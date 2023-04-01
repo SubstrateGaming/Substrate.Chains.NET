@@ -1,0 +1,15 @@
+D:\repos\GENERATED\Substrate.Chains.NET\Substrate.Polkadot.NET\Substrate.Polkadot.NET.RestClient.Mockup\bin\Release\netstandard2.1\Substrate.Polkadot.NET.RestClient.Mockup.deps.json
+D:\repos\GENERATED\Substrate.Chains.NET\Substrate.Polkadot.NET\Substrate.Polkadot.NET.RestClient.Mockup\bin\Release\netstandard2.1\Substrate.Polkadot.NET.RestClient.Mockup.dll
+D:\repos\GENERATED\Substrate.Chains.NET\Substrate.Polkadot.NET\Substrate.Polkadot.NET.RestClient.Mockup\bin\Release\netstandard2.1\Substrate.Polkadot.NET.RestClient.Mockup.pdb
+D:\repos\GENERATED\Substrate.Chains.NET\Substrate.Polkadot.NET\Substrate.Polkadot.NET.RestClient.Mockup\bin\Release\netstandard2.1\Substrate.Polkadot.NET.NetApiExt.dll
+D:\repos\GENERATED\Substrate.Chains.NET\Substrate.Polkadot.NET\Substrate.Polkadot.NET.RestClient.Mockup\bin\Release\netstandard2.1\Substrate.Polkadot.NET.RestClient.dll
+D:\repos\GENERATED\Substrate.Chains.NET\Substrate.Polkadot.NET\Substrate.Polkadot.NET.RestClient.Mockup\bin\Release\netstandard2.1\Substrate.Polkadot.NET.RestClient.pdb
+D:\repos\GENERATED\Substrate.Chains.NET\Substrate.Polkadot.NET\Substrate.Polkadot.NET.RestClient.Mockup\bin\Release\netstandard2.1\Substrate.Polkadot.NET.NetApiExt.pdb
+D:\repos\GENERATED\Substrate.Chains.NET\Substrate.Polkadot.NET\Substrate.Polkadot.NET.RestClient.Mockup\obj\Release\netstandard2.1\Substrate.Polkadot.NET.RestClient.Mockup.csproj.AssemblyReference.cache
+D:\repos\GENERATED\Substrate.Chains.NET\Substrate.Polkadot.NET\Substrate.Polkadot.NET.RestClient.Mockup\obj\Release\netstandard2.1\Substrate.Polkadot.NET.RestClient.Mockup.GeneratedMSBuildEditorConfig.editorconfig
+D:\repos\GENERATED\Substrate.Chains.NET\Substrate.Polkadot.NET\Substrate.Polkadot.NET.RestClient.Mockup\obj\Release\netstandard2.1\Substrate.Polkadot.NET.RestClient.Mockup.AssemblyInfoInputs.cache
+D:\repos\GENERATED\Substrate.Chains.NET\Substrate.Polkadot.NET\Substrate.Polkadot.NET.RestClient.Mockup\obj\Release\netstandard2.1\Substrate.Polkadot.NET.RestClient.Mockup.AssemblyInfo.cs
+D:\repos\GENERATED\Substrate.Chains.NET\Substrate.Polkadot.NET\Substrate.Polkadot.NET.RestClient.Mockup\obj\Release\netstandard2.1\Substrate.Polkadot.NET.RestClient.Mockup.csproj.CoreCompileInputs.cache
+D:\repos\GENERATED\Substrate.Chains.NET\Substrate.Polkadot.NET\Substrate.Polkadot.NET.RestClient.Mockup\obj\Release\netstandard2.1\Substrate.Polkadot.NET.RestClient.Mockup.csproj.CopyComplete
+D:\repos\GENERATED\Substrate.Chains.NET\Substrate.Polkadot.NET\Substrate.Polkadot.NET.RestClient.Mockup\obj\Release\netstandard2.1\Substrate.Polkadot.NET.RestClient.Mockup.dll
+D:\repos\GENERATED\Substrate.Chains.NET\Substrate.Polkadot.NET\Substrate.Polkadot.NET.RestClient.Mockup\obj\Release\netstandard2.1\Substrate.Polkadot.NET.RestClient.Mockup.pdb

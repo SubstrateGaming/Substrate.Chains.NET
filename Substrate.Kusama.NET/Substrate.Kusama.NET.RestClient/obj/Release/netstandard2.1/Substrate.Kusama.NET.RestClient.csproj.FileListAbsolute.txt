@@ -1,0 +1,13 @@
+D:\repos\GENERATED\Substrate.Chains.NET\Substrate.Kusama.NET\Substrate.Kusama.NET.RestClient\bin\Release\netstandard2.1\Substrate.Kusama.NET.RestClient.deps.json
+D:\repos\GENERATED\Substrate.Chains.NET\Substrate.Kusama.NET\Substrate.Kusama.NET.RestClient\bin\Release\netstandard2.1\Substrate.Kusama.NET.RestClient.dll
+D:\repos\GENERATED\Substrate.Chains.NET\Substrate.Kusama.NET\Substrate.Kusama.NET.RestClient\bin\Release\netstandard2.1\Substrate.Kusama.NET.RestClient.pdb
+D:\repos\GENERATED\Substrate.Chains.NET\Substrate.Kusama.NET\Substrate.Kusama.NET.RestClient\bin\Release\netstandard2.1\Substrate.Kusama.NET.NetApiExt.dll
+D:\repos\GENERATED\Substrate.Chains.NET\Substrate.Kusama.NET\Substrate.Kusama.NET.RestClient\bin\Release\netstandard2.1\Substrate.Kusama.NET.NetApiExt.pdb
+D:\repos\GENERATED\Substrate.Chains.NET\Substrate.Kusama.NET\Substrate.Kusama.NET.RestClient\obj\Release\netstandard2.1\Substrate.Kusama.NET.RestClient.csproj.AssemblyReference.cache
+D:\repos\GENERATED\Substrate.Chains.NET\Substrate.Kusama.NET\Substrate.Kusama.NET.RestClient\obj\Release\netstandard2.1\Substrate.Kusama.NET.RestClient.GeneratedMSBuildEditorConfig.editorconfig
+D:\repos\GENERATED\Substrate.Chains.NET\Substrate.Kusama.NET\Substrate.Kusama.NET.RestClient\obj\Release\netstandard2.1\Substrate.Kusama.NET.RestClient.AssemblyInfoInputs.cache
+D:\repos\GENERATED\Substrate.Chains.NET\Substrate.Kusama.NET\Substrate.Kusama.NET.RestClient\obj\Release\netstandard2.1\Substrate.Kusama.NET.RestClient.AssemblyInfo.cs
+D:\repos\GENERATED\Substrate.Chains.NET\Substrate.Kusama.NET\Substrate.Kusama.NET.RestClient\obj\Release\netstandard2.1\Substrate.Kusama.NET.RestClient.csproj.CoreCompileInputs.cache
+D:\repos\GENERATED\Substrate.Chains.NET\Substrate.Kusama.NET\Substrate.Kusama.NET.RestClient\obj\Release\netstandard2.1\Substrate.Kusama.NET.RestClient.csproj.CopyComplete
+D:\repos\GENERATED\Substrate.Chains.NET\Substrate.Kusama.NET\Substrate.Kusama.NET.RestClient\obj\Release\netstandard2.1\Substrate.Kusama.NET.RestClient.dll
+D:\repos\GENERATED\Substrate.Chains.NET\Substrate.Kusama.NET\Substrate.Kusama.NET.RestClient\obj\Release\netstandard2.1\Substrate.Kusama.NET.RestClient.pdb

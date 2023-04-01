@@ -1,0 +1,10 @@
+D:\repos\GENERATED\Substrate.Chains.NET\Substrate.Ajuna.NET\Substrate.Ajuna.NET.NetApiExt\bin\Release\netstandard2.1\Substrate.Ajuna.NET.NetApiExt.deps.json
+D:\repos\GENERATED\Substrate.Chains.NET\Substrate.Ajuna.NET\Substrate.Ajuna.NET.NetApiExt\bin\Release\netstandard2.1\Substrate.Ajuna.NET.NetApiExt.dll
+D:\repos\GENERATED\Substrate.Chains.NET\Substrate.Ajuna.NET\Substrate.Ajuna.NET.NetApiExt\bin\Release\netstandard2.1\Substrate.Ajuna.NET.NetApiExt.pdb
+D:\repos\GENERATED\Substrate.Chains.NET\Substrate.Ajuna.NET\Substrate.Ajuna.NET.NetApiExt\obj\Release\netstandard2.1\Substrate.Ajuna.NET.NetApiExt.csproj.AssemblyReference.cache
+D:\repos\GENERATED\Substrate.Chains.NET\Substrate.Ajuna.NET\Substrate.Ajuna.NET.NetApiExt\obj\Release\netstandard2.1\Substrate.Ajuna.NET.NetApiExt.GeneratedMSBuildEditorConfig.editorconfig
+D:\repos\GENERATED\Substrate.Chains.NET\Substrate.Ajuna.NET\Substrate.Ajuna.NET.NetApiExt\obj\Release\netstandard2.1\Substrate.Ajuna.NET.NetApiExt.AssemblyInfoInputs.cache
+D:\repos\GENERATED\Substrate.Chains.NET\Substrate.Ajuna.NET\Substrate.Ajuna.NET.NetApiExt\obj\Release\netstandard2.1\Substrate.Ajuna.NET.NetApiExt.AssemblyInfo.cs
+D:\repos\GENERATED\Substrate.Chains.NET\Substrate.Ajuna.NET\Substrate.Ajuna.NET.NetApiExt\obj\Release\netstandard2.1\Substrate.Ajuna.NET.NetApiExt.csproj.CoreCompileInputs.cache
+D:\repos\GENERATED\Substrate.Chains.NET\Substrate.Ajuna.NET\Substrate.Ajuna.NET.NetApiExt\obj\Release\netstandard2.1\Substrate.Ajuna.NET.NetApiExt.dll
+D:\repos\GENERATED\Substrate.Chains.NET\Substrate.Ajuna.NET\Substrate.Ajuna.NET.NetApiExt\obj\Release\netstandard2.1\Substrate.Ajuna.NET.NetApiExt.pdb

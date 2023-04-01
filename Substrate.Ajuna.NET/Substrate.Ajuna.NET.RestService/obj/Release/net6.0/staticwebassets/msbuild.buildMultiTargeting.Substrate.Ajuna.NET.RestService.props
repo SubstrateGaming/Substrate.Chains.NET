@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Substrate.Ajuna.NET.RestService.props" />
+</Project>

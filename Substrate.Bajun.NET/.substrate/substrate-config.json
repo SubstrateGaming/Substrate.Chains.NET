@@ -1,0 +1,13 @@
+{
+  "projects": {
+    "net_api": "Substrate.Bajun.NET.NetApiExt",
+    "rest_service": "Substrate.Bajun.NET.RestService",
+    "rest_client": "Substrate.Bajun.NET.RestClient"
+  },
+   "metadata": {
+      "websocket": "wss://rpc-parachain.bajun.network"
+   },
+  "rest_client_settings": {
+    "service_assembly": "Substrate.Bajun.NET.RestService.dll"
+  }
+}

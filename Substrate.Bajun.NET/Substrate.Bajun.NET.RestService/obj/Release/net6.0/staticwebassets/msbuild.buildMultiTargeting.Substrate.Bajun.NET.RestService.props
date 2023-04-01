@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Substrate.Bajun.NET.RestService.props" />
+</Project>

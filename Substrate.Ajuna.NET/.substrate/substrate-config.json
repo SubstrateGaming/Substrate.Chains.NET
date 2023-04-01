@@ -1,0 +1,13 @@
+{
+  "projects": {
+    "net_api": "Substrate.Ajuna.NET.NetApiExt",
+    "rest_service": "Substrate.Ajuna.NET.RestService",
+    "rest_client": "Substrate.Ajuna.NET.RestClient"
+  },
+   "metadata": {
+      "websocket": "wss://rpc-parachain.ajuna.network"
+   },
+  "rest_client_settings": {
+    "service_assembly": "Substrate.Ajuna.NET.RestService.dll"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "zui9KcdI+m6MCYLNl3fIK8actPC0zb0tZR/ujbtQcUk=",
+  "Source": "Substrate.Bajun.NET.RestService",
+  "BasePath": "_content/Substrate.Bajun.NET.RestService",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

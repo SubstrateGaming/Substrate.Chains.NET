@@ -1,0 +1,11 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+   <PropertyGroup>
+      <TargetFramework>netstandard2.1</TargetFramework>
+   </PropertyGroup>
+   <ItemGroup>
+      <PackageReference Include="Substrate.ServiceLayer.Model" Version="0.3.5" />
+   </ItemGroup>
+   <ItemGroup>      
+      <ProjectReference Include="..\Substrate.Polkadot.NET.RestClient\Substrate.Polkadot.NET.RestClient.csproj" />
+   </ItemGroup>
+</Project>

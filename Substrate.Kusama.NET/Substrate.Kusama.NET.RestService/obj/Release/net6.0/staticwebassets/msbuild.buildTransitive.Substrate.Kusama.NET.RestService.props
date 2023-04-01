@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\Substrate.Kusama.NET.RestService.props" />
+</Project>
