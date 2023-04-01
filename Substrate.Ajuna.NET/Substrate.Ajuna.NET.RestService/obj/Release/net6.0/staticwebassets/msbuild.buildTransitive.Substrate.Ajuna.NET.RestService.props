@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\buildMultiTargeting\Substrate.Ajuna.NET.RestService.props" />
-</Project>
