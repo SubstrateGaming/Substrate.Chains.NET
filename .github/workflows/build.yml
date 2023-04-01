@@ -44,7 +44,7 @@ jobs:
       # Restore the project and its dependencies.
       ##
       - name: Install dependencies
-        run: dotnet restore
+        run: dotnet restore Substrate.Ajuna.NET
       
       #
       # Build
@@ -52,5 +52,5 @@ jobs:
       ##
       - name: Build
         run: |
-            dotnet build --configuration Release
+            dotnet build Substrate.Ajuna.NET --configuration Release
             
