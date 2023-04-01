@@ -8,7 +8,7 @@
 		<Authors>Substrate Gaming</Authors>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<Description>Substrate Polkadot .NET API Extension</Description>
-		<PackageProjectUrl>https://github.com/SubstrateGaming/Substrate.Chains.NET/Substrate.Polkadot.NET/Substrate.Polkadot.NET.NetApiExt/</PackageProjectUrl>
+		<PackageProjectUrl>https://github.com/SubstrateGaming/Substrate.Chains.NET/tree/main/Substrate.Polkadot.NET/Substrate.Polkadot.NET.NetApiExt/</PackageProjectUrl>
 		<PackageLicenseFile>LICENSE</PackageLicenseFile>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<RepositoryUrl>https://github.com/SubstrateGaming/Substrate.Chains.NET/</RepositoryUrl>

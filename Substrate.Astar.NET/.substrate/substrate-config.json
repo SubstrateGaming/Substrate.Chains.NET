@@ -1,0 +1,13 @@
+{
+  "projects": {
+    "net_api": "Substrate.Astar.NET.NetApiExt",
+    "rest_service": "Substrate.Astar.NET.RestService",
+    "rest_client": "Substrate.Astar.NET.RestClient"
+  },
+   "metadata": {
+      "websocket": "wss://rpc.astar.network"
+   },
+  "rest_client_settings": {
+    "service_assembly": "Substrate.Astar.NET.RestService.dll"
+  }
+}

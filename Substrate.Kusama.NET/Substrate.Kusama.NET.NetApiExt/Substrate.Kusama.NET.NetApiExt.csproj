@@ -8,7 +8,7 @@
 		<Authors>Substrate Gaming</Authors>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<Description>Substrate Kusama .NET API Extension</Description>
-		<PackageProjectUrl>https://github.com/SubstrateGaming/Substrate.Chains.NET/Substrate.Kusama.NET/Substrate.Kusama.NET.NetApiExt/</PackageProjectUrl>
+		<PackageProjectUrl>https://github.com/SubstrateGaming/Substrate.Chains.NET/tree/main/Substrate.Kusama.NET/Substrate.Kusama.NET.NetApiExt/</PackageProjectUrl>
 		<PackageLicenseFile>LICENSE</PackageLicenseFile>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<RepositoryUrl>https://github.com/SubstrateGaming/Substrate.Chains.NET/</RepositoryUrl>

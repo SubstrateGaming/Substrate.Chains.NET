@@ -32,35 +32,42 @@ jobs:
       # Dependencies
       # Restore the project and its dependencies.
       ##
-      - name: Install dependencies
+      - name: Install Ajuna .NET
         run: dotnet restore Substrate.Ajuna.NET
 
       - name: Install dependencies
+        run: dotnet restore Substrate.Astar.NET
+
+      - name: Install Bajun .NET
         run: dotnet restore Substrate.Bajun.NET
 
-      - name: Install dependencies
+      - name: Install Polkadot .NET
         run: dotnet restore Substrate.Polkadot.NET
 
-      - name: Install dependencies
+      - name: Install Kusama .NET
         run: dotnet restore Substrate.Kusama.NET
       
       #
       # Build
       # Build the toolchain
       ##
-      - name: Build
+      - name: Build Ajuna .NET
         run: |
             dotnet build Substrate.Ajuna.NET --configuration Release
 
-      - name: Build
+      - name: Build Astar .NET
+        run: |
+            dotnet build Substrate.Astar.NET --configuration Release
+
+      - name: Build Bajun .NET
         run: |
             dotnet build Substrate.Bajun.NET --configuration Release
 
-      - name: Build
+      - name: Build Polkadot .NET
         run: |
             dotnet build Substrate.Polkadot.NET --configuration Release
 
-      - name: Build
+      - name: Build Kusama .NET
         run: |
             dotnet build Substrate.Kusama.NET --configuration Release
             
