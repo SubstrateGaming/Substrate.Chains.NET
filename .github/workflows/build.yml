@@ -13,36 +13,19 @@ jobs:
         
     steps:
       - uses: actions/checkout@v2
-        with:
-        # Set the version of Node.js to use to v16
-          node-version: '16.x'
 
       ##
       # Setup
       # Setup multiple .NET versions so we can build against all referenced .NET versions.
       ##
-      - name: Setup .NET Core 2.1.x
-        uses: actions/setup-dotnet@v1
-        with:
-          node-version: '16.x'
-          dotnet-version: 2.1.x
-     
-      - name: Setup .NET Core 3.1.x
-        uses: actions/setup-dotnet@v1
-        with:
-          node-version: '16.x'
-          dotnet-version: 3.1.x
-
       - name: Setup .NET 6.0.x
         uses: actions/setup-dotnet@v2
         with:
-          node-version: '16.x'
           dotnet-version: 6.0.x
 
       - name: Setup .NET 7.0.x
         uses: actions/setup-dotnet@v2
         with:
-          node-version: '16.x'
           dotnet-version: 7.0.x
       
       ##
@@ -51,6 +34,15 @@ jobs:
       ##
       - name: Install dependencies
         run: dotnet restore Substrate.Ajuna.NET
+
+      - name: Install dependencies
+        run: dotnet restore Substrate.Bajun.NET
+
+      - name: Install dependencies
+        run: dotnet restore Substrate.Polkadot.NET
+
+      - name: Install dependencies
+        run: dotnet restore Substrate.Kusama.NET
       
       #
       # Build
@@ -59,4 +51,16 @@ jobs:
       - name: Build
         run: |
             dotnet build Substrate.Ajuna.NET --configuration Release
+
+      - name: Build
+        run: |
+            dotnet build Substrate.Bajun.NET --configuration Release
+
+      - name: Build
+        run: |
+            dotnet build Substrate.Polkadot.NET --configuration Release
+
+      - name: Build
+        run: |
+            dotnet build Substrate.Kusama.NET --configuration Release
             
