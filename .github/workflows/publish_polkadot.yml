@@ -3,7 +3,9 @@ name: publish Polkadot.NET
 on:
   push:
     branches: [ main ]
-
+    paths-ignore:
+      - '*.md'
+      
 jobs:
   build:
     name: build & test & publish
