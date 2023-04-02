@@ -101,7 +101,7 @@ namespace Substrate.Polkadot.NET.RestService
             CancellationToken = CTS.Token,
             DataProvider = _storageDataProvider,
             Storages = GetRuntimeStorages(),
-            IsLazyLoadingEnabled = false // Set to true if you prefer to avoid loading all initial Storage values at the service startup
+            IsLazyLoadingEnabled = true // Set to true if you prefer to avoid loading all initial Storage values at the service startup
          });
 
          // Register data provider as singleton.

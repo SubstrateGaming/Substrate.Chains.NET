@@ -49,57 +49,57 @@ jobs:
       # Publishing
       # Publish all NuGet packages from Substrate Chains .NET
       ##
-      #- name: Publish Substrate Ajuna .NET API Extension
-      #  id: publish_nuget_1
-      #  uses: alirezanet/publish-nuget@v3.0.4
-      #  with:
-      #     # Filepath of the project to be packaged, relative to root of repository
-      #    PROJECT_FILE_PATH: Substrate.Ajuna.NET/Substrate.Ajuna.NET.NetApiExt/Substrate.Ajuna.NET.NetApiExt.csproj
-      #    # NuGet package id, used for version detection & defaults to project name
-      #    PACKAGE_NAME: Substrate.Ajuna.NET.Extension
-      #    # API key to authenticate with NuGet server
-      #    NUGET_KEY: ${{secrets.NUGET_API_KEY}}
+      - name: Publish Substrate Ajuna .NET API Extension
+        id: publish_nuget_1
+        uses: alirezanet/publish-nuget@v3.0.4
+        with:
+          # Filepath of the project to be packaged, relative to root of repository
+          PROJECT_FILE_PATH: Substrate.Ajuna.NET/Substrate.Ajuna.NET.NetApiExt/Substrate.Ajuna.NET.NetApiExt.csproj
+          # NuGet package id, used for version detection & defaults to project name
+          PACKAGE_NAME: Substrate.Ajuna.NET.Extension
+          # API key to authenticate with NuGet server
+          NUGET_KEY: ${{secrets.NUGET_API_KEY}}
 
-      #- name: Publish Substrate Astar .NET API Extension
-      #  id: publish_nuget_1
-      #  uses: alirezanet/publish-nuget@v3.0.4
-      #  with:
-      #     # Filepath of the project to be packaged, relative to root of repository
-      #    PROJECT_FILE_PATH: Substrate.Astar.NET/Substrate.Astar.NET.NetApiExt/Substrate.Astar.NET.NetApiExt.csproj
-      #    # NuGet package id, used for version detection & defaults to project name
-      #    PACKAGE_NAME: Substrate.Astar.NET.Extension
-      #    # API key to authenticate with NuGet server
-      #    NUGET_KEY: ${{secrets.NUGET_API_KEY}}
+      - name: Publish Substrate Astar .NET API Extension
+        id: publish_nuget_1
+        uses: alirezanet/publish-nuget@v3.0.4
+        with:
+          # Filepath of the project to be packaged, relative to root of repository
+          PROJECT_FILE_PATH: Substrate.Astar.NET/Substrate.Astar.NET.NetApiExt/Substrate.Astar.NET.NetApiExt.csproj
+          # NuGet package id, used for version detection & defaults to project name
+          PACKAGE_NAME: Substrate.Astar.NET.Extension
+          # API key to authenticate with NuGet server
+          NUGET_KEY: ${{secrets.NUGET_API_KEY}}
 
-      #- name: Publish Substrate Bajun .NET API Extension
-      #  id: publish_nuget_1
-      #  uses: alirezanet/publish-nuget@v3.0.4
-      #  with:
-      #     # Filepath of the project to be packaged, relative to root of repository
-      #    PROJECT_FILE_PATH: Substrate.Bajun.NET/Substrate.Bajun.NET.NetApiExt/Substrate.Bajun.NET.NetApiExt.csproj
-      #    # NuGet package id, used for version detection & defaults to project name
-      #    PACKAGE_NAME: Substrate.Bajun.NET.Extension
-      #    # API key to authenticate with NuGet server
-      #    NUGET_KEY: ${{secrets.NUGET_API_KEY}}
+      - name: Publish Substrate Bajun .NET API Extension
+        id: publish_nuget_1
+        uses: alirezanet/publish-nuget@v3.0.4
+        with:
+          # Filepath of the project to be packaged, relative to root of repository
+          PROJECT_FILE_PATH: Substrate.Bajun.NET/Substrate.Bajun.NET.NetApiExt/Substrate.Bajun.NET.NetApiExt.csproj
+          # NuGet package id, used for version detection & defaults to project name
+          PACKAGE_NAME: Substrate.Bajun.NET.Extension
+          # API key to authenticate with NuGet server
+          NUGET_KEY: ${{secrets.NUGET_API_KEY}}
 
-      #- name: Publish Substrate Polkadot .NET API Extension
-      #  id: publish_nuget_1
-      #  uses: alirezanet/publish-nuget@v3.0.4
-      #  with:
-      #     # Filepath of the project to be packaged, relative to root of repository
-      #    PROJECT_FILE_PATH: Substrate.Polkadot.NET/Substrate.Polkadot.NET.NetApiExt/Substrate.Polkadot.NET.NetApiExt.csproj
-      #    # NuGet package id, used for version detection & defaults to project name
-      #    PACKAGE_NAME: Substrate.Polkadot.NET.Extension
-      #    # API key to authenticate with NuGet server
-      #    NUGET_KEY: ${{secrets.NUGET_API_KEY}}
+      - name: Publish Substrate Polkadot .NET API Extension
+        id: publish_nuget_1
+        uses: alirezanet/publish-nuget@v3.0.4
+        with:
+          # Filepath of the project to be packaged, relative to root of repository
+          PROJECT_FILE_PATH: Substrate.Polkadot.NET/Substrate.Polkadot.NET.NetApiExt/Substrate.Polkadot.NET.NetApiExt.csproj
+          # NuGet package id, used for version detection & defaults to project name
+          PACKAGE_NAME: Substrate.Polkadot.NET.Extension
+          # API key to authenticate with NuGet server
+          NUGET_KEY: ${{secrets.NUGET_API_KEY}}
 
-      #- name: Publish Substrate Kusama .NET API Extension
-      #  id: publish_nuget_1
-      #  uses: alirezanet/publish-nuget@v3.0.4
-      #  with:
-      #     # Filepath of the project to be packaged, relative to root of repository
-      #    PROJECT_FILE_PATH: Substrate.Kusama.NET/Substrate.Kusama.NET.NetApiExt/Substrate.Kusama.NET.NetApiExt.csproj
-      #    # NuGet package id, used for version detection & defaults to project name
-      #    PACKAGE_NAME: Substrate.Kusama.NET.Extension
-      #    # API key to authenticate with NuGet server
-      #    NUGET_KEY: ${{secrets.NUGET_API_KEY}}
+      - name: Publish Substrate Kusama .NET API Extension
+        id: publish_nuget_1
+        uses: alirezanet/publish-nuget@v3.0.4
+        with:
+          # Filepath of the project to be packaged, relative to root of repository
+          PROJECT_FILE_PATH: Substrate.Kusama.NET/Substrate.Kusama.NET.NetApiExt/Substrate.Kusama.NET.NetApiExt.csproj
+          # NuGet package id, used for version detection & defaults to project name
+          PACKAGE_NAME: Substrate.Kusama.NET.Extension
+          # API key to authenticate with NuGet server
+          NUGET_KEY: ${{secrets.NUGET_API_KEY}}
