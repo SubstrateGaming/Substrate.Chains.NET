@@ -47,7 +47,7 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
       {
          Substrate.NetApi.Model.Types.Base.BaseBitSeq<Substrate.NetApi.Model.Types.Primitive.U8, Substrate.Kusama.NET.NetApiExt.Generated.Model.bitvec.order.Lsb0> result;
          result = new Substrate.NetApi.Model.Types.Base.BaseBitSeq<Substrate.NetApi.Model.Types.Primitive.U8, Substrate.Kusama.NET.NetApiExt.Generated.Model.bitvec.order.Lsb0>();
-         // NOT IMPLEMENTED >> Initialize Substrate.NetApi.Model.Types.Base.BaseBitSeq`2[[Substrate.NetApi.Model.Types.Primitive.U8, Substrate.NetApi, Version=0.9.1.0, Culture=neutral, PublicKeyToken=null],[Substrate.Kusama.NET.NetApiExt.Generated.Model.bitvec.order.Lsb0, Substrate.Kusama.NET.NetApiExt, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+         // NOT IMPLEMENTED >> Initialize Substrate.NetApi.Model.Types.Base.BaseBitSeq`2[[Substrate.NetApi.Model.Types.Primitive.U8, Substrate.NetApi, Version=0.9.2.0, Culture=neutral, PublicKeyToken=null],[Substrate.Kusama.NET.NetApiExt.Generated.Model.bitvec.order.Lsb0, Substrate.Kusama.NET.NetApiExt, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
          return result;
       }
       public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.ValidatorIndex GetTestValue5()
@@ -572,14 +572,14 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
       {
          Substrate.NetApi.Model.Types.Base.BaseBitSeq<Substrate.NetApi.Model.Types.Primitive.U8, Substrate.Kusama.NET.NetApiExt.Generated.Model.bitvec.order.Lsb0> result;
          result = new Substrate.NetApi.Model.Types.Base.BaseBitSeq<Substrate.NetApi.Model.Types.Primitive.U8, Substrate.Kusama.NET.NetApiExt.Generated.Model.bitvec.order.Lsb0>();
-         // NOT IMPLEMENTED >> Initialize Substrate.NetApi.Model.Types.Base.BaseBitSeq`2[[Substrate.NetApi.Model.Types.Primitive.U8, Substrate.NetApi, Version=0.9.1.0, Culture=neutral, PublicKeyToken=null],[Substrate.Kusama.NET.NetApiExt.Generated.Model.bitvec.order.Lsb0, Substrate.Kusama.NET.NetApiExt, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+         // NOT IMPLEMENTED >> Initialize Substrate.NetApi.Model.Types.Base.BaseBitSeq`2[[Substrate.NetApi.Model.Types.Primitive.U8, Substrate.NetApi, Version=0.9.2.0, Culture=neutral, PublicKeyToken=null],[Substrate.Kusama.NET.NetApiExt.Generated.Model.bitvec.order.Lsb0, Substrate.Kusama.NET.NetApiExt, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
          return result;
       }
       public Substrate.NetApi.Model.Types.Base.BaseBitSeq<Substrate.NetApi.Model.Types.Primitive.U8, Substrate.Kusama.NET.NetApiExt.Generated.Model.bitvec.order.Lsb0> GetTestValue25()
       {
          Substrate.NetApi.Model.Types.Base.BaseBitSeq<Substrate.NetApi.Model.Types.Primitive.U8, Substrate.Kusama.NET.NetApiExt.Generated.Model.bitvec.order.Lsb0> result;
          result = new Substrate.NetApi.Model.Types.Base.BaseBitSeq<Substrate.NetApi.Model.Types.Primitive.U8, Substrate.Kusama.NET.NetApiExt.Generated.Model.bitvec.order.Lsb0>();
-         // NOT IMPLEMENTED >> Initialize Substrate.NetApi.Model.Types.Base.BaseBitSeq`2[[Substrate.NetApi.Model.Types.Primitive.U8, Substrate.NetApi, Version=0.9.1.0, Culture=neutral, PublicKeyToken=null],[Substrate.Kusama.NET.NetApiExt.Generated.Model.bitvec.order.Lsb0, Substrate.Kusama.NET.NetApiExt, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+         // NOT IMPLEMENTED >> Initialize Substrate.NetApi.Model.Types.Base.BaseBitSeq`2[[Substrate.NetApi.Model.Types.Primitive.U8, Substrate.NetApi, Version=0.9.2.0, Culture=neutral, PublicKeyToken=null],[Substrate.Kusama.NET.NetApiExt.Generated.Model.bitvec.order.Lsb0, Substrate.Kusama.NET.NetApiExt, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
          return result;
       }
       public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.GroupIndex GetTestValue26()

@@ -16,7 +16,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Substrate.NET.API" Version="0.9.1" />
+		<PackageReference Include="Substrate.NET.API" Version="0.9.2" />
 	</ItemGroup>
 
 	<ItemGroup>
