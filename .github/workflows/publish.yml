@@ -40,11 +40,17 @@ jobs:
         run: dotnet restore Substrate.Bajun.NET
 
       - name: Install dependencies
-        run: dotnet restore Substrate.Polkadot.NET
+        run: dotnet restore Substrate.Kusama.NET
 
       - name: Install dependencies
-        run: dotnet restore Substrate.Kusama.NET
+        run: dotnet restore Substrate.Polkadot.NET
       
+      - name: Install dependencies
+        run: dotnet restore Substrate.Statemine.NET
+
+      - name: Install dependencies
+        run: dotnet restore Substrate.Statemint.NET
+
       ##
       # Publishing
       # Publish all NuGet packages from Substrate Chains .NET
@@ -82,6 +88,17 @@ jobs:
           # API key to authenticate with NuGet server
           NUGET_KEY: ${{secrets.NUGET_API_KEY}}
 
+      - name: Publish Substrate Kusama .NET API Extension
+        id: publish_nuget_kusama
+        uses: alirezanet/publish-nuget@v3.0.4
+        with:
+          # Filepath of the project to be packaged, relative to root of repository
+          PROJECT_FILE_PATH: Substrate.Kusama.NET/Substrate.Kusama.NET.NetApiExt/Substrate.Kusama.NET.NetApiExt.csproj
+          # NuGet package id, used for version detection & defaults to project name
+          PACKAGE_NAME: Substrate.Kusama.NET.Extension
+          # API key to authenticate with NuGet server
+          NUGET_KEY: ${{secrets.NUGET_API_KEY}}
+
       - name: Publish Substrate Polkadot .NET API Extension
         id: publish_nuget_polkadot
         uses: alirezanet/publish-nuget@v3.0.4
@@ -93,13 +110,24 @@ jobs:
           # API key to authenticate with NuGet server
           NUGET_KEY: ${{secrets.NUGET_API_KEY}}
 
-      - name: Publish Substrate Kusama .NET API Extension
-        id: publish_nuget_kusama
+      - name: Publish Substrate Statemine .NET API Extension
+        id: publish_nuget_statemine
         uses: alirezanet/publish-nuget@v3.0.4
         with:
           # Filepath of the project to be packaged, relative to root of repository
-          PROJECT_FILE_PATH: Substrate.Kusama.NET/Substrate.Kusama.NET.NetApiExt/Substrate.Kusama.NET.NetApiExt.csproj
+          PROJECT_FILE_PATH: Substrate.Statemine.NET/Substrate.Statemine.NET.NetApiExt/Substrate.Statemine.NET.NetApiExt.csproj
           # NuGet package id, used for version detection & defaults to project name
-          PACKAGE_NAME: Substrate.Kusama.NET.Extension
+          PACKAGE_NAME: Substrate.Statemine.NET.Extension
+          # API key to authenticate with NuGet server
+          NUGET_KEY: ${{secrets.NUGET_API_KEY}}
+
+      - name: Publish Substrate Statemint .NET API Extension
+        id: publish_nuget_statemint
+        uses: alirezanet/publish-nuget@v3.0.4
+        with:
+          # Filepath of the project to be packaged, relative to root of repository
+          PROJECT_FILE_PATH: Substrate.Statemint.NET/Substrate.Statemint.NET.NetApiExt/Substrate.Statemint.NET.NetApiExt.csproj
+          # NuGet package id, used for version detection & defaults to project name
+          PACKAGE_NAME: Substrate.Statemint.NET.Extension
           # API key to authenticate with NuGet server
           NUGET_KEY: ${{secrets.NUGET_API_KEY}}

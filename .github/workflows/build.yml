@@ -41,12 +41,18 @@ jobs:
       - name: Install Bajun .NET
         run: dotnet restore Substrate.Bajun.NET
 
-      - name: Install Polkadot .NET
-        run: dotnet restore Substrate.Polkadot.NET
-
       - name: Install Kusama .NET
         run: dotnet restore Substrate.Kusama.NET
-      
+
+      - name: Install Polkadot .NET
+        run: dotnet restore Substrate.Polkadot.NET
+     
+      - name: Install Statemine .NET
+        run: dotnet restore Substrate.Statemine.NET
+
+      - name: Install Statemint .NET
+        run: dotnet restore Substrate.Statemint.NET
+
       #
       # Build
       # Build the toolchain
@@ -62,12 +68,19 @@ jobs:
       - name: Build Bajun .NET
         run: |
             dotnet build Substrate.Bajun.NET --configuration Release
+      
+      - name: Build Kusama .NET
+        run: |
+            dotnet build Substrate.Kusama.NET --configuration Release
 
       - name: Build Polkadot .NET
         run: |
             dotnet build Substrate.Polkadot.NET --configuration Release
 
-      - name: Build Kusama .NET
+      - name: Build Statemine .NET
         run: |
-            dotnet build Substrate.Kusama.NET --configuration Release
-            
+            dotnet build Substrate.Statemine.NET --configuration Release
+
+      - name: Build Statemint .NET
+        run: |
+            dotnet build Substrate.Statemint.NET --configuration Release

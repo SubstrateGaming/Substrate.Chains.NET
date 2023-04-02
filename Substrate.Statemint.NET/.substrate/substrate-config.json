@@ -1,0 +1,13 @@
+{
+  "projects": {
+    "net_api": "Substrate.Statemint.NET.NetApiExt",
+    "rest_service": "Substrate.Statemint.NET.RestService",
+    "rest_client": "Substrate.Statemint.NET.RestClient"
+  },
+   "metadata": {
+      "websocket": "wss://statemint-rpc.polkadot.io"
+   },
+  "rest_client_settings": {
+    "service_assembly": "Substrate.Statemint.NET.RestService.dll"
+  }
+}
