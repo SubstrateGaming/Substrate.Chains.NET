@@ -50,7 +50,7 @@ jobs:
       # Publish all NuGet packages from Substrate Chains .NET
       ##
       - name: Publish Substrate Ajuna .NET API Extension
-        id: publish_nuget_1
+        id: publish_nuget_ajuna
         uses: alirezanet/publish-nuget@v3.0.4
         with:
           # Filepath of the project to be packaged, relative to root of repository
@@ -61,7 +61,7 @@ jobs:
           NUGET_KEY: ${{secrets.NUGET_API_KEY}}
 
       - name: Publish Substrate Astar .NET API Extension
-        id: publish_nuget_1
+        id: publish_nuget_astar
         uses: alirezanet/publish-nuget@v3.0.4
         with:
           # Filepath of the project to be packaged, relative to root of repository
@@ -72,7 +72,7 @@ jobs:
           NUGET_KEY: ${{secrets.NUGET_API_KEY}}
 
       - name: Publish Substrate Bajun .NET API Extension
-        id: publish_nuget_1
+        id: publish_nuget_bajun
         uses: alirezanet/publish-nuget@v3.0.4
         with:
           # Filepath of the project to be packaged, relative to root of repository
@@ -83,7 +83,7 @@ jobs:
           NUGET_KEY: ${{secrets.NUGET_API_KEY}}
 
       - name: Publish Substrate Polkadot .NET API Extension
-        id: publish_nuget_1
+        id: publish_nuget_polkadot
         uses: alirezanet/publish-nuget@v3.0.4
         with:
           # Filepath of the project to be packaged, relative to root of repository
@@ -94,7 +94,7 @@ jobs:
           NUGET_KEY: ${{secrets.NUGET_API_KEY}}
 
       - name: Publish Substrate Kusama .NET API Extension
-        id: publish_nuget_1
+        id: publish_nuget_kusama
         uses: alirezanet/publish-nuget@v3.0.4
         with:
           # Filepath of the project to be packaged, relative to root of repository
