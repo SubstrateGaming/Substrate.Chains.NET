@@ -1,0 +1,52 @@
+name: publish
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    name: build & test & publish
+    runs-on: ubuntu-latest
+        
+    steps:
+      - uses: actions/checkout@v3
+
+      ##
+      # Setup
+      # Setup multiple .NET versions so we can build against all referenced .NET versions.
+      ##
+      - name: Setup .NET 6.0.x
+        uses: actions/setup-dotnet@v2
+        with:
+          dotnet-version: 6.0.x
+
+      ##
+      # Dependencies
+      # Restore the project and its dependencies.
+      ##
+      - name: Install dependencies
+        run: dotnet restore Substrate.Statemint.NET
+
+      ##
+      # Dependencies
+      # Restore the project and its dependencies.
+      ##
+      - name: Build Statemint .NET
+        run: |
+            dotnet build Substrate.Statemint.NET --configuration Release
+
+      ##
+      # Publishing
+      # Publish all NuGet packages from Substrate Chains .NET
+      ##
+      - name: Publish Substrate Statemint .NET API Extension
+        id: publish_nuget
+        uses: alirezanet/publish-nuget@v3.0.4
+        with:
+          # Filepath of the project to be packaged, relative to root of repository
+          PROJECT_FILE_PATH: Substrate.Statemint.NET/Substrate.Statemint.NET.NetApiExt/Substrate.Statemint.NET.NetApiExt.csproj
+          # NuGet package id, used for version detection & defaults to project name
+          PACKAGE_NAME: Substrate.Statemint.NET.Extension
+          # API key to authenticate with NuGet server
+          NUGET_KEY: ${{secrets.NUGET_API_KEY}}
