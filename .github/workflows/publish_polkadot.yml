@@ -1,4 +1,4 @@
-name: publish
+name: publish Polkadot.NET
 
 on:
   push:
