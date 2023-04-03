@@ -1,4 +1,4 @@
-name: Ajuna.NET
+name: publish Ajuna.NET
 
 on:
   push:
