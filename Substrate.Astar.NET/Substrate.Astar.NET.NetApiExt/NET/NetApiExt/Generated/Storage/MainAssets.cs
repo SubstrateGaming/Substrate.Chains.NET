@@ -553,7 +553,7 @@ namespace Substrate.Astar.NET.NetApiExt.Generated.Storage
         public Substrate.NetApi.Model.Types.Primitive.U128 AssetDeposit()
         {
             var result = new Substrate.NetApi.Model.Types.Primitive.U128();
-            result.Create("0x40420F00000000000000000000000000");
+            result.Create("0x0000A0DEC5ADC9353600000000000000");
             return result;
         }
         
@@ -565,7 +565,7 @@ namespace Substrate.Astar.NET.NetApiExt.Generated.Storage
         public Substrate.NetApi.Model.Types.Primitive.U128 AssetAccountDeposit()
         {
             var result = new Substrate.NetApi.Model.Types.Primitive.U128();
-            result.Create("0x00FE7C6C040000000000000000000000");
+            result.Create("0x0000D2B5D308478B0000000000000000");
             return result;
         }
         
@@ -576,7 +576,7 @@ namespace Substrate.Astar.NET.NetApiExt.Generated.Storage
         public Substrate.NetApi.Model.Types.Primitive.U128 MetadataDepositBase()
         {
             var result = new Substrate.NetApi.Model.Types.Primitive.U128();
-            result.Create("0x0072B810100000000000000000000000");
+            result.Create("0x00005C134C4EAA8C0000000000000000");
             return result;
         }
         
@@ -588,7 +588,7 @@ namespace Substrate.Astar.NET.NetApiExt.Generated.Storage
         public Substrate.NetApi.Model.Types.Primitive.U128 MetadataDepositPerByte()
         {
             var result = new Substrate.NetApi.Model.Types.Primitive.U128();
-            result.Create("0x00CA9A3B000000000000000000000000");
+            result.Create("0x00008D49FD1A07000000000000000000");
             return result;
         }
         

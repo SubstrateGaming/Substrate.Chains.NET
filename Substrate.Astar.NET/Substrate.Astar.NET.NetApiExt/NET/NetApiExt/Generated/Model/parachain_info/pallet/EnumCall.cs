@@ -20,7 +20,7 @@ namespace Substrate.Astar.NET.NetApiExt.Generated.Model.parachain_info.pallet
     }
     
     /// <summary>
-    /// >> 200 - Variant[parachain_info.pallet.Call]
+    /// >> 201 - Variant[parachain_info.pallet.Call]
     /// Contains one variant per dispatchable that can be called by an extrinsic.
     /// </summary>
     public sealed class EnumCall : BaseEnum<Call>

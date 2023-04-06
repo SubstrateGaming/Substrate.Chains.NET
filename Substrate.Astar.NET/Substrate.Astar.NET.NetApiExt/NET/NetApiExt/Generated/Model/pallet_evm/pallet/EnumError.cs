@@ -42,7 +42,7 @@ namespace Substrate.Astar.NET.NetApiExt.Generated.Model.pallet_evm.pallet
     }
     
     /// <summary>
-    /// >> 392 - Variant[pallet_evm.pallet.Error]
+    /// >> 398 - Variant[pallet_evm.pallet.Error]
     /// 
     ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
     ///			of this pallet.

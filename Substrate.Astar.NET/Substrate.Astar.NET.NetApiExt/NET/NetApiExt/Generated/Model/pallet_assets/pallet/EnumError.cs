@@ -58,7 +58,7 @@ namespace Substrate.Astar.NET.NetApiExt.Generated.Model.pallet_assets.pallet
     }
     
     /// <summary>
-    /// >> 341 - Variant[pallet_assets.pallet.Error]
+    /// >> 347 - Variant[pallet_assets.pallet.Error]
     /// 
     ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
     ///			of this pallet.

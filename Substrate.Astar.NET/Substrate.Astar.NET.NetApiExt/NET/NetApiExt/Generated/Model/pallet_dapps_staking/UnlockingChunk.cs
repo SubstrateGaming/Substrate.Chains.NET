@@ -18,7 +18,7 @@ namespace Substrate.Astar.NET.NetApiExt.Generated.Model.pallet_dapps_staking
     
     
     /// <summary>
-    /// >> 317 - Composite[pallet_dapps_staking.UnlockingChunk]
+    /// >> 323 - Composite[pallet_dapps_staking.UnlockingChunk]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class UnlockingChunk : BaseType

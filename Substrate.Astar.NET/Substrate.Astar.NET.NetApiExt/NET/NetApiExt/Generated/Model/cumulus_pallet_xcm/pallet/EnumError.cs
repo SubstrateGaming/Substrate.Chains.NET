@@ -20,7 +20,7 @@ namespace Substrate.Astar.NET.NetApiExt.Generated.Model.cumulus_pallet_xcm.palle
     }
     
     /// <summary>
-    /// >> 384 - Variant[cumulus_pallet_xcm.pallet.Error]
+    /// >> 390 - Variant[cumulus_pallet_xcm.pallet.Error]
     /// 
     ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
     ///			of this pallet.

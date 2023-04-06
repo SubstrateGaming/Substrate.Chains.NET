@@ -28,7 +28,7 @@ namespace Substrate.Astar.NET.NetApiExt.Generated.Model.pallet_dapps_staking
     }
     
     /// <summary>
-    /// >> 328 - Variant[pallet_dapps_staking.Version]
+    /// >> 334 - Variant[pallet_dapps_staking.Version]
     /// </summary>
     public sealed class EnumVersion : BaseEnum<Version>
     {

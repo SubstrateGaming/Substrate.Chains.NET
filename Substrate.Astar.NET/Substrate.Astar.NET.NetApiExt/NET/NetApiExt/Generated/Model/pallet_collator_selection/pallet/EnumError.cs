@@ -38,7 +38,7 @@ namespace Substrate.Astar.NET.NetApiExt.Generated.Model.pallet_collator_selectio
     }
     
     /// <summary>
-    /// >> 348 - Variant[pallet_collator_selection.pallet.Error]
+    /// >> 354 - Variant[pallet_collator_selection.pallet.Error]
     /// 
     ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
     ///			of this pallet.

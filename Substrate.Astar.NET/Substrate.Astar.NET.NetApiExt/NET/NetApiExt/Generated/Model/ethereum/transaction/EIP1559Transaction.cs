@@ -18,7 +18,7 @@ namespace Substrate.Astar.NET.NetApiExt.Generated.Model.ethereum.transaction
     
     
     /// <summary>
-    /// >> 260 - Composite[ethereum.transaction.EIP1559Transaction]
+    /// >> 261 - Composite[ethereum.transaction.EIP1559Transaction]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class EIP1559Transaction : BaseType

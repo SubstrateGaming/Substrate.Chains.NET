@@ -18,7 +18,7 @@ namespace Substrate.Astar.NET.NetApiExt.Generated.Model.pallet_dapps_staking
     
     
     /// <summary>
-    /// >> 327 - Composite[pallet_dapps_staking.EraStake]
+    /// >> 333 - Composite[pallet_dapps_staking.EraStake]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class EraStake : BaseType

@@ -26,7 +26,7 @@ namespace Substrate.Astar.NET.NetApiExt.Generated.Model.xcm
     }
     
     /// <summary>
-    /// >> 375 - Variant[xcm.VersionedResponse]
+    /// >> 381 - Variant[xcm.VersionedResponse]
     /// </summary>
     public sealed class EnumVersionedResponse : BaseEnumExt<VersionedResponse, Substrate.Astar.NET.NetApiExt.Generated.Model.xcm.v0.EnumResponse, Substrate.Astar.NET.NetApiExt.Generated.Model.xcm.v1.EnumResponse, Substrate.Astar.NET.NetApiExt.Generated.Model.xcm.v2.EnumResponse>
     {

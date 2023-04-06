@@ -24,7 +24,7 @@ namespace Substrate.Astar.NET.NetApiExt.Generated.Model.pallet_authorship
     }
     
     /// <summary>
-    /// >> 343 - Variant[pallet_authorship.UncleEntryItem]
+    /// >> 349 - Variant[pallet_authorship.UncleEntryItem]
     /// </summary>
     public sealed class EnumUncleEntryItem : BaseEnumExt<UncleEntryItem, Substrate.NetApi.Model.Types.Primitive.U32, BaseTuple<Substrate.Astar.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Astar.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>>>
     {

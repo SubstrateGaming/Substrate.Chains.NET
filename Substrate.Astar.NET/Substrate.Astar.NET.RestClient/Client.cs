@@ -27,6 +27,7 @@ namespace Substrate.Astar.NET.RestClient
       public IBaseFeeControllerClient BaseFeeControllerClient;
       public IBlockRewardControllerClient BlockRewardControllerClient;
       public ICollatorSelectionControllerClient CollatorSelectionControllerClient;
+      public IContractsControllerClient ContractsControllerClient;
       public IDappsStakingControllerClient DappsStakingControllerClient;
       public IDmpQueueControllerClient DmpQueueControllerClient;
       public IEthereumControllerClient EthereumControllerClient;
@@ -56,6 +57,7 @@ namespace Substrate.Astar.NET.RestClient
          BaseFeeControllerClient = new BaseFeeControllerClient(_httpClient, _subscriptionClient);
          BlockRewardControllerClient = new BlockRewardControllerClient(_httpClient, _subscriptionClient);
          CollatorSelectionControllerClient = new CollatorSelectionControllerClient(_httpClient, _subscriptionClient);
+         ContractsControllerClient = new ContractsControllerClient(_httpClient, _subscriptionClient);
          DappsStakingControllerClient = new DappsStakingControllerClient(_httpClient, _subscriptionClient);
          DmpQueueControllerClient = new DmpQueueControllerClient(_httpClient, _subscriptionClient);
          EthereumControllerClient = new EthereumControllerClient(_httpClient, _subscriptionClient);

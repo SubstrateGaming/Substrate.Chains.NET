@@ -18,7 +18,7 @@ namespace Substrate.Astar.NET.NetApiExt.Generated.Model.sp_runtime.generic.heade
     
     
     /// <summary>
-    /// >> 210 - Composite[sp_runtime.generic.header.Header]
+    /// >> 211 - Composite[sp_runtime.generic.header.Header]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Header : BaseType

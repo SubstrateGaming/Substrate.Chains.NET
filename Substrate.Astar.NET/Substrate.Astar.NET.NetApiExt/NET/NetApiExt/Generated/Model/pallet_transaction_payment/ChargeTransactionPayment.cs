@@ -18,7 +18,7 @@ namespace Substrate.Astar.NET.NetApiExt.Generated.Model.pallet_transaction_payme
     
     
     /// <summary>
-    /// >> 427 - Composite[pallet_transaction_payment.ChargeTransactionPayment]
+    /// >> 447 - Composite[pallet_transaction_payment.ChargeTransactionPayment]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class ChargeTransactionPayment : BaseType

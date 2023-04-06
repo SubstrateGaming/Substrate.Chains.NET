@@ -368,7 +368,7 @@ namespace Substrate.Astar.NET.NetApiExt.Generated.Storage
         public Substrate.NetApi.Model.Types.Primitive.U128 BasicDeposit()
         {
             var result = new Substrate.NetApi.Model.Types.Primitive.U128();
-            result.Create("0x0000E8890423C78A0000000000000000");
+            result.Create("0x000002AA4856F0910000000000000000");
             return result;
         }
         
@@ -379,7 +379,7 @@ namespace Substrate.Astar.NET.NetApiExt.Generated.Storage
         public Substrate.NetApi.Model.Types.Primitive.U128 FieldDeposit()
         {
             var result = new Substrate.NetApi.Model.Types.Primitive.U128();
-            result.Create("0x008062175ED158000000000000000000");
+            result.Create("0x00005AF64CF5D4010000000000000000");
             return result;
         }
         
@@ -392,7 +392,7 @@ namespace Substrate.Astar.NET.NetApiExt.Generated.Storage
         public Substrate.NetApi.Model.Types.Primitive.U128 SubAccountDeposit()
         {
             var result = new Substrate.NetApi.Model.Types.Primitive.U128();
-            result.Create("0x0000C84E676DC11B0000000000000000");
+            result.Create("0x000019C474B93F8C0000000000000000");
             return result;
         }
         

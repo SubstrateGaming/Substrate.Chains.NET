@@ -24,7 +24,7 @@ namespace Substrate.Astar.NET.NetApiExt.Generated.Model.ethereum.transaction
     }
     
     /// <summary>
-    /// >> 254 - Variant[ethereum.transaction.TransactionAction]
+    /// >> 255 - Variant[ethereum.transaction.TransactionAction]
     /// </summary>
     public sealed class EnumTransactionAction : BaseEnumExt<TransactionAction, Substrate.Astar.NET.NetApiExt.Generated.Model.primitive_types.H160, BaseVoid>
     {

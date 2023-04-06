@@ -26,6 +26,7 @@ namespace Substrate.Astar.NET.RestClient.Mockup
       public IBaseFeeControllerMockupClient BaseFeeControllerClient;
       public IBlockRewardControllerMockupClient BlockRewardControllerClient;
       public ICollatorSelectionControllerMockupClient CollatorSelectionControllerClient;
+      public IContractsControllerMockupClient ContractsControllerClient;
       public IDappsStakingControllerMockupClient DappsStakingControllerClient;
       public IDmpQueueControllerMockupClient DmpQueueControllerClient;
       public IEthereumControllerMockupClient EthereumControllerClient;
@@ -54,6 +55,7 @@ namespace Substrate.Astar.NET.RestClient.Mockup
          BaseFeeControllerClient = new BaseFeeControllerMockupClient(_httpClient);
          BlockRewardControllerClient = new BlockRewardControllerMockupClient(_httpClient);
          CollatorSelectionControllerClient = new CollatorSelectionControllerMockupClient(_httpClient);
+         ContractsControllerClient = new ContractsControllerMockupClient(_httpClient);
          DappsStakingControllerClient = new DappsStakingControllerMockupClient(_httpClient);
          DmpQueueControllerClient = new DmpQueueControllerMockupClient(_httpClient);
          EthereumControllerClient = new EthereumControllerMockupClient(_httpClient);

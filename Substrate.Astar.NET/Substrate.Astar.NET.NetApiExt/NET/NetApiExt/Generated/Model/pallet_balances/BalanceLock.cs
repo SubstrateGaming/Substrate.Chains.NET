@@ -18,7 +18,7 @@ namespace Substrate.Astar.NET.NetApiExt.Generated.Model.pallet_balances
     
     
     /// <summary>
-    /// >> 303 - Composite[pallet_balances.BalanceLock]
+    /// >> 309 - Composite[pallet_balances.BalanceLock]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class BalanceLock : BaseType

@@ -18,7 +18,7 @@ namespace Substrate.Astar.NET.NetApiExt.Generated.Model.fp_rpc
     
     
     /// <summary>
-    /// >> 395 - Composite[fp_rpc.TransactionStatus]
+    /// >> 401 - Composite[fp_rpc.TransactionStatus]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class TransactionStatus : BaseType

@@ -18,7 +18,7 @@ namespace Substrate.Astar.NET.NetApiExt.Generated.Model.cumulus_pallet_dmp_queue
     
     
     /// <summary>
-    /// >> 385 - Composite[cumulus_pallet_dmp_queue.ConfigData]
+    /// >> 391 - Composite[cumulus_pallet_dmp_queue.ConfigData]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class ConfigData : BaseType

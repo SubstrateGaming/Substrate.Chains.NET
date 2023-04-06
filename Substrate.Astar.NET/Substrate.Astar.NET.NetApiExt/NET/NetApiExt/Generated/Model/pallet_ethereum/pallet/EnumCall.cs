@@ -22,7 +22,7 @@ namespace Substrate.Astar.NET.NetApiExt.Generated.Model.pallet_ethereum.pallet
     }
     
     /// <summary>
-    /// >> 251 - Variant[pallet_ethereum.pallet.Call]
+    /// >> 252 - Variant[pallet_ethereum.pallet.Call]
     /// Contains one variant per dispatchable that can be called by an extrinsic.
     /// </summary>
     public sealed class EnumCall : BaseEnumExt<Call, Substrate.Astar.NET.NetApiExt.Generated.Model.ethereum.transaction.EnumTransactionV2>

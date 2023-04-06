@@ -172,7 +172,7 @@ namespace Substrate.Astar.NET.NetApiExt.Generated.Storage
         public Substrate.NetApi.Model.Types.Primitive.U128 MinVestedTransfer()
         {
             var result = new Substrate.NetApi.Model.Types.Primitive.U128();
-            result.Create("0x000064A7B3B6E00D0000000000000000");
+            result.Create("0x000010632D5EC76B0500000000000000");
             return result;
         }
         

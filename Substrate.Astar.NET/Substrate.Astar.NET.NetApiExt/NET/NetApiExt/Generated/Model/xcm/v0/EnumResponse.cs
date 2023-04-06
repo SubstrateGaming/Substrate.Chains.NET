@@ -22,7 +22,7 @@ namespace Substrate.Astar.NET.NetApiExt.Generated.Model.xcm.v0
     }
     
     /// <summary>
-    /// >> 224 - Variant[xcm.v0.Response]
+    /// >> 225 - Variant[xcm.v0.Response]
     /// </summary>
     public sealed class EnumResponse : BaseEnumExt<Response, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Astar.NET.NetApiExt.Generated.Model.xcm.v0.multi_asset.EnumMultiAsset>>
     {

@@ -162,6 +162,11 @@ namespace Substrate.Astar.NET.NetApiExt.Generated
         public BaseFeeStorage BaseFeeStorage;
         
         /// <summary>
+        /// ContractsStorage storage calls.
+        /// </summary>
+        public ContractsStorage ContractsStorage;
+        
+        /// <summary>
         /// SudoStorage storage calls.
         /// </summary>
         public SudoStorage SudoStorage;
@@ -197,6 +202,7 @@ namespace Substrate.Astar.NET.NetApiExt.Generated
             this.EthereumStorage = new EthereumStorage(this);
             this.EthCallStorage = new EthCallStorage(this);
             this.BaseFeeStorage = new BaseFeeStorage(this);
+            this.ContractsStorage = new ContractsStorage(this);
             this.SudoStorage = new SudoStorage(this);
         }
     }
