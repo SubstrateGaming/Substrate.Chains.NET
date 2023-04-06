@@ -6,27 +6,41 @@
 [![license](https://img.shields.io/github/license/SubstrateGaming/Substrate.Chains.NET)](https://github.com/SubstrateGaming/Substrate.Chains.NET/blob/origin/LICENSE)
 [![contributors](https://img.shields.io/github/contributors/SubstrateGaming/Substrate.Chains.NET)](https://github.com/SubstrateGaming/Substrate.Chains.NET/graphs/contributors)  
 
-- Ajuna Network .NET SDK ([Link](https://github.com/SubstrateGaming/Substrate.Chains.NET/tree/main/Substrate.Ajuna.NET))
+- Ajuna Network .NET SDK ([Link](https://github.com/SubstrateGaming/Substrate.Chains.NET/tree/main/Substrate.Ajuna.NET))  
   - Substrate Ajuna .NET API Extension   
-![Build](https://github.com/SubstrateGaming/Substrate.Chains.NET/actions/workflows/publish_ajuna.yml/badge.svg)[![Nuget](https://img.shields.io/nuget/v/Substrate.Ajuna.NET.Extension)](https://www.nuget.org/packages/Substrate.Ajuna.NET.Extension/)  
-- Astar Network .NET SDK ([Link](https://github.com/SubstrateGaming/Substrate.Chains.NET/tree/main/Substrate.Astar.NET))
+[![Nuget](https://img.shields.io/nuget/v/Substrate.Ajuna.NET.Extension)](https://www.nuget.org/packages/Substrate.Ajuna.NET.Extension/)
+![Nuget](https://img.shields.io/nuget/dt/Substrate.Ajuna.NET.Extension)  
+![Build](https://github.com/SubstrateGaming/Substrate.Chains.NET/actions/workflows/publish_ajuna.yml/badge.svg)
+- Astar Network .NET SDK ([Link](https://github.com/SubstrateGaming/Substrate.Chains.NET/tree/main/Substrate.Astar.NET))  
   - Substrate Astar .NET API Extension  
-![Build](https://github.com/SubstrateGaming/Substrate.Chains.NET/actions/workflows/publish_astar.yml/badge.svg)[![Nuget](https://img.shields.io/nuget/v/Substrate.Astar.NET.Extension)](https://www.nuget.org/packages/Substrate.Astar.NET.Extension/)  
-- Bajun Network .NET SDK ([Link](https://github.com/SubstrateGaming/Substrate.Chains.NET/tree/main/Substrate.Bajun.NET))
+[![Nuget](https://img.shields.io/nuget/v/Substrate.Astar.NET.Extension)](https://www.nuget.org/packages/Substrate.Astar.NET.Extension/)
+![Nuget](https://img.shields.io/nuget/dt/Substrate.Astar.NET.Extension)  
+![Build](https://github.com/SubstrateGaming/Substrate.Chains.NET/actions/workflows/publish_astar.yml/badge.svg)  
+- Bajun Network .NET SDK ([Link](https://github.com/SubstrateGaming/Substrate.Chains.NET/tree/main/Substrate.Bajun.NET))  
   - Substrate Bajun .NET API Extension  
-![Build](https://github.com/SubstrateGaming/Substrate.Chains.NET/actions/workflows/publish_bajun.yml/badge.svg)[![Nuget](https://img.shields.io/nuget/v/Substrate.Bajun.NET.Extension)](https://www.nuget.org/packages/Substrate.Bajun.NET.Extension/)  
-- Kusama Network .NET SDK ([Link](https://github.com/SubstrateGaming/Substrate.Chains.NET/tree/main/Substrate.Kusama.NET))
+[![Nuget](https://img.shields.io/nuget/v/Substrate.Bajun.NET.Extension)](https://www.nuget.org/packages/Substrate.Bajun.NET.Extension/)
+![Nuget](https://img.shields.io/nuget/dt/Substrate.Bajun.NET.Extension)  
+![Build](https://github.com/SubstrateGaming/Substrate.Chains.NET/actions/workflows/publish_bajun.yml/badge.svg)  
+- Kusama Network .NET SDK ([Link](https://github.com/SubstrateGaming/Substrate.Chains.NET/tree/main/Substrate.Kusama.NET))  
   - Substrate Kusama .NET API Extension  
-![Build](https://github.com/SubstrateGaming/Substrate.Chains.NET/actions/workflows/publish_kusama.yml/badge.svg)[![Nuget](https://img.shields.io/nuget/v/Substrate.Kusama.NET.Extension)](https://www.nuget.org/packages/Substrate.Kusama.NET.Extension/)  
-- Polkadot Network .NET SDK ([Link](https://github.com/SubstrateGaming/Substrate.Chains.NET/tree/main/Substrate.Polkadot.NET))
+[![Nuget](https://img.shields.io/nuget/v/Substrate.Kusama.NET.Extension)](https://www.nuget.org/packages/Substrate.Kusama.NET.Extension/)
+![Nuget](https://img.shields.io/nuget/dt/Substrate.Kusama.NET.Extension)  
+![Build](https://github.com/SubstrateGaming/Substrate.Chains.NET/actions/workflows/publish_kusama.yml/badge.svg)  
+- Polkadot Network .NET SDK ([Link](https://github.com/SubstrateGaming/Substrate.Chains.NET/tree/main/Substrate.Polkadot.NET))  
   - Substrate Polkadot .NET API Extension  
-![Build](https://github.com/SubstrateGaming/Substrate.Chains.NET/actions/workflows/publish_polkadot.yml/badge.svg)[![Nuget](https://img.shields.io/nuget/v/Substrate.Polkadot.NET.Extension)](https://www.nuget.org/packages/Substrate.Polkadot.NET.Extension/)  
-- Statemine Network .NET SDK ([Link](https://github.com/SubstrateGaming/Substrate.Chains.NET/tree/main/Substrate.Statemine.NET))
+[![Nuget](https://img.shields.io/nuget/v/Substrate.Polkadot.NET.Extension)](https://www.nuget.org/packages/Substrate.Polkadot.NET.Extension/)
+![Nuget](https://img.shields.io/nuget/dt/Substrate.Polkadot.NET.Extension)  
+![Build](https://github.com/SubstrateGaming/Substrate.Chains.NET/actions/workflows/publish_polkadot.yml/badge.svg)  
+- Statemine Network .NET SDK ([Link](https://github.com/SubstrateGaming/Substrate.Chains.NET/tree/main/Substrate.Statemine.NET))  
   - Substrate Statemine .NET API Extension  
-![Build](https://github.com/SubstrateGaming/Substrate.Chains.NET/actions/workflows/publish_statemine.yml/badge.svg)[![Nuget](https://img.shields.io/nuget/v/Substrate.Statemine.NET.Extension)](https://www.nuget.org/packages/Substrate.Statemine.NET.Extension/)  
-- Statemint Network .NET SDK ([Link](https://github.com/SubstrateGaming/Substrate.Chains.NET/tree/main/Substrate.Statemint.NET))
+[![Nuget](https://img.shields.io/nuget/v/Substrate.Statemine.NET.Extension)](https://www.nuget.org/packages/Substrate.Statemine.NET.Extension/)
+![Nuget](https://img.shields.io/nuget/dt/Substrate.Statemine.NET.Extension)  
+![Build](https://github.com/SubstrateGaming/Substrate.Chains.NET/actions/workflows/publish_statemine.yml/badge.svg)  
+- Statemint Network .NET SDK ([Link](https://github.com/SubstrateGaming/Substrate.Chains.NET/tree/main/Substrate.Statemint.NET))  
   - Substrate Statemint .NET API Extension  
-![Build](https://github.com/SubstrateGaming/Substrate.Chains.NET/actions/workflows/publish_statemint.yml/badge.svg)[![Nuget](https://img.shields.io/nuget/v/Substrate.Statemint.NET.Extension)](https://www.nuget.org/packages/Substrate.Statemint.NET.Extension/)  
+[![Nuget](https://img.shields.io/nuget/v/Substrate.Statemint.NET.Extension)](https://www.nuget.org/packages/Substrate.Statemint.NET.Extension/)
+![Nuget](https://img.shields.io/nuget/dt/Substrate.Statemint.NET.Extension)  
+![Build](https://github.com/SubstrateGaming/Substrate.Chains.NET/actions/workflows/publish_statemint.yml/badge.svg)  
 
 ## Add or update Package
 
