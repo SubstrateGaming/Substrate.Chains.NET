@@ -18,7 +18,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_
     
     
     /// <summary>
-    /// >> 440 - Composite[sp_core.bounded.bounded_btree_map.BoundedBTreeMap]
+    /// >> 428 - Composite[sp_core.bounded.bounded_btree_map.BoundedBTreeMap]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class BoundedBTreeMap : BaseType

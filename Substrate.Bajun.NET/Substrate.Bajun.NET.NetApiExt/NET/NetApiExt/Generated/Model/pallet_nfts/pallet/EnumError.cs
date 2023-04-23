@@ -92,7 +92,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.pallet
     }
     
     /// <summary>
-    /// >> 455 - Variant[pallet_nfts.pallet.Error]
+    /// >> 443 - Variant[pallet_nfts.pallet.Error]
     /// 
     ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
     ///			of this pallet.

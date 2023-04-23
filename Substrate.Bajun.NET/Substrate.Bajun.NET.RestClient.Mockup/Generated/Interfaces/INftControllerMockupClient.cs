@@ -21,18 +21,18 @@ namespace Substrate.Bajun.NET.RestClient.Mockup.Generated.Interfaces
    {
       Task<bool> SetCollection(CollectionDetails value, U32 key);
       Task<bool> SetOwnershipAcceptance(U32 value, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
-      Task<bool> SetAccount(BaseTuple value, BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, U32, U128> key);
+      Task<bool> SetAccount(BaseTuple value, BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> key);
       Task<bool> SetCollectionAccount(BaseTuple value, BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, U32> key);
       Task<bool> SetCollectionRoleOf(BitFlagsT3 value, BaseTuple<U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> key);
-      Task<bool> SetItem(ItemDetails value, BaseTuple<U32, U128> key);
+      Task<bool> SetItem(ItemDetails value, BaseTuple<U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> key);
       Task<bool> SetCollectionMetadataOf(CollectionMetadata value, U32 key);
-      Task<bool> SetItemMetadataOf(ItemMetadata value, BaseTuple<U32, U128> key);
-      Task<bool> SetAttribute(BaseTuple<BoundedVecT7, AttributeDeposit> value, BaseTuple<U32, BaseOpt<U128>, Substrate.Bajun.NET.NetApiExt.Generated.Model.frame_support.traits.tokens.misc.EnumAttributeNamespace, BoundedVecT6> key);
-      Task<bool> SetItemPriceOf(BaseTuple<U128, BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>> value, BaseTuple<U32, U128> key);
-      Task<bool> SetItemAttributesApprovalsOf(BoundedBTreeSetT2 value, BaseTuple<U32, U128> key);
+      Task<bool> SetItemMetadataOf(ItemMetadata value, BaseTuple<U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> key);
+      Task<bool> SetAttribute(BaseTuple<BoundedVecT8, AttributeDeposit> value, BaseTuple<U32, BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256>, Substrate.Bajun.NET.NetApiExt.Generated.Model.frame_support.traits.tokens.misc.EnumAttributeNamespace, BoundedVecT7> key);
+      Task<bool> SetItemPriceOf(BaseTuple<U128, BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>> value, BaseTuple<U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> key);
+      Task<bool> SetItemAttributesApprovalsOf(BoundedBTreeSetT2 value, BaseTuple<U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> key);
       Task<bool> SetNextCollectionId(U32 value);
-      Task<bool> SetPendingSwapOf(PendingSwap value, BaseTuple<U32, U128> key);
+      Task<bool> SetPendingSwapOf(PendingSwap value, BaseTuple<U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> key);
       Task<bool> SetCollectionConfigOf(CollectionConfig value, U32 key);
-      Task<bool> SetItemConfigOf(ItemConfig value, BaseTuple<U32, U128> key);
+      Task<bool> SetItemConfigOf(ItemConfig value, BaseTuple<U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> key);
    }
 }

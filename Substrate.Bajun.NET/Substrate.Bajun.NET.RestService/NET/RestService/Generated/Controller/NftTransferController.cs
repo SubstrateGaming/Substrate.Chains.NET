@@ -38,69 +38,14 @@ namespace Substrate.Bajun.NET.RestService.Generated.Controller
         }
         
         /// <summary>
-        /// >> Organizer
+        /// >> NftStatuses
         /// </summary>
-        [HttpGet("Organizer")]
-        [ProducesResponseType(typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32), 200)]
-        [StorageKeyBuilder(typeof(Substrate.Bajun.NET.NetApiExt.Generated.Storage.NftTransferStorage), "OrganizerParams")]
-        public IActionResult GetOrganizer()
-        {
-            return this.Ok(_nftTransferStorage.GetOrganizer());
-        }
-        
-        /// <summary>
-        /// >> LockedState
-        /// </summary>
-        [HttpGet("LockedState")]
-        [ProducesResponseType(typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_nft_transfer.pallet.EnumPalletLockedState), 200)]
-        [StorageKeyBuilder(typeof(Substrate.Bajun.NET.NetApiExt.Generated.Storage.NftTransferStorage), "LockedStateParams")]
-        public IActionResult GetLockedState()
-        {
-            return this.Ok(_nftTransferStorage.GetLockedState());
-        }
-        
-        /// <summary>
-        /// >> NextItemId
-        /// </summary>
-        [HttpGet("NextItemId")]
-        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Primitive.U128), 200)]
-        [StorageKeyBuilder(typeof(Substrate.Bajun.NET.NetApiExt.Generated.Storage.NftTransferStorage), "NextItemIdParams", typeof(Substrate.NetApi.Model.Types.Primitive.U32))]
-        public IActionResult GetNextItemId(string key)
-        {
-            return this.Ok(_nftTransferStorage.GetNextItemId(key));
-        }
-        
-        /// <summary>
-        /// >> LockItemStatus
-        /// </summary>
-        [HttpGet("LockItemStatus")]
+        [HttpGet("NftStatuses")]
         [ProducesResponseType(typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_nft_transfer.pallet.EnumNftStatus), 200)]
-        [StorageKeyBuilder(typeof(Substrate.Bajun.NET.NetApiExt.Generated.Storage.NftTransferStorage), "LockItemStatusParams", typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U128>))]
-        public IActionResult GetLockItemStatus(string key)
+        [StorageKeyBuilder(typeof(Substrate.Bajun.NET.NetApiExt.Generated.Storage.NftTransferStorage), "NftStatusesParams", typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256>))]
+        public IActionResult GetNftStatuses(string key)
         {
-            return this.Ok(_nftTransferStorage.GetLockItemStatus(key));
-        }
-        
-        /// <summary>
-        /// >> HoldingAccount
-        /// </summary>
-        [HttpGet("HoldingAccount")]
-        [ProducesResponseType(typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32), 200)]
-        [StorageKeyBuilder(typeof(Substrate.Bajun.NET.NetApiExt.Generated.Storage.NftTransferStorage), "HoldingAccountParams")]
-        public IActionResult GetHoldingAccount()
-        {
-            return this.Ok(_nftTransferStorage.GetHoldingAccount());
-        }
-        
-        /// <summary>
-        /// >> NftClaimants
-        /// </summary>
-        [HttpGet("NftClaimants")]
-        [ProducesResponseType(typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32), 200)]
-        [StorageKeyBuilder(typeof(Substrate.Bajun.NET.NetApiExt.Generated.Storage.NftTransferStorage), "NftClaimantsParams", typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U128>))]
-        public IActionResult GetNftClaimants(string key)
-        {
-            return this.Ok(_nftTransferStorage.GetNftClaimants(key));
+            return this.Ok(_nftTransferStorage.GetNftStatuses(key));
         }
     }
 }

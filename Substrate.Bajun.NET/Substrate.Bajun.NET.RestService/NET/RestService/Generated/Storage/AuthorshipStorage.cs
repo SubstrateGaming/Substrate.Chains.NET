@@ -28,7 +28,7 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
         /// >> Uncles
         ///  Uncles
         /// </summary>
-        Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT23 GetUncles();
+        Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT22 GetUncles();
         
         /// <summary>
         /// >> Author
@@ -52,7 +52,7 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
         /// <summary>
         /// _unclesTypedStorage typed storage field
         /// </summary>
-        private TypedStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT23> _unclesTypedStorage;
+        private TypedStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT22> _unclesTypedStorage;
         
         /// <summary>
         /// _authorTypedStorage typed storage field
@@ -69,7 +69,7 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
         /// </summary>
         public AuthorshipStorage(IStorageDataProvider storageDataProvider, List<IStorageChangeDelegate> storageChangeDelegates)
         {
-            this.UnclesTypedStorage = new TypedStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT23>("Authorship.Uncles", storageDataProvider, storageChangeDelegates);
+            this.UnclesTypedStorage = new TypedStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT22>("Authorship.Uncles", storageDataProvider, storageChangeDelegates);
             this.AuthorTypedStorage = new TypedStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>("Authorship.Author", storageDataProvider, storageChangeDelegates);
             this.DidSetUnclesTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.Bool>("Authorship.DidSetUncles", storageDataProvider, storageChangeDelegates);
         }
@@ -77,7 +77,7 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
         /// <summary>
         /// _unclesTypedStorage property
         /// </summary>
-        public TypedStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT23> UnclesTypedStorage
+        public TypedStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT22> UnclesTypedStorage
         {
             get
             {
@@ -142,7 +142,7 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
         /// >> Uncles
         ///  Uncles
         /// </summary>
-        public Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT23 GetUncles()
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT22 GetUncles()
         {
             return UnclesTypedStorage.Get();
         }

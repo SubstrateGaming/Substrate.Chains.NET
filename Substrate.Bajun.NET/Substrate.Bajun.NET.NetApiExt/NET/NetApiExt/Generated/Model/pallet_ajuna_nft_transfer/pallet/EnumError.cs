@@ -18,25 +18,23 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_nft_transfe
     public enum Error
     {
         
-        OrganizerNotSet = 0,
+        EmptyIpfsUrl = 0,
         
-        PalletLocked = 1,
+        DuplicateItemCode = 1,
         
-        AssetSizeAboveEncodingLimit = 2,
+        UnknownItem = 2,
         
-        NftNotFound = 3,
+        UnknownClaim = 3,
         
-        NftAttributeMissing = 4,
+        NftNotOwned = 4,
         
-        NftNotOwned = 5,
+        NftOutsideOfChain = 5,
         
-        NftOutsideOfChain = 6,
-        
-        AssetRestoreFailure = 7,
+        ItemRestoreFailure = 6,
     }
     
     /// <summary>
-    /// >> 457 - Variant[pallet_ajuna_nft_transfer.pallet.Error]
+    /// >> 445 - Variant[pallet_ajuna_nft_transfer.pallet.Error]
     /// 
     ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
     ///			of this pallet.

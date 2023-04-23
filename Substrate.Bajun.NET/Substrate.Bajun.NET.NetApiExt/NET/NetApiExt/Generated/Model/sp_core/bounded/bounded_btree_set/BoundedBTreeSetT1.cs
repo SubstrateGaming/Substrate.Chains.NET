@@ -18,7 +18,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_
     
     
     /// <summary>
-    /// >> 424 - Composite[sp_core.bounded.bounded_btree_set.BoundedBTreeSetT1]
+    /// >> 412 - Composite[sp_core.bounded.bounded_btree_set.BoundedBTreeSetT1]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class BoundedBTreeSetT1 : BaseType

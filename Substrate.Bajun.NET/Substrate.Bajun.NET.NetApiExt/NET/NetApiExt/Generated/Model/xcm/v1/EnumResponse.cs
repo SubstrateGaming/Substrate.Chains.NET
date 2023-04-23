@@ -24,7 +24,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.v1
     }
     
     /// <summary>
-    /// >> 267 - Variant[xcm.v1.Response]
+    /// >> 262 - Variant[xcm.v1.Response]
     /// </summary>
     public sealed class EnumResponse : BaseEnumExt<Response, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.v1.multiasset.MultiAssets, Substrate.NetApi.Model.Types.Primitive.U32>
     {

@@ -18,7 +18,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_
     
     
     /// <summary>
-    /// >> 332 - Composite[sp_core.bounded.bounded_vec.BoundedVecT16]
+    /// >> 324 - Composite[sp_core.bounded.bounded_vec.BoundedVecT16]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class BoundedVecT16 : BaseType
@@ -27,9 +27,9 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_
         /// <summary>
         /// >> value
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_proxy.ProxyDefinition> _value;
+        private Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_proxy.Announcement> _value;
         
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_proxy.ProxyDefinition> Value
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_proxy.Announcement> Value
         {
             get
             {
@@ -56,7 +56,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_proxy.ProxyDefinition>();
+            Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_proxy.Announcement>();
             Value.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

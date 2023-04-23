@@ -18,7 +18,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_runtime.generic.heade
     
     
     /// <summary>
-    /// >> 248 - Composite[sp_runtime.generic.header.Header]
+    /// >> 243 - Composite[sp_runtime.generic.header.Header]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Header : BaseType

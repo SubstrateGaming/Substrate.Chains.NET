@@ -16,7 +16,7 @@ namespace Substrate.Bajun.NET.RestClient.Generated.Interfaces
    
    public interface ICouncilMembershipControllerClient
    {
-      Task<BoundedVecT29> GetMembers();
+      Task<BoundedVecT28> GetMembers();
       Task<bool> SubscribeMembers();
       Task<AccountId32> GetPrime();
       Task<bool> SubscribePrime();

@@ -61,13 +61,17 @@ namespace Substrate.Bajun.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "AwesomeAvatars/Avatars", value.Encode(), Substrate.Bajun.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage.AvatarsParams(key));
       }
-      public async Task<bool> SetOwners(BoundedVecT31 value, AccountId32 key)
+      public async Task<bool> SetOwners(BoundedVecT30 value, AccountId32 key)
       {
          return await SendMockupRequestAsync(_httpClient, "AwesomeAvatars/Owners", value.Encode(), Substrate.Bajun.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage.OwnersParams(key));
       }
-      public async Task<bool> SetLockedAvatars(U128 value, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 key)
+      public async Task<bool> SetLockedAvatars(BaseTuple value, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 key)
       {
          return await SendMockupRequestAsync(_httpClient, "AwesomeAvatars/LockedAvatars", value.Encode(), Substrate.Bajun.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage.LockedAvatarsParams(key));
+      }
+      public async Task<bool> SetCollectionId(U32 value)
+      {
+         return await SendMockupRequestAsync(_httpClient, "AwesomeAvatars/CollectionId", value.Encode(), Substrate.Bajun.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage.CollectionIdParams());
       }
       public async Task<bool> SetAccounts(AccountInfo value, AccountId32 key)
       {
@@ -80,6 +84,14 @@ namespace Substrate.Bajun.NET.RestClient.Mockup.Generated.Clients
       public async Task<bool> SetTrade(U128 value, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 key)
       {
          return await SendMockupRequestAsync(_httpClient, "AwesomeAvatars/Trade", value.Encode(), Substrate.Bajun.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage.TradeParams(key));
+      }
+      public async Task<bool> SetServiceAccount(AccountId32 value)
+      {
+         return await SendMockupRequestAsync(_httpClient, "AwesomeAvatars/ServiceAccount", value.Encode(), Substrate.Bajun.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage.ServiceAccountParams());
+      }
+      public async Task<bool> SetPreparation(BoundedVecT5 value, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 key)
+      {
+         return await SendMockupRequestAsync(_httpClient, "AwesomeAvatars/Preparation", value.Encode(), Substrate.Bajun.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage.PreparationParams(key));
       }
    }
 }

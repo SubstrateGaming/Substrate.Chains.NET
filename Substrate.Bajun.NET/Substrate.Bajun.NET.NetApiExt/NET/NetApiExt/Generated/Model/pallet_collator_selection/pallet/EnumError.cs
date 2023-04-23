@@ -40,7 +40,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_collator_selectio
     }
     
     /// <summary>
-    /// >> 373 - Variant[pallet_collator_selection.pallet.Error]
+    /// >> 361 - Variant[pallet_collator_selection.pallet.Error]
     /// 
     ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
     ///			of this pallet.

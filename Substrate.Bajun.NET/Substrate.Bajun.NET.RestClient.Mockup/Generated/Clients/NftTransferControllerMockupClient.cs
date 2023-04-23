@@ -12,9 +12,7 @@ namespace Substrate.Bajun.NET.RestClient.Mockup.Generated.Clients
    using System;
    using System.Threading.Tasks;
    using System.Net.Http;
-   using Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto;
    using Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_nft_transfer.pallet;
-   using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.Bajun.NET.RestClient.Mockup.Generated.Interfaces;
    
    public sealed class NftTransferControllerMockupClient : MockupBaseClient, INftTransferControllerMockupClient
@@ -24,29 +22,9 @@ namespace Substrate.Bajun.NET.RestClient.Mockup.Generated.Clients
       {
          _httpClient = httpClient;
       }
-      public async Task<bool> SetOrganizer(AccountId32 value)
+      public async Task<bool> SetNftStatuses(EnumNftStatus value, Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> key)
       {
-         return await SendMockupRequestAsync(_httpClient, "NftTransfer/Organizer", value.Encode(), Substrate.Bajun.NET.NetApiExt.Generated.Storage.NftTransferStorage.OrganizerParams());
-      }
-      public async Task<bool> SetLockedState(EnumPalletLockedState value)
-      {
-         return await SendMockupRequestAsync(_httpClient, "NftTransfer/LockedState", value.Encode(), Substrate.Bajun.NET.NetApiExt.Generated.Storage.NftTransferStorage.LockedStateParams());
-      }
-      public async Task<bool> SetNextItemId(U128 value, U32 key)
-      {
-         return await SendMockupRequestAsync(_httpClient, "NftTransfer/NextItemId", value.Encode(), Substrate.Bajun.NET.NetApiExt.Generated.Storage.NftTransferStorage.NextItemIdParams(key));
-      }
-      public async Task<bool> SetLockItemStatus(EnumNftStatus value, Substrate.NetApi.Model.Types.Base.BaseTuple<U32, U128> key)
-      {
-         return await SendMockupRequestAsync(_httpClient, "NftTransfer/LockItemStatus", value.Encode(), Substrate.Bajun.NET.NetApiExt.Generated.Storage.NftTransferStorage.LockItemStatusParams(key));
-      }
-      public async Task<bool> SetHoldingAccount(AccountId32 value)
-      {
-         return await SendMockupRequestAsync(_httpClient, "NftTransfer/HoldingAccount", value.Encode(), Substrate.Bajun.NET.NetApiExt.Generated.Storage.NftTransferStorage.HoldingAccountParams());
-      }
-      public async Task<bool> SetNftClaimants(AccountId32 value, Substrate.NetApi.Model.Types.Base.BaseTuple<U32, U128> key)
-      {
-         return await SendMockupRequestAsync(_httpClient, "NftTransfer/NftClaimants", value.Encode(), Substrate.Bajun.NET.NetApiExt.Generated.Storage.NftTransferStorage.NftClaimantsParams(key));
+         return await SendMockupRequestAsync(_httpClient, "NftTransfer/NftStatuses", value.Encode(), Substrate.Bajun.NET.NetApiExt.Generated.Storage.NftTransferStorage.NftStatusesParams(key));
       }
    }
 }

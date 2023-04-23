@@ -176,11 +176,6 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated
         /// </summary>
         public NftTransferStorage NftTransferStorage;
         
-        /// <summary>
-        /// NftStakeStorage storage calls.
-        /// </summary>
-        public NftStakeStorage NftStakeStorage;
-        
         public SubstrateClientExt(System.Uri uri, Substrate.NetApi.Model.Extrinsics.ChargeType chargeType) : 
                 base(uri, chargeType)
         {
@@ -215,7 +210,6 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated
             this.AwesomeAvatarsStorage = new AwesomeAvatarsStorage(this);
             this.NftStorage = new NftStorage(this);
             this.NftTransferStorage = new NftTransferStorage(this);
-            this.NftStakeStorage = new NftStakeStorage(this);
         }
     }
 }

@@ -25,17 +25,17 @@ namespace Substrate.Bajun.NET.RestClient.Generated.Clients
          _httpClient = httpClient;
          _subscriptionClient = subscriptionClient;
       }
-      public async Task<BoundedVecT24> GetInvulnerables()
+      public async Task<BoundedVecT23> GetInvulnerables()
       {
-         return await SendRequestAsync<BoundedVecT24>(_httpClient, "collatorselection/invulnerables");
+         return await SendRequestAsync<BoundedVecT23>(_httpClient, "collatorselection/invulnerables");
       }
       public async Task<bool> SubscribeInvulnerables()
       {
          return await _subscriptionClient.SubscribeAsync("CollatorSelection.Invulnerables");
       }
-      public async Task<BoundedVecT25> GetCandidates()
+      public async Task<BoundedVecT24> GetCandidates()
       {
-         return await SendRequestAsync<BoundedVecT25>(_httpClient, "collatorselection/candidates");
+         return await SendRequestAsync<BoundedVecT24>(_httpClient, "collatorselection/candidates");
       }
       public async Task<bool> SubscribeCandidates()
       {

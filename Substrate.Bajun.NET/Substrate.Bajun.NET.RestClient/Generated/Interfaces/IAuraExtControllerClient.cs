@@ -15,7 +15,7 @@ namespace Substrate.Bajun.NET.RestClient.Generated.Interfaces
    
    public interface IAuraExtControllerClient
    {
-      Task<BoundedVecT26> GetAuthorities();
+      Task<BoundedVecT25> GetAuthorities();
       Task<bool> SubscribeAuthorities();
    }
 }

@@ -18,7 +18,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_weights
     
     
     /// <summary>
-    /// >> 286 - Composite[sp_weights.OldWeight]
+    /// >> 281 - Composite[sp_weights.OldWeight]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class OldWeight : BaseType

@@ -43,9 +43,10 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("AwesomeAvatars", "Avatars"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.Identity}, typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256), typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.avatar.Avatar>)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("AwesomeAvatars", "Owners"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.Identity}, typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32), typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT31)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.Identity}, typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32), typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT30)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("AwesomeAvatars", "LockedAvatars"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.Identity}, typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256), typeof(Substrate.NetApi.Model.Types.Primitive.U128)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.Identity}, typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256), typeof(Substrate.NetApi.Model.Types.Base.BaseTuple)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("AwesomeAvatars", "CollectionId"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Primitive.U32)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("AwesomeAvatars", "Accounts"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.Identity}, typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32), typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.AccountInfo)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("AwesomeAvatars", "SeasonStats"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
@@ -53,6 +54,9 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
                             Substrate.NetApi.Model.Meta.Storage.Hasher.Identity}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U16, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>), typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.SeasonInfo)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("AwesomeAvatars", "Trade"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.Identity}, typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256), typeof(Substrate.NetApi.Model.Types.Primitive.U128)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("AwesomeAvatars", "ServiceAccount"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("AwesomeAvatars", "Preparation"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.Identity}, typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256), typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT5)));
         }
         
         /// <summary>
@@ -241,9 +245,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         /// </summary>
         public static string GlobalConfigsDefault()
         {
-            return "0x0000000000000000000000000000000000000000000000000000000000000000000000000000000" +
-                "00000000000000000000000000000000000000000000000000000000000000000000000000000000" +
-                "000000000000000000000000000000000000000000000000000000000000000";
+            return @"0x0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000";
         }
         
         /// <summary>
@@ -307,10 +309,10 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         /// <summary>
         /// >> Owners
         /// </summary>
-        public async Task<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT31> Owners(Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, CancellationToken token)
+        public async Task<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT30> Owners(Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, CancellationToken token)
         {
             string parameters = AwesomeAvatarsStorage.OwnersParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT31>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT30>(parameters, token);
             return result;
         }
         
@@ -336,10 +338,37 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         /// <summary>
         /// >> LockedAvatars
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U128> LockedAvatars(Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 key, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Base.BaseTuple> LockedAvatars(Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 key, CancellationToken token)
         {
             string parameters = AwesomeAvatarsStorage.LockedAvatarsParams(key);
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U128>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseTuple>(parameters, token);
+            return result;
+        }
+        
+        /// <summary>
+        /// >> CollectionIdParams
+        /// </summary>
+        public static string CollectionIdParams()
+        {
+            return RequestGenerator.GetStorage("AwesomeAvatars", "CollectionId", Substrate.NetApi.Model.Meta.Storage.Type.Plain);
+        }
+        
+        /// <summary>
+        /// >> CollectionIdDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string CollectionIdDefault()
+        {
+            return "0x00";
+        }
+        
+        /// <summary>
+        /// >> CollectionId
+        /// </summary>
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> CollectionId(CancellationToken token)
+        {
+            string parameters = AwesomeAvatarsStorage.CollectionIdParams();
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, token);
             return result;
         }
         
@@ -427,6 +456,62 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         {
             string parameters = AwesomeAvatarsStorage.TradeParams(key);
             var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U128>(parameters, token);
+            return result;
+        }
+        
+        /// <summary>
+        /// >> ServiceAccountParams
+        /// </summary>
+        public static string ServiceAccountParams()
+        {
+            return RequestGenerator.GetStorage("AwesomeAvatars", "ServiceAccount", Substrate.NetApi.Model.Meta.Storage.Type.Plain);
+        }
+        
+        /// <summary>
+        /// >> ServiceAccountDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string ServiceAccountDefault()
+        {
+            return "0x00";
+        }
+        
+        /// <summary>
+        /// >> ServiceAccount
+        /// </summary>
+        public async Task<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> ServiceAccount(CancellationToken token)
+        {
+            string parameters = AwesomeAvatarsStorage.ServiceAccountParams();
+            var result = await _client.GetStorageAsync<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>(parameters, token);
+            return result;
+        }
+        
+        /// <summary>
+        /// >> PreparationParams
+        /// </summary>
+        public static string PreparationParams(Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 key)
+        {
+            return RequestGenerator.GetStorage("AwesomeAvatars", "Preparation", Substrate.NetApi.Model.Meta.Storage.Type.Map, new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
+                        Substrate.NetApi.Model.Meta.Storage.Hasher.Identity}, new Substrate.NetApi.Model.Types.IType[] {
+                        key});
+        }
+        
+        /// <summary>
+        /// >> PreparationDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string PreparationDefault()
+        {
+            return "0x00";
+        }
+        
+        /// <summary>
+        /// >> Preparation
+        /// </summary>
+        public async Task<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT5> Preparation(Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 key, CancellationToken token)
+        {
+            string parameters = AwesomeAvatarsStorage.PreparationParams(key);
+            var result = await _client.GetStorageAsync<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT5>(parameters, token);
             return result;
         }
     }
@@ -595,6 +680,17 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         }
         
         /// <summary>
+        /// >> set_collection_id
+        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// </summary>
+        public static Method SetCollectionId(Substrate.NetApi.Model.Types.Primitive.U32 collection_id)
+        {
+            System.Collections.Generic.List<byte> byteArray = new List<byte>();
+            byteArray.AddRange(collection_id.Encode());
+            return new Method(51, "AwesomeAvatars", 14, "set_collection_id", byteArray.ToArray());
+        }
+        
+        /// <summary>
         /// >> lock_avatar
         /// Contains one variant per dispatchable that can be called by an extrinsic.
         /// </summary>
@@ -602,7 +698,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(avatar_id.Encode());
-            return new Method(51, "AwesomeAvatars", 14, "lock_avatar", byteArray.ToArray());
+            return new Method(51, "AwesomeAvatars", 15, "lock_avatar", byteArray.ToArray());
         }
         
         /// <summary>
@@ -613,7 +709,63 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(avatar_id.Encode());
-            return new Method(51, "AwesomeAvatars", 15, "unlock_avatar", byteArray.ToArray());
+            return new Method(51, "AwesomeAvatars", 16, "unlock_avatar", byteArray.ToArray());
+        }
+        
+        /// <summary>
+        /// >> fix_variation
+        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// </summary>
+        public static Method FixVariation(Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 avatar_id)
+        {
+            System.Collections.Generic.List<byte> byteArray = new List<byte>();
+            byteArray.AddRange(avatar_id.Encode());
+            return new Method(51, "AwesomeAvatars", 17, "fix_variation", byteArray.ToArray());
+        }
+        
+        /// <summary>
+        /// >> set_service_account
+        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// </summary>
+        public static Method SetServiceAccount(Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 service_account)
+        {
+            System.Collections.Generic.List<byte> byteArray = new List<byte>();
+            byteArray.AddRange(service_account.Encode());
+            return new Method(51, "AwesomeAvatars", 18, "set_service_account", byteArray.ToArray());
+        }
+        
+        /// <summary>
+        /// >> prepare_avatar
+        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// </summary>
+        public static Method PrepareAvatar(Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 avatar_id)
+        {
+            System.Collections.Generic.List<byte> byteArray = new List<byte>();
+            byteArray.AddRange(avatar_id.Encode());
+            return new Method(51, "AwesomeAvatars", 19, "prepare_avatar", byteArray.ToArray());
+        }
+        
+        /// <summary>
+        /// >> unprepare_avatar
+        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// </summary>
+        public static Method UnprepareAvatar(Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 avatar_id)
+        {
+            System.Collections.Generic.List<byte> byteArray = new List<byte>();
+            byteArray.AddRange(avatar_id.Encode());
+            return new Method(51, "AwesomeAvatars", 20, "unprepare_avatar", byteArray.ToArray());
+        }
+        
+        /// <summary>
+        /// >> prepare_ipfs
+        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// </summary>
+        public static Method PrepareIpfs(Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 avatar_id, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT5 url)
+        {
+            System.Collections.Generic.List<byte> byteArray = new List<byte>();
+            byteArray.AddRange(avatar_id.Encode());
+            byteArray.AddRange(url.Encode());
+            return new Method(51, "AwesomeAvatars", 21, "prepare_ipfs", byteArray.ToArray());
         }
     }
     
@@ -621,12 +773,12 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
     {
         
         /// <summary>
-        /// >> NftCollectionId
+        /// >> PalletId
         /// </summary>
-        public Substrate.NetApi.Model.Types.Primitive.U32 NftCollectionId()
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.frame_support.PalletId PalletId()
         {
-            var result = new Substrate.NetApi.Model.Types.Primitive.U32();
-            result.Create("0x00000000");
+            var result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.frame_support.PalletId();
+            result.Create("0x616A2F6161617472");
             return result;
         }
     }
@@ -639,6 +791,12 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         /// There is no account set as the organizer
         /// </summary>
         OrganizerNotSet,
+        
+        /// <summary>
+        /// >> CollectionIdNotSet
+        /// There is no collection ID set for NFT handler.
+        /// </summary>
+        CollectionIdNotSet,
         
         /// <summary>
         /// >> EarlyStartTooEarly
@@ -707,6 +865,12 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         UnknownTreasurer,
         
         /// <summary>
+        /// >> UnknownPreparation
+        /// The preparation doesn't exist.
+        /// </summary>
+        UnknownPreparation,
+        
+        /// <summary>
         /// >> NonSequentialSeasonId
         /// The season ID of a season to create is not sequential.
         /// </summary>
@@ -732,6 +896,12 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         DuplicatedRarityTier,
         
         /// <summary>
+        /// >> TooLowFees
+        /// Attempt to set fees lower than the existential deposit amount.
+        /// </summary>
+        TooLowFees,
+        
+        /// <summary>
         /// >> MintClosed
         /// Minting is not available at the moment.
         /// </summary>
@@ -754,6 +924,12 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         /// Trading is not available at the moment.
         /// </summary>
         TradeClosed,
+        
+        /// <summary>
+        /// >> NftTransferClosed
+        /// NFT transfer is not available at the moment.
+        /// </summary>
+        NftTransferClosed,
         
         /// <summary>
         /// >> SeasonClosed
@@ -796,6 +972,12 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         /// Incorrect DNA.
         /// </summary>
         IncorrectDna,
+        
+        /// <summary>
+        /// >> IncorrectData
+        /// Incorrect data.
+        /// </summary>
+        IncorrectData,
         
         /// <summary>
         /// >> IncorrectAvatarId
@@ -910,5 +1092,29 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         /// Tried claiming treasury which is zero.
         /// </summary>
         CannotClaimZero,
+        
+        /// <summary>
+        /// >> AlreadyPrepared
+        /// Tried to prepare an already prepared avatar.
+        /// </summary>
+        AlreadyPrepared,
+        
+        /// <summary>
+        /// >> NotPrepared
+        /// Tried to prepare an IPFS URL for an avatar, that is not yet prepared.
+        /// </summary>
+        NotPrepared,
+        
+        /// <summary>
+        /// >> NoServiceAccount
+        /// No service account has been set.
+        /// </summary>
+        NoServiceAccount,
+        
+        /// <summary>
+        /// >> EmptyIpfsUrl
+        /// Tried to prepare an IPFS URL for an avatar with an empty URL.
+        /// </summary>
+        EmptyIpfsUrl,
     }
 }

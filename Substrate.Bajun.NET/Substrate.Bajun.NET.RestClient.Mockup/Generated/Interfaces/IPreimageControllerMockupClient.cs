@@ -17,6 +17,6 @@ namespace Substrate.Bajun.NET.RestClient.Mockup.Generated.Interfaces
    public interface IPreimageControllerMockupClient
    {
       Task<bool> SetStatusFor(EnumRequestStatus value, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 key);
-      Task<bool> SetPreimageFor(BoundedVecT20 value, Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Primitive.U32> key);
+      Task<bool> SetPreimageFor(BoundedVecT19 value, Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Primitive.U32> key);
    }
 }

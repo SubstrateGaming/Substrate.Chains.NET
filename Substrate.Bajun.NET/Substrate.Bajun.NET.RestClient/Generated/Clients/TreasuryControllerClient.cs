@@ -50,9 +50,9 @@ namespace Substrate.Bajun.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("Treasury.Deactivated");
       }
-      public async Task<BoundedVecT27> GetApprovals()
+      public async Task<BoundedVecT26> GetApprovals()
       {
-         return await SendRequestAsync<BoundedVecT27>(_httpClient, "treasury/approvals");
+         return await SendRequestAsync<BoundedVecT26>(_httpClient, "treasury/approvals");
       }
       public async Task<bool> SubscribeApprovals()
       {

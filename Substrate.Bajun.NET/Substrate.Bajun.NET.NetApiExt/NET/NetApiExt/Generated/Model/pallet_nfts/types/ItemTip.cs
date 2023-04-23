@@ -18,7 +18,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types
     
     
     /// <summary>
-    /// >> 307 - Composite[pallet_nfts.types.ItemTip]
+    /// >> 303 - Composite[pallet_nfts.types.ItemTip]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class ItemTip : BaseType
@@ -32,7 +32,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types
         /// <summary>
         /// >> item
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U128 _item;
+        private Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 _item;
         
         /// <summary>
         /// >> receiver
@@ -56,7 +56,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types
             }
         }
         
-        public Substrate.NetApi.Model.Types.Primitive.U128 Item
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 Item
         {
             get
             {
@@ -112,7 +112,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types
             var start = p;
             Collection = new Substrate.NetApi.Model.Types.Primitive.U32();
             Collection.Decode(byteArray, ref p);
-            Item = new Substrate.NetApi.Model.Types.Primitive.U128();
+            Item = new Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256();
             Item.Decode(byteArray, ref p);
             Receiver = new Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32();
             Receiver.Decode(byteArray, ref p);

@@ -25,10 +25,14 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
         Three = 75,
         
         Four = 100,
+        
+        Five = 150,
+        
+        Max = 200,
     }
     
     /// <summary>
-    /// >> 421 - Variant[pallet_ajuna_awesome_avatars.types.account.StorageTier]
+    /// >> 409 - Variant[pallet_ajuna_awesome_avatars.types.account.StorageTier]
     /// </summary>
     public sealed class EnumStorageTier : BaseEnum<StorageTier>
     {

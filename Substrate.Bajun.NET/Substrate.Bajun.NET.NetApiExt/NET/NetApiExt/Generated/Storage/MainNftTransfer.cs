@@ -30,234 +30,53 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         public NftTransferStorage(SubstrateClientExt client)
         {
             this._client = client;
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("NftTransfer", "Organizer"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32)));
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("NftTransfer", "LockedState"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_nft_transfer.pallet.EnumPalletLockedState)));
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("NftTransfer", "NextItemId"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.Identity}, typeof(Substrate.NetApi.Model.Types.Primitive.U32), typeof(Substrate.NetApi.Model.Types.Primitive.U128)));
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("NftTransfer", "LockItemStatus"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("NftTransfer", "NftStatuses"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.Identity,
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.Identity}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U128>), typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_nft_transfer.pallet.EnumNftStatus)));
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("NftTransfer", "HoldingAccount"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32)));
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("NftTransfer", "NftClaimants"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.Identity,
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.Identity}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U128>), typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.Identity}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256>), typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_nft_transfer.pallet.EnumNftStatus)));
         }
         
         /// <summary>
-        /// >> OrganizerParams
+        /// >> NftStatusesParams
         /// </summary>
-        public static string OrganizerParams()
+        public static string NftStatusesParams(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> key)
         {
-            return RequestGenerator.GetStorage("NftTransfer", "Organizer", Substrate.NetApi.Model.Meta.Storage.Type.Plain);
-        }
-        
-        /// <summary>
-        /// >> OrganizerDefault
-        /// Default value as hex string
-        /// </summary>
-        public static string OrganizerDefault()
-        {
-            return "0x00";
-        }
-        
-        /// <summary>
-        /// >> Organizer
-        /// </summary>
-        public async Task<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> Organizer(CancellationToken token)
-        {
-            string parameters = NftTransferStorage.OrganizerParams();
-            var result = await _client.GetStorageAsync<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>(parameters, token);
-            return result;
-        }
-        
-        /// <summary>
-        /// >> LockedStateParams
-        /// </summary>
-        public static string LockedStateParams()
-        {
-            return RequestGenerator.GetStorage("NftTransfer", "LockedState", Substrate.NetApi.Model.Meta.Storage.Type.Plain);
-        }
-        
-        /// <summary>
-        /// >> LockedStateDefault
-        /// Default value as hex string
-        /// </summary>
-        public static string LockedStateDefault()
-        {
-            return "0x00";
-        }
-        
-        /// <summary>
-        /// >> LockedState
-        /// </summary>
-        public async Task<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_nft_transfer.pallet.EnumPalletLockedState> LockedState(CancellationToken token)
-        {
-            string parameters = NftTransferStorage.LockedStateParams();
-            var result = await _client.GetStorageAsync<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_nft_transfer.pallet.EnumPalletLockedState>(parameters, token);
-            return result;
-        }
-        
-        /// <summary>
-        /// >> NextItemIdParams
-        /// </summary>
-        public static string NextItemIdParams(Substrate.NetApi.Model.Types.Primitive.U32 key)
-        {
-            return RequestGenerator.GetStorage("NftTransfer", "NextItemId", Substrate.NetApi.Model.Meta.Storage.Type.Map, new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                        Substrate.NetApi.Model.Meta.Storage.Hasher.Identity}, new Substrate.NetApi.Model.Types.IType[] {
-                        key});
-        }
-        
-        /// <summary>
-        /// >> NextItemIdDefault
-        /// Default value as hex string
-        /// </summary>
-        public static string NextItemIdDefault()
-        {
-            return "0x00000000000000000000000000000000";
-        }
-        
-        /// <summary>
-        /// >> NextItemId
-        /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U128> NextItemId(Substrate.NetApi.Model.Types.Primitive.U32 key, CancellationToken token)
-        {
-            string parameters = NftTransferStorage.NextItemIdParams(key);
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U128>(parameters, token);
-            return result;
-        }
-        
-        /// <summary>
-        /// >> LockItemStatusParams
-        /// </summary>
-        public static string LockItemStatusParams(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U128> key)
-        {
-            return RequestGenerator.GetStorage("NftTransfer", "LockItemStatus", Substrate.NetApi.Model.Meta.Storage.Type.Map, new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
+            return RequestGenerator.GetStorage("NftTransfer", "NftStatuses", Substrate.NetApi.Model.Meta.Storage.Type.Map, new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                         Substrate.NetApi.Model.Meta.Storage.Hasher.Identity,
                         Substrate.NetApi.Model.Meta.Storage.Hasher.Identity}, key.Value);
         }
         
         /// <summary>
-        /// >> LockItemStatusDefault
+        /// >> NftStatusesDefault
         /// Default value as hex string
         /// </summary>
-        public static string LockItemStatusDefault()
+        public static string NftStatusesDefault()
         {
             return "0x00";
         }
         
         /// <summary>
-        /// >> LockItemStatus
+        /// >> NftStatuses
         /// </summary>
-        public async Task<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_nft_transfer.pallet.EnumNftStatus> LockItemStatus(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U128> key, CancellationToken token)
+        public async Task<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_nft_transfer.pallet.EnumNftStatus> NftStatuses(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> key, CancellationToken token)
         {
-            string parameters = NftTransferStorage.LockItemStatusParams(key);
+            string parameters = NftTransferStorage.NftStatusesParams(key);
             var result = await _client.GetStorageAsync<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_nft_transfer.pallet.EnumNftStatus>(parameters, token);
-            return result;
-        }
-        
-        /// <summary>
-        /// >> HoldingAccountParams
-        /// </summary>
-        public static string HoldingAccountParams()
-        {
-            return RequestGenerator.GetStorage("NftTransfer", "HoldingAccount", Substrate.NetApi.Model.Meta.Storage.Type.Plain);
-        }
-        
-        /// <summary>
-        /// >> HoldingAccountDefault
-        /// Default value as hex string
-        /// </summary>
-        public static string HoldingAccountDefault()
-        {
-            return "0x00";
-        }
-        
-        /// <summary>
-        /// >> HoldingAccount
-        /// </summary>
-        public async Task<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> HoldingAccount(CancellationToken token)
-        {
-            string parameters = NftTransferStorage.HoldingAccountParams();
-            var result = await _client.GetStorageAsync<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>(parameters, token);
-            return result;
-        }
-        
-        /// <summary>
-        /// >> NftClaimantsParams
-        /// </summary>
-        public static string NftClaimantsParams(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U128> key)
-        {
-            return RequestGenerator.GetStorage("NftTransfer", "NftClaimants", Substrate.NetApi.Model.Meta.Storage.Type.Map, new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                        Substrate.NetApi.Model.Meta.Storage.Hasher.Identity,
-                        Substrate.NetApi.Model.Meta.Storage.Hasher.Identity}, key.Value);
-        }
-        
-        /// <summary>
-        /// >> NftClaimantsDefault
-        /// Default value as hex string
-        /// </summary>
-        public static string NftClaimantsDefault()
-        {
-            return "0x00";
-        }
-        
-        /// <summary>
-        /// >> NftClaimants
-        /// </summary>
-        public async Task<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> NftClaimants(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U128> key, CancellationToken token)
-        {
-            string parameters = NftTransferStorage.NftClaimantsParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>(parameters, token);
             return result;
         }
     }
     
     public sealed class NftTransferCalls
     {
-        
-        /// <summary>
-        /// >> set_organizer
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
-        /// </summary>
-        public static Method SetOrganizer(Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 organizer)
-        {
-            System.Collections.Generic.List<byte> byteArray = new List<byte>();
-            byteArray.AddRange(organizer.Encode());
-            return new Method(61, "NftTransfer", 0, "set_organizer", byteArray.ToArray());
-        }
-        
-        /// <summary>
-        /// >> set_locked_state
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
-        /// </summary>
-        public static Method SetLockedState(Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_nft_transfer.pallet.EnumPalletLockedState locked_state)
-        {
-            System.Collections.Generic.List<byte> byteArray = new List<byte>();
-            byteArray.AddRange(locked_state.Encode());
-            return new Method(61, "NftTransfer", 1, "set_locked_state", byteArray.ToArray());
-        }
     }
     
     public sealed class NftTransferConstants
     {
         
         /// <summary>
-        /// >> MaxAssetEncodedSize
-        ///  Maximum amount of bytes that an asset may be encoded as.
+        /// >> PalletId
+        ///  The NFT-transfer's pallet id, used for deriving its sovereign account ID.
         /// </summary>
-        public Substrate.NetApi.Model.Types.Primitive.U32 MaxAssetEncodedSize()
-        {
-            var result = new Substrate.NetApi.Model.Types.Primitive.U32();
-            result.Create("0xC8000000");
-            return result;
-        }
-        
-        /// <summary>
-        /// >> HoldingPalletId
-        ///  The holding's pallet id, used for deriving its sovereign account identifier for the Nft
-        ///  holding account.
-        /// </summary>
-        public Substrate.Bajun.NET.NetApiExt.Generated.Model.frame_support.PalletId HoldingPalletId()
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.frame_support.PalletId PalletId()
         {
             var result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.frame_support.PalletId();
             result.Create("0x616A2F6E66747472");
@@ -269,34 +88,28 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
     {
         
         /// <summary>
-        /// >> OrganizerNotSet
-        /// There is no account set as the organizer
+        /// >> EmptyIpfsUrl
+        /// IPFS URL must not be an empty string.
         /// </summary>
-        OrganizerNotSet,
+        EmptyIpfsUrl,
         
         /// <summary>
-        /// >> PalletLocked
-        /// The pallet is currently locked and cannot be interacted with.
+        /// >> DuplicateItemCode
+        /// Item code must be different to attribute codes.
         /// </summary>
-        PalletLocked,
+        DuplicateItemCode,
         
         /// <summary>
-        /// >> AssetSizeAboveEncodingLimit
-        /// The given asset resulted in an encoded size larger that the defined encoding limit.
+        /// >> UnknownItem
+        /// The given NFT item doesn't exist.
         /// </summary>
-        AssetSizeAboveEncodingLimit,
+        UnknownItem,
         
         /// <summary>
-        /// >> NftNotFound
-        /// The given NFT id didn't match any entries for the specified collection.
+        /// >> UnknownClaim
+        /// The given claim doesn't exist.
         /// </summary>
-        NftNotFound,
-        
-        /// <summary>
-        /// >> NftAttributeMissing
-        /// The given NFT id doesn't have the proper attribute set.
-        /// </summary>
-        NftAttributeMissing,
+        UnknownClaim,
         
         /// <summary>
         /// >> NftNotOwned
@@ -312,9 +125,9 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         NftOutsideOfChain,
         
         /// <summary>
-        /// >> AssetRestoreFailure
-        /// The process of restoring an NFT into an Asset has failed.
+        /// >> ItemRestoreFailure
+        /// The process of restoring an NFT into an item has failed.
         /// </summary>
-        AssetRestoreFailure,
+        ItemRestoreFailure,
     }
 }

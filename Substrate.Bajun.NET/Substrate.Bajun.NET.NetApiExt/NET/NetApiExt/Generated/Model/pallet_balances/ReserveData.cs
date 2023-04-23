@@ -18,7 +18,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_balances
     
     
     /// <summary>
-    /// >> 358 - Composite[pallet_balances.ReserveData]
+    /// >> 346 - Composite[pallet_balances.ReserveData]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class ReserveData : BaseType

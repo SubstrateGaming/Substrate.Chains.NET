@@ -36,7 +36,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_balances.pallet
     }
     
     /// <summary>
-    /// >> 360 - Variant[pallet_balances.pallet.Error]
+    /// >> 348 - Variant[pallet_balances.pallet.Error]
     /// 
     ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
     ///			of this pallet.

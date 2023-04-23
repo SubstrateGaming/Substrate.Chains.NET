@@ -11,23 +11,11 @@ namespace Substrate.Bajun.NET.RestClient.Generated.Interfaces
 {
    using System;
    using System.Threading.Tasks;
-   using Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto;
    using Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_nft_transfer.pallet;
-   using Substrate.NetApi.Model.Types.Primitive;
    
    public interface INftTransferControllerClient
    {
-      Task<AccountId32> GetOrganizer();
-      Task<bool> SubscribeOrganizer();
-      Task<EnumPalletLockedState> GetLockedState();
-      Task<bool> SubscribeLockedState();
-      Task<U128> GetNextItemId(U32 key);
-      Task<bool> SubscribeNextItemId(U32 key);
-      Task<EnumNftStatus> GetLockItemStatus(Substrate.NetApi.Model.Types.Base.BaseTuple<U32, U128> key);
-      Task<bool> SubscribeLockItemStatus(Substrate.NetApi.Model.Types.Base.BaseTuple<U32, U128> key);
-      Task<AccountId32> GetHoldingAccount();
-      Task<bool> SubscribeHoldingAccount();
-      Task<AccountId32> GetNftClaimants(Substrate.NetApi.Model.Types.Base.BaseTuple<U32, U128> key);
-      Task<bool> SubscribeNftClaimants(Substrate.NetApi.Model.Types.Base.BaseTuple<U32, U128> key);
+      Task<EnumNftStatus> GetNftStatuses(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> key);
+      Task<bool> SubscribeNftStatuses(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> key);
    }
 }

@@ -11,17 +11,10 @@ namespace Substrate.Bajun.NET.RestClient.Mockup.Generated.Interfaces
 {
    using System;
    using System.Threading.Tasks;
-   using Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto;
    using Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_nft_transfer.pallet;
-   using Substrate.NetApi.Model.Types.Primitive;
    
    public interface INftTransferControllerMockupClient
    {
-      Task<bool> SetOrganizer(AccountId32 value);
-      Task<bool> SetLockedState(EnumPalletLockedState value);
-      Task<bool> SetNextItemId(U128 value, U32 key);
-      Task<bool> SetLockItemStatus(EnumNftStatus value, Substrate.NetApi.Model.Types.Base.BaseTuple<U32, U128> key);
-      Task<bool> SetHoldingAccount(AccountId32 value);
-      Task<bool> SetNftClaimants(AccountId32 value, Substrate.NetApi.Model.Types.Base.BaseTuple<U32, U128> key);
+      Task<bool> SetNftStatuses(EnumNftStatus value, Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> key);
    }
 }

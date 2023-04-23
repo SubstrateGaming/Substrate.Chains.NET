@@ -24,7 +24,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.cumulus_pallet_xcm.palle
     }
     
     /// <summary>
-    /// >> 193 - Variant[cumulus_pallet_xcm.pallet.Origin]
+    /// >> 188 - Variant[cumulus_pallet_xcm.pallet.Origin]
     /// </summary>
     public sealed class EnumOrigin : BaseEnumExt<Origin, BaseVoid, Substrate.Bajun.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id>
     {

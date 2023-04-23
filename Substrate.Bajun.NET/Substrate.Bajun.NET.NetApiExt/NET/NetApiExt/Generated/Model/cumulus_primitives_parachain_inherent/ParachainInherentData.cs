@@ -18,7 +18,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.cumulus_primitives_parac
     
     
     /// <summary>
-    /// >> 173 - Composite[cumulus_primitives_parachain_inherent.ParachainInherentData]
+    /// >> 168 - Composite[cumulus_primitives_parachain_inherent.ParachainInherentData]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class ParachainInherentData : BaseType

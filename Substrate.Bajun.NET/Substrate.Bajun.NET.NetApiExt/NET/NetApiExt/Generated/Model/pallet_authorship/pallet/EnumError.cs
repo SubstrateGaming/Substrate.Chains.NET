@@ -34,7 +34,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_authorship.pallet
     }
     
     /// <summary>
-    /// >> 368 - Variant[pallet_authorship.pallet.Error]
+    /// >> 356 - Variant[pallet_authorship.pallet.Error]
     /// 
     ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
     ///			of this pallet.

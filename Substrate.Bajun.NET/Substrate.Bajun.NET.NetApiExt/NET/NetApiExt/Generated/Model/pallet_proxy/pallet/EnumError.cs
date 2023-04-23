@@ -36,7 +36,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_proxy.pallet
     }
     
     /// <summary>
-    /// >> 339 - Variant[pallet_proxy.pallet.Error]
+    /// >> 327 - Variant[pallet_proxy.pallet.Error]
     /// 
     ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
     ///			of this pallet.

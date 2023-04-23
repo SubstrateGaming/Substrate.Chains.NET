@@ -31,7 +31,6 @@ namespace Substrate.Bajun.NET.RestClient
       public IIdentityControllerClient IdentityControllerClient;
       public IMultisigControllerClient MultisigControllerClient;
       public INftControllerClient NftControllerClient;
-      public INftStakeControllerClient NftStakeControllerClient;
       public INftTransferControllerClient NftTransferControllerClient;
       public IParachainInfoControllerClient ParachainInfoControllerClient;
       public IParachainSystemControllerClient ParachainSystemControllerClient;
@@ -63,7 +62,6 @@ namespace Substrate.Bajun.NET.RestClient
          IdentityControllerClient = new IdentityControllerClient(_httpClient, _subscriptionClient);
          MultisigControllerClient = new MultisigControllerClient(_httpClient, _subscriptionClient);
          NftControllerClient = new NftControllerClient(_httpClient, _subscriptionClient);
-         NftStakeControllerClient = new NftStakeControllerClient(_httpClient, _subscriptionClient);
          NftTransferControllerClient = new NftTransferControllerClient(_httpClient, _subscriptionClient);
          ParachainInfoControllerClient = new ParachainInfoControllerClient(_httpClient, _subscriptionClient);
          ParachainSystemControllerClient = new ParachainSystemControllerClient(_httpClient, _subscriptionClient);

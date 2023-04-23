@@ -34,7 +34,7 @@ namespace Substrate.Bajun.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "Nft/OwnershipAcceptance", value.Encode(), Substrate.Bajun.NET.NetApiExt.Generated.Storage.NftStorage.OwnershipAcceptanceParams(key));
       }
-      public async Task<bool> SetAccount(BaseTuple value, BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, U32, U128> key)
+      public async Task<bool> SetAccount(BaseTuple value, BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> key)
       {
          return await SendMockupRequestAsync(_httpClient, "Nft/Account", value.Encode(), Substrate.Bajun.NET.NetApiExt.Generated.Storage.NftStorage.AccountParams(key));
       }
@@ -46,7 +46,7 @@ namespace Substrate.Bajun.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "Nft/CollectionRoleOf", value.Encode(), Substrate.Bajun.NET.NetApiExt.Generated.Storage.NftStorage.CollectionRoleOfParams(key));
       }
-      public async Task<bool> SetItem(ItemDetails value, BaseTuple<U32, U128> key)
+      public async Task<bool> SetItem(ItemDetails value, BaseTuple<U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> key)
       {
          return await SendMockupRequestAsync(_httpClient, "Nft/Item", value.Encode(), Substrate.Bajun.NET.NetApiExt.Generated.Storage.NftStorage.ItemParams(key));
       }
@@ -54,19 +54,19 @@ namespace Substrate.Bajun.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "Nft/CollectionMetadataOf", value.Encode(), Substrate.Bajun.NET.NetApiExt.Generated.Storage.NftStorage.CollectionMetadataOfParams(key));
       }
-      public async Task<bool> SetItemMetadataOf(ItemMetadata value, BaseTuple<U32, U128> key)
+      public async Task<bool> SetItemMetadataOf(ItemMetadata value, BaseTuple<U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> key)
       {
          return await SendMockupRequestAsync(_httpClient, "Nft/ItemMetadataOf", value.Encode(), Substrate.Bajun.NET.NetApiExt.Generated.Storage.NftStorage.ItemMetadataOfParams(key));
       }
-      public async Task<bool> SetAttribute(BaseTuple<BoundedVecT7, AttributeDeposit> value, BaseTuple<U32, BaseOpt<U128>, Substrate.Bajun.NET.NetApiExt.Generated.Model.frame_support.traits.tokens.misc.EnumAttributeNamespace, BoundedVecT6> key)
+      public async Task<bool> SetAttribute(BaseTuple<BoundedVecT8, AttributeDeposit> value, BaseTuple<U32, BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256>, Substrate.Bajun.NET.NetApiExt.Generated.Model.frame_support.traits.tokens.misc.EnumAttributeNamespace, BoundedVecT7> key)
       {
          return await SendMockupRequestAsync(_httpClient, "Nft/Attribute", value.Encode(), Substrate.Bajun.NET.NetApiExt.Generated.Storage.NftStorage.AttributeParams(key));
       }
-      public async Task<bool> SetItemPriceOf(BaseTuple<U128, BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>> value, BaseTuple<U32, U128> key)
+      public async Task<bool> SetItemPriceOf(BaseTuple<U128, BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>> value, BaseTuple<U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> key)
       {
          return await SendMockupRequestAsync(_httpClient, "Nft/ItemPriceOf", value.Encode(), Substrate.Bajun.NET.NetApiExt.Generated.Storage.NftStorage.ItemPriceOfParams(key));
       }
-      public async Task<bool> SetItemAttributesApprovalsOf(BoundedBTreeSetT2 value, BaseTuple<U32, U128> key)
+      public async Task<bool> SetItemAttributesApprovalsOf(BoundedBTreeSetT2 value, BaseTuple<U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> key)
       {
          return await SendMockupRequestAsync(_httpClient, "Nft/ItemAttributesApprovalsOf", value.Encode(), Substrate.Bajun.NET.NetApiExt.Generated.Storage.NftStorage.ItemAttributesApprovalsOfParams(key));
       }
@@ -74,7 +74,7 @@ namespace Substrate.Bajun.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "Nft/NextCollectionId", value.Encode(), Substrate.Bajun.NET.NetApiExt.Generated.Storage.NftStorage.NextCollectionIdParams());
       }
-      public async Task<bool> SetPendingSwapOf(PendingSwap value, BaseTuple<U32, U128> key)
+      public async Task<bool> SetPendingSwapOf(PendingSwap value, BaseTuple<U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> key)
       {
          return await SendMockupRequestAsync(_httpClient, "Nft/PendingSwapOf", value.Encode(), Substrate.Bajun.NET.NetApiExt.Generated.Storage.NftStorage.PendingSwapOfParams(key));
       }
@@ -82,7 +82,7 @@ namespace Substrate.Bajun.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "Nft/CollectionConfigOf", value.Encode(), Substrate.Bajun.NET.NetApiExt.Generated.Storage.NftStorage.CollectionConfigOfParams(key));
       }
-      public async Task<bool> SetItemConfigOf(ItemConfig value, BaseTuple<U32, U128> key)
+      public async Task<bool> SetItemConfigOf(ItemConfig value, BaseTuple<U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> key)
       {
          return await SendMockupRequestAsync(_httpClient, "Nft/ItemConfigOf", value.Encode(), Substrate.Bajun.NET.NetApiExt.Generated.Storage.NftStorage.ItemConfigOfParams(key));
       }

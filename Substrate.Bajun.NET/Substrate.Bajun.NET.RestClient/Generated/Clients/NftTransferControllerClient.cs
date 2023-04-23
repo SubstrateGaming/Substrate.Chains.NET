@@ -12,9 +12,7 @@ namespace Substrate.Bajun.NET.RestClient.Generated.Clients
    using System;
    using System.Threading.Tasks;
    using System.Net.Http;
-   using Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto;
    using Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_nft_transfer.pallet;
-   using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.Bajun.NET.RestClient.Generated.Interfaces;
    
    public sealed class NftTransferControllerClient : BaseClient, INftTransferControllerClient
@@ -26,53 +24,13 @@ namespace Substrate.Bajun.NET.RestClient.Generated.Clients
          _httpClient = httpClient;
          _subscriptionClient = subscriptionClient;
       }
-      public async Task<AccountId32> GetOrganizer()
+      public async Task<EnumNftStatus> GetNftStatuses(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> key)
       {
-         return await SendRequestAsync<AccountId32>(_httpClient, "nfttransfer/organizer");
+         return await SendRequestAsync<EnumNftStatus>(_httpClient, "nfttransfer/nftstatuses", Substrate.Bajun.NET.NetApiExt.Generated.Storage.NftTransferStorage.NftStatusesParams(key));
       }
-      public async Task<bool> SubscribeOrganizer()
+      public async Task<bool> SubscribeNftStatuses(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> key)
       {
-         return await _subscriptionClient.SubscribeAsync("NftTransfer.Organizer");
-      }
-      public async Task<EnumPalletLockedState> GetLockedState()
-      {
-         return await SendRequestAsync<EnumPalletLockedState>(_httpClient, "nfttransfer/lockedstate");
-      }
-      public async Task<bool> SubscribeLockedState()
-      {
-         return await _subscriptionClient.SubscribeAsync("NftTransfer.LockedState");
-      }
-      public async Task<U128> GetNextItemId(U32 key)
-      {
-         return await SendRequestAsync<U128>(_httpClient, "nfttransfer/nextitemid", Substrate.Bajun.NET.NetApiExt.Generated.Storage.NftTransferStorage.NextItemIdParams(key));
-      }
-      public async Task<bool> SubscribeNextItemId(U32 key)
-      {
-         return await _subscriptionClient.SubscribeAsync("NftTransfer.NextItemId", Substrate.Bajun.NET.NetApiExt.Generated.Storage.NftTransferStorage.NextItemIdParams(key));
-      }
-      public async Task<EnumNftStatus> GetLockItemStatus(Substrate.NetApi.Model.Types.Base.BaseTuple<U32, U128> key)
-      {
-         return await SendRequestAsync<EnumNftStatus>(_httpClient, "nfttransfer/lockitemstatus", Substrate.Bajun.NET.NetApiExt.Generated.Storage.NftTransferStorage.LockItemStatusParams(key));
-      }
-      public async Task<bool> SubscribeLockItemStatus(Substrate.NetApi.Model.Types.Base.BaseTuple<U32, U128> key)
-      {
-         return await _subscriptionClient.SubscribeAsync("NftTransfer.LockItemStatus", Substrate.Bajun.NET.NetApiExt.Generated.Storage.NftTransferStorage.LockItemStatusParams(key));
-      }
-      public async Task<AccountId32> GetHoldingAccount()
-      {
-         return await SendRequestAsync<AccountId32>(_httpClient, "nfttransfer/holdingaccount");
-      }
-      public async Task<bool> SubscribeHoldingAccount()
-      {
-         return await _subscriptionClient.SubscribeAsync("NftTransfer.HoldingAccount");
-      }
-      public async Task<AccountId32> GetNftClaimants(Substrate.NetApi.Model.Types.Base.BaseTuple<U32, U128> key)
-      {
-         return await SendRequestAsync<AccountId32>(_httpClient, "nfttransfer/nftclaimants", Substrate.Bajun.NET.NetApiExt.Generated.Storage.NftTransferStorage.NftClaimantsParams(key));
-      }
-      public async Task<bool> SubscribeNftClaimants(Substrate.NetApi.Model.Types.Base.BaseTuple<U32, U128> key)
-      {
-         return await _subscriptionClient.SubscribeAsync("NftTransfer.NftClaimants", Substrate.Bajun.NET.NetApiExt.Generated.Storage.NftTransferStorage.NftClaimantsParams(key));
+         return await _subscriptionClient.SubscribeAsync("NftTransfer.NftStatuses", Substrate.Bajun.NET.NetApiExt.Generated.Storage.NftTransferStorage.NftStatusesParams(key));
       }
    }
 }

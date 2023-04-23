@@ -49,6 +49,11 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
         /// </summary>
         private Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.AccountConfig _account;
         
+        /// <summary>
+        /// >> nft_transfer
+        /// </summary>
+        private Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.NftTransferConfig _nftTransfer;
+        
         public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.MintConfig Mint
         {
             get
@@ -109,6 +114,18 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
             }
         }
         
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.NftTransferConfig NftTransfer
+        {
+            get
+            {
+                return this._nftTransfer;
+            }
+            set
+            {
+                this._nftTransfer = value;
+            }
+        }
+        
         public override string TypeName()
         {
             return "GlobalConfig";
@@ -122,6 +139,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
             result.AddRange(Transfer.Encode());
             result.AddRange(Trade.Encode());
             result.AddRange(Account.Encode());
+            result.AddRange(NftTransfer.Encode());
             return result.ToArray();
         }
         
@@ -138,6 +156,8 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
             Trade.Decode(byteArray, ref p);
             Account = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.AccountConfig();
             Account.Decode(byteArray, ref p);
+            NftTransfer = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.NftTransferConfig();
+            NftTransfer.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];

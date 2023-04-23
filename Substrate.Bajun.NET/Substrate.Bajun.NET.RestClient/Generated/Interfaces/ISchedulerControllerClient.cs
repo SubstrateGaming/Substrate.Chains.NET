@@ -19,7 +19,7 @@ namespace Substrate.Bajun.NET.RestClient.Generated.Interfaces
    {
       Task<U32> GetIncompleteSince();
       Task<bool> SubscribeIncompleteSince();
-      Task<BoundedVecT18> GetAgenda(U32 key);
+      Task<BoundedVecT17> GetAgenda(U32 key);
       Task<bool> SubscribeAgenda(U32 key);
       Task<BaseTuple<U32, U32>> GetLookup(Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.Arr32U8 key);
       Task<bool> SubscribeLookup(Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.Arr32U8 key);

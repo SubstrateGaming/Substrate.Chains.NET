@@ -68,7 +68,7 @@ namespace Substrate.Bajun.NET.RestService.Generated.Controller
         /// </summary>
         [HttpGet("Account")]
         [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseTuple), 200)]
-        [StorageKeyBuilder(typeof(Substrate.Bajun.NET.NetApiExt.Generated.Storage.NftStorage), "AccountParams", typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U128>))]
+        [StorageKeyBuilder(typeof(Substrate.Bajun.NET.NetApiExt.Generated.Storage.NftStorage), "AccountParams", typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256>))]
         public IActionResult GetAccount(string key)
         {
             return this.Ok(_nftStorage.GetAccount(key));
@@ -106,7 +106,7 @@ namespace Substrate.Bajun.NET.RestService.Generated.Controller
         /// </summary>
         [HttpGet("Item")]
         [ProducesResponseType(typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.ItemDetails), 200)]
-        [StorageKeyBuilder(typeof(Substrate.Bajun.NET.NetApiExt.Generated.Storage.NftStorage), "ItemParams", typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U128>))]
+        [StorageKeyBuilder(typeof(Substrate.Bajun.NET.NetApiExt.Generated.Storage.NftStorage), "ItemParams", typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256>))]
         public IActionResult GetItem(string key)
         {
             return this.Ok(_nftStorage.GetItem(key));
@@ -130,7 +130,7 @@ namespace Substrate.Bajun.NET.RestService.Generated.Controller
         /// </summary>
         [HttpGet("ItemMetadataOf")]
         [ProducesResponseType(typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.ItemMetadata), 200)]
-        [StorageKeyBuilder(typeof(Substrate.Bajun.NET.NetApiExt.Generated.Storage.NftStorage), "ItemMetadataOfParams", typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U128>))]
+        [StorageKeyBuilder(typeof(Substrate.Bajun.NET.NetApiExt.Generated.Storage.NftStorage), "ItemMetadataOfParams", typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256>))]
         public IActionResult GetItemMetadataOf(string key)
         {
             return this.Ok(_nftStorage.GetItemMetadataOf(key));
@@ -141,8 +141,8 @@ namespace Substrate.Bajun.NET.RestService.Generated.Controller
         ///  Attributes of a collection.
         /// </summary>
         [HttpGet("Attribute")]
-        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT7, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.AttributeDeposit>), 200)]
-        [StorageKeyBuilder(typeof(Substrate.Bajun.NET.NetApiExt.Generated.Storage.NftStorage), "AttributeParams", typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U128>, Substrate.Bajun.NET.NetApiExt.Generated.Model.frame_support.traits.tokens.misc.EnumAttributeNamespace, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT6>))]
+        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT8, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.AttributeDeposit>), 200)]
+        [StorageKeyBuilder(typeof(Substrate.Bajun.NET.NetApiExt.Generated.Storage.NftStorage), "AttributeParams", typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256>, Substrate.Bajun.NET.NetApiExt.Generated.Model.frame_support.traits.tokens.misc.EnumAttributeNamespace, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT7>))]
         public IActionResult GetAttribute(string key)
         {
             return this.Ok(_nftStorage.GetAttribute(key));
@@ -154,7 +154,7 @@ namespace Substrate.Bajun.NET.RestService.Generated.Controller
         /// </summary>
         [HttpGet("ItemPriceOf")]
         [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>>), 200)]
-        [StorageKeyBuilder(typeof(Substrate.Bajun.NET.NetApiExt.Generated.Storage.NftStorage), "ItemPriceOfParams", typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U128>))]
+        [StorageKeyBuilder(typeof(Substrate.Bajun.NET.NetApiExt.Generated.Storage.NftStorage), "ItemPriceOfParams", typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256>))]
         public IActionResult GetItemPriceOf(string key)
         {
             return this.Ok(_nftStorage.GetItemPriceOf(key));
@@ -166,7 +166,7 @@ namespace Substrate.Bajun.NET.RestService.Generated.Controller
         /// </summary>
         [HttpGet("ItemAttributesApprovalsOf")]
         [ProducesResponseType(typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_btree_set.BoundedBTreeSetT2), 200)]
-        [StorageKeyBuilder(typeof(Substrate.Bajun.NET.NetApiExt.Generated.Storage.NftStorage), "ItemAttributesApprovalsOfParams", typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U128>))]
+        [StorageKeyBuilder(typeof(Substrate.Bajun.NET.NetApiExt.Generated.Storage.NftStorage), "ItemAttributesApprovalsOfParams", typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256>))]
         public IActionResult GetItemAttributesApprovalsOf(string key)
         {
             return this.Ok(_nftStorage.GetItemAttributesApprovalsOf(key));
@@ -191,7 +191,7 @@ namespace Substrate.Bajun.NET.RestService.Generated.Controller
         /// </summary>
         [HttpGet("PendingSwapOf")]
         [ProducesResponseType(typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.PendingSwap), 200)]
-        [StorageKeyBuilder(typeof(Substrate.Bajun.NET.NetApiExt.Generated.Storage.NftStorage), "PendingSwapOfParams", typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U128>))]
+        [StorageKeyBuilder(typeof(Substrate.Bajun.NET.NetApiExt.Generated.Storage.NftStorage), "PendingSwapOfParams", typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256>))]
         public IActionResult GetPendingSwapOf(string key)
         {
             return this.Ok(_nftStorage.GetPendingSwapOf(key));
@@ -215,7 +215,7 @@ namespace Substrate.Bajun.NET.RestService.Generated.Controller
         /// </summary>
         [HttpGet("ItemConfigOf")]
         [ProducesResponseType(typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.ItemConfig), 200)]
-        [StorageKeyBuilder(typeof(Substrate.Bajun.NET.NetApiExt.Generated.Storage.NftStorage), "ItemConfigOfParams", typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U128>))]
+        [StorageKeyBuilder(typeof(Substrate.Bajun.NET.NetApiExt.Generated.Storage.NftStorage), "ItemConfigOfParams", typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256>))]
         public IActionResult GetItemConfigOf(string key)
         {
             return this.Ok(_nftStorage.GetItemConfigOf(key));

@@ -22,7 +22,7 @@ namespace Substrate.Bajun.NET.RestClient.Mockup.Generated.Clients
       {
          _httpClient = httpClient;
       }
-      public async Task<bool> SetRandomMaterial(BoundedVecT30 value)
+      public async Task<bool> SetRandomMaterial(BoundedVecT29 value)
       {
          return await SendMockupRequestAsync(_httpClient, "Randomness/RandomMaterial", value.Encode(), Substrate.Bajun.NET.NetApiExt.Generated.Storage.RandomnessStorage.RandomMaterialParams());
       }

@@ -26,7 +26,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm
     }
     
     /// <summary>
-    /// >> 268 - Variant[xcm.VersionedXcm]
+    /// >> 263 - Variant[xcm.VersionedXcm]
     /// </summary>
     public sealed class EnumVersionedXcm : BaseEnumExt<VersionedXcm, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.v0.EnumXcm, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.v1.EnumXcm, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.v2.XcmT2>
     {

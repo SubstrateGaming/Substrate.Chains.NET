@@ -22,7 +22,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_authorship.pallet
     }
     
     /// <summary>
-    /// >> 246 - Variant[pallet_authorship.pallet.Call]
+    /// >> 241 - Variant[pallet_authorship.pallet.Call]
     /// Contains one variant per dispatchable that can be called by an extrinsic.
     /// </summary>
     public sealed class EnumCall : BaseEnumExt<Call, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_runtime.generic.header.Header>>

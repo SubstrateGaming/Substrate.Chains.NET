@@ -24,7 +24,7 @@ namespace Substrate.Bajun.NET.RestClient.Mockup.Generated.Clients
       {
          _httpClient = httpClient;
       }
-      public async Task<bool> SetUncles(BoundedVecT23 value)
+      public async Task<bool> SetUncles(BoundedVecT22 value)
       {
          return await SendMockupRequestAsync(_httpClient, "Authorship/Uncles", value.Encode(), Substrate.Bajun.NET.NetApiExt.Generated.Storage.AuthorshipStorage.UnclesParams());
       }

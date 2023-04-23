@@ -23,7 +23,7 @@ namespace Substrate.Bajun.NET.RestClient.Generated.Interfaces
       Task<bool> SubscribeProposals(U32 key);
       Task<U128> GetDeactivated();
       Task<bool> SubscribeDeactivated();
-      Task<BoundedVecT27> GetApprovals();
+      Task<BoundedVecT26> GetApprovals();
       Task<bool> SubscribeApprovals();
    }
 }

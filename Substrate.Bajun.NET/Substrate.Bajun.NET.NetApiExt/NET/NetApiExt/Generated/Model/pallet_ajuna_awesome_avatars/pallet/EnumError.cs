@@ -20,99 +20,117 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
         
         OrganizerNotSet = 0,
         
-        EarlyStartTooEarly = 1,
+        CollectionIdNotSet = 1,
         
-        EarlyStartTooLate = 2,
+        EarlyStartTooEarly = 2,
         
-        SeasonStartTooLate = 3,
+        EarlyStartTooLate = 3,
         
-        SeasonEndTooLate = 4,
+        SeasonStartTooLate = 4,
         
-        PeriodConfigOverflow = 5,
+        SeasonEndTooLate = 5,
         
-        PeriodsIndivisible = 6,
+        PeriodConfigOverflow = 6,
         
-        UnknownSeason = 7,
+        PeriodsIndivisible = 7,
         
-        UnknownAvatar = 8,
+        UnknownSeason = 8,
         
-        UnknownAvatarForSale = 9,
+        UnknownAvatar = 9,
         
-        UnknownTier = 10,
+        UnknownAvatarForSale = 10,
         
-        UnknownTreasurer = 11,
+        UnknownTier = 11,
         
-        NonSequentialSeasonId = 12,
+        UnknownTreasurer = 12,
         
-        IncorrectRarityPercentages = 13,
+        UnknownPreparation = 13,
         
-        TooManyRarityPercentages = 14,
+        NonSequentialSeasonId = 14,
         
-        DuplicatedRarityTier = 15,
+        IncorrectRarityPercentages = 15,
         
-        MintClosed = 16,
+        TooManyRarityPercentages = 16,
         
-        ForgeClosed = 17,
+        DuplicatedRarityTier = 17,
         
-        TransferClosed = 18,
+        TooLowFees = 18,
         
-        TradeClosed = 19,
+        MintClosed = 19,
         
-        SeasonClosed = 20,
+        ForgeClosed = 20,
         
-        PrematureSeasonEnd = 21,
+        TransferClosed = 21,
         
-        MaxOwnershipReached = 22,
+        TradeClosed = 22,
         
-        MaxStorageTierReached = 23,
+        NftTransferClosed = 23,
         
-        Ownership = 24,
+        SeasonClosed = 24,
         
-        AlreadyOwned = 25,
+        PrematureSeasonEnd = 25,
         
-        IncorrectDna = 26,
+        MaxOwnershipReached = 26,
         
-        IncorrectAvatarId = 27,
+        MaxStorageTierReached = 27,
         
-        IncorrectSeasonId = 28,
+        Ownership = 28,
         
-        MintCooldown = 29,
+        AlreadyOwned = 29,
         
-        MaxComponentsTooLow = 30,
+        IncorrectDna = 30,
         
-        MaxComponentsTooHigh = 31,
+        IncorrectData = 31,
         
-        MaxVariationsTooLow = 32,
+        IncorrectAvatarId = 32,
         
-        MaxVariationsTooHigh = 33,
+        IncorrectSeasonId = 33,
         
-        InsufficientFreeMints = 34,
+        MintCooldown = 34,
         
-        TooLowFreeMints = 35,
+        MaxComponentsTooLow = 35,
         
-        TooFewSacrifices = 36,
+        MaxComponentsTooHigh = 36,
         
-        TooManySacrifices = 37,
+        MaxVariationsTooLow = 37,
         
-        LeaderSacrificed = 38,
+        MaxVariationsTooHigh = 38,
         
-        AvatarInTrade = 39,
+        InsufficientFreeMints = 39,
         
-        AvatarLocked = 40,
+        TooLowFreeMints = 40,
         
-        AvatarUnlocked = 41,
+        TooFewSacrifices = 41,
         
-        IncorrectAvatarSeason = 42,
+        TooManySacrifices = 42,
         
-        CannotTransferToSelf = 43,
+        LeaderSacrificed = 43,
         
-        CannotClaimDuringSeason = 44,
+        AvatarInTrade = 44,
         
-        CannotClaimZero = 45,
+        AvatarLocked = 45,
+        
+        AvatarUnlocked = 46,
+        
+        IncorrectAvatarSeason = 47,
+        
+        CannotTransferToSelf = 48,
+        
+        CannotClaimDuringSeason = 49,
+        
+        CannotClaimZero = 50,
+        
+        AlreadyPrepared = 51,
+        
+        NotPrepared = 52,
+        
+        NoServiceAccount = 53,
+        
+        EmptyIpfsUrl = 54,
     }
     
     /// <summary>
-    /// >> 430 - Variant[pallet_ajuna_awesome_avatars.pallet.Error]
+    /// >> 418 - Variant[pallet_ajuna_awesome_avatars.pallet.Error]
     /// 
     ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
     ///			of this pallet.

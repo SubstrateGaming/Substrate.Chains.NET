@@ -131,7 +131,7 @@ namespace Substrate.Bajun.NET.RestService.Generated.Controller
         /// >> Owners
         /// </summary>
         [HttpGet("Owners")]
-        [ProducesResponseType(typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT31), 200)]
+        [ProducesResponseType(typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT30), 200)]
         [StorageKeyBuilder(typeof(Substrate.Bajun.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage), "OwnersParams", typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32))]
         public IActionResult GetOwners(string key)
         {
@@ -142,11 +142,22 @@ namespace Substrate.Bajun.NET.RestService.Generated.Controller
         /// >> LockedAvatars
         /// </summary>
         [HttpGet("LockedAvatars")]
-        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Primitive.U128), 200)]
+        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseTuple), 200)]
         [StorageKeyBuilder(typeof(Substrate.Bajun.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage), "LockedAvatarsParams", typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256))]
         public IActionResult GetLockedAvatars(string key)
         {
             return this.Ok(_awesomeAvatarsStorage.GetLockedAvatars(key));
+        }
+        
+        /// <summary>
+        /// >> CollectionId
+        /// </summary>
+        [HttpGet("CollectionId")]
+        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Primitive.U32), 200)]
+        [StorageKeyBuilder(typeof(Substrate.Bajun.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage), "CollectionIdParams")]
+        public IActionResult GetCollectionId()
+        {
+            return this.Ok(_awesomeAvatarsStorage.GetCollectionId());
         }
         
         /// <summary>
@@ -180,6 +191,28 @@ namespace Substrate.Bajun.NET.RestService.Generated.Controller
         public IActionResult GetTrade(string key)
         {
             return this.Ok(_awesomeAvatarsStorage.GetTrade(key));
+        }
+        
+        /// <summary>
+        /// >> ServiceAccount
+        /// </summary>
+        [HttpGet("ServiceAccount")]
+        [ProducesResponseType(typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32), 200)]
+        [StorageKeyBuilder(typeof(Substrate.Bajun.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage), "ServiceAccountParams")]
+        public IActionResult GetServiceAccount()
+        {
+            return this.Ok(_awesomeAvatarsStorage.GetServiceAccount());
+        }
+        
+        /// <summary>
+        /// >> Preparation
+        /// </summary>
+        [HttpGet("Preparation")]
+        [ProducesResponseType(typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT5), 200)]
+        [StorageKeyBuilder(typeof(Substrate.Bajun.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage), "PreparationParams", typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256))]
+        public IActionResult GetPreparation(string key)
+        {
+            return this.Ok(_awesomeAvatarsStorage.GetPreparation(key));
         }
     }
 }

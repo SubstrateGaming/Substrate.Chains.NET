@@ -17,7 +17,7 @@ namespace Substrate.Bajun.NET.RestClient.Generated.Interfaces
    
    public interface IAuthorshipControllerClient
    {
-      Task<BoundedVecT23> GetUncles();
+      Task<BoundedVecT22> GetUncles();
       Task<bool> SubscribeUncles();
       Task<AccountId32> GetAuthor();
       Task<bool> SubscribeAuthor();

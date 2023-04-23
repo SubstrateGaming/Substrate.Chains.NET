@@ -44,7 +44,7 @@ namespace Substrate.Bajun.NET.RestService.Generated.Controller
         ///  the oldest hash.
         /// </summary>
         [HttpGet("RandomMaterial")]
-        [ProducesResponseType(typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT30), 200)]
+        [ProducesResponseType(typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT29), 200)]
         [StorageKeyBuilder(typeof(Substrate.Bajun.NET.NetApiExt.Generated.Storage.RandomnessStorage), "RandomMaterialParams")]
         public IActionResult GetRandomMaterial()
         {

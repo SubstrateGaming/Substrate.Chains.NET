@@ -27,7 +27,7 @@ namespace Substrate.Bajun.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "Preimage/StatusFor", value.Encode(), Substrate.Bajun.NET.NetApiExt.Generated.Storage.PreimageStorage.StatusForParams(key));
       }
-      public async Task<bool> SetPreimageFor(BoundedVecT20 value, Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Primitive.U32> key)
+      public async Task<bool> SetPreimageFor(BoundedVecT19 value, Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Primitive.U32> key)
       {
          return await SendMockupRequestAsync(_httpClient, "Preimage/PreimageFor", value.Encode(), Substrate.Bajun.NET.NetApiExt.Generated.Storage.PreimageStorage.PreimageForParams(key));
       }

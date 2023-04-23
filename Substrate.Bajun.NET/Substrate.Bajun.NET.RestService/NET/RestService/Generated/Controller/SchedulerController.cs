@@ -53,7 +53,7 @@ namespace Substrate.Bajun.NET.RestService.Generated.Controller
         ///  Items to be executed, indexed by the block number that they should be executed on.
         /// </summary>
         [HttpGet("Agenda")]
-        [ProducesResponseType(typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT18), 200)]
+        [ProducesResponseType(typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT17), 200)]
         [StorageKeyBuilder(typeof(Substrate.Bajun.NET.NetApiExt.Generated.Storage.SchedulerStorage), "AgendaParams", typeof(Substrate.NetApi.Model.Types.Primitive.U32))]
         public IActionResult GetAgenda(string key)
         {

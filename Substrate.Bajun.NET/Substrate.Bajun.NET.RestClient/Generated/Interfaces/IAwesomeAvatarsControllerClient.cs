@@ -38,15 +38,21 @@ namespace Substrate.Bajun.NET.RestClient.Generated.Interfaces
       Task<bool> SubscribeGlobalConfigs();
       Task<BaseTuple<AccountId32, Avatar>> GetAvatars(Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 key);
       Task<bool> SubscribeAvatars(Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 key);
-      Task<BoundedVecT31> GetOwners(AccountId32 key);
+      Task<BoundedVecT30> GetOwners(AccountId32 key);
       Task<bool> SubscribeOwners(AccountId32 key);
-      Task<U128> GetLockedAvatars(Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 key);
+      Task<BaseTuple> GetLockedAvatars(Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 key);
       Task<bool> SubscribeLockedAvatars(Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 key);
+      Task<U32> GetCollectionId();
+      Task<bool> SubscribeCollectionId();
       Task<AccountInfo> GetAccounts(AccountId32 key);
       Task<bool> SubscribeAccounts(AccountId32 key);
       Task<SeasonInfo> GetSeasonStats(BaseTuple<U16, AccountId32> key);
       Task<bool> SubscribeSeasonStats(BaseTuple<U16, AccountId32> key);
       Task<U128> GetTrade(Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 key);
       Task<bool> SubscribeTrade(Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 key);
+      Task<AccountId32> GetServiceAccount();
+      Task<bool> SubscribeServiceAccount();
+      Task<BoundedVecT5> GetPreparation(Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 key);
+      Task<bool> SubscribePreparation(Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 key);
    }
 }

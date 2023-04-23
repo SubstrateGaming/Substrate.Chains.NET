@@ -30,7 +30,6 @@ namespace Substrate.Bajun.NET.RestClient.Mockup
       public IIdentityControllerMockupClient IdentityControllerClient;
       public IMultisigControllerMockupClient MultisigControllerClient;
       public INftControllerMockupClient NftControllerClient;
-      public INftStakeControllerMockupClient NftStakeControllerClient;
       public INftTransferControllerMockupClient NftTransferControllerClient;
       public IParachainInfoControllerMockupClient ParachainInfoControllerClient;
       public IParachainSystemControllerMockupClient ParachainSystemControllerClient;
@@ -61,7 +60,6 @@ namespace Substrate.Bajun.NET.RestClient.Mockup
          IdentityControllerClient = new IdentityControllerMockupClient(_httpClient);
          MultisigControllerClient = new MultisigControllerMockupClient(_httpClient);
          NftControllerClient = new NftControllerMockupClient(_httpClient);
-         NftStakeControllerClient = new NftStakeControllerMockupClient(_httpClient);
          NftTransferControllerClient = new NftTransferControllerMockupClient(_httpClient);
          ParachainInfoControllerClient = new ParachainInfoControllerMockupClient(_httpClient);
          ParachainSystemControllerClient = new ParachainSystemControllerMockupClient(_httpClient);

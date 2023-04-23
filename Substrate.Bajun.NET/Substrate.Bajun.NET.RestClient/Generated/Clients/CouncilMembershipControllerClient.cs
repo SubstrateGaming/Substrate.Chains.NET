@@ -25,9 +25,9 @@ namespace Substrate.Bajun.NET.RestClient.Generated.Clients
          _httpClient = httpClient;
          _subscriptionClient = subscriptionClient;
       }
-      public async Task<BoundedVecT29> GetMembers()
+      public async Task<BoundedVecT28> GetMembers()
       {
-         return await SendRequestAsync<BoundedVecT29>(_httpClient, "councilmembership/members");
+         return await SendRequestAsync<BoundedVecT28>(_httpClient, "councilmembership/members");
       }
       public async Task<bool> SubscribeMembers()
       {

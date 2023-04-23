@@ -534,7 +534,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_runtime.generic.era
     }
     
     /// <summary>
-    /// >> 472 - Variant[sp_runtime.generic.era.Era]
+    /// >> 459 - Variant[sp_runtime.generic.era.Era]
     /// </summary>
     public sealed class EnumEra : BaseEnumExt<Era, BaseVoid>
     {

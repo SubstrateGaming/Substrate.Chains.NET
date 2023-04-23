@@ -24,7 +24,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
     }
     
     /// <summary>
-    /// >> 290 - Variant[pallet_ajuna_awesome_avatars.types.config.MintType]
+    /// >> 285 - Variant[pallet_ajuna_awesome_avatars.types.config.MintType]
     /// </summary>
     public sealed class EnumMintType : BaseEnum<MintType>
     {
