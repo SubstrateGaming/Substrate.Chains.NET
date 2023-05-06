@@ -5,7 +5,7 @@
     "rest_client": "Substrate.Astar.NET.RestClient"
   },
    "metadata": {
-      "websocket": "wss://astar.api.onfinality.io/public-ws"
+      "websocket": "wss://rpc.astar.network"
    },
   "rest_client_settings": {
     "service_assembly": "Substrate.Astar.NET.RestService.dll"
