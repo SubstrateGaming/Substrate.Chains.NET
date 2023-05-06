@@ -14,6 +14,7 @@ namespace Substrate.Statemine.NET.RestClient.Generated.Interfaces
    using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_xcm.pallet;
    using Substrate.NetApi.Model.Types.Base;
+   using Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_weights.weight_v2;
    using Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
    
    public interface IPolkadotXcmControllerClient
@@ -30,11 +31,15 @@ namespace Substrate.Statemine.NET.RestClient.Generated.Interfaces
       Task<bool> SubscribeSupportedVersion(BaseTuple<U32, Substrate.Statemine.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation> key);
       Task<U64> GetVersionNotifiers(BaseTuple<U32, Substrate.Statemine.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation> key);
       Task<bool> SubscribeVersionNotifiers(BaseTuple<U32, Substrate.Statemine.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation> key);
-      Task<BaseTuple<U64, U64, U32>> GetVersionNotifyTargets(BaseTuple<U32, Substrate.Statemine.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation> key);
+      Task<BaseTuple<U64, Weight, U32>> GetVersionNotifyTargets(BaseTuple<U32, Substrate.Statemine.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation> key);
       Task<bool> SubscribeVersionNotifyTargets(BaseTuple<U32, Substrate.Statemine.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation> key);
-      Task<BoundedVecT9> GetVersionDiscoveryQueue();
+      Task<BoundedVecT8> GetVersionDiscoveryQueue();
       Task<bool> SubscribeVersionDiscoveryQueue();
       Task<EnumVersionMigrationStage> GetCurrentMigration();
       Task<bool> SubscribeCurrentMigration();
+      Task<RemoteLockedFungibleRecord> GetRemoteLockedFungibles(BaseTuple<U32, Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Statemine.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAssetId> key);
+      Task<bool> SubscribeRemoteLockedFungibles(BaseTuple<U32, Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Statemine.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAssetId> key);
+      Task<BoundedVecT9> GetLockedFungibles(Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
+      Task<bool> SubscribeLockedFungibles(Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
    }
 }

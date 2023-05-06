@@ -47,6 +47,12 @@ namespace Substrate.Statemine.NET.RestService.Generated.Storage
         ///  The overweight messages.
         /// </summary>
         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>> GetOverweight(string key);
+        
+        /// <summary>
+        /// >> CounterForOverweight
+        /// Counter for the related counted storage map
+        /// </summary>
+        Substrate.NetApi.Model.Types.Primitive.U32 GetCounterForOverweight();
     }
     
     /// <summary>
@@ -76,6 +82,11 @@ namespace Substrate.Statemine.NET.RestService.Generated.Storage
         private TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>> _overweightTypedStorage;
         
         /// <summary>
+        /// _counterForOverweightTypedStorage typed storage field
+        /// </summary>
+        private TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32> _counterForOverweightTypedStorage;
+        
+        /// <summary>
         /// DmpQueueStorage constructor.
         /// </summary>
         public DmpQueueStorage(IStorageDataProvider storageDataProvider, List<IStorageChangeDelegate> storageChangeDelegates)
@@ -84,6 +95,7 @@ namespace Substrate.Statemine.NET.RestService.Generated.Storage
             this.PageIndexTypedStorage = new TypedStorage<Substrate.Statemine.NET.NetApiExt.Generated.Model.cumulus_pallet_dmp_queue.PageIndexData>("DmpQueue.PageIndex", storageDataProvider, storageChangeDelegates);
             this.PagesTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>>>("DmpQueue.Pages", storageDataProvider, storageChangeDelegates);
             this.OverweightTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>>("DmpQueue.Overweight", storageDataProvider, storageChangeDelegates);
+            this.CounterForOverweightTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32>("DmpQueue.CounterForOverweight", storageDataProvider, storageChangeDelegates);
         }
         
         /// <summary>
@@ -147,6 +159,21 @@ namespace Substrate.Statemine.NET.RestService.Generated.Storage
         }
         
         /// <summary>
+        /// _counterForOverweightTypedStorage property
+        /// </summary>
+        public TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32> CounterForOverweightTypedStorage
+        {
+            get
+            {
+                return _counterForOverweightTypedStorage;
+            }
+            set
+            {
+                _counterForOverweightTypedStorage = value;
+            }
+        }
+        
+        /// <summary>
         /// Connects to all storages and initializes the change subscription handling.
         /// </summary>
         public async Task InitializeAsync(Substrate.ServiceLayer.Storage.IStorageDataProvider dataProvider)
@@ -155,6 +182,7 @@ namespace Substrate.Statemine.NET.RestService.Generated.Storage
             await PageIndexTypedStorage.InitializeAsync("DmpQueue", "PageIndex");
             await PagesTypedStorage.InitializeAsync("DmpQueue", "Pages");
             await OverweightTypedStorage.InitializeAsync("DmpQueue", "Overweight");
+            await CounterForOverweightTypedStorage.InitializeAsync("DmpQueue", "CounterForOverweight");
         }
         
         /// <summary>
@@ -249,6 +277,24 @@ namespace Substrate.Statemine.NET.RestService.Generated.Storage
             {
                 return null;
             }
+        }
+        
+        /// <summary>
+        /// Implements any storage change for DmpQueue.CounterForOverweight
+        /// </summary>
+        [StorageChange("DmpQueue", "CounterForOverweight")]
+        public void OnUpdateCounterForOverweight(string data)
+        {
+            CounterForOverweightTypedStorage.Update(data);
+        }
+        
+        /// <summary>
+        /// >> CounterForOverweight
+        /// Counter for the related counted storage map
+        /// </summary>
+        public Substrate.NetApi.Model.Types.Primitive.U32 GetCounterForOverweight()
+        {
+            return CounterForOverweightTypedStorage.Get();
         }
     }
 }

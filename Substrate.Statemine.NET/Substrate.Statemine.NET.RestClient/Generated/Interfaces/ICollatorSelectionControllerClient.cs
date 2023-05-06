@@ -16,9 +16,9 @@ namespace Substrate.Statemine.NET.RestClient.Generated.Interfaces
    
    public interface ICollatorSelectionControllerClient
    {
-      Task<BoundedVecT6> GetInvulnerables();
+      Task<BoundedVecT5> GetInvulnerables();
       Task<bool> SubscribeInvulnerables();
-      Task<BoundedVecT7> GetCandidates();
+      Task<BoundedVecT6> GetCandidates();
       Task<bool> SubscribeCandidates();
       Task<U32> GetLastAuthoredBlock(Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
       Task<bool> SubscribeLastAuthoredBlock(Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);

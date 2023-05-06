@@ -16,7 +16,7 @@ namespace Substrate.Statemine.NET.RestClient.Mockup.Generated.Interfaces
    
    public interface IAuraControllerMockupClient
    {
-      Task<bool> SetAuthorities(BoundedVecT8 value);
+      Task<bool> SetAuthorities(BoundedVecT7 value);
       Task<bool> SetCurrentSlot(Slot value);
    }
 }

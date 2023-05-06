@@ -18,7 +18,7 @@ namespace Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_assets.types
     
     
     /// <summary>
-    /// >> 284 - Composite[pallet_assets.types.Approval]
+    /// >> 294 - Composite[pallet_assets.types.Approval]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Approval : BaseType

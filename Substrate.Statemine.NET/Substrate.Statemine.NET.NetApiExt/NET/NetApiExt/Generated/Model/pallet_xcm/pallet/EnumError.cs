@@ -43,10 +43,24 @@ namespace Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_xcm.pallet
         NoSubscription = 11,
         
         AlreadySubscribed = 12,
+        
+        InvalidAsset = 13,
+        
+        LowBalance = 14,
+        
+        TooManyLocks = 15,
+        
+        AccountNotSovereign = 16,
+        
+        FeesNotMet = 17,
+        
+        LockNotFound = 18,
+        
+        InUse = 19,
     }
     
     /// <summary>
-    /// >> 239 - Variant[pallet_xcm.pallet.Error]
+    /// >> 249 - Variant[pallet_xcm.pallet.Error]
     /// 
     ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
     ///			of this pallet.

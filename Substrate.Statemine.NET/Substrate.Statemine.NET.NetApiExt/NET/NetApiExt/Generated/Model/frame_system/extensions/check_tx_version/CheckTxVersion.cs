@@ -18,7 +18,7 @@ namespace Substrate.Statemine.NET.NetApiExt.Generated.Model.frame_system.extensi
     
     
     /// <summary>
-    /// >> 308 - Composite[frame_system.extensions.check_tx_version.CheckTxVersion]
+    /// >> 318 - Composite[frame_system.extensions.check_tx_version.CheckTxVersion]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class CheckTxVersion : BaseType

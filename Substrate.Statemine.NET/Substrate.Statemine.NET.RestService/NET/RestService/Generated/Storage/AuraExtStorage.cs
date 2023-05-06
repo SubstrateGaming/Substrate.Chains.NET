@@ -32,7 +32,7 @@ namespace Substrate.Statemine.NET.RestService.Generated.Storage
         ///  but we require the old authorities to verify the seal when validating a PoV. This will always
         ///  be updated to the latest AuRa authorities in `on_finalize`.
         /// </summary>
-        Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT8 GetAuthorities();
+        Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT7 GetAuthorities();
     }
     
     /// <summary>
@@ -44,20 +44,20 @@ namespace Substrate.Statemine.NET.RestService.Generated.Storage
         /// <summary>
         /// _authoritiesTypedStorage typed storage field
         /// </summary>
-        private TypedStorage<Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT8> _authoritiesTypedStorage;
+        private TypedStorage<Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT7> _authoritiesTypedStorage;
         
         /// <summary>
         /// AuraExtStorage constructor.
         /// </summary>
         public AuraExtStorage(IStorageDataProvider storageDataProvider, List<IStorageChangeDelegate> storageChangeDelegates)
         {
-            this.AuthoritiesTypedStorage = new TypedStorage<Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT8>("AuraExt.Authorities", storageDataProvider, storageChangeDelegates);
+            this.AuthoritiesTypedStorage = new TypedStorage<Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT7>("AuraExt.Authorities", storageDataProvider, storageChangeDelegates);
         }
         
         /// <summary>
         /// _authoritiesTypedStorage property
         /// </summary>
-        public TypedStorage<Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT8> AuthoritiesTypedStorage
+        public TypedStorage<Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT7> AuthoritiesTypedStorage
         {
             get
             {
@@ -94,7 +94,7 @@ namespace Substrate.Statemine.NET.RestService.Generated.Storage
         ///  but we require the old authorities to verify the seal when validating a PoV. This will always
         ///  be updated to the latest AuRa authorities in `on_finalize`.
         /// </summary>
-        public Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT8 GetAuthorities()
+        public Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT7 GetAuthorities()
         {
             return AuthoritiesTypedStorage.Get();
         }

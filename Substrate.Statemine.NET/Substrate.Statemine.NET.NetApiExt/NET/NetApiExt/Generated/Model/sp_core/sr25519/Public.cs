@@ -18,7 +18,7 @@ namespace Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.sr25519
     
     
     /// <summary>
-    /// >> 180 - Composite[sp_core.sr25519.Public]
+    /// >> 187 - Composite[sp_core.sr25519.Public]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Public : BaseType

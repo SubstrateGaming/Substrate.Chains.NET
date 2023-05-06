@@ -18,7 +18,7 @@ namespace Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.boun
     
     
     /// <summary>
-    /// >> 211 - Composite[sp_core.bounded.bounded_vec.BoundedVecT9]
+    /// >> 229 - Composite[sp_core.bounded.bounded_vec.BoundedVecT9]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class BoundedVecT9 : BaseType
@@ -27,9 +27,9 @@ namespace Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.boun
         /// <summary>
         /// >> value
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Statemine.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation, Substrate.NetApi.Model.Types.Primitive.U32>> _value;
+        private Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.Statemine.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation>> _value;
         
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Statemine.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation, Substrate.NetApi.Model.Types.Primitive.U32>> Value
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.Statemine.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation>> Value
         {
             get
             {
@@ -56,7 +56,7 @@ namespace Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.boun
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Statemine.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation, Substrate.NetApi.Model.Types.Primitive.U32>>();
+            Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.Statemine.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation>>();
             Value.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

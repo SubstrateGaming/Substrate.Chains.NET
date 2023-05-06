@@ -23,7 +23,7 @@ namespace Substrate.Statemine.NET.RestClient.Mockup.Generated.Clients
       {
          _httpClient = httpClient;
       }
-      public async Task<bool> SetAuthorities(BoundedVecT8 value)
+      public async Task<bool> SetAuthorities(BoundedVecT7 value)
       {
          return await SendMockupRequestAsync(_httpClient, "Aura/Authorities", value.Encode(), Substrate.Statemine.NET.NetApiExt.Generated.Storage.AuraStorage.AuthoritiesParams());
       }

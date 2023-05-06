@@ -28,7 +28,7 @@ namespace Substrate.Statemine.NET.NetApiExt.Generated.Model.cumulus_pallet_parac
     }
     
     /// <summary>
-    /// >> 138 - Variant[cumulus_pallet_parachain_system.pallet.Call]
+    /// >> 153 - Variant[cumulus_pallet_parachain_system.pallet.Call]
     /// Contains one variant per dispatchable that can be called by an extrinsic.
     /// </summary>
     public sealed class EnumCall : BaseEnumExt<Call, Substrate.Statemine.NET.NetApiExt.Generated.Model.cumulus_primitives_parachain_inherent.ParachainInherentData, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>, Substrate.Statemine.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>

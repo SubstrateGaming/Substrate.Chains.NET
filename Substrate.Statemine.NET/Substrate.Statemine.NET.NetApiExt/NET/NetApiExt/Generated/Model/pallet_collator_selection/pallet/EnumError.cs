@@ -40,7 +40,7 @@ namespace Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_collator_sele
     }
     
     /// <summary>
-    /// >> 175 - Variant[pallet_collator_selection.pallet.Error]
+    /// >> 182 - Variant[pallet_collator_selection.pallet.Error]
     /// 
     ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
     ///			of this pallet.

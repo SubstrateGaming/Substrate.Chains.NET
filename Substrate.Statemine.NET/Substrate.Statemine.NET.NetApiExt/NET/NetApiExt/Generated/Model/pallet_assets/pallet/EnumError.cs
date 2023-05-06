@@ -58,7 +58,7 @@ namespace Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_assets.pallet
     }
     
     /// <summary>
-    /// >> 287 - Variant[pallet_assets.pallet.Error]
+    /// >> 297 - Variant[pallet_assets.pallet.Error]
     /// 
     ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
     ///			of this pallet.

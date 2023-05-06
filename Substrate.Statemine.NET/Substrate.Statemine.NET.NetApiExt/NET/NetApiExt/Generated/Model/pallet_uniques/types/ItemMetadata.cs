@@ -18,7 +18,7 @@ namespace Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_uniques.types
     
     
     /// <summary>
-    /// >> 293 - Composite[pallet_uniques.types.ItemMetadata]
+    /// >> 303 - Composite[pallet_uniques.types.ItemMetadata]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class ItemMetadata : BaseType

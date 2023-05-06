@@ -18,7 +18,7 @@ namespace Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.boun
     
     
     /// <summary>
-    /// >> 171 - Composite[sp_core.bounded.bounded_vec.BoundedVecT7]
+    /// >> 192 - Composite[sp_core.bounded.bounded_vec.BoundedVecT7]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class BoundedVecT7 : BaseType
@@ -27,9 +27,9 @@ namespace Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.boun
         /// <summary>
         /// >> value
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_collator_selection.pallet.CandidateInfo> _value;
+        private Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_consensus_aura.sr25519.app_sr25519.Public> _value;
         
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_collator_selection.pallet.CandidateInfo> Value
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_consensus_aura.sr25519.app_sr25519.Public> Value
         {
             get
             {
@@ -56,7 +56,7 @@ namespace Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.boun
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_collator_selection.pallet.CandidateInfo>();
+            Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_consensus_aura.sr25519.app_sr25519.Public>();
             Value.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

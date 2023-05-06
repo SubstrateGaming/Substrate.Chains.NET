@@ -25,9 +25,9 @@ namespace Substrate.Statemine.NET.RestClient.Generated.Clients
          _httpClient = httpClient;
          _subscriptionClient = subscriptionClient;
       }
-      public async Task<BoundedVecT8> GetAuthorities()
+      public async Task<BoundedVecT7> GetAuthorities()
       {
-         return await SendRequestAsync<BoundedVecT8>(_httpClient, "aura/authorities");
+         return await SendRequestAsync<BoundedVecT7>(_httpClient, "aura/authorities");
       }
       public async Task<bool> SubscribeAuthorities()
       {

@@ -46,7 +46,7 @@ namespace Substrate.Statemine.NET.RestService.Generated.Controller
         ///  be updated to the latest AuRa authorities in `on_finalize`.
         /// </summary>
         [HttpGet("Authorities")]
-        [ProducesResponseType(typeof(Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT8), 200)]
+        [ProducesResponseType(typeof(Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT7), 200)]
         [StorageKeyBuilder(typeof(Substrate.Statemine.NET.NetApiExt.Generated.Storage.AuraExtStorage), "AuthoritiesParams")]
         public IActionResult GetAuthorities()
         {

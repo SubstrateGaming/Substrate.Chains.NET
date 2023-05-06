@@ -18,7 +18,7 @@ namespace Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_core_primit
     
     
     /// <summary>
-    /// >> 144 - Composite[polkadot_core_primitives.InboundHrmpMessage]
+    /// >> 159 - Composite[polkadot_core_primitives.InboundHrmpMessage]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class InboundHrmpMessage : BaseType

@@ -18,17 +18,15 @@ namespace Substrate.Statemine.NET.NetApiExt.Generated.Model.xcm
     public enum VersionedResponse
     {
         
-        V0 = 0,
-        
-        V1 = 1,
-        
         V2 = 2,
+        
+        V3 = 3,
     }
     
     /// <summary>
-    /// >> 206 - Variant[xcm.VersionedResponse]
+    /// >> 214 - Variant[xcm.VersionedResponse]
     /// </summary>
-    public sealed class EnumVersionedResponse : BaseEnumExt<VersionedResponse, Substrate.Statemine.NET.NetApiExt.Generated.Model.xcm.v0.EnumResponse, Substrate.Statemine.NET.NetApiExt.Generated.Model.xcm.v1.EnumResponse, Substrate.Statemine.NET.NetApiExt.Generated.Model.xcm.v2.EnumResponse>
+    public sealed class EnumVersionedResponse : BaseEnumExt<VersionedResponse, BaseVoid, BaseVoid, Substrate.Statemine.NET.NetApiExt.Generated.Model.xcm.v2.EnumResponse, Substrate.Statemine.NET.NetApiExt.Generated.Model.xcm.v3.EnumResponse>
     {
     }
 }

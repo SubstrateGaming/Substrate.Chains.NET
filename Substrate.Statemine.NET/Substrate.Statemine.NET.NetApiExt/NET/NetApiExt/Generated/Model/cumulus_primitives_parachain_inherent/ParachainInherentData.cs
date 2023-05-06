@@ -18,7 +18,7 @@ namespace Substrate.Statemine.NET.NetApiExt.Generated.Model.cumulus_primitives_p
     
     
     /// <summary>
-    /// >> 139 - Composite[cumulus_primitives_parachain_inherent.ParachainInherentData]
+    /// >> 154 - Composite[cumulus_primitives_parachain_inherent.ParachainInherentData]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class ParachainInherentData : BaseType

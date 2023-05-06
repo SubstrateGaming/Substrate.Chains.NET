@@ -16,7 +16,7 @@ namespace Substrate.Statemine.NET.RestClient.Generated.Interfaces
    
    public interface IAuraControllerClient
    {
-      Task<BoundedVecT8> GetAuthorities();
+      Task<BoundedVecT7> GetAuthorities();
       Task<bool> SubscribeAuthorities();
       Task<Slot> GetCurrentSlot();
       Task<bool> SubscribeCurrentSlot();

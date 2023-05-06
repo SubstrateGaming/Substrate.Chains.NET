@@ -15,6 +15,7 @@ namespace Substrate.Statemine.NET.RestClient.Generated.Clients
    using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_xcm.pallet;
    using Substrate.NetApi.Model.Types.Base;
+   using Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_weights.weight_v2;
    using Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
    using Substrate.Statemine.NET.RestClient.Generated.Interfaces;
    
@@ -75,17 +76,17 @@ namespace Substrate.Statemine.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("PolkadotXcm.VersionNotifiers", Substrate.Statemine.NET.NetApiExt.Generated.Storage.PolkadotXcmStorage.VersionNotifiersParams(key));
       }
-      public async Task<BaseTuple<U64, U64, U32>> GetVersionNotifyTargets(BaseTuple<U32, Substrate.Statemine.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation> key)
+      public async Task<BaseTuple<U64, Weight, U32>> GetVersionNotifyTargets(BaseTuple<U32, Substrate.Statemine.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation> key)
       {
-         return await SendRequestAsync<BaseTuple<U64, U64, U32>>(_httpClient, "polkadotxcm/versionnotifytargets", Substrate.Statemine.NET.NetApiExt.Generated.Storage.PolkadotXcmStorage.VersionNotifyTargetsParams(key));
+         return await SendRequestAsync<BaseTuple<U64, Weight, U32>>(_httpClient, "polkadotxcm/versionnotifytargets", Substrate.Statemine.NET.NetApiExt.Generated.Storage.PolkadotXcmStorage.VersionNotifyTargetsParams(key));
       }
       public async Task<bool> SubscribeVersionNotifyTargets(BaseTuple<U32, Substrate.Statemine.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation> key)
       {
          return await _subscriptionClient.SubscribeAsync("PolkadotXcm.VersionNotifyTargets", Substrate.Statemine.NET.NetApiExt.Generated.Storage.PolkadotXcmStorage.VersionNotifyTargetsParams(key));
       }
-      public async Task<BoundedVecT9> GetVersionDiscoveryQueue()
+      public async Task<BoundedVecT8> GetVersionDiscoveryQueue()
       {
-         return await SendRequestAsync<BoundedVecT9>(_httpClient, "polkadotxcm/versiondiscoveryqueue");
+         return await SendRequestAsync<BoundedVecT8>(_httpClient, "polkadotxcm/versiondiscoveryqueue");
       }
       public async Task<bool> SubscribeVersionDiscoveryQueue()
       {
@@ -98,6 +99,22 @@ namespace Substrate.Statemine.NET.RestClient.Generated.Clients
       public async Task<bool> SubscribeCurrentMigration()
       {
          return await _subscriptionClient.SubscribeAsync("PolkadotXcm.CurrentMigration");
+      }
+      public async Task<RemoteLockedFungibleRecord> GetRemoteLockedFungibles(BaseTuple<U32, Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Statemine.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAssetId> key)
+      {
+         return await SendRequestAsync<RemoteLockedFungibleRecord>(_httpClient, "polkadotxcm/remotelockedfungibles", Substrate.Statemine.NET.NetApiExt.Generated.Storage.PolkadotXcmStorage.RemoteLockedFungiblesParams(key));
+      }
+      public async Task<bool> SubscribeRemoteLockedFungibles(BaseTuple<U32, Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Statemine.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAssetId> key)
+      {
+         return await _subscriptionClient.SubscribeAsync("PolkadotXcm.RemoteLockedFungibles", Substrate.Statemine.NET.NetApiExt.Generated.Storage.PolkadotXcmStorage.RemoteLockedFungiblesParams(key));
+      }
+      public async Task<BoundedVecT9> GetLockedFungibles(Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+      {
+         return await SendRequestAsync<BoundedVecT9>(_httpClient, "polkadotxcm/lockedfungibles", Substrate.Statemine.NET.NetApiExt.Generated.Storage.PolkadotXcmStorage.LockedFungiblesParams(key));
+      }
+      public async Task<bool> SubscribeLockedFungibles(Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+      {
+         return await _subscriptionClient.SubscribeAsync("PolkadotXcm.LockedFungibles", Substrate.Statemine.NET.NetApiExt.Generated.Storage.PolkadotXcmStorage.LockedFungiblesParams(key));
       }
    }
 }

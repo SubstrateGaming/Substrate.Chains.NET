@@ -36,6 +36,7 @@ namespace Substrate.Statemine.NET.NetApiExt.Generated.Storage
                             Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.NetApi.Model.Types.Primitive.U32), typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>>)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("DmpQueue", "Overweight"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.NetApi.Model.Types.Primitive.U64), typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("DmpQueue", "CounterForOverweight"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Primitive.U32)));
         }
         
         /// <summary>
@@ -157,6 +158,35 @@ namespace Substrate.Statemine.NET.NetApiExt.Generated.Storage
             var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>>(parameters, token);
             return result;
         }
+        
+        /// <summary>
+        /// >> CounterForOverweightParams
+        /// Counter for the related counted storage map
+        /// </summary>
+        public static string CounterForOverweightParams()
+        {
+            return RequestGenerator.GetStorage("DmpQueue", "CounterForOverweight", Substrate.NetApi.Model.Meta.Storage.Type.Plain);
+        }
+        
+        /// <summary>
+        /// >> CounterForOverweightDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string CounterForOverweightDefault()
+        {
+            return "0x00000000";
+        }
+        
+        /// <summary>
+        /// >> CounterForOverweight
+        /// Counter for the related counted storage map
+        /// </summary>
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> CounterForOverweight(CancellationToken token)
+        {
+            string parameters = DmpQueueStorage.CounterForOverweightParams();
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, token);
+            return result;
+        }
     }
     
     public sealed class DmpQueueCalls
@@ -166,7 +196,7 @@ namespace Substrate.Statemine.NET.NetApiExt.Generated.Storage
         /// >> service_overweight
         /// Contains one variant per dispatchable that can be called by an extrinsic.
         /// </summary>
-        public static Method ServiceOverweight(Substrate.NetApi.Model.Types.Primitive.U64 index, Substrate.NetApi.Model.Types.Primitive.U64 weight_limit)
+        public static Method ServiceOverweight(Substrate.NetApi.Model.Types.Primitive.U64 index, Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight weight_limit)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(index.Encode());

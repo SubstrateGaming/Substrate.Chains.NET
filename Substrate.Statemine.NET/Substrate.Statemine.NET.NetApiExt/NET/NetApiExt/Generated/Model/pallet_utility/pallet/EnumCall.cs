@@ -32,7 +32,7 @@ namespace Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_utility.palle
     }
     
     /// <summary>
-    /// >> 247 - Variant[pallet_utility.pallet.Call]
+    /// >> 257 - Variant[pallet_utility.pallet.Call]
     /// Contains one variant per dispatchable that can be called by an extrinsic.
     /// </summary>
     public sealed class EnumCall : BaseEnumExt<Call, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Statemine.NET.NetApiExt.Generated.Model.statemine_runtime.EnumRuntimeCall>, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U16, Substrate.Statemine.NET.NetApiExt.Generated.Model.statemine_runtime.EnumRuntimeCall>, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Statemine.NET.NetApiExt.Generated.Model.statemine_runtime.EnumRuntimeCall>, BaseTuple<Substrate.Statemine.NET.NetApiExt.Generated.Model.statemine_runtime.EnumOriginCaller, Substrate.Statemine.NET.NetApiExt.Generated.Model.statemine_runtime.EnumRuntimeCall>, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Statemine.NET.NetApiExt.Generated.Model.statemine_runtime.EnumRuntimeCall>, BaseTuple<Substrate.Statemine.NET.NetApiExt.Generated.Model.statemine_runtime.EnumRuntimeCall, Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>>

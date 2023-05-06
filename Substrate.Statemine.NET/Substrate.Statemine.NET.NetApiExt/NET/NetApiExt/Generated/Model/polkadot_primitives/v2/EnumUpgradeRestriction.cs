@@ -22,7 +22,7 @@ namespace Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_primitives.
     }
     
     /// <summary>
-    /// >> 124 - Variant[polkadot_primitives.v2.UpgradeRestriction]
+    /// >> 138 - Variant[polkadot_primitives.v2.UpgradeRestriction]
     /// </summary>
     public sealed class EnumUpgradeRestriction : BaseEnum<UpgradeRestriction>
     {

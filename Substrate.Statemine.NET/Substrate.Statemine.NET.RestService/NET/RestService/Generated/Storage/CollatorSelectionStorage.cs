@@ -28,13 +28,13 @@ namespace Substrate.Statemine.NET.RestService.Generated.Storage
         /// >> Invulnerables
         ///  The invulnerable, fixed collators.
         /// </summary>
-        Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT6 GetInvulnerables();
+        Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT5 GetInvulnerables();
         
         /// <summary>
         /// >> Candidates
         ///  The (community, limited) collation candidates.
         /// </summary>
-        Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT7 GetCandidates();
+        Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT6 GetCandidates();
         
         /// <summary>
         /// >> LastAuthoredBlock
@@ -68,12 +68,12 @@ namespace Substrate.Statemine.NET.RestService.Generated.Storage
         /// <summary>
         /// _invulnerablesTypedStorage typed storage field
         /// </summary>
-        private TypedStorage<Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT6> _invulnerablesTypedStorage;
+        private TypedStorage<Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT5> _invulnerablesTypedStorage;
         
         /// <summary>
         /// _candidatesTypedStorage typed storage field
         /// </summary>
-        private TypedStorage<Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT7> _candidatesTypedStorage;
+        private TypedStorage<Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT6> _candidatesTypedStorage;
         
         /// <summary>
         /// _lastAuthoredBlockTypedStorage typed storage field
@@ -95,8 +95,8 @@ namespace Substrate.Statemine.NET.RestService.Generated.Storage
         /// </summary>
         public CollatorSelectionStorage(IStorageDataProvider storageDataProvider, List<IStorageChangeDelegate> storageChangeDelegates)
         {
-            this.InvulnerablesTypedStorage = new TypedStorage<Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT6>("CollatorSelection.Invulnerables", storageDataProvider, storageChangeDelegates);
-            this.CandidatesTypedStorage = new TypedStorage<Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT7>("CollatorSelection.Candidates", storageDataProvider, storageChangeDelegates);
+            this.InvulnerablesTypedStorage = new TypedStorage<Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT5>("CollatorSelection.Invulnerables", storageDataProvider, storageChangeDelegates);
+            this.CandidatesTypedStorage = new TypedStorage<Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT6>("CollatorSelection.Candidates", storageDataProvider, storageChangeDelegates);
             this.LastAuthoredBlockTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Primitive.U32>("CollatorSelection.LastAuthoredBlock", storageDataProvider, storageChangeDelegates);
             this.DesiredCandidatesTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32>("CollatorSelection.DesiredCandidates", storageDataProvider, storageChangeDelegates);
             this.CandidacyBondTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U128>("CollatorSelection.CandidacyBond", storageDataProvider, storageChangeDelegates);
@@ -105,7 +105,7 @@ namespace Substrate.Statemine.NET.RestService.Generated.Storage
         /// <summary>
         /// _invulnerablesTypedStorage property
         /// </summary>
-        public TypedStorage<Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT6> InvulnerablesTypedStorage
+        public TypedStorage<Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT5> InvulnerablesTypedStorage
         {
             get
             {
@@ -120,7 +120,7 @@ namespace Substrate.Statemine.NET.RestService.Generated.Storage
         /// <summary>
         /// _candidatesTypedStorage property
         /// </summary>
-        public TypedStorage<Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT7> CandidatesTypedStorage
+        public TypedStorage<Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT6> CandidatesTypedStorage
         {
             get
             {
@@ -202,7 +202,7 @@ namespace Substrate.Statemine.NET.RestService.Generated.Storage
         /// >> Invulnerables
         ///  The invulnerable, fixed collators.
         /// </summary>
-        public Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT6 GetInvulnerables()
+        public Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT5 GetInvulnerables()
         {
             return InvulnerablesTypedStorage.Get();
         }
@@ -220,7 +220,7 @@ namespace Substrate.Statemine.NET.RestService.Generated.Storage
         /// >> Candidates
         ///  The (community, limited) collation candidates.
         /// </summary>
-        public Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT7 GetCandidates()
+        public Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT6 GetCandidates()
         {
             return CandidatesTypedStorage.Get();
         }

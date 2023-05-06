@@ -11,17 +11,11 @@ namespace Substrate.Statemine.NET.RestClient.Generated.Interfaces
 {
    using System;
    using System.Threading.Tasks;
-   using Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
    using Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.crypto;
-   using Substrate.NetApi.Model.Types.Primitive;
    
    public interface IAuthorshipControllerClient
    {
-      Task<BoundedVecT5> GetUncles();
-      Task<bool> SubscribeUncles();
       Task<AccountId32> GetAuthor();
       Task<bool> SubscribeAuthor();
-      Task<Bool> GetDidSetUncles();
-      Task<bool> SubscribeDidSetUncles();
    }
 }

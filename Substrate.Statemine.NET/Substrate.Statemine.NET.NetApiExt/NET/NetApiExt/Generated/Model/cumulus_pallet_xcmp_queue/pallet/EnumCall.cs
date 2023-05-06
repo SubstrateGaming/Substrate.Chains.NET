@@ -38,10 +38,10 @@ namespace Substrate.Statemine.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_
     }
     
     /// <summary>
-    /// >> 201 - Variant[cumulus_pallet_xcmp_queue.pallet.Call]
+    /// >> 208 - Variant[cumulus_pallet_xcmp_queue.pallet.Call]
     /// Contains one variant per dispatchable that can be called by an extrinsic.
     /// </summary>
-    public sealed class EnumCall : BaseEnumExt<Call, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U64, Substrate.NetApi.Model.Types.Primitive.U64>, BaseVoid, BaseVoid, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U64, Substrate.NetApi.Model.Types.Primitive.U64, Substrate.NetApi.Model.Types.Primitive.U64>
+    public sealed class EnumCall : BaseEnumExt<Call, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U64, Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>, BaseVoid, BaseVoid, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight, Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight, Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>
     {
     }
 }

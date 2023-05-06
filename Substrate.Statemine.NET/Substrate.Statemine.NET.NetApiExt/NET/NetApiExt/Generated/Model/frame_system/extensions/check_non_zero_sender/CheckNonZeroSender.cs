@@ -18,7 +18,7 @@ namespace Substrate.Statemine.NET.NetApiExt.Generated.Model.frame_system.extensi
     
     
     /// <summary>
-    /// >> 306 - Composite[frame_system.extensions.check_non_zero_sender.CheckNonZeroSender]
+    /// >> 316 - Composite[frame_system.extensions.check_non_zero_sender.CheckNonZeroSender]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class CheckNonZeroSender : BaseType

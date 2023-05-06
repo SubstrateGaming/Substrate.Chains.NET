@@ -23,11 +23,11 @@ namespace Substrate.Statemine.NET.RestClient.Mockup.Generated.Clients
       {
          _httpClient = httpClient;
       }
-      public async Task<bool> SetInvulnerables(BoundedVecT6 value)
+      public async Task<bool> SetInvulnerables(BoundedVecT5 value)
       {
          return await SendMockupRequestAsync(_httpClient, "CollatorSelection/Invulnerables", value.Encode(), Substrate.Statemine.NET.NetApiExt.Generated.Storage.CollatorSelectionStorage.InvulnerablesParams());
       }
-      public async Task<bool> SetCandidates(BoundedVecT7 value)
+      public async Task<bool> SetCandidates(BoundedVecT6 value)
       {
          return await SendMockupRequestAsync(_httpClient, "CollatorSelection/Candidates", value.Encode(), Substrate.Statemine.NET.NetApiExt.Generated.Storage.CollatorSelectionStorage.CandidatesParams());
       }

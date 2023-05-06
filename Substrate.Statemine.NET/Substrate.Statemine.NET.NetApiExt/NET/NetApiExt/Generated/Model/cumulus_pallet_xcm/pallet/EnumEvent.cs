@@ -26,13 +26,13 @@ namespace Substrate.Statemine.NET.NetApiExt.Generated.Model.cumulus_pallet_xcm.p
     }
     
     /// <summary>
-    /// >> 81 - Variant[cumulus_pallet_xcm.pallet.Event]
+    /// >> 96 - Variant[cumulus_pallet_xcm.pallet.Event]
     /// 
     ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
     ///			by this pallet.
     ///			
     /// </summary>
-    public sealed class EnumEvent : BaseEnumExt<Event, Substrate.Statemine.NET.NetApiExt.Generated.Types.Base.Arr8U8, Substrate.Statemine.NET.NetApiExt.Generated.Types.Base.Arr8U8, BaseTuple<Substrate.Statemine.NET.NetApiExt.Generated.Types.Base.Arr8U8, Substrate.Statemine.NET.NetApiExt.Generated.Model.xcm.v2.traits.EnumOutcome>>
+    public sealed class EnumEvent : BaseEnumExt<Event, Substrate.Statemine.NET.NetApiExt.Generated.Types.Base.Arr32U8, Substrate.Statemine.NET.NetApiExt.Generated.Types.Base.Arr32U8, BaseTuple<Substrate.Statemine.NET.NetApiExt.Generated.Types.Base.Arr32U8, Substrate.Statemine.NET.NetApiExt.Generated.Model.xcm.v3.traits.EnumOutcome>>
     {
     }
 }

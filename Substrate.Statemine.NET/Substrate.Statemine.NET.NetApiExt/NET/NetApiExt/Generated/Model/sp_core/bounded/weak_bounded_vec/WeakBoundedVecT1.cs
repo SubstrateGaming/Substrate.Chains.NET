@@ -18,7 +18,7 @@ namespace Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.weak
     
     
     /// <summary>
-    /// >> 49 - Composite[sp_core.bounded.weak_bounded_vec.WeakBoundedVecT1]
+    /// >> 90 - Composite[sp_core.bounded.weak_bounded_vec.WeakBoundedVecT1]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class WeakBoundedVecT1 : BaseType

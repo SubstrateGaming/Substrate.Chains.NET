@@ -18,7 +18,7 @@ namespace Substrate.Statemine.NET.NetApiExt.Generated.Model.frame_system.extensi
     
     
     /// <summary>
-    /// >> 309 - Composite[frame_system.extensions.check_genesis.CheckGenesis]
+    /// >> 319 - Composite[frame_system.extensions.check_genesis.CheckGenesis]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class CheckGenesis : BaseType

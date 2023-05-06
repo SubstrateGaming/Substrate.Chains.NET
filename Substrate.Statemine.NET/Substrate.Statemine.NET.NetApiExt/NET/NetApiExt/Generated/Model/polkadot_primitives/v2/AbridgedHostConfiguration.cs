@@ -18,7 +18,7 @@ namespace Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_primitives.
     
     
     /// <summary>
-    /// >> 131 - Composite[polkadot_primitives.v2.AbridgedHostConfiguration]
+    /// >> 146 - Composite[polkadot_primitives.v2.AbridgedHostConfiguration]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class AbridgedHostConfiguration : BaseType

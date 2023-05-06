@@ -53,6 +53,10 @@ namespace Substrate.Statemine.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "XcmpQueue/Overweight", value.Encode(), Substrate.Statemine.NET.NetApiExt.Generated.Storage.XcmpQueueStorage.OverweightParams(key));
       }
+      public async Task<bool> SetCounterForOverweight(U32 value)
+      {
+         return await SendMockupRequestAsync(_httpClient, "XcmpQueue/CounterForOverweight", value.Encode(), Substrate.Statemine.NET.NetApiExt.Generated.Storage.XcmpQueueStorage.CounterForOverweightParams());
+      }
       public async Task<bool> SetOverweightCount(U64 value)
       {
          return await SendMockupRequestAsync(_httpClient, "XcmpQueue/OverweightCount", value.Encode(), Substrate.Statemine.NET.NetApiExt.Generated.Storage.XcmpQueueStorage.OverweightCountParams());

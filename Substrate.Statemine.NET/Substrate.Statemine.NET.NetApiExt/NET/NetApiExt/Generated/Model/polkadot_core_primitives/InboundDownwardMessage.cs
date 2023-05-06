@@ -18,7 +18,7 @@ namespace Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_core_primit
     
     
     /// <summary>
-    /// >> 141 - Composite[polkadot_core_primitives.InboundDownwardMessage]
+    /// >> 156 - Composite[polkadot_core_primitives.InboundDownwardMessage]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class InboundDownwardMessage : BaseType

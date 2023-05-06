@@ -74,7 +74,7 @@ namespace Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_uniques.palle
     }
     
     /// <summary>
-    /// >> 93 - Variant[pallet_uniques.pallet.Event]
+    /// >> 107 - Variant[pallet_uniques.pallet.Event]
     /// 
     ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
     ///			by this pallet.

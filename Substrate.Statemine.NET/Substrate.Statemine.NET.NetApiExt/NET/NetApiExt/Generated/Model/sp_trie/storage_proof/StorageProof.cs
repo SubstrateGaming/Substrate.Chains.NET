@@ -18,7 +18,7 @@ namespace Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_trie.storage_proo
     
     
     /// <summary>
-    /// >> 125 - Composite[sp_trie.storage_proof.StorageProof]
+    /// >> 139 - Composite[sp_trie.storage_proof.StorageProof]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class StorageProof : BaseType

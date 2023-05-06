@@ -40,5 +40,9 @@ namespace Substrate.Statemine.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "DmpQueue/Overweight", value.Encode(), Substrate.Statemine.NET.NetApiExt.Generated.Storage.DmpQueueStorage.OverweightParams(key));
       }
+      public async Task<bool> SetCounterForOverweight(U32 value)
+      {
+         return await SendMockupRequestAsync(_httpClient, "DmpQueue/CounterForOverweight", value.Encode(), Substrate.Statemine.NET.NetApiExt.Generated.Storage.DmpQueueStorage.CounterForOverweightParams());
+      }
    }
 }

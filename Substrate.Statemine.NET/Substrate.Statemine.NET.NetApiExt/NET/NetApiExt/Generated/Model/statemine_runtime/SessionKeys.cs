@@ -18,7 +18,7 @@ namespace Substrate.Statemine.NET.NetApiExt.Generated.Model.statemine_runtime
     
     
     /// <summary>
-    /// >> 178 - Composite[statemine_runtime.SessionKeys]
+    /// >> 185 - Composite[statemine_runtime.SessionKeys]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class SessionKeys : BaseType

@@ -18,7 +18,7 @@ namespace Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_primitives.
     
     
     /// <summary>
-    /// >> 130 - Composite[polkadot_primitives.v2.AbridgedHrmpChannel]
+    /// >> 144 - Composite[polkadot_primitives.v2.AbridgedHrmpChannel]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class AbridgedHrmpChannel : BaseType

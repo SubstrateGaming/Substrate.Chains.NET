@@ -26,8 +26,6 @@ namespace Substrate.Statemine.NET.NetApiExt.Generated.Model.statemine_runtime
         
         Balances = 10,
         
-        Authorship = 20,
-        
         CollatorSelection = 21,
         
         Session = 22,
@@ -50,9 +48,9 @@ namespace Substrate.Statemine.NET.NetApiExt.Generated.Model.statemine_runtime
     }
     
     /// <summary>
-    /// >> 249 - Variant[statemine_runtime.RuntimeCall]
+    /// >> 259 - Variant[statemine_runtime.RuntimeCall]
     /// </summary>
-    public sealed class EnumRuntimeCall : BaseEnumExt<RuntimeCall, Substrate.Statemine.NET.NetApiExt.Generated.Model.frame_system.pallet.EnumCall, Substrate.Statemine.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.pallet.EnumCall, BaseVoid, Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_timestamp.pallet.EnumCall, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_balances.pallet.EnumCall, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_authorship.pallet.EnumCall, Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_collator_selection.pallet.EnumCall, Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_session.pallet.EnumCall, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.Statemine.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue.pallet.EnumCall, Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_xcm.pallet.EnumCall, BaseVoid, Substrate.Statemine.NET.NetApiExt.Generated.Model.cumulus_pallet_dmp_queue.pallet.EnumCall, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_utility.pallet.EnumCall, Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_multisig.pallet.EnumCall, Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_proxy.pallet.EnumCall, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_assets.pallet.EnumCall, Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_uniques.pallet.EnumCall>
+    public sealed class EnumRuntimeCall : BaseEnumExt<RuntimeCall, Substrate.Statemine.NET.NetApiExt.Generated.Model.frame_system.pallet.EnumCall, Substrate.Statemine.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.pallet.EnumCall, BaseVoid, Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_timestamp.pallet.EnumCall, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_balances.pallet.EnumCall, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_collator_selection.pallet.EnumCall, Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_session.pallet.EnumCall, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.Statemine.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue.pallet.EnumCall, Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_xcm.pallet.EnumCall, BaseVoid, Substrate.Statemine.NET.NetApiExt.Generated.Model.cumulus_pallet_dmp_queue.pallet.EnumCall, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_utility.pallet.EnumCall, Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_multisig.pallet.EnumCall, Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_proxy.pallet.EnumCall, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_assets.pallet.EnumCall, Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_uniques.pallet.EnumCall>
     {
     }
 }

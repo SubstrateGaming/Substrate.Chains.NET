@@ -18,7 +18,7 @@ namespace Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_uniques.types
     
     
     /// <summary>
-    /// >> 256 - Composite[pallet_uniques.types.DestroyWitness]
+    /// >> 266 - Composite[pallet_uniques.types.DestroyWitness]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class DestroyWitness : BaseType

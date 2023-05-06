@@ -24,7 +24,7 @@ namespace Substrate.Statemine.NET.NetApiExt.Generated.Model.cumulus_pallet_dmp_q
     }
     
     /// <summary>
-    /// >> 246 - Variant[cumulus_pallet_dmp_queue.pallet.Error]
+    /// >> 256 - Variant[cumulus_pallet_dmp_queue.pallet.Error]
     /// 
     ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
     ///			of this pallet.

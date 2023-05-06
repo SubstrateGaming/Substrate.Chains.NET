@@ -38,18 +38,6 @@ namespace Substrate.Statemine.NET.RestService.Generated.Controller
         }
         
         /// <summary>
-        /// >> Uncles
-        ///  Uncles
-        /// </summary>
-        [HttpGet("Uncles")]
-        [ProducesResponseType(typeof(Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT5), 200)]
-        [StorageKeyBuilder(typeof(Substrate.Statemine.NET.NetApiExt.Generated.Storage.AuthorshipStorage), "UnclesParams")]
-        public IActionResult GetUncles()
-        {
-            return this.Ok(_authorshipStorage.GetUncles());
-        }
-        
-        /// <summary>
         /// >> Author
         ///  Author of current block.
         /// </summary>
@@ -59,18 +47,6 @@ namespace Substrate.Statemine.NET.RestService.Generated.Controller
         public IActionResult GetAuthor()
         {
             return this.Ok(_authorshipStorage.GetAuthor());
-        }
-        
-        /// <summary>
-        /// >> DidSetUncles
-        ///  Whether uncles were already set in this block.
-        /// </summary>
-        [HttpGet("DidSetUncles")]
-        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Primitive.Bool), 200)]
-        [StorageKeyBuilder(typeof(Substrate.Statemine.NET.NetApiExt.Generated.Storage.AuthorshipStorage), "DidSetUnclesParams")]
-        public IActionResult GetDidSetUncles()
-        {
-            return this.Ok(_authorshipStorage.GetDidSetUncles());
         }
     }
 }

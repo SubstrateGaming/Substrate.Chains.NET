@@ -18,7 +18,7 @@ namespace Substrate.Statemine.NET.NetApiExt.Generated.Model.cumulus_pallet_parac
     
     
     /// <summary>
-    /// >> 127 - Composite[cumulus_pallet_parachain_system.relay_state_snapshot.MessagingStateSnapshot]
+    /// >> 141 - Composite[cumulus_pallet_parachain_system.relay_state_snapshot.MessagingStateSnapshot]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class MessagingStateSnapshot : BaseType

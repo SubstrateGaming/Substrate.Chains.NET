@@ -29,6 +29,8 @@ namespace Substrate.Statemine.NET.NetApiExt.Generated.Model.cumulus_pallet_parac
         DownwardMessagesReceived = 4,
         
         DownwardMessagesProcessed = 5,
+        
+        UpwardMessageSent = 6,
     }
     
     /// <summary>
@@ -38,7 +40,7 @@ namespace Substrate.Statemine.NET.NetApiExt.Generated.Model.cumulus_pallet_parac
     ///			by this pallet.
     ///			
     /// </summary>
-    public sealed class EnumEvent : BaseEnumExt<Event, BaseVoid, Substrate.NetApi.Model.Types.Primitive.U32, BaseVoid, Substrate.Statemine.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Primitive.U32, BaseTuple<Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight, Substrate.Statemine.NET.NetApiExt.Generated.Model.primitive_types.H256>>
+    public sealed class EnumEvent : BaseEnumExt<Event, BaseVoid, Substrate.NetApi.Model.Types.Primitive.U32, BaseVoid, Substrate.Statemine.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Primitive.U32, BaseTuple<Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight, Substrate.Statemine.NET.NetApiExt.Generated.Model.primitive_types.H256>, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Statemine.NET.NetApiExt.Generated.Types.Base.Arr32U8>>
     {
     }
 }

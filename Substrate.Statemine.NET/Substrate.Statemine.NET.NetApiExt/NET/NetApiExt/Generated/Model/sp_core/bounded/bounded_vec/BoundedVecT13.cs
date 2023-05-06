@@ -18,7 +18,7 @@ namespace Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.boun
     
     
     /// <summary>
-    /// >> 286 - Composite[sp_core.bounded.bounded_vec.BoundedVecT13]
+    /// >> 296 - Composite[sp_core.bounded.bounded_vec.BoundedVecT13]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class BoundedVecT13 : BaseType
