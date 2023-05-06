@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2
     
     
     /// <summary>
-    /// >> 764 - Composite[polkadot_primitives.v2.ScrapedOnChainVotes]
+    /// >> 769 - Composite[polkadot_primitives.v2.ScrapedOnChainVotes]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class ScrapedOnChainVotes : BaseType

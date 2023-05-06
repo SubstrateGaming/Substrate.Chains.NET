@@ -24,7 +24,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_vesting
     }
     
     /// <summary>
-    /// >> 676 - Variant[pallet_vesting.Releases]
+    /// >> 681 - Variant[pallet_vesting.Releases]
     /// </summary>
     public sealed class EnumReleases : BaseEnum<Releases>
     {

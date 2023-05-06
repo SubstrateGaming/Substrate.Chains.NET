@@ -201,10 +201,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> control
         /// Contains one variant per dispatchable that can be called by an extrinsic.
         /// </summary>
-        public static Method Control(Substrate.NetApi.Model.Types.Primitive.U32 unchecked_eras_to_check)
+        public static Method Control(Substrate.NetApi.Model.Types.Primitive.U32 eras_to_check)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
-            byteArray.AddRange(unchecked_eras_to_check.Encode());
+            byteArray.AddRange(eras_to_check.Encode());
             return new Method(42, "FastUnstake", 2, "control", byteArray.ToArray());
         }
     }

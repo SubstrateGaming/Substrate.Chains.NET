@@ -26,7 +26,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_whitelist.pallet
     }
     
     /// <summary>
-    /// >> 444 - Variant[pallet_whitelist.pallet.Event]
+    /// >> 454 - Variant[pallet_whitelist.pallet.Event]
     /// 
     ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
     ///			by this pallet.

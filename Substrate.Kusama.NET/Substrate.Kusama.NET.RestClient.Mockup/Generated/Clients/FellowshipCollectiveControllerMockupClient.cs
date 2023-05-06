@@ -45,7 +45,7 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "FellowshipCollective/Voting", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.FellowshipCollectiveStorage.VotingParams(key));
       }
-      public async Task<bool> SetVotingCleanup(BoundedVecT19 value, U32 key)
+      public async Task<bool> SetVotingCleanup(BoundedVecT18 value, U32 key)
       {
          return await SendMockupRequestAsync(_httpClient, "FellowshipCollective/VotingCleanup", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.FellowshipCollectiveStorage.VotingCleanupParams(key));
       }

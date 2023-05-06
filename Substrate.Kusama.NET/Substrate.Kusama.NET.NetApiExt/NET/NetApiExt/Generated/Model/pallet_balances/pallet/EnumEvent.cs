@@ -40,7 +40,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_balances.pallet
     }
     
     /// <summary>
-    /// >> 469 - Variant[pallet_balances.pallet.Event]
+    /// >> 478 - Variant[pallet_balances.pallet.Event]
     /// 
     ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
     ///			by this pallet.

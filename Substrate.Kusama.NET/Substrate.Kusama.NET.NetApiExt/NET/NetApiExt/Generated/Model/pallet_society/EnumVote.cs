@@ -26,7 +26,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society
     }
     
     /// <summary>
-    /// >> 668 - Variant[pallet_society.Vote]
+    /// >> 673 - Variant[pallet_society.Vote]
     /// </summary>
     public sealed class EnumVote : BaseEnum<Vote>
     {

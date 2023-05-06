@@ -12,9 +12,7 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Clients
    using System;
    using System.Threading.Tasks;
    using System.Net.Http;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
    using Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto;
-   using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.Kusama.NET.RestClient.Mockup.Generated.Interfaces;
    
    public sealed class AuthorshipControllerMockupClient : MockupBaseClient, IAuthorshipControllerMockupClient
@@ -24,17 +22,9 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Clients
       {
          _httpClient = httpClient;
       }
-      public async Task<bool> SetUncles(BoundedVecT5 value)
-      {
-         return await SendMockupRequestAsync(_httpClient, "Authorship/Uncles", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.AuthorshipStorage.UnclesParams());
-      }
       public async Task<bool> SetAuthor(AccountId32 value)
       {
          return await SendMockupRequestAsync(_httpClient, "Authorship/Author", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.AuthorshipStorage.AuthorParams());
-      }
-      public async Task<bool> SetDidSetUncles(Bool value)
-      {
-         return await SendMockupRequestAsync(_httpClient, "Authorship/DidSetUncles", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.AuthorshipStorage.DidSetUnclesParams());
       }
    }
 }

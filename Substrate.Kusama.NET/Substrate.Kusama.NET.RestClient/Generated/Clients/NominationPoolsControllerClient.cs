@@ -130,9 +130,9 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("NominationPools.CounterForSubPoolsStorage");
       }
-      public async Task<BoundedVecT37> GetMetadata(U32 key)
+      public async Task<BoundedVecT36> GetMetadata(U32 key)
       {
-         return await SendRequestAsync<BoundedVecT37>(_httpClient, "nominationpools/metadata", Substrate.Kusama.NET.NetApiExt.Generated.Storage.NominationPoolsStorage.MetadataParams(key));
+         return await SendRequestAsync<BoundedVecT36>(_httpClient, "nominationpools/metadata", Substrate.Kusama.NET.NetApiExt.Generated.Storage.NominationPoolsStorage.MetadataParams(key));
       }
       public async Task<bool> SubscribeMetadata(U32 key)
       {

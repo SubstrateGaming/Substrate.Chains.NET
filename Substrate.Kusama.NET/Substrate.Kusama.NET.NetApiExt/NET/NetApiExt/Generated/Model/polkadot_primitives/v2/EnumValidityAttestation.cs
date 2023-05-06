@@ -24,7 +24,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2
     }
     
     /// <summary>
-    /// >> 359 - Variant[polkadot_primitives.v2.ValidityAttestation]
+    /// >> 358 - Variant[polkadot_primitives.v2.ValidityAttestation]
     /// </summary>
     public sealed class EnumValidityAttestation : BaseEnumExt<ValidityAttestation, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.validator_app.Signature, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.validator_app.Signature>
     {

@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_identity.types
     
     
     /// <summary>
-    /// >> 218 - Composite[pallet_identity.types.BitFlags]
+    /// >> 216 - Composite[pallet_identity.types.BitFlags]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class BitFlags : BaseType

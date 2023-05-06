@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_multisig
     
     
     /// <summary>
-    /// >> 234 - Composite[pallet_multisig.Timepoint]
+    /// >> 232 - Composite[pallet_multisig.Timepoint]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Timepoint : BaseType

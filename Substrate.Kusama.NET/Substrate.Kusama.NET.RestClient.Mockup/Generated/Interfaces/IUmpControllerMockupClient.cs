@@ -22,6 +22,7 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Interfaces
       Task<bool> SetNeedsDispatch(BaseVec<Id> value);
       Task<bool> SetNextDispatchRoundStartWith(Id value);
       Task<bool> SetOverweight(BaseTuple<Id, BaseVec<U8>> value, U64 key);
+      Task<bool> SetCounterForOverweight(U32 value);
       Task<bool> SetOverweightCount(U64 value);
    }
 }

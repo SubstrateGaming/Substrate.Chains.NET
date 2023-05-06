@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.
     
     
     /// <summary>
-    /// >> 339 - Composite[polkadot_primitives.v2.signed.UncheckedSigned]
+    /// >> 338 - Composite[polkadot_primitives.v2.signed.UncheckedSigned]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class UncheckedSigned : BaseType

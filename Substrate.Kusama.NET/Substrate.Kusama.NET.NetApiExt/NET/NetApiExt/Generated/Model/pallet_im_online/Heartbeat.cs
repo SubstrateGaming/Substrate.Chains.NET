@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_im_online
     
     
     /// <summary>
-    /// >> 125 - Composite[pallet_im_online.Heartbeat]
+    /// >> 123 - Composite[pallet_im_online.Heartbeat]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Heartbeat : BaseType

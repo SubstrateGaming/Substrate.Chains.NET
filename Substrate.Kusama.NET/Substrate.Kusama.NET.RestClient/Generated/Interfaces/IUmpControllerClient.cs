@@ -27,6 +27,8 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Interfaces
       Task<bool> SubscribeNextDispatchRoundStartWith();
       Task<BaseTuple<Id, BaseVec<U8>>> GetOverweight(U64 key);
       Task<bool> SubscribeOverweight(U64 key);
+      Task<U32> GetCounterForOverweight();
+      Task<bool> SubscribeCounterForOverweight();
       Task<U64> GetOverweightCount();
       Task<bool> SubscribeOverweightCount();
    }

@@ -50,9 +50,9 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("ChildBounties.ChildBounties", Substrate.Kusama.NET.NetApiExt.Generated.Storage.ChildBountiesStorage.ChildBountiesParams(key));
       }
-      public async Task<BoundedVecT31> GetChildBountyDescriptions(U32 key)
+      public async Task<BoundedVecT30> GetChildBountyDescriptions(U32 key)
       {
-         return await SendRequestAsync<BoundedVecT31>(_httpClient, "childbounties/childbountydescriptions", Substrate.Kusama.NET.NetApiExt.Generated.Storage.ChildBountiesStorage.ChildBountyDescriptionsParams(key));
+         return await SendRequestAsync<BoundedVecT30>(_httpClient, "childbounties/childbountydescriptions", Substrate.Kusama.NET.NetApiExt.Generated.Storage.ChildBountiesStorage.ChildBountyDescriptionsParams(key));
       }
       public async Task<bool> SubscribeChildBountyDescriptions(U32 key)
       {

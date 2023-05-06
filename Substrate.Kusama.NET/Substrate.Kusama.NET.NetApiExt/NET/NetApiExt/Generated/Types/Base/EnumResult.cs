@@ -24,7 +24,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Types.Base
     }
     
     /// <summary>
-    /// >> 445 - Variant[Result]
+    /// >> 455 - Variant[Result]
     /// </summary>
     public sealed class EnumResult : BaseEnumExt<Result, Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_support.dispatch.PostDispatchInfo, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.DispatchErrorWithPostInfo>
     {

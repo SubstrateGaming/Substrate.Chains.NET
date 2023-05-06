@@ -41,7 +41,7 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "NisCounterpartBalances/Locks", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.NisCounterpartBalancesStorage.LocksParams(key));
       }
-      public async Task<bool> SetReserves(BoundedVecT36 value, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+      public async Task<bool> SetReserves(BoundedVecT35 value, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {
          return await SendMockupRequestAsync(_httpClient, "NisCounterpartBalances/Reserves", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.NisCounterpartBalancesStorage.ReservesParams(key));
       }

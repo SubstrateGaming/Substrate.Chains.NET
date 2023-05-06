@@ -14,6 +14,7 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Clients
    using System.Net.Http;
    using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Types.Base;
    using Substrate.NetApi.Model.Types.Base;
    using Substrate.Kusama.NET.RestClient.Generated.Interfaces;
    
@@ -41,6 +42,14 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Clients
       public async Task<bool> SubscribeDisputes(BaseTuple<U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_core_primitives.CandidateHash> key)
       {
          return await _subscriptionClient.SubscribeAsync("ParasDisputes.Disputes", Substrate.Kusama.NET.NetApiExt.Generated.Storage.ParasDisputesStorage.DisputesParams(key));
+      }
+      public async Task<BTreeSet> GetBackersOnDisputes(BaseTuple<U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_core_primitives.CandidateHash> key)
+      {
+         return await SendRequestAsync<BTreeSet>(_httpClient, "parasdisputes/backersondisputes", Substrate.Kusama.NET.NetApiExt.Generated.Storage.ParasDisputesStorage.BackersOnDisputesParams(key));
+      }
+      public async Task<bool> SubscribeBackersOnDisputes(BaseTuple<U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_core_primitives.CandidateHash> key)
+      {
+         return await _subscriptionClient.SubscribeAsync("ParasDisputes.BackersOnDisputes", Substrate.Kusama.NET.NetApiExt.Generated.Storage.ParasDisputesStorage.BackersOnDisputesParams(key));
       }
       public async Task<U32> GetIncluded(BaseTuple<U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_core_primitives.CandidateHash> key)
       {

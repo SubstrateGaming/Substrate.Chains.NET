@@ -40,13 +40,13 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// >> BountyDescriptions
         ///  The description of each bounty.
         /// </summary>
-        Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT31 GetBountyDescriptions(string key);
+        Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT30 GetBountyDescriptions(string key);
         
         /// <summary>
         /// >> BountyApprovals
         ///  Bounty indices that have been approved but not yet funded.
         /// </summary>
-        Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT15 GetBountyApprovals();
+        Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT14 GetBountyApprovals();
     }
     
     /// <summary>
@@ -68,12 +68,12 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// <summary>
         /// _bountyDescriptionsTypedStorage typed storage field
         /// </summary>
-        private TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT31> _bountyDescriptionsTypedStorage;
+        private TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT30> _bountyDescriptionsTypedStorage;
         
         /// <summary>
         /// _bountyApprovalsTypedStorage typed storage field
         /// </summary>
-        private TypedStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT15> _bountyApprovalsTypedStorage;
+        private TypedStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT14> _bountyApprovalsTypedStorage;
         
         /// <summary>
         /// BountiesStorage constructor.
@@ -82,8 +82,8 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         {
             this.BountyCountTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32>("Bounties.BountyCount", storageDataProvider, storageChangeDelegates);
             this.BountiesTypedStorage = new TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_bounties.Bounty>("Bounties.Bounties", storageDataProvider, storageChangeDelegates);
-            this.BountyDescriptionsTypedStorage = new TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT31>("Bounties.BountyDescriptions", storageDataProvider, storageChangeDelegates);
-            this.BountyApprovalsTypedStorage = new TypedStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT15>("Bounties.BountyApprovals", storageDataProvider, storageChangeDelegates);
+            this.BountyDescriptionsTypedStorage = new TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT30>("Bounties.BountyDescriptions", storageDataProvider, storageChangeDelegates);
+            this.BountyApprovalsTypedStorage = new TypedStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT14>("Bounties.BountyApprovals", storageDataProvider, storageChangeDelegates);
         }
         
         /// <summary>
@@ -119,7 +119,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// <summary>
         /// _bountyDescriptionsTypedStorage property
         /// </summary>
-        public TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT31> BountyDescriptionsTypedStorage
+        public TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT30> BountyDescriptionsTypedStorage
         {
             get
             {
@@ -134,7 +134,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// <summary>
         /// _bountyApprovalsTypedStorage property
         /// </summary>
-        public TypedStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT15> BountyApprovalsTypedStorage
+        public TypedStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT14> BountyApprovalsTypedStorage
         {
             get
             {
@@ -217,13 +217,13 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// >> BountyDescriptions
         ///  The description of each bounty.
         /// </summary>
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT31 GetBountyDescriptions(string key)
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT30 GetBountyDescriptions(string key)
         {
             if ((key == null))
             {
                 return null;
             }
-            if (BountyDescriptionsTypedStorage.Dictionary.TryGetValue(key, out Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT31 result))
+            if (BountyDescriptionsTypedStorage.Dictionary.TryGetValue(key, out Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT30 result))
             {
                 return result;
             }
@@ -246,7 +246,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// >> BountyApprovals
         ///  Bounty indices that have been approved but not yet funded.
         /// </summary>
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT15 GetBountyApprovals()
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT14 GetBountyApprovals()
         {
             return BountyApprovalsTypedStorage.Get();
         }

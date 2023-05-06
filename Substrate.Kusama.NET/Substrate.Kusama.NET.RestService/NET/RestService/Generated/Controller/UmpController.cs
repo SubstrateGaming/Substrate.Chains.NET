@@ -123,6 +123,18 @@ namespace Substrate.Kusama.NET.RestService.Generated.Controller
         }
         
         /// <summary>
+        /// >> CounterForOverweight
+        /// Counter for the related counted storage map
+        /// </summary>
+        [HttpGet("CounterForOverweight")]
+        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Primitive.U32), 200)]
+        [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.UmpStorage), "CounterForOverweightParams")]
+        public IActionResult GetCounterForOverweight()
+        {
+            return this.Ok(_umpStorage.GetCounterForOverweight());
+        }
+        
+        /// <summary>
         /// >> OverweightCount
         ///  The number of overweight messages ever recorded in `Overweight` (and thus the lowest free
         ///  index).

@@ -23,7 +23,7 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Clients
       {
          _httpClient = httpClient;
       }
-      public async Task<bool> SetMembers(BoundedVecT14 value)
+      public async Task<bool> SetMembers(BoundedVecT13 value)
       {
          return await SendMockupRequestAsync(_httpClient, "TechnicalMembership/Members", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.TechnicalMembershipStorage.MembersParams());
       }

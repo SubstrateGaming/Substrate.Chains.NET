@@ -32,11 +32,11 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "Democracy/PublicPropCount", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.DemocracyStorage.PublicPropCountParams());
       }
-      public async Task<bool> SetPublicProps(BoundedVecT9 value)
+      public async Task<bool> SetPublicProps(BoundedVecT8 value)
       {
          return await SendMockupRequestAsync(_httpClient, "Democracy/PublicProps", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.DemocracyStorage.PublicPropsParams());
       }
-      public async Task<bool> SetDepositOf(BaseTuple<BoundedVecT10, U128> value, U32 key)
+      public async Task<bool> SetDepositOf(BaseTuple<BoundedVecT9, U128> value, U32 key)
       {
          return await SendMockupRequestAsync(_httpClient, "Democracy/DepositOf", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.DemocracyStorage.DepositOfParams(key));
       }
@@ -64,7 +64,7 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "Democracy/NextExternal", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.DemocracyStorage.NextExternalParams());
       }
-      public async Task<bool> SetBlacklist(BaseTuple<U32, BoundedVecT10> value, Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256 key)
+      public async Task<bool> SetBlacklist(BaseTuple<U32, BoundedVecT9> value, Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256 key)
       {
          return await SendMockupRequestAsync(_httpClient, "Democracy/Blacklist", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.DemocracyStorage.BlacklistParams(key));
       }

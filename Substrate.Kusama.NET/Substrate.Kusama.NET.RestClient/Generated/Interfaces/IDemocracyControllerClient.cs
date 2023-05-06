@@ -23,9 +23,9 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Interfaces
    {
       Task<U32> GetPublicPropCount();
       Task<bool> SubscribePublicPropCount();
-      Task<BoundedVecT9> GetPublicProps();
+      Task<BoundedVecT8> GetPublicProps();
       Task<bool> SubscribePublicProps();
-      Task<BaseTuple<BoundedVecT10, U128>> GetDepositOf(U32 key);
+      Task<BaseTuple<BoundedVecT9, U128>> GetDepositOf(U32 key);
       Task<bool> SubscribeDepositOf(U32 key);
       Task<U32> GetReferendumCount();
       Task<bool> SubscribeReferendumCount();
@@ -39,7 +39,7 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Interfaces
       Task<bool> SubscribeLastTabledWasExternal();
       Task<BaseTuple<EnumBounded, EnumVoteThreshold>> GetNextExternal();
       Task<bool> SubscribeNextExternal();
-      Task<BaseTuple<U32, BoundedVecT10>> GetBlacklist(Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256 key);
+      Task<BaseTuple<U32, BoundedVecT9>> GetBlacklist(Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256 key);
       Task<bool> SubscribeBlacklist(Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256 key);
       Task<Bool> GetCancellations(Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256 key);
       Task<bool> SubscribeCancellations(Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256 key);

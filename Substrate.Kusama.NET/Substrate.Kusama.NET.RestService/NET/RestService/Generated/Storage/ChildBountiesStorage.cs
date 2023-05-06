@@ -47,7 +47,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// >> ChildBountyDescriptions
         ///  The description of each child-bounty.
         /// </summary>
-        Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT31 GetChildBountyDescriptions(string key);
+        Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT30 GetChildBountyDescriptions(string key);
         
         /// <summary>
         /// >> ChildrenCuratorFees
@@ -80,7 +80,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// <summary>
         /// _childBountyDescriptionsTypedStorage typed storage field
         /// </summary>
-        private TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT31> _childBountyDescriptionsTypedStorage;
+        private TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT30> _childBountyDescriptionsTypedStorage;
         
         /// <summary>
         /// _childrenCuratorFeesTypedStorage typed storage field
@@ -95,7 +95,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
             this.ChildBountyCountTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32>("ChildBounties.ChildBountyCount", storageDataProvider, storageChangeDelegates);
             this.ParentChildBountiesTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Primitive.U32>("ChildBounties.ParentChildBounties", storageDataProvider, storageChangeDelegates);
             this.ChildBountiesTypedStorage = new TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_child_bounties.ChildBounty>("ChildBounties.ChildBounties", storageDataProvider, storageChangeDelegates);
-            this.ChildBountyDescriptionsTypedStorage = new TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT31>("ChildBounties.ChildBountyDescriptions", storageDataProvider, storageChangeDelegates);
+            this.ChildBountyDescriptionsTypedStorage = new TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT30>("ChildBounties.ChildBountyDescriptions", storageDataProvider, storageChangeDelegates);
             this.ChildrenCuratorFeesTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Primitive.U128>("ChildBounties.ChildrenCuratorFees", storageDataProvider, storageChangeDelegates);
         }
         
@@ -147,7 +147,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// <summary>
         /// _childBountyDescriptionsTypedStorage property
         /// </summary>
-        public TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT31> ChildBountyDescriptionsTypedStorage
+        public TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT30> ChildBountyDescriptionsTypedStorage
         {
             get
             {
@@ -276,13 +276,13 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// >> ChildBountyDescriptions
         ///  The description of each child-bounty.
         /// </summary>
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT31 GetChildBountyDescriptions(string key)
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT30 GetChildBountyDescriptions(string key)
         {
             if ((key == null))
             {
                 return null;
             }
-            if (ChildBountyDescriptionsTypedStorage.Dictionary.TryGetValue(key, out Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT31 result))
+            if (ChildBountyDescriptionsTypedStorage.Dictionary.TryGetValue(key, out Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT30 result))
             {
                 return result;
             }

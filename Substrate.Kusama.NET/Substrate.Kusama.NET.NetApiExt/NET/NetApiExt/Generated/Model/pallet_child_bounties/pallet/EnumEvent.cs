@@ -28,7 +28,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_child_bounties.p
     }
     
     /// <summary>
-    /// >> 461 - Variant[pallet_child_bounties.pallet.Event]
+    /// >> 471 - Variant[pallet_child_bounties.pallet.Event]
     /// 
     ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
     ///			by this pallet.

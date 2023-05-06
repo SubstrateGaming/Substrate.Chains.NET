@@ -254,6 +254,35 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
       [Test()]
+      public async System.Threading.Tasks.Task TestCounterForOverweight()
+      {
+         // Construct new Mockup client to test with.
+         UmpControllerMockupClient mockupClient = new UmpControllerMockupClient(_httpClient);
+
+         // Construct new subscription client to test with.
+         var subscriptionClient = CreateSubscriptionClient();
+
+         // Construct new RPC client to test with.
+         UmpControllerClient rpcClient = new UmpControllerClient(_httpClient, subscriptionClient);
+         Substrate.NetApi.Model.Types.Primitive.U32 mockupValue = this.GetTestValueU32();
+
+
+         Assert.IsTrue(await rpcClient.SubscribeCounterForOverweight());
+
+         // Save the previously generated mockup value in RPC service storage.
+         bool mockupSetResult = await mockupClient.SetCounterForOverweight(mockupValue);
+
+         // Test that the expected mockup value was handled successfully from RPC service.
+         Assert.IsTrue(mockupSetResult);
+         var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
+         Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
+
+         Substrate.NetApi.Model.Types.Primitive.U32 rpcResult = await rpcClient.GetCounterForOverweight();
+
+         // Test that the expected mockup value matches the actual result from RPC service.
+         Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
+      }
+      [Test()]
       public async System.Threading.Tasks.Task TestOverweightCount()
       {
          // Construct new Mockup client to test with.

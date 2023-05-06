@@ -23,7 +23,7 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Interfaces
       Task<bool> SubscribeProposals(U32 key);
       Task<U128> GetDeactivated();
       Task<bool> SubscribeDeactivated();
-      Task<BoundedVecT15> GetApprovals();
+      Task<BoundedVecT14> GetApprovals();
       Task<bool> SubscribeApprovals();
    }
 }

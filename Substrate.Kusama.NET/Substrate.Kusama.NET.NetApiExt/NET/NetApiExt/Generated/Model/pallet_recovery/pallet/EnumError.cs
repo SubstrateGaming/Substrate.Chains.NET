@@ -52,7 +52,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_recovery.pallet
     }
     
     /// <summary>
-    /// >> 673 - Variant[pallet_recovery.pallet.Error]
+    /// >> 678 - Variant[pallet_recovery.pallet.Error]
     /// 
     ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
     ///			of this pallet.

@@ -34,6 +34,9 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("ParasDisputes", "Disputes"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat,
                             Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_core_primitives.CandidateHash>), typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.DisputeState)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("ParasDisputes", "BackersOnDisputes"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat,
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_core_primitives.CandidateHash>), typeof(Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.BTreeSet)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("ParasDisputes", "Included"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat,
                             Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_core_primitives.CandidateHash>), typeof(Substrate.NetApi.Model.Types.Primitive.U32)));
@@ -99,6 +102,39 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         {
             string parameters = ParasDisputesStorage.DisputesParams(key);
             var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.DisputeState>(parameters, token);
+            return result;
+        }
+        
+        /// <summary>
+        /// >> BackersOnDisputesParams
+        ///  Backing votes stored for each dispute.
+        ///  This storage is used for slashing.
+        /// </summary>
+        public static string BackersOnDisputesParams(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_core_primitives.CandidateHash> key)
+        {
+            return RequestGenerator.GetStorage("ParasDisputes", "BackersOnDisputes", Substrate.NetApi.Model.Meta.Storage.Type.Map, new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
+                        Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat,
+                        Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, key.Value);
+        }
+        
+        /// <summary>
+        /// >> BackersOnDisputesDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string BackersOnDisputesDefault()
+        {
+            return "0x00";
+        }
+        
+        /// <summary>
+        /// >> BackersOnDisputes
+        ///  Backing votes stored for each dispute.
+        ///  This storage is used for slashing.
+        /// </summary>
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.BTreeSet> BackersOnDisputes(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_core_primitives.CandidateHash> key, CancellationToken token)
+        {
+            string parameters = ParasDisputesStorage.BackersOnDisputesParams(key);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.BTreeSet>(parameters, token);
             return result;
         }
         
@@ -229,8 +265,20 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         SingleSidedDispute,
         
         /// <summary>
+        /// >> MaliciousBacker
+        /// A dispute vote from a malicious backer.
+        /// </summary>
+        MaliciousBacker,
+        
+        /// <summary>
+        /// >> MissingBackingVotes
+        /// No backing votes were provides along dispute statements.
+        /// </summary>
+        MissingBackingVotes,
+        
+        /// <summary>
         /// >> UnconfirmedDispute
-        /// Unconfirmed dispute statement sets provided
+        /// Unconfirmed dispute statement sets provided.
         /// </summary>
         UnconfirmedDispute,
     }

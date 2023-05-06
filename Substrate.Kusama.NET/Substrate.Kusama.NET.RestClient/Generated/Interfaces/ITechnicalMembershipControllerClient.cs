@@ -16,7 +16,7 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Interfaces
    
    public interface ITechnicalMembershipControllerClient
    {
-      Task<BoundedVecT14> GetMembers();
+      Task<BoundedVecT13> GetMembers();
       Task<bool> SubscribeMembers();
       Task<AccountId32> GetPrime();
       Task<bool> SubscribePrime();

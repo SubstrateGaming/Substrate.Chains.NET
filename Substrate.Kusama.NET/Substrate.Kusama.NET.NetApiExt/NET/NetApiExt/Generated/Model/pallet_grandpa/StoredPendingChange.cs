@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_grandpa
     
     
     /// <summary>
-    /// >> 564 - Composite[pallet_grandpa.StoredPendingChange]
+    /// >> 568 - Composite[pallet_grandpa.StoredPendingChange]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class StoredPendingChange : BaseType

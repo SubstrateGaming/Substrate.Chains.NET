@@ -26,27 +26,31 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nis.pallet
         
         BidTooLow = 3,
         
-        Unknown = 4,
+        UnknownReceipt = 4,
         
         NotOwner = 5,
         
         NotExpired = 6,
         
-        NotFound = 7,
+        UnknownBid = 7,
         
-        TooMuch = 8,
+        PortionTooBig = 8,
         
         Unfunded = 9,
         
-        Funded = 10,
+        AlreadyFunded = 10,
         
         Throttled = 11,
         
         MakesDust = 12,
+        
+        AlreadyCommunal = 13,
+        
+        AlreadyPrivate = 14,
     }
     
     /// <summary>
-    /// >> 727 - Variant[pallet_nis.pallet.Error]
+    /// >> 732 - Variant[pallet_nis.pallet.Error]
     /// 
     ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
     ///			of this pallet.

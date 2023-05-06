@@ -30,11 +30,15 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parach
         
         SingleSidedDispute = 5,
         
-        UnconfirmedDispute = 6,
+        MaliciousBacker = 6,
+        
+        MissingBackingVotes = 7,
+        
+        UnconfirmedDispute = 8,
     }
     
     /// <summary>
-    /// >> 819 - Variant[polkadot_runtime_parachains.disputes.pallet.Error]
+    /// >> 825 - Variant[polkadot_runtime_parachains.disputes.pallet.Error]
     /// 
     ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
     ///			of this pallet.

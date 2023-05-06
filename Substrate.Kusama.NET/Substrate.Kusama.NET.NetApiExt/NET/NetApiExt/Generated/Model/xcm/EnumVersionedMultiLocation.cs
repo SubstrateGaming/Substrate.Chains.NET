@@ -18,15 +18,15 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm
     public enum VersionedMultiLocation
     {
         
-        V0 = 0,
+        V2 = 1,
         
-        V1 = 1,
+        V3 = 3,
     }
     
     /// <summary>
-    /// >> 389 - Variant[xcm.VersionedMultiLocation]
+    /// >> 388 - Variant[xcm.VersionedMultiLocation]
     /// </summary>
-    public sealed class EnumVersionedMultiLocation : BaseEnumExt<VersionedMultiLocation, Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.v0.multi_location.EnumMultiLocation, Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.v1.multilocation.MultiLocation>
+    public sealed class EnumVersionedMultiLocation : BaseEnumExt<VersionedMultiLocation, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.v2.multilocation.MultiLocation, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.v3.multilocation.MultiLocation>
     {
     }
 }

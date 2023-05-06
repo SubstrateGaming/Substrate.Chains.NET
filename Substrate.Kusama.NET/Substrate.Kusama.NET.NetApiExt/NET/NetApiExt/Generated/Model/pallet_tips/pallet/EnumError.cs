@@ -32,7 +32,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_tips.pallet
     }
     
     /// <summary>
-    /// >> 709 - Variant[pallet_tips.pallet.Error]
+    /// >> 714 - Variant[pallet_tips.pallet.Error]
     /// 
     ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
     ///			of this pallet.

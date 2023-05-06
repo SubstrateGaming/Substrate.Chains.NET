@@ -14,6 +14,7 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Clients
    using System.Net.Http;
    using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Types.Base;
    using Substrate.NetApi.Model.Types.Base;
    using Substrate.Kusama.NET.RestClient.Mockup.Generated.Interfaces;
    
@@ -31,6 +32,10 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Clients
       public async Task<bool> SetDisputes(DisputeState value, BaseTuple<U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_core_primitives.CandidateHash> key)
       {
          return await SendMockupRequestAsync(_httpClient, "ParasDisputes/Disputes", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.ParasDisputesStorage.DisputesParams(key));
+      }
+      public async Task<bool> SetBackersOnDisputes(BTreeSet value, BaseTuple<U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_core_primitives.CandidateHash> key)
+      {
+         return await SendMockupRequestAsync(_httpClient, "ParasDisputes/BackersOnDisputes", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.ParasDisputesStorage.BackersOnDisputesParams(key));
       }
       public async Task<bool> SetIncluded(U32 value, BaseTuple<U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_core_primitives.CandidateHash> key)
       {

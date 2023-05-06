@@ -20,6 +20,6 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Interfaces
       Task<bool> SetProposalCount(U32 value);
       Task<bool> SetProposals(Proposal value, U32 key);
       Task<bool> SetDeactivated(U128 value);
-      Task<bool> SetApprovals(BoundedVecT15 value);
+      Task<bool> SetApprovals(BoundedVecT14 value);
    }
 }

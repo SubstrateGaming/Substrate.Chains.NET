@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_elections_phragm
     
     
     /// <summary>
-    /// >> 598 - Composite[pallet_elections_phragmen.SeatHolder]
+    /// >> 602 - Composite[pallet_elections_phragmen.SeatHolder]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class SeatHolder : BaseType

@@ -23,7 +23,7 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Clients
       {
          _httpClient = httpClient;
       }
-      public async Task<bool> SetVesting(BoundedVecT25 value, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+      public async Task<bool> SetVesting(BoundedVecT24 value, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {
          return await SendMockupRequestAsync(_httpClient, "Vesting/Vesting", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.VestingStorage.VestingParams(key));
       }

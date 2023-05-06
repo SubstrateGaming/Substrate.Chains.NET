@@ -20,7 +20,7 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Interfaces
    
    public interface ITechnicalCommitteeControllerMockupClient
    {
-      Task<bool> SetProposals(BoundedVecT13 value);
+      Task<bool> SetProposals(BoundedVecT12 value);
       Task<bool> SetProposalOf(EnumRuntimeCall value, Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256 key);
       Task<bool> SetVoting(Votes value, Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256 key);
       Task<bool> SetProposalCount(U32 value);

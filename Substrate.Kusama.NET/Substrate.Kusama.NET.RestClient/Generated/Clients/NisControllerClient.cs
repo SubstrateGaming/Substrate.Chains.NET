@@ -25,17 +25,17 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Clients
          _httpClient = httpClient;
          _subscriptionClient = subscriptionClient;
       }
-      public async Task<BoundedVecT34> GetQueueTotals()
+      public async Task<BoundedVecT33> GetQueueTotals()
       {
-         return await SendRequestAsync<BoundedVecT34>(_httpClient, "nis/queuetotals");
+         return await SendRequestAsync<BoundedVecT33>(_httpClient, "nis/queuetotals");
       }
       public async Task<bool> SubscribeQueueTotals()
       {
          return await _subscriptionClient.SubscribeAsync("Nis.QueueTotals");
       }
-      public async Task<BoundedVecT35> GetQueues(Substrate.NetApi.Model.Types.Primitive.U32 key)
+      public async Task<BoundedVecT34> GetQueues(Substrate.NetApi.Model.Types.Primitive.U32 key)
       {
-         return await SendRequestAsync<BoundedVecT35>(_httpClient, "nis/queues", Substrate.Kusama.NET.NetApiExt.Generated.Storage.NisStorage.QueuesParams(key));
+         return await SendRequestAsync<BoundedVecT34>(_httpClient, "nis/queues", Substrate.Kusama.NET.NetApiExt.Generated.Storage.NisStorage.QueuesParams(key));
       }
       public async Task<bool> SubscribeQueues(Substrate.NetApi.Model.Types.Primitive.U32 key)
       {

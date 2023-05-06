@@ -27,7 +27,7 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Clients
       {
          _httpClient = httpClient;
       }
-      public async Task<bool> SetProposals(BoundedVecT13 value)
+      public async Task<bool> SetProposals(BoundedVecT12 value)
       {
          return await SendMockupRequestAsync(_httpClient, "TechnicalCommittee/Proposals", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.TechnicalCommitteeStorage.ProposalsParams());
       }

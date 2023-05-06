@@ -54,7 +54,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_elections_phragm
     }
     
     /// <summary>
-    /// >> 600 - Variant[pallet_elections_phragmen.pallet.Error]
+    /// >> 604 - Variant[pallet_elections_phragmen.pallet.Error]
     /// 
     ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
     ///			of this pallet.

@@ -54,7 +54,7 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "ElectionProviderMultiPhase/SignedSubmissionNextIndex", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.ElectionProviderMultiPhaseStorage.SignedSubmissionNextIndexParams());
       }
-      public async Task<bool> SetSignedSubmissionIndices(BoundedVecT33 value)
+      public async Task<bool> SetSignedSubmissionIndices(BoundedVecT32 value)
       {
          return await SendMockupRequestAsync(_httpClient, "ElectionProviderMultiPhase/SignedSubmissionIndices", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.ElectionProviderMultiPhaseStorage.SignedSubmissionIndicesParams());
       }

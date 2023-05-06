@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_election_provide
     
     
     /// <summary>
-    /// >> 240 - Composite[pallet_election_provider_multi_phase.RawSolution]
+    /// >> 238 - Composite[pallet_election_provider_multi_phase.RawSolution]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class RawSolution : BaseType

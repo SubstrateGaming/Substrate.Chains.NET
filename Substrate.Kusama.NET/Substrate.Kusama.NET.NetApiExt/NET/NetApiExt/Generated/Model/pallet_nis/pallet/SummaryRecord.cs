@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nis.pallet
     
     
     /// <summary>
-    /// >> 724 - Composite[pallet_nis.pallet.SummaryRecord]
+    /// >> 729 - Composite[pallet_nis.pallet.SummaryRecord]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class SummaryRecord : BaseType
@@ -43,6 +43,11 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nis.pallet
         /// >> last_period
         /// </summary>
         private Substrate.NetApi.Model.Types.Primitive.U32 _lastPeriod;
+        
+        /// <summary>
+        /// >> receipts_on_hold
+        /// </summary>
+        private Substrate.NetApi.Model.Types.Primitive.U128 _receiptsOnHold;
         
         public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perquintill ProportionOwed
         {
@@ -92,6 +97,18 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nis.pallet
             }
         }
         
+        public Substrate.NetApi.Model.Types.Primitive.U128 ReceiptsOnHold
+        {
+            get
+            {
+                return this._receiptsOnHold;
+            }
+            set
+            {
+                this._receiptsOnHold = value;
+            }
+        }
+        
         public override string TypeName()
         {
             return "SummaryRecord";
@@ -104,6 +121,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nis.pallet
             result.AddRange(Index.Encode());
             result.AddRange(Thawed.Encode());
             result.AddRange(LastPeriod.Encode());
+            result.AddRange(ReceiptsOnHold.Encode());
             return result.ToArray();
         }
         
@@ -118,6 +136,8 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nis.pallet
             Thawed.Decode(byteArray, ref p);
             LastPeriod = new Substrate.NetApi.Model.Types.Primitive.U32();
             LastPeriod.Decode(byteArray, ref p);
+            ReceiptsOnHold = new Substrate.NetApi.Model.Types.Primitive.U128();
+            ReceiptsOnHold.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];

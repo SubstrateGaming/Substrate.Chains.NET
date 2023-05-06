@@ -32,7 +32,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parach
     }
     
     /// <summary>
-    /// >> 769 - Variant[polkadot_runtime_parachains.paras_inherent.pallet.Error]
+    /// >> 774 - Variant[polkadot_runtime_parachains.paras_inherent.pallet.Error]
     /// 
     ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
     ///			of this pallet.

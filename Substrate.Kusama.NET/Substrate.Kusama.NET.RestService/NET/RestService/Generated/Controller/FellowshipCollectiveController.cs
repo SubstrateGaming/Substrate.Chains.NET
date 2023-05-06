@@ -103,7 +103,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Controller
         /// >> VotingCleanup
         /// </summary>
         [HttpGet("VotingCleanup")]
-        [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT19), 200)]
+        [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT18), 200)]
         [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.FellowshipCollectiveStorage), "VotingCleanupParams", typeof(Substrate.NetApi.Model.Types.Primitive.U32))]
         public IActionResult GetVotingCleanup(string key)
         {

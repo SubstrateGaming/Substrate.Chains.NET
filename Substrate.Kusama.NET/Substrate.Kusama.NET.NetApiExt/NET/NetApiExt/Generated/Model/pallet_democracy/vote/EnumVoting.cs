@@ -24,9 +24,9 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_democracy.vote
     }
     
     /// <summary>
-    /// >> 583 - Variant[pallet_democracy.vote.Voting]
+    /// >> 587 - Variant[pallet_democracy.vote.Voting]
     /// </summary>
-    public sealed class EnumVoting : BaseEnumExt<Voting, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT11, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_democracy.types.Delegations, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_democracy.vote.PriorLock>, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_democracy.conviction.EnumConviction, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_democracy.types.Delegations, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_democracy.vote.PriorLock>>
+    public sealed class EnumVoting : BaseEnumExt<Voting, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT10, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_democracy.types.Delegations, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_democracy.vote.PriorLock>, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_democracy.conviction.EnumConviction, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_democracy.types.Delegations, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_democracy.vote.PriorLock>>
     {
     }
 }

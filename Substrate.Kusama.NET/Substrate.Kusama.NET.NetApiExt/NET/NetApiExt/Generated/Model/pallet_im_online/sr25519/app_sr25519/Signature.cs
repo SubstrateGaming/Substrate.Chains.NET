@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_im_online.sr2551
     
     
     /// <summary>
-    /// >> 130 - Composite[pallet_im_online.sr25519.app_sr25519.Signature]
+    /// >> 128 - Composite[pallet_im_online.sr25519.app_sr25519.Signature]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Signature : BaseType

@@ -20,7 +20,7 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Interfaces
    
    public interface ICouncilControllerClient
    {
-      Task<BoundedVecT12> GetProposals();
+      Task<BoundedVecT11> GetProposals();
       Task<bool> SubscribeProposals();
       Task<EnumRuntimeCall> GetProposalOf(Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256 key);
       Task<bool> SubscribeProposalOf(Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256 key);

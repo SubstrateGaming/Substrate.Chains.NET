@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.
     
     
     /// <summary>
-    /// >> 110 - Composite[polkadot_primitives.v2.assignment_app.Public]
+    /// >> 108 - Composite[polkadot_primitives.v2.assignment_app.Public]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Public : BaseType

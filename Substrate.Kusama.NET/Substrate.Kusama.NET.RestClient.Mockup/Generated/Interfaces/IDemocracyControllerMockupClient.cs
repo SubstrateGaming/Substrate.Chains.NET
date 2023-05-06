@@ -22,15 +22,15 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Interfaces
    public interface IDemocracyControllerMockupClient
    {
       Task<bool> SetPublicPropCount(U32 value);
-      Task<bool> SetPublicProps(BoundedVecT9 value);
-      Task<bool> SetDepositOf(BaseTuple<BoundedVecT10, U128> value, U32 key);
+      Task<bool> SetPublicProps(BoundedVecT8 value);
+      Task<bool> SetDepositOf(BaseTuple<BoundedVecT9, U128> value, U32 key);
       Task<bool> SetReferendumCount(U32 value);
       Task<bool> SetLowestUnbaked(U32 value);
       Task<bool> SetReferendumInfoOf(EnumReferendumInfo value, U32 key);
       Task<bool> SetVotingOf(EnumVoting value, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
       Task<bool> SetLastTabledWasExternal(Bool value);
       Task<bool> SetNextExternal(BaseTuple<EnumBounded, EnumVoteThreshold> value);
-      Task<bool> SetBlacklist(BaseTuple<U32, BoundedVecT10> value, Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256 key);
+      Task<bool> SetBlacklist(BaseTuple<U32, BoundedVecT9> value, Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256 key);
       Task<bool> SetCancellations(Bool value, Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256 key);
    }
 }

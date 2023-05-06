@@ -16,9 +16,9 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Interfaces
    
    public interface INisControllerClient
    {
-      Task<BoundedVecT34> GetQueueTotals();
+      Task<BoundedVecT33> GetQueueTotals();
       Task<bool> SubscribeQueueTotals();
-      Task<BoundedVecT35> GetQueues(Substrate.NetApi.Model.Types.Primitive.U32 key);
+      Task<BoundedVecT34> GetQueues(Substrate.NetApi.Model.Types.Primitive.U32 key);
       Task<bool> SubscribeQueues(Substrate.NetApi.Model.Types.Primitive.U32 key);
       Task<SummaryRecord> GetSummary();
       Task<bool> SubscribeSummary();

@@ -19,7 +19,7 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Interfaces
    {
       Task<bool> SetBountyCount(U32 value);
       Task<bool> SetBounties(Bounty value, U32 key);
-      Task<bool> SetBountyDescriptions(BoundedVecT31 value, U32 key);
-      Task<bool> SetBountyApprovals(BoundedVecT15 value);
+      Task<bool> SetBountyDescriptions(BoundedVecT30 value, U32 key);
+      Task<bool> SetBountyApprovals(BoundedVecT14 value);
    }
 }

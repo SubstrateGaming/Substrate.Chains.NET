@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.
     
     
     /// <summary>
-    /// >> 350 - Composite[polkadot_primitives.v2.collator_app.Signature]
+    /// >> 349 - Composite[polkadot_primitives.v2.collator_app.Signature]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Signature : BaseType

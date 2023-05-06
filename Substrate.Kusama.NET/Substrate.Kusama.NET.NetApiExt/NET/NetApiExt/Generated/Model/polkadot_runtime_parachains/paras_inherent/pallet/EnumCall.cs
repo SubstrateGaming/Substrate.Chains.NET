@@ -22,7 +22,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parach
     }
     
     /// <summary>
-    /// >> 336 - Variant[polkadot_runtime_parachains.paras_inherent.pallet.Call]
+    /// >> 335 - Variant[polkadot_runtime_parachains.paras_inherent.pallet.Call]
     /// Contains one variant per dispatchable that can be called by an extrinsic.
     /// </summary>
     public sealed class EnumCall : BaseEnumExt<Call, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.InherentData>

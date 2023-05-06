@@ -70,7 +70,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.pallet.p
     }
     
     /// <summary>
-    /// >> 555 - Variant[pallet_staking.pallet.pallet.Error]
+    /// >> 559 - Variant[pallet_staking.pallet.pallet.Error]
     /// 
     ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
     ///			of this pallet.

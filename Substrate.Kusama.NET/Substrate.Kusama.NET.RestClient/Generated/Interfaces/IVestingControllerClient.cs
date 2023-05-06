@@ -16,7 +16,7 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Interfaces
    
    public interface IVestingControllerClient
    {
-      Task<BoundedVecT25> GetVesting(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
+      Task<BoundedVecT24> GetVesting(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
       Task<bool> SubscribeVesting(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
       Task<EnumReleases> GetStorageVersion();
       Task<bool> SubscribeStorageVersion();

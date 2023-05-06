@@ -23,6 +23,6 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Interfaces
       Task<bool> SetIdToIndex(U32 value, Substrate.NetApi.Model.Types.Base.BaseTuple<U16, AccountId32> key);
       Task<bool> SetIndexToId(AccountId32 value, Substrate.NetApi.Model.Types.Base.BaseTuple<U16, U32> key);
       Task<bool> SetVoting(EnumVoteRecord value, Substrate.NetApi.Model.Types.Base.BaseTuple<U32, AccountId32> key);
-      Task<bool> SetVotingCleanup(BoundedVecT19 value, U32 key);
+      Task<bool> SetVotingCleanup(BoundedVecT18 value, U32 key);
    }
 }

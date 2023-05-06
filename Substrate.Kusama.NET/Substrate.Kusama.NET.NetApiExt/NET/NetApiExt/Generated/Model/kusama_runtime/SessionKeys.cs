@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.kusama_runtime
     
     
     /// <summary>
-    /// >> 108 - Composite[kusama_runtime.SessionKeys]
+    /// >> 106 - Composite[kusama_runtime.SessionKeys]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class SessionKeys : BaseType

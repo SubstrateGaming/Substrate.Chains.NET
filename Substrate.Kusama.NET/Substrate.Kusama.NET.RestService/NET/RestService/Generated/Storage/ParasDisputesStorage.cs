@@ -38,6 +38,13 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.DisputeState GetDisputes(string key);
         
         /// <summary>
+        /// >> BackersOnDisputes
+        ///  Backing votes stored for each dispute.
+        ///  This storage is used for slashing.
+        /// </summary>
+        Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.BTreeSet GetBackersOnDisputes(string key);
+        
+        /// <summary>
         /// >> Included
         ///  All included blocks on the chain, as well as the block number in this chain that
         ///  should be reverted back to if the candidate is disputed and determined to be invalid.
@@ -71,6 +78,11 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         private TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.DisputeState> _disputesTypedStorage;
         
         /// <summary>
+        /// _backersOnDisputesTypedStorage typed storage field
+        /// </summary>
+        private TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.BTreeSet> _backersOnDisputesTypedStorage;
+        
+        /// <summary>
         /// _includedTypedStorage typed storage field
         /// </summary>
         private TypedMapStorage<Substrate.NetApi.Model.Types.Primitive.U32> _includedTypedStorage;
@@ -87,6 +99,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         {
             this.LastPrunedSessionTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32>("ParasDisputes.LastPrunedSession", storageDataProvider, storageChangeDelegates);
             this.DisputesTypedStorage = new TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.DisputeState>("ParasDisputes.Disputes", storageDataProvider, storageChangeDelegates);
+            this.BackersOnDisputesTypedStorage = new TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.BTreeSet>("ParasDisputes.BackersOnDisputes", storageDataProvider, storageChangeDelegates);
             this.IncludedTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Primitive.U32>("ParasDisputes.Included", storageDataProvider, storageChangeDelegates);
             this.FrozenTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32>>("ParasDisputes.Frozen", storageDataProvider, storageChangeDelegates);
         }
@@ -118,6 +131,21 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
             set
             {
                 _disputesTypedStorage = value;
+            }
+        }
+        
+        /// <summary>
+        /// _backersOnDisputesTypedStorage property
+        /// </summary>
+        public TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.BTreeSet> BackersOnDisputesTypedStorage
+        {
+            get
+            {
+                return _backersOnDisputesTypedStorage;
+            }
+            set
+            {
+                _backersOnDisputesTypedStorage = value;
             }
         }
         
@@ -158,6 +186,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         {
             await LastPrunedSessionTypedStorage.InitializeAsync("ParasDisputes", "LastPrunedSession");
             await DisputesTypedStorage.InitializeAsync("ParasDisputes", "Disputes");
+            await BackersOnDisputesTypedStorage.InitializeAsync("ParasDisputes", "BackersOnDisputes");
             await IncludedTypedStorage.InitializeAsync("ParasDisputes", "Included");
             await FrozenTypedStorage.InitializeAsync("ParasDisputes", "Frozen");
         }
@@ -201,6 +230,36 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
                 return null;
             }
             if (DisputesTypedStorage.Dictionary.TryGetValue(key, out Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.DisputeState result))
+            {
+                return result;
+            }
+            else
+            {
+                return null;
+            }
+        }
+        
+        /// <summary>
+        /// Implements any storage change for ParasDisputes.BackersOnDisputes
+        /// </summary>
+        [StorageChange("ParasDisputes", "BackersOnDisputes")]
+        public void OnUpdateBackersOnDisputes(string key, string data)
+        {
+            BackersOnDisputesTypedStorage.Update(key, data);
+        }
+        
+        /// <summary>
+        /// >> BackersOnDisputes
+        ///  Backing votes stored for each dispute.
+        ///  This storage is used for slashing.
+        /// </summary>
+        public Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.BTreeSet GetBackersOnDisputes(string key)
+        {
+            if ((key == null))
+            {
+                return null;
+            }
+            if (BackersOnDisputesTypedStorage.Dictionary.TryGetValue(key, out Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.BTreeSet result))
             {
                 return result;
             }

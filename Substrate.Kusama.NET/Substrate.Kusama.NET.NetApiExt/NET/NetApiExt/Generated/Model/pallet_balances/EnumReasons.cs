@@ -26,7 +26,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_balances
     }
     
     /// <summary>
-    /// >> 522 - Variant[pallet_balances.Reasons]
+    /// >> 530 - Variant[pallet_balances.Reasons]
     /// </summary>
     public sealed class EnumReasons : BaseEnum<Reasons>
     {

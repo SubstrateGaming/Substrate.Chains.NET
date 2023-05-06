@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2
     
     
     /// <summary>
-    /// >> 340 - Composite[polkadot_primitives.v2.AvailabilityBitfield]
+    /// >> 339 - Composite[polkadot_primitives.v2.AvailabilityBitfield]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class AvailabilityBitfield : BaseType

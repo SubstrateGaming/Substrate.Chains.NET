@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_babe.diges
     
     
     /// <summary>
-    /// >> 513 - Composite[sp_consensus_babe.digests.PrimaryPreDigest]
+    /// >> 521 - Composite[sp_consensus_babe.digests.PrimaryPreDigest]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class PrimaryPreDigest : BaseType

@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_finality_grandpa.app
     
     
     /// <summary>
-    /// >> 117 - Composite[sp_finality_grandpa.app.Signature]
+    /// >> 115 - Composite[sp_finality_grandpa.app.Signature]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Signature : BaseType

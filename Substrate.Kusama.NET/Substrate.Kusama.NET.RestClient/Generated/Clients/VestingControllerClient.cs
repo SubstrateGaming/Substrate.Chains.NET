@@ -25,9 +25,9 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Clients
          _httpClient = httpClient;
          _subscriptionClient = subscriptionClient;
       }
-      public async Task<BoundedVecT25> GetVesting(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+      public async Task<BoundedVecT24> GetVesting(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {
-         return await SendRequestAsync<BoundedVecT25>(_httpClient, "vesting/vesting", Substrate.Kusama.NET.NetApiExt.Generated.Storage.VestingStorage.VestingParams(key));
+         return await SendRequestAsync<BoundedVecT24>(_httpClient, "vesting/vesting", Substrate.Kusama.NET.NetApiExt.Generated.Storage.VestingStorage.VestingParams(key));
       }
       public async Task<bool> SubscribeVesting(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {

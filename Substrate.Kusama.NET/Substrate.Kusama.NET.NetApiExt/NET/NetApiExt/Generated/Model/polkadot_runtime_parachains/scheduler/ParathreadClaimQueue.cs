@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parach
     
     
     /// <summary>
-    /// >> 771 - Composite[polkadot_runtime_parachains.scheduler.ParathreadClaimQueue]
+    /// >> 776 - Composite[polkadot_runtime_parachains.scheduler.ParathreadClaimQueue]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class ParathreadClaimQueue : BaseType

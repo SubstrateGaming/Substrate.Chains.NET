@@ -30,7 +30,7 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Interfaces
       Task<bool> SetCounterForRewardPools(U32 value);
       Task<bool> SetSubPoolsStorage(SubPools value, U32 key);
       Task<bool> SetCounterForSubPoolsStorage(U32 value);
-      Task<bool> SetMetadata(BoundedVecT37 value, U32 key);
+      Task<bool> SetMetadata(BoundedVecT36 value, U32 key);
       Task<bool> SetCounterForMetadata(U32 value);
       Task<bool> SetLastPoolId(U32 value);
       Task<bool> SetReversePoolIdLookup(U32 value, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);

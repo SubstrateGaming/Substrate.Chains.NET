@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_elections_phragm
     
     
     /// <summary>
-    /// >> 599 - Composite[pallet_elections_phragmen.Voter]
+    /// >> 603 - Composite[pallet_elections_phragmen.Voter]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Voter : BaseType

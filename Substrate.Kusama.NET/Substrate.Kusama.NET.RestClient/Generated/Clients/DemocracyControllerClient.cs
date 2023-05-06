@@ -38,17 +38,17 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("Democracy.PublicPropCount");
       }
-      public async Task<BoundedVecT9> GetPublicProps()
+      public async Task<BoundedVecT8> GetPublicProps()
       {
-         return await SendRequestAsync<BoundedVecT9>(_httpClient, "democracy/publicprops");
+         return await SendRequestAsync<BoundedVecT8>(_httpClient, "democracy/publicprops");
       }
       public async Task<bool> SubscribePublicProps()
       {
          return await _subscriptionClient.SubscribeAsync("Democracy.PublicProps");
       }
-      public async Task<BaseTuple<BoundedVecT10, U128>> GetDepositOf(U32 key)
+      public async Task<BaseTuple<BoundedVecT9, U128>> GetDepositOf(U32 key)
       {
-         return await SendRequestAsync<BaseTuple<BoundedVecT10, U128>>(_httpClient, "democracy/depositof", Substrate.Kusama.NET.NetApiExt.Generated.Storage.DemocracyStorage.DepositOfParams(key));
+         return await SendRequestAsync<BaseTuple<BoundedVecT9, U128>>(_httpClient, "democracy/depositof", Substrate.Kusama.NET.NetApiExt.Generated.Storage.DemocracyStorage.DepositOfParams(key));
       }
       public async Task<bool> SubscribeDepositOf(U32 key)
       {
@@ -102,9 +102,9 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("Democracy.NextExternal");
       }
-      public async Task<BaseTuple<U32, BoundedVecT10>> GetBlacklist(Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256 key)
+      public async Task<BaseTuple<U32, BoundedVecT9>> GetBlacklist(Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256 key)
       {
-         return await SendRequestAsync<BaseTuple<U32, BoundedVecT10>>(_httpClient, "democracy/blacklist", Substrate.Kusama.NET.NetApiExt.Generated.Storage.DemocracyStorage.BlacklistParams(key));
+         return await SendRequestAsync<BaseTuple<U32, BoundedVecT9>>(_httpClient, "democracy/blacklist", Substrate.Kusama.NET.NetApiExt.Generated.Storage.DemocracyStorage.BlacklistParams(key));
       }
       public async Task<bool> SubscribeBlacklist(Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256 key)
       {

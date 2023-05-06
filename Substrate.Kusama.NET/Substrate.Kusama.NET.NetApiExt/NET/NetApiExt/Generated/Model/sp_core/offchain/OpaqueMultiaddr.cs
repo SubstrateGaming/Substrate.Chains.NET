@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.offchain
     
     
     /// <summary>
-    /// >> 129 - Composite[sp_core.offchain.OpaqueMultiaddr]
+    /// >> 127 - Composite[sp_core.offchain.OpaqueMultiaddr]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class OpaqueMultiaddr : BaseType

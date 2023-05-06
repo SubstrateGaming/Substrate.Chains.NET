@@ -23,9 +23,9 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Interfaces
       Task<bool> SubscribeIdentityOf(AccountId32 key);
       Task<BaseTuple<AccountId32, EnumData>> GetSuperOf(AccountId32 key);
       Task<bool> SubscribeSuperOf(AccountId32 key);
-      Task<BaseTuple<U128, BoundedVecT22>> GetSubsOf(AccountId32 key);
+      Task<BaseTuple<U128, BoundedVecT21>> GetSubsOf(AccountId32 key);
       Task<bool> SubscribeSubsOf(AccountId32 key);
-      Task<BoundedVecT23> GetRegistrars();
+      Task<BoundedVecT22> GetRegistrars();
       Task<bool> SubscribeRegistrars();
    }
 }

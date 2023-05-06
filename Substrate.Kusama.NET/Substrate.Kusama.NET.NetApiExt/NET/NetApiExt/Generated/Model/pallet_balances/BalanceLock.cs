@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_balances
     
     
     /// <summary>
-    /// >> 521 - Composite[pallet_balances.BalanceLock]
+    /// >> 529 - Composite[pallet_balances.BalanceLock]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class BalanceLock : BaseType

@@ -63,6 +63,19 @@ namespace Substrate.Kusama.NET.RestService.Generated.Controller
         }
         
         /// <summary>
+        /// >> BackersOnDisputes
+        ///  Backing votes stored for each dispute.
+        ///  This storage is used for slashing.
+        /// </summary>
+        [HttpGet("BackersOnDisputes")]
+        [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.BTreeSet), 200)]
+        [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.ParasDisputesStorage), "BackersOnDisputesParams", typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_core_primitives.CandidateHash>))]
+        public IActionResult GetBackersOnDisputes(string key)
+        {
+            return this.Ok(_parasDisputesStorage.GetBackersOnDisputes(key));
+        }
+        
+        /// <summary>
         /// >> Included
         ///  All included blocks on the chain, as well as the block number in this chain that
         ///  should be reverted back to if the candidate is disputed and determined to be invalid.

@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nis.pallet
     
     
     /// <summary>
-    /// >> 725 - Composite[pallet_nis.pallet.ReceiptRecord]
+    /// >> 730 - Composite[pallet_nis.pallet.ReceiptRecord]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class ReceiptRecord : BaseType
@@ -30,9 +30,9 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nis.pallet
         private Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perquintill _proportion;
         
         /// <summary>
-        /// >> who
+        /// >> owner
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 _who;
+        private Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U128>> _owner;
         
         /// <summary>
         /// >> expiry
@@ -51,15 +51,15 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nis.pallet
             }
         }
         
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 Who
+        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U128>> Owner
         {
             get
             {
-                return this._who;
+                return this._owner;
             }
             set
             {
-                this._who = value;
+                this._owner = value;
             }
         }
         
@@ -84,7 +84,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nis.pallet
         {
             var result = new List<byte>();
             result.AddRange(Proportion.Encode());
-            result.AddRange(Who.Encode());
+            result.AddRange(Owner.Encode());
             result.AddRange(Expiry.Encode());
             return result.ToArray();
         }
@@ -94,8 +94,8 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nis.pallet
             var start = p;
             Proportion = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perquintill();
             Proportion.Decode(byteArray, ref p);
-            Who = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32();
-            Who.Decode(byteArray, ref p);
+            Owner = new Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U128>>();
+            Owner.Decode(byteArray, ref p);
             Expiry = new Substrate.NetApi.Model.Types.Primitive.U32();
             Expiry.Decode(byteArray, ref p);
             var bytesLength = p - start;

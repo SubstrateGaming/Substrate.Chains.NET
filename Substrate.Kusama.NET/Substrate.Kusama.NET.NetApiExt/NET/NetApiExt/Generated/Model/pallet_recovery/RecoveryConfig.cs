@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_recovery
     
     
     /// <summary>
-    /// >> 670 - Composite[pallet_recovery.RecoveryConfig]
+    /// >> 675 - Composite[pallet_recovery.RecoveryConfig]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class RecoveryConfig : BaseType
@@ -37,7 +37,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_recovery
         /// <summary>
         /// >> friends
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT24 _friends;
+        private Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT23 _friends;
         
         /// <summary>
         /// >> threshold
@@ -68,7 +68,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_recovery
             }
         }
         
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT24 Friends
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT23 Friends
         {
             get
             {
@@ -114,7 +114,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_recovery
             DelayPeriod.Decode(byteArray, ref p);
             Deposit = new Substrate.NetApi.Model.Types.Primitive.U128();
             Deposit.Decode(byteArray, ref p);
-            Friends = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT24();
+            Friends = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT23();
             Friends.Decode(byteArray, ref p);
             Threshold = new Substrate.NetApi.Model.Types.Primitive.U16();
             Threshold.Decode(byteArray, ref p);

@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_tips
     
     
     /// <summary>
-    /// >> 708 - Composite[pallet_tips.OpenTip]
+    /// >> 713 - Composite[pallet_tips.OpenTip]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class OpenTip : BaseType

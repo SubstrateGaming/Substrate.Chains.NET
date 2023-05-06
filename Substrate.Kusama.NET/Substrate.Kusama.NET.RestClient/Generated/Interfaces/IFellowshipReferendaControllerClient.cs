@@ -21,7 +21,7 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Interfaces
       Task<bool> SubscribeReferendumCount();
       Task<EnumReferendumInfo> GetReferendumInfoFor(U32 key);
       Task<bool> SubscribeReferendumInfoFor(U32 key);
-      Task<BoundedVecT20> GetTrackQueue(U16 key);
+      Task<BoundedVecT19> GetTrackQueue(U16 key);
       Task<bool> SubscribeTrackQueue(U16 key);
       Task<U32> GetDecidingCount(U16 key);
       Task<bool> SubscribeDecidingCount(U16 key);

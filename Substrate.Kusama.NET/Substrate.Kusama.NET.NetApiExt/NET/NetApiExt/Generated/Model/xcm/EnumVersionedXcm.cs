@@ -18,17 +18,15 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm
     public enum VersionedXcm
     {
         
-        V0 = 0,
-        
-        V1 = 1,
-        
         V2 = 2,
+        
+        V3 = 3,
     }
     
     /// <summary>
-    /// >> 425 - Variant[xcm.VersionedXcm]
+    /// >> 440 - Variant[xcm.VersionedXcm]
     /// </summary>
-    public sealed class EnumVersionedXcm : BaseEnumExt<VersionedXcm, Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.v0.EnumXcm, Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.v1.EnumXcm, Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.v2.XcmT2>
+    public sealed class EnumVersionedXcm : BaseEnumExt<VersionedXcm, BaseVoid, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.v2.XcmT2, Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.v3.XcmT2>
     {
     }
 }

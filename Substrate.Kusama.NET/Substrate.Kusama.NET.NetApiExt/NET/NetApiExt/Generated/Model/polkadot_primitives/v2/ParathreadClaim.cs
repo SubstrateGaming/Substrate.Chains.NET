@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2
     
     
     /// <summary>
-    /// >> 775 - Composite[polkadot_primitives.v2.ParathreadClaim]
+    /// >> 780 - Composite[polkadot_primitives.v2.ParathreadClaim]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class ParathreadClaim : BaseType

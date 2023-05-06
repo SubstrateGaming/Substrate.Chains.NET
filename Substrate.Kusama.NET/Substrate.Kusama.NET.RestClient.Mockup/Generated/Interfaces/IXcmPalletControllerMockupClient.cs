@@ -14,6 +14,7 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Interfaces
    using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_xcm.pallet;
    using Substrate.NetApi.Model.Types.Base;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_weights.weight_v2;
    using Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
    
    public interface IXcmPalletControllerMockupClient
@@ -24,8 +25,10 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Interfaces
       Task<bool> SetSafeXcmVersion(U32 value);
       Task<bool> SetSupportedVersion(U32 value, BaseTuple<U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation> key);
       Task<bool> SetVersionNotifiers(U64 value, BaseTuple<U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation> key);
-      Task<bool> SetVersionNotifyTargets(BaseTuple<U64, U64, U32> value, BaseTuple<U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation> key);
-      Task<bool> SetVersionDiscoveryQueue(BoundedVecT40 value);
+      Task<bool> SetVersionNotifyTargets(BaseTuple<U64, Weight, U32> value, BaseTuple<U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation> key);
+      Task<bool> SetVersionDiscoveryQueue(BoundedVecT39 value);
       Task<bool> SetCurrentMigration(EnumVersionMigrationStage value);
+      Task<bool> SetRemoteLockedFungibles(RemoteLockedFungibleRecord value, BaseTuple<U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAssetId> key);
+      Task<bool> SetLockedFungibles(BoundedVecT40 value, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
    }
 }

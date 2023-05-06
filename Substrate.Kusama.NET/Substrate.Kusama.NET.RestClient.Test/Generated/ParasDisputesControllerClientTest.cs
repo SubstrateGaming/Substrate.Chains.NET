@@ -17,6 +17,7 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
    using Substrate.Kusama.NET.RestClient.Generated.Clients;
    using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Types.Base;
    using Substrate.NetApi.Model.Types.Base;
    
    public class ParasDisputesControllerClientTest : ClientTestBase
@@ -167,22 +168,122 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_core_primitives.CandidateHash> GetTestValue10()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.BTreeSet GetTestValue10()
+      {
+         Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.BTreeSet result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.BTreeSet();
+         result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.ValidatorIndex>();
+         result.Value.Create(new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.ValidatorIndex[] {
+                  this.GetTestValue11()});
+         return result;
+      }
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.ValidatorIndex GetTestValue11()
+      {
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.ValidatorIndex result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.ValidatorIndex();
+         result.Value = this.GetTestValueU32();
+         return result;
+      }
+      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_core_primitives.CandidateHash> GetTestValue12()
       {
          Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_core_primitives.CandidateHash> result;
          result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_core_primitives.CandidateHash>();
-         result.Create(this.GetTestValueU32(), this.GetTestValue11());
+         result.Create(this.GetTestValueU32(), this.GetTestValue13());
          return result;
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_core_primitives.CandidateHash GetTestValue11()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_core_primitives.CandidateHash GetTestValue13()
       {
          Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_core_primitives.CandidateHash result;
          result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_core_primitives.CandidateHash();
          result.Value = new Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256();
-         result.Value = this.GetTestValue12();
+         result.Value = this.GetTestValue14();
          return result;
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256 GetTestValue12()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256 GetTestValue14()
+      {
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256 result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256();
+         result.Value = new Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr32U8();
+         result.Value.Create(new Substrate.NetApi.Model.Types.Primitive.U8[] {
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8()});
+         return result;
+      }
+      [Test()]
+      public async System.Threading.Tasks.Task TestBackersOnDisputes()
+      {
+         // Construct new Mockup client to test with.
+         ParasDisputesControllerMockupClient mockupClient = new ParasDisputesControllerMockupClient(_httpClient);
+
+         // Construct new subscription client to test with.
+         var subscriptionClient = CreateSubscriptionClient();
+
+         // Construct new RPC client to test with.
+         ParasDisputesControllerClient rpcClient = new ParasDisputesControllerClient(_httpClient, subscriptionClient);
+         Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.BTreeSet mockupValue = this.GetTestValue10();
+         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_core_primitives.CandidateHash> mockupKey = this.GetTestValue12();
+
+         Assert.IsTrue(await rpcClient.SubscribeBackersOnDisputes(mockupKey));
+
+         // Save the previously generated mockup value in RPC service storage.
+         bool mockupSetResult = await mockupClient.SetBackersOnDisputes(mockupValue, mockupKey);
+
+         // Test that the expected mockup value was handled successfully from RPC service.
+         Assert.IsTrue(mockupSetResult);
+         var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
+         Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
+
+         Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.BTreeSet rpcResult = await rpcClient.GetBackersOnDisputes(mockupKey);
+
+         // Test that the expected mockup value matches the actual result from RPC service.
+         Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
+      }
+      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_core_primitives.CandidateHash> GetTestValue16()
+      {
+         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_core_primitives.CandidateHash> result;
+         result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_core_primitives.CandidateHash>();
+         result.Create(this.GetTestValueU32(), this.GetTestValue17());
+         return result;
+      }
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_core_primitives.CandidateHash GetTestValue17()
+      {
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_core_primitives.CandidateHash result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_core_primitives.CandidateHash();
+         result.Value = new Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256();
+         result.Value = this.GetTestValue18();
+         return result;
+      }
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256 GetTestValue18()
       {
          Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256 result;
          result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256();
@@ -234,7 +335,7 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
          // Construct new RPC client to test with.
          ParasDisputesControllerClient rpcClient = new ParasDisputesControllerClient(_httpClient, subscriptionClient);
          Substrate.NetApi.Model.Types.Primitive.U32 mockupValue = this.GetTestValueU32();
-         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_core_primitives.CandidateHash> mockupKey = this.GetTestValue10();
+         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_core_primitives.CandidateHash> mockupKey = this.GetTestValue16();
 
          Assert.IsTrue(await rpcClient.SubscribeIncluded(mockupKey));
 
@@ -251,7 +352,7 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32> GetTestValue14()
+      public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32> GetTestValue20()
       {
          Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32> result;
          result = new Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32>();
@@ -269,7 +370,7 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          ParasDisputesControllerClient rpcClient = new ParasDisputesControllerClient(_httpClient, subscriptionClient);
-         Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32> mockupValue = this.GetTestValue14();
+         Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32> mockupValue = this.GetTestValue20();
 
 
          Assert.IsTrue(await rpcClient.SubscribeFrozen());

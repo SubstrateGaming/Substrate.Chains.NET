@@ -32,7 +32,7 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "Referenda/ReferendumInfoFor", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.ReferendaStorage.ReferendumInfoForParams(key));
       }
-      public async Task<bool> SetTrackQueue(BoundedVecT18 value, U16 key)
+      public async Task<bool> SetTrackQueue(BoundedVecT17 value, U16 key)
       {
          return await SendMockupRequestAsync(_httpClient, "Referenda/TrackQueue", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.ReferendaStorage.TrackQueueParams(key));
       }

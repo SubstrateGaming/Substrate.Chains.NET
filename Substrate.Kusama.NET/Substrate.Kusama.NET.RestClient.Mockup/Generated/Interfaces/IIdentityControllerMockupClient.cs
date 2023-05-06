@@ -21,7 +21,7 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Interfaces
    {
       Task<bool> SetIdentityOf(Registration value, AccountId32 key);
       Task<bool> SetSuperOf(BaseTuple<AccountId32, EnumData> value, AccountId32 key);
-      Task<bool> SetSubsOf(BaseTuple<U128, BoundedVecT22> value, AccountId32 key);
-      Task<bool> SetRegistrars(BoundedVecT23 value);
+      Task<bool> SetSubsOf(BaseTuple<U128, BoundedVecT21> value, AccountId32 key);
+      Task<bool> SetRegistrars(BoundedVecT22 value);
    }
 }

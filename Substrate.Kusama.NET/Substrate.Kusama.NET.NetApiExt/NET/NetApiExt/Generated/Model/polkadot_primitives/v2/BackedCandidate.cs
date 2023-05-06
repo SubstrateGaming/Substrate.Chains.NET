@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2
     
     
     /// <summary>
-    /// >> 346 - Composite[polkadot_primitives.v2.BackedCandidate]
+    /// >> 345 - Composite[polkadot_primitives.v2.BackedCandidate]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class BackedCandidate : BaseType

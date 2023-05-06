@@ -80,6 +80,12 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>> GetOverweight(string key);
         
         /// <summary>
+        /// >> CounterForOverweight
+        /// Counter for the related counted storage map
+        /// </summary>
+        Substrate.NetApi.Model.Types.Primitive.U32 GetCounterForOverweight();
+        
+        /// <summary>
         /// >> OverweightCount
         ///  The number of overweight messages ever recorded in `Overweight` (and thus the lowest free
         ///  index).
@@ -119,6 +125,11 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         private TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>> _overweightTypedStorage;
         
         /// <summary>
+        /// _counterForOverweightTypedStorage typed storage field
+        /// </summary>
+        private TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32> _counterForOverweightTypedStorage;
+        
+        /// <summary>
         /// _overweightCountTypedStorage typed storage field
         /// </summary>
         private TypedStorage<Substrate.NetApi.Model.Types.Primitive.U64> _overweightCountTypedStorage;
@@ -133,6 +144,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
             this.NeedsDispatchTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id>>("Ump.NeedsDispatch", storageDataProvider, storageChangeDelegates);
             this.NextDispatchRoundStartWithTypedStorage = new TypedStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id>("Ump.NextDispatchRoundStartWith", storageDataProvider, storageChangeDelegates);
             this.OverweightTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>>("Ump.Overweight", storageDataProvider, storageChangeDelegates);
+            this.CounterForOverweightTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32>("Ump.CounterForOverweight", storageDataProvider, storageChangeDelegates);
             this.OverweightCountTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U64>("Ump.OverweightCount", storageDataProvider, storageChangeDelegates);
         }
         
@@ -212,6 +224,21 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         }
         
         /// <summary>
+        /// _counterForOverweightTypedStorage property
+        /// </summary>
+        public TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32> CounterForOverweightTypedStorage
+        {
+            get
+            {
+                return _counterForOverweightTypedStorage;
+            }
+            set
+            {
+                _counterForOverweightTypedStorage = value;
+            }
+        }
+        
+        /// <summary>
         /// _overweightCountTypedStorage property
         /// </summary>
         public TypedStorage<Substrate.NetApi.Model.Types.Primitive.U64> OverweightCountTypedStorage
@@ -236,6 +263,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
             await NeedsDispatchTypedStorage.InitializeAsync("Ump", "NeedsDispatch");
             await NextDispatchRoundStartWithTypedStorage.InitializeAsync("Ump", "NextDispatchRoundStartWith");
             await OverweightTypedStorage.InitializeAsync("Ump", "Overweight");
+            await CounterForOverweightTypedStorage.InitializeAsync("Ump", "CounterForOverweight");
             await OverweightCountTypedStorage.InitializeAsync("Ump", "OverweightCount");
         }
         
@@ -385,6 +413,24 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
             {
                 return null;
             }
+        }
+        
+        /// <summary>
+        /// Implements any storage change for Ump.CounterForOverweight
+        /// </summary>
+        [StorageChange("Ump", "CounterForOverweight")]
+        public void OnUpdateCounterForOverweight(string data)
+        {
+            CounterForOverweightTypedStorage.Update(data);
+        }
+        
+        /// <summary>
+        /// >> CounterForOverweight
+        /// Counter for the related counted storage map
+        /// </summary>
+        public Substrate.NetApi.Model.Types.Primitive.U32 GetCounterForOverweight()
+        {
+            return CounterForOverweightTypedStorage.Get();
         }
         
         /// <summary>

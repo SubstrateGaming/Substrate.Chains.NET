@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking
     
     
     /// <summary>
-    /// >> 534 - Composite[pallet_staking.StakingLedger]
+    /// >> 538 - Composite[pallet_staking.StakingLedger]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class StakingLedger : BaseType
@@ -42,12 +42,12 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking
         /// <summary>
         /// >> unlocking
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT6 _unlocking;
+        private Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT5 _unlocking;
         
         /// <summary>
         /// >> claimed_rewards
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT7 _claimedRewards;
+        private Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT6 _claimedRewards;
         
         public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 Stash
         {
@@ -85,7 +85,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking
             }
         }
         
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT6 Unlocking
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT5 Unlocking
         {
             get
             {
@@ -97,7 +97,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking
             }
         }
         
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT7 ClaimedRewards
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT6 ClaimedRewards
         {
             get
             {
@@ -134,9 +134,9 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking
             Total.Decode(byteArray, ref p);
             Active = new Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128>();
             Active.Decode(byteArray, ref p);
-            Unlocking = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT6();
+            Unlocking = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT5();
             Unlocking.Decode(byteArray, ref p);
-            ClaimedRewards = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT7();
+            ClaimedRewards = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT6();
             ClaimedRewards.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

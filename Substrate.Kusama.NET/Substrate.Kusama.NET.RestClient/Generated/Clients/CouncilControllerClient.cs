@@ -29,9 +29,9 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Clients
          _httpClient = httpClient;
          _subscriptionClient = subscriptionClient;
       }
-      public async Task<BoundedVecT12> GetProposals()
+      public async Task<BoundedVecT11> GetProposals()
       {
-         return await SendRequestAsync<BoundedVecT12>(_httpClient, "council/proposals");
+         return await SendRequestAsync<BoundedVecT11>(_httpClient, "council/proposals");
       }
       public async Task<bool> SubscribeProposals()
       {

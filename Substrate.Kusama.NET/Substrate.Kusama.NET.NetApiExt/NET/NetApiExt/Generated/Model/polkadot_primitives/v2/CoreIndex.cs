@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2
     
     
     /// <summary>
-    /// >> 475 - Composite[polkadot_primitives.v2.CoreIndex]
+    /// >> 484 - Composite[polkadot_primitives.v2.CoreIndex]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class CoreIndex : BaseType

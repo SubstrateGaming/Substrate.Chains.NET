@@ -11,14 +11,10 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Interfaces
 {
    using System;
    using System.Threading.Tasks;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
    using Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto;
-   using Substrate.NetApi.Model.Types.Primitive;
    
    public interface IAuthorshipControllerMockupClient
    {
-      Task<bool> SetUncles(BoundedVecT5 value);
       Task<bool> SetAuthor(AccountId32 value);
-      Task<bool> SetDidSetUncles(Bool value);
    }
 }

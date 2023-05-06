@@ -28,7 +28,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2
     }
     
     /// <summary>
-    /// >> 366 - Variant[polkadot_primitives.v2.ValidDisputeStatementKind]
+    /// >> 365 - Variant[polkadot_primitives.v2.ValidDisputeStatementKind]
     /// </summary>
     public sealed class EnumValidDisputeStatementKind : BaseEnumExt<ValidDisputeStatementKind, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256, BaseVoid>
     {

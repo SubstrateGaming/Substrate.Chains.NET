@@ -30,7 +30,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_whitelist.pallet
     }
     
     /// <summary>
-    /// >> 648 - Variant[pallet_whitelist.pallet.Error]
+    /// >> 653 - Variant[pallet_whitelist.pallet.Error]
     /// 
     ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
     ///			of this pallet.

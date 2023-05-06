@@ -84,9 +84,9 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("ElectionProviderMultiPhase.SignedSubmissionNextIndex");
       }
-      public async Task<BoundedVecT33> GetSignedSubmissionIndices()
+      public async Task<BoundedVecT32> GetSignedSubmissionIndices()
       {
-         return await SendRequestAsync<BoundedVecT33>(_httpClient, "electionprovidermultiphase/signedsubmissionindices");
+         return await SendRequestAsync<BoundedVecT32>(_httpClient, "electionprovidermultiphase/signedsubmissionindices");
       }
       public async Task<bool> SubscribeSignedSubmissionIndices()
       {

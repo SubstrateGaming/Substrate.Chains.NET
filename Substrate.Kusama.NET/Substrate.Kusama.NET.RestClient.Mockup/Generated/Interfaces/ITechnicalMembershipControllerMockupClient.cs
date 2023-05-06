@@ -16,7 +16,7 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Interfaces
    
    public interface ITechnicalMembershipControllerMockupClient
    {
-      Task<bool> SetMembers(BoundedVecT14 value);
+      Task<bool> SetMembers(BoundedVecT13 value);
       Task<bool> SetPrime(AccountId32 value);
    }
 }

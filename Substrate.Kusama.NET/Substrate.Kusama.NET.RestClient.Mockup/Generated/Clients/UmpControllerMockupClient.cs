@@ -44,6 +44,10 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "Ump/Overweight", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.UmpStorage.OverweightParams(key));
       }
+      public async Task<bool> SetCounterForOverweight(U32 value)
+      {
+         return await SendMockupRequestAsync(_httpClient, "Ump/CounterForOverweight", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.UmpStorage.CounterForOverweightParams());
+      }
       public async Task<bool> SetOverweightCount(U64 value)
       {
          return await SendMockupRequestAsync(_httpClient, "Ump/OverweightCount", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.UmpStorage.OverweightCountParams());
