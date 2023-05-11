@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Substrate.Gear.NET.RestService", "Substrate.Gear.NET.RestService\Substrate.Gear.NET.RestService.csproj", "{ACD48C9A-DD4E-455C-8140-FB583592A8F3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Substrate.Gear.NET.NetApiExt", "Substrate.Gear.NET.NetApiExt\Substrate.Gear.NET.NetApiExt.csproj", "{E25FD6A3-F87A-4C8A-AE2D-0AC48DA999C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Substrate.Gear.NET.RestClient", "Substrate.Gear.NET.RestClient\Substrate.Gear.NET.RestClient.csproj", "{B7ED9AA6-CAF3-4C34-A129-C50657EE15C3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Substrate.Gear.NET.RestClient.Mockup", "Substrate.Gear.NET.RestClient.Mockup\Substrate.Gear.NET.RestClient.Mockup.csproj", "{0C5508C3-F641-4CC1-8112-B31A5E322FA3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Substrate.Gear.NET.RestClient.Test", "Substrate.Gear.NET.RestClient.Test\Substrate.Gear.NET.RestClient.Test.csproj", "{2C0A2422-2755-4CF5-AF65-EC0E5E3AAE8E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ACD48C9A-DD4E-455C-8140-FB583592A8F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACD48C9A-DD4E-455C-8140-FB583592A8F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACD48C9A-DD4E-455C-8140-FB583592A8F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACD48C9A-DD4E-455C-8140-FB583592A8F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E25FD6A3-F87A-4C8A-AE2D-0AC48DA999C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E25FD6A3-F87A-4C8A-AE2D-0AC48DA999C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E25FD6A3-F87A-4C8A-AE2D-0AC48DA999C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E25FD6A3-F87A-4C8A-AE2D-0AC48DA999C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7ED9AA6-CAF3-4C34-A129-C50657EE15C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7ED9AA6-CAF3-4C34-A129-C50657EE15C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7ED9AA6-CAF3-4C34-A129-C50657EE15C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7ED9AA6-CAF3-4C34-A129-C50657EE15C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C5508C3-F641-4CC1-8112-B31A5E322FA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C5508C3-F641-4CC1-8112-B31A5E322FA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C5508C3-F641-4CC1-8112-B31A5E322FA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C5508C3-F641-4CC1-8112-B31A5E322FA3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C0A2422-2755-4CF5-AF65-EC0E5E3AAE8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C0A2422-2755-4CF5-AF65-EC0E5E3AAE8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C0A2422-2755-4CF5-AF65-EC0E5E3AAE8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C0A2422-2755-4CF5-AF65-EC0E5E3AAE8E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

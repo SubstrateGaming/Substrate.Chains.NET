@@ -1,0 +1,13 @@
+{
+  "projects": {
+    "net_api": "Substrate.Gear.NET.NetApiExt",
+    "rest_service": "Substrate.Gear.NET.RestService",
+    "rest_client": "Substrate.Gear.NET.RestClient"
+  },
+   "metadata": {
+      "websocket": "wss://rpc-node.gear-tech.io"
+   },
+  "rest_client_settings": {
+    "service_assembly": "Substrate.Gear.NET.RestService.dll"
+  }
+}
