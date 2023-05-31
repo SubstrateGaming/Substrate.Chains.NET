@@ -14,7 +14,7 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Clients
    using System.Net.Http;
    using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_child_bounties;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    using Substrate.Kusama.NET.RestClient.Mockup.Generated.Interfaces;
    
    public sealed class ChildBountiesControllerMockupClient : MockupBaseClient, IChildBountiesControllerMockupClient
@@ -36,7 +36,7 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "ChildBounties/ChildBounties", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.ChildBountiesStorage.ChildBountiesParams(key));
       }
-      public async Task<bool> SetChildBountyDescriptions(BoundedVecT30 value, U32 key)
+      public async Task<bool> SetChildBountyDescriptions(BoundedVecT32 value, U32 key)
       {
          return await SendMockupRequestAsync(_httpClient, "ChildBounties/ChildBountyDescriptions", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.ChildBountiesStorage.ChildBountyDescriptionsParams(key));
       }

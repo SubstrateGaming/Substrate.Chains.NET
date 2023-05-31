@@ -32,7 +32,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_conviction_votin
     }
     
     /// <summary>
-    /// >> 142 - Variant[pallet_conviction_voting.pallet.Call]
+    /// >> 121 - Variant[pallet_conviction_voting.pallet.Call]
     /// Contains one variant per dispatchable that can be called by an extrinsic.
     /// </summary>
     public sealed class EnumCall : BaseEnumExt<Call, BaseTuple<Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_conviction_voting.vote.EnumAccountVote>, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U16, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_conviction_voting.conviction.EnumConviction, Substrate.NetApi.Model.Types.Primitive.U128>, Substrate.NetApi.Model.Types.Primitive.U16, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U16, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress>, BaseTuple<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U16>, Substrate.NetApi.Model.Types.Primitive.U32>, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.NetApi.Model.Types.Primitive.U16, Substrate.NetApi.Model.Types.Primitive.U32>>

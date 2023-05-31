@@ -26,17 +26,21 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_balances.pallet
         
         ExistentialDeposit = 3,
         
-        KeepAlive = 4,
+        Expendability = 4,
         
         ExistingVestingSchedule = 5,
         
         DeadAccount = 6,
         
         TooManyReserves = 7,
+        
+        TooManyHolds = 8,
+        
+        TooManyFreezes = 9,
     }
     
     /// <summary>
-    /// >> 735 - Variant[pallet_balances.pallet.Error]
+    /// >> 717 - Variant[pallet_balances.pallet.Error]
     /// 
     ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
     ///			of this pallet.

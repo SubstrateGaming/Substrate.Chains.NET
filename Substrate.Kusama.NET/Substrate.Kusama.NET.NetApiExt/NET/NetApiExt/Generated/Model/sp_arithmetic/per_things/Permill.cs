@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_thing
     
     
     /// <summary>
-    /// >> 609 - Composite[sp_arithmetic.per_things.Permill]
+    /// >> 592 - Composite[sp_arithmetic.per_things.Permill]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Permill : BaseType

@@ -27,9 +27,7 @@ namespace Substrate.Kusama.NET.RestClient.Mockup
       public IClaimsControllerMockupClient ClaimsControllerClient;
       public IConfigurationControllerMockupClient ConfigurationControllerClient;
       public IConvictionVotingControllerMockupClient ConvictionVotingControllerClient;
-      public ICouncilControllerMockupClient CouncilControllerClient;
       public ICrowdloanControllerMockupClient CrowdloanControllerClient;
-      public IDemocracyControllerMockupClient DemocracyControllerClient;
       public IDmpControllerMockupClient DmpControllerClient;
       public IElectionProviderMultiPhaseControllerMockupClient ElectionProviderMultiPhaseControllerClient;
       public IFastUnstakeControllerMockupClient FastUnstakeControllerClient;
@@ -53,7 +51,7 @@ namespace Substrate.Kusama.NET.RestClient.Mockup
       public IParasDisputesControllerMockupClient ParasDisputesControllerClient;
       public IParaSessionInfoControllerMockupClient ParaSessionInfoControllerClient;
       public IParasSharedControllerMockupClient ParasSharedControllerClient;
-      public IPhragmenElectionControllerMockupClient PhragmenElectionControllerClient;
+      public IParasSlashingControllerMockupClient ParasSlashingControllerClient;
       public IPreimageControllerMockupClient PreimageControllerClient;
       public IProxyControllerMockupClient ProxyControllerClient;
       public IRecoveryControllerMockupClient RecoveryControllerClient;
@@ -65,10 +63,7 @@ namespace Substrate.Kusama.NET.RestClient.Mockup
       public ISocietyControllerMockupClient SocietyControllerClient;
       public IStakingControllerMockupClient StakingControllerClient;
       public ISystemControllerMockupClient SystemControllerClient;
-      public ITechnicalCommitteeControllerMockupClient TechnicalCommitteeControllerClient;
-      public ITechnicalMembershipControllerMockupClient TechnicalMembershipControllerClient;
       public ITimestampControllerMockupClient TimestampControllerClient;
-      public ITipsControllerMockupClient TipsControllerClient;
       public ITransactionPaymentControllerMockupClient TransactionPaymentControllerClient;
       public ITreasuryControllerMockupClient TreasuryControllerClient;
       public IUmpControllerMockupClient UmpControllerClient;
@@ -88,9 +83,7 @@ namespace Substrate.Kusama.NET.RestClient.Mockup
          ClaimsControllerClient = new ClaimsControllerMockupClient(_httpClient);
          ConfigurationControllerClient = new ConfigurationControllerMockupClient(_httpClient);
          ConvictionVotingControllerClient = new ConvictionVotingControllerMockupClient(_httpClient);
-         CouncilControllerClient = new CouncilControllerMockupClient(_httpClient);
          CrowdloanControllerClient = new CrowdloanControllerMockupClient(_httpClient);
-         DemocracyControllerClient = new DemocracyControllerMockupClient(_httpClient);
          DmpControllerClient = new DmpControllerMockupClient(_httpClient);
          ElectionProviderMultiPhaseControllerClient = new ElectionProviderMultiPhaseControllerMockupClient(_httpClient);
          FastUnstakeControllerClient = new FastUnstakeControllerMockupClient(_httpClient);
@@ -114,7 +107,7 @@ namespace Substrate.Kusama.NET.RestClient.Mockup
          ParasDisputesControllerClient = new ParasDisputesControllerMockupClient(_httpClient);
          ParaSessionInfoControllerClient = new ParaSessionInfoControllerMockupClient(_httpClient);
          ParasSharedControllerClient = new ParasSharedControllerMockupClient(_httpClient);
-         PhragmenElectionControllerClient = new PhragmenElectionControllerMockupClient(_httpClient);
+         ParasSlashingControllerClient = new ParasSlashingControllerMockupClient(_httpClient);
          PreimageControllerClient = new PreimageControllerMockupClient(_httpClient);
          ProxyControllerClient = new ProxyControllerMockupClient(_httpClient);
          RecoveryControllerClient = new RecoveryControllerMockupClient(_httpClient);
@@ -126,10 +119,7 @@ namespace Substrate.Kusama.NET.RestClient.Mockup
          SocietyControllerClient = new SocietyControllerMockupClient(_httpClient);
          StakingControllerClient = new StakingControllerMockupClient(_httpClient);
          SystemControllerClient = new SystemControllerMockupClient(_httpClient);
-         TechnicalCommitteeControllerClient = new TechnicalCommitteeControllerMockupClient(_httpClient);
-         TechnicalMembershipControllerClient = new TechnicalMembershipControllerMockupClient(_httpClient);
          TimestampControllerClient = new TimestampControllerMockupClient(_httpClient);
-         TipsControllerClient = new TipsControllerMockupClient(_httpClient);
          TransactionPaymentControllerClient = new TransactionPaymentControllerMockupClient(_httpClient);
          TreasuryControllerClient = new TreasuryControllerMockupClient(_httpClient);
          UmpControllerClient = new UmpControllerMockupClient(_httpClient);

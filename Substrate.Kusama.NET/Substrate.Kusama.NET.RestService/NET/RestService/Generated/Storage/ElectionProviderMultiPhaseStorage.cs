@@ -94,7 +94,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         ///  can be quite large, so we're willing to pay the cost of multiple database accesses to access
         ///  them one at a time instead of reading and decoding all of them at once.
         /// </summary>
-        Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT32 GetSignedSubmissionIndices();
+        Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT34 GetSignedSubmissionIndices();
         
         /// <summary>
         /// >> SignedSubmissionsMap
@@ -162,7 +162,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// <summary>
         /// _signedSubmissionIndicesTypedStorage typed storage field
         /// </summary>
-        private TypedStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT32> _signedSubmissionIndicesTypedStorage;
+        private TypedStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT34> _signedSubmissionIndicesTypedStorage;
         
         /// <summary>
         /// _signedSubmissionsMapTypedStorage typed storage field
@@ -186,7 +186,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
             this.DesiredTargetsTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32>("ElectionProviderMultiPhase.DesiredTargets", storageDataProvider, storageChangeDelegates);
             this.SnapshotMetadataTypedStorage = new TypedStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_election_provider_multi_phase.SolutionOrSnapshotSize>("ElectionProviderMultiPhase.SnapshotMetadata", storageDataProvider, storageChangeDelegates);
             this.SignedSubmissionNextIndexTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32>("ElectionProviderMultiPhase.SignedSubmissionNextIndex", storageDataProvider, storageChangeDelegates);
-            this.SignedSubmissionIndicesTypedStorage = new TypedStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT32>("ElectionProviderMultiPhase.SignedSubmissionIndices", storageDataProvider, storageChangeDelegates);
+            this.SignedSubmissionIndicesTypedStorage = new TypedStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT34>("ElectionProviderMultiPhase.SignedSubmissionIndices", storageDataProvider, storageChangeDelegates);
             this.SignedSubmissionsMapTypedStorage = new TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_election_provider_multi_phase.signed.SignedSubmission>("ElectionProviderMultiPhase.SignedSubmissionsMap", storageDataProvider, storageChangeDelegates);
             this.MinimumUntrustedScoreTypedStorage = new TypedStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_npos_elections.ElectionScore>("ElectionProviderMultiPhase.MinimumUntrustedScore", storageDataProvider, storageChangeDelegates);
         }
@@ -299,7 +299,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// <summary>
         /// _signedSubmissionIndicesTypedStorage property
         /// </summary>
-        public TypedStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT32> SignedSubmissionIndicesTypedStorage
+        public TypedStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT34> SignedSubmissionIndicesTypedStorage
         {
             get
             {
@@ -521,7 +521,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         ///  can be quite large, so we're willing to pay the cost of multiple database accesses to access
         ///  them one at a time instead of reading and decoding all of them at once.
         /// </summary>
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT32 GetSignedSubmissionIndices()
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT34 GetSignedSubmissionIndices()
         {
             return SignedSubmissionIndicesTypedStorage.Get();
         }

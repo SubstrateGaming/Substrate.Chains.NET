@@ -11,10 +11,10 @@ namespace Substrate.Statemine.NET.RestClient.Mockup.Generated.Interfaces
 {
    using System;
    using System.Threading.Tasks;
-   using Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    
    public interface IAuraExtControllerMockupClient
    {
-      Task<bool> SetAuthorities(BoundedVecT7 value);
+      Task<bool> SetAuthorities(BoundedVecT12 value);
    }
 }

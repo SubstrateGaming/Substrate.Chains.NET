@@ -12,7 +12,7 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Clients
    using System;
    using System.Threading.Tasks;
    using System.Net.Http;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    using Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nis.pallet;
    using Substrate.Kusama.NET.RestClient.Mockup.Generated.Interfaces;
    
@@ -23,11 +23,11 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Clients
       {
          _httpClient = httpClient;
       }
-      public async Task<bool> SetQueueTotals(BoundedVecT33 value)
+      public async Task<bool> SetQueueTotals(BoundedVecT35 value)
       {
          return await SendMockupRequestAsync(_httpClient, "Nis/QueueTotals", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.NisStorage.QueueTotalsParams());
       }
-      public async Task<bool> SetQueues(BoundedVecT34 value, Substrate.NetApi.Model.Types.Primitive.U32 key)
+      public async Task<bool> SetQueues(BoundedVecT36 value, Substrate.NetApi.Model.Types.Primitive.U32 key)
       {
          return await SendMockupRequestAsync(_httpClient, "Nis/Queues", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.NisStorage.QueuesParams(key));
       }

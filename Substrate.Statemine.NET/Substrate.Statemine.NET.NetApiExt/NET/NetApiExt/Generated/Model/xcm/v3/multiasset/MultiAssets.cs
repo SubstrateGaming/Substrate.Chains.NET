@@ -18,7 +18,7 @@ namespace Substrate.Statemine.NET.NetApiExt.Generated.Model.xcm.v3.multiasset
     
     
     /// <summary>
-    /// >> 57 - Composite[xcm.v3.multiasset.MultiAssets]
+    /// >> 58 - Composite[xcm.v3.multiasset.MultiAssets]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class MultiAssets : BaseType

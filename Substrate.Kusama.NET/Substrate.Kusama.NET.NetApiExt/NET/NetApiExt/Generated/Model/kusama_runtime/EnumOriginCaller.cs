@@ -20,23 +20,19 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.kusama_runtime
         
         system = 0,
         
-        Council = 14,
-        
-        TechnicalCommittee = 15,
-        
         Origins = 43,
         
         ParachainsOrigin = 50,
         
         XcmPallet = 99,
         
-        Void = 6,
+        Void = 4,
     }
     
     /// <summary>
-    /// >> 148 - Variant[kusama_runtime.OriginCaller]
+    /// >> 127 - Variant[kusama_runtime.OriginCaller]
     /// </summary>
-    public sealed class EnumOriginCaller : BaseEnumExt<OriginCaller, Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_support.dispatch.EnumRawOrigin, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.NetApi.Model.Types.Base.BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_collective.EnumRawOrigin, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_collective.EnumRawOrigin, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.kusama_runtime.governance.origins.pallet_custom_origins.EnumOrigin, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.origin.pallet.EnumOrigin, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_xcm.pallet.EnumOrigin>
+    public sealed class EnumOriginCaller : BaseEnumExt<OriginCaller, Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_support.dispatch.EnumRawOrigin, BaseVoid, BaseVoid, BaseVoid, Substrate.NetApi.Model.Types.Base.BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.kusama_runtime.governance.origins.pallet_custom_origins.EnumOrigin, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.origin.pallet.EnumOrigin, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_xcm.pallet.EnumOrigin>
     {
     }
 }

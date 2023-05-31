@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_common
     
     
     /// <summary>
-    /// >> 169 - Composite[polkadot_runtime_common.claims.EcdsaSignature]
+    /// >> 147 - Composite[polkadot_runtime_common.claims.EcdsaSignature]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class EcdsaSignature : BaseType

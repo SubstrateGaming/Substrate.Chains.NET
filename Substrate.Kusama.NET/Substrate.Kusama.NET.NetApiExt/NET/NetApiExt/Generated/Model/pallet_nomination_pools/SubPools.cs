@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools
     
     
     /// <summary>
-    /// >> 747 - Composite[pallet_nomination_pools.SubPools]
+    /// >> 732 - Composite[pallet_nomination_pools.SubPools]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class SubPools : BaseType
@@ -32,7 +32,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools
         /// <summary>
         /// >> with_era
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_btree_map.BoundedBTreeMapT2 _withEra;
+        private Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_map.BoundedBTreeMapT2 _withEra;
         
         public Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools.UnbondPool NoEra
         {
@@ -46,7 +46,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools
             }
         }
         
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_btree_map.BoundedBTreeMapT2 WithEra
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_map.BoundedBTreeMapT2 WithEra
         {
             get
             {
@@ -76,7 +76,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools
             var start = p;
             NoEra = new Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools.UnbondPool();
             NoEra.Decode(byteArray, ref p);
-            WithEra = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_btree_map.BoundedBTreeMapT2();
+            WithEra = new Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_map.BoundedBTreeMapT2();
             WithEra.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

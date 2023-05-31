@@ -18,7 +18,7 @@ namespace Substrate.Statemine.NET.NetApiExt.Generated.Model.xcm.v3.multilocation
     
     
     /// <summary>
-    /// >> 44 - Composite[xcm.v3.multilocation.MultiLocation]
+    /// >> 45 - Composite[xcm.v3.multilocation.MultiLocation]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class MultiLocation : BaseType

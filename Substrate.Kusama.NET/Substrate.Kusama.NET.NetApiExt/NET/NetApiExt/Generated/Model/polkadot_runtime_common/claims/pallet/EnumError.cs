@@ -32,7 +32,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_common
     }
     
     /// <summary>
-    /// >> 654 - Variant[polkadot_runtime_common.claims.pallet.Error]
+    /// >> 637 - Variant[polkadot_runtime_common.claims.pallet.Error]
     /// 
     ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
     ///			of this pallet.

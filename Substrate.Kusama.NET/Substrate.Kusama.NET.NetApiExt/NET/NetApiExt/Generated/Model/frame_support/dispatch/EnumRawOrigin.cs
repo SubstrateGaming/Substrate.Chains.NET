@@ -26,7 +26,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_support.dispatch
     }
     
     /// <summary>
-    /// >> 149 - Variant[frame_support.dispatch.RawOrigin]
+    /// >> 128 - Variant[frame_support.dispatch.RawOrigin]
     /// </summary>
     public sealed class EnumRawOrigin : BaseEnumExt<RawOrigin, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, BaseVoid>
     {

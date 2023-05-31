@@ -31,8 +31,8 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         {
             this._client = client;
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("ParasShared", "CurrentSessionIndex"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Primitive.U32)));
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("ParasShared", "ActiveValidatorIndices"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.ValidatorIndex>)));
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("ParasShared", "ActiveValidatorKeys"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.validator_app.Public>)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("ParasShared", "ActiveValidatorIndices"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.ValidatorIndex>)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("ParasShared", "ActiveValidatorKeys"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.validator_app.Public>)));
         }
         
         /// <summary>
@@ -88,10 +88,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         ///  All the validators actively participating in parachain consensus.
         ///  Indices are into the broader validator set.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.ValidatorIndex>> ActiveValidatorIndices(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.ValidatorIndex>> ActiveValidatorIndices(CancellationToken token)
         {
             string parameters = ParasSharedStorage.ActiveValidatorIndicesParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.ValidatorIndex>>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.ValidatorIndex>>(parameters, token);
             return result;
         }
         
@@ -119,10 +119,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         ///  The parachain attestation keys of the validators actively participating in parachain consensus.
         ///  This should be the same length as `ActiveValidatorIndices`.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.validator_app.Public>> ActiveValidatorKeys(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.validator_app.Public>> ActiveValidatorKeys(CancellationToken token)
         {
             string parameters = ParasSharedStorage.ActiveValidatorKeysParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.validator_app.Public>>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.validator_app.Public>>(parameters, token);
             return result;
         }
     }

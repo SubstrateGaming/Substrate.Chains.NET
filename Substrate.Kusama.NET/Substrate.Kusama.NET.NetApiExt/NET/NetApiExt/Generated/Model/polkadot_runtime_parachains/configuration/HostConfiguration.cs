@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parach
     
     
     /// <summary>
-    /// >> 760 - Composite[polkadot_runtime_parachains.configuration.HostConfiguration]
+    /// >> 745 - Composite[polkadot_runtime_parachains.configuration.HostConfiguration]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class HostConfiguration : BaseType
@@ -68,6 +68,11 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parach
         /// >> validation_upgrade_delay
         /// </summary>
         private Substrate.NetApi.Model.Types.Primitive.U32 _validationUpgradeDelay;
+        
+        /// <summary>
+        /// >> async_backing_params
+        /// </summary>
+        private Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.vstaging.AsyncBackingParams _asyncBackingParams;
         
         /// <summary>
         /// >> max_pov_size
@@ -130,6 +135,11 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parach
         private Substrate.NetApi.Model.Types.Primitive.U32 _hrmpChannelMaxMessageSize;
         
         /// <summary>
+        /// >> executor_params
+        /// </summary>
+        private Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.executor_params.ExecutorParams _executorParams;
+        
+        /// <summary>
         /// >> code_retention_period
         /// </summary>
         private Substrate.NetApi.Model.Types.Primitive.U32 _codeRetentionPeriod;
@@ -183,11 +193,6 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parach
         /// >> dispute_post_conclusion_acceptance_period
         /// </summary>
         private Substrate.NetApi.Model.Types.Primitive.U32 _disputePostConclusionAcceptancePeriod;
-        
-        /// <summary>
-        /// >> dispute_conclusion_by_time_out_period
-        /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _disputeConclusionByTimeOutPeriod;
         
         /// <summary>
         /// >> no_show_slots
@@ -342,6 +347,18 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parach
             }
         }
         
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.vstaging.AsyncBackingParams AsyncBackingParams
+        {
+            get
+            {
+                return this._asyncBackingParams;
+            }
+            set
+            {
+                this._asyncBackingParams = value;
+            }
+        }
+        
         public Substrate.NetApi.Model.Types.Primitive.U32 MaxPovSize
         {
             get
@@ -486,6 +503,18 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parach
             }
         }
         
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.executor_params.ExecutorParams ExecutorParams
+        {
+            get
+            {
+                return this._executorParams;
+            }
+            set
+            {
+                this._executorParams = value;
+            }
+        }
+        
         public Substrate.NetApi.Model.Types.Primitive.U32 CodeRetentionPeriod
         {
             get
@@ -618,18 +647,6 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parach
             }
         }
         
-        public Substrate.NetApi.Model.Types.Primitive.U32 DisputeConclusionByTimeOutPeriod
-        {
-            get
-            {
-                return this._disputeConclusionByTimeOutPeriod;
-            }
-            set
-            {
-                this._disputeConclusionByTimeOutPeriod = value;
-            }
-        }
-        
         public Substrate.NetApi.Model.Types.Primitive.U32 NoShowSlots
         {
             get
@@ -755,6 +772,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parach
             result.AddRange(HrmpMaxMessageNumPerCandidate.Encode());
             result.AddRange(ValidationUpgradeCooldown.Encode());
             result.AddRange(ValidationUpgradeDelay.Encode());
+            result.AddRange(AsyncBackingParams.Encode());
             result.AddRange(MaxPovSize.Encode());
             result.AddRange(MaxDownwardMessageSize.Encode());
             result.AddRange(UmpServiceTotalWeight.Encode());
@@ -767,6 +785,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parach
             result.AddRange(HrmpMaxParachainInboundChannels.Encode());
             result.AddRange(HrmpMaxParathreadInboundChannels.Encode());
             result.AddRange(HrmpChannelMaxMessageSize.Encode());
+            result.AddRange(ExecutorParams.Encode());
             result.AddRange(CodeRetentionPeriod.Encode());
             result.AddRange(ParathreadCores.Encode());
             result.AddRange(ParathreadRetries.Encode());
@@ -778,7 +797,6 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parach
             result.AddRange(MaxValidators.Encode());
             result.AddRange(DisputePeriod.Encode());
             result.AddRange(DisputePostConclusionAcceptancePeriod.Encode());
-            result.AddRange(DisputeConclusionByTimeOutPeriod.Encode());
             result.AddRange(NoShowSlots.Encode());
             result.AddRange(NDelayTranches.Encode());
             result.AddRange(ZerothDelayTrancheWidth.Encode());
@@ -812,6 +830,8 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parach
             ValidationUpgradeCooldown.Decode(byteArray, ref p);
             ValidationUpgradeDelay = new Substrate.NetApi.Model.Types.Primitive.U32();
             ValidationUpgradeDelay.Decode(byteArray, ref p);
+            AsyncBackingParams = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.vstaging.AsyncBackingParams();
+            AsyncBackingParams.Decode(byteArray, ref p);
             MaxPovSize = new Substrate.NetApi.Model.Types.Primitive.U32();
             MaxPovSize.Decode(byteArray, ref p);
             MaxDownwardMessageSize = new Substrate.NetApi.Model.Types.Primitive.U32();
@@ -836,6 +856,8 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parach
             HrmpMaxParathreadInboundChannels.Decode(byteArray, ref p);
             HrmpChannelMaxMessageSize = new Substrate.NetApi.Model.Types.Primitive.U32();
             HrmpChannelMaxMessageSize.Decode(byteArray, ref p);
+            ExecutorParams = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.executor_params.ExecutorParams();
+            ExecutorParams.Decode(byteArray, ref p);
             CodeRetentionPeriod = new Substrate.NetApi.Model.Types.Primitive.U32();
             CodeRetentionPeriod.Decode(byteArray, ref p);
             ParathreadCores = new Substrate.NetApi.Model.Types.Primitive.U32();
@@ -858,8 +880,6 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parach
             DisputePeriod.Decode(byteArray, ref p);
             DisputePostConclusionAcceptancePeriod = new Substrate.NetApi.Model.Types.Primitive.U32();
             DisputePostConclusionAcceptancePeriod.Decode(byteArray, ref p);
-            DisputeConclusionByTimeOutPeriod = new Substrate.NetApi.Model.Types.Primitive.U32();
-            DisputeConclusionByTimeOutPeriod.Decode(byteArray, ref p);
             NoShowSlots = new Substrate.NetApi.Model.Types.Primitive.U32();
             NoShowSlots.Decode(byteArray, ref p);
             NDelayTranches = new Substrate.NetApi.Model.Types.Primitive.U32();

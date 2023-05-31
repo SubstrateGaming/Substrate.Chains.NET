@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.double_encoded
     
     
     /// <summary>
-    /// >> 444 - Composite[xcm.double_encoded.DoubleEncodedT2]
+    /// >> 443 - Composite[xcm.double_encoded.DoubleEncodedT2]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class DoubleEncodedT2 : BaseType

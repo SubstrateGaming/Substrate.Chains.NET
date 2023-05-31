@@ -40,7 +40,7 @@ namespace Substrate.Statemine.NET.NetApiExt.Generated.Model.xcm.v3.junction
     }
     
     /// <summary>
-    /// >> 52 - Variant[xcm.v3.junction.BodyId]
+    /// >> 53 - Variant[xcm.v3.junction.BodyId]
     /// </summary>
     public sealed class EnumBodyId : BaseEnumExt<BodyId, BaseVoid, Substrate.Statemine.NET.NetApiExt.Generated.Types.Base.Arr4U8, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid>
     {

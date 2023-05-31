@@ -14,10 +14,12 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Interfaces
    using Substrate.NetApi.Model.Types.Base;
    using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_core_primitives;
    using Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point;
    
    public interface IDmpControllerMockupClient
    {
       Task<bool> SetDownwardMessageQueues(BaseVec<InboundDownwardMessage> value, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id key);
       Task<bool> SetDownwardMessageQueueHeads(H256 value, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id key);
+      Task<bool> SetDeliveryFeeFactor(FixedU128 value, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id key);
    }
 }

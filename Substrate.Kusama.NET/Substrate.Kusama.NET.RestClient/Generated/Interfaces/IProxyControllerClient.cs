@@ -12,14 +12,14 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Interfaces
    using System;
    using System.Threading.Tasks;
    using Substrate.NetApi.Model.Types.Base;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    using Substrate.NetApi.Model.Types.Primitive;
    
    public interface IProxyControllerClient
    {
-      Task<BaseTuple<BoundedVecT26, U128>> GetProxies(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
+      Task<BaseTuple<BoundedVecT28, U128>> GetProxies(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
       Task<bool> SubscribeProxies(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
-      Task<BaseTuple<BoundedVecT27, U128>> GetAnnouncements(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
+      Task<BaseTuple<BoundedVecT29, U128>> GetAnnouncements(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
       Task<bool> SubscribeAnnouncements(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
    }
 }

@@ -15,6 +15,7 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Clients
    using Substrate.NetApi.Model.Types.Base;
    using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_core_primitives;
    using Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point;
    using Substrate.Kusama.NET.RestClient.Generated.Interfaces;
    
    public sealed class DmpControllerClient : BaseClient, IDmpControllerClient
@@ -41,6 +42,14 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Clients
       public async Task<bool> SubscribeDownwardMessageQueueHeads(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id key)
       {
          return await _subscriptionClient.SubscribeAsync("Dmp.DownwardMessageQueueHeads", Substrate.Kusama.NET.NetApiExt.Generated.Storage.DmpStorage.DownwardMessageQueueHeadsParams(key));
+      }
+      public async Task<FixedU128> GetDeliveryFeeFactor(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id key)
+      {
+         return await SendRequestAsync<FixedU128>(_httpClient, "dmp/deliveryfeefactor", Substrate.Kusama.NET.NetApiExt.Generated.Storage.DmpStorage.DeliveryFeeFactorParams(key));
+      }
+      public async Task<bool> SubscribeDeliveryFeeFactor(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id key)
+      {
+         return await _subscriptionClient.SubscribeAsync("Dmp.DeliveryFeeFactor", Substrate.Kusama.NET.NetApiExt.Generated.Storage.DmpStorage.DeliveryFeeFactorParams(key));
       }
    }
 }

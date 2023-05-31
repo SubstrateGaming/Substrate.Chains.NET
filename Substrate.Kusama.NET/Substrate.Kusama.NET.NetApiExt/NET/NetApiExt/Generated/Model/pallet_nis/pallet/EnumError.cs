@@ -50,7 +50,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nis.pallet
     }
     
     /// <summary>
-    /// >> 732 - Variant[pallet_nis.pallet.Error]
+    /// >> 713 - Variant[pallet_nis.pallet.Error]
     /// 
     ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
     ///			of this pallet.

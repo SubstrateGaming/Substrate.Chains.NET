@@ -30,7 +30,7 @@ namespace Substrate.Statemine.NET.NetApiExt.Generated.Model.xcm.v3.junction
     }
     
     /// <summary>
-    /// >> 53 - Variant[xcm.v3.junction.BodyPart]
+    /// >> 54 - Variant[xcm.v3.junction.BodyPart]
     /// </summary>
     public sealed class EnumBodyPart : BaseEnumExt<BodyPart, BaseVoid, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>, BaseTuple<Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>>, BaseTuple<Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>>, BaseTuple<Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>>>
     {

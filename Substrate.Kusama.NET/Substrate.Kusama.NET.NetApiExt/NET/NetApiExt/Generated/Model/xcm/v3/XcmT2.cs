@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.v3
     
     
     /// <summary>
-    /// >> 445 - Composite[xcm.v3.XcmT2]
+    /// >> 444 - Composite[xcm.v3.XcmT2]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class XcmT2 : BaseType

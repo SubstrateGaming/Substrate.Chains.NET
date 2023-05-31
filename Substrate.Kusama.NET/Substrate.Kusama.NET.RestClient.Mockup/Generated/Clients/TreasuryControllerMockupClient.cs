@@ -14,7 +14,7 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Clients
    using System.Net.Http;
    using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_treasury;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    using Substrate.Kusama.NET.RestClient.Mockup.Generated.Interfaces;
    
    public sealed class TreasuryControllerMockupClient : MockupBaseClient, ITreasuryControllerMockupClient
@@ -36,7 +36,7 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "Treasury/Deactivated", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.TreasuryStorage.DeactivatedParams());
       }
-      public async Task<bool> SetApprovals(BoundedVecT14 value)
+      public async Task<bool> SetApprovals(BoundedVecT16 value)
       {
          return await SendMockupRequestAsync(_httpClient, "Treasury/Approvals", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.TreasuryStorage.ApprovalsParams());
       }

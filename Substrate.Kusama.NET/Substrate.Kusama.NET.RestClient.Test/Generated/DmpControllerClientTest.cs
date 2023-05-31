@@ -18,6 +18,7 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
    using Substrate.NetApi.Model.Types.Base;
    using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_core_primitives;
    using Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point;
    
    public class DmpControllerClientTest : ClientTestBase
    {
@@ -153,6 +154,49 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
          Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256 rpcResult = await rpcClient.GetDownwardMessageQueueHeads(mockupKey);
+
+         // Test that the expected mockup value matches the actual result from RPC service.
+         Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
+      }
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedU128 GetTestValue9()
+      {
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedU128 result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedU128();
+         result.Value = this.GetTestValueU128();
+         return result;
+      }
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id GetTestValue10()
+      {
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id();
+         result.Value = this.GetTestValueU32();
+         return result;
+      }
+      [Test()]
+      public async System.Threading.Tasks.Task TestDeliveryFeeFactor()
+      {
+         // Construct new Mockup client to test with.
+         DmpControllerMockupClient mockupClient = new DmpControllerMockupClient(_httpClient);
+
+         // Construct new subscription client to test with.
+         var subscriptionClient = CreateSubscriptionClient();
+
+         // Construct new RPC client to test with.
+         DmpControllerClient rpcClient = new DmpControllerClient(_httpClient, subscriptionClient);
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedU128 mockupValue = this.GetTestValue9();
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id mockupKey = this.GetTestValue10();
+
+         Assert.IsTrue(await rpcClient.SubscribeDeliveryFeeFactor(mockupKey));
+
+         // Save the previously generated mockup value in RPC service storage.
+         bool mockupSetResult = await mockupClient.SetDeliveryFeeFactor(mockupValue, mockupKey);
+
+         // Test that the expected mockup value was handled successfully from RPC service.
+         Assert.IsTrue(mockupSetResult);
+         var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
+         Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
+
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedU128 rpcResult = await rpcClient.GetDeliveryFeeFactor(mockupKey);
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());

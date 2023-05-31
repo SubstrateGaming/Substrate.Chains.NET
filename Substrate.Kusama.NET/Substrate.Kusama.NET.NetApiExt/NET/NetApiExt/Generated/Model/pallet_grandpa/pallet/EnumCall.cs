@@ -26,10 +26,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_grandpa.pallet
     }
     
     /// <summary>
-    /// >> 110 - Variant[pallet_grandpa.pallet.Call]
+    /// >> 100 - Variant[pallet_grandpa.pallet.Call]
     /// Contains one variant per dispatchable that can be called by an extrinsic.
     /// </summary>
-    public sealed class EnumCall : BaseEnumExt<Call, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_finality_grandpa.EquivocationProof, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_session.MembershipProof>, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_finality_grandpa.EquivocationProof, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_session.MembershipProof>, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>>
+    public sealed class EnumCall : BaseEnumExt<Call, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_grandpa.EquivocationProof, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_session.MembershipProof>, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_grandpa.EquivocationProof, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_session.MembershipProof>, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>>
     {
     }
 }

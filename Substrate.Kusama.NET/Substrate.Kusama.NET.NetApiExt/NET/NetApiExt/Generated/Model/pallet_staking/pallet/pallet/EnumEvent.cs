@@ -50,7 +50,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.pallet.p
     }
     
     /// <summary>
-    /// >> 33 - Variant[pallet_staking.pallet.pallet.Event]
+    /// >> 34 - Variant[pallet_staking.pallet.pallet.Event]
     /// 
     ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
     ///			by this pallet.

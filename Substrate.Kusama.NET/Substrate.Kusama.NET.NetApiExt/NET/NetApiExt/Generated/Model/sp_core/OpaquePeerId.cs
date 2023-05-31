@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core
     
     
     /// <summary>
-    /// >> 125 - Composite[sp_core.OpaquePeerId]
+    /// >> 115 - Composite[sp_core.OpaquePeerId]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class OpaquePeerId : BaseType

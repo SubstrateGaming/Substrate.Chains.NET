@@ -18,21 +18,16 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools
     
     
     /// <summary>
-    /// >> 744 - Composite[pallet_nomination_pools.BondedPoolInner]
+    /// >> 726 - Composite[pallet_nomination_pools.BondedPoolInner]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class BondedPoolInner : BaseType
     {
         
         /// <summary>
-        /// >> points
+        /// >> commission
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U128 _points;
-        
-        /// <summary>
-        /// >> state
-        /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools.EnumPoolState _state;
+        private Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools.Commission _commission;
         
         /// <summary>
         /// >> member_counter
@@ -40,31 +35,29 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools
         private Substrate.NetApi.Model.Types.Primitive.U32 _memberCounter;
         
         /// <summary>
+        /// >> points
+        /// </summary>
+        private Substrate.NetApi.Model.Types.Primitive.U128 _points;
+        
+        /// <summary>
         /// >> roles
         /// </summary>
         private Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools.PoolRoles _roles;
         
-        public Substrate.NetApi.Model.Types.Primitive.U128 Points
-        {
-            get
-            {
-                return this._points;
-            }
-            set
-            {
-                this._points = value;
-            }
-        }
+        /// <summary>
+        /// >> state
+        /// </summary>
+        private Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools.EnumPoolState _state;
         
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools.EnumPoolState State
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools.Commission Commission
         {
             get
             {
-                return this._state;
+                return this._commission;
             }
             set
             {
-                this._state = value;
+                this._commission = value;
             }
         }
         
@@ -80,6 +73,18 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools
             }
         }
         
+        public Substrate.NetApi.Model.Types.Primitive.U128 Points
+        {
+            get
+            {
+                return this._points;
+            }
+            set
+            {
+                this._points = value;
+            }
+        }
+        
         public Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools.PoolRoles Roles
         {
             get
@@ -92,6 +97,18 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools
             }
         }
         
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools.EnumPoolState State
+        {
+            get
+            {
+                return this._state;
+            }
+            set
+            {
+                this._state = value;
+            }
+        }
+        
         public override string TypeName()
         {
             return "BondedPoolInner";
@@ -100,24 +117,27 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools
         public override byte[] Encode()
         {
             var result = new List<byte>();
-            result.AddRange(Points.Encode());
-            result.AddRange(State.Encode());
+            result.AddRange(Commission.Encode());
             result.AddRange(MemberCounter.Encode());
+            result.AddRange(Points.Encode());
             result.AddRange(Roles.Encode());
+            result.AddRange(State.Encode());
             return result.ToArray();
         }
         
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Points = new Substrate.NetApi.Model.Types.Primitive.U128();
-            Points.Decode(byteArray, ref p);
-            State = new Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools.EnumPoolState();
-            State.Decode(byteArray, ref p);
+            Commission = new Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools.Commission();
+            Commission.Decode(byteArray, ref p);
             MemberCounter = new Substrate.NetApi.Model.Types.Primitive.U32();
             MemberCounter.Decode(byteArray, ref p);
+            Points = new Substrate.NetApi.Model.Types.Primitive.U128();
+            Points.Decode(byteArray, ref p);
             Roles = new Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools.PoolRoles();
             Roles.Decode(byteArray, ref p);
+            State = new Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools.EnumPoolState();
+            State.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];

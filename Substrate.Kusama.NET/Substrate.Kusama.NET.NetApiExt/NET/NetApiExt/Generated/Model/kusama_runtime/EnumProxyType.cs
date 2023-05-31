@@ -33,10 +33,12 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.kusama_runtime
         Auction = 6,
         
         Society = 7,
+        
+        NominationPools = 8,
     }
     
     /// <summary>
-    /// >> 229 - Variant[kusama_runtime.ProxyType]
+    /// >> 208 - Variant[kusama_runtime.ProxyType]
     /// </summary>
     public sealed class EnumProxyType : BaseEnum<ProxyType>
     {

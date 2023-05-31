@@ -24,7 +24,7 @@ namespace Substrate.Statemine.NET.NetApiExt.Generated.Model.xcm.v3.multiasset
     }
     
     /// <summary>
-    /// >> 60 - Variant[xcm.v3.multiasset.AssetId]
+    /// >> 61 - Variant[xcm.v3.multiasset.AssetId]
     /// </summary>
     public sealed class EnumAssetId : BaseEnumExt<AssetId, Substrate.Statemine.NET.NetApiExt.Generated.Model.xcm.v3.multilocation.MultiLocation, Substrate.Statemine.NET.NetApiExt.Generated.Types.Base.Arr32U8>
     {

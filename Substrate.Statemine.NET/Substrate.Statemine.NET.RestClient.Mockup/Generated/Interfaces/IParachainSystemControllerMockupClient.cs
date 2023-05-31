@@ -13,14 +13,14 @@ namespace Substrate.Statemine.NET.RestClient.Mockup.Generated.Interfaces
    using System.Threading.Tasks;
    using Substrate.NetApi.Model.Types.Base;
    using Substrate.NetApi.Model.Types.Primitive;
-   using Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_primitives.v2;
+   using Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_primitives.v4;
    using Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_trie.storage_proof;
    using Substrate.Statemine.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.relay_state_snapshot;
    using Substrate.Statemine.NET.NetApiExt.Generated.Model.cumulus_primitives_parachain_inherent;
    using Substrate.Statemine.NET.NetApiExt.Generated.Types.Base;
    using Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_core_primitives;
    using Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_weights.weight_v2;
-   using Substrate.Statemine.NET.NetApiExt.Generated.Model.primitive_types;
+   using Substrate.Statemine.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system;
    
    public interface IParachainSystemControllerMockupClient
    {
@@ -43,7 +43,7 @@ namespace Substrate.Statemine.NET.RestClient.Mockup.Generated.Interfaces
       Task<bool> SetAnnouncedHrmpMessagesPerCandidate(U32 value);
       Task<bool> SetReservedXcmpWeightOverride(Weight value);
       Task<bool> SetReservedDmpWeightOverride(Weight value);
-      Task<bool> SetAuthorizedUpgrade(H256 value);
+      Task<bool> SetAuthorizedUpgrade(CodeUpgradeAuthorization value);
       Task<bool> SetCustomValidationHeadData(BaseVec<U8> value);
    }
 }

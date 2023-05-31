@@ -13,7 +13,7 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Interfaces
    using System.Threading.Tasks;
    using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_election_provider_multi_phase;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    using Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_election_provider_multi_phase.signed;
    using Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_npos_elections;
    
@@ -26,7 +26,7 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Interfaces
       Task<bool> SetDesiredTargets(U32 value);
       Task<bool> SetSnapshotMetadata(SolutionOrSnapshotSize value);
       Task<bool> SetSignedSubmissionNextIndex(U32 value);
-      Task<bool> SetSignedSubmissionIndices(BoundedVecT32 value);
+      Task<bool> SetSignedSubmissionIndices(BoundedVecT34 value);
       Task<bool> SetSignedSubmissionsMap(SignedSubmission value, U32 key);
       Task<bool> SetMinimumUntrustedScore(ElectionScore value);
    }

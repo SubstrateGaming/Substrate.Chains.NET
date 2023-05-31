@@ -13,7 +13,8 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Interfaces
    using System.Threading.Tasks;
    using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_referenda.types;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types;
    
    public interface IFellowshipReferendaControllerClient
    {
@@ -21,9 +22,11 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Interfaces
       Task<bool> SubscribeReferendumCount();
       Task<EnumReferendumInfo> GetReferendumInfoFor(U32 key);
       Task<bool> SubscribeReferendumInfoFor(U32 key);
-      Task<BoundedVecT19> GetTrackQueue(U16 key);
+      Task<BoundedVecT21> GetTrackQueue(U16 key);
       Task<bool> SubscribeTrackQueue(U16 key);
       Task<U32> GetDecidingCount(U16 key);
       Task<bool> SubscribeDecidingCount(U16 key);
+      Task<H256> GetMetadataOf(U32 key);
+      Task<bool> SubscribeMetadataOf(U32 key);
    }
 }

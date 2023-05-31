@@ -36,7 +36,7 @@ namespace Substrate.Statemine.NET.NetApiExt.Generated.Model.cumulus_pallet_parac
     }
     
     /// <summary>
-    /// >> 162 - Variant[cumulus_pallet_parachain_system.pallet.Error]
+    /// >> 174 - Variant[cumulus_pallet_parachain_system.pallet.Error]
     /// 
     ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
     ///			of this pallet.

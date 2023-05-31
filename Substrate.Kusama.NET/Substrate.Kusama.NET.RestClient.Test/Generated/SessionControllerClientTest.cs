@@ -222,24 +222,24 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
       {
          Substrate.Kusama.NET.NetApiExt.Generated.Model.kusama_runtime.SessionKeys result;
          result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.kusama_runtime.SessionKeys();
-         result.Grandpa = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_finality_grandpa.app.Public();
+         result.Grandpa = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_grandpa.app.Public();
          result.Grandpa = this.GetTestValue11();
          result.Babe = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_babe.app.Public();
          result.Babe = this.GetTestValue13();
          result.ImOnline = new Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_im_online.sr25519.app_sr25519.Public();
          result.ImOnline = this.GetTestValue15();
-         result.ParaValidator = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.validator_app.Public();
+         result.ParaValidator = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.validator_app.Public();
          result.ParaValidator = this.GetTestValue17();
-         result.ParaAssignment = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.assignment_app.Public();
+         result.ParaAssignment = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.assignment_app.Public();
          result.ParaAssignment = this.GetTestValue19();
          result.AuthorityDiscovery = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_authority_discovery.app.Public();
          result.AuthorityDiscovery = this.GetTestValue21();
          return result;
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_finality_grandpa.app.Public GetTestValue11()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_grandpa.app.Public GetTestValue11()
       {
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_finality_grandpa.app.Public result;
-         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_finality_grandpa.app.Public();
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_grandpa.app.Public result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_grandpa.app.Public();
          result.Value = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.ed25519.Public();
          result.Value = this.GetTestValue12();
          return result;
@@ -380,10 +380,10 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
                   this.GetTestValueU8()});
          return result;
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.validator_app.Public GetTestValue17()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.validator_app.Public GetTestValue17()
       {
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.validator_app.Public result;
-         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.validator_app.Public();
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.validator_app.Public result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.validator_app.Public();
          result.Value = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.sr25519.Public();
          result.Value = this.GetTestValue18();
          return result;
@@ -428,10 +428,10 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
                   this.GetTestValueU8()});
          return result;
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.assignment_app.Public GetTestValue19()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.assignment_app.Public GetTestValue19()
       {
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.assignment_app.Public result;
-         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.assignment_app.Public();
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.assignment_app.Public result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.assignment_app.Public();
          result.Value = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.sr25519.Public();
          result.Value = this.GetTestValue20();
          return result;
@@ -594,24 +594,24 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
       {
          Substrate.Kusama.NET.NetApiExt.Generated.Model.kusama_runtime.SessionKeys result;
          result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.kusama_runtime.SessionKeys();
-         result.Grandpa = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_finality_grandpa.app.Public();
+         result.Grandpa = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_grandpa.app.Public();
          result.Grandpa = this.GetTestValue27();
          result.Babe = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_babe.app.Public();
          result.Babe = this.GetTestValue29();
          result.ImOnline = new Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_im_online.sr25519.app_sr25519.Public();
          result.ImOnline = this.GetTestValue31();
-         result.ParaValidator = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.validator_app.Public();
+         result.ParaValidator = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.validator_app.Public();
          result.ParaValidator = this.GetTestValue33();
-         result.ParaAssignment = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.assignment_app.Public();
+         result.ParaAssignment = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.assignment_app.Public();
          result.ParaAssignment = this.GetTestValue35();
          result.AuthorityDiscovery = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_authority_discovery.app.Public();
          result.AuthorityDiscovery = this.GetTestValue37();
          return result;
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_finality_grandpa.app.Public GetTestValue27()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_grandpa.app.Public GetTestValue27()
       {
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_finality_grandpa.app.Public result;
-         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_finality_grandpa.app.Public();
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_grandpa.app.Public result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_grandpa.app.Public();
          result.Value = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.ed25519.Public();
          result.Value = this.GetTestValue28();
          return result;
@@ -752,10 +752,10 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
                   this.GetTestValueU8()});
          return result;
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.validator_app.Public GetTestValue33()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.validator_app.Public GetTestValue33()
       {
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.validator_app.Public result;
-         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.validator_app.Public();
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.validator_app.Public result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.validator_app.Public();
          result.Value = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.sr25519.Public();
          result.Value = this.GetTestValue34();
          return result;
@@ -800,10 +800,10 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
                   this.GetTestValueU8()});
          return result;
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.assignment_app.Public GetTestValue35()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.assignment_app.Public GetTestValue35()
       {
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.assignment_app.Public result;
-         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.assignment_app.Public();
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.assignment_app.Public result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.assignment_app.Public();
          result.Value = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.sr25519.Public();
          result.Value = this.GetTestValue36();
          return result;

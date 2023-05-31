@@ -30,8 +30,8 @@ namespace Substrate.Statemine.NET.NetApiExt.Generated.Storage
         public CollatorSelectionStorage(SubstrateClientExt client)
         {
             this._client = client;
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("CollatorSelection", "Invulnerables"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT5)));
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("CollatorSelection", "Candidates"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT6)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("CollatorSelection", "Invulnerables"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("CollatorSelection", "Candidates"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT11)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("CollatorSelection", "LastAuthoredBlock"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32), typeof(Substrate.NetApi.Model.Types.Primitive.U32)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("CollatorSelection", "DesiredCandidates"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Primitive.U32)));
@@ -60,10 +60,10 @@ namespace Substrate.Statemine.NET.NetApiExt.Generated.Storage
         /// >> Invulnerables
         ///  The invulnerable, fixed collators.
         /// </summary>
-        public async Task<Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT5> Invulnerables(CancellationToken token)
+        public async Task<Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10> Invulnerables(CancellationToken token)
         {
             string parameters = CollatorSelectionStorage.InvulnerablesParams();
-            var result = await _client.GetStorageAsync<Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT5>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10>(parameters, token);
             return result;
         }
         
@@ -89,10 +89,10 @@ namespace Substrate.Statemine.NET.NetApiExt.Generated.Storage
         /// >> Candidates
         ///  The (community, limited) collation candidates.
         /// </summary>
-        public async Task<Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT6> Candidates(CancellationToken token)
+        public async Task<Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT11> Candidates(CancellationToken token)
         {
             string parameters = CollatorSelectionStorage.CandidatesParams();
-            var result = await _client.GetStorageAsync<Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT6>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT11>(parameters, token);
             return result;
         }
         

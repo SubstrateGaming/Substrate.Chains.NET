@@ -13,13 +13,13 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Interfaces
    using System.Threading.Tasks;
    using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_bounties;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    
    public interface IBountiesControllerMockupClient
    {
       Task<bool> SetBountyCount(U32 value);
       Task<bool> SetBounties(Bounty value, U32 key);
-      Task<bool> SetBountyDescriptions(BoundedVecT30 value, U32 key);
-      Task<bool> SetBountyApprovals(BoundedVecT14 value);
+      Task<bool> SetBountyDescriptions(BoundedVecT32 value, U32 key);
+      Task<bool> SetBountyApprovals(BoundedVecT16 value);
    }
 }

@@ -24,7 +24,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_ranked_collectiv
     }
     
     /// <summary>
-    /// >> 451 - Variant[pallet_ranked_collective.VoteRecord]
+    /// >> 450 - Variant[pallet_ranked_collective.VoteRecord]
     /// </summary>
     public sealed class EnumVoteRecord : BaseEnumExt<VoteRecord, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>
     {

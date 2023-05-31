@@ -37,7 +37,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         ///  require. The actual amount locked on behalf of this pallet should always be the maximum of
         ///  this list.
         /// </summary>
-        Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT16 GetClassLocksFor(string key);
+        Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18 GetClassLocksFor(string key);
     }
     
     /// <summary>
@@ -54,7 +54,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// <summary>
         /// _classLocksForTypedStorage typed storage field
         /// </summary>
-        private TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT16> _classLocksForTypedStorage;
+        private TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18> _classLocksForTypedStorage;
         
         /// <summary>
         /// ConvictionVotingStorage constructor.
@@ -62,7 +62,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         public ConvictionVotingStorage(IStorageDataProvider storageDataProvider, List<IStorageChangeDelegate> storageChangeDelegates)
         {
             this.VotingForTypedStorage = new TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_conviction_voting.vote.EnumVoting>("ConvictionVoting.VotingFor", storageDataProvider, storageChangeDelegates);
-            this.ClassLocksForTypedStorage = new TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT16>("ConvictionVoting.ClassLocksFor", storageDataProvider, storageChangeDelegates);
+            this.ClassLocksForTypedStorage = new TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18>("ConvictionVoting.ClassLocksFor", storageDataProvider, storageChangeDelegates);
         }
         
         /// <summary>
@@ -83,7 +83,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// <summary>
         /// _classLocksForTypedStorage property
         /// </summary>
-        public TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT16> ClassLocksForTypedStorage
+        public TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18> ClassLocksForTypedStorage
         {
             get
             {
@@ -149,13 +149,13 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         ///  require. The actual amount locked on behalf of this pallet should always be the maximum of
         ///  this list.
         /// </summary>
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT16 GetClassLocksFor(string key)
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18 GetClassLocksFor(string key)
         {
             if ((key == null))
             {
                 return null;
             }
-            if (ClassLocksForTypedStorage.Dictionary.TryGetValue(key, out Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT16 result))
+            if (ClassLocksForTypedStorage.Dictionary.TryGetValue(key, out Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18 result))
             {
                 return result;
             }

@@ -27,9 +27,9 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Clients
          _httpClient = httpClient;
          _subscriptionClient = subscriptionClient;
       }
-      public async Task<BaseVec<BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.ValidatorIndex>>> GetValidatorGroups()
+      public async Task<BaseVec<BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.ValidatorIndex>>> GetValidatorGroups()
       {
-         return await SendRequestAsync<BaseVec<BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.ValidatorIndex>>>(_httpClient, "parascheduler/validatorgroups");
+         return await SendRequestAsync<BaseVec<BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.ValidatorIndex>>>(_httpClient, "parascheduler/validatorgroups");
       }
       public async Task<bool> SubscribeValidatorGroups()
       {
@@ -43,9 +43,9 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("ParaScheduler.ParathreadQueue");
       }
-      public async Task<BaseVec<BaseOpt<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.EnumCoreOccupied>>> GetAvailabilityCores()
+      public async Task<BaseVec<BaseOpt<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.EnumCoreOccupied>>> GetAvailabilityCores()
       {
-         return await SendRequestAsync<BaseVec<BaseOpt<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.EnumCoreOccupied>>>(_httpClient, "parascheduler/availabilitycores");
+         return await SendRequestAsync<BaseVec<BaseOpt<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.EnumCoreOccupied>>>(_httpClient, "parascheduler/availabilitycores");
       }
       public async Task<bool> SubscribeAvailabilityCores()
       {

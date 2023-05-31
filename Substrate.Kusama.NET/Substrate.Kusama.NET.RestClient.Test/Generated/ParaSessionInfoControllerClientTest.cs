@@ -16,10 +16,11 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
    using Substrate.Kusama.NET.RestClient.Mockup.Generated.Clients;
    using Substrate.Kusama.NET.RestClient.Generated.Clients;
    using Substrate.NetApi.Model.Types.Base;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.assignment_app;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.assignment_app;
    using Substrate.NetApi.Model.Types.Primitive;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4;
    using Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.executor_params;
    
    public class ParaSessionInfoControllerClientTest : ClientTestBase
    {
@@ -29,18 +30,18 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
       {
          _httpClient = CreateHttpClient();
       }
-      public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.assignment_app.Public> GetTestValue2()
+      public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.assignment_app.Public> GetTestValue2()
       {
-         Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.assignment_app.Public> result;
-         result = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.assignment_app.Public>();
-         result.Create(new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.assignment_app.Public[] {
+         Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.assignment_app.Public> result;
+         result = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.assignment_app.Public>();
+         result.Create(new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.assignment_app.Public[] {
                   this.GetTestValue3()});
          return result;
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.assignment_app.Public GetTestValue3()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.assignment_app.Public GetTestValue3()
       {
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.assignment_app.Public result;
-         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.assignment_app.Public();
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.assignment_app.Public result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.assignment_app.Public();
          result.Value = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.sr25519.Public();
          result.Value = this.GetTestValue4();
          return result;
@@ -96,7 +97,7 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          ParaSessionInfoControllerClient rpcClient = new ParaSessionInfoControllerClient(_httpClient, subscriptionClient);
-         Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.assignment_app.Public> mockupValue = this.GetTestValue2();
+         Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.assignment_app.Public> mockupValue = this.GetTestValue2();
 
 
          Assert.IsTrue(await rpcClient.SubscribeAssignmentKeysUnsafe());
@@ -109,7 +110,7 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.assignment_app.Public> rpcResult = await rpcClient.GetAssignmentKeysUnsafe();
+         Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.assignment_app.Public> rpcResult = await rpcClient.GetAssignmentKeysUnsafe();
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
@@ -143,12 +144,12 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.SessionInfo GetTestValue7()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.SessionInfo GetTestValue7()
       {
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.SessionInfo result;
-         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.SessionInfo();
-         result.ActiveValidatorIndices = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.ValidatorIndex>();
-         result.ActiveValidatorIndices.Create(new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.ValidatorIndex[] {
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.SessionInfo result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.SessionInfo();
+         result.ActiveValidatorIndices = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.ValidatorIndex>();
+         result.ActiveValidatorIndices.Create(new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.ValidatorIndex[] {
                   this.GetTestValue8()});
          result.RandomSeed = new Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr32U8();
          result.RandomSeed.Create(new Substrate.NetApi.Model.Types.Primitive.U8[] {
@@ -185,15 +186,15 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
                   this.GetTestValueU8(),
                   this.GetTestValueU8()});
          result.DisputePeriod = this.GetTestValueU32();
-         result.Validators = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.IndexedVecT1();
+         result.Validators = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.IndexedVecT1();
          result.Validators = this.GetTestValue9();
          result.DiscoveryKeys = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_authority_discovery.app.Public>();
          result.DiscoveryKeys.Create(new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_authority_discovery.app.Public[] {
                   this.GetTestValue12()});
-         result.AssignmentKeys = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.assignment_app.Public>();
-         result.AssignmentKeys.Create(new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.assignment_app.Public[] {
+         result.AssignmentKeys = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.assignment_app.Public>();
+         result.AssignmentKeys.Create(new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.assignment_app.Public[] {
                   this.GetTestValue14()});
-         result.ValidatorGroups = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.IndexedVecT2();
+         result.ValidatorGroups = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.IndexedVecT2();
          result.ValidatorGroups = this.GetTestValue16();
          result.NCores = this.GetTestValueU32();
          result.ZerothDelayTrancheWidth = this.GetTestValueU32();
@@ -203,26 +204,26 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
          result.NeededApprovals = this.GetTestValueU32();
          return result;
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.ValidatorIndex GetTestValue8()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.ValidatorIndex GetTestValue8()
       {
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.ValidatorIndex result;
-         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.ValidatorIndex();
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.ValidatorIndex result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.ValidatorIndex();
          result.Value = this.GetTestValueU32();
          return result;
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.IndexedVecT1 GetTestValue9()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.IndexedVecT1 GetTestValue9()
       {
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.IndexedVecT1 result;
-         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.IndexedVecT1();
-         result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.validator_app.Public>();
-         result.Value.Create(new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.validator_app.Public[] {
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.IndexedVecT1 result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.IndexedVecT1();
+         result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.validator_app.Public>();
+         result.Value.Create(new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.validator_app.Public[] {
                   this.GetTestValue10()});
          return result;
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.validator_app.Public GetTestValue10()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.validator_app.Public GetTestValue10()
       {
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.validator_app.Public result;
-         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.validator_app.Public();
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.validator_app.Public result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.validator_app.Public();
          result.Value = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.sr25519.Public();
          result.Value = this.GetTestValue11();
          return result;
@@ -315,10 +316,10 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
                   this.GetTestValueU8()});
          return result;
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.assignment_app.Public GetTestValue14()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.assignment_app.Public GetTestValue14()
       {
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.assignment_app.Public result;
-         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.assignment_app.Public();
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.assignment_app.Public result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.assignment_app.Public();
          result.Value = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.sr25519.Public();
          result.Value = this.GetTestValue15();
          return result;
@@ -363,27 +364,27 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
                   this.GetTestValueU8()});
          return result;
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.IndexedVecT2 GetTestValue16()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.IndexedVecT2 GetTestValue16()
       {
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.IndexedVecT2 result;
-         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.IndexedVecT2();
-         result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.ValidatorIndex>>();
-         result.Value.Create(new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.ValidatorIndex>[] {
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.IndexedVecT2 result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.IndexedVecT2();
+         result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.ValidatorIndex>>();
+         result.Value.Create(new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.ValidatorIndex>[] {
                   this.GetTestValue17()});
          return result;
       }
-      public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.ValidatorIndex> GetTestValue17()
+      public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.ValidatorIndex> GetTestValue17()
       {
-         Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.ValidatorIndex> result;
-         result = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.ValidatorIndex>();
-         result.Create(new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.ValidatorIndex[] {
+         Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.ValidatorIndex> result;
+         result = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.ValidatorIndex>();
+         result.Create(new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.ValidatorIndex[] {
                   this.GetTestValue18()});
          return result;
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.ValidatorIndex GetTestValue18()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.ValidatorIndex GetTestValue18()
       {
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.ValidatorIndex result;
-         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.ValidatorIndex();
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.ValidatorIndex result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.ValidatorIndex();
          result.Value = this.GetTestValueU32();
          return result;
       }
@@ -398,7 +399,7 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          ParaSessionInfoControllerClient rpcClient = new ParaSessionInfoControllerClient(_httpClient, subscriptionClient);
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.SessionInfo mockupValue = this.GetTestValue7();
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.SessionInfo mockupValue = this.GetTestValue7();
          Substrate.NetApi.Model.Types.Primitive.U32 mockupKey = this.GetTestValueU32();
 
          Assert.IsTrue(await rpcClient.SubscribeSessions(mockupKey));
@@ -411,7 +412,7 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.SessionInfo rpcResult = await rpcClient.GetSessions(mockupKey);
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.SessionInfo rpcResult = await rpcClient.GetSessions(mockupKey);
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
@@ -489,6 +490,51 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
          Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> rpcResult = await rpcClient.GetAccountKeys(mockupKey);
+
+         // Test that the expected mockup value matches the actual result from RPC service.
+         Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
+      }
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.executor_params.ExecutorParams GetTestValue23()
+      {
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.executor_params.ExecutorParams result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.executor_params.ExecutorParams();
+         result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.executor_params.EnumExecutorParam>();
+         result.Value.Create(new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.executor_params.EnumExecutorParam[] {
+                  this.GetTestValue24()});
+         return result;
+      }
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.executor_params.EnumExecutorParam GetTestValue24()
+      {
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.executor_params.EnumExecutorParam result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.executor_params.EnumExecutorParam();
+         result.Create(this.GetTestValueEnum<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.executor_params.ExecutorParam>(), this.GetTestValueBaseVoid());
+         return result;
+      }
+      [Test()]
+      public async System.Threading.Tasks.Task TestSessionExecutorParams()
+      {
+         // Construct new Mockup client to test with.
+         ParaSessionInfoControllerMockupClient mockupClient = new ParaSessionInfoControllerMockupClient(_httpClient);
+
+         // Construct new subscription client to test with.
+         var subscriptionClient = CreateSubscriptionClient();
+
+         // Construct new RPC client to test with.
+         ParaSessionInfoControllerClient rpcClient = new ParaSessionInfoControllerClient(_httpClient, subscriptionClient);
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.executor_params.ExecutorParams mockupValue = this.GetTestValue23();
+         Substrate.NetApi.Model.Types.Primitive.U32 mockupKey = this.GetTestValueU32();
+
+         Assert.IsTrue(await rpcClient.SubscribeSessionExecutorParams(mockupKey));
+
+         // Save the previously generated mockup value in RPC service storage.
+         bool mockupSetResult = await mockupClient.SetSessionExecutorParams(mockupValue, mockupKey);
+
+         // Test that the expected mockup value was handled successfully from RPC service.
+         Assert.IsTrue(mockupSetResult);
+         var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
+         Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
+
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.executor_params.ExecutorParams rpcResult = await rpcClient.GetSessionExecutorParams(mockupKey);
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());

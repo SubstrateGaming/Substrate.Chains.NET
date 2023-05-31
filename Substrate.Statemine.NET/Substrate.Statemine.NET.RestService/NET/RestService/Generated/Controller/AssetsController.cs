@@ -80,7 +80,7 @@ namespace Substrate.Statemine.NET.RestService.Generated.Controller
         ///  Metadata of an asset.
         /// </summary>
         [HttpGet("Metadata")]
-        [ProducesResponseType(typeof(Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_assets.types.AssetMetadata), 200)]
+        [ProducesResponseType(typeof(Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_assets.types.AssetMetadataT1), 200)]
         [StorageKeyBuilder(typeof(Substrate.Statemine.NET.NetApiExt.Generated.Storage.AssetsStorage), "MetadataParams", typeof(Substrate.NetApi.Model.Types.Primitive.U32))]
         public IActionResult GetMetadata(string key)
         {

@@ -3,7 +3,7 @@
 	<PropertyGroup>
 		<PackageId>Substrate.Polkadot.NET.Extension</PackageId>
 		<TargetFrameworks>netstandard2.0;netstandard2.1;net6.0</TargetFrameworks>
-		<Version>1.9370.0</Version>
+		<Version>1.9370.1</Version>
 		<Company>Substrate Gaming</Company>
 		<Authors>Substrate Gaming</Authors>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
@@ -16,7 +16,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Substrate.NET.API" Version="0.9.2" />
+		<PackageReference Include="Substrate.NET.API" Version="0.9.7" />
 	</ItemGroup>
 
 	<ItemGroup>

@@ -18,7 +18,7 @@ namespace Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_asset_tx_paym
     
     
     /// <summary>
-    /// >> 324 - Composite[pallet_asset_tx_payment.ChargeAssetTxPayment]
+    /// >> 384 - Composite[pallet_asset_tx_payment.ChargeAssetTxPayment]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class ChargeAssetTxPayment : BaseType

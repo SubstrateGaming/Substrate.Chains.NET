@@ -13,7 +13,7 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Interfaces
    using System.Threading.Tasks;
    using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_treasury;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    
    public interface ITreasuryControllerClient
    {
@@ -23,7 +23,7 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Interfaces
       Task<bool> SubscribeProposals(U32 key);
       Task<U128> GetDeactivated();
       Task<bool> SubscribeDeactivated();
-      Task<BoundedVecT14> GetApprovals();
+      Task<BoundedVecT16> GetApprovals();
       Task<bool> SubscribeApprovals();
    }
 }

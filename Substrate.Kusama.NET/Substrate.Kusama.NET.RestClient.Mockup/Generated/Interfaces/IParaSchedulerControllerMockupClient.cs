@@ -18,9 +18,9 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Interfaces
    
    public interface IParaSchedulerControllerMockupClient
    {
-      Task<bool> SetValidatorGroups(BaseVec<BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.ValidatorIndex>> value);
+      Task<bool> SetValidatorGroups(BaseVec<BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.ValidatorIndex>> value);
       Task<bool> SetParathreadQueue(ParathreadClaimQueue value);
-      Task<bool> SetAvailabilityCores(BaseVec<BaseOpt<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.EnumCoreOccupied>> value);
+      Task<bool> SetAvailabilityCores(BaseVec<BaseOpt<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.EnumCoreOccupied>> value);
       Task<bool> SetParathreadClaimIndex(BaseVec<Id> value);
       Task<bool> SetSessionStartBlock(U32 value);
       Task<bool> SetScheduled(BaseVec<CoreAssignment> value);

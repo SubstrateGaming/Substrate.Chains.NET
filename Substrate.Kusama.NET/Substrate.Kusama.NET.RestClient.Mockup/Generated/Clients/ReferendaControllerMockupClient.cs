@@ -14,7 +14,8 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Clients
    using System.Net.Http;
    using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_referenda.types;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types;
    using Substrate.Kusama.NET.RestClient.Mockup.Generated.Interfaces;
    
    public sealed class ReferendaControllerMockupClient : MockupBaseClient, IReferendaControllerMockupClient
@@ -32,13 +33,17 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "Referenda/ReferendumInfoFor", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.ReferendaStorage.ReferendumInfoForParams(key));
       }
-      public async Task<bool> SetTrackQueue(BoundedVecT17 value, U16 key)
+      public async Task<bool> SetTrackQueue(BoundedVecT19 value, U16 key)
       {
          return await SendMockupRequestAsync(_httpClient, "Referenda/TrackQueue", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.ReferendaStorage.TrackQueueParams(key));
       }
       public async Task<bool> SetDecidingCount(U32 value, U16 key)
       {
          return await SendMockupRequestAsync(_httpClient, "Referenda/DecidingCount", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.ReferendaStorage.DecidingCountParams(key));
+      }
+      public async Task<bool> SetMetadataOf(H256 value, U32 key)
+      {
+         return await SendMockupRequestAsync(_httpClient, "Referenda/MetadataOf", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.ReferendaStorage.MetadataOfParams(key));
       }
    }
 }

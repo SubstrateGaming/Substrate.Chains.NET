@@ -69,32 +69,32 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
          result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_grandpa.StoredPendingChange();
          result.ScheduledAt = this.GetTestValueU32();
          result.Delay = this.GetTestValueU32();
-         result.NextAuthorities = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.weak_bounded_vec.WeakBoundedVecT4();
+         result.NextAuthorities = new Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT4();
          result.NextAuthorities = this.GetTestValue5();
          result.Forced = new Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32>();
          result.Forced.Create(this.GetTestValueU32());
          return result;
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.weak_bounded_vec.WeakBoundedVecT4 GetTestValue5()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT4 GetTestValue5()
       {
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.weak_bounded_vec.WeakBoundedVecT4 result;
-         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.weak_bounded_vec.WeakBoundedVecT4();
-         result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_finality_grandpa.app.Public, Substrate.NetApi.Model.Types.Primitive.U64>>();
-         result.Value.Create(new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_finality_grandpa.app.Public, Substrate.NetApi.Model.Types.Primitive.U64>[] {
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT4 result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT4();
+         result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_grandpa.app.Public, Substrate.NetApi.Model.Types.Primitive.U64>>();
+         result.Value.Create(new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_grandpa.app.Public, Substrate.NetApi.Model.Types.Primitive.U64>[] {
                   this.GetTestValue6()});
          return result;
       }
-      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_finality_grandpa.app.Public, Substrate.NetApi.Model.Types.Primitive.U64> GetTestValue6()
+      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_grandpa.app.Public, Substrate.NetApi.Model.Types.Primitive.U64> GetTestValue6()
       {
-         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_finality_grandpa.app.Public, Substrate.NetApi.Model.Types.Primitive.U64> result;
-         result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_finality_grandpa.app.Public, Substrate.NetApi.Model.Types.Primitive.U64>();
+         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_grandpa.app.Public, Substrate.NetApi.Model.Types.Primitive.U64> result;
+         result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_grandpa.app.Public, Substrate.NetApi.Model.Types.Primitive.U64>();
          result.Create(this.GetTestValue7(), this.GetTestValueU64());
          return result;
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_finality_grandpa.app.Public GetTestValue7()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_grandpa.app.Public GetTestValue7()
       {
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_finality_grandpa.app.Public result;
-         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_finality_grandpa.app.Public();
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_grandpa.app.Public result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_grandpa.app.Public();
          result.Value = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.ed25519.Public();
          result.Value = this.GetTestValue8();
          return result;

@@ -14,7 +14,7 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Clients
    using System.Net.Http;
    using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_bounties;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    using Substrate.Kusama.NET.RestClient.Generated.Interfaces;
    
    public sealed class BountiesControllerClient : BaseClient, IBountiesControllerClient
@@ -42,17 +42,17 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("Bounties.Bounties", Substrate.Kusama.NET.NetApiExt.Generated.Storage.BountiesStorage.BountiesParams(key));
       }
-      public async Task<BoundedVecT30> GetBountyDescriptions(U32 key)
+      public async Task<BoundedVecT32> GetBountyDescriptions(U32 key)
       {
-         return await SendRequestAsync<BoundedVecT30>(_httpClient, "bounties/bountydescriptions", Substrate.Kusama.NET.NetApiExt.Generated.Storage.BountiesStorage.BountyDescriptionsParams(key));
+         return await SendRequestAsync<BoundedVecT32>(_httpClient, "bounties/bountydescriptions", Substrate.Kusama.NET.NetApiExt.Generated.Storage.BountiesStorage.BountyDescriptionsParams(key));
       }
       public async Task<bool> SubscribeBountyDescriptions(U32 key)
       {
          return await _subscriptionClient.SubscribeAsync("Bounties.BountyDescriptions", Substrate.Kusama.NET.NetApiExt.Generated.Storage.BountiesStorage.BountyDescriptionsParams(key));
       }
-      public async Task<BoundedVecT14> GetBountyApprovals()
+      public async Task<BoundedVecT16> GetBountyApprovals()
       {
-         return await SendRequestAsync<BoundedVecT14>(_httpClient, "bounties/bountyapprovals");
+         return await SendRequestAsync<BoundedVecT16>(_httpClient, "bounties/bountyapprovals");
       }
       public async Task<bool> SubscribeBountyApprovals()
       {

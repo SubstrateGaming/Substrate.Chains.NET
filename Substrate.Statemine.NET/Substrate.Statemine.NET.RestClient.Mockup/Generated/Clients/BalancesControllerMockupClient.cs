@@ -13,9 +13,9 @@ namespace Substrate.Statemine.NET.RestClient.Mockup.Generated.Clients
    using System.Threading.Tasks;
    using System.Net.Http;
    using Substrate.NetApi.Model.Types.Primitive;
-   using Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_balances;
-   using Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.weak_bounded_vec;
-   using Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_balances.types;
+   using Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec;
+   using Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    using Substrate.Statemine.NET.RestClient.Mockup.Generated.Interfaces;
    
    public sealed class BalancesControllerMockupClient : MockupBaseClient, IBalancesControllerMockupClient
@@ -41,9 +41,17 @@ namespace Substrate.Statemine.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "Balances/Locks", value.Encode(), Substrate.Statemine.NET.NetApiExt.Generated.Storage.BalancesStorage.LocksParams(key));
       }
-      public async Task<bool> SetReserves(BoundedVecT4 value, Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+      public async Task<bool> SetReserves(BoundedVecT8 value, Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {
          return await SendMockupRequestAsync(_httpClient, "Balances/Reserves", value.Encode(), Substrate.Statemine.NET.NetApiExt.Generated.Storage.BalancesStorage.ReservesParams(key));
+      }
+      public async Task<bool> SetHolds(BoundedVecT9 value, Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+      {
+         return await SendMockupRequestAsync(_httpClient, "Balances/Holds", value.Encode(), Substrate.Statemine.NET.NetApiExt.Generated.Storage.BalancesStorage.HoldsParams(key));
+      }
+      public async Task<bool> SetFreezes(BoundedVecT9 value, Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+      {
+         return await SendMockupRequestAsync(_httpClient, "Balances/Freezes", value.Encode(), Substrate.Statemine.NET.NetApiExt.Generated.Storage.BalancesStorage.FreezesParams(key));
       }
    }
 }

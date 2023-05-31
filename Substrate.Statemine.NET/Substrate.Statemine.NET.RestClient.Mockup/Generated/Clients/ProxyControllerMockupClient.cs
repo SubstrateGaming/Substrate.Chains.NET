@@ -13,7 +13,7 @@ namespace Substrate.Statemine.NET.RestClient.Mockup.Generated.Clients
    using System.Threading.Tasks;
    using System.Net.Http;
    using Substrate.NetApi.Model.Types.Base;
-   using Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.Statemine.NET.RestClient.Mockup.Generated.Interfaces;
    
@@ -24,11 +24,11 @@ namespace Substrate.Statemine.NET.RestClient.Mockup.Generated.Clients
       {
          _httpClient = httpClient;
       }
-      public async Task<bool> SetProxies(BaseTuple<BoundedVecT11, U128> value, Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+      public async Task<bool> SetProxies(BaseTuple<BoundedVecT17, U128> value, Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {
          return await SendMockupRequestAsync(_httpClient, "Proxy/Proxies", value.Encode(), Substrate.Statemine.NET.NetApiExt.Generated.Storage.ProxyStorage.ProxiesParams(key));
       }
-      public async Task<bool> SetAnnouncements(BaseTuple<BoundedVecT12, U128> value, Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+      public async Task<bool> SetAnnouncements(BaseTuple<BoundedVecT18, U128> value, Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {
          return await SendMockupRequestAsync(_httpClient, "Proxy/Announcements", value.Encode(), Substrate.Statemine.NET.NetApiExt.Generated.Storage.ProxyStorage.AnnouncementsParams(key));
       }

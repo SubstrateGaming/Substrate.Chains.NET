@@ -13,13 +13,15 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Interfaces
    using System.Threading.Tasks;
    using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_referenda.types;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types;
    
    public interface IReferendaControllerMockupClient
    {
       Task<bool> SetReferendumCount(U32 value);
       Task<bool> SetReferendumInfoFor(EnumReferendumInfo value, U32 key);
-      Task<bool> SetTrackQueue(BoundedVecT17 value, U16 key);
+      Task<bool> SetTrackQueue(BoundedVecT19 value, U16 key);
       Task<bool> SetDecidingCount(U32 value, U16 key);
+      Task<bool> SetMetadataOf(H256 value, U32 key);
    }
 }

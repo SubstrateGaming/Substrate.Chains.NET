@@ -73,7 +73,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Controller
         ///  TWOX-NOTE: OK ��� `AccountId` is a secure hash.
         /// </summary>
         [HttpGet("SubsOf")]
-        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT21>), 200)]
+        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT23>), 200)]
         [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.IdentityStorage), "SubsOfParams", typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32))]
         public IActionResult GetSubsOf(string key)
         {
@@ -88,7 +88,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Controller
         ///  The index into this can be cast to `RegistrarIndex` to get a valid value.
         /// </summary>
         [HttpGet("Registrars")]
-        [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT22), 200)]
+        [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT24), 200)]
         [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.IdentityStorage), "RegistrarsParams")]
         public IActionResult GetRegistrars()
         {

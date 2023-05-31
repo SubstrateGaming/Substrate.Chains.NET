@@ -66,7 +66,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Controller
         ///  The description of each bounty.
         /// </summary>
         [HttpGet("BountyDescriptions")]
-        [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT30), 200)]
+        [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT32), 200)]
         [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.BountiesStorage), "BountyDescriptionsParams", typeof(Substrate.NetApi.Model.Types.Primitive.U32))]
         public IActionResult GetBountyDescriptions(string key)
         {
@@ -78,7 +78,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Controller
         ///  Bounty indices that have been approved but not yet funded.
         /// </summary>
         [HttpGet("BountyApprovals")]
-        [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT14), 200)]
+        [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT16), 200)]
         [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.BountiesStorage), "BountyApprovalsParams")]
         public IActionResult GetBountyApprovals()
         {

@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_npos_elections
     
     
     /// <summary>
-    /// >> 319 - Composite[sp_npos_elections.Support]
+    /// >> 297 - Composite[sp_npos_elections.Support]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Support : BaseType

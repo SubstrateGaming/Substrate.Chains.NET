@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_im_online.sr2551
     
     
     /// <summary>
-    /// >> 48 - Composite[pallet_im_online.sr25519.app_sr25519.Public]
+    /// >> 49 - Composite[pallet_im_online.sr25519.app_sr25519.Public]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Public : BaseType

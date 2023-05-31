@@ -30,7 +30,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_election_provide
     }
     
     /// <summary>
-    /// >> 237 - Variant[pallet_election_provider_multi_phase.pallet.Call]
+    /// >> 215 - Variant[pallet_election_provider_multi_phase.pallet.Call]
     /// Contains one variant per dispatchable that can be called by an extrinsic.
     /// </summary>
     public sealed class EnumCall : BaseEnumExt<Call, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_election_provider_multi_phase.RawSolution, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_election_provider_multi_phase.SolutionOrSnapshotSize>, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_npos_elections.ElectionScore>, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_npos_elections.Support>>, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_election_provider_multi_phase.RawSolution, BaseTuple<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32>>>

@@ -66,5 +66,17 @@ namespace Substrate.Kusama.NET.RestService.Generated.Controller
         {
             return this.Ok(_dmpStorage.GetDownwardMessageQueueHeads(key));
         }
+        
+        /// <summary>
+        /// >> DeliveryFeeFactor
+        ///  The number to multiply the base delivery fee by.
+        /// </summary>
+        [HttpGet("DeliveryFeeFactor")]
+        [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedU128), 200)]
+        [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.DmpStorage), "DeliveryFeeFactorParams", typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id))]
+        public IActionResult GetDeliveryFeeFactor(string key)
+        {
+            return this.Ok(_dmpStorage.GetDeliveryFeeFactor(key));
+        }
     }
 }

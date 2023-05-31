@@ -26,7 +26,7 @@ namespace Substrate.Statemine.NET.NetApiExt.Generated.Model.frame_system
     }
     
     /// <summary>
-    /// >> 113 - Variant[frame_system.Phase]
+    /// >> 124 - Variant[frame_system.Phase]
     /// </summary>
     public sealed class EnumPhase : BaseEnumExt<Phase, Substrate.NetApi.Model.Types.Primitive.U32, BaseVoid, BaseVoid>
     {

@@ -12,7 +12,7 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Clients
    using System;
    using System.Threading.Tasks;
    using System.Net.Http;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    using Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_vesting;
    using Substrate.Kusama.NET.RestClient.Mockup.Generated.Interfaces;
    
@@ -23,7 +23,7 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Clients
       {
          _httpClient = httpClient;
       }
-      public async Task<bool> SetVesting(BoundedVecT24 value, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+      public async Task<bool> SetVesting(BoundedVecT26 value, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {
          return await SendMockupRequestAsync(_httpClient, "Vesting/Vesting", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.VestingStorage.VestingParams(key));
       }

@@ -18,7 +18,7 @@ namespace Substrate.Statemine.NET.RestClient.Test.Generated
    using Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_uniques.types;
    using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.NetApi.Model.Types.Base;
-   using Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    
    public class UniquesControllerClientTest : ClientTestBase
    {
@@ -603,15 +603,15 @@ namespace Substrate.Statemine.NET.RestClient.Test.Generated
          Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_uniques.types.CollectionMetadata result;
          result = new Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_uniques.types.CollectionMetadata();
          result.Deposit = this.GetTestValueU128();
-         result.Data = new Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT1();
+         result.Data = new Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT4();
          result.Data = this.GetTestValue24();
          result.IsFrozen = this.GetTestValueBool();
          return result;
       }
-      public Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT1 GetTestValue24()
+      public Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT4 GetTestValue24()
       {
-         Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT1 result;
-         result = new Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT1();
+         Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT4 result;
+         result = new Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT4();
          result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>();
          result.Value.Create(new Substrate.NetApi.Model.Types.Primitive.U8[] {
                   this.GetTestValueU8()});
@@ -651,15 +651,15 @@ namespace Substrate.Statemine.NET.RestClient.Test.Generated
          Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_uniques.types.ItemMetadata result;
          result = new Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_uniques.types.ItemMetadata();
          result.Deposit = this.GetTestValueU128();
-         result.Data = new Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT1();
+         result.Data = new Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT4();
          result.Data = this.GetTestValue27();
          result.IsFrozen = this.GetTestValueBool();
          return result;
       }
-      public Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT1 GetTestValue27()
+      public Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT4 GetTestValue27()
       {
-         Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT1 result;
-         result = new Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT1();
+         Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT4 result;
+         result = new Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT4();
          result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>();
          result.Value.Create(new Substrate.NetApi.Model.Types.Primitive.U8[] {
                   this.GetTestValueU8()});
@@ -701,26 +701,26 @@ namespace Substrate.Statemine.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT3, Substrate.NetApi.Model.Types.Primitive.U128> GetTestValue30()
+      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT6, Substrate.NetApi.Model.Types.Primitive.U128> GetTestValue30()
       {
-         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT3, Substrate.NetApi.Model.Types.Primitive.U128> result;
-         result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT3, Substrate.NetApi.Model.Types.Primitive.U128>();
+         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT6, Substrate.NetApi.Model.Types.Primitive.U128> result;
+         result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT6, Substrate.NetApi.Model.Types.Primitive.U128>();
          result.Create(this.GetTestValue31(), this.GetTestValueU128());
          return result;
       }
-      public Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT3 GetTestValue31()
+      public Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT6 GetTestValue31()
       {
-         Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT3 result;
-         result = new Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT3();
+         Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT6 result;
+         result = new Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT6();
          result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>();
          result.Value.Create(new Substrate.NetApi.Model.Types.Primitive.U8[] {
                   this.GetTestValueU8()});
          return result;
       }
-      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT2> GetTestValue32()
+      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT5> GetTestValue32()
       {
-         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT2> result;
-         result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT2>();
+         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT5> result;
+         result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT5>();
          result.Create(this.GetTestValueU32(), this.GetTestValue33(), this.GetTestValue34());
          return result;
       }
@@ -731,10 +731,10 @@ namespace Substrate.Statemine.NET.RestClient.Test.Generated
          result.Create(this.GetTestValueU32());
          return result;
       }
-      public Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT2 GetTestValue34()
+      public Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT5 GetTestValue34()
       {
-         Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT2 result;
-         result = new Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT2();
+         Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT5 result;
+         result = new Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT5();
          result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>();
          result.Value.Create(new Substrate.NetApi.Model.Types.Primitive.U8[] {
                   this.GetTestValueU8()});
@@ -751,8 +751,8 @@ namespace Substrate.Statemine.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          UniquesControllerClient rpcClient = new UniquesControllerClient(_httpClient, subscriptionClient);
-         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT3, Substrate.NetApi.Model.Types.Primitive.U128> mockupValue = this.GetTestValue30();
-         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT2> mockupKey = this.GetTestValue32();
+         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT6, Substrate.NetApi.Model.Types.Primitive.U128> mockupValue = this.GetTestValue30();
+         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT5> mockupKey = this.GetTestValue32();
 
          Assert.IsTrue(await rpcClient.SubscribeAttribute(mockupKey));
 
@@ -764,7 +764,7 @@ namespace Substrate.Statemine.NET.RestClient.Test.Generated
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT3, Substrate.NetApi.Model.Types.Primitive.U128> rpcResult = await rpcClient.GetAttribute(mockupKey);
+         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT6, Substrate.NetApi.Model.Types.Primitive.U128> rpcResult = await rpcClient.GetAttribute(mockupKey);
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());

@@ -40,9 +40,9 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.v2
     }
     
     /// <summary>
-    /// >> 394 - Variant[xcm.v2.BodyId]
+    /// >> 391 - Variant[xcm.v2.BodyId]
     /// </summary>
-    public sealed class EnumBodyId : BaseEnumExt<BodyId, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.weak_bounded_vec.WeakBoundedVecT1, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid>
+    public sealed class EnumBodyId : BaseEnumExt<BodyId, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT1, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid>
     {
     }
 }

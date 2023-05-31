@@ -48,7 +48,7 @@ namespace Substrate.Statemine.NET.RestService.Generated.Storage
         /// >> Metadata
         ///  Metadata of an asset.
         /// </summary>
-        Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_assets.types.AssetMetadata GetMetadata(string key);
+        Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_assets.types.AssetMetadataT1 GetMetadata(string key);
     }
     
     /// <summary>
@@ -75,7 +75,7 @@ namespace Substrate.Statemine.NET.RestService.Generated.Storage
         /// <summary>
         /// _metadataTypedStorage typed storage field
         /// </summary>
-        private TypedMapStorage<Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_assets.types.AssetMetadata> _metadataTypedStorage;
+        private TypedMapStorage<Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_assets.types.AssetMetadataT1> _metadataTypedStorage;
         
         /// <summary>
         /// AssetsStorage constructor.
@@ -85,7 +85,7 @@ namespace Substrate.Statemine.NET.RestService.Generated.Storage
             this.AssetTypedStorage = new TypedMapStorage<Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_assets.types.AssetDetails>("Assets.Asset", storageDataProvider, storageChangeDelegates);
             this.AccountTypedStorage = new TypedMapStorage<Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_assets.types.AssetAccount>("Assets.Account", storageDataProvider, storageChangeDelegates);
             this.ApprovalsTypedStorage = new TypedMapStorage<Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_assets.types.Approval>("Assets.Approvals", storageDataProvider, storageChangeDelegates);
-            this.MetadataTypedStorage = new TypedMapStorage<Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_assets.types.AssetMetadata>("Assets.Metadata", storageDataProvider, storageChangeDelegates);
+            this.MetadataTypedStorage = new TypedMapStorage<Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_assets.types.AssetMetadataT1>("Assets.Metadata", storageDataProvider, storageChangeDelegates);
         }
         
         /// <summary>
@@ -136,7 +136,7 @@ namespace Substrate.Statemine.NET.RestService.Generated.Storage
         /// <summary>
         /// _metadataTypedStorage property
         /// </summary>
-        public TypedMapStorage<Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_assets.types.AssetMetadata> MetadataTypedStorage
+        public TypedMapStorage<Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_assets.types.AssetMetadataT1> MetadataTypedStorage
         {
             get
             {
@@ -261,13 +261,13 @@ namespace Substrate.Statemine.NET.RestService.Generated.Storage
         /// >> Metadata
         ///  Metadata of an asset.
         /// </summary>
-        public Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_assets.types.AssetMetadata GetMetadata(string key)
+        public Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_assets.types.AssetMetadataT1 GetMetadata(string key)
         {
             if ((key == null))
             {
                 return null;
             }
-            if (MetadataTypedStorage.Dictionary.TryGetValue(key, out Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_assets.types.AssetMetadata result))
+            if (MetadataTypedStorage.Dictionary.TryGetValue(key, out Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_assets.types.AssetMetadataT1 result))
             {
                 return result;
             }

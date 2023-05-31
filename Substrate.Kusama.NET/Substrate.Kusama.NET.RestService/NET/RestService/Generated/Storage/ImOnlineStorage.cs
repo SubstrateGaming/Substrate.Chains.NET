@@ -44,7 +44,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// >> Keys
         ///  The current set of keys that may issue a heartbeat.
         /// </summary>
-        Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.weak_bounded_vec.WeakBoundedVecT5 GetKeys();
+        Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT5 GetKeys();
         
         /// <summary>
         /// >> ReceivedHeartbeats
@@ -75,7 +75,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// <summary>
         /// _keysTypedStorage typed storage field
         /// </summary>
-        private TypedStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.weak_bounded_vec.WeakBoundedVecT5> _keysTypedStorage;
+        private TypedStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT5> _keysTypedStorage;
         
         /// <summary>
         /// _receivedHeartbeatsTypedStorage typed storage field
@@ -93,7 +93,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         public ImOnlineStorage(IStorageDataProvider storageDataProvider, List<IStorageChangeDelegate> storageChangeDelegates)
         {
             this.HeartbeatAfterTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32>("ImOnline.HeartbeatAfter", storageDataProvider, storageChangeDelegates);
-            this.KeysTypedStorage = new TypedStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.weak_bounded_vec.WeakBoundedVecT5>("ImOnline.Keys", storageDataProvider, storageChangeDelegates);
+            this.KeysTypedStorage = new TypedStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT5>("ImOnline.Keys", storageDataProvider, storageChangeDelegates);
             this.ReceivedHeartbeatsTypedStorage = new TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_support.traits.misc.WrapperOpaque>("ImOnline.ReceivedHeartbeats", storageDataProvider, storageChangeDelegates);
             this.AuthoredBlocksTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Primitive.U32>("ImOnline.AuthoredBlocks", storageDataProvider, storageChangeDelegates);
         }
@@ -116,7 +116,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// <summary>
         /// _keysTypedStorage property
         /// </summary>
-        public TypedStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.weak_bounded_vec.WeakBoundedVecT5> KeysTypedStorage
+        public TypedStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT5> KeysTypedStorage
         {
             get
             {
@@ -210,7 +210,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// >> Keys
         ///  The current set of keys that may issue a heartbeat.
         /// </summary>
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.weak_bounded_vec.WeakBoundedVecT5 GetKeys()
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT5 GetKeys()
         {
             return KeysTypedStorage.Get();
         }

@@ -50,7 +50,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// </summary>
         public static string ActiveConfigDefault()
         {
-            return @"0x000000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100000001000000010000000000000000000600000064000000C800000001000000000000000000000000000000000000000700C817A80402004001000200000002000000";
+            return @"0x00000000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000000100000001000000000000000000060000006400000001000000000000000000000000000000000000000700C817A80402004001000200000002000000";
         }
         
         /// <summary>
@@ -314,17 +314,6 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(@new.Encode());
             return new Method(51, "Configuration", 15, "set_dispute_post_conclusion_acceptance_period", byteArray.ToArray());
-        }
-        
-        /// <summary>
-        /// >> set_dispute_conclusion_by_time_out_period
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
-        /// </summary>
-        public static Method SetDisputeConclusionByTimeOutPeriod(Substrate.NetApi.Model.Types.Primitive.U32 @new)
-        {
-            System.Collections.Generic.List<byte> byteArray = new List<byte>();
-            byteArray.AddRange(@new.Encode());
-            return new Method(51, "Configuration", 17, "set_dispute_conclusion_by_time_out_period", byteArray.ToArray());
         }
         
         /// <summary>
@@ -622,6 +611,28 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(@new.Encode());
             return new Method(51, "Configuration", 44, "set_bypass_consistency_check", byteArray.ToArray());
+        }
+        
+        /// <summary>
+        /// >> set_async_backing_params
+        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// </summary>
+        public static Method SetAsyncBackingParams(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.vstaging.AsyncBackingParams @new)
+        {
+            System.Collections.Generic.List<byte> byteArray = new List<byte>();
+            byteArray.AddRange(@new.Encode());
+            return new Method(51, "Configuration", 45, "set_async_backing_params", byteArray.ToArray());
+        }
+        
+        /// <summary>
+        /// >> set_executor_params
+        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// </summary>
+        public static Method SetExecutorParams(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.executor_params.ExecutorParams @new)
+        {
+            System.Collections.Generic.List<byte> byteArray = new List<byte>();
+            byteArray.AddRange(@new.Encode());
+            return new Method(51, "Configuration", 46, "set_executor_params", byteArray.ToArray());
         }
     }
     

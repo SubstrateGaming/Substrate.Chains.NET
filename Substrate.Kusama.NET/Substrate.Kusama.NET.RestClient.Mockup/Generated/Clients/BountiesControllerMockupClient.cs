@@ -14,7 +14,7 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Clients
    using System.Net.Http;
    using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_bounties;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    using Substrate.Kusama.NET.RestClient.Mockup.Generated.Interfaces;
    
    public sealed class BountiesControllerMockupClient : MockupBaseClient, IBountiesControllerMockupClient
@@ -32,11 +32,11 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "Bounties/Bounties", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.BountiesStorage.BountiesParams(key));
       }
-      public async Task<bool> SetBountyDescriptions(BoundedVecT30 value, U32 key)
+      public async Task<bool> SetBountyDescriptions(BoundedVecT32 value, U32 key)
       {
          return await SendMockupRequestAsync(_httpClient, "Bounties/BountyDescriptions", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.BountiesStorage.BountyDescriptionsParams(key));
       }
-      public async Task<bool> SetBountyApprovals(BoundedVecT14 value)
+      public async Task<bool> SetBountyApprovals(BoundedVecT16 value)
       {
          return await SendMockupRequestAsync(_httpClient, "Bounties/BountyApprovals", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.BountiesStorage.BountyApprovalsParams());
       }

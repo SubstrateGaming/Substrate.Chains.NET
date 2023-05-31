@@ -60,19 +60,33 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools
         
         PartialUnbondNotAllowedPermissionlessly = 20,
         
-        PoolIdInUse = 21,
+        MaxCommissionRestricted = 21,
         
-        InvalidPoolId = 22,
+        CommissionExceedsMaximum = 22,
+        
+        CommissionChangeThrottled = 23,
+        
+        CommissionChangeRateNotAllowed = 24,
+        
+        NoPendingCommission = 25,
+        
+        NoCommissionCurrentSet = 26,
+        
+        PoolIdInUse = 27,
+        
+        InvalidPoolId = 28,
+        
+        BondExtraRestricted = 29,
     }
     
     /// <summary>
-    /// >> 754 - Variant[pallet_nomination_pools.pallet.Error]
+    /// >> 739 - Variant[pallet_nomination_pools.pallet.Error]
     /// 
     ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
     ///			of this pallet.
     ///			
     /// </summary>
-    public sealed class EnumError : BaseEnumExt<Error, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools.pallet.EnumDefensiveError, BaseVoid, BaseVoid, BaseVoid>
+    public sealed class EnumError : BaseEnumExt<Error, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools.pallet.EnumDefensiveError, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid>
     {
     }
 }

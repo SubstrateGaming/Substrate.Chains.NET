@@ -40,7 +40,7 @@ namespace Substrate.Statemine.NET.NetApiExt.Generated.Model.xcm.v3.junction
     }
     
     /// <summary>
-    /// >> 49 - Variant[xcm.v3.junction.NetworkId]
+    /// >> 50 - Variant[xcm.v3.junction.NetworkId]
     /// </summary>
     public sealed class EnumNetworkId : BaseEnumExt<NetworkId, Substrate.Statemine.NET.NetApiExt.Generated.Types.Base.Arr32U8, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U64, Substrate.Statemine.NET.NetApiExt.Generated.Types.Base.Arr32U8>, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U64>, BaseVoid, BaseVoid>
     {

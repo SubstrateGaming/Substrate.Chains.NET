@@ -69,7 +69,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Controller
         ///  This should be empty if `DecidingCount` is less than `TrackInfo::max_deciding`.
         /// </summary>
         [HttpGet("TrackQueue")]
-        [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT19), 200)]
+        [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT21), 200)]
         [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.FellowshipReferendaStorage), "TrackQueueParams", typeof(Substrate.NetApi.Model.Types.Primitive.U16))]
         public IActionResult GetTrackQueue(string key)
         {
@@ -86,6 +86,23 @@ namespace Substrate.Kusama.NET.RestService.Generated.Controller
         public IActionResult GetDecidingCount(string key)
         {
             return this.Ok(_fellowshipReferendaStorage.GetDecidingCount(key));
+        }
+        
+        /// <summary>
+        /// >> MetadataOf
+        ///  The metadata is a general information concerning the referendum.
+        ///  The `PreimageHash` refers to the preimage of the `Preimages` provider which can be a JSON
+        ///  dump or IPFS hash of a JSON file.
+        /// 
+        ///  Consider a garbage collection for a metadata of finished referendums to `unrequest` (remove)
+        ///  large preimages.
+        /// </summary>
+        [HttpGet("MetadataOf")]
+        [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256), 200)]
+        [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.FellowshipReferendaStorage), "MetadataOfParams", typeof(Substrate.NetApi.Model.Types.Primitive.U32))]
+        public IActionResult GetMetadataOf(string key)
+        {
+            return this.Ok(_fellowshipReferendaStorage.GetMetadataOf(key));
         }
     }
 }

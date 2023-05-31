@@ -13,7 +13,7 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Clients
    using System.Threading.Tasks;
    using System.Net.Http;
    using Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_preimage;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    using Substrate.Kusama.NET.RestClient.Generated.Interfaces;
    
    public sealed class PreimageControllerClient : BaseClient, IPreimageControllerClient
@@ -33,9 +33,9 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("Preimage.StatusFor", Substrate.Kusama.NET.NetApiExt.Generated.Storage.PreimageStorage.StatusForParams(key));
       }
-      public async Task<BoundedVecT29> GetPreimageFor(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Primitive.U32> key)
+      public async Task<BoundedVecT31> GetPreimageFor(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Primitive.U32> key)
       {
-         return await SendRequestAsync<BoundedVecT29>(_httpClient, "preimage/preimagefor", Substrate.Kusama.NET.NetApiExt.Generated.Storage.PreimageStorage.PreimageForParams(key));
+         return await SendRequestAsync<BoundedVecT31>(_httpClient, "preimage/preimagefor", Substrate.Kusama.NET.NetApiExt.Generated.Storage.PreimageStorage.PreimageForParams(key));
       }
       public async Task<bool> SubscribePreimageFor(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Primitive.U32> key)
       {

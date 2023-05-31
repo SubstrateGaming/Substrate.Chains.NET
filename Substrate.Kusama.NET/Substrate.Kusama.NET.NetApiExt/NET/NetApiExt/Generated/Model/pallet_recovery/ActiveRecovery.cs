@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_recovery
     
     
     /// <summary>
-    /// >> 677 - Composite[pallet_recovery.ActiveRecovery]
+    /// >> 660 - Composite[pallet_recovery.ActiveRecovery]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class ActiveRecovery : BaseType
@@ -37,7 +37,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_recovery
         /// <summary>
         /// >> friends
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT23 _friends;
+        private Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT25 _friends;
         
         public Substrate.NetApi.Model.Types.Primitive.U32 Created
         {
@@ -63,7 +63,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_recovery
             }
         }
         
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT23 Friends
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT25 Friends
         {
             get
             {
@@ -96,7 +96,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_recovery
             Created.Decode(byteArray, ref p);
             Deposit = new Substrate.NetApi.Model.Types.Primitive.U128();
             Deposit.Decode(byteArray, ref p);
-            Friends = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT23();
+            Friends = new Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT25();
             Friends.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

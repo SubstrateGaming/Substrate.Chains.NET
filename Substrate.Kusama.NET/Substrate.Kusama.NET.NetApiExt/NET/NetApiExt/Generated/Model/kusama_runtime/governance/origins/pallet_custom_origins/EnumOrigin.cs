@@ -74,7 +74,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.kusama_runtime.governan
     }
     
     /// <summary>
-    /// >> 152 - Variant[kusama_runtime.governance.origins.pallet_custom_origins.Origin]
+    /// >> 129 - Variant[kusama_runtime.governance.origins.pallet_custom_origins.Origin]
     /// </summary>
     public sealed class EnumOrigin : BaseEnum<Origin>
     {

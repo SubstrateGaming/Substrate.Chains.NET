@@ -24,7 +24,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society
     }
     
     /// <summary>
-    /// >> 671 - Variant[pallet_society.VouchingStatus]
+    /// >> 654 - Variant[pallet_society.VouchingStatus]
     /// </summary>
     public sealed class EnumVouchingStatus : BaseEnum<VouchingStatus>
     {

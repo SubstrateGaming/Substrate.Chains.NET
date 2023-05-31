@@ -15,7 +15,7 @@ namespace Substrate.Statemine.NET.RestClient.Mockup.Generated.Interfaces
    using Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_xcm.pallet;
    using Substrate.NetApi.Model.Types.Base;
    using Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_weights.weight_v2;
-   using Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    
    public interface IPolkadotXcmControllerMockupClient
    {
@@ -26,9 +26,10 @@ namespace Substrate.Statemine.NET.RestClient.Mockup.Generated.Interfaces
       Task<bool> SetSupportedVersion(U32 value, BaseTuple<U32, Substrate.Statemine.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation> key);
       Task<bool> SetVersionNotifiers(U64 value, BaseTuple<U32, Substrate.Statemine.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation> key);
       Task<bool> SetVersionNotifyTargets(BaseTuple<U64, Weight, U32> value, BaseTuple<U32, Substrate.Statemine.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation> key);
-      Task<bool> SetVersionDiscoveryQueue(BoundedVecT8 value);
+      Task<bool> SetVersionDiscoveryQueue(BoundedVecT13 value);
       Task<bool> SetCurrentMigration(EnumVersionMigrationStage value);
       Task<bool> SetRemoteLockedFungibles(RemoteLockedFungibleRecord value, BaseTuple<U32, Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Statemine.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAssetId> key);
-      Task<bool> SetLockedFungibles(BoundedVecT9 value, Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
+      Task<bool> SetLockedFungibles(BoundedVecT14 value, Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
+      Task<bool> SetXcmExecutionSuspended(Bool value);
    }
 }

@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_support
     
     
     /// <summary>
-    /// >> 611 - Composite[frame_support.PalletId]
+    /// >> 594 - Composite[frame_support.PalletId]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class PalletId : BaseType

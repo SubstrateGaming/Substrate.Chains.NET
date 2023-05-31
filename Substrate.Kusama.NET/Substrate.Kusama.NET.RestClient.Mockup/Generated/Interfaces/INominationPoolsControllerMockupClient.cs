@@ -12,8 +12,9 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Interfaces
    using System;
    using System.Threading.Tasks;
    using Substrate.NetApi.Model.Types.Primitive;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things;
    using Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    
    public interface INominationPoolsControllerMockupClient
    {
@@ -22,6 +23,7 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Interfaces
       Task<bool> SetMaxPools(U32 value);
       Task<bool> SetMaxPoolMembers(U32 value);
       Task<bool> SetMaxPoolMembersPerPool(U32 value);
+      Task<bool> SetGlobalMaxCommission(Perbill value);
       Task<bool> SetPoolMembers(PoolMember value, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
       Task<bool> SetCounterForPoolMembers(U32 value);
       Task<bool> SetBondedPools(BondedPoolInner value, U32 key);
@@ -30,10 +32,11 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Interfaces
       Task<bool> SetCounterForRewardPools(U32 value);
       Task<bool> SetSubPoolsStorage(SubPools value, U32 key);
       Task<bool> SetCounterForSubPoolsStorage(U32 value);
-      Task<bool> SetMetadata(BoundedVecT36 value, U32 key);
+      Task<bool> SetMetadata(BoundedVecT39 value, U32 key);
       Task<bool> SetCounterForMetadata(U32 value);
       Task<bool> SetLastPoolId(U32 value);
       Task<bool> SetReversePoolIdLookup(U32 value, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
       Task<bool> SetCounterForReversePoolIdLookup(U32 value);
+      Task<bool> SetClaimPermissions(EnumClaimPermission value, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
    }
 }

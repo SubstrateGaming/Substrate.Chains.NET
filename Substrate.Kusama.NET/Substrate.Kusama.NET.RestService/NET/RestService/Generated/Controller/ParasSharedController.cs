@@ -55,7 +55,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Controller
         ///  Indices are into the broader validator set.
         /// </summary>
         [HttpGet("ActiveValidatorIndices")]
-        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.ValidatorIndex>), 200)]
+        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.ValidatorIndex>), 200)]
         [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.ParasSharedStorage), "ActiveValidatorIndicesParams")]
         public IActionResult GetActiveValidatorIndices()
         {
@@ -68,7 +68,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Controller
         ///  This should be the same length as `ActiveValidatorIndices`.
         /// </summary>
         [HttpGet("ActiveValidatorKeys")]
-        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.validator_app.Public>), 200)]
+        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.validator_app.Public>), 200)]
         [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.ParasSharedStorage), "ActiveValidatorKeysParams")]
         public IActionResult GetActiveValidatorKeys()
         {

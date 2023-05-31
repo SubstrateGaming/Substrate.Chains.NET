@@ -12,13 +12,13 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Interfaces
    using System;
    using System.Threading.Tasks;
    using Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_preimage;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    
    public interface IPreimageControllerClient
    {
       Task<EnumRequestStatus> GetStatusFor(Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256 key);
       Task<bool> SubscribeStatusFor(Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256 key);
-      Task<BoundedVecT29> GetPreimageFor(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Primitive.U32> key);
+      Task<BoundedVecT31> GetPreimageFor(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Primitive.U32> key);
       Task<bool> SubscribePreimageFor(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Primitive.U32> key);
    }
 }

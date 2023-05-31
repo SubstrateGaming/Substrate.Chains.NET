@@ -22,7 +22,7 @@ namespace Substrate.Statemine.NET.NetApiExt.Generated.Model.xcm
     }
     
     /// <summary>
-    /// >> 227 - Variant[xcm.VersionedAssetId]
+    /// >> 242 - Variant[xcm.VersionedAssetId]
     /// </summary>
     public sealed class EnumVersionedAssetId : BaseEnumExt<VersionedAssetId, BaseVoid, BaseVoid, BaseVoid, Substrate.Statemine.NET.NetApiExt.Generated.Model.xcm.v3.multiasset.EnumAssetId>
     {

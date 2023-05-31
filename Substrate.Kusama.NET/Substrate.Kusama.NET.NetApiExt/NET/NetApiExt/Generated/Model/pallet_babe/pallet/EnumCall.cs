@@ -26,7 +26,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_babe.pallet
     }
     
     /// <summary>
-    /// >> 78 - Variant[pallet_babe.pallet.Call]
+    /// >> 67 - Variant[pallet_babe.pallet.Call]
     /// Contains one variant per dispatchable that can be called by an extrinsic.
     /// </summary>
     public sealed class EnumCall : BaseEnumExt<Call, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_slots.EquivocationProof, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_session.MembershipProof>, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_slots.EquivocationProof, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_session.MembershipProof>, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_babe.digests.EnumNextConfigDescriptor>

@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.finality_grandpa
     
     
     /// <summary>
-    /// >> 120 - Composite[finality_grandpa.Precommit]
+    /// >> 110 - Composite[finality_grandpa.Precommit]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Precommit : BaseType

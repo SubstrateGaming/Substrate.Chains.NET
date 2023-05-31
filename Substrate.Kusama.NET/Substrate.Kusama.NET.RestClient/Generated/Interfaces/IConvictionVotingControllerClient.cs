@@ -12,13 +12,13 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Interfaces
    using System;
    using System.Threading.Tasks;
    using Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_conviction_voting.vote;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    
    public interface IConvictionVotingControllerClient
    {
       Task<EnumVoting> GetVotingFor(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U16> key);
       Task<bool> SubscribeVotingFor(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U16> key);
-      Task<BoundedVecT16> GetClassLocksFor(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
+      Task<BoundedVecT18> GetClassLocksFor(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
       Task<bool> SubscribeClassLocksFor(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
    }
 }

@@ -19,7 +19,7 @@ namespace Substrate.Statemine.NET.RestClient.Test.Generated
    using Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_xcm.pallet;
    using Substrate.NetApi.Model.Types.Base;
    using Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_weights.weight_v2;
-   using Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    
    public class PolkadotXcmControllerClientTest : ClientTestBase
    {
@@ -380,10 +380,10 @@ namespace Substrate.Statemine.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT8 GetTestValue25()
+      public Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT13 GetTestValue25()
       {
-         Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT8 result;
-         result = new Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT8();
+         Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT13 result;
+         result = new Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT13();
          result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Statemine.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation, Substrate.NetApi.Model.Types.Primitive.U32>>();
          result.Value.Create(new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Statemine.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation, Substrate.NetApi.Model.Types.Primitive.U32>[] {
                   this.GetTestValue26()});
@@ -414,7 +414,7 @@ namespace Substrate.Statemine.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          PolkadotXcmControllerClient rpcClient = new PolkadotXcmControllerClient(_httpClient, subscriptionClient);
-         Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT8 mockupValue = this.GetTestValue25();
+         Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT13 mockupValue = this.GetTestValue25();
 
 
          Assert.IsTrue(await rpcClient.SubscribeVersionDiscoveryQueue());
@@ -427,7 +427,7 @@ namespace Substrate.Statemine.NET.RestClient.Test.Generated
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT8 rpcResult = await rpcClient.GetVersionDiscoveryQueue();
+         Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT13 rpcResult = await rpcClient.GetVersionDiscoveryQueue();
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
@@ -563,10 +563,10 @@ namespace Substrate.Statemine.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT9 GetTestValue36()
+      public Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT14 GetTestValue36()
       {
-         Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT9 result;
-         result = new Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT9();
+         Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT14 result;
+         result = new Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT14();
          result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.Statemine.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation>>();
          result.Value.Create(new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.Statemine.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation>[] {
                   this.GetTestValue37()});
@@ -637,7 +637,7 @@ namespace Substrate.Statemine.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          PolkadotXcmControllerClient rpcClient = new PolkadotXcmControllerClient(_httpClient, subscriptionClient);
-         Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT9 mockupValue = this.GetTestValue36();
+         Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT14 mockupValue = this.GetTestValue36();
          Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 mockupKey = this.GetTestValue39();
 
          Assert.IsTrue(await rpcClient.SubscribeLockedFungibles(mockupKey));
@@ -650,7 +650,36 @@ namespace Substrate.Statemine.NET.RestClient.Test.Generated
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT9 rpcResult = await rpcClient.GetLockedFungibles(mockupKey);
+         Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT14 rpcResult = await rpcClient.GetLockedFungibles(mockupKey);
+
+         // Test that the expected mockup value matches the actual result from RPC service.
+         Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
+      }
+      [Test()]
+      public async System.Threading.Tasks.Task TestXcmExecutionSuspended()
+      {
+         // Construct new Mockup client to test with.
+         PolkadotXcmControllerMockupClient mockupClient = new PolkadotXcmControllerMockupClient(_httpClient);
+
+         // Construct new subscription client to test with.
+         var subscriptionClient = CreateSubscriptionClient();
+
+         // Construct new RPC client to test with.
+         PolkadotXcmControllerClient rpcClient = new PolkadotXcmControllerClient(_httpClient, subscriptionClient);
+         Substrate.NetApi.Model.Types.Primitive.Bool mockupValue = this.GetTestValueBool();
+
+
+         Assert.IsTrue(await rpcClient.SubscribeXcmExecutionSuspended());
+
+         // Save the previously generated mockup value in RPC service storage.
+         bool mockupSetResult = await mockupClient.SetXcmExecutionSuspended(mockupValue);
+
+         // Test that the expected mockup value was handled successfully from RPC service.
+         Assert.IsTrue(mockupSetResult);
+         var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
+         Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
+
+         Substrate.NetApi.Model.Types.Primitive.Bool rpcResult = await rpcClient.GetXcmExecutionSuspended();
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());

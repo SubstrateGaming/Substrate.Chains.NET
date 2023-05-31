@@ -50,9 +50,9 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Paras", "FutureCodeHash"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id), typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.ValidationCodeHash)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Paras", "UpgradeGoAheadSignal"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id), typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.EnumUpgradeGoAhead)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id), typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.EnumUpgradeGoAhead)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Paras", "UpgradeRestrictionSignal"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id), typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.EnumUpgradeRestriction)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id), typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.EnumUpgradeRestriction)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Paras", "UpgradeCooldowns"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32>>)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Paras", "UpcomingUpgrades"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32>>)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Paras", "ActionsQueue"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
@@ -482,10 +482,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         ///  NOTE that this field is used by parachains via merkle storage proofs, therefore changing
         ///  the format will require migration of parachains.
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.EnumUpgradeGoAhead> UpgradeGoAheadSignal(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id key, CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.EnumUpgradeGoAhead> UpgradeGoAheadSignal(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id key, CancellationToken token)
         {
             string parameters = ParasStorage.UpgradeGoAheadSignalParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.EnumUpgradeGoAhead>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.EnumUpgradeGoAhead>(parameters, token);
             return result;
         }
         
@@ -529,10 +529,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         ///  NOTE that this field is used by parachains via merkle storage proofs, therefore changing
         ///  the format will require migration of parachains.
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.EnumUpgradeRestriction> UpgradeRestrictionSignal(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id key, CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.EnumUpgradeRestriction> UpgradeRestrictionSignal(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id key, CancellationToken token)
         {
             string parameters = ParasStorage.UpgradeRestrictionSignalParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.EnumUpgradeRestriction>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.EnumUpgradeRestriction>(parameters, token);
             return result;
         }
         
@@ -830,7 +830,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> include_pvf_check_statement
         /// Contains one variant per dispatchable that can be called by an extrinsic.
         /// </summary>
-        public static Method IncludePvfCheckStatement(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.PvfCheckStatement stmt, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.validator_app.Signature signature)
+        public static Method IncludePvfCheckStatement(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.PvfCheckStatement stmt, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.validator_app.Signature signature)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(stmt.Encode());

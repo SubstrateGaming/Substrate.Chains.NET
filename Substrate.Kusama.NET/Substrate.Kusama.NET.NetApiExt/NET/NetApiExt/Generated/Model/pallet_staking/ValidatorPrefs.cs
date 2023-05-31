@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking
     
     
     /// <summary>
-    /// >> 35 - Composite[pallet_staking.ValidatorPrefs]
+    /// >> 36 - Composite[pallet_staking.ValidatorPrefs]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class ValidatorPrefs : BaseType

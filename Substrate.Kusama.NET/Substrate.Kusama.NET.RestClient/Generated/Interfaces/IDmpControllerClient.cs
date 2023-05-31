@@ -14,6 +14,7 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Interfaces
    using Substrate.NetApi.Model.Types.Base;
    using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_core_primitives;
    using Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point;
    
    public interface IDmpControllerClient
    {
@@ -21,5 +22,7 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Interfaces
       Task<bool> SubscribeDownwardMessageQueues(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id key);
       Task<H256> GetDownwardMessageQueueHeads(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id key);
       Task<bool> SubscribeDownwardMessageQueueHeads(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id key);
+      Task<FixedU128> GetDeliveryFeeFactor(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id key);
+      Task<bool> SubscribeDeliveryFeeFactor(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id key);
    }
 }

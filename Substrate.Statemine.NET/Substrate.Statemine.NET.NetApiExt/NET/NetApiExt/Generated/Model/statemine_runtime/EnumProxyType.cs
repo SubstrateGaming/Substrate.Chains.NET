@@ -34,7 +34,7 @@ namespace Substrate.Statemine.NET.NetApiExt.Generated.Model.statemine_runtime
     }
     
     /// <summary>
-    /// >> 104 - Variant[statemine_runtime.ProxyType]
+    /// >> 107 - Variant[statemine_runtime.ProxyType]
     /// </summary>
     public sealed class EnumProxyType : BaseEnum<ProxyType>
     {

@@ -22,7 +22,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parach
     }
     
     /// <summary>
-    /// >> 153 - Variant[polkadot_runtime_parachains.origin.pallet.Origin]
+    /// >> 130 - Variant[polkadot_runtime_parachains.origin.pallet.Origin]
     /// </summary>
     public sealed class EnumOrigin : BaseEnumExt<Origin, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id>
     {

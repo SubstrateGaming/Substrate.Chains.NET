@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_authority_discovery.
     
     
     /// <summary>
-    /// >> 109 - Composite[sp_authority_discovery.app.Public]
+    /// >> 99 - Composite[sp_authority_discovery.app.Public]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Public : BaseType

@@ -15,7 +15,7 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Clients
    using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_ranked_collective;
    using Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    using Substrate.Kusama.NET.RestClient.Mockup.Generated.Interfaces;
    
    public sealed class FellowshipCollectiveControllerMockupClient : MockupBaseClient, IFellowshipCollectiveControllerMockupClient
@@ -45,7 +45,7 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "FellowshipCollective/Voting", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.FellowshipCollectiveStorage.VotingParams(key));
       }
-      public async Task<bool> SetVotingCleanup(BoundedVecT18 value, U32 key)
+      public async Task<bool> SetVotingCleanup(BoundedVecT20 value, U32 key)
       {
          return await SendMockupRequestAsync(_httpClient, "FellowshipCollective/VotingCleanup", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.FellowshipCollectiveStorage.VotingCleanupParams(key));
       }

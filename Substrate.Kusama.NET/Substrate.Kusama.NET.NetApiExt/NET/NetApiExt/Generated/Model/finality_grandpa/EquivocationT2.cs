@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.finality_grandpa
     
     
     /// <summary>
-    /// >> 119 - Composite[finality_grandpa.EquivocationT2]
+    /// >> 109 - Composite[finality_grandpa.EquivocationT2]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class EquivocationT2 : BaseType
@@ -32,17 +32,17 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.finality_grandpa
         /// <summary>
         /// >> identity
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_finality_grandpa.app.Public _identity;
+        private Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_grandpa.app.Public _identity;
         
         /// <summary>
         /// >> first
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.finality_grandpa.Precommit, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_finality_grandpa.app.Signature> _first;
+        private Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.finality_grandpa.Precommit, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_grandpa.app.Signature> _first;
         
         /// <summary>
         /// >> second
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.finality_grandpa.Precommit, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_finality_grandpa.app.Signature> _second;
+        private Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.finality_grandpa.Precommit, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_grandpa.app.Signature> _second;
         
         public Substrate.NetApi.Model.Types.Primitive.U64 RoundNumber
         {
@@ -56,7 +56,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.finality_grandpa
             }
         }
         
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_finality_grandpa.app.Public Identity
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_grandpa.app.Public Identity
         {
             get
             {
@@ -68,7 +68,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.finality_grandpa
             }
         }
         
-        public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.finality_grandpa.Precommit, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_finality_grandpa.app.Signature> First
+        public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.finality_grandpa.Precommit, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_grandpa.app.Signature> First
         {
             get
             {
@@ -80,7 +80,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.finality_grandpa
             }
         }
         
-        public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.finality_grandpa.Precommit, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_finality_grandpa.app.Signature> Second
+        public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.finality_grandpa.Precommit, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_grandpa.app.Signature> Second
         {
             get
             {
@@ -112,11 +112,11 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.finality_grandpa
             var start = p;
             RoundNumber = new Substrate.NetApi.Model.Types.Primitive.U64();
             RoundNumber.Decode(byteArray, ref p);
-            Identity = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_finality_grandpa.app.Public();
+            Identity = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_grandpa.app.Public();
             Identity.Decode(byteArray, ref p);
-            First = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.finality_grandpa.Precommit, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_finality_grandpa.app.Signature>();
+            First = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.finality_grandpa.Precommit, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_grandpa.app.Signature>();
             First.Decode(byteArray, ref p);
-            Second = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.finality_grandpa.Precommit, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_finality_grandpa.app.Signature>();
+            Second = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.finality_grandpa.Precommit, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_grandpa.app.Signature>();
             Second.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

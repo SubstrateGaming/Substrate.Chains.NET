@@ -24,7 +24,7 @@ namespace Substrate.Statemine.NET.NetApiExt.Generated.Model.xcm
     }
     
     /// <summary>
-    /// >> 95 - Variant[xcm.VersionedMultiLocation]
+    /// >> 98 - Variant[xcm.VersionedMultiLocation]
     /// </summary>
     public sealed class EnumVersionedMultiLocation : BaseEnumExt<VersionedMultiLocation, BaseVoid, Substrate.Statemine.NET.NetApiExt.Generated.Model.xcm.v2.multilocation.MultiLocation, BaseVoid, Substrate.Statemine.NET.NetApiExt.Generated.Model.xcm.v3.multilocation.MultiLocation>
     {

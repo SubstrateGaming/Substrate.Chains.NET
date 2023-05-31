@@ -28,7 +28,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_multisig.pallet
     }
     
     /// <summary>
-    /// >> 230 - Variant[pallet_multisig.pallet.Call]
+    /// >> 209 - Variant[pallet_multisig.pallet.Call]
     /// Contains one variant per dispatchable that can be called by an extrinsic.
     /// </summary>
     public sealed class EnumCall : BaseEnumExt<Call, BaseTuple<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>, Substrate.Kusama.NET.NetApiExt.Generated.Model.kusama_runtime.EnumRuntimeCall>, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U16, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_multisig.Timepoint>, Substrate.Kusama.NET.NetApiExt.Generated.Model.kusama_runtime.EnumRuntimeCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U16, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_multisig.Timepoint>, Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr32U8, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U16, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_multisig.Timepoint, Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr32U8>>

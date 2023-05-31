@@ -12,11 +12,11 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Interfaces
    using System;
    using System.Threading.Tasks;
    using Substrate.NetApi.Model.Types.Primitive;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.weak_bounded_vec;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec;
    using Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_slots;
    using Substrate.Kusama.NET.NetApiExt.Generated.Types.Base;
    using Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_babe.digests;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    using Substrate.NetApi.Model.Types.Base;
    using Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_babe;
    
@@ -40,7 +40,7 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Interfaces
       Task<bool> SubscribeNextAuthorities();
       Task<U32> GetSegmentIndex();
       Task<bool> SubscribeSegmentIndex();
-      Task<BoundedVecT3> GetUnderConstruction(U32 key);
+      Task<BoundedVecT8> GetUnderConstruction(U32 key);
       Task<bool> SubscribeUnderConstruction(U32 key);
       Task<BaseOpt<EnumPreDigest>> GetInitialized();
       Task<bool> SubscribeInitialized();
@@ -54,5 +54,7 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Interfaces
       Task<bool> SubscribeEpochConfig();
       Task<BabeEpochConfiguration> GetNextEpochConfig();
       Task<bool> SubscribeNextEpochConfig();
+      Task<BoundedVecT9> GetSkippedEpochs();
+      Task<bool> SubscribeSkippedEpochs();
    }
 }

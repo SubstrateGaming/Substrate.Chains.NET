@@ -38,7 +38,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_ranked_collectiv
     }
     
     /// <summary>
-    /// >> 648 - Variant[pallet_ranked_collective.pallet.Error]
+    /// >> 631 - Variant[pallet_ranked_collective.pallet.Error]
     /// 
     ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
     ///			of this pallet.

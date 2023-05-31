@@ -40,7 +40,7 @@ namespace Substrate.Statemine.NET.NetApiExt.Generated.Storage
                             Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat,
                             Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>), typeof(Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_assets.types.Approval)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Assets", "Metadata"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.NetApi.Model.Types.Primitive.U32), typeof(Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_assets.types.AssetMetadata)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.NetApi.Model.Types.Primitive.U32), typeof(Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_assets.types.AssetMetadataT1)));
         }
         
         /// <summary>
@@ -165,10 +165,10 @@ namespace Substrate.Statemine.NET.NetApiExt.Generated.Storage
         /// >> Metadata
         ///  Metadata of an asset.
         /// </summary>
-        public async Task<Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_assets.types.AssetMetadata> Metadata(Substrate.NetApi.Model.Types.Primitive.U32 key, CancellationToken token)
+        public async Task<Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_assets.types.AssetMetadataT1> Metadata(Substrate.NetApi.Model.Types.Primitive.U32 key, CancellationToken token)
         {
             string parameters = AssetsStorage.MetadataParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_assets.types.AssetMetadata>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_assets.types.AssetMetadataT1>(parameters, token);
             return result;
         }
     }
@@ -528,6 +528,18 @@ namespace Substrate.Statemine.NET.NetApiExt.Generated.Storage
             byteArray.AddRange(allow_burn.Encode());
             return new Method(50, "Assets", 27, "refund", byteArray.ToArray());
         }
+        
+        /// <summary>
+        /// >> set_min_balance
+        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// </summary>
+        public static Method SetMinBalance(Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32> id, Substrate.NetApi.Model.Types.Primitive.U128 min_balance)
+        {
+            System.Collections.Generic.List<byte> byteArray = new List<byte>();
+            byteArray.AddRange(id.Encode());
+            byteArray.AddRange(min_balance.Encode());
+            return new Method(50, "Assets", 28, "set_min_balance", byteArray.ToArray());
+        }
     }
     
     public sealed class AssetsConstants
@@ -667,12 +679,12 @@ namespace Substrate.Statemine.NET.NetApiExt.Generated.Storage
         MinBalanceZero,
         
         /// <summary>
-        /// >> NoProvider
+        /// >> UnavailableConsumer
         /// Unable to increment the consumer reference counters on the account. Either no provider
-        /// reference exists to allow a non-zero balance of a non-self-sufficient asset, or the
-        /// maximum number of consumers has been reached.
+        /// reference exists to allow a non-zero balance of a non-self-sufficient asset, or one
+        /// fewer then the maximum number of consumers has been reached.
         /// </summary>
-        NoProvider,
+        UnavailableConsumer,
         
         /// <summary>
         /// >> BadMetadata
@@ -734,5 +746,11 @@ namespace Substrate.Statemine.NET.NetApiExt.Generated.Storage
         /// The asset should be frozen before the given operation.
         /// </summary>
         NotFrozen,
+        
+        /// <summary>
+        /// >> CallbackFailed
+        /// Callback action resulted in error
+        /// </summary>
+        CallbackFailed,
     }
 }

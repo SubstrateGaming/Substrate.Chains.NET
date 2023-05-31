@@ -33,11 +33,15 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("NisCounterpartBalances", "TotalIssuance"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Primitive.U128)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("NisCounterpartBalances", "InactiveIssuance"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Primitive.U128)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("NisCounterpartBalances", "Account"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32), typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_balances.AccountData)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32), typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_balances.types.AccountData)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("NisCounterpartBalances", "Locks"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32), typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.weak_bounded_vec.WeakBoundedVecT8)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32), typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT8)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("NisCounterpartBalances", "Reserves"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32), typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT35)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32), typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT37)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("NisCounterpartBalances", "Holds"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32), typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT38)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("NisCounterpartBalances", "Freezes"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32), typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT38)));
         }
         
         /// <summary>
@@ -139,7 +143,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         public static string AccountDefault()
         {
             return "0x0000000000000000000000000000000000000000000000000000000000000000000000000000000" +
-                "0000000000000000000000000000000000000000000000000";
+                "0000000000000000000000000000000000000000000000080";
         }
         
         /// <summary>
@@ -169,10 +173,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         ///  `Balances` pallet, which uses a `StorageMap` to store balances data only.
         ///  NOTE: This is only used in the case that this pallet is used to store balances.
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_balances.AccountData> Account(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_balances.types.AccountData> Account(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, CancellationToken token)
         {
             string parameters = NisCounterpartBalancesStorage.AccountParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_balances.AccountData>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_balances.types.AccountData>(parameters, token);
             return result;
         }
         
@@ -202,10 +206,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         ///  Any liquidity locks on some account balances.
         ///  NOTE: Should only be accessed when setting, changing and freeing a lock.
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.weak_bounded_vec.WeakBoundedVecT8> Locks(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT8> Locks(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, CancellationToken token)
         {
             string parameters = NisCounterpartBalancesStorage.LocksParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.weak_bounded_vec.WeakBoundedVecT8>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT8>(parameters, token);
             return result;
         }
         
@@ -233,10 +237,72 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> Reserves
         ///  Named reserves on some account balances.
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT35> Reserves(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT37> Reserves(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, CancellationToken token)
         {
             string parameters = NisCounterpartBalancesStorage.ReservesParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT35>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT37>(parameters, token);
+            return result;
+        }
+        
+        /// <summary>
+        /// >> HoldsParams
+        ///  Holds on account balances.
+        /// </summary>
+        public static string HoldsParams(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+        {
+            return RequestGenerator.GetStorage("NisCounterpartBalances", "Holds", Substrate.NetApi.Model.Meta.Storage.Type.Map, new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
+                        Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, new Substrate.NetApi.Model.Types.IType[] {
+                        key});
+        }
+        
+        /// <summary>
+        /// >> HoldsDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string HoldsDefault()
+        {
+            return "0x00";
+        }
+        
+        /// <summary>
+        /// >> Holds
+        ///  Holds on account balances.
+        /// </summary>
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT38> Holds(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, CancellationToken token)
+        {
+            string parameters = NisCounterpartBalancesStorage.HoldsParams(key);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT38>(parameters, token);
+            return result;
+        }
+        
+        /// <summary>
+        /// >> FreezesParams
+        ///  Freeze locks on account balances.
+        /// </summary>
+        public static string FreezesParams(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+        {
+            return RequestGenerator.GetStorage("NisCounterpartBalances", "Freezes", Substrate.NetApi.Model.Meta.Storage.Type.Map, new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
+                        Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, new Substrate.NetApi.Model.Types.IType[] {
+                        key});
+        }
+        
+        /// <summary>
+        /// >> FreezesDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string FreezesDefault()
+        {
+            return "0x00";
+        }
+        
+        /// <summary>
+        /// >> Freezes
+        ///  Freeze locks on account balances.
+        /// </summary>
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT38> Freezes(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, CancellationToken token)
+        {
+            string parameters = NisCounterpartBalancesStorage.FreezesParams(key);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT38>(parameters, token);
             return result;
         }
     }
@@ -245,28 +311,28 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
     {
         
         /// <summary>
-        /// >> transfer
+        /// >> transfer_allow_death
         /// Contains one variant per dispatchable that can be called by an extrinsic.
         /// </summary>
-        public static Method Transfer(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress dest, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128> value)
+        public static Method TransferAllowDeath(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress dest, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128> value)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(dest.Encode());
             byteArray.AddRange(value.Encode());
-            return new Method(45, "NisCounterpartBalances", 0, "transfer", byteArray.ToArray());
+            return new Method(45, "NisCounterpartBalances", 0, "transfer_allow_death", byteArray.ToArray());
         }
         
         /// <summary>
-        /// >> set_balance
+        /// >> set_balance_deprecated
         /// Contains one variant per dispatchable that can be called by an extrinsic.
         /// </summary>
-        public static Method SetBalance(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress who, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128> new_free, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128> new_reserved)
+        public static Method SetBalanceDeprecated(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress who, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128> new_free, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128> old_reserved)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(who.Encode());
             byteArray.AddRange(new_free.Encode());
-            byteArray.AddRange(new_reserved.Encode());
-            return new Method(45, "NisCounterpartBalances", 1, "set_balance", byteArray.ToArray());
+            byteArray.AddRange(old_reserved.Encode());
+            return new Method(45, "NisCounterpartBalances", 1, "set_balance_deprecated", byteArray.ToArray());
         }
         
         /// <summary>
@@ -317,6 +383,41 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
             byteArray.AddRange(amount.Encode());
             return new Method(45, "NisCounterpartBalances", 5, "force_unreserve", byteArray.ToArray());
         }
+        
+        /// <summary>
+        /// >> upgrade_accounts
+        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// </summary>
+        public static Method UpgradeAccounts(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> who)
+        {
+            System.Collections.Generic.List<byte> byteArray = new List<byte>();
+            byteArray.AddRange(who.Encode());
+            return new Method(45, "NisCounterpartBalances", 6, "upgrade_accounts", byteArray.ToArray());
+        }
+        
+        /// <summary>
+        /// >> transfer
+        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// </summary>
+        public static Method Transfer(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress dest, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128> value)
+        {
+            System.Collections.Generic.List<byte> byteArray = new List<byte>();
+            byteArray.AddRange(dest.Encode());
+            byteArray.AddRange(value.Encode());
+            return new Method(45, "NisCounterpartBalances", 7, "transfer", byteArray.ToArray());
+        }
+        
+        /// <summary>
+        /// >> force_set_balance
+        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// </summary>
+        public static Method ForceSetBalance(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress who, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128> new_free)
+        {
+            System.Collections.Generic.List<byte> byteArray = new List<byte>();
+            byteArray.AddRange(who.Encode());
+            byteArray.AddRange(new_free.Encode());
+            return new Method(45, "NisCounterpartBalances", 8, "force_set_balance", byteArray.ToArray());
+        }
     }
     
     public sealed class NisCounterpartBalancesConstants
@@ -324,7 +425,14 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> ExistentialDeposit
-        ///  The minimum amount required to keep an account open.
+        ///  The minimum amount required to keep an account open. MUST BE GREATER THAN ZERO!
+        /// 
+        ///  If you *really* need it to be zero, you can enable the feature `insecure_zero_ed` for
+        ///  this pallet. However, you do so at your own risk: this will open up a major DoS vector.
+        ///  In case you have multiple sources of provider references, you may also get unexpected
+        ///  behaviour if you set this to zero.
+        /// 
+        ///  Bottom line: Do yourself a favour and make it at least one!
         /// </summary>
         public Substrate.NetApi.Model.Types.Primitive.U128 ExistentialDeposit()
         {
@@ -355,6 +463,28 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
             result.Create("0x04000000");
             return result;
         }
+        
+        /// <summary>
+        /// >> MaxHolds
+        ///  The maximum number of holds that can exist on an account at any time.
+        /// </summary>
+        public Substrate.NetApi.Model.Types.Primitive.U32 MaxHolds()
+        {
+            var result = new Substrate.NetApi.Model.Types.Primitive.U32();
+            result.Create("0x00000000");
+            return result;
+        }
+        
+        /// <summary>
+        /// >> MaxFreezes
+        ///  The maximum number of individual freeze locks that can exist on an account at any time.
+        /// </summary>
+        public Substrate.NetApi.Model.Types.Primitive.U32 MaxFreezes()
+        {
+            var result = new Substrate.NetApi.Model.Types.Primitive.U32();
+            result.Create("0x00000000");
+            return result;
+        }
     }
     
     public enum NisCounterpartBalancesErrors
@@ -362,13 +492,13 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> VestingBalance
-        /// Vesting balance too high to send value
+        /// Vesting balance too high to send value.
         /// </summary>
         VestingBalance,
         
         /// <summary>
         /// >> LiquidityRestrictions
-        /// Account liquidity restrictions prevent withdrawal
+        /// Account liquidity restrictions prevent withdrawal.
         /// </summary>
         LiquidityRestrictions,
         
@@ -380,32 +510,44 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> ExistentialDeposit
-        /// Value too low to create account due to existential deposit
+        /// Value too low to create account due to existential deposit.
         /// </summary>
         ExistentialDeposit,
         
         /// <summary>
-        /// >> KeepAlive
-        /// Transfer/payment would kill account
+        /// >> Expendability
+        /// Transfer/payment would kill account.
         /// </summary>
-        KeepAlive,
+        Expendability,
         
         /// <summary>
         /// >> ExistingVestingSchedule
-        /// A vesting schedule already exists for this account
+        /// A vesting schedule already exists for this account.
         /// </summary>
         ExistingVestingSchedule,
         
         /// <summary>
         /// >> DeadAccount
-        /// Beneficiary account must pre-exist
+        /// Beneficiary account must pre-exist.
         /// </summary>
         DeadAccount,
         
         /// <summary>
         /// >> TooManyReserves
-        /// Number of named reserves exceed MaxReserves
+        /// Number of named reserves exceed `MaxReserves`.
         /// </summary>
         TooManyReserves,
+        
+        /// <summary>
+        /// >> TooManyHolds
+        /// Number of holds exceed `MaxHolds`.
+        /// </summary>
+        TooManyHolds,
+        
+        /// <summary>
+        /// >> TooManyFreezes
+        /// Number of freezes exceed `MaxFreezes`.
+        /// </summary>
+        TooManyFreezes,
     }
 }

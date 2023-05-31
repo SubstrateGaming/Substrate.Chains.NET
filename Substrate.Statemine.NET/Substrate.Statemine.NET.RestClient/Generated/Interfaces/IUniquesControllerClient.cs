@@ -14,7 +14,7 @@ namespace Substrate.Statemine.NET.RestClient.Generated.Interfaces
    using Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_uniques.types;
    using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.NetApi.Model.Types.Base;
-   using Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    
    public interface IUniquesControllerClient
    {
@@ -32,8 +32,8 @@ namespace Substrate.Statemine.NET.RestClient.Generated.Interfaces
       Task<bool> SubscribeClassMetadataOf(U32 key);
       Task<ItemMetadata> GetInstanceMetadataOf(BaseTuple<U32, U32> key);
       Task<bool> SubscribeInstanceMetadataOf(BaseTuple<U32, U32> key);
-      Task<BaseTuple<BoundedVecT3, U128>> GetAttribute(BaseTuple<U32, BaseOpt<U32>, BoundedVecT2> key);
-      Task<bool> SubscribeAttribute(BaseTuple<U32, BaseOpt<U32>, BoundedVecT2> key);
+      Task<BaseTuple<BoundedVecT6, U128>> GetAttribute(BaseTuple<U32, BaseOpt<U32>, BoundedVecT5> key);
+      Task<bool> SubscribeAttribute(BaseTuple<U32, BaseOpt<U32>, BoundedVecT5> key);
       Task<BaseTuple<U128, BaseOpt<Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>>> GetItemPriceOf(BaseTuple<U32, U32> key);
       Task<bool> SubscribeItemPriceOf(BaseTuple<U32, U32> key);
       Task<U32> GetCollectionMaxSupply(U32 key);

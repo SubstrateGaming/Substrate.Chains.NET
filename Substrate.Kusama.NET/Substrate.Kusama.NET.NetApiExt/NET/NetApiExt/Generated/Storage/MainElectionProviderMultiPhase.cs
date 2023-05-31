@@ -37,7 +37,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("ElectionProviderMultiPhase", "DesiredTargets"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Primitive.U32)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("ElectionProviderMultiPhase", "SnapshotMetadata"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_election_provider_multi_phase.SolutionOrSnapshotSize)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("ElectionProviderMultiPhase", "SignedSubmissionNextIndex"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Primitive.U32)));
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("ElectionProviderMultiPhase", "SignedSubmissionIndices"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT32)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("ElectionProviderMultiPhase", "SignedSubmissionIndices"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT34)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("ElectionProviderMultiPhase", "SignedSubmissionsMap"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.NetApi.Model.Types.Primitive.U32), typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_election_provider_multi_phase.signed.SignedSubmission)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("ElectionProviderMultiPhase", "MinimumUntrustedScore"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_npos_elections.ElectionScore)));
@@ -316,10 +316,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         ///  can be quite large, so we're willing to pay the cost of multiple database accesses to access
         ///  them one at a time instead of reading and decoding all of them at once.
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT32> SignedSubmissionIndices(CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT34> SignedSubmissionIndices(CancellationToken token)
         {
             string parameters = ElectionProviderMultiPhaseStorage.SignedSubmissionIndicesParams();
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT32>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT34>(parameters, token);
             return result;
         }
         
@@ -565,7 +565,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight SignedMaxWeight()
         {
             var result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight();
-            result.Create("0x0B68D433F7550113A3703D0AD7A370BD");
+            result.Create("0x0B78089CC1570113A3703D0AD7A370BD");
             return result;
         }
         
@@ -678,7 +678,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight MinerMaxWeight()
         {
             var result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight();
-            result.Create("0x0B68D433F7550113A3703D0AD7A370BD");
+            result.Create("0x0B78089CC1570113A3703D0AD7A370BD");
             return result;
         }
         
@@ -689,6 +689,16 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         {
             var result = new Substrate.NetApi.Model.Types.Primitive.U32();
             result.Create("0x18000000");
+            return result;
+        }
+        
+        /// <summary>
+        /// >> MinerMaxWinners
+        /// </summary>
+        public Substrate.NetApi.Model.Types.Primitive.U32 MinerMaxWinners()
+        {
+            var result = new Substrate.NetApi.Model.Types.Primitive.U32();
+            result.Create("0xD0070000");
             return result;
         }
     }

@@ -13,10 +13,11 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Clients
    using System.Threading.Tasks;
    using System.Net.Http;
    using Substrate.NetApi.Model.Types.Base;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.assignment_app;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.assignment_app;
    using Substrate.NetApi.Model.Types.Primitive;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4;
    using Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.executor_params;
    using Substrate.Kusama.NET.RestClient.Mockup.Generated.Interfaces;
    
    public sealed class ParaSessionInfoControllerMockupClient : MockupBaseClient, IParaSessionInfoControllerMockupClient
@@ -41,6 +42,10 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Clients
       public async Task<bool> SetAccountKeys(BaseVec<AccountId32> value, U32 key)
       {
          return await SendMockupRequestAsync(_httpClient, "ParaSessionInfo/AccountKeys", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.ParaSessionInfoStorage.AccountKeysParams(key));
+      }
+      public async Task<bool> SetSessionExecutorParams(ExecutorParams value, U32 key)
+      {
+         return await SendMockupRequestAsync(_httpClient, "ParaSessionInfo/SessionExecutorParams", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.ParaSessionInfoStorage.SessionExecutorParamsParams(key));
       }
    }
 }

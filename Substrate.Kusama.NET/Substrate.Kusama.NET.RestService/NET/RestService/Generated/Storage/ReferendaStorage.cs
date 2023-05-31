@@ -43,13 +43,24 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// 
         ///  This should be empty if `DecidingCount` is less than `TrackInfo::max_deciding`.
         /// </summary>
-        Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT17 GetTrackQueue(string key);
+        Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT19 GetTrackQueue(string key);
         
         /// <summary>
         /// >> DecidingCount
         ///  The number of referenda being decided currently.
         /// </summary>
         Substrate.NetApi.Model.Types.Primitive.U32 GetDecidingCount(string key);
+        
+        /// <summary>
+        /// >> MetadataOf
+        ///  The metadata is a general information concerning the referendum.
+        ///  The `PreimageHash` refers to the preimage of the `Preimages` provider which can be a JSON
+        ///  dump or IPFS hash of a JSON file.
+        /// 
+        ///  Consider a garbage collection for a metadata of finished referendums to `unrequest` (remove)
+        ///  large preimages.
+        /// </summary>
+        Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256 GetMetadataOf(string key);
     }
     
     /// <summary>
@@ -71,12 +82,17 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// <summary>
         /// _trackQueueTypedStorage typed storage field
         /// </summary>
-        private TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT17> _trackQueueTypedStorage;
+        private TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT19> _trackQueueTypedStorage;
         
         /// <summary>
         /// _decidingCountTypedStorage typed storage field
         /// </summary>
         private TypedMapStorage<Substrate.NetApi.Model.Types.Primitive.U32> _decidingCountTypedStorage;
+        
+        /// <summary>
+        /// _metadataOfTypedStorage typed storage field
+        /// </summary>
+        private TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256> _metadataOfTypedStorage;
         
         /// <summary>
         /// ReferendaStorage constructor.
@@ -85,8 +101,9 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         {
             this.ReferendumCountTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32>("Referenda.ReferendumCount", storageDataProvider, storageChangeDelegates);
             this.ReferendumInfoForTypedStorage = new TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_referenda.types.EnumReferendumInfo>("Referenda.ReferendumInfoFor", storageDataProvider, storageChangeDelegates);
-            this.TrackQueueTypedStorage = new TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT17>("Referenda.TrackQueue", storageDataProvider, storageChangeDelegates);
+            this.TrackQueueTypedStorage = new TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT19>("Referenda.TrackQueue", storageDataProvider, storageChangeDelegates);
             this.DecidingCountTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Primitive.U32>("Referenda.DecidingCount", storageDataProvider, storageChangeDelegates);
+            this.MetadataOfTypedStorage = new TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256>("Referenda.MetadataOf", storageDataProvider, storageChangeDelegates);
         }
         
         /// <summary>
@@ -122,7 +139,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// <summary>
         /// _trackQueueTypedStorage property
         /// </summary>
-        public TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT17> TrackQueueTypedStorage
+        public TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT19> TrackQueueTypedStorage
         {
             get
             {
@@ -150,6 +167,21 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         }
         
         /// <summary>
+        /// _metadataOfTypedStorage property
+        /// </summary>
+        public TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256> MetadataOfTypedStorage
+        {
+            get
+            {
+                return _metadataOfTypedStorage;
+            }
+            set
+            {
+                _metadataOfTypedStorage = value;
+            }
+        }
+        
+        /// <summary>
         /// Connects to all storages and initializes the change subscription handling.
         /// </summary>
         public async Task InitializeAsync(Substrate.ServiceLayer.Storage.IStorageDataProvider dataProvider)
@@ -158,6 +190,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
             await ReferendumInfoForTypedStorage.InitializeAsync("Referenda", "ReferendumInfoFor");
             await TrackQueueTypedStorage.InitializeAsync("Referenda", "TrackQueue");
             await DecidingCountTypedStorage.InitializeAsync("Referenda", "DecidingCount");
+            await MetadataOfTypedStorage.InitializeAsync("Referenda", "MetadataOf");
         }
         
         /// <summary>
@@ -223,13 +256,13 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// 
         ///  This should be empty if `DecidingCount` is less than `TrackInfo::max_deciding`.
         /// </summary>
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT17 GetTrackQueue(string key)
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT19 GetTrackQueue(string key)
         {
             if ((key == null))
             {
                 return null;
             }
-            if (TrackQueueTypedStorage.Dictionary.TryGetValue(key, out Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT17 result))
+            if (TrackQueueTypedStorage.Dictionary.TryGetValue(key, out Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT19 result))
             {
                 return result;
             }
@@ -259,6 +292,40 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
                 return null;
             }
             if (DecidingCountTypedStorage.Dictionary.TryGetValue(key, out Substrate.NetApi.Model.Types.Primitive.U32 result))
+            {
+                return result;
+            }
+            else
+            {
+                return null;
+            }
+        }
+        
+        /// <summary>
+        /// Implements any storage change for Referenda.MetadataOf
+        /// </summary>
+        [StorageChange("Referenda", "MetadataOf")]
+        public void OnUpdateMetadataOf(string key, string data)
+        {
+            MetadataOfTypedStorage.Update(key, data);
+        }
+        
+        /// <summary>
+        /// >> MetadataOf
+        ///  The metadata is a general information concerning the referendum.
+        ///  The `PreimageHash` refers to the preimage of the `Preimages` provider which can be a JSON
+        ///  dump or IPFS hash of a JSON file.
+        /// 
+        ///  Consider a garbage collection for a metadata of finished referendums to `unrequest` (remove)
+        ///  large preimages.
+        /// </summary>
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256 GetMetadataOf(string key)
+        {
+            if ((key == null))
+            {
+                return null;
+            }
+            if (MetadataOfTypedStorage.Dictionary.TryGetValue(key, out Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256 result))
             {
                 return result;
             }

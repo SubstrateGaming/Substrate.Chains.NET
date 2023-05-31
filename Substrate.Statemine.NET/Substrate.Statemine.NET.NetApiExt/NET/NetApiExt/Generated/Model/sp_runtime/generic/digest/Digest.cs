@@ -18,7 +18,7 @@ namespace Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_runtime.generic.d
     
     
     /// <summary>
-    /// >> 13 - Composite[sp_runtime.generic.digest.Digest]
+    /// >> 14 - Composite[sp_runtime.generic.digest.Digest]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Digest : BaseType

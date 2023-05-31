@@ -13,7 +13,7 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Clients
    using System.Threading.Tasks;
    using System.Net.Http;
    using Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_conviction_voting.vote;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    using Substrate.Kusama.NET.RestClient.Generated.Interfaces;
    
    public sealed class ConvictionVotingControllerClient : BaseClient, IConvictionVotingControllerClient
@@ -33,9 +33,9 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("ConvictionVoting.VotingFor", Substrate.Kusama.NET.NetApiExt.Generated.Storage.ConvictionVotingStorage.VotingForParams(key));
       }
-      public async Task<BoundedVecT16> GetClassLocksFor(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+      public async Task<BoundedVecT18> GetClassLocksFor(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {
-         return await SendRequestAsync<BoundedVecT16>(_httpClient, "convictionvoting/classlocksfor", Substrate.Kusama.NET.NetApiExt.Generated.Storage.ConvictionVotingStorage.ClassLocksForParams(key));
+         return await SendRequestAsync<BoundedVecT18>(_httpClient, "convictionvoting/classlocksfor", Substrate.Kusama.NET.NetApiExt.Generated.Storage.ConvictionVotingStorage.ClassLocksForParams(key));
       }
       public async Task<bool> SubscribeClassLocksFor(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {

@@ -30,7 +30,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_vesting.pallet
     }
     
     /// <summary>
-    /// >> 682 - Variant[pallet_vesting.pallet.Error]
+    /// >> 665 - Variant[pallet_vesting.pallet.Error]
     /// Error for the vesting pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>

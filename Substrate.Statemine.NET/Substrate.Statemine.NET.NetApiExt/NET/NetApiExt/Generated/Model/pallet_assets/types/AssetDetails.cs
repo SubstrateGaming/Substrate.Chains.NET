@@ -18,7 +18,7 @@ namespace Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_assets.types
     
     
     /// <summary>
-    /// >> 288 - Composite[pallet_assets.types.AssetDetails]
+    /// >> 328 - Composite[pallet_assets.types.AssetDetails]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class AssetDetails : BaseType

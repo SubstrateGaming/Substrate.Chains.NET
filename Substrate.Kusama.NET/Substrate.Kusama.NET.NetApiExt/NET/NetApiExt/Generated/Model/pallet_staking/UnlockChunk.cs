@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking
     
     
     /// <summary>
-    /// >> 540 - Composite[pallet_staking.UnlockChunk]
+    /// >> 551 - Composite[pallet_staking.UnlockChunk]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class UnlockChunk : BaseType

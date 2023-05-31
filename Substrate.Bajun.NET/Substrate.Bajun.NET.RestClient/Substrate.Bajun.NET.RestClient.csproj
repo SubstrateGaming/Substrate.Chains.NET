@@ -7,7 +7,7 @@
       <CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
    </PropertyGroup>
    <ItemGroup>
-      <PackageReference Include="Substrate.ServiceLayer.Model" Version="0.4.0" />
+      <PackageReference Include="Substrate.ServiceLayer.Model" Version="0.4.4" />
    </ItemGroup>
    <ItemGroup>
       <ProjectReference Include="..\Substrate.Bajun.NET.NetApiExt\Substrate.Bajun.NET.NetApiExt.csproj" />

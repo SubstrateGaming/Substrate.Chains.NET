@@ -16,7 +16,7 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
    using Substrate.Kusama.NET.RestClient.Mockup.Generated.Clients;
    using Substrate.Kusama.NET.RestClient.Generated.Clients;
    using Substrate.NetApi.Model.Types.Primitive;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    using Substrate.NetApi.Model.Types.Base;
    
    public class SchedulerControllerClientTest : ClientTestBase
@@ -56,10 +56,10 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT25 GetTestValue3()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT27 GetTestValue3()
       {
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT25 result;
-         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT25();
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT27 result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT27();
          result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_scheduler.Scheduled>>();
          result.Value.Create(new Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_scheduler.Scheduled>[] {
                   this.GetTestValue4()});
@@ -191,7 +191,7 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          SchedulerControllerClient rpcClient = new SchedulerControllerClient(_httpClient, subscriptionClient);
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT25 mockupValue = this.GetTestValue3();
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT27 mockupValue = this.GetTestValue3();
          Substrate.NetApi.Model.Types.Primitive.U32 mockupKey = this.GetTestValueU32();
 
          Assert.IsTrue(await rpcClient.SubscribeAgenda(mockupKey));
@@ -204,7 +204,7 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT25 rpcResult = await rpcClient.GetAgenda(mockupKey);
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT27 rpcResult = await rpcClient.GetAgenda(mockupKey);
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());

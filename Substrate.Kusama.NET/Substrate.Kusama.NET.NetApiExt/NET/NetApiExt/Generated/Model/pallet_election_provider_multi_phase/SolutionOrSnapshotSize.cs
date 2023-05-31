@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_election_provide
     
     
     /// <summary>
-    /// >> 315 - Composite[pallet_election_provider_multi_phase.SolutionOrSnapshotSize]
+    /// >> 293 - Composite[pallet_election_provider_multi_phase.SolutionOrSnapshotSize]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class SolutionOrSnapshotSize : BaseType

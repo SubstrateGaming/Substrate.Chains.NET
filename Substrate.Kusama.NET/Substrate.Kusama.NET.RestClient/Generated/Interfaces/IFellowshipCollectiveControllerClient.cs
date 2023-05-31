@@ -14,7 +14,7 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Interfaces
    using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_ranked_collective;
    using Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    
    public interface IFellowshipCollectiveControllerClient
    {
@@ -28,7 +28,7 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Interfaces
       Task<bool> SubscribeIndexToId(Substrate.NetApi.Model.Types.Base.BaseTuple<U16, U32> key);
       Task<EnumVoteRecord> GetVoting(Substrate.NetApi.Model.Types.Base.BaseTuple<U32, AccountId32> key);
       Task<bool> SubscribeVoting(Substrate.NetApi.Model.Types.Base.BaseTuple<U32, AccountId32> key);
-      Task<BoundedVecT18> GetVotingCleanup(U32 key);
+      Task<BoundedVecT20> GetVotingCleanup(U32 key);
       Task<bool> SubscribeVotingCleanup(U32 key);
    }
 }

@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parach
     
     
     /// <summary>
-    /// >> 778 - Composite[polkadot_runtime_parachains.scheduler.QueuedParathread]
+    /// >> 763 - Composite[polkadot_runtime_parachains.scheduler.QueuedParathread]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class QueuedParathread : BaseType
@@ -27,14 +27,14 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parach
         /// <summary>
         /// >> claim
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.ParathreadEntry _claim;
+        private Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.ParathreadEntry _claim;
         
         /// <summary>
         /// >> core_offset
         /// </summary>
         private Substrate.NetApi.Model.Types.Primitive.U32 _coreOffset;
         
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.ParathreadEntry Claim
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.ParathreadEntry Claim
         {
             get
             {
@@ -74,7 +74,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parach
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Claim = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.ParathreadEntry();
+            Claim = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.ParathreadEntry();
             Claim.Decode(byteArray, ref p);
             CoreOffset = new Substrate.NetApi.Model.Types.Primitive.U32();
             CoreOffset.Decode(byteArray, ref p);

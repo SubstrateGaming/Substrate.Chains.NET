@@ -31,22 +31,23 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         {
             this._client = client;
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Babe", "EpochIndex"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Primitive.U64)));
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("Babe", "Authorities"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.weak_bounded_vec.WeakBoundedVecT2)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("Babe", "Authorities"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT2)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Babe", "GenesisSlot"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_slots.Slot)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Babe", "CurrentSlot"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_slots.Slot)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Babe", "Randomness"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr32U8)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Babe", "PendingEpochConfigChange"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_babe.digests.EnumNextConfigDescriptor)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Babe", "NextRandomness"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr32U8)));
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("Babe", "NextAuthorities"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.weak_bounded_vec.WeakBoundedVecT2)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("Babe", "NextAuthorities"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT2)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Babe", "SegmentIndex"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Primitive.U32)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Babe", "UnderConstruction"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.NetApi.Model.Types.Primitive.U32), typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT3)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.NetApi.Model.Types.Primitive.U32), typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT8)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Babe", "Initialized"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_babe.digests.EnumPreDigest>)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Babe", "AuthorVrfRandomness"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr32U8>)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Babe", "EpochStart"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Babe", "Lateness"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Primitive.U32)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Babe", "EpochConfig"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_babe.BabeEpochConfiguration)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Babe", "NextEpochConfig"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_babe.BabeEpochConfiguration)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("Babe", "SkippedEpochs"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9)));
         }
         
         /// <summary>
@@ -100,10 +101,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> Authorities
         ///  Current epoch authorities.
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.weak_bounded_vec.WeakBoundedVecT2> Authorities(CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT2> Authorities(CancellationToken token)
         {
             string parameters = BabeStorage.AuthoritiesParams();
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.weak_bounded_vec.WeakBoundedVecT2>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT2>(parameters, token);
             return result;
         }
         
@@ -294,10 +295,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> NextAuthorities
         ///  Next epoch authorities.
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.weak_bounded_vec.WeakBoundedVecT2> NextAuthorities(CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT2> NextAuthorities(CancellationToken token)
         {
             string parameters = BabeStorage.NextAuthoritiesParams();
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.weak_bounded_vec.WeakBoundedVecT2>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT2>(parameters, token);
             return result;
         }
         
@@ -370,10 +371,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> UnderConstruction
         ///  TWOX-NOTE: `SegmentIndex` is an increasing integer, so this is okay.
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT3> UnderConstruction(Substrate.NetApi.Model.Types.Primitive.U32 key, CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT8> UnderConstruction(Substrate.NetApi.Model.Types.Primitive.U32 key, CancellationToken token)
         {
             string parameters = BabeStorage.UnderConstructionParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT3>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT8>(parameters, token);
             return result;
         }
         
@@ -576,6 +577,49 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         {
             string parameters = BabeStorage.NextEpochConfigParams();
             var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_babe.BabeEpochConfiguration>(parameters, token);
+            return result;
+        }
+        
+        /// <summary>
+        /// >> SkippedEpochsParams
+        ///  A list of the last 100 skipped epochs and the corresponding session index
+        ///  when the epoch was skipped.
+        /// 
+        ///  This is only used for validating equivocation proofs. An equivocation proof
+        ///  must contains a key-ownership proof for a given session, therefore we need a
+        ///  way to tie together sessions and epoch indices, i.e. we need to validate that
+        ///  a validator was the owner of a given key on a given session, and what the
+        ///  active epoch index was during that session.
+        /// </summary>
+        public static string SkippedEpochsParams()
+        {
+            return RequestGenerator.GetStorage("Babe", "SkippedEpochs", Substrate.NetApi.Model.Meta.Storage.Type.Plain);
+        }
+        
+        /// <summary>
+        /// >> SkippedEpochsDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string SkippedEpochsDefault()
+        {
+            return "0x00";
+        }
+        
+        /// <summary>
+        /// >> SkippedEpochs
+        ///  A list of the last 100 skipped epochs and the corresponding session index
+        ///  when the epoch was skipped.
+        /// 
+        ///  This is only used for validating equivocation proofs. An equivocation proof
+        ///  must contains a key-ownership proof for a given session, therefore we need a
+        ///  way to tie together sessions and epoch indices, i.e. we need to validate that
+        ///  a validator was the owner of a given key on a given session, and what the
+        ///  active epoch index was during that session.
+        /// </summary>
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9> SkippedEpochs(CancellationToken token)
+        {
+            string parameters = BabeStorage.SkippedEpochsParams();
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9>(parameters, token);
             return result;
         }
     }

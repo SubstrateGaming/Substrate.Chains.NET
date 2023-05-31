@@ -18,7 +18,7 @@ namespace Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_
     
     
     /// <summary>
-    /// >> 175 - Composite[sp_arithmetic.fixed_point.FixedU128]
+    /// >> 190 - Composite[sp_arithmetic.fixed_point.FixedU128]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class FixedU128 : BaseType

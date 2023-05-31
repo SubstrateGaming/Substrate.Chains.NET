@@ -41,10 +41,12 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_referenda.pallet
         NoDeposit = 10,
         
         BadStatus = 11,
+        
+        PreimageNotExist = 12,
     }
     
     /// <summary>
-    /// >> 652 - Variant[pallet_referenda.pallet.Error]
+    /// >> 635 - Variant[pallet_referenda.pallet.Error]
     /// 
     ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
     ///			of this pallet.

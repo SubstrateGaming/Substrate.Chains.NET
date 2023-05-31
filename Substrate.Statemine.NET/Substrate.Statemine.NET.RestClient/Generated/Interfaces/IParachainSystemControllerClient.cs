@@ -13,14 +13,14 @@ namespace Substrate.Statemine.NET.RestClient.Generated.Interfaces
    using System.Threading.Tasks;
    using Substrate.NetApi.Model.Types.Base;
    using Substrate.NetApi.Model.Types.Primitive;
-   using Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_primitives.v2;
+   using Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_primitives.v4;
    using Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_trie.storage_proof;
    using Substrate.Statemine.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.relay_state_snapshot;
    using Substrate.Statemine.NET.NetApiExt.Generated.Model.cumulus_primitives_parachain_inherent;
    using Substrate.Statemine.NET.NetApiExt.Generated.Types.Base;
    using Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_core_primitives;
    using Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_weights.weight_v2;
-   using Substrate.Statemine.NET.NetApiExt.Generated.Model.primitive_types;
+   using Substrate.Statemine.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system;
    
    public interface IParachainSystemControllerClient
    {
@@ -62,7 +62,7 @@ namespace Substrate.Statemine.NET.RestClient.Generated.Interfaces
       Task<bool> SubscribeReservedXcmpWeightOverride();
       Task<Weight> GetReservedDmpWeightOverride();
       Task<bool> SubscribeReservedDmpWeightOverride();
-      Task<H256> GetAuthorizedUpgrade();
+      Task<CodeUpgradeAuthorization> GetAuthorizedUpgrade();
       Task<bool> SubscribeAuthorizedUpgrade();
       Task<BaseVec<U8>> GetCustomValidationHeadData();
       Task<bool> SubscribeCustomValidationHeadData();

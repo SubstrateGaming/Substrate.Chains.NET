@@ -14,7 +14,7 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Clients
    using System.Net.Http;
    using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_treasury;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    using Substrate.Kusama.NET.RestClient.Generated.Interfaces;
    
    public sealed class TreasuryControllerClient : BaseClient, ITreasuryControllerClient
@@ -50,9 +50,9 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("Treasury.Deactivated");
       }
-      public async Task<BoundedVecT14> GetApprovals()
+      public async Task<BoundedVecT16> GetApprovals()
       {
-         return await SendRequestAsync<BoundedVecT14>(_httpClient, "treasury/approvals");
+         return await SendRequestAsync<BoundedVecT16>(_httpClient, "treasury/approvals");
       }
       public async Task<bool> SubscribeApprovals()
       {

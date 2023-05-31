@@ -131,6 +131,16 @@ namespace Substrate.Statemine.NET.NetApiExt.Generated
         /// </summary>
         public UniquesStorage UniquesStorage;
         
+        /// <summary>
+        /// NftsStorage storage calls.
+        /// </summary>
+        public NftsStorage NftsStorage;
+        
+        /// <summary>
+        /// ForeignAssetsStorage storage calls.
+        /// </summary>
+        public ForeignAssetsStorage ForeignAssetsStorage;
+        
         public SubstrateClientExt(System.Uri uri, Substrate.NetApi.Model.Extrinsics.ChargeType chargeType) : 
                 base(uri, chargeType)
         {
@@ -156,6 +166,8 @@ namespace Substrate.Statemine.NET.NetApiExt.Generated
             this.ProxyStorage = new ProxyStorage(this);
             this.AssetsStorage = new AssetsStorage(this);
             this.UniquesStorage = new UniquesStorage(this);
+            this.NftsStorage = new NftsStorage(this);
+            this.ForeignAssetsStorage = new ForeignAssetsStorage(this);
         }
     }
 }

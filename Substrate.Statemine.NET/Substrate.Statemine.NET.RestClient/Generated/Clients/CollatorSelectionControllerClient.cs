@@ -12,7 +12,7 @@ namespace Substrate.Statemine.NET.RestClient.Generated.Clients
    using System;
    using System.Threading.Tasks;
    using System.Net.Http;
-   using Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.Statemine.NET.RestClient.Generated.Interfaces;
    
@@ -25,17 +25,17 @@ namespace Substrate.Statemine.NET.RestClient.Generated.Clients
          _httpClient = httpClient;
          _subscriptionClient = subscriptionClient;
       }
-      public async Task<BoundedVecT5> GetInvulnerables()
+      public async Task<BoundedVecT10> GetInvulnerables()
       {
-         return await SendRequestAsync<BoundedVecT5>(_httpClient, "collatorselection/invulnerables");
+         return await SendRequestAsync<BoundedVecT10>(_httpClient, "collatorselection/invulnerables");
       }
       public async Task<bool> SubscribeInvulnerables()
       {
          return await _subscriptionClient.SubscribeAsync("CollatorSelection.Invulnerables");
       }
-      public async Task<BoundedVecT6> GetCandidates()
+      public async Task<BoundedVecT11> GetCandidates()
       {
-         return await SendRequestAsync<BoundedVecT6>(_httpClient, "collatorselection/candidates");
+         return await SendRequestAsync<BoundedVecT11>(_httpClient, "collatorselection/candidates");
       }
       public async Task<bool> SubscribeCandidates()
       {

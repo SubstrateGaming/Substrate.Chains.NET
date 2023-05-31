@@ -28,9 +28,9 @@ namespace Substrate.Statemine.NET.NetApiExt.Generated.Model.xcm.v2
     }
     
     /// <summary>
-    /// >> 89 - Variant[xcm.v2.NetworkId]
+    /// >> 92 - Variant[xcm.v2.NetworkId]
     /// </summary>
-    public sealed class EnumNetworkId : BaseEnumExt<NetworkId, BaseVoid, Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.weak_bounded_vec.WeakBoundedVecT1, BaseVoid, BaseVoid>
+    public sealed class EnumNetworkId : BaseEnumExt<NetworkId, BaseVoid, Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT1, BaseVoid, BaseVoid>
     {
     }
 }

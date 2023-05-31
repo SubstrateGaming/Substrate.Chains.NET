@@ -24,7 +24,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm
     }
     
     /// <summary>
-    /// >> 388 - Variant[xcm.VersionedMultiLocation]
+    /// >> 385 - Variant[xcm.VersionedMultiLocation]
     /// </summary>
     public sealed class EnumVersionedMultiLocation : BaseEnumExt<VersionedMultiLocation, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.v2.multilocation.MultiLocation, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.v3.multilocation.MultiLocation>
     {

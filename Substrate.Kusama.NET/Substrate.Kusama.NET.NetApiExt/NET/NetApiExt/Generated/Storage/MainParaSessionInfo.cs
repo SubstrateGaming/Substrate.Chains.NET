@@ -30,12 +30,14 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         public ParaSessionInfoStorage(SubstrateClientExt client)
         {
             this._client = client;
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("ParaSessionInfo", "AssignmentKeysUnsafe"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.assignment_app.Public>)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("ParaSessionInfo", "AssignmentKeysUnsafe"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.assignment_app.Public>)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("ParaSessionInfo", "EarliestStoredSession"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Primitive.U32)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("ParaSessionInfo", "Sessions"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.Identity}, typeof(Substrate.NetApi.Model.Types.Primitive.U32), typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.SessionInfo)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.Identity}, typeof(Substrate.NetApi.Model.Types.Primitive.U32), typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.SessionInfo)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("ParaSessionInfo", "AccountKeys"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.Identity}, typeof(Substrate.NetApi.Model.Types.Primitive.U32), typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("ParaSessionInfo", "SessionExecutorParams"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.Identity}, typeof(Substrate.NetApi.Model.Types.Primitive.U32), typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.executor_params.ExecutorParams)));
         }
         
         /// <summary>
@@ -64,10 +66,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         ///  Note that this API is private due to it being prone to 'off-by-one' at session boundaries.
         ///  When in doubt, use `Sessions` API instead.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.assignment_app.Public>> AssignmentKeysUnsafe(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.assignment_app.Public>> AssignmentKeysUnsafe(CancellationToken token)
         {
             string parameters = ParaSessionInfoStorage.AssignmentKeysUnsafeParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.assignment_app.Public>>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.assignment_app.Public>>(parameters, token);
             return result;
         }
         
@@ -128,10 +130,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         ///  Should have an entry in range `EarliestStoredSession..=CurrentSessionIndex`.
         ///  Does not have any entries before the session index in the first session change notification.
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.SessionInfo> Sessions(Substrate.NetApi.Model.Types.Primitive.U32 key, CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.SessionInfo> Sessions(Substrate.NetApi.Model.Types.Primitive.U32 key, CancellationToken token)
         {
             string parameters = ParaSessionInfoStorage.SessionsParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.SessionInfo>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.SessionInfo>(parameters, token);
             return result;
         }
         
@@ -163,6 +165,37 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         {
             string parameters = ParaSessionInfoStorage.AccountKeysParams(key);
             var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>>(parameters, token);
+            return result;
+        }
+        
+        /// <summary>
+        /// >> SessionExecutorParamsParams
+        ///  Executor parameter set for a given session index
+        /// </summary>
+        public static string SessionExecutorParamsParams(Substrate.NetApi.Model.Types.Primitive.U32 key)
+        {
+            return RequestGenerator.GetStorage("ParaSessionInfo", "SessionExecutorParams", Substrate.NetApi.Model.Meta.Storage.Type.Map, new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
+                        Substrate.NetApi.Model.Meta.Storage.Hasher.Identity}, new Substrate.NetApi.Model.Types.IType[] {
+                        key});
+        }
+        
+        /// <summary>
+        /// >> SessionExecutorParamsDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string SessionExecutorParamsDefault()
+        {
+            return "0x00";
+        }
+        
+        /// <summary>
+        /// >> SessionExecutorParams
+        ///  Executor parameter set for a given session index
+        /// </summary>
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.executor_params.ExecutorParams> SessionExecutorParams(Substrate.NetApi.Model.Types.Primitive.U32 key, CancellationToken token)
+        {
+            string parameters = ParaSessionInfoStorage.SessionExecutorParamsParams(key);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.executor_params.ExecutorParams>(parameters, token);
             return result;
         }
     }

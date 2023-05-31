@@ -19,7 +19,7 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
    using Substrate.NetApi.Model.Types.Base;
    using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives;
    using Substrate.NetApi.Model.Types.Primitive;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4;
    
    public class ParasControllerClientTest : ClientTestBase
    {
@@ -48,14 +48,14 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
       {
          Substrate.NetApi.Model.Types.Base.BaseBitSeq<Substrate.NetApi.Model.Types.Primitive.U8, Substrate.Kusama.NET.NetApiExt.Generated.Model.bitvec.order.Lsb0> result;
          result = new Substrate.NetApi.Model.Types.Base.BaseBitSeq<Substrate.NetApi.Model.Types.Primitive.U8, Substrate.Kusama.NET.NetApiExt.Generated.Model.bitvec.order.Lsb0>();
-         // NOT IMPLEMENTED >> Initialize Substrate.NetApi.Model.Types.Base.BaseBitSeq`2[[Substrate.NetApi.Model.Types.Primitive.U8, Substrate.NetApi, Version=0.9.2.0, Culture=neutral, PublicKeyToken=null],[Substrate.Kusama.NET.NetApiExt.Generated.Model.bitvec.order.Lsb0, Substrate.Kusama.NET.NetApiExt, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+         // NOT IMPLEMENTED >> Initialize Substrate.NetApi.Model.Types.Base.BaseBitSeq`2[[Substrate.NetApi.Model.Types.Primitive.U8, Substrate.NetApi, Version=0.9.7.0, Culture=neutral, PublicKeyToken=null],[Substrate.Kusama.NET.NetApiExt.Generated.Model.bitvec.order.Lsb0, Substrate.Kusama.NET.NetApiExt, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
          return result;
       }
       public Substrate.NetApi.Model.Types.Base.BaseBitSeq<Substrate.NetApi.Model.Types.Primitive.U8, Substrate.Kusama.NET.NetApiExt.Generated.Model.bitvec.order.Lsb0> GetTestValue4()
       {
          Substrate.NetApi.Model.Types.Base.BaseBitSeq<Substrate.NetApi.Model.Types.Primitive.U8, Substrate.Kusama.NET.NetApiExt.Generated.Model.bitvec.order.Lsb0> result;
          result = new Substrate.NetApi.Model.Types.Base.BaseBitSeq<Substrate.NetApi.Model.Types.Primitive.U8, Substrate.Kusama.NET.NetApiExt.Generated.Model.bitvec.order.Lsb0>();
-         // NOT IMPLEMENTED >> Initialize Substrate.NetApi.Model.Types.Base.BaseBitSeq`2[[Substrate.NetApi.Model.Types.Primitive.U8, Substrate.NetApi, Version=0.9.2.0, Culture=neutral, PublicKeyToken=null],[Substrate.Kusama.NET.NetApiExt.Generated.Model.bitvec.order.Lsb0, Substrate.Kusama.NET.NetApiExt, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+         // NOT IMPLEMENTED >> Initialize Substrate.NetApi.Model.Types.Base.BaseBitSeq`2[[Substrate.NetApi.Model.Types.Primitive.U8, Substrate.NetApi, Version=0.9.7.0, Culture=neutral, PublicKeyToken=null],[Substrate.Kusama.NET.NetApiExt.Generated.Model.bitvec.order.Lsb0, Substrate.Kusama.NET.NetApiExt, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
          return result;
       }
       public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.paras.EnumPvfCheckCause GetTestValue5()
@@ -767,11 +767,11 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.EnumUpgradeGoAhead GetTestValue46()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.EnumUpgradeGoAhead GetTestValue46()
       {
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.EnumUpgradeGoAhead result;
-         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.EnumUpgradeGoAhead();
-         result.Create(this.GetTestValueEnum<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.UpgradeGoAhead>());
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.EnumUpgradeGoAhead result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.EnumUpgradeGoAhead();
+         result.Create(this.GetTestValueEnum<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.UpgradeGoAhead>());
          return result;
       }
       public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id GetTestValue47()
@@ -792,7 +792,7 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          ParasControllerClient rpcClient = new ParasControllerClient(_httpClient, subscriptionClient);
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.EnumUpgradeGoAhead mockupValue = this.GetTestValue46();
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.EnumUpgradeGoAhead mockupValue = this.GetTestValue46();
          Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id mockupKey = this.GetTestValue47();
 
          Assert.IsTrue(await rpcClient.SubscribeUpgradeGoAheadSignal(mockupKey));
@@ -805,16 +805,16 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.EnumUpgradeGoAhead rpcResult = await rpcClient.GetUpgradeGoAheadSignal(mockupKey);
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.EnumUpgradeGoAhead rpcResult = await rpcClient.GetUpgradeGoAheadSignal(mockupKey);
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.EnumUpgradeRestriction GetTestValue49()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.EnumUpgradeRestriction GetTestValue49()
       {
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.EnumUpgradeRestriction result;
-         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.EnumUpgradeRestriction();
-         result.Create(this.GetTestValueEnum<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.UpgradeRestriction>());
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.EnumUpgradeRestriction result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.EnumUpgradeRestriction();
+         result.Create(this.GetTestValueEnum<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.UpgradeRestriction>());
          return result;
       }
       public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id GetTestValue50()
@@ -835,7 +835,7 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          ParasControllerClient rpcClient = new ParasControllerClient(_httpClient, subscriptionClient);
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.EnumUpgradeRestriction mockupValue = this.GetTestValue49();
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.EnumUpgradeRestriction mockupValue = this.GetTestValue49();
          Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id mockupKey = this.GetTestValue50();
 
          Assert.IsTrue(await rpcClient.SubscribeUpgradeRestrictionSignal(mockupKey));
@@ -848,7 +848,7 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.EnumUpgradeRestriction rpcResult = await rpcClient.GetUpgradeRestrictionSignal(mockupKey);
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.EnumUpgradeRestriction rpcResult = await rpcClient.GetUpgradeRestrictionSignal(mockupKey);
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());

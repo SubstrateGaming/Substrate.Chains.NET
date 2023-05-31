@@ -16,7 +16,7 @@ namespace Substrate.Statemine.NET.RestClient.Mockup.Generated.Clients
    using Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_xcm.pallet;
    using Substrate.NetApi.Model.Types.Base;
    using Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_weights.weight_v2;
-   using Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    using Substrate.Statemine.NET.RestClient.Mockup.Generated.Interfaces;
    
    public sealed class PolkadotXcmControllerMockupClient : MockupBaseClient, IPolkadotXcmControllerMockupClient
@@ -54,7 +54,7 @@ namespace Substrate.Statemine.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "PolkadotXcm/VersionNotifyTargets", value.Encode(), Substrate.Statemine.NET.NetApiExt.Generated.Storage.PolkadotXcmStorage.VersionNotifyTargetsParams(key));
       }
-      public async Task<bool> SetVersionDiscoveryQueue(BoundedVecT8 value)
+      public async Task<bool> SetVersionDiscoveryQueue(BoundedVecT13 value)
       {
          return await SendMockupRequestAsync(_httpClient, "PolkadotXcm/VersionDiscoveryQueue", value.Encode(), Substrate.Statemine.NET.NetApiExt.Generated.Storage.PolkadotXcmStorage.VersionDiscoveryQueueParams());
       }
@@ -66,9 +66,13 @@ namespace Substrate.Statemine.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "PolkadotXcm/RemoteLockedFungibles", value.Encode(), Substrate.Statemine.NET.NetApiExt.Generated.Storage.PolkadotXcmStorage.RemoteLockedFungiblesParams(key));
       }
-      public async Task<bool> SetLockedFungibles(BoundedVecT9 value, Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+      public async Task<bool> SetLockedFungibles(BoundedVecT14 value, Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {
          return await SendMockupRequestAsync(_httpClient, "PolkadotXcm/LockedFungibles", value.Encode(), Substrate.Statemine.NET.NetApiExt.Generated.Storage.PolkadotXcmStorage.LockedFungiblesParams(key));
+      }
+      public async Task<bool> SetXcmExecutionSuspended(Bool value)
+      {
+         return await SendMockupRequestAsync(_httpClient, "PolkadotXcm/XcmExecutionSuspended", value.Encode(), Substrate.Statemine.NET.NetApiExt.Generated.Storage.PolkadotXcmStorage.XcmExecutionSuspendedParams());
       }
    }
 }

@@ -26,7 +26,7 @@ namespace Substrate.Statemine.NET.NetApiExt.Generated.Model.frame_support.dispat
     }
     
     /// <summary>
-    /// >> 22 - Variant[frame_support.dispatch.DispatchClass]
+    /// >> 23 - Variant[frame_support.dispatch.DispatchClass]
     /// </summary>
     public sealed class EnumDispatchClass : BaseEnum<DispatchClass>
     {

@@ -35,6 +35,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("NominationPools", "MaxPools"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Primitive.U32)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("NominationPools", "MaxPoolMembers"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Primitive.U32)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("NominationPools", "MaxPoolMembersPerPool"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Primitive.U32)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("NominationPools", "GlobalMaxCommission"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("NominationPools", "PoolMembers"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32), typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools.PoolMember)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("NominationPools", "CounterForPoolMembers"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Primitive.U32)));
@@ -48,12 +49,14 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
                             Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.NetApi.Model.Types.Primitive.U32), typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools.SubPools)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("NominationPools", "CounterForSubPoolsStorage"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Primitive.U32)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("NominationPools", "Metadata"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.NetApi.Model.Types.Primitive.U32), typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT36)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.NetApi.Model.Types.Primitive.U32), typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT39)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("NominationPools", "CounterForMetadata"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Primitive.U32)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("NominationPools", "LastPoolId"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Primitive.U32)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("NominationPools", "ReversePoolIdLookup"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32), typeof(Substrate.NetApi.Model.Types.Primitive.U32)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("NominationPools", "CounterForReversePoolIdLookup"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Primitive.U32)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("NominationPools", "ClaimPermissions"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32), typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools.EnumClaimPermission)));
         }
         
         /// <summary>
@@ -220,6 +223,39 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         }
         
         /// <summary>
+        /// >> GlobalMaxCommissionParams
+        ///  The maximum commission that can be charged by a pool. Used on commission payouts to bound
+        ///  pool commissions that are > `GlobalMaxCommission`, necessary if a future
+        ///  `GlobalMaxCommission` is lower than some current pool commissions.
+        /// </summary>
+        public static string GlobalMaxCommissionParams()
+        {
+            return RequestGenerator.GetStorage("NominationPools", "GlobalMaxCommission", Substrate.NetApi.Model.Meta.Storage.Type.Plain);
+        }
+        
+        /// <summary>
+        /// >> GlobalMaxCommissionDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string GlobalMaxCommissionDefault()
+        {
+            return "0x00";
+        }
+        
+        /// <summary>
+        /// >> GlobalMaxCommission
+        ///  The maximum commission that can be charged by a pool. Used on commission payouts to bound
+        ///  pool commissions that are > `GlobalMaxCommission`, necessary if a future
+        ///  `GlobalMaxCommission` is lower than some current pool commissions.
+        /// </summary>
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill> GlobalMaxCommission(CancellationToken token)
+        {
+            string parameters = NominationPoolsStorage.GlobalMaxCommissionParams();
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill>(parameters, token);
+            return result;
+        }
+        
+        /// <summary>
         /// >> PoolMembersParams
         ///  Active members.
         /// 
@@ -345,8 +381,8 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> RewardPoolsParams
-        ///  Reward pools. This is where there rewards for each pool accumulate. When a members payout
-        ///  is claimed, the balance comes out fo the reward pool. Keyed by the bonded pools account.
+        ///  Reward pools. This is where there rewards for each pool accumulate. When a members payout is
+        ///  claimed, the balance comes out fo the reward pool. Keyed by the bonded pools account.
         /// </summary>
         public static string RewardPoolsParams(Substrate.NetApi.Model.Types.Primitive.U32 key)
         {
@@ -366,8 +402,8 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> RewardPools
-        ///  Reward pools. This is where there rewards for each pool accumulate. When a members payout
-        ///  is claimed, the balance comes out fo the reward pool. Keyed by the bonded pools account.
+        ///  Reward pools. This is where there rewards for each pool accumulate. When a members payout is
+        ///  claimed, the balance comes out fo the reward pool. Keyed by the bonded pools account.
         /// </summary>
         public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools.RewardPool> RewardPools(Substrate.NetApi.Model.Types.Primitive.U32 key, CancellationToken token)
         {
@@ -407,8 +443,8 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> SubPoolsStorageParams
-        ///  Groups of unbonding pools. Each group of unbonding pools belongs to a bonded pool,
-        ///  hence the name sub-pools. Keyed by the bonded pools account.
+        ///  Groups of unbonding pools. Each group of unbonding pools belongs to a
+        ///  bonded pool, hence the name sub-pools. Keyed by the bonded pools account.
         /// </summary>
         public static string SubPoolsStorageParams(Substrate.NetApi.Model.Types.Primitive.U32 key)
         {
@@ -428,8 +464,8 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> SubPoolsStorage
-        ///  Groups of unbonding pools. Each group of unbonding pools belongs to a bonded pool,
-        ///  hence the name sub-pools. Keyed by the bonded pools account.
+        ///  Groups of unbonding pools. Each group of unbonding pools belongs to a
+        ///  bonded pool, hence the name sub-pools. Keyed by the bonded pools account.
         /// </summary>
         public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools.SubPools> SubPoolsStorage(Substrate.NetApi.Model.Types.Primitive.U32 key, CancellationToken token)
         {
@@ -491,10 +527,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> Metadata
         ///  Metadata for the pool.
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT36> Metadata(Substrate.NetApi.Model.Types.Primitive.U32 key, CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT39> Metadata(Substrate.NetApi.Model.Types.Primitive.U32 key, CancellationToken token)
         {
             string parameters = NominationPoolsStorage.MetadataParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT36>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT39>(parameters, token);
             return result;
         }
         
@@ -621,6 +657,37 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
             var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, token);
             return result;
         }
+        
+        /// <summary>
+        /// >> ClaimPermissionsParams
+        ///  Map from a pool member account to their opted claim permission.
+        /// </summary>
+        public static string ClaimPermissionsParams(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+        {
+            return RequestGenerator.GetStorage("NominationPools", "ClaimPermissions", Substrate.NetApi.Model.Meta.Storage.Type.Map, new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
+                        Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, new Substrate.NetApi.Model.Types.IType[] {
+                        key});
+        }
+        
+        /// <summary>
+        /// >> ClaimPermissionsDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string ClaimPermissionsDefault()
+        {
+            return "0x00";
+        }
+        
+        /// <summary>
+        /// >> ClaimPermissions
+        ///  Map from a pool member account to their opted claim permission.
+        /// </summary>
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools.EnumClaimPermission> ClaimPermissions(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, CancellationToken token)
+        {
+            string parameters = NominationPoolsStorage.ClaimPermissionsParams(key);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools.EnumClaimPermission>(parameters, token);
+            return result;
+        }
     }
     
     public sealed class NominationPoolsCalls
@@ -699,13 +766,13 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> create
         /// Contains one variant per dispatchable that can be called by an extrinsic.
         /// </summary>
-        public static Method Create(Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128> amount, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress root, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress nominator, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress state_toggler)
+        public static Method Create(Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128> amount, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress root, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress nominator, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress bouncer)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(amount.Encode());
             byteArray.AddRange(root.Encode());
             byteArray.AddRange(nominator.Encode());
-            byteArray.AddRange(state_toggler.Encode());
+            byteArray.AddRange(bouncer.Encode());
             return new Method(41, "NominationPools", 6, "create", byteArray.ToArray());
         }
         
@@ -713,13 +780,13 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> create_with_pool_id
         /// Contains one variant per dispatchable that can be called by an extrinsic.
         /// </summary>
-        public static Method CreateWithPoolId(Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128> amount, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress root, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress nominator, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress state_toggler, Substrate.NetApi.Model.Types.Primitive.U32 pool_id)
+        public static Method CreateWithPoolId(Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128> amount, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress root, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress nominator, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress bouncer, Substrate.NetApi.Model.Types.Primitive.U32 pool_id)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(amount.Encode());
             byteArray.AddRange(root.Encode());
             byteArray.AddRange(nominator.Encode());
-            byteArray.AddRange(state_toggler.Encode());
+            byteArray.AddRange(bouncer.Encode());
             byteArray.AddRange(pool_id.Encode());
             return new Method(41, "NominationPools", 7, "create_with_pool_id", byteArray.ToArray());
         }
@@ -764,7 +831,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> set_configs
         /// Contains one variant per dispatchable that can be called by an extrinsic.
         /// </summary>
-        public static Method SetConfigs(Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools.EnumConfigOp min_join_bond, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools.EnumConfigOp min_create_bond, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools.EnumConfigOp max_pools, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools.EnumConfigOp max_members, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools.EnumConfigOp max_members_per_pool)
+        public static Method SetConfigs(Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools.EnumConfigOp min_join_bond, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools.EnumConfigOp min_create_bond, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools.EnumConfigOp max_pools, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools.EnumConfigOp max_members, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools.EnumConfigOp max_members_per_pool, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools.EnumConfigOp global_max_commission)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(min_join_bond.Encode());
@@ -772,6 +839,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
             byteArray.AddRange(max_pools.Encode());
             byteArray.AddRange(max_members.Encode());
             byteArray.AddRange(max_members_per_pool.Encode());
+            byteArray.AddRange(global_max_commission.Encode());
             return new Method(41, "NominationPools", 11, "set_configs", byteArray.ToArray());
         }
         
@@ -779,13 +847,13 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> update_roles
         /// Contains one variant per dispatchable that can be called by an extrinsic.
         /// </summary>
-        public static Method UpdateRoles(Substrate.NetApi.Model.Types.Primitive.U32 pool_id, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools.EnumConfigOp new_root, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools.EnumConfigOp new_nominator, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools.EnumConfigOp new_state_toggler)
+        public static Method UpdateRoles(Substrate.NetApi.Model.Types.Primitive.U32 pool_id, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools.EnumConfigOp new_root, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools.EnumConfigOp new_nominator, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools.EnumConfigOp new_bouncer)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(pool_id.Encode());
             byteArray.AddRange(new_root.Encode());
             byteArray.AddRange(new_nominator.Encode());
-            byteArray.AddRange(new_state_toggler.Encode());
+            byteArray.AddRange(new_bouncer.Encode());
             return new Method(41, "NominationPools", 12, "update_roles", byteArray.ToArray());
         }
         
@@ -798,6 +866,87 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(pool_id.Encode());
             return new Method(41, "NominationPools", 13, "chill", byteArray.ToArray());
+        }
+        
+        /// <summary>
+        /// >> bond_extra_other
+        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// </summary>
+        public static Method BondExtraOther(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress member, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools.EnumBondExtra extra)
+        {
+            System.Collections.Generic.List<byte> byteArray = new List<byte>();
+            byteArray.AddRange(member.Encode());
+            byteArray.AddRange(extra.Encode());
+            return new Method(41, "NominationPools", 14, "bond_extra_other", byteArray.ToArray());
+        }
+        
+        /// <summary>
+        /// >> set_claim_permission
+        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// </summary>
+        public static Method SetClaimPermission(Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools.EnumClaimPermission permission)
+        {
+            System.Collections.Generic.List<byte> byteArray = new List<byte>();
+            byteArray.AddRange(permission.Encode());
+            return new Method(41, "NominationPools", 15, "set_claim_permission", byteArray.ToArray());
+        }
+        
+        /// <summary>
+        /// >> claim_payout_other
+        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// </summary>
+        public static Method ClaimPayoutOther(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 other)
+        {
+            System.Collections.Generic.List<byte> byteArray = new List<byte>();
+            byteArray.AddRange(other.Encode());
+            return new Method(41, "NominationPools", 16, "claim_payout_other", byteArray.ToArray());
+        }
+        
+        /// <summary>
+        /// >> set_commission
+        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// </summary>
+        public static Method SetCommission(Substrate.NetApi.Model.Types.Primitive.U32 pool_id, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>> new_commission)
+        {
+            System.Collections.Generic.List<byte> byteArray = new List<byte>();
+            byteArray.AddRange(pool_id.Encode());
+            byteArray.AddRange(new_commission.Encode());
+            return new Method(41, "NominationPools", 17, "set_commission", byteArray.ToArray());
+        }
+        
+        /// <summary>
+        /// >> set_commission_max
+        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// </summary>
+        public static Method SetCommissionMax(Substrate.NetApi.Model.Types.Primitive.U32 pool_id, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill max_commission)
+        {
+            System.Collections.Generic.List<byte> byteArray = new List<byte>();
+            byteArray.AddRange(pool_id.Encode());
+            byteArray.AddRange(max_commission.Encode());
+            return new Method(41, "NominationPools", 18, "set_commission_max", byteArray.ToArray());
+        }
+        
+        /// <summary>
+        /// >> set_commission_change_rate
+        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// </summary>
+        public static Method SetCommissionChangeRate(Substrate.NetApi.Model.Types.Primitive.U32 pool_id, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools.CommissionChangeRate change_rate)
+        {
+            System.Collections.Generic.List<byte> byteArray = new List<byte>();
+            byteArray.AddRange(pool_id.Encode());
+            byteArray.AddRange(change_rate.Encode());
+            return new Method(41, "NominationPools", 19, "set_commission_change_rate", byteArray.ToArray());
+        }
+        
+        /// <summary>
+        /// >> claim_commission
+        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// </summary>
+        public static Method ClaimCommission(Substrate.NetApi.Model.Types.Primitive.U32 pool_id)
+        {
+            System.Collections.Generic.List<byte> byteArray = new List<byte>();
+            byteArray.AddRange(pool_id.Encode());
+            return new Method(41, "NominationPools", 20, "claim_commission", byteArray.ToArray());
         }
     }
     
@@ -976,6 +1125,42 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         PartialUnbondNotAllowedPermissionlessly,
         
         /// <summary>
+        /// >> MaxCommissionRestricted
+        /// The pool's max commission cannot be set higher than the existing value.
+        /// </summary>
+        MaxCommissionRestricted,
+        
+        /// <summary>
+        /// >> CommissionExceedsMaximum
+        /// The supplied commission exceeds the max allowed commission.
+        /// </summary>
+        CommissionExceedsMaximum,
+        
+        /// <summary>
+        /// >> CommissionChangeThrottled
+        /// Not enough blocks have surpassed since the last commission update.
+        /// </summary>
+        CommissionChangeThrottled,
+        
+        /// <summary>
+        /// >> CommissionChangeRateNotAllowed
+        /// The submitted changes to commission change rate are not allowed.
+        /// </summary>
+        CommissionChangeRateNotAllowed,
+        
+        /// <summary>
+        /// >> NoPendingCommission
+        /// There is no pending commission to claim.
+        /// </summary>
+        NoPendingCommission,
+        
+        /// <summary>
+        /// >> NoCommissionCurrentSet
+        /// No commission current has been set.
+        /// </summary>
+        NoCommissionCurrentSet,
+        
+        /// <summary>
         /// >> PoolIdInUse
         /// Pool id currently in use.
         /// </summary>
@@ -986,5 +1171,11 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// Pool id provided is not correct/usable.
         /// </summary>
         InvalidPoolId,
+        
+        /// <summary>
+        /// >> BondExtraRestricted
+        /// Bonding extra is restricted to the exact pending reward amount.
+        /// </summary>
+        BondExtraRestricted,
     }
 }

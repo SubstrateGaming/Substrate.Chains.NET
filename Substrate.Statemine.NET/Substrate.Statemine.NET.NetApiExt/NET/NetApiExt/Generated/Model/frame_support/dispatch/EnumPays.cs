@@ -24,7 +24,7 @@ namespace Substrate.Statemine.NET.NetApiExt.Generated.Model.frame_support.dispat
     }
     
     /// <summary>
-    /// >> 23 - Variant[frame_support.dispatch.Pays]
+    /// >> 24 - Variant[frame_support.dispatch.Pays]
     /// </summary>
     public sealed class EnumPays : BaseEnum<Pays>
     {

@@ -36,7 +36,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parach
     }
     
     /// <summary>
-    /// >> 372 - Variant[polkadot_runtime_parachains.hrmp.pallet.Call]
+    /// >> 365 - Variant[polkadot_runtime_parachains.hrmp.pallet.Call]
     /// Contains one variant per dispatchable that can be called by an extrinsic.
     /// </summary>
     public sealed class EnumCall : BaseEnumExt<Call, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.HrmpChannelId, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.HrmpChannelId, Substrate.NetApi.Model.Types.Primitive.U32>, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>>

@@ -64,7 +64,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Controller
         ///  The current set of keys that may issue a heartbeat.
         /// </summary>
         [HttpGet("Keys")]
-        [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.weak_bounded_vec.WeakBoundedVecT5), 200)]
+        [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT5), 200)]
         [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.ImOnlineStorage), "KeysParams")]
         public IActionResult GetKeys()
         {

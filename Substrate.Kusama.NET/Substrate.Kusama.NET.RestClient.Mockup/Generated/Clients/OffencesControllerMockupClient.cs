@@ -15,7 +15,6 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Clients
    using Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_staking.offence;
    using Substrate.NetApi.Model.Types.Base;
    using Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types;
-   using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.Kusama.NET.RestClient.Mockup.Generated.Interfaces;
    
    public sealed class OffencesControllerMockupClient : MockupBaseClient, IOffencesControllerMockupClient
@@ -29,13 +28,9 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "Offences/Reports", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.OffencesStorage.ReportsParams(key));
       }
-      public async Task<bool> SetConcurrentReportsIndex(BaseVec<H256> value, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr16U8, BaseVec<U8>> key)
+      public async Task<bool> SetConcurrentReportsIndex(BaseVec<H256> value, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr16U8, BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>> key)
       {
          return await SendMockupRequestAsync(_httpClient, "Offences/ConcurrentReportsIndex", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.OffencesStorage.ConcurrentReportsIndexParams(key));
-      }
-      public async Task<bool> SetReportsByKindIndex(BaseVec<U8> value, Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr16U8 key)
-      {
-         return await SendMockupRequestAsync(_httpClient, "Offences/ReportsByKindIndex", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.OffencesStorage.ReportsByKindIndexParams(key));
       }
    }
 }

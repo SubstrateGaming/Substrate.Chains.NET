@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_system.limits
     
     
     /// <summary>
-    /// >> 506 - Composite[frame_system.limits.BlockLength]
+    /// >> 505 - Composite[frame_system.limits.BlockLength]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class BlockLength : BaseType

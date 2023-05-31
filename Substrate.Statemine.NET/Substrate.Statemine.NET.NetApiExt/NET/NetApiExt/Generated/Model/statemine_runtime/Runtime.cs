@@ -18,7 +18,7 @@ namespace Substrate.Statemine.NET.NetApiExt.Generated.Model.statemine_runtime
     
     
     /// <summary>
-    /// >> 325 - Composite[statemine_runtime.Runtime]
+    /// >> 385 - Composite[statemine_runtime.Runtime]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Runtime : BaseType

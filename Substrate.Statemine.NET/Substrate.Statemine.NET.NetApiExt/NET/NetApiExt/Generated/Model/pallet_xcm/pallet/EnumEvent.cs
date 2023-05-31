@@ -66,7 +66,7 @@ namespace Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_xcm.pallet
     }
     
     /// <summary>
-    /// >> 42 - Variant[pallet_xcm.pallet.Event]
+    /// >> 43 - Variant[pallet_xcm.pallet.Event]
     /// 
     ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
     ///			by this pallet.

@@ -55,7 +55,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Controller
         ///  All ongoing or concluded disputes for the last several sessions.
         /// </summary>
         [HttpGet("Disputes")]
-        [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.DisputeState), 200)]
+        [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.DisputeState), 200)]
         [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.ParasDisputesStorage), "DisputesParams", typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_core_primitives.CandidateHash>))]
         public IActionResult GetDisputes(string key)
         {

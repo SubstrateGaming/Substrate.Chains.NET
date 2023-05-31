@@ -28,7 +28,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_whitelist.pallet
     }
     
     /// <summary>
-    /// >> 167 - Variant[pallet_whitelist.pallet.Call]
+    /// >> 145 - Variant[pallet_whitelist.pallet.Call]
     /// Contains one variant per dispatchable that can be called by an extrinsic.
     /// </summary>
     public sealed class EnumCall : BaseEnumExt<Call, Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>, Substrate.Kusama.NET.NetApiExt.Generated.Model.kusama_runtime.EnumRuntimeCall>

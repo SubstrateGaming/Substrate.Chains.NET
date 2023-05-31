@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_ranked_collectiv
     
     
     /// <summary>
-    /// >> 452 - Composite[pallet_ranked_collective.Tally]
+    /// >> 451 - Composite[pallet_ranked_collective.Tally]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Tally : BaseType

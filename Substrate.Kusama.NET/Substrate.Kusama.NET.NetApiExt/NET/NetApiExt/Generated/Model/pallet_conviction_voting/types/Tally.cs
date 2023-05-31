@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_conviction_votin
     
     
     /// <summary>
-    /// >> 449 - Composite[pallet_conviction_voting.types.Tally]
+    /// >> 448 - Composite[pallet_conviction_voting.types.Tally]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Tally : BaseType

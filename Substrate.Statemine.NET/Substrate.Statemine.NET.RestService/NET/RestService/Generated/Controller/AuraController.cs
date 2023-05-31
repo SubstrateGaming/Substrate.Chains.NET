@@ -42,7 +42,7 @@ namespace Substrate.Statemine.NET.RestService.Generated.Controller
         ///  The current authority set.
         /// </summary>
         [HttpGet("Authorities")]
-        [ProducesResponseType(typeof(Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT7), 200)]
+        [ProducesResponseType(typeof(Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT12), 200)]
         [StorageKeyBuilder(typeof(Substrate.Statemine.NET.NetApiExt.Generated.Storage.AuraStorage), "AuthoritiesParams")]
         public IActionResult GetAuthorities()
         {

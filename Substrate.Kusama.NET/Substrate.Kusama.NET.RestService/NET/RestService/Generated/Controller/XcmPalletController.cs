@@ -133,7 +133,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Controller
         ///  which is used as a prioritization.
         /// </summary>
         [HttpGet("VersionDiscoveryQueue")]
-        [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT39), 200)]
+        [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT42), 200)]
         [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.XcmPalletStorage), "VersionDiscoveryQueueParams")]
         public IActionResult GetVersionDiscoveryQueue()
         {
@@ -169,11 +169,23 @@ namespace Substrate.Kusama.NET.RestService.Generated.Controller
         ///  Fungible assets which we know are locked on this chain.
         /// </summary>
         [HttpGet("LockedFungibles")]
-        [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT40), 200)]
+        [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT43), 200)]
         [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.XcmPalletStorage), "LockedFungiblesParams", typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32))]
         public IActionResult GetLockedFungibles(string key)
         {
             return this.Ok(_xcmPalletStorage.GetLockedFungibles(key));
+        }
+        
+        /// <summary>
+        /// >> XcmExecutionSuspended
+        ///  Global suspension state of the XCM executor.
+        /// </summary>
+        [HttpGet("XcmExecutionSuspended")]
+        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Primitive.Bool), 200)]
+        [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.XcmPalletStorage), "XcmExecutionSuspendedParams")]
+        public IActionResult GetXcmExecutionSuspended()
+        {
+            return this.Ok(_xcmPalletStorage.GetXcmExecutionSuspended());
         }
     }
 }

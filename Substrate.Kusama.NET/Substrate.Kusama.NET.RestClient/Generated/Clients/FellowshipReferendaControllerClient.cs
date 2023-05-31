@@ -14,7 +14,8 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Clients
    using System.Net.Http;
    using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_referenda.types;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types;
    using Substrate.Kusama.NET.RestClient.Generated.Interfaces;
    
    public sealed class FellowshipReferendaControllerClient : BaseClient, IFellowshipReferendaControllerClient
@@ -42,9 +43,9 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("FellowshipReferenda.ReferendumInfoFor", Substrate.Kusama.NET.NetApiExt.Generated.Storage.FellowshipReferendaStorage.ReferendumInfoForParams(key));
       }
-      public async Task<BoundedVecT19> GetTrackQueue(U16 key)
+      public async Task<BoundedVecT21> GetTrackQueue(U16 key)
       {
-         return await SendRequestAsync<BoundedVecT19>(_httpClient, "fellowshipreferenda/trackqueue", Substrate.Kusama.NET.NetApiExt.Generated.Storage.FellowshipReferendaStorage.TrackQueueParams(key));
+         return await SendRequestAsync<BoundedVecT21>(_httpClient, "fellowshipreferenda/trackqueue", Substrate.Kusama.NET.NetApiExt.Generated.Storage.FellowshipReferendaStorage.TrackQueueParams(key));
       }
       public async Task<bool> SubscribeTrackQueue(U16 key)
       {
@@ -57,6 +58,14 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Clients
       public async Task<bool> SubscribeDecidingCount(U16 key)
       {
          return await _subscriptionClient.SubscribeAsync("FellowshipReferenda.DecidingCount", Substrate.Kusama.NET.NetApiExt.Generated.Storage.FellowshipReferendaStorage.DecidingCountParams(key));
+      }
+      public async Task<H256> GetMetadataOf(U32 key)
+      {
+         return await SendRequestAsync<H256>(_httpClient, "fellowshipreferenda/metadataof", Substrate.Kusama.NET.NetApiExt.Generated.Storage.FellowshipReferendaStorage.MetadataOfParams(key));
+      }
+      public async Task<bool> SubscribeMetadataOf(U32 key)
+      {
+         return await _subscriptionClient.SubscribeAsync("FellowshipReferenda.MetadataOf", Substrate.Kusama.NET.NetApiExt.Generated.Storage.FellowshipReferendaStorage.MetadataOfParams(key));
       }
    }
 }

@@ -243,7 +243,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> report_equivocation
         /// Contains one variant per dispatchable that can be called by an extrinsic.
         /// </summary>
-        public static Method ReportEquivocation(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_finality_grandpa.EquivocationProof equivocation_proof, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_session.MembershipProof key_owner_proof)
+        public static Method ReportEquivocation(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_grandpa.EquivocationProof equivocation_proof, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_session.MembershipProof key_owner_proof)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(equivocation_proof.Encode());
@@ -255,7 +255,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> report_equivocation_unsigned
         /// Contains one variant per dispatchable that can be called by an extrinsic.
         /// </summary>
-        public static Method ReportEquivocationUnsigned(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_finality_grandpa.EquivocationProof equivocation_proof, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_session.MembershipProof key_owner_proof)
+        public static Method ReportEquivocationUnsigned(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_grandpa.EquivocationProof equivocation_proof, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_session.MembershipProof key_owner_proof)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(equivocation_proof.Encode());

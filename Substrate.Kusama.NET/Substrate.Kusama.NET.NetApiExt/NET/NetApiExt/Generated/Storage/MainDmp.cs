@@ -34,6 +34,8 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
                             Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id), typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_core_primitives.InboundDownwardMessage>)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Dmp", "DownwardMessageQueueHeads"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id), typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("Dmp", "DeliveryFeeFactor"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id), typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedU128)));
         }
         
         /// <summary>
@@ -107,6 +109,37 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         {
             string parameters = DmpStorage.DownwardMessageQueueHeadsParams(key);
             var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256>(parameters, token);
+            return result;
+        }
+        
+        /// <summary>
+        /// >> DeliveryFeeFactorParams
+        ///  The number to multiply the base delivery fee by.
+        /// </summary>
+        public static string DeliveryFeeFactorParams(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id key)
+        {
+            return RequestGenerator.GetStorage("Dmp", "DeliveryFeeFactor", Substrate.NetApi.Model.Meta.Storage.Type.Map, new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
+                        Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, new Substrate.NetApi.Model.Types.IType[] {
+                        key});
+        }
+        
+        /// <summary>
+        /// >> DeliveryFeeFactorDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string DeliveryFeeFactorDefault()
+        {
+            return "0x000064A7B3B6E00D0000000000000000";
+        }
+        
+        /// <summary>
+        /// >> DeliveryFeeFactor
+        ///  The number to multiply the base delivery fee by.
+        /// </summary>
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedU128> DeliveryFeeFactor(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id key, CancellationToken token)
+        {
+            string parameters = DmpStorage.DeliveryFeeFactorParams(key);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedU128>(parameters, token);
             return result;
         }
     }

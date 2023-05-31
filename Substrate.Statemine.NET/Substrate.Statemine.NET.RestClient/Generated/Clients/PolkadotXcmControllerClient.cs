@@ -16,7 +16,7 @@ namespace Substrate.Statemine.NET.RestClient.Generated.Clients
    using Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_xcm.pallet;
    using Substrate.NetApi.Model.Types.Base;
    using Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_weights.weight_v2;
-   using Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    using Substrate.Statemine.NET.RestClient.Generated.Interfaces;
    
    public sealed class PolkadotXcmControllerClient : BaseClient, IPolkadotXcmControllerClient
@@ -84,9 +84,9 @@ namespace Substrate.Statemine.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("PolkadotXcm.VersionNotifyTargets", Substrate.Statemine.NET.NetApiExt.Generated.Storage.PolkadotXcmStorage.VersionNotifyTargetsParams(key));
       }
-      public async Task<BoundedVecT8> GetVersionDiscoveryQueue()
+      public async Task<BoundedVecT13> GetVersionDiscoveryQueue()
       {
-         return await SendRequestAsync<BoundedVecT8>(_httpClient, "polkadotxcm/versiondiscoveryqueue");
+         return await SendRequestAsync<BoundedVecT13>(_httpClient, "polkadotxcm/versiondiscoveryqueue");
       }
       public async Task<bool> SubscribeVersionDiscoveryQueue()
       {
@@ -108,13 +108,21 @@ namespace Substrate.Statemine.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("PolkadotXcm.RemoteLockedFungibles", Substrate.Statemine.NET.NetApiExt.Generated.Storage.PolkadotXcmStorage.RemoteLockedFungiblesParams(key));
       }
-      public async Task<BoundedVecT9> GetLockedFungibles(Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+      public async Task<BoundedVecT14> GetLockedFungibles(Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {
-         return await SendRequestAsync<BoundedVecT9>(_httpClient, "polkadotxcm/lockedfungibles", Substrate.Statemine.NET.NetApiExt.Generated.Storage.PolkadotXcmStorage.LockedFungiblesParams(key));
+         return await SendRequestAsync<BoundedVecT14>(_httpClient, "polkadotxcm/lockedfungibles", Substrate.Statemine.NET.NetApiExt.Generated.Storage.PolkadotXcmStorage.LockedFungiblesParams(key));
       }
       public async Task<bool> SubscribeLockedFungibles(Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {
          return await _subscriptionClient.SubscribeAsync("PolkadotXcm.LockedFungibles", Substrate.Statemine.NET.NetApiExt.Generated.Storage.PolkadotXcmStorage.LockedFungiblesParams(key));
+      }
+      public async Task<Bool> GetXcmExecutionSuspended()
+      {
+         return await SendRequestAsync<Bool>(_httpClient, "polkadotxcm/xcmexecutionsuspended");
+      }
+      public async Task<bool> SubscribeXcmExecutionSuspended()
+      {
+         return await _subscriptionClient.SubscribeAsync("PolkadotXcm.XcmExecutionSuspended");
       }
    }
 }

@@ -14,7 +14,7 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Clients
    using System.Net.Http;
    using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_election_provider_multi_phase;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    using Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_election_provider_multi_phase.signed;
    using Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_npos_elections;
    using Substrate.Kusama.NET.RestClient.Mockup.Generated.Interfaces;
@@ -54,7 +54,7 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "ElectionProviderMultiPhase/SignedSubmissionNextIndex", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.ElectionProviderMultiPhaseStorage.SignedSubmissionNextIndexParams());
       }
-      public async Task<bool> SetSignedSubmissionIndices(BoundedVecT32 value)
+      public async Task<bool> SetSignedSubmissionIndices(BoundedVecT34 value)
       {
          return await SendMockupRequestAsync(_httpClient, "ElectionProviderMultiPhase/SignedSubmissionIndices", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.ElectionProviderMultiPhaseStorage.SignedSubmissionIndicesParams());
       }

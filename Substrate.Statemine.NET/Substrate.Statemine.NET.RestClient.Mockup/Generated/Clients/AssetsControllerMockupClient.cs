@@ -34,7 +34,7 @@ namespace Substrate.Statemine.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "Assets/Approvals", value.Encode(), Substrate.Statemine.NET.NetApiExt.Generated.Storage.AssetsStorage.ApprovalsParams(key));
       }
-      public async Task<bool> SetMetadata(AssetMetadata value, Substrate.NetApi.Model.Types.Primitive.U32 key)
+      public async Task<bool> SetMetadata(AssetMetadataT1 value, Substrate.NetApi.Model.Types.Primitive.U32 key)
       {
          return await SendMockupRequestAsync(_httpClient, "Assets/Metadata", value.Encode(), Substrate.Statemine.NET.NetApiExt.Generated.Storage.AssetsStorage.MetadataParams(key));
       }

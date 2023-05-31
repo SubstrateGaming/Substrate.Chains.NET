@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.kusama_runtime
     
     
     /// <summary>
-    /// >> 239 - Composite[kusama_runtime.NposCompactSolution24]
+    /// >> 217 - Composite[kusama_runtime.NposCompactSolution24]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class NposCompactSolution24 : BaseType

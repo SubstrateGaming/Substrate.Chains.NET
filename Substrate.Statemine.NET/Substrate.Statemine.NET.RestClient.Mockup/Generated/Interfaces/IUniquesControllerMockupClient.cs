@@ -14,7 +14,7 @@ namespace Substrate.Statemine.NET.RestClient.Mockup.Generated.Interfaces
    using Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_uniques.types;
    using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.NetApi.Model.Types.Base;
-   using Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    
    public interface IUniquesControllerMockupClient
    {
@@ -25,7 +25,7 @@ namespace Substrate.Statemine.NET.RestClient.Mockup.Generated.Interfaces
       Task<bool> SetAsset(ItemDetails value, BaseTuple<U32, U32> key);
       Task<bool> SetClassMetadataOf(CollectionMetadata value, U32 key);
       Task<bool> SetInstanceMetadataOf(ItemMetadata value, BaseTuple<U32, U32> key);
-      Task<bool> SetAttribute(BaseTuple<BoundedVecT3, U128> value, BaseTuple<U32, BaseOpt<U32>, BoundedVecT2> key);
+      Task<bool> SetAttribute(BaseTuple<BoundedVecT6, U128> value, BaseTuple<U32, BaseOpt<U32>, BoundedVecT5> key);
       Task<bool> SetItemPriceOf(BaseTuple<U128, BaseOpt<Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>> value, BaseTuple<U32, U32> key);
       Task<bool> SetCollectionMaxSupply(U32 value, U32 key);
    }

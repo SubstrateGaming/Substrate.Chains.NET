@@ -24,7 +24,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.v2.multiasset
     }
     
     /// <summary>
-    /// >> 403 - Variant[xcm.v2.multiasset.AssetId]
+    /// >> 400 - Variant[xcm.v2.multiasset.AssetId]
     /// </summary>
     public sealed class EnumAssetId : BaseEnumExt<AssetId, Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.v2.multilocation.MultiLocation, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>
     {

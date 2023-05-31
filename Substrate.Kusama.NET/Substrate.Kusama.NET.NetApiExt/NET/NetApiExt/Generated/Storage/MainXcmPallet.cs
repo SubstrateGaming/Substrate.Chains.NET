@@ -45,14 +45,15 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("XcmPallet", "VersionNotifyTargets"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat,
                             Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation>), typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U64, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight, Substrate.NetApi.Model.Types.Primitive.U32>)));
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("XcmPallet", "VersionDiscoveryQueue"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT39)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("XcmPallet", "VersionDiscoveryQueue"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT42)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("XcmPallet", "CurrentMigration"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_xcm.pallet.EnumVersionMigrationStage)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("XcmPallet", "RemoteLockedFungibles"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat,
                             Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat,
                             Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAssetId>), typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_xcm.pallet.RemoteLockedFungibleRecord)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("XcmPallet", "LockedFungibles"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32), typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT40)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32), typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT43)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("XcmPallet", "XcmExecutionSuspended"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Primitive.Bool)));
         }
         
         /// <summary>
@@ -304,10 +305,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         ///  the `u32` counter is the number of times that a send to the destination has been attempted,
         ///  which is used as a prioritization.
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT39> VersionDiscoveryQueue(CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT42> VersionDiscoveryQueue(CancellationToken token)
         {
             string parameters = XcmPalletStorage.VersionDiscoveryQueueParams();
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT39>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT42>(parameters, token);
             return result;
         }
         
@@ -396,10 +397,39 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> LockedFungibles
         ///  Fungible assets which we know are locked on this chain.
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT40> LockedFungibles(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT43> LockedFungibles(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, CancellationToken token)
         {
             string parameters = XcmPalletStorage.LockedFungiblesParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT40>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT43>(parameters, token);
+            return result;
+        }
+        
+        /// <summary>
+        /// >> XcmExecutionSuspendedParams
+        ///  Global suspension state of the XCM executor.
+        /// </summary>
+        public static string XcmExecutionSuspendedParams()
+        {
+            return RequestGenerator.GetStorage("XcmPallet", "XcmExecutionSuspended", Substrate.NetApi.Model.Meta.Storage.Type.Plain);
+        }
+        
+        /// <summary>
+        /// >> XcmExecutionSuspendedDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string XcmExecutionSuspendedDefault()
+        {
+            return "0x00";
+        }
+        
+        /// <summary>
+        /// >> XcmExecutionSuspended
+        ///  Global suspension state of the XCM executor.
+        /// </summary>
+        public async Task<Substrate.NetApi.Model.Types.Primitive.Bool> XcmExecutionSuspended(CancellationToken token)
+        {
+            string parameters = XcmPalletStorage.XcmExecutionSuspendedParams();
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.Bool>(parameters, token);
             return result;
         }
     }
@@ -532,6 +562,17 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
             byteArray.AddRange(fee_asset_item.Encode());
             byteArray.AddRange(weight_limit.Encode());
             return new Method(99, "XcmPallet", 9, "limited_teleport_assets", byteArray.ToArray());
+        }
+        
+        /// <summary>
+        /// >> force_suspension
+        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// </summary>
+        public static Method ForceSuspension(Substrate.NetApi.Model.Types.Primitive.Bool suspended)
+        {
+            System.Collections.Generic.List<byte> byteArray = new List<byte>();
+            byteArray.AddRange(suspended.Encode());
+            return new Method(99, "XcmPallet", 10, "force_suspension", byteArray.ToArray());
         }
     }
     

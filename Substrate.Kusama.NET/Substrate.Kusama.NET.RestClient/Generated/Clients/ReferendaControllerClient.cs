@@ -14,7 +14,8 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Clients
    using System.Net.Http;
    using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_referenda.types;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types;
    using Substrate.Kusama.NET.RestClient.Generated.Interfaces;
    
    public sealed class ReferendaControllerClient : BaseClient, IReferendaControllerClient
@@ -42,9 +43,9 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("Referenda.ReferendumInfoFor", Substrate.Kusama.NET.NetApiExt.Generated.Storage.ReferendaStorage.ReferendumInfoForParams(key));
       }
-      public async Task<BoundedVecT17> GetTrackQueue(U16 key)
+      public async Task<BoundedVecT19> GetTrackQueue(U16 key)
       {
-         return await SendRequestAsync<BoundedVecT17>(_httpClient, "referenda/trackqueue", Substrate.Kusama.NET.NetApiExt.Generated.Storage.ReferendaStorage.TrackQueueParams(key));
+         return await SendRequestAsync<BoundedVecT19>(_httpClient, "referenda/trackqueue", Substrate.Kusama.NET.NetApiExt.Generated.Storage.ReferendaStorage.TrackQueueParams(key));
       }
       public async Task<bool> SubscribeTrackQueue(U16 key)
       {
@@ -57,6 +58,14 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Clients
       public async Task<bool> SubscribeDecidingCount(U16 key)
       {
          return await _subscriptionClient.SubscribeAsync("Referenda.DecidingCount", Substrate.Kusama.NET.NetApiExt.Generated.Storage.ReferendaStorage.DecidingCountParams(key));
+      }
+      public async Task<H256> GetMetadataOf(U32 key)
+      {
+         return await SendRequestAsync<H256>(_httpClient, "referenda/metadataof", Substrate.Kusama.NET.NetApiExt.Generated.Storage.ReferendaStorage.MetadataOfParams(key));
+      }
+      public async Task<bool> SubscribeMetadataOf(U32 key)
+      {
+         return await _subscriptionClient.SubscribeAsync("Referenda.MetadataOf", Substrate.Kusama.NET.NetApiExt.Generated.Storage.ReferendaStorage.MetadataOfParams(key));
       }
    }
 }

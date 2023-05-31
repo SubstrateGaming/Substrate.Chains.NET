@@ -13,9 +13,9 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Clients
    using System.Threading.Tasks;
    using System.Net.Http;
    using Substrate.NetApi.Model.Types.Primitive;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_balances;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.weak_bounded_vec;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_balances.types;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    using Substrate.Kusama.NET.RestClient.Generated.Interfaces;
    
    public sealed class BalancesControllerClient : BaseClient, IBalancesControllerClient
@@ -59,13 +59,29 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("Balances.Locks", Substrate.Kusama.NET.NetApiExt.Generated.Storage.BalancesStorage.LocksParams(key));
       }
-      public async Task<BoundedVecT4> GetReserves(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+      public async Task<BoundedVecT10> GetReserves(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {
-         return await SendRequestAsync<BoundedVecT4>(_httpClient, "balances/reserves", Substrate.Kusama.NET.NetApiExt.Generated.Storage.BalancesStorage.ReservesParams(key));
+         return await SendRequestAsync<BoundedVecT10>(_httpClient, "balances/reserves", Substrate.Kusama.NET.NetApiExt.Generated.Storage.BalancesStorage.ReservesParams(key));
       }
       public async Task<bool> SubscribeReserves(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {
          return await _subscriptionClient.SubscribeAsync("Balances.Reserves", Substrate.Kusama.NET.NetApiExt.Generated.Storage.BalancesStorage.ReservesParams(key));
+      }
+      public async Task<BoundedVecT11> GetHolds(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+      {
+         return await SendRequestAsync<BoundedVecT11>(_httpClient, "balances/holds", Substrate.Kusama.NET.NetApiExt.Generated.Storage.BalancesStorage.HoldsParams(key));
+      }
+      public async Task<bool> SubscribeHolds(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+      {
+         return await _subscriptionClient.SubscribeAsync("Balances.Holds", Substrate.Kusama.NET.NetApiExt.Generated.Storage.BalancesStorage.HoldsParams(key));
+      }
+      public async Task<BoundedVecT12> GetFreezes(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+      {
+         return await SendRequestAsync<BoundedVecT12>(_httpClient, "balances/freezes", Substrate.Kusama.NET.NetApiExt.Generated.Storage.BalancesStorage.FreezesParams(key));
+      }
+      public async Task<bool> SubscribeFreezes(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+      {
+         return await _subscriptionClient.SubscribeAsync("Balances.Freezes", Substrate.Kusama.NET.NetApiExt.Generated.Storage.BalancesStorage.FreezesParams(key));
       }
    }
 }

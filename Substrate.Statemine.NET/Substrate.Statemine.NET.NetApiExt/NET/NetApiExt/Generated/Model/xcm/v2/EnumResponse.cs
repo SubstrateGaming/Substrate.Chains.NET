@@ -28,7 +28,7 @@ namespace Substrate.Statemine.NET.NetApiExt.Generated.Model.xcm.v2
     }
     
     /// <summary>
-    /// >> 215 - Variant[xcm.v2.Response]
+    /// >> 230 - Variant[xcm.v2.Response]
     /// </summary>
     public sealed class EnumResponse : BaseEnumExt<Response, BaseVoid, Substrate.Statemine.NET.NetApiExt.Generated.Model.xcm.v2.multiasset.MultiAssets, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Statemine.NET.NetApiExt.Generated.Model.xcm.v2.traits.EnumError>>, Substrate.NetApi.Model.Types.Primitive.U32>
     {

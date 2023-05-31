@@ -12,14 +12,14 @@ namespace Substrate.Statemine.NET.RestClient.Generated.Interfaces
    using System;
    using System.Threading.Tasks;
    using Substrate.NetApi.Model.Types.Base;
-   using Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    using Substrate.NetApi.Model.Types.Primitive;
    
    public interface IProxyControllerClient
    {
-      Task<BaseTuple<BoundedVecT11, U128>> GetProxies(Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
+      Task<BaseTuple<BoundedVecT17, U128>> GetProxies(Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
       Task<bool> SubscribeProxies(Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
-      Task<BaseTuple<BoundedVecT12, U128>> GetAnnouncements(Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
+      Task<BaseTuple<BoundedVecT18, U128>> GetAnnouncements(Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
       Task<bool> SubscribeAnnouncements(Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
    }
 }

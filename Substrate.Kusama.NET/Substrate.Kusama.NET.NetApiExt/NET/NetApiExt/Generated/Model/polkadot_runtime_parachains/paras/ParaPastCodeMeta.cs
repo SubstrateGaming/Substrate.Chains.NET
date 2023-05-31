@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parach
     
     
     /// <summary>
-    /// >> 794 - Composite[polkadot_runtime_parachains.paras.ParaPastCodeMeta]
+    /// >> 779 - Composite[polkadot_runtime_parachains.paras.ParaPastCodeMeta]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class ParaPastCodeMeta : BaseType

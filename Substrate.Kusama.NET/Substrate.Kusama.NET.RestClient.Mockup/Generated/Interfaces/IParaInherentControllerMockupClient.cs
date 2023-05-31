@@ -12,7 +12,7 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Interfaces
    using System;
    using System.Threading.Tasks;
    using Substrate.NetApi.Model.Types.Base;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4;
    
    public interface IParaInherentControllerMockupClient
    {

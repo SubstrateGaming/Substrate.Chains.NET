@@ -32,12 +32,12 @@ namespace Substrate.Statemine.NET.NetApiExt.Generated.Model.xcm.v3
         /// <summary>
         /// >> name
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> _name;
+        private Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT2 _name;
         
         /// <summary>
         /// >> module_name
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> _moduleName;
+        private Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT2 _moduleName;
         
         /// <summary>
         /// >> major
@@ -66,7 +66,7 @@ namespace Substrate.Statemine.NET.NetApiExt.Generated.Model.xcm.v3
             }
         }
         
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> Name
+        public Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT2 Name
         {
             get
             {
@@ -78,7 +78,7 @@ namespace Substrate.Statemine.NET.NetApiExt.Generated.Model.xcm.v3
             }
         }
         
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> ModuleName
+        public Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT2 ModuleName
         {
             get
             {
@@ -148,9 +148,9 @@ namespace Substrate.Statemine.NET.NetApiExt.Generated.Model.xcm.v3
             var start = p;
             Index = new Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>();
             Index.Decode(byteArray, ref p);
-            Name = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>();
+            Name = new Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT2();
             Name.Decode(byteArray, ref p);
-            ModuleName = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>();
+            ModuleName = new Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT2();
             ModuleName.Decode(byteArray, ref p);
             Major = new Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>();
             Major.Decode(byteArray, ref p);

@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking
     
     
     /// <summary>
-    /// >> 52 - Composite[pallet_staking.Exposure]
+    /// >> 53 - Composite[pallet_staking.Exposure]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Exposure : BaseType

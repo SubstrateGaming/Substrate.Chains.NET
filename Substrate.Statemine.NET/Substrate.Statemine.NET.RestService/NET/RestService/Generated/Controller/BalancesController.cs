@@ -89,7 +89,7 @@ namespace Substrate.Statemine.NET.RestService.Generated.Controller
         ///  NOTE: This is only used in the case that this pallet is used to store balances.
         /// </summary>
         [HttpGet("Account")]
-        [ProducesResponseType(typeof(Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_balances.AccountData), 200)]
+        [ProducesResponseType(typeof(Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_balances.types.AccountData), 200)]
         [StorageKeyBuilder(typeof(Substrate.Statemine.NET.NetApiExt.Generated.Storage.BalancesStorage), "AccountParams", typeof(Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32))]
         public IActionResult GetAccount(string key)
         {
@@ -102,7 +102,7 @@ namespace Substrate.Statemine.NET.RestService.Generated.Controller
         ///  NOTE: Should only be accessed when setting, changing and freeing a lock.
         /// </summary>
         [HttpGet("Locks")]
-        [ProducesResponseType(typeof(Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.weak_bounded_vec.WeakBoundedVecT2), 200)]
+        [ProducesResponseType(typeof(Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT2), 200)]
         [StorageKeyBuilder(typeof(Substrate.Statemine.NET.NetApiExt.Generated.Storage.BalancesStorage), "LocksParams", typeof(Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32))]
         public IActionResult GetLocks(string key)
         {
@@ -114,11 +114,35 @@ namespace Substrate.Statemine.NET.RestService.Generated.Controller
         ///  Named reserves on some account balances.
         /// </summary>
         [HttpGet("Reserves")]
-        [ProducesResponseType(typeof(Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT4), 200)]
+        [ProducesResponseType(typeof(Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT8), 200)]
         [StorageKeyBuilder(typeof(Substrate.Statemine.NET.NetApiExt.Generated.Storage.BalancesStorage), "ReservesParams", typeof(Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32))]
         public IActionResult GetReserves(string key)
         {
             return this.Ok(_balancesStorage.GetReserves(key));
+        }
+        
+        /// <summary>
+        /// >> Holds
+        ///  Holds on account balances.
+        /// </summary>
+        [HttpGet("Holds")]
+        [ProducesResponseType(typeof(Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9), 200)]
+        [StorageKeyBuilder(typeof(Substrate.Statemine.NET.NetApiExt.Generated.Storage.BalancesStorage), "HoldsParams", typeof(Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32))]
+        public IActionResult GetHolds(string key)
+        {
+            return this.Ok(_balancesStorage.GetHolds(key));
+        }
+        
+        /// <summary>
+        /// >> Freezes
+        ///  Freeze locks on account balances.
+        /// </summary>
+        [HttpGet("Freezes")]
+        [ProducesResponseType(typeof(Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9), 200)]
+        [StorageKeyBuilder(typeof(Substrate.Statemine.NET.NetApiExt.Generated.Storage.BalancesStorage), "FreezesParams", typeof(Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32))]
+        public IActionResult GetFreezes(string key)
+        {
+            return this.Ok(_balancesStorage.GetFreezes(key));
         }
     }
 }

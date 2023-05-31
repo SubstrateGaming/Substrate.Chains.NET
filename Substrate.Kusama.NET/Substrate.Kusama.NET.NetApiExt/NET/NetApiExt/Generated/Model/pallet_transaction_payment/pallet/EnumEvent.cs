@@ -22,7 +22,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_transaction_paym
     }
     
     /// <summary>
-    /// >> 32 - Variant[pallet_transaction_payment.pallet.Event]
+    /// >> 33 - Variant[pallet_transaction_payment.pallet.Event]
     /// 
     ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
     ///			by this pallet.

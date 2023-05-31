@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.offchain
     
     
     /// <summary>
-    /// >> 124 - Composite[sp_core.offchain.OpaqueNetworkState]
+    /// >> 114 - Composite[sp_core.offchain.OpaqueNetworkState]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class OpaqueNetworkState : BaseType

@@ -14,7 +14,7 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Clients
    using System.Net.Http;
    using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_child_bounties;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    using Substrate.Kusama.NET.RestClient.Generated.Interfaces;
    
    public sealed class ChildBountiesControllerClient : BaseClient, IChildBountiesControllerClient
@@ -50,9 +50,9 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("ChildBounties.ChildBounties", Substrate.Kusama.NET.NetApiExt.Generated.Storage.ChildBountiesStorage.ChildBountiesParams(key));
       }
-      public async Task<BoundedVecT30> GetChildBountyDescriptions(U32 key)
+      public async Task<BoundedVecT32> GetChildBountyDescriptions(U32 key)
       {
-         return await SendRequestAsync<BoundedVecT30>(_httpClient, "childbounties/childbountydescriptions", Substrate.Kusama.NET.NetApiExt.Generated.Storage.ChildBountiesStorage.ChildBountyDescriptionsParams(key));
+         return await SendRequestAsync<BoundedVecT32>(_httpClient, "childbounties/childbountydescriptions", Substrate.Kusama.NET.NetApiExt.Generated.Storage.ChildBountiesStorage.ChildBountyDescriptionsParams(key));
       }
       public async Task<bool> SubscribeChildBountyDescriptions(U32 key)
       {

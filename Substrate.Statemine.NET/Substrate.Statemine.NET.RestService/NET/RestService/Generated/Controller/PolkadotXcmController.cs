@@ -133,7 +133,7 @@ namespace Substrate.Statemine.NET.RestService.Generated.Controller
         ///  which is used as a prioritization.
         /// </summary>
         [HttpGet("VersionDiscoveryQueue")]
-        [ProducesResponseType(typeof(Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT8), 200)]
+        [ProducesResponseType(typeof(Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT13), 200)]
         [StorageKeyBuilder(typeof(Substrate.Statemine.NET.NetApiExt.Generated.Storage.PolkadotXcmStorage), "VersionDiscoveryQueueParams")]
         public IActionResult GetVersionDiscoveryQueue()
         {
@@ -169,11 +169,23 @@ namespace Substrate.Statemine.NET.RestService.Generated.Controller
         ///  Fungible assets which we know are locked on this chain.
         /// </summary>
         [HttpGet("LockedFungibles")]
-        [ProducesResponseType(typeof(Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT9), 200)]
+        [ProducesResponseType(typeof(Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT14), 200)]
         [StorageKeyBuilder(typeof(Substrate.Statemine.NET.NetApiExt.Generated.Storage.PolkadotXcmStorage), "LockedFungiblesParams", typeof(Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32))]
         public IActionResult GetLockedFungibles(string key)
         {
             return this.Ok(_polkadotXcmStorage.GetLockedFungibles(key));
+        }
+        
+        /// <summary>
+        /// >> XcmExecutionSuspended
+        ///  Global suspension state of the XCM executor.
+        /// </summary>
+        [HttpGet("XcmExecutionSuspended")]
+        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Primitive.Bool), 200)]
+        [StorageKeyBuilder(typeof(Substrate.Statemine.NET.NetApiExt.Generated.Storage.PolkadotXcmStorage), "XcmExecutionSuspendedParams")]
+        public IActionResult GetXcmExecutionSuspended()
+        {
+            return this.Ok(_polkadotXcmStorage.GetXcmExecutionSuspended());
         }
     }
 }

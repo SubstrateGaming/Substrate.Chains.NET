@@ -22,19 +22,17 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parach
         
         DisputeConcluded = 1,
         
-        DisputeTimedOut = 2,
-        
-        Revert = 3,
+        Revert = 2,
     }
     
     /// <summary>
-    /// >> 490 - Variant[polkadot_runtime_parachains.disputes.pallet.Event]
+    /// >> 489 - Variant[polkadot_runtime_parachains.disputes.pallet.Event]
     /// 
     ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
     ///			by this pallet.
     ///			
     /// </summary>
-    public sealed class EnumEvent : BaseEnumExt<Event, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_core_primitives.CandidateHash, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.disputes.EnumDisputeLocation>, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_core_primitives.CandidateHash, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.disputes.EnumDisputeResult>, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_core_primitives.CandidateHash, Substrate.NetApi.Model.Types.Primitive.U32>
+    public sealed class EnumEvent : BaseEnumExt<Event, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_core_primitives.CandidateHash, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.disputes.EnumDisputeLocation>, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_core_primitives.CandidateHash, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.disputes.EnumDisputeResult>, Substrate.NetApi.Model.Types.Primitive.U32>
     {
     }
 }

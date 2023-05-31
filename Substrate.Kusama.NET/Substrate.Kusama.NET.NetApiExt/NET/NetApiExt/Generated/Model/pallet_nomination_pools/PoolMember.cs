@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools
     
     
     /// <summary>
-    /// >> 741 - Composite[pallet_nomination_pools.PoolMember]
+    /// >> 723 - Composite[pallet_nomination_pools.PoolMember]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class PoolMember : BaseType
@@ -42,7 +42,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools
         /// <summary>
         /// >> unbonding_eras
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_btree_map.BoundedBTreeMapT1 _unbondingEras;
+        private Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_map.BoundedBTreeMapT1 _unbondingEras;
         
         public Substrate.NetApi.Model.Types.Primitive.U32 PoolId
         {
@@ -80,7 +80,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools
             }
         }
         
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_btree_map.BoundedBTreeMapT1 UnbondingEras
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_map.BoundedBTreeMapT1 UnbondingEras
         {
             get
             {
@@ -116,7 +116,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools
             Points.Decode(byteArray, ref p);
             LastRecordedRewardCounter = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedU128();
             LastRecordedRewardCounter.Decode(byteArray, ref p);
-            UnbondingEras = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_btree_map.BoundedBTreeMapT1();
+            UnbondingEras = new Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_map.BoundedBTreeMapT1();
             UnbondingEras.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

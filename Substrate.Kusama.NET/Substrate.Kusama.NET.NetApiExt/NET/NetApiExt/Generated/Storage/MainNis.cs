@@ -30,9 +30,9 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         public NisStorage(SubstrateClientExt client)
         {
             this._client = client;
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("Nis", "QueueTotals"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT33)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("Nis", "QueueTotals"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT35)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Nis", "Queues"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.NetApi.Model.Types.Primitive.U32), typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT34)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.NetApi.Model.Types.Primitive.U32), typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT36)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Nis", "Summary"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nis.pallet.SummaryRecord)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Nis", "Receipts"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.NetApi.Model.Types.Primitive.U32), typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nis.pallet.ReceiptRecord)));
@@ -318,10 +318,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         ///  The vector is indexed by duration in `Period`s, offset by one, so information on the queue
         ///  whose duration is one `Period` would be storage `0`.
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT33> QueueTotals(CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT35> QueueTotals(CancellationToken token)
         {
             string parameters = NisStorage.QueueTotalsParams();
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT33>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT35>(parameters, token);
             return result;
         }
         
@@ -349,10 +349,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> Queues
         ///  The queues of bids. Indexed by duration (in `Period`s).
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT34> Queues(Substrate.NetApi.Model.Types.Primitive.U32 key, CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT36> Queues(Substrate.NetApi.Model.Types.Primitive.U32 key, CancellationToken token)
         {
             string parameters = NisStorage.QueuesParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT34>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT36>(parameters, token);
             return result;
         }
         
@@ -516,6 +516,17 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         }
         
         /// <summary>
+        /// >> HoldReason
+        ///  The identifier of the hold reason.
+        /// </summary>
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.kusama_runtime.EnumRuntimeHoldReason HoldReason()
+        {
+            var result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.kusama_runtime.EnumRuntimeHoldReason();
+            result.Create("0x2600");
+            return result;
+        }
+        
+        /// <summary>
         /// >> QueueCount
         ///  Number of duration queues in total. This sets the maximum duration supported, which is
         ///  this value multiplied by `Period`.
@@ -628,17 +639,6 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         {
             var result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perquintill, Substrate.NetApi.Model.Types.Primitive.U32>();
             result.Create("0x0000D9E9AC2D780305000000");
-            return result;
-        }
-        
-        /// <summary>
-        /// >> ReserveId
-        ///  The name for the reserve ID.
-        /// </summary>
-        public Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr8U8 ReserveId()
-        {
-            var result = new Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr8U8();
-            result.Create("0x70792F6E69732020");
             return result;
         }
     }

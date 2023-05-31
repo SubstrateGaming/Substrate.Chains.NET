@@ -13,7 +13,7 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Interfaces
    using System.Threading.Tasks;
    using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_bounties;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    
    public interface IBountiesControllerClient
    {
@@ -21,9 +21,9 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Interfaces
       Task<bool> SubscribeBountyCount();
       Task<Bounty> GetBounties(U32 key);
       Task<bool> SubscribeBounties(U32 key);
-      Task<BoundedVecT30> GetBountyDescriptions(U32 key);
+      Task<BoundedVecT32> GetBountyDescriptions(U32 key);
       Task<bool> SubscribeBountyDescriptions(U32 key);
-      Task<BoundedVecT14> GetBountyApprovals();
+      Task<BoundedVecT16> GetBountyApprovals();
       Task<bool> SubscribeBountyApprovals();
    }
 }

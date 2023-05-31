@@ -25,7 +25,9 @@ namespace Substrate.Statemine.NET.RestClient.Mockup
       public IBalancesControllerMockupClient BalancesControllerClient;
       public ICollatorSelectionControllerMockupClient CollatorSelectionControllerClient;
       public IDmpQueueControllerMockupClient DmpQueueControllerClient;
+      public IForeignAssetsControllerMockupClient ForeignAssetsControllerClient;
       public IMultisigControllerMockupClient MultisigControllerClient;
+      public INftsControllerMockupClient NftsControllerClient;
       public IParachainInfoControllerMockupClient ParachainInfoControllerClient;
       public IParachainSystemControllerMockupClient ParachainSystemControllerClient;
       public IPolkadotXcmControllerMockupClient PolkadotXcmControllerClient;
@@ -46,7 +48,9 @@ namespace Substrate.Statemine.NET.RestClient.Mockup
          BalancesControllerClient = new BalancesControllerMockupClient(_httpClient);
          CollatorSelectionControllerClient = new CollatorSelectionControllerMockupClient(_httpClient);
          DmpQueueControllerClient = new DmpQueueControllerMockupClient(_httpClient);
+         ForeignAssetsControllerClient = new ForeignAssetsControllerMockupClient(_httpClient);
          MultisigControllerClient = new MultisigControllerMockupClient(_httpClient);
+         NftsControllerClient = new NftsControllerMockupClient(_httpClient);
          ParachainInfoControllerClient = new ParachainInfoControllerMockupClient(_httpClient);
          ParachainSystemControllerClient = new ParachainSystemControllerMockupClient(_httpClient);
          PolkadotXcmControllerClient = new PolkadotXcmControllerMockupClient(_httpClient);

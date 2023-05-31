@@ -15,7 +15,6 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Clients
    using Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_staking.offence;
    using Substrate.NetApi.Model.Types.Base;
    using Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types;
-   using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.Kusama.NET.RestClient.Generated.Interfaces;
    
    public sealed class OffencesControllerClient : BaseClient, IOffencesControllerClient
@@ -35,21 +34,13 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("Offences.Reports", Substrate.Kusama.NET.NetApiExt.Generated.Storage.OffencesStorage.ReportsParams(key));
       }
-      public async Task<BaseVec<H256>> GetConcurrentReportsIndex(BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr16U8, BaseVec<U8>> key)
+      public async Task<BaseVec<H256>> GetConcurrentReportsIndex(BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr16U8, BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>> key)
       {
          return await SendRequestAsync<BaseVec<H256>>(_httpClient, "offences/concurrentreportsindex", Substrate.Kusama.NET.NetApiExt.Generated.Storage.OffencesStorage.ConcurrentReportsIndexParams(key));
       }
-      public async Task<bool> SubscribeConcurrentReportsIndex(BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr16U8, BaseVec<U8>> key)
+      public async Task<bool> SubscribeConcurrentReportsIndex(BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr16U8, BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>> key)
       {
          return await _subscriptionClient.SubscribeAsync("Offences.ConcurrentReportsIndex", Substrate.Kusama.NET.NetApiExt.Generated.Storage.OffencesStorage.ConcurrentReportsIndexParams(key));
-      }
-      public async Task<BaseVec<U8>> GetReportsByKindIndex(Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr16U8 key)
-      {
-         return await SendRequestAsync<BaseVec<U8>>(_httpClient, "offences/reportsbykindindex", Substrate.Kusama.NET.NetApiExt.Generated.Storage.OffencesStorage.ReportsByKindIndexParams(key));
-      }
-      public async Task<bool> SubscribeReportsByKindIndex(Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr16U8 key)
-      {
-         return await _subscriptionClient.SubscribeAsync("Offences.ReportsByKindIndex", Substrate.Kusama.NET.NetApiExt.Generated.Storage.OffencesStorage.ReportsByKindIndexParams(key));
       }
    }
 }

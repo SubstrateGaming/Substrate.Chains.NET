@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society
     
     
     /// <summary>
-    /// >> 668 - Composite[pallet_society.Bid]
+    /// >> 651 - Composite[pallet_society.Bid]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Bid : BaseType

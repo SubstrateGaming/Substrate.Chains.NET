@@ -15,7 +15,7 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Clients
    using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_ranked_collective;
    using Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    using Substrate.Kusama.NET.RestClient.Generated.Interfaces;
    
    public sealed class FellowshipCollectiveControllerClient : BaseClient, IFellowshipCollectiveControllerClient
@@ -67,9 +67,9 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("FellowshipCollective.Voting", Substrate.Kusama.NET.NetApiExt.Generated.Storage.FellowshipCollectiveStorage.VotingParams(key));
       }
-      public async Task<BoundedVecT18> GetVotingCleanup(U32 key)
+      public async Task<BoundedVecT20> GetVotingCleanup(U32 key)
       {
-         return await SendRequestAsync<BoundedVecT18>(_httpClient, "fellowshipcollective/votingcleanup", Substrate.Kusama.NET.NetApiExt.Generated.Storage.FellowshipCollectiveStorage.VotingCleanupParams(key));
+         return await SendRequestAsync<BoundedVecT20>(_httpClient, "fellowshipcollective/votingcleanup", Substrate.Kusama.NET.NetApiExt.Generated.Storage.FellowshipCollectiveStorage.VotingCleanupParams(key));
       }
       public async Task<bool> SubscribeVotingCleanup(U32 key)
       {

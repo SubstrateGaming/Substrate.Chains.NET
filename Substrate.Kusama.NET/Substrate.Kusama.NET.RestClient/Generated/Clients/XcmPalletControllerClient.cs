@@ -16,7 +16,7 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Clients
    using Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_xcm.pallet;
    using Substrate.NetApi.Model.Types.Base;
    using Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_weights.weight_v2;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    using Substrate.Kusama.NET.RestClient.Generated.Interfaces;
    
    public sealed class XcmPalletControllerClient : BaseClient, IXcmPalletControllerClient
@@ -84,9 +84,9 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("XcmPallet.VersionNotifyTargets", Substrate.Kusama.NET.NetApiExt.Generated.Storage.XcmPalletStorage.VersionNotifyTargetsParams(key));
       }
-      public async Task<BoundedVecT39> GetVersionDiscoveryQueue()
+      public async Task<BoundedVecT42> GetVersionDiscoveryQueue()
       {
-         return await SendRequestAsync<BoundedVecT39>(_httpClient, "xcmpallet/versiondiscoveryqueue");
+         return await SendRequestAsync<BoundedVecT42>(_httpClient, "xcmpallet/versiondiscoveryqueue");
       }
       public async Task<bool> SubscribeVersionDiscoveryQueue()
       {
@@ -108,13 +108,21 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("XcmPallet.RemoteLockedFungibles", Substrate.Kusama.NET.NetApiExt.Generated.Storage.XcmPalletStorage.RemoteLockedFungiblesParams(key));
       }
-      public async Task<BoundedVecT40> GetLockedFungibles(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+      public async Task<BoundedVecT43> GetLockedFungibles(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {
-         return await SendRequestAsync<BoundedVecT40>(_httpClient, "xcmpallet/lockedfungibles", Substrate.Kusama.NET.NetApiExt.Generated.Storage.XcmPalletStorage.LockedFungiblesParams(key));
+         return await SendRequestAsync<BoundedVecT43>(_httpClient, "xcmpallet/lockedfungibles", Substrate.Kusama.NET.NetApiExt.Generated.Storage.XcmPalletStorage.LockedFungiblesParams(key));
       }
       public async Task<bool> SubscribeLockedFungibles(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {
          return await _subscriptionClient.SubscribeAsync("XcmPallet.LockedFungibles", Substrate.Kusama.NET.NetApiExt.Generated.Storage.XcmPalletStorage.LockedFungiblesParams(key));
+      }
+      public async Task<Bool> GetXcmExecutionSuspended()
+      {
+         return await SendRequestAsync<Bool>(_httpClient, "xcmpallet/xcmexecutionsuspended");
+      }
+      public async Task<bool> SubscribeXcmExecutionSuspended()
+      {
+         return await _subscriptionClient.SubscribeAsync("XcmPallet.XcmExecutionSuspended");
       }
    }
 }

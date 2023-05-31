@@ -24,7 +24,7 @@ namespace Substrate.Statemine.NET.NetApiExt.Generated.Model.xcm.v3
     }
     
     /// <summary>
-    /// >> 80 - Variant[xcm.v3.WeightLimit]
+    /// >> 83 - Variant[xcm.v3.WeightLimit]
     /// </summary>
     public sealed class EnumWeightLimit : BaseEnumExt<WeightLimit, BaseVoid, Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>
     {

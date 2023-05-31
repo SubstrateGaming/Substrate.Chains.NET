@@ -14,7 +14,7 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Interfaces
    using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_ranked_collective;
    using Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    
    public interface IFellowshipCollectiveControllerMockupClient
    {
@@ -23,6 +23,6 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Interfaces
       Task<bool> SetIdToIndex(U32 value, Substrate.NetApi.Model.Types.Base.BaseTuple<U16, AccountId32> key);
       Task<bool> SetIndexToId(AccountId32 value, Substrate.NetApi.Model.Types.Base.BaseTuple<U16, U32> key);
       Task<bool> SetVoting(EnumVoteRecord value, Substrate.NetApi.Model.Types.Base.BaseTuple<U32, AccountId32> key);
-      Task<bool> SetVotingCleanup(BoundedVecT18 value, U32 key);
+      Task<bool> SetVotingCleanup(BoundedVecT20 value, U32 key);
    }
 }

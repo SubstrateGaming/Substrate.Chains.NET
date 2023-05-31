@@ -13,10 +13,11 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Clients
    using System.Threading.Tasks;
    using System.Net.Http;
    using Substrate.NetApi.Model.Types.Base;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.assignment_app;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.assignment_app;
    using Substrate.NetApi.Model.Types.Primitive;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4;
    using Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.executor_params;
    using Substrate.Kusama.NET.RestClient.Generated.Interfaces;
    
    public sealed class ParaSessionInfoControllerClient : BaseClient, IParaSessionInfoControllerClient
@@ -59,6 +60,14 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Clients
       public async Task<bool> SubscribeAccountKeys(U32 key)
       {
          return await _subscriptionClient.SubscribeAsync("ParaSessionInfo.AccountKeys", Substrate.Kusama.NET.NetApiExt.Generated.Storage.ParaSessionInfoStorage.AccountKeysParams(key));
+      }
+      public async Task<ExecutorParams> GetSessionExecutorParams(U32 key)
+      {
+         return await SendRequestAsync<ExecutorParams>(_httpClient, "parasessioninfo/sessionexecutorparams", Substrate.Kusama.NET.NetApiExt.Generated.Storage.ParaSessionInfoStorage.SessionExecutorParamsParams(key));
+      }
+      public async Task<bool> SubscribeSessionExecutorParams(U32 key)
+      {
+         return await _subscriptionClient.SubscribeAsync("ParaSessionInfo.SessionExecutorParams", Substrate.Kusama.NET.NetApiExt.Generated.Storage.ParaSessionInfoStorage.SessionExecutorParamsParams(key));
       }
    }
 }

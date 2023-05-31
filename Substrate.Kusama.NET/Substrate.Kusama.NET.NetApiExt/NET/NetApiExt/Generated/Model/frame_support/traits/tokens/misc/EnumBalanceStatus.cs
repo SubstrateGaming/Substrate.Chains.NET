@@ -24,7 +24,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_support.traits.to
     }
     
     /// <summary>
-    /// >> 31 - Variant[frame_support.traits.tokens.misc.BalanceStatus]
+    /// >> 32 - Variant[frame_support.traits.tokens.misc.BalanceStatus]
     /// </summary>
     public sealed class EnumBalanceStatus : BaseEnum<BalanceStatus>
     {

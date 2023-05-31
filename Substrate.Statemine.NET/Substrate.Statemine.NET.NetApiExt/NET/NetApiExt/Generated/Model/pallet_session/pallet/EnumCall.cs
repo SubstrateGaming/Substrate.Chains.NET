@@ -24,7 +24,7 @@ namespace Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_session.palle
     }
     
     /// <summary>
-    /// >> 190 - Variant[pallet_session.pallet.Call]
+    /// >> 205 - Variant[pallet_session.pallet.Call]
     /// Contains one variant per dispatchable that can be called by an extrinsic.
     /// </summary>
     public sealed class EnumCall : BaseEnumExt<Call, BaseTuple<Substrate.Statemine.NET.NetApiExt.Generated.Model.statemine_runtime.SessionKeys, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>, BaseVoid>

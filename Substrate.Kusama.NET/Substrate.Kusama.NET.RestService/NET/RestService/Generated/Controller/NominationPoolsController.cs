@@ -107,6 +107,20 @@ namespace Substrate.Kusama.NET.RestService.Generated.Controller
         }
         
         /// <summary>
+        /// >> GlobalMaxCommission
+        ///  The maximum commission that can be charged by a pool. Used on commission payouts to bound
+        ///  pool commissions that are > `GlobalMaxCommission`, necessary if a future
+        ///  `GlobalMaxCommission` is lower than some current pool commissions.
+        /// </summary>
+        [HttpGet("GlobalMaxCommission")]
+        [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill), 200)]
+        [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.NominationPoolsStorage), "GlobalMaxCommissionParams")]
+        public IActionResult GetGlobalMaxCommission()
+        {
+            return this.Ok(_nominationPoolsStorage.GetGlobalMaxCommission());
+        }
+        
+        /// <summary>
         /// >> PoolMembers
         ///  Active members.
         /// 
@@ -158,8 +172,8 @@ namespace Substrate.Kusama.NET.RestService.Generated.Controller
         
         /// <summary>
         /// >> RewardPools
-        ///  Reward pools. This is where there rewards for each pool accumulate. When a members payout
-        ///  is claimed, the balance comes out fo the reward pool. Keyed by the bonded pools account.
+        ///  Reward pools. This is where there rewards for each pool accumulate. When a members payout is
+        ///  claimed, the balance comes out fo the reward pool. Keyed by the bonded pools account.
         /// </summary>
         [HttpGet("RewardPools")]
         [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools.RewardPool), 200)]
@@ -183,8 +197,8 @@ namespace Substrate.Kusama.NET.RestService.Generated.Controller
         
         /// <summary>
         /// >> SubPoolsStorage
-        ///  Groups of unbonding pools. Each group of unbonding pools belongs to a bonded pool,
-        ///  hence the name sub-pools. Keyed by the bonded pools account.
+        ///  Groups of unbonding pools. Each group of unbonding pools belongs to a
+        ///  bonded pool, hence the name sub-pools. Keyed by the bonded pools account.
         /// </summary>
         [HttpGet("SubPoolsStorage")]
         [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools.SubPools), 200)]
@@ -211,7 +225,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Controller
         ///  Metadata for the pool.
         /// </summary>
         [HttpGet("Metadata")]
-        [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT36), 200)]
+        [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT39), 200)]
         [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.NominationPoolsStorage), "MetadataParams", typeof(Substrate.NetApi.Model.Types.Primitive.U32))]
         public IActionResult GetMetadata(string key)
         {
@@ -267,6 +281,18 @@ namespace Substrate.Kusama.NET.RestService.Generated.Controller
         public IActionResult GetCounterForReversePoolIdLookup()
         {
             return this.Ok(_nominationPoolsStorage.GetCounterForReversePoolIdLookup());
+        }
+        
+        /// <summary>
+        /// >> ClaimPermissions
+        ///  Map from a pool member account to their opted claim permission.
+        /// </summary>
+        [HttpGet("ClaimPermissions")]
+        [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools.EnumClaimPermission), 200)]
+        [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.NominationPoolsStorage), "ClaimPermissionsParams", typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32))]
+        public IActionResult GetClaimPermissions(string key)
+        {
+            return this.Ok(_nominationPoolsStorage.GetClaimPermissions(key));
         }
     }
 }

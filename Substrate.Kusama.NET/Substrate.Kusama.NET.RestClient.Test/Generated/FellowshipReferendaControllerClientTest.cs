@@ -17,7 +17,8 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
    using Substrate.Kusama.NET.RestClient.Generated.Clients;
    using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_referenda.types;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types;
    
    public class FellowshipReferendaControllerClientTest : ClientTestBase
    {
@@ -294,10 +295,10 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT19 GetTestValue16()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT21 GetTestValue16()
       {
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT19 result;
-         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT19();
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT21 result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT21();
          result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>>();
          result.Value.Create(new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>[] {
                   this.GetTestValue17()});
@@ -321,7 +322,7 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          FellowshipReferendaControllerClient rpcClient = new FellowshipReferendaControllerClient(_httpClient, subscriptionClient);
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT19 mockupValue = this.GetTestValue16();
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT21 mockupValue = this.GetTestValue16();
          Substrate.NetApi.Model.Types.Primitive.U16 mockupKey = this.GetTestValueU16();
 
          Assert.IsTrue(await rpcClient.SubscribeTrackQueue(mockupKey));
@@ -334,7 +335,7 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT19 rpcResult = await rpcClient.GetTrackQueue(mockupKey);
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT21 rpcResult = await rpcClient.GetTrackQueue(mockupKey);
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
@@ -364,6 +365,75 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
          Substrate.NetApi.Model.Types.Primitive.U32 rpcResult = await rpcClient.GetDecidingCount(mockupKey);
+
+         // Test that the expected mockup value matches the actual result from RPC service.
+         Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
+      }
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256 GetTestValue20()
+      {
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256 result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256();
+         result.Value = new Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr32U8();
+         result.Value.Create(new Substrate.NetApi.Model.Types.Primitive.U8[] {
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8()});
+         return result;
+      }
+      [Test()]
+      public async System.Threading.Tasks.Task TestMetadataOf()
+      {
+         // Construct new Mockup client to test with.
+         FellowshipReferendaControllerMockupClient mockupClient = new FellowshipReferendaControllerMockupClient(_httpClient);
+
+         // Construct new subscription client to test with.
+         var subscriptionClient = CreateSubscriptionClient();
+
+         // Construct new RPC client to test with.
+         FellowshipReferendaControllerClient rpcClient = new FellowshipReferendaControllerClient(_httpClient, subscriptionClient);
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256 mockupValue = this.GetTestValue20();
+         Substrate.NetApi.Model.Types.Primitive.U32 mockupKey = this.GetTestValueU32();
+
+         Assert.IsTrue(await rpcClient.SubscribeMetadataOf(mockupKey));
+
+         // Save the previously generated mockup value in RPC service storage.
+         bool mockupSetResult = await mockupClient.SetMetadataOf(mockupValue, mockupKey);
+
+         // Test that the expected mockup value was handled successfully from RPC service.
+         Assert.IsTrue(mockupSetResult);
+         var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
+         Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
+
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256 rpcResult = await rpcClient.GetMetadataOf(mockupKey);
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());

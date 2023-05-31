@@ -12,12 +12,12 @@ namespace Substrate.Statemine.NET.RestClient.Mockup.Generated.Interfaces
    using System;
    using System.Threading.Tasks;
    using Substrate.NetApi.Model.Types.Base;
-   using Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    using Substrate.NetApi.Model.Types.Primitive;
    
    public interface IProxyControllerMockupClient
    {
-      Task<bool> SetProxies(BaseTuple<BoundedVecT11, U128> value, Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
-      Task<bool> SetAnnouncements(BaseTuple<BoundedVecT12, U128> value, Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
+      Task<bool> SetProxies(BaseTuple<BoundedVecT17, U128> value, Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
+      Task<bool> SetAnnouncements(BaseTuple<BoundedVecT18, U128> value, Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
    }
 }

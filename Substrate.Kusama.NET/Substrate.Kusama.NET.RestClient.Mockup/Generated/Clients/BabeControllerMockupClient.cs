@@ -13,11 +13,11 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Clients
    using System.Threading.Tasks;
    using System.Net.Http;
    using Substrate.NetApi.Model.Types.Primitive;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.weak_bounded_vec;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec;
    using Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_slots;
    using Substrate.Kusama.NET.NetApiExt.Generated.Types.Base;
    using Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_babe.digests;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    using Substrate.NetApi.Model.Types.Base;
    using Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_babe;
    using Substrate.Kusama.NET.RestClient.Mockup.Generated.Interfaces;
@@ -65,7 +65,7 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "Babe/SegmentIndex", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.BabeStorage.SegmentIndexParams());
       }
-      public async Task<bool> SetUnderConstruction(BoundedVecT3 value, U32 key)
+      public async Task<bool> SetUnderConstruction(BoundedVecT8 value, U32 key)
       {
          return await SendMockupRequestAsync(_httpClient, "Babe/UnderConstruction", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.BabeStorage.UnderConstructionParams(key));
       }
@@ -92,6 +92,10 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Clients
       public async Task<bool> SetNextEpochConfig(BabeEpochConfiguration value)
       {
          return await SendMockupRequestAsync(_httpClient, "Babe/NextEpochConfig", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.BabeStorage.NextEpochConfigParams());
+      }
+      public async Task<bool> SetSkippedEpochs(BoundedVecT9 value)
+      {
+         return await SendMockupRequestAsync(_httpClient, "Babe/SkippedEpochs", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.BabeStorage.SkippedEpochsParams());
       }
    }
 }

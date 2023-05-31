@@ -16,7 +16,7 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Clients
    using Substrate.NetApi.Model.Types.Base;
    using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives;
    using Substrate.NetApi.Model.Types.Primitive;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4;
    using Substrate.Kusama.NET.RestClient.Generated.Interfaces;
    
    public sealed class ParasControllerClient : BaseClient, IParasControllerClient

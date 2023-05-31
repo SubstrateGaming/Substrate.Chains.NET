@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.prim
     
     
     /// <summary>
-    /// >> 373 - Composite[polkadot_parachain.primitives.HrmpChannelId]
+    /// >> 366 - Composite[polkadot_parachain.primitives.HrmpChannelId]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class HrmpChannelId : BaseType

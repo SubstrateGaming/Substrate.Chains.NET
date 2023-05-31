@@ -14,15 +14,12 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Interfaces
    using Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_staking.offence;
    using Substrate.NetApi.Model.Types.Base;
    using Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types;
-   using Substrate.NetApi.Model.Types.Primitive;
    
    public interface IOffencesControllerClient
    {
       Task<OffenceDetails> GetReports(H256 key);
       Task<bool> SubscribeReports(H256 key);
-      Task<BaseVec<H256>> GetConcurrentReportsIndex(BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr16U8, BaseVec<U8>> key);
-      Task<bool> SubscribeConcurrentReportsIndex(BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr16U8, BaseVec<U8>> key);
-      Task<BaseVec<U8>> GetReportsByKindIndex(Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr16U8 key);
-      Task<bool> SubscribeReportsByKindIndex(Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr16U8 key);
+      Task<BaseVec<H256>> GetConcurrentReportsIndex(BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr16U8, BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>> key);
+      Task<bool> SubscribeConcurrentReportsIndex(BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr16U8, BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>> key);
    }
 }

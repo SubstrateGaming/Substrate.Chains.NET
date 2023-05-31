@@ -15,7 +15,7 @@ namespace Substrate.Statemine.NET.RestClient.Generated.Clients
    using Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_uniques.types;
    using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.NetApi.Model.Types.Base;
-   using Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    using Substrate.Statemine.NET.RestClient.Generated.Interfaces;
    
    public sealed class UniquesControllerClient : BaseClient, IUniquesControllerClient
@@ -83,11 +83,11 @@ namespace Substrate.Statemine.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("Uniques.InstanceMetadataOf", Substrate.Statemine.NET.NetApiExt.Generated.Storage.UniquesStorage.InstanceMetadataOfParams(key));
       }
-      public async Task<BaseTuple<BoundedVecT3, U128>> GetAttribute(BaseTuple<U32, BaseOpt<U32>, BoundedVecT2> key)
+      public async Task<BaseTuple<BoundedVecT6, U128>> GetAttribute(BaseTuple<U32, BaseOpt<U32>, BoundedVecT5> key)
       {
-         return await SendRequestAsync<BaseTuple<BoundedVecT3, U128>>(_httpClient, "uniques/attribute", Substrate.Statemine.NET.NetApiExt.Generated.Storage.UniquesStorage.AttributeParams(key));
+         return await SendRequestAsync<BaseTuple<BoundedVecT6, U128>>(_httpClient, "uniques/attribute", Substrate.Statemine.NET.NetApiExt.Generated.Storage.UniquesStorage.AttributeParams(key));
       }
-      public async Task<bool> SubscribeAttribute(BaseTuple<U32, BaseOpt<U32>, BoundedVecT2> key)
+      public async Task<bool> SubscribeAttribute(BaseTuple<U32, BaseOpt<U32>, BoundedVecT5> key)
       {
          return await _subscriptionClient.SubscribeAsync("Uniques.Attribute", Substrate.Statemine.NET.NetApiExt.Generated.Storage.UniquesStorage.AttributeParams(key));
       }

@@ -42,7 +42,7 @@ namespace Substrate.Statemine.NET.RestService.Generated.Controller
         ///  The invulnerable, fixed collators.
         /// </summary>
         [HttpGet("Invulnerables")]
-        [ProducesResponseType(typeof(Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT5), 200)]
+        [ProducesResponseType(typeof(Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10), 200)]
         [StorageKeyBuilder(typeof(Substrate.Statemine.NET.NetApiExt.Generated.Storage.CollatorSelectionStorage), "InvulnerablesParams")]
         public IActionResult GetInvulnerables()
         {
@@ -54,7 +54,7 @@ namespace Substrate.Statemine.NET.RestService.Generated.Controller
         ///  The (community, limited) collation candidates.
         /// </summary>
         [HttpGet("Candidates")]
-        [ProducesResponseType(typeof(Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT6), 200)]
+        [ProducesResponseType(typeof(Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT11), 200)]
         [StorageKeyBuilder(typeof(Substrate.Statemine.NET.NetApiExt.Generated.Storage.CollatorSelectionStorage), "CandidatesParams")]
         public IActionResult GetCandidates()
         {

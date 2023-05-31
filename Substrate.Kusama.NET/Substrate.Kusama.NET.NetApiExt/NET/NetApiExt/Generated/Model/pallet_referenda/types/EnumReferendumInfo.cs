@@ -32,7 +32,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_referenda.types
     }
     
     /// <summary>
-    /// >> 649 - Variant[pallet_referenda.types.ReferendumInfo]
+    /// >> 632 - Variant[pallet_referenda.types.ReferendumInfo]
     /// </summary>
     public sealed class EnumReferendumInfo : BaseEnumExt<ReferendumInfo, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_referenda.types.ReferendumStatusT2, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_referenda.types.Deposit>, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_referenda.types.Deposit>>, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_referenda.types.Deposit>, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_referenda.types.Deposit>>, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_referenda.types.Deposit>, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_referenda.types.Deposit>>, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_referenda.types.Deposit>, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_referenda.types.Deposit>>, Substrate.NetApi.Model.Types.Primitive.U32>
     {

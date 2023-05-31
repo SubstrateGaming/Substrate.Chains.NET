@@ -64,6 +64,14 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         Substrate.NetApi.Model.Types.Primitive.U32 GetMaxPoolMembersPerPool();
         
         /// <summary>
+        /// >> GlobalMaxCommission
+        ///  The maximum commission that can be charged by a pool. Used on commission payouts to bound
+        ///  pool commissions that are > `GlobalMaxCommission`, necessary if a future
+        ///  `GlobalMaxCommission` is lower than some current pool commissions.
+        /// </summary>
+        Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill GetGlobalMaxCommission();
+        
+        /// <summary>
         /// >> PoolMembers
         ///  Active members.
         /// 
@@ -91,8 +99,8 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         
         /// <summary>
         /// >> RewardPools
-        ///  Reward pools. This is where there rewards for each pool accumulate. When a members payout
-        ///  is claimed, the balance comes out fo the reward pool. Keyed by the bonded pools account.
+        ///  Reward pools. This is where there rewards for each pool accumulate. When a members payout is
+        ///  claimed, the balance comes out fo the reward pool. Keyed by the bonded pools account.
         /// </summary>
         Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools.RewardPool GetRewardPools(string key);
         
@@ -104,8 +112,8 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         
         /// <summary>
         /// >> SubPoolsStorage
-        ///  Groups of unbonding pools. Each group of unbonding pools belongs to a bonded pool,
-        ///  hence the name sub-pools. Keyed by the bonded pools account.
+        ///  Groups of unbonding pools. Each group of unbonding pools belongs to a
+        ///  bonded pool, hence the name sub-pools. Keyed by the bonded pools account.
         /// </summary>
         Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools.SubPools GetSubPoolsStorage(string key);
         
@@ -119,7 +127,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// >> Metadata
         ///  Metadata for the pool.
         /// </summary>
-        Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT36 GetMetadata(string key);
+        Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT39 GetMetadata(string key);
         
         /// <summary>
         /// >> CounterForMetadata
@@ -147,6 +155,12 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// Counter for the related counted storage map
         /// </summary>
         Substrate.NetApi.Model.Types.Primitive.U32 GetCounterForReversePoolIdLookup();
+        
+        /// <summary>
+        /// >> ClaimPermissions
+        ///  Map from a pool member account to their opted claim permission.
+        /// </summary>
+        Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools.EnumClaimPermission GetClaimPermissions(string key);
     }
     
     /// <summary>
@@ -179,6 +193,11 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// _maxPoolMembersPerPoolTypedStorage typed storage field
         /// </summary>
         private TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32> _maxPoolMembersPerPoolTypedStorage;
+        
+        /// <summary>
+        /// _globalMaxCommissionTypedStorage typed storage field
+        /// </summary>
+        private TypedStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill> _globalMaxCommissionTypedStorage;
         
         /// <summary>
         /// _poolMembersTypedStorage typed storage field
@@ -223,7 +242,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// <summary>
         /// _metadataTypedStorage typed storage field
         /// </summary>
-        private TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT36> _metadataTypedStorage;
+        private TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT39> _metadataTypedStorage;
         
         /// <summary>
         /// _counterForMetadataTypedStorage typed storage field
@@ -246,6 +265,11 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         private TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32> _counterForReversePoolIdLookupTypedStorage;
         
         /// <summary>
+        /// _claimPermissionsTypedStorage typed storage field
+        /// </summary>
+        private TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools.EnumClaimPermission> _claimPermissionsTypedStorage;
+        
+        /// <summary>
         /// NominationPoolsStorage constructor.
         /// </summary>
         public NominationPoolsStorage(IStorageDataProvider storageDataProvider, List<IStorageChangeDelegate> storageChangeDelegates)
@@ -255,6 +279,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
             this.MaxPoolsTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32>("NominationPools.MaxPools", storageDataProvider, storageChangeDelegates);
             this.MaxPoolMembersTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32>("NominationPools.MaxPoolMembers", storageDataProvider, storageChangeDelegates);
             this.MaxPoolMembersPerPoolTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32>("NominationPools.MaxPoolMembersPerPool", storageDataProvider, storageChangeDelegates);
+            this.GlobalMaxCommissionTypedStorage = new TypedStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill>("NominationPools.GlobalMaxCommission", storageDataProvider, storageChangeDelegates);
             this.PoolMembersTypedStorage = new TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools.PoolMember>("NominationPools.PoolMembers", storageDataProvider, storageChangeDelegates);
             this.CounterForPoolMembersTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32>("NominationPools.CounterForPoolMembers", storageDataProvider, storageChangeDelegates);
             this.BondedPoolsTypedStorage = new TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools.BondedPoolInner>("NominationPools.BondedPools", storageDataProvider, storageChangeDelegates);
@@ -263,11 +288,12 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
             this.CounterForRewardPoolsTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32>("NominationPools.CounterForRewardPools", storageDataProvider, storageChangeDelegates);
             this.SubPoolsStorageTypedStorage = new TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools.SubPools>("NominationPools.SubPoolsStorage", storageDataProvider, storageChangeDelegates);
             this.CounterForSubPoolsStorageTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32>("NominationPools.CounterForSubPoolsStorage", storageDataProvider, storageChangeDelegates);
-            this.MetadataTypedStorage = new TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT36>("NominationPools.Metadata", storageDataProvider, storageChangeDelegates);
+            this.MetadataTypedStorage = new TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT39>("NominationPools.Metadata", storageDataProvider, storageChangeDelegates);
             this.CounterForMetadataTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32>("NominationPools.CounterForMetadata", storageDataProvider, storageChangeDelegates);
             this.LastPoolIdTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32>("NominationPools.LastPoolId", storageDataProvider, storageChangeDelegates);
             this.ReversePoolIdLookupTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Primitive.U32>("NominationPools.ReversePoolIdLookup", storageDataProvider, storageChangeDelegates);
             this.CounterForReversePoolIdLookupTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32>("NominationPools.CounterForReversePoolIdLookup", storageDataProvider, storageChangeDelegates);
+            this.ClaimPermissionsTypedStorage = new TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools.EnumClaimPermission>("NominationPools.ClaimPermissions", storageDataProvider, storageChangeDelegates);
         }
         
         /// <summary>
@@ -342,6 +368,21 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
             set
             {
                 _maxPoolMembersPerPoolTypedStorage = value;
+            }
+        }
+        
+        /// <summary>
+        /// _globalMaxCommissionTypedStorage property
+        /// </summary>
+        public TypedStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill> GlobalMaxCommissionTypedStorage
+        {
+            get
+            {
+                return _globalMaxCommissionTypedStorage;
+            }
+            set
+            {
+                _globalMaxCommissionTypedStorage = value;
             }
         }
         
@@ -468,7 +509,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// <summary>
         /// _metadataTypedStorage property
         /// </summary>
-        public TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT36> MetadataTypedStorage
+        public TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT39> MetadataTypedStorage
         {
             get
             {
@@ -541,6 +582,21 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         }
         
         /// <summary>
+        /// _claimPermissionsTypedStorage property
+        /// </summary>
+        public TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools.EnumClaimPermission> ClaimPermissionsTypedStorage
+        {
+            get
+            {
+                return _claimPermissionsTypedStorage;
+            }
+            set
+            {
+                _claimPermissionsTypedStorage = value;
+            }
+        }
+        
+        /// <summary>
         /// Connects to all storages and initializes the change subscription handling.
         /// </summary>
         public async Task InitializeAsync(Substrate.ServiceLayer.Storage.IStorageDataProvider dataProvider)
@@ -550,6 +606,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
             await MaxPoolsTypedStorage.InitializeAsync("NominationPools", "MaxPools");
             await MaxPoolMembersTypedStorage.InitializeAsync("NominationPools", "MaxPoolMembers");
             await MaxPoolMembersPerPoolTypedStorage.InitializeAsync("NominationPools", "MaxPoolMembersPerPool");
+            await GlobalMaxCommissionTypedStorage.InitializeAsync("NominationPools", "GlobalMaxCommission");
             await PoolMembersTypedStorage.InitializeAsync("NominationPools", "PoolMembers");
             await CounterForPoolMembersTypedStorage.InitializeAsync("NominationPools", "CounterForPoolMembers");
             await BondedPoolsTypedStorage.InitializeAsync("NominationPools", "BondedPools");
@@ -563,6 +620,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
             await LastPoolIdTypedStorage.InitializeAsync("NominationPools", "LastPoolId");
             await ReversePoolIdLookupTypedStorage.InitializeAsync("NominationPools", "ReversePoolIdLookup");
             await CounterForReversePoolIdLookupTypedStorage.InitializeAsync("NominationPools", "CounterForReversePoolIdLookup");
+            await ClaimPermissionsTypedStorage.InitializeAsync("NominationPools", "ClaimPermissions");
         }
         
         /// <summary>
@@ -662,6 +720,26 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         public Substrate.NetApi.Model.Types.Primitive.U32 GetMaxPoolMembersPerPool()
         {
             return MaxPoolMembersPerPoolTypedStorage.Get();
+        }
+        
+        /// <summary>
+        /// Implements any storage change for NominationPools.GlobalMaxCommission
+        /// </summary>
+        [StorageChange("NominationPools", "GlobalMaxCommission")]
+        public void OnUpdateGlobalMaxCommission(string data)
+        {
+            GlobalMaxCommissionTypedStorage.Update(data);
+        }
+        
+        /// <summary>
+        /// >> GlobalMaxCommission
+        ///  The maximum commission that can be charged by a pool. Used on commission payouts to bound
+        ///  pool commissions that are > `GlobalMaxCommission`, necessary if a future
+        ///  `GlobalMaxCommission` is lower than some current pool commissions.
+        /// </summary>
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill GetGlobalMaxCommission()
+        {
+            return GlobalMaxCommissionTypedStorage.Get();
         }
         
         /// <summary>
@@ -771,8 +849,8 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         
         /// <summary>
         /// >> RewardPools
-        ///  Reward pools. This is where there rewards for each pool accumulate. When a members payout
-        ///  is claimed, the balance comes out fo the reward pool. Keyed by the bonded pools account.
+        ///  Reward pools. This is where there rewards for each pool accumulate. When a members payout is
+        ///  claimed, the balance comes out fo the reward pool. Keyed by the bonded pools account.
         /// </summary>
         public Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools.RewardPool GetRewardPools(string key)
         {
@@ -819,8 +897,8 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         
         /// <summary>
         /// >> SubPoolsStorage
-        ///  Groups of unbonding pools. Each group of unbonding pools belongs to a bonded pool,
-        ///  hence the name sub-pools. Keyed by the bonded pools account.
+        ///  Groups of unbonding pools. Each group of unbonding pools belongs to a
+        ///  bonded pool, hence the name sub-pools. Keyed by the bonded pools account.
         /// </summary>
         public Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools.SubPools GetSubPoolsStorage(string key)
         {
@@ -869,13 +947,13 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// >> Metadata
         ///  Metadata for the pool.
         /// </summary>
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT36 GetMetadata(string key)
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT39 GetMetadata(string key)
         {
             if ((key == null))
             {
                 return null;
             }
-            if (MetadataTypedStorage.Dictionary.TryGetValue(key, out Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT36 result))
+            if (MetadataTypedStorage.Dictionary.TryGetValue(key, out Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT39 result))
             {
                 return result;
             }
@@ -969,6 +1047,35 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         public Substrate.NetApi.Model.Types.Primitive.U32 GetCounterForReversePoolIdLookup()
         {
             return CounterForReversePoolIdLookupTypedStorage.Get();
+        }
+        
+        /// <summary>
+        /// Implements any storage change for NominationPools.ClaimPermissions
+        /// </summary>
+        [StorageChange("NominationPools", "ClaimPermissions")]
+        public void OnUpdateClaimPermissions(string key, string data)
+        {
+            ClaimPermissionsTypedStorage.Update(key, data);
+        }
+        
+        /// <summary>
+        /// >> ClaimPermissions
+        ///  Map from a pool member account to their opted claim permission.
+        /// </summary>
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools.EnumClaimPermission GetClaimPermissions(string key)
+        {
+            if ((key == null))
+            {
+                return null;
+            }
+            if (ClaimPermissionsTypedStorage.Dictionary.TryGetValue(key, out Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools.EnumClaimPermission result))
+            {
+                return result;
+            }
+            else
+            {
+                return null;
+            }
         }
     }
 }

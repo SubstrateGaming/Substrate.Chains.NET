@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_babe.diges
     
     
     /// <summary>
-    /// >> 521 - Composite[sp_consensus_babe.digests.PrimaryPreDigest]
+    /// >> 520 - Composite[sp_consensus_babe.digests.PrimaryPreDigest]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class PrimaryPreDigest : BaseType
@@ -35,14 +35,9 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_babe.diges
         private Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_slots.Slot _slot;
         
         /// <summary>
-        /// >> vrf_output
+        /// >> vrf_signature
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr32U8 _vrfOutput;
-        
-        /// <summary>
-        /// >> vrf_proof
-        /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr64U8 _vrfProof;
+        private Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.sr25519.vrf.VrfSignature _vrfSignature;
         
         public Substrate.NetApi.Model.Types.Primitive.U32 AuthorityIndex
         {
@@ -68,27 +63,15 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_babe.diges
             }
         }
         
-        public Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr32U8 VrfOutput
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.sr25519.vrf.VrfSignature VrfSignature
         {
             get
             {
-                return this._vrfOutput;
+                return this._vrfSignature;
             }
             set
             {
-                this._vrfOutput = value;
-            }
-        }
-        
-        public Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr64U8 VrfProof
-        {
-            get
-            {
-                return this._vrfProof;
-            }
-            set
-            {
-                this._vrfProof = value;
+                this._vrfSignature = value;
             }
         }
         
@@ -102,8 +85,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_babe.diges
             var result = new List<byte>();
             result.AddRange(AuthorityIndex.Encode());
             result.AddRange(Slot.Encode());
-            result.AddRange(VrfOutput.Encode());
-            result.AddRange(VrfProof.Encode());
+            result.AddRange(VrfSignature.Encode());
             return result.ToArray();
         }
         
@@ -114,10 +96,8 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_babe.diges
             AuthorityIndex.Decode(byteArray, ref p);
             Slot = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_slots.Slot();
             Slot.Decode(byteArray, ref p);
-            VrfOutput = new Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr32U8();
-            VrfOutput.Decode(byteArray, ref p);
-            VrfProof = new Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr64U8();
-            VrfProof.Decode(byteArray, ref p);
+            VrfSignature = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.sr25519.vrf.VrfSignature();
+            VrfSignature.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];

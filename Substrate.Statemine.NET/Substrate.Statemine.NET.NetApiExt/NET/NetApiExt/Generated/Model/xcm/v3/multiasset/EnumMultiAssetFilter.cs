@@ -24,7 +24,7 @@ namespace Substrate.Statemine.NET.NetApiExt.Generated.Model.xcm.v3.multiasset
     }
     
     /// <summary>
-    /// >> 76 - Variant[xcm.v3.multiasset.MultiAssetFilter]
+    /// >> 79 - Variant[xcm.v3.multiasset.MultiAssetFilter]
     /// </summary>
     public sealed class EnumMultiAssetFilter : BaseEnumExt<MultiAssetFilter, Substrate.Statemine.NET.NetApiExt.Generated.Model.xcm.v3.multiasset.MultiAssets, Substrate.Statemine.NET.NetApiExt.Generated.Model.xcm.v3.multiasset.EnumWildMultiAsset>
     {

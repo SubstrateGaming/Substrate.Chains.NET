@@ -35,17 +35,6 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         ///  A vector of reports of the same kind that happened at the same time slot.
         /// </summary>
         Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256> GetConcurrentReportsIndex(string key);
-        
-        /// <summary>
-        /// >> ReportsByKindIndex
-        ///  Enumerates all reports of a kind along with the time they happened.
-        /// 
-        ///  All reports are sorted by the time of offence.
-        /// 
-        ///  Note that the actual type of this mapping is `Vec<u8>`, this is because values of
-        ///  different types are not supported at the moment so we are doing the manual serialization.
-        /// </summary>
-        Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> GetReportsByKindIndex(string key);
     }
     
     /// <summary>
@@ -65,18 +54,12 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         private TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256>> _concurrentReportsIndexTypedStorage;
         
         /// <summary>
-        /// _reportsByKindIndexTypedStorage typed storage field
-        /// </summary>
-        private TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>> _reportsByKindIndexTypedStorage;
-        
-        /// <summary>
         /// OffencesStorage constructor.
         /// </summary>
         public OffencesStorage(IStorageDataProvider storageDataProvider, List<IStorageChangeDelegate> storageChangeDelegates)
         {
             this.ReportsTypedStorage = new TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_staking.offence.OffenceDetails>("Offences.Reports", storageDataProvider, storageChangeDelegates);
             this.ConcurrentReportsIndexTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256>>("Offences.ConcurrentReportsIndex", storageDataProvider, storageChangeDelegates);
-            this.ReportsByKindIndexTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>("Offences.ReportsByKindIndex", storageDataProvider, storageChangeDelegates);
         }
         
         /// <summary>
@@ -110,28 +93,12 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         }
         
         /// <summary>
-        /// _reportsByKindIndexTypedStorage property
-        /// </summary>
-        public TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>> ReportsByKindIndexTypedStorage
-        {
-            get
-            {
-                return _reportsByKindIndexTypedStorage;
-            }
-            set
-            {
-                _reportsByKindIndexTypedStorage = value;
-            }
-        }
-        
-        /// <summary>
         /// Connects to all storages and initializes the change subscription handling.
         /// </summary>
         public async Task InitializeAsync(Substrate.ServiceLayer.Storage.IStorageDataProvider dataProvider)
         {
             await ReportsTypedStorage.InitializeAsync("Offences", "Reports");
             await ConcurrentReportsIndexTypedStorage.InitializeAsync("Offences", "ConcurrentReportsIndex");
-            await ReportsByKindIndexTypedStorage.InitializeAsync("Offences", "ReportsByKindIndex");
         }
         
         /// <summary>
@@ -183,40 +150,6 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
                 return null;
             }
             if (ConcurrentReportsIndexTypedStorage.Dictionary.TryGetValue(key, out Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256> result))
-            {
-                return result;
-            }
-            else
-            {
-                return null;
-            }
-        }
-        
-        /// <summary>
-        /// Implements any storage change for Offences.ReportsByKindIndex
-        /// </summary>
-        [StorageChange("Offences", "ReportsByKindIndex")]
-        public void OnUpdateReportsByKindIndex(string key, string data)
-        {
-            ReportsByKindIndexTypedStorage.Update(key, data);
-        }
-        
-        /// <summary>
-        /// >> ReportsByKindIndex
-        ///  Enumerates all reports of a kind along with the time they happened.
-        /// 
-        ///  All reports are sorted by the time of offence.
-        /// 
-        ///  Note that the actual type of this mapping is `Vec<u8>`, this is because values of
-        ///  different types are not supported at the moment so we are doing the manual serialization.
-        /// </summary>
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> GetReportsByKindIndex(string key)
-        {
-            if ((key == null))
-            {
-                return null;
-            }
-            if (ReportsByKindIndexTypedStorage.Dictionary.TryGetValue(key, out Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> result))
             {
                 return result;
             }

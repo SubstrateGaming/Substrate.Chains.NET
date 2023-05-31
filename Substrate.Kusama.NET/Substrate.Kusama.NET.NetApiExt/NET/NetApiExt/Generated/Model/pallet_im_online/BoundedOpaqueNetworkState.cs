@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_im_online
     
     
     /// <summary>
-    /// >> 574 - Composite[pallet_im_online.BoundedOpaqueNetworkState]
+    /// >> 585 - Composite[pallet_im_online.BoundedOpaqueNetworkState]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class BoundedOpaqueNetworkState : BaseType
@@ -27,14 +27,14 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_im_online
         /// <summary>
         /// >> peer_id
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.weak_bounded_vec.WeakBoundedVecT6 _peerId;
+        private Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT6 _peerId;
         
         /// <summary>
         /// >> external_addresses
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.weak_bounded_vec.WeakBoundedVecT7 _externalAddresses;
+        private Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT7 _externalAddresses;
         
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.weak_bounded_vec.WeakBoundedVecT6 PeerId
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT6 PeerId
         {
             get
             {
@@ -46,7 +46,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_im_online
             }
         }
         
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.weak_bounded_vec.WeakBoundedVecT7 ExternalAddresses
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT7 ExternalAddresses
         {
             get
             {
@@ -74,9 +74,9 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_im_online
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            PeerId = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.weak_bounded_vec.WeakBoundedVecT6();
+            PeerId = new Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT6();
             PeerId.Decode(byteArray, ref p);
-            ExternalAddresses = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.weak_bounded_vec.WeakBoundedVecT7();
+            ExternalAddresses = new Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT7();
             ExternalAddresses.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

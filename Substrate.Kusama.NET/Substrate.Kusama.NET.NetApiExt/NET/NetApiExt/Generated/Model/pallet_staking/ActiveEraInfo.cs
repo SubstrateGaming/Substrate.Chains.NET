@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking
     
     
     /// <summary>
-    /// >> 545 - Composite[pallet_staking.ActiveEraInfo]
+    /// >> 556 - Composite[pallet_staking.ActiveEraInfo]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class ActiveEraInfo : BaseType

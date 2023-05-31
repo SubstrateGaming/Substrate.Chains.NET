@@ -448,32 +448,32 @@ namespace Substrate.Statemine.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_assets.types.AssetMetadata GetTestValue17()
+      public Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_assets.types.AssetMetadataT1 GetTestValue17()
       {
-         Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_assets.types.AssetMetadata result;
-         result = new Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_assets.types.AssetMetadata();
+         Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_assets.types.AssetMetadataT1 result;
+         result = new Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_assets.types.AssetMetadataT1();
          result.Deposit = this.GetTestValueU128();
-         result.Name = new Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT13();
+         result.Name = new Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT19();
          result.Name = this.GetTestValue18();
-         result.Symbol = new Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT13();
+         result.Symbol = new Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT19();
          result.Symbol = this.GetTestValue19();
          result.Decimals = this.GetTestValueU8();
          result.IsFrozen = this.GetTestValueBool();
          return result;
       }
-      public Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT13 GetTestValue18()
+      public Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT19 GetTestValue18()
       {
-         Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT13 result;
-         result = new Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT13();
+         Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT19 result;
+         result = new Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT19();
          result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>();
          result.Value.Create(new Substrate.NetApi.Model.Types.Primitive.U8[] {
                   this.GetTestValueU8()});
          return result;
       }
-      public Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT13 GetTestValue19()
+      public Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT19 GetTestValue19()
       {
-         Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT13 result;
-         result = new Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT13();
+         Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT19 result;
+         result = new Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT19();
          result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>();
          result.Value.Create(new Substrate.NetApi.Model.Types.Primitive.U8[] {
                   this.GetTestValueU8()});
@@ -490,7 +490,7 @@ namespace Substrate.Statemine.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          AssetsControllerClient rpcClient = new AssetsControllerClient(_httpClient, subscriptionClient);
-         Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_assets.types.AssetMetadata mockupValue = this.GetTestValue17();
+         Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_assets.types.AssetMetadataT1 mockupValue = this.GetTestValue17();
          Substrate.NetApi.Model.Types.Primitive.U32 mockupKey = this.GetTestValueU32();
 
          Assert.IsTrue(await rpcClient.SubscribeMetadata(mockupKey));
@@ -503,7 +503,7 @@ namespace Substrate.Statemine.NET.RestClient.Test.Generated
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_assets.types.AssetMetadata rpcResult = await rpcClient.GetMetadata(mockupKey);
+         Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_assets.types.AssetMetadataT1 rpcResult = await rpcClient.GetMetadata(mockupKey);
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());

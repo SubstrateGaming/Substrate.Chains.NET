@@ -24,7 +24,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_conviction_votin
     }
     
     /// <summary>
-    /// >> 69 - Variant[pallet_conviction_voting.pallet.Event]
+    /// >> 58 - Variant[pallet_conviction_voting.pallet.Event]
     /// 
     ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
     ///			by this pallet.

@@ -12,7 +12,7 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Interfaces
    using System;
    using System.Threading.Tasks;
    using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.inclusion;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4;
    
    public interface IParaInclusionControllerMockupClient
    {

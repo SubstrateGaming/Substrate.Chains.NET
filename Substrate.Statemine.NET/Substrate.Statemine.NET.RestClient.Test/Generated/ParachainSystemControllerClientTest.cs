@@ -17,14 +17,14 @@ namespace Substrate.Statemine.NET.RestClient.Test.Generated
    using Substrate.Statemine.NET.RestClient.Generated.Clients;
    using Substrate.NetApi.Model.Types.Base;
    using Substrate.NetApi.Model.Types.Primitive;
-   using Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_primitives.v2;
+   using Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_primitives.v4;
    using Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_trie.storage_proof;
    using Substrate.Statemine.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.relay_state_snapshot;
    using Substrate.Statemine.NET.NetApiExt.Generated.Model.cumulus_primitives_parachain_inherent;
    using Substrate.Statemine.NET.NetApiExt.Generated.Types.Base;
    using Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_core_primitives;
    using Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_weights.weight_v2;
-   using Substrate.Statemine.NET.NetApiExt.Generated.Model.primitive_types;
+   using Substrate.Statemine.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system;
    
    public class ParachainSystemControllerClientTest : ClientTestBase
    {
@@ -108,10 +108,10 @@ namespace Substrate.Statemine.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.PersistedValidationData GetTestValue6()
+      public Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.PersistedValidationData GetTestValue6()
       {
-         Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.PersistedValidationData result;
-         result = new Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.PersistedValidationData();
+         Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.PersistedValidationData result;
+         result = new Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.PersistedValidationData();
          result.ParentHead = new Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.HeadData();
          result.ParentHead = this.GetTestValue7();
          result.RelayParentNumber = this.GetTestValueU32();
@@ -180,7 +180,7 @@ namespace Substrate.Statemine.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          ParachainSystemControllerClient rpcClient = new ParachainSystemControllerClient(_httpClient, subscriptionClient);
-         Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.PersistedValidationData mockupValue = this.GetTestValue6();
+         Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.PersistedValidationData mockupValue = this.GetTestValue6();
 
 
          Assert.IsTrue(await rpcClient.SubscribeValidationData());
@@ -193,7 +193,7 @@ namespace Substrate.Statemine.NET.RestClient.Test.Generated
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.PersistedValidationData rpcResult = await rpcClient.GetValidationData();
+         Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.PersistedValidationData rpcResult = await rpcClient.GetValidationData();
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
@@ -256,18 +256,18 @@ namespace Substrate.Statemine.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.EnumUpgradeRestriction> GetTestValue12()
+      public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.EnumUpgradeRestriction> GetTestValue12()
       {
-         Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.EnumUpgradeRestriction> result;
-         result = new Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.EnumUpgradeRestriction>();
+         Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.EnumUpgradeRestriction> result;
+         result = new Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.EnumUpgradeRestriction>();
          result.Create(this.GetTestValue13());
          return result;
       }
-      public Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.EnumUpgradeRestriction GetTestValue13()
+      public Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.EnumUpgradeRestriction GetTestValue13()
       {
-         Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.EnumUpgradeRestriction result;
-         result = new Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.EnumUpgradeRestriction();
-         result.Create(this.GetTestValueEnum<Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.UpgradeRestriction>());
+         Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.EnumUpgradeRestriction result;
+         result = new Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.EnumUpgradeRestriction();
+         result.Create(this.GetTestValueEnum<Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.UpgradeRestriction>());
          return result;
       }
       [Test()]
@@ -281,7 +281,7 @@ namespace Substrate.Statemine.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          ParachainSystemControllerClient rpcClient = new ParachainSystemControllerClient(_httpClient, subscriptionClient);
-         Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.EnumUpgradeRestriction> mockupValue = this.GetTestValue12();
+         Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.EnumUpgradeRestriction> mockupValue = this.GetTestValue12();
 
 
          Assert.IsTrue(await rpcClient.SubscribeUpgradeRestrictionSignal());
@@ -294,7 +294,7 @@ namespace Substrate.Statemine.NET.RestClient.Test.Generated
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.EnumUpgradeRestriction> rpcResult = await rpcClient.GetUpgradeRestrictionSignal();
+         Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.EnumUpgradeRestriction> rpcResult = await rpcClient.GetUpgradeRestrictionSignal();
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
@@ -303,14 +303,14 @@ namespace Substrate.Statemine.NET.RestClient.Test.Generated
       {
          Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_trie.storage_proof.StorageProof result;
          result = new Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_trie.storage_proof.StorageProof();
-         result.TrieNodes = new Substrate.Statemine.NET.NetApiExt.Generated.Types.Base.BTreeSet();
+         result.TrieNodes = new Substrate.Statemine.NET.NetApiExt.Generated.Types.Base.BTreeSetT1();
          result.TrieNodes = this.GetTestValue16();
          return result;
       }
-      public Substrate.Statemine.NET.NetApiExt.Generated.Types.Base.BTreeSet GetTestValue16()
+      public Substrate.Statemine.NET.NetApiExt.Generated.Types.Base.BTreeSetT1 GetTestValue16()
       {
-         Substrate.Statemine.NET.NetApiExt.Generated.Types.Base.BTreeSet result;
-         result = new Substrate.Statemine.NET.NetApiExt.Generated.Types.Base.BTreeSet();
+         Substrate.Statemine.NET.NetApiExt.Generated.Types.Base.BTreeSetT1 result;
+         result = new Substrate.Statemine.NET.NetApiExt.Generated.Types.Base.BTreeSetT1();
          result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>();
          result.Value.Create(new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>[] {
                   this.GetTestValue17()});
@@ -361,11 +361,11 @@ namespace Substrate.Statemine.NET.RestClient.Test.Generated
          result.DmqMqcHead = this.GetTestValue20();
          result.RelayDispatchQueueSize = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>();
          result.RelayDispatchQueueSize.Create(this.GetTestValueU32(), this.GetTestValueU32());
-         result.IngressChannels = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.AbridgedHrmpChannel>>();
-         result.IngressChannels.Create(new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.AbridgedHrmpChannel>[] {
+         result.IngressChannels = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.AbridgedHrmpChannel>>();
+         result.IngressChannels.Create(new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.AbridgedHrmpChannel>[] {
                   this.GetTestValue21()});
-         result.EgressChannels = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.AbridgedHrmpChannel>>();
-         result.EgressChannels.Create(new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.AbridgedHrmpChannel>[] {
+         result.EgressChannels = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.AbridgedHrmpChannel>>();
+         result.EgressChannels.Create(new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.AbridgedHrmpChannel>[] {
                   this.GetTestValue25()});
          return result;
       }
@@ -409,10 +409,10 @@ namespace Substrate.Statemine.NET.RestClient.Test.Generated
                   this.GetTestValueU8()});
          return result;
       }
-      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.AbridgedHrmpChannel> GetTestValue21()
+      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.AbridgedHrmpChannel> GetTestValue21()
       {
-         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.AbridgedHrmpChannel> result;
-         result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.AbridgedHrmpChannel>();
+         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.AbridgedHrmpChannel> result;
+         result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.AbridgedHrmpChannel>();
          result.Create(this.GetTestValue22(), this.GetTestValue23());
          return result;
       }
@@ -423,10 +423,10 @@ namespace Substrate.Statemine.NET.RestClient.Test.Generated
          result.Value = this.GetTestValueU32();
          return result;
       }
-      public Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.AbridgedHrmpChannel GetTestValue23()
+      public Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.AbridgedHrmpChannel GetTestValue23()
       {
-         Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.AbridgedHrmpChannel result;
-         result = new Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.AbridgedHrmpChannel();
+         Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.AbridgedHrmpChannel result;
+         result = new Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.AbridgedHrmpChannel();
          result.MaxCapacity = this.GetTestValueU32();
          result.MaxTotalSize = this.GetTestValueU32();
          result.MaxMessageSize = this.GetTestValueU32();
@@ -476,10 +476,10 @@ namespace Substrate.Statemine.NET.RestClient.Test.Generated
                   this.GetTestValueU8()});
          return result;
       }
-      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.AbridgedHrmpChannel> GetTestValue25()
+      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.AbridgedHrmpChannel> GetTestValue25()
       {
-         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.AbridgedHrmpChannel> result;
-         result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.AbridgedHrmpChannel>();
+         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.AbridgedHrmpChannel> result;
+         result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.AbridgedHrmpChannel>();
          result.Create(this.GetTestValue26(), this.GetTestValue27());
          return result;
       }
@@ -490,10 +490,10 @@ namespace Substrate.Statemine.NET.RestClient.Test.Generated
          result.Value = this.GetTestValueU32();
          return result;
       }
-      public Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.AbridgedHrmpChannel GetTestValue27()
+      public Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.AbridgedHrmpChannel GetTestValue27()
       {
-         Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.AbridgedHrmpChannel result;
-         result = new Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.AbridgedHrmpChannel();
+         Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.AbridgedHrmpChannel result;
+         result = new Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.AbridgedHrmpChannel();
          result.MaxCapacity = this.GetTestValueU32();
          result.MaxTotalSize = this.GetTestValueU32();
          result.MaxMessageSize = this.GetTestValueU32();
@@ -572,10 +572,10 @@ namespace Substrate.Statemine.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.AbridgedHostConfiguration GetTestValue30()
+      public Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.AbridgedHostConfiguration GetTestValue30()
       {
-         Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.AbridgedHostConfiguration result;
-         result = new Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.AbridgedHostConfiguration();
+         Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.AbridgedHostConfiguration result;
+         result = new Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.AbridgedHostConfiguration();
          result.MaxCodeSize = this.GetTestValueU32();
          result.MaxHeadDataSize = this.GetTestValueU32();
          result.MaxUpwardQueueCount = this.GetTestValueU32();
@@ -598,7 +598,7 @@ namespace Substrate.Statemine.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          ParachainSystemControllerClient rpcClient = new ParachainSystemControllerClient(_httpClient, subscriptionClient);
-         Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.AbridgedHostConfiguration mockupValue = this.GetTestValue30();
+         Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.AbridgedHostConfiguration mockupValue = this.GetTestValue30();
 
 
          Assert.IsTrue(await rpcClient.SubscribeHostConfiguration());
@@ -611,7 +611,7 @@ namespace Substrate.Statemine.NET.RestClient.Test.Generated
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.AbridgedHostConfiguration rpcResult = await rpcClient.GetHostConfiguration();
+         Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.AbridgedHostConfiguration rpcResult = await rpcClient.GetHostConfiguration();
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
@@ -1103,7 +1103,16 @@ namespace Substrate.Statemine.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Statemine.NET.NetApiExt.Generated.Model.primitive_types.H256 GetTestValue58()
+      public Substrate.Statemine.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.CodeUpgradeAuthorization GetTestValue58()
+      {
+         Substrate.Statemine.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.CodeUpgradeAuthorization result;
+         result = new Substrate.Statemine.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.CodeUpgradeAuthorization();
+         result.CodeHash = new Substrate.Statemine.NET.NetApiExt.Generated.Model.primitive_types.H256();
+         result.CodeHash = this.GetTestValue59();
+         result.CheckVersion = this.GetTestValueBool();
+         return result;
+      }
+      public Substrate.Statemine.NET.NetApiExt.Generated.Model.primitive_types.H256 GetTestValue59()
       {
          Substrate.Statemine.NET.NetApiExt.Generated.Model.primitive_types.H256 result;
          result = new Substrate.Statemine.NET.NetApiExt.Generated.Model.primitive_types.H256();
@@ -1154,7 +1163,7 @@ namespace Substrate.Statemine.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          ParachainSystemControllerClient rpcClient = new ParachainSystemControllerClient(_httpClient, subscriptionClient);
-         Substrate.Statemine.NET.NetApiExt.Generated.Model.primitive_types.H256 mockupValue = this.GetTestValue58();
+         Substrate.Statemine.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.CodeUpgradeAuthorization mockupValue = this.GetTestValue58();
 
 
          Assert.IsTrue(await rpcClient.SubscribeAuthorizedUpgrade());
@@ -1167,12 +1176,12 @@ namespace Substrate.Statemine.NET.RestClient.Test.Generated
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Substrate.Statemine.NET.NetApiExt.Generated.Model.primitive_types.H256 rpcResult = await rpcClient.GetAuthorizedUpgrade();
+         Substrate.Statemine.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.CodeUpgradeAuthorization rpcResult = await rpcClient.GetAuthorizedUpgrade();
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> GetTestValue60()
+      public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> GetTestValue61()
       {
          Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> result;
          result = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>();
@@ -1191,7 +1200,7 @@ namespace Substrate.Statemine.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          ParachainSystemControllerClient rpcClient = new ParachainSystemControllerClient(_httpClient, subscriptionClient);
-         Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> mockupValue = this.GetTestValue60();
+         Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> mockupValue = this.GetTestValue61();
 
 
          Assert.IsTrue(await rpcClient.SubscribeCustomValidationHeadData());

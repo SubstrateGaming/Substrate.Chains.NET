@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.generic.head
     
     
     /// <summary>
-    /// >> 80 - Composite[sp_runtime.generic.header.Header]
+    /// >> 69 - Composite[sp_runtime.generic.header.Header]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Header : BaseType

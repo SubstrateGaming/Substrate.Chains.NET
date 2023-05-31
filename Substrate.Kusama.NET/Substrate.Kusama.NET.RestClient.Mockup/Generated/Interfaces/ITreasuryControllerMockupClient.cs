@@ -13,13 +13,13 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Interfaces
    using System.Threading.Tasks;
    using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_treasury;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    
    public interface ITreasuryControllerMockupClient
    {
       Task<bool> SetProposalCount(U32 value);
       Task<bool> SetProposals(Proposal value, U32 key);
       Task<bool> SetDeactivated(U128 value);
-      Task<bool> SetApprovals(BoundedVecT14 value);
+      Task<bool> SetApprovals(BoundedVecT16 value);
    }
 }

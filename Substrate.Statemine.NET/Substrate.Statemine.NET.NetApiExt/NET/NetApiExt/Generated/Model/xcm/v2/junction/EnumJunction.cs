@@ -38,9 +38,9 @@ namespace Substrate.Statemine.NET.NetApiExt.Generated.Model.xcm.v2.junction
     }
     
     /// <summary>
-    /// >> 88 - Variant[xcm.v2.junction.Junction]
+    /// >> 91 - Variant[xcm.v2.junction.Junction]
     /// </summary>
-    public sealed class EnumJunction : BaseEnumExt<Junction, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>, BaseTuple<Substrate.Statemine.NET.NetApiExt.Generated.Model.xcm.v2.EnumNetworkId, Substrate.Statemine.NET.NetApiExt.Generated.Types.Base.Arr32U8>, BaseTuple<Substrate.Statemine.NET.NetApiExt.Generated.Model.xcm.v2.EnumNetworkId, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U64>>, BaseTuple<Substrate.Statemine.NET.NetApiExt.Generated.Model.xcm.v2.EnumNetworkId, Substrate.Statemine.NET.NetApiExt.Generated.Types.Base.Arr20U8>, Substrate.NetApi.Model.Types.Primitive.U8, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128>, Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.bounded.weak_bounded_vec.WeakBoundedVecT1, BaseVoid, BaseTuple<Substrate.Statemine.NET.NetApiExt.Generated.Model.xcm.v2.EnumBodyId, Substrate.Statemine.NET.NetApiExt.Generated.Model.xcm.v2.EnumBodyPart>>
+    public sealed class EnumJunction : BaseEnumExt<Junction, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>, BaseTuple<Substrate.Statemine.NET.NetApiExt.Generated.Model.xcm.v2.EnumNetworkId, Substrate.Statemine.NET.NetApiExt.Generated.Types.Base.Arr32U8>, BaseTuple<Substrate.Statemine.NET.NetApiExt.Generated.Model.xcm.v2.EnumNetworkId, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U64>>, BaseTuple<Substrate.Statemine.NET.NetApiExt.Generated.Model.xcm.v2.EnumNetworkId, Substrate.Statemine.NET.NetApiExt.Generated.Types.Base.Arr20U8>, Substrate.NetApi.Model.Types.Primitive.U8, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128>, Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT1, BaseVoid, BaseTuple<Substrate.Statemine.NET.NetApiExt.Generated.Model.xcm.v2.EnumBodyId, Substrate.Statemine.NET.NetApiExt.Generated.Model.xcm.v2.EnumBodyPart>>
     {
     }
 }

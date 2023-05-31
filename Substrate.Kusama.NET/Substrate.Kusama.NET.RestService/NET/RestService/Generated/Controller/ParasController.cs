@@ -203,7 +203,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Controller
         ///  the format will require migration of parachains.
         /// </summary>
         [HttpGet("UpgradeGoAheadSignal")]
-        [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.EnumUpgradeGoAhead), 200)]
+        [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.EnumUpgradeGoAhead), 200)]
         [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.ParasStorage), "UpgradeGoAheadSignalParams", typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id))]
         public IActionResult GetUpgradeGoAheadSignal(string key)
         {
@@ -223,7 +223,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Controller
         ///  the format will require migration of parachains.
         /// </summary>
         [HttpGet("UpgradeRestrictionSignal")]
-        [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.EnumUpgradeRestriction), 200)]
+        [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.EnumUpgradeRestriction), 200)]
         [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.ParasStorage), "UpgradeRestrictionSignalParams", typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id))]
         public IActionResult GetUpgradeRestrictionSignal(string key)
         {

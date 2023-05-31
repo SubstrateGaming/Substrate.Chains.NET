@@ -11,14 +11,14 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Interfaces
 {
    using System;
    using System.Threading.Tasks;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    using Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nis.pallet;
    
    public interface INisControllerClient
    {
-      Task<BoundedVecT33> GetQueueTotals();
+      Task<BoundedVecT35> GetQueueTotals();
       Task<bool> SubscribeQueueTotals();
-      Task<BoundedVecT34> GetQueues(Substrate.NetApi.Model.Types.Primitive.U32 key);
+      Task<BoundedVecT36> GetQueues(Substrate.NetApi.Model.Types.Primitive.U32 key);
       Task<bool> SubscribeQueues(Substrate.NetApi.Model.Types.Primitive.U32 key);
       Task<SummaryRecord> GetSummary();
       Task<bool> SubscribeSummary();

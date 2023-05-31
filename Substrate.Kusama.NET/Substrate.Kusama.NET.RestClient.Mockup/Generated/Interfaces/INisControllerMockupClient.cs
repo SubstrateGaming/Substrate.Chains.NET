@@ -11,13 +11,13 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Interfaces
 {
    using System;
    using System.Threading.Tasks;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    using Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nis.pallet;
    
    public interface INisControllerMockupClient
    {
-      Task<bool> SetQueueTotals(BoundedVecT33 value);
-      Task<bool> SetQueues(BoundedVecT34 value, Substrate.NetApi.Model.Types.Primitive.U32 key);
+      Task<bool> SetQueueTotals(BoundedVecT35 value);
+      Task<bool> SetQueues(BoundedVecT36 value, Substrate.NetApi.Model.Types.Primitive.U32 key);
       Task<bool> SetSummary(SummaryRecord value);
       Task<bool> SetReceipts(ReceiptRecord value, Substrate.NetApi.Model.Types.Primitive.U32 key);
    }

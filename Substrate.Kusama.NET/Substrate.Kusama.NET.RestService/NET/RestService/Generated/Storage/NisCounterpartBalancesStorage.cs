@@ -63,20 +63,32 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         ///  `Balances` pallet, which uses a `StorageMap` to store balances data only.
         ///  NOTE: This is only used in the case that this pallet is used to store balances.
         /// </summary>
-        Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_balances.AccountData GetAccount(string key);
+        Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_balances.types.AccountData GetAccount(string key);
         
         /// <summary>
         /// >> Locks
         ///  Any liquidity locks on some account balances.
         ///  NOTE: Should only be accessed when setting, changing and freeing a lock.
         /// </summary>
-        Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.weak_bounded_vec.WeakBoundedVecT8 GetLocks(string key);
+        Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT8 GetLocks(string key);
         
         /// <summary>
         /// >> Reserves
         ///  Named reserves on some account balances.
         /// </summary>
-        Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT35 GetReserves(string key);
+        Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT37 GetReserves(string key);
+        
+        /// <summary>
+        /// >> Holds
+        ///  Holds on account balances.
+        /// </summary>
+        Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT38 GetHolds(string key);
+        
+        /// <summary>
+        /// >> Freezes
+        ///  Freeze locks on account balances.
+        /// </summary>
+        Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT38 GetFreezes(string key);
     }
     
     /// <summary>
@@ -98,17 +110,27 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// <summary>
         /// _accountTypedStorage typed storage field
         /// </summary>
-        private TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_balances.AccountData> _accountTypedStorage;
+        private TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_balances.types.AccountData> _accountTypedStorage;
         
         /// <summary>
         /// _locksTypedStorage typed storage field
         /// </summary>
-        private TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.weak_bounded_vec.WeakBoundedVecT8> _locksTypedStorage;
+        private TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT8> _locksTypedStorage;
         
         /// <summary>
         /// _reservesTypedStorage typed storage field
         /// </summary>
-        private TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT35> _reservesTypedStorage;
+        private TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT37> _reservesTypedStorage;
+        
+        /// <summary>
+        /// _holdsTypedStorage typed storage field
+        /// </summary>
+        private TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT38> _holdsTypedStorage;
+        
+        /// <summary>
+        /// _freezesTypedStorage typed storage field
+        /// </summary>
+        private TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT38> _freezesTypedStorage;
         
         /// <summary>
         /// NisCounterpartBalancesStorage constructor.
@@ -117,9 +139,11 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         {
             this.TotalIssuanceTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U128>("NisCounterpartBalances.TotalIssuance", storageDataProvider, storageChangeDelegates);
             this.InactiveIssuanceTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U128>("NisCounterpartBalances.InactiveIssuance", storageDataProvider, storageChangeDelegates);
-            this.AccountTypedStorage = new TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_balances.AccountData>("NisCounterpartBalances.Account", storageDataProvider, storageChangeDelegates);
-            this.LocksTypedStorage = new TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.weak_bounded_vec.WeakBoundedVecT8>("NisCounterpartBalances.Locks", storageDataProvider, storageChangeDelegates);
-            this.ReservesTypedStorage = new TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT35>("NisCounterpartBalances.Reserves", storageDataProvider, storageChangeDelegates);
+            this.AccountTypedStorage = new TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_balances.types.AccountData>("NisCounterpartBalances.Account", storageDataProvider, storageChangeDelegates);
+            this.LocksTypedStorage = new TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT8>("NisCounterpartBalances.Locks", storageDataProvider, storageChangeDelegates);
+            this.ReservesTypedStorage = new TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT37>("NisCounterpartBalances.Reserves", storageDataProvider, storageChangeDelegates);
+            this.HoldsTypedStorage = new TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT38>("NisCounterpartBalances.Holds", storageDataProvider, storageChangeDelegates);
+            this.FreezesTypedStorage = new TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT38>("NisCounterpartBalances.Freezes", storageDataProvider, storageChangeDelegates);
         }
         
         /// <summary>
@@ -155,7 +179,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// <summary>
         /// _accountTypedStorage property
         /// </summary>
-        public TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_balances.AccountData> AccountTypedStorage
+        public TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_balances.types.AccountData> AccountTypedStorage
         {
             get
             {
@@ -170,7 +194,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// <summary>
         /// _locksTypedStorage property
         /// </summary>
-        public TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.weak_bounded_vec.WeakBoundedVecT8> LocksTypedStorage
+        public TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT8> LocksTypedStorage
         {
             get
             {
@@ -185,7 +209,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// <summary>
         /// _reservesTypedStorage property
         /// </summary>
-        public TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT35> ReservesTypedStorage
+        public TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT37> ReservesTypedStorage
         {
             get
             {
@@ -194,6 +218,36 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
             set
             {
                 _reservesTypedStorage = value;
+            }
+        }
+        
+        /// <summary>
+        /// _holdsTypedStorage property
+        /// </summary>
+        public TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT38> HoldsTypedStorage
+        {
+            get
+            {
+                return _holdsTypedStorage;
+            }
+            set
+            {
+                _holdsTypedStorage = value;
+            }
+        }
+        
+        /// <summary>
+        /// _freezesTypedStorage property
+        /// </summary>
+        public TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT38> FreezesTypedStorage
+        {
+            get
+            {
+                return _freezesTypedStorage;
+            }
+            set
+            {
+                _freezesTypedStorage = value;
             }
         }
         
@@ -207,6 +261,8 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
             await AccountTypedStorage.InitializeAsync("NisCounterpartBalances", "Account");
             await LocksTypedStorage.InitializeAsync("NisCounterpartBalances", "Locks");
             await ReservesTypedStorage.InitializeAsync("NisCounterpartBalances", "Reserves");
+            await HoldsTypedStorage.InitializeAsync("NisCounterpartBalances", "Holds");
+            await FreezesTypedStorage.InitializeAsync("NisCounterpartBalances", "Freezes");
         }
         
         /// <summary>
@@ -281,13 +337,13 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         ///  `Balances` pallet, which uses a `StorageMap` to store balances data only.
         ///  NOTE: This is only used in the case that this pallet is used to store balances.
         /// </summary>
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_balances.AccountData GetAccount(string key)
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_balances.types.AccountData GetAccount(string key)
         {
             if ((key == null))
             {
                 return null;
             }
-            if (AccountTypedStorage.Dictionary.TryGetValue(key, out Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_balances.AccountData result))
+            if (AccountTypedStorage.Dictionary.TryGetValue(key, out Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_balances.types.AccountData result))
             {
                 return result;
             }
@@ -311,13 +367,13 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         ///  Any liquidity locks on some account balances.
         ///  NOTE: Should only be accessed when setting, changing and freeing a lock.
         /// </summary>
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.weak_bounded_vec.WeakBoundedVecT8 GetLocks(string key)
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT8 GetLocks(string key)
         {
             if ((key == null))
             {
                 return null;
             }
-            if (LocksTypedStorage.Dictionary.TryGetValue(key, out Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.weak_bounded_vec.WeakBoundedVecT8 result))
+            if (LocksTypedStorage.Dictionary.TryGetValue(key, out Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT8 result))
             {
                 return result;
             }
@@ -340,13 +396,71 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// >> Reserves
         ///  Named reserves on some account balances.
         /// </summary>
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT35 GetReserves(string key)
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT37 GetReserves(string key)
         {
             if ((key == null))
             {
                 return null;
             }
-            if (ReservesTypedStorage.Dictionary.TryGetValue(key, out Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT35 result))
+            if (ReservesTypedStorage.Dictionary.TryGetValue(key, out Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT37 result))
+            {
+                return result;
+            }
+            else
+            {
+                return null;
+            }
+        }
+        
+        /// <summary>
+        /// Implements any storage change for NisCounterpartBalances.Holds
+        /// </summary>
+        [StorageChange("NisCounterpartBalances", "Holds")]
+        public void OnUpdateHolds(string key, string data)
+        {
+            HoldsTypedStorage.Update(key, data);
+        }
+        
+        /// <summary>
+        /// >> Holds
+        ///  Holds on account balances.
+        /// </summary>
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT38 GetHolds(string key)
+        {
+            if ((key == null))
+            {
+                return null;
+            }
+            if (HoldsTypedStorage.Dictionary.TryGetValue(key, out Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT38 result))
+            {
+                return result;
+            }
+            else
+            {
+                return null;
+            }
+        }
+        
+        /// <summary>
+        /// Implements any storage change for NisCounterpartBalances.Freezes
+        /// </summary>
+        [StorageChange("NisCounterpartBalances", "Freezes")]
+        public void OnUpdateFreezes(string key, string data)
+        {
+            FreezesTypedStorage.Update(key, data);
+        }
+        
+        /// <summary>
+        /// >> Freezes
+        ///  Freeze locks on account balances.
+        /// </summary>
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT38 GetFreezes(string key)
+        {
+            if ((key == null))
+            {
+                return null;
+            }
+            if (FreezesTypedStorage.Dictionary.TryGetValue(key, out Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT38 result))
             {
                 return result;
             }

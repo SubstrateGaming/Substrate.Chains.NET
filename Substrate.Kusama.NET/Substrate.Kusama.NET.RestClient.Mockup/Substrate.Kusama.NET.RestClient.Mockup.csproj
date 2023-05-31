@@ -3,7 +3,7 @@
       <TargetFramework>netstandard2.0</TargetFramework>
    </PropertyGroup>
    <ItemGroup>
-      <PackageReference Include="Substrate.ServiceLayer.Model" Version="0.4.0" />
+      <PackageReference Include="Substrate.ServiceLayer.Model" Version="0.4.4" />
    </ItemGroup>
    <ItemGroup>      
       <ProjectReference Include="..\Substrate.Kusama.NET.RestClient\Substrate.Kusama.NET.RestClient.csproj" />
