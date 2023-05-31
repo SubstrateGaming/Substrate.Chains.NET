@@ -3,7 +3,7 @@
       <OutputType>Exe</OutputType>
       <TargetFramework>net6.0</TargetFramework>
       
-      <OpenApiGenerateDocumentsOnBuild>False</OpenApiGenerateDocumentsOnBuild>      
+      <OpenApiGenerateDocumentsOnBuild>false</OpenApiGenerateDocumentsOnBuild>      
 
       <!-- 
          .NET 6 removed runtime configuration. 
