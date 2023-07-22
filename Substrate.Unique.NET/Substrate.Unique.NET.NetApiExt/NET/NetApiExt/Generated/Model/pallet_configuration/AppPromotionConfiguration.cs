@@ -18,7 +18,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_configuration
     
     
     /// <summary>
-    /// >> 298 - Composite[pallet_configuration.AppPromotionConfiguration]
+    /// >> 313 - Composite[pallet_configuration.AppPromotionConfiguration]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class AppPromotionConfiguration : BaseType

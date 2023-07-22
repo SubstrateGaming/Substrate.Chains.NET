@@ -24,7 +24,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs
     }
     
     /// <summary>
-    /// >> 259 - Variant[up_data_structs.SponsoringRateLimit]
+    /// >> 274 - Variant[up_data_structs.SponsoringRateLimit]
     /// </summary>
     public sealed class EnumSponsoringRateLimit : BaseEnumExt<SponsoringRateLimit, BaseVoid, Substrate.NetApi.Model.Types.Primitive.U32>
     {

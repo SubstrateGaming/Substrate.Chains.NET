@@ -24,7 +24,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.sp_runtime.transaction_
     }
     
     /// <summary>
-    /// >> 413 - Variant[sp_runtime.transaction_validity.TransactionValidityError]
+    /// >> 428 - Variant[sp_runtime.transaction_validity.TransactionValidityError]
     /// </summary>
     public sealed class EnumTransactionValidityError : BaseEnumExt<TransactionValidityError, Substrate.Unique.NET.NetApiExt.Generated.Model.sp_runtime.transaction_validity.EnumInvalidTransaction, Substrate.Unique.NET.NetApiExt.Generated.Model.sp_runtime.transaction_validity.EnumUnknownTransaction>
     {

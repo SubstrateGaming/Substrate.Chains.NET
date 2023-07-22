@@ -18,7 +18,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs
     
     
     /// <summary>
-    /// >> 403 - Composite[up_data_structs.TokenChild]
+    /// >> 418 - Composite[up_data_structs.TokenChild]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class TokenChild : BaseType

@@ -18,7 +18,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bou
     
     
     /// <summary>
-    /// >> 120 - Composite[bounded_collections.bounded_vec.BoundedVecT6]
+    /// >> 124 - Composite[bounded_collections.bounded_vec.BoundedVecT6]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class BoundedVecT6 : BaseType

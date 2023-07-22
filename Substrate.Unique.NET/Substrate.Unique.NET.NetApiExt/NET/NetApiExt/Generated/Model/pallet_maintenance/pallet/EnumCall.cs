@@ -26,7 +26,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_maintenance.pall
     }
     
     /// <summary>
-    /// >> 328 - Variant[pallet_maintenance.pallet.Call]
+    /// >> 343 - Variant[pallet_maintenance.pallet.Call]
     /// Contains one variant per dispatchable that can be called by an extrinsic.
     /// </summary>
     public sealed class EnumCall : BaseEnumExt<Call, BaseVoid, BaseVoid, BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.Unique.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>>

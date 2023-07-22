@@ -50,7 +50,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.orml_tokens.module
     }
     
     /// <summary>
-    /// >> 60 - Variant[orml_tokens.module.Event]
+    /// >> 64 - Variant[orml_tokens.module.Event]
     /// 
     ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
     ///			by this pallet.

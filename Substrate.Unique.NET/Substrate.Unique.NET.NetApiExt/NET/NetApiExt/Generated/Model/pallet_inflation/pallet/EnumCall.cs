@@ -22,7 +22,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_inflation.pallet
     }
     
     /// <summary>
-    /// >> 246 - Variant[pallet_inflation.pallet.Call]
+    /// >> 261 - Variant[pallet_inflation.pallet.Call]
     /// Contains one variant per dispatchable that can be called by an extrinsic.
     /// </summary>
     public sealed class EnumCall : BaseEnumExt<Call, Substrate.NetApi.Model.Types.Primitive.U32>

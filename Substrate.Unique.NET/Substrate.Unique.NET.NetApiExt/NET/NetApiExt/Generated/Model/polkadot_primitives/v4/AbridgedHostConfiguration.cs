@@ -13,12 +13,12 @@ using Substrate.NetApi.Model.Types.Metadata.V14;
 using System.Collections.Generic;
 
 
-namespace Substrate.Unique.NET.NetApiExt.Generated.Model.polkadot_primitives.v2
+namespace Substrate.Unique.NET.NetApiExt.Generated.Model.polkadot_primitives.v4
 {
     
     
     /// <summary>
-    /// >> 168 - Composite[polkadot_primitives.v2.AbridgedHostConfiguration]
+    /// >> 178 - Composite[polkadot_primitives.v4.AbridgedHostConfiguration]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class AbridgedHostConfiguration : BaseType

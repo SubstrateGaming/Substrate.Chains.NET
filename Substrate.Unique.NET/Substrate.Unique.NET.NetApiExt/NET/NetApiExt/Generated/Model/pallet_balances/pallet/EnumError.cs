@@ -26,17 +26,21 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_balances.pallet
         
         ExistentialDeposit = 3,
         
-        KeepAlive = 4,
+        Expendability = 4,
         
         ExistingVestingSchedule = 5,
         
         DeadAccount = 6,
         
         TooManyReserves = 7,
+        
+        TooManyHolds = 8,
+        
+        TooManyFreezes = 9,
     }
     
     /// <summary>
-    /// >> 202 - Variant[pallet_balances.pallet.Error]
+    /// >> 217 - Variant[pallet_balances.pallet.Error]
     /// 
     ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
     ///			of this pallet.

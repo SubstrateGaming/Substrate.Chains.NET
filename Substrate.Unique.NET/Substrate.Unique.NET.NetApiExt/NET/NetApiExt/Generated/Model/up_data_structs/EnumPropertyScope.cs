@@ -24,7 +24,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs
     }
     
     /// <summary>
-    /// >> 429 - Variant[up_data_structs.PropertyScope]
+    /// >> 444 - Variant[up_data_structs.PropertyScope]
     /// </summary>
     public sealed class EnumPropertyScope : BaseEnum<PropertyScope>
     {

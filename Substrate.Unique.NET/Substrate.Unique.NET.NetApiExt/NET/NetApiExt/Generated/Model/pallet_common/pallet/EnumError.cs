@@ -94,7 +94,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_common.pallet
     }
     
     /// <summary>
-    /// >> 419 - Variant[pallet_common.pallet.Error]
+    /// >> 434 - Variant[pallet_common.pallet.Error]
     /// 
     ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
     ///			of this pallet.

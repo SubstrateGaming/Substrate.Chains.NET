@@ -22,7 +22,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_evm_coder_substr
     }
     
     /// <summary>
-    /// >> 321 - Variant[pallet_evm_coder_substrate.pallet.Call]
+    /// >> 336 - Variant[pallet_evm_coder_substrate.pallet.Call]
     /// Contains one variant per dispatchable that can be called by an extrinsic.
     /// </summary>
     public sealed class EnumCall : BaseEnum<Call>

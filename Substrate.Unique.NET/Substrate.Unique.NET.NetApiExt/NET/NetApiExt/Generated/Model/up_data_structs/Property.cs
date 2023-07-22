@@ -18,7 +18,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs
     
     
     /// <summary>
-    /// >> 275 - Composite[up_data_structs.Property]
+    /// >> 290 - Composite[up_data_structs.Property]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Property : BaseType
@@ -32,7 +32,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs
         /// <summary>
         /// >> value
         /// </summary>
-        private Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT15 _value;
+        private Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18 _value;
         
         public Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT4 Key
         {
@@ -46,7 +46,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs
             }
         }
         
-        public Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT15 Value
+        public Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18 Value
         {
             get
             {
@@ -76,7 +76,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs
             var start = p;
             Key = new Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT4();
             Key.Decode(byteArray, ref p);
-            Value = new Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT15();
+            Value = new Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18();
             Value.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

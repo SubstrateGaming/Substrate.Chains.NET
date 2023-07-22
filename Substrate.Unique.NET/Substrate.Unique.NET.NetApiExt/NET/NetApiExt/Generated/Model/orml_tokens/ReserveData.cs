@@ -18,7 +18,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.orml_tokens
     
     
     /// <summary>
-    /// >> 339 - Composite[orml_tokens.ReserveData]
+    /// >> 354 - Composite[orml_tokens.ReserveData]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class ReserveData : BaseType

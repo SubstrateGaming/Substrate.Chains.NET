@@ -24,7 +24,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_foreign_assets
     }
     
     /// <summary>
-    /// >> 62 - Variant[pallet_foreign_assets.NativeCurrency]
+    /// >> 66 - Variant[pallet_foreign_assets.NativeCurrency]
     /// </summary>
     public sealed class EnumNativeCurrency : BaseEnum<NativeCurrency>
     {

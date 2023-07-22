@@ -18,7 +18,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.unique_runtime
     
     
     /// <summary>
-    /// >> 488 - Composite[unique_runtime.Runtime]
+    /// >> 503 - Composite[unique_runtime.Runtime]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Runtime : BaseType

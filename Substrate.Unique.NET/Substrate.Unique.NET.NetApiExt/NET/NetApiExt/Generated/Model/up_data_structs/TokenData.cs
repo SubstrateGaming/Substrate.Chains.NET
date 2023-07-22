@@ -18,7 +18,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs
     
     
     /// <summary>
-    /// >> 406 - Composite[up_data_structs.TokenData]
+    /// >> 421 - Composite[up_data_structs.TokenData]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class TokenData : BaseType

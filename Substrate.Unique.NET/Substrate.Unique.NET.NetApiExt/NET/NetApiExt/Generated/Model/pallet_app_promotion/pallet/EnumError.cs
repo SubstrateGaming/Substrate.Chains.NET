@@ -28,13 +28,13 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_app_promotion.pa
         
         SponsorNotSet = 4,
         
-        IncorrectLockedBalanceOperation = 5,
+        InsufficientStakedBalance = 5,
         
-        InsufficientStakedBalance = 6,
+        InconsistencyState = 6,
     }
     
     /// <summary>
-    /// >> 439 - Variant[pallet_app_promotion.pallet.Error]
+    /// >> 454 - Variant[pallet_app_promotion.pallet.Error]
     /// 
     ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
     ///			of this pallet.

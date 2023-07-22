@@ -38,7 +38,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_treasury.pallet
     }
     
     /// <summary>
-    /// >> 34 - Variant[pallet_treasury.pallet.Event]
+    /// >> 38 - Variant[pallet_treasury.pallet.Event]
     /// 
     ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
     ///			by this pallet.

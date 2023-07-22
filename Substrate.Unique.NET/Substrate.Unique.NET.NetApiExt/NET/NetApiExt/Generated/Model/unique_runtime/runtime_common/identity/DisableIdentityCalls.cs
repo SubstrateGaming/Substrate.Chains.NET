@@ -18,7 +18,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.unique_runtime.runtime_
     
     
     /// <summary>
-    /// >> 486 - Composite[unique_runtime.runtime_common.identity.DisableIdentityCalls]
+    /// >> 501 - Composite[unique_runtime.runtime_common.identity.DisableIdentityCalls]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class DisableIdentityCalls : BaseType

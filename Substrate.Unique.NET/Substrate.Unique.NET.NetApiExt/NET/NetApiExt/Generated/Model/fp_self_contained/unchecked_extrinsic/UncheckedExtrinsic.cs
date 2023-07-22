@@ -18,7 +18,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.fp_self_contained.unche
     
     
     /// <summary>
-    /// >> 470 - Composite[fp_self_contained.unchecked_extrinsic.UncheckedExtrinsic]
+    /// >> 485 - Composite[fp_self_contained.unchecked_extrinsic.UncheckedExtrinsic]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class UncheckedExtrinsic : BaseType

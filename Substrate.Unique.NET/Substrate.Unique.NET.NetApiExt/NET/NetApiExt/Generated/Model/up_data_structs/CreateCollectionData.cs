@@ -18,7 +18,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs
     
     
     /// <summary>
-    /// >> 253 - Composite[up_data_structs.CreateCollectionData]
+    /// >> 268 - Composite[up_data_structs.CreateCollectionData]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class CreateCollectionData : BaseType
@@ -37,17 +37,17 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs
         /// <summary>
         /// >> name
         /// </summary>
-        private Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10 _name;
+        private Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT13 _name;
         
         /// <summary>
         /// >> description
         /// </summary>
-        private Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT11 _description;
+        private Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT14 _description;
         
         /// <summary>
         /// >> token_prefix
         /// </summary>
-        private Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT12 _tokenPrefix;
+        private Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT15 _tokenPrefix;
         
         /// <summary>
         /// >> pending_sponsor
@@ -67,12 +67,12 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs
         /// <summary>
         /// >> token_property_permissions
         /// </summary>
-        private Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT13 _tokenPropertyPermissions;
+        private Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT16 _tokenPropertyPermissions;
         
         /// <summary>
         /// >> properties
         /// </summary>
-        private Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT14 _properties;
+        private Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17 _properties;
         
         public Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.EnumCollectionMode Mode
         {
@@ -98,7 +98,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs
             }
         }
         
-        public Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10 Name
+        public Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT13 Name
         {
             get
             {
@@ -110,7 +110,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs
             }
         }
         
-        public Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT11 Description
+        public Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT14 Description
         {
             get
             {
@@ -122,7 +122,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs
             }
         }
         
-        public Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT12 TokenPrefix
+        public Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT15 TokenPrefix
         {
             get
             {
@@ -170,7 +170,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs
             }
         }
         
-        public Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT13 TokenPropertyPermissions
+        public Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT16 TokenPropertyPermissions
         {
             get
             {
@@ -182,7 +182,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs
             }
         }
         
-        public Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT14 Properties
+        public Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17 Properties
         {
             get
             {
@@ -222,11 +222,11 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs
             Mode.Decode(byteArray, ref p);
             Access = new Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.EnumAccessMode>();
             Access.Decode(byteArray, ref p);
-            Name = new Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10();
+            Name = new Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT13();
             Name.Decode(byteArray, ref p);
-            Description = new Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT11();
+            Description = new Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT14();
             Description.Decode(byteArray, ref p);
-            TokenPrefix = new Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT12();
+            TokenPrefix = new Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT15();
             TokenPrefix.Decode(byteArray, ref p);
             PendingSponsor = new Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Unique.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>();
             PendingSponsor.Decode(byteArray, ref p);
@@ -234,9 +234,9 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs
             Limits.Decode(byteArray, ref p);
             Permissions = new Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionPermissions>();
             Permissions.Decode(byteArray, ref p);
-            TokenPropertyPermissions = new Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT13();
+            TokenPropertyPermissions = new Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT16();
             TokenPropertyPermissions.Decode(byteArray, ref p);
-            Properties = new Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT14();
+            Properties = new Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17();
             Properties.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

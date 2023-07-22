@@ -64,7 +64,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_common.pallet
     }
     
     /// <summary>
-    /// >> 109 - Variant[pallet_common.pallet.Event]
+    /// >> 113 - Variant[pallet_common.pallet.Event]
     /// 
     ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
     ///			by this pallet.

@@ -26,7 +26,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs
     }
     
     /// <summary>
-    /// >> 460 - Variant[up_data_structs.SponsorshipState]
+    /// >> 475 - Variant[up_data_structs.SponsorshipState]
     /// </summary>
     public sealed class EnumSponsorshipState : BaseEnumExt<SponsorshipState, BaseVoid, Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_evm.account.EnumBasicCrossAccountIdRepr, Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_evm.account.EnumBasicCrossAccountIdRepr>
     {

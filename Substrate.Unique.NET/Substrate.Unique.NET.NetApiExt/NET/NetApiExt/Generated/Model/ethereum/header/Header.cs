@@ -18,7 +18,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.ethereum.header
     
     
     /// <summary>
-    /// >> 452 - Composite[ethereum.header.Header]
+    /// >> 467 - Composite[ethereum.header.Header]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Header : BaseType

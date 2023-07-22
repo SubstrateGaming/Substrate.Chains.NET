@@ -32,7 +32,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.orml_vesting.module
     }
     
     /// <summary>
-    /// >> 331 - Variant[orml_vesting.module.Error]
+    /// >> 346 - Variant[orml_vesting.module.Error]
     /// 
     ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
     ///			of this pallet.

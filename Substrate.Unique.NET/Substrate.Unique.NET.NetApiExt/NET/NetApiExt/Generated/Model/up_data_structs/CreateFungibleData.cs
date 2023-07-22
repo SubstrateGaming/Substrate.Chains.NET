@@ -18,7 +18,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs
     
     
     /// <summary>
-    /// >> 280 - Composite[up_data_structs.CreateFungibleData]
+    /// >> 295 - Composite[up_data_structs.CreateFungibleData]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class CreateFungibleData : BaseType

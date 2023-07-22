@@ -34,7 +34,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.cumulus_pallet_dmp_queu
     }
     
     /// <summary>
-    /// >> 105 - Variant[cumulus_pallet_dmp_queue.pallet.Event]
+    /// >> 109 - Variant[cumulus_pallet_dmp_queue.pallet.Event]
     /// 
     ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
     ///			by this pallet.

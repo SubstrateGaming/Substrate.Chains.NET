@@ -32,7 +32,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_configuration.pa
     }
     
     /// <summary>
-    /// >> 296 - Variant[pallet_configuration.pallet.Call]
+    /// >> 311 - Variant[pallet_configuration.pallet.Call]
     /// Contains one variant per dispatchable that can be called by an extrinsic.
     /// </summary>
     public sealed class EnumCall : BaseEnumExt<Call, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U64>, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U64>, BaseVoid, Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_configuration.AppPromotionConfiguration, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U128>, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32>>

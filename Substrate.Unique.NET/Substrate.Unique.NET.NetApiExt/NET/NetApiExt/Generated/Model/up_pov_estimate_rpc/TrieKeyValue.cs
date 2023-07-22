@@ -18,7 +18,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.up_pov_estimate_rpc
     
     
     /// <summary>
-    /// >> 417 - Composite[up_pov_estimate_rpc.TrieKeyValue]
+    /// >> 432 - Composite[up_pov_estimate_rpc.TrieKeyValue]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class TrieKeyValue : BaseType

@@ -26,7 +26,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.orml_vesting.module
     }
     
     /// <summary>
-    /// >> 39 - Variant[orml_vesting.module.Event]
+    /// >> 43 - Variant[orml_vesting.module.Event]
     /// 
     ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
     ///			by this pallet.

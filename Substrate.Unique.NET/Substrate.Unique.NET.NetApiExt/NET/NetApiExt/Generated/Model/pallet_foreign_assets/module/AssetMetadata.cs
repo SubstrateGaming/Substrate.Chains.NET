@@ -18,7 +18,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_foreign_assets.m
     
     
     /// <summary>
-    /// >> 118 - Composite[pallet_foreign_assets.module.AssetMetadata]
+    /// >> 122 - Composite[pallet_foreign_assets.module.AssetMetadata]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class AssetMetadata : BaseType

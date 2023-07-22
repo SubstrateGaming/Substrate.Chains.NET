@@ -26,7 +26,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_evm_contract_hel
     }
     
     /// <summary>
-    /// >> 133 - Variant[pallet_evm_contract_helpers.pallet.Event]
+    /// >> 137 - Variant[pallet_evm_contract_helpers.pallet.Event]
     /// 
     ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
     ///			by this pallet.

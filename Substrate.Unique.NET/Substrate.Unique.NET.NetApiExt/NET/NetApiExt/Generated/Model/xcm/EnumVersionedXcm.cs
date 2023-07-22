@@ -24,7 +24,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.xcm
     }
     
     /// <summary>
-    /// >> 236 - Variant[xcm.VersionedXcm]
+    /// >> 251 - Variant[xcm.VersionedXcm]
     /// </summary>
     public sealed class EnumVersionedXcm : BaseEnumExt<VersionedXcm, BaseVoid, BaseVoid, Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v2.XcmT2, Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v3.XcmT2>
     {

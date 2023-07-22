@@ -347,7 +347,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         /// >> create_collection
         /// Type alias to Pallet, to be used by construct_runtime.
         /// </summary>
-        public static Method CreateCollection(Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10 collection_name, Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT11 collection_description, Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT12 token_prefix, Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.EnumCollectionMode mode)
+        public static Method CreateCollection(Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT13 collection_name, Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT14 collection_description, Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT15 token_prefix, Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.EnumCollectionMode mode)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(collection_name.Encode());

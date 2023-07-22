@@ -34,7 +34,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_fungible.pallet
     }
     
     /// <summary>
-    /// >> 421 - Variant[pallet_fungible.pallet.Error]
+    /// >> 436 - Variant[pallet_fungible.pallet.Error]
     /// 
     ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
     ///			of this pallet.

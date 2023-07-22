@@ -18,7 +18,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.PhantomType
     
     
     /// <summary>
-    /// >> 404 - Composite[PhantomType.up_data_structs]
+    /// >> 419 - Composite[PhantomType.up_data_structs]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class up_data_structs : BaseType

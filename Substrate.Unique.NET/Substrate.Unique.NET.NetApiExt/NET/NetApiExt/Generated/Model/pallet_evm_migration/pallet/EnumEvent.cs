@@ -22,7 +22,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_evm_migration.pa
     }
     
     /// <summary>
-    /// >> 134 - Variant[pallet_evm_migration.pallet.Event]
+    /// >> 138 - Variant[pallet_evm_migration.pallet.Event]
     /// 
     ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
     ///			by this pallet.

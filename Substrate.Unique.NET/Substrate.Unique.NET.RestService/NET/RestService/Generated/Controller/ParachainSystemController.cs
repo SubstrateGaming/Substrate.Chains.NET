@@ -77,7 +77,7 @@ namespace Substrate.Unique.NET.RestService.Generated.Controller
         ///  in the trie.
         /// </summary>
         [HttpGet("ValidationData")]
-        [ProducesResponseType(typeof(Substrate.Unique.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.PersistedValidationData), 200)]
+        [ProducesResponseType(typeof(Substrate.Unique.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.PersistedValidationData), 200)]
         [StorageKeyBuilder(typeof(Substrate.Unique.NET.NetApiExt.Generated.Storage.ParachainSystemStorage), "ValidationDataParams")]
         public IActionResult GetValidationData()
         {
@@ -119,7 +119,7 @@ namespace Substrate.Unique.NET.RestService.Generated.Controller
         ///  set after the inherent.
         /// </summary>
         [HttpGet("UpgradeRestrictionSignal")]
-        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Unique.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.EnumUpgradeRestriction>), 200)]
+        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Unique.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.EnumUpgradeRestriction>), 200)]
         [StorageKeyBuilder(typeof(Substrate.Unique.NET.NetApiExt.Generated.Storage.ParachainSystemStorage), "UpgradeRestrictionSignalParams")]
         public IActionResult GetUpgradeRestrictionSignal()
         {
@@ -171,7 +171,7 @@ namespace Substrate.Unique.NET.RestService.Generated.Controller
         ///  This data is also absent from the genesis.
         /// </summary>
         [HttpGet("HostConfiguration")]
-        [ProducesResponseType(typeof(Substrate.Unique.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.AbridgedHostConfiguration), 200)]
+        [ProducesResponseType(typeof(Substrate.Unique.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.AbridgedHostConfiguration), 200)]
         [StorageKeyBuilder(typeof(Substrate.Unique.NET.NetApiExt.Generated.Storage.ParachainSystemStorage), "HostConfigurationParams")]
         public IActionResult GetHostConfiguration()
         {

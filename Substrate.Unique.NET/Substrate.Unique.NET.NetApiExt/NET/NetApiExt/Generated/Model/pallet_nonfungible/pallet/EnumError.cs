@@ -26,7 +26,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_nonfungible.pall
     }
     
     /// <summary>
-    /// >> 432 - Variant[pallet_nonfungible.pallet.Error]
+    /// >> 447 - Variant[pallet_nonfungible.pallet.Error]
     /// 
     ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
     ///			of this pallet.

@@ -13,12 +13,12 @@ using Substrate.NetApi.Model.Types.Metadata.V14;
 using System.Collections.Generic;
 
 
-namespace Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_balances
+namespace Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_balances.types
 {
     
     
     /// <summary>
-    /// >> 5 - Composite[pallet_balances.AccountData]
+    /// >> 5 - Composite[pallet_balances.types.AccountData]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class AccountData : BaseType
@@ -35,14 +35,14 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_balances
         private Substrate.NetApi.Model.Types.Primitive.U128 _reserved;
         
         /// <summary>
-        /// >> misc_frozen
+        /// >> frozen
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U128 _miscFrozen;
+        private Substrate.NetApi.Model.Types.Primitive.U128 _frozen;
         
         /// <summary>
-        /// >> fee_frozen
+        /// >> flags
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U128 _feeFrozen;
+        private Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_balances.types.ExtraFlags _flags;
         
         public Substrate.NetApi.Model.Types.Primitive.U128 Free
         {
@@ -68,27 +68,27 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_balances
             }
         }
         
-        public Substrate.NetApi.Model.Types.Primitive.U128 MiscFrozen
+        public Substrate.NetApi.Model.Types.Primitive.U128 Frozen
         {
             get
             {
-                return this._miscFrozen;
+                return this._frozen;
             }
             set
             {
-                this._miscFrozen = value;
+                this._frozen = value;
             }
         }
         
-        public Substrate.NetApi.Model.Types.Primitive.U128 FeeFrozen
+        public Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_balances.types.ExtraFlags Flags
         {
             get
             {
-                return this._feeFrozen;
+                return this._flags;
             }
             set
             {
-                this._feeFrozen = value;
+                this._flags = value;
             }
         }
         
@@ -102,8 +102,8 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_balances
             var result = new List<byte>();
             result.AddRange(Free.Encode());
             result.AddRange(Reserved.Encode());
-            result.AddRange(MiscFrozen.Encode());
-            result.AddRange(FeeFrozen.Encode());
+            result.AddRange(Frozen.Encode());
+            result.AddRange(Flags.Encode());
             return result.ToArray();
         }
         
@@ -114,10 +114,10 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_balances
             Free.Decode(byteArray, ref p);
             Reserved = new Substrate.NetApi.Model.Types.Primitive.U128();
             Reserved.Decode(byteArray, ref p);
-            MiscFrozen = new Substrate.NetApi.Model.Types.Primitive.U128();
-            MiscFrozen.Decode(byteArray, ref p);
-            FeeFrozen = new Substrate.NetApi.Model.Types.Primitive.U128();
-            FeeFrozen.Decode(byteArray, ref p);
+            Frozen = new Substrate.NetApi.Model.Types.Primitive.U128();
+            Frozen.Decode(byteArray, ref p);
+            Flags = new Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_balances.types.ExtraFlags();
+            Flags.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];

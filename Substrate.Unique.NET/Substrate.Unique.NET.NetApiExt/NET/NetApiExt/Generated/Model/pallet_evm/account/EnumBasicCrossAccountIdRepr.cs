@@ -24,7 +24,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_evm.account
     }
     
     /// <summary>
-    /// >> 112 - Variant[pallet_evm.account.BasicCrossAccountIdRepr]
+    /// >> 116 - Variant[pallet_evm.account.BasicCrossAccountIdRepr]
     /// </summary>
     public sealed class EnumBasicCrossAccountIdRepr : BaseEnumExt<BasicCrossAccountIdRepr, Substrate.Unique.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H160>
     {

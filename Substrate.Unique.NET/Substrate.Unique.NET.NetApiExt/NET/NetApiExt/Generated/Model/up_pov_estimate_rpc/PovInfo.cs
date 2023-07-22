@@ -18,7 +18,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.up_pov_estimate_rpc
     
     
     /// <summary>
-    /// >> 410 - Composite[up_pov_estimate_rpc.PovInfo]
+    /// >> 425 - Composite[up_pov_estimate_rpc.PovInfo]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class PovInfo : BaseType

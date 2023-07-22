@@ -52,7 +52,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         /// </summary>
         public static string WeightToFeeCoefficientOverrideDefault()
         {
-            return "0x3166FD6145041601";
+            return "0x3AECA2BF09FE1001";
         }
         
         /// <summary>
@@ -79,7 +79,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         /// </summary>
         public static string MinGasPriceOverrideDefault()
         {
-            return "0xBE2E7BB7DD000000";
+            return "0x2D6BC6EBBB010000";
         }
         
         /// <summary>
@@ -280,7 +280,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         public Substrate.NetApi.Model.Types.Primitive.U64 DefaultWeightToFeeCoefficient()
         {
             var result = new Substrate.NetApi.Model.Types.Primitive.U64();
-            result.Create("0x3166FD6145041601");
+            result.Create("0x3AECA2BF09FE1001");
             return result;
         }
         
@@ -290,7 +290,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         public Substrate.NetApi.Model.Types.Primitive.U64 DefaultMinGasPrice()
         {
             var result = new Substrate.NetApi.Model.Types.Primitive.U64();
-            result.Create("0xBE2E7BB7DD000000");
+            result.Create("0x2D6BC6EBBB010000");
             return result;
         }
         

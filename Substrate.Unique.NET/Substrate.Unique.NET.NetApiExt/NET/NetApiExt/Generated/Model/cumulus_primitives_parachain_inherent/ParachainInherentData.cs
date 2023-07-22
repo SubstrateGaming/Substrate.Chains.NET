@@ -18,7 +18,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.cumulus_primitives_para
     
     
     /// <summary>
-    /// >> 177 - Composite[cumulus_primitives_parachain_inherent.ParachainInherentData]
+    /// >> 187 - Composite[cumulus_primitives_parachain_inherent.ParachainInherentData]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class ParachainInherentData : BaseType
@@ -27,7 +27,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.cumulus_primitives_para
         /// <summary>
         /// >> validation_data
         /// </summary>
-        private Substrate.Unique.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.PersistedValidationData _validationData;
+        private Substrate.Unique.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.PersistedValidationData _validationData;
         
         /// <summary>
         /// >> relay_chain_state
@@ -44,7 +44,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.cumulus_primitives_para
         /// </summary>
         private Substrate.Unique.NET.NetApiExt.Generated.Types.Base.BTreeMapT2 _horizontalMessages;
         
-        public Substrate.Unique.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.PersistedValidationData ValidationData
+        public Substrate.Unique.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.PersistedValidationData ValidationData
         {
             get
             {
@@ -110,7 +110,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.cumulus_primitives_para
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            ValidationData = new Substrate.Unique.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.PersistedValidationData();
+            ValidationData = new Substrate.Unique.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.PersistedValidationData();
             ValidationData.Decode(byteArray, ref p);
             RelayChainState = new Substrate.Unique.NET.NetApiExt.Generated.Model.sp_trie.storage_proof.StorageProof();
             RelayChainState.Decode(byteArray, ref p);

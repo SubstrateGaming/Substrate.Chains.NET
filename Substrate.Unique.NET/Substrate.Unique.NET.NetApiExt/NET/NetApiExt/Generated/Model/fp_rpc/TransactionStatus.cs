@@ -18,7 +18,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.fp_rpc
     
     
     /// <summary>
-    /// >> 445 - Composite[fp_rpc.TransactionStatus]
+    /// >> 460 - Composite[fp_rpc.TransactionStatus]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class TransactionStatus : BaseType

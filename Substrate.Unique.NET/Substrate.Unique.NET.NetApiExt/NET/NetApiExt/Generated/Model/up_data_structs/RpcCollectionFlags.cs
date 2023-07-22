@@ -18,7 +18,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs
     
     
     /// <summary>
-    /// >> 409 - Composite[up_data_structs.RpcCollectionFlags]
+    /// >> 424 - Composite[up_data_structs.RpcCollectionFlags]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class RpcCollectionFlags : BaseType

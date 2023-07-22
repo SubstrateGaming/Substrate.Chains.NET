@@ -138,7 +138,7 @@ namespace Substrate.Unique.NET.RestService.Generated.Controller
         ///  Not used by code, exists only to provide some types to metadata.
         /// </summary>
         [HttpGet("DummyStorageValue")]
-        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionStats), 200)]
+        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionStats, Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId, Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.TokenId, Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.TokenChild, Substrate.Unique.NET.NetApiExt.Generated.Model.PhantomType.up_data_structs>), 200)]
         [StorageKeyBuilder(typeof(Substrate.Unique.NET.NetApiExt.Generated.Storage.CommonStorage), "DummyStorageValueParams")]
         public IActionResult GetDummyStorageValue()
         {

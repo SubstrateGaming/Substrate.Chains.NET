@@ -24,7 +24,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Types.Base
     }
     
     /// <summary>
-    /// >> 412 - Variant[Result]
+    /// >> 427 - Variant[Result]
     /// </summary>
     public sealed class EnumResult : BaseEnumExt<Result, Substrate.Unique.NET.NetApiExt.Generated.Types.Base.EnumResult, Substrate.Unique.NET.NetApiExt.Generated.Model.sp_runtime.transaction_validity.EnumTransactionValidityError>
     {

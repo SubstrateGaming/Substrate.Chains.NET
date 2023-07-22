@@ -36,7 +36,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.orml_tokens.module
     }
     
     /// <summary>
-    /// >> 341 - Variant[orml_tokens.module.Error]
+    /// >> 356 - Variant[orml_tokens.module.Error]
     /// 
     ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
     ///			of this pallet.

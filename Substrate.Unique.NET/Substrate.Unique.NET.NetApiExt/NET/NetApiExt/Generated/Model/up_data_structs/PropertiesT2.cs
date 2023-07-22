@@ -18,7 +18,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs
     
     
     /// <summary>
-    /// >> 422 - Composite[up_data_structs.PropertiesT2]
+    /// >> 437 - Composite[up_data_structs.PropertiesT2]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class PropertiesT2 : BaseType

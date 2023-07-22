@@ -24,7 +24,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_foreign_assets
     }
     
     /// <summary>
-    /// >> 61 - Variant[pallet_foreign_assets.AssetIds]
+    /// >> 65 - Variant[pallet_foreign_assets.AssetIds]
     /// </summary>
     public sealed class EnumAssetIds : BaseEnumExt<AssetIds, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_foreign_assets.EnumNativeCurrency>
     {

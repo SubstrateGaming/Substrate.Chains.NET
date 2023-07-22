@@ -22,7 +22,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_evm_contract_hel
     }
     
     /// <summary>
-    /// >> 322 - Variant[pallet_evm_contract_helpers.pallet.Call]
+    /// >> 337 - Variant[pallet_evm_contract_helpers.pallet.Call]
     /// Contains one variant per dispatchable that can be called by an extrinsic.
     /// </summary>
     public sealed class EnumCall : BaseEnumExt<Call, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H160>>

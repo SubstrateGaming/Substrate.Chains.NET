@@ -18,7 +18,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.orml_tokens
     
     
     /// <summary>
-    /// >> 335 - Composite[orml_tokens.BalanceLock]
+    /// >> 350 - Composite[orml_tokens.BalanceLock]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class BalanceLock : BaseType

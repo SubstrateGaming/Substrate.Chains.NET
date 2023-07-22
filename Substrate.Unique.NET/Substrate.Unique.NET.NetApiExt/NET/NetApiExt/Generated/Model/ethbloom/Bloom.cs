@@ -18,7 +18,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.ethbloom
     
     
     /// <summary>
-    /// >> 447 - Composite[ethbloom.Bloom]
+    /// >> 462 - Composite[ethbloom.Bloom]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Bloom : BaseType

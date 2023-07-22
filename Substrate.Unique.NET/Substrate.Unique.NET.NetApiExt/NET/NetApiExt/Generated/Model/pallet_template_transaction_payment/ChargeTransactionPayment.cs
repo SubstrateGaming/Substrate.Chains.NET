@@ -18,7 +18,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_template_transac
     
     
     /// <summary>
-    /// >> 487 - Composite[pallet_template_transaction_payment.ChargeTransactionPayment]
+    /// >> 502 - Composite[pallet_template_transaction_payment.ChargeTransactionPayment]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class ChargeTransactionPayment : BaseType

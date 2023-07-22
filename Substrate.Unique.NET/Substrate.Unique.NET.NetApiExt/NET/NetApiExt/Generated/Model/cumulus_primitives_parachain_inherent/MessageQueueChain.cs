@@ -18,7 +18,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.cumulus_primitives_para
     
     
     /// <summary>
-    /// >> 169 - Composite[cumulus_primitives_parachain_inherent.MessageQueueChain]
+    /// >> 179 - Composite[cumulus_primitives_parachain_inherent.MessageQueueChain]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class MessageQueueChain : BaseType

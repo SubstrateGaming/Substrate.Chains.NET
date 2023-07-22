@@ -32,6 +32,11 @@ namespace Substrate.Unique.NET.NetApiExt.Generated
         public SystemStorage SystemStorage;
         
         /// <summary>
+        /// StateTrieMigrationStorage storage calls.
+        /// </summary>
+        public StateTrieMigrationStorage StateTrieMigrationStorage;
+        
+        /// <summary>
         /// ParachainSystemStorage storage calls.
         /// </summary>
         public ParachainSystemStorage ParachainSystemStorage;
@@ -201,11 +206,17 @@ namespace Substrate.Unique.NET.NetApiExt.Generated
         /// </summary>
         public MaintenanceStorage MaintenanceStorage;
         
+        /// <summary>
+        /// BalancesAdapterStorage storage calls.
+        /// </summary>
+        public BalancesAdapterStorage BalancesAdapterStorage;
+        
         public SubstrateClientExt(System.Uri uri, Substrate.NetApi.Model.Extrinsics.ChargeType chargeType) : 
                 base(uri, chargeType)
         {
             StorageKeyDict = new System.Collections.Generic.Dictionary<System.Tuple<string, string>, System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>>();
             this.SystemStorage = new SystemStorage(this);
+            this.StateTrieMigrationStorage = new StateTrieMigrationStorage(this);
             this.ParachainSystemStorage = new ParachainSystemStorage(this);
             this.ParachainInfoStorage = new ParachainInfoStorage(this);
             this.AuraStorage = new AuraStorage(this);
@@ -240,6 +251,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated
             this.EvmTransactionPaymentStorage = new EvmTransactionPaymentStorage(this);
             this.EvmMigrationStorage = new EvmMigrationStorage(this);
             this.MaintenanceStorage = new MaintenanceStorage(this);
+            this.BalancesAdapterStorage = new BalancesAdapterStorage(this);
         }
     }
 }

@@ -26,7 +26,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v3.traits
     }
     
     /// <summary>
-    /// >> 67 - Variant[xcm.v3.traits.Outcome]
+    /// >> 71 - Variant[xcm.v3.traits.Outcome]
     /// </summary>
     public sealed class EnumOutcome : BaseEnumExt<Outcome, Substrate.Unique.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight, BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight, Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v3.traits.EnumError>, Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v3.traits.EnumError>
     {

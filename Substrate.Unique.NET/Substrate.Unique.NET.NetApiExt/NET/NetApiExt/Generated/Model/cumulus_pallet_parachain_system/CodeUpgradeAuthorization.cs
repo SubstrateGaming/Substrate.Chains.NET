@@ -18,7 +18,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.cumulus_pallet_parachai
     
     
     /// <summary>
-    /// >> 175 - Composite[cumulus_pallet_parachain_system.CodeUpgradeAuthorization]
+    /// >> 185 - Composite[cumulus_pallet_parachain_system.CodeUpgradeAuthorization]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class CodeUpgradeAuthorization : BaseType

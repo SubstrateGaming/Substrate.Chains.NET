@@ -18,7 +18,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs
     
     
     /// <summary>
-    /// >> 293 - Composite[up_data_structs.CreateRefungibleExSingleOwner]
+    /// >> 308 - Composite[up_data_structs.CreateRefungibleExSingleOwner]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class CreateRefungibleExSingleOwner : BaseType
@@ -37,7 +37,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs
         /// <summary>
         /// >> properties
         /// </summary>
-        private Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT14 _properties;
+        private Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17 _properties;
         
         public Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_evm.account.EnumBasicCrossAccountIdRepr User
         {
@@ -63,7 +63,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs
             }
         }
         
-        public Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT14 Properties
+        public Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17 Properties
         {
             get
             {
@@ -96,7 +96,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs
             User.Decode(byteArray, ref p);
             Pieces = new Substrate.NetApi.Model.Types.Primitive.U128();
             Pieces.Decode(byteArray, ref p);
-            Properties = new Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT14();
+            Properties = new Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17();
             Properties.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

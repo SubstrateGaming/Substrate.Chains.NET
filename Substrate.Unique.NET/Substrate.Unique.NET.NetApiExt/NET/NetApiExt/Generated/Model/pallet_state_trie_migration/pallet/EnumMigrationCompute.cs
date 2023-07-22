@@ -11,24 +11,22 @@ using Substrate.NetApi.Model.Types.Base;
 using System.Collections.Generic;
 
 
-namespace Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_balances
+namespace Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet
 {
     
     
-    public enum Reasons
+    public enum MigrationCompute
     {
         
-        Fee = 0,
+        Signed = 0,
         
-        Misc = 1,
-        
-        All = 2,
+        Auto = 1,
     }
     
     /// <summary>
-    /// >> 194 - Variant[pallet_balances.Reasons]
+    /// >> 31 - Variant[pallet_state_trie_migration.pallet.MigrationCompute]
     /// </summary>
-    public sealed class EnumReasons : BaseEnum<Reasons>
+    public sealed class EnumMigrationCompute : BaseEnum<MigrationCompute>
     {
     }
 }

@@ -18,7 +18,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs
     
     
     /// <summary>
-    /// >> 271 - Composite[up_data_structs.PropertyKeyPermission]
+    /// >> 286 - Composite[up_data_structs.PropertyKeyPermission]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class PropertyKeyPermission : BaseType

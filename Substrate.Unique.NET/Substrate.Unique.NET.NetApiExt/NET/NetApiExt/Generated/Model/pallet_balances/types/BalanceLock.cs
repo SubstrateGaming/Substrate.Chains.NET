@@ -13,12 +13,12 @@ using Substrate.NetApi.Model.Types.Metadata.V14;
 using System.Collections.Generic;
 
 
-namespace Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_balances
+namespace Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_balances.types
 {
     
     
     /// <summary>
-    /// >> 193 - Composite[pallet_balances.BalanceLock]
+    /// >> 203 - Composite[pallet_balances.types.BalanceLock]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class BalanceLock : BaseType
@@ -37,7 +37,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_balances
         /// <summary>
         /// >> reasons
         /// </summary>
-        private Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_balances.EnumReasons _reasons;
+        private Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_balances.types.EnumReasons _reasons;
         
         public Substrate.Unique.NET.NetApiExt.Generated.Types.Base.Arr8U8 Id
         {
@@ -63,7 +63,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_balances
             }
         }
         
-        public Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_balances.EnumReasons Reasons
+        public Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_balances.types.EnumReasons Reasons
         {
             get
             {
@@ -96,7 +96,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_balances
             Id.Decode(byteArray, ref p);
             Amount = new Substrate.NetApi.Model.Types.Primitive.U128();
             Amount.Decode(byteArray, ref p);
-            Reasons = new Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_balances.EnumReasons();
+            Reasons = new Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_balances.types.EnumReasons();
             Reasons.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

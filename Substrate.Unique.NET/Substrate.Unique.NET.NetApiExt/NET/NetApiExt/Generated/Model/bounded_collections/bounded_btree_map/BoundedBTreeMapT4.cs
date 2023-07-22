@@ -18,7 +18,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bou
     
     
     /// <summary>
-    /// >> 462 - Composite[bounded_collections.bounded_btree_map.BoundedBTreeMapT4]
+    /// >> 477 - Composite[bounded_collections.bounded_btree_map.BoundedBTreeMapT4]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class BoundedBTreeMapT4 : BaseType

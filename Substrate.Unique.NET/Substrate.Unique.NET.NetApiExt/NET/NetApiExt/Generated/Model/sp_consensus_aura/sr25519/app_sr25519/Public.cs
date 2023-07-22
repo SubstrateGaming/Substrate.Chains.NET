@@ -18,7 +18,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.sp_consensus_aura.sr255
     
     
     /// <summary>
-    /// >> 188 - Composite[sp_consensus_aura.sr25519.app_sr25519.Public]
+    /// >> 198 - Composite[sp_consensus_aura.sr25519.app_sr25519.Public]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Public : BaseType

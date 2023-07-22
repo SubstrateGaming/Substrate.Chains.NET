@@ -28,7 +28,7 @@ namespace Substrate.Unique.NET.RestService.Generated.Storage
         /// >> Authorities
         ///  The current authority set.
         /// </summary>
-        Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT7 GetAuthorities();
+        Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT8 GetAuthorities();
         
         /// <summary>
         /// >> CurrentSlot
@@ -48,7 +48,7 @@ namespace Substrate.Unique.NET.RestService.Generated.Storage
         /// <summary>
         /// _authoritiesTypedStorage typed storage field
         /// </summary>
-        private TypedStorage<Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT7> _authoritiesTypedStorage;
+        private TypedStorage<Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT8> _authoritiesTypedStorage;
         
         /// <summary>
         /// _currentSlotTypedStorage typed storage field
@@ -60,14 +60,14 @@ namespace Substrate.Unique.NET.RestService.Generated.Storage
         /// </summary>
         public AuraStorage(IStorageDataProvider storageDataProvider, List<IStorageChangeDelegate> storageChangeDelegates)
         {
-            this.AuthoritiesTypedStorage = new TypedStorage<Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT7>("Aura.Authorities", storageDataProvider, storageChangeDelegates);
+            this.AuthoritiesTypedStorage = new TypedStorage<Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT8>("Aura.Authorities", storageDataProvider, storageChangeDelegates);
             this.CurrentSlotTypedStorage = new TypedStorage<Substrate.Unique.NET.NetApiExt.Generated.Model.sp_consensus_slots.Slot>("Aura.CurrentSlot", storageDataProvider, storageChangeDelegates);
         }
         
         /// <summary>
         /// _authoritiesTypedStorage property
         /// </summary>
-        public TypedStorage<Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT7> AuthoritiesTypedStorage
+        public TypedStorage<Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT8> AuthoritiesTypedStorage
         {
             get
             {
@@ -116,7 +116,7 @@ namespace Substrate.Unique.NET.RestService.Generated.Storage
         /// >> Authorities
         ///  The current authority set.
         /// </summary>
-        public Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT7 GetAuthorities()
+        public Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT8 GetAuthorities()
         {
             return AuthoritiesTypedStorage.Get();
         }

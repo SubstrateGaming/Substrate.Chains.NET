@@ -24,7 +24,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_evm_coder_substr
     }
     
     /// <summary>
-    /// >> 459 - Variant[pallet_evm_coder_substrate.pallet.Error]
+    /// >> 474 - Variant[pallet_evm_coder_substrate.pallet.Error]
     /// DispatchError is opaque, but we need to somehow extract correct error in case of OutOfGas failure
     /// So we have this pallet, which defines OutOfGas error, and knews its own id to check if DispatchError
     /// is thrown because of it

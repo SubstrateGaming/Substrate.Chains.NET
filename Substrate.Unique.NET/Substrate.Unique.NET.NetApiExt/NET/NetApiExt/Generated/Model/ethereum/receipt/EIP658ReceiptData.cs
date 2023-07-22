@@ -18,7 +18,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.ethereum.receipt
     
     
     /// <summary>
-    /// >> 450 - Composite[ethereum.receipt.EIP658ReceiptData]
+    /// >> 465 - Composite[ethereum.receipt.EIP658ReceiptData]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class EIP658ReceiptData : BaseType

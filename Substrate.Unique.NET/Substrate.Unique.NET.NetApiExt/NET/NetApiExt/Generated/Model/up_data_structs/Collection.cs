@@ -18,7 +18,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs
     
     
     /// <summary>
-    /// >> 386 - Composite[up_data_structs.Collection]
+    /// >> 401 - Composite[up_data_structs.Collection]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Collection : BaseType
@@ -37,17 +37,17 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs
         /// <summary>
         /// >> name
         /// </summary>
-        private Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10 _name;
+        private Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT13 _name;
         
         /// <summary>
         /// >> description
         /// </summary>
-        private Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT11 _description;
+        private Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT14 _description;
         
         /// <summary>
         /// >> token_prefix
         /// </summary>
-        private Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT12 _tokenPrefix;
+        private Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT15 _tokenPrefix;
         
         /// <summary>
         /// >> sponsorship
@@ -93,7 +93,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs
             }
         }
         
-        public Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10 Name
+        public Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT13 Name
         {
             get
             {
@@ -105,7 +105,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs
             }
         }
         
-        public Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT11 Description
+        public Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT14 Description
         {
             get
             {
@@ -117,7 +117,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs
             }
         }
         
-        public Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT12 TokenPrefix
+        public Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT15 TokenPrefix
         {
             get
             {
@@ -204,11 +204,11 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs
             Owner.Decode(byteArray, ref p);
             Mode = new Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.EnumCollectionMode();
             Mode.Decode(byteArray, ref p);
-            Name = new Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10();
+            Name = new Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT13();
             Name.Decode(byteArray, ref p);
-            Description = new Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT11();
+            Description = new Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT14();
             Description.Decode(byteArray, ref p);
-            TokenPrefix = new Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT12();
+            TokenPrefix = new Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT15();
             TokenPrefix.Decode(byteArray, ref p);
             Sponsorship = new Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.EnumSponsorshipState();
             Sponsorship.Decode(byteArray, ref p);

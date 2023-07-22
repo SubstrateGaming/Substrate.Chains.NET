@@ -18,7 +18,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs
     
     
     /// <summary>
-    /// >> 110 - Composite[up_data_structs.CollectionId]
+    /// >> 114 - Composite[up_data_structs.CollectionId]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class CollectionId : BaseType

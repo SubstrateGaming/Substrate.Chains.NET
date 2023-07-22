@@ -34,7 +34,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.cumulus_pallet_parachai
     }
     
     /// <summary>
-    /// >> 29 - Variant[cumulus_pallet_parachain_system.pallet.Event]
+    /// >> 33 - Variant[cumulus_pallet_parachain_system.pallet.Event]
     /// 
     ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
     ///			by this pallet.

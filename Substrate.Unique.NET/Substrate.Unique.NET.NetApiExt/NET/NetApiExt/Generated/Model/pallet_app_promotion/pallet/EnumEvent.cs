@@ -28,7 +28,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_app_promotion.pa
     }
     
     /// <summary>
-    /// >> 116 - Variant[pallet_app_promotion.pallet.Event]
+    /// >> 120 - Variant[pallet_app_promotion.pallet.Event]
     /// 
     ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
     ///			by this pallet.

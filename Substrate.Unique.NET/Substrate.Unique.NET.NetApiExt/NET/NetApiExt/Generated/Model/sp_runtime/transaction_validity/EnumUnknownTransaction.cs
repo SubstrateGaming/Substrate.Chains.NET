@@ -26,7 +26,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.sp_runtime.transaction_
     }
     
     /// <summary>
-    /// >> 415 - Variant[sp_runtime.transaction_validity.UnknownTransaction]
+    /// >> 430 - Variant[sp_runtime.transaction_validity.UnknownTransaction]
     /// </summary>
     public sealed class EnumUnknownTransaction : BaseEnumExt<UnknownTransaction, BaseVoid, BaseVoid, Substrate.NetApi.Model.Types.Primitive.U8>
     {

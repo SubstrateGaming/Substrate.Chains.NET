@@ -24,7 +24,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.ethereum.transaction
     }
     
     /// <summary>
-    /// >> 314 - Variant[ethereum.transaction.TransactionAction]
+    /// >> 329 - Variant[ethereum.transaction.TransactionAction]
     /// </summary>
     public sealed class EnumTransactionAction : BaseEnumExt<TransactionAction, Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H160, BaseVoid>
     {

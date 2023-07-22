@@ -32,7 +32,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.frame_system.pallet
     }
     
     /// <summary>
-    /// >> 20 - Variant[frame_system.pallet.Event]
+    /// >> 21 - Variant[frame_system.pallet.Event]
     /// Event for the System pallet.
     /// </summary>
     public sealed class EnumEvent : BaseEnumExt<Event, Substrate.Unique.NET.NetApiExt.Generated.Model.frame_support.dispatch.DispatchInfo, BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.sp_runtime.EnumDispatchError, Substrate.Unique.NET.NetApiExt.Generated.Model.frame_support.dispatch.DispatchInfo>, BaseVoid, Substrate.Unique.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Unique.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H256>>

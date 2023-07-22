@@ -32,7 +32,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v3.multiasset
     }
     
     /// <summary>
-    /// >> 57 - Variant[xcm.v3.multiasset.AssetInstance]
+    /// >> 61 - Variant[xcm.v3.multiasset.AssetInstance]
     /// </summary>
     public sealed class EnumAssetInstance : BaseEnumExt<AssetInstance, BaseVoid, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128>, Substrate.Unique.NET.NetApiExt.Generated.Types.Base.Arr4U8, Substrate.Unique.NET.NetApiExt.Generated.Types.Base.Arr8U8, Substrate.Unique.NET.NetApiExt.Generated.Types.Base.Arr16U8, Substrate.Unique.NET.NetApiExt.Generated.Types.Base.Arr32U8>
     {

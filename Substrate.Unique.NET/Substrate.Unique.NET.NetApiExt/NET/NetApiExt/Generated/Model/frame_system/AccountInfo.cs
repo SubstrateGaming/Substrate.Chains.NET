@@ -47,7 +47,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.frame_system
         /// <summary>
         /// >> data
         /// </summary>
-        private Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_balances.AccountData _data;
+        private Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_balances.types.AccountData _data;
         
         public Substrate.NetApi.Model.Types.Primitive.U32 Nonce
         {
@@ -97,7 +97,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.frame_system
             }
         }
         
-        public Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_balances.AccountData Data
+        public Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_balances.types.AccountData Data
         {
             get
             {
@@ -136,7 +136,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.frame_system
             Providers.Decode(byteArray, ref p);
             Sufficients = new Substrate.NetApi.Model.Types.Primitive.U32();
             Sufficients.Decode(byteArray, ref p);
-            Data = new Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_balances.AccountData();
+            Data = new Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_balances.types.AccountData();
             Data.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

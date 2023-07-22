@@ -18,7 +18,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs
     
     
     /// <summary>
-    /// >> 264 - Composite[up_data_structs.NestingPermissions]
+    /// >> 279 - Composite[up_data_structs.NestingPermissions]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class NestingPermissions : BaseType

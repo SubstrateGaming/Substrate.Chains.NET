@@ -18,7 +18,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.sp_consensus_slots
     
     
     /// <summary>
-    /// >> 191 - Composite[sp_consensus_slots.Slot]
+    /// >> 201 - Composite[sp_consensus_slots.Slot]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Slot : BaseType

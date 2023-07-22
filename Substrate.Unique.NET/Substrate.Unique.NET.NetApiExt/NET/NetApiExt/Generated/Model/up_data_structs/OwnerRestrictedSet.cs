@@ -18,7 +18,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs
     
     
     /// <summary>
-    /// >> 266 - Composite[up_data_structs.OwnerRestrictedSet]
+    /// >> 281 - Composite[up_data_structs.OwnerRestrictedSet]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class OwnerRestrictedSet : BaseType

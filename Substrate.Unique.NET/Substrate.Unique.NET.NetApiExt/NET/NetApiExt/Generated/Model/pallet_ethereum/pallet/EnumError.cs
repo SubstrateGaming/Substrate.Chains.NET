@@ -24,7 +24,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_ethereum.pallet
     }
     
     /// <summary>
-    /// >> 458 - Variant[pallet_ethereum.pallet.Error]
+    /// >> 473 - Variant[pallet_ethereum.pallet.Error]
     /// 
     ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
     ///			of this pallet.

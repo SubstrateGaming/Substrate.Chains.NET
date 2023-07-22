@@ -13,12 +13,12 @@ using Substrate.NetApi.Model.Types.Metadata.V14;
 using System.Collections.Generic;
 
 
-namespace Substrate.Unique.NET.NetApiExt.Generated.Model.polkadot_primitives.v2
+namespace Substrate.Unique.NET.NetApiExt.Generated.Model.polkadot_primitives.v4
 {
     
     
     /// <summary>
-    /// >> 166 - Composite[polkadot_primitives.v2.AbridgedHrmpChannel]
+    /// >> 176 - Composite[polkadot_primitives.v4.AbridgedHrmpChannel]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class AbridgedHrmpChannel : BaseType

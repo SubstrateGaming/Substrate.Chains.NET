@@ -18,7 +18,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_nonfungible
     
     
     /// <summary>
-    /// >> 427 - Composite[pallet_nonfungible.ItemData]
+    /// >> 442 - Composite[pallet_nonfungible.ItemData]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class ItemData : BaseType

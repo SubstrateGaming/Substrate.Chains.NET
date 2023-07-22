@@ -18,7 +18,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs
     
     
     /// <summary>
-    /// >> 257 - Composite[up_data_structs.CollectionLimits]
+    /// >> 272 - Composite[up_data_structs.CollectionLimits]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class CollectionLimits : BaseType

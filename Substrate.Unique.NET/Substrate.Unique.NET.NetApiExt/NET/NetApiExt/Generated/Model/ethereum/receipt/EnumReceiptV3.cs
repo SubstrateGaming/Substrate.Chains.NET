@@ -26,7 +26,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.ethereum.receipt
     }
     
     /// <summary>
-    /// >> 449 - Variant[ethereum.receipt.ReceiptV3]
+    /// >> 464 - Variant[ethereum.receipt.ReceiptV3]
     /// </summary>
     public sealed class EnumReceiptV3 : BaseEnumExt<ReceiptV3, Substrate.Unique.NET.NetApiExt.Generated.Model.ethereum.receipt.EIP658ReceiptData, Substrate.Unique.NET.NetApiExt.Generated.Model.ethereum.receipt.EIP658ReceiptData, Substrate.Unique.NET.NetApiExt.Generated.Model.ethereum.receipt.EIP658ReceiptData>
     {

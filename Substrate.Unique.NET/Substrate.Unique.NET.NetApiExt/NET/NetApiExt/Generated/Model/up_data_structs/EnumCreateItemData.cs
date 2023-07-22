@@ -26,7 +26,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs
     }
     
     /// <summary>
-    /// >> 278 - Variant[up_data_structs.CreateItemData]
+    /// >> 293 - Variant[up_data_structs.CreateItemData]
     /// </summary>
     public sealed class EnumCreateItemData : BaseEnumExt<CreateItemData, Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CreateNftData, Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CreateFungibleData, Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CreateReFungibleData>
     {

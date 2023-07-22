@@ -18,7 +18,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_ethereum
     
     
     /// <summary>
-    /// >> 489 - Composite[pallet_ethereum.FakeTransactionFinalizer]
+    /// >> 504 - Composite[pallet_ethereum.FakeTransactionFinalizer]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class FakeTransactionFinalizer : BaseType

@@ -18,7 +18,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.unique_runtime.runtime_
     
     
     /// <summary>
-    /// >> 485 - Composite[unique_runtime.runtime_common.maintenance.CheckMaintenance]
+    /// >> 500 - Composite[unique_runtime.runtime_common.maintenance.CheckMaintenance]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class CheckMaintenance : BaseType

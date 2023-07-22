@@ -26,7 +26,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.ethereum.transaction
     }
     
     /// <summary>
-    /// >> 312 - Variant[ethereum.transaction.TransactionV2]
+    /// >> 327 - Variant[ethereum.transaction.TransactionV2]
     /// </summary>
     public sealed class EnumTransactionV2 : BaseEnumExt<TransactionV2, Substrate.Unique.NET.NetApiExt.Generated.Model.ethereum.transaction.LegacyTransaction, Substrate.Unique.NET.NetApiExt.Generated.Model.ethereum.transaction.EIP2930Transaction, Substrate.Unique.NET.NetApiExt.Generated.Model.ethereum.transaction.EIP1559Transaction>
     {

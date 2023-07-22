@@ -42,7 +42,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_evm.pallet
     }
     
     /// <summary>
-    /// >> 442 - Variant[pallet_evm.pallet.Error]
+    /// >> 457 - Variant[pallet_evm.pallet.Error]
     /// 
     ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
     ///			of this pallet.

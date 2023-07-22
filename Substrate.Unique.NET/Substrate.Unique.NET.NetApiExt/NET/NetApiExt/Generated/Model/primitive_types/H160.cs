@@ -18,7 +18,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types
     
     
     /// <summary>
-    /// >> 113 - Composite[primitive_types.H160]
+    /// >> 117 - Composite[primitive_types.H160]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class H160 : BaseType

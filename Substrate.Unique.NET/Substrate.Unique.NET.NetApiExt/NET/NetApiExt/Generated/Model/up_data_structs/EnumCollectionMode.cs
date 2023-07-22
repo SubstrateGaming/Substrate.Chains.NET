@@ -26,7 +26,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs
     }
     
     /// <summary>
-    /// >> 252 - Variant[up_data_structs.CollectionMode]
+    /// >> 267 - Variant[up_data_structs.CollectionMode]
     /// </summary>
     public sealed class EnumCollectionMode : BaseEnumExt<CollectionMode, BaseVoid, Substrate.NetApi.Model.Types.Primitive.U8, BaseVoid>
     {

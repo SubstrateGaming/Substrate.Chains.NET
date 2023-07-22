@@ -28,7 +28,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_foreign_assets.m
     }
     
     /// <summary>
-    /// >> 117 - Variant[pallet_foreign_assets.module.Event]
+    /// >> 121 - Variant[pallet_foreign_assets.module.Event]
     /// 
     ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
     ///			by this pallet.

@@ -11,20 +11,24 @@ using Substrate.NetApi.Model.Types.Base;
 using System.Collections.Generic;
 
 
-namespace Substrate.Unique.NET.NetApiExt.Generated.Model.polkadot_primitives.v2
+namespace Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_balances.types
 {
     
     
-    public enum UpgradeRestriction
+    public enum Reasons
     {
         
-        Present = 0,
+        Fee = 0,
+        
+        Misc = 1,
+        
+        All = 2,
     }
     
     /// <summary>
-    /// >> 160 - Variant[polkadot_primitives.v2.UpgradeRestriction]
+    /// >> 204 - Variant[pallet_balances.types.Reasons]
     /// </summary>
-    public sealed class EnumUpgradeRestriction : BaseEnum<UpgradeRestriction>
+    public sealed class EnumReasons : BaseEnum<Reasons>
     {
     }
 }

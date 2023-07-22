@@ -42,7 +42,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.sp_runtime.transaction_
     }
     
     /// <summary>
-    /// >> 414 - Variant[sp_runtime.transaction_validity.InvalidTransaction]
+    /// >> 429 - Variant[sp_runtime.transaction_validity.InvalidTransaction]
     /// </summary>
     public sealed class EnumInvalidTransaction : BaseEnumExt<InvalidTransaction, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.NetApi.Model.Types.Primitive.U8, BaseVoid, BaseVoid, BaseVoid>
     {

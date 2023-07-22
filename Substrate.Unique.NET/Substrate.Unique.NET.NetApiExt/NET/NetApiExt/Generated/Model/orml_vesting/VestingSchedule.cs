@@ -18,7 +18,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.orml_vesting
     
     
     /// <summary>
-    /// >> 40 - Composite[orml_vesting.VestingSchedule]
+    /// >> 44 - Composite[orml_vesting.VestingSchedule]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class VestingSchedule : BaseType
