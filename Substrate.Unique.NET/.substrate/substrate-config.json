@@ -1,0 +1,13 @@
+{
+  "projects": {
+    "net_api": "Substrate.Unique.NET.NetApiExt",
+    "rest_service": "Substrate.Unique.NET.RestService",
+    "rest_client": "Substrate.Unique.NET.RestClient"
+  },
+   "metadata": {
+      "websocket": "wss://eu-ws.unique.network"
+   },
+  "rest_client_settings": {
+    "service_assembly": "Substrate.Unique.NET.RestService.dll"
+  }
+}
