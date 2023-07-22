@@ -24,7 +24,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Types.Base
     }
     
     /// <summary>
-    /// >> 81 - Variant[Result]
+    /// >> 34 - Variant[Result]
     /// </summary>
     public sealed class EnumResult : BaseEnumExt<Result, Substrate.NetApi.Model.Types.Base.BaseTuple, Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_runtime.EnumDispatchError>
     {

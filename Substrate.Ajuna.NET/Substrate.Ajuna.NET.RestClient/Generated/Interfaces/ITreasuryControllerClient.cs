@@ -13,7 +13,7 @@ namespace Substrate.Ajuna.NET.RestClient.Generated.Interfaces
    using System.Threading.Tasks;
    using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_treasury;
-   using Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.storage.bounded_vec;
+   using Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    
    public interface ITreasuryControllerClient
    {
@@ -21,7 +21,9 @@ namespace Substrate.Ajuna.NET.RestClient.Generated.Interfaces
       Task<bool> SubscribeProposalCount();
       Task<Proposal> GetProposals(U32 key);
       Task<bool> SubscribeProposals(U32 key);
-      Task<BoundedVecT3> GetApprovals();
+      Task<U128> GetDeactivated();
+      Task<bool> SubscribeDeactivated();
+      Task<BoundedVecT22> GetApprovals();
       Task<bool> SubscribeApprovals();
    }
 }

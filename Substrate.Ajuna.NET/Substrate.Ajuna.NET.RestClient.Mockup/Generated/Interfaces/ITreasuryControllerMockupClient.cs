@@ -13,12 +13,13 @@ namespace Substrate.Ajuna.NET.RestClient.Mockup.Generated.Interfaces
    using System.Threading.Tasks;
    using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_treasury;
-   using Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.storage.bounded_vec;
+   using Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    
    public interface ITreasuryControllerMockupClient
    {
       Task<bool> SetProposalCount(U32 value);
       Task<bool> SetProposals(Proposal value, U32 key);
-      Task<bool> SetApprovals(BoundedVecT3 value);
+      Task<bool> SetDeactivated(U128 value);
+      Task<bool> SetApprovals(BoundedVecT22 value);
    }
 }

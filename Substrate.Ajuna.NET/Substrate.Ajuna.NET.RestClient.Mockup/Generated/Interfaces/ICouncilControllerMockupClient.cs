@@ -11,7 +11,7 @@ namespace Substrate.Ajuna.NET.RestClient.Mockup.Generated.Interfaces
 {
    using System;
    using System.Threading.Tasks;
-   using Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.storage.bounded_vec;
+   using Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    using Substrate.Ajuna.NET.NetApiExt.Generated.Model.ajuna_runtime;
    using Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_collective;
    using Substrate.NetApi.Model.Types.Primitive;
@@ -20,8 +20,8 @@ namespace Substrate.Ajuna.NET.RestClient.Mockup.Generated.Interfaces
    
    public interface ICouncilControllerMockupClient
    {
-      Task<bool> SetProposals(BoundedVecT4 value);
-      Task<bool> SetProposalOf(EnumCall value, Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256 key);
+      Task<bool> SetProposals(BoundedVecT23 value);
+      Task<bool> SetProposalOf(EnumRuntimeCall value, Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256 key);
       Task<bool> SetVoting(Votes value, Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256 key);
       Task<bool> SetProposalCount(U32 value);
       Task<bool> SetMembers(BaseVec<AccountId32> value);

@@ -70,7 +70,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         /// >> sudo
         /// Contains one variant per dispatchable that can be called by an extrinsic.
         /// </summary>
-        public static Method Sudo(Substrate.Ajuna.NET.NetApiExt.Generated.Model.ajuna_runtime.EnumCall call)
+        public static Method Sudo(Substrate.Ajuna.NET.NetApiExt.Generated.Model.ajuna_runtime.EnumRuntimeCall call)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(call.Encode());
@@ -81,7 +81,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         /// >> sudo_unchecked_weight
         /// Contains one variant per dispatchable that can be called by an extrinsic.
         /// </summary>
-        public static Method SudoUncheckedWeight(Substrate.Ajuna.NET.NetApiExt.Generated.Model.ajuna_runtime.EnumCall call, Substrate.NetApi.Model.Types.Primitive.U64 weight)
+        public static Method SudoUncheckedWeight(Substrate.Ajuna.NET.NetApiExt.Generated.Model.ajuna_runtime.EnumRuntimeCall call, Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight weight)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(call.Encode());
@@ -104,7 +104,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         /// >> sudo_as
         /// Contains one variant per dispatchable that can be called by an extrinsic.
         /// </summary>
-        public static Method SudoAs(Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress who, Substrate.Ajuna.NET.NetApiExt.Generated.Model.ajuna_runtime.EnumCall call)
+        public static Method SudoAs(Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress who, Substrate.Ajuna.NET.NetApiExt.Generated.Model.ajuna_runtime.EnumRuntimeCall call)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(who.Encode());

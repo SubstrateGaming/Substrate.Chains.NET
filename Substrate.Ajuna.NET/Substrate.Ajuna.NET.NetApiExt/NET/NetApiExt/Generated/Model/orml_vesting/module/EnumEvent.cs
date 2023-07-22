@@ -26,9 +26,9 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.orml_vesting.module
     }
     
     /// <summary>
-    /// >> 30 - Variant[orml_vesting.module.Event]
+    /// >> 47 - Variant[orml_vesting.module.Event]
     /// 
-    ///			The [event](https://docs.substrate.io/v3/runtime/events-and-errors) emitted
+    ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
     ///			by this pallet.
     ///			
     /// </summary>

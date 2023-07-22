@@ -12,8 +12,7 @@ namespace Substrate.Ajuna.NET.RestClient.Mockup.Generated.Clients
    using System;
    using System.Threading.Tasks;
    using System.Net.Http;
-   using Substrate.NetApi.Model.Types.Base;
-   using Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_consensus_aura.sr25519.app_sr25519;
+   using Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    using Substrate.Ajuna.NET.RestClient.Mockup.Generated.Interfaces;
    
    public sealed class AuraExtControllerMockupClient : MockupBaseClient, IAuraExtControllerMockupClient
@@ -23,7 +22,7 @@ namespace Substrate.Ajuna.NET.RestClient.Mockup.Generated.Clients
       {
          _httpClient = httpClient;
       }
-      public async Task<bool> SetAuthorities(BaseVec<Public> value)
+      public async Task<bool> SetAuthorities(BoundedVecT19 value)
       {
          return await SendMockupRequestAsync(_httpClient, "AuraExt/Authorities", value.Encode(), Substrate.Ajuna.NET.NetApiExt.Generated.Storage.AuraExtStorage.AuthoritiesParams());
       }

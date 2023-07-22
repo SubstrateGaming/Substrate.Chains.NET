@@ -309,9 +309,42 @@ namespace Substrate.Ajuna.NET.RestClient.Test.Generated
          result.SuspendThreshold = this.GetTestValueU32();
          result.DropThreshold = this.GetTestValueU32();
          result.ResumeThreshold = this.GetTestValueU32();
-         result.ThresholdWeight = this.GetTestValueU64();
-         result.WeightRestrictDecay = this.GetTestValueU64();
-         result.XcmpMaxIndividualWeight = this.GetTestValueU64();
+         result.ThresholdWeight = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight();
+         result.ThresholdWeight = this.GetTestValue24();
+         result.WeightRestrictDecay = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight();
+         result.WeightRestrictDecay = this.GetTestValue25();
+         result.XcmpMaxIndividualWeight = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight();
+         result.XcmpMaxIndividualWeight = this.GetTestValue26();
+         return result;
+      }
+      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight GetTestValue24()
+      {
+         Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight result;
+         result = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight();
+         result.RefTime = new Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U64>();
+         result.RefTime.Create(new Substrate.NetApi.CompactInteger(this.GetTestValueU64().Value));
+         result.ProofSize = new Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U64>();
+         result.ProofSize.Create(new Substrate.NetApi.CompactInteger(this.GetTestValueU64().Value));
+         return result;
+      }
+      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight GetTestValue25()
+      {
+         Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight result;
+         result = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight();
+         result.RefTime = new Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U64>();
+         result.RefTime.Create(new Substrate.NetApi.CompactInteger(this.GetTestValueU64().Value));
+         result.ProofSize = new Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U64>();
+         result.ProofSize.Create(new Substrate.NetApi.CompactInteger(this.GetTestValueU64().Value));
+         return result;
+      }
+      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight GetTestValue26()
+      {
+         Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight result;
+         result = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight();
+         result.RefTime = new Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U64>();
+         result.RefTime.Create(new Substrate.NetApi.CompactInteger(this.GetTestValueU64().Value));
+         result.ProofSize = new Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U64>();
+         result.ProofSize.Create(new Substrate.NetApi.CompactInteger(this.GetTestValueU64().Value));
          return result;
       }
       [Test()]
@@ -343,21 +376,21 @@ namespace Substrate.Ajuna.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>> GetTestValue25()
+      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>> GetTestValue28()
       {
          Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>> result;
          result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>();
-         result.Create(this.GetTestValue26(), this.GetTestValueU32(), this.GetTestValue27());
+         result.Create(this.GetTestValue29(), this.GetTestValueU32(), this.GetTestValue30());
          return result;
       }
-      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id GetTestValue26()
+      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id GetTestValue29()
       {
          Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id result;
          result = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id();
          result.Value = this.GetTestValueU32();
          return result;
       }
-      public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> GetTestValue27()
+      public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> GetTestValue30()
       {
          Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> result;
          result = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>();
@@ -376,7 +409,7 @@ namespace Substrate.Ajuna.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          XcmpQueueControllerClient rpcClient = new XcmpQueueControllerClient(_httpClient, subscriptionClient);
-         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>> mockupValue = this.GetTestValue25();
+         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>> mockupValue = this.GetTestValue28();
          Substrate.NetApi.Model.Types.Primitive.U64 mockupKey = this.GetTestValueU64();
 
          Assert.IsTrue(await rpcClient.SubscribeOverweight(mockupKey));
@@ -390,6 +423,35 @@ namespace Substrate.Ajuna.NET.RestClient.Test.Generated
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
          Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>> rpcResult = await rpcClient.GetOverweight(mockupKey);
+
+         // Test that the expected mockup value matches the actual result from RPC service.
+         Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
+      }
+      [Test()]
+      public async System.Threading.Tasks.Task TestCounterForOverweight()
+      {
+         // Construct new Mockup client to test with.
+         XcmpQueueControllerMockupClient mockupClient = new XcmpQueueControllerMockupClient(_httpClient);
+
+         // Construct new subscription client to test with.
+         var subscriptionClient = CreateSubscriptionClient();
+
+         // Construct new RPC client to test with.
+         XcmpQueueControllerClient rpcClient = new XcmpQueueControllerClient(_httpClient, subscriptionClient);
+         Substrate.NetApi.Model.Types.Primitive.U32 mockupValue = this.GetTestValueU32();
+
+
+         Assert.IsTrue(await rpcClient.SubscribeCounterForOverweight());
+
+         // Save the previously generated mockup value in RPC service storage.
+         bool mockupSetResult = await mockupClient.SetCounterForOverweight(mockupValue);
+
+         // Test that the expected mockup value was handled successfully from RPC service.
+         Assert.IsTrue(mockupSetResult);
+         var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
+         Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
+
+         Substrate.NetApi.Model.Types.Primitive.U32 rpcResult = await rpcClient.GetCounterForOverweight();
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());

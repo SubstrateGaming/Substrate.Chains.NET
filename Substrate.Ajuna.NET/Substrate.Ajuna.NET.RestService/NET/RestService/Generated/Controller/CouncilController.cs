@@ -42,7 +42,7 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Controller
         ///  The hashes of the active proposals.
         /// </summary>
         [HttpGet("Proposals")]
-        [ProducesResponseType(typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.storage.bounded_vec.BoundedVecT4), 200)]
+        [ProducesResponseType(typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT23), 200)]
         [StorageKeyBuilder(typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Storage.CouncilStorage), "ProposalsParams")]
         public IActionResult GetProposals()
         {
@@ -54,7 +54,7 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Controller
         ///  Actual proposal for a given hash, if it's current.
         /// </summary>
         [HttpGet("ProposalOf")]
-        [ProducesResponseType(typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Model.ajuna_runtime.EnumCall), 200)]
+        [ProducesResponseType(typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Model.ajuna_runtime.EnumRuntimeCall), 200)]
         [StorageKeyBuilder(typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Storage.CouncilStorage), "ProposalOfParams", typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256))]
         public IActionResult GetProposalOf(string key)
         {

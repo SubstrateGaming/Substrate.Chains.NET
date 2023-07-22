@@ -77,7 +77,7 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Controller
         ///  in the trie.
         /// </summary>
         [HttpGet("ValidationData")]
-        [ProducesResponseType(typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.PersistedValidationData), 200)]
+        [ProducesResponseType(typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.PersistedValidationData), 200)]
         [StorageKeyBuilder(typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Storage.ParachainSystemStorage), "ValidationDataParams")]
         public IActionResult GetValidationData()
         {
@@ -97,6 +97,18 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Controller
         }
         
         /// <summary>
+        /// >> LastRelayChainBlockNumber
+        ///  The relay chain block number associated with the last parachain block.
+        /// </summary>
+        [HttpGet("LastRelayChainBlockNumber")]
+        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Primitive.U32), 200)]
+        [StorageKeyBuilder(typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Storage.ParachainSystemStorage), "LastRelayChainBlockNumberParams")]
+        public IActionResult GetLastRelayChainBlockNumber()
+        {
+            return this.Ok(_parachainSystemStorage.GetLastRelayChainBlockNumber());
+        }
+        
+        /// <summary>
         /// >> UpgradeRestrictionSignal
         ///  An option which indicates if the relay-chain restricts signalling a validation code upgrade.
         ///  In other words, if this is `Some` and [`NewValidationCode`] is `Some` then the produced
@@ -107,7 +119,7 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Controller
         ///  set after the inherent.
         /// </summary>
         [HttpGet("UpgradeRestrictionSignal")]
-        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.EnumUpgradeRestriction>), 200)]
+        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.EnumUpgradeRestriction>), 200)]
         [StorageKeyBuilder(typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Storage.ParachainSystemStorage), "UpgradeRestrictionSignalParams")]
         public IActionResult GetUpgradeRestrictionSignal()
         {
@@ -159,7 +171,7 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Controller
         ///  This data is also absent from the genesis.
         /// </summary>
         [HttpGet("HostConfiguration")]
-        [ProducesResponseType(typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.AbridgedHostConfiguration), 200)]
+        [ProducesResponseType(typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.AbridgedHostConfiguration), 200)]
         [StorageKeyBuilder(typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Storage.ParachainSystemStorage), "HostConfigurationParams")]
         public IActionResult GetHostConfiguration()
         {
@@ -283,7 +295,7 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Controller
         ///  overrides the amount set in the Config trait.
         /// </summary>
         [HttpGet("ReservedXcmpWeightOverride")]
-        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Primitive.U64), 200)]
+        [ProducesResponseType(typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight), 200)]
         [StorageKeyBuilder(typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Storage.ParachainSystemStorage), "ReservedXcmpWeightOverrideParams")]
         public IActionResult GetReservedXcmpWeightOverride()
         {
@@ -296,7 +308,7 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Controller
         ///  overrides the amount set in the Config trait.
         /// </summary>
         [HttpGet("ReservedDmpWeightOverride")]
-        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Primitive.U64), 200)]
+        [ProducesResponseType(typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight), 200)]
         [StorageKeyBuilder(typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Storage.ParachainSystemStorage), "ReservedDmpWeightOverrideParams")]
         public IActionResult GetReservedDmpWeightOverride()
         {
@@ -308,7 +320,7 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Controller
         ///  The next authorized upgrade, if there is one.
         /// </summary>
         [HttpGet("AuthorizedUpgrade")]
-        [ProducesResponseType(typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256), 200)]
+        [ProducesResponseType(typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.CodeUpgradeAuthorization), 200)]
         [StorageKeyBuilder(typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Storage.ParachainSystemStorage), "AuthorizedUpgradeParams")]
         public IActionResult GetAuthorizedUpgrade()
         {

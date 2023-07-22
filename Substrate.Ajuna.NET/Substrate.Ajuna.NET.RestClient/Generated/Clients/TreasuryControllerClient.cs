@@ -14,7 +14,7 @@ namespace Substrate.Ajuna.NET.RestClient.Generated.Clients
    using System.Net.Http;
    using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_treasury;
-   using Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.storage.bounded_vec;
+   using Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    using Substrate.Ajuna.NET.RestClient.Generated.Interfaces;
    
    public sealed class TreasuryControllerClient : BaseClient, ITreasuryControllerClient
@@ -42,9 +42,17 @@ namespace Substrate.Ajuna.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("Treasury.Proposals", Substrate.Ajuna.NET.NetApiExt.Generated.Storage.TreasuryStorage.ProposalsParams(key));
       }
-      public async Task<BoundedVecT3> GetApprovals()
+      public async Task<U128> GetDeactivated()
       {
-         return await SendRequestAsync<BoundedVecT3>(_httpClient, "treasury/approvals");
+         return await SendRequestAsync<U128>(_httpClient, "treasury/deactivated");
+      }
+      public async Task<bool> SubscribeDeactivated()
+      {
+         return await _subscriptionClient.SubscribeAsync("Treasury.Deactivated");
+      }
+      public async Task<BoundedVecT22> GetApprovals()
+      {
+         return await SendRequestAsync<BoundedVecT22>(_httpClient, "treasury/approvals");
       }
       public async Task<bool> SubscribeApprovals()
       {

@@ -11,7 +11,7 @@ namespace Substrate.Ajuna.NET.RestClient.Generated.Interfaces
 {
    using System;
    using System.Threading.Tasks;
-   using Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.storage.bounded_vec;
+   using Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    using Substrate.Ajuna.NET.NetApiExt.Generated.Model.ajuna_runtime;
    using Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_collective;
    using Substrate.NetApi.Model.Types.Primitive;
@@ -20,9 +20,9 @@ namespace Substrate.Ajuna.NET.RestClient.Generated.Interfaces
    
    public interface ICouncilControllerClient
    {
-      Task<BoundedVecT4> GetProposals();
+      Task<BoundedVecT23> GetProposals();
       Task<bool> SubscribeProposals();
-      Task<EnumCall> GetProposalOf(Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256 key);
+      Task<EnumRuntimeCall> GetProposalOf(Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256 key);
       Task<bool> SubscribeProposalOf(Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256 key);
       Task<Votes> GetVoting(Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256 key);
       Task<bool> SubscribeVoting(Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256 key);

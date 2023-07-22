@@ -14,13 +14,14 @@ namespace Substrate.Ajuna.NET.RestClient.Generated.Clients
    using System.Net.Http;
    using Substrate.NetApi.Model.Types.Base;
    using Substrate.NetApi.Model.Types.Primitive;
-   using Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v2;
+   using Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v4;
    using Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_trie.storage_proof;
    using Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.relay_state_snapshot;
    using Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_primitives_parachain_inherent;
    using Substrate.Ajuna.NET.NetApiExt.Generated.Types.Base;
    using Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_core_primitives;
-   using Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types;
+   using Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_weights.weight_v2;
+   using Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system;
    using Substrate.Ajuna.NET.RestClient.Generated.Interfaces;
    
    public sealed class ParachainSystemControllerClient : BaseClient, IParachainSystemControllerClient
@@ -63,6 +64,14 @@ namespace Substrate.Ajuna.NET.RestClient.Generated.Clients
       public async Task<bool> SubscribeDidSetValidationCode()
       {
          return await _subscriptionClient.SubscribeAsync("ParachainSystem.DidSetValidationCode");
+      }
+      public async Task<U32> GetLastRelayChainBlockNumber()
+      {
+         return await SendRequestAsync<U32>(_httpClient, "parachainsystem/lastrelaychainblocknumber");
+      }
+      public async Task<bool> SubscribeLastRelayChainBlockNumber()
+      {
+         return await _subscriptionClient.SubscribeAsync("ParachainSystem.LastRelayChainBlockNumber");
       }
       public async Task<BaseOpt<EnumUpgradeRestriction>> GetUpgradeRestrictionSignal()
       {
@@ -160,25 +169,25 @@ namespace Substrate.Ajuna.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("ParachainSystem.AnnouncedHrmpMessagesPerCandidate");
       }
-      public async Task<U64> GetReservedXcmpWeightOverride()
+      public async Task<Weight> GetReservedXcmpWeightOverride()
       {
-         return await SendRequestAsync<U64>(_httpClient, "parachainsystem/reservedxcmpweightoverride");
+         return await SendRequestAsync<Weight>(_httpClient, "parachainsystem/reservedxcmpweightoverride");
       }
       public async Task<bool> SubscribeReservedXcmpWeightOverride()
       {
          return await _subscriptionClient.SubscribeAsync("ParachainSystem.ReservedXcmpWeightOverride");
       }
-      public async Task<U64> GetReservedDmpWeightOverride()
+      public async Task<Weight> GetReservedDmpWeightOverride()
       {
-         return await SendRequestAsync<U64>(_httpClient, "parachainsystem/reserveddmpweightoverride");
+         return await SendRequestAsync<Weight>(_httpClient, "parachainsystem/reserveddmpweightoverride");
       }
       public async Task<bool> SubscribeReservedDmpWeightOverride()
       {
          return await _subscriptionClient.SubscribeAsync("ParachainSystem.ReservedDmpWeightOverride");
       }
-      public async Task<H256> GetAuthorizedUpgrade()
+      public async Task<CodeUpgradeAuthorization> GetAuthorizedUpgrade()
       {
-         return await SendRequestAsync<H256>(_httpClient, "parachainsystem/authorizedupgrade");
+         return await SendRequestAsync<CodeUpgradeAuthorization>(_httpClient, "parachainsystem/authorizedupgrade");
       }
       public async Task<bool> SubscribeAuthorizedUpgrade()
       {

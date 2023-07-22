@@ -18,7 +18,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_pallet_dmp_queue
     
     
     /// <summary>
-    /// >> 227 - Composite[cumulus_pallet_dmp_queue.ConfigData]
+    /// >> 366 - Composite[cumulus_pallet_dmp_queue.ConfigData]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class ConfigData : BaseType
@@ -27,9 +27,9 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_pallet_dmp_queue
         /// <summary>
         /// >> max_individual
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U64 _maxIndividual;
+        private Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight _maxIndividual;
         
-        public Substrate.NetApi.Model.Types.Primitive.U64 MaxIndividual
+        public Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight MaxIndividual
         {
             get
             {
@@ -56,7 +56,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_pallet_dmp_queue
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            MaxIndividual = new Substrate.NetApi.Model.Types.Primitive.U64();
+            MaxIndividual = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight();
             MaxIndividual.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

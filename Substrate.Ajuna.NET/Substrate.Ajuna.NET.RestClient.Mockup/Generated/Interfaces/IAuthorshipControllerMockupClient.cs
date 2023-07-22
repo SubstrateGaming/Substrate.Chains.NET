@@ -11,15 +11,10 @@ namespace Substrate.Ajuna.NET.RestClient.Mockup.Generated.Interfaces
 {
    using System;
    using System.Threading.Tasks;
-   using Substrate.NetApi.Model.Types.Base;
-   using Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_authorship;
    using Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto;
-   using Substrate.NetApi.Model.Types.Primitive;
    
    public interface IAuthorshipControllerMockupClient
    {
-      Task<bool> SetUncles(BaseVec<EnumUncleEntryItem> value);
       Task<bool> SetAuthor(AccountId32 value);
-      Task<bool> SetDidSetUncles(Bool value);
    }
 }

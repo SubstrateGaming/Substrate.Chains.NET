@@ -50,6 +50,18 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Controller
         }
         
         /// <summary>
+        /// >> InactiveIssuance
+        ///  The total units of outstanding deactivated balance in the system.
+        /// </summary>
+        [HttpGet("InactiveIssuance")]
+        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Primitive.U128), 200)]
+        [StorageKeyBuilder(typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Storage.BalancesStorage), "InactiveIssuanceParams")]
+        public IActionResult GetInactiveIssuance()
+        {
+            return this.Ok(_balancesStorage.GetInactiveIssuance());
+        }
+        
+        /// <summary>
         /// >> Account
         ///  The Balances pallet example of storing the balance of an account.
         /// 
@@ -77,7 +89,7 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Controller
         ///  NOTE: This is only used in the case that this pallet is used to store balances.
         /// </summary>
         [HttpGet("Account")]
-        [ProducesResponseType(typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_balances.AccountData), 200)]
+        [ProducesResponseType(typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_balances.types.AccountData), 200)]
         [StorageKeyBuilder(typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Storage.BalancesStorage), "AccountParams", typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32))]
         public IActionResult GetAccount(string key)
         {
@@ -90,7 +102,7 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Controller
         ///  NOTE: Should only be accessed when setting, changing and freeing a lock.
         /// </summary>
         [HttpGet("Locks")]
-        [ProducesResponseType(typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.storage.weak_bounded_vec.WeakBoundedVecT1), 200)]
+        [ProducesResponseType(typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT2), 200)]
         [StorageKeyBuilder(typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Storage.BalancesStorage), "LocksParams", typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32))]
         public IActionResult GetLocks(string key)
         {
@@ -102,7 +114,7 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Controller
         ///  Named reserves on some account balances.
         /// </summary>
         [HttpGet("Reserves")]
-        [ProducesResponseType(typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.storage.bounded_vec.BoundedVecT1), 200)]
+        [ProducesResponseType(typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT14), 200)]
         [StorageKeyBuilder(typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Storage.BalancesStorage), "ReservesParams", typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32))]
         public IActionResult GetReserves(string key)
         {
@@ -110,17 +122,27 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Controller
         }
         
         /// <summary>
-        /// >> StorageVersion
-        ///  Storage version of the pallet.
-        /// 
-        ///  This is set to v2.0.0 for new networks.
+        /// >> Holds
+        ///  Holds on account balances.
         /// </summary>
-        [HttpGet("StorageVersion")]
-        [ProducesResponseType(typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_balances.EnumReleases), 200)]
-        [StorageKeyBuilder(typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Storage.BalancesStorage), "StorageVersionParams")]
-        public IActionResult GetStorageVersion()
+        [HttpGet("Holds")]
+        [ProducesResponseType(typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT15), 200)]
+        [StorageKeyBuilder(typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Storage.BalancesStorage), "HoldsParams", typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32))]
+        public IActionResult GetHolds(string key)
         {
-            return this.Ok(_balancesStorage.GetStorageVersion());
+            return this.Ok(_balancesStorage.GetHolds(key));
+        }
+        
+        /// <summary>
+        /// >> Freezes
+        ///  Freeze locks on account balances.
+        /// </summary>
+        [HttpGet("Freezes")]
+        [ProducesResponseType(typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT15), 200)]
+        [StorageKeyBuilder(typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Storage.BalancesStorage), "FreezesParams", typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32))]
+        public IActionResult GetFreezes(string key)
+        {
+            return this.Ok(_balancesStorage.GetFreezes(key));
         }
     }
 }

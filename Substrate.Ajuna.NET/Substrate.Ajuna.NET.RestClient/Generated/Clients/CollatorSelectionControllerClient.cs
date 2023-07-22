@@ -12,9 +12,7 @@ namespace Substrate.Ajuna.NET.RestClient.Generated.Clients
    using System;
    using System.Threading.Tasks;
    using System.Net.Http;
-   using Substrate.NetApi.Model.Types.Base;
-   using Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto;
-   using Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_collator_selection.pallet;
+   using Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.Ajuna.NET.RestClient.Generated.Interfaces;
    
@@ -27,27 +25,27 @@ namespace Substrate.Ajuna.NET.RestClient.Generated.Clients
          _httpClient = httpClient;
          _subscriptionClient = subscriptionClient;
       }
-      public async Task<BaseVec<AccountId32>> GetInvulnerables()
+      public async Task<BoundedVecT17> GetInvulnerables()
       {
-         return await SendRequestAsync<BaseVec<AccountId32>>(_httpClient, "collatorselection/invulnerables");
+         return await SendRequestAsync<BoundedVecT17>(_httpClient, "collatorselection/invulnerables");
       }
       public async Task<bool> SubscribeInvulnerables()
       {
          return await _subscriptionClient.SubscribeAsync("CollatorSelection.Invulnerables");
       }
-      public async Task<BaseVec<CandidateInfo>> GetCandidates()
+      public async Task<BoundedVecT18> GetCandidates()
       {
-         return await SendRequestAsync<BaseVec<CandidateInfo>>(_httpClient, "collatorselection/candidates");
+         return await SendRequestAsync<BoundedVecT18>(_httpClient, "collatorselection/candidates");
       }
       public async Task<bool> SubscribeCandidates()
       {
          return await _subscriptionClient.SubscribeAsync("CollatorSelection.Candidates");
       }
-      public async Task<U32> GetLastAuthoredBlock(AccountId32 key)
+      public async Task<U32> GetLastAuthoredBlock(Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {
          return await SendRequestAsync<U32>(_httpClient, "collatorselection/lastauthoredblock", Substrate.Ajuna.NET.NetApiExt.Generated.Storage.CollatorSelectionStorage.LastAuthoredBlockParams(key));
       }
-      public async Task<bool> SubscribeLastAuthoredBlock(AccountId32 key)
+      public async Task<bool> SubscribeLastAuthoredBlock(Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {
          return await _subscriptionClient.SubscribeAsync("CollatorSelection.LastAuthoredBlock", Substrate.Ajuna.NET.NetApiExt.Generated.Storage.CollatorSelectionStorage.LastAuthoredBlockParams(key));
       }

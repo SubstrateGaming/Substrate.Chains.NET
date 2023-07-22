@@ -13,9 +13,9 @@ namespace Substrate.Ajuna.NET.RestClient.Generated.Clients
    using System.Threading.Tasks;
    using System.Net.Http;
    using Substrate.NetApi.Model.Types.Primitive;
-   using Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_balances;
-   using Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.storage.weak_bounded_vec;
-   using Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.storage.bounded_vec;
+   using Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_balances.types;
+   using Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec;
+   using Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    using Substrate.Ajuna.NET.RestClient.Generated.Interfaces;
    
    public sealed class BalancesControllerClient : BaseClient, IBalancesControllerClient
@@ -35,6 +35,14 @@ namespace Substrate.Ajuna.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("Balances.TotalIssuance");
       }
+      public async Task<U128> GetInactiveIssuance()
+      {
+         return await SendRequestAsync<U128>(_httpClient, "balances/inactiveissuance");
+      }
+      public async Task<bool> SubscribeInactiveIssuance()
+      {
+         return await _subscriptionClient.SubscribeAsync("Balances.InactiveIssuance");
+      }
       public async Task<AccountData> GetAccount(Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {
          return await SendRequestAsync<AccountData>(_httpClient, "balances/account", Substrate.Ajuna.NET.NetApiExt.Generated.Storage.BalancesStorage.AccountParams(key));
@@ -43,29 +51,37 @@ namespace Substrate.Ajuna.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("Balances.Account", Substrate.Ajuna.NET.NetApiExt.Generated.Storage.BalancesStorage.AccountParams(key));
       }
-      public async Task<WeakBoundedVecT1> GetLocks(Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+      public async Task<WeakBoundedVecT2> GetLocks(Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {
-         return await SendRequestAsync<WeakBoundedVecT1>(_httpClient, "balances/locks", Substrate.Ajuna.NET.NetApiExt.Generated.Storage.BalancesStorage.LocksParams(key));
+         return await SendRequestAsync<WeakBoundedVecT2>(_httpClient, "balances/locks", Substrate.Ajuna.NET.NetApiExt.Generated.Storage.BalancesStorage.LocksParams(key));
       }
       public async Task<bool> SubscribeLocks(Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {
          return await _subscriptionClient.SubscribeAsync("Balances.Locks", Substrate.Ajuna.NET.NetApiExt.Generated.Storage.BalancesStorage.LocksParams(key));
       }
-      public async Task<BoundedVecT1> GetReserves(Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+      public async Task<BoundedVecT14> GetReserves(Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {
-         return await SendRequestAsync<BoundedVecT1>(_httpClient, "balances/reserves", Substrate.Ajuna.NET.NetApiExt.Generated.Storage.BalancesStorage.ReservesParams(key));
+         return await SendRequestAsync<BoundedVecT14>(_httpClient, "balances/reserves", Substrate.Ajuna.NET.NetApiExt.Generated.Storage.BalancesStorage.ReservesParams(key));
       }
       public async Task<bool> SubscribeReserves(Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {
          return await _subscriptionClient.SubscribeAsync("Balances.Reserves", Substrate.Ajuna.NET.NetApiExt.Generated.Storage.BalancesStorage.ReservesParams(key));
       }
-      public async Task<EnumReleases> GetStorageVersion()
+      public async Task<BoundedVecT15> GetHolds(Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {
-         return await SendRequestAsync<EnumReleases>(_httpClient, "balances/storageversion");
+         return await SendRequestAsync<BoundedVecT15>(_httpClient, "balances/holds", Substrate.Ajuna.NET.NetApiExt.Generated.Storage.BalancesStorage.HoldsParams(key));
       }
-      public async Task<bool> SubscribeStorageVersion()
+      public async Task<bool> SubscribeHolds(Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {
-         return await _subscriptionClient.SubscribeAsync("Balances.StorageVersion");
+         return await _subscriptionClient.SubscribeAsync("Balances.Holds", Substrate.Ajuna.NET.NetApiExt.Generated.Storage.BalancesStorage.HoldsParams(key));
+      }
+      public async Task<BoundedVecT15> GetFreezes(Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+      {
+         return await SendRequestAsync<BoundedVecT15>(_httpClient, "balances/freezes", Substrate.Ajuna.NET.NetApiExt.Generated.Storage.BalancesStorage.FreezesParams(key));
+      }
+      public async Task<bool> SubscribeFreezes(Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+      {
+         return await _subscriptionClient.SubscribeAsync("Balances.Freezes", Substrate.Ajuna.NET.NetApiExt.Generated.Storage.BalancesStorage.FreezesParams(key));
       }
    }
 }

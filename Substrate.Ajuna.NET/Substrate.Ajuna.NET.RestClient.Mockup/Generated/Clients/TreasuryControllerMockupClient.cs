@@ -14,7 +14,7 @@ namespace Substrate.Ajuna.NET.RestClient.Mockup.Generated.Clients
    using System.Net.Http;
    using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_treasury;
-   using Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.storage.bounded_vec;
+   using Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    using Substrate.Ajuna.NET.RestClient.Mockup.Generated.Interfaces;
    
    public sealed class TreasuryControllerMockupClient : MockupBaseClient, ITreasuryControllerMockupClient
@@ -32,7 +32,11 @@ namespace Substrate.Ajuna.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "Treasury/Proposals", value.Encode(), Substrate.Ajuna.NET.NetApiExt.Generated.Storage.TreasuryStorage.ProposalsParams(key));
       }
-      public async Task<bool> SetApprovals(BoundedVecT3 value)
+      public async Task<bool> SetDeactivated(U128 value)
+      {
+         return await SendMockupRequestAsync(_httpClient, "Treasury/Deactivated", value.Encode(), Substrate.Ajuna.NET.NetApiExt.Generated.Storage.TreasuryStorage.DeactivatedParams());
+      }
+      public async Task<bool> SetApprovals(BoundedVecT22 value)
       {
          return await SendMockupRequestAsync(_httpClient, "Treasury/Approvals", value.Encode(), Substrate.Ajuna.NET.NetApiExt.Generated.Storage.TreasuryStorage.ApprovalsParams());
       }

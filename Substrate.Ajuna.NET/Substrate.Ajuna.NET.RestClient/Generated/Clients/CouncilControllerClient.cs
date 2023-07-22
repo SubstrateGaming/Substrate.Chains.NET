@@ -12,7 +12,7 @@ namespace Substrate.Ajuna.NET.RestClient.Generated.Clients
    using System;
    using System.Threading.Tasks;
    using System.Net.Http;
-   using Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.storage.bounded_vec;
+   using Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    using Substrate.Ajuna.NET.NetApiExt.Generated.Model.ajuna_runtime;
    using Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_collective;
    using Substrate.NetApi.Model.Types.Primitive;
@@ -29,17 +29,17 @@ namespace Substrate.Ajuna.NET.RestClient.Generated.Clients
          _httpClient = httpClient;
          _subscriptionClient = subscriptionClient;
       }
-      public async Task<BoundedVecT4> GetProposals()
+      public async Task<BoundedVecT23> GetProposals()
       {
-         return await SendRequestAsync<BoundedVecT4>(_httpClient, "council/proposals");
+         return await SendRequestAsync<BoundedVecT23>(_httpClient, "council/proposals");
       }
       public async Task<bool> SubscribeProposals()
       {
          return await _subscriptionClient.SubscribeAsync("Council.Proposals");
       }
-      public async Task<EnumCall> GetProposalOf(Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256 key)
+      public async Task<EnumRuntimeCall> GetProposalOf(Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256 key)
       {
-         return await SendRequestAsync<EnumCall>(_httpClient, "council/proposalof", Substrate.Ajuna.NET.NetApiExt.Generated.Storage.CouncilStorage.ProposalOfParams(key));
+         return await SendRequestAsync<EnumRuntimeCall>(_httpClient, "council/proposalof", Substrate.Ajuna.NET.NetApiExt.Generated.Storage.CouncilStorage.ProposalOfParams(key));
       }
       public async Task<bool> SubscribeProposalOf(Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256 key)
       {

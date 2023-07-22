@@ -31,7 +31,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         {
             this._client = client;
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Vesting", "VestingSchedules"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32), typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.storage.bounded_vec.BoundedVecT2)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32), typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT16)));
         }
         
         /// <summary>
@@ -62,10 +62,10 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         /// 
         ///  VestingSchedules: map AccountId => Vec<VestingSchedule>
         /// </summary>
-        public async Task<Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.storage.bounded_vec.BoundedVecT2> VestingSchedules(Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, CancellationToken token)
+        public async Task<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT16> VestingSchedules(Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, CancellationToken token)
         {
             string parameters = VestingStorage.VestingSchedulesParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.storage.bounded_vec.BoundedVecT2>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT16>(parameters, token);
             return result;
         }
     }
@@ -80,7 +80,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         public static Method Claim()
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
-            return new Method(12, "Vesting", 0, "claim", byteArray.ToArray());
+            return new Method(17, "Vesting", 0, "claim", byteArray.ToArray());
         }
         
         /// <summary>
@@ -92,7 +92,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(dest.Encode());
             byteArray.AddRange(schedule.Encode());
-            return new Method(12, "Vesting", 1, "vested_transfer", byteArray.ToArray());
+            return new Method(17, "Vesting", 1, "vested_transfer", byteArray.ToArray());
         }
         
         /// <summary>
@@ -104,7 +104,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(who.Encode());
             byteArray.AddRange(vesting_schedules.Encode());
-            return new Method(12, "Vesting", 2, "update_vesting_schedules", byteArray.ToArray());
+            return new Method(17, "Vesting", 2, "update_vesting_schedules", byteArray.ToArray());
         }
         
         /// <summary>
@@ -115,7 +115,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(dest.Encode());
-            return new Method(12, "Vesting", 3, "claim_for", byteArray.ToArray());
+            return new Method(17, "Vesting", 3, "claim_for", byteArray.ToArray());
         }
     }
     
@@ -129,7 +129,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         public Substrate.NetApi.Model.Types.Primitive.U128 MinVestedTransfer()
         {
             var result = new Substrate.NetApi.Model.Types.Primitive.U128();
-            result.Create("0x00A0724E180900000000000000000000");
+            result.Create("0x00E1F505000000000000000000000000");
             return result;
         }
     }

@@ -13,9 +13,9 @@ namespace Substrate.Ajuna.NET.RestClient.Mockup.Generated.Clients
    using System.Threading.Tasks;
    using System.Net.Http;
    using Substrate.NetApi.Model.Types.Primitive;
-   using Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_balances;
-   using Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.storage.weak_bounded_vec;
-   using Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.storage.bounded_vec;
+   using Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_balances.types;
+   using Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec;
+   using Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    using Substrate.Ajuna.NET.RestClient.Mockup.Generated.Interfaces;
    
    public sealed class BalancesControllerMockupClient : MockupBaseClient, IBalancesControllerMockupClient
@@ -29,21 +29,29 @@ namespace Substrate.Ajuna.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "Balances/TotalIssuance", value.Encode(), Substrate.Ajuna.NET.NetApiExt.Generated.Storage.BalancesStorage.TotalIssuanceParams());
       }
+      public async Task<bool> SetInactiveIssuance(U128 value)
+      {
+         return await SendMockupRequestAsync(_httpClient, "Balances/InactiveIssuance", value.Encode(), Substrate.Ajuna.NET.NetApiExt.Generated.Storage.BalancesStorage.InactiveIssuanceParams());
+      }
       public async Task<bool> SetAccount(AccountData value, Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {
          return await SendMockupRequestAsync(_httpClient, "Balances/Account", value.Encode(), Substrate.Ajuna.NET.NetApiExt.Generated.Storage.BalancesStorage.AccountParams(key));
       }
-      public async Task<bool> SetLocks(WeakBoundedVecT1 value, Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+      public async Task<bool> SetLocks(WeakBoundedVecT2 value, Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {
          return await SendMockupRequestAsync(_httpClient, "Balances/Locks", value.Encode(), Substrate.Ajuna.NET.NetApiExt.Generated.Storage.BalancesStorage.LocksParams(key));
       }
-      public async Task<bool> SetReserves(BoundedVecT1 value, Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+      public async Task<bool> SetReserves(BoundedVecT14 value, Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {
          return await SendMockupRequestAsync(_httpClient, "Balances/Reserves", value.Encode(), Substrate.Ajuna.NET.NetApiExt.Generated.Storage.BalancesStorage.ReservesParams(key));
       }
-      public async Task<bool> SetStorageVersion(EnumReleases value)
+      public async Task<bool> SetHolds(BoundedVecT15 value, Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {
-         return await SendMockupRequestAsync(_httpClient, "Balances/StorageVersion", value.Encode(), Substrate.Ajuna.NET.NetApiExt.Generated.Storage.BalancesStorage.StorageVersionParams());
+         return await SendMockupRequestAsync(_httpClient, "Balances/Holds", value.Encode(), Substrate.Ajuna.NET.NetApiExt.Generated.Storage.BalancesStorage.HoldsParams(key));
+      }
+      public async Task<bool> SetFreezes(BoundedVecT15 value, Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+      {
+         return await SendMockupRequestAsync(_httpClient, "Balances/Freezes", value.Encode(), Substrate.Ajuna.NET.NetApiExt.Generated.Storage.BalancesStorage.FreezesParams(key));
       }
    }
 }

@@ -18,7 +18,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_system.limits
     
     
     /// <summary>
-    /// >> 99 - Composite[frame_system.limits.BlockWeights]
+    /// >> 127 - Composite[frame_system.limits.BlockWeights]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class BlockWeights : BaseType
@@ -27,19 +27,19 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_system.limits
         /// <summary>
         /// >> base_block
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U64 _baseBlock;
+        private Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight _baseBlock;
         
         /// <summary>
         /// >> max_block
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U64 _maxBlock;
+        private Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight _maxBlock;
         
         /// <summary>
         /// >> per_class
         /// </summary>
-        private Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.weights.PerDispatchClassT2 _perClass;
+        private Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.dispatch.PerDispatchClassT2 _perClass;
         
-        public Substrate.NetApi.Model.Types.Primitive.U64 BaseBlock
+        public Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight BaseBlock
         {
             get
             {
@@ -51,7 +51,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_system.limits
             }
         }
         
-        public Substrate.NetApi.Model.Types.Primitive.U64 MaxBlock
+        public Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight MaxBlock
         {
             get
             {
@@ -63,7 +63,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_system.limits
             }
         }
         
-        public Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.weights.PerDispatchClassT2 PerClass
+        public Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.dispatch.PerDispatchClassT2 PerClass
         {
             get
             {
@@ -92,11 +92,11 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_system.limits
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            BaseBlock = new Substrate.NetApi.Model.Types.Primitive.U64();
+            BaseBlock = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight();
             BaseBlock.Decode(byteArray, ref p);
-            MaxBlock = new Substrate.NetApi.Model.Types.Primitive.U64();
+            MaxBlock = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight();
             MaxBlock.Decode(byteArray, ref p);
-            PerClass = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.weights.PerDispatchClassT2();
+            PerClass = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.dispatch.PerDispatchClassT2();
             PerClass.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

@@ -26,7 +26,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_parachain.primi
     }
     
     /// <summary>
-    /// >> 189 - Variant[polkadot_parachain.primitives.XcmpMessageFormat]
+    /// >> 337 - Variant[polkadot_parachain.primitives.XcmpMessageFormat]
     /// </summary>
     public sealed class EnumXcmpMessageFormat : BaseEnum<XcmpMessageFormat>
     {

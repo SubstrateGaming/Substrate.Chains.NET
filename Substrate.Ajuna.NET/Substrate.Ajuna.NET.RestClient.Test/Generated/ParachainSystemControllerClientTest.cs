@@ -17,13 +17,14 @@ namespace Substrate.Ajuna.NET.RestClient.Test.Generated
    using Substrate.Ajuna.NET.RestClient.Generated.Clients;
    using Substrate.NetApi.Model.Types.Base;
    using Substrate.NetApi.Model.Types.Primitive;
-   using Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v2;
+   using Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v4;
    using Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_trie.storage_proof;
    using Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.relay_state_snapshot;
    using Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_primitives_parachain_inherent;
    using Substrate.Ajuna.NET.NetApiExt.Generated.Types.Base;
    using Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_core_primitives;
-   using Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types;
+   using Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_weights.weight_v2;
+   using Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system;
    
    public class ParachainSystemControllerClientTest : ClientTestBase
    {
@@ -107,10 +108,10 @@ namespace Substrate.Ajuna.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.PersistedValidationData GetTestValue6()
+      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.PersistedValidationData GetTestValue6()
       {
-         Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.PersistedValidationData result;
-         result = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.PersistedValidationData();
+         Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.PersistedValidationData result;
+         result = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.PersistedValidationData();
          result.ParentHead = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.HeadData();
          result.ParentHead = this.GetTestValue7();
          result.RelayParentNumber = this.GetTestValueU32();
@@ -179,7 +180,7 @@ namespace Substrate.Ajuna.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          ParachainSystemControllerClient rpcClient = new ParachainSystemControllerClient(_httpClient, subscriptionClient);
-         Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.PersistedValidationData mockupValue = this.GetTestValue6();
+         Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.PersistedValidationData mockupValue = this.GetTestValue6();
 
 
          Assert.IsTrue(await rpcClient.SubscribeValidationData());
@@ -192,7 +193,7 @@ namespace Substrate.Ajuna.NET.RestClient.Test.Generated
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.PersistedValidationData rpcResult = await rpcClient.GetValidationData();
+         Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.PersistedValidationData rpcResult = await rpcClient.GetValidationData();
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
@@ -226,18 +227,47 @@ namespace Substrate.Ajuna.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.EnumUpgradeRestriction> GetTestValue11()
+      [Test()]
+      public async System.Threading.Tasks.Task TestLastRelayChainBlockNumber()
       {
-         Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.EnumUpgradeRestriction> result;
-         result = new Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.EnumUpgradeRestriction>();
-         result.Create(this.GetTestValue12());
+         // Construct new Mockup client to test with.
+         ParachainSystemControllerMockupClient mockupClient = new ParachainSystemControllerMockupClient(_httpClient);
+
+         // Construct new subscription client to test with.
+         var subscriptionClient = CreateSubscriptionClient();
+
+         // Construct new RPC client to test with.
+         ParachainSystemControllerClient rpcClient = new ParachainSystemControllerClient(_httpClient, subscriptionClient);
+         Substrate.NetApi.Model.Types.Primitive.U32 mockupValue = this.GetTestValueU32();
+
+
+         Assert.IsTrue(await rpcClient.SubscribeLastRelayChainBlockNumber());
+
+         // Save the previously generated mockup value in RPC service storage.
+         bool mockupSetResult = await mockupClient.SetLastRelayChainBlockNumber(mockupValue);
+
+         // Test that the expected mockup value was handled successfully from RPC service.
+         Assert.IsTrue(mockupSetResult);
+         var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
+         Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
+
+         Substrate.NetApi.Model.Types.Primitive.U32 rpcResult = await rpcClient.GetLastRelayChainBlockNumber();
+
+         // Test that the expected mockup value matches the actual result from RPC service.
+         Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
+      }
+      public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.EnumUpgradeRestriction> GetTestValue12()
+      {
+         Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.EnumUpgradeRestriction> result;
+         result = new Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.EnumUpgradeRestriction>();
+         result.Create(this.GetTestValue13());
          return result;
       }
-      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.EnumUpgradeRestriction GetTestValue12()
+      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.EnumUpgradeRestriction GetTestValue13()
       {
-         Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.EnumUpgradeRestriction result;
-         result = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.EnumUpgradeRestriction();
-         result.Create(this.GetTestValueEnum<Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.UpgradeRestriction>());
+         Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.EnumUpgradeRestriction result;
+         result = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.EnumUpgradeRestriction();
+         result.Create(this.GetTestValueEnum<Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.UpgradeRestriction>());
          return result;
       }
       [Test()]
@@ -251,7 +281,7 @@ namespace Substrate.Ajuna.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          ParachainSystemControllerClient rpcClient = new ParachainSystemControllerClient(_httpClient, subscriptionClient);
-         Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.EnumUpgradeRestriction> mockupValue = this.GetTestValue11();
+         Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.EnumUpgradeRestriction> mockupValue = this.GetTestValue12();
 
 
          Assert.IsTrue(await rpcClient.SubscribeUpgradeRestrictionSignal());
@@ -264,29 +294,29 @@ namespace Substrate.Ajuna.NET.RestClient.Test.Generated
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.EnumUpgradeRestriction> rpcResult = await rpcClient.GetUpgradeRestrictionSignal();
+         Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.EnumUpgradeRestriction> rpcResult = await rpcClient.GetUpgradeRestrictionSignal();
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_trie.storage_proof.StorageProof GetTestValue14()
+      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_trie.storage_proof.StorageProof GetTestValue15()
       {
          Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_trie.storage_proof.StorageProof result;
          result = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_trie.storage_proof.StorageProof();
          result.TrieNodes = new Substrate.Ajuna.NET.NetApiExt.Generated.Types.Base.BTreeSet();
-         result.TrieNodes = this.GetTestValue15();
+         result.TrieNodes = this.GetTestValue16();
          return result;
       }
-      public Substrate.Ajuna.NET.NetApiExt.Generated.Types.Base.BTreeSet GetTestValue15()
+      public Substrate.Ajuna.NET.NetApiExt.Generated.Types.Base.BTreeSet GetTestValue16()
       {
          Substrate.Ajuna.NET.NetApiExt.Generated.Types.Base.BTreeSet result;
          result = new Substrate.Ajuna.NET.NetApiExt.Generated.Types.Base.BTreeSet();
          result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>();
          result.Value.Create(new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>[] {
-                  this.GetTestValue16()});
+                  this.GetTestValue17()});
          return result;
       }
-      public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> GetTestValue16()
+      public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> GetTestValue17()
       {
          Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> result;
          result = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>();
@@ -305,7 +335,7 @@ namespace Substrate.Ajuna.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          ParachainSystemControllerClient rpcClient = new ParachainSystemControllerClient(_httpClient, subscriptionClient);
-         Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_trie.storage_proof.StorageProof mockupValue = this.GetTestValue14();
+         Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_trie.storage_proof.StorageProof mockupValue = this.GetTestValue15();
 
 
          Assert.IsTrue(await rpcClient.SubscribeRelayStateProof());
@@ -323,23 +353,23 @@ namespace Substrate.Ajuna.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.relay_state_snapshot.MessagingStateSnapshot GetTestValue18()
+      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.relay_state_snapshot.MessagingStateSnapshot GetTestValue19()
       {
          Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.relay_state_snapshot.MessagingStateSnapshot result;
          result = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.relay_state_snapshot.MessagingStateSnapshot();
          result.DmqMqcHead = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256();
-         result.DmqMqcHead = this.GetTestValue19();
+         result.DmqMqcHead = this.GetTestValue20();
          result.RelayDispatchQueueSize = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>();
          result.RelayDispatchQueueSize.Create(this.GetTestValueU32(), this.GetTestValueU32());
-         result.IngressChannels = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.AbridgedHrmpChannel>>();
-         result.IngressChannels.Create(new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.AbridgedHrmpChannel>[] {
-                  this.GetTestValue20()});
-         result.EgressChannels = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.AbridgedHrmpChannel>>();
-         result.EgressChannels.Create(new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.AbridgedHrmpChannel>[] {
-                  this.GetTestValue24()});
+         result.IngressChannels = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.AbridgedHrmpChannel>>();
+         result.IngressChannels.Create(new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.AbridgedHrmpChannel>[] {
+                  this.GetTestValue21()});
+         result.EgressChannels = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.AbridgedHrmpChannel>>();
+         result.EgressChannels.Create(new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.AbridgedHrmpChannel>[] {
+                  this.GetTestValue25()});
          return result;
       }
-      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256 GetTestValue19()
+      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256 GetTestValue20()
       {
          Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256 result;
          result = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256();
@@ -379,34 +409,34 @@ namespace Substrate.Ajuna.NET.RestClient.Test.Generated
                   this.GetTestValueU8()});
          return result;
       }
-      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.AbridgedHrmpChannel> GetTestValue20()
+      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.AbridgedHrmpChannel> GetTestValue21()
       {
-         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.AbridgedHrmpChannel> result;
-         result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.AbridgedHrmpChannel>();
-         result.Create(this.GetTestValue21(), this.GetTestValue22());
+         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.AbridgedHrmpChannel> result;
+         result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.AbridgedHrmpChannel>();
+         result.Create(this.GetTestValue22(), this.GetTestValue23());
          return result;
       }
-      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id GetTestValue21()
+      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id GetTestValue22()
       {
          Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id result;
          result = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id();
          result.Value = this.GetTestValueU32();
          return result;
       }
-      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.AbridgedHrmpChannel GetTestValue22()
+      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.AbridgedHrmpChannel GetTestValue23()
       {
-         Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.AbridgedHrmpChannel result;
-         result = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.AbridgedHrmpChannel();
+         Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.AbridgedHrmpChannel result;
+         result = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.AbridgedHrmpChannel();
          result.MaxCapacity = this.GetTestValueU32();
          result.MaxTotalSize = this.GetTestValueU32();
          result.MaxMessageSize = this.GetTestValueU32();
          result.MsgCount = this.GetTestValueU32();
          result.TotalSize = this.GetTestValueU32();
          result.MqcHead = new Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256>();
-         result.MqcHead.Create(this.GetTestValue23());
+         result.MqcHead.Create(this.GetTestValue24());
          return result;
       }
-      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256 GetTestValue23()
+      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256 GetTestValue24()
       {
          Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256 result;
          result = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256();
@@ -446,34 +476,34 @@ namespace Substrate.Ajuna.NET.RestClient.Test.Generated
                   this.GetTestValueU8()});
          return result;
       }
-      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.AbridgedHrmpChannel> GetTestValue24()
+      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.AbridgedHrmpChannel> GetTestValue25()
       {
-         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.AbridgedHrmpChannel> result;
-         result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.AbridgedHrmpChannel>();
-         result.Create(this.GetTestValue25(), this.GetTestValue26());
+         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.AbridgedHrmpChannel> result;
+         result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.AbridgedHrmpChannel>();
+         result.Create(this.GetTestValue26(), this.GetTestValue27());
          return result;
       }
-      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id GetTestValue25()
+      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id GetTestValue26()
       {
          Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id result;
          result = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id();
          result.Value = this.GetTestValueU32();
          return result;
       }
-      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.AbridgedHrmpChannel GetTestValue26()
+      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.AbridgedHrmpChannel GetTestValue27()
       {
-         Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.AbridgedHrmpChannel result;
-         result = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.AbridgedHrmpChannel();
+         Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.AbridgedHrmpChannel result;
+         result = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.AbridgedHrmpChannel();
          result.MaxCapacity = this.GetTestValueU32();
          result.MaxTotalSize = this.GetTestValueU32();
          result.MaxMessageSize = this.GetTestValueU32();
          result.MsgCount = this.GetTestValueU32();
          result.TotalSize = this.GetTestValueU32();
          result.MqcHead = new Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256>();
-         result.MqcHead.Create(this.GetTestValue27());
+         result.MqcHead.Create(this.GetTestValue28());
          return result;
       }
-      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256 GetTestValue27()
+      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256 GetTestValue28()
       {
          Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256 result;
          result = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256();
@@ -524,7 +554,7 @@ namespace Substrate.Ajuna.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          ParachainSystemControllerClient rpcClient = new ParachainSystemControllerClient(_httpClient, subscriptionClient);
-         Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.relay_state_snapshot.MessagingStateSnapshot mockupValue = this.GetTestValue18();
+         Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.relay_state_snapshot.MessagingStateSnapshot mockupValue = this.GetTestValue19();
 
 
          Assert.IsTrue(await rpcClient.SubscribeRelevantMessagingState());
@@ -542,10 +572,10 @@ namespace Substrate.Ajuna.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.AbridgedHostConfiguration GetTestValue29()
+      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.AbridgedHostConfiguration GetTestValue30()
       {
-         Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.AbridgedHostConfiguration result;
-         result = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.AbridgedHostConfiguration();
+         Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.AbridgedHostConfiguration result;
+         result = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.AbridgedHostConfiguration();
          result.MaxCodeSize = this.GetTestValueU32();
          result.MaxHeadDataSize = this.GetTestValueU32();
          result.MaxUpwardQueueCount = this.GetTestValueU32();
@@ -568,7 +598,7 @@ namespace Substrate.Ajuna.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          ParachainSystemControllerClient rpcClient = new ParachainSystemControllerClient(_httpClient, subscriptionClient);
-         Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.AbridgedHostConfiguration mockupValue = this.GetTestValue29();
+         Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.AbridgedHostConfiguration mockupValue = this.GetTestValue30();
 
 
          Assert.IsTrue(await rpcClient.SubscribeHostConfiguration());
@@ -581,20 +611,20 @@ namespace Substrate.Ajuna.NET.RestClient.Test.Generated
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.AbridgedHostConfiguration rpcResult = await rpcClient.GetHostConfiguration();
+         Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.AbridgedHostConfiguration rpcResult = await rpcClient.GetHostConfiguration();
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_primitives_parachain_inherent.MessageQueueChain GetTestValue31()
+      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_primitives_parachain_inherent.MessageQueueChain GetTestValue32()
       {
          Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_primitives_parachain_inherent.MessageQueueChain result;
          result = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_primitives_parachain_inherent.MessageQueueChain();
          result.Value = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256();
-         result.Value = this.GetTestValue32();
+         result.Value = this.GetTestValue33();
          return result;
       }
-      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256 GetTestValue32()
+      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256 GetTestValue33()
       {
          Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256 result;
          result = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256();
@@ -645,7 +675,7 @@ namespace Substrate.Ajuna.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          ParachainSystemControllerClient rpcClient = new ParachainSystemControllerClient(_httpClient, subscriptionClient);
-         Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_primitives_parachain_inherent.MessageQueueChain mockupValue = this.GetTestValue31();
+         Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_primitives_parachain_inherent.MessageQueueChain mockupValue = this.GetTestValue32();
 
 
          Assert.IsTrue(await rpcClient.SubscribeLastDmqMqcHead());
@@ -663,38 +693,38 @@ namespace Substrate.Ajuna.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Ajuna.NET.NetApiExt.Generated.Types.Base.BTreeMapT1 GetTestValue34()
+      public Substrate.Ajuna.NET.NetApiExt.Generated.Types.Base.BTreeMapT1 GetTestValue35()
       {
          Substrate.Ajuna.NET.NetApiExt.Generated.Types.Base.BTreeMapT1 result;
          result = new Substrate.Ajuna.NET.NetApiExt.Generated.Types.Base.BTreeMapT1();
          result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_primitives_parachain_inherent.MessageQueueChain>>();
          result.Value.Create(new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_primitives_parachain_inherent.MessageQueueChain>[] {
-                  this.GetTestValue35()});
+                  this.GetTestValue36()});
          return result;
       }
-      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_primitives_parachain_inherent.MessageQueueChain> GetTestValue35()
+      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_primitives_parachain_inherent.MessageQueueChain> GetTestValue36()
       {
          Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_primitives_parachain_inherent.MessageQueueChain> result;
          result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_primitives_parachain_inherent.MessageQueueChain>();
-         result.Create(this.GetTestValue36(), this.GetTestValue37());
+         result.Create(this.GetTestValue37(), this.GetTestValue38());
          return result;
       }
-      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id GetTestValue36()
+      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id GetTestValue37()
       {
          Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id result;
          result = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id();
          result.Value = this.GetTestValueU32();
          return result;
       }
-      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_primitives_parachain_inherent.MessageQueueChain GetTestValue37()
+      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_primitives_parachain_inherent.MessageQueueChain GetTestValue38()
       {
          Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_primitives_parachain_inherent.MessageQueueChain result;
          result = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_primitives_parachain_inherent.MessageQueueChain();
          result.Value = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256();
-         result.Value = this.GetTestValue38();
+         result.Value = this.GetTestValue39();
          return result;
       }
-      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256 GetTestValue38()
+      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256 GetTestValue39()
       {
          Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256 result;
          result = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256();
@@ -745,7 +775,7 @@ namespace Substrate.Ajuna.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          ParachainSystemControllerClient rpcClient = new ParachainSystemControllerClient(_httpClient, subscriptionClient);
-         Substrate.Ajuna.NET.NetApiExt.Generated.Types.Base.BTreeMapT1 mockupValue = this.GetTestValue34();
+         Substrate.Ajuna.NET.NetApiExt.Generated.Types.Base.BTreeMapT1 mockupValue = this.GetTestValue35();
 
 
          Assert.IsTrue(await rpcClient.SubscribeLastHrmpMqcHeads());
@@ -821,26 +851,26 @@ namespace Substrate.Ajuna.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_core_primitives.OutboundHrmpMessage> GetTestValue42()
+      public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_core_primitives.OutboundHrmpMessage> GetTestValue43()
       {
          Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_core_primitives.OutboundHrmpMessage> result;
          result = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_core_primitives.OutboundHrmpMessage>();
          result.Create(new Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_core_primitives.OutboundHrmpMessage[] {
-                  this.GetTestValue43()});
+                  this.GetTestValue44()});
          return result;
       }
-      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_core_primitives.OutboundHrmpMessage GetTestValue43()
+      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_core_primitives.OutboundHrmpMessage GetTestValue44()
       {
          Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_core_primitives.OutboundHrmpMessage result;
          result = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_core_primitives.OutboundHrmpMessage();
          result.Recipient = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id();
-         result.Recipient = this.GetTestValue44();
+         result.Recipient = this.GetTestValue45();
          result.Data = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>();
          result.Data.Create(new Substrate.NetApi.Model.Types.Primitive.U8[] {
                   this.GetTestValueU8()});
          return result;
       }
-      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id GetTestValue44()
+      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id GetTestValue45()
       {
          Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id result;
          result = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id();
@@ -858,7 +888,7 @@ namespace Substrate.Ajuna.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          ParachainSystemControllerClient rpcClient = new ParachainSystemControllerClient(_httpClient, subscriptionClient);
-         Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_core_primitives.OutboundHrmpMessage> mockupValue = this.GetTestValue42();
+         Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_core_primitives.OutboundHrmpMessage> mockupValue = this.GetTestValue43();
 
 
          Assert.IsTrue(await rpcClient.SubscribeHrmpOutboundMessages());
@@ -876,15 +906,15 @@ namespace Substrate.Ajuna.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>> GetTestValue46()
+      public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>> GetTestValue47()
       {
          Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>> result;
          result = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>();
          result.Create(new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>[] {
-                  this.GetTestValue47()});
+                  this.GetTestValue48()});
          return result;
       }
-      public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> GetTestValue47()
+      public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> GetTestValue48()
       {
          Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> result;
          result = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>();
@@ -903,7 +933,7 @@ namespace Substrate.Ajuna.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          ParachainSystemControllerClient rpcClient = new ParachainSystemControllerClient(_httpClient, subscriptionClient);
-         Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>> mockupValue = this.GetTestValue46();
+         Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>> mockupValue = this.GetTestValue47();
 
 
          Assert.IsTrue(await rpcClient.SubscribeUpwardMessages());
@@ -921,15 +951,15 @@ namespace Substrate.Ajuna.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>> GetTestValue49()
+      public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>> GetTestValue50()
       {
          Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>> result;
          result = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>();
          result.Create(new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>[] {
-                  this.GetTestValue50()});
+                  this.GetTestValue51()});
          return result;
       }
-      public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> GetTestValue50()
+      public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> GetTestValue51()
       {
          Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> result;
          result = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>();
@@ -948,7 +978,7 @@ namespace Substrate.Ajuna.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          ParachainSystemControllerClient rpcClient = new ParachainSystemControllerClient(_httpClient, subscriptionClient);
-         Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>> mockupValue = this.GetTestValue49();
+         Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>> mockupValue = this.GetTestValue50();
 
 
          Assert.IsTrue(await rpcClient.SubscribePendingUpwardMessages());
@@ -995,6 +1025,16 @@ namespace Substrate.Ajuna.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
+      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight GetTestValue54()
+      {
+         Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight result;
+         result = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight();
+         result.RefTime = new Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U64>();
+         result.RefTime.Create(new Substrate.NetApi.CompactInteger(this.GetTestValueU64().Value));
+         result.ProofSize = new Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U64>();
+         result.ProofSize.Create(new Substrate.NetApi.CompactInteger(this.GetTestValueU64().Value));
+         return result;
+      }
       [Test()]
       public async System.Threading.Tasks.Task TestReservedXcmpWeightOverride()
       {
@@ -1006,7 +1046,7 @@ namespace Substrate.Ajuna.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          ParachainSystemControllerClient rpcClient = new ParachainSystemControllerClient(_httpClient, subscriptionClient);
-         Substrate.NetApi.Model.Types.Primitive.U64 mockupValue = this.GetTestValueU64();
+         Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight mockupValue = this.GetTestValue54();
 
 
          Assert.IsTrue(await rpcClient.SubscribeReservedXcmpWeightOverride());
@@ -1019,10 +1059,20 @@ namespace Substrate.Ajuna.NET.RestClient.Test.Generated
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Substrate.NetApi.Model.Types.Primitive.U64 rpcResult = await rpcClient.GetReservedXcmpWeightOverride();
+         Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight rpcResult = await rpcClient.GetReservedXcmpWeightOverride();
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
+      }
+      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight GetTestValue56()
+      {
+         Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight result;
+         result = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight();
+         result.RefTime = new Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U64>();
+         result.RefTime.Create(new Substrate.NetApi.CompactInteger(this.GetTestValueU64().Value));
+         result.ProofSize = new Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U64>();
+         result.ProofSize.Create(new Substrate.NetApi.CompactInteger(this.GetTestValueU64().Value));
+         return result;
       }
       [Test()]
       public async System.Threading.Tasks.Task TestReservedDmpWeightOverride()
@@ -1035,7 +1085,7 @@ namespace Substrate.Ajuna.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          ParachainSystemControllerClient rpcClient = new ParachainSystemControllerClient(_httpClient, subscriptionClient);
-         Substrate.NetApi.Model.Types.Primitive.U64 mockupValue = this.GetTestValueU64();
+         Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight mockupValue = this.GetTestValue56();
 
 
          Assert.IsTrue(await rpcClient.SubscribeReservedDmpWeightOverride());
@@ -1048,12 +1098,21 @@ namespace Substrate.Ajuna.NET.RestClient.Test.Generated
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Substrate.NetApi.Model.Types.Primitive.U64 rpcResult = await rpcClient.GetReservedDmpWeightOverride();
+         Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight rpcResult = await rpcClient.GetReservedDmpWeightOverride();
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256 GetTestValue55()
+      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.CodeUpgradeAuthorization GetTestValue58()
+      {
+         Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.CodeUpgradeAuthorization result;
+         result = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.CodeUpgradeAuthorization();
+         result.CodeHash = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256();
+         result.CodeHash = this.GetTestValue59();
+         result.CheckVersion = this.GetTestValueBool();
+         return result;
+      }
+      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256 GetTestValue59()
       {
          Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256 result;
          result = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256();
@@ -1104,7 +1163,7 @@ namespace Substrate.Ajuna.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          ParachainSystemControllerClient rpcClient = new ParachainSystemControllerClient(_httpClient, subscriptionClient);
-         Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256 mockupValue = this.GetTestValue55();
+         Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.CodeUpgradeAuthorization mockupValue = this.GetTestValue58();
 
 
          Assert.IsTrue(await rpcClient.SubscribeAuthorizedUpgrade());
@@ -1117,12 +1176,12 @@ namespace Substrate.Ajuna.NET.RestClient.Test.Generated
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256 rpcResult = await rpcClient.GetAuthorizedUpgrade();
+         Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.CodeUpgradeAuthorization rpcResult = await rpcClient.GetAuthorizedUpgrade();
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> GetTestValue57()
+      public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> GetTestValue61()
       {
          Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> result;
          result = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>();
@@ -1141,7 +1200,7 @@ namespace Substrate.Ajuna.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          ParachainSystemControllerClient rpcClient = new ParachainSystemControllerClient(_httpClient, subscriptionClient);
-         Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> mockupValue = this.GetTestValue57();
+         Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> mockupValue = this.GetTestValue61();
 
 
          Assert.IsTrue(await rpcClient.SubscribeCustomValidationHeadData());

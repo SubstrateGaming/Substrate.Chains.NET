@@ -12,7 +12,7 @@ namespace Substrate.Ajuna.NET.RestClient.Generated.Clients
    using System;
    using System.Threading.Tasks;
    using System.Net.Http;
-   using Substrate.NetApi.Model.Types.Base;
+   using Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    using Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto;
    using Substrate.Ajuna.NET.RestClient.Generated.Interfaces;
    
@@ -25,9 +25,9 @@ namespace Substrate.Ajuna.NET.RestClient.Generated.Clients
          _httpClient = httpClient;
          _subscriptionClient = subscriptionClient;
       }
-      public async Task<BaseVec<AccountId32>> GetMembers()
+      public async Task<BoundedVecT24> GetMembers()
       {
-         return await SendRequestAsync<BaseVec<AccountId32>>(_httpClient, "councilmembership/members");
+         return await SendRequestAsync<BoundedVecT24>(_httpClient, "councilmembership/members");
       }
       public async Task<bool> SubscribeMembers()
       {

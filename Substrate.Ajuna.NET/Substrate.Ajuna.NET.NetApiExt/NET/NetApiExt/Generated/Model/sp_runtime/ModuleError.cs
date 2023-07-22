@@ -18,7 +18,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_runtime
     
     
     /// <summary>
-    /// >> 23 - Composite[sp_runtime.ModuleError]
+    /// >> 26 - Composite[sp_runtime.ModuleError]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class ModuleError : BaseType

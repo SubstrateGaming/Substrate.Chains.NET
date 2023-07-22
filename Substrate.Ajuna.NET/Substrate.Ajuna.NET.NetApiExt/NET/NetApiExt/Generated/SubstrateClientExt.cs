@@ -47,6 +47,36 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated
         public ParachainInfoStorage ParachainInfoStorage;
         
         /// <summary>
+        /// MultisigStorage storage calls.
+        /// </summary>
+        public MultisigStorage MultisigStorage;
+        
+        /// <summary>
+        /// UtilityStorage storage calls.
+        /// </summary>
+        public UtilityStorage UtilityStorage;
+        
+        /// <summary>
+        /// IdentityStorage storage calls.
+        /// </summary>
+        public IdentityStorage IdentityStorage;
+        
+        /// <summary>
+        /// ProxyStorage storage calls.
+        /// </summary>
+        public ProxyStorage ProxyStorage;
+        
+        /// <summary>
+        /// SchedulerStorage storage calls.
+        /// </summary>
+        public SchedulerStorage SchedulerStorage;
+        
+        /// <summary>
+        /// PreimageStorage storage calls.
+        /// </summary>
+        public PreimageStorage PreimageStorage;
+        
+        /// <summary>
         /// BalancesStorage storage calls.
         /// </summary>
         public BalancesStorage BalancesStorage;
@@ -134,6 +164,12 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated
             this.ParachainSystemStorage = new ParachainSystemStorage(this);
             this.TimestampStorage = new TimestampStorage(this);
             this.ParachainInfoStorage = new ParachainInfoStorage(this);
+            this.MultisigStorage = new MultisigStorage(this);
+            this.UtilityStorage = new UtilityStorage(this);
+            this.IdentityStorage = new IdentityStorage(this);
+            this.ProxyStorage = new ProxyStorage(this);
+            this.SchedulerStorage = new SchedulerStorage(this);
+            this.PreimageStorage = new PreimageStorage(this);
             this.BalancesStorage = new BalancesStorage(this);
             this.TransactionPaymentStorage = new TransactionPaymentStorage(this);
             this.VestingStorage = new VestingStorage(this);

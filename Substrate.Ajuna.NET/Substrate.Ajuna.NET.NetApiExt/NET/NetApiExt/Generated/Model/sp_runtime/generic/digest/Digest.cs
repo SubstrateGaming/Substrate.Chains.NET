@@ -18,7 +18,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_runtime.generic.diges
     
     
     /// <summary>
-    /// >> 11 - Composite[sp_runtime.generic.digest.Digest]
+    /// >> 14 - Composite[sp_runtime.generic.digest.Digest]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Digest : BaseType

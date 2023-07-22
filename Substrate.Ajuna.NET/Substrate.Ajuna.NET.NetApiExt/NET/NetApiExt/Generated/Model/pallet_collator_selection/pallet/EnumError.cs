@@ -30,17 +30,19 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_collator_selectio
         
         NotCandidate = 5,
         
-        AlreadyInvulnerable = 6,
+        TooManyInvulnerables = 6,
         
-        NoAssociatedValidatorId = 7,
+        AlreadyInvulnerable = 7,
         
-        ValidatorNotRegistered = 8,
+        NoAssociatedValidatorId = 8,
+        
+        ValidatorNotRegistered = 9,
     }
     
     /// <summary>
-    /// >> 170 - Variant[pallet_collator_selection.pallet.Error]
+    /// >> 322 - Variant[pallet_collator_selection.pallet.Error]
     /// 
-    ///			Custom [dispatch errors](https://docs.substrate.io/v3/runtime/events-and-errors)
+    ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
     ///			of this pallet.
     ///			
     /// </summary>

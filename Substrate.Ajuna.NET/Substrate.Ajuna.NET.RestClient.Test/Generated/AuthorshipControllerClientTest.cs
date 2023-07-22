@@ -15,10 +15,7 @@ namespace Substrate.Ajuna.NET.RestClient.Test.Generated
    using System.Net.Http;
    using Substrate.Ajuna.NET.RestClient.Mockup.Generated.Clients;
    using Substrate.Ajuna.NET.RestClient.Generated.Clients;
-   using Substrate.NetApi.Model.Types.Base;
-   using Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_authorship;
    using Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto;
-   using Substrate.NetApi.Model.Types.Primitive;
    
    public class AuthorshipControllerClientTest : ClientTestBase
    {
@@ -28,51 +25,7 @@ namespace Substrate.Ajuna.NET.RestClient.Test.Generated
       {
          _httpClient = CreateHttpClient();
       }
-      public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_authorship.EnumUncleEntryItem> GetTestValue2()
-      {
-         Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_authorship.EnumUncleEntryItem> result;
-         result = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_authorship.EnumUncleEntryItem>();
-         result.Create(new Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_authorship.EnumUncleEntryItem[] {
-                  this.GetTestValue3()});
-         return result;
-      }
-      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_authorship.EnumUncleEntryItem GetTestValue3()
-      {
-         Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_authorship.EnumUncleEntryItem result;
-         result = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_authorship.EnumUncleEntryItem();
-         result.Create(this.GetTestValueEnum<Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_authorship.UncleEntryItem>(), this.GetTestValueU32());
-         return result;
-      }
-      [Test()]
-      public async System.Threading.Tasks.Task TestUncles()
-      {
-         // Construct new Mockup client to test with.
-         AuthorshipControllerMockupClient mockupClient = new AuthorshipControllerMockupClient(_httpClient);
-
-         // Construct new subscription client to test with.
-         var subscriptionClient = CreateSubscriptionClient();
-
-         // Construct new RPC client to test with.
-         AuthorshipControllerClient rpcClient = new AuthorshipControllerClient(_httpClient, subscriptionClient);
-         Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_authorship.EnumUncleEntryItem> mockupValue = this.GetTestValue2();
-
-
-         Assert.IsTrue(await rpcClient.SubscribeUncles());
-
-         // Save the previously generated mockup value in RPC service storage.
-         bool mockupSetResult = await mockupClient.SetUncles(mockupValue);
-
-         // Test that the expected mockup value was handled successfully from RPC service.
-         Assert.IsTrue(mockupSetResult);
-         var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
-         Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
-
-         Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_authorship.EnumUncleEntryItem> rpcResult = await rpcClient.GetUncles();
-
-         // Test that the expected mockup value matches the actual result from RPC service.
-         Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
-      }
-      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue5()
+      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue2()
       {
          Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 result;
          result = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32();
@@ -123,7 +76,7 @@ namespace Substrate.Ajuna.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          AuthorshipControllerClient rpcClient = new AuthorshipControllerClient(_httpClient, subscriptionClient);
-         Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 mockupValue = this.GetTestValue5();
+         Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 mockupValue = this.GetTestValue2();
 
 
          Assert.IsTrue(await rpcClient.SubscribeAuthor());
@@ -137,35 +90,6 @@ namespace Substrate.Ajuna.NET.RestClient.Test.Generated
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
          Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 rpcResult = await rpcClient.GetAuthor();
-
-         // Test that the expected mockup value matches the actual result from RPC service.
-         Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
-      }
-      [Test()]
-      public async System.Threading.Tasks.Task TestDidSetUncles()
-      {
-         // Construct new Mockup client to test with.
-         AuthorshipControllerMockupClient mockupClient = new AuthorshipControllerMockupClient(_httpClient);
-
-         // Construct new subscription client to test with.
-         var subscriptionClient = CreateSubscriptionClient();
-
-         // Construct new RPC client to test with.
-         AuthorshipControllerClient rpcClient = new AuthorshipControllerClient(_httpClient, subscriptionClient);
-         Substrate.NetApi.Model.Types.Primitive.Bool mockupValue = this.GetTestValueBool();
-
-
-         Assert.IsTrue(await rpcClient.SubscribeDidSetUncles());
-
-         // Save the previously generated mockup value in RPC service storage.
-         bool mockupSetResult = await mockupClient.SetDidSetUncles(mockupValue);
-
-         // Test that the expected mockup value was handled successfully from RPC service.
-         Assert.IsTrue(mockupSetResult);
-         var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
-         Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
-
-         Substrate.NetApi.Model.Types.Primitive.Bool rpcResult = await rpcClient.GetDidSetUncles();
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());

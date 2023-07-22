@@ -31,6 +31,12 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Storage
         Substrate.NetApi.Model.Types.Primitive.U128 GetTotalIssuance();
         
         /// <summary>
+        /// >> InactiveIssuance
+        ///  The total units of outstanding deactivated balance in the system.
+        /// </summary>
+        Substrate.NetApi.Model.Types.Primitive.U128 GetInactiveIssuance();
+        
+        /// <summary>
         /// >> Account
         ///  The Balances pallet example of storing the balance of an account.
         /// 
@@ -57,28 +63,32 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Storage
         ///  `Balances` pallet, which uses a `StorageMap` to store balances data only.
         ///  NOTE: This is only used in the case that this pallet is used to store balances.
         /// </summary>
-        Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_balances.AccountData GetAccount(string key);
+        Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_balances.types.AccountData GetAccount(string key);
         
         /// <summary>
         /// >> Locks
         ///  Any liquidity locks on some account balances.
         ///  NOTE: Should only be accessed when setting, changing and freeing a lock.
         /// </summary>
-        Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.storage.weak_bounded_vec.WeakBoundedVecT1 GetLocks(string key);
+        Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT2 GetLocks(string key);
         
         /// <summary>
         /// >> Reserves
         ///  Named reserves on some account balances.
         /// </summary>
-        Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.storage.bounded_vec.BoundedVecT1 GetReserves(string key);
+        Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT14 GetReserves(string key);
         
         /// <summary>
-        /// >> StorageVersion
-        ///  Storage version of the pallet.
-        /// 
-        ///  This is set to v2.0.0 for new networks.
+        /// >> Holds
+        ///  Holds on account balances.
         /// </summary>
-        Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_balances.EnumReleases GetStorageVersion();
+        Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT15 GetHolds(string key);
+        
+        /// <summary>
+        /// >> Freezes
+        ///  Freeze locks on account balances.
+        /// </summary>
+        Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT15 GetFreezes(string key);
     }
     
     /// <summary>
@@ -93,24 +103,34 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Storage
         private TypedStorage<Substrate.NetApi.Model.Types.Primitive.U128> _totalIssuanceTypedStorage;
         
         /// <summary>
+        /// _inactiveIssuanceTypedStorage typed storage field
+        /// </summary>
+        private TypedStorage<Substrate.NetApi.Model.Types.Primitive.U128> _inactiveIssuanceTypedStorage;
+        
+        /// <summary>
         /// _accountTypedStorage typed storage field
         /// </summary>
-        private TypedMapStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_balances.AccountData> _accountTypedStorage;
+        private TypedMapStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_balances.types.AccountData> _accountTypedStorage;
         
         /// <summary>
         /// _locksTypedStorage typed storage field
         /// </summary>
-        private TypedMapStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.storage.weak_bounded_vec.WeakBoundedVecT1> _locksTypedStorage;
+        private TypedMapStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT2> _locksTypedStorage;
         
         /// <summary>
         /// _reservesTypedStorage typed storage field
         /// </summary>
-        private TypedMapStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.storage.bounded_vec.BoundedVecT1> _reservesTypedStorage;
+        private TypedMapStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT14> _reservesTypedStorage;
         
         /// <summary>
-        /// _storageVersionTypedStorage typed storage field
+        /// _holdsTypedStorage typed storage field
         /// </summary>
-        private TypedStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_balances.EnumReleases> _storageVersionTypedStorage;
+        private TypedMapStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT15> _holdsTypedStorage;
+        
+        /// <summary>
+        /// _freezesTypedStorage typed storage field
+        /// </summary>
+        private TypedMapStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT15> _freezesTypedStorage;
         
         /// <summary>
         /// BalancesStorage constructor.
@@ -118,10 +138,12 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Storage
         public BalancesStorage(IStorageDataProvider storageDataProvider, List<IStorageChangeDelegate> storageChangeDelegates)
         {
             this.TotalIssuanceTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U128>("Balances.TotalIssuance", storageDataProvider, storageChangeDelegates);
-            this.AccountTypedStorage = new TypedMapStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_balances.AccountData>("Balances.Account", storageDataProvider, storageChangeDelegates);
-            this.LocksTypedStorage = new TypedMapStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.storage.weak_bounded_vec.WeakBoundedVecT1>("Balances.Locks", storageDataProvider, storageChangeDelegates);
-            this.ReservesTypedStorage = new TypedMapStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.storage.bounded_vec.BoundedVecT1>("Balances.Reserves", storageDataProvider, storageChangeDelegates);
-            this.StorageVersionTypedStorage = new TypedStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_balances.EnumReleases>("Balances.StorageVersion", storageDataProvider, storageChangeDelegates);
+            this.InactiveIssuanceTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U128>("Balances.InactiveIssuance", storageDataProvider, storageChangeDelegates);
+            this.AccountTypedStorage = new TypedMapStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_balances.types.AccountData>("Balances.Account", storageDataProvider, storageChangeDelegates);
+            this.LocksTypedStorage = new TypedMapStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT2>("Balances.Locks", storageDataProvider, storageChangeDelegates);
+            this.ReservesTypedStorage = new TypedMapStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT14>("Balances.Reserves", storageDataProvider, storageChangeDelegates);
+            this.HoldsTypedStorage = new TypedMapStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT15>("Balances.Holds", storageDataProvider, storageChangeDelegates);
+            this.FreezesTypedStorage = new TypedMapStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT15>("Balances.Freezes", storageDataProvider, storageChangeDelegates);
         }
         
         /// <summary>
@@ -140,9 +162,24 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Storage
         }
         
         /// <summary>
+        /// _inactiveIssuanceTypedStorage property
+        /// </summary>
+        public TypedStorage<Substrate.NetApi.Model.Types.Primitive.U128> InactiveIssuanceTypedStorage
+        {
+            get
+            {
+                return _inactiveIssuanceTypedStorage;
+            }
+            set
+            {
+                _inactiveIssuanceTypedStorage = value;
+            }
+        }
+        
+        /// <summary>
         /// _accountTypedStorage property
         /// </summary>
-        public TypedMapStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_balances.AccountData> AccountTypedStorage
+        public TypedMapStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_balances.types.AccountData> AccountTypedStorage
         {
             get
             {
@@ -157,7 +194,7 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Storage
         /// <summary>
         /// _locksTypedStorage property
         /// </summary>
-        public TypedMapStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.storage.weak_bounded_vec.WeakBoundedVecT1> LocksTypedStorage
+        public TypedMapStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT2> LocksTypedStorage
         {
             get
             {
@@ -172,7 +209,7 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Storage
         /// <summary>
         /// _reservesTypedStorage property
         /// </summary>
-        public TypedMapStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.storage.bounded_vec.BoundedVecT1> ReservesTypedStorage
+        public TypedMapStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT14> ReservesTypedStorage
         {
             get
             {
@@ -185,17 +222,32 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Storage
         }
         
         /// <summary>
-        /// _storageVersionTypedStorage property
+        /// _holdsTypedStorage property
         /// </summary>
-        public TypedStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_balances.EnumReleases> StorageVersionTypedStorage
+        public TypedMapStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT15> HoldsTypedStorage
         {
             get
             {
-                return _storageVersionTypedStorage;
+                return _holdsTypedStorage;
             }
             set
             {
-                _storageVersionTypedStorage = value;
+                _holdsTypedStorage = value;
+            }
+        }
+        
+        /// <summary>
+        /// _freezesTypedStorage property
+        /// </summary>
+        public TypedMapStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT15> FreezesTypedStorage
+        {
+            get
+            {
+                return _freezesTypedStorage;
+            }
+            set
+            {
+                _freezesTypedStorage = value;
             }
         }
         
@@ -205,10 +257,12 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Storage
         public async Task InitializeAsync(Substrate.ServiceLayer.Storage.IStorageDataProvider dataProvider)
         {
             await TotalIssuanceTypedStorage.InitializeAsync("Balances", "TotalIssuance");
+            await InactiveIssuanceTypedStorage.InitializeAsync("Balances", "InactiveIssuance");
             await AccountTypedStorage.InitializeAsync("Balances", "Account");
             await LocksTypedStorage.InitializeAsync("Balances", "Locks");
             await ReservesTypedStorage.InitializeAsync("Balances", "Reserves");
-            await StorageVersionTypedStorage.InitializeAsync("Balances", "StorageVersion");
+            await HoldsTypedStorage.InitializeAsync("Balances", "Holds");
+            await FreezesTypedStorage.InitializeAsync("Balances", "Freezes");
         }
         
         /// <summary>
@@ -227,6 +281,24 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Storage
         public Substrate.NetApi.Model.Types.Primitive.U128 GetTotalIssuance()
         {
             return TotalIssuanceTypedStorage.Get();
+        }
+        
+        /// <summary>
+        /// Implements any storage change for Balances.InactiveIssuance
+        /// </summary>
+        [StorageChange("Balances", "InactiveIssuance")]
+        public void OnUpdateInactiveIssuance(string data)
+        {
+            InactiveIssuanceTypedStorage.Update(data);
+        }
+        
+        /// <summary>
+        /// >> InactiveIssuance
+        ///  The total units of outstanding deactivated balance in the system.
+        /// </summary>
+        public Substrate.NetApi.Model.Types.Primitive.U128 GetInactiveIssuance()
+        {
+            return InactiveIssuanceTypedStorage.Get();
         }
         
         /// <summary>
@@ -265,13 +337,13 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Storage
         ///  `Balances` pallet, which uses a `StorageMap` to store balances data only.
         ///  NOTE: This is only used in the case that this pallet is used to store balances.
         /// </summary>
-        public Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_balances.AccountData GetAccount(string key)
+        public Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_balances.types.AccountData GetAccount(string key)
         {
             if ((key == null))
             {
                 return null;
             }
-            if (AccountTypedStorage.Dictionary.TryGetValue(key, out Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_balances.AccountData result))
+            if (AccountTypedStorage.Dictionary.TryGetValue(key, out Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_balances.types.AccountData result))
             {
                 return result;
             }
@@ -295,13 +367,13 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Storage
         ///  Any liquidity locks on some account balances.
         ///  NOTE: Should only be accessed when setting, changing and freeing a lock.
         /// </summary>
-        public Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.storage.weak_bounded_vec.WeakBoundedVecT1 GetLocks(string key)
+        public Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT2 GetLocks(string key)
         {
             if ((key == null))
             {
                 return null;
             }
-            if (LocksTypedStorage.Dictionary.TryGetValue(key, out Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.storage.weak_bounded_vec.WeakBoundedVecT1 result))
+            if (LocksTypedStorage.Dictionary.TryGetValue(key, out Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT2 result))
             {
                 return result;
             }
@@ -324,13 +396,13 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Storage
         /// >> Reserves
         ///  Named reserves on some account balances.
         /// </summary>
-        public Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.storage.bounded_vec.BoundedVecT1 GetReserves(string key)
+        public Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT14 GetReserves(string key)
         {
             if ((key == null))
             {
                 return null;
             }
-            if (ReservesTypedStorage.Dictionary.TryGetValue(key, out Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.storage.bounded_vec.BoundedVecT1 result))
+            if (ReservesTypedStorage.Dictionary.TryGetValue(key, out Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT14 result))
             {
                 return result;
             }
@@ -341,23 +413,61 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Storage
         }
         
         /// <summary>
-        /// Implements any storage change for Balances.StorageVersion
+        /// Implements any storage change for Balances.Holds
         /// </summary>
-        [StorageChange("Balances", "StorageVersion")]
-        public void OnUpdateStorageVersion(string data)
+        [StorageChange("Balances", "Holds")]
+        public void OnUpdateHolds(string key, string data)
         {
-            StorageVersionTypedStorage.Update(data);
+            HoldsTypedStorage.Update(key, data);
         }
         
         /// <summary>
-        /// >> StorageVersion
-        ///  Storage version of the pallet.
-        /// 
-        ///  This is set to v2.0.0 for new networks.
+        /// >> Holds
+        ///  Holds on account balances.
         /// </summary>
-        public Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_balances.EnumReleases GetStorageVersion()
+        public Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT15 GetHolds(string key)
         {
-            return StorageVersionTypedStorage.Get();
+            if ((key == null))
+            {
+                return null;
+            }
+            if (HoldsTypedStorage.Dictionary.TryGetValue(key, out Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT15 result))
+            {
+                return result;
+            }
+            else
+            {
+                return null;
+            }
+        }
+        
+        /// <summary>
+        /// Implements any storage change for Balances.Freezes
+        /// </summary>
+        [StorageChange("Balances", "Freezes")]
+        public void OnUpdateFreezes(string key, string data)
+        {
+            FreezesTypedStorage.Update(key, data);
+        }
+        
+        /// <summary>
+        /// >> Freezes
+        ///  Freeze locks on account balances.
+        /// </summary>
+        public Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT15 GetFreezes(string key)
+        {
+            if ((key == null))
+            {
+                return null;
+            }
+            if (FreezesTypedStorage.Dictionary.TryGetValue(key, out Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT15 result))
+            {
+                return result;
+            }
+            else
+            {
+                return null;
+            }
         }
     }
 }

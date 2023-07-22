@@ -11,19 +11,17 @@ namespace Substrate.Ajuna.NET.RestClient.Generated.Interfaces
 {
    using System;
    using System.Threading.Tasks;
-   using Substrate.NetApi.Model.Types.Base;
-   using Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto;
-   using Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_collator_selection.pallet;
+   using Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    using Substrate.NetApi.Model.Types.Primitive;
    
    public interface ICollatorSelectionControllerClient
    {
-      Task<BaseVec<AccountId32>> GetInvulnerables();
+      Task<BoundedVecT17> GetInvulnerables();
       Task<bool> SubscribeInvulnerables();
-      Task<BaseVec<CandidateInfo>> GetCandidates();
+      Task<BoundedVecT18> GetCandidates();
       Task<bool> SubscribeCandidates();
-      Task<U32> GetLastAuthoredBlock(AccountId32 key);
-      Task<bool> SubscribeLastAuthoredBlock(AccountId32 key);
+      Task<U32> GetLastAuthoredBlock(Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
+      Task<bool> SubscribeLastAuthoredBlock(Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
       Task<U32> GetDesiredCandidates();
       Task<bool> SubscribeDesiredCandidates();
       Task<U128> GetCandidacyBond();

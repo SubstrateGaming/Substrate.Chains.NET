@@ -12,7 +12,7 @@ namespace Substrate.Ajuna.NET.RestClient.Mockup.Generated.Clients
    using System;
    using System.Threading.Tasks;
    using System.Net.Http;
-   using Substrate.NetApi.Model.Types.Base;
+   using Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    using Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto;
    using Substrate.Ajuna.NET.RestClient.Mockup.Generated.Interfaces;
    
@@ -23,7 +23,7 @@ namespace Substrate.Ajuna.NET.RestClient.Mockup.Generated.Clients
       {
          _httpClient = httpClient;
       }
-      public async Task<bool> SetMembers(BaseVec<AccountId32> value)
+      public async Task<bool> SetMembers(BoundedVecT24 value)
       {
          return await SendMockupRequestAsync(_httpClient, "CouncilMembership/Members", value.Encode(), Substrate.Ajuna.NET.NetApiExt.Generated.Storage.CouncilMembershipStorage.MembersParams());
       }
