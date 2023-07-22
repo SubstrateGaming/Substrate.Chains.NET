@@ -34,7 +34,7 @@ namespace Substrate.Moonbeam.NET.NetApiExt.Generated.Model.pallet_parachain_stak
         /// </summary>
         private Substrate.NetApi.Model.Types.Primitive.U128 _total;
         
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Moonbeam.NET.NetApiExt.Generated.Model.pallet_parachain_staking.types.Bond> Delegations
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Moonbeam.NET.NetApiExt.Generated.Model.pallet_parachain_staking.types.Bond> DelegationsVal
         {
             get
             {
@@ -66,7 +66,7 @@ namespace Substrate.Moonbeam.NET.NetApiExt.Generated.Model.pallet_parachain_stak
         public override byte[] Encode()
         {
             var result = new List<byte>();
-            result.AddRange(Delegations.Encode());
+            result.AddRange(DelegationsVal.Encode());
             result.AddRange(Total.Encode());
             return result.ToArray();
         }
@@ -74,8 +74,8 @@ namespace Substrate.Moonbeam.NET.NetApiExt.Generated.Model.pallet_parachain_stak
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Delegations = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Moonbeam.NET.NetApiExt.Generated.Model.pallet_parachain_staking.types.Bond>();
-            Delegations.Decode(byteArray, ref p);
+            DelegationsVal = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Moonbeam.NET.NetApiExt.Generated.Model.pallet_parachain_staking.types.Bond>();
+            DelegationsVal.Decode(byteArray, ref p);
             Total = new Substrate.NetApi.Model.Types.Primitive.U128();
             Total.Decode(byteArray, ref p);
             var bytesLength = p - start;

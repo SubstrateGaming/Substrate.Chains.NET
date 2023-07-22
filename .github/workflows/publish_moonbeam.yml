@@ -1,4 +1,4 @@
-name: publish Moonsama.NET
+name: publish Moonbeam.NET
 
 on:
   push:
@@ -28,27 +28,27 @@ jobs:
       # Restore the project and its dependencies.
       ##
       - name: Install dependencies
-        run: dotnet restore Substrate.Moonsama.NET
+        run: dotnet restore Substrate.Moonbeam.NET
 
       ##
       # Dependencies
       # Restore the project and its dependencies.
       ##
-      - name: Build Moonsama .NET
+      - name: Build Moonbeam .NET
         run: |
-            dotnet build Substrate.Moonsama.NET --configuration Release
+            dotnet build Substrate.Moonbeam.NET --configuration Release
 
       ##
       # Publishing
       # Publish all NuGet packages from Substrate Chains .NET
       ##
-      - name: Publish Substrate Moonsama .NET API Extension
+      - name: Publish Substrate Moonbeam .NET API Extension
         id: publish_nuget
         uses: alirezanet/publish-nuget@v3.0.4
         with:
           # Filepath of the project to be packaged, relative to root of repository
-          PROJECT_FILE_PATH: Substrate.Moonsama.NET/Substrate.Moonsama.NET.NetApiExt/Substrate.Moonsama.NET.NetApiExt.csproj
+          PROJECT_FILE_PATH: Substrate.Moonbeam.NET/Substrate.Moonbeam.NET.NetApiExt/Substrate.Moonbeam.NET.NetApiExt.csproj
           # NuGet package id, used for version detection & defaults to project name
-          PACKAGE_NAME: Substrate.Moonsama.NET.Extension
+          PACKAGE_NAME: Substrate.Moonbeam.NET.Extension
           # API key to authenticate with NuGet server
           NUGET_KEY: ${{secrets.NUGET_API_KEY}}
