@@ -18,7 +18,7 @@ namespace Substrate.Statemint.NET.NetApiExt.Generated.Model.polkadot_parachain.p
     
     
     /// <summary>
-    /// >> 122 - Composite[polkadot_parachain.primitives.HeadData]
+    /// >> 147 - Composite[polkadot_parachain.primitives.HeadData]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class HeadData : BaseType

@@ -14,14 +14,14 @@ namespace Substrate.Statemint.NET.RestClient.Generated.Clients
    using System.Net.Http;
    using Substrate.NetApi.Model.Types.Base;
    using Substrate.NetApi.Model.Types.Primitive;
-   using Substrate.Statemint.NET.NetApiExt.Generated.Model.polkadot_primitives.v2;
+   using Substrate.Statemint.NET.NetApiExt.Generated.Model.polkadot_primitives.v4;
    using Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_trie.storage_proof;
    using Substrate.Statemint.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.relay_state_snapshot;
    using Substrate.Statemint.NET.NetApiExt.Generated.Model.cumulus_primitives_parachain_inherent;
    using Substrate.Statemint.NET.NetApiExt.Generated.Types.Base;
    using Substrate.Statemint.NET.NetApiExt.Generated.Model.polkadot_core_primitives;
    using Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_weights.weight_v2;
-   using Substrate.Statemint.NET.NetApiExt.Generated.Model.primitive_types;
+   using Substrate.Statemint.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system;
    using Substrate.Statemint.NET.RestClient.Generated.Interfaces;
    
    public sealed class ParachainSystemControllerClient : BaseClient, IParachainSystemControllerClient
@@ -185,9 +185,9 @@ namespace Substrate.Statemint.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("ParachainSystem.ReservedDmpWeightOverride");
       }
-      public async Task<H256> GetAuthorizedUpgrade()
+      public async Task<CodeUpgradeAuthorization> GetAuthorizedUpgrade()
       {
-         return await SendRequestAsync<H256>(_httpClient, "parachainsystem/authorizedupgrade");
+         return await SendRequestAsync<CodeUpgradeAuthorization>(_httpClient, "parachainsystem/authorizedupgrade");
       }
       public async Task<bool> SubscribeAuthorizedUpgrade()
       {

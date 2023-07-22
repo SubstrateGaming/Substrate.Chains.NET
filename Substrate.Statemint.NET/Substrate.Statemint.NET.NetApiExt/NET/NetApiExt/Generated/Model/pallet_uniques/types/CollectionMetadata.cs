@@ -18,7 +18,7 @@ namespace Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_uniques.types
     
     
     /// <summary>
-    /// >> 292 - Composite[pallet_uniques.types.CollectionMetadata]
+    /// >> 347 - Composite[pallet_uniques.types.CollectionMetadata]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class CollectionMetadata : BaseType
@@ -32,7 +32,7 @@ namespace Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_uniques.types
         /// <summary>
         /// >> data
         /// </summary>
-        private Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT1 _data;
+        private Substrate.Statemint.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT4 _data;
         
         /// <summary>
         /// >> is_frozen
@@ -51,7 +51,7 @@ namespace Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_uniques.types
             }
         }
         
-        public Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT1 Data
+        public Substrate.Statemint.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT4 Data
         {
             get
             {
@@ -94,7 +94,7 @@ namespace Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_uniques.types
             var start = p;
             Deposit = new Substrate.NetApi.Model.Types.Primitive.U128();
             Deposit.Decode(byteArray, ref p);
-            Data = new Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT1();
+            Data = new Substrate.Statemint.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT4();
             Data.Decode(byteArray, ref p);
             IsFrozen = new Substrate.NetApi.Model.Types.Primitive.Bool();
             IsFrozen.Decode(byteArray, ref p);

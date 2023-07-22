@@ -18,7 +18,7 @@ namespace Substrate.Statemint.NET.NetApiExt.Generated.Model.xcm.v2
     
     
     /// <summary>
-    /// >> 54 - Composite[xcm.v2.XcmT1]
+    /// >> 253 - Composite[xcm.v2.XcmT1]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class XcmT1 : BaseType

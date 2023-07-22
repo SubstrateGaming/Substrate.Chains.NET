@@ -26,7 +26,9 @@ namespace Substrate.Statemint.NET.RestClient
       public IBalancesControllerClient BalancesControllerClient;
       public ICollatorSelectionControllerClient CollatorSelectionControllerClient;
       public IDmpQueueControllerClient DmpQueueControllerClient;
+      public IForeignAssetsControllerClient ForeignAssetsControllerClient;
       public IMultisigControllerClient MultisigControllerClient;
+      public INftsControllerClient NftsControllerClient;
       public IParachainInfoControllerClient ParachainInfoControllerClient;
       public IParachainSystemControllerClient ParachainSystemControllerClient;
       public IPolkadotXcmControllerClient PolkadotXcmControllerClient;
@@ -48,7 +50,9 @@ namespace Substrate.Statemint.NET.RestClient
          BalancesControllerClient = new BalancesControllerClient(_httpClient, _subscriptionClient);
          CollatorSelectionControllerClient = new CollatorSelectionControllerClient(_httpClient, _subscriptionClient);
          DmpQueueControllerClient = new DmpQueueControllerClient(_httpClient, _subscriptionClient);
+         ForeignAssetsControllerClient = new ForeignAssetsControllerClient(_httpClient, _subscriptionClient);
          MultisigControllerClient = new MultisigControllerClient(_httpClient, _subscriptionClient);
+         NftsControllerClient = new NftsControllerClient(_httpClient, _subscriptionClient);
          ParachainInfoControllerClient = new ParachainInfoControllerClient(_httpClient, _subscriptionClient);
          ParachainSystemControllerClient = new ParachainSystemControllerClient(_httpClient, _subscriptionClient);
          PolkadotXcmControllerClient = new PolkadotXcmControllerClient(_httpClient, _subscriptionClient);

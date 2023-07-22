@@ -13,9 +13,9 @@ namespace Substrate.Statemint.NET.RestClient.Generated.Clients
    using System.Threading.Tasks;
    using System.Net.Http;
    using Substrate.NetApi.Model.Types.Primitive;
-   using Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_balances;
-   using Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.bounded.weak_bounded_vec;
-   using Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_balances.types;
+   using Substrate.Statemint.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec;
+   using Substrate.Statemint.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    using Substrate.Statemint.NET.RestClient.Generated.Interfaces;
    
    public sealed class BalancesControllerClient : BaseClient, IBalancesControllerClient
@@ -59,13 +59,29 @@ namespace Substrate.Statemint.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("Balances.Locks", Substrate.Statemint.NET.NetApiExt.Generated.Storage.BalancesStorage.LocksParams(key));
       }
-      public async Task<BoundedVecT4> GetReserves(Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+      public async Task<BoundedVecT8> GetReserves(Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {
-         return await SendRequestAsync<BoundedVecT4>(_httpClient, "balances/reserves", Substrate.Statemint.NET.NetApiExt.Generated.Storage.BalancesStorage.ReservesParams(key));
+         return await SendRequestAsync<BoundedVecT8>(_httpClient, "balances/reserves", Substrate.Statemint.NET.NetApiExt.Generated.Storage.BalancesStorage.ReservesParams(key));
       }
       public async Task<bool> SubscribeReserves(Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {
          return await _subscriptionClient.SubscribeAsync("Balances.Reserves", Substrate.Statemint.NET.NetApiExt.Generated.Storage.BalancesStorage.ReservesParams(key));
+      }
+      public async Task<BoundedVecT9> GetHolds(Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+      {
+         return await SendRequestAsync<BoundedVecT9>(_httpClient, "balances/holds", Substrate.Statemint.NET.NetApiExt.Generated.Storage.BalancesStorage.HoldsParams(key));
+      }
+      public async Task<bool> SubscribeHolds(Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+      {
+         return await _subscriptionClient.SubscribeAsync("Balances.Holds", Substrate.Statemint.NET.NetApiExt.Generated.Storage.BalancesStorage.HoldsParams(key));
+      }
+      public async Task<BoundedVecT9> GetFreezes(Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+      {
+         return await SendRequestAsync<BoundedVecT9>(_httpClient, "balances/freezes", Substrate.Statemint.NET.NetApiExt.Generated.Storage.BalancesStorage.FreezesParams(key));
+      }
+      public async Task<bool> SubscribeFreezes(Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+      {
+         return await _subscriptionClient.SubscribeAsync("Balances.Freezes", Substrate.Statemint.NET.NetApiExt.Generated.Storage.BalancesStorage.FreezesParams(key));
       }
    }
 }

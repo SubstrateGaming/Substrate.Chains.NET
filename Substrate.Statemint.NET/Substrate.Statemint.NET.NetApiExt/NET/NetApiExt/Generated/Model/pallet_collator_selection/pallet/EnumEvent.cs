@@ -30,7 +30,7 @@ namespace Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_collator_sele
     }
     
     /// <summary>
-    /// >> 35 - Variant[pallet_collator_selection.pallet.Event]
+    /// >> 37 - Variant[pallet_collator_selection.pallet.Event]
     /// 
     ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
     ///			by this pallet.

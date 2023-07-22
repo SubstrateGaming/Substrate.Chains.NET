@@ -28,7 +28,7 @@ namespace Substrate.Statemint.NET.RestService.Generated.Storage
         /// >> Authorities
         ///  The current authority set.
         /// </summary>
-        Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT8 GetAuthorities();
+        Substrate.Statemint.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT12 GetAuthorities();
         
         /// <summary>
         /// >> CurrentSlot
@@ -48,7 +48,7 @@ namespace Substrate.Statemint.NET.RestService.Generated.Storage
         /// <summary>
         /// _authoritiesTypedStorage typed storage field
         /// </summary>
-        private TypedStorage<Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT8> _authoritiesTypedStorage;
+        private TypedStorage<Substrate.Statemint.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT12> _authoritiesTypedStorage;
         
         /// <summary>
         /// _currentSlotTypedStorage typed storage field
@@ -60,14 +60,14 @@ namespace Substrate.Statemint.NET.RestService.Generated.Storage
         /// </summary>
         public AuraStorage(IStorageDataProvider storageDataProvider, List<IStorageChangeDelegate> storageChangeDelegates)
         {
-            this.AuthoritiesTypedStorage = new TypedStorage<Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT8>("Aura.Authorities", storageDataProvider, storageChangeDelegates);
+            this.AuthoritiesTypedStorage = new TypedStorage<Substrate.Statemint.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT12>("Aura.Authorities", storageDataProvider, storageChangeDelegates);
             this.CurrentSlotTypedStorage = new TypedStorage<Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_consensus_slots.Slot>("Aura.CurrentSlot", storageDataProvider, storageChangeDelegates);
         }
         
         /// <summary>
         /// _authoritiesTypedStorage property
         /// </summary>
-        public TypedStorage<Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT8> AuthoritiesTypedStorage
+        public TypedStorage<Substrate.Statemint.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT12> AuthoritiesTypedStorage
         {
             get
             {
@@ -116,7 +116,7 @@ namespace Substrate.Statemint.NET.RestService.Generated.Storage
         /// >> Authorities
         ///  The current authority set.
         /// </summary>
-        public Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT8 GetAuthorities()
+        public Substrate.Statemint.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT12 GetAuthorities()
         {
             return AuthoritiesTypedStorage.Get();
         }

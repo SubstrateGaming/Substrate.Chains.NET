@@ -32,7 +32,7 @@ namespace Substrate.Statemint.NET.NetApiExt.Generated.Model.frame_system.pallet
     }
     
     /// <summary>
-    /// >> 120 - Variant[frame_system.pallet.Error]
+    /// >> 145 - Variant[frame_system.pallet.Error]
     /// Error for the System pallet
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>

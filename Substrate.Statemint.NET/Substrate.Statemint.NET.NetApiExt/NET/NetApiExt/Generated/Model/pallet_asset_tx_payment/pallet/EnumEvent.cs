@@ -22,7 +22,7 @@ namespace Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_asset_tx_paym
     }
     
     /// <summary>
-    /// >> 33 - Variant[pallet_asset_tx_payment.pallet.Event]
+    /// >> 35 - Variant[pallet_asset_tx_payment.pallet.Event]
     /// 
     ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
     ///			by this pallet.

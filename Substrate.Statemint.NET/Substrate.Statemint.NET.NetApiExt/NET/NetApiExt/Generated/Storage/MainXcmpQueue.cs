@@ -43,6 +43,7 @@ namespace Substrate.Statemint.NET.NetApiExt.Generated.Storage
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("XcmpQueue", "QueueConfig"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Statemint.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue.QueueConfigData)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("XcmpQueue", "Overweight"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.NetApi.Model.Types.Primitive.U64), typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Statemint.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("XcmpQueue", "CounterForOverweight"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Primitive.U32)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("XcmpQueue", "OverweightCount"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Primitive.U64)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("XcmpQueue", "QueueSuspended"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Primitive.Bool)));
         }
@@ -275,6 +276,35 @@ namespace Substrate.Statemint.NET.NetApiExt.Generated.Storage
         }
         
         /// <summary>
+        /// >> CounterForOverweightParams
+        /// Counter for the related counted storage map
+        /// </summary>
+        public static string CounterForOverweightParams()
+        {
+            return RequestGenerator.GetStorage("XcmpQueue", "CounterForOverweight", Substrate.NetApi.Model.Meta.Storage.Type.Plain);
+        }
+        
+        /// <summary>
+        /// >> CounterForOverweightDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string CounterForOverweightDefault()
+        {
+            return "0x00000000";
+        }
+        
+        /// <summary>
+        /// >> CounterForOverweight
+        /// Counter for the related counted storage map
+        /// </summary>
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> CounterForOverweight(CancellationToken token)
+        {
+            string parameters = XcmpQueueStorage.CounterForOverweightParams();
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, token);
+            return result;
+        }
+        
+        /// <summary>
         /// >> OverweightCountParams
         ///  The number of overweight messages ever recorded in `Overweight`. Also doubles as the next
         ///  available free overweight index.
@@ -342,7 +372,7 @@ namespace Substrate.Statemint.NET.NetApiExt.Generated.Storage
         /// >> service_overweight
         /// Contains one variant per dispatchable that can be called by an extrinsic.
         /// </summary>
-        public static Method ServiceOverweight(Substrate.NetApi.Model.Types.Primitive.U64 index, Substrate.NetApi.Model.Types.Primitive.U64 weight_limit)
+        public static Method ServiceOverweight(Substrate.NetApi.Model.Types.Primitive.U64 index, Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight weight_limit)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(index.Encode());
@@ -407,7 +437,7 @@ namespace Substrate.Statemint.NET.NetApiExt.Generated.Storage
         /// >> update_threshold_weight
         /// Contains one variant per dispatchable that can be called by an extrinsic.
         /// </summary>
-        public static Method UpdateThresholdWeight(Substrate.NetApi.Model.Types.Primitive.U64 @new)
+        public static Method UpdateThresholdWeight(Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight @new)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(@new.Encode());
@@ -418,7 +448,7 @@ namespace Substrate.Statemint.NET.NetApiExt.Generated.Storage
         /// >> update_weight_restrict_decay
         /// Contains one variant per dispatchable that can be called by an extrinsic.
         /// </summary>
-        public static Method UpdateWeightRestrictDecay(Substrate.NetApi.Model.Types.Primitive.U64 @new)
+        public static Method UpdateWeightRestrictDecay(Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight @new)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(@new.Encode());
@@ -429,7 +459,7 @@ namespace Substrate.Statemint.NET.NetApiExt.Generated.Storage
         /// >> update_xcmp_max_individual_weight
         /// Contains one variant per dispatchable that can be called by an extrinsic.
         /// </summary>
-        public static Method UpdateXcmpMaxIndividualWeight(Substrate.NetApi.Model.Types.Primitive.U64 @new)
+        public static Method UpdateXcmpMaxIndividualWeight(Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight @new)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(@new.Encode());

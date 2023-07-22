@@ -26,7 +26,7 @@ namespace Substrate.Statemint.NET.NetApiExt.Generated.Model.frame_support.dispat
     }
     
     /// <summary>
-    /// >> 260 - Variant[frame_support.dispatch.RawOrigin]
+    /// >> 314 - Variant[frame_support.dispatch.RawOrigin]
     /// </summary>
     public sealed class EnumRawOrigin : BaseEnumExt<RawOrigin, BaseVoid, Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, BaseVoid>
     {

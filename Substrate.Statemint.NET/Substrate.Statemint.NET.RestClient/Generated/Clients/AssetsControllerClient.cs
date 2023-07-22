@@ -48,9 +48,9 @@ namespace Substrate.Statemint.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("Assets.Approvals", Substrate.Statemint.NET.NetApiExt.Generated.Storage.AssetsStorage.ApprovalsParams(key));
       }
-      public async Task<AssetMetadata> GetMetadata(Substrate.NetApi.Model.Types.Primitive.U32 key)
+      public async Task<AssetMetadataT1> GetMetadata(Substrate.NetApi.Model.Types.Primitive.U32 key)
       {
-         return await SendRequestAsync<AssetMetadata>(_httpClient, "assets/metadata", Substrate.Statemint.NET.NetApiExt.Generated.Storage.AssetsStorage.MetadataParams(key));
+         return await SendRequestAsync<AssetMetadataT1>(_httpClient, "assets/metadata", Substrate.Statemint.NET.NetApiExt.Generated.Storage.AssetsStorage.MetadataParams(key));
       }
       public async Task<bool> SubscribeMetadata(Substrate.NetApi.Model.Types.Primitive.U32 key)
       {

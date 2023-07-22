@@ -12,9 +12,9 @@ namespace Substrate.Statemint.NET.RestClient.Generated.Interfaces
    using System;
    using System.Threading.Tasks;
    using Substrate.NetApi.Model.Types.Primitive;
-   using Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_balances;
-   using Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.bounded.weak_bounded_vec;
-   using Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_balances.types;
+   using Substrate.Statemint.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec;
+   using Substrate.Statemint.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    
    public interface IBalancesControllerClient
    {
@@ -26,7 +26,11 @@ namespace Substrate.Statemint.NET.RestClient.Generated.Interfaces
       Task<bool> SubscribeAccount(Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
       Task<WeakBoundedVecT2> GetLocks(Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
       Task<bool> SubscribeLocks(Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
-      Task<BoundedVecT4> GetReserves(Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
+      Task<BoundedVecT8> GetReserves(Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
       Task<bool> SubscribeReserves(Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
+      Task<BoundedVecT9> GetHolds(Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
+      Task<bool> SubscribeHolds(Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
+      Task<BoundedVecT9> GetFreezes(Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
+      Task<bool> SubscribeFreezes(Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
    }
 }

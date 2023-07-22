@@ -18,7 +18,7 @@ namespace Substrate.Statemint.NET.NetApiExt.Generated.Model.statemint_runtime
     
     
     /// <summary>
-    /// >> 178 - Composite[statemint_runtime.SessionKeys]
+    /// >> 201 - Composite[statemint_runtime.SessionKeys]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class SessionKeys : BaseType

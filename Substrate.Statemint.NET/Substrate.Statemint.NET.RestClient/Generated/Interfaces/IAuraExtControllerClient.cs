@@ -11,11 +11,11 @@ namespace Substrate.Statemint.NET.RestClient.Generated.Interfaces
 {
    using System;
    using System.Threading.Tasks;
-   using Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Statemint.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    
    public interface IAuraExtControllerClient
    {
-      Task<BoundedVecT8> GetAuthorities();
+      Task<BoundedVecT12> GetAuthorities();
       Task<bool> SubscribeAuthorities();
    }
 }

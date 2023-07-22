@@ -12,9 +12,9 @@ namespace Substrate.Statemint.NET.RestClient.Mockup.Generated.Interfaces
    using System;
    using System.Threading.Tasks;
    using Substrate.NetApi.Model.Types.Primitive;
-   using Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_balances;
-   using Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.bounded.weak_bounded_vec;
-   using Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_balances.types;
+   using Substrate.Statemint.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec;
+   using Substrate.Statemint.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    
    public interface IBalancesControllerMockupClient
    {
@@ -22,6 +22,8 @@ namespace Substrate.Statemint.NET.RestClient.Mockup.Generated.Interfaces
       Task<bool> SetInactiveIssuance(U128 value);
       Task<bool> SetAccount(AccountData value, Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
       Task<bool> SetLocks(WeakBoundedVecT2 value, Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
-      Task<bool> SetReserves(BoundedVecT4 value, Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
+      Task<bool> SetReserves(BoundedVecT8 value, Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
+      Task<bool> SetHolds(BoundedVecT9 value, Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
+      Task<bool> SetFreezes(BoundedVecT9 value, Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
    }
 }

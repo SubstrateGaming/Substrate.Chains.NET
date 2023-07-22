@@ -52,7 +52,7 @@ namespace Substrate.Statemint.NET.NetApiExt.Generated.Storage
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Uniques", "Attribute"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat,
                             Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat,
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT2>), typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT3, Substrate.NetApi.Model.Types.Primitive.U128>)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.Statemint.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT5>), typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Statemint.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT6, Substrate.NetApi.Model.Types.Primitive.U128>)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Uniques", "ItemPriceOf"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat,
                             Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>), typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>>)));
@@ -286,7 +286,7 @@ namespace Substrate.Statemint.NET.NetApiExt.Generated.Storage
         /// >> AttributeParams
         ///  Attributes of a collection.
         /// </summary>
-        public static string AttributeParams(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT2> key)
+        public static string AttributeParams(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.Statemint.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT5> key)
         {
             return RequestGenerator.GetStorage("Uniques", "Attribute", Substrate.NetApi.Model.Meta.Storage.Type.Map, new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                         Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat,
@@ -307,10 +307,10 @@ namespace Substrate.Statemint.NET.NetApiExt.Generated.Storage
         /// >> Attribute
         ///  Attributes of a collection.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT3, Substrate.NetApi.Model.Types.Primitive.U128>> Attribute(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT2> key, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Statemint.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT6, Substrate.NetApi.Model.Types.Primitive.U128>> Attribute(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.Statemint.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT5> key, CancellationToken token)
         {
             string parameters = UniquesStorage.AttributeParams(key);
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT3, Substrate.NetApi.Model.Types.Primitive.U128>>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Statemint.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT6, Substrate.NetApi.Model.Types.Primitive.U128>>(parameters, token);
             return result;
         }
         
@@ -587,7 +587,7 @@ namespace Substrate.Statemint.NET.NetApiExt.Generated.Storage
         /// >> set_attribute
         /// Contains one variant per dispatchable that can be called by an extrinsic.
         /// </summary>
-        public static Method SetAttribute(Substrate.NetApi.Model.Types.Primitive.U32 collection, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32> maybe_item, Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT2 key, Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT3 value)
+        public static Method SetAttribute(Substrate.NetApi.Model.Types.Primitive.U32 collection, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32> maybe_item, Substrate.Statemint.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT5 key, Substrate.Statemint.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT6 value)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(collection.Encode());
@@ -601,7 +601,7 @@ namespace Substrate.Statemint.NET.NetApiExt.Generated.Storage
         /// >> clear_attribute
         /// Contains one variant per dispatchable that can be called by an extrinsic.
         /// </summary>
-        public static Method ClearAttribute(Substrate.NetApi.Model.Types.Primitive.U32 collection, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32> maybe_item, Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT2 key)
+        public static Method ClearAttribute(Substrate.NetApi.Model.Types.Primitive.U32 collection, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32> maybe_item, Substrate.Statemint.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT5 key)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(collection.Encode());
@@ -614,7 +614,7 @@ namespace Substrate.Statemint.NET.NetApiExt.Generated.Storage
         /// >> set_metadata
         /// Contains one variant per dispatchable that can be called by an extrinsic.
         /// </summary>
-        public static Method SetMetadata(Substrate.NetApi.Model.Types.Primitive.U32 collection, Substrate.NetApi.Model.Types.Primitive.U32 item, Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT1 data, Substrate.NetApi.Model.Types.Primitive.Bool is_frozen)
+        public static Method SetMetadata(Substrate.NetApi.Model.Types.Primitive.U32 collection, Substrate.NetApi.Model.Types.Primitive.U32 item, Substrate.Statemint.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT4 data, Substrate.NetApi.Model.Types.Primitive.Bool is_frozen)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(collection.Encode());
@@ -640,7 +640,7 @@ namespace Substrate.Statemint.NET.NetApiExt.Generated.Storage
         /// >> set_collection_metadata
         /// Contains one variant per dispatchable that can be called by an extrinsic.
         /// </summary>
-        public static Method SetCollectionMetadata(Substrate.NetApi.Model.Types.Primitive.U32 collection, Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT1 data, Substrate.NetApi.Model.Types.Primitive.Bool is_frozen)
+        public static Method SetCollectionMetadata(Substrate.NetApi.Model.Types.Primitive.U32 collection, Substrate.Statemint.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT4 data, Substrate.NetApi.Model.Types.Primitive.Bool is_frozen)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(collection.Encode());

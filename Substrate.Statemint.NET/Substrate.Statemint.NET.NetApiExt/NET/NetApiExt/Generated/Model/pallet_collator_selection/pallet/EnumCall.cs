@@ -30,7 +30,7 @@ namespace Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_collator_sele
     }
     
     /// <summary>
-    /// >> 174 - Variant[pallet_collator_selection.pallet.Call]
+    /// >> 197 - Variant[pallet_collator_selection.pallet.Call]
     /// Contains one variant per dispatchable that can be called by an extrinsic.
     /// </summary>
     public sealed class EnumCall : BaseEnumExt<Call, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U128, BaseVoid, BaseVoid>

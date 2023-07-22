@@ -30,7 +30,7 @@ namespace Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_session.palle
     }
     
     /// <summary>
-    /// >> 184 - Variant[pallet_session.pallet.Error]
+    /// >> 207 - Variant[pallet_session.pallet.Error]
     /// Error for the session pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>

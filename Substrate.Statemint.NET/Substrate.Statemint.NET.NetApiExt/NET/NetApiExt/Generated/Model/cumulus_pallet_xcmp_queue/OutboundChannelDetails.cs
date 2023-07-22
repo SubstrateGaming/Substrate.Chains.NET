@@ -18,7 +18,7 @@ namespace Substrate.Statemint.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_
     
     
     /// <summary>
-    /// >> 196 - Composite[cumulus_pallet_xcmp_queue.OutboundChannelDetails]
+    /// >> 219 - Composite[cumulus_pallet_xcmp_queue.OutboundChannelDetails]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class OutboundChannelDetails : BaseType

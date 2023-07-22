@@ -15,7 +15,8 @@ namespace Substrate.Statemint.NET.RestClient.Generated.Clients
    using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_xcm.pallet;
    using Substrate.NetApi.Model.Types.Base;
-   using Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_weights.weight_v2;
+   using Substrate.Statemint.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    using Substrate.Statemint.NET.RestClient.Generated.Interfaces;
    
    public sealed class PolkadotXcmControllerClient : BaseClient, IPolkadotXcmControllerClient
@@ -75,17 +76,17 @@ namespace Substrate.Statemint.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("PolkadotXcm.VersionNotifiers", Substrate.Statemint.NET.NetApiExt.Generated.Storage.PolkadotXcmStorage.VersionNotifiersParams(key));
       }
-      public async Task<BaseTuple<U64, U64, U32>> GetVersionNotifyTargets(BaseTuple<U32, Substrate.Statemint.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation> key)
+      public async Task<BaseTuple<U64, Weight, U32>> GetVersionNotifyTargets(BaseTuple<U32, Substrate.Statemint.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation> key)
       {
-         return await SendRequestAsync<BaseTuple<U64, U64, U32>>(_httpClient, "polkadotxcm/versionnotifytargets", Substrate.Statemint.NET.NetApiExt.Generated.Storage.PolkadotXcmStorage.VersionNotifyTargetsParams(key));
+         return await SendRequestAsync<BaseTuple<U64, Weight, U32>>(_httpClient, "polkadotxcm/versionnotifytargets", Substrate.Statemint.NET.NetApiExt.Generated.Storage.PolkadotXcmStorage.VersionNotifyTargetsParams(key));
       }
       public async Task<bool> SubscribeVersionNotifyTargets(BaseTuple<U32, Substrate.Statemint.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation> key)
       {
          return await _subscriptionClient.SubscribeAsync("PolkadotXcm.VersionNotifyTargets", Substrate.Statemint.NET.NetApiExt.Generated.Storage.PolkadotXcmStorage.VersionNotifyTargetsParams(key));
       }
-      public async Task<BoundedVecT9> GetVersionDiscoveryQueue()
+      public async Task<BoundedVecT13> GetVersionDiscoveryQueue()
       {
-         return await SendRequestAsync<BoundedVecT9>(_httpClient, "polkadotxcm/versiondiscoveryqueue");
+         return await SendRequestAsync<BoundedVecT13>(_httpClient, "polkadotxcm/versiondiscoveryqueue");
       }
       public async Task<bool> SubscribeVersionDiscoveryQueue()
       {
@@ -98,6 +99,30 @@ namespace Substrate.Statemint.NET.RestClient.Generated.Clients
       public async Task<bool> SubscribeCurrentMigration()
       {
          return await _subscriptionClient.SubscribeAsync("PolkadotXcm.CurrentMigration");
+      }
+      public async Task<RemoteLockedFungibleRecord> GetRemoteLockedFungibles(BaseTuple<U32, Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Statemint.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAssetId> key)
+      {
+         return await SendRequestAsync<RemoteLockedFungibleRecord>(_httpClient, "polkadotxcm/remotelockedfungibles", Substrate.Statemint.NET.NetApiExt.Generated.Storage.PolkadotXcmStorage.RemoteLockedFungiblesParams(key));
+      }
+      public async Task<bool> SubscribeRemoteLockedFungibles(BaseTuple<U32, Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Statemint.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAssetId> key)
+      {
+         return await _subscriptionClient.SubscribeAsync("PolkadotXcm.RemoteLockedFungibles", Substrate.Statemint.NET.NetApiExt.Generated.Storage.PolkadotXcmStorage.RemoteLockedFungiblesParams(key));
+      }
+      public async Task<BoundedVecT15> GetLockedFungibles(Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+      {
+         return await SendRequestAsync<BoundedVecT15>(_httpClient, "polkadotxcm/lockedfungibles", Substrate.Statemint.NET.NetApiExt.Generated.Storage.PolkadotXcmStorage.LockedFungiblesParams(key));
+      }
+      public async Task<bool> SubscribeLockedFungibles(Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+      {
+         return await _subscriptionClient.SubscribeAsync("PolkadotXcm.LockedFungibles", Substrate.Statemint.NET.NetApiExt.Generated.Storage.PolkadotXcmStorage.LockedFungiblesParams(key));
+      }
+      public async Task<Bool> GetXcmExecutionSuspended()
+      {
+         return await SendRequestAsync<Bool>(_httpClient, "polkadotxcm/xcmexecutionsuspended");
+      }
+      public async Task<bool> SubscribeXcmExecutionSuspended()
+      {
+         return await _subscriptionClient.SubscribeAsync("PolkadotXcm.XcmExecutionSuspended");
       }
    }
 }

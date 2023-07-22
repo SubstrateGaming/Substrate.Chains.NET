@@ -34,7 +34,7 @@ namespace Substrate.Statemint.NET.RestClient.Test.Generated
          result.Deposit = this.GetTestValueU128();
          result.Depositor = new Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32();
          result.Depositor = this.GetTestValue4();
-         result.Approvals = new Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT10();
+         result.Approvals = new Substrate.Statemint.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17();
          result.Approvals = this.GetTestValue5();
          return result;
       }
@@ -86,10 +86,10 @@ namespace Substrate.Statemint.NET.RestClient.Test.Generated
                   this.GetTestValueU8()});
          return result;
       }
-      public Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT10 GetTestValue5()
+      public Substrate.Statemint.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17 GetTestValue5()
       {
-         Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT10 result;
-         result = new Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT10();
+         Substrate.Statemint.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17 result;
+         result = new Substrate.Statemint.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17();
          result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>();
          result.Value.Create(new Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32[] {
                   this.GetTestValue6()});

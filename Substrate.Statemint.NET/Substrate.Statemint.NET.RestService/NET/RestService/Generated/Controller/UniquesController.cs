@@ -128,8 +128,8 @@ namespace Substrate.Statemint.NET.RestService.Generated.Controller
         ///  Attributes of a collection.
         /// </summary>
         [HttpGet("Attribute")]
-        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT3, Substrate.NetApi.Model.Types.Primitive.U128>), 200)]
-        [StorageKeyBuilder(typeof(Substrate.Statemint.NET.NetApiExt.Generated.Storage.UniquesStorage), "AttributeParams", typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT2>))]
+        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Statemint.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT6, Substrate.NetApi.Model.Types.Primitive.U128>), 200)]
+        [StorageKeyBuilder(typeof(Substrate.Statemint.NET.NetApiExt.Generated.Storage.UniquesStorage), "AttributeParams", typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.Statemint.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT5>))]
         public IActionResult GetAttribute(string key)
         {
             return this.Ok(_uniquesStorage.GetAttribute(key));

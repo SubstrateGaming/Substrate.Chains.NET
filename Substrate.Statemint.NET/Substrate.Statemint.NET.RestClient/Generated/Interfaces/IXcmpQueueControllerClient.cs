@@ -32,6 +32,8 @@ namespace Substrate.Statemint.NET.RestClient.Generated.Interfaces
       Task<bool> SubscribeQueueConfig();
       Task<BaseTuple<Id, U32, BaseVec<U8>>> GetOverweight(U64 key);
       Task<bool> SubscribeOverweight(U64 key);
+      Task<U32> GetCounterForOverweight();
+      Task<bool> SubscribeCounterForOverweight();
       Task<U64> GetOverweightCount();
       Task<bool> SubscribeOverweightCount();
       Task<Bool> GetQueueSuspended();

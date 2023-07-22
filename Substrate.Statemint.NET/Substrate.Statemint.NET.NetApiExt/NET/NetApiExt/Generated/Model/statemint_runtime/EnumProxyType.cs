@@ -34,7 +34,7 @@ namespace Substrate.Statemint.NET.NetApiExt.Generated.Model.statemint_runtime
     }
     
     /// <summary>
-    /// >> 89 - Variant[statemint_runtime.ProxyType]
+    /// >> 107 - Variant[statemint_runtime.ProxyType]
     /// </summary>
     public sealed class EnumProxyType : BaseEnum<ProxyType>
     {

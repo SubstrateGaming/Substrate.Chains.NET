@@ -12,7 +12,7 @@ namespace Substrate.Statemint.NET.RestClient.Generated.Clients
    using System;
    using System.Threading.Tasks;
    using System.Net.Http;
-   using Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Statemint.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    using Substrate.Statemint.NET.RestClient.Generated.Interfaces;
    
    public sealed class AuraExtControllerClient : BaseClient, IAuraExtControllerClient
@@ -24,9 +24,9 @@ namespace Substrate.Statemint.NET.RestClient.Generated.Clients
          _httpClient = httpClient;
          _subscriptionClient = subscriptionClient;
       }
-      public async Task<BoundedVecT8> GetAuthorities()
+      public async Task<BoundedVecT12> GetAuthorities()
       {
-         return await SendRequestAsync<BoundedVecT8>(_httpClient, "auraext/authorities");
+         return await SendRequestAsync<BoundedVecT12>(_httpClient, "auraext/authorities");
       }
       public async Task<bool> SubscribeAuthorities()
       {

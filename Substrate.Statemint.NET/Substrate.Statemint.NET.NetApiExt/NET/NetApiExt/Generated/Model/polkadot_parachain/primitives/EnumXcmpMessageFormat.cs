@@ -26,7 +26,7 @@ namespace Substrate.Statemint.NET.NetApiExt.Generated.Model.polkadot_parachain.p
     }
     
     /// <summary>
-    /// >> 193 - Variant[polkadot_parachain.primitives.XcmpMessageFormat]
+    /// >> 216 - Variant[polkadot_parachain.primitives.XcmpMessageFormat]
     /// </summary>
     public sealed class EnumXcmpMessageFormat : BaseEnum<XcmpMessageFormat>
     {

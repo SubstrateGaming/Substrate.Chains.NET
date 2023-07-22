@@ -28,7 +28,7 @@ namespace Substrate.Statemint.NET.NetApiExt.Generated.Model.statemint_runtime
     }
     
     /// <summary>
-    /// >> 259 - Variant[statemint_runtime.OriginCaller]
+    /// >> 313 - Variant[statemint_runtime.OriginCaller]
     /// </summary>
     public sealed class EnumOriginCaller : BaseEnumExt<OriginCaller, Substrate.Statemint.NET.NetApiExt.Generated.Model.frame_support.dispatch.EnumRawOrigin, BaseVoid, BaseVoid, Substrate.NetApi.Model.Types.Base.BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_xcm.pallet.EnumOrigin, Substrate.Statemint.NET.NetApiExt.Generated.Model.cumulus_pallet_xcm.pallet.EnumOrigin>
     {

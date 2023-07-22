@@ -18,7 +18,7 @@ namespace Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_trie.storage_proo
     
     
     /// <summary>
-    /// >> 125 - Composite[sp_trie.storage_proof.StorageProof]
+    /// >> 150 - Composite[sp_trie.storage_proof.StorageProof]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class StorageProof : BaseType
@@ -27,9 +27,9 @@ namespace Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_trie.storage_proo
         /// <summary>
         /// >> trie_nodes
         /// </summary>
-        private Substrate.Statemint.NET.NetApiExt.Generated.Types.Base.BTreeSet _trieNodes;
+        private Substrate.Statemint.NET.NetApiExt.Generated.Types.Base.BTreeSetT1 _trieNodes;
         
-        public Substrate.Statemint.NET.NetApiExt.Generated.Types.Base.BTreeSet TrieNodes
+        public Substrate.Statemint.NET.NetApiExt.Generated.Types.Base.BTreeSetT1 TrieNodes
         {
             get
             {
@@ -56,7 +56,7 @@ namespace Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_trie.storage_proo
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            TrieNodes = new Substrate.Statemint.NET.NetApiExt.Generated.Types.Base.BTreeSet();
+            TrieNodes = new Substrate.Statemint.NET.NetApiExt.Generated.Types.Base.BTreeSetT1();
             TrieNodes.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

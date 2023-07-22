@@ -15,7 +15,7 @@ namespace Substrate.Statemint.NET.RestClient.Test.Generated
    using System.Net.Http;
    using Substrate.Statemint.NET.RestClient.Mockup.Generated.Clients;
    using Substrate.Statemint.NET.RestClient.Generated.Clients;
-   using Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Statemint.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    
    public class AuraExtControllerClientTest : ClientTestBase
    {
@@ -25,10 +25,10 @@ namespace Substrate.Statemint.NET.RestClient.Test.Generated
       {
          _httpClient = CreateHttpClient();
       }
-      public Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT8 GetTestValue2()
+      public Substrate.Statemint.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT12 GetTestValue2()
       {
-         Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT8 result;
-         result = new Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT8();
+         Substrate.Statemint.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT12 result;
+         result = new Substrate.Statemint.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT12();
          result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_consensus_aura.ed25519.app_ed25519.Public>();
          result.Value.Create(new Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_consensus_aura.ed25519.app_ed25519.Public[] {
                   this.GetTestValue3()});
@@ -93,7 +93,7 @@ namespace Substrate.Statemint.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          AuraExtControllerClient rpcClient = new AuraExtControllerClient(_httpClient, subscriptionClient);
-         Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT8 mockupValue = this.GetTestValue2();
+         Substrate.Statemint.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT12 mockupValue = this.GetTestValue2();
 
 
          Assert.IsTrue(await rpcClient.SubscribeAuthorities());
@@ -106,7 +106,7 @@ namespace Substrate.Statemint.NET.RestClient.Test.Generated
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT8 rpcResult = await rpcClient.GetAuthorities();
+         Substrate.Statemint.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT12 rpcResult = await rpcClient.GetAuthorities();
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());

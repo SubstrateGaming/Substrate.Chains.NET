@@ -51,7 +51,7 @@ namespace Substrate.Statemint.NET.RestService.Generated.Storage
         ///  This value is expected to be set only once per block and it's never stored
         ///  in the trie.
         /// </summary>
-        Substrate.Statemint.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.PersistedValidationData GetValidationData();
+        Substrate.Statemint.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.PersistedValidationData GetValidationData();
         
         /// <summary>
         /// >> DidSetValidationCode
@@ -75,7 +75,7 @@ namespace Substrate.Statemint.NET.RestService.Generated.Storage
         ///  relay-chain. This value is ephemeral which means it doesn't hit the storage. This value is
         ///  set after the inherent.
         /// </summary>
-        Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Statemint.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.EnumUpgradeRestriction> GetUpgradeRestrictionSignal();
+        Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Statemint.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.EnumUpgradeRestriction> GetUpgradeRestrictionSignal();
         
         /// <summary>
         /// >> RelayStateProof
@@ -109,7 +109,7 @@ namespace Substrate.Statemint.NET.RestService.Generated.Storage
         /// 
         ///  This data is also absent from the genesis.
         /// </summary>
-        Substrate.Statemint.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.AbridgedHostConfiguration GetHostConfiguration();
+        Substrate.Statemint.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.AbridgedHostConfiguration GetHostConfiguration();
         
         /// <summary>
         /// >> LastDmqMqcHead
@@ -192,7 +192,7 @@ namespace Substrate.Statemint.NET.RestService.Generated.Storage
         /// >> AuthorizedUpgrade
         ///  The next authorized upgrade, if there is one.
         /// </summary>
-        Substrate.Statemint.NET.NetApiExt.Generated.Model.primitive_types.H256 GetAuthorizedUpgrade();
+        Substrate.Statemint.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.CodeUpgradeAuthorization GetAuthorizedUpgrade();
         
         /// <summary>
         /// >> CustomValidationHeadData
@@ -222,7 +222,7 @@ namespace Substrate.Statemint.NET.RestService.Generated.Storage
         /// <summary>
         /// _validationDataTypedStorage typed storage field
         /// </summary>
-        private TypedStorage<Substrate.Statemint.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.PersistedValidationData> _validationDataTypedStorage;
+        private TypedStorage<Substrate.Statemint.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.PersistedValidationData> _validationDataTypedStorage;
         
         /// <summary>
         /// _didSetValidationCodeTypedStorage typed storage field
@@ -237,7 +237,7 @@ namespace Substrate.Statemint.NET.RestService.Generated.Storage
         /// <summary>
         /// _upgradeRestrictionSignalTypedStorage typed storage field
         /// </summary>
-        private TypedStorage<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Statemint.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.EnumUpgradeRestriction>> _upgradeRestrictionSignalTypedStorage;
+        private TypedStorage<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Statemint.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.EnumUpgradeRestriction>> _upgradeRestrictionSignalTypedStorage;
         
         /// <summary>
         /// _relayStateProofTypedStorage typed storage field
@@ -252,7 +252,7 @@ namespace Substrate.Statemint.NET.RestService.Generated.Storage
         /// <summary>
         /// _hostConfigurationTypedStorage typed storage field
         /// </summary>
-        private TypedStorage<Substrate.Statemint.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.AbridgedHostConfiguration> _hostConfigurationTypedStorage;
+        private TypedStorage<Substrate.Statemint.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.AbridgedHostConfiguration> _hostConfigurationTypedStorage;
         
         /// <summary>
         /// _lastDmqMqcHeadTypedStorage typed storage field
@@ -307,7 +307,7 @@ namespace Substrate.Statemint.NET.RestService.Generated.Storage
         /// <summary>
         /// _authorizedUpgradeTypedStorage typed storage field
         /// </summary>
-        private TypedStorage<Substrate.Statemint.NET.NetApiExt.Generated.Model.primitive_types.H256> _authorizedUpgradeTypedStorage;
+        private TypedStorage<Substrate.Statemint.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.CodeUpgradeAuthorization> _authorizedUpgradeTypedStorage;
         
         /// <summary>
         /// _customValidationHeadDataTypedStorage typed storage field
@@ -321,13 +321,13 @@ namespace Substrate.Statemint.NET.RestService.Generated.Storage
         {
             this.PendingValidationCodeTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>("ParachainSystem.PendingValidationCode", storageDataProvider, storageChangeDelegates);
             this.NewValidationCodeTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>("ParachainSystem.NewValidationCode", storageDataProvider, storageChangeDelegates);
-            this.ValidationDataTypedStorage = new TypedStorage<Substrate.Statemint.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.PersistedValidationData>("ParachainSystem.ValidationData", storageDataProvider, storageChangeDelegates);
+            this.ValidationDataTypedStorage = new TypedStorage<Substrate.Statemint.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.PersistedValidationData>("ParachainSystem.ValidationData", storageDataProvider, storageChangeDelegates);
             this.DidSetValidationCodeTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.Bool>("ParachainSystem.DidSetValidationCode", storageDataProvider, storageChangeDelegates);
             this.LastRelayChainBlockNumberTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32>("ParachainSystem.LastRelayChainBlockNumber", storageDataProvider, storageChangeDelegates);
-            this.UpgradeRestrictionSignalTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Statemint.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.EnumUpgradeRestriction>>("ParachainSystem.UpgradeRestrictionSignal", storageDataProvider, storageChangeDelegates);
+            this.UpgradeRestrictionSignalTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Statemint.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.EnumUpgradeRestriction>>("ParachainSystem.UpgradeRestrictionSignal", storageDataProvider, storageChangeDelegates);
             this.RelayStateProofTypedStorage = new TypedStorage<Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_trie.storage_proof.StorageProof>("ParachainSystem.RelayStateProof", storageDataProvider, storageChangeDelegates);
             this.RelevantMessagingStateTypedStorage = new TypedStorage<Substrate.Statemint.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.relay_state_snapshot.MessagingStateSnapshot>("ParachainSystem.RelevantMessagingState", storageDataProvider, storageChangeDelegates);
-            this.HostConfigurationTypedStorage = new TypedStorage<Substrate.Statemint.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.AbridgedHostConfiguration>("ParachainSystem.HostConfiguration", storageDataProvider, storageChangeDelegates);
+            this.HostConfigurationTypedStorage = new TypedStorage<Substrate.Statemint.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.AbridgedHostConfiguration>("ParachainSystem.HostConfiguration", storageDataProvider, storageChangeDelegates);
             this.LastDmqMqcHeadTypedStorage = new TypedStorage<Substrate.Statemint.NET.NetApiExt.Generated.Model.cumulus_primitives_parachain_inherent.MessageQueueChain>("ParachainSystem.LastDmqMqcHead", storageDataProvider, storageChangeDelegates);
             this.LastHrmpMqcHeadsTypedStorage = new TypedStorage<Substrate.Statemint.NET.NetApiExt.Generated.Types.Base.BTreeMapT1>("ParachainSystem.LastHrmpMqcHeads", storageDataProvider, storageChangeDelegates);
             this.ProcessedDownwardMessagesTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32>("ParachainSystem.ProcessedDownwardMessages", storageDataProvider, storageChangeDelegates);
@@ -338,7 +338,7 @@ namespace Substrate.Statemint.NET.RestService.Generated.Storage
             this.AnnouncedHrmpMessagesPerCandidateTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32>("ParachainSystem.AnnouncedHrmpMessagesPerCandidate", storageDataProvider, storageChangeDelegates);
             this.ReservedXcmpWeightOverrideTypedStorage = new TypedStorage<Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>("ParachainSystem.ReservedXcmpWeightOverride", storageDataProvider, storageChangeDelegates);
             this.ReservedDmpWeightOverrideTypedStorage = new TypedStorage<Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>("ParachainSystem.ReservedDmpWeightOverride", storageDataProvider, storageChangeDelegates);
-            this.AuthorizedUpgradeTypedStorage = new TypedStorage<Substrate.Statemint.NET.NetApiExt.Generated.Model.primitive_types.H256>("ParachainSystem.AuthorizedUpgrade", storageDataProvider, storageChangeDelegates);
+            this.AuthorizedUpgradeTypedStorage = new TypedStorage<Substrate.Statemint.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.CodeUpgradeAuthorization>("ParachainSystem.AuthorizedUpgrade", storageDataProvider, storageChangeDelegates);
             this.CustomValidationHeadDataTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>("ParachainSystem.CustomValidationHeadData", storageDataProvider, storageChangeDelegates);
         }
         
@@ -375,7 +375,7 @@ namespace Substrate.Statemint.NET.RestService.Generated.Storage
         /// <summary>
         /// _validationDataTypedStorage property
         /// </summary>
-        public TypedStorage<Substrate.Statemint.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.PersistedValidationData> ValidationDataTypedStorage
+        public TypedStorage<Substrate.Statemint.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.PersistedValidationData> ValidationDataTypedStorage
         {
             get
             {
@@ -420,7 +420,7 @@ namespace Substrate.Statemint.NET.RestService.Generated.Storage
         /// <summary>
         /// _upgradeRestrictionSignalTypedStorage property
         /// </summary>
-        public TypedStorage<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Statemint.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.EnumUpgradeRestriction>> UpgradeRestrictionSignalTypedStorage
+        public TypedStorage<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Statemint.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.EnumUpgradeRestriction>> UpgradeRestrictionSignalTypedStorage
         {
             get
             {
@@ -465,7 +465,7 @@ namespace Substrate.Statemint.NET.RestService.Generated.Storage
         /// <summary>
         /// _hostConfigurationTypedStorage property
         /// </summary>
-        public TypedStorage<Substrate.Statemint.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.AbridgedHostConfiguration> HostConfigurationTypedStorage
+        public TypedStorage<Substrate.Statemint.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.AbridgedHostConfiguration> HostConfigurationTypedStorage
         {
             get
             {
@@ -630,7 +630,7 @@ namespace Substrate.Statemint.NET.RestService.Generated.Storage
         /// <summary>
         /// _authorizedUpgradeTypedStorage property
         /// </summary>
-        public TypedStorage<Substrate.Statemint.NET.NetApiExt.Generated.Model.primitive_types.H256> AuthorizedUpgradeTypedStorage
+        public TypedStorage<Substrate.Statemint.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.CodeUpgradeAuthorization> AuthorizedUpgradeTypedStorage
         {
             get
             {
@@ -745,7 +745,7 @@ namespace Substrate.Statemint.NET.RestService.Generated.Storage
         ///  This value is expected to be set only once per block and it's never stored
         ///  in the trie.
         /// </summary>
-        public Substrate.Statemint.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.PersistedValidationData GetValidationData()
+        public Substrate.Statemint.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.PersistedValidationData GetValidationData()
         {
             return ValidationDataTypedStorage.Get();
         }
@@ -805,7 +805,7 @@ namespace Substrate.Statemint.NET.RestService.Generated.Storage
         ///  relay-chain. This value is ephemeral which means it doesn't hit the storage. This value is
         ///  set after the inherent.
         /// </summary>
-        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Statemint.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.EnumUpgradeRestriction> GetUpgradeRestrictionSignal()
+        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Statemint.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.EnumUpgradeRestriction> GetUpgradeRestrictionSignal()
         {
             return UpgradeRestrictionSignalTypedStorage.Get();
         }
@@ -875,7 +875,7 @@ namespace Substrate.Statemint.NET.RestService.Generated.Storage
         /// 
         ///  This data is also absent from the genesis.
         /// </summary>
-        public Substrate.Statemint.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.AbridgedHostConfiguration GetHostConfiguration()
+        public Substrate.Statemint.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.AbridgedHostConfiguration GetHostConfiguration()
         {
             return HostConfigurationTypedStorage.Get();
         }
@@ -1090,7 +1090,7 @@ namespace Substrate.Statemint.NET.RestService.Generated.Storage
         /// >> AuthorizedUpgrade
         ///  The next authorized upgrade, if there is one.
         /// </summary>
-        public Substrate.Statemint.NET.NetApiExt.Generated.Model.primitive_types.H256 GetAuthorizedUpgrade()
+        public Substrate.Statemint.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.CodeUpgradeAuthorization GetAuthorizedUpgrade()
         {
             return AuthorizedUpgradeTypedStorage.Get();
         }

@@ -11,14 +11,14 @@ namespace Substrate.Statemint.NET.RestClient.Generated.Interfaces
 {
    using System;
    using System.Threading.Tasks;
-   using Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Statemint.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    using Substrate.NetApi.Model.Types.Primitive;
    
    public interface ICollatorSelectionControllerClient
    {
-      Task<BoundedVecT6> GetInvulnerables();
+      Task<BoundedVecT10> GetInvulnerables();
       Task<bool> SubscribeInvulnerables();
-      Task<BoundedVecT7> GetCandidates();
+      Task<BoundedVecT11> GetCandidates();
       Task<bool> SubscribeCandidates();
       Task<U32> GetLastAuthoredBlock(Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
       Task<bool> SubscribeLastAuthoredBlock(Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);

@@ -26,7 +26,7 @@ namespace Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_arithmetic
     }
     
     /// <summary>
-    /// >> 27 - Variant[sp_arithmetic.ArithmeticError]
+    /// >> 28 - Variant[sp_arithmetic.ArithmeticError]
     /// </summary>
     public sealed class EnumArithmeticError : BaseEnum<ArithmeticError>
     {

@@ -13,7 +13,7 @@ namespace Substrate.Statemint.NET.RestClient.Generated.Clients
    using System.Threading.Tasks;
    using System.Net.Http;
    using Substrate.NetApi.Model.Types.Base;
-   using Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Statemint.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.Statemint.NET.RestClient.Generated.Interfaces;
    
@@ -26,17 +26,17 @@ namespace Substrate.Statemint.NET.RestClient.Generated.Clients
          _httpClient = httpClient;
          _subscriptionClient = subscriptionClient;
       }
-      public async Task<BaseTuple<BoundedVecT11, U128>> GetProxies(Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+      public async Task<BaseTuple<BoundedVecT18, U128>> GetProxies(Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {
-         return await SendRequestAsync<BaseTuple<BoundedVecT11, U128>>(_httpClient, "proxy/proxies", Substrate.Statemint.NET.NetApiExt.Generated.Storage.ProxyStorage.ProxiesParams(key));
+         return await SendRequestAsync<BaseTuple<BoundedVecT18, U128>>(_httpClient, "proxy/proxies", Substrate.Statemint.NET.NetApiExt.Generated.Storage.ProxyStorage.ProxiesParams(key));
       }
       public async Task<bool> SubscribeProxies(Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {
          return await _subscriptionClient.SubscribeAsync("Proxy.Proxies", Substrate.Statemint.NET.NetApiExt.Generated.Storage.ProxyStorage.ProxiesParams(key));
       }
-      public async Task<BaseTuple<BoundedVecT12, U128>> GetAnnouncements(Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+      public async Task<BaseTuple<BoundedVecT19, U128>> GetAnnouncements(Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {
-         return await SendRequestAsync<BaseTuple<BoundedVecT12, U128>>(_httpClient, "proxy/announcements", Substrate.Statemint.NET.NetApiExt.Generated.Storage.ProxyStorage.AnnouncementsParams(key));
+         return await SendRequestAsync<BaseTuple<BoundedVecT19, U128>>(_httpClient, "proxy/announcements", Substrate.Statemint.NET.NetApiExt.Generated.Storage.ProxyStorage.AnnouncementsParams(key));
       }
       public async Task<bool> SubscribeAnnouncements(Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {

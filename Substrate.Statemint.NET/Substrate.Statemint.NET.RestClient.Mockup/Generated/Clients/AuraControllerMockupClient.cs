@@ -12,7 +12,7 @@ namespace Substrate.Statemint.NET.RestClient.Mockup.Generated.Clients
    using System;
    using System.Threading.Tasks;
    using System.Net.Http;
-   using Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Statemint.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    using Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_consensus_slots;
    using Substrate.Statemint.NET.RestClient.Mockup.Generated.Interfaces;
    
@@ -23,7 +23,7 @@ namespace Substrate.Statemint.NET.RestClient.Mockup.Generated.Clients
       {
          _httpClient = httpClient;
       }
-      public async Task<bool> SetAuthorities(BoundedVecT8 value)
+      public async Task<bool> SetAuthorities(BoundedVecT12 value)
       {
          return await SendMockupRequestAsync(_httpClient, "Aura/Authorities", value.Encode(), Substrate.Statemint.NET.NetApiExt.Generated.Storage.AuraStorage.AuthoritiesParams());
       }

@@ -11,13 +11,13 @@ namespace Substrate.Statemint.NET.RestClient.Mockup.Generated.Interfaces
 {
    using System;
    using System.Threading.Tasks;
-   using Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Statemint.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    using Substrate.NetApi.Model.Types.Primitive;
    
    public interface ICollatorSelectionControllerMockupClient
    {
-      Task<bool> SetInvulnerables(BoundedVecT6 value);
-      Task<bool> SetCandidates(BoundedVecT7 value);
+      Task<bool> SetInvulnerables(BoundedVecT10 value);
+      Task<bool> SetCandidates(BoundedVecT11 value);
       Task<bool> SetLastAuthoredBlock(U32 value, Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
       Task<bool> SetDesiredCandidates(U32 value);
       Task<bool> SetCandidacyBond(U128 value);

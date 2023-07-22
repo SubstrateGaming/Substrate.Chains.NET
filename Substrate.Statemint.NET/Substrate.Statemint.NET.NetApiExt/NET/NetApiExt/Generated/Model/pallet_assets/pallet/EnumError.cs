@@ -34,7 +34,7 @@ namespace Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_assets.pallet
         
         MinBalanceZero = 7,
         
-        NoProvider = 8,
+        UnavailableConsumer = 8,
         
         BadMetadata = 9,
         
@@ -55,10 +55,12 @@ namespace Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_assets.pallet
         IncorrectStatus = 17,
         
         NotFrozen = 18,
+        
+        CallbackFailed = 19,
     }
     
     /// <summary>
-    /// >> 287 - Variant[pallet_assets.pallet.Error]
+    /// >> 378 - Variant[pallet_assets.pallet.Error]
     /// 
     ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
     ///			of this pallet.

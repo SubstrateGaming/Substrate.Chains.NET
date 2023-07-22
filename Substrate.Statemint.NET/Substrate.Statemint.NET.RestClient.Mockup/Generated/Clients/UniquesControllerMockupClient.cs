@@ -15,7 +15,7 @@ namespace Substrate.Statemint.NET.RestClient.Mockup.Generated.Clients
    using Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_uniques.types;
    using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.NetApi.Model.Types.Base;
-   using Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Statemint.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    using Substrate.Statemint.NET.RestClient.Mockup.Generated.Interfaces;
    
    public sealed class UniquesControllerMockupClient : MockupBaseClient, IUniquesControllerMockupClient
@@ -53,7 +53,7 @@ namespace Substrate.Statemint.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "Uniques/InstanceMetadataOf", value.Encode(), Substrate.Statemint.NET.NetApiExt.Generated.Storage.UniquesStorage.InstanceMetadataOfParams(key));
       }
-      public async Task<bool> SetAttribute(BaseTuple<BoundedVecT3, U128> value, BaseTuple<U32, BaseOpt<U32>, BoundedVecT2> key)
+      public async Task<bool> SetAttribute(BaseTuple<BoundedVecT6, U128> value, BaseTuple<U32, BaseOpt<U32>, BoundedVecT5> key)
       {
          return await SendMockupRequestAsync(_httpClient, "Uniques/Attribute", value.Encode(), Substrate.Statemint.NET.NetApiExt.Generated.Storage.UniquesStorage.AttributeParams(key));
       }

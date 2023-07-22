@@ -24,7 +24,7 @@ namespace Substrate.Statemint.NET.NetApiExt.Generated.Types.Base
     }
     
     /// <summary>
-    /// >> 84 - Variant[Result]
+    /// >> 102 - Variant[Result]
     /// </summary>
     public sealed class EnumResult : BaseEnumExt<Result, Substrate.NetApi.Model.Types.Base.BaseTuple, Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_runtime.EnumDispatchError>
     {

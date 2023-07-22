@@ -77,7 +77,7 @@ namespace Substrate.Statemint.NET.RestService.Generated.Controller
         ///  in the trie.
         /// </summary>
         [HttpGet("ValidationData")]
-        [ProducesResponseType(typeof(Substrate.Statemint.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.PersistedValidationData), 200)]
+        [ProducesResponseType(typeof(Substrate.Statemint.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.PersistedValidationData), 200)]
         [StorageKeyBuilder(typeof(Substrate.Statemint.NET.NetApiExt.Generated.Storage.ParachainSystemStorage), "ValidationDataParams")]
         public IActionResult GetValidationData()
         {
@@ -119,7 +119,7 @@ namespace Substrate.Statemint.NET.RestService.Generated.Controller
         ///  set after the inherent.
         /// </summary>
         [HttpGet("UpgradeRestrictionSignal")]
-        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Statemint.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.EnumUpgradeRestriction>), 200)]
+        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Statemint.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.EnumUpgradeRestriction>), 200)]
         [StorageKeyBuilder(typeof(Substrate.Statemint.NET.NetApiExt.Generated.Storage.ParachainSystemStorage), "UpgradeRestrictionSignalParams")]
         public IActionResult GetUpgradeRestrictionSignal()
         {
@@ -171,7 +171,7 @@ namespace Substrate.Statemint.NET.RestService.Generated.Controller
         ///  This data is also absent from the genesis.
         /// </summary>
         [HttpGet("HostConfiguration")]
-        [ProducesResponseType(typeof(Substrate.Statemint.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.AbridgedHostConfiguration), 200)]
+        [ProducesResponseType(typeof(Substrate.Statemint.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.AbridgedHostConfiguration), 200)]
         [StorageKeyBuilder(typeof(Substrate.Statemint.NET.NetApiExt.Generated.Storage.ParachainSystemStorage), "HostConfigurationParams")]
         public IActionResult GetHostConfiguration()
         {
@@ -320,7 +320,7 @@ namespace Substrate.Statemint.NET.RestService.Generated.Controller
         ///  The next authorized upgrade, if there is one.
         /// </summary>
         [HttpGet("AuthorizedUpgrade")]
-        [ProducesResponseType(typeof(Substrate.Statemint.NET.NetApiExt.Generated.Model.primitive_types.H256), 200)]
+        [ProducesResponseType(typeof(Substrate.Statemint.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.CodeUpgradeAuthorization), 200)]
         [StorageKeyBuilder(typeof(Substrate.Statemint.NET.NetApiExt.Generated.Storage.ParachainSystemStorage), "AuthorizedUpgradeParams")]
         public IActionResult GetAuthorizedUpgrade()
         {

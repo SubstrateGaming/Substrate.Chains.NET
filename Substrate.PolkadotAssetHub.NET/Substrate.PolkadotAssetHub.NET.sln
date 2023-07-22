@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Substrate.PolkadotAssetHub.NET.RestService", "Substrate.PolkadotAssetHub.NET.RestService\Substrate.PolkadotAssetHub.NET.RestService.csproj", "{BA5BA5A1-545E-4907-A4E7-EAE7C241D951}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Substrate.PolkadotAssetHub.NET.NetApiExt", "Substrate.PolkadotAssetHub.NET.NetApiExt\Substrate.PolkadotAssetHub.NET.NetApiExt.csproj", "{AF71AC6C-736F-421D-BA6F-E0DAEDF44BB1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Substrate.PolkadotAssetHub.NET.RestClient", "Substrate.PolkadotAssetHub.NET.RestClient\Substrate.PolkadotAssetHub.NET.RestClient.csproj", "{CA153B02-7C4A-49B9-A5B0-72E040101C70}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Substrate.PolkadotAssetHub.NET.RestClient.Mockup", "Substrate.PolkadotAssetHub.NET.RestClient.Mockup\Substrate.PolkadotAssetHub.NET.RestClient.Mockup.csproj", "{31DD5955-739A-49DD-B50C-DBC8E8984CC7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Substrate.PolkadotAssetHub.NET.RestClient.Test", "Substrate.PolkadotAssetHub.NET.RestClient.Test\Substrate.PolkadotAssetHub.NET.RestClient.Test.csproj", "{FBA42D5B-0C35-4F18-B853-A08385B38ADA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BA5BA5A1-545E-4907-A4E7-EAE7C241D951}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA5BA5A1-545E-4907-A4E7-EAE7C241D951}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA5BA5A1-545E-4907-A4E7-EAE7C241D951}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA5BA5A1-545E-4907-A4E7-EAE7C241D951}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF71AC6C-736F-421D-BA6F-E0DAEDF44BB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF71AC6C-736F-421D-BA6F-E0DAEDF44BB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF71AC6C-736F-421D-BA6F-E0DAEDF44BB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF71AC6C-736F-421D-BA6F-E0DAEDF44BB1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA153B02-7C4A-49B9-A5B0-72E040101C70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA153B02-7C4A-49B9-A5B0-72E040101C70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA153B02-7C4A-49B9-A5B0-72E040101C70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA153B02-7C4A-49B9-A5B0-72E040101C70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31DD5955-739A-49DD-B50C-DBC8E8984CC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31DD5955-739A-49DD-B50C-DBC8E8984CC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31DD5955-739A-49DD-B50C-DBC8E8984CC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31DD5955-739A-49DD-B50C-DBC8E8984CC7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBA42D5B-0C35-4F18-B853-A08385B38ADA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBA42D5B-0C35-4F18-B853-A08385B38ADA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBA42D5B-0C35-4F18-B853-A08385B38ADA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBA42D5B-0C35-4F18-B853-A08385B38ADA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

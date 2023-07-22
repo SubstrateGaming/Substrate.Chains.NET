@@ -30,7 +30,7 @@ namespace Substrate.Statemint.NET.NetApiExt.Generated.Storage
         public AuraExtStorage(SubstrateClientExt client)
         {
             this._client = client;
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("AuraExt", "Authorities"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT8)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("AuraExt", "Authorities"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Statemint.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT12)));
         }
         
         /// <summary>
@@ -63,10 +63,10 @@ namespace Substrate.Statemint.NET.NetApiExt.Generated.Storage
         ///  but we require the old authorities to verify the seal when validating a PoV. This will always
         ///  be updated to the latest AuRa authorities in `on_finalize`.
         /// </summary>
-        public async Task<Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT8> Authorities(CancellationToken token)
+        public async Task<Substrate.Statemint.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT12> Authorities(CancellationToken token)
         {
             string parameters = AuraExtStorage.AuthoritiesParams();
-            var result = await _client.GetStorageAsync<Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT8>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Statemint.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT12>(parameters, token);
             return result;
         }
     }

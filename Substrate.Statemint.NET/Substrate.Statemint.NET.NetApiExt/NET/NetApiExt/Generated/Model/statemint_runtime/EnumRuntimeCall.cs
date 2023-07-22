@@ -26,8 +26,6 @@ namespace Substrate.Statemint.NET.NetApiExt.Generated.Model.statemint_runtime
         
         Balances = 10,
         
-        Authorship = 20,
-        
         CollatorSelection = 21,
         
         Session = 22,
@@ -47,12 +45,16 @@ namespace Substrate.Statemint.NET.NetApiExt.Generated.Model.statemint_runtime
         Assets = 50,
         
         Uniques = 51,
+        
+        Nfts = 52,
+        
+        ForeignAssets = 53,
     }
     
     /// <summary>
-    /// >> 249 - Variant[statemint_runtime.RuntimeCall]
+    /// >> 278 - Variant[statemint_runtime.RuntimeCall]
     /// </summary>
-    public sealed class EnumRuntimeCall : BaseEnumExt<RuntimeCall, Substrate.Statemint.NET.NetApiExt.Generated.Model.frame_system.pallet.EnumCall, Substrate.Statemint.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.pallet.EnumCall, BaseVoid, Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_timestamp.pallet.EnumCall, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_balances.pallet.EnumCall, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_authorship.pallet.EnumCall, Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_collator_selection.pallet.EnumCall, Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_session.pallet.EnumCall, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.Statemint.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue.pallet.EnumCall, Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_xcm.pallet.EnumCall, BaseVoid, Substrate.Statemint.NET.NetApiExt.Generated.Model.cumulus_pallet_dmp_queue.pallet.EnumCall, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_utility.pallet.EnumCall, Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_multisig.pallet.EnumCall, Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_proxy.pallet.EnumCall, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_assets.pallet.EnumCall, Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_uniques.pallet.EnumCall>
+    public sealed class EnumRuntimeCall : BaseEnumExt<RuntimeCall, Substrate.Statemint.NET.NetApiExt.Generated.Model.frame_system.pallet.EnumCall, Substrate.Statemint.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.pallet.EnumCall, BaseVoid, Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_timestamp.pallet.EnumCall, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_balances.pallet.EnumCall, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_collator_selection.pallet.EnumCall, Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_session.pallet.EnumCall, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.Statemint.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue.pallet.EnumCall, Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_xcm.pallet.EnumCall, BaseVoid, Substrate.Statemint.NET.NetApiExt.Generated.Model.cumulus_pallet_dmp_queue.pallet.EnumCall, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_utility.pallet.EnumCall, Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_multisig.pallet.EnumCall, Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_proxy.pallet.EnumCall, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_assets.pallet.EnumCall, Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_uniques.pallet.EnumCall, Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_nfts.pallet.EnumCall, Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_assets.pallet.EnumCall>
     {
     }
 }

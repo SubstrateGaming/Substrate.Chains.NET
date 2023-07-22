@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Substrate.Statemint.NET.RestService", "Substrate.Statemint.NET.RestService\Substrate.Statemint.NET.RestService.csproj", "{93728BC6-8729-4C85-8993-6EB105461424}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Substrate.Statemint.NET.RestService", "Substrate.Statemint.NET.RestService\Substrate.Statemint.NET.RestService.csproj", "{DFA5089A-B904-414A-A470-BF69145D29F8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Substrate.Statemint.NET.NetApiExt", "Substrate.Statemint.NET.NetApiExt\Substrate.Statemint.NET.NetApiExt.csproj", "{BF00E51F-6385-49EB-9D70-4323FCF9E9CB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Substrate.Statemint.NET.NetApiExt", "Substrate.Statemint.NET.NetApiExt\Substrate.Statemint.NET.NetApiExt.csproj", "{BCDBA02C-72C5-41E4-8369-49E8C20BA52D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Substrate.Statemint.NET.RestClient", "Substrate.Statemint.NET.RestClient\Substrate.Statemint.NET.RestClient.csproj", "{2B5A8EAF-C62A-420B-8AF8-4E3736819E04}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Substrate.Statemint.NET.RestClient", "Substrate.Statemint.NET.RestClient\Substrate.Statemint.NET.RestClient.csproj", "{ACF5347F-3081-4BE9-B358-5930302319BE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Substrate.Statemint.NET.RestClient.Mockup", "Substrate.Statemint.NET.RestClient.Mockup\Substrate.Statemint.NET.RestClient.Mockup.csproj", "{F54CA3E1-B7D6-47DD-BB26-EDB2FB445EDA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Substrate.Statemint.NET.RestClient.Mockup", "Substrate.Statemint.NET.RestClient.Mockup\Substrate.Statemint.NET.RestClient.Mockup.csproj", "{15BDB9F8-CAFD-48EC-934B-58D89FF5A540}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Substrate.Statemint.NET.RestClient.Test", "Substrate.Statemint.NET.RestClient.Test\Substrate.Statemint.NET.RestClient.Test.csproj", "{EE2ECDB9-DAC8-4DB7-919F-22547861DF05}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Substrate.Statemint.NET.RestClient.Test", "Substrate.Statemint.NET.RestClient.Test\Substrate.Statemint.NET.RestClient.Test.csproj", "{DD324C2C-E583-4F1D-95AC-0A7D79073EEF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -22,25 +22,25 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{93728BC6-8729-4C85-8993-6EB105461424}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{93728BC6-8729-4C85-8993-6EB105461424}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{93728BC6-8729-4C85-8993-6EB105461424}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{93728BC6-8729-4C85-8993-6EB105461424}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BF00E51F-6385-49EB-9D70-4323FCF9E9CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BF00E51F-6385-49EB-9D70-4323FCF9E9CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BF00E51F-6385-49EB-9D70-4323FCF9E9CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BF00E51F-6385-49EB-9D70-4323FCF9E9CB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2B5A8EAF-C62A-420B-8AF8-4E3736819E04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2B5A8EAF-C62A-420B-8AF8-4E3736819E04}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2B5A8EAF-C62A-420B-8AF8-4E3736819E04}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2B5A8EAF-C62A-420B-8AF8-4E3736819E04}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F54CA3E1-B7D6-47DD-BB26-EDB2FB445EDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F54CA3E1-B7D6-47DD-BB26-EDB2FB445EDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F54CA3E1-B7D6-47DD-BB26-EDB2FB445EDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F54CA3E1-B7D6-47DD-BB26-EDB2FB445EDA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EE2ECDB9-DAC8-4DB7-919F-22547861DF05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EE2ECDB9-DAC8-4DB7-919F-22547861DF05}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EE2ECDB9-DAC8-4DB7-919F-22547861DF05}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EE2ECDB9-DAC8-4DB7-919F-22547861DF05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFA5089A-B904-414A-A470-BF69145D29F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFA5089A-B904-414A-A470-BF69145D29F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFA5089A-B904-414A-A470-BF69145D29F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFA5089A-B904-414A-A470-BF69145D29F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCDBA02C-72C5-41E4-8369-49E8C20BA52D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCDBA02C-72C5-41E4-8369-49E8C20BA52D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCDBA02C-72C5-41E4-8369-49E8C20BA52D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCDBA02C-72C5-41E4-8369-49E8C20BA52D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACF5347F-3081-4BE9-B358-5930302319BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACF5347F-3081-4BE9-B358-5930302319BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACF5347F-3081-4BE9-B358-5930302319BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACF5347F-3081-4BE9-B358-5930302319BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15BDB9F8-CAFD-48EC-934B-58D89FF5A540}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15BDB9F8-CAFD-48EC-934B-58D89FF5A540}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15BDB9F8-CAFD-48EC-934B-58D89FF5A540}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15BDB9F8-CAFD-48EC-934B-58D89FF5A540}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD324C2C-E583-4F1D-95AC-0A7D79073EEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD324C2C-E583-4F1D-95AC-0A7D79073EEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD324C2C-E583-4F1D-95AC-0A7D79073EEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD324C2C-E583-4F1D-95AC-0A7D79073EEF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

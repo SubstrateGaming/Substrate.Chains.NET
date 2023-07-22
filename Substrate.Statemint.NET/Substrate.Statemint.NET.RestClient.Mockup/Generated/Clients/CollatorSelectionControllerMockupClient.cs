@@ -12,7 +12,7 @@ namespace Substrate.Statemint.NET.RestClient.Mockup.Generated.Clients
    using System;
    using System.Threading.Tasks;
    using System.Net.Http;
-   using Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Statemint.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.Statemint.NET.RestClient.Mockup.Generated.Interfaces;
    
@@ -23,11 +23,11 @@ namespace Substrate.Statemint.NET.RestClient.Mockup.Generated.Clients
       {
          _httpClient = httpClient;
       }
-      public async Task<bool> SetInvulnerables(BoundedVecT6 value)
+      public async Task<bool> SetInvulnerables(BoundedVecT10 value)
       {
          return await SendMockupRequestAsync(_httpClient, "CollatorSelection/Invulnerables", value.Encode(), Substrate.Statemint.NET.NetApiExt.Generated.Storage.CollatorSelectionStorage.InvulnerablesParams());
       }
-      public async Task<bool> SetCandidates(BoundedVecT7 value)
+      public async Task<bool> SetCandidates(BoundedVecT11 value)
       {
          return await SendMockupRequestAsync(_httpClient, "CollatorSelection/Candidates", value.Encode(), Substrate.Statemint.NET.NetApiExt.Generated.Storage.CollatorSelectionStorage.CandidatesParams());
       }

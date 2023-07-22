@@ -36,7 +36,7 @@ namespace Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_proxy.pallet
     }
     
     /// <summary>
-    /// >> 277 - Variant[pallet_proxy.pallet.Error]
+    /// >> 331 - Variant[pallet_proxy.pallet.Error]
     /// 
     ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
     ///			of this pallet.

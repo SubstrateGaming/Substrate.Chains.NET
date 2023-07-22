@@ -18,6 +18,6 @@ namespace Substrate.Statemint.NET.RestClient.Mockup.Generated.Interfaces
       Task<bool> SetAsset(AssetDetails value, Substrate.NetApi.Model.Types.Primitive.U32 key);
       Task<bool> SetAccount(AssetAccount value, Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> key);
       Task<bool> SetApprovals(Approval value, Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> key);
-      Task<bool> SetMetadata(AssetMetadata value, Substrate.NetApi.Model.Types.Primitive.U32 key);
+      Task<bool> SetMetadata(AssetMetadataT1 value, Substrate.NetApi.Model.Types.Primitive.U32 key);
    }
 }

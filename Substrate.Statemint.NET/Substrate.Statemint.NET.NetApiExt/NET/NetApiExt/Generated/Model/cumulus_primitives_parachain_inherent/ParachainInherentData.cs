@@ -18,7 +18,7 @@ namespace Substrate.Statemint.NET.NetApiExt.Generated.Model.cumulus_primitives_p
     
     
     /// <summary>
-    /// >> 139 - Composite[cumulus_primitives_parachain_inherent.ParachainInherentData]
+    /// >> 167 - Composite[cumulus_primitives_parachain_inherent.ParachainInherentData]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class ParachainInherentData : BaseType
@@ -27,7 +27,7 @@ namespace Substrate.Statemint.NET.NetApiExt.Generated.Model.cumulus_primitives_p
         /// <summary>
         /// >> validation_data
         /// </summary>
-        private Substrate.Statemint.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.PersistedValidationData _validationData;
+        private Substrate.Statemint.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.PersistedValidationData _validationData;
         
         /// <summary>
         /// >> relay_chain_state
@@ -44,7 +44,7 @@ namespace Substrate.Statemint.NET.NetApiExt.Generated.Model.cumulus_primitives_p
         /// </summary>
         private Substrate.Statemint.NET.NetApiExt.Generated.Types.Base.BTreeMapT2 _horizontalMessages;
         
-        public Substrate.Statemint.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.PersistedValidationData ValidationData
+        public Substrate.Statemint.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.PersistedValidationData ValidationData
         {
             get
             {
@@ -110,7 +110,7 @@ namespace Substrate.Statemint.NET.NetApiExt.Generated.Model.cumulus_primitives_p
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            ValidationData = new Substrate.Statemint.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.PersistedValidationData();
+            ValidationData = new Substrate.Statemint.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.PersistedValidationData();
             ValidationData.Decode(byteArray, ref p);
             RelayChainState = new Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_trie.storage_proof.StorageProof();
             RelayChainState.Decode(byteArray, ref p);

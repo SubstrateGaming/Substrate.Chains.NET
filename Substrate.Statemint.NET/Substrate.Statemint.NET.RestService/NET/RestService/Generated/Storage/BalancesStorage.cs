@@ -63,20 +63,32 @@ namespace Substrate.Statemint.NET.RestService.Generated.Storage
         ///  `Balances` pallet, which uses a `StorageMap` to store balances data only.
         ///  NOTE: This is only used in the case that this pallet is used to store balances.
         /// </summary>
-        Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_balances.AccountData GetAccount(string key);
+        Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_balances.types.AccountData GetAccount(string key);
         
         /// <summary>
         /// >> Locks
         ///  Any liquidity locks on some account balances.
         ///  NOTE: Should only be accessed when setting, changing and freeing a lock.
         /// </summary>
-        Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.bounded.weak_bounded_vec.WeakBoundedVecT2 GetLocks(string key);
+        Substrate.Statemint.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT2 GetLocks(string key);
         
         /// <summary>
         /// >> Reserves
         ///  Named reserves on some account balances.
         /// </summary>
-        Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT4 GetReserves(string key);
+        Substrate.Statemint.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT8 GetReserves(string key);
+        
+        /// <summary>
+        /// >> Holds
+        ///  Holds on account balances.
+        /// </summary>
+        Substrate.Statemint.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9 GetHolds(string key);
+        
+        /// <summary>
+        /// >> Freezes
+        ///  Freeze locks on account balances.
+        /// </summary>
+        Substrate.Statemint.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9 GetFreezes(string key);
     }
     
     /// <summary>
@@ -98,17 +110,27 @@ namespace Substrate.Statemint.NET.RestService.Generated.Storage
         /// <summary>
         /// _accountTypedStorage typed storage field
         /// </summary>
-        private TypedMapStorage<Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_balances.AccountData> _accountTypedStorage;
+        private TypedMapStorage<Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_balances.types.AccountData> _accountTypedStorage;
         
         /// <summary>
         /// _locksTypedStorage typed storage field
         /// </summary>
-        private TypedMapStorage<Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.bounded.weak_bounded_vec.WeakBoundedVecT2> _locksTypedStorage;
+        private TypedMapStorage<Substrate.Statemint.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT2> _locksTypedStorage;
         
         /// <summary>
         /// _reservesTypedStorage typed storage field
         /// </summary>
-        private TypedMapStorage<Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT4> _reservesTypedStorage;
+        private TypedMapStorage<Substrate.Statemint.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT8> _reservesTypedStorage;
+        
+        /// <summary>
+        /// _holdsTypedStorage typed storage field
+        /// </summary>
+        private TypedMapStorage<Substrate.Statemint.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9> _holdsTypedStorage;
+        
+        /// <summary>
+        /// _freezesTypedStorage typed storage field
+        /// </summary>
+        private TypedMapStorage<Substrate.Statemint.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9> _freezesTypedStorage;
         
         /// <summary>
         /// BalancesStorage constructor.
@@ -117,9 +139,11 @@ namespace Substrate.Statemint.NET.RestService.Generated.Storage
         {
             this.TotalIssuanceTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U128>("Balances.TotalIssuance", storageDataProvider, storageChangeDelegates);
             this.InactiveIssuanceTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U128>("Balances.InactiveIssuance", storageDataProvider, storageChangeDelegates);
-            this.AccountTypedStorage = new TypedMapStorage<Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_balances.AccountData>("Balances.Account", storageDataProvider, storageChangeDelegates);
-            this.LocksTypedStorage = new TypedMapStorage<Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.bounded.weak_bounded_vec.WeakBoundedVecT2>("Balances.Locks", storageDataProvider, storageChangeDelegates);
-            this.ReservesTypedStorage = new TypedMapStorage<Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT4>("Balances.Reserves", storageDataProvider, storageChangeDelegates);
+            this.AccountTypedStorage = new TypedMapStorage<Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_balances.types.AccountData>("Balances.Account", storageDataProvider, storageChangeDelegates);
+            this.LocksTypedStorage = new TypedMapStorage<Substrate.Statemint.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT2>("Balances.Locks", storageDataProvider, storageChangeDelegates);
+            this.ReservesTypedStorage = new TypedMapStorage<Substrate.Statemint.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT8>("Balances.Reserves", storageDataProvider, storageChangeDelegates);
+            this.HoldsTypedStorage = new TypedMapStorage<Substrate.Statemint.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9>("Balances.Holds", storageDataProvider, storageChangeDelegates);
+            this.FreezesTypedStorage = new TypedMapStorage<Substrate.Statemint.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9>("Balances.Freezes", storageDataProvider, storageChangeDelegates);
         }
         
         /// <summary>
@@ -155,7 +179,7 @@ namespace Substrate.Statemint.NET.RestService.Generated.Storage
         /// <summary>
         /// _accountTypedStorage property
         /// </summary>
-        public TypedMapStorage<Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_balances.AccountData> AccountTypedStorage
+        public TypedMapStorage<Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_balances.types.AccountData> AccountTypedStorage
         {
             get
             {
@@ -170,7 +194,7 @@ namespace Substrate.Statemint.NET.RestService.Generated.Storage
         /// <summary>
         /// _locksTypedStorage property
         /// </summary>
-        public TypedMapStorage<Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.bounded.weak_bounded_vec.WeakBoundedVecT2> LocksTypedStorage
+        public TypedMapStorage<Substrate.Statemint.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT2> LocksTypedStorage
         {
             get
             {
@@ -185,7 +209,7 @@ namespace Substrate.Statemint.NET.RestService.Generated.Storage
         /// <summary>
         /// _reservesTypedStorage property
         /// </summary>
-        public TypedMapStorage<Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT4> ReservesTypedStorage
+        public TypedMapStorage<Substrate.Statemint.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT8> ReservesTypedStorage
         {
             get
             {
@@ -194,6 +218,36 @@ namespace Substrate.Statemint.NET.RestService.Generated.Storage
             set
             {
                 _reservesTypedStorage = value;
+            }
+        }
+        
+        /// <summary>
+        /// _holdsTypedStorage property
+        /// </summary>
+        public TypedMapStorage<Substrate.Statemint.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9> HoldsTypedStorage
+        {
+            get
+            {
+                return _holdsTypedStorage;
+            }
+            set
+            {
+                _holdsTypedStorage = value;
+            }
+        }
+        
+        /// <summary>
+        /// _freezesTypedStorage property
+        /// </summary>
+        public TypedMapStorage<Substrate.Statemint.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9> FreezesTypedStorage
+        {
+            get
+            {
+                return _freezesTypedStorage;
+            }
+            set
+            {
+                _freezesTypedStorage = value;
             }
         }
         
@@ -207,6 +261,8 @@ namespace Substrate.Statemint.NET.RestService.Generated.Storage
             await AccountTypedStorage.InitializeAsync("Balances", "Account");
             await LocksTypedStorage.InitializeAsync("Balances", "Locks");
             await ReservesTypedStorage.InitializeAsync("Balances", "Reserves");
+            await HoldsTypedStorage.InitializeAsync("Balances", "Holds");
+            await FreezesTypedStorage.InitializeAsync("Balances", "Freezes");
         }
         
         /// <summary>
@@ -281,13 +337,13 @@ namespace Substrate.Statemint.NET.RestService.Generated.Storage
         ///  `Balances` pallet, which uses a `StorageMap` to store balances data only.
         ///  NOTE: This is only used in the case that this pallet is used to store balances.
         /// </summary>
-        public Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_balances.AccountData GetAccount(string key)
+        public Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_balances.types.AccountData GetAccount(string key)
         {
             if ((key == null))
             {
                 return null;
             }
-            if (AccountTypedStorage.Dictionary.TryGetValue(key, out Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_balances.AccountData result))
+            if (AccountTypedStorage.Dictionary.TryGetValue(key, out Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_balances.types.AccountData result))
             {
                 return result;
             }
@@ -311,13 +367,13 @@ namespace Substrate.Statemint.NET.RestService.Generated.Storage
         ///  Any liquidity locks on some account balances.
         ///  NOTE: Should only be accessed when setting, changing and freeing a lock.
         /// </summary>
-        public Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.bounded.weak_bounded_vec.WeakBoundedVecT2 GetLocks(string key)
+        public Substrate.Statemint.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT2 GetLocks(string key)
         {
             if ((key == null))
             {
                 return null;
             }
-            if (LocksTypedStorage.Dictionary.TryGetValue(key, out Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.bounded.weak_bounded_vec.WeakBoundedVecT2 result))
+            if (LocksTypedStorage.Dictionary.TryGetValue(key, out Substrate.Statemint.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT2 result))
             {
                 return result;
             }
@@ -340,13 +396,71 @@ namespace Substrate.Statemint.NET.RestService.Generated.Storage
         /// >> Reserves
         ///  Named reserves on some account balances.
         /// </summary>
-        public Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT4 GetReserves(string key)
+        public Substrate.Statemint.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT8 GetReserves(string key)
         {
             if ((key == null))
             {
                 return null;
             }
-            if (ReservesTypedStorage.Dictionary.TryGetValue(key, out Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT4 result))
+            if (ReservesTypedStorage.Dictionary.TryGetValue(key, out Substrate.Statemint.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT8 result))
+            {
+                return result;
+            }
+            else
+            {
+                return null;
+            }
+        }
+        
+        /// <summary>
+        /// Implements any storage change for Balances.Holds
+        /// </summary>
+        [StorageChange("Balances", "Holds")]
+        public void OnUpdateHolds(string key, string data)
+        {
+            HoldsTypedStorage.Update(key, data);
+        }
+        
+        /// <summary>
+        /// >> Holds
+        ///  Holds on account balances.
+        /// </summary>
+        public Substrate.Statemint.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9 GetHolds(string key)
+        {
+            if ((key == null))
+            {
+                return null;
+            }
+            if (HoldsTypedStorage.Dictionary.TryGetValue(key, out Substrate.Statemint.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9 result))
+            {
+                return result;
+            }
+            else
+            {
+                return null;
+            }
+        }
+        
+        /// <summary>
+        /// Implements any storage change for Balances.Freezes
+        /// </summary>
+        [StorageChange("Balances", "Freezes")]
+        public void OnUpdateFreezes(string key, string data)
+        {
+            FreezesTypedStorage.Update(key, data);
+        }
+        
+        /// <summary>
+        /// >> Freezes
+        ///  Freeze locks on account balances.
+        /// </summary>
+        public Substrate.Statemint.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9 GetFreezes(string key)
+        {
+            if ((key == null))
+            {
+                return null;
+            }
+            if (FreezesTypedStorage.Dictionary.TryGetValue(key, out Substrate.Statemint.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9 result))
             {
                 return result;
             }

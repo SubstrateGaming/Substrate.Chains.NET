@@ -44,9 +44,16 @@ namespace Substrate.Statemint.NET.NetApiExt.Generated.Storage
                             Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Statemint.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation>), typeof(Substrate.NetApi.Model.Types.Primitive.U64)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("PolkadotXcm", "VersionNotifyTargets"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat,
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Statemint.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation>), typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U64, Substrate.NetApi.Model.Types.Primitive.U64, Substrate.NetApi.Model.Types.Primitive.U32>)));
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("PolkadotXcm", "VersionDiscoveryQueue"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT9)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Statemint.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation>), typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U64, Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight, Substrate.NetApi.Model.Types.Primitive.U32>)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("PolkadotXcm", "VersionDiscoveryQueue"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Statemint.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT13)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("PolkadotXcm", "CurrentMigration"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_xcm.pallet.EnumVersionMigrationStage)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("PolkadotXcm", "RemoteLockedFungibles"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat,
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat,
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Statemint.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAssetId>), typeof(Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_xcm.pallet.RemoteLockedFungibleRecord)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("PolkadotXcm", "LockedFungibles"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32), typeof(Substrate.Statemint.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT15)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("PolkadotXcm", "XcmExecutionSuspended"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Primitive.Bool)));
         }
         
         /// <summary>
@@ -265,10 +272,10 @@ namespace Substrate.Statemint.NET.NetApiExt.Generated.Storage
         ///  The target locations that are subscribed to our version changes, as well as the most recent
         ///  of our versions we informed them of.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U64, Substrate.NetApi.Model.Types.Primitive.U64, Substrate.NetApi.Model.Types.Primitive.U32>> VersionNotifyTargets(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Statemint.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation> key, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U64, Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight, Substrate.NetApi.Model.Types.Primitive.U32>> VersionNotifyTargets(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Statemint.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation> key, CancellationToken token)
         {
             string parameters = PolkadotXcmStorage.VersionNotifyTargetsParams(key);
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U64, Substrate.NetApi.Model.Types.Primitive.U64, Substrate.NetApi.Model.Types.Primitive.U32>>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U64, Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight, Substrate.NetApi.Model.Types.Primitive.U32>>(parameters, token);
             return result;
         }
         
@@ -298,10 +305,10 @@ namespace Substrate.Statemint.NET.NetApiExt.Generated.Storage
         ///  the `u32` counter is the number of times that a send to the destination has been attempted,
         ///  which is used as a prioritization.
         /// </summary>
-        public async Task<Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT9> VersionDiscoveryQueue(CancellationToken token)
+        public async Task<Substrate.Statemint.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT13> VersionDiscoveryQueue(CancellationToken token)
         {
             string parameters = PolkadotXcmStorage.VersionDiscoveryQueueParams();
-            var result = await _client.GetStorageAsync<Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT9>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Statemint.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT13>(parameters, token);
             return result;
         }
         
@@ -331,6 +338,98 @@ namespace Substrate.Statemint.NET.NetApiExt.Generated.Storage
         {
             string parameters = PolkadotXcmStorage.CurrentMigrationParams();
             var result = await _client.GetStorageAsync<Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_xcm.pallet.EnumVersionMigrationStage>(parameters, token);
+            return result;
+        }
+        
+        /// <summary>
+        /// >> RemoteLockedFungiblesParams
+        ///  Fungible assets which we know are locked on a remote chain.
+        /// </summary>
+        public static string RemoteLockedFungiblesParams(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Statemint.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAssetId> key)
+        {
+            return RequestGenerator.GetStorage("PolkadotXcm", "RemoteLockedFungibles", Substrate.NetApi.Model.Meta.Storage.Type.Map, new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
+                        Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat,
+                        Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat,
+                        Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, key.Value);
+        }
+        
+        /// <summary>
+        /// >> RemoteLockedFungiblesDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string RemoteLockedFungiblesDefault()
+        {
+            return "0x00";
+        }
+        
+        /// <summary>
+        /// >> RemoteLockedFungibles
+        ///  Fungible assets which we know are locked on a remote chain.
+        /// </summary>
+        public async Task<Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_xcm.pallet.RemoteLockedFungibleRecord> RemoteLockedFungibles(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Statemint.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAssetId> key, CancellationToken token)
+        {
+            string parameters = PolkadotXcmStorage.RemoteLockedFungiblesParams(key);
+            var result = await _client.GetStorageAsync<Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_xcm.pallet.RemoteLockedFungibleRecord>(parameters, token);
+            return result;
+        }
+        
+        /// <summary>
+        /// >> LockedFungiblesParams
+        ///  Fungible assets which we know are locked on this chain.
+        /// </summary>
+        public static string LockedFungiblesParams(Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+        {
+            return RequestGenerator.GetStorage("PolkadotXcm", "LockedFungibles", Substrate.NetApi.Model.Meta.Storage.Type.Map, new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
+                        Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, new Substrate.NetApi.Model.Types.IType[] {
+                        key});
+        }
+        
+        /// <summary>
+        /// >> LockedFungiblesDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string LockedFungiblesDefault()
+        {
+            return "0x00";
+        }
+        
+        /// <summary>
+        /// >> LockedFungibles
+        ///  Fungible assets which we know are locked on this chain.
+        /// </summary>
+        public async Task<Substrate.Statemint.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT15> LockedFungibles(Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, CancellationToken token)
+        {
+            string parameters = PolkadotXcmStorage.LockedFungiblesParams(key);
+            var result = await _client.GetStorageAsync<Substrate.Statemint.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT15>(parameters, token);
+            return result;
+        }
+        
+        /// <summary>
+        /// >> XcmExecutionSuspendedParams
+        ///  Global suspension state of the XCM executor.
+        /// </summary>
+        public static string XcmExecutionSuspendedParams()
+        {
+            return RequestGenerator.GetStorage("PolkadotXcm", "XcmExecutionSuspended", Substrate.NetApi.Model.Meta.Storage.Type.Plain);
+        }
+        
+        /// <summary>
+        /// >> XcmExecutionSuspendedDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string XcmExecutionSuspendedDefault()
+        {
+            return "0x00";
+        }
+        
+        /// <summary>
+        /// >> XcmExecutionSuspended
+        ///  Global suspension state of the XCM executor.
+        /// </summary>
+        public async Task<Substrate.NetApi.Model.Types.Primitive.Bool> XcmExecutionSuspended(CancellationToken token)
+        {
+            string parameters = PolkadotXcmStorage.XcmExecutionSuspendedParams();
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.Bool>(parameters, token);
             return result;
         }
     }
@@ -382,7 +481,7 @@ namespace Substrate.Statemint.NET.NetApiExt.Generated.Storage
         /// >> execute
         /// Contains one variant per dispatchable that can be called by an extrinsic.
         /// </summary>
-        public static Method Execute(Substrate.Statemint.NET.NetApiExt.Generated.Model.xcm.EnumVersionedXcm message, Substrate.NetApi.Model.Types.Primitive.U64 max_weight)
+        public static Method Execute(Substrate.Statemint.NET.NetApiExt.Generated.Model.xcm.EnumVersionedXcm message, Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight max_weight)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(message.Encode());
@@ -394,7 +493,7 @@ namespace Substrate.Statemint.NET.NetApiExt.Generated.Storage
         /// >> force_xcm_version
         /// Contains one variant per dispatchable that can be called by an extrinsic.
         /// </summary>
-        public static Method ForceXcmVersion(Substrate.Statemint.NET.NetApiExt.Generated.Model.xcm.v1.multilocation.MultiLocation location, Substrate.NetApi.Model.Types.Primitive.U32 xcm_version)
+        public static Method ForceXcmVersion(Substrate.Statemint.NET.NetApiExt.Generated.Model.xcm.v3.multilocation.MultiLocation location, Substrate.NetApi.Model.Types.Primitive.U32 xcm_version)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(location.Encode());
@@ -439,7 +538,7 @@ namespace Substrate.Statemint.NET.NetApiExt.Generated.Storage
         /// >> limited_reserve_transfer_assets
         /// Contains one variant per dispatchable that can be called by an extrinsic.
         /// </summary>
-        public static Method LimitedReserveTransferAssets(Substrate.Statemint.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation dest, Substrate.Statemint.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation beneficiary, Substrate.Statemint.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiAssets assets, Substrate.NetApi.Model.Types.Primitive.U32 fee_asset_item, Substrate.Statemint.NET.NetApiExt.Generated.Model.xcm.v2.EnumWeightLimit weight_limit)
+        public static Method LimitedReserveTransferAssets(Substrate.Statemint.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation dest, Substrate.Statemint.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation beneficiary, Substrate.Statemint.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiAssets assets, Substrate.NetApi.Model.Types.Primitive.U32 fee_asset_item, Substrate.Statemint.NET.NetApiExt.Generated.Model.xcm.v3.EnumWeightLimit weight_limit)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(dest.Encode());
@@ -454,7 +553,7 @@ namespace Substrate.Statemint.NET.NetApiExt.Generated.Storage
         /// >> limited_teleport_assets
         /// Contains one variant per dispatchable that can be called by an extrinsic.
         /// </summary>
-        public static Method LimitedTeleportAssets(Substrate.Statemint.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation dest, Substrate.Statemint.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation beneficiary, Substrate.Statemint.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiAssets assets, Substrate.NetApi.Model.Types.Primitive.U32 fee_asset_item, Substrate.Statemint.NET.NetApiExt.Generated.Model.xcm.v2.EnumWeightLimit weight_limit)
+        public static Method LimitedTeleportAssets(Substrate.Statemint.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation dest, Substrate.Statemint.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation beneficiary, Substrate.Statemint.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiAssets assets, Substrate.NetApi.Model.Types.Primitive.U32 fee_asset_item, Substrate.Statemint.NET.NetApiExt.Generated.Model.xcm.v3.EnumWeightLimit weight_limit)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(dest.Encode());
@@ -463,6 +562,17 @@ namespace Substrate.Statemint.NET.NetApiExt.Generated.Storage
             byteArray.AddRange(fee_asset_item.Encode());
             byteArray.AddRange(weight_limit.Encode());
             return new Method(31, "PolkadotXcm", 9, "limited_teleport_assets", byteArray.ToArray());
+        }
+        
+        /// <summary>
+        /// >> force_suspension
+        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// </summary>
+        public static Method ForceSuspension(Substrate.NetApi.Model.Types.Primitive.Bool suspended)
+        {
+            System.Collections.Generic.List<byte> byteArray = new List<byte>();
+            byteArray.AddRange(suspended.Encode());
+            return new Method(31, "PolkadotXcm", 10, "force_suspension", byteArray.ToArray());
         }
     }
     
@@ -553,5 +663,47 @@ namespace Substrate.Statemint.NET.NetApiExt.Generated.Storage
         /// The location is invalid since it already has a subscription from us.
         /// </summary>
         AlreadySubscribed,
+        
+        /// <summary>
+        /// >> InvalidAsset
+        /// Invalid asset for the operation.
+        /// </summary>
+        InvalidAsset,
+        
+        /// <summary>
+        /// >> LowBalance
+        /// The owner does not own (all) of the asset that they wish to do the operation on.
+        /// </summary>
+        LowBalance,
+        
+        /// <summary>
+        /// >> TooManyLocks
+        /// The asset owner has too many locks on the asset.
+        /// </summary>
+        TooManyLocks,
+        
+        /// <summary>
+        /// >> AccountNotSovereign
+        /// The given account is not an identifiable sovereign account for any location.
+        /// </summary>
+        AccountNotSovereign,
+        
+        /// <summary>
+        /// >> FeesNotMet
+        /// The operation required fees to be paid which the initiator could not meet.
+        /// </summary>
+        FeesNotMet,
+        
+        /// <summary>
+        /// >> LockNotFound
+        /// A remote lock with the corresponding data could not be found.
+        /// </summary>
+        LockNotFound,
+        
+        /// <summary>
+        /// >> InUse
+        /// The unlock operation cannot succeed because there are still consumers of the lock.
+        /// </summary>
+        InUse,
     }
 }

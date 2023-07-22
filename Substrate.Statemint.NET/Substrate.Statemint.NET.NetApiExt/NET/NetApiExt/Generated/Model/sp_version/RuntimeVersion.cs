@@ -18,7 +18,7 @@ namespace Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_version
     
     
     /// <summary>
-    /// >> 116 - Composite[sp_version.RuntimeVersion]
+    /// >> 141 - Composite[sp_version.RuntimeVersion]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class RuntimeVersion : BaseType

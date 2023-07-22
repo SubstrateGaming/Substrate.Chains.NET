@@ -22,7 +22,7 @@ namespace Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_session.palle
     }
     
     /// <summary>
-    /// >> 37 - Variant[pallet_session.pallet.Event]
+    /// >> 39 - Variant[pallet_session.pallet.Event]
     /// 
     ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
     ///			by this pallet.

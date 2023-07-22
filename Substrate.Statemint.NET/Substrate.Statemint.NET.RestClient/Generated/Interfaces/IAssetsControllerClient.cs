@@ -21,7 +21,7 @@ namespace Substrate.Statemint.NET.RestClient.Generated.Interfaces
       Task<bool> SubscribeAccount(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> key);
       Task<Approval> GetApprovals(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> key);
       Task<bool> SubscribeApprovals(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> key);
-      Task<AssetMetadata> GetMetadata(Substrate.NetApi.Model.Types.Primitive.U32 key);
+      Task<AssetMetadataT1> GetMetadata(Substrate.NetApi.Model.Types.Primitive.U32 key);
       Task<bool> SubscribeMetadata(Substrate.NetApi.Model.Types.Primitive.U32 key);
    }
 }

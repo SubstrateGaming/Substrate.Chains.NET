@@ -21,5 +21,6 @@ namespace Substrate.Statemint.NET.RestClient.Mockup.Generated.Interfaces
       Task<bool> SetPageIndex(PageIndexData value);
       Task<bool> SetPages(BaseVec<BaseTuple<U32, BaseVec<U8>>> value, U32 key);
       Task<bool> SetOverweight(BaseTuple<U32, BaseVec<U8>> value, U64 key);
+      Task<bool> SetCounterForOverweight(U32 value);
    }
 }

@@ -16,9 +16,9 @@ namespace Substrate.Statemint.NET.RestClient.Test.Generated
    using Substrate.Statemint.NET.RestClient.Mockup.Generated.Clients;
    using Substrate.Statemint.NET.RestClient.Generated.Clients;
    using Substrate.NetApi.Model.Types.Primitive;
-   using Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_balances;
-   using Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.bounded.weak_bounded_vec;
-   using Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_balances.types;
+   using Substrate.Statemint.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec;
+   using Substrate.Statemint.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    
    public class BalancesControllerClientTest : ClientTestBase
    {
@@ -86,17 +86,25 @@ namespace Substrate.Statemint.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_balances.AccountData GetTestValue4()
+      public Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_balances.types.AccountData GetTestValue4()
       {
-         Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_balances.AccountData result;
-         result = new Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_balances.AccountData();
+         Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_balances.types.AccountData result;
+         result = new Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_balances.types.AccountData();
          result.Free = this.GetTestValueU128();
          result.Reserved = this.GetTestValueU128();
-         result.MiscFrozen = this.GetTestValueU128();
-         result.FeeFrozen = this.GetTestValueU128();
+         result.Frozen = this.GetTestValueU128();
+         result.Flags = new Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_balances.types.ExtraFlags();
+         result.Flags = this.GetTestValue5();
          return result;
       }
-      public Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue5()
+      public Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_balances.types.ExtraFlags GetTestValue5()
+      {
+         Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_balances.types.ExtraFlags result;
+         result = new Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_balances.types.ExtraFlags();
+         result.Value = this.GetTestValueU128();
+         return result;
+      }
+      public Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue6()
       {
          Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 result;
          result = new Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32();
@@ -147,8 +155,8 @@ namespace Substrate.Statemint.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          BalancesControllerClient rpcClient = new BalancesControllerClient(_httpClient, subscriptionClient);
-         Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_balances.AccountData mockupValue = this.GetTestValue4();
-         Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 mockupKey = this.GetTestValue5();
+         Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_balances.types.AccountData mockupValue = this.GetTestValue4();
+         Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 mockupKey = this.GetTestValue6();
 
          Assert.IsTrue(await rpcClient.SubscribeAccount(mockupKey));
 
@@ -160,24 +168,24 @@ namespace Substrate.Statemint.NET.RestClient.Test.Generated
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_balances.AccountData rpcResult = await rpcClient.GetAccount(mockupKey);
+         Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_balances.types.AccountData rpcResult = await rpcClient.GetAccount(mockupKey);
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.bounded.weak_bounded_vec.WeakBoundedVecT2 GetTestValue7()
+      public Substrate.Statemint.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT2 GetTestValue8()
       {
-         Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.bounded.weak_bounded_vec.WeakBoundedVecT2 result;
-         result = new Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.bounded.weak_bounded_vec.WeakBoundedVecT2();
-         result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_balances.BalanceLock>();
-         result.Value.Create(new Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_balances.BalanceLock[] {
-                  this.GetTestValue8()});
+         Substrate.Statemint.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT2 result;
+         result = new Substrate.Statemint.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT2();
+         result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_balances.types.BalanceLock>();
+         result.Value.Create(new Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_balances.types.BalanceLock[] {
+                  this.GetTestValue9()});
          return result;
       }
-      public Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_balances.BalanceLock GetTestValue8()
+      public Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_balances.types.BalanceLock GetTestValue9()
       {
-         Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_balances.BalanceLock result;
-         result = new Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_balances.BalanceLock();
+         Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_balances.types.BalanceLock result;
+         result = new Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_balances.types.BalanceLock();
          result.Id = new Substrate.Statemint.NET.NetApiExt.Generated.Types.Base.Arr8U8();
          result.Id.Create(new Substrate.NetApi.Model.Types.Primitive.U8[] {
                   this.GetTestValueU8(),
@@ -189,11 +197,11 @@ namespace Substrate.Statemint.NET.RestClient.Test.Generated
                   this.GetTestValueU8(),
                   this.GetTestValueU8()});
          result.Amount = this.GetTestValueU128();
-         result.Reasons = new Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_balances.EnumReasons();
-         result.Reasons.Create(this.GetTestValueEnum<Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_balances.Reasons>());
+         result.Reasons = new Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_balances.types.EnumReasons();
+         result.Reasons.Create(this.GetTestValueEnum<Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_balances.types.Reasons>());
          return result;
       }
-      public Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue9()
+      public Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue10()
       {
          Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 result;
          result = new Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32();
@@ -244,8 +252,8 @@ namespace Substrate.Statemint.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          BalancesControllerClient rpcClient = new BalancesControllerClient(_httpClient, subscriptionClient);
-         Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.bounded.weak_bounded_vec.WeakBoundedVecT2 mockupValue = this.GetTestValue7();
-         Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 mockupKey = this.GetTestValue9();
+         Substrate.Statemint.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT2 mockupValue = this.GetTestValue8();
+         Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 mockupKey = this.GetTestValue10();
 
          Assert.IsTrue(await rpcClient.SubscribeLocks(mockupKey));
 
@@ -257,24 +265,24 @@ namespace Substrate.Statemint.NET.RestClient.Test.Generated
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.bounded.weak_bounded_vec.WeakBoundedVecT2 rpcResult = await rpcClient.GetLocks(mockupKey);
+         Substrate.Statemint.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT2 rpcResult = await rpcClient.GetLocks(mockupKey);
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT4 GetTestValue11()
+      public Substrate.Statemint.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT8 GetTestValue12()
       {
-         Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT4 result;
-         result = new Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT4();
-         result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_balances.ReserveData>();
-         result.Value.Create(new Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_balances.ReserveData[] {
-                  this.GetTestValue12()});
+         Substrate.Statemint.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT8 result;
+         result = new Substrate.Statemint.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT8();
+         result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_balances.types.ReserveData>();
+         result.Value.Create(new Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_balances.types.ReserveData[] {
+                  this.GetTestValue13()});
          return result;
       }
-      public Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_balances.ReserveData GetTestValue12()
+      public Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_balances.types.ReserveData GetTestValue13()
       {
-         Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_balances.ReserveData result;
-         result = new Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_balances.ReserveData();
+         Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_balances.types.ReserveData result;
+         result = new Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_balances.types.ReserveData();
          result.Id = new Substrate.Statemint.NET.NetApiExt.Generated.Types.Base.Arr8U8();
          result.Id.Create(new Substrate.NetApi.Model.Types.Primitive.U8[] {
                   this.GetTestValueU8(),
@@ -288,7 +296,7 @@ namespace Substrate.Statemint.NET.RestClient.Test.Generated
          result.Amount = this.GetTestValueU128();
          return result;
       }
-      public Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue13()
+      public Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue14()
       {
          Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 result;
          result = new Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32();
@@ -339,8 +347,8 @@ namespace Substrate.Statemint.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          BalancesControllerClient rpcClient = new BalancesControllerClient(_httpClient, subscriptionClient);
-         Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT4 mockupValue = this.GetTestValue11();
-         Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 mockupKey = this.GetTestValue13();
+         Substrate.Statemint.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT8 mockupValue = this.GetTestValue12();
+         Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 mockupKey = this.GetTestValue14();
 
          Assert.IsTrue(await rpcClient.SubscribeReserves(mockupKey));
 
@@ -352,7 +360,179 @@ namespace Substrate.Statemint.NET.RestClient.Test.Generated
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT4 rpcResult = await rpcClient.GetReserves(mockupKey);
+         Substrate.Statemint.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT8 rpcResult = await rpcClient.GetReserves(mockupKey);
+
+         // Test that the expected mockup value matches the actual result from RPC service.
+         Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
+      }
+      public Substrate.Statemint.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9 GetTestValue16()
+      {
+         Substrate.Statemint.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9 result;
+         result = new Substrate.Statemint.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9();
+         result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_balances.types.IdAmount>();
+         result.Value.Create(new Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_balances.types.IdAmount[] {
+                  this.GetTestValue17()});
+         return result;
+      }
+      public Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_balances.types.IdAmount GetTestValue17()
+      {
+         Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_balances.types.IdAmount result;
+         result = new Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_balances.types.IdAmount();
+         result.Id = new Substrate.NetApi.Model.Types.Base.BaseTuple();
+         result.Amount = this.GetTestValueU128();
+         return result;
+      }
+      public Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue18()
+      {
+         Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 result;
+         result = new Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32();
+         result.Value = new Substrate.Statemint.NET.NetApiExt.Generated.Types.Base.Arr32U8();
+         result.Value.Create(new Substrate.NetApi.Model.Types.Primitive.U8[] {
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8()});
+         return result;
+      }
+      [Test()]
+      public async System.Threading.Tasks.Task TestHolds()
+      {
+         // Construct new Mockup client to test with.
+         BalancesControllerMockupClient mockupClient = new BalancesControllerMockupClient(_httpClient);
+
+         // Construct new subscription client to test with.
+         var subscriptionClient = CreateSubscriptionClient();
+
+         // Construct new RPC client to test with.
+         BalancesControllerClient rpcClient = new BalancesControllerClient(_httpClient, subscriptionClient);
+         Substrate.Statemint.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9 mockupValue = this.GetTestValue16();
+         Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 mockupKey = this.GetTestValue18();
+
+         Assert.IsTrue(await rpcClient.SubscribeHolds(mockupKey));
+
+         // Save the previously generated mockup value in RPC service storage.
+         bool mockupSetResult = await mockupClient.SetHolds(mockupValue, mockupKey);
+
+         // Test that the expected mockup value was handled successfully from RPC service.
+         Assert.IsTrue(mockupSetResult);
+         var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
+         Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
+
+         Substrate.Statemint.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9 rpcResult = await rpcClient.GetHolds(mockupKey);
+
+         // Test that the expected mockup value matches the actual result from RPC service.
+         Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
+      }
+      public Substrate.Statemint.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9 GetTestValue20()
+      {
+         Substrate.Statemint.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9 result;
+         result = new Substrate.Statemint.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9();
+         result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_balances.types.IdAmount>();
+         result.Value.Create(new Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_balances.types.IdAmount[] {
+                  this.GetTestValue21()});
+         return result;
+      }
+      public Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_balances.types.IdAmount GetTestValue21()
+      {
+         Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_balances.types.IdAmount result;
+         result = new Substrate.Statemint.NET.NetApiExt.Generated.Model.pallet_balances.types.IdAmount();
+         result.Id = new Substrate.NetApi.Model.Types.Base.BaseTuple();
+         result.Amount = this.GetTestValueU128();
+         return result;
+      }
+      public Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue22()
+      {
+         Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 result;
+         result = new Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32();
+         result.Value = new Substrate.Statemint.NET.NetApiExt.Generated.Types.Base.Arr32U8();
+         result.Value.Create(new Substrate.NetApi.Model.Types.Primitive.U8[] {
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8()});
+         return result;
+      }
+      [Test()]
+      public async System.Threading.Tasks.Task TestFreezes()
+      {
+         // Construct new Mockup client to test with.
+         BalancesControllerMockupClient mockupClient = new BalancesControllerMockupClient(_httpClient);
+
+         // Construct new subscription client to test with.
+         var subscriptionClient = CreateSubscriptionClient();
+
+         // Construct new RPC client to test with.
+         BalancesControllerClient rpcClient = new BalancesControllerClient(_httpClient, subscriptionClient);
+         Substrate.Statemint.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9 mockupValue = this.GetTestValue20();
+         Substrate.Statemint.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 mockupKey = this.GetTestValue22();
+
+         Assert.IsTrue(await rpcClient.SubscribeFreezes(mockupKey));
+
+         // Save the previously generated mockup value in RPC service storage.
+         bool mockupSetResult = await mockupClient.SetFreezes(mockupValue, mockupKey);
+
+         // Test that the expected mockup value was handled successfully from RPC service.
+         Assert.IsTrue(mockupSetResult);
+         var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
+         Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
+
+         Substrate.Statemint.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9 rpcResult = await rpcClient.GetFreezes(mockupKey);
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
