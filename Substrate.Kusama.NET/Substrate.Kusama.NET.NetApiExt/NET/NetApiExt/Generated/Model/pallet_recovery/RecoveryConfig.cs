@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_recovery
     
     
     /// <summary>
-    /// >> 658 - Composite[pallet_recovery.RecoveryConfig]
+    /// >> 661 - Composite[pallet_recovery.RecoveryConfig]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class RecoveryConfig : BaseType

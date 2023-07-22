@@ -35,6 +35,8 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime
         CannotCreateHold = 7,
         
         NotExpendable = 8,
+        
+        Blocked = 9,
     }
     
     /// <summary>

@@ -11,21 +11,20 @@ using Substrate.NetApi.Model.Types.Base;
 using System.Collections.Generic;
 
 
-namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.ump.pallet
+namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.inclusion
 {
     
     
-    public enum Call
+    public enum UmpQueueId
     {
         
-        service_overweight = 0,
+        Para = 0,
     }
     
     /// <summary>
-    /// >> 364 - Variant[polkadot_runtime_parachains.ump.pallet.Call]
-    /// Contains one variant per dispatchable that can be called by an extrinsic.
+    /// >> 448 - Variant[polkadot_runtime_parachains.inclusion.UmpQueueId]
     /// </summary>
-    public sealed class EnumCall : BaseEnumExt<Call, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U64, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>>
+    public sealed class EnumUmpQueueId : BaseEnumExt<UmpQueueId, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id>
     {
     }
 }

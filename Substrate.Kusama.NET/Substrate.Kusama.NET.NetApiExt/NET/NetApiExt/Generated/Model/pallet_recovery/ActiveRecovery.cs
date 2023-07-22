@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_recovery
     
     
     /// <summary>
-    /// >> 660 - Composite[pallet_recovery.ActiveRecovery]
+    /// >> 663 - Composite[pallet_recovery.ActiveRecovery]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class ActiveRecovery : BaseType

@@ -114,6 +114,8 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// <summary>
         /// >> QueuedSolutionParams
         ///  Current best solution, signed or unsigned, queued to be returned upon `elect`.
+        /// 
+        ///  Always sorted by score.
         /// </summary>
         public static string QueuedSolutionParams()
         {
@@ -132,6 +134,8 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// <summary>
         /// >> QueuedSolution
         ///  Current best solution, signed or unsigned, queued to be returned upon `elect`.
+        /// 
+        ///  Always sorted by score.
         /// </summary>
         public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_election_provider_multi_phase.ReadySolution> QueuedSolution(CancellationToken token)
         {
@@ -565,7 +569,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight SignedMaxWeight()
         {
             var result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight();
-            result.Create("0x0B78089CC1570113A3703D0AD7A370BD");
+            result.Create("0x0B98AD4B21560113A3703D0AD7A370BD");
             return result;
         }
         
@@ -678,7 +682,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight MinerMaxWeight()
         {
             var result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight();
-            result.Create("0x0B78089CC1570113A3703D0AD7A370BD");
+            result.Create("0x0B98AD4B21560113A3703D0AD7A370BD");
             return result;
         }
         

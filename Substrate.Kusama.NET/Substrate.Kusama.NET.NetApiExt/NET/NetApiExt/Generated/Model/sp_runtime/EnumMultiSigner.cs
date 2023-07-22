@@ -26,7 +26,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime
     }
     
     /// <summary>
-    /// >> 378 - Variant[sp_runtime.MultiSigner]
+    /// >> 377 - Variant[sp_runtime.MultiSigner]
     /// </summary>
     public sealed class EnumMultiSigner : BaseEnumExt<MultiSigner, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.ed25519.Public, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.sr25519.Public, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.ecdsa.Public>
     {

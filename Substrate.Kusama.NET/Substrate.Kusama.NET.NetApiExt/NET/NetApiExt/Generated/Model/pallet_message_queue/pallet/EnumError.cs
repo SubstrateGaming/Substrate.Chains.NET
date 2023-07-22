@@ -11,20 +11,30 @@ using Substrate.NetApi.Model.Types.Base;
 using System.Collections.Generic;
 
 
-namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.ump.pallet
+namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_message_queue.pallet
 {
     
     
     public enum Error
     {
         
-        UnknownMessageIndex = 0,
+        NotReapable = 0,
         
-        WeightOverLimit = 1,
+        NoPage = 1,
+        
+        NoMessage = 2,
+        
+        AlreadyProcessed = 3,
+        
+        Queued = 4,
+        
+        InsufficientWeight = 5,
+        
+        TemporarilyUnprocessable = 6,
     }
     
     /// <summary>
-    /// >> 792 - Variant[polkadot_runtime_parachains.ump.pallet.Error]
+    /// >> 856 - Variant[pallet_message_queue.pallet.Error]
     /// 
     ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
     ///			of this pallet.

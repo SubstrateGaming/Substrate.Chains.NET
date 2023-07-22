@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Substrate.Kusama.NET.RestService", "Substrate.Kusama.NET.RestService\Substrate.Kusama.NET.RestService.csproj", "{BF54B310-3930-422B-AA42-96F6D9D259AC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Substrate.Kusama.NET.RestService", "Substrate.Kusama.NET.RestService\Substrate.Kusama.NET.RestService.csproj", "{D582330A-AEFD-4576-9978-07FB17E8063A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Substrate.Kusama.NET.NetApiExt", "Substrate.Kusama.NET.NetApiExt\Substrate.Kusama.NET.NetApiExt.csproj", "{AD9B6002-9E5B-49DA-8EB5-28115A1E8020}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Substrate.Kusama.NET.NetApiExt", "Substrate.Kusama.NET.NetApiExt\Substrate.Kusama.NET.NetApiExt.csproj", "{71F836CC-B62A-46F6-92F5-119BB908A381}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Substrate.Kusama.NET.RestClient", "Substrate.Kusama.NET.RestClient\Substrate.Kusama.NET.RestClient.csproj", "{C5948D5D-8E90-40CC-9413-BBCF35E29029}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Substrate.Kusama.NET.RestClient", "Substrate.Kusama.NET.RestClient\Substrate.Kusama.NET.RestClient.csproj", "{EDBA581E-642B-4349-B92B-A00A1F0BEF42}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Substrate.Kusama.NET.RestClient.Mockup", "Substrate.Kusama.NET.RestClient.Mockup\Substrate.Kusama.NET.RestClient.Mockup.csproj", "{31010617-DA73-449B-99F4-135316EC3B01}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Substrate.Kusama.NET.RestClient.Mockup", "Substrate.Kusama.NET.RestClient.Mockup\Substrate.Kusama.NET.RestClient.Mockup.csproj", "{EE6B8A1D-C38C-4AEF-A2CC-EBD91791DA4D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Substrate.Kusama.NET.RestClient.Test", "Substrate.Kusama.NET.RestClient.Test\Substrate.Kusama.NET.RestClient.Test.csproj", "{9C71D6A8-759F-4FA3-9357-7B91643989AE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Substrate.Kusama.NET.RestClient.Test", "Substrate.Kusama.NET.RestClient.Test\Substrate.Kusama.NET.RestClient.Test.csproj", "{CEFA8B64-81CC-4BC7-B051-4E505A2CB8ED}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -22,25 +22,25 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{BF54B310-3930-422B-AA42-96F6D9D259AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BF54B310-3930-422B-AA42-96F6D9D259AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BF54B310-3930-422B-AA42-96F6D9D259AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BF54B310-3930-422B-AA42-96F6D9D259AC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AD9B6002-9E5B-49DA-8EB5-28115A1E8020}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AD9B6002-9E5B-49DA-8EB5-28115A1E8020}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AD9B6002-9E5B-49DA-8EB5-28115A1E8020}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AD9B6002-9E5B-49DA-8EB5-28115A1E8020}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C5948D5D-8E90-40CC-9413-BBCF35E29029}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C5948D5D-8E90-40CC-9413-BBCF35E29029}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C5948D5D-8E90-40CC-9413-BBCF35E29029}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C5948D5D-8E90-40CC-9413-BBCF35E29029}.Release|Any CPU.Build.0 = Release|Any CPU
-		{31010617-DA73-449B-99F4-135316EC3B01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{31010617-DA73-449B-99F4-135316EC3B01}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{31010617-DA73-449B-99F4-135316EC3B01}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{31010617-DA73-449B-99F4-135316EC3B01}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9C71D6A8-759F-4FA3-9357-7B91643989AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9C71D6A8-759F-4FA3-9357-7B91643989AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9C71D6A8-759F-4FA3-9357-7B91643989AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9C71D6A8-759F-4FA3-9357-7B91643989AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D582330A-AEFD-4576-9978-07FB17E8063A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D582330A-AEFD-4576-9978-07FB17E8063A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D582330A-AEFD-4576-9978-07FB17E8063A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D582330A-AEFD-4576-9978-07FB17E8063A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71F836CC-B62A-46F6-92F5-119BB908A381}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71F836CC-B62A-46F6-92F5-119BB908A381}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71F836CC-B62A-46F6-92F5-119BB908A381}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71F836CC-B62A-46F6-92F5-119BB908A381}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDBA581E-642B-4349-B92B-A00A1F0BEF42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDBA581E-642B-4349-B92B-A00A1F0BEF42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDBA581E-642B-4349-B92B-A00A1F0BEF42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDBA581E-642B-4349-B92B-A00A1F0BEF42}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE6B8A1D-C38C-4AEF-A2CC-EBD91791DA4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE6B8A1D-C38C-4AEF-A2CC-EBD91791DA4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE6B8A1D-C38C-4AEF-A2CC-EBD91791DA4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE6B8A1D-C38C-4AEF-A2CC-EBD91791DA4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CEFA8B64-81CC-4BC7-B051-4E505A2CB8ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEFA8B64-81CC-4BC7-B051-4E505A2CB8ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEFA8B64-81CC-4BC7-B051-4E505A2CB8ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEFA8B64-81CC-4BC7-B051-4E505A2CB8ED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

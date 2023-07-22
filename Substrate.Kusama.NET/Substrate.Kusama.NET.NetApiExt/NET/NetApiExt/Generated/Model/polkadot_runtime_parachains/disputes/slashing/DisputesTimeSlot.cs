@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parach
     
     
     /// <summary>
-    /// >> 370 - Composite[polkadot_runtime_parachains.disputes.slashing.DisputesTimeSlot]
+    /// >> 369 - Composite[polkadot_runtime_parachains.disputes.slashing.DisputesTimeSlot]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class DisputesTimeSlot : BaseType

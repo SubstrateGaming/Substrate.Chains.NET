@@ -24,7 +24,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_conviction_votin
     }
     
     /// <summary>
-    /// >> 597 - Variant[pallet_conviction_voting.vote.Voting]
+    /// >> 600 - Variant[pallet_conviction_voting.vote.Voting]
     /// </summary>
     public sealed class EnumVoting : BaseEnumExt<Voting, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_conviction_voting.vote.Casting, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_conviction_voting.vote.Delegating>
     {

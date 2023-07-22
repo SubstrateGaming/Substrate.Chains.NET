@@ -44,7 +44,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_conviction_votin
     }
     
     /// <summary>
-    /// >> 608 - Variant[pallet_conviction_voting.pallet.Error]
+    /// >> 611 - Variant[pallet_conviction_voting.pallet.Error]
     /// 
     ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
     ///			of this pallet.

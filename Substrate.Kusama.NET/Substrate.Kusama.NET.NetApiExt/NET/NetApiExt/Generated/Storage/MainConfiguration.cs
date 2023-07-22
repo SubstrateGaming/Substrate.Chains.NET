@@ -50,7 +50,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// </summary>
         public static string ActiveConfigDefault()
         {
-            return @"0x00000000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000000100000001000000000000000000060000006400000001000000000000000000000000000000000000000700C817A80402004001000200000002000000";
+            return @"0x000000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000010000000100000000000000000006000000640000000100000000000000000000000000000000000000000200000002000000";
         }
         
         /// <summary>
@@ -405,17 +405,6 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         }
         
         /// <summary>
-        /// >> set_ump_service_total_weight
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
-        /// </summary>
-        public static Method SetUmpServiceTotalWeight(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight @new)
-        {
-            System.Collections.Generic.List<byte> byteArray = new List<byte>();
-            byteArray.AddRange(@new.Encode());
-            return new Method(51, "Configuration", 26, "set_ump_service_total_weight", byteArray.ToArray());
-        }
-        
-        /// <summary>
         /// >> set_max_upward_message_size
         /// Contains one variant per dispatchable that can be called by an extrinsic.
         /// </summary>
@@ -556,17 +545,6 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(@new.Encode());
             return new Method(51, "Configuration", 39, "set_hrmp_max_message_num_per_candidate", byteArray.ToArray());
-        }
-        
-        /// <summary>
-        /// >> set_ump_max_individual_weight
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
-        /// </summary>
-        public static Method SetUmpMaxIndividualWeight(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight @new)
-        {
-            System.Collections.Generic.List<byte> byteArray = new List<byte>();
-            byteArray.AddRange(@new.Encode());
-            return new Method(51, "Configuration", 40, "set_ump_max_individual_weight", byteArray.ToArray());
         }
         
         /// <summary>

@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4
     
     
     /// <summary>
-    /// >> 802 - Composite[polkadot_primitives.v4.SessionInfo]
+    /// >> 803 - Composite[polkadot_primitives.v4.SessionInfo]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class SessionInfo : BaseType

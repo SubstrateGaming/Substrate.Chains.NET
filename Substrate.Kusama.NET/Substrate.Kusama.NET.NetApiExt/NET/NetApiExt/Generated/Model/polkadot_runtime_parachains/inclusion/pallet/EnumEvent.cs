@@ -23,16 +23,18 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parach
         CandidateIncluded = 1,
         
         CandidateTimedOut = 2,
+        
+        UpwardMessagesReceived = 3,
     }
     
     /// <summary>
-    /// >> 481 - Variant[polkadot_runtime_parachains.inclusion.pallet.Event]
+    /// >> 483 - Variant[polkadot_runtime_parachains.inclusion.pallet.Event]
     /// 
     ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
     ///			by this pallet.
     ///			
     /// </summary>
-    public sealed class EnumEvent : BaseEnumExt<Event, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.CandidateReceipt, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.HeadData, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.CoreIndex, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.GroupIndex>, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.CandidateReceipt, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.HeadData, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.CoreIndex, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.GroupIndex>, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.CandidateReceipt, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.HeadData, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.CoreIndex>>
+    public sealed class EnumEvent : BaseEnumExt<Event, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.CandidateReceipt, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.HeadData, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.CoreIndex, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.GroupIndex>, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.CandidateReceipt, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.HeadData, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.CoreIndex, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.GroupIndex>, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.CandidateReceipt, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.HeadData, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.CoreIndex>, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32>>
     {
     }
 }

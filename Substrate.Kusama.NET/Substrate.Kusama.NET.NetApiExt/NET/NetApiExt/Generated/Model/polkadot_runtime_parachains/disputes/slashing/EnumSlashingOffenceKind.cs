@@ -24,7 +24,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parach
     }
     
     /// <summary>
-    /// >> 371 - Variant[polkadot_runtime_parachains.disputes.slashing.SlashingOffenceKind]
+    /// >> 370 - Variant[polkadot_runtime_parachains.disputes.slashing.SlashingOffenceKind]
     /// </summary>
     public sealed class EnumSlashingOffenceKind : BaseEnum<SlashingOffenceKind>
     {

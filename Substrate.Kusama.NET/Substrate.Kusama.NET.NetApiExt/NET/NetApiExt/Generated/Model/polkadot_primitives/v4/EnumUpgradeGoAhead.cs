@@ -24,7 +24,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4
     }
     
     /// <summary>
-    /// >> 783 - Variant[polkadot_primitives.v4.UpgradeGoAhead]
+    /// >> 786 - Variant[polkadot_primitives.v4.UpgradeGoAhead]
     /// </summary>
     public sealed class EnumUpgradeGoAhead : BaseEnum<UpgradeGoAhead>
     {

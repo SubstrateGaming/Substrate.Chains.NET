@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parach
     
     
     /// <summary>
-    /// >> 810 - Composite[polkadot_runtime_parachains.disputes.slashing.PendingSlashes]
+    /// >> 811 - Composite[polkadot_runtime_parachains.disputes.slashing.PendingSlashes]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class PendingSlashes : BaseType

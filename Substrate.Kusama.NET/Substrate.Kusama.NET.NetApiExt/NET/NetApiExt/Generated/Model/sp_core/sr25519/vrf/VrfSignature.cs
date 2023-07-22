@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.sr25519.vrf
     
     
     /// <summary>
-    /// >> 521 - Composite[sp_core.sr25519.vrf.VrfSignature]
+    /// >> 524 - Composite[sp_core.sr25519.vrf.VrfSignature]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class VrfSignature : BaseType
