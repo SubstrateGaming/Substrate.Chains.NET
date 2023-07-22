@@ -1,0 +1,13 @@
+{
+  "projects": {
+    "net_api": "Substrate.Moonbeam.NET.NetApiExt",
+    "rest_service": "Substrate.Moonbeam.NET.RestService",
+    "rest_client": "Substrate.Moonbeam.NET.RestClient"
+  },
+   "metadata": {
+      "websocket": "wss://wss.api.moonbeam.network"
+   },
+  "rest_client_settings": {
+    "service_assembly": "Substrate.Moonbeam.NET.RestService.dll"
+  }
+}

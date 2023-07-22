@@ -1,0 +1,13 @@
+{
+  "projects": {
+    "net_api": "Substrate.Moonsama.NET.NetApiExt",
+    "rest_service": "Substrate.Moonsama.NET.RestService",
+    "rest_client": "Substrate.Moonsama.NET.RestClient"
+  },
+   "metadata": {
+      "websocket": "wss://rpc.moonsama.com/ws"
+   },
+  "rest_client_settings": {
+    "service_assembly": "Substrate.Moonsama.NET.RestService.dll"
+  }
+}

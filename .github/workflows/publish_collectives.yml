@@ -1,4 +1,4 @@
-name: publish Polkadot.NET
+name: publish Collectives.NET
 
 on:
   push:

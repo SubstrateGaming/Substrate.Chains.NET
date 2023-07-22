@@ -1,0 +1,13 @@
+{
+  "projects": {
+    "net_api": "Substrate.Aventus.NET.NetApiExt",
+    "rest_service": "Substrate.Aventus.NET.RestService",
+    "rest_client": "Substrate.Aventus.NET.RestClient"
+  },
+   "metadata": {
+      "websocket": "wss://public-rpc.mainnet.aventus.io"
+   },
+  "rest_client_settings": {
+    "service_assembly": "Substrate.Aventus.NET.RestService.dll"
+  }
+}

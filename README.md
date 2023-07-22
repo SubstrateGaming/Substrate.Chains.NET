@@ -39,7 +39,16 @@
 [![Nuget](https://img.shields.io/nuget/v/Substrate.Astar.NET.Extension)](https://www.nuget.org/packages/Substrate.Astar.NET.Extension/)
 ![Nuget](https://img.shields.io/nuget/dt/Substrate.Astar.NET.Extension)  
 ![Build](https://github.com/SubstrateGaming/Substrate.Chains.NET/actions/workflows/publish_astar.yml/badge.svg)  
-- Bajun Network .NET SDK ([Link](https://github.com/SubstrateGaming/Substrate.Chains.NET/tree/main/Substrate.Bajun.NET))  
+- Aventus Network .NET SDK ([Link](https://github.com/SubstrateGaming/Substrate.Chains.NET/tree/main/Substrate.Aventus.NET))  
+  - Substrate Aventus .NET API Extension  
+[![Nuget](https://img.shields.io/nuget/v/Substrate.Aventus.NET.Extension)](https://www.nuget.org/packages/Substrate.Aventus.NET.Extension/)
+![Nuget](https://img.shields.io/nuget/dt/Substrate.Aventus.NET.Extension)  
+![Build](https://github.com/SubstrateGaming/Substrate.Chains.NET/actions/workflows/publish_aventus.yml/badge.svg)  
+- Moonsama Network .NET SDK ([Link](https://github.com/SubstrateGaming/Substrate.Chains.NET/tree/main/Substrate.Moonsama.NET))  
+  - Substrate Moonsama .NET API Extension  
+[![Nuget](https://img.shields.io/nuget/v/Substrate.Moonsama.NET.Extension)](https://www.nuget.org/packages/Substrate.Moonsama.NET.Extension/)
+![Nuget](https://img.shields.io/nuget/dt/Substrate.Moonsama.NET.Extension)  
+![Build](https://github.com/SubstrateGaming/Substrate.Chains.NET/actions/workflows/publish_moonsama.yml/badge.svg)  
 
 ### Kusama (Relay Chain)
 - Kusama Network .NET SDK ([Link](https://github.com/SubstrateGaming/Substrate.Chains.NET/tree/main/Substrate.Kusama.NET))  
@@ -59,6 +68,7 @@
 [![Nuget](https://img.shields.io/nuget/v/Substrate.KusamaBridgeHub.NET.Extension)](https://www.nuget.org/packages/Substrate.KusamaBridgeHub.NET.Extension/)
 ![Nuget](https://img.shields.io/nuget/dt/Substrate.KusamaBridgeHub.NET.Extension)  
 ![Build](https://github.com/SubstrateGaming/Substrate.Chains.NET/actions/workflows/publish_kusamabridgehub.yml/badge.svg)
+- Bajun Network .NET SDK ([Link](https://github.com/SubstrateGaming/Substrate.Chains.NET/tree/main/Substrate.Bajun.NET))  
   - Substrate Bajun .NET API Extension  
 [![Nuget](https://img.shields.io/nuget/v/Substrate.Bajun.NET.Extension)](https://www.nuget.org/packages/Substrate.Bajun.NET.Extension/)
 ![Nuget](https://img.shields.io/nuget/dt/Substrate.Bajun.NET.Extension)  

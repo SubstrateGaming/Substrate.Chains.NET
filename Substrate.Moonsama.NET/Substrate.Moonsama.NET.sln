@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Substrate.Moonsama.NET.RestService", "Substrate.Moonsama.NET.RestService\Substrate.Moonsama.NET.RestService.csproj", "{3BE62572-9451-4CFF-B3A3-A60BC0820DB5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Substrate.Moonsama.NET.NetApiExt", "Substrate.Moonsama.NET.NetApiExt\Substrate.Moonsama.NET.NetApiExt.csproj", "{204A5CEB-6AE4-46CD-974B-8BA96785092A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Substrate.Moonsama.NET.RestClient", "Substrate.Moonsama.NET.RestClient\Substrate.Moonsama.NET.RestClient.csproj", "{EE58D96A-992A-4C1B-B55A-2C79C0DBD2EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Substrate.Moonsama.NET.RestClient.Mockup", "Substrate.Moonsama.NET.RestClient.Mockup\Substrate.Moonsama.NET.RestClient.Mockup.csproj", "{A844BE07-1939-40A0-9838-E67794A69814}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Substrate.Moonsama.NET.RestClient.Test", "Substrate.Moonsama.NET.RestClient.Test\Substrate.Moonsama.NET.RestClient.Test.csproj", "{4D9C4A1E-4B3D-4138-9E52-8A08370DA863}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3BE62572-9451-4CFF-B3A3-A60BC0820DB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BE62572-9451-4CFF-B3A3-A60BC0820DB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BE62572-9451-4CFF-B3A3-A60BC0820DB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BE62572-9451-4CFF-B3A3-A60BC0820DB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{204A5CEB-6AE4-46CD-974B-8BA96785092A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{204A5CEB-6AE4-46CD-974B-8BA96785092A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{204A5CEB-6AE4-46CD-974B-8BA96785092A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{204A5CEB-6AE4-46CD-974B-8BA96785092A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE58D96A-992A-4C1B-B55A-2C79C0DBD2EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE58D96A-992A-4C1B-B55A-2C79C0DBD2EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE58D96A-992A-4C1B-B55A-2C79C0DBD2EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE58D96A-992A-4C1B-B55A-2C79C0DBD2EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A844BE07-1939-40A0-9838-E67794A69814}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A844BE07-1939-40A0-9838-E67794A69814}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A844BE07-1939-40A0-9838-E67794A69814}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A844BE07-1939-40A0-9838-E67794A69814}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D9C4A1E-4B3D-4138-9E52-8A08370DA863}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D9C4A1E-4B3D-4138-9E52-8A08370DA863}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D9C4A1E-4B3D-4138-9E52-8A08370DA863}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D9C4A1E-4B3D-4138-9E52-8A08370DA863}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
