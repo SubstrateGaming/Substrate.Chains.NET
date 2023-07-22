@@ -50,7 +50,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_staking.pallet
     }
     
     /// <summary>
-    /// >> 39 - Variant[pallet_staking.pallet.pallet.Event]
+    /// >> 40 - Variant[pallet_staking.pallet.pallet.Event]
     /// 
     ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
     ///			by this pallet.

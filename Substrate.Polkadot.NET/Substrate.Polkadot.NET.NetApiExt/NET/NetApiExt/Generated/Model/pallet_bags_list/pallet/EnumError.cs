@@ -22,7 +22,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_bags_list.pall
     }
     
     /// <summary>
-    /// >> 614 - Variant[pallet_bags_list.pallet.Error]
+    /// >> 695 - Variant[pallet_bags_list.pallet.Error]
     /// 
     ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
     ///			of this pallet.

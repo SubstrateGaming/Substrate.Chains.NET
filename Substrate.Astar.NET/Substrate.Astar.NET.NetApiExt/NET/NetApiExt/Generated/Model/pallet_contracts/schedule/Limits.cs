@@ -18,7 +18,7 @@ namespace Substrate.Astar.NET.NetApiExt.Generated.Model.pallet_contracts.schedul
     
     
     /// <summary>
-    /// >> 427 - Composite[pallet_contracts.schedule.Limits]
+    /// >> 461 - Composite[pallet_contracts.schedule.Limits]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Limits : BaseType

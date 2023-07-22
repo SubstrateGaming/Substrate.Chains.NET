@@ -18,7 +18,7 @@ namespace Substrate.Astar.NET.NetApiExt.Generated.Model.pallet_block_reward
     
     
     /// <summary>
-    /// >> 47 - Composite[pallet_block_reward.RewardDistributionConfig]
+    /// >> 51 - Composite[pallet_block_reward.RewardDistributionConfig]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class RewardDistributionConfig : BaseType

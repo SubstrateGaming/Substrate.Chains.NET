@@ -18,7 +18,7 @@ namespace Substrate.Astar.NET.NetApiExt.Generated.Model.pallet_vesting.vesting_i
     
     
     /// <summary>
-    /// >> 204 - Composite[pallet_vesting.vesting_info.VestingInfo]
+    /// >> 227 - Composite[pallet_vesting.vesting_info.VestingInfo]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class VestingInfo : BaseType

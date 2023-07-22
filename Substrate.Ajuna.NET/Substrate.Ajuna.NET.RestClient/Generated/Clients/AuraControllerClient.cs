@@ -12,7 +12,7 @@ namespace Substrate.Ajuna.NET.RestClient.Generated.Clients
    using System;
    using System.Threading.Tasks;
    using System.Net.Http;
-   using Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.storage.weak_bounded_vec;
+   using Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    using Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_consensus_slots;
    using Substrate.Ajuna.NET.RestClient.Generated.Interfaces;
    
@@ -25,9 +25,9 @@ namespace Substrate.Ajuna.NET.RestClient.Generated.Clients
          _httpClient = httpClient;
          _subscriptionClient = subscriptionClient;
       }
-      public async Task<WeakBoundedVecT2> GetAuthorities()
+      public async Task<BoundedVecT19> GetAuthorities()
       {
-         return await SendRequestAsync<WeakBoundedVecT2>(_httpClient, "aura/authorities");
+         return await SendRequestAsync<BoundedVecT19>(_httpClient, "aura/authorities");
       }
       public async Task<bool> SubscribeAuthorities()
       {

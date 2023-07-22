@@ -33,7 +33,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("System", "Account"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32), typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_system.AccountInfo)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("System", "ExtrinsicCount"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Primitive.U32)));
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("System", "BlockWeight"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.weights.PerDispatchClassT1)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("System", "BlockWeight"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.dispatch.PerDispatchClassT1)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("System", "AllExtrinsicsLen"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Primitive.U32)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("System", "BlockHash"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.NetApi.Model.Types.Primitive.U32), typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256)));
@@ -70,7 +70,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         public static string AccountDefault()
         {
             return "0x0000000000000000000000000000000000000000000000000000000000000000000000000000000" +
-                "00000000000000000000000000000000000000000000000000000000000000000000000000000000" +
+                "00000000000000000000000000000000000000000000000000000000000000000000000000000008" +
                 "0";
         }
         
@@ -129,17 +129,17 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         /// </summary>
         public static string BlockWeightDefault()
         {
-            return "0x000000000000000000000000000000000000000000000000";
+            return "0x000000000000";
         }
         
         /// <summary>
         /// >> BlockWeight
         ///  The current weight for the block.
         /// </summary>
-        public async Task<Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.weights.PerDispatchClassT1> BlockWeight(CancellationToken token)
+        public async Task<Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.dispatch.PerDispatchClassT1> BlockWeight(CancellationToken token)
         {
             string parameters = SystemStorage.BlockWeightParams();
-            var result = await _client.GetStorageAsync<Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.weights.PerDispatchClassT1>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.dispatch.PerDispatchClassT1>(parameters, token);
             return result;
         }
         
@@ -563,17 +563,6 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
     {
         
         /// <summary>
-        /// >> fill_block
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
-        /// </summary>
-        public static Method FillBlock(Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill ratio)
-        {
-            System.Collections.Generic.List<byte> byteArray = new List<byte>();
-            byteArray.AddRange(ratio.Encode());
-            return new Method(0, "System", 0, "fill_block", byteArray.ToArray());
-        }
-        
-        /// <summary>
         /// >> remark
         /// Contains one variant per dispatchable that can be called by an extrinsic.
         /// </summary>
@@ -581,7 +570,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(remark.Encode());
-            return new Method(0, "System", 1, "remark", byteArray.ToArray());
+            return new Method(0, "System", 0, "remark", byteArray.ToArray());
         }
         
         /// <summary>
@@ -592,7 +581,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(pages.Encode());
-            return new Method(0, "System", 2, "set_heap_pages", byteArray.ToArray());
+            return new Method(0, "System", 1, "set_heap_pages", byteArray.ToArray());
         }
         
         /// <summary>
@@ -603,7 +592,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(code.Encode());
-            return new Method(0, "System", 3, "set_code", byteArray.ToArray());
+            return new Method(0, "System", 2, "set_code", byteArray.ToArray());
         }
         
         /// <summary>
@@ -614,7 +603,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(code.Encode());
-            return new Method(0, "System", 4, "set_code_without_checks", byteArray.ToArray());
+            return new Method(0, "System", 3, "set_code_without_checks", byteArray.ToArray());
         }
         
         /// <summary>
@@ -625,7 +614,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(items.Encode());
-            return new Method(0, "System", 5, "set_storage", byteArray.ToArray());
+            return new Method(0, "System", 4, "set_storage", byteArray.ToArray());
         }
         
         /// <summary>
@@ -636,7 +625,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(keys.Encode());
-            return new Method(0, "System", 6, "kill_storage", byteArray.ToArray());
+            return new Method(0, "System", 5, "kill_storage", byteArray.ToArray());
         }
         
         /// <summary>
@@ -648,7 +637,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(prefix.Encode());
             byteArray.AddRange(subkeys.Encode());
-            return new Method(0, "System", 7, "kill_prefix", byteArray.ToArray());
+            return new Method(0, "System", 6, "kill_prefix", byteArray.ToArray());
         }
         
         /// <summary>
@@ -659,7 +648,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(remark.Encode());
-            return new Method(0, "System", 8, "remark_with_event", byteArray.ToArray());
+            return new Method(0, "System", 7, "remark_with_event", byteArray.ToArray());
         }
     }
     
@@ -673,9 +662,9 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         public Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_system.limits.BlockWeights BlockWeights()
         {
             var result = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_system.limits.BlockWeights();
-            result.Create("0x00F2052A010000000088526A74000000405973070000000001C0D22C76510000000100E6BD4F570" +
-                    "00000010000000000000000405973070000000001C074C1906E000000010088526A740000000100A" +
-                    "2941A1D0000004059730700000000000000");
+            result.Create("0x0700F2052A0100070088526A74020040010265CD1D000107C0D22C76510200E000010700E6BD4F5" +
+                    "70200F0000100000265CD1D000107C074C1906E0200300101070088526A7402004001010700A2941" +
+                    "A1D020050000265CD1D00000000");
             return result;
         }
         
@@ -697,7 +686,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         public Substrate.NetApi.Model.Types.Primitive.U32 BlockHashCount()
         {
             var result = new Substrate.NetApi.Model.Types.Primitive.U32();
-            result.Create("0x60090000");
+            result.Create("0x00100000");
             return result;
         }
         
@@ -705,9 +694,9 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         /// >> DbWeight
         ///  The weight of runtime database operations the runtime can invoke.
         /// </summary>
-        public Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.weights.RuntimeDbWeight DbWeight()
+        public Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_weights.RuntimeDbWeight DbWeight()
         {
-            var result = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.weights.RuntimeDbWeight();
+            var result = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_weights.RuntimeDbWeight();
             result.Create("0x40787D010000000000E1F50500000000");
             return result;
         }
@@ -719,13 +708,13 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         public Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_version.RuntimeVersion Version()
         {
             var result = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_version.RuntimeVersion();
-            result.Create(@"0x14616A756E6114616A756E6101000000010000000000000028DD718D5CC53262D401000000DF6ACB689907609B0400000037E397FC7C91F5E40100000040FE3AD401F8959A06000000D2BC9897EED08F1503000000F78B278BE53F454C02000000AB3C0572291FEB8B01000000BC9D89904F5B923F0100000037C8BB1350A9A2A801000000EA93E3F16F3D6962020000000100000001");
+            result.Create(@"0x14616A756E6114616A756E6101000000770000000000000028DD718D5CC53262D401000000DF6ACB689907609B0400000037E397FC7C91F5E40200000040FE3AD401F8959A06000000D2BC9897EED08F1503000000F78B278BE53F454C02000000AB3C0572291FEB8B01000000BC9D89904F5B923F0100000037C8BB1350A9A2A804000000EA93E3F16F3D6962020000000100000001");
             return result;
         }
         
         /// <summary>
         /// >> SS58Prefix
-        ///  The designated SS85 prefix of this chain.
+        ///  The designated SS58 prefix of this chain.
         /// 
         ///  This replaces the "ss58Format" property declared in the chain spec. Reason is
         ///  that the runtime should know about the prefix in order to make use of it as

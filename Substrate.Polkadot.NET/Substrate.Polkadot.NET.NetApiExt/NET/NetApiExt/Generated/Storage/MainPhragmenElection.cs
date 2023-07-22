@@ -372,9 +372,10 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         /// >> MaxCandidates
         ///  The maximum number of candidates in a phragmen election.
         /// 
-        ///  Warning: The election happens onchain, and this value will determine
-        ///  the size of the election. When this limit is reached no more
-        ///  candidates are accepted in the election.
+        ///  Warning: This impacts the size of the election which is run onchain. Chose wisely, and
+        ///  consider how it will impact `T::WeightInfo::election_phragmen`.
+        /// 
+        ///  When this limit is reached no more candidates are accepted in the election.
         /// </summary>
         public Substrate.NetApi.Model.Types.Primitive.U32 MaxCandidates()
         {
@@ -387,13 +388,29 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         /// >> MaxVoters
         ///  The maximum number of voters to allow in a phragmen election.
         /// 
-        ///  Warning: This impacts the size of the election which is run onchain.
+        ///  Warning: This impacts the size of the election which is run onchain. Chose wisely, and
+        ///  consider how it will impact `T::WeightInfo::election_phragmen`.
+        /// 
         ///  When the limit is reached the new voters are ignored.
         /// </summary>
         public Substrate.NetApi.Model.Types.Primitive.U32 MaxVoters()
         {
             var result = new Substrate.NetApi.Model.Types.Primitive.U32();
             result.Create("0x10270000");
+            return result;
+        }
+        
+        /// <summary>
+        /// >> MaxVotesPerVoter
+        ///  Maximum numbers of votes per voter.
+        /// 
+        ///  Warning: This impacts the size of the election which is run onchain. Chose wisely, and
+        ///  consider how it will impact `T::WeightInfo::election_phragmen`.
+        /// </summary>
+        public Substrate.NetApi.Model.Types.Primitive.U32 MaxVotesPerVoter()
+        {
+            var result = new Substrate.NetApi.Model.Types.Primitive.U32();
+            result.Create("0x10000000");
             return result;
         }
     }

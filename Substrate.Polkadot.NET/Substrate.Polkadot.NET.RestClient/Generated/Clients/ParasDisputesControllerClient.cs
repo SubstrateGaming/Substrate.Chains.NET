@@ -13,7 +13,8 @@ namespace Substrate.Polkadot.NET.RestClient.Generated.Clients
    using System.Threading.Tasks;
    using System.Net.Http;
    using Substrate.NetApi.Model.Types.Primitive;
-   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base;
    using Substrate.NetApi.Model.Types.Base;
    using Substrate.Polkadot.NET.RestClient.Generated.Interfaces;
    
@@ -41,6 +42,14 @@ namespace Substrate.Polkadot.NET.RestClient.Generated.Clients
       public async Task<bool> SubscribeDisputes(BaseTuple<U32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_core_primitives.CandidateHash> key)
       {
          return await _subscriptionClient.SubscribeAsync("ParasDisputes.Disputes", Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParasDisputesStorage.DisputesParams(key));
+      }
+      public async Task<BTreeSet> GetBackersOnDisputes(BaseTuple<U32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_core_primitives.CandidateHash> key)
+      {
+         return await SendRequestAsync<BTreeSet>(_httpClient, "parasdisputes/backersondisputes", Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParasDisputesStorage.BackersOnDisputesParams(key));
+      }
+      public async Task<bool> SubscribeBackersOnDisputes(BaseTuple<U32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_core_primitives.CandidateHash> key)
+      {
+         return await _subscriptionClient.SubscribeAsync("ParasDisputes.BackersOnDisputes", Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParasDisputesStorage.BackersOnDisputesParams(key));
       }
       public async Task<U32> GetIncluded(BaseTuple<U32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_core_primitives.CandidateHash> key)
       {

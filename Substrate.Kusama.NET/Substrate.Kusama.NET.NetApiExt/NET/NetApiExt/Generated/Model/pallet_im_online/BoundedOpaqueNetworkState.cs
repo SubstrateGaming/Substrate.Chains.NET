@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_im_online
     
     
     /// <summary>
-    /// >> 585 - Composite[pallet_im_online.BoundedOpaqueNetworkState]
+    /// >> 588 - Composite[pallet_im_online.BoundedOpaqueNetworkState]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class BoundedOpaqueNetworkState : BaseType

@@ -13,8 +13,8 @@ namespace Substrate.Polkadot.NET.RestClient.Generated.Interfaces
    using System.Threading.Tasks;
    using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.NetApi.Model.Types.Base;
-   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2;
-   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.validator_app;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.validator_app;
    
    public interface IParasSharedControllerClient
    {

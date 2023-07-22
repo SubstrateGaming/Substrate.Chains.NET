@@ -37,10 +37,16 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Storage
         Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_treasury.Proposal GetProposals(string key);
         
         /// <summary>
+        /// >> Deactivated
+        ///  The amount which has been reported as inactive to Currency.
+        /// </summary>
+        Substrate.NetApi.Model.Types.Primitive.U128 GetDeactivated();
+        
+        /// <summary>
         /// >> Approvals
         ///  Proposal indices that have been approved but not yet awarded.
         /// </summary>
-        Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.storage.bounded_vec.BoundedVecT3 GetApprovals();
+        Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT22 GetApprovals();
     }
     
     /// <summary>
@@ -60,9 +66,14 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Storage
         private TypedMapStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_treasury.Proposal> _proposalsTypedStorage;
         
         /// <summary>
+        /// _deactivatedTypedStorage typed storage field
+        /// </summary>
+        private TypedStorage<Substrate.NetApi.Model.Types.Primitive.U128> _deactivatedTypedStorage;
+        
+        /// <summary>
         /// _approvalsTypedStorage typed storage field
         /// </summary>
-        private TypedStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.storage.bounded_vec.BoundedVecT3> _approvalsTypedStorage;
+        private TypedStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT22> _approvalsTypedStorage;
         
         /// <summary>
         /// TreasuryStorage constructor.
@@ -71,7 +82,8 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Storage
         {
             this.ProposalCountTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32>("Treasury.ProposalCount", storageDataProvider, storageChangeDelegates);
             this.ProposalsTypedStorage = new TypedMapStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_treasury.Proposal>("Treasury.Proposals", storageDataProvider, storageChangeDelegates);
-            this.ApprovalsTypedStorage = new TypedStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.storage.bounded_vec.BoundedVecT3>("Treasury.Approvals", storageDataProvider, storageChangeDelegates);
+            this.DeactivatedTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U128>("Treasury.Deactivated", storageDataProvider, storageChangeDelegates);
+            this.ApprovalsTypedStorage = new TypedStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT22>("Treasury.Approvals", storageDataProvider, storageChangeDelegates);
         }
         
         /// <summary>
@@ -105,9 +117,24 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Storage
         }
         
         /// <summary>
+        /// _deactivatedTypedStorage property
+        /// </summary>
+        public TypedStorage<Substrate.NetApi.Model.Types.Primitive.U128> DeactivatedTypedStorage
+        {
+            get
+            {
+                return _deactivatedTypedStorage;
+            }
+            set
+            {
+                _deactivatedTypedStorage = value;
+            }
+        }
+        
+        /// <summary>
         /// _approvalsTypedStorage property
         /// </summary>
-        public TypedStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.storage.bounded_vec.BoundedVecT3> ApprovalsTypedStorage
+        public TypedStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT22> ApprovalsTypedStorage
         {
             get
             {
@@ -126,6 +153,7 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Storage
         {
             await ProposalCountTypedStorage.InitializeAsync("Treasury", "ProposalCount");
             await ProposalsTypedStorage.InitializeAsync("Treasury", "Proposals");
+            await DeactivatedTypedStorage.InitializeAsync("Treasury", "Deactivated");
             await ApprovalsTypedStorage.InitializeAsync("Treasury", "Approvals");
         }
         
@@ -177,6 +205,24 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Storage
         }
         
         /// <summary>
+        /// Implements any storage change for Treasury.Deactivated
+        /// </summary>
+        [StorageChange("Treasury", "Deactivated")]
+        public void OnUpdateDeactivated(string data)
+        {
+            DeactivatedTypedStorage.Update(data);
+        }
+        
+        /// <summary>
+        /// >> Deactivated
+        ///  The amount which has been reported as inactive to Currency.
+        /// </summary>
+        public Substrate.NetApi.Model.Types.Primitive.U128 GetDeactivated()
+        {
+            return DeactivatedTypedStorage.Get();
+        }
+        
+        /// <summary>
         /// Implements any storage change for Treasury.Approvals
         /// </summary>
         [StorageChange("Treasury", "Approvals")]
@@ -189,7 +235,7 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Storage
         /// >> Approvals
         ///  Proposal indices that have been approved but not yet awarded.
         /// </summary>
-        public Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.storage.bounded_vec.BoundedVecT3 GetApprovals()
+        public Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT22 GetApprovals()
         {
             return ApprovalsTypedStorage.Get();
         }

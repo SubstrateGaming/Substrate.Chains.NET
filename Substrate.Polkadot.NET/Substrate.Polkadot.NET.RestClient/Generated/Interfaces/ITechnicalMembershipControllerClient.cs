@@ -11,12 +11,12 @@ namespace Substrate.Polkadot.NET.RestClient.Generated.Interfaces
 {
    using System;
    using System.Threading.Tasks;
-   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto;
    
    public interface ITechnicalMembershipControllerClient
    {
-      Task<BoundedVecT16> GetMembers();
+      Task<BoundedVecT22> GetMembers();
       Task<bool> SubscribeMembers();
       Task<AccountId32> GetPrime();
       Task<bool> SubscribePrime();

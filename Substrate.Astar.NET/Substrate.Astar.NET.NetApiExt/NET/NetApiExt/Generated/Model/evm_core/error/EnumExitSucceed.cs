@@ -26,7 +26,7 @@ namespace Substrate.Astar.NET.NetApiExt.Generated.Model.evm_core.error
     }
     
     /// <summary>
-    /// >> 104 - Variant[evm_core.error.ExitSucceed]
+    /// >> 123 - Variant[evm_core.error.ExitSucceed]
     /// </summary>
     public sealed class EnumExitSucceed : BaseEnum<ExitSucceed>
     {

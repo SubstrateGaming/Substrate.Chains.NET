@@ -21,12 +21,14 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_membership.pallet
         AlreadyMember = 0,
         
         NotMember = 1,
+        
+        TooManyMembers = 2,
     }
     
     /// <summary>
-    /// >> 248 - Variant[pallet_membership.pallet.Error]
+    /// >> 382 - Variant[pallet_membership.pallet.Error]
     /// 
-    ///			Custom [dispatch errors](https://docs.substrate.io/v3/runtime/events-and-errors)
+    ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
     ///			of this pallet.
     ///			
     /// </summary>

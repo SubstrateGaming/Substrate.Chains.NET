@@ -29,16 +29,18 @@ namespace Substrate.Astar.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain
         DownwardMessagesReceived = 4,
         
         DownwardMessagesProcessed = 5,
+        
+        UpwardMessageSent = 6,
     }
     
     /// <summary>
-    /// >> 35 - Variant[cumulus_pallet_parachain_system.pallet.Event]
+    /// >> 38 - Variant[cumulus_pallet_parachain_system.pallet.Event]
     /// 
     ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
     ///			by this pallet.
     ///			
     /// </summary>
-    public sealed class EnumEvent : BaseEnumExt<Event, BaseVoid, Substrate.NetApi.Model.Types.Primitive.U32, BaseVoid, Substrate.Astar.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Primitive.U32, BaseTuple<Substrate.Astar.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight, Substrate.Astar.NET.NetApiExt.Generated.Model.primitive_types.H256>>
+    public sealed class EnumEvent : BaseEnumExt<Event, BaseVoid, Substrate.NetApi.Model.Types.Primitive.U32, BaseVoid, Substrate.Astar.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Primitive.U32, BaseTuple<Substrate.Astar.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight, Substrate.Astar.NET.NetApiExt.Generated.Model.primitive_types.H256>, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Astar.NET.NetApiExt.Generated.Types.Base.Arr32U8>>
     {
     }
 }

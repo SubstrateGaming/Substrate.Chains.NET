@@ -12,7 +12,7 @@ namespace Substrate.Ajuna.NET.RestClient.Mockup.Generated.Clients
    using System;
    using System.Threading.Tasks;
    using System.Net.Http;
-   using Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.storage.bounded_vec;
+   using Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    using Substrate.Ajuna.NET.NetApiExt.Generated.Model.ajuna_runtime;
    using Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_collective;
    using Substrate.NetApi.Model.Types.Primitive;
@@ -27,11 +27,11 @@ namespace Substrate.Ajuna.NET.RestClient.Mockup.Generated.Clients
       {
          _httpClient = httpClient;
       }
-      public async Task<bool> SetProposals(BoundedVecT4 value)
+      public async Task<bool> SetProposals(BoundedVecT23 value)
       {
          return await SendMockupRequestAsync(_httpClient, "Council/Proposals", value.Encode(), Substrate.Ajuna.NET.NetApiExt.Generated.Storage.CouncilStorage.ProposalsParams());
       }
-      public async Task<bool> SetProposalOf(EnumCall value, Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256 key)
+      public async Task<bool> SetProposalOf(EnumRuntimeCall value, Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256 key)
       {
          return await SendMockupRequestAsync(_httpClient, "Council/ProposalOf", value.Encode(), Substrate.Ajuna.NET.NetApiExt.Generated.Storage.CouncilStorage.ProposalOfParams(key));
       }

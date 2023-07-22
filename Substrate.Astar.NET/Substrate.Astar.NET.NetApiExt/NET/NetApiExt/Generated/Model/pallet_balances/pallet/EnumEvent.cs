@@ -40,7 +40,7 @@ namespace Substrate.Astar.NET.NetApiExt.Generated.Model.pallet_balances.pallet
     }
     
     /// <summary>
-    /// >> 37 - Variant[pallet_balances.pallet.Event]
+    /// >> 41 - Variant[pallet_balances.pallet.Event]
     /// 
     ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
     ///			by this pallet.

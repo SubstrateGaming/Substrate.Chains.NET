@@ -15,7 +15,8 @@ namespace Substrate.Polkadot.NET.RestClient.Generated.Clients
    using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_xcm.pallet;
    using Substrate.NetApi.Model.Types.Base;
-   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_weights.weight_v2;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    using Substrate.Polkadot.NET.RestClient.Generated.Interfaces;
    
    public sealed class XcmPalletControllerClient : BaseClient, IXcmPalletControllerClient
@@ -75,17 +76,17 @@ namespace Substrate.Polkadot.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("XcmPallet.VersionNotifiers", Substrate.Polkadot.NET.NetApiExt.Generated.Storage.XcmPalletStorage.VersionNotifiersParams(key));
       }
-      public async Task<BaseTuple<U64, U64, U32>> GetVersionNotifyTargets(BaseTuple<U32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation> key)
+      public async Task<BaseTuple<U64, Weight, U32>> GetVersionNotifyTargets(BaseTuple<U32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation> key)
       {
-         return await SendRequestAsync<BaseTuple<U64, U64, U32>>(_httpClient, "xcmpallet/versionnotifytargets", Substrate.Polkadot.NET.NetApiExt.Generated.Storage.XcmPalletStorage.VersionNotifyTargetsParams(key));
+         return await SendRequestAsync<BaseTuple<U64, Weight, U32>>(_httpClient, "xcmpallet/versionnotifytargets", Substrate.Polkadot.NET.NetApiExt.Generated.Storage.XcmPalletStorage.VersionNotifyTargetsParams(key));
       }
       public async Task<bool> SubscribeVersionNotifyTargets(BaseTuple<U32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation> key)
       {
          return await _subscriptionClient.SubscribeAsync("XcmPallet.VersionNotifyTargets", Substrate.Polkadot.NET.NetApiExt.Generated.Storage.XcmPalletStorage.VersionNotifyTargetsParams(key));
       }
-      public async Task<BoundedVecT31> GetVersionDiscoveryQueue()
+      public async Task<BoundedVecT40> GetVersionDiscoveryQueue()
       {
-         return await SendRequestAsync<BoundedVecT31>(_httpClient, "xcmpallet/versiondiscoveryqueue");
+         return await SendRequestAsync<BoundedVecT40>(_httpClient, "xcmpallet/versiondiscoveryqueue");
       }
       public async Task<bool> SubscribeVersionDiscoveryQueue()
       {
@@ -98,6 +99,30 @@ namespace Substrate.Polkadot.NET.RestClient.Generated.Clients
       public async Task<bool> SubscribeCurrentMigration()
       {
          return await _subscriptionClient.SubscribeAsync("XcmPallet.CurrentMigration");
+      }
+      public async Task<RemoteLockedFungibleRecord> GetRemoteLockedFungibles(BaseTuple<U32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAssetId> key)
+      {
+         return await SendRequestAsync<RemoteLockedFungibleRecord>(_httpClient, "xcmpallet/remotelockedfungibles", Substrate.Polkadot.NET.NetApiExt.Generated.Storage.XcmPalletStorage.RemoteLockedFungiblesParams(key));
+      }
+      public async Task<bool> SubscribeRemoteLockedFungibles(BaseTuple<U32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAssetId> key)
+      {
+         return await _subscriptionClient.SubscribeAsync("XcmPallet.RemoteLockedFungibles", Substrate.Polkadot.NET.NetApiExt.Generated.Storage.XcmPalletStorage.RemoteLockedFungiblesParams(key));
+      }
+      public async Task<BoundedVecT42> GetLockedFungibles(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+      {
+         return await SendRequestAsync<BoundedVecT42>(_httpClient, "xcmpallet/lockedfungibles", Substrate.Polkadot.NET.NetApiExt.Generated.Storage.XcmPalletStorage.LockedFungiblesParams(key));
+      }
+      public async Task<bool> SubscribeLockedFungibles(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+      {
+         return await _subscriptionClient.SubscribeAsync("XcmPallet.LockedFungibles", Substrate.Polkadot.NET.NetApiExt.Generated.Storage.XcmPalletStorage.LockedFungiblesParams(key));
+      }
+      public async Task<Bool> GetXcmExecutionSuspended()
+      {
+         return await SendRequestAsync<Bool>(_httpClient, "xcmpallet/xcmexecutionsuspended");
+      }
+      public async Task<bool> SubscribeXcmExecutionSuspended()
+      {
+         return await _subscriptionClient.SubscribeAsync("XcmPallet.XcmExecutionSuspended");
       }
    }
 }

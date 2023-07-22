@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nis.pallet
     
     
     /// <summary>
-    /// >> 710 - Composite[pallet_nis.pallet.SummaryRecord]
+    /// >> 713 - Composite[pallet_nis.pallet.SummaryRecord]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class SummaryRecord : BaseType

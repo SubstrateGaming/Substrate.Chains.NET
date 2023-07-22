@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_elections_phra
     
     
     /// <summary>
-    /// >> 551 - Composite[pallet_elections_phragmen.SeatHolder]
+    /// >> 600 - Composite[pallet_elections_phragmen.SeatHolder]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class SeatHolder : BaseType

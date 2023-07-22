@@ -22,7 +22,7 @@ namespace Substrate.Astar.NET.NetApiExt.Generated.Model.pallet_custom_signatures
     }
     
     /// <summary>
-    /// >> 262 - Variant[pallet_custom_signatures.pallet.Call]
+    /// >> 277 - Variant[pallet_custom_signatures.pallet.Call]
     /// Contains one variant per dispatchable that can be called by an extrinsic.
     /// </summary>
     public sealed class EnumCall : BaseEnumExt<Call, BaseTuple<Substrate.Astar.NET.NetApiExt.Generated.Model.astar_runtime.EnumRuntimeCall, Substrate.Astar.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>>>

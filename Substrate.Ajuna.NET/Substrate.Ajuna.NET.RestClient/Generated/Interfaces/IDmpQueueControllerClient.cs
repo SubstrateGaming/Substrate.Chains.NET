@@ -25,5 +25,7 @@ namespace Substrate.Ajuna.NET.RestClient.Generated.Interfaces
       Task<bool> SubscribePages(U32 key);
       Task<BaseTuple<U32, BaseVec<U8>>> GetOverweight(U64 key);
       Task<bool> SubscribeOverweight(U64 key);
+      Task<U32> GetCounterForOverweight();
+      Task<bool> SubscribeCounterForOverweight();
    }
 }

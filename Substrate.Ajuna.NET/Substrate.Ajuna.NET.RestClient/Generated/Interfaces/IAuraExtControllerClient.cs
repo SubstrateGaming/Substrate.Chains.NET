@@ -11,12 +11,11 @@ namespace Substrate.Ajuna.NET.RestClient.Generated.Interfaces
 {
    using System;
    using System.Threading.Tasks;
-   using Substrate.NetApi.Model.Types.Base;
-   using Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_consensus_aura.sr25519.app_sr25519;
+   using Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    
    public interface IAuraExtControllerClient
    {
-      Task<BaseVec<Public>> GetAuthorities();
+      Task<BoundedVecT19> GetAuthorities();
       Task<bool> SubscribeAuthorities();
    }
 }

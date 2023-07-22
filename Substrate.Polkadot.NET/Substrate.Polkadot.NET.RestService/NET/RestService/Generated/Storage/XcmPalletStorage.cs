@@ -69,7 +69,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         ///  The target locations that are subscribed to our version changes, as well as the most recent
         ///  of our versions we informed them of.
         /// </summary>
-        Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U64, Substrate.NetApi.Model.Types.Primitive.U64, Substrate.NetApi.Model.Types.Primitive.U32> GetVersionNotifyTargets(string key);
+        Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U64, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight, Substrate.NetApi.Model.Types.Primitive.U32> GetVersionNotifyTargets(string key);
         
         /// <summary>
         /// >> VersionDiscoveryQueue
@@ -77,13 +77,31 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         ///  the `u32` counter is the number of times that a send to the destination has been attempted,
         ///  which is used as a prioritization.
         /// </summary>
-        Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT31 GetVersionDiscoveryQueue();
+        Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT40 GetVersionDiscoveryQueue();
         
         /// <summary>
         /// >> CurrentMigration
         ///  The current migration's stage, if any.
         /// </summary>
         Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_xcm.pallet.EnumVersionMigrationStage GetCurrentMigration();
+        
+        /// <summary>
+        /// >> RemoteLockedFungibles
+        ///  Fungible assets which we know are locked on a remote chain.
+        /// </summary>
+        Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_xcm.pallet.RemoteLockedFungibleRecord GetRemoteLockedFungibles(string key);
+        
+        /// <summary>
+        /// >> LockedFungibles
+        ///  Fungible assets which we know are locked on this chain.
+        /// </summary>
+        Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT42 GetLockedFungibles(string key);
+        
+        /// <summary>
+        /// >> XcmExecutionSuspended
+        ///  Global suspension state of the XCM executor.
+        /// </summary>
+        Substrate.NetApi.Model.Types.Primitive.Bool GetXcmExecutionSuspended();
     }
     
     /// <summary>
@@ -125,17 +143,32 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// <summary>
         /// _versionNotifyTargetsTypedStorage typed storage field
         /// </summary>
-        private TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U64, Substrate.NetApi.Model.Types.Primitive.U64, Substrate.NetApi.Model.Types.Primitive.U32>> _versionNotifyTargetsTypedStorage;
+        private TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U64, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight, Substrate.NetApi.Model.Types.Primitive.U32>> _versionNotifyTargetsTypedStorage;
         
         /// <summary>
         /// _versionDiscoveryQueueTypedStorage typed storage field
         /// </summary>
-        private TypedStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT31> _versionDiscoveryQueueTypedStorage;
+        private TypedStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT40> _versionDiscoveryQueueTypedStorage;
         
         /// <summary>
         /// _currentMigrationTypedStorage typed storage field
         /// </summary>
         private TypedStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_xcm.pallet.EnumVersionMigrationStage> _currentMigrationTypedStorage;
+        
+        /// <summary>
+        /// _remoteLockedFungiblesTypedStorage typed storage field
+        /// </summary>
+        private TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_xcm.pallet.RemoteLockedFungibleRecord> _remoteLockedFungiblesTypedStorage;
+        
+        /// <summary>
+        /// _lockedFungiblesTypedStorage typed storage field
+        /// </summary>
+        private TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT42> _lockedFungiblesTypedStorage;
+        
+        /// <summary>
+        /// _xcmExecutionSuspendedTypedStorage typed storage field
+        /// </summary>
+        private TypedStorage<Substrate.NetApi.Model.Types.Primitive.Bool> _xcmExecutionSuspendedTypedStorage;
         
         /// <summary>
         /// XcmPalletStorage constructor.
@@ -148,9 +181,12 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
             this.SafeXcmVersionTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32>("XcmPallet.SafeXcmVersion", storageDataProvider, storageChangeDelegates);
             this.SupportedVersionTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Primitive.U32>("XcmPallet.SupportedVersion", storageDataProvider, storageChangeDelegates);
             this.VersionNotifiersTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Primitive.U64>("XcmPallet.VersionNotifiers", storageDataProvider, storageChangeDelegates);
-            this.VersionNotifyTargetsTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U64, Substrate.NetApi.Model.Types.Primitive.U64, Substrate.NetApi.Model.Types.Primitive.U32>>("XcmPallet.VersionNotifyTargets", storageDataProvider, storageChangeDelegates);
-            this.VersionDiscoveryQueueTypedStorage = new TypedStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT31>("XcmPallet.VersionDiscoveryQueue", storageDataProvider, storageChangeDelegates);
+            this.VersionNotifyTargetsTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U64, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight, Substrate.NetApi.Model.Types.Primitive.U32>>("XcmPallet.VersionNotifyTargets", storageDataProvider, storageChangeDelegates);
+            this.VersionDiscoveryQueueTypedStorage = new TypedStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT40>("XcmPallet.VersionDiscoveryQueue", storageDataProvider, storageChangeDelegates);
             this.CurrentMigrationTypedStorage = new TypedStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_xcm.pallet.EnumVersionMigrationStage>("XcmPallet.CurrentMigration", storageDataProvider, storageChangeDelegates);
+            this.RemoteLockedFungiblesTypedStorage = new TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_xcm.pallet.RemoteLockedFungibleRecord>("XcmPallet.RemoteLockedFungibles", storageDataProvider, storageChangeDelegates);
+            this.LockedFungiblesTypedStorage = new TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT42>("XcmPallet.LockedFungibles", storageDataProvider, storageChangeDelegates);
+            this.XcmExecutionSuspendedTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.Bool>("XcmPallet.XcmExecutionSuspended", storageDataProvider, storageChangeDelegates);
         }
         
         /// <summary>
@@ -246,7 +282,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// <summary>
         /// _versionNotifyTargetsTypedStorage property
         /// </summary>
-        public TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U64, Substrate.NetApi.Model.Types.Primitive.U64, Substrate.NetApi.Model.Types.Primitive.U32>> VersionNotifyTargetsTypedStorage
+        public TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U64, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight, Substrate.NetApi.Model.Types.Primitive.U32>> VersionNotifyTargetsTypedStorage
         {
             get
             {
@@ -261,7 +297,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// <summary>
         /// _versionDiscoveryQueueTypedStorage property
         /// </summary>
-        public TypedStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT31> VersionDiscoveryQueueTypedStorage
+        public TypedStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT40> VersionDiscoveryQueueTypedStorage
         {
             get
             {
@@ -289,6 +325,51 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         }
         
         /// <summary>
+        /// _remoteLockedFungiblesTypedStorage property
+        /// </summary>
+        public TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_xcm.pallet.RemoteLockedFungibleRecord> RemoteLockedFungiblesTypedStorage
+        {
+            get
+            {
+                return _remoteLockedFungiblesTypedStorage;
+            }
+            set
+            {
+                _remoteLockedFungiblesTypedStorage = value;
+            }
+        }
+        
+        /// <summary>
+        /// _lockedFungiblesTypedStorage property
+        /// </summary>
+        public TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT42> LockedFungiblesTypedStorage
+        {
+            get
+            {
+                return _lockedFungiblesTypedStorage;
+            }
+            set
+            {
+                _lockedFungiblesTypedStorage = value;
+            }
+        }
+        
+        /// <summary>
+        /// _xcmExecutionSuspendedTypedStorage property
+        /// </summary>
+        public TypedStorage<Substrate.NetApi.Model.Types.Primitive.Bool> XcmExecutionSuspendedTypedStorage
+        {
+            get
+            {
+                return _xcmExecutionSuspendedTypedStorage;
+            }
+            set
+            {
+                _xcmExecutionSuspendedTypedStorage = value;
+            }
+        }
+        
+        /// <summary>
         /// Connects to all storages and initializes the change subscription handling.
         /// </summary>
         public async Task InitializeAsync(Substrate.ServiceLayer.Storage.IStorageDataProvider dataProvider)
@@ -302,6 +383,9 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
             await VersionNotifyTargetsTypedStorage.InitializeAsync("XcmPallet", "VersionNotifyTargets");
             await VersionDiscoveryQueueTypedStorage.InitializeAsync("XcmPallet", "VersionDiscoveryQueue");
             await CurrentMigrationTypedStorage.InitializeAsync("XcmPallet", "CurrentMigration");
+            await RemoteLockedFungiblesTypedStorage.InitializeAsync("XcmPallet", "RemoteLockedFungibles");
+            await LockedFungiblesTypedStorage.InitializeAsync("XcmPallet", "LockedFungibles");
+            await XcmExecutionSuspendedTypedStorage.InitializeAsync("XcmPallet", "XcmExecutionSuspended");
         }
         
         /// <summary>
@@ -474,13 +558,13 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         ///  The target locations that are subscribed to our version changes, as well as the most recent
         ///  of our versions we informed them of.
         /// </summary>
-        public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U64, Substrate.NetApi.Model.Types.Primitive.U64, Substrate.NetApi.Model.Types.Primitive.U32> GetVersionNotifyTargets(string key)
+        public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U64, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight, Substrate.NetApi.Model.Types.Primitive.U32> GetVersionNotifyTargets(string key)
         {
             if ((key == null))
             {
                 return null;
             }
-            if (VersionNotifyTargetsTypedStorage.Dictionary.TryGetValue(key, out Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U64, Substrate.NetApi.Model.Types.Primitive.U64, Substrate.NetApi.Model.Types.Primitive.U32> result))
+            if (VersionNotifyTargetsTypedStorage.Dictionary.TryGetValue(key, out Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U64, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight, Substrate.NetApi.Model.Types.Primitive.U32> result))
             {
                 return result;
             }
@@ -505,7 +589,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         ///  the `u32` counter is the number of times that a send to the destination has been attempted,
         ///  which is used as a prioritization.
         /// </summary>
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT31 GetVersionDiscoveryQueue()
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT40 GetVersionDiscoveryQueue()
         {
             return VersionDiscoveryQueueTypedStorage.Get();
         }
@@ -526,6 +610,82 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         public Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_xcm.pallet.EnumVersionMigrationStage GetCurrentMigration()
         {
             return CurrentMigrationTypedStorage.Get();
+        }
+        
+        /// <summary>
+        /// Implements any storage change for XcmPallet.RemoteLockedFungibles
+        /// </summary>
+        [StorageChange("XcmPallet", "RemoteLockedFungibles")]
+        public void OnUpdateRemoteLockedFungibles(string key, string data)
+        {
+            RemoteLockedFungiblesTypedStorage.Update(key, data);
+        }
+        
+        /// <summary>
+        /// >> RemoteLockedFungibles
+        ///  Fungible assets which we know are locked on a remote chain.
+        /// </summary>
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_xcm.pallet.RemoteLockedFungibleRecord GetRemoteLockedFungibles(string key)
+        {
+            if ((key == null))
+            {
+                return null;
+            }
+            if (RemoteLockedFungiblesTypedStorage.Dictionary.TryGetValue(key, out Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_xcm.pallet.RemoteLockedFungibleRecord result))
+            {
+                return result;
+            }
+            else
+            {
+                return null;
+            }
+        }
+        
+        /// <summary>
+        /// Implements any storage change for XcmPallet.LockedFungibles
+        /// </summary>
+        [StorageChange("XcmPallet", "LockedFungibles")]
+        public void OnUpdateLockedFungibles(string key, string data)
+        {
+            LockedFungiblesTypedStorage.Update(key, data);
+        }
+        
+        /// <summary>
+        /// >> LockedFungibles
+        ///  Fungible assets which we know are locked on this chain.
+        /// </summary>
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT42 GetLockedFungibles(string key)
+        {
+            if ((key == null))
+            {
+                return null;
+            }
+            if (LockedFungiblesTypedStorage.Dictionary.TryGetValue(key, out Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT42 result))
+            {
+                return result;
+            }
+            else
+            {
+                return null;
+            }
+        }
+        
+        /// <summary>
+        /// Implements any storage change for XcmPallet.XcmExecutionSuspended
+        /// </summary>
+        [StorageChange("XcmPallet", "XcmExecutionSuspended")]
+        public void OnUpdateXcmExecutionSuspended(string data)
+        {
+            XcmExecutionSuspendedTypedStorage.Update(data);
+        }
+        
+        /// <summary>
+        /// >> XcmExecutionSuspended
+        ///  Global suspension state of the XCM executor.
+        /// </summary>
+        public Substrate.NetApi.Model.Types.Primitive.Bool GetXcmExecutionSuspended()
+        {
+            return XcmExecutionSuspendedTypedStorage.Get();
         }
     }
 }

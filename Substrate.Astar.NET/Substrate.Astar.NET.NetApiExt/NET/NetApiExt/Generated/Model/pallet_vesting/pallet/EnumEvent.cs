@@ -24,7 +24,7 @@ namespace Substrate.Astar.NET.NetApiExt.Generated.Model.pallet_vesting.pallet
     }
     
     /// <summary>
-    /// >> 39 - Variant[pallet_vesting.pallet.Event]
+    /// >> 43 - Variant[pallet_vesting.pallet.Event]
     /// 
     ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
     ///			by this pallet.

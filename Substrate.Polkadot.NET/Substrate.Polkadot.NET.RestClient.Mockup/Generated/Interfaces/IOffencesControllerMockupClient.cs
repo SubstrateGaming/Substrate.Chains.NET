@@ -14,12 +14,10 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup.Generated.Interfaces
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_staking.offence;
    using Substrate.NetApi.Model.Types.Base;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types;
-   using Substrate.NetApi.Model.Types.Primitive;
    
    public interface IOffencesControllerMockupClient
    {
       Task<bool> SetReports(OffenceDetails value, H256 key);
-      Task<bool> SetConcurrentReportsIndex(BaseVec<H256> value, BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base.Arr16U8, BaseVec<U8>> key);
-      Task<bool> SetReportsByKindIndex(BaseVec<U8> value, Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base.Arr16U8 key);
+      Task<bool> SetConcurrentReportsIndex(BaseVec<H256> value, BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base.Arr16U8, BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>> key);
    }
 }

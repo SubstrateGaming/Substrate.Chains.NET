@@ -54,7 +54,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_elections_phra
     }
     
     /// <summary>
-    /// >> 553 - Variant[pallet_elections_phragmen.pallet.Error]
+    /// >> 602 - Variant[pallet_elections_phragmen.pallet.Error]
     /// 
     ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
     ///			of this pallet.

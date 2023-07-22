@@ -43,12 +43,14 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime
         Corruption = 11,
         
         Unavailable = 12,
+        
+        RootNotAllowed = 13,
     }
     
     /// <summary>
     /// >> 25 - Variant[sp_runtime.DispatchError]
     /// </summary>
-    public sealed class EnumDispatchError : BaseEnumExt<DispatchError, BaseVoid, BaseVoid, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.ModuleError, BaseVoid, BaseVoid, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.EnumTokenError, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.EnumArithmeticError, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.EnumTransactionalError, BaseVoid, BaseVoid, BaseVoid>
+    public sealed class EnumDispatchError : BaseEnumExt<DispatchError, BaseVoid, BaseVoid, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.ModuleError, BaseVoid, BaseVoid, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.EnumTokenError, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.EnumArithmeticError, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.EnumTransactionalError, BaseVoid, BaseVoid, BaseVoid, BaseVoid>
     {
     }
 }

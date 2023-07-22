@@ -14,7 +14,7 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup.Generated.Clients
    using System.Net.Http;
    using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_election_provider_multi_phase;
-   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_election_provider_multi_phase.signed;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_npos_elections;
    using Substrate.Polkadot.NET.RestClient.Mockup.Generated.Interfaces;
@@ -54,7 +54,7 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "ElectionProviderMultiPhase/SignedSubmissionNextIndex", value.Encode(), Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ElectionProviderMultiPhaseStorage.SignedSubmissionNextIndexParams());
       }
-      public async Task<bool> SetSignedSubmissionIndices(BoundedVecT27 value)
+      public async Task<bool> SetSignedSubmissionIndices(BoundedVecT36 value)
       {
          return await SendMockupRequestAsync(_httpClient, "ElectionProviderMultiPhase/SignedSubmissionIndices", value.Encode(), Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ElectionProviderMultiPhaseStorage.SignedSubmissionIndicesParams());
       }

@@ -23,10 +23,14 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_treasury.pallet
         InvalidIndex = 1,
         
         TooManyApprovals = 2,
+        
+        InsufficientPermission = 3,
+        
+        ProposalNotApproved = 4,
     }
     
     /// <summary>
-    /// >> 244 - Variant[pallet_treasury.pallet.Error]
+    /// >> 377 - Variant[pallet_treasury.pallet.Error]
     /// Error for the treasury pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>

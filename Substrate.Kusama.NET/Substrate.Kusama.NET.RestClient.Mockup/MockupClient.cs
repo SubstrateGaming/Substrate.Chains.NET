@@ -39,6 +39,7 @@ namespace Substrate.Kusama.NET.RestClient.Mockup
       public IImOnlineControllerMockupClient ImOnlineControllerClient;
       public IIndicesControllerMockupClient IndicesControllerClient;
       public IInitializerControllerMockupClient InitializerControllerClient;
+      public IMessageQueueControllerMockupClient MessageQueueControllerClient;
       public IMultisigControllerMockupClient MultisigControllerClient;
       public INisControllerMockupClient NisControllerClient;
       public INisCounterpartBalancesControllerMockupClient NisCounterpartBalancesControllerClient;
@@ -66,7 +67,6 @@ namespace Substrate.Kusama.NET.RestClient.Mockup
       public ITimestampControllerMockupClient TimestampControllerClient;
       public ITransactionPaymentControllerMockupClient TransactionPaymentControllerClient;
       public ITreasuryControllerMockupClient TreasuryControllerClient;
-      public IUmpControllerMockupClient UmpControllerClient;
       public IVestingControllerMockupClient VestingControllerClient;
       public IVoterListControllerMockupClient VoterListControllerClient;
       public IWhitelistControllerMockupClient WhitelistControllerClient;
@@ -95,6 +95,7 @@ namespace Substrate.Kusama.NET.RestClient.Mockup
          ImOnlineControllerClient = new ImOnlineControllerMockupClient(_httpClient);
          IndicesControllerClient = new IndicesControllerMockupClient(_httpClient);
          InitializerControllerClient = new InitializerControllerMockupClient(_httpClient);
+         MessageQueueControllerClient = new MessageQueueControllerMockupClient(_httpClient);
          MultisigControllerClient = new MultisigControllerMockupClient(_httpClient);
          NisControllerClient = new NisControllerMockupClient(_httpClient);
          NisCounterpartBalancesControllerClient = new NisCounterpartBalancesControllerMockupClient(_httpClient);
@@ -122,7 +123,6 @@ namespace Substrate.Kusama.NET.RestClient.Mockup
          TimestampControllerClient = new TimestampControllerMockupClient(_httpClient);
          TransactionPaymentControllerClient = new TransactionPaymentControllerMockupClient(_httpClient);
          TreasuryControllerClient = new TreasuryControllerMockupClient(_httpClient);
-         UmpControllerClient = new UmpControllerMockupClient(_httpClient);
          VestingControllerClient = new VestingControllerMockupClient(_httpClient);
          VoterListControllerClient = new VoterListControllerMockupClient(_httpClient);
          WhitelistControllerClient = new WhitelistControllerMockupClient(_httpClient);

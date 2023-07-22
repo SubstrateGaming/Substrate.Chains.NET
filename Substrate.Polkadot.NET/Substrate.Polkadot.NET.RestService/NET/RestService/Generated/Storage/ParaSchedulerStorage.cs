@@ -33,7 +33,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         ///  Bound: The number of cores is the sum of the numbers of parachains and parathread multiplexers.
         ///  Reasonably, 100-1000. The dominant factor is the number of validators: safe upper bound at 10k.
         /// </summary>
-        Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.ValidatorIndex>> GetValidatorGroups();
+        Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.ValidatorIndex>> GetValidatorGroups();
         
         /// <summary>
         /// >> ParathreadQueue
@@ -55,7 +55,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         ///    * The number of parachains and parathread multiplexers
         ///    * The number of validators divided by `configuration.max_validators_per_core`.
         /// </summary>
-        Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.EnumCoreOccupied>> GetAvailabilityCores();
+        Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.EnumCoreOccupied>> GetAvailabilityCores();
         
         /// <summary>
         /// >> ParathreadClaimIndex
@@ -98,7 +98,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// <summary>
         /// _validatorGroupsTypedStorage typed storage field
         /// </summary>
-        private TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.ValidatorIndex>>> _validatorGroupsTypedStorage;
+        private TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.ValidatorIndex>>> _validatorGroupsTypedStorage;
         
         /// <summary>
         /// _parathreadQueueTypedStorage typed storage field
@@ -108,7 +108,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// <summary>
         /// _availabilityCoresTypedStorage typed storage field
         /// </summary>
-        private TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.EnumCoreOccupied>>> _availabilityCoresTypedStorage;
+        private TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.EnumCoreOccupied>>> _availabilityCoresTypedStorage;
         
         /// <summary>
         /// _parathreadClaimIndexTypedStorage typed storage field
@@ -130,9 +130,9 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// </summary>
         public ParaSchedulerStorage(IStorageDataProvider storageDataProvider, List<IStorageChangeDelegate> storageChangeDelegates)
         {
-            this.ValidatorGroupsTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.ValidatorIndex>>>("ParaScheduler.ValidatorGroups", storageDataProvider, storageChangeDelegates);
+            this.ValidatorGroupsTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.ValidatorIndex>>>("ParaScheduler.ValidatorGroups", storageDataProvider, storageChangeDelegates);
             this.ParathreadQueueTypedStorage = new TypedStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.scheduler.ParathreadClaimQueue>("ParaScheduler.ParathreadQueue", storageDataProvider, storageChangeDelegates);
-            this.AvailabilityCoresTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.EnumCoreOccupied>>>("ParaScheduler.AvailabilityCores", storageDataProvider, storageChangeDelegates);
+            this.AvailabilityCoresTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.EnumCoreOccupied>>>("ParaScheduler.AvailabilityCores", storageDataProvider, storageChangeDelegates);
             this.ParathreadClaimIndexTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id>>("ParaScheduler.ParathreadClaimIndex", storageDataProvider, storageChangeDelegates);
             this.SessionStartBlockTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32>("ParaScheduler.SessionStartBlock", storageDataProvider, storageChangeDelegates);
             this.ScheduledTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.scheduler.CoreAssignment>>("ParaScheduler.Scheduled", storageDataProvider, storageChangeDelegates);
@@ -141,7 +141,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// <summary>
         /// _validatorGroupsTypedStorage property
         /// </summary>
-        public TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.ValidatorIndex>>> ValidatorGroupsTypedStorage
+        public TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.ValidatorIndex>>> ValidatorGroupsTypedStorage
         {
             get
             {
@@ -171,7 +171,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// <summary>
         /// _availabilityCoresTypedStorage property
         /// </summary>
-        public TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.EnumCoreOccupied>>> AvailabilityCoresTypedStorage
+        public TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.EnumCoreOccupied>>> AvailabilityCoresTypedStorage
         {
             get
             {
@@ -259,7 +259,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         ///  Bound: The number of cores is the sum of the numbers of parachains and parathread multiplexers.
         ///  Reasonably, 100-1000. The dominant factor is the number of validators: safe upper bound at 10k.
         /// </summary>
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.ValidatorIndex>> GetValidatorGroups()
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.ValidatorIndex>> GetValidatorGroups()
         {
             return ValidatorGroupsTypedStorage.Get();
         }
@@ -305,7 +305,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         ///    * The number of parachains and parathread multiplexers
         ///    * The number of validators divided by `configuration.max_validators_per_core`.
         /// </summary>
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.EnumCoreOccupied>> GetAvailabilityCores()
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.EnumCoreOccupied>> GetAvailabilityCores()
         {
             return AvailabilityCoresTypedStorage.Get();
         }

@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_xcm.pallet
     
     
     /// <summary>
-    /// >> 841 - Composite[pallet_xcm.pallet.RemoteLockedFungibleRecord]
+    /// >> 842 - Composite[pallet_xcm.pallet.RemoteLockedFungibleRecord]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class RemoteLockedFungibleRecord : BaseType
@@ -40,9 +40,9 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_xcm.pallet
         private Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation _locker;
         
         /// <summary>
-        /// >> users
+        /// >> consumers
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _users;
+        private Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT43 _consumers;
         
         public Substrate.NetApi.Model.Types.Primitive.U128 Amount
         {
@@ -80,15 +80,15 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_xcm.pallet
             }
         }
         
-        public Substrate.NetApi.Model.Types.Primitive.U32 Users
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT43 Consumers
         {
             get
             {
-                return this._users;
+                return this._consumers;
             }
             set
             {
-                this._users = value;
+                this._consumers = value;
             }
         }
         
@@ -103,7 +103,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_xcm.pallet
             result.AddRange(Amount.Encode());
             result.AddRange(Owner.Encode());
             result.AddRange(Locker.Encode());
-            result.AddRange(Users.Encode());
+            result.AddRange(Consumers.Encode());
             return result.ToArray();
         }
         
@@ -116,8 +116,8 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_xcm.pallet
             Owner.Decode(byteArray, ref p);
             Locker = new Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation();
             Locker.Decode(byteArray, ref p);
-            Users = new Substrate.NetApi.Model.Types.Primitive.U32();
-            Users.Decode(byteArray, ref p);
+            Consumers = new Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT43();
+            Consumers.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];

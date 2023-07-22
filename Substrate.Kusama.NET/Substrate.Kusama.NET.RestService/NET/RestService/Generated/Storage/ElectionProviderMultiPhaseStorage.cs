@@ -44,6 +44,8 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// <summary>
         /// >> QueuedSolution
         ///  Current best solution, signed or unsigned, queued to be returned upon `elect`.
+        /// 
+        ///  Always sorted by score.
         /// </summary>
         Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_election_provider_multi_phase.ReadySolution GetQueuedSolution();
         
@@ -411,6 +413,8 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// <summary>
         /// >> QueuedSolution
         ///  Current best solution, signed or unsigned, queued to be returned upon `elect`.
+        /// 
+        ///  Always sorted by score.
         /// </summary>
         public Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_election_provider_multi_phase.ReadySolution GetQueuedSolution()
         {

@@ -13,13 +13,14 @@ namespace Substrate.Ajuna.NET.RestClient.Generated.Interfaces
    using System.Threading.Tasks;
    using Substrate.NetApi.Model.Types.Base;
    using Substrate.NetApi.Model.Types.Primitive;
-   using Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v2;
+   using Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v4;
    using Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_trie.storage_proof;
    using Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.relay_state_snapshot;
    using Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_primitives_parachain_inherent;
    using Substrate.Ajuna.NET.NetApiExt.Generated.Types.Base;
    using Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_core_primitives;
-   using Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types;
+   using Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_weights.weight_v2;
+   using Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system;
    
    public interface IParachainSystemControllerClient
    {
@@ -31,6 +32,8 @@ namespace Substrate.Ajuna.NET.RestClient.Generated.Interfaces
       Task<bool> SubscribeValidationData();
       Task<Bool> GetDidSetValidationCode();
       Task<bool> SubscribeDidSetValidationCode();
+      Task<U32> GetLastRelayChainBlockNumber();
+      Task<bool> SubscribeLastRelayChainBlockNumber();
       Task<BaseOpt<EnumUpgradeRestriction>> GetUpgradeRestrictionSignal();
       Task<bool> SubscribeUpgradeRestrictionSignal();
       Task<StorageProof> GetRelayStateProof();
@@ -55,11 +58,11 @@ namespace Substrate.Ajuna.NET.RestClient.Generated.Interfaces
       Task<bool> SubscribePendingUpwardMessages();
       Task<U32> GetAnnouncedHrmpMessagesPerCandidate();
       Task<bool> SubscribeAnnouncedHrmpMessagesPerCandidate();
-      Task<U64> GetReservedXcmpWeightOverride();
+      Task<Weight> GetReservedXcmpWeightOverride();
       Task<bool> SubscribeReservedXcmpWeightOverride();
-      Task<U64> GetReservedDmpWeightOverride();
+      Task<Weight> GetReservedDmpWeightOverride();
       Task<bool> SubscribeReservedDmpWeightOverride();
-      Task<H256> GetAuthorizedUpgrade();
+      Task<CodeUpgradeAuthorization> GetAuthorizedUpgrade();
       Task<bool> SubscribeAuthorizedUpgrade();
       Task<BaseVec<U8>> GetCustomValidationHeadData();
       Task<bool> SubscribeCustomValidationHeadData();

@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_im_online.sr25
     
     
     /// <summary>
-    /// >> 236 - Composite[pallet_im_online.sr25519.app_sr25519.Signature]
+    /// >> 137 - Composite[pallet_im_online.sr25519.app_sr25519.Signature]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Signature : BaseType

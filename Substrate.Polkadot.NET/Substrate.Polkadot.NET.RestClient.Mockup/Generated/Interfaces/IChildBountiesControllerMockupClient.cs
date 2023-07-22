@@ -13,14 +13,14 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup.Generated.Interfaces
    using System.Threading.Tasks;
    using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_child_bounties;
-   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    
    public interface IChildBountiesControllerMockupClient
    {
       Task<bool> SetChildBountyCount(U32 value);
       Task<bool> SetParentChildBounties(U32 value, U32 key);
       Task<bool> SetChildBounties(ChildBounty value, Substrate.NetApi.Model.Types.Base.BaseTuple<U32, U32> key);
-      Task<bool> SetChildBountyDescriptions(BoundedVecT25 value, U32 key);
+      Task<bool> SetChildBountyDescriptions(BoundedVecT34 value, U32 key);
       Task<bool> SetChildrenCuratorFees(U128 value, U32 key);
    }
 }

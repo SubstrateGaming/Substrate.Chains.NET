@@ -12,7 +12,7 @@ namespace Substrate.Polkadot.NET.RestClient.Generated.Clients
    using System;
    using System.Threading.Tasks;
    using System.Net.Http;
-   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_collective;
    using Substrate.NetApi.Model.Types.Primitive;
@@ -29,9 +29,9 @@ namespace Substrate.Polkadot.NET.RestClient.Generated.Clients
          _httpClient = httpClient;
          _subscriptionClient = subscriptionClient;
       }
-      public async Task<BoundedVecT15> GetProposals()
+      public async Task<BoundedVecT21> GetProposals()
       {
-         return await SendRequestAsync<BoundedVecT15>(_httpClient, "technicalcommittee/proposals");
+         return await SendRequestAsync<BoundedVecT21>(_httpClient, "technicalcommittee/proposals");
       }
       public async Task<bool> SubscribeProposals()
       {

@@ -40,6 +40,7 @@ namespace Substrate.Kusama.NET.RestClient
       public IImOnlineControllerClient ImOnlineControllerClient;
       public IIndicesControllerClient IndicesControllerClient;
       public IInitializerControllerClient InitializerControllerClient;
+      public IMessageQueueControllerClient MessageQueueControllerClient;
       public IMultisigControllerClient MultisigControllerClient;
       public INisControllerClient NisControllerClient;
       public INisCounterpartBalancesControllerClient NisCounterpartBalancesControllerClient;
@@ -67,7 +68,6 @@ namespace Substrate.Kusama.NET.RestClient
       public ITimestampControllerClient TimestampControllerClient;
       public ITransactionPaymentControllerClient TransactionPaymentControllerClient;
       public ITreasuryControllerClient TreasuryControllerClient;
-      public IUmpControllerClient UmpControllerClient;
       public IVestingControllerClient VestingControllerClient;
       public IVoterListControllerClient VoterListControllerClient;
       public IWhitelistControllerClient WhitelistControllerClient;
@@ -97,6 +97,7 @@ namespace Substrate.Kusama.NET.RestClient
          ImOnlineControllerClient = new ImOnlineControllerClient(_httpClient, _subscriptionClient);
          IndicesControllerClient = new IndicesControllerClient(_httpClient, _subscriptionClient);
          InitializerControllerClient = new InitializerControllerClient(_httpClient, _subscriptionClient);
+         MessageQueueControllerClient = new MessageQueueControllerClient(_httpClient, _subscriptionClient);
          MultisigControllerClient = new MultisigControllerClient(_httpClient, _subscriptionClient);
          NisControllerClient = new NisControllerClient(_httpClient, _subscriptionClient);
          NisCounterpartBalancesControllerClient = new NisCounterpartBalancesControllerClient(_httpClient, _subscriptionClient);
@@ -124,7 +125,6 @@ namespace Substrate.Kusama.NET.RestClient
          TimestampControllerClient = new TimestampControllerClient(_httpClient, _subscriptionClient);
          TransactionPaymentControllerClient = new TransactionPaymentControllerClient(_httpClient, _subscriptionClient);
          TreasuryControllerClient = new TreasuryControllerClient(_httpClient, _subscriptionClient);
-         UmpControllerClient = new UmpControllerClient(_httpClient, _subscriptionClient);
          VestingControllerClient = new VestingControllerClient(_httpClient, _subscriptionClient);
          VoterListControllerClient = new VoterListControllerClient(_httpClient, _subscriptionClient);
          WhitelistControllerClient = new WhitelistControllerClient(_httpClient, _subscriptionClient);

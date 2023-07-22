@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_im_online.sr25
     
     
     /// <summary>
-    /// >> 54 - Composite[pallet_im_online.sr25519.app_sr25519.Public]
+    /// >> 55 - Composite[pallet_im_online.sr25519.app_sr25519.Public]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Public : BaseType

@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_comm
     
     
     /// <summary>
-    /// >> 702 - Composite[polkadot_runtime_common.paras_registrar.ParaInfo]
+    /// >> 787 - Composite[polkadot_runtime_common.paras_registrar.ParaInfo]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class ParaInfo : BaseType

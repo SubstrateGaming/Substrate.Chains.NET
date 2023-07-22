@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_support.traits.mi
     
     
     /// <summary>
-    /// >> 584 - Composite[frame_support.traits.misc.WrapperOpaque]
+    /// >> 587 - Composite[frame_support.traits.misc.WrapperOpaque]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class WrapperOpaque : BaseType

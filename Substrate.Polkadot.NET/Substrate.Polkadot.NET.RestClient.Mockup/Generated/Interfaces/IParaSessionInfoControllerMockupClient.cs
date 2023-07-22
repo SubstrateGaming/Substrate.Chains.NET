@@ -12,10 +12,11 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup.Generated.Interfaces
    using System;
    using System.Threading.Tasks;
    using Substrate.NetApi.Model.Types.Base;
-   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.assignment_app;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.assignment_app;
    using Substrate.NetApi.Model.Types.Primitive;
-   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.executor_params;
    
    public interface IParaSessionInfoControllerMockupClient
    {
@@ -23,5 +24,6 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup.Generated.Interfaces
       Task<bool> SetEarliestStoredSession(U32 value);
       Task<bool> SetSessions(SessionInfo value, U32 key);
       Task<bool> SetAccountKeys(BaseVec<AccountId32> value, U32 key);
+      Task<bool> SetSessionExecutorParams(ExecutorParams value, U32 key);
    }
 }

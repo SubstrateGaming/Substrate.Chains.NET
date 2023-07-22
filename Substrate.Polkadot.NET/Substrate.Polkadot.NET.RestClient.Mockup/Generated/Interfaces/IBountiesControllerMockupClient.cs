@@ -13,13 +13,13 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup.Generated.Interfaces
    using System.Threading.Tasks;
    using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_bounties;
-   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    
    public interface IBountiesControllerMockupClient
    {
       Task<bool> SetBountyCount(U32 value);
       Task<bool> SetBounties(Bounty value, U32 key);
-      Task<bool> SetBountyDescriptions(BoundedVecT25 value, U32 key);
-      Task<bool> SetBountyApprovals(BoundedVecT17 value);
+      Task<bool> SetBountyDescriptions(BoundedVecT34 value, U32 key);
+      Task<bool> SetBountyApprovals(BoundedVecT23 value);
    }
 }

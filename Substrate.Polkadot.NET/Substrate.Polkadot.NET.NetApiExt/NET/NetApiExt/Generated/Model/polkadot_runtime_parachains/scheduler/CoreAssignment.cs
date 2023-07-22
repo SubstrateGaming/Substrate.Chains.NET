@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_para
     
     
     /// <summary>
-    /// >> 663 - Composite[polkadot_runtime_parachains.scheduler.CoreAssignment]
+    /// >> 745 - Composite[polkadot_runtime_parachains.scheduler.CoreAssignment]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class CoreAssignment : BaseType
@@ -27,7 +27,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_para
         /// <summary>
         /// >> core
         /// </summary>
-        private Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.CoreIndex _core;
+        private Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.CoreIndex _core;
         
         /// <summary>
         /// >> para_id
@@ -42,9 +42,9 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_para
         /// <summary>
         /// >> group_idx
         /// </summary>
-        private Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.GroupIndex _groupIdx;
+        private Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.GroupIndex _groupIdx;
         
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.CoreIndex Core
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.CoreIndex Core
         {
             get
             {
@@ -80,7 +80,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_para
             }
         }
         
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.GroupIndex GroupIdx
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.GroupIndex GroupIdx
         {
             get
             {
@@ -110,13 +110,13 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_para
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Core = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.CoreIndex();
+            Core = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.CoreIndex();
             Core.Decode(byteArray, ref p);
             ParaId = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id();
             ParaId.Decode(byteArray, ref p);
             Kind = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.scheduler.EnumAssignmentKind();
             Kind.Decode(byteArray, ref p);
-            GroupIdx = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.GroupIndex();
+            GroupIdx = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.GroupIndex();
             GroupIdx.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

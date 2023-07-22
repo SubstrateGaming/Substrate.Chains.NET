@@ -31,10 +31,12 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime
         CancelProxy = 6,
         
         Auction = 7,
+        
+        NominationPools = 8,
     }
     
     /// <summary>
-    /// >> 80 - Variant[polkadot_runtime.ProxyType]
+    /// >> 229 - Variant[polkadot_runtime.ProxyType]
     /// </summary>
     public sealed class EnumProxyType : BaseEnum<ProxyType>
     {

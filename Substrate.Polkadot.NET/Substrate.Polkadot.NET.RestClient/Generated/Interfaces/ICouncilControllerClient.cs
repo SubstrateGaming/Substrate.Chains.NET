@@ -11,7 +11,7 @@ namespace Substrate.Polkadot.NET.RestClient.Generated.Interfaces
 {
    using System;
    using System.Threading.Tasks;
-   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_collective;
    using Substrate.NetApi.Model.Types.Primitive;
@@ -20,7 +20,7 @@ namespace Substrate.Polkadot.NET.RestClient.Generated.Interfaces
    
    public interface ICouncilControllerClient
    {
-      Task<BoundedVecT14> GetProposals();
+      Task<BoundedVecT20> GetProposals();
       Task<bool> SubscribeProposals();
       Task<EnumRuntimeCall> GetProposalOf(Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256 key);
       Task<bool> SubscribeProposalOf(Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256 key);

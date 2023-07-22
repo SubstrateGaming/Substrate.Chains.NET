@@ -18,7 +18,7 @@ namespace Substrate.Astar.NET.NetApiExt.Generated.Model.ethereum.transaction
     
     
     /// <summary>
-    /// >> 260 - Composite[ethereum.transaction.AccessListItem]
+    /// >> 275 - Composite[ethereum.transaction.AccessListItem]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class AccessListItem : BaseType

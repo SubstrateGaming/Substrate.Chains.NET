@@ -923,13 +923,6 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         PvfCheckSubjectInvalid,
         
         /// <summary>
-        /// >> PvfCheckDisabled
-        /// The PVF pre-checking statement cannot be included since the PVF pre-checking mechanism
-        /// is disabled.
-        /// </summary>
-        PvfCheckDisabled,
-        
-        /// <summary>
         /// >> CannotUpgradeCode
         /// Parachain cannot currently schedule a code upgrade.
         /// </summary>

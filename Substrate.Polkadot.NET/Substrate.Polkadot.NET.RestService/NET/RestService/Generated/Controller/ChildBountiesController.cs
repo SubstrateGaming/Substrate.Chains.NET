@@ -79,7 +79,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Controller
         ///  The description of each child-bounty.
         /// </summary>
         [HttpGet("ChildBountyDescriptions")]
-        [ProducesResponseType(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT25), 200)]
+        [ProducesResponseType(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT34), 200)]
         [StorageKeyBuilder(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ChildBountiesStorage), "ChildBountyDescriptionsParams", typeof(Substrate.NetApi.Model.Types.Primitive.U32))]
         public IActionResult GetChildBountyDescriptions(string key)
         {

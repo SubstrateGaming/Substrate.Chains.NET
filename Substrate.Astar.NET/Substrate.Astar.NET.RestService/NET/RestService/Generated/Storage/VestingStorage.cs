@@ -28,7 +28,7 @@ namespace Substrate.Astar.NET.RestService.Generated.Storage
         /// >> Vesting
         ///  Information regarding the vesting of a given account.
         /// </summary>
-        Substrate.Astar.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT7 GetVesting(string key);
+        Substrate.Astar.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT13 GetVesting(string key);
         
         /// <summary>
         /// >> StorageVersion
@@ -48,7 +48,7 @@ namespace Substrate.Astar.NET.RestService.Generated.Storage
         /// <summary>
         /// _vestingTypedStorage typed storage field
         /// </summary>
-        private TypedMapStorage<Substrate.Astar.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT7> _vestingTypedStorage;
+        private TypedMapStorage<Substrate.Astar.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT13> _vestingTypedStorage;
         
         /// <summary>
         /// _storageVersionTypedStorage typed storage field
@@ -60,14 +60,14 @@ namespace Substrate.Astar.NET.RestService.Generated.Storage
         /// </summary>
         public VestingStorage(IStorageDataProvider storageDataProvider, List<IStorageChangeDelegate> storageChangeDelegates)
         {
-            this.VestingTypedStorage = new TypedMapStorage<Substrate.Astar.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT7>("Vesting.Vesting", storageDataProvider, storageChangeDelegates);
+            this.VestingTypedStorage = new TypedMapStorage<Substrate.Astar.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT13>("Vesting.Vesting", storageDataProvider, storageChangeDelegates);
             this.StorageVersionTypedStorage = new TypedStorage<Substrate.Astar.NET.NetApiExt.Generated.Model.pallet_vesting.EnumReleases>("Vesting.StorageVersion", storageDataProvider, storageChangeDelegates);
         }
         
         /// <summary>
         /// _vestingTypedStorage property
         /// </summary>
-        public TypedMapStorage<Substrate.Astar.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT7> VestingTypedStorage
+        public TypedMapStorage<Substrate.Astar.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT13> VestingTypedStorage
         {
             get
             {
@@ -116,13 +116,13 @@ namespace Substrate.Astar.NET.RestService.Generated.Storage
         /// >> Vesting
         ///  Information regarding the vesting of a given account.
         /// </summary>
-        public Substrate.Astar.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT7 GetVesting(string key)
+        public Substrate.Astar.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT13 GetVesting(string key)
         {
             if ((key == null))
             {
                 return null;
             }
-            if (VestingTypedStorage.Dictionary.TryGetValue(key, out Substrate.Astar.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT7 result))
+            if (VestingTypedStorage.Dictionary.TryGetValue(key, out Substrate.Astar.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT13 result))
             {
                 return result;
             }

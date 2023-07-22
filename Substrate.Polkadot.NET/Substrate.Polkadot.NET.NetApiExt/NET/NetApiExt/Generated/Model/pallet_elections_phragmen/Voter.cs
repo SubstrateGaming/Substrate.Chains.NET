@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_elections_phra
     
     
     /// <summary>
-    /// >> 552 - Composite[pallet_elections_phragmen.Voter]
+    /// >> 601 - Composite[pallet_elections_phragmen.Voter]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Voter : BaseType

@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Substrate.Moonbeam.NET.RestService", "Substrate.Moonbeam.NET.RestService\Substrate.Moonbeam.NET.RestService.csproj", "{ACFD7BAD-E16F-4C1E-9837-0E27CA8CCC76}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Substrate.Moonbeam.NET.NetApiExt", "Substrate.Moonbeam.NET.NetApiExt\Substrate.Moonbeam.NET.NetApiExt.csproj", "{7AA992AD-9297-41DD-8B51-FE292B3D4760}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Substrate.Moonbeam.NET.RestClient", "Substrate.Moonbeam.NET.RestClient\Substrate.Moonbeam.NET.RestClient.csproj", "{4369A21A-C841-4BD2-8576-B83C88D7EE22}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Substrate.Moonbeam.NET.RestClient.Mockup", "Substrate.Moonbeam.NET.RestClient.Mockup\Substrate.Moonbeam.NET.RestClient.Mockup.csproj", "{A47028B4-6530-41DD-9177-DC5F760393FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Substrate.Moonbeam.NET.RestClient.Test", "Substrate.Moonbeam.NET.RestClient.Test\Substrate.Moonbeam.NET.RestClient.Test.csproj", "{DCF8828B-27B6-47D8-91B5-047E123560F8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ACFD7BAD-E16F-4C1E-9837-0E27CA8CCC76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACFD7BAD-E16F-4C1E-9837-0E27CA8CCC76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACFD7BAD-E16F-4C1E-9837-0E27CA8CCC76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACFD7BAD-E16F-4C1E-9837-0E27CA8CCC76}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7AA992AD-9297-41DD-8B51-FE292B3D4760}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AA992AD-9297-41DD-8B51-FE292B3D4760}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AA992AD-9297-41DD-8B51-FE292B3D4760}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AA992AD-9297-41DD-8B51-FE292B3D4760}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4369A21A-C841-4BD2-8576-B83C88D7EE22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4369A21A-C841-4BD2-8576-B83C88D7EE22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4369A21A-C841-4BD2-8576-B83C88D7EE22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4369A21A-C841-4BD2-8576-B83C88D7EE22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A47028B4-6530-41DD-9177-DC5F760393FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A47028B4-6530-41DD-9177-DC5F760393FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A47028B4-6530-41DD-9177-DC5F760393FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A47028B4-6530-41DD-9177-DC5F760393FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DCF8828B-27B6-47D8-91B5-047E123560F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCF8828B-27B6-47D8-91B5-047E123560F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCF8828B-27B6-47D8-91B5-047E123560F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCF8828B-27B6-47D8-91B5-047E123560F8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

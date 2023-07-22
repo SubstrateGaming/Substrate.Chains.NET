@@ -1,0 +1,13 @@
+{
+  "projects": {
+    "net_api": "Substrate.KusamaAssetHub.NET.NetApiExt",
+    "rest_service": "Substrate.KusamaAssetHub.NET.RestService",
+    "rest_client": "Substrate.KusamaAssetHub.NET.RestClient"
+  },
+   "metadata": {
+      "websocket": "wss://statemine-rpc.polkadot.io"
+   },
+  "rest_client_settings": {
+    "service_assembly": "Substrate.KusamaAssetHub.NET.RestService.dll"
+  }
+}

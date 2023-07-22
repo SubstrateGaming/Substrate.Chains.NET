@@ -24,7 +24,7 @@ namespace Substrate.Astar.NET.NetApiExt.Generated.Model.pallet_vesting
     }
     
     /// <summary>
-    /// >> 318 - Variant[pallet_vesting.Releases]
+    /// >> 349 - Variant[pallet_vesting.Releases]
     /// </summary>
     public sealed class EnumReleases : BaseEnum<Releases>
     {

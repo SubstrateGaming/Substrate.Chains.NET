@@ -24,7 +24,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4
     }
     
     /// <summary>
-    /// >> 768 - Variant[polkadot_primitives.v4.CoreOccupied]
+    /// >> 771 - Variant[polkadot_primitives.v4.CoreOccupied]
     /// </summary>
     public sealed class EnumCoreOccupied : BaseEnumExt<CoreOccupied, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.ParathreadEntry, BaseVoid>
     {

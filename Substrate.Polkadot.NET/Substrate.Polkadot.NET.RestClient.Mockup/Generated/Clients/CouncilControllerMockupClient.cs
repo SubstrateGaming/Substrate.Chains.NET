@@ -12,7 +12,7 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup.Generated.Clients
    using System;
    using System.Threading.Tasks;
    using System.Net.Http;
-   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_collective;
    using Substrate.NetApi.Model.Types.Primitive;
@@ -27,7 +27,7 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup.Generated.Clients
       {
          _httpClient = httpClient;
       }
-      public async Task<bool> SetProposals(BoundedVecT14 value)
+      public async Task<bool> SetProposals(BoundedVecT20 value)
       {
          return await SendMockupRequestAsync(_httpClient, "Council/Proposals", value.Encode(), Substrate.Polkadot.NET.NetApiExt.Generated.Storage.CouncilStorage.ProposalsParams());
       }

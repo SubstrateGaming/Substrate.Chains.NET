@@ -13,7 +13,7 @@ namespace Substrate.Ajuna.NET.RestClient.Generated.Interfaces
    using System.Threading.Tasks;
    using Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_system;
    using Substrate.NetApi.Model.Types.Primitive;
-   using Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.weights;
+   using Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.dispatch;
    using Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types;
    using Substrate.NetApi.Model.Types.Base;
    using Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_runtime.generic.digest;

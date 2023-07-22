@@ -24,7 +24,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parach
     }
     
     /// <summary>
-    /// >> 772 - Variant[polkadot_runtime_parachains.scheduler.AssignmentKind]
+    /// >> 775 - Variant[polkadot_runtime_parachains.scheduler.AssignmentKind]
     /// </summary>
     public sealed class EnumAssignmentKind : BaseEnumExt<AssignmentKind, BaseVoid, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.collator_app.Public, Substrate.NetApi.Model.Types.Primitive.U32>>
     {

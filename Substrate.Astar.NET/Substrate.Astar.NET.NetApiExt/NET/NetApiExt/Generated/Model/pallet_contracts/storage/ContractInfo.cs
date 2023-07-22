@@ -18,7 +18,7 @@ namespace Substrate.Astar.NET.NetApiExt.Generated.Model.pallet_contracts.storage
     
     
     /// <summary>
-    /// >> 421 - Composite[pallet_contracts.storage.ContractInfo]
+    /// >> 455 - Composite[pallet_contracts.storage.ContractInfo]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class ContractInfo : BaseType
@@ -27,7 +27,7 @@ namespace Substrate.Astar.NET.NetApiExt.Generated.Model.pallet_contracts.storage
         /// <summary>
         /// >> trie_id
         /// </summary>
-        private Substrate.Astar.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT13 _trieId;
+        private Substrate.Astar.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT19 _trieId;
         
         /// <summary>
         /// >> code_hash
@@ -59,7 +59,7 @@ namespace Substrate.Astar.NET.NetApiExt.Generated.Model.pallet_contracts.storage
         /// </summary>
         private Substrate.NetApi.Model.Types.Primitive.U128 _storageBaseDeposit;
         
-        public Substrate.Astar.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT13 TrieId
+        public Substrate.Astar.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT19 TrieId
         {
             get
             {
@@ -164,7 +164,7 @@ namespace Substrate.Astar.NET.NetApiExt.Generated.Model.pallet_contracts.storage
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            TrieId = new Substrate.Astar.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT13();
+            TrieId = new Substrate.Astar.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT19();
             TrieId.Decode(byteArray, ref p);
             CodeHash = new Substrate.Astar.NET.NetApiExt.Generated.Model.primitive_types.H256();
             CodeHash.Decode(byteArray, ref p);

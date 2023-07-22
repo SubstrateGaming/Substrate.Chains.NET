@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4
     
     
     /// <summary>
-    /// >> 484 - Composite[polkadot_primitives.v4.GroupIndex]
+    /// >> 486 - Composite[polkadot_primitives.v4.GroupIndex]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class GroupIndex : BaseType

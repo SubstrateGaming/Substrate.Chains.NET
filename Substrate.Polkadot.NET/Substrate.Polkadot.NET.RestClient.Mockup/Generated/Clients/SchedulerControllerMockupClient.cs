@@ -13,7 +13,7 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup.Generated.Clients
    using System.Threading.Tasks;
    using System.Net.Http;
    using Substrate.NetApi.Model.Types.Primitive;
-   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    using Substrate.NetApi.Model.Types.Base;
    using Substrate.Polkadot.NET.RestClient.Mockup.Generated.Interfaces;
    
@@ -28,7 +28,7 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "Scheduler/IncompleteSince", value.Encode(), Substrate.Polkadot.NET.NetApiExt.Generated.Storage.SchedulerStorage.IncompleteSinceParams());
       }
-      public async Task<bool> SetAgenda(BoundedVecT1 value, U32 key)
+      public async Task<bool> SetAgenda(BoundedVecT8 value, U32 key)
       {
          return await SendMockupRequestAsync(_httpClient, "Scheduler/Agenda", value.Encode(), Substrate.Polkadot.NET.NetApiExt.Generated.Storage.SchedulerStorage.AgendaParams(key));
       }

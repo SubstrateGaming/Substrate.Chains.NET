@@ -63,10 +63,12 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_democracy.pall
         TooMany = 21,
         
         VotingPeriodLow = 22,
+        
+        PreimageNotExist = 23,
     }
     
     /// <summary>
-    /// >> 544 - Variant[pallet_democracy.pallet.Error]
+    /// >> 593 - Variant[pallet_democracy.pallet.Error]
     /// 
     ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
     ///			of this pallet.

@@ -28,7 +28,7 @@ namespace Substrate.Astar.NET.NetApiExt.Generated.Model.evm_core.error
     }
     
     /// <summary>
-    /// >> 110 - Variant[evm_core.error.ExitFatal]
+    /// >> 129 - Variant[evm_core.error.ExitFatal]
     /// </summary>
     public sealed class EnumExitFatal : BaseEnumExt<ExitFatal, BaseVoid, BaseVoid, Substrate.Astar.NET.NetApiExt.Generated.Model.evm_core.error.EnumExitError, Substrate.Astar.NET.NetApiExt.Generated.Types.Base.CowT1>
     {

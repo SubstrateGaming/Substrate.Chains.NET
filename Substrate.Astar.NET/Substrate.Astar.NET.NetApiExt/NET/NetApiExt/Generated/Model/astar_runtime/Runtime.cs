@@ -18,7 +18,7 @@ namespace Substrate.Astar.NET.NetApiExt.Generated.Model.astar_runtime
     
     
     /// <summary>
-    /// >> 449 - Composite[astar_runtime.Runtime]
+    /// >> 483 - Composite[astar_runtime.Runtime]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Runtime : BaseType

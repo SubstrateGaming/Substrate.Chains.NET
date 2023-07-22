@@ -83,6 +83,14 @@ namespace Substrate.Ajuna.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("XcmpQueue.Overweight", Substrate.Ajuna.NET.NetApiExt.Generated.Storage.XcmpQueueStorage.OverweightParams(key));
       }
+      public async Task<U32> GetCounterForOverweight()
+      {
+         return await SendRequestAsync<U32>(_httpClient, "xcmpqueue/counterforoverweight");
+      }
+      public async Task<bool> SubscribeCounterForOverweight()
+      {
+         return await _subscriptionClient.SubscribeAsync("XcmpQueue.CounterForOverweight");
+      }
       public async Task<U64> GetOverweightCount()
       {
          return await SendRequestAsync<U64>(_httpClient, "xcmpqueue/overweightcount");

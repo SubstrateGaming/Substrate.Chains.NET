@@ -12,7 +12,7 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup.Generated.Clients
    using System;
    using System.Threading.Tasks;
    using System.Net.Http;
-   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto;
    using Substrate.Polkadot.NET.RestClient.Mockup.Generated.Interfaces;
    
@@ -23,7 +23,7 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup.Generated.Clients
       {
          _httpClient = httpClient;
       }
-      public async Task<bool> SetMembers(BoundedVecT16 value)
+      public async Task<bool> SetMembers(BoundedVecT22 value)
       {
          return await SendMockupRequestAsync(_httpClient, "TechnicalMembership/Members", value.Encode(), Substrate.Polkadot.NET.NetApiExt.Generated.Storage.TechnicalMembershipStorage.MembersParams());
       }

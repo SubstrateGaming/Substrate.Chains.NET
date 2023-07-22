@@ -38,18 +38,6 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Controller
         }
         
         /// <summary>
-        /// >> Uncles
-        ///  Uncles
-        /// </summary>
-        [HttpGet("Uncles")]
-        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_authorship.EnumUncleEntryItem>), 200)]
-        [StorageKeyBuilder(typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Storage.AuthorshipStorage), "UnclesParams")]
-        public IActionResult GetUncles()
-        {
-            return this.Ok(_authorshipStorage.GetUncles());
-        }
-        
-        /// <summary>
         /// >> Author
         ///  Author of current block.
         /// </summary>
@@ -59,18 +47,6 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Controller
         public IActionResult GetAuthor()
         {
             return this.Ok(_authorshipStorage.GetAuthor());
-        }
-        
-        /// <summary>
-        /// >> DidSetUncles
-        ///  Whether uncles were already set in this block.
-        /// </summary>
-        [HttpGet("DidSetUncles")]
-        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Primitive.Bool), 200)]
-        [StorageKeyBuilder(typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Storage.AuthorshipStorage), "DidSetUnclesParams")]
-        public IActionResult GetDidSetUncles()
-        {
-            return this.Ok(_authorshipStorage.GetDidSetUncles());
         }
     }
 }

@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4
     
     
     /// <summary>
-    /// >> 803 - Composite[polkadot_primitives.v4.IndexedVecT1]
+    /// >> 804 - Composite[polkadot_primitives.v4.IndexedVecT1]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class IndexedVecT1 : BaseType

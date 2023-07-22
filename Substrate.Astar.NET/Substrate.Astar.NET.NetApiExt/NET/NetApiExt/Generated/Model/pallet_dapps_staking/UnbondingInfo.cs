@@ -18,7 +18,7 @@ namespace Substrate.Astar.NET.NetApiExt.Generated.Model.pallet_dapps_staking
     
     
     /// <summary>
-    /// >> 321 - Composite[pallet_dapps_staking.UnbondingInfo]
+    /// >> 352 - Composite[pallet_dapps_staking.UnbondingInfo]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class UnbondingInfo : BaseType

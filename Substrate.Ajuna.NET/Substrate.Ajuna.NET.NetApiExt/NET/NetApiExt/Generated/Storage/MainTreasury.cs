@@ -33,7 +33,8 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Treasury", "ProposalCount"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Primitive.U32)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Treasury", "Proposals"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.NetApi.Model.Types.Primitive.U32), typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_treasury.Proposal)));
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("Treasury", "Approvals"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.storage.bounded_vec.BoundedVecT3)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("Treasury", "Deactivated"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Primitive.U128)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("Treasury", "Approvals"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT22)));
         }
         
         /// <summary>
@@ -97,6 +98,35 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         }
         
         /// <summary>
+        /// >> DeactivatedParams
+        ///  The amount which has been reported as inactive to Currency.
+        /// </summary>
+        public static string DeactivatedParams()
+        {
+            return RequestGenerator.GetStorage("Treasury", "Deactivated", Substrate.NetApi.Model.Meta.Storage.Type.Plain);
+        }
+        
+        /// <summary>
+        /// >> DeactivatedDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string DeactivatedDefault()
+        {
+            return "0x00000000000000000000000000000000";
+        }
+        
+        /// <summary>
+        /// >> Deactivated
+        ///  The amount which has been reported as inactive to Currency.
+        /// </summary>
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U128> Deactivated(CancellationToken token)
+        {
+            string parameters = TreasuryStorage.DeactivatedParams();
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U128>(parameters, token);
+            return result;
+        }
+        
+        /// <summary>
         /// >> ApprovalsParams
         ///  Proposal indices that have been approved but not yet awarded.
         /// </summary>
@@ -118,10 +148,10 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         /// >> Approvals
         ///  Proposal indices that have been approved but not yet awarded.
         /// </summary>
-        public async Task<Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.storage.bounded_vec.BoundedVecT3> Approvals(CancellationToken token)
+        public async Task<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT22> Approvals(CancellationToken token)
         {
             string parameters = TreasuryStorage.ApprovalsParams();
-            var result = await _client.GetStorageAsync<Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.storage.bounded_vec.BoundedVecT3>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT22>(parameters, token);
             return result;
         }
     }
@@ -162,6 +192,29 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
             byteArray.AddRange(proposal_id.Encode());
             return new Method(41, "Treasury", 2, "approve_proposal", byteArray.ToArray());
         }
+        
+        /// <summary>
+        /// >> spend
+        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// </summary>
+        public static Method Spend(Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128> amount, Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress beneficiary)
+        {
+            System.Collections.Generic.List<byte> byteArray = new List<byte>();
+            byteArray.AddRange(amount.Encode());
+            byteArray.AddRange(beneficiary.Encode());
+            return new Method(41, "Treasury", 3, "spend", byteArray.ToArray());
+        }
+        
+        /// <summary>
+        /// >> remove_approval
+        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// </summary>
+        public static Method RemoveApproval(Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32> proposal_id)
+        {
+            System.Collections.Generic.List<byte> byteArray = new List<byte>();
+            byteArray.AddRange(proposal_id.Encode());
+            return new Method(41, "Treasury", 4, "remove_approval", byteArray.ToArray());
+        }
     }
     
     public sealed class TreasuryConstants
@@ -186,7 +239,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         public Substrate.NetApi.Model.Types.Primitive.U128 ProposalBondMinimum()
         {
             var result = new Substrate.NetApi.Model.Types.Primitive.U128();
-            result.Create("0x01000000000000000000000000000000");
+            result.Create("0x0010A5D4E80000000000000000000000");
             return result;
         }
         
@@ -268,5 +321,18 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         /// Too many approvals in the queue.
         /// </summary>
         TooManyApprovals,
+        
+        /// <summary>
+        /// >> InsufficientPermission
+        /// The spend origin is valid but the amount it is allowed to spend is lower than the
+        /// amount to be spent.
+        /// </summary>
+        InsufficientPermission,
+        
+        /// <summary>
+        /// >> ProposalNotApproved
+        /// Proposal has not been approved.
+        /// </summary>
+        ProposalNotApproved,
     }
 }

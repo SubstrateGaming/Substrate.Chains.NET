@@ -30,7 +30,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         public CouncilStorage(SubstrateClientExt client)
         {
             this._client = client;
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("Council", "Proposals"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT14)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("Council", "Proposals"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT20)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Council", "ProposalOf"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.Identity}, typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256), typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime.EnumRuntimeCall)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Council", "Voting"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
@@ -62,10 +62,10 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         /// >> Proposals
         ///  The hashes of the active proposals.
         /// </summary>
-        public async Task<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT14> Proposals(CancellationToken token)
+        public async Task<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT20> Proposals(CancellationToken token)
         {
             string parameters = CouncilStorage.ProposalsParams();
-            var result = await _client.GetStorageAsync<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT14>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT20>(parameters, token);
             return result;
         }
         
@@ -274,20 +274,6 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         }
         
         /// <summary>
-        /// >> close_old_weight
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
-        /// </summary>
-        public static Method CloseOldWeight(Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256 proposal_hash, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32> index, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_weights.OldWeight> proposal_weight_bound, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32> length_bound)
-        {
-            System.Collections.Generic.List<byte> byteArray = new List<byte>();
-            byteArray.AddRange(proposal_hash.Encode());
-            byteArray.AddRange(index.Encode());
-            byteArray.AddRange(proposal_weight_bound.Encode());
-            byteArray.AddRange(length_bound.Encode());
-            return new Method(15, "Council", 4, "close_old_weight", byteArray.ToArray());
-        }
-        
-        /// <summary>
         /// >> disapprove_proposal
         /// Contains one variant per dispatchable that can be called by an extrinsic.
         /// </summary>
@@ -315,6 +301,17 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
     
     public sealed class CouncilConstants
     {
+        
+        /// <summary>
+        /// >> MaxProposalWeight
+        ///  The maximum weight of a dispatch call that can be proposed and executed.
+        /// </summary>
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight MaxProposalWeight()
+        {
+            var result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight();
+            result.Create("0x070010A5D4E813FFFFFFFFFFFFFF7F");
+            return result;
+        }
     }
     
     public enum CouncilErrors

@@ -13,8 +13,9 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup.Generated.Clients
    using System.Threading.Tasks;
    using System.Net.Http;
    using Substrate.NetApi.Model.Types.Primitive;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_nomination_pools;
-   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    using Substrate.Polkadot.NET.RestClient.Mockup.Generated.Interfaces;
    
    public sealed class NominationPoolsControllerMockupClient : MockupBaseClient, INominationPoolsControllerMockupClient
@@ -43,6 +44,10 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup.Generated.Clients
       public async Task<bool> SetMaxPoolMembersPerPool(U32 value)
       {
          return await SendMockupRequestAsync(_httpClient, "NominationPools/MaxPoolMembersPerPool", value.Encode(), Substrate.Polkadot.NET.NetApiExt.Generated.Storage.NominationPoolsStorage.MaxPoolMembersPerPoolParams());
+      }
+      public async Task<bool> SetGlobalMaxCommission(Perbill value)
+      {
+         return await SendMockupRequestAsync(_httpClient, "NominationPools/GlobalMaxCommission", value.Encode(), Substrate.Polkadot.NET.NetApiExt.Generated.Storage.NominationPoolsStorage.GlobalMaxCommissionParams());
       }
       public async Task<bool> SetPoolMembers(PoolMember value, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {
@@ -76,7 +81,7 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "NominationPools/CounterForSubPoolsStorage", value.Encode(), Substrate.Polkadot.NET.NetApiExt.Generated.Storage.NominationPoolsStorage.CounterForSubPoolsStorageParams());
       }
-      public async Task<bool> SetMetadata(BoundedVecT28 value, U32 key)
+      public async Task<bool> SetMetadata(BoundedVecT37 value, U32 key)
       {
          return await SendMockupRequestAsync(_httpClient, "NominationPools/Metadata", value.Encode(), Substrate.Polkadot.NET.NetApiExt.Generated.Storage.NominationPoolsStorage.MetadataParams(key));
       }
@@ -95,6 +100,10 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup.Generated.Clients
       public async Task<bool> SetCounterForReversePoolIdLookup(U32 value)
       {
          return await SendMockupRequestAsync(_httpClient, "NominationPools/CounterForReversePoolIdLookup", value.Encode(), Substrate.Polkadot.NET.NetApiExt.Generated.Storage.NominationPoolsStorage.CounterForReversePoolIdLookupParams());
+      }
+      public async Task<bool> SetClaimPermissions(EnumClaimPermission value, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+      {
+         return await SendMockupRequestAsync(_httpClient, "NominationPools/ClaimPermissions", value.Encode(), Substrate.Polkadot.NET.NetApiExt.Generated.Storage.NominationPoolsStorage.ClaimPermissionsParams(key));
       }
    }
 }

@@ -36,9 +36,9 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain
     }
     
     /// <summary>
-    /// >> 138 - Variant[cumulus_pallet_parachain_system.pallet.Error]
+    /// >> 167 - Variant[cumulus_pallet_parachain_system.pallet.Error]
     /// 
-    ///			Custom [dispatch errors](https://docs.substrate.io/v3/runtime/events-and-errors)
+    ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
     ///			of this pallet.
     ///			
     /// </summary>

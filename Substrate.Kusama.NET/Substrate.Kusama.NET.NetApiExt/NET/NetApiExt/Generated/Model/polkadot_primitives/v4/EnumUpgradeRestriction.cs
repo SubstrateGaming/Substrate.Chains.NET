@@ -22,7 +22,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4
     }
     
     /// <summary>
-    /// >> 784 - Variant[polkadot_primitives.v4.UpgradeRestriction]
+    /// >> 787 - Variant[polkadot_primitives.v4.UpgradeRestriction]
     /// </summary>
     public sealed class EnumUpgradeRestriction : BaseEnum<UpgradeRestriction>
     {

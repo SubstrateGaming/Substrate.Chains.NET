@@ -32,7 +32,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_membership.pal
     }
     
     /// <summary>
-    /// >> 71 - Variant[pallet_membership.pallet.Event]
+    /// >> 73 - Variant[pallet_membership.pallet.Event]
     /// 
     ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
     ///			by this pallet.

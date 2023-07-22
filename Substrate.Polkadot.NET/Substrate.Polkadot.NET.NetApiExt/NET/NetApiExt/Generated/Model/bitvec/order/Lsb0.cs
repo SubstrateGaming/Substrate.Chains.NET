@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.bitvec.order
     
     
     /// <summary>
-    /// >> 387 - Composite[bitvec.order.Lsb0]
+    /// >> 323 - Composite[bitvec.order.Lsb0]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Lsb0 : BaseType

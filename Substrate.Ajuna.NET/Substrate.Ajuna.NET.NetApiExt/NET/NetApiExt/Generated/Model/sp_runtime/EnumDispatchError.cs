@@ -37,12 +37,18 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_runtime
         Arithmetic = 8,
         
         Transactional = 9,
+        
+        Exhausted = 10,
+        
+        Corruption = 11,
+        
+        Unavailable = 12,
     }
     
     /// <summary>
-    /// >> 22 - Variant[sp_runtime.DispatchError]
+    /// >> 25 - Variant[sp_runtime.DispatchError]
     /// </summary>
-    public sealed class EnumDispatchError : BaseEnumExt<DispatchError, BaseVoid, BaseVoid, BaseVoid, Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_runtime.ModuleError, BaseVoid, BaseVoid, BaseVoid, Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_runtime.EnumTokenError, Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_runtime.EnumArithmeticError, Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_runtime.EnumTransactionalError>
+    public sealed class EnumDispatchError : BaseEnumExt<DispatchError, BaseVoid, BaseVoid, BaseVoid, Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_runtime.ModuleError, BaseVoid, BaseVoid, BaseVoid, Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_runtime.EnumTokenError, Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_arithmetic.EnumArithmeticError, Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_runtime.EnumTransactionalError, BaseVoid, BaseVoid, BaseVoid>
     {
     }
 }

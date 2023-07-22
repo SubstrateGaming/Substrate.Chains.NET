@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_staking.offence
     
     
     /// <summary>
-    /// >> 571 - Composite[sp_staking.offence.OffenceDetails]
+    /// >> 574 - Composite[sp_staking.offence.OffenceDetails]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class OffenceDetails : BaseType

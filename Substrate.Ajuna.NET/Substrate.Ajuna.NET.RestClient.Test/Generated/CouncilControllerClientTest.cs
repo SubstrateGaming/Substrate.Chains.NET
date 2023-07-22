@@ -15,7 +15,7 @@ namespace Substrate.Ajuna.NET.RestClient.Test.Generated
    using System.Net.Http;
    using Substrate.Ajuna.NET.RestClient.Mockup.Generated.Clients;
    using Substrate.Ajuna.NET.RestClient.Generated.Clients;
-   using Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.storage.bounded_vec;
+   using Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    using Substrate.Ajuna.NET.NetApiExt.Generated.Model.ajuna_runtime;
    using Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_collective;
    using Substrate.NetApi.Model.Types.Primitive;
@@ -30,10 +30,10 @@ namespace Substrate.Ajuna.NET.RestClient.Test.Generated
       {
          _httpClient = CreateHttpClient();
       }
-      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.storage.bounded_vec.BoundedVecT4 GetTestValue2()
+      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT23 GetTestValue2()
       {
-         Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.storage.bounded_vec.BoundedVecT4 result;
-         result = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.storage.bounded_vec.BoundedVecT4();
+         Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT23 result;
+         result = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT23();
          result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256>();
          result.Value.Create(new Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256[] {
                   this.GetTestValue3()});
@@ -90,7 +90,7 @@ namespace Substrate.Ajuna.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          CouncilControllerClient rpcClient = new CouncilControllerClient(_httpClient, subscriptionClient);
-         Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.storage.bounded_vec.BoundedVecT4 mockupValue = this.GetTestValue2();
+         Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT23 mockupValue = this.GetTestValue2();
 
 
          Assert.IsTrue(await rpcClient.SubscribeProposals());
@@ -103,16 +103,16 @@ namespace Substrate.Ajuna.NET.RestClient.Test.Generated
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.storage.bounded_vec.BoundedVecT4 rpcResult = await rpcClient.GetProposals();
+         Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT23 rpcResult = await rpcClient.GetProposals();
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.ajuna_runtime.EnumCall GetTestValue5()
+      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.ajuna_runtime.EnumRuntimeCall GetTestValue5()
       {
-         Substrate.Ajuna.NET.NetApiExt.Generated.Model.ajuna_runtime.EnumCall result;
-         result = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.ajuna_runtime.EnumCall();
-         result.Create(this.GetTestValueEnum<Substrate.Ajuna.NET.NetApiExt.Generated.Model.ajuna_runtime.Call>(), this.GetTestValue6());
+         Substrate.Ajuna.NET.NetApiExt.Generated.Model.ajuna_runtime.EnumRuntimeCall result;
+         result = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.ajuna_runtime.EnumRuntimeCall();
+         result.Create(this.GetTestValueEnum<Substrate.Ajuna.NET.NetApiExt.Generated.Model.ajuna_runtime.RuntimeCall>(), this.GetTestValue6());
          return result;
       }
       public Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_system.pallet.EnumCall GetTestValue6()
@@ -122,11 +122,12 @@ namespace Substrate.Ajuna.NET.RestClient.Test.Generated
          result.Create(this.GetTestValueEnum<Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_system.pallet.Call>(), this.GetTestValue7());
          return result;
       }
-      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill GetTestValue7()
+      public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> GetTestValue7()
       {
-         Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill result;
-         result = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill();
-         result.Value = this.GetTestValueU32();
+         Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> result;
+         result = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>();
+         result.Create(new Substrate.NetApi.Model.Types.Primitive.U8[] {
+                  this.GetTestValueU8()});
          return result;
       }
       public Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256 GetTestValue8()
@@ -180,7 +181,7 @@ namespace Substrate.Ajuna.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          CouncilControllerClient rpcClient = new CouncilControllerClient(_httpClient, subscriptionClient);
-         Substrate.Ajuna.NET.NetApiExt.Generated.Model.ajuna_runtime.EnumCall mockupValue = this.GetTestValue5();
+         Substrate.Ajuna.NET.NetApiExt.Generated.Model.ajuna_runtime.EnumRuntimeCall mockupValue = this.GetTestValue5();
          Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256 mockupKey = this.GetTestValue8();
 
          Assert.IsTrue(await rpcClient.SubscribeProposalOf(mockupKey));
@@ -193,7 +194,7 @@ namespace Substrate.Ajuna.NET.RestClient.Test.Generated
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Substrate.Ajuna.NET.NetApiExt.Generated.Model.ajuna_runtime.EnumCall rpcResult = await rpcClient.GetProposalOf(mockupKey);
+         Substrate.Ajuna.NET.NetApiExt.Generated.Model.ajuna_runtime.EnumRuntimeCall rpcResult = await rpcClient.GetProposalOf(mockupKey);
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());

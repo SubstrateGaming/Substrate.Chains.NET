@@ -262,11 +262,6 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated
         public DmpStorage DmpStorage;
         
         /// <summary>
-        /// UmpStorage storage calls.
-        /// </summary>
-        public UmpStorage UmpStorage;
-        
-        /// <summary>
         /// HrmpStorage storage calls.
         /// </summary>
         public HrmpStorage HrmpStorage;
@@ -310,6 +305,11 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated
         /// XcmPalletStorage storage calls.
         /// </summary>
         public XcmPalletStorage XcmPalletStorage;
+        
+        /// <summary>
+        /// MessageQueueStorage storage calls.
+        /// </summary>
+        public MessageQueueStorage MessageQueueStorage;
         
         public SubstrateClientExt(System.Uri uri, Substrate.NetApi.Model.Extrinsics.ChargeType chargeType) : 
                 base(uri, chargeType)
@@ -362,7 +362,6 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated
             this.ParasStorage = new ParasStorage(this);
             this.InitializerStorage = new InitializerStorage(this);
             this.DmpStorage = new DmpStorage(this);
-            this.UmpStorage = new UmpStorage(this);
             this.HrmpStorage = new HrmpStorage(this);
             this.ParaSessionInfoStorage = new ParaSessionInfoStorage(this);
             this.ParasDisputesStorage = new ParasDisputesStorage(this);
@@ -372,6 +371,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated
             this.AuctionsStorage = new AuctionsStorage(this);
             this.CrowdloanStorage = new CrowdloanStorage(this);
             this.XcmPalletStorage = new XcmPalletStorage(this);
+            this.MessageQueueStorage = new MessageQueueStorage(this);
         }
     }
 }

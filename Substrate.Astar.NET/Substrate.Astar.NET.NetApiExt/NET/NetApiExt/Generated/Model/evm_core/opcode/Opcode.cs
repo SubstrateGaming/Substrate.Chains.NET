@@ -18,7 +18,7 @@ namespace Substrate.Astar.NET.NetApiExt.Generated.Model.evm_core.opcode
     
     
     /// <summary>
-    /// >> 106 - Composite[evm_core.opcode.Opcode]
+    /// >> 125 - Composite[evm_core.opcode.Opcode]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Opcode : BaseType

@@ -62,11 +62,23 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Controller
         }
         
         /// <summary>
+        /// >> Deactivated
+        ///  The amount which has been reported as inactive to Currency.
+        /// </summary>
+        [HttpGet("Deactivated")]
+        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Primitive.U128), 200)]
+        [StorageKeyBuilder(typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Storage.TreasuryStorage), "DeactivatedParams")]
+        public IActionResult GetDeactivated()
+        {
+            return this.Ok(_treasuryStorage.GetDeactivated());
+        }
+        
+        /// <summary>
         /// >> Approvals
         ///  Proposal indices that have been approved but not yet awarded.
         /// </summary>
         [HttpGet("Approvals")]
-        [ProducesResponseType(typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.storage.bounded_vec.BoundedVecT3), 200)]
+        [ProducesResponseType(typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT22), 200)]
         [StorageKeyBuilder(typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Storage.TreasuryStorage), "ApprovalsParams")]
         public IActionResult GetApprovals()
         {

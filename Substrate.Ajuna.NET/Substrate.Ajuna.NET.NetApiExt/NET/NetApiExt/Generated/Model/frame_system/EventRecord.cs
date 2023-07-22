@@ -18,7 +18,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_system
     
     
     /// <summary>
-    /// >> 16 - Composite[frame_system.EventRecord]
+    /// >> 19 - Composite[frame_system.EventRecord]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class EventRecord : BaseType
@@ -32,7 +32,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_system
         /// <summary>
         /// >> event
         /// </summary>
-        private Substrate.Ajuna.NET.NetApiExt.Generated.Model.ajuna_runtime.EnumEvent _event;
+        private Substrate.Ajuna.NET.NetApiExt.Generated.Model.ajuna_runtime.EnumRuntimeEvent _event;
         
         /// <summary>
         /// >> topics
@@ -51,7 +51,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_system
             }
         }
         
-        public Substrate.Ajuna.NET.NetApiExt.Generated.Model.ajuna_runtime.EnumEvent Event
+        public Substrate.Ajuna.NET.NetApiExt.Generated.Model.ajuna_runtime.EnumRuntimeEvent Event
         {
             get
             {
@@ -94,7 +94,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_system
             var start = p;
             Phase = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_system.EnumPhase();
             Phase.Decode(byteArray, ref p);
-            Event = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.ajuna_runtime.EnumEvent();
+            Event = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.ajuna_runtime.EnumRuntimeEvent();
             Event.Decode(byteArray, ref p);
             Topics = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256>();
             Topics.Decode(byteArray, ref p);

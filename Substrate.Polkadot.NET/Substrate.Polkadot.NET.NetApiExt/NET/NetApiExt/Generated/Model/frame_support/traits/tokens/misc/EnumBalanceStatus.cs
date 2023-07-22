@@ -24,7 +24,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.frame_support.traits.
     }
     
     /// <summary>
-    /// >> 37 - Variant[frame_support.traits.tokens.misc.BalanceStatus]
+    /// >> 38 - Variant[frame_support.traits.tokens.misc.BalanceStatus]
     /// </summary>
     public sealed class EnumBalanceStatus : BaseEnum<BalanceStatus>
     {

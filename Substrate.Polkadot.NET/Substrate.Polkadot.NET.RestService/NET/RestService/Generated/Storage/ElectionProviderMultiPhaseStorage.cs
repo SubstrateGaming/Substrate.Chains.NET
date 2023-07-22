@@ -44,6 +44,8 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// <summary>
         /// >> QueuedSolution
         ///  Current best solution, signed or unsigned, queued to be returned upon `elect`.
+        /// 
+        ///  Always sorted by score.
         /// </summary>
         Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_election_provider_multi_phase.ReadySolution GetQueuedSolution();
         
@@ -94,7 +96,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         ///  can be quite large, so we're willing to pay the cost of multiple database accesses to access
         ///  them one at a time instead of reading and decoding all of them at once.
         /// </summary>
-        Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT27 GetSignedSubmissionIndices();
+        Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT36 GetSignedSubmissionIndices();
         
         /// <summary>
         /// >> SignedSubmissionsMap
@@ -162,7 +164,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// <summary>
         /// _signedSubmissionIndicesTypedStorage typed storage field
         /// </summary>
-        private TypedStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT27> _signedSubmissionIndicesTypedStorage;
+        private TypedStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT36> _signedSubmissionIndicesTypedStorage;
         
         /// <summary>
         /// _signedSubmissionsMapTypedStorage typed storage field
@@ -186,7 +188,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
             this.DesiredTargetsTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32>("ElectionProviderMultiPhase.DesiredTargets", storageDataProvider, storageChangeDelegates);
             this.SnapshotMetadataTypedStorage = new TypedStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_election_provider_multi_phase.SolutionOrSnapshotSize>("ElectionProviderMultiPhase.SnapshotMetadata", storageDataProvider, storageChangeDelegates);
             this.SignedSubmissionNextIndexTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32>("ElectionProviderMultiPhase.SignedSubmissionNextIndex", storageDataProvider, storageChangeDelegates);
-            this.SignedSubmissionIndicesTypedStorage = new TypedStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT27>("ElectionProviderMultiPhase.SignedSubmissionIndices", storageDataProvider, storageChangeDelegates);
+            this.SignedSubmissionIndicesTypedStorage = new TypedStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT36>("ElectionProviderMultiPhase.SignedSubmissionIndices", storageDataProvider, storageChangeDelegates);
             this.SignedSubmissionsMapTypedStorage = new TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_election_provider_multi_phase.signed.SignedSubmission>("ElectionProviderMultiPhase.SignedSubmissionsMap", storageDataProvider, storageChangeDelegates);
             this.MinimumUntrustedScoreTypedStorage = new TypedStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_npos_elections.ElectionScore>("ElectionProviderMultiPhase.MinimumUntrustedScore", storageDataProvider, storageChangeDelegates);
         }
@@ -299,7 +301,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// <summary>
         /// _signedSubmissionIndicesTypedStorage property
         /// </summary>
-        public TypedStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT27> SignedSubmissionIndicesTypedStorage
+        public TypedStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT36> SignedSubmissionIndicesTypedStorage
         {
             get
             {
@@ -411,6 +413,8 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// <summary>
         /// >> QueuedSolution
         ///  Current best solution, signed or unsigned, queued to be returned upon `elect`.
+        /// 
+        ///  Always sorted by score.
         /// </summary>
         public Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_election_provider_multi_phase.ReadySolution GetQueuedSolution()
         {
@@ -521,7 +525,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         ///  can be quite large, so we're willing to pay the cost of multiple database accesses to access
         ///  them one at a time instead of reading and decoding all of them at once.
         /// </summary>
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT27 GetSignedSubmissionIndices()
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT36 GetSignedSubmissionIndices()
         {
             return SignedSubmissionIndicesTypedStorage.Get();
         }

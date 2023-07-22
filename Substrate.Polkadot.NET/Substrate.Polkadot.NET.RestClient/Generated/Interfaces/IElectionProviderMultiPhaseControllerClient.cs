@@ -13,7 +13,7 @@ namespace Substrate.Polkadot.NET.RestClient.Generated.Interfaces
    using System.Threading.Tasks;
    using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_election_provider_multi_phase;
-   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_election_provider_multi_phase.signed;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_npos_elections;
    
@@ -33,7 +33,7 @@ namespace Substrate.Polkadot.NET.RestClient.Generated.Interfaces
       Task<bool> SubscribeSnapshotMetadata();
       Task<U32> GetSignedSubmissionNextIndex();
       Task<bool> SubscribeSignedSubmissionNextIndex();
-      Task<BoundedVecT27> GetSignedSubmissionIndices();
+      Task<BoundedVecT36> GetSignedSubmissionIndices();
       Task<bool> SubscribeSignedSubmissionIndices();
       Task<SignedSubmission> GetSignedSubmissionsMap(U32 key);
       Task<bool> SubscribeSignedSubmissionsMap(U32 key);

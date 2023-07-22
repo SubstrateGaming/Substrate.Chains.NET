@@ -32,7 +32,7 @@ namespace Substrate.Astar.NET.NetApiExt.Generated.Model.pallet_utility.pallet
     }
     
     /// <summary>
-    /// >> 140 - Variant[pallet_utility.pallet.Call]
+    /// >> 161 - Variant[pallet_utility.pallet.Call]
     /// Contains one variant per dispatchable that can be called by an extrinsic.
     /// </summary>
     public sealed class EnumCall : BaseEnumExt<Call, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Astar.NET.NetApiExt.Generated.Model.astar_runtime.EnumRuntimeCall>, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U16, Substrate.Astar.NET.NetApiExt.Generated.Model.astar_runtime.EnumRuntimeCall>, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Astar.NET.NetApiExt.Generated.Model.astar_runtime.EnumRuntimeCall>, BaseTuple<Substrate.Astar.NET.NetApiExt.Generated.Model.astar_runtime.EnumOriginCaller, Substrate.Astar.NET.NetApiExt.Generated.Model.astar_runtime.EnumRuntimeCall>, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Astar.NET.NetApiExt.Generated.Model.astar_runtime.EnumRuntimeCall>, BaseTuple<Substrate.Astar.NET.NetApiExt.Generated.Model.astar_runtime.EnumRuntimeCall, Substrate.Astar.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>>

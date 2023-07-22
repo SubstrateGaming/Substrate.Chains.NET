@@ -24,7 +24,7 @@ namespace Substrate.Astar.NET.NetApiExt.Generated.Model.pallet_contracts.wasm
     }
     
     /// <summary>
-    /// >> 268 - Variant[pallet_contracts.wasm.Determinism]
+    /// >> 283 - Variant[pallet_contracts.wasm.Determinism]
     /// </summary>
     public sealed class EnumDeterminism : BaseEnum<Determinism>
     {

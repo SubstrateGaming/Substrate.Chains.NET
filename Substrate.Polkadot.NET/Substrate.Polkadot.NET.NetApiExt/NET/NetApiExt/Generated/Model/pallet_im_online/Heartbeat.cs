@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_im_online
     
     
     /// <summary>
-    /// >> 231 - Composite[pallet_im_online.Heartbeat]
+    /// >> 132 - Composite[pallet_im_online.Heartbeat]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Heartbeat : BaseType

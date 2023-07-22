@@ -66,7 +66,7 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Controller
         ///  The current weight for the block.
         /// </summary>
         [HttpGet("BlockWeight")]
-        [ProducesResponseType(typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.weights.PerDispatchClassT1), 200)]
+        [ProducesResponseType(typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.dispatch.PerDispatchClassT1), 200)]
         [StorageKeyBuilder(typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Storage.SystemStorage), "BlockWeightParams")]
         public IActionResult GetBlockWeight()
         {

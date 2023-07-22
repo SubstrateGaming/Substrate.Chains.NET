@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parach
     
     
     /// <summary>
-    /// >> 369 - Composite[polkadot_runtime_parachains.disputes.slashing.DisputeProof]
+    /// >> 368 - Composite[polkadot_runtime_parachains.disputes.slashing.DisputeProof]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class DisputeProof : BaseType

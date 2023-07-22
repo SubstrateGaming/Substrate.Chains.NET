@@ -1372,10 +1372,9 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> bond
         /// Contains one variant per dispatchable that can be called by an extrinsic.
         /// </summary>
-        public static Method Bond(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress controller, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128> value, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.EnumRewardDestination payee)
+        public static Method Bond(Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128> value, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.EnumRewardDestination payee)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
-            byteArray.AddRange(controller.Encode());
             byteArray.AddRange(value.Encode());
             byteArray.AddRange(payee.Encode());
             return new Method(6, "Staking", 0, "bond", byteArray.ToArray());
@@ -1461,10 +1460,9 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> set_controller
         /// Contains one variant per dispatchable that can be called by an extrinsic.
         /// </summary>
-        public static Method SetController(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress controller)
+        public static Method SetController()
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
-            byteArray.AddRange(controller.Encode());
             return new Method(6, "Staking", 8, "set_controller", byteArray.ToArray());
         }
         

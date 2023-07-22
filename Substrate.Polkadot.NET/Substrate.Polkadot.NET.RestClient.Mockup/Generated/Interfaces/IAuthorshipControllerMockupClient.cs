@@ -11,14 +11,10 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup.Generated.Interfaces
 {
    using System;
    using System.Threading.Tasks;
-   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto;
-   using Substrate.NetApi.Model.Types.Primitive;
    
    public interface IAuthorshipControllerMockupClient
    {
-      Task<bool> SetUncles(BoundedVecT7 value);
       Task<bool> SetAuthor(AccountId32 value);
-      Task<bool> SetDidSetUncles(Bool value);
    }
 }

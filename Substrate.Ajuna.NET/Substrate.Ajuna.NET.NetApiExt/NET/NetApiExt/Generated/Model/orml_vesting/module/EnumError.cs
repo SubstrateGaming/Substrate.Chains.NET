@@ -32,9 +32,9 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.orml_vesting.module
     }
     
     /// <summary>
-    /// >> 159 - Variant[orml_vesting.module.Error]
+    /// >> 317 - Variant[orml_vesting.module.Error]
     /// 
-    ///			Custom [dispatch errors](https://docs.substrate.io/v3/runtime/events-and-errors)
+    ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
     ///			of this pallet.
     ///			
     /// </summary>

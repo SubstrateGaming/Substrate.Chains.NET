@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_democracy.type
     
     
     /// <summary>
-    /// >> 540 - Composite[pallet_democracy.types.Delegations]
+    /// >> 589 - Composite[pallet_democracy.types.Delegations]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Delegations : BaseType

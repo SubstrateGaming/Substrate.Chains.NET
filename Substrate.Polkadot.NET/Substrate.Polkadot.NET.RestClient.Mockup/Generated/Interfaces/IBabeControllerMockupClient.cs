@@ -12,11 +12,11 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup.Generated.Interfaces
    using System;
    using System.Threading.Tasks;
    using Substrate.NetApi.Model.Types.Primitive;
-   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.bounded.weak_bounded_vec;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_consensus_slots;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_consensus_babe.digests;
-   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    using Substrate.NetApi.Model.Types.Base;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_consensus_babe;
    
@@ -31,12 +31,13 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup.Generated.Interfaces
       Task<bool> SetNextRandomness(Arr32U8 value);
       Task<bool> SetNextAuthorities(WeakBoundedVecT2 value);
       Task<bool> SetSegmentIndex(U32 value);
-      Task<bool> SetUnderConstruction(BoundedVecT5 value, U32 key);
+      Task<bool> SetUnderConstruction(BoundedVecT10 value, U32 key);
       Task<bool> SetInitialized(BaseOpt<EnumPreDigest> value);
       Task<bool> SetAuthorVrfRandomness(BaseOpt<Arr32U8> value);
       Task<bool> SetEpochStart(BaseTuple<U32, U32> value);
       Task<bool> SetLateness(U32 value);
       Task<bool> SetEpochConfig(BabeEpochConfiguration value);
       Task<bool> SetNextEpochConfig(BabeEpochConfiguration value);
+      Task<bool> SetSkippedEpochs(BoundedVecT11 value);
    }
 }

@@ -18,7 +18,7 @@ namespace Substrate.Astar.NET.NetApiExt.Generated.Model.pallet_contracts.schedul
     
     
     /// <summary>
-    /// >> 429 - Composite[pallet_contracts.schedule.HostFnWeights]
+    /// >> 463 - Composite[pallet_contracts.schedule.HostFnWeights]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class HostFnWeights : BaseType

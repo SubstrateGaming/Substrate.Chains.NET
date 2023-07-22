@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parach
     
     
     /// <summary>
-    /// >> 745 - Composite[polkadot_runtime_parachains.configuration.HostConfiguration]
+    /// >> 748 - Composite[polkadot_runtime_parachains.configuration.HostConfiguration]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class HostConfiguration : BaseType
@@ -83,11 +83,6 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parach
         /// >> max_downward_message_size
         /// </summary>
         private Substrate.NetApi.Model.Types.Primitive.U32 _maxDownwardMessageSize;
-        
-        /// <summary>
-        /// >> ump_service_total_weight
-        /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight _umpServiceTotalWeight;
         
         /// <summary>
         /// >> hrmp_max_parachain_outbound_channels
@@ -218,11 +213,6 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parach
         /// >> relay_vrf_modulo_samples
         /// </summary>
         private Substrate.NetApi.Model.Types.Primitive.U32 _relayVrfModuloSamples;
-        
-        /// <summary>
-        /// >> ump_max_individual_weight
-        /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight _umpMaxIndividualWeight;
         
         /// <summary>
         /// >> pvf_checking_enabled
@@ -380,18 +370,6 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parach
             set
             {
                 this._maxDownwardMessageSize = value;
-            }
-        }
-        
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight UmpServiceTotalWeight
-        {
-            get
-            {
-                return this._umpServiceTotalWeight;
-            }
-            set
-            {
-                this._umpServiceTotalWeight = value;
             }
         }
         
@@ -707,18 +685,6 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parach
             }
         }
         
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight UmpMaxIndividualWeight
-        {
-            get
-            {
-                return this._umpMaxIndividualWeight;
-            }
-            set
-            {
-                this._umpMaxIndividualWeight = value;
-            }
-        }
-        
         public Substrate.NetApi.Model.Types.Primitive.Bool PvfCheckingEnabled
         {
             get
@@ -775,7 +741,6 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parach
             result.AddRange(AsyncBackingParams.Encode());
             result.AddRange(MaxPovSize.Encode());
             result.AddRange(MaxDownwardMessageSize.Encode());
-            result.AddRange(UmpServiceTotalWeight.Encode());
             result.AddRange(HrmpMaxParachainOutboundChannels.Encode());
             result.AddRange(HrmpMaxParathreadOutboundChannels.Encode());
             result.AddRange(HrmpSenderDeposit.Encode());
@@ -802,7 +767,6 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parach
             result.AddRange(ZerothDelayTrancheWidth.Encode());
             result.AddRange(NeededApprovals.Encode());
             result.AddRange(RelayVrfModuloSamples.Encode());
-            result.AddRange(UmpMaxIndividualWeight.Encode());
             result.AddRange(PvfCheckingEnabled.Encode());
             result.AddRange(PvfVotingTtl.Encode());
             result.AddRange(MinimumValidationUpgradeDelay.Encode());
@@ -836,8 +800,6 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parach
             MaxPovSize.Decode(byteArray, ref p);
             MaxDownwardMessageSize = new Substrate.NetApi.Model.Types.Primitive.U32();
             MaxDownwardMessageSize.Decode(byteArray, ref p);
-            UmpServiceTotalWeight = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight();
-            UmpServiceTotalWeight.Decode(byteArray, ref p);
             HrmpMaxParachainOutboundChannels = new Substrate.NetApi.Model.Types.Primitive.U32();
             HrmpMaxParachainOutboundChannels.Decode(byteArray, ref p);
             HrmpMaxParathreadOutboundChannels = new Substrate.NetApi.Model.Types.Primitive.U32();
@@ -890,8 +852,6 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parach
             NeededApprovals.Decode(byteArray, ref p);
             RelayVrfModuloSamples = new Substrate.NetApi.Model.Types.Primitive.U32();
             RelayVrfModuloSamples.Decode(byteArray, ref p);
-            UmpMaxIndividualWeight = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight();
-            UmpMaxIndividualWeight.Decode(byteArray, ref p);
             PvfCheckingEnabled = new Substrate.NetApi.Model.Types.Primitive.Bool();
             PvfCheckingEnabled.Decode(byteArray, ref p);
             PvfVotingTtl = new Substrate.NetApi.Model.Types.Primitive.U32();

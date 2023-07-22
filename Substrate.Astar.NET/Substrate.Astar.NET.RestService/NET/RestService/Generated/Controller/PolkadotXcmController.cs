@@ -119,7 +119,7 @@ namespace Substrate.Astar.NET.RestService.Generated.Controller
         ///  of our versions we informed them of.
         /// </summary>
         [HttpGet("VersionNotifyTargets")]
-        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U64, Substrate.NetApi.Model.Types.Primitive.U64, Substrate.NetApi.Model.Types.Primitive.U32>), 200)]
+        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U64, Substrate.Astar.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight, Substrate.NetApi.Model.Types.Primitive.U32>), 200)]
         [StorageKeyBuilder(typeof(Substrate.Astar.NET.NetApiExt.Generated.Storage.PolkadotXcmStorage), "VersionNotifyTargetsParams", typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Astar.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation>))]
         public IActionResult GetVersionNotifyTargets(string key)
         {
@@ -133,7 +133,7 @@ namespace Substrate.Astar.NET.RestService.Generated.Controller
         ///  which is used as a prioritization.
         /// </summary>
         [HttpGet("VersionDiscoveryQueue")]
-        [ProducesResponseType(typeof(Substrate.Astar.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT11), 200)]
+        [ProducesResponseType(typeof(Substrate.Astar.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT16), 200)]
         [StorageKeyBuilder(typeof(Substrate.Astar.NET.NetApiExt.Generated.Storage.PolkadotXcmStorage), "VersionDiscoveryQueueParams")]
         public IActionResult GetVersionDiscoveryQueue()
         {
@@ -150,6 +150,30 @@ namespace Substrate.Astar.NET.RestService.Generated.Controller
         public IActionResult GetCurrentMigration()
         {
             return this.Ok(_polkadotXcmStorage.GetCurrentMigration());
+        }
+        
+        /// <summary>
+        /// >> RemoteLockedFungibles
+        ///  Fungible assets which we know are locked on a remote chain.
+        /// </summary>
+        [HttpGet("RemoteLockedFungibles")]
+        [ProducesResponseType(typeof(Substrate.Astar.NET.NetApiExt.Generated.Model.pallet_xcm.pallet.RemoteLockedFungibleRecord), 200)]
+        [StorageKeyBuilder(typeof(Substrate.Astar.NET.NetApiExt.Generated.Storage.PolkadotXcmStorage), "RemoteLockedFungiblesParams", typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Astar.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Astar.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAssetId>))]
+        public IActionResult GetRemoteLockedFungibles(string key)
+        {
+            return this.Ok(_polkadotXcmStorage.GetRemoteLockedFungibles(key));
+        }
+        
+        /// <summary>
+        /// >> LockedFungibles
+        ///  Fungible assets which we know are locked on this chain.
+        /// </summary>
+        [HttpGet("LockedFungibles")]
+        [ProducesResponseType(typeof(Substrate.Astar.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17), 200)]
+        [StorageKeyBuilder(typeof(Substrate.Astar.NET.NetApiExt.Generated.Storage.PolkadotXcmStorage), "LockedFungiblesParams", typeof(Substrate.Astar.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32))]
+        public IActionResult GetLockedFungibles(string key)
+        {
+            return this.Ok(_polkadotXcmStorage.GetLockedFungibles(key));
         }
     }
 }

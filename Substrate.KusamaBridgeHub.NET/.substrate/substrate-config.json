@@ -1,0 +1,13 @@
+{
+  "projects": {
+    "net_api": "Substrate.KusamaBridgeHub.NET.NetApiExt",
+    "rest_service": "Substrate.KusamaBridgeHub.NET.RestService",
+    "rest_client": "Substrate.KusamaBridgeHub.NET.RestClient"
+  },
+   "metadata": {
+      "websocket": "wss://kusama-bridge-hub-rpc.polkadot.io"
+   },
+  "rest_client_settings": {
+    "service_assembly": "Substrate.KusamaBridgeHub.NET.RestService.dll"
+  }
+}

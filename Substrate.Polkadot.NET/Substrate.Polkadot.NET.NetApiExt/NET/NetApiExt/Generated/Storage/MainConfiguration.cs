@@ -50,7 +50,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         /// </summary>
         public static string ActiveConfigDefault()
         {
-            return @"0x000000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100000001000000010000000000000000000600000064000000C800000001000000000000000000000000000000000000000700C817A80402004001000200000002000000";
+            return @"0x000000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000010000000100000000000000000006000000640000000100000000000000000000000000000000000000000200000002000000";
         }
         
         /// <summary>
@@ -317,17 +317,6 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         }
         
         /// <summary>
-        /// >> set_dispute_conclusion_by_time_out_period
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
-        /// </summary>
-        public static Method SetDisputeConclusionByTimeOutPeriod(Substrate.NetApi.Model.Types.Primitive.U32 @new)
-        {
-            System.Collections.Generic.List<byte> byteArray = new List<byte>();
-            byteArray.AddRange(@new.Encode());
-            return new Method(51, "Configuration", 17, "set_dispute_conclusion_by_time_out_period", byteArray.ToArray());
-        }
-        
-        /// <summary>
         /// >> set_no_show_slots
         /// Contains one variant per dispatchable that can be called by an extrinsic.
         /// </summary>
@@ -413,17 +402,6 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(@new.Encode());
             return new Method(51, "Configuration", 25, "set_max_downward_message_size", byteArray.ToArray());
-        }
-        
-        /// <summary>
-        /// >> set_ump_service_total_weight
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
-        /// </summary>
-        public static Method SetUmpServiceTotalWeight(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight @new)
-        {
-            System.Collections.Generic.List<byte> byteArray = new List<byte>();
-            byteArray.AddRange(@new.Encode());
-            return new Method(51, "Configuration", 26, "set_ump_service_total_weight", byteArray.ToArray());
         }
         
         /// <summary>
@@ -570,17 +548,6 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         }
         
         /// <summary>
-        /// >> set_ump_max_individual_weight
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
-        /// </summary>
-        public static Method SetUmpMaxIndividualWeight(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight @new)
-        {
-            System.Collections.Generic.List<byte> byteArray = new List<byte>();
-            byteArray.AddRange(@new.Encode());
-            return new Method(51, "Configuration", 40, "set_ump_max_individual_weight", byteArray.ToArray());
-        }
-        
-        /// <summary>
         /// >> set_pvf_checking_enabled
         /// Contains one variant per dispatchable that can be called by an extrinsic.
         /// </summary>
@@ -622,6 +589,28 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(@new.Encode());
             return new Method(51, "Configuration", 44, "set_bypass_consistency_check", byteArray.ToArray());
+        }
+        
+        /// <summary>
+        /// >> set_async_backing_params
+        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// </summary>
+        public static Method SetAsyncBackingParams(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.vstaging.AsyncBackingParams @new)
+        {
+            System.Collections.Generic.List<byte> byteArray = new List<byte>();
+            byteArray.AddRange(@new.Encode());
+            return new Method(51, "Configuration", 45, "set_async_backing_params", byteArray.ToArray());
+        }
+        
+        /// <summary>
+        /// >> set_executor_params
+        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// </summary>
+        public static Method SetExecutorParams(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.executor_params.ExecutorParams @new)
+        {
+            System.Collections.Generic.List<byte> byteArray = new List<byte>();
+            byteArray.AddRange(@new.Encode());
+            return new Method(51, "Configuration", 46, "set_executor_params", byteArray.ToArray());
         }
     }
     

@@ -30,7 +30,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         ///  Note that this API is private due to it being prone to 'off-by-one' at session boundaries.
         ///  When in doubt, use `Sessions` API instead.
         /// </summary>
-        Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.assignment_app.Public> GetAssignmentKeysUnsafe();
+        Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.assignment_app.Public> GetAssignmentKeysUnsafe();
         
         /// <summary>
         /// >> EarliestStoredSession
@@ -44,13 +44,19 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         ///  Should have an entry in range `EarliestStoredSession..=CurrentSessionIndex`.
         ///  Does not have any entries before the session index in the first session change notification.
         /// </summary>
-        Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.SessionInfo GetSessions(string key);
+        Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.SessionInfo GetSessions(string key);
         
         /// <summary>
         /// >> AccountKeys
         ///  The validator account keys of the validators actively participating in parachain consensus.
         /// </summary>
         Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> GetAccountKeys(string key);
+        
+        /// <summary>
+        /// >> SessionExecutorParams
+        ///  Executor parameter set for a given session index
+        /// </summary>
+        Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.executor_params.ExecutorParams GetSessionExecutorParams(string key);
     }
     
     /// <summary>
@@ -62,7 +68,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// <summary>
         /// _assignmentKeysUnsafeTypedStorage typed storage field
         /// </summary>
-        private TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.assignment_app.Public>> _assignmentKeysUnsafeTypedStorage;
+        private TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.assignment_app.Public>> _assignmentKeysUnsafeTypedStorage;
         
         /// <summary>
         /// _earliestStoredSessionTypedStorage typed storage field
@@ -72,7 +78,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// <summary>
         /// _sessionsTypedStorage typed storage field
         /// </summary>
-        private TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.SessionInfo> _sessionsTypedStorage;
+        private TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.SessionInfo> _sessionsTypedStorage;
         
         /// <summary>
         /// _accountKeysTypedStorage typed storage field
@@ -80,20 +86,26 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         private TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>> _accountKeysTypedStorage;
         
         /// <summary>
+        /// _sessionExecutorParamsTypedStorage typed storage field
+        /// </summary>
+        private TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.executor_params.ExecutorParams> _sessionExecutorParamsTypedStorage;
+        
+        /// <summary>
         /// ParaSessionInfoStorage constructor.
         /// </summary>
         public ParaSessionInfoStorage(IStorageDataProvider storageDataProvider, List<IStorageChangeDelegate> storageChangeDelegates)
         {
-            this.AssignmentKeysUnsafeTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.assignment_app.Public>>("ParaSessionInfo.AssignmentKeysUnsafe", storageDataProvider, storageChangeDelegates);
+            this.AssignmentKeysUnsafeTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.assignment_app.Public>>("ParaSessionInfo.AssignmentKeysUnsafe", storageDataProvider, storageChangeDelegates);
             this.EarliestStoredSessionTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32>("ParaSessionInfo.EarliestStoredSession", storageDataProvider, storageChangeDelegates);
-            this.SessionsTypedStorage = new TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.SessionInfo>("ParaSessionInfo.Sessions", storageDataProvider, storageChangeDelegates);
+            this.SessionsTypedStorage = new TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.SessionInfo>("ParaSessionInfo.Sessions", storageDataProvider, storageChangeDelegates);
             this.AccountKeysTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>>("ParaSessionInfo.AccountKeys", storageDataProvider, storageChangeDelegates);
+            this.SessionExecutorParamsTypedStorage = new TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.executor_params.ExecutorParams>("ParaSessionInfo.SessionExecutorParams", storageDataProvider, storageChangeDelegates);
         }
         
         /// <summary>
         /// _assignmentKeysUnsafeTypedStorage property
         /// </summary>
-        public TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.assignment_app.Public>> AssignmentKeysUnsafeTypedStorage
+        public TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.assignment_app.Public>> AssignmentKeysUnsafeTypedStorage
         {
             get
             {
@@ -123,7 +135,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// <summary>
         /// _sessionsTypedStorage property
         /// </summary>
-        public TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.SessionInfo> SessionsTypedStorage
+        public TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.SessionInfo> SessionsTypedStorage
         {
             get
             {
@@ -151,6 +163,21 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         }
         
         /// <summary>
+        /// _sessionExecutorParamsTypedStorage property
+        /// </summary>
+        public TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.executor_params.ExecutorParams> SessionExecutorParamsTypedStorage
+        {
+            get
+            {
+                return _sessionExecutorParamsTypedStorage;
+            }
+            set
+            {
+                _sessionExecutorParamsTypedStorage = value;
+            }
+        }
+        
+        /// <summary>
         /// Connects to all storages and initializes the change subscription handling.
         /// </summary>
         public async Task InitializeAsync(Substrate.ServiceLayer.Storage.IStorageDataProvider dataProvider)
@@ -159,6 +186,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
             await EarliestStoredSessionTypedStorage.InitializeAsync("ParaSessionInfo", "EarliestStoredSession");
             await SessionsTypedStorage.InitializeAsync("ParaSessionInfo", "Sessions");
             await AccountKeysTypedStorage.InitializeAsync("ParaSessionInfo", "AccountKeys");
+            await SessionExecutorParamsTypedStorage.InitializeAsync("ParaSessionInfo", "SessionExecutorParams");
         }
         
         /// <summary>
@@ -176,7 +204,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         ///  Note that this API is private due to it being prone to 'off-by-one' at session boundaries.
         ///  When in doubt, use `Sessions` API instead.
         /// </summary>
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.assignment_app.Public> GetAssignmentKeysUnsafe()
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.assignment_app.Public> GetAssignmentKeysUnsafe()
         {
             return AssignmentKeysUnsafeTypedStorage.Get();
         }
@@ -214,13 +242,13 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         ///  Should have an entry in range `EarliestStoredSession..=CurrentSessionIndex`.
         ///  Does not have any entries before the session index in the first session change notification.
         /// </summary>
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.SessionInfo GetSessions(string key)
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.SessionInfo GetSessions(string key)
         {
             if ((key == null))
             {
                 return null;
             }
-            if (SessionsTypedStorage.Dictionary.TryGetValue(key, out Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.SessionInfo result))
+            if (SessionsTypedStorage.Dictionary.TryGetValue(key, out Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.SessionInfo result))
             {
                 return result;
             }
@@ -250,6 +278,35 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
                 return null;
             }
             if (AccountKeysTypedStorage.Dictionary.TryGetValue(key, out Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> result))
+            {
+                return result;
+            }
+            else
+            {
+                return null;
+            }
+        }
+        
+        /// <summary>
+        /// Implements any storage change for ParaSessionInfo.SessionExecutorParams
+        /// </summary>
+        [StorageChange("ParaSessionInfo", "SessionExecutorParams")]
+        public void OnUpdateSessionExecutorParams(string key, string data)
+        {
+            SessionExecutorParamsTypedStorage.Update(key, data);
+        }
+        
+        /// <summary>
+        /// >> SessionExecutorParams
+        ///  Executor parameter set for a given session index
+        /// </summary>
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.executor_params.ExecutorParams GetSessionExecutorParams(string key)
+        {
+            if ((key == null))
+            {
+                return null;
+            }
+            if (SessionExecutorParamsTypedStorage.Dictionary.TryGetValue(key, out Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.executor_params.ExecutorParams result))
             {
                 return result;
             }

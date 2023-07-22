@@ -25,22 +25,10 @@ namespace Substrate.Astar.NET.RestService.Generated.Storage
     {
         
         /// <summary>
-        /// >> Uncles
-        ///  Uncles
-        /// </summary>
-        Substrate.Astar.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT9 GetUncles();
-        
-        /// <summary>
         /// >> Author
         ///  Author of current block.
         /// </summary>
         Substrate.Astar.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetAuthor();
-        
-        /// <summary>
-        /// >> DidSetUncles
-        ///  Whether uncles were already set in this block.
-        /// </summary>
-        Substrate.NetApi.Model.Types.Primitive.Bool GetDidSetUncles();
     }
     
     /// <summary>
@@ -50,43 +38,16 @@ namespace Substrate.Astar.NET.RestService.Generated.Storage
     {
         
         /// <summary>
-        /// _unclesTypedStorage typed storage field
-        /// </summary>
-        private TypedStorage<Substrate.Astar.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT9> _unclesTypedStorage;
-        
-        /// <summary>
         /// _authorTypedStorage typed storage field
         /// </summary>
         private TypedStorage<Substrate.Astar.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> _authorTypedStorage;
-        
-        /// <summary>
-        /// _didSetUnclesTypedStorage typed storage field
-        /// </summary>
-        private TypedStorage<Substrate.NetApi.Model.Types.Primitive.Bool> _didSetUnclesTypedStorage;
         
         /// <summary>
         /// AuthorshipStorage constructor.
         /// </summary>
         public AuthorshipStorage(IStorageDataProvider storageDataProvider, List<IStorageChangeDelegate> storageChangeDelegates)
         {
-            this.UnclesTypedStorage = new TypedStorage<Substrate.Astar.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT9>("Authorship.Uncles", storageDataProvider, storageChangeDelegates);
             this.AuthorTypedStorage = new TypedStorage<Substrate.Astar.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>("Authorship.Author", storageDataProvider, storageChangeDelegates);
-            this.DidSetUnclesTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.Bool>("Authorship.DidSetUncles", storageDataProvider, storageChangeDelegates);
-        }
-        
-        /// <summary>
-        /// _unclesTypedStorage property
-        /// </summary>
-        public TypedStorage<Substrate.Astar.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT9> UnclesTypedStorage
-        {
-            get
-            {
-                return _unclesTypedStorage;
-            }
-            set
-            {
-                _unclesTypedStorage = value;
-            }
         }
         
         /// <summary>
@@ -105,46 +66,11 @@ namespace Substrate.Astar.NET.RestService.Generated.Storage
         }
         
         /// <summary>
-        /// _didSetUnclesTypedStorage property
-        /// </summary>
-        public TypedStorage<Substrate.NetApi.Model.Types.Primitive.Bool> DidSetUnclesTypedStorage
-        {
-            get
-            {
-                return _didSetUnclesTypedStorage;
-            }
-            set
-            {
-                _didSetUnclesTypedStorage = value;
-            }
-        }
-        
-        /// <summary>
         /// Connects to all storages and initializes the change subscription handling.
         /// </summary>
         public async Task InitializeAsync(Substrate.ServiceLayer.Storage.IStorageDataProvider dataProvider)
         {
-            await UnclesTypedStorage.InitializeAsync("Authorship", "Uncles");
             await AuthorTypedStorage.InitializeAsync("Authorship", "Author");
-            await DidSetUnclesTypedStorage.InitializeAsync("Authorship", "DidSetUncles");
-        }
-        
-        /// <summary>
-        /// Implements any storage change for Authorship.Uncles
-        /// </summary>
-        [StorageChange("Authorship", "Uncles")]
-        public void OnUpdateUncles(string data)
-        {
-            UnclesTypedStorage.Update(data);
-        }
-        
-        /// <summary>
-        /// >> Uncles
-        ///  Uncles
-        /// </summary>
-        public Substrate.Astar.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT9 GetUncles()
-        {
-            return UnclesTypedStorage.Get();
         }
         
         /// <summary>
@@ -163,24 +89,6 @@ namespace Substrate.Astar.NET.RestService.Generated.Storage
         public Substrate.Astar.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetAuthor()
         {
             return AuthorTypedStorage.Get();
-        }
-        
-        /// <summary>
-        /// Implements any storage change for Authorship.DidSetUncles
-        /// </summary>
-        [StorageChange("Authorship", "DidSetUncles")]
-        public void OnUpdateDidSetUncles(string data)
-        {
-            DidSetUnclesTypedStorage.Update(data);
-        }
-        
-        /// <summary>
-        /// >> DidSetUncles
-        ///  Whether uncles were already set in this block.
-        /// </summary>
-        public Substrate.NetApi.Model.Types.Primitive.Bool GetDidSetUncles()
-        {
-            return DidSetUnclesTypedStorage.Get();
         }
     }
 }

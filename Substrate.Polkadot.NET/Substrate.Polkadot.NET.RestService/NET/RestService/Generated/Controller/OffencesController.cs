@@ -60,22 +60,5 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Controller
         {
             return this.Ok(_offencesStorage.GetConcurrentReportsIndex(key));
         }
-        
-        /// <summary>
-        /// >> ReportsByKindIndex
-        ///  Enumerates all reports of a kind along with the time they happened.
-        /// 
-        ///  All reports are sorted by the time of offence.
-        /// 
-        ///  Note that the actual type of this mapping is `Vec<u8>`, this is because values of
-        ///  different types are not supported at the moment so we are doing the manual serialization.
-        /// </summary>
-        [HttpGet("ReportsByKindIndex")]
-        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>), 200)]
-        [StorageKeyBuilder(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Storage.OffencesStorage), "ReportsByKindIndexParams", typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base.Arr16U8))]
-        public IActionResult GetReportsByKindIndex(string key)
-        {
-            return this.Ok(_offencesStorage.GetReportsByKindIndex(key));
-        }
     }
 }

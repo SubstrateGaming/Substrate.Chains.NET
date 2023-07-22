@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.offchain
     
     
     /// <summary>
-    /// >> 232 - Composite[sp_core.offchain.OpaqueNetworkState]
+    /// >> 133 - Composite[sp_core.offchain.OpaqueNetworkState]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class OpaqueNetworkState : BaseType

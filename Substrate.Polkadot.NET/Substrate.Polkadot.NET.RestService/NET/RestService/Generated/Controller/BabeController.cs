@@ -54,7 +54,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Controller
         ///  Current epoch authorities.
         /// </summary>
         [HttpGet("Authorities")]
-        [ProducesResponseType(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.bounded.weak_bounded_vec.WeakBoundedVecT2), 200)]
+        [ProducesResponseType(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT2), 200)]
         [StorageKeyBuilder(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Storage.BabeStorage), "AuthoritiesParams")]
         public IActionResult GetAuthorities()
         {
@@ -136,7 +136,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Controller
         ///  Next epoch authorities.
         /// </summary>
         [HttpGet("NextAuthorities")]
-        [ProducesResponseType(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.bounded.weak_bounded_vec.WeakBoundedVecT2), 200)]
+        [ProducesResponseType(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT2), 200)]
         [StorageKeyBuilder(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Storage.BabeStorage), "NextAuthoritiesParams")]
         public IActionResult GetNextAuthorities()
         {
@@ -168,7 +168,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Controller
         ///  TWOX-NOTE: `SegmentIndex` is an increasing integer, so this is okay.
         /// </summary>
         [HttpGet("UnderConstruction")]
-        [ProducesResponseType(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT5), 200)]
+        [ProducesResponseType(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10), 200)]
         [StorageKeyBuilder(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Storage.BabeStorage), "UnderConstructionParams", typeof(Substrate.NetApi.Model.Types.Primitive.U32))]
         public IActionResult GetUnderConstruction(string key)
         {
@@ -259,6 +259,25 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Controller
         public IActionResult GetNextEpochConfig()
         {
             return this.Ok(_babeStorage.GetNextEpochConfig());
+        }
+        
+        /// <summary>
+        /// >> SkippedEpochs
+        ///  A list of the last 100 skipped epochs and the corresponding session index
+        ///  when the epoch was skipped.
+        /// 
+        ///  This is only used for validating equivocation proofs. An equivocation proof
+        ///  must contains a key-ownership proof for a given session, therefore we need a
+        ///  way to tie together sessions and epoch indices, i.e. we need to validate that
+        ///  a validator was the owner of a given key on a given session, and what the
+        ///  active epoch index was during that session.
+        /// </summary>
+        [HttpGet("SkippedEpochs")]
+        [ProducesResponseType(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT11), 200)]
+        [StorageKeyBuilder(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Storage.BabeStorage), "SkippedEpochsParams")]
+        public IActionResult GetSkippedEpochs()
+        {
+            return this.Ok(_babeStorage.GetSkippedEpochs());
         }
     }
 }

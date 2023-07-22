@@ -18,7 +18,7 @@ namespace Substrate.Astar.NET.NetApiExt.Generated.Model.ethereum.transaction
     
     
     /// <summary>
-    /// >> 256 - Composite[ethereum.transaction.TransactionSignature]
+    /// >> 271 - Composite[ethereum.transaction.TransactionSignature]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class TransactionSignature : BaseType

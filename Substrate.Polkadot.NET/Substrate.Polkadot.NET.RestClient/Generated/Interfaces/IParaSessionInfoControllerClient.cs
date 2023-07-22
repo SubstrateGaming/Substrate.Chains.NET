@@ -12,10 +12,11 @@ namespace Substrate.Polkadot.NET.RestClient.Generated.Interfaces
    using System;
    using System.Threading.Tasks;
    using Substrate.NetApi.Model.Types.Base;
-   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.assignment_app;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.assignment_app;
    using Substrate.NetApi.Model.Types.Primitive;
-   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.executor_params;
    
    public interface IParaSessionInfoControllerClient
    {
@@ -27,5 +28,7 @@ namespace Substrate.Polkadot.NET.RestClient.Generated.Interfaces
       Task<bool> SubscribeSessions(U32 key);
       Task<BaseVec<AccountId32>> GetAccountKeys(U32 key);
       Task<bool> SubscribeAccountKeys(U32 key);
+      Task<ExecutorParams> GetSessionExecutorParams(U32 key);
+      Task<bool> SubscribeSessionExecutorParams(U32 key);
    }
 }

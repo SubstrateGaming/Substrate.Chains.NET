@@ -13,8 +13,9 @@ namespace Substrate.Polkadot.NET.RestClient.Generated.Clients
    using System.Threading.Tasks;
    using System.Net.Http;
    using Substrate.NetApi.Model.Types.Primitive;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_nomination_pools;
-   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    using Substrate.Polkadot.NET.RestClient.Generated.Interfaces;
    
    public sealed class NominationPoolsControllerClient : BaseClient, INominationPoolsControllerClient
@@ -65,6 +66,14 @@ namespace Substrate.Polkadot.NET.RestClient.Generated.Clients
       public async Task<bool> SubscribeMaxPoolMembersPerPool()
       {
          return await _subscriptionClient.SubscribeAsync("NominationPools.MaxPoolMembersPerPool");
+      }
+      public async Task<Perbill> GetGlobalMaxCommission()
+      {
+         return await SendRequestAsync<Perbill>(_httpClient, "nominationpools/globalmaxcommission");
+      }
+      public async Task<bool> SubscribeGlobalMaxCommission()
+      {
+         return await _subscriptionClient.SubscribeAsync("NominationPools.GlobalMaxCommission");
       }
       public async Task<PoolMember> GetPoolMembers(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {
@@ -130,9 +139,9 @@ namespace Substrate.Polkadot.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("NominationPools.CounterForSubPoolsStorage");
       }
-      public async Task<BoundedVecT28> GetMetadata(U32 key)
+      public async Task<BoundedVecT37> GetMetadata(U32 key)
       {
-         return await SendRequestAsync<BoundedVecT28>(_httpClient, "nominationpools/metadata", Substrate.Polkadot.NET.NetApiExt.Generated.Storage.NominationPoolsStorage.MetadataParams(key));
+         return await SendRequestAsync<BoundedVecT37>(_httpClient, "nominationpools/metadata", Substrate.Polkadot.NET.NetApiExt.Generated.Storage.NominationPoolsStorage.MetadataParams(key));
       }
       public async Task<bool> SubscribeMetadata(U32 key)
       {
@@ -169,6 +178,14 @@ namespace Substrate.Polkadot.NET.RestClient.Generated.Clients
       public async Task<bool> SubscribeCounterForReversePoolIdLookup()
       {
          return await _subscriptionClient.SubscribeAsync("NominationPools.CounterForReversePoolIdLookup");
+      }
+      public async Task<EnumClaimPermission> GetClaimPermissions(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+      {
+         return await SendRequestAsync<EnumClaimPermission>(_httpClient, "nominationpools/claimpermissions", Substrate.Polkadot.NET.NetApiExt.Generated.Storage.NominationPoolsStorage.ClaimPermissionsParams(key));
+      }
+      public async Task<bool> SubscribeClaimPermissions(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+      {
+         return await _subscriptionClient.SubscribeAsync("NominationPools.ClaimPermissions", Substrate.Polkadot.NET.NetApiExt.Generated.Storage.NominationPoolsStorage.ClaimPermissionsParams(key));
       }
    }
 }

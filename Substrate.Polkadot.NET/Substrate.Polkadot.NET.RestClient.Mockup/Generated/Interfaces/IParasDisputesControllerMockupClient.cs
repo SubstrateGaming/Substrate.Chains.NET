@@ -12,13 +12,15 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup.Generated.Interfaces
    using System;
    using System.Threading.Tasks;
    using Substrate.NetApi.Model.Types.Primitive;
-   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base;
    using Substrate.NetApi.Model.Types.Base;
    
    public interface IParasDisputesControllerMockupClient
    {
       Task<bool> SetLastPrunedSession(U32 value);
       Task<bool> SetDisputes(DisputeState value, BaseTuple<U32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_core_primitives.CandidateHash> key);
+      Task<bool> SetBackersOnDisputes(BTreeSet value, BaseTuple<U32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_core_primitives.CandidateHash> key);
       Task<bool> SetIncluded(U32 value, BaseTuple<U32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_core_primitives.CandidateHash> key);
       Task<bool> SetFrozen(BaseOpt<U32> value);
    }

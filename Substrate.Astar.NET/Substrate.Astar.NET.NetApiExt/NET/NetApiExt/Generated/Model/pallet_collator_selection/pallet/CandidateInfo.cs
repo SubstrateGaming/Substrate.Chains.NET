@@ -18,7 +18,7 @@ namespace Substrate.Astar.NET.NetApiExt.Generated.Model.pallet_collator_selectio
     
     
     /// <summary>
-    /// >> 353 - Composite[pallet_collator_selection.pallet.CandidateInfo]
+    /// >> 380 - Composite[pallet_collator_selection.pallet.CandidateInfo]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class CandidateInfo : BaseType

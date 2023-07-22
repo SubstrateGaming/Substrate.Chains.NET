@@ -18,7 +18,7 @@ namespace Substrate.Astar.NET.NetApiExt.Generated.Model.pallet_contracts.wasm
     
     
     /// <summary>
-    /// >> 420 - Composite[pallet_contracts.wasm.OwnerInfo]
+    /// >> 454 - Composite[pallet_contracts.wasm.OwnerInfo]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class OwnerInfo : BaseType

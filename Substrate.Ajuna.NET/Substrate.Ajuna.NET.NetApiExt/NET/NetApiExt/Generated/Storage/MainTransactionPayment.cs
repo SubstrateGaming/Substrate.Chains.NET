@@ -126,27 +126,5 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
             result.Create("0x05");
             return result;
         }
-        
-        /// <summary>
-        /// >> WeightToFee
-        ///  The polynomial that is applied in order to derive fee from weight.
-        /// </summary>
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.weights.WeightToFeeCoefficient> WeightToFee()
-        {
-            var result = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.weights.WeightToFeeCoefficient>();
-            result.Create("0x0400000000000000000000000000000000FF117A000001");
-            return result;
-        }
-        
-        /// <summary>
-        /// >> LengthToFee
-        ///  The polynomial that is applied in order to derive fee from length.
-        /// </summary>
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.weights.WeightToFeeCoefficient> LengthToFee()
-        {
-            var result = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.weights.WeightToFeeCoefficient>();
-            result.Create("0x0480969800000000000000000000000000000000000001");
-            return result;
-        }
     }
 }

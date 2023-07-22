@@ -42,7 +42,7 @@ namespace Substrate.Astar.NET.RestService.Generated.Controller
         ///  A mapping from an original code hash to the original code, untouched by instrumentation.
         /// </summary>
         [HttpGet("PristineCode")]
-        [ProducesResponseType(typeof(Substrate.Astar.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT12), 200)]
+        [ProducesResponseType(typeof(Substrate.Astar.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18), 200)]
         [StorageKeyBuilder(typeof(Substrate.Astar.NET.NetApiExt.Generated.Storage.ContractsStorage), "PristineCodeParams", typeof(Substrate.Astar.NET.NetApiExt.Generated.Model.primitive_types.H256))]
         public IActionResult GetPristineCode(string key)
         {
@@ -128,7 +128,7 @@ namespace Substrate.Astar.NET.RestService.Generated.Controller
         ///  stored in said trie. Therefore this operation is performed lazily in `on_initialize`.
         /// </summary>
         [HttpGet("DeletionQueue")]
-        [ProducesResponseType(typeof(Substrate.Astar.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT14), 200)]
+        [ProducesResponseType(typeof(Substrate.Astar.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT20), 200)]
         [StorageKeyBuilder(typeof(Substrate.Astar.NET.NetApiExt.Generated.Storage.ContractsStorage), "DeletionQueueParams")]
         public IActionResult GetDeletionQueue()
         {

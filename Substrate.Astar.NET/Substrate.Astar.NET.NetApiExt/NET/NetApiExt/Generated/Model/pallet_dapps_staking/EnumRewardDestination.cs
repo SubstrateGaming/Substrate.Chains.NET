@@ -24,7 +24,7 @@ namespace Substrate.Astar.NET.NetApiExt.Generated.Model.pallet_dapps_staking
     }
     
     /// <summary>
-    /// >> 45 - Variant[pallet_dapps_staking.RewardDestination]
+    /// >> 49 - Variant[pallet_dapps_staking.RewardDestination]
     /// </summary>
     public sealed class EnumRewardDestination : BaseEnum<RewardDestination>
     {

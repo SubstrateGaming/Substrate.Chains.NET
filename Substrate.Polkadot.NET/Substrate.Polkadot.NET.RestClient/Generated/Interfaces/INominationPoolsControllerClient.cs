@@ -12,8 +12,9 @@ namespace Substrate.Polkadot.NET.RestClient.Generated.Interfaces
    using System;
    using System.Threading.Tasks;
    using Substrate.NetApi.Model.Types.Primitive;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_nomination_pools;
-   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    
    public interface INominationPoolsControllerClient
    {
@@ -27,6 +28,8 @@ namespace Substrate.Polkadot.NET.RestClient.Generated.Interfaces
       Task<bool> SubscribeMaxPoolMembers();
       Task<U32> GetMaxPoolMembersPerPool();
       Task<bool> SubscribeMaxPoolMembersPerPool();
+      Task<Perbill> GetGlobalMaxCommission();
+      Task<bool> SubscribeGlobalMaxCommission();
       Task<PoolMember> GetPoolMembers(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
       Task<bool> SubscribePoolMembers(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
       Task<U32> GetCounterForPoolMembers();
@@ -43,7 +46,7 @@ namespace Substrate.Polkadot.NET.RestClient.Generated.Interfaces
       Task<bool> SubscribeSubPoolsStorage(U32 key);
       Task<U32> GetCounterForSubPoolsStorage();
       Task<bool> SubscribeCounterForSubPoolsStorage();
-      Task<BoundedVecT28> GetMetadata(U32 key);
+      Task<BoundedVecT37> GetMetadata(U32 key);
       Task<bool> SubscribeMetadata(U32 key);
       Task<U32> GetCounterForMetadata();
       Task<bool> SubscribeCounterForMetadata();
@@ -53,5 +56,7 @@ namespace Substrate.Polkadot.NET.RestClient.Generated.Interfaces
       Task<bool> SubscribeReversePoolIdLookup(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
       Task<U32> GetCounterForReversePoolIdLookup();
       Task<bool> SubscribeCounterForReversePoolIdLookup();
+      Task<EnumClaimPermission> GetClaimPermissions(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
+      Task<bool> SubscribeClaimPermissions(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
    }
 }

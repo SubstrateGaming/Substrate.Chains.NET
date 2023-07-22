@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types
     
     
     /// <summary>
-    /// >> 303 - Composite[pallet_identity.types.BitFlags]
+    /// >> 224 - Composite[pallet_identity.types.BitFlags]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class BitFlags : BaseType

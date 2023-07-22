@@ -59,7 +59,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Controller
         ///  Scraped on chain data for extracting resolved disputes as well as backing votes.
         /// </summary>
         [HttpGet("OnChainVotes")]
-        [ProducesResponseType(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.ScrapedOnChainVotes), 200)]
+        [ProducesResponseType(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.ScrapedOnChainVotes), 200)]
         [StorageKeyBuilder(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParaInherentStorage), "OnChainVotesParams")]
         public IActionResult GetOnChainVotes()
         {

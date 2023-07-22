@@ -26,7 +26,7 @@ namespace Substrate.Astar.NET.NetApiExt.Generated.Model.pallet_base_fee.pallet
     }
     
     /// <summary>
-    /// >> 112 - Variant[pallet_base_fee.pallet.Event]
+    /// >> 131 - Variant[pallet_base_fee.pallet.Event]
     /// 
     ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
     ///			by this pallet.

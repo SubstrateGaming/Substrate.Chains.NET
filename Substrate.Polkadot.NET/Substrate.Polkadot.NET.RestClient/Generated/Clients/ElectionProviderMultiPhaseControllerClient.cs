@@ -14,7 +14,7 @@ namespace Substrate.Polkadot.NET.RestClient.Generated.Clients
    using System.Net.Http;
    using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_election_provider_multi_phase;
-   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_election_provider_multi_phase.signed;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_npos_elections;
    using Substrate.Polkadot.NET.RestClient.Generated.Interfaces;
@@ -84,9 +84,9 @@ namespace Substrate.Polkadot.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("ElectionProviderMultiPhase.SignedSubmissionNextIndex");
       }
-      public async Task<BoundedVecT27> GetSignedSubmissionIndices()
+      public async Task<BoundedVecT36> GetSignedSubmissionIndices()
       {
-         return await SendRequestAsync<BoundedVecT27>(_httpClient, "electionprovidermultiphase/signedsubmissionindices");
+         return await SendRequestAsync<BoundedVecT36>(_httpClient, "electionprovidermultiphase/signedsubmissionindices");
       }
       public async Task<bool> SubscribeSignedSubmissionIndices()
       {

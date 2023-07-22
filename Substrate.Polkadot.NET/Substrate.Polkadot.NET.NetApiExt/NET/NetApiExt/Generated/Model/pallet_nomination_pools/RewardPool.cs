@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_nomination_poo
     
     
     /// <summary>
-    /// >> 623 - Composite[pallet_nomination_pools.RewardPool]
+    /// >> 705 - Composite[pallet_nomination_pools.RewardPool]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class RewardPool : BaseType
@@ -38,6 +38,16 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_nomination_poo
         /// >> total_rewards_claimed
         /// </summary>
         private Substrate.NetApi.Model.Types.Primitive.U128 _totalRewardsClaimed;
+        
+        /// <summary>
+        /// >> total_commission_pending
+        /// </summary>
+        private Substrate.NetApi.Model.Types.Primitive.U128 _totalCommissionPending;
+        
+        /// <summary>
+        /// >> total_commission_claimed
+        /// </summary>
+        private Substrate.NetApi.Model.Types.Primitive.U128 _totalCommissionClaimed;
         
         public Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedU128 LastRecordedRewardCounter
         {
@@ -75,6 +85,30 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_nomination_poo
             }
         }
         
+        public Substrate.NetApi.Model.Types.Primitive.U128 TotalCommissionPending
+        {
+            get
+            {
+                return this._totalCommissionPending;
+            }
+            set
+            {
+                this._totalCommissionPending = value;
+            }
+        }
+        
+        public Substrate.NetApi.Model.Types.Primitive.U128 TotalCommissionClaimed
+        {
+            get
+            {
+                return this._totalCommissionClaimed;
+            }
+            set
+            {
+                this._totalCommissionClaimed = value;
+            }
+        }
+        
         public override string TypeName()
         {
             return "RewardPool";
@@ -86,6 +120,8 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_nomination_poo
             result.AddRange(LastRecordedRewardCounter.Encode());
             result.AddRange(LastRecordedTotalPayouts.Encode());
             result.AddRange(TotalRewardsClaimed.Encode());
+            result.AddRange(TotalCommissionPending.Encode());
+            result.AddRange(TotalCommissionClaimed.Encode());
             return result.ToArray();
         }
         
@@ -98,6 +134,10 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_nomination_poo
             LastRecordedTotalPayouts.Decode(byteArray, ref p);
             TotalRewardsClaimed = new Substrate.NetApi.Model.Types.Primitive.U128();
             TotalRewardsClaimed.Decode(byteArray, ref p);
+            TotalCommissionPending = new Substrate.NetApi.Model.Types.Primitive.U128();
+            TotalCommissionPending.Decode(byteArray, ref p);
+            TotalCommissionClaimed = new Substrate.NetApi.Model.Types.Primitive.U128();
+            TotalCommissionClaimed.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];

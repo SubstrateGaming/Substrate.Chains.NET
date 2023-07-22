@@ -26,7 +26,7 @@ namespace Substrate.Astar.NET.NetApiExt.Generated.Model.frame_support.dispatch
     }
     
     /// <summary>
-    /// >> 271 - Variant[frame_support.dispatch.RawOrigin]
+    /// >> 292 - Variant[frame_support.dispatch.RawOrigin]
     /// </summary>
     public sealed class EnumRawOrigin : BaseEnumExt<RawOrigin, BaseVoid, Substrate.Astar.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, BaseVoid>
     {

@@ -1,0 +1,13 @@
+{
+  "projects": {
+    "net_api": "Substrate.Collectives.NET.NetApiExt",
+    "rest_service": "Substrate.Collectives.NET.RestService",
+    "rest_client": "Substrate.Collectives.NET.RestClient"
+  },
+   "metadata": {
+      "websocket": "wss://polkadot-collectives-rpc.polkadot.io"
+   },
+  "rest_client_settings": {
+    "service_assembly": "Substrate.Collectives.NET.RestService.dll"
+  }
+}

@@ -26,6 +26,7 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup
       public IChildBountiesControllerMockupClient ChildBountiesControllerClient;
       public IClaimsControllerMockupClient ClaimsControllerClient;
       public IConfigurationControllerMockupClient ConfigurationControllerClient;
+      public IConvictionVotingControllerMockupClient ConvictionVotingControllerClient;
       public ICouncilControllerMockupClient CouncilControllerClient;
       public ICrowdloanControllerMockupClient CrowdloanControllerClient;
       public IDemocracyControllerMockupClient DemocracyControllerClient;
@@ -38,6 +39,7 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup
       public IImOnlineControllerMockupClient ImOnlineControllerClient;
       public IIndicesControllerMockupClient IndicesControllerClient;
       public IInitializerControllerMockupClient InitializerControllerClient;
+      public IMessageQueueControllerMockupClient MessageQueueControllerClient;
       public IMultisigControllerMockupClient MultisigControllerClient;
       public INominationPoolsControllerMockupClient NominationPoolsControllerClient;
       public IOffencesControllerMockupClient OffencesControllerClient;
@@ -48,9 +50,11 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup
       public IParasDisputesControllerMockupClient ParasDisputesControllerClient;
       public IParaSessionInfoControllerMockupClient ParaSessionInfoControllerClient;
       public IParasSharedControllerMockupClient ParasSharedControllerClient;
+      public IParasSlashingControllerMockupClient ParasSlashingControllerClient;
       public IPhragmenElectionControllerMockupClient PhragmenElectionControllerClient;
       public IPreimageControllerMockupClient PreimageControllerClient;
       public IProxyControllerMockupClient ProxyControllerClient;
+      public IReferendaControllerMockupClient ReferendaControllerClient;
       public IRegistrarControllerMockupClient RegistrarControllerClient;
       public ISchedulerControllerMockupClient SchedulerControllerClient;
       public ISessionControllerMockupClient SessionControllerClient;
@@ -63,9 +67,9 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup
       public ITipsControllerMockupClient TipsControllerClient;
       public ITransactionPaymentControllerMockupClient TransactionPaymentControllerClient;
       public ITreasuryControllerMockupClient TreasuryControllerClient;
-      public IUmpControllerMockupClient UmpControllerClient;
       public IVestingControllerMockupClient VestingControllerClient;
       public IVoterListControllerMockupClient VoterListControllerClient;
+      public IWhitelistControllerMockupClient WhitelistControllerClient;
       public IXcmPalletControllerMockupClient XcmPalletControllerClient;
       public MockupClient(HttpClient httpClient)
       {
@@ -78,6 +82,7 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup
          ChildBountiesControllerClient = new ChildBountiesControllerMockupClient(_httpClient);
          ClaimsControllerClient = new ClaimsControllerMockupClient(_httpClient);
          ConfigurationControllerClient = new ConfigurationControllerMockupClient(_httpClient);
+         ConvictionVotingControllerClient = new ConvictionVotingControllerMockupClient(_httpClient);
          CouncilControllerClient = new CouncilControllerMockupClient(_httpClient);
          CrowdloanControllerClient = new CrowdloanControllerMockupClient(_httpClient);
          DemocracyControllerClient = new DemocracyControllerMockupClient(_httpClient);
@@ -90,6 +95,7 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup
          ImOnlineControllerClient = new ImOnlineControllerMockupClient(_httpClient);
          IndicesControllerClient = new IndicesControllerMockupClient(_httpClient);
          InitializerControllerClient = new InitializerControllerMockupClient(_httpClient);
+         MessageQueueControllerClient = new MessageQueueControllerMockupClient(_httpClient);
          MultisigControllerClient = new MultisigControllerMockupClient(_httpClient);
          NominationPoolsControllerClient = new NominationPoolsControllerMockupClient(_httpClient);
          OffencesControllerClient = new OffencesControllerMockupClient(_httpClient);
@@ -100,9 +106,11 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup
          ParasDisputesControllerClient = new ParasDisputesControllerMockupClient(_httpClient);
          ParaSessionInfoControllerClient = new ParaSessionInfoControllerMockupClient(_httpClient);
          ParasSharedControllerClient = new ParasSharedControllerMockupClient(_httpClient);
+         ParasSlashingControllerClient = new ParasSlashingControllerMockupClient(_httpClient);
          PhragmenElectionControllerClient = new PhragmenElectionControllerMockupClient(_httpClient);
          PreimageControllerClient = new PreimageControllerMockupClient(_httpClient);
          ProxyControllerClient = new ProxyControllerMockupClient(_httpClient);
+         ReferendaControllerClient = new ReferendaControllerMockupClient(_httpClient);
          RegistrarControllerClient = new RegistrarControllerMockupClient(_httpClient);
          SchedulerControllerClient = new SchedulerControllerMockupClient(_httpClient);
          SessionControllerClient = new SessionControllerMockupClient(_httpClient);
@@ -115,9 +123,9 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup
          TipsControllerClient = new TipsControllerMockupClient(_httpClient);
          TransactionPaymentControllerClient = new TransactionPaymentControllerMockupClient(_httpClient);
          TreasuryControllerClient = new TreasuryControllerMockupClient(_httpClient);
-         UmpControllerClient = new UmpControllerMockupClient(_httpClient);
          VestingControllerClient = new VestingControllerMockupClient(_httpClient);
          VoterListControllerClient = new VoterListControllerMockupClient(_httpClient);
+         WhitelistControllerClient = new WhitelistControllerMockupClient(_httpClient);
          XcmPalletControllerClient = new XcmPalletControllerMockupClient(_httpClient);
       }
    }

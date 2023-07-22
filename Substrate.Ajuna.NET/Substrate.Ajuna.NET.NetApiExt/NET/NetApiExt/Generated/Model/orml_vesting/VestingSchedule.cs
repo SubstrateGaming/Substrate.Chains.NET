@@ -18,7 +18,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.orml_vesting
     
     
     /// <summary>
-    /// >> 31 - Composite[orml_vesting.VestingSchedule]
+    /// >> 48 - Composite[orml_vesting.VestingSchedule]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class VestingSchedule : BaseType

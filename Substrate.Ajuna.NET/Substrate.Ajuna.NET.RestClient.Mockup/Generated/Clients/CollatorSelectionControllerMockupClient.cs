@@ -12,9 +12,7 @@ namespace Substrate.Ajuna.NET.RestClient.Mockup.Generated.Clients
    using System;
    using System.Threading.Tasks;
    using System.Net.Http;
-   using Substrate.NetApi.Model.Types.Base;
-   using Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto;
-   using Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_collator_selection.pallet;
+   using Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.Ajuna.NET.RestClient.Mockup.Generated.Interfaces;
    
@@ -25,15 +23,15 @@ namespace Substrate.Ajuna.NET.RestClient.Mockup.Generated.Clients
       {
          _httpClient = httpClient;
       }
-      public async Task<bool> SetInvulnerables(BaseVec<AccountId32> value)
+      public async Task<bool> SetInvulnerables(BoundedVecT17 value)
       {
          return await SendMockupRequestAsync(_httpClient, "CollatorSelection/Invulnerables", value.Encode(), Substrate.Ajuna.NET.NetApiExt.Generated.Storage.CollatorSelectionStorage.InvulnerablesParams());
       }
-      public async Task<bool> SetCandidates(BaseVec<CandidateInfo> value)
+      public async Task<bool> SetCandidates(BoundedVecT18 value)
       {
          return await SendMockupRequestAsync(_httpClient, "CollatorSelection/Candidates", value.Encode(), Substrate.Ajuna.NET.NetApiExt.Generated.Storage.CollatorSelectionStorage.CandidatesParams());
       }
-      public async Task<bool> SetLastAuthoredBlock(U32 value, AccountId32 key)
+      public async Task<bool> SetLastAuthoredBlock(U32 value, Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {
          return await SendMockupRequestAsync(_httpClient, "CollatorSelection/LastAuthoredBlock", value.Encode(), Substrate.Ajuna.NET.NetApiExt.Generated.Storage.CollatorSelectionStorage.LastAuthoredBlockParams(key));
       }

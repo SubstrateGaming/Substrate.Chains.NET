@@ -15,7 +15,8 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup.Generated.Clients
    using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_xcm.pallet;
    using Substrate.NetApi.Model.Types.Base;
-   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_weights.weight_v2;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    using Substrate.Polkadot.NET.RestClient.Mockup.Generated.Interfaces;
    
    public sealed class XcmPalletControllerMockupClient : MockupBaseClient, IXcmPalletControllerMockupClient
@@ -49,17 +50,29 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "XcmPallet/VersionNotifiers", value.Encode(), Substrate.Polkadot.NET.NetApiExt.Generated.Storage.XcmPalletStorage.VersionNotifiersParams(key));
       }
-      public async Task<bool> SetVersionNotifyTargets(BaseTuple<U64, U64, U32> value, BaseTuple<U32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation> key)
+      public async Task<bool> SetVersionNotifyTargets(BaseTuple<U64, Weight, U32> value, BaseTuple<U32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation> key)
       {
          return await SendMockupRequestAsync(_httpClient, "XcmPallet/VersionNotifyTargets", value.Encode(), Substrate.Polkadot.NET.NetApiExt.Generated.Storage.XcmPalletStorage.VersionNotifyTargetsParams(key));
       }
-      public async Task<bool> SetVersionDiscoveryQueue(BoundedVecT31 value)
+      public async Task<bool> SetVersionDiscoveryQueue(BoundedVecT40 value)
       {
          return await SendMockupRequestAsync(_httpClient, "XcmPallet/VersionDiscoveryQueue", value.Encode(), Substrate.Polkadot.NET.NetApiExt.Generated.Storage.XcmPalletStorage.VersionDiscoveryQueueParams());
       }
       public async Task<bool> SetCurrentMigration(EnumVersionMigrationStage value)
       {
          return await SendMockupRequestAsync(_httpClient, "XcmPallet/CurrentMigration", value.Encode(), Substrate.Polkadot.NET.NetApiExt.Generated.Storage.XcmPalletStorage.CurrentMigrationParams());
+      }
+      public async Task<bool> SetRemoteLockedFungibles(RemoteLockedFungibleRecord value, BaseTuple<U32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAssetId> key)
+      {
+         return await SendMockupRequestAsync(_httpClient, "XcmPallet/RemoteLockedFungibles", value.Encode(), Substrate.Polkadot.NET.NetApiExt.Generated.Storage.XcmPalletStorage.RemoteLockedFungiblesParams(key));
+      }
+      public async Task<bool> SetLockedFungibles(BoundedVecT42 value, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+      {
+         return await SendMockupRequestAsync(_httpClient, "XcmPallet/LockedFungibles", value.Encode(), Substrate.Polkadot.NET.NetApiExt.Generated.Storage.XcmPalletStorage.LockedFungiblesParams(key));
+      }
+      public async Task<bool> SetXcmExecutionSuspended(Bool value)
+      {
+         return await SendMockupRequestAsync(_httpClient, "XcmPallet/XcmExecutionSuspended", value.Encode(), Substrate.Polkadot.NET.NetApiExt.Generated.Storage.XcmPalletStorage.XcmExecutionSuspendedParams());
       }
    }
 }

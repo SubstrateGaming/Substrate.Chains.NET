@@ -18,7 +18,7 @@ namespace Substrate.Astar.NET.NetApiExt.Generated.Model.pallet_identity.types
     
     
     /// <summary>
-    /// >> 146 - Composite[pallet_identity.types.IdentityInfo]
+    /// >> 167 - Composite[pallet_identity.types.IdentityInfo]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class IdentityInfo : BaseType
@@ -27,7 +27,7 @@ namespace Substrate.Astar.NET.NetApiExt.Generated.Model.pallet_identity.types
         /// <summary>
         /// >> additional
         /// </summary>
-        private Substrate.Astar.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT1 _additional;
+        private Substrate.Astar.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT4 _additional;
         
         /// <summary>
         /// >> display
@@ -69,7 +69,7 @@ namespace Substrate.Astar.NET.NetApiExt.Generated.Model.pallet_identity.types
         /// </summary>
         private Substrate.Astar.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData _twitter;
         
-        public Substrate.Astar.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT1 Additional
+        public Substrate.Astar.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT4 Additional
         {
             get
             {
@@ -200,7 +200,7 @@ namespace Substrate.Astar.NET.NetApiExt.Generated.Model.pallet_identity.types
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Additional = new Substrate.Astar.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT1();
+            Additional = new Substrate.Astar.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT4();
             Additional.Decode(byteArray, ref p);
             Display = new Substrate.Astar.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData();
             Display.Decode(byteArray, ref p);

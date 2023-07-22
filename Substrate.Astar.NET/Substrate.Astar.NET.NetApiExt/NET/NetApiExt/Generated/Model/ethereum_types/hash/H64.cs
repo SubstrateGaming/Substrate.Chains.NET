@@ -18,7 +18,7 @@ namespace Substrate.Astar.NET.NetApiExt.Generated.Model.ethereum_types.hash
     
     
     /// <summary>
-    /// >> 410 - Composite[ethereum_types.hash.H64]
+    /// >> 444 - Composite[ethereum_types.hash.H64]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class H64 : BaseType

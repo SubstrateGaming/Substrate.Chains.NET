@@ -12,9 +12,7 @@ namespace Substrate.Polkadot.NET.RestClient.Generated.Clients
    using System;
    using System.Threading.Tasks;
    using System.Net.Http;
-   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto;
-   using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.Polkadot.NET.RestClient.Generated.Interfaces;
    
    public sealed class AuthorshipControllerClient : BaseClient, IAuthorshipControllerClient
@@ -26,14 +24,6 @@ namespace Substrate.Polkadot.NET.RestClient.Generated.Clients
          _httpClient = httpClient;
          _subscriptionClient = subscriptionClient;
       }
-      public async Task<BoundedVecT7> GetUncles()
-      {
-         return await SendRequestAsync<BoundedVecT7>(_httpClient, "authorship/uncles");
-      }
-      public async Task<bool> SubscribeUncles()
-      {
-         return await _subscriptionClient.SubscribeAsync("Authorship.Uncles");
-      }
       public async Task<AccountId32> GetAuthor()
       {
          return await SendRequestAsync<AccountId32>(_httpClient, "authorship/author");
@@ -41,14 +31,6 @@ namespace Substrate.Polkadot.NET.RestClient.Generated.Clients
       public async Task<bool> SubscribeAuthor()
       {
          return await _subscriptionClient.SubscribeAsync("Authorship.Author");
-      }
-      public async Task<Bool> GetDidSetUncles()
-      {
-         return await SendRequestAsync<Bool>(_httpClient, "authorship/didsetuncles");
-      }
-      public async Task<bool> SubscribeDidSetUncles()
-      {
-         return await _subscriptionClient.SubscribeAsync("Authorship.DidSetUncles");
       }
    }
 }

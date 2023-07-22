@@ -28,7 +28,7 @@ namespace Substrate.Astar.NET.NetApiExt.Generated.Model.evm_core.error
     }
     
     /// <summary>
-    /// >> 103 - Variant[evm_core.error.ExitReason]
+    /// >> 122 - Variant[evm_core.error.ExitReason]
     /// </summary>
     public sealed class EnumExitReason : BaseEnumExt<ExitReason, Substrate.Astar.NET.NetApiExt.Generated.Model.evm_core.error.EnumExitSucceed, Substrate.Astar.NET.NetApiExt.Generated.Model.evm_core.error.EnumExitError, Substrate.Astar.NET.NetApiExt.Generated.Model.evm_core.error.EnumExitRevert, Substrate.Astar.NET.NetApiExt.Generated.Model.evm_core.error.EnumExitFatal>
     {

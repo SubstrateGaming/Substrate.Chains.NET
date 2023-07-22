@@ -34,7 +34,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// >> PublicProps
         ///  The public proposals. Unsorted. The second item is the proposal.
         /// </summary>
-        Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT11 GetPublicProps();
+        Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17 GetPublicProps();
         
         /// <summary>
         /// >> DepositOf
@@ -42,7 +42,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// 
         ///  TWOX-NOTE: Safe, as increasing integer keys are safe.
         /// </summary>
-        Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT12, Substrate.NetApi.Model.Types.Primitive.U128> GetDepositOf(string key);
+        Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18, Substrate.NetApi.Model.Types.Primitive.U128> GetDepositOf(string key);
         
         /// <summary>
         /// >> ReferendumCount
@@ -95,13 +95,24 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         ///  A record of who vetoed what. Maps proposal hash to a possible existent block number
         ///  (until when it may not be resubmitted) and who vetoed it.
         /// </summary>
-        Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT12> GetBlacklist(string key);
+        Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18> GetBlacklist(string key);
         
         /// <summary>
         /// >> Cancellations
         ///  Record of all proposals that have been subject to emergency cancellation.
         /// </summary>
         Substrate.NetApi.Model.Types.Primitive.Bool GetCancellations(string key);
+        
+        /// <summary>
+        /// >> MetadataOf
+        ///  General information concerning any proposal or referendum.
+        ///  The `PreimageHash` refers to the preimage of the `Preimages` provider which can be a JSON
+        ///  dump or IPFS hash of a JSON file.
+        /// 
+        ///  Consider a garbage collection for a metadata of finished referendums to `unrequest` (remove)
+        ///  large preimages.
+        /// </summary>
+        Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256 GetMetadataOf(string key);
     }
     
     /// <summary>
@@ -118,12 +129,12 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// <summary>
         /// _publicPropsTypedStorage typed storage field
         /// </summary>
-        private TypedStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT11> _publicPropsTypedStorage;
+        private TypedStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17> _publicPropsTypedStorage;
         
         /// <summary>
         /// _depositOfTypedStorage typed storage field
         /// </summary>
-        private TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT12, Substrate.NetApi.Model.Types.Primitive.U128>> _depositOfTypedStorage;
+        private TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18, Substrate.NetApi.Model.Types.Primitive.U128>> _depositOfTypedStorage;
         
         /// <summary>
         /// _referendumCountTypedStorage typed storage field
@@ -158,7 +169,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// <summary>
         /// _blacklistTypedStorage typed storage field
         /// </summary>
-        private TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT12>> _blacklistTypedStorage;
+        private TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18>> _blacklistTypedStorage;
         
         /// <summary>
         /// _cancellationsTypedStorage typed storage field
@@ -166,21 +177,27 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         private TypedMapStorage<Substrate.NetApi.Model.Types.Primitive.Bool> _cancellationsTypedStorage;
         
         /// <summary>
+        /// _metadataOfTypedStorage typed storage field
+        /// </summary>
+        private TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256> _metadataOfTypedStorage;
+        
+        /// <summary>
         /// DemocracyStorage constructor.
         /// </summary>
         public DemocracyStorage(IStorageDataProvider storageDataProvider, List<IStorageChangeDelegate> storageChangeDelegates)
         {
             this.PublicPropCountTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32>("Democracy.PublicPropCount", storageDataProvider, storageChangeDelegates);
-            this.PublicPropsTypedStorage = new TypedStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT11>("Democracy.PublicProps", storageDataProvider, storageChangeDelegates);
-            this.DepositOfTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT12, Substrate.NetApi.Model.Types.Primitive.U128>>("Democracy.DepositOf", storageDataProvider, storageChangeDelegates);
+            this.PublicPropsTypedStorage = new TypedStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17>("Democracy.PublicProps", storageDataProvider, storageChangeDelegates);
+            this.DepositOfTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18, Substrate.NetApi.Model.Types.Primitive.U128>>("Democracy.DepositOf", storageDataProvider, storageChangeDelegates);
             this.ReferendumCountTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32>("Democracy.ReferendumCount", storageDataProvider, storageChangeDelegates);
             this.LowestUnbakedTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32>("Democracy.LowestUnbaked", storageDataProvider, storageChangeDelegates);
             this.ReferendumInfoOfTypedStorage = new TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_democracy.types.EnumReferendumInfo>("Democracy.ReferendumInfoOf", storageDataProvider, storageChangeDelegates);
             this.VotingOfTypedStorage = new TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_democracy.vote.EnumVoting>("Democracy.VotingOf", storageDataProvider, storageChangeDelegates);
             this.LastTabledWasExternalTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.Bool>("Democracy.LastTabledWasExternal", storageDataProvider, storageChangeDelegates);
             this.NextExternalTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.frame_support.traits.preimages.EnumBounded, Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_democracy.vote_threshold.EnumVoteThreshold>>("Democracy.NextExternal", storageDataProvider, storageChangeDelegates);
-            this.BlacklistTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT12>>("Democracy.Blacklist", storageDataProvider, storageChangeDelegates);
+            this.BlacklistTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18>>("Democracy.Blacklist", storageDataProvider, storageChangeDelegates);
             this.CancellationsTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Primitive.Bool>("Democracy.Cancellations", storageDataProvider, storageChangeDelegates);
+            this.MetadataOfTypedStorage = new TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256>("Democracy.MetadataOf", storageDataProvider, storageChangeDelegates);
         }
         
         /// <summary>
@@ -201,7 +218,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// <summary>
         /// _publicPropsTypedStorage property
         /// </summary>
-        public TypedStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT11> PublicPropsTypedStorage
+        public TypedStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17> PublicPropsTypedStorage
         {
             get
             {
@@ -216,7 +233,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// <summary>
         /// _depositOfTypedStorage property
         /// </summary>
-        public TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT12, Substrate.NetApi.Model.Types.Primitive.U128>> DepositOfTypedStorage
+        public TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18, Substrate.NetApi.Model.Types.Primitive.U128>> DepositOfTypedStorage
         {
             get
             {
@@ -321,7 +338,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// <summary>
         /// _blacklistTypedStorage property
         /// </summary>
-        public TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT12>> BlacklistTypedStorage
+        public TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18>> BlacklistTypedStorage
         {
             get
             {
@@ -349,6 +366,21 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         }
         
         /// <summary>
+        /// _metadataOfTypedStorage property
+        /// </summary>
+        public TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256> MetadataOfTypedStorage
+        {
+            get
+            {
+                return _metadataOfTypedStorage;
+            }
+            set
+            {
+                _metadataOfTypedStorage = value;
+            }
+        }
+        
+        /// <summary>
         /// Connects to all storages and initializes the change subscription handling.
         /// </summary>
         public async Task InitializeAsync(Substrate.ServiceLayer.Storage.IStorageDataProvider dataProvider)
@@ -364,6 +396,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
             await NextExternalTypedStorage.InitializeAsync("Democracy", "NextExternal");
             await BlacklistTypedStorage.InitializeAsync("Democracy", "Blacklist");
             await CancellationsTypedStorage.InitializeAsync("Democracy", "Cancellations");
+            await MetadataOfTypedStorage.InitializeAsync("Democracy", "MetadataOf");
         }
         
         /// <summary>
@@ -397,7 +430,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// >> PublicProps
         ///  The public proposals. Unsorted. The second item is the proposal.
         /// </summary>
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT11 GetPublicProps()
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17 GetPublicProps()
         {
             return PublicPropsTypedStorage.Get();
         }
@@ -417,13 +450,13 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// 
         ///  TWOX-NOTE: Safe, as increasing integer keys are safe.
         /// </summary>
-        public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT12, Substrate.NetApi.Model.Types.Primitive.U128> GetDepositOf(string key)
+        public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18, Substrate.NetApi.Model.Types.Primitive.U128> GetDepositOf(string key)
         {
             if ((key == null))
             {
                 return null;
             }
-            if (DepositOfTypedStorage.Dictionary.TryGetValue(key, out Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT12, Substrate.NetApi.Model.Types.Primitive.U128> result))
+            if (DepositOfTypedStorage.Dictionary.TryGetValue(key, out Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18, Substrate.NetApi.Model.Types.Primitive.U128> result))
             {
                 return result;
             }
@@ -587,13 +620,13 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         ///  A record of who vetoed what. Maps proposal hash to a possible existent block number
         ///  (until when it may not be resubmitted) and who vetoed it.
         /// </summary>
-        public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT12> GetBlacklist(string key)
+        public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18> GetBlacklist(string key)
         {
             if ((key == null))
             {
                 return null;
             }
-            if (BlacklistTypedStorage.Dictionary.TryGetValue(key, out Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT12> result))
+            if (BlacklistTypedStorage.Dictionary.TryGetValue(key, out Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18> result))
             {
                 return result;
             }
@@ -623,6 +656,40 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
                 return null;
             }
             if (CancellationsTypedStorage.Dictionary.TryGetValue(key, out Substrate.NetApi.Model.Types.Primitive.Bool result))
+            {
+                return result;
+            }
+            else
+            {
+                return null;
+            }
+        }
+        
+        /// <summary>
+        /// Implements any storage change for Democracy.MetadataOf
+        /// </summary>
+        [StorageChange("Democracy", "MetadataOf")]
+        public void OnUpdateMetadataOf(string key, string data)
+        {
+            MetadataOfTypedStorage.Update(key, data);
+        }
+        
+        /// <summary>
+        /// >> MetadataOf
+        ///  General information concerning any proposal or referendum.
+        ///  The `PreimageHash` refers to the preimage of the `Preimages` provider which can be a JSON
+        ///  dump or IPFS hash of a JSON file.
+        /// 
+        ///  Consider a garbage collection for a metadata of finished referendums to `unrequest` (remove)
+        ///  large preimages.
+        /// </summary>
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256 GetMetadataOf(string key)
+        {
+            if ((key == null))
+            {
+                return null;
+            }
+            if (MetadataOfTypedStorage.Dictionary.TryGetValue(key, out Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256 result))
             {
                 return result;
             }

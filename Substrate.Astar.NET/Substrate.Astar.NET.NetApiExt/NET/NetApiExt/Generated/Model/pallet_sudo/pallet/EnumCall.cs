@@ -28,7 +28,7 @@ namespace Substrate.Astar.NET.NetApiExt.Generated.Model.pallet_sudo.pallet
     }
     
     /// <summary>
-    /// >> 269 - Variant[pallet_sudo.pallet.Call]
+    /// >> 284 - Variant[pallet_sudo.pallet.Call]
     /// Contains one variant per dispatchable that can be called by an extrinsic.
     /// </summary>
     public sealed class EnumCall : BaseEnumExt<Call, Substrate.Astar.NET.NetApiExt.Generated.Model.astar_runtime.EnumRuntimeCall, BaseTuple<Substrate.Astar.NET.NetApiExt.Generated.Model.astar_runtime.EnumRuntimeCall, Substrate.Astar.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>, Substrate.Astar.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, BaseTuple<Substrate.Astar.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.Astar.NET.NetApiExt.Generated.Model.astar_runtime.EnumRuntimeCall>>

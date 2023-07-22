@@ -36,7 +36,7 @@ namespace Substrate.Astar.NET.NetApiExt.Generated.Model.pallet_contracts.pallet
     }
     
     /// <summary>
-    /// >> 116 - Variant[pallet_contracts.pallet.Event]
+    /// >> 135 - Variant[pallet_contracts.pallet.Event]
     /// 
     ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
     ///			by this pallet.

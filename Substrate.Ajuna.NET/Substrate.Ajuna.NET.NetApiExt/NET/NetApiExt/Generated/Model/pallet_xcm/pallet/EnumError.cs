@@ -43,12 +43,26 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_xcm.pallet
         NoSubscription = 11,
         
         AlreadySubscribed = 12,
+        
+        InvalidAsset = 13,
+        
+        LowBalance = 14,
+        
+        TooManyLocks = 15,
+        
+        AccountNotSovereign = 16,
+        
+        FeesNotMet = 17,
+        
+        LockNotFound = 18,
+        
+        InUse = 19,
     }
     
     /// <summary>
-    /// >> 225 - Variant[pallet_xcm.pallet.Error]
+    /// >> 364 - Variant[pallet_xcm.pallet.Error]
     /// 
-    ///			Custom [dispatch errors](https://docs.substrate.io/v3/runtime/events-and-errors)
+    ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
     ///			of this pallet.
     ///			
     /// </summary>

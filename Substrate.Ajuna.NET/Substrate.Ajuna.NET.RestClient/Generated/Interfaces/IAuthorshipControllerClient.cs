@@ -11,18 +11,11 @@ namespace Substrate.Ajuna.NET.RestClient.Generated.Interfaces
 {
    using System;
    using System.Threading.Tasks;
-   using Substrate.NetApi.Model.Types.Base;
-   using Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_authorship;
    using Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto;
-   using Substrate.NetApi.Model.Types.Primitive;
    
    public interface IAuthorshipControllerClient
    {
-      Task<BaseVec<EnumUncleEntryItem>> GetUncles();
-      Task<bool> SubscribeUncles();
       Task<AccountId32> GetAuthor();
       Task<bool> SubscribeAuthor();
-      Task<Bool> GetDidSetUncles();
-      Task<bool> SubscribeDidSetUncles();
    }
 }

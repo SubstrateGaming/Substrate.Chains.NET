@@ -34,7 +34,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// >> Authorities
         ///  Current epoch authorities.
         /// </summary>
-        Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.bounded.weak_bounded_vec.WeakBoundedVecT2 GetAuthorities();
+        Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT2 GetAuthorities();
         
         /// <summary>
         /// >> GenesisSlot
@@ -80,7 +80,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// >> NextAuthorities
         ///  Next epoch authorities.
         /// </summary>
-        Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.bounded.weak_bounded_vec.WeakBoundedVecT2 GetNextAuthorities();
+        Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT2 GetNextAuthorities();
         
         /// <summary>
         /// >> SegmentIndex
@@ -100,7 +100,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// >> UnderConstruction
         ///  TWOX-NOTE: `SegmentIndex` is an increasing integer, so this is okay.
         /// </summary>
-        Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT5 GetUnderConstruction(string key);
+        Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10 GetUnderConstruction(string key);
         
         /// <summary>
         /// >> Initialized
@@ -151,6 +151,19 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         ///  (you can fallback to `EpochConfig` instead in that case).
         /// </summary>
         Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_consensus_babe.BabeEpochConfiguration GetNextEpochConfig();
+        
+        /// <summary>
+        /// >> SkippedEpochs
+        ///  A list of the last 100 skipped epochs and the corresponding session index
+        ///  when the epoch was skipped.
+        /// 
+        ///  This is only used for validating equivocation proofs. An equivocation proof
+        ///  must contains a key-ownership proof for a given session, therefore we need a
+        ///  way to tie together sessions and epoch indices, i.e. we need to validate that
+        ///  a validator was the owner of a given key on a given session, and what the
+        ///  active epoch index was during that session.
+        /// </summary>
+        Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT11 GetSkippedEpochs();
     }
     
     /// <summary>
@@ -167,7 +180,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// <summary>
         /// _authoritiesTypedStorage typed storage field
         /// </summary>
-        private TypedStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.bounded.weak_bounded_vec.WeakBoundedVecT2> _authoritiesTypedStorage;
+        private TypedStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT2> _authoritiesTypedStorage;
         
         /// <summary>
         /// _genesisSlotTypedStorage typed storage field
@@ -197,7 +210,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// <summary>
         /// _nextAuthoritiesTypedStorage typed storage field
         /// </summary>
-        private TypedStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.bounded.weak_bounded_vec.WeakBoundedVecT2> _nextAuthoritiesTypedStorage;
+        private TypedStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT2> _nextAuthoritiesTypedStorage;
         
         /// <summary>
         /// _segmentIndexTypedStorage typed storage field
@@ -207,7 +220,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// <summary>
         /// _underConstructionTypedStorage typed storage field
         /// </summary>
-        private TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT5> _underConstructionTypedStorage;
+        private TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10> _underConstructionTypedStorage;
         
         /// <summary>
         /// _initializedTypedStorage typed storage field
@@ -240,26 +253,32 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         private TypedStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_consensus_babe.BabeEpochConfiguration> _nextEpochConfigTypedStorage;
         
         /// <summary>
+        /// _skippedEpochsTypedStorage typed storage field
+        /// </summary>
+        private TypedStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT11> _skippedEpochsTypedStorage;
+        
+        /// <summary>
         /// BabeStorage constructor.
         /// </summary>
         public BabeStorage(IStorageDataProvider storageDataProvider, List<IStorageChangeDelegate> storageChangeDelegates)
         {
             this.EpochIndexTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U64>("Babe.EpochIndex", storageDataProvider, storageChangeDelegates);
-            this.AuthoritiesTypedStorage = new TypedStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.bounded.weak_bounded_vec.WeakBoundedVecT2>("Babe.Authorities", storageDataProvider, storageChangeDelegates);
+            this.AuthoritiesTypedStorage = new TypedStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT2>("Babe.Authorities", storageDataProvider, storageChangeDelegates);
             this.GenesisSlotTypedStorage = new TypedStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_consensus_slots.Slot>("Babe.GenesisSlot", storageDataProvider, storageChangeDelegates);
             this.CurrentSlotTypedStorage = new TypedStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_consensus_slots.Slot>("Babe.CurrentSlot", storageDataProvider, storageChangeDelegates);
             this.RandomnessTypedStorage = new TypedStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base.Arr32U8>("Babe.Randomness", storageDataProvider, storageChangeDelegates);
             this.PendingEpochConfigChangeTypedStorage = new TypedStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_consensus_babe.digests.EnumNextConfigDescriptor>("Babe.PendingEpochConfigChange", storageDataProvider, storageChangeDelegates);
             this.NextRandomnessTypedStorage = new TypedStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base.Arr32U8>("Babe.NextRandomness", storageDataProvider, storageChangeDelegates);
-            this.NextAuthoritiesTypedStorage = new TypedStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.bounded.weak_bounded_vec.WeakBoundedVecT2>("Babe.NextAuthorities", storageDataProvider, storageChangeDelegates);
+            this.NextAuthoritiesTypedStorage = new TypedStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT2>("Babe.NextAuthorities", storageDataProvider, storageChangeDelegates);
             this.SegmentIndexTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32>("Babe.SegmentIndex", storageDataProvider, storageChangeDelegates);
-            this.UnderConstructionTypedStorage = new TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT5>("Babe.UnderConstruction", storageDataProvider, storageChangeDelegates);
+            this.UnderConstructionTypedStorage = new TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10>("Babe.UnderConstruction", storageDataProvider, storageChangeDelegates);
             this.InitializedTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_consensus_babe.digests.EnumPreDigest>>("Babe.Initialized", storageDataProvider, storageChangeDelegates);
             this.AuthorVrfRandomnessTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base.Arr32U8>>("Babe.AuthorVrfRandomness", storageDataProvider, storageChangeDelegates);
             this.EpochStartTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>>("Babe.EpochStart", storageDataProvider, storageChangeDelegates);
             this.LatenessTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32>("Babe.Lateness", storageDataProvider, storageChangeDelegates);
             this.EpochConfigTypedStorage = new TypedStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_consensus_babe.BabeEpochConfiguration>("Babe.EpochConfig", storageDataProvider, storageChangeDelegates);
             this.NextEpochConfigTypedStorage = new TypedStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_consensus_babe.BabeEpochConfiguration>("Babe.NextEpochConfig", storageDataProvider, storageChangeDelegates);
+            this.SkippedEpochsTypedStorage = new TypedStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT11>("Babe.SkippedEpochs", storageDataProvider, storageChangeDelegates);
         }
         
         /// <summary>
@@ -280,7 +299,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// <summary>
         /// _authoritiesTypedStorage property
         /// </summary>
-        public TypedStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.bounded.weak_bounded_vec.WeakBoundedVecT2> AuthoritiesTypedStorage
+        public TypedStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT2> AuthoritiesTypedStorage
         {
             get
             {
@@ -370,7 +389,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// <summary>
         /// _nextAuthoritiesTypedStorage property
         /// </summary>
-        public TypedStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.bounded.weak_bounded_vec.WeakBoundedVecT2> NextAuthoritiesTypedStorage
+        public TypedStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT2> NextAuthoritiesTypedStorage
         {
             get
             {
@@ -400,7 +419,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// <summary>
         /// _underConstructionTypedStorage property
         /// </summary>
-        public TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT5> UnderConstructionTypedStorage
+        public TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10> UnderConstructionTypedStorage
         {
             get
             {
@@ -503,6 +522,21 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         }
         
         /// <summary>
+        /// _skippedEpochsTypedStorage property
+        /// </summary>
+        public TypedStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT11> SkippedEpochsTypedStorage
+        {
+            get
+            {
+                return _skippedEpochsTypedStorage;
+            }
+            set
+            {
+                _skippedEpochsTypedStorage = value;
+            }
+        }
+        
+        /// <summary>
         /// Connects to all storages and initializes the change subscription handling.
         /// </summary>
         public async Task InitializeAsync(Substrate.ServiceLayer.Storage.IStorageDataProvider dataProvider)
@@ -523,6 +557,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
             await LatenessTypedStorage.InitializeAsync("Babe", "Lateness");
             await EpochConfigTypedStorage.InitializeAsync("Babe", "EpochConfig");
             await NextEpochConfigTypedStorage.InitializeAsync("Babe", "NextEpochConfig");
+            await SkippedEpochsTypedStorage.InitializeAsync("Babe", "SkippedEpochs");
         }
         
         /// <summary>
@@ -556,7 +591,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// >> Authorities
         ///  Current epoch authorities.
         /// </summary>
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.bounded.weak_bounded_vec.WeakBoundedVecT2 GetAuthorities()
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT2 GetAuthorities()
         {
             return AuthoritiesTypedStorage.Get();
         }
@@ -674,7 +709,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// >> NextAuthorities
         ///  Next epoch authorities.
         /// </summary>
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.bounded.weak_bounded_vec.WeakBoundedVecT2 GetNextAuthorities()
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT2 GetNextAuthorities()
         {
             return NextAuthoritiesTypedStorage.Get();
         }
@@ -718,13 +753,13 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// >> UnderConstruction
         ///  TWOX-NOTE: `SegmentIndex` is an increasing integer, so this is okay.
         /// </summary>
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT5 GetUnderConstruction(string key)
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10 GetUnderConstruction(string key)
         {
             if ((key == null))
             {
                 return null;
             }
-            if (UnderConstructionTypedStorage.Dictionary.TryGetValue(key, out Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT5 result))
+            if (UnderConstructionTypedStorage.Dictionary.TryGetValue(key, out Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10 result))
             {
                 return result;
             }
@@ -854,6 +889,31 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         public Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_consensus_babe.BabeEpochConfiguration GetNextEpochConfig()
         {
             return NextEpochConfigTypedStorage.Get();
+        }
+        
+        /// <summary>
+        /// Implements any storage change for Babe.SkippedEpochs
+        /// </summary>
+        [StorageChange("Babe", "SkippedEpochs")]
+        public void OnUpdateSkippedEpochs(string data)
+        {
+            SkippedEpochsTypedStorage.Update(data);
+        }
+        
+        /// <summary>
+        /// >> SkippedEpochs
+        ///  A list of the last 100 skipped epochs and the corresponding session index
+        ///  when the epoch was skipped.
+        /// 
+        ///  This is only used for validating equivocation proofs. An equivocation proof
+        ///  must contains a key-ownership proof for a given session, therefore we need a
+        ///  way to tie together sessions and epoch indices, i.e. we need to validate that
+        ///  a validator was the owner of a given key on a given session, and what the
+        ///  active epoch index was during that session.
+        /// </summary>
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT11 GetSkippedEpochs()
+        {
+            return SkippedEpochsTypedStorage.Get();
         }
     }
 }
