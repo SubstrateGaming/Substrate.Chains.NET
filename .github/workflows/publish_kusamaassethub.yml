@@ -1,4 +1,4 @@
-name: publish Statemine.NET
+name: publish KusamaAssetHub.NET
 
 on:
   push:
@@ -28,27 +28,27 @@ jobs:
       # Restore the project and its dependencies.
       ##
       - name: Install dependencies
-        run: dotnet restore Substrate.Statemine.NET
+        run: dotnet restore Substrate.KusamaAssetHub.NET
 
       ##
       # Dependencies
       # Restore the project and its dependencies.
       ##
-      - name: Build Statemine .NET
+      - name: Build KusamaAssetHub .NET
         run: |
-            dotnet build Substrate.Statemine.NET --configuration Release
+            dotnet build Substrate.KusamaAssetHub.NET --configuration Release
 
       ##
       # Publishing
       # Publish all NuGet packages from Substrate Chains .NET
       ##
-      - name: Publish Substrate Statemine .NET API Extension
+      - name: Publish Substrate KusamaAssetHub .NET API Extension
         id: publish_nuget
         uses: alirezanet/publish-nuget@v3.0.4
         with:
           # Filepath of the project to be packaged, relative to root of repository
-          PROJECT_FILE_PATH: Substrate.Statemine.NET/Substrate.Statemine.NET.NetApiExt/Substrate.Statemine.NET.NetApiExt.csproj
+          PROJECT_FILE_PATH: Substrate.KusamaAssetHub.NET/Substrate.KusamaAssetHub.NET.NetApiExt/Substrate.KusamaAssetHub.NET.NetApiExt.csproj
           # NuGet package id, used for version detection & defaults to project name
-          PACKAGE_NAME: Substrate.Statemine.NET.Extension
+          PACKAGE_NAME: Substrate.KusamaAssetHub.NET.Extension
           # API key to authenticate with NuGet server
           NUGET_KEY: ${{secrets.NUGET_API_KEY}}
