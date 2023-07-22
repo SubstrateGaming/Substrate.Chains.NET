@@ -18,7 +18,7 @@ namespace Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_nfts.types
     
     
     /// <summary>
-    /// >> 294 - Composite[pallet_nfts.types.MintWitness]
+    /// >> 298 - Composite[pallet_nfts.types.MintWitness]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class MintWitness : BaseType

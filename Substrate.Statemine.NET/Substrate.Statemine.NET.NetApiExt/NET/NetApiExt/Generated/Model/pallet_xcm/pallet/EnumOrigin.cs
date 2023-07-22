@@ -24,7 +24,7 @@ namespace Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_xcm.pallet
     }
     
     /// <summary>
-    /// >> 311 - Variant[pallet_xcm.pallet.Origin]
+    /// >> 315 - Variant[pallet_xcm.pallet.Origin]
     /// </summary>
     public sealed class EnumOrigin : BaseEnumExt<Origin, Substrate.Statemine.NET.NetApiExt.Generated.Model.xcm.v3.multilocation.MultiLocation, Substrate.Statemine.NET.NetApiExt.Generated.Model.xcm.v3.multilocation.MultiLocation>
     {

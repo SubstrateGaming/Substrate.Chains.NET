@@ -18,7 +18,7 @@ namespace Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_nfts.types
     
     
     /// <summary>
-    /// >> 290 - Composite[pallet_nfts.types.BitFlagsT2]
+    /// >> 294 - Composite[pallet_nfts.types.BitFlagsT2]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class BitFlagsT2 : BaseType

@@ -26,7 +26,7 @@ namespace Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_balances.type
     }
     
     /// <summary>
-    /// >> 178 - Variant[pallet_balances.types.Reasons]
+    /// >> 179 - Variant[pallet_balances.types.Reasons]
     /// </summary>
     public sealed class EnumReasons : BaseEnum<Reasons>
     {

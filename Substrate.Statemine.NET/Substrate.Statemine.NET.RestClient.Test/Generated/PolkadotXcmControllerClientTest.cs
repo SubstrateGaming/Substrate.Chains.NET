@@ -477,17 +477,40 @@ namespace Substrate.Statemine.NET.RestClient.Test.Generated
          result.Owner.Create(this.GetTestValueEnum<Substrate.Statemine.NET.NetApiExt.Generated.Model.xcm.VersionedMultiLocation>(), this.GetTestValueBaseVoid());
          result.Locker = new Substrate.Statemine.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation();
          result.Locker.Create(this.GetTestValueEnum<Substrate.Statemine.NET.NetApiExt.Generated.Model.xcm.VersionedMultiLocation>(), this.GetTestValueBaseVoid());
-         result.Users = this.GetTestValueU32();
+         result.Consumers = new Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT14();
+         result.Consumers = this.GetTestValue32();
          return result;
       }
-      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Statemine.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAssetId> GetTestValue32()
+      public Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT14 GetTestValue32()
+      {
+         Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT14 result;
+         result = new Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT14();
+         result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Base.BaseTuple, Substrate.NetApi.Model.Types.Primitive.U128>>();
+         result.Value.Create(new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Base.BaseTuple, Substrate.NetApi.Model.Types.Primitive.U128>[] {
+                  this.GetTestValue33()});
+         return result;
+      }
+      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Base.BaseTuple, Substrate.NetApi.Model.Types.Primitive.U128> GetTestValue33()
+      {
+         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Base.BaseTuple, Substrate.NetApi.Model.Types.Primitive.U128> result;
+         result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Base.BaseTuple, Substrate.NetApi.Model.Types.Primitive.U128>();
+         result.Create(this.GetTestValue34(), this.GetTestValueU128());
+         return result;
+      }
+      public Substrate.NetApi.Model.Types.Base.BaseTuple GetTestValue34()
+      {
+         Substrate.NetApi.Model.Types.Base.BaseTuple result;
+         result = new Substrate.NetApi.Model.Types.Base.BaseTuple();
+         return result;
+      }
+      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Statemine.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAssetId> GetTestValue35()
       {
          Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Statemine.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAssetId> result;
          result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Statemine.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAssetId>();
-         result.Create(this.GetTestValueU32(), this.GetTestValue33(), this.GetTestValue34());
+         result.Create(this.GetTestValueU32(), this.GetTestValue36(), this.GetTestValue37());
          return result;
       }
-      public Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue33()
+      public Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue36()
       {
          Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 result;
          result = new Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32();
@@ -527,7 +550,7 @@ namespace Substrate.Statemine.NET.RestClient.Test.Generated
                   this.GetTestValueU8()});
          return result;
       }
-      public Substrate.Statemine.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAssetId GetTestValue34()
+      public Substrate.Statemine.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAssetId GetTestValue37()
       {
          Substrate.Statemine.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAssetId result;
          result = new Substrate.Statemine.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAssetId();
@@ -546,7 +569,7 @@ namespace Substrate.Statemine.NET.RestClient.Test.Generated
          // Construct new RPC client to test with.
          PolkadotXcmControllerClient rpcClient = new PolkadotXcmControllerClient(_httpClient, subscriptionClient);
          Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_xcm.pallet.RemoteLockedFungibleRecord mockupValue = this.GetTestValue31();
-         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Statemine.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAssetId> mockupKey = this.GetTestValue32();
+         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Statemine.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAssetId> mockupKey = this.GetTestValue35();
 
          Assert.IsTrue(await rpcClient.SubscribeRemoteLockedFungibles(mockupKey));
 
@@ -563,30 +586,30 @@ namespace Substrate.Statemine.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT14 GetTestValue36()
+      public Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT15 GetTestValue39()
       {
-         Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT14 result;
-         result = new Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT14();
+         Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT15 result;
+         result = new Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT15();
          result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.Statemine.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation>>();
          result.Value.Create(new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.Statemine.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation>[] {
-                  this.GetTestValue37()});
+                  this.GetTestValue40()});
          return result;
       }
-      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.Statemine.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation> GetTestValue37()
+      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.Statemine.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation> GetTestValue40()
       {
          Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.Statemine.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation> result;
          result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.Statemine.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation>();
-         result.Create(this.GetTestValueU128(), this.GetTestValue38());
+         result.Create(this.GetTestValueU128(), this.GetTestValue41());
          return result;
       }
-      public Substrate.Statemine.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation GetTestValue38()
+      public Substrate.Statemine.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation GetTestValue41()
       {
          Substrate.Statemine.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation result;
          result = new Substrate.Statemine.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation();
          result.Create(this.GetTestValueEnum<Substrate.Statemine.NET.NetApiExt.Generated.Model.xcm.VersionedMultiLocation>(), this.GetTestValueBaseVoid());
          return result;
       }
-      public Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue39()
+      public Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue42()
       {
          Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 result;
          result = new Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32();
@@ -637,8 +660,8 @@ namespace Substrate.Statemine.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          PolkadotXcmControllerClient rpcClient = new PolkadotXcmControllerClient(_httpClient, subscriptionClient);
-         Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT14 mockupValue = this.GetTestValue36();
-         Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 mockupKey = this.GetTestValue39();
+         Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT15 mockupValue = this.GetTestValue39();
+         Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 mockupKey = this.GetTestValue42();
 
          Assert.IsTrue(await rpcClient.SubscribeLockedFungibles(mockupKey));
 
@@ -650,7 +673,7 @@ namespace Substrate.Statemine.NET.RestClient.Test.Generated
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT14 rpcResult = await rpcClient.GetLockedFungibles(mockupKey);
+         Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT15 rpcResult = await rpcClient.GetLockedFungibles(mockupKey);
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());

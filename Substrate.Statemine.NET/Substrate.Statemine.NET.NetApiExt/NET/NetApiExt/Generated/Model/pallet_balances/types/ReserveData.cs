@@ -18,7 +18,7 @@ namespace Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_balances.type
     
     
     /// <summary>
-    /// >> 181 - Composite[pallet_balances.types.ReserveData]
+    /// >> 182 - Composite[pallet_balances.types.ReserveData]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class ReserveData : BaseType

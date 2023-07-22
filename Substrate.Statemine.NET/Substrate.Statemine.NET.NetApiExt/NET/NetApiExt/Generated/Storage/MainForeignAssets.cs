@@ -540,6 +540,42 @@ namespace Substrate.Statemine.NET.NetApiExt.Generated.Storage
             byteArray.AddRange(min_balance.Encode());
             return new Method(53, "ForeignAssets", 28, "set_min_balance", byteArray.ToArray());
         }
+        
+        /// <summary>
+        /// >> touch_other
+        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// </summary>
+        public static Method TouchOther(Substrate.Statemine.NET.NetApiExt.Generated.Model.xcm.v3.multilocation.MultiLocation id, Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress who)
+        {
+            System.Collections.Generic.List<byte> byteArray = new List<byte>();
+            byteArray.AddRange(id.Encode());
+            byteArray.AddRange(who.Encode());
+            return new Method(53, "ForeignAssets", 29, "touch_other", byteArray.ToArray());
+        }
+        
+        /// <summary>
+        /// >> refund_other
+        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// </summary>
+        public static Method RefundOther(Substrate.Statemine.NET.NetApiExt.Generated.Model.xcm.v3.multilocation.MultiLocation id, Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress who)
+        {
+            System.Collections.Generic.List<byte> byteArray = new List<byte>();
+            byteArray.AddRange(id.Encode());
+            byteArray.AddRange(who.Encode());
+            return new Method(53, "ForeignAssets", 30, "refund_other", byteArray.ToArray());
+        }
+        
+        /// <summary>
+        /// >> block
+        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// </summary>
+        public static Method Block(Substrate.Statemine.NET.NetApiExt.Generated.Model.xcm.v3.multilocation.MultiLocation id, Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress who)
+        {
+            System.Collections.Generic.List<byte> byteArray = new List<byte>();
+            byteArray.AddRange(id.Encode());
+            byteArray.AddRange(who.Encode());
+            return new Method(53, "ForeignAssets", 31, "block", byteArray.ToArray());
+        }
     }
     
     public sealed class ForeignAssetsConstants

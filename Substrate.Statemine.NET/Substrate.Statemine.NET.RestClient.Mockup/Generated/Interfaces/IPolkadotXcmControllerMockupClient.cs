@@ -29,7 +29,7 @@ namespace Substrate.Statemine.NET.RestClient.Mockup.Generated.Interfaces
       Task<bool> SetVersionDiscoveryQueue(BoundedVecT13 value);
       Task<bool> SetCurrentMigration(EnumVersionMigrationStage value);
       Task<bool> SetRemoteLockedFungibles(RemoteLockedFungibleRecord value, BaseTuple<U32, Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Statemine.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAssetId> key);
-      Task<bool> SetLockedFungibles(BoundedVecT14 value, Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
+      Task<bool> SetLockedFungibles(BoundedVecT15 value, Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
       Task<bool> SetXcmExecutionSuspended(Bool value);
    }
 }

@@ -540,6 +540,42 @@ namespace Substrate.Statemine.NET.NetApiExt.Generated.Storage
             byteArray.AddRange(min_balance.Encode());
             return new Method(50, "Assets", 28, "set_min_balance", byteArray.ToArray());
         }
+        
+        /// <summary>
+        /// >> touch_other
+        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// </summary>
+        public static Method TouchOther(Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32> id, Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress who)
+        {
+            System.Collections.Generic.List<byte> byteArray = new List<byte>();
+            byteArray.AddRange(id.Encode());
+            byteArray.AddRange(who.Encode());
+            return new Method(50, "Assets", 29, "touch_other", byteArray.ToArray());
+        }
+        
+        /// <summary>
+        /// >> refund_other
+        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// </summary>
+        public static Method RefundOther(Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32> id, Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress who)
+        {
+            System.Collections.Generic.List<byte> byteArray = new List<byte>();
+            byteArray.AddRange(id.Encode());
+            byteArray.AddRange(who.Encode());
+            return new Method(50, "Assets", 30, "refund_other", byteArray.ToArray());
+        }
+        
+        /// <summary>
+        /// >> block
+        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// </summary>
+        public static Method Block(Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32> id, Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress who)
+        {
+            System.Collections.Generic.List<byte> byteArray = new List<byte>();
+            byteArray.AddRange(id.Encode());
+            byteArray.AddRange(who.Encode());
+            return new Method(50, "Assets", 31, "block", byteArray.ToArray());
+        }
     }
     
     public sealed class AssetsConstants

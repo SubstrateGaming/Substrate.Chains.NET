@@ -251,7 +251,8 @@ namespace Substrate.Statemine.NET.RestClient.Test.Generated
          Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_assets.types.AssetAccount result;
          result = new Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_assets.types.AssetAccount();
          result.Balance = this.GetTestValueU128();
-         result.IsFrozen = this.GetTestValueBool();
+         result.Status = new Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_assets.types.EnumAccountStatus();
+         result.Status.Create(this.GetTestValueEnum<Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_assets.types.AccountStatus>());
          result.Reason = new Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_assets.types.EnumExistenceReason();
          result.Reason.Create(this.GetTestValueEnum<Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_assets.types.ExistenceReason>(), this.GetTestValueBaseVoid());
          result.Extra = new Substrate.NetApi.Model.Types.Base.BaseTuple();
@@ -480,27 +481,27 @@ namespace Substrate.Statemine.NET.RestClient.Test.Generated
          Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_assets.types.AssetMetadataT2 result;
          result = new Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_assets.types.AssetMetadataT2();
          result.Deposit = this.GetTestValueU128();
-         result.Name = new Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT20();
+         result.Name = new Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT21();
          result.Name = this.GetTestValue21();
-         result.Symbol = new Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT20();
+         result.Symbol = new Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT21();
          result.Symbol = this.GetTestValue22();
          result.Decimals = this.GetTestValueU8();
          result.IsFrozen = this.GetTestValueBool();
          return result;
       }
-      public Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT20 GetTestValue21()
+      public Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT21 GetTestValue21()
       {
-         Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT20 result;
-         result = new Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT20();
+         Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT21 result;
+         result = new Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT21();
          result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>();
          result.Value.Create(new Substrate.NetApi.Model.Types.Primitive.U8[] {
                   this.GetTestValueU8()});
          return result;
       }
-      public Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT20 GetTestValue22()
+      public Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT21 GetTestValue22()
       {
-         Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT20 result;
-         result = new Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT20();
+         Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT21 result;
+         result = new Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT21();
          result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>();
          result.Value.Create(new Substrate.NetApi.Model.Types.Primitive.U8[] {
                   this.GetTestValueU8()});

@@ -39,7 +39,7 @@ namespace Substrate.Statemine.NET.RestClient.Generated.Interfaces
       Task<bool> SubscribeCurrentMigration();
       Task<RemoteLockedFungibleRecord> GetRemoteLockedFungibles(BaseTuple<U32, Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Statemine.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAssetId> key);
       Task<bool> SubscribeRemoteLockedFungibles(BaseTuple<U32, Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Statemine.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAssetId> key);
-      Task<BoundedVecT14> GetLockedFungibles(Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
+      Task<BoundedVecT15> GetLockedFungibles(Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
       Task<bool> SubscribeLockedFungibles(Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
       Task<Bool> GetXcmExecutionSuspended();
       Task<bool> SubscribeXcmExecutionSuspended();

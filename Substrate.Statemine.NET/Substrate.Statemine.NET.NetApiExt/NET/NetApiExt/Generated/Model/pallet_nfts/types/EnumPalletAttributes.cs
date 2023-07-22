@@ -19,12 +19,14 @@ namespace Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_nfts.types
     {
         
         UsedToClaim = 0,
+        
+        TransferDisabled = 1,
     }
     
     /// <summary>
     /// >> 122 - Variant[pallet_nfts.types.PalletAttributes]
     /// </summary>
-    public sealed class EnumPalletAttributes : BaseEnumExt<PalletAttributes, Substrate.NetApi.Model.Types.Primitive.U32>
+    public sealed class EnumPalletAttributes : BaseEnumExt<PalletAttributes, Substrate.NetApi.Model.Types.Primitive.U32, BaseVoid>
     {
     }
 }

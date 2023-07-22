@@ -18,7 +18,7 @@ namespace Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_balances.type
     
     
     /// <summary>
-    /// >> 184 - Composite[pallet_balances.types.IdAmount]
+    /// >> 185 - Composite[pallet_balances.types.IdAmount]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class IdAmount : BaseType

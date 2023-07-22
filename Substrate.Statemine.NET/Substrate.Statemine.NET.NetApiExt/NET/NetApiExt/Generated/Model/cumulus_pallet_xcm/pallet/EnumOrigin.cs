@@ -24,7 +24,7 @@ namespace Substrate.Statemine.NET.NetApiExt.Generated.Model.cumulus_pallet_xcm.p
     }
     
     /// <summary>
-    /// >> 312 - Variant[cumulus_pallet_xcm.pallet.Origin]
+    /// >> 316 - Variant[cumulus_pallet_xcm.pallet.Origin]
     /// </summary>
     public sealed class EnumOrigin : BaseEnumExt<Origin, BaseVoid, Substrate.Statemine.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id>
     {

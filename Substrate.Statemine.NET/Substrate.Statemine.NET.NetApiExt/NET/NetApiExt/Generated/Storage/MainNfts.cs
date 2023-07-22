@@ -978,7 +978,7 @@ namespace Substrate.Statemine.NET.NetApiExt.Generated.Storage
         /// >> pay_tips
         /// Contains one variant per dispatchable that can be called by an extrinsic.
         /// </summary>
-        public static Method PayTips(Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT15 tips)
+        public static Method PayTips(Substrate.Statemine.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT16 tips)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(tips.Encode());

@@ -18,7 +18,7 @@ namespace Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_nfts.types
     
     
     /// <summary>
-    /// >> 285 - Composite[pallet_nfts.types.CollectionConfig]
+    /// >> 289 - Composite[pallet_nfts.types.CollectionConfig]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class CollectionConfig : BaseType

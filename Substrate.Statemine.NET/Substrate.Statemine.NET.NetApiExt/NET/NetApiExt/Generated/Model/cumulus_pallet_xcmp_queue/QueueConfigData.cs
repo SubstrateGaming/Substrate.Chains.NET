@@ -18,7 +18,7 @@ namespace Substrate.Statemine.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_
     
     
     /// <summary>
-    /// >> 221 - Composite[cumulus_pallet_xcmp_queue.QueueConfigData]
+    /// >> 222 - Composite[cumulus_pallet_xcmp_queue.QueueConfigData]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class QueueConfigData : BaseType

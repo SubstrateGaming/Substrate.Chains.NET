@@ -24,7 +24,7 @@ namespace Substrate.Statemine.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_
     }
     
     /// <summary>
-    /// >> 219 - Variant[cumulus_pallet_xcmp_queue.OutboundState]
+    /// >> 220 - Variant[cumulus_pallet_xcmp_queue.OutboundState]
     /// </summary>
     public sealed class EnumOutboundState : BaseEnum<OutboundState>
     {

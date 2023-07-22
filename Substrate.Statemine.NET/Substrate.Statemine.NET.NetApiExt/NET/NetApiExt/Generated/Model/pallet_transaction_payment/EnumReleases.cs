@@ -24,7 +24,7 @@ namespace Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_transaction_p
     }
     
     /// <summary>
-    /// >> 191 - Variant[pallet_transaction_payment.Releases]
+    /// >> 192 - Variant[pallet_transaction_payment.Releases]
     /// </summary>
     public sealed class EnumReleases : BaseEnum<Releases>
     {

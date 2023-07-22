@@ -25,12 +25,14 @@ namespace Substrate.Statemine.NET.NetApiExt.Generated.Model.pallet_assets.types
         DepositHeld = 2,
         
         DepositRefunded = 3,
+        
+        DepositFrom = 4,
     }
     
     /// <summary>
-    /// >> 332 - Variant[pallet_assets.types.ExistenceReason]
+    /// >> 337 - Variant[pallet_assets.types.ExistenceReason]
     /// </summary>
-    public sealed class EnumExistenceReason : BaseEnumExt<ExistenceReason, BaseVoid, BaseVoid, Substrate.NetApi.Model.Types.Primitive.U128, BaseVoid>
+    public sealed class EnumExistenceReason : BaseEnumExt<ExistenceReason, BaseVoid, BaseVoid, Substrate.NetApi.Model.Types.Primitive.U128, BaseVoid, BaseTuple<Substrate.Statemine.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U128>>
     {
     }
 }
