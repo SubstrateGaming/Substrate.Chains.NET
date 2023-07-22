@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_para
     
     
     /// <summary>
-    /// >> 637 - Composite[polkadot_runtime_parachains.configuration.HostConfiguration]
+    /// >> 719 - Composite[polkadot_runtime_parachains.configuration.HostConfiguration]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class HostConfiguration : BaseType
@@ -70,6 +70,11 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_para
         private Substrate.NetApi.Model.Types.Primitive.U32 _validationUpgradeDelay;
         
         /// <summary>
+        /// >> async_backing_params
+        /// </summary>
+        private Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.vstaging.AsyncBackingParams _asyncBackingParams;
+        
+        /// <summary>
         /// >> max_pov_size
         /// </summary>
         private Substrate.NetApi.Model.Types.Primitive.U32 _maxPovSize;
@@ -78,11 +83,6 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_para
         /// >> max_downward_message_size
         /// </summary>
         private Substrate.NetApi.Model.Types.Primitive.U32 _maxDownwardMessageSize;
-        
-        /// <summary>
-        /// >> ump_service_total_weight
-        /// </summary>
-        private Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight _umpServiceTotalWeight;
         
         /// <summary>
         /// >> hrmp_max_parachain_outbound_channels
@@ -128,6 +128,11 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_para
         /// >> hrmp_channel_max_message_size
         /// </summary>
         private Substrate.NetApi.Model.Types.Primitive.U32 _hrmpChannelMaxMessageSize;
+        
+        /// <summary>
+        /// >> executor_params
+        /// </summary>
+        private Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.executor_params.ExecutorParams _executorParams;
         
         /// <summary>
         /// >> code_retention_period
@@ -185,11 +190,6 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_para
         private Substrate.NetApi.Model.Types.Primitive.U32 _disputePostConclusionAcceptancePeriod;
         
         /// <summary>
-        /// >> dispute_conclusion_by_time_out_period
-        /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _disputeConclusionByTimeOutPeriod;
-        
-        /// <summary>
         /// >> no_show_slots
         /// </summary>
         private Substrate.NetApi.Model.Types.Primitive.U32 _noShowSlots;
@@ -213,11 +213,6 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_para
         /// >> relay_vrf_modulo_samples
         /// </summary>
         private Substrate.NetApi.Model.Types.Primitive.U32 _relayVrfModuloSamples;
-        
-        /// <summary>
-        /// >> ump_max_individual_weight
-        /// </summary>
-        private Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight _umpMaxIndividualWeight;
         
         /// <summary>
         /// >> pvf_checking_enabled
@@ -342,6 +337,18 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_para
             }
         }
         
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.vstaging.AsyncBackingParams AsyncBackingParams
+        {
+            get
+            {
+                return this._asyncBackingParams;
+            }
+            set
+            {
+                this._asyncBackingParams = value;
+            }
+        }
+        
         public Substrate.NetApi.Model.Types.Primitive.U32 MaxPovSize
         {
             get
@@ -363,18 +370,6 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_para
             set
             {
                 this._maxDownwardMessageSize = value;
-            }
-        }
-        
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight UmpServiceTotalWeight
-        {
-            get
-            {
-                return this._umpServiceTotalWeight;
-            }
-            set
-            {
-                this._umpServiceTotalWeight = value;
             }
         }
         
@@ -483,6 +478,18 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_para
             set
             {
                 this._hrmpChannelMaxMessageSize = value;
+            }
+        }
+        
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.executor_params.ExecutorParams ExecutorParams
+        {
+            get
+            {
+                return this._executorParams;
+            }
+            set
+            {
+                this._executorParams = value;
             }
         }
         
@@ -618,18 +625,6 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_para
             }
         }
         
-        public Substrate.NetApi.Model.Types.Primitive.U32 DisputeConclusionByTimeOutPeriod
-        {
-            get
-            {
-                return this._disputeConclusionByTimeOutPeriod;
-            }
-            set
-            {
-                this._disputeConclusionByTimeOutPeriod = value;
-            }
-        }
-        
         public Substrate.NetApi.Model.Types.Primitive.U32 NoShowSlots
         {
             get
@@ -690,18 +685,6 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_para
             }
         }
         
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight UmpMaxIndividualWeight
-        {
-            get
-            {
-                return this._umpMaxIndividualWeight;
-            }
-            set
-            {
-                this._umpMaxIndividualWeight = value;
-            }
-        }
-        
         public Substrate.NetApi.Model.Types.Primitive.Bool PvfCheckingEnabled
         {
             get
@@ -755,9 +738,9 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_para
             result.AddRange(HrmpMaxMessageNumPerCandidate.Encode());
             result.AddRange(ValidationUpgradeCooldown.Encode());
             result.AddRange(ValidationUpgradeDelay.Encode());
+            result.AddRange(AsyncBackingParams.Encode());
             result.AddRange(MaxPovSize.Encode());
             result.AddRange(MaxDownwardMessageSize.Encode());
-            result.AddRange(UmpServiceTotalWeight.Encode());
             result.AddRange(HrmpMaxParachainOutboundChannels.Encode());
             result.AddRange(HrmpMaxParathreadOutboundChannels.Encode());
             result.AddRange(HrmpSenderDeposit.Encode());
@@ -767,6 +750,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_para
             result.AddRange(HrmpMaxParachainInboundChannels.Encode());
             result.AddRange(HrmpMaxParathreadInboundChannels.Encode());
             result.AddRange(HrmpChannelMaxMessageSize.Encode());
+            result.AddRange(ExecutorParams.Encode());
             result.AddRange(CodeRetentionPeriod.Encode());
             result.AddRange(ParathreadCores.Encode());
             result.AddRange(ParathreadRetries.Encode());
@@ -778,13 +762,11 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_para
             result.AddRange(MaxValidators.Encode());
             result.AddRange(DisputePeriod.Encode());
             result.AddRange(DisputePostConclusionAcceptancePeriod.Encode());
-            result.AddRange(DisputeConclusionByTimeOutPeriod.Encode());
             result.AddRange(NoShowSlots.Encode());
             result.AddRange(NDelayTranches.Encode());
             result.AddRange(ZerothDelayTrancheWidth.Encode());
             result.AddRange(NeededApprovals.Encode());
             result.AddRange(RelayVrfModuloSamples.Encode());
-            result.AddRange(UmpMaxIndividualWeight.Encode());
             result.AddRange(PvfCheckingEnabled.Encode());
             result.AddRange(PvfVotingTtl.Encode());
             result.AddRange(MinimumValidationUpgradeDelay.Encode());
@@ -812,12 +794,12 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_para
             ValidationUpgradeCooldown.Decode(byteArray, ref p);
             ValidationUpgradeDelay = new Substrate.NetApi.Model.Types.Primitive.U32();
             ValidationUpgradeDelay.Decode(byteArray, ref p);
+            AsyncBackingParams = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.vstaging.AsyncBackingParams();
+            AsyncBackingParams.Decode(byteArray, ref p);
             MaxPovSize = new Substrate.NetApi.Model.Types.Primitive.U32();
             MaxPovSize.Decode(byteArray, ref p);
             MaxDownwardMessageSize = new Substrate.NetApi.Model.Types.Primitive.U32();
             MaxDownwardMessageSize.Decode(byteArray, ref p);
-            UmpServiceTotalWeight = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight();
-            UmpServiceTotalWeight.Decode(byteArray, ref p);
             HrmpMaxParachainOutboundChannels = new Substrate.NetApi.Model.Types.Primitive.U32();
             HrmpMaxParachainOutboundChannels.Decode(byteArray, ref p);
             HrmpMaxParathreadOutboundChannels = new Substrate.NetApi.Model.Types.Primitive.U32();
@@ -836,6 +818,8 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_para
             HrmpMaxParathreadInboundChannels.Decode(byteArray, ref p);
             HrmpChannelMaxMessageSize = new Substrate.NetApi.Model.Types.Primitive.U32();
             HrmpChannelMaxMessageSize.Decode(byteArray, ref p);
+            ExecutorParams = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.executor_params.ExecutorParams();
+            ExecutorParams.Decode(byteArray, ref p);
             CodeRetentionPeriod = new Substrate.NetApi.Model.Types.Primitive.U32();
             CodeRetentionPeriod.Decode(byteArray, ref p);
             ParathreadCores = new Substrate.NetApi.Model.Types.Primitive.U32();
@@ -858,8 +842,6 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_para
             DisputePeriod.Decode(byteArray, ref p);
             DisputePostConclusionAcceptancePeriod = new Substrate.NetApi.Model.Types.Primitive.U32();
             DisputePostConclusionAcceptancePeriod.Decode(byteArray, ref p);
-            DisputeConclusionByTimeOutPeriod = new Substrate.NetApi.Model.Types.Primitive.U32();
-            DisputeConclusionByTimeOutPeriod.Decode(byteArray, ref p);
             NoShowSlots = new Substrate.NetApi.Model.Types.Primitive.U32();
             NoShowSlots.Decode(byteArray, ref p);
             NDelayTranches = new Substrate.NetApi.Model.Types.Primitive.U32();
@@ -870,8 +852,6 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_para
             NeededApprovals.Decode(byteArray, ref p);
             RelayVrfModuloSamples = new Substrate.NetApi.Model.Types.Primitive.U32();
             RelayVrfModuloSamples.Decode(byteArray, ref p);
-            UmpMaxIndividualWeight = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight();
-            UmpMaxIndividualWeight.Decode(byteArray, ref p);
             PvfCheckingEnabled = new Substrate.NetApi.Model.Types.Primitive.Bool();
             PvfCheckingEnabled.Decode(byteArray, ref p);
             PvfVotingTtl = new Substrate.NetApi.Model.Types.Primitive.U32();

@@ -34,7 +34,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_bounties.palle
     }
     
     /// <summary>
-    /// >> 84 - Variant[pallet_bounties.pallet.Event]
+    /// >> 452 - Variant[pallet_bounties.pallet.Event]
     /// 
     ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
     ///			by this pallet.

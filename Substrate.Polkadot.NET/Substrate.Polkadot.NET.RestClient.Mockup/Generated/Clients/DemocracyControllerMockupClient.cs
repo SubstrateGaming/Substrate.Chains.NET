@@ -13,12 +13,13 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup.Generated.Clients
    using System.Threading.Tasks;
    using System.Net.Http;
    using Substrate.NetApi.Model.Types.Primitive;
-   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    using Substrate.NetApi.Model.Types.Base;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_democracy.types;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_democracy.vote;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.frame_support.traits.preimages;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_democracy.vote_threshold;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types;
    using Substrate.Polkadot.NET.RestClient.Mockup.Generated.Interfaces;
    
    public sealed class DemocracyControllerMockupClient : MockupBaseClient, IDemocracyControllerMockupClient
@@ -32,11 +33,11 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "Democracy/PublicPropCount", value.Encode(), Substrate.Polkadot.NET.NetApiExt.Generated.Storage.DemocracyStorage.PublicPropCountParams());
       }
-      public async Task<bool> SetPublicProps(BoundedVecT11 value)
+      public async Task<bool> SetPublicProps(BoundedVecT17 value)
       {
          return await SendMockupRequestAsync(_httpClient, "Democracy/PublicProps", value.Encode(), Substrate.Polkadot.NET.NetApiExt.Generated.Storage.DemocracyStorage.PublicPropsParams());
       }
-      public async Task<bool> SetDepositOf(BaseTuple<BoundedVecT12, U128> value, U32 key)
+      public async Task<bool> SetDepositOf(BaseTuple<BoundedVecT18, U128> value, U32 key)
       {
          return await SendMockupRequestAsync(_httpClient, "Democracy/DepositOf", value.Encode(), Substrate.Polkadot.NET.NetApiExt.Generated.Storage.DemocracyStorage.DepositOfParams(key));
       }
@@ -64,13 +65,17 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "Democracy/NextExternal", value.Encode(), Substrate.Polkadot.NET.NetApiExt.Generated.Storage.DemocracyStorage.NextExternalParams());
       }
-      public async Task<bool> SetBlacklist(BaseTuple<U32, BoundedVecT12> value, Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256 key)
+      public async Task<bool> SetBlacklist(BaseTuple<U32, BoundedVecT18> value, H256 key)
       {
          return await SendMockupRequestAsync(_httpClient, "Democracy/Blacklist", value.Encode(), Substrate.Polkadot.NET.NetApiExt.Generated.Storage.DemocracyStorage.BlacklistParams(key));
       }
-      public async Task<bool> SetCancellations(Bool value, Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256 key)
+      public async Task<bool> SetCancellations(Bool value, H256 key)
       {
          return await SendMockupRequestAsync(_httpClient, "Democracy/Cancellations", value.Encode(), Substrate.Polkadot.NET.NetApiExt.Generated.Storage.DemocracyStorage.CancellationsParams(key));
+      }
+      public async Task<bool> SetMetadataOf(H256 value, EnumMetadataOwner key)
+      {
+         return await SendMockupRequestAsync(_httpClient, "Democracy/MetadataOf", value.Encode(), Substrate.Polkadot.NET.NetApiExt.Generated.Storage.DemocracyStorage.MetadataOfParams(key));
       }
    }
 }

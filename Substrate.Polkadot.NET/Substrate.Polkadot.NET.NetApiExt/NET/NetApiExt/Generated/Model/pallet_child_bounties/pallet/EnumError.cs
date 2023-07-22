@@ -26,7 +26,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_child_bounties
     }
     
     /// <summary>
-    /// >> 598 - Variant[pallet_child_bounties.pallet.Error]
+    /// >> 679 - Variant[pallet_child_bounties.pallet.Error]
     /// 
     ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
     ///			of this pallet.

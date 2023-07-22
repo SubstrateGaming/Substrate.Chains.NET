@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_fast_unstake.t
     
     
     /// <summary>
-    /// >> 633 - Composite[pallet_fast_unstake.types.UnstakeRequest]
+    /// >> 715 - Composite[pallet_fast_unstake.types.UnstakeRequest]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class UnstakeRequest : BaseType
@@ -27,14 +27,14 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_fast_unstake.t
         /// <summary>
         /// >> stashes
         /// </summary>
-        private Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT29 _stashes;
+        private Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT38 _stashes;
         
         /// <summary>
         /// >> checked
         /// </summary>
-        private Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT30 _checked;
+        private Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT39 _checked;
         
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT29 Stashes
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT38 Stashes
         {
             get
             {
@@ -46,7 +46,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_fast_unstake.t
             }
         }
         
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT30 Checked
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT39 Checked
         {
             get
             {
@@ -74,9 +74,9 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_fast_unstake.t
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Stashes = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT29();
+            Stashes = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT38();
             Stashes.Decode(byteArray, ref p);
-            Checked = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT30();
+            Checked = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT39();
             Checked.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

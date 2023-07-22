@@ -35,7 +35,14 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// >> Disputes
         ///  All ongoing or concluded disputes for the last several sessions.
         /// </summary>
-        Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.DisputeState GetDisputes(string key);
+        Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.DisputeState GetDisputes(string key);
+        
+        /// <summary>
+        /// >> BackersOnDisputes
+        ///  Backing votes stored for each dispute.
+        ///  This storage is used for slashing.
+        /// </summary>
+        Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base.BTreeSet GetBackersOnDisputes(string key);
         
         /// <summary>
         /// >> Included
@@ -68,7 +75,12 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// <summary>
         /// _disputesTypedStorage typed storage field
         /// </summary>
-        private TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.DisputeState> _disputesTypedStorage;
+        private TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.DisputeState> _disputesTypedStorage;
+        
+        /// <summary>
+        /// _backersOnDisputesTypedStorage typed storage field
+        /// </summary>
+        private TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base.BTreeSet> _backersOnDisputesTypedStorage;
         
         /// <summary>
         /// _includedTypedStorage typed storage field
@@ -86,7 +98,8 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         public ParasDisputesStorage(IStorageDataProvider storageDataProvider, List<IStorageChangeDelegate> storageChangeDelegates)
         {
             this.LastPrunedSessionTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32>("ParasDisputes.LastPrunedSession", storageDataProvider, storageChangeDelegates);
-            this.DisputesTypedStorage = new TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.DisputeState>("ParasDisputes.Disputes", storageDataProvider, storageChangeDelegates);
+            this.DisputesTypedStorage = new TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.DisputeState>("ParasDisputes.Disputes", storageDataProvider, storageChangeDelegates);
+            this.BackersOnDisputesTypedStorage = new TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base.BTreeSet>("ParasDisputes.BackersOnDisputes", storageDataProvider, storageChangeDelegates);
             this.IncludedTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Primitive.U32>("ParasDisputes.Included", storageDataProvider, storageChangeDelegates);
             this.FrozenTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32>>("ParasDisputes.Frozen", storageDataProvider, storageChangeDelegates);
         }
@@ -109,7 +122,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// <summary>
         /// _disputesTypedStorage property
         /// </summary>
-        public TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.DisputeState> DisputesTypedStorage
+        public TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.DisputeState> DisputesTypedStorage
         {
             get
             {
@@ -118,6 +131,21 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
             set
             {
                 _disputesTypedStorage = value;
+            }
+        }
+        
+        /// <summary>
+        /// _backersOnDisputesTypedStorage property
+        /// </summary>
+        public TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base.BTreeSet> BackersOnDisputesTypedStorage
+        {
+            get
+            {
+                return _backersOnDisputesTypedStorage;
+            }
+            set
+            {
+                _backersOnDisputesTypedStorage = value;
             }
         }
         
@@ -158,6 +186,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         {
             await LastPrunedSessionTypedStorage.InitializeAsync("ParasDisputes", "LastPrunedSession");
             await DisputesTypedStorage.InitializeAsync("ParasDisputes", "Disputes");
+            await BackersOnDisputesTypedStorage.InitializeAsync("ParasDisputes", "BackersOnDisputes");
             await IncludedTypedStorage.InitializeAsync("ParasDisputes", "Included");
             await FrozenTypedStorage.InitializeAsync("ParasDisputes", "Frozen");
         }
@@ -194,13 +223,43 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// >> Disputes
         ///  All ongoing or concluded disputes for the last several sessions.
         /// </summary>
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.DisputeState GetDisputes(string key)
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.DisputeState GetDisputes(string key)
         {
             if ((key == null))
             {
                 return null;
             }
-            if (DisputesTypedStorage.Dictionary.TryGetValue(key, out Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.DisputeState result))
+            if (DisputesTypedStorage.Dictionary.TryGetValue(key, out Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.DisputeState result))
+            {
+                return result;
+            }
+            else
+            {
+                return null;
+            }
+        }
+        
+        /// <summary>
+        /// Implements any storage change for ParasDisputes.BackersOnDisputes
+        /// </summary>
+        [StorageChange("ParasDisputes", "BackersOnDisputes")]
+        public void OnUpdateBackersOnDisputes(string key, string data)
+        {
+            BackersOnDisputesTypedStorage.Update(key, data);
+        }
+        
+        /// <summary>
+        /// >> BackersOnDisputes
+        ///  Backing votes stored for each dispute.
+        ///  This storage is used for slashing.
+        /// </summary>
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base.BTreeSet GetBackersOnDisputes(string key)
+        {
+            if ((key == null))
+            {
+                return null;
+            }
+            if (BackersOnDisputesTypedStorage.Dictionary.TryGetValue(key, out Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base.BTreeSet result))
             {
                 return result;
             }

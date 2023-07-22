@@ -54,7 +54,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Controller
         ///  The public proposals. Unsorted. The second item is the proposal.
         /// </summary>
         [HttpGet("PublicProps")]
-        [ProducesResponseType(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT11), 200)]
+        [ProducesResponseType(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17), 200)]
         [StorageKeyBuilder(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Storage.DemocracyStorage), "PublicPropsParams")]
         public IActionResult GetPublicProps()
         {
@@ -68,7 +68,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Controller
         ///  TWOX-NOTE: Safe, as increasing integer keys are safe.
         /// </summary>
         [HttpGet("DepositOf")]
-        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT12, Substrate.NetApi.Model.Types.Primitive.U128>), 200)]
+        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18, Substrate.NetApi.Model.Types.Primitive.U128>), 200)]
         [StorageKeyBuilder(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Storage.DemocracyStorage), "DepositOfParams", typeof(Substrate.NetApi.Model.Types.Primitive.U32))]
         public IActionResult GetDepositOf(string key)
         {
@@ -163,7 +163,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Controller
         ///  (until when it may not be resubmitted) and who vetoed it.
         /// </summary>
         [HttpGet("Blacklist")]
-        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT12>), 200)]
+        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18>), 200)]
         [StorageKeyBuilder(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Storage.DemocracyStorage), "BlacklistParams", typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256))]
         public IActionResult GetBlacklist(string key)
         {
@@ -180,6 +180,23 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Controller
         public IActionResult GetCancellations(string key)
         {
             return this.Ok(_democracyStorage.GetCancellations(key));
+        }
+        
+        /// <summary>
+        /// >> MetadataOf
+        ///  General information concerning any proposal or referendum.
+        ///  The `PreimageHash` refers to the preimage of the `Preimages` provider which can be a JSON
+        ///  dump or IPFS hash of a JSON file.
+        /// 
+        ///  Consider a garbage collection for a metadata of finished referendums to `unrequest` (remove)
+        ///  large preimages.
+        /// </summary>
+        [HttpGet("MetadataOf")]
+        [ProducesResponseType(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256), 200)]
+        [StorageKeyBuilder(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Storage.DemocracyStorage), "MetadataOfParams", typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_democracy.types.EnumMetadataOwner))]
+        public IActionResult GetMetadataOf(string key)
+        {
+            return this.Ok(_democracyStorage.GetMetadataOf(key));
         }
     }
 }

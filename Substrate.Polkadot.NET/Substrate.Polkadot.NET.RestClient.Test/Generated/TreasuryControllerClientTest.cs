@@ -17,7 +17,7 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
    using Substrate.Polkadot.NET.RestClient.Generated.Clients;
    using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_treasury;
-   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    
    public class TreasuryControllerClientTest : ClientTestBase
    {
@@ -206,10 +206,10 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT17 GetTestValue8()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT23 GetTestValue8()
       {
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT17 result;
-         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT17();
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT23 result;
+         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT23();
          result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U32>();
          result.Value.Create(new Substrate.NetApi.Model.Types.Primitive.U32[] {
                   this.GetTestValueU32()});
@@ -226,7 +226,7 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          TreasuryControllerClient rpcClient = new TreasuryControllerClient(_httpClient, subscriptionClient);
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT17 mockupValue = this.GetTestValue8();
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT23 mockupValue = this.GetTestValue8();
 
 
          Assert.IsTrue(await rpcClient.SubscribeApprovals());
@@ -239,7 +239,7 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT17 rpcResult = await rpcClient.GetApprovals();
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT23 rpcResult = await rpcClient.GetApprovals();
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());

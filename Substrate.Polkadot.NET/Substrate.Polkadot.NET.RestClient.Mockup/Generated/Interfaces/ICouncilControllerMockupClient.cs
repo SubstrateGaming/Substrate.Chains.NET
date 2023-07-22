@@ -11,7 +11,7 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup.Generated.Interfaces
 {
    using System;
    using System.Threading.Tasks;
-   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_collective;
    using Substrate.NetApi.Model.Types.Primitive;
@@ -20,7 +20,7 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup.Generated.Interfaces
    
    public interface ICouncilControllerMockupClient
    {
-      Task<bool> SetProposals(BoundedVecT14 value);
+      Task<bool> SetProposals(BoundedVecT20 value);
       Task<bool> SetProposalOf(EnumRuntimeCall value, Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256 key);
       Task<bool> SetVoting(Votes value, Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256 key);
       Task<bool> SetProposalCount(U32 value);

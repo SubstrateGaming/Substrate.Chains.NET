@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.frame_support.traits.
     
     
     /// <summary>
-    /// >> 522 - Composite[frame_support.traits.misc.WrapperOpaque]
+    /// >> 571 - Composite[frame_support.traits.misc.WrapperOpaque]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class WrapperOpaque : BaseType

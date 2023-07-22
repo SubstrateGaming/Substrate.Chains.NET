@@ -14,7 +14,7 @@ namespace Substrate.Polkadot.NET.RestClient.Generated.Clients
    using System.Net.Http;
    using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_treasury;
-   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    using Substrate.Polkadot.NET.RestClient.Generated.Interfaces;
    
    public sealed class TreasuryControllerClient : BaseClient, ITreasuryControllerClient
@@ -50,9 +50,9 @@ namespace Substrate.Polkadot.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("Treasury.Deactivated");
       }
-      public async Task<BoundedVecT17> GetApprovals()
+      public async Task<BoundedVecT23> GetApprovals()
       {
-         return await SendRequestAsync<BoundedVecT17>(_httpClient, "treasury/approvals");
+         return await SendRequestAsync<BoundedVecT23>(_httpClient, "treasury/approvals");
       }
       public async Task<bool> SubscribeApprovals()
       {

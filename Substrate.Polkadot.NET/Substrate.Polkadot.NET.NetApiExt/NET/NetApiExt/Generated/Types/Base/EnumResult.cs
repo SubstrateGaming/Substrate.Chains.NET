@@ -24,9 +24,9 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base
     }
     
     /// <summary>
-    /// >> 32 - Variant[Result]
+    /// >> 442 - Variant[Result]
     /// </summary>
-    public sealed class EnumResult : BaseEnumExt<Result, Substrate.NetApi.Model.Types.Base.BaseTuple, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_runtime.EnumDispatchError>
+    public sealed class EnumResult : BaseEnumExt<Result, Substrate.Polkadot.NET.NetApiExt.Generated.Model.frame_support.dispatch.PostDispatchInfo, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_runtime.DispatchErrorWithPostInfo>
     {
     }
 }

@@ -24,7 +24,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_bags_list.pall
     }
     
     /// <summary>
-    /// >> 93 - Variant[pallet_bags_list.pallet.Event]
+    /// >> 459 - Variant[pallet_bags_list.pallet.Event]
     /// 
     ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
     ///			by this pallet.

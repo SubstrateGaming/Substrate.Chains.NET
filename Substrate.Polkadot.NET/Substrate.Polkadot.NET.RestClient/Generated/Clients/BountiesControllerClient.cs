@@ -14,7 +14,7 @@ namespace Substrate.Polkadot.NET.RestClient.Generated.Clients
    using System.Net.Http;
    using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_bounties;
-   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    using Substrate.Polkadot.NET.RestClient.Generated.Interfaces;
    
    public sealed class BountiesControllerClient : BaseClient, IBountiesControllerClient
@@ -42,17 +42,17 @@ namespace Substrate.Polkadot.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("Bounties.Bounties", Substrate.Polkadot.NET.NetApiExt.Generated.Storage.BountiesStorage.BountiesParams(key));
       }
-      public async Task<BoundedVecT25> GetBountyDescriptions(U32 key)
+      public async Task<BoundedVecT34> GetBountyDescriptions(U32 key)
       {
-         return await SendRequestAsync<BoundedVecT25>(_httpClient, "bounties/bountydescriptions", Substrate.Polkadot.NET.NetApiExt.Generated.Storage.BountiesStorage.BountyDescriptionsParams(key));
+         return await SendRequestAsync<BoundedVecT34>(_httpClient, "bounties/bountydescriptions", Substrate.Polkadot.NET.NetApiExt.Generated.Storage.BountiesStorage.BountyDescriptionsParams(key));
       }
       public async Task<bool> SubscribeBountyDescriptions(U32 key)
       {
          return await _subscriptionClient.SubscribeAsync("Bounties.BountyDescriptions", Substrate.Polkadot.NET.NetApiExt.Generated.Storage.BountiesStorage.BountyDescriptionsParams(key));
       }
-      public async Task<BoundedVecT17> GetBountyApprovals()
+      public async Task<BoundedVecT23> GetBountyApprovals()
       {
-         return await SendRequestAsync<BoundedVecT17>(_httpClient, "bounties/bountyapprovals");
+         return await SendRequestAsync<BoundedVecT23>(_httpClient, "bounties/bountyapprovals");
       }
       public async Task<bool> SubscribeBountyApprovals()
       {

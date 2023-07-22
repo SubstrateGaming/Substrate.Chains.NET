@@ -14,6 +14,7 @@ namespace Substrate.Polkadot.NET.RestClient.Generated.Interfaces
    using Substrate.NetApi.Model.Types.Base;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_core_primitives;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point;
    
    public interface IDmpControllerClient
    {
@@ -21,5 +22,7 @@ namespace Substrate.Polkadot.NET.RestClient.Generated.Interfaces
       Task<bool> SubscribeDownwardMessageQueues(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id key);
       Task<H256> GetDownwardMessageQueueHeads(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id key);
       Task<bool> SubscribeDownwardMessageQueueHeads(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id key);
+      Task<FixedU128> GetDeliveryFeeFactor(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id key);
+      Task<bool> SubscribeDeliveryFeeFactor(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id key);
    }
 }

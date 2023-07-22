@@ -13,11 +13,11 @@ namespace Substrate.Polkadot.NET.RestClient.Generated.Clients
    using System.Threading.Tasks;
    using System.Net.Http;
    using Substrate.NetApi.Model.Types.Primitive;
-   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.bounded.weak_bounded_vec;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_consensus_slots;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_consensus_babe.digests;
-   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    using Substrate.NetApi.Model.Types.Base;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_consensus_babe;
    using Substrate.Polkadot.NET.RestClient.Generated.Interfaces;
@@ -103,9 +103,9 @@ namespace Substrate.Polkadot.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("Babe.SegmentIndex");
       }
-      public async Task<BoundedVecT5> GetUnderConstruction(U32 key)
+      public async Task<BoundedVecT10> GetUnderConstruction(U32 key)
       {
-         return await SendRequestAsync<BoundedVecT5>(_httpClient, "babe/underconstruction", Substrate.Polkadot.NET.NetApiExt.Generated.Storage.BabeStorage.UnderConstructionParams(key));
+         return await SendRequestAsync<BoundedVecT10>(_httpClient, "babe/underconstruction", Substrate.Polkadot.NET.NetApiExt.Generated.Storage.BabeStorage.UnderConstructionParams(key));
       }
       public async Task<bool> SubscribeUnderConstruction(U32 key)
       {
@@ -158,6 +158,14 @@ namespace Substrate.Polkadot.NET.RestClient.Generated.Clients
       public async Task<bool> SubscribeNextEpochConfig()
       {
          return await _subscriptionClient.SubscribeAsync("Babe.NextEpochConfig");
+      }
+      public async Task<BoundedVecT11> GetSkippedEpochs()
+      {
+         return await SendRequestAsync<BoundedVecT11>(_httpClient, "babe/skippedepochs");
+      }
+      public async Task<bool> SubscribeSkippedEpochs()
+      {
+         return await _subscriptionClient.SubscribeAsync("Babe.SkippedEpochs");
       }
    }
 }

@@ -28,7 +28,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// >> Members
         ///  The current membership, stored as an ordered Vec.
         /// </summary>
-        Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT16 GetMembers();
+        Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT22 GetMembers();
         
         /// <summary>
         /// >> Prime
@@ -46,7 +46,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// <summary>
         /// _membersTypedStorage typed storage field
         /// </summary>
-        private TypedStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT16> _membersTypedStorage;
+        private TypedStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT22> _membersTypedStorage;
         
         /// <summary>
         /// _primeTypedStorage typed storage field
@@ -58,14 +58,14 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// </summary>
         public TechnicalMembershipStorage(IStorageDataProvider storageDataProvider, List<IStorageChangeDelegate> storageChangeDelegates)
         {
-            this.MembersTypedStorage = new TypedStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT16>("TechnicalMembership.Members", storageDataProvider, storageChangeDelegates);
+            this.MembersTypedStorage = new TypedStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT22>("TechnicalMembership.Members", storageDataProvider, storageChangeDelegates);
             this.PrimeTypedStorage = new TypedStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>("TechnicalMembership.Prime", storageDataProvider, storageChangeDelegates);
         }
         
         /// <summary>
         /// _membersTypedStorage property
         /// </summary>
-        public TypedStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT16> MembersTypedStorage
+        public TypedStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT22> MembersTypedStorage
         {
             get
             {
@@ -114,7 +114,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// >> Members
         ///  The current membership, stored as an ordered Vec.
         /// </summary>
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT16 GetMembers()
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT22 GetMembers()
         {
             return MembersTypedStorage.Get();
         }

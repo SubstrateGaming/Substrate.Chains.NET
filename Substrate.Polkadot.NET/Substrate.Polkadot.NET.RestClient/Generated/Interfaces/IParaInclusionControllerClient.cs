@@ -12,7 +12,7 @@ namespace Substrate.Polkadot.NET.RestClient.Generated.Interfaces
    using System;
    using System.Threading.Tasks;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.inclusion;
-   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4;
    
    public interface IParaInclusionControllerClient
    {

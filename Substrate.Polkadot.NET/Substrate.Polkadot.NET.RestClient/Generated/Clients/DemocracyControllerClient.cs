@@ -13,12 +13,13 @@ namespace Substrate.Polkadot.NET.RestClient.Generated.Clients
    using System.Threading.Tasks;
    using System.Net.Http;
    using Substrate.NetApi.Model.Types.Primitive;
-   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    using Substrate.NetApi.Model.Types.Base;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_democracy.types;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_democracy.vote;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.frame_support.traits.preimages;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_democracy.vote_threshold;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types;
    using Substrate.Polkadot.NET.RestClient.Generated.Interfaces;
    
    public sealed class DemocracyControllerClient : BaseClient, IDemocracyControllerClient
@@ -38,17 +39,17 @@ namespace Substrate.Polkadot.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("Democracy.PublicPropCount");
       }
-      public async Task<BoundedVecT11> GetPublicProps()
+      public async Task<BoundedVecT17> GetPublicProps()
       {
-         return await SendRequestAsync<BoundedVecT11>(_httpClient, "democracy/publicprops");
+         return await SendRequestAsync<BoundedVecT17>(_httpClient, "democracy/publicprops");
       }
       public async Task<bool> SubscribePublicProps()
       {
          return await _subscriptionClient.SubscribeAsync("Democracy.PublicProps");
       }
-      public async Task<BaseTuple<BoundedVecT12, U128>> GetDepositOf(U32 key)
+      public async Task<BaseTuple<BoundedVecT18, U128>> GetDepositOf(U32 key)
       {
-         return await SendRequestAsync<BaseTuple<BoundedVecT12, U128>>(_httpClient, "democracy/depositof", Substrate.Polkadot.NET.NetApiExt.Generated.Storage.DemocracyStorage.DepositOfParams(key));
+         return await SendRequestAsync<BaseTuple<BoundedVecT18, U128>>(_httpClient, "democracy/depositof", Substrate.Polkadot.NET.NetApiExt.Generated.Storage.DemocracyStorage.DepositOfParams(key));
       }
       public async Task<bool> SubscribeDepositOf(U32 key)
       {
@@ -102,21 +103,29 @@ namespace Substrate.Polkadot.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("Democracy.NextExternal");
       }
-      public async Task<BaseTuple<U32, BoundedVecT12>> GetBlacklist(Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256 key)
+      public async Task<BaseTuple<U32, BoundedVecT18>> GetBlacklist(H256 key)
       {
-         return await SendRequestAsync<BaseTuple<U32, BoundedVecT12>>(_httpClient, "democracy/blacklist", Substrate.Polkadot.NET.NetApiExt.Generated.Storage.DemocracyStorage.BlacklistParams(key));
+         return await SendRequestAsync<BaseTuple<U32, BoundedVecT18>>(_httpClient, "democracy/blacklist", Substrate.Polkadot.NET.NetApiExt.Generated.Storage.DemocracyStorage.BlacklistParams(key));
       }
-      public async Task<bool> SubscribeBlacklist(Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256 key)
+      public async Task<bool> SubscribeBlacklist(H256 key)
       {
          return await _subscriptionClient.SubscribeAsync("Democracy.Blacklist", Substrate.Polkadot.NET.NetApiExt.Generated.Storage.DemocracyStorage.BlacklistParams(key));
       }
-      public async Task<Bool> GetCancellations(Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256 key)
+      public async Task<Bool> GetCancellations(H256 key)
       {
          return await SendRequestAsync<Bool>(_httpClient, "democracy/cancellations", Substrate.Polkadot.NET.NetApiExt.Generated.Storage.DemocracyStorage.CancellationsParams(key));
       }
-      public async Task<bool> SubscribeCancellations(Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256 key)
+      public async Task<bool> SubscribeCancellations(H256 key)
       {
          return await _subscriptionClient.SubscribeAsync("Democracy.Cancellations", Substrate.Polkadot.NET.NetApiExt.Generated.Storage.DemocracyStorage.CancellationsParams(key));
+      }
+      public async Task<H256> GetMetadataOf(EnumMetadataOwner key)
+      {
+         return await SendRequestAsync<H256>(_httpClient, "democracy/metadataof", Substrate.Polkadot.NET.NetApiExt.Generated.Storage.DemocracyStorage.MetadataOfParams(key));
+      }
+      public async Task<bool> SubscribeMetadataOf(EnumMetadataOwner key)
+      {
+         return await _subscriptionClient.SubscribeAsync("Democracy.MetadataOf", Substrate.Polkadot.NET.NetApiExt.Generated.Storage.DemocracyStorage.MetadataOfParams(key));
       }
    }
 }

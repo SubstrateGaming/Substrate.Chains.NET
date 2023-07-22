@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_staking
     
     
     /// <summary>
-    /// >> 41 - Composite[pallet_staking.ValidatorPrefs]
+    /// >> 42 - Composite[pallet_staking.ValidatorPrefs]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class ValidatorPrefs : BaseType

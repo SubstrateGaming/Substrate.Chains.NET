@@ -26,7 +26,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_preimage.palle
     }
     
     /// <summary>
-    /// >> 34 - Variant[pallet_preimage.pallet.Event]
+    /// >> 35 - Variant[pallet_preimage.pallet.Event]
     /// 
     ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
     ///			by this pallet.

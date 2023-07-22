@@ -25,7 +25,7 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup.Generated.Clients
       {
          _httpClient = httpClient;
       }
-      public async Task<bool> SetValidatorGroups(BaseVec<BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.ValidatorIndex>> value)
+      public async Task<bool> SetValidatorGroups(BaseVec<BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.ValidatorIndex>> value)
       {
          return await SendMockupRequestAsync(_httpClient, "ParaScheduler/ValidatorGroups", value.Encode(), Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParaSchedulerStorage.ValidatorGroupsParams());
       }
@@ -33,7 +33,7 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "ParaScheduler/ParathreadQueue", value.Encode(), Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParaSchedulerStorage.ParathreadQueueParams());
       }
-      public async Task<bool> SetAvailabilityCores(BaseVec<BaseOpt<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.EnumCoreOccupied>> value)
+      public async Task<bool> SetAvailabilityCores(BaseVec<BaseOpt<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.EnumCoreOccupied>> value)
       {
          return await SendMockupRequestAsync(_httpClient, "ParaScheduler/AvailabilityCores", value.Encode(), Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParaSchedulerStorage.AvailabilityCoresParams());
       }

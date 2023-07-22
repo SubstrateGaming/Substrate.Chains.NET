@@ -11,12 +11,12 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup.Generated.Interfaces
 {
    using System;
    using System.Threading.Tasks;
-   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto;
    
    public interface ITechnicalMembershipControllerMockupClient
    {
-      Task<bool> SetMembers(BoundedVecT16 value);
+      Task<bool> SetMembers(BoundedVecT22 value);
       Task<bool> SetPrime(AccountId32 value);
    }
 }

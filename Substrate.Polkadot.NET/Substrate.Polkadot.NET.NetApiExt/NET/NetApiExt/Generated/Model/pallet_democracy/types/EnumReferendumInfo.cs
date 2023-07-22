@@ -24,7 +24,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_democracy.type
     }
     
     /// <summary>
-    /// >> 533 - Variant[pallet_democracy.types.ReferendumInfo]
+    /// >> 582 - Variant[pallet_democracy.types.ReferendumInfo]
     /// </summary>
     public sealed class EnumReferendumInfo : BaseEnumExt<ReferendumInfo, Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_democracy.types.ReferendumStatus, BaseTuple<Substrate.NetApi.Model.Types.Primitive.Bool, Substrate.NetApi.Model.Types.Primitive.U32>>
     {

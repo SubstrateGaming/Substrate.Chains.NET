@@ -12,13 +12,13 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup.Generated.Interfaces
    using System;
    using System.Threading.Tasks;
    using Substrate.NetApi.Model.Types.Primitive;
-   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    using Substrate.NetApi.Model.Types.Base;
    
    public interface ISchedulerControllerMockupClient
    {
       Task<bool> SetIncompleteSince(U32 value);
-      Task<bool> SetAgenda(BoundedVecT1 value, U32 key);
+      Task<bool> SetAgenda(BoundedVecT8 value, U32 key);
       Task<bool> SetLookup(BaseTuple<U32, U32> value, Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base.Arr32U8 key);
    }
 }

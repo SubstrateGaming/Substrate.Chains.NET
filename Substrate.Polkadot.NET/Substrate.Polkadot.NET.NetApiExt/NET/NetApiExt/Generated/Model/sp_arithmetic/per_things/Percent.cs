@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_arithmetic.per_thi
     
     
     /// <summary>
-    /// >> 208 - Composite[sp_arithmetic.per_things.Percent]
+    /// >> 108 - Composite[sp_arithmetic.per_things.Percent]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Percent : BaseType

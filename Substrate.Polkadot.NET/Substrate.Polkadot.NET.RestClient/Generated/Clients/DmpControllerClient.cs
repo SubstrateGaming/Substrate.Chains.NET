@@ -15,6 +15,7 @@ namespace Substrate.Polkadot.NET.RestClient.Generated.Clients
    using Substrate.NetApi.Model.Types.Base;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_core_primitives;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point;
    using Substrate.Polkadot.NET.RestClient.Generated.Interfaces;
    
    public sealed class DmpControllerClient : BaseClient, IDmpControllerClient
@@ -41,6 +42,14 @@ namespace Substrate.Polkadot.NET.RestClient.Generated.Clients
       public async Task<bool> SubscribeDownwardMessageQueueHeads(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id key)
       {
          return await _subscriptionClient.SubscribeAsync("Dmp.DownwardMessageQueueHeads", Substrate.Polkadot.NET.NetApiExt.Generated.Storage.DmpStorage.DownwardMessageQueueHeadsParams(key));
+      }
+      public async Task<FixedU128> GetDeliveryFeeFactor(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id key)
+      {
+         return await SendRequestAsync<FixedU128>(_httpClient, "dmp/deliveryfeefactor", Substrate.Polkadot.NET.NetApiExt.Generated.Storage.DmpStorage.DeliveryFeeFactorParams(key));
+      }
+      public async Task<bool> SubscribeDeliveryFeeFactor(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id key)
+      {
+         return await _subscriptionClient.SubscribeAsync("Dmp.DeliveryFeeFactor", Substrate.Polkadot.NET.NetApiExt.Generated.Storage.DmpStorage.DeliveryFeeFactorParams(key));
       }
    }
 }

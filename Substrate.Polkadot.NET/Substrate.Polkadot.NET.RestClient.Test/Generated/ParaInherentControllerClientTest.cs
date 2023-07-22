@@ -16,7 +16,7 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
    using Substrate.Polkadot.NET.RestClient.Mockup.Generated.Clients;
    using Substrate.Polkadot.NET.RestClient.Generated.Clients;
    using Substrate.NetApi.Model.Types.Base;
-   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4;
    
    public class ParaInherentControllerClientTest : ClientTestBase
    {
@@ -61,45 +61,45 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.ScrapedOnChainVotes GetTestValue4()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.ScrapedOnChainVotes GetTestValue4()
       {
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.ScrapedOnChainVotes result;
-         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.ScrapedOnChainVotes();
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.ScrapedOnChainVotes result;
+         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.ScrapedOnChainVotes();
          result.Session = this.GetTestValueU32();
-         result.BackingValidatorsPerCandidate = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.CandidateReceipt, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.ValidatorIndex, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.EnumValidityAttestation>>>>();
-         result.BackingValidatorsPerCandidate.Create(new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.CandidateReceipt, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.ValidatorIndex, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.EnumValidityAttestation>>>[] {
+         result.BackingValidatorsPerCandidate = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.CandidateReceipt, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.ValidatorIndex, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.EnumValidityAttestation>>>>();
+         result.BackingValidatorsPerCandidate.Create(new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.CandidateReceipt, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.ValidatorIndex, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.EnumValidityAttestation>>>[] {
                   this.GetTestValue5()});
-         result.Disputes = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.DisputeStatementSet>();
-         result.Disputes.Create(new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.DisputeStatementSet[] {
+         result.Disputes = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.DisputeStatementSet>();
+         result.Disputes.Create(new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.DisputeStatementSet[] {
                   this.GetTestValue25()});
          return result;
       }
-      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.CandidateReceipt, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.ValidatorIndex, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.EnumValidityAttestation>>> GetTestValue5()
+      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.CandidateReceipt, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.ValidatorIndex, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.EnumValidityAttestation>>> GetTestValue5()
       {
-         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.CandidateReceipt, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.ValidatorIndex, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.EnumValidityAttestation>>> result;
-         result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.CandidateReceipt, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.ValidatorIndex, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.EnumValidityAttestation>>>();
+         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.CandidateReceipt, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.ValidatorIndex, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.EnumValidityAttestation>>> result;
+         result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.CandidateReceipt, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.ValidatorIndex, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.EnumValidityAttestation>>>();
          result.Create(this.GetTestValue6(), this.GetTestValue21());
          return result;
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.CandidateReceipt GetTestValue6()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.CandidateReceipt GetTestValue6()
       {
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.CandidateReceipt result;
-         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.CandidateReceipt();
-         result.Descriptor = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.CandidateDescriptor();
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.CandidateReceipt result;
+         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.CandidateReceipt();
+         result.Descriptor = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.CandidateDescriptor();
          result.Descriptor = this.GetTestValue7();
          result.CommitmentsHash = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256();
          result.CommitmentsHash = this.GetTestValue20();
          return result;
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.CandidateDescriptor GetTestValue7()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.CandidateDescriptor GetTestValue7()
       {
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.CandidateDescriptor result;
-         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.CandidateDescriptor();
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.CandidateDescriptor result;
+         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.CandidateDescriptor();
          result.ParaId = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id();
          result.ParaId = this.GetTestValue8();
          result.RelayParent = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256();
          result.RelayParent = this.GetTestValue9();
-         result.Collator = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.collator_app.Public();
+         result.Collator = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.collator_app.Public();
          result.Collator = this.GetTestValue10();
          result.PersistedValidationDataHash = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256();
          result.PersistedValidationDataHash = this.GetTestValue12();
@@ -107,7 +107,7 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
          result.PovHash = this.GetTestValue13();
          result.ErasureRoot = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256();
          result.ErasureRoot = this.GetTestValue14();
-         result.Signature = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.collator_app.Signature();
+         result.Signature = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.collator_app.Signature();
          result.Signature = this.GetTestValue15();
          result.ParaHead = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256();
          result.ParaHead = this.GetTestValue17();
@@ -162,10 +162,10 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
                   this.GetTestValueU8()});
          return result;
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.collator_app.Public GetTestValue10()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.collator_app.Public GetTestValue10()
       {
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.collator_app.Public result;
-         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.collator_app.Public();
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.collator_app.Public result;
+         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.collator_app.Public();
          result.Value = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.sr25519.Public();
          result.Value = this.GetTestValue11();
          return result;
@@ -330,10 +330,10 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
                   this.GetTestValueU8()});
          return result;
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.collator_app.Signature GetTestValue15()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.collator_app.Signature GetTestValue15()
       {
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.collator_app.Signature result;
-         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.collator_app.Signature();
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.collator_app.Signature result;
+         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.collator_app.Signature();
          result.Value = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.sr25519.Signature();
          result.Value = this.GetTestValue16();
          return result;
@@ -538,44 +538,44 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
                   this.GetTestValueU8()});
          return result;
       }
-      public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.ValidatorIndex, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.EnumValidityAttestation>> GetTestValue21()
+      public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.ValidatorIndex, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.EnumValidityAttestation>> GetTestValue21()
       {
-         Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.ValidatorIndex, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.EnumValidityAttestation>> result;
-         result = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.ValidatorIndex, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.EnumValidityAttestation>>();
-         result.Create(new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.ValidatorIndex, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.EnumValidityAttestation>[] {
+         Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.ValidatorIndex, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.EnumValidityAttestation>> result;
+         result = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.ValidatorIndex, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.EnumValidityAttestation>>();
+         result.Create(new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.ValidatorIndex, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.EnumValidityAttestation>[] {
                   this.GetTestValue22()});
          return result;
       }
-      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.ValidatorIndex, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.EnumValidityAttestation> GetTestValue22()
+      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.ValidatorIndex, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.EnumValidityAttestation> GetTestValue22()
       {
-         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.ValidatorIndex, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.EnumValidityAttestation> result;
-         result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.ValidatorIndex, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.EnumValidityAttestation>();
+         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.ValidatorIndex, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.EnumValidityAttestation> result;
+         result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.ValidatorIndex, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.EnumValidityAttestation>();
          result.Create(this.GetTestValue23(), this.GetTestValue24());
          return result;
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.ValidatorIndex GetTestValue23()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.ValidatorIndex GetTestValue23()
       {
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.ValidatorIndex result;
-         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.ValidatorIndex();
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.ValidatorIndex result;
+         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.ValidatorIndex();
          result.Value = this.GetTestValueU32();
          return result;
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.EnumValidityAttestation GetTestValue24()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.EnumValidityAttestation GetTestValue24()
       {
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.EnumValidityAttestation result;
-         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.EnumValidityAttestation();
-         result.Create(this.GetTestValueEnum<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.ValidityAttestation>(), this.GetTestValueBaseVoid());
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.EnumValidityAttestation result;
+         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.EnumValidityAttestation();
+         result.Create(this.GetTestValueEnum<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.ValidityAttestation>(), this.GetTestValueBaseVoid());
          return result;
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.DisputeStatementSet GetTestValue25()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.DisputeStatementSet GetTestValue25()
       {
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.DisputeStatementSet result;
-         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.DisputeStatementSet();
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.DisputeStatementSet result;
+         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.DisputeStatementSet();
          result.CandidateHash = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_core_primitives.CandidateHash();
          result.CandidateHash = this.GetTestValue26();
          result.Session = this.GetTestValueU32();
-         result.Statements = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.EnumDisputeStatement, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.ValidatorIndex, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.validator_app.Signature>>();
-         result.Statements.Create(new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.EnumDisputeStatement, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.ValidatorIndex, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.validator_app.Signature>[] {
+         result.Statements = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.EnumDisputeStatement, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.ValidatorIndex, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.validator_app.Signature>>();
+         result.Statements.Create(new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.EnumDisputeStatement, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.ValidatorIndex, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.validator_app.Signature>[] {
                   this.GetTestValue28()});
          return result;
       }
@@ -627,38 +627,38 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
                   this.GetTestValueU8()});
          return result;
       }
-      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.EnumDisputeStatement, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.ValidatorIndex, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.validator_app.Signature> GetTestValue28()
+      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.EnumDisputeStatement, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.ValidatorIndex, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.validator_app.Signature> GetTestValue28()
       {
-         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.EnumDisputeStatement, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.ValidatorIndex, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.validator_app.Signature> result;
-         result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.EnumDisputeStatement, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.ValidatorIndex, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.validator_app.Signature>();
+         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.EnumDisputeStatement, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.ValidatorIndex, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.validator_app.Signature> result;
+         result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.EnumDisputeStatement, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.ValidatorIndex, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.validator_app.Signature>();
          result.Create(this.GetTestValue29(), this.GetTestValue31(), this.GetTestValue32());
          return result;
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.EnumDisputeStatement GetTestValue29()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.EnumDisputeStatement GetTestValue29()
       {
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.EnumDisputeStatement result;
-         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.EnumDisputeStatement();
-         result.Create(this.GetTestValueEnum<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.DisputeStatement>(), this.GetTestValue30());
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.EnumDisputeStatement result;
+         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.EnumDisputeStatement();
+         result.Create(this.GetTestValueEnum<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.DisputeStatement>(), this.GetTestValue30());
          return result;
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.EnumValidDisputeStatementKind GetTestValue30()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.EnumValidDisputeStatementKind GetTestValue30()
       {
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.EnumValidDisputeStatementKind result;
-         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.EnumValidDisputeStatementKind();
-         result.Create(this.GetTestValueEnum<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.ValidDisputeStatementKind>(), this.GetTestValueBaseVoid());
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.EnumValidDisputeStatementKind result;
+         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.EnumValidDisputeStatementKind();
+         result.Create(this.GetTestValueEnum<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.ValidDisputeStatementKind>(), this.GetTestValueBaseVoid());
          return result;
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.ValidatorIndex GetTestValue31()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.ValidatorIndex GetTestValue31()
       {
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.ValidatorIndex result;
-         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.ValidatorIndex();
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.ValidatorIndex result;
+         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.ValidatorIndex();
          result.Value = this.GetTestValueU32();
          return result;
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.validator_app.Signature GetTestValue32()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.validator_app.Signature GetTestValue32()
       {
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.validator_app.Signature result;
-         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.validator_app.Signature();
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.validator_app.Signature result;
+         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.validator_app.Signature();
          result.Value = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.sr25519.Signature();
          result.Value = this.GetTestValue33();
          return result;
@@ -746,7 +746,7 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          ParaInherentControllerClient rpcClient = new ParaInherentControllerClient(_httpClient, subscriptionClient);
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.ScrapedOnChainVotes mockupValue = this.GetTestValue4();
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.ScrapedOnChainVotes mockupValue = this.GetTestValue4();
 
 
          Assert.IsTrue(await rpcClient.SubscribeOnChainVotes());
@@ -759,7 +759,7 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.ScrapedOnChainVotes rpcResult = await rpcClient.GetOnChainVotes();
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.ScrapedOnChainVotes rpcResult = await rpcClient.GetOnChainVotes();
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());

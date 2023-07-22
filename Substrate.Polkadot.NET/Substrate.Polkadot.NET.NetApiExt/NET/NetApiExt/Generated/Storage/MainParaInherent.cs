@@ -31,7 +31,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         {
             this._client = client;
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("ParaInherent", "Included"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple)));
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("ParaInherent", "OnChainVotes"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.ScrapedOnChainVotes)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("ParaInherent", "OnChainVotes"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.ScrapedOnChainVotes)));
         }
         
         /// <summary>
@@ -95,10 +95,10 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         /// >> OnChainVotes
         ///  Scraped on chain data for extracting resolved disputes as well as backing votes.
         /// </summary>
-        public async Task<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.ScrapedOnChainVotes> OnChainVotes(CancellationToken token)
+        public async Task<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.ScrapedOnChainVotes> OnChainVotes(CancellationToken token)
         {
             string parameters = ParaInherentStorage.OnChainVotesParams();
-            var result = await _client.GetStorageAsync<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.ScrapedOnChainVotes>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.ScrapedOnChainVotes>(parameters, token);
             return result;
         }
     }
@@ -110,7 +110,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         /// >> enter
         /// Contains one variant per dispatchable that can be called by an extrinsic.
         /// </summary>
-        public static Method Enter(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.InherentData data)
+        public static Method Enter(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.InherentData data)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(data.Encode());

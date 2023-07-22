@@ -22,7 +22,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_transaction_pa
     }
     
     /// <summary>
-    /// >> 38 - Variant[pallet_transaction_payment.pallet.Event]
+    /// >> 39 - Variant[pallet_transaction_payment.pallet.Event]
     /// 
     ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
     ///			by this pallet.

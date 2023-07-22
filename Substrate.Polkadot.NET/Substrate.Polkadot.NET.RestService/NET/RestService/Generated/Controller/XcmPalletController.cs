@@ -119,7 +119,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Controller
         ///  of our versions we informed them of.
         /// </summary>
         [HttpGet("VersionNotifyTargets")]
-        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U64, Substrate.NetApi.Model.Types.Primitive.U64, Substrate.NetApi.Model.Types.Primitive.U32>), 200)]
+        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U64, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight, Substrate.NetApi.Model.Types.Primitive.U32>), 200)]
         [StorageKeyBuilder(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Storage.XcmPalletStorage), "VersionNotifyTargetsParams", typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation>))]
         public IActionResult GetVersionNotifyTargets(string key)
         {
@@ -133,7 +133,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Controller
         ///  which is used as a prioritization.
         /// </summary>
         [HttpGet("VersionDiscoveryQueue")]
-        [ProducesResponseType(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT31), 200)]
+        [ProducesResponseType(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT40), 200)]
         [StorageKeyBuilder(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Storage.XcmPalletStorage), "VersionDiscoveryQueueParams")]
         public IActionResult GetVersionDiscoveryQueue()
         {
@@ -150,6 +150,42 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Controller
         public IActionResult GetCurrentMigration()
         {
             return this.Ok(_xcmPalletStorage.GetCurrentMigration());
+        }
+        
+        /// <summary>
+        /// >> RemoteLockedFungibles
+        ///  Fungible assets which we know are locked on a remote chain.
+        /// </summary>
+        [HttpGet("RemoteLockedFungibles")]
+        [ProducesResponseType(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_xcm.pallet.RemoteLockedFungibleRecord), 200)]
+        [StorageKeyBuilder(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Storage.XcmPalletStorage), "RemoteLockedFungiblesParams", typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAssetId>))]
+        public IActionResult GetRemoteLockedFungibles(string key)
+        {
+            return this.Ok(_xcmPalletStorage.GetRemoteLockedFungibles(key));
+        }
+        
+        /// <summary>
+        /// >> LockedFungibles
+        ///  Fungible assets which we know are locked on this chain.
+        /// </summary>
+        [HttpGet("LockedFungibles")]
+        [ProducesResponseType(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT42), 200)]
+        [StorageKeyBuilder(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Storage.XcmPalletStorage), "LockedFungiblesParams", typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32))]
+        public IActionResult GetLockedFungibles(string key)
+        {
+            return this.Ok(_xcmPalletStorage.GetLockedFungibles(key));
+        }
+        
+        /// <summary>
+        /// >> XcmExecutionSuspended
+        ///  Global suspension state of the XCM executor.
+        /// </summary>
+        [HttpGet("XcmExecutionSuspended")]
+        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Primitive.Bool), 200)]
+        [StorageKeyBuilder(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Storage.XcmPalletStorage), "XcmExecutionSuspendedParams")]
+        public IActionResult GetXcmExecutionSuspended()
+        {
+            return this.Ok(_xcmPalletStorage.GetXcmExecutionSuspended());
         }
     }
 }

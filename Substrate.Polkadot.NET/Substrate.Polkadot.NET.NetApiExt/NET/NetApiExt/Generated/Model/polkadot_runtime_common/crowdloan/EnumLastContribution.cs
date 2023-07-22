@@ -26,7 +26,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_comm
     }
     
     /// <summary>
-    /// >> 712 - Variant[polkadot_runtime_common.crowdloan.LastContribution]
+    /// >> 797 - Variant[polkadot_runtime_common.crowdloan.LastContribution]
     /// </summary>
     public sealed class EnumLastContribution : BaseEnumExt<LastContribution, BaseVoid, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>
     {

@@ -32,7 +32,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_election_provi
     }
     
     /// <summary>
-    /// >> 87 - Variant[pallet_election_provider_multi_phase.pallet.Event]
+    /// >> 455 - Variant[pallet_election_provider_multi_phase.pallet.Event]
     /// 
     ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
     ///			by this pallet.

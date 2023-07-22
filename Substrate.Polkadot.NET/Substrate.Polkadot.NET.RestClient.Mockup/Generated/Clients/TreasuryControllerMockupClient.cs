@@ -14,7 +14,7 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup.Generated.Clients
    using System.Net.Http;
    using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_treasury;
-   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    using Substrate.Polkadot.NET.RestClient.Mockup.Generated.Interfaces;
    
    public sealed class TreasuryControllerMockupClient : MockupBaseClient, ITreasuryControllerMockupClient
@@ -36,7 +36,7 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "Treasury/Deactivated", value.Encode(), Substrate.Polkadot.NET.NetApiExt.Generated.Storage.TreasuryStorage.DeactivatedParams());
       }
-      public async Task<bool> SetApprovals(BoundedVecT17 value)
+      public async Task<bool> SetApprovals(BoundedVecT23 value)
       {
          return await SendMockupRequestAsync(_httpClient, "Treasury/Approvals", value.Encode(), Substrate.Polkadot.NET.NetApiExt.Generated.Storage.TreasuryStorage.ApprovalsParams());
       }

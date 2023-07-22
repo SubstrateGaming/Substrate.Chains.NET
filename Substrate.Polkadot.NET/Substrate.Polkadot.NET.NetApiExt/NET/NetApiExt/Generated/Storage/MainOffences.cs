@@ -35,8 +35,6 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Offences", "ConcurrentReportsIndex"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat,
                             Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base.Arr16U8, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>), typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256>)));
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("Offences", "ReportsByKindIndex"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base.Arr16U8), typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>)));
         }
         
         /// <summary>
@@ -98,47 +96,6 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         {
             string parameters = OffencesStorage.ConcurrentReportsIndexParams(key);
             var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256>>(parameters, token);
-            return result;
-        }
-        
-        /// <summary>
-        /// >> ReportsByKindIndexParams
-        ///  Enumerates all reports of a kind along with the time they happened.
-        /// 
-        ///  All reports are sorted by the time of offence.
-        /// 
-        ///  Note that the actual type of this mapping is `Vec<u8>`, this is because values of
-        ///  different types are not supported at the moment so we are doing the manual serialization.
-        /// </summary>
-        public static string ReportsByKindIndexParams(Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base.Arr16U8 key)
-        {
-            return RequestGenerator.GetStorage("Offences", "ReportsByKindIndex", Substrate.NetApi.Model.Meta.Storage.Type.Map, new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                        Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, new Substrate.NetApi.Model.Types.IType[] {
-                        key});
-        }
-        
-        /// <summary>
-        /// >> ReportsByKindIndexDefault
-        /// Default value as hex string
-        /// </summary>
-        public static string ReportsByKindIndexDefault()
-        {
-            return "0x00";
-        }
-        
-        /// <summary>
-        /// >> ReportsByKindIndex
-        ///  Enumerates all reports of a kind along with the time they happened.
-        /// 
-        ///  All reports are sorted by the time of offence.
-        /// 
-        ///  Note that the actual type of this mapping is `Vec<u8>`, this is because values of
-        ///  different types are not supported at the moment so we are doing the manual serialization.
-        /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>> ReportsByKindIndex(Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base.Arr16U8 key, CancellationToken token)
-        {
-            string parameters = OffencesStorage.ReportsByKindIndexParams(key);
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>(parameters, token);
             return result;
         }
     }

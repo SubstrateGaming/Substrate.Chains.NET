@@ -12,7 +12,7 @@ namespace Substrate.Polkadot.NET.RestClient.Generated.Clients
    using System;
    using System.Threading.Tasks;
    using System.Net.Http;
-   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto;
    using Substrate.Polkadot.NET.RestClient.Generated.Interfaces;
    
@@ -25,9 +25,9 @@ namespace Substrate.Polkadot.NET.RestClient.Generated.Clients
          _httpClient = httpClient;
          _subscriptionClient = subscriptionClient;
       }
-      public async Task<BoundedVecT16> GetMembers()
+      public async Task<BoundedVecT22> GetMembers()
       {
-         return await SendRequestAsync<BoundedVecT16>(_httpClient, "technicalmembership/members");
+         return await SendRequestAsync<BoundedVecT22>(_httpClient, "technicalmembership/members");
       }
       public async Task<bool> SubscribeMembers()
       {

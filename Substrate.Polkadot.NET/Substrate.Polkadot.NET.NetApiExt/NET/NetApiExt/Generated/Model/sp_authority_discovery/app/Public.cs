@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_authority_discover
     
     
     /// <summary>
-    /// >> 218 - Composite[sp_authority_discovery.app.Public]
+    /// >> 118 - Composite[sp_authority_discovery.app.Public]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Public : BaseType

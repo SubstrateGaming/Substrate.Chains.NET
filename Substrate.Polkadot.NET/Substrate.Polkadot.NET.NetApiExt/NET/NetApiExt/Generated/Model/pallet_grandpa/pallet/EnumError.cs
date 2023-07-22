@@ -34,7 +34,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_grandpa.pallet
     }
     
     /// <summary>
-    /// >> 519 - Variant[pallet_grandpa.pallet.Error]
+    /// >> 568 - Variant[pallet_grandpa.pallet.Error]
     /// 
     ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
     ///			of this pallet.

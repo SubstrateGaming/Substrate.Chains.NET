@@ -18,17 +18,15 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm
     public enum VersionedResponse
     {
         
-        V0 = 0,
-        
-        V1 = 1,
-        
         V2 = 2,
+        
+        V3 = 3,
     }
     
     /// <summary>
-    /// >> 717 - Variant[xcm.VersionedResponse]
+    /// >> 803 - Variant[xcm.VersionedResponse]
     /// </summary>
-    public sealed class EnumVersionedResponse : BaseEnumExt<VersionedResponse, Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.v0.EnumResponse, Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.v1.EnumResponse, Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.v2.EnumResponse>
+    public sealed class EnumVersionedResponse : BaseEnumExt<VersionedResponse, BaseVoid, BaseVoid, Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.v2.EnumResponse, Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.v3.EnumResponse>
     {
     }
 }

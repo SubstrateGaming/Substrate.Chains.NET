@@ -15,6 +15,7 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup.Generated.Clients
    using Substrate.NetApi.Model.Types.Base;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_core_primitives;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point;
    using Substrate.Polkadot.NET.RestClient.Mockup.Generated.Interfaces;
    
    public sealed class DmpControllerMockupClient : MockupBaseClient, IDmpControllerMockupClient
@@ -31,6 +32,10 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup.Generated.Clients
       public async Task<bool> SetDownwardMessageQueueHeads(H256 value, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id key)
       {
          return await SendMockupRequestAsync(_httpClient, "Dmp/DownwardMessageQueueHeads", value.Encode(), Substrate.Polkadot.NET.NetApiExt.Generated.Storage.DmpStorage.DownwardMessageQueueHeadsParams(key));
+      }
+      public async Task<bool> SetDeliveryFeeFactor(FixedU128 value, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id key)
+      {
+         return await SendMockupRequestAsync(_httpClient, "Dmp/DeliveryFeeFactor", value.Encode(), Substrate.Polkadot.NET.NetApiExt.Generated.Storage.DmpStorage.DeliveryFeeFactorParams(key));
       }
    }
 }

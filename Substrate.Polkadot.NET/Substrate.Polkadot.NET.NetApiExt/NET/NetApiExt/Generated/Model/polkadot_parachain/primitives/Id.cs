@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.pr
     
     
     /// <summary>
-    /// >> 101 - Composite[polkadot_parachain.primitives.Id]
+    /// >> 162 - Composite[polkadot_parachain.primitives.Id]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Id : BaseType

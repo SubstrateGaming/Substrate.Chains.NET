@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_democracy.type
     
     
     /// <summary>
-    /// >> 535 - Composite[pallet_democracy.types.Tally]
+    /// >> 584 - Composite[pallet_democracy.types.Tally]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Tally : BaseType

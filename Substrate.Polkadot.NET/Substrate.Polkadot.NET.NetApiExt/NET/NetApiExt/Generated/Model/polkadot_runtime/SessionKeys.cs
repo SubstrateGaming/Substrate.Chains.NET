@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime
     
     
     /// <summary>
-    /// >> 215 - Composite[polkadot_runtime.SessionKeys]
+    /// >> 115 - Composite[polkadot_runtime.SessionKeys]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class SessionKeys : BaseType
@@ -27,7 +27,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime
         /// <summary>
         /// >> grandpa
         /// </summary>
-        private Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_finality_grandpa.app.Public _grandpa;
+        private Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_consensus_grandpa.app.Public _grandpa;
         
         /// <summary>
         /// >> babe
@@ -42,19 +42,19 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime
         /// <summary>
         /// >> para_validator
         /// </summary>
-        private Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.validator_app.Public _paraValidator;
+        private Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.validator_app.Public _paraValidator;
         
         /// <summary>
         /// >> para_assignment
         /// </summary>
-        private Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.assignment_app.Public _paraAssignment;
+        private Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.assignment_app.Public _paraAssignment;
         
         /// <summary>
         /// >> authority_discovery
         /// </summary>
         private Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_authority_discovery.app.Public _authorityDiscovery;
         
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_finality_grandpa.app.Public Grandpa
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_consensus_grandpa.app.Public Grandpa
         {
             get
             {
@@ -90,7 +90,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime
             }
         }
         
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.validator_app.Public ParaValidator
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.validator_app.Public ParaValidator
         {
             get
             {
@@ -102,7 +102,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime
             }
         }
         
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.assignment_app.Public ParaAssignment
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.assignment_app.Public ParaAssignment
         {
             get
             {
@@ -146,15 +146,15 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Grandpa = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_finality_grandpa.app.Public();
+            Grandpa = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_consensus_grandpa.app.Public();
             Grandpa.Decode(byteArray, ref p);
             Babe = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_consensus_babe.app.Public();
             Babe.Decode(byteArray, ref p);
             ImOnline = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_im_online.sr25519.app_sr25519.Public();
             ImOnline.Decode(byteArray, ref p);
-            ParaValidator = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.validator_app.Public();
+            ParaValidator = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.validator_app.Public();
             ParaValidator.Decode(byteArray, ref p);
-            ParaAssignment = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.assignment_app.Public();
+            ParaAssignment = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.assignment_app.Public();
             ParaAssignment.Decode(byteArray, ref p);
             AuthorityDiscovery = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_authority_discovery.app.Public();
             AuthorityDiscovery.Decode(byteArray, ref p);

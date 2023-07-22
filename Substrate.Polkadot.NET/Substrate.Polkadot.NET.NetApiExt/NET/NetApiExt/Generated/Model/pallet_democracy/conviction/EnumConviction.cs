@@ -34,7 +34,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_democracy.conv
     }
     
     /// <summary>
-    /// >> 238 - Variant[pallet_democracy.conviction.Conviction]
+    /// >> 140 - Variant[pallet_democracy.conviction.Conviction]
     /// </summary>
     public sealed class EnumConviction : BaseEnum<Conviction>
     {

@@ -30,7 +30,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_scheduler.pall
     }
     
     /// <summary>
-    /// >> 453 - Variant[pallet_scheduler.pallet.Error]
+    /// >> 499 - Variant[pallet_scheduler.pallet.Error]
     /// 
     ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
     ///			of this pallet.

@@ -41,6 +41,12 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         ///  - `H(M)`: is the hash of the message being appended.
         /// </summary>
         Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256 GetDownwardMessageQueueHeads(string key);
+        
+        /// <summary>
+        /// >> DeliveryFeeFactor
+        ///  The number to multiply the base delivery fee by.
+        /// </summary>
+        Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedU128 GetDeliveryFeeFactor(string key);
     }
     
     /// <summary>
@@ -60,12 +66,18 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         private TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256> _downwardMessageQueueHeadsTypedStorage;
         
         /// <summary>
+        /// _deliveryFeeFactorTypedStorage typed storage field
+        /// </summary>
+        private TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedU128> _deliveryFeeFactorTypedStorage;
+        
+        /// <summary>
         /// DmpStorage constructor.
         /// </summary>
         public DmpStorage(IStorageDataProvider storageDataProvider, List<IStorageChangeDelegate> storageChangeDelegates)
         {
             this.DownwardMessageQueuesTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_core_primitives.InboundDownwardMessage>>("Dmp.DownwardMessageQueues", storageDataProvider, storageChangeDelegates);
             this.DownwardMessageQueueHeadsTypedStorage = new TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256>("Dmp.DownwardMessageQueueHeads", storageDataProvider, storageChangeDelegates);
+            this.DeliveryFeeFactorTypedStorage = new TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedU128>("Dmp.DeliveryFeeFactor", storageDataProvider, storageChangeDelegates);
         }
         
         /// <summary>
@@ -99,12 +111,28 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         }
         
         /// <summary>
+        /// _deliveryFeeFactorTypedStorage property
+        /// </summary>
+        public TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedU128> DeliveryFeeFactorTypedStorage
+        {
+            get
+            {
+                return _deliveryFeeFactorTypedStorage;
+            }
+            set
+            {
+                _deliveryFeeFactorTypedStorage = value;
+            }
+        }
+        
+        /// <summary>
         /// Connects to all storages and initializes the change subscription handling.
         /// </summary>
         public async Task InitializeAsync(Substrate.ServiceLayer.Storage.IStorageDataProvider dataProvider)
         {
             await DownwardMessageQueuesTypedStorage.InitializeAsync("Dmp", "DownwardMessageQueues");
             await DownwardMessageQueueHeadsTypedStorage.InitializeAsync("Dmp", "DownwardMessageQueueHeads");
+            await DeliveryFeeFactorTypedStorage.InitializeAsync("Dmp", "DeliveryFeeFactor");
         }
         
         /// <summary>
@@ -162,6 +190,35 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
                 return null;
             }
             if (DownwardMessageQueueHeadsTypedStorage.Dictionary.TryGetValue(key, out Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256 result))
+            {
+                return result;
+            }
+            else
+            {
+                return null;
+            }
+        }
+        
+        /// <summary>
+        /// Implements any storage change for Dmp.DeliveryFeeFactor
+        /// </summary>
+        [StorageChange("Dmp", "DeliveryFeeFactor")]
+        public void OnUpdateDeliveryFeeFactor(string key, string data)
+        {
+            DeliveryFeeFactorTypedStorage.Update(key, data);
+        }
+        
+        /// <summary>
+        /// >> DeliveryFeeFactor
+        ///  The number to multiply the base delivery fee by.
+        /// </summary>
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedU128 GetDeliveryFeeFactor(string key)
+        {
+            if ((key == null))
+            {
+                return null;
+            }
+            if (DeliveryFeeFactorTypedStorage.Dictionary.TryGetValue(key, out Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedU128 result))
             {
                 return result;
             }

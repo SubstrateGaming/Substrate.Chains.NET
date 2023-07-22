@@ -191,6 +191,12 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         ///  A mapping from grandpa set ID to the index of the *most recent* session for which its
         ///  members were responsible.
         /// 
+        ///  This is only used for validating equivocation proofs. An equivocation proof must
+        ///  contains a key-ownership proof for a given session, therefore we need a way to tie
+        ///  together sessions and GRANDPA set ids, i.e. we need to validate that a validator
+        ///  was the owner of a given key on a given session, and what the active set ID was
+        ///  during that session.
+        /// 
         ///  TWOX-NOTE: `SetId` is not under user control.
         /// </summary>
         public static string SetIdSessionParams(Substrate.NetApi.Model.Types.Primitive.U64 key)
@@ -214,6 +220,12 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         ///  A mapping from grandpa set ID to the index of the *most recent* session for which its
         ///  members were responsible.
         /// 
+        ///  This is only used for validating equivocation proofs. An equivocation proof must
+        ///  contains a key-ownership proof for a given session, therefore we need a way to tie
+        ///  together sessions and GRANDPA set ids, i.e. we need to validate that a validator
+        ///  was the owner of a given key on a given session, and what the active set ID was
+        ///  during that session.
+        /// 
         ///  TWOX-NOTE: `SetId` is not under user control.
         /// </summary>
         public async Task<Substrate.NetApi.Model.Types.Primitive.U32> SetIdSession(Substrate.NetApi.Model.Types.Primitive.U64 key, CancellationToken token)
@@ -231,7 +243,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         /// >> report_equivocation
         /// Contains one variant per dispatchable that can be called by an extrinsic.
         /// </summary>
-        public static Method ReportEquivocation(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_finality_grandpa.EquivocationProof equivocation_proof, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_session.MembershipProof key_owner_proof)
+        public static Method ReportEquivocation(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_consensus_grandpa.EquivocationProof equivocation_proof, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_session.MembershipProof key_owner_proof)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(equivocation_proof.Encode());
@@ -243,7 +255,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         /// >> report_equivocation_unsigned
         /// Contains one variant per dispatchable that can be called by an extrinsic.
         /// </summary>
-        public static Method ReportEquivocationUnsigned(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_finality_grandpa.EquivocationProof equivocation_proof, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_session.MembershipProof key_owner_proof)
+        public static Method ReportEquivocationUnsigned(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_consensus_grandpa.EquivocationProof equivocation_proof, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_session.MembershipProof key_owner_proof)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(equivocation_proof.Encode());
@@ -275,6 +287,22 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         {
             var result = new Substrate.NetApi.Model.Types.Primitive.U32();
             result.Create("0xA0860100");
+            return result;
+        }
+        
+        /// <summary>
+        /// >> MaxSetIdSessionEntries
+        ///  The maximum number of entries to keep in the set id to session index mapping.
+        /// 
+        ///  Since the `SetIdSession` map is only used for validating equivocations this
+        ///  value should relate to the bonding duration of whatever staking system is
+        ///  being used (if any). If equivocation handling is not enabled then this value
+        ///  can be zero.
+        /// </summary>
+        public Substrate.NetApi.Model.Types.Primitive.U64 MaxSetIdSessionEntries()
+        {
+            var result = new Substrate.NetApi.Model.Types.Primitive.U64();
+            result.Create("0xA800000000000000");
             return result;
         }
     }

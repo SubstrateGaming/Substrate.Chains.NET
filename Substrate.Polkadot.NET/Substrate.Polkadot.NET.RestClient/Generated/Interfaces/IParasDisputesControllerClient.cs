@@ -12,7 +12,8 @@ namespace Substrate.Polkadot.NET.RestClient.Generated.Interfaces
    using System;
    using System.Threading.Tasks;
    using Substrate.NetApi.Model.Types.Primitive;
-   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base;
    using Substrate.NetApi.Model.Types.Base;
    
    public interface IParasDisputesControllerClient
@@ -21,6 +22,8 @@ namespace Substrate.Polkadot.NET.RestClient.Generated.Interfaces
       Task<bool> SubscribeLastPrunedSession();
       Task<DisputeState> GetDisputes(BaseTuple<U32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_core_primitives.CandidateHash> key);
       Task<bool> SubscribeDisputes(BaseTuple<U32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_core_primitives.CandidateHash> key);
+      Task<BTreeSet> GetBackersOnDisputes(BaseTuple<U32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_core_primitives.CandidateHash> key);
+      Task<bool> SubscribeBackersOnDisputes(BaseTuple<U32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_core_primitives.CandidateHash> key);
       Task<U32> GetIncluded(BaseTuple<U32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_core_primitives.CandidateHash> key);
       Task<bool> SubscribeIncluded(BaseTuple<U32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_core_primitives.CandidateHash> key);
       Task<BaseOpt<U32>> GetFrozen();

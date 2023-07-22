@@ -13,7 +13,7 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup.Generated.Clients
    using System.Threading.Tasks;
    using System.Net.Http;
    using Substrate.NetApi.Model.Types.Primitive;
-   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.bounded.weak_bounded_vec;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.frame_support.traits.misc;
    using Substrate.Polkadot.NET.RestClient.Mockup.Generated.Interfaces;
    

@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.offchain
     
     
     /// <summary>
-    /// >> 235 - Composite[sp_core.offchain.OpaqueMultiaddr]
+    /// >> 136 - Composite[sp_core.offchain.OpaqueMultiaddr]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class OpaqueMultiaddr : BaseType

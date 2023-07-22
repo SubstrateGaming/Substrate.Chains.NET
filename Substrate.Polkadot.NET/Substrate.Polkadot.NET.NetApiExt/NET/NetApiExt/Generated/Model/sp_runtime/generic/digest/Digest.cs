@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_runtime.generic.di
     
     
     /// <summary>
-    /// >> 13 - Composite[sp_runtime.generic.digest.Digest]
+    /// >> 14 - Composite[sp_runtime.generic.digest.Digest]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Digest : BaseType

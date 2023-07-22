@@ -12,25 +12,27 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup.Generated.Interfaces
    using System;
    using System.Threading.Tasks;
    using Substrate.NetApi.Model.Types.Primitive;
-   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    using Substrate.NetApi.Model.Types.Base;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_democracy.types;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_democracy.vote;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.frame_support.traits.preimages;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_democracy.vote_threshold;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types;
    
    public interface IDemocracyControllerMockupClient
    {
       Task<bool> SetPublicPropCount(U32 value);
-      Task<bool> SetPublicProps(BoundedVecT11 value);
-      Task<bool> SetDepositOf(BaseTuple<BoundedVecT12, U128> value, U32 key);
+      Task<bool> SetPublicProps(BoundedVecT17 value);
+      Task<bool> SetDepositOf(BaseTuple<BoundedVecT18, U128> value, U32 key);
       Task<bool> SetReferendumCount(U32 value);
       Task<bool> SetLowestUnbaked(U32 value);
       Task<bool> SetReferendumInfoOf(EnumReferendumInfo value, U32 key);
       Task<bool> SetVotingOf(EnumVoting value, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
       Task<bool> SetLastTabledWasExternal(Bool value);
       Task<bool> SetNextExternal(BaseTuple<EnumBounded, EnumVoteThreshold> value);
-      Task<bool> SetBlacklist(BaseTuple<U32, BoundedVecT12> value, Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256 key);
-      Task<bool> SetCancellations(Bool value, Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256 key);
+      Task<bool> SetBlacklist(BaseTuple<U32, BoundedVecT18> value, H256 key);
+      Task<bool> SetCancellations(Bool value, H256 key);
+      Task<bool> SetMetadataOf(H256 value, EnumMetadataOwner key);
    }
 }

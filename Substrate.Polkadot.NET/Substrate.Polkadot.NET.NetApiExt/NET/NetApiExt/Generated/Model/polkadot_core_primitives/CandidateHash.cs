@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_core_primiti
     
     
     /// <summary>
-    /// >> 117 - Composite[polkadot_core_primitives.CandidateHash]
+    /// >> 345 - Composite[polkadot_core_primitives.CandidateHash]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class CandidateHash : BaseType

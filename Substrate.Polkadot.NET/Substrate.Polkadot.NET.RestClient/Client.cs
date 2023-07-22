@@ -27,6 +27,7 @@ namespace Substrate.Polkadot.NET.RestClient
       public IChildBountiesControllerClient ChildBountiesControllerClient;
       public IClaimsControllerClient ClaimsControllerClient;
       public IConfigurationControllerClient ConfigurationControllerClient;
+      public IConvictionVotingControllerClient ConvictionVotingControllerClient;
       public ICouncilControllerClient CouncilControllerClient;
       public ICrowdloanControllerClient CrowdloanControllerClient;
       public IDemocracyControllerClient DemocracyControllerClient;
@@ -39,6 +40,7 @@ namespace Substrate.Polkadot.NET.RestClient
       public IImOnlineControllerClient ImOnlineControllerClient;
       public IIndicesControllerClient IndicesControllerClient;
       public IInitializerControllerClient InitializerControllerClient;
+      public IMessageQueueControllerClient MessageQueueControllerClient;
       public IMultisigControllerClient MultisigControllerClient;
       public INominationPoolsControllerClient NominationPoolsControllerClient;
       public IOffencesControllerClient OffencesControllerClient;
@@ -49,9 +51,11 @@ namespace Substrate.Polkadot.NET.RestClient
       public IParasDisputesControllerClient ParasDisputesControllerClient;
       public IParaSessionInfoControllerClient ParaSessionInfoControllerClient;
       public IParasSharedControllerClient ParasSharedControllerClient;
+      public IParasSlashingControllerClient ParasSlashingControllerClient;
       public IPhragmenElectionControllerClient PhragmenElectionControllerClient;
       public IPreimageControllerClient PreimageControllerClient;
       public IProxyControllerClient ProxyControllerClient;
+      public IReferendaControllerClient ReferendaControllerClient;
       public IRegistrarControllerClient RegistrarControllerClient;
       public ISchedulerControllerClient SchedulerControllerClient;
       public ISessionControllerClient SessionControllerClient;
@@ -64,9 +68,9 @@ namespace Substrate.Polkadot.NET.RestClient
       public ITipsControllerClient TipsControllerClient;
       public ITransactionPaymentControllerClient TransactionPaymentControllerClient;
       public ITreasuryControllerClient TreasuryControllerClient;
-      public IUmpControllerClient UmpControllerClient;
       public IVestingControllerClient VestingControllerClient;
       public IVoterListControllerClient VoterListControllerClient;
+      public IWhitelistControllerClient WhitelistControllerClient;
       public IXcmPalletControllerClient XcmPalletControllerClient;
       public Client(HttpClient httpClient, BaseSubscriptionClient subscriptionClient)
       {
@@ -80,6 +84,7 @@ namespace Substrate.Polkadot.NET.RestClient
          ChildBountiesControllerClient = new ChildBountiesControllerClient(_httpClient, _subscriptionClient);
          ClaimsControllerClient = new ClaimsControllerClient(_httpClient, _subscriptionClient);
          ConfigurationControllerClient = new ConfigurationControllerClient(_httpClient, _subscriptionClient);
+         ConvictionVotingControllerClient = new ConvictionVotingControllerClient(_httpClient, _subscriptionClient);
          CouncilControllerClient = new CouncilControllerClient(_httpClient, _subscriptionClient);
          CrowdloanControllerClient = new CrowdloanControllerClient(_httpClient, _subscriptionClient);
          DemocracyControllerClient = new DemocracyControllerClient(_httpClient, _subscriptionClient);
@@ -92,6 +97,7 @@ namespace Substrate.Polkadot.NET.RestClient
          ImOnlineControllerClient = new ImOnlineControllerClient(_httpClient, _subscriptionClient);
          IndicesControllerClient = new IndicesControllerClient(_httpClient, _subscriptionClient);
          InitializerControllerClient = new InitializerControllerClient(_httpClient, _subscriptionClient);
+         MessageQueueControllerClient = new MessageQueueControllerClient(_httpClient, _subscriptionClient);
          MultisigControllerClient = new MultisigControllerClient(_httpClient, _subscriptionClient);
          NominationPoolsControllerClient = new NominationPoolsControllerClient(_httpClient, _subscriptionClient);
          OffencesControllerClient = new OffencesControllerClient(_httpClient, _subscriptionClient);
@@ -102,9 +108,11 @@ namespace Substrate.Polkadot.NET.RestClient
          ParasDisputesControllerClient = new ParasDisputesControllerClient(_httpClient, _subscriptionClient);
          ParaSessionInfoControllerClient = new ParaSessionInfoControllerClient(_httpClient, _subscriptionClient);
          ParasSharedControllerClient = new ParasSharedControllerClient(_httpClient, _subscriptionClient);
+         ParasSlashingControllerClient = new ParasSlashingControllerClient(_httpClient, _subscriptionClient);
          PhragmenElectionControllerClient = new PhragmenElectionControllerClient(_httpClient, _subscriptionClient);
          PreimageControllerClient = new PreimageControllerClient(_httpClient, _subscriptionClient);
          ProxyControllerClient = new ProxyControllerClient(_httpClient, _subscriptionClient);
+         ReferendaControllerClient = new ReferendaControllerClient(_httpClient, _subscriptionClient);
          RegistrarControllerClient = new RegistrarControllerClient(_httpClient, _subscriptionClient);
          SchedulerControllerClient = new SchedulerControllerClient(_httpClient, _subscriptionClient);
          SessionControllerClient = new SessionControllerClient(_httpClient, _subscriptionClient);
@@ -117,9 +125,9 @@ namespace Substrate.Polkadot.NET.RestClient
          TipsControllerClient = new TipsControllerClient(_httpClient, _subscriptionClient);
          TransactionPaymentControllerClient = new TransactionPaymentControllerClient(_httpClient, _subscriptionClient);
          TreasuryControllerClient = new TreasuryControllerClient(_httpClient, _subscriptionClient);
-         UmpControllerClient = new UmpControllerClient(_httpClient, _subscriptionClient);
          VestingControllerClient = new VestingControllerClient(_httpClient, _subscriptionClient);
          VoterListControllerClient = new VoterListControllerClient(_httpClient, _subscriptionClient);
+         WhitelistControllerClient = new WhitelistControllerClient(_httpClient, _subscriptionClient);
          XcmPalletControllerClient = new XcmPalletControllerClient(_httpClient, _subscriptionClient);
       }
    }

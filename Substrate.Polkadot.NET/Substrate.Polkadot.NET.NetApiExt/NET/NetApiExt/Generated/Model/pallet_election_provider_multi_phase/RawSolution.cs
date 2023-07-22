@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_election_provi
     
     
     /// <summary>
-    /// >> 314 - Composite[pallet_election_provider_multi_phase.RawSolution]
+    /// >> 237 - Composite[pallet_election_provider_multi_phase.RawSolution]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class RawSolution : BaseType

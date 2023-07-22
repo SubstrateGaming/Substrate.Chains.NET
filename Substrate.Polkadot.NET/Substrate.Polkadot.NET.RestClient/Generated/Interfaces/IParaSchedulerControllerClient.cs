@@ -18,11 +18,11 @@ namespace Substrate.Polkadot.NET.RestClient.Generated.Interfaces
    
    public interface IParaSchedulerControllerClient
    {
-      Task<BaseVec<BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.ValidatorIndex>>> GetValidatorGroups();
+      Task<BaseVec<BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.ValidatorIndex>>> GetValidatorGroups();
       Task<bool> SubscribeValidatorGroups();
       Task<ParathreadClaimQueue> GetParathreadQueue();
       Task<bool> SubscribeParathreadQueue();
-      Task<BaseVec<BaseOpt<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.EnumCoreOccupied>>> GetAvailabilityCores();
+      Task<BaseVec<BaseOpt<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.EnumCoreOccupied>>> GetAvailabilityCores();
       Task<bool> SubscribeAvailabilityCores();
       Task<BaseVec<Id>> GetParathreadClaimIndex();
       Task<bool> SubscribeParathreadClaimIndex();

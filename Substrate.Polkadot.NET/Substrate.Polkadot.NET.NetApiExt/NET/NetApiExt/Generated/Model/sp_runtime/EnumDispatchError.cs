@@ -43,12 +43,14 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_runtime
         Corruption = 11,
         
         Unavailable = 12,
+        
+        RootNotAllowed = 13,
     }
     
     /// <summary>
-    /// >> 24 - Variant[sp_runtime.DispatchError]
+    /// >> 25 - Variant[sp_runtime.DispatchError]
     /// </summary>
-    public sealed class EnumDispatchError : BaseEnumExt<DispatchError, BaseVoid, BaseVoid, BaseVoid, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_runtime.ModuleError, BaseVoid, BaseVoid, BaseVoid, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_runtime.EnumTokenError, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_arithmetic.EnumArithmeticError, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_runtime.EnumTransactionalError, BaseVoid, BaseVoid, BaseVoid>
+    public sealed class EnumDispatchError : BaseEnumExt<DispatchError, BaseVoid, BaseVoid, BaseVoid, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_runtime.ModuleError, BaseVoid, BaseVoid, BaseVoid, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_runtime.EnumTokenError, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_arithmetic.EnumArithmeticError, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_runtime.EnumTransactionalError, BaseVoid, BaseVoid, BaseVoid, BaseVoid>
     {
     }
 }

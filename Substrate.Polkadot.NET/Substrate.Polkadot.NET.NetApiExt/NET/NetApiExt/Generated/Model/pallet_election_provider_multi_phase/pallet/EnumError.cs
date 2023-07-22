@@ -48,7 +48,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_election_provi
     }
     
     /// <summary>
-    /// >> 610 - Variant[pallet_election_provider_multi_phase.pallet.Error]
+    /// >> 691 - Variant[pallet_election_provider_multi_phase.pallet.Error]
     /// Error of the pallet that can be returned in response to dispatches.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>

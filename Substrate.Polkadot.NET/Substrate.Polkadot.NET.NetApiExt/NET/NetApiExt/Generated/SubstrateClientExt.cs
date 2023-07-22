@@ -137,6 +137,21 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated
         public TreasuryStorage TreasuryStorage;
         
         /// <summary>
+        /// ConvictionVotingStorage storage calls.
+        /// </summary>
+        public ConvictionVotingStorage ConvictionVotingStorage;
+        
+        /// <summary>
+        /// ReferendaStorage storage calls.
+        /// </summary>
+        public ReferendaStorage ReferendaStorage;
+        
+        /// <summary>
+        /// WhitelistStorage storage calls.
+        /// </summary>
+        public WhitelistStorage WhitelistStorage;
+        
+        /// <summary>
         /// ClaimsStorage storage calls.
         /// </summary>
         public ClaimsStorage ClaimsStorage;
@@ -247,11 +262,6 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated
         public DmpStorage DmpStorage;
         
         /// <summary>
-        /// UmpStorage storage calls.
-        /// </summary>
-        public UmpStorage UmpStorage;
-        
-        /// <summary>
         /// HrmpStorage storage calls.
         /// </summary>
         public HrmpStorage HrmpStorage;
@@ -265,6 +275,11 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated
         /// ParasDisputesStorage storage calls.
         /// </summary>
         public ParasDisputesStorage ParasDisputesStorage;
+        
+        /// <summary>
+        /// ParasSlashingStorage storage calls.
+        /// </summary>
+        public ParasSlashingStorage ParasSlashingStorage;
         
         /// <summary>
         /// RegistrarStorage storage calls.
@@ -290,6 +305,11 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated
         /// XcmPalletStorage storage calls.
         /// </summary>
         public XcmPalletStorage XcmPalletStorage;
+        
+        /// <summary>
+        /// MessageQueueStorage storage calls.
+        /// </summary>
+        public MessageQueueStorage MessageQueueStorage;
         
         public SubstrateClientExt(System.Uri uri, Substrate.NetApi.Model.Extrinsics.ChargeType chargeType) : 
                 base(uri, chargeType)
@@ -317,6 +337,9 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated
             this.PhragmenElectionStorage = new PhragmenElectionStorage(this);
             this.TechnicalMembershipStorage = new TechnicalMembershipStorage(this);
             this.TreasuryStorage = new TreasuryStorage(this);
+            this.ConvictionVotingStorage = new ConvictionVotingStorage(this);
+            this.ReferendaStorage = new ReferendaStorage(this);
+            this.WhitelistStorage = new WhitelistStorage(this);
             this.ClaimsStorage = new ClaimsStorage(this);
             this.VestingStorage = new VestingStorage(this);
             this.UtilityStorage = new UtilityStorage(this);
@@ -339,15 +362,16 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated
             this.ParasStorage = new ParasStorage(this);
             this.InitializerStorage = new InitializerStorage(this);
             this.DmpStorage = new DmpStorage(this);
-            this.UmpStorage = new UmpStorage(this);
             this.HrmpStorage = new HrmpStorage(this);
             this.ParaSessionInfoStorage = new ParaSessionInfoStorage(this);
             this.ParasDisputesStorage = new ParasDisputesStorage(this);
+            this.ParasSlashingStorage = new ParasSlashingStorage(this);
             this.RegistrarStorage = new RegistrarStorage(this);
             this.SlotsStorage = new SlotsStorage(this);
             this.AuctionsStorage = new AuctionsStorage(this);
             this.CrowdloanStorage = new CrowdloanStorage(this);
             this.XcmPalletStorage = new XcmPalletStorage(this);
+            this.MessageQueueStorage = new MessageQueueStorage(this);
         }
     }
 }

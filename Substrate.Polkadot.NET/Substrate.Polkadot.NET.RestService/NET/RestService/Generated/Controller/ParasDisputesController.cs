@@ -55,11 +55,24 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Controller
         ///  All ongoing or concluded disputes for the last several sessions.
         /// </summary>
         [HttpGet("Disputes")]
-        [ProducesResponseType(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.DisputeState), 200)]
+        [ProducesResponseType(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.DisputeState), 200)]
         [StorageKeyBuilder(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParasDisputesStorage), "DisputesParams", typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_core_primitives.CandidateHash>))]
         public IActionResult GetDisputes(string key)
         {
             return this.Ok(_parasDisputesStorage.GetDisputes(key));
+        }
+        
+        /// <summary>
+        /// >> BackersOnDisputes
+        ///  Backing votes stored for each dispute.
+        ///  This storage is used for slashing.
+        /// </summary>
+        [HttpGet("BackersOnDisputes")]
+        [ProducesResponseType(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base.BTreeSet), 200)]
+        [StorageKeyBuilder(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParasDisputesStorage), "BackersOnDisputesParams", typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_core_primitives.CandidateHash>))]
+        public IActionResult GetBackersOnDisputes(string key)
+        {
+            return this.Ok(_parasDisputesStorage.GetBackersOnDisputes(key));
         }
         
         /// <summary>

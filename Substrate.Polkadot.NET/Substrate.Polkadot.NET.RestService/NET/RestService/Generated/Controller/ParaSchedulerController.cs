@@ -47,7 +47,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Controller
         ///  Reasonably, 100-1000. The dominant factor is the number of validators: safe upper bound at 10k.
         /// </summary>
         [HttpGet("ValidatorGroups")]
-        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.ValidatorIndex>>), 200)]
+        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.ValidatorIndex>>), 200)]
         [StorageKeyBuilder(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParaSchedulerStorage), "ValidatorGroupsParams")]
         public IActionResult GetValidatorGroups()
         {
@@ -81,7 +81,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Controller
         ///    * The number of validators divided by `configuration.max_validators_per_core`.
         /// </summary>
         [HttpGet("AvailabilityCores")]
-        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v2.EnumCoreOccupied>>), 200)]
+        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.EnumCoreOccupied>>), 200)]
         [StorageKeyBuilder(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParaSchedulerStorage), "AvailabilityCoresParams")]
         public IActionResult GetAvailabilityCores()
         {

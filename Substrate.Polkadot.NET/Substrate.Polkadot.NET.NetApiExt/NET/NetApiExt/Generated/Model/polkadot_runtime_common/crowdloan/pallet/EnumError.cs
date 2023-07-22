@@ -66,7 +66,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_comm
     }
     
     /// <summary>
-    /// >> 713 - Variant[polkadot_runtime_common.crowdloan.pallet.Error]
+    /// >> 798 - Variant[polkadot_runtime_common.crowdloan.pallet.Error]
     /// 
     ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
     ///			of this pallet.

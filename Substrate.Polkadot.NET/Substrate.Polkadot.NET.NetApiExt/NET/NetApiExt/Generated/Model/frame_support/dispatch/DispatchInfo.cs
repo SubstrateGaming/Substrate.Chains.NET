@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.frame_support.dispatc
     
     
     /// <summary>
-    /// >> 21 - Composite[frame_support.dispatch.DispatchInfo]
+    /// >> 22 - Composite[frame_support.dispatch.DispatchInfo]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class DispatchInfo : BaseType

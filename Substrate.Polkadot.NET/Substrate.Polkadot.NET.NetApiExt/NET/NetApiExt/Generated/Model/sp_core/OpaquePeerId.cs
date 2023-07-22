@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core
     
     
     /// <summary>
-    /// >> 233 - Composite[sp_core.OpaquePeerId]
+    /// >> 134 - Composite[sp_core.OpaquePeerId]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class OpaquePeerId : BaseType

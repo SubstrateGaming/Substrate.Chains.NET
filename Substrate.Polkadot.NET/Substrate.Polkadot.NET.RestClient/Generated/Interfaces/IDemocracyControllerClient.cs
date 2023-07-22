@@ -12,20 +12,21 @@ namespace Substrate.Polkadot.NET.RestClient.Generated.Interfaces
    using System;
    using System.Threading.Tasks;
    using Substrate.NetApi.Model.Types.Primitive;
-   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    using Substrate.NetApi.Model.Types.Base;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_democracy.types;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_democracy.vote;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.frame_support.traits.preimages;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_democracy.vote_threshold;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types;
    
    public interface IDemocracyControllerClient
    {
       Task<U32> GetPublicPropCount();
       Task<bool> SubscribePublicPropCount();
-      Task<BoundedVecT11> GetPublicProps();
+      Task<BoundedVecT17> GetPublicProps();
       Task<bool> SubscribePublicProps();
-      Task<BaseTuple<BoundedVecT12, U128>> GetDepositOf(U32 key);
+      Task<BaseTuple<BoundedVecT18, U128>> GetDepositOf(U32 key);
       Task<bool> SubscribeDepositOf(U32 key);
       Task<U32> GetReferendumCount();
       Task<bool> SubscribeReferendumCount();
@@ -39,9 +40,11 @@ namespace Substrate.Polkadot.NET.RestClient.Generated.Interfaces
       Task<bool> SubscribeLastTabledWasExternal();
       Task<BaseTuple<EnumBounded, EnumVoteThreshold>> GetNextExternal();
       Task<bool> SubscribeNextExternal();
-      Task<BaseTuple<U32, BoundedVecT12>> GetBlacklist(Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256 key);
-      Task<bool> SubscribeBlacklist(Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256 key);
-      Task<Bool> GetCancellations(Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256 key);
-      Task<bool> SubscribeCancellations(Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256 key);
+      Task<BaseTuple<U32, BoundedVecT18>> GetBlacklist(H256 key);
+      Task<bool> SubscribeBlacklist(H256 key);
+      Task<Bool> GetCancellations(H256 key);
+      Task<bool> SubscribeCancellations(H256 key);
+      Task<H256> GetMetadataOf(EnumMetadataOwner key);
+      Task<bool> SubscribeMetadataOf(EnumMetadataOwner key);
    }
 }
