@@ -18,7 +18,7 @@ namespace Substrate.Astar.NET.NetApiExt.Generated.Model.pallet_dapps_staking
     
     
     /// <summary>
-    /// >> 324 - Composite[pallet_dapps_staking.RewardInfo]
+    /// >> 355 - Composite[pallet_dapps_staking.RewardInfo]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class RewardInfo : BaseType

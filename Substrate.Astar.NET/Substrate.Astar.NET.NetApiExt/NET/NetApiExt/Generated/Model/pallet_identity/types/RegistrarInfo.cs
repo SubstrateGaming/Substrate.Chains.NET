@@ -18,7 +18,7 @@ namespace Substrate.Astar.NET.NetApiExt.Generated.Model.pallet_identity.types
     
     
     /// <summary>
-    /// >> 285 - Composite[pallet_identity.types.RegistrarInfo]
+    /// >> 306 - Composite[pallet_identity.types.RegistrarInfo]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class RegistrarInfo : BaseType

@@ -50,7 +50,7 @@ namespace Substrate.Astar.NET.NetApiExt.Generated.Model.evm_core.error
     }
     
     /// <summary>
-    /// >> 105 - Variant[evm_core.error.ExitError]
+    /// >> 124 - Variant[evm_core.error.ExitError]
     /// </summary>
     public sealed class EnumExitError : BaseEnumExt<ExitError, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.Astar.NET.NetApiExt.Generated.Types.Base.CowT1, BaseVoid, Substrate.Astar.NET.NetApiExt.Generated.Model.evm_core.opcode.Opcode>
     {

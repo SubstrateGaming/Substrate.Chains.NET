@@ -18,7 +18,7 @@ namespace Substrate.Astar.NET.NetApiExt.Generated.Model.polkadot_primitives.v2
     
     
     /// <summary>
-    /// >> 190 - Composite[polkadot_primitives.v2.PersistedValidationData]
+    /// >> 213 - Composite[polkadot_primitives.v2.PersistedValidationData]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class PersistedValidationData : BaseType

@@ -24,7 +24,7 @@ namespace Substrate.Astar.NET.NetApiExt.Generated.Model.astar_runtime
     }
     
     /// <summary>
-    /// >> 41 - Variant[astar_runtime.SmartContract]
+    /// >> 45 - Variant[astar_runtime.SmartContract]
     /// </summary>
     public sealed class EnumSmartContract : BaseEnumExt<SmartContract, Substrate.Astar.NET.NetApiExt.Generated.Model.primitive_types.H160, Substrate.Astar.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>
     {

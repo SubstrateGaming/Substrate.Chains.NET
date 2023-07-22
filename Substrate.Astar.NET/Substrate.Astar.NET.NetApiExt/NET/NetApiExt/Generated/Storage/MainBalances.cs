@@ -35,9 +35,9 @@ namespace Substrate.Astar.NET.NetApiExt.Generated.Storage
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Balances", "Account"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.Astar.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32), typeof(Substrate.Astar.NET.NetApiExt.Generated.Model.pallet_balances.AccountData)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Balances", "Locks"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.Astar.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32), typeof(Substrate.Astar.NET.NetApiExt.Generated.Model.sp_core.bounded.weak_bounded_vec.WeakBoundedVecT2)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.Astar.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32), typeof(Substrate.Astar.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT2)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Balances", "Reserves"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.Astar.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32), typeof(Substrate.Astar.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT6)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.Astar.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32), typeof(Substrate.Astar.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT12)));
         }
         
         /// <summary>
@@ -202,10 +202,10 @@ namespace Substrate.Astar.NET.NetApiExt.Generated.Storage
         ///  Any liquidity locks on some account balances.
         ///  NOTE: Should only be accessed when setting, changing and freeing a lock.
         /// </summary>
-        public async Task<Substrate.Astar.NET.NetApiExt.Generated.Model.sp_core.bounded.weak_bounded_vec.WeakBoundedVecT2> Locks(Substrate.Astar.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, CancellationToken token)
+        public async Task<Substrate.Astar.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT2> Locks(Substrate.Astar.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, CancellationToken token)
         {
             string parameters = BalancesStorage.LocksParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Astar.NET.NetApiExt.Generated.Model.sp_core.bounded.weak_bounded_vec.WeakBoundedVecT2>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Astar.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT2>(parameters, token);
             return result;
         }
         
@@ -233,10 +233,10 @@ namespace Substrate.Astar.NET.NetApiExt.Generated.Storage
         /// >> Reserves
         ///  Named reserves on some account balances.
         /// </summary>
-        public async Task<Substrate.Astar.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT6> Reserves(Substrate.Astar.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, CancellationToken token)
+        public async Task<Substrate.Astar.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT12> Reserves(Substrate.Astar.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, CancellationToken token)
         {
             string parameters = BalancesStorage.ReservesParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Astar.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT6>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Astar.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT12>(parameters, token);
             return result;
         }
     }

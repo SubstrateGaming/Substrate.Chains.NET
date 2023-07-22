@@ -18,7 +18,7 @@ namespace Substrate.Astar.NET.NetApiExt.Generated.Model.pallet_dapps_staking
     
     
     /// <summary>
-    /// >> 320 - Composite[pallet_dapps_staking.AccountLedger]
+    /// >> 351 - Composite[pallet_dapps_staking.AccountLedger]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class AccountLedger : BaseType

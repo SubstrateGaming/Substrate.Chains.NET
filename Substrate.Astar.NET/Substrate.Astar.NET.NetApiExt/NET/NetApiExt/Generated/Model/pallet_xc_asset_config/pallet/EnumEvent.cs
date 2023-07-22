@@ -30,7 +30,7 @@ namespace Substrate.Astar.NET.NetApiExt.Generated.Model.pallet_xc_asset_config.p
     }
     
     /// <summary>
-    /// >> 98 - Variant[pallet_xc_asset_config.pallet.Event]
+    /// >> 117 - Variant[pallet_xc_asset_config.pallet.Event]
     /// 
     ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
     ///			by this pallet.

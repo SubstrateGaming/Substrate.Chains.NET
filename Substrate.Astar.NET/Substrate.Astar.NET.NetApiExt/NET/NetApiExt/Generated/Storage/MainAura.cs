@@ -30,7 +30,7 @@ namespace Substrate.Astar.NET.NetApiExt.Generated.Storage
         public AuraStorage(SubstrateClientExt client)
         {
             this._client = client;
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("Aura", "Authorities"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Astar.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT10)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("Aura", "Authorities"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Astar.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT15)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Aura", "CurrentSlot"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Astar.NET.NetApiExt.Generated.Model.sp_consensus_slots.Slot)));
         }
         
@@ -56,10 +56,10 @@ namespace Substrate.Astar.NET.NetApiExt.Generated.Storage
         /// >> Authorities
         ///  The current authority set.
         /// </summary>
-        public async Task<Substrate.Astar.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT10> Authorities(CancellationToken token)
+        public async Task<Substrate.Astar.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT15> Authorities(CancellationToken token)
         {
             string parameters = AuraStorage.AuthoritiesParams();
-            var result = await _client.GetStorageAsync<Substrate.Astar.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT10>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Astar.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT15>(parameters, token);
             return result;
         }
         

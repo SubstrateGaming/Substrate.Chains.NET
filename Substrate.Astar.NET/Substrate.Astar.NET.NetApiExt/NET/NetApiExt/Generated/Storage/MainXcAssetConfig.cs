@@ -226,5 +226,11 @@ namespace Substrate.Astar.NET.NetApiExt.Generated.Storage
         /// Asset does not exist (hasn't been registered).
         /// </summary>
         AssetDoesNotExist,
+        
+        /// <summary>
+        /// >> MultiLocationNotSupported
+        /// Failed to convert to latest versioned MultiLocation
+        /// </summary>
+        MultiLocationNotSupported,
     }
 }

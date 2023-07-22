@@ -22,7 +22,7 @@ namespace Substrate.Astar.NET.NetApiExt.Generated.Model.pallet_ethereum
     }
     
     /// <summary>
-    /// >> 274 - Variant[pallet_ethereum.RawOrigin]
+    /// >> 295 - Variant[pallet_ethereum.RawOrigin]
     /// </summary>
     public sealed class EnumRawOrigin : BaseEnumExt<RawOrigin, Substrate.Astar.NET.NetApiExt.Generated.Model.primitive_types.H160>
     {

@@ -18,7 +18,7 @@ namespace Substrate.Astar.NET.NetApiExt.Generated.Model.astar_runtime
     
     
     /// <summary>
-    /// >> 215 - Composite[astar_runtime.SessionKeys]
+    /// >> 234 - Composite[astar_runtime.SessionKeys]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class SessionKeys : BaseType

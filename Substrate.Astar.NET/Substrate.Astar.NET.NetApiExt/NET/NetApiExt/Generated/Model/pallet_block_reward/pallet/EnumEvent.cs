@@ -22,7 +22,7 @@ namespace Substrate.Astar.NET.NetApiExt.Generated.Model.pallet_block_reward.pall
     }
     
     /// <summary>
-    /// >> 46 - Variant[pallet_block_reward.pallet.Event]
+    /// >> 50 - Variant[pallet_block_reward.pallet.Event]
     /// 
     ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
     ///			by this pallet.

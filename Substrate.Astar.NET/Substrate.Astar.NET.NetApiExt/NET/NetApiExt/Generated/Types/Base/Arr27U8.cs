@@ -18,7 +18,7 @@ namespace Substrate.Astar.NET.NetApiExt.Generated.Types.Base
     
     
     /// <summary>
-    /// >> 173 - Array
+    /// >> 194 - Array
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Array)]
     public sealed class Arr27U8 : BaseType

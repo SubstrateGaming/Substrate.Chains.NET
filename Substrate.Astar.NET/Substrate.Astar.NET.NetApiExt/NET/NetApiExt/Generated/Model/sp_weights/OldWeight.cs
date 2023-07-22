@@ -18,7 +18,7 @@ namespace Substrate.Astar.NET.NetApiExt.Generated.Model.sp_weights
     
     
     /// <summary>
-    /// >> 266 - Composite[sp_weights.OldWeight]
+    /// >> 281 - Composite[sp_weights.OldWeight]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class OldWeight : BaseType

@@ -22,7 +22,7 @@ namespace Substrate.Astar.NET.NetApiExt.Generated.Model.pallet_sudo.pallet
     }
     
     /// <summary>
-    /// >> 431 - Variant[pallet_sudo.pallet.Error]
+    /// >> 465 - Variant[pallet_sudo.pallet.Error]
     /// Error for the Sudo pallet
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>

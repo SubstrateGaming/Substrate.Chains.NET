@@ -42,7 +42,7 @@ namespace Substrate.Astar.NET.RestService.Generated.Controller
         ///  Information regarding the vesting of a given account.
         /// </summary>
         [HttpGet("Vesting")]
-        [ProducesResponseType(typeof(Substrate.Astar.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT7), 200)]
+        [ProducesResponseType(typeof(Substrate.Astar.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT13), 200)]
         [StorageKeyBuilder(typeof(Substrate.Astar.NET.NetApiExt.Generated.Storage.VestingStorage), "VestingParams", typeof(Substrate.Astar.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32))]
         public IActionResult GetVesting(string key)
         {

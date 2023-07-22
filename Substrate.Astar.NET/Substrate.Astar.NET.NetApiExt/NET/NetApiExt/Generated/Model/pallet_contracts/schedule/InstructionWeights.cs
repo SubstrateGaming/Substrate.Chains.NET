@@ -18,7 +18,7 @@ namespace Substrate.Astar.NET.NetApiExt.Generated.Model.pallet_contracts.schedul
     
     
     /// <summary>
-    /// >> 428 - Composite[pallet_contracts.schedule.InstructionWeights]
+    /// >> 462 - Composite[pallet_contracts.schedule.InstructionWeights]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class InstructionWeights : BaseType

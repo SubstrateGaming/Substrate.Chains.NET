@@ -52,6 +52,11 @@ namespace Substrate.Astar.NET.NetApiExt.Generated
         public MultisigStorage MultisigStorage;
         
         /// <summary>
+        /// ProxyStorage storage calls.
+        /// </summary>
+        public ProxyStorage ProxyStorage;
+        
+        /// <summary>
         /// ParachainSystemStorage storage calls.
         /// </summary>
         public ParachainSystemStorage ParachainSystemStorage;
@@ -171,6 +176,11 @@ namespace Substrate.Astar.NET.NetApiExt.Generated
         /// </summary>
         public SudoStorage SudoStorage;
         
+        /// <summary>
+        /// StateTrieMigrationStorage storage calls.
+        /// </summary>
+        public StateTrieMigrationStorage StateTrieMigrationStorage;
+        
         public SubstrateClientExt(System.Uri uri, Substrate.NetApi.Model.Extrinsics.ChargeType chargeType) : 
                 base(uri, chargeType)
         {
@@ -180,6 +190,7 @@ namespace Substrate.Astar.NET.NetApiExt.Generated
             this.IdentityStorage = new IdentityStorage(this);
             this.TimestampStorage = new TimestampStorage(this);
             this.MultisigStorage = new MultisigStorage(this);
+            this.ProxyStorage = new ProxyStorage(this);
             this.ParachainSystemStorage = new ParachainSystemStorage(this);
             this.ParachainInfoStorage = new ParachainInfoStorage(this);
             this.TransactionPaymentStorage = new TransactionPaymentStorage(this);
@@ -204,6 +215,7 @@ namespace Substrate.Astar.NET.NetApiExt.Generated
             this.BaseFeeStorage = new BaseFeeStorage(this);
             this.ContractsStorage = new ContractsStorage(this);
             this.SudoStorage = new SudoStorage(this);
+            this.StateTrieMigrationStorage = new StateTrieMigrationStorage(this);
         }
     }
 }

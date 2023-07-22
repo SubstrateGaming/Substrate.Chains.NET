@@ -66,7 +66,7 @@ namespace Substrate.Astar.NET.NetApiExt.Generated.Model.pallet_dapps_staking.pal
     }
     
     /// <summary>
-    /// >> 336 - Variant[pallet_dapps_staking.pallet.pallet.Error]
+    /// >> 367 - Variant[pallet_dapps_staking.pallet.pallet.Error]
     /// 
     ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
     ///			of this pallet.

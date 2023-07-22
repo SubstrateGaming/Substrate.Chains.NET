@@ -18,7 +18,7 @@ namespace Substrate.Astar.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things
     
     
     /// <summary>
-    /// >> 115 - Composite[sp_arithmetic.per_things.Permill]
+    /// >> 134 - Composite[sp_arithmetic.per_things.Permill]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Permill : BaseType

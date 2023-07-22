@@ -20,7 +20,7 @@ namespace Substrate.Astar.NET.NetApiExt.Generated.Model.cumulus_pallet_xcm.palle
     }
     
     /// <summary>
-    /// >> 245 - Variant[cumulus_pallet_xcm.pallet.Call]
+    /// >> 260 - Variant[cumulus_pallet_xcm.pallet.Call]
     /// Contains one variant per dispatchable that can be called by an extrinsic.
     /// </summary>
     public sealed class EnumCall : BaseEnum<Call>

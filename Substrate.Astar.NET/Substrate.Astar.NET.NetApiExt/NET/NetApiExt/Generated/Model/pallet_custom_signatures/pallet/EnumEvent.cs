@@ -22,7 +22,7 @@ namespace Substrate.Astar.NET.NetApiExt.Generated.Model.pallet_custom_signatures
     }
     
     /// <summary>
-    /// >> 111 - Variant[pallet_custom_signatures.pallet.Event]
+    /// >> 130 - Variant[pallet_custom_signatures.pallet.Event]
     /// 
     ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
     ///			by this pallet.

@@ -26,7 +26,7 @@ namespace Substrate.Astar.NET.NetApiExt.Generated.Model.pallet_assets.types
     }
     
     /// <summary>
-    /// >> 339 - Variant[pallet_assets.types.AssetStatus]
+    /// >> 370 - Variant[pallet_assets.types.AssetStatus]
     /// </summary>
     public sealed class EnumAssetStatus : BaseEnum<AssetStatus>
     {

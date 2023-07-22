@@ -102,7 +102,7 @@ namespace Substrate.Astar.NET.RestService.Generated.Controller
         ///  NOTE: Should only be accessed when setting, changing and freeing a lock.
         /// </summary>
         [HttpGet("Locks")]
-        [ProducesResponseType(typeof(Substrate.Astar.NET.NetApiExt.Generated.Model.sp_core.bounded.weak_bounded_vec.WeakBoundedVecT2), 200)]
+        [ProducesResponseType(typeof(Substrate.Astar.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT2), 200)]
         [StorageKeyBuilder(typeof(Substrate.Astar.NET.NetApiExt.Generated.Storage.BalancesStorage), "LocksParams", typeof(Substrate.Astar.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32))]
         public IActionResult GetLocks(string key)
         {
@@ -114,7 +114,7 @@ namespace Substrate.Astar.NET.RestService.Generated.Controller
         ///  Named reserves on some account balances.
         /// </summary>
         [HttpGet("Reserves")]
-        [ProducesResponseType(typeof(Substrate.Astar.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT6), 200)]
+        [ProducesResponseType(typeof(Substrate.Astar.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT12), 200)]
         [StorageKeyBuilder(typeof(Substrate.Astar.NET.NetApiExt.Generated.Storage.BalancesStorage), "ReservesParams", typeof(Substrate.Astar.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32))]
         public IActionResult GetReserves(string key)
         {

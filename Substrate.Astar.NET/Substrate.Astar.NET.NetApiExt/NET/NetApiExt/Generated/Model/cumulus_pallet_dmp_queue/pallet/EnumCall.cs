@@ -22,10 +22,10 @@ namespace Substrate.Astar.NET.NetApiExt.Generated.Model.cumulus_pallet_dmp_queue
     }
     
     /// <summary>
-    /// >> 246 - Variant[cumulus_pallet_dmp_queue.pallet.Call]
+    /// >> 261 - Variant[cumulus_pallet_dmp_queue.pallet.Call]
     /// Contains one variant per dispatchable that can be called by an extrinsic.
     /// </summary>
-    public sealed class EnumCall : BaseEnumExt<Call, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U64, Substrate.NetApi.Model.Types.Primitive.U64>>
+    public sealed class EnumCall : BaseEnumExt<Call, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U64, Substrate.Astar.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>>
     {
     }
 }

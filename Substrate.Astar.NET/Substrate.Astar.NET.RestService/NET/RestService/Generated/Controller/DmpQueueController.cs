@@ -84,5 +84,17 @@ namespace Substrate.Astar.NET.RestService.Generated.Controller
         {
             return this.Ok(_dmpQueueStorage.GetOverweight(key));
         }
+        
+        /// <summary>
+        /// >> CounterForOverweight
+        /// Counter for the related counted storage map
+        /// </summary>
+        [HttpGet("CounterForOverweight")]
+        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Primitive.U32), 200)]
+        [StorageKeyBuilder(typeof(Substrate.Astar.NET.NetApiExt.Generated.Storage.DmpQueueStorage), "CounterForOverweightParams")]
+        public IActionResult GetCounterForOverweight()
+        {
+            return this.Ok(_dmpQueueStorage.GetCounterForOverweight());
+        }
     }
 }

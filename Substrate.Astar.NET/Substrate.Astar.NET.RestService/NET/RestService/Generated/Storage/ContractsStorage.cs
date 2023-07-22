@@ -28,7 +28,7 @@ namespace Substrate.Astar.NET.RestService.Generated.Storage
         /// >> PristineCode
         ///  A mapping from an original code hash to the original code, untouched by instrumentation.
         /// </summary>
-        Substrate.Astar.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT12 GetPristineCode(string key);
+        Substrate.Astar.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18 GetPristineCode(string key);
         
         /// <summary>
         /// >> CodeStorage
@@ -84,7 +84,7 @@ namespace Substrate.Astar.NET.RestService.Generated.Storage
         ///  Child trie deletion is a heavy operation depending on the amount of storage items
         ///  stored in said trie. Therefore this operation is performed lazily in `on_initialize`.
         /// </summary>
-        Substrate.Astar.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT14 GetDeletionQueue();
+        Substrate.Astar.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT20 GetDeletionQueue();
     }
     
     /// <summary>
@@ -96,7 +96,7 @@ namespace Substrate.Astar.NET.RestService.Generated.Storage
         /// <summary>
         /// _pristineCodeTypedStorage typed storage field
         /// </summary>
-        private TypedMapStorage<Substrate.Astar.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT12> _pristineCodeTypedStorage;
+        private TypedMapStorage<Substrate.Astar.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18> _pristineCodeTypedStorage;
         
         /// <summary>
         /// _codeStorageTypedStorage typed storage field
@@ -121,25 +121,25 @@ namespace Substrate.Astar.NET.RestService.Generated.Storage
         /// <summary>
         /// _deletionQueueTypedStorage typed storage field
         /// </summary>
-        private TypedStorage<Substrate.Astar.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT14> _deletionQueueTypedStorage;
+        private TypedStorage<Substrate.Astar.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT20> _deletionQueueTypedStorage;
         
         /// <summary>
         /// ContractsStorage constructor.
         /// </summary>
         public ContractsStorage(IStorageDataProvider storageDataProvider, List<IStorageChangeDelegate> storageChangeDelegates)
         {
-            this.PristineCodeTypedStorage = new TypedMapStorage<Substrate.Astar.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT12>("Contracts.PristineCode", storageDataProvider, storageChangeDelegates);
+            this.PristineCodeTypedStorage = new TypedMapStorage<Substrate.Astar.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18>("Contracts.PristineCode", storageDataProvider, storageChangeDelegates);
             this.CodeStorageTypedStorage = new TypedMapStorage<Substrate.Astar.NET.NetApiExt.Generated.Model.pallet_contracts.wasm.PrefabWasmModule>("Contracts.CodeStorage", storageDataProvider, storageChangeDelegates);
             this.OwnerInfoOfTypedStorage = new TypedMapStorage<Substrate.Astar.NET.NetApiExt.Generated.Model.pallet_contracts.wasm.OwnerInfo>("Contracts.OwnerInfoOf", storageDataProvider, storageChangeDelegates);
             this.NonceTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U64>("Contracts.Nonce", storageDataProvider, storageChangeDelegates);
             this.ContractInfoOfTypedStorage = new TypedMapStorage<Substrate.Astar.NET.NetApiExt.Generated.Model.pallet_contracts.storage.ContractInfo>("Contracts.ContractInfoOf", storageDataProvider, storageChangeDelegates);
-            this.DeletionQueueTypedStorage = new TypedStorage<Substrate.Astar.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT14>("Contracts.DeletionQueue", storageDataProvider, storageChangeDelegates);
+            this.DeletionQueueTypedStorage = new TypedStorage<Substrate.Astar.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT20>("Contracts.DeletionQueue", storageDataProvider, storageChangeDelegates);
         }
         
         /// <summary>
         /// _pristineCodeTypedStorage property
         /// </summary>
-        public TypedMapStorage<Substrate.Astar.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT12> PristineCodeTypedStorage
+        public TypedMapStorage<Substrate.Astar.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18> PristineCodeTypedStorage
         {
             get
             {
@@ -214,7 +214,7 @@ namespace Substrate.Astar.NET.RestService.Generated.Storage
         /// <summary>
         /// _deletionQueueTypedStorage property
         /// </summary>
-        public TypedStorage<Substrate.Astar.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT14> DeletionQueueTypedStorage
+        public TypedStorage<Substrate.Astar.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT20> DeletionQueueTypedStorage
         {
             get
             {
@@ -252,13 +252,13 @@ namespace Substrate.Astar.NET.RestService.Generated.Storage
         /// >> PristineCode
         ///  A mapping from an original code hash to the original code, untouched by instrumentation.
         /// </summary>
-        public Substrate.Astar.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT12 GetPristineCode(string key)
+        public Substrate.Astar.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18 GetPristineCode(string key)
         {
             if ((key == null))
             {
                 return null;
             }
-            if (PristineCodeTypedStorage.Dictionary.TryGetValue(key, out Substrate.Astar.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT12 result))
+            if (PristineCodeTypedStorage.Dictionary.TryGetValue(key, out Substrate.Astar.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18 result))
             {
                 return result;
             }
@@ -412,7 +412,7 @@ namespace Substrate.Astar.NET.RestService.Generated.Storage
         ///  Child trie deletion is a heavy operation depending on the amount of storage items
         ///  stored in said trie. Therefore this operation is performed lazily in `on_initialize`.
         /// </summary>
-        public Substrate.Astar.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT14 GetDeletionQueue()
+        public Substrate.Astar.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT20 GetDeletionQueue()
         {
             return DeletionQueueTypedStorage.Get();
         }

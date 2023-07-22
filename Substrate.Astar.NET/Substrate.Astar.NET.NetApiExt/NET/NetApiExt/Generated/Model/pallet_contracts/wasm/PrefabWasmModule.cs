@@ -18,7 +18,7 @@ namespace Substrate.Astar.NET.NetApiExt.Generated.Model.pallet_contracts.wasm
     
     
     /// <summary>
-    /// >> 418 - Composite[pallet_contracts.wasm.PrefabWasmModule]
+    /// >> 452 - Composite[pallet_contracts.wasm.PrefabWasmModule]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class PrefabWasmModule : BaseType
@@ -42,7 +42,7 @@ namespace Substrate.Astar.NET.NetApiExt.Generated.Model.pallet_contracts.wasm
         /// <summary>
         /// >> code
         /// </summary>
-        private Substrate.Astar.NET.NetApiExt.Generated.Model.sp_core.bounded.weak_bounded_vec.WeakBoundedVecT3 _code;
+        private Substrate.Astar.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT3 _code;
         
         /// <summary>
         /// >> determinism
@@ -85,7 +85,7 @@ namespace Substrate.Astar.NET.NetApiExt.Generated.Model.pallet_contracts.wasm
             }
         }
         
-        public Substrate.Astar.NET.NetApiExt.Generated.Model.sp_core.bounded.weak_bounded_vec.WeakBoundedVecT3 Code
+        public Substrate.Astar.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT3 Code
         {
             get
             {
@@ -134,7 +134,7 @@ namespace Substrate.Astar.NET.NetApiExt.Generated.Model.pallet_contracts.wasm
             Initial.Decode(byteArray, ref p);
             Maximum = new Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>();
             Maximum.Decode(byteArray, ref p);
-            Code = new Substrate.Astar.NET.NetApiExt.Generated.Model.sp_core.bounded.weak_bounded_vec.WeakBoundedVecT3();
+            Code = new Substrate.Astar.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT3();
             Code.Decode(byteArray, ref p);
             Determinism = new Substrate.Astar.NET.NetApiExt.Generated.Model.pallet_contracts.wasm.EnumDeterminism();
             Determinism.Decode(byteArray, ref p);
