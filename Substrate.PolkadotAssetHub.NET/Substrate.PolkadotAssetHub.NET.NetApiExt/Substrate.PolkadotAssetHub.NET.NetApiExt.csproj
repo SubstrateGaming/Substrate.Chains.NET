@@ -7,7 +7,7 @@
 		<Company>Substrate Gaming</Company>
 		<Authors>Substrate Gaming</Authors>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-		<Description>Substrate Polkadot Asset Hub .NET API Extension</Description>
+		<Description>Substrate Polkadot AssetHub .NET API Extension</Description>
 		<PackageProjectUrl>https://github.com/SubstrateGaming/Substrate.Chains.NET/tree/main/Substrate.PolkadotAssetHub.NET/Substrate.PolkadotAssetHub.NET.NetApiExt/</PackageProjectUrl>
 		<PackageLicenseFile>LICENSE</PackageLicenseFile>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
