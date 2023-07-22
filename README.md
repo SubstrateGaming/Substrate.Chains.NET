@@ -54,6 +54,11 @@
 [![Nuget](https://img.shields.io/nuget/v/Substrate.Moonsama.NET.Extension)](https://www.nuget.org/packages/Substrate.Moonsama.NET.Extension/)
 ![Nuget](https://img.shields.io/nuget/dt/Substrate.Moonsama.NET.Extension)  
 ![Build](https://github.com/SubstrateGaming/Substrate.Chains.NET/actions/workflows/publish_moonsama.yml/badge.svg)  
+- Unique Network .NET SDK ([Link](https://github.com/SubstrateGaming/Substrate.Chains.NET/tree/main/Substrate.Moonsama.NET))  
+  - Substrate Unique .NET API Extension  
+[![Nuget](https://img.shields.io/nuget/v/Substrate.Unique.NET.Extension)](https://www.nuget.org/packages/Substrate.Unique.NET.Extension/)
+![Nuget](https://img.shields.io/nuget/dt/Substrate.Unique.NET.Extension)  
+![Build](https://github.com/SubstrateGaming/Substrate.Chains.NET/actions/workflows/publish_unique.yml/badge.svg)  
 
 ### Kusama (Relay Chain)
 - Kusama Network .NET SDK ([Link](https://github.com/SubstrateGaming/Substrate.Chains.NET/tree/main/Substrate.Kusama.NET))  
