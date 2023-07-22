@@ -24,6 +24,11 @@
 [![Nuget](https://img.shields.io/nuget/v/Substrate.PolkadotBridgeHub.NET.Extension)](https://www.nuget.org/packages/Substrate.PolkadotBridgeHub.NET.Extension/)
 ![Nuget](https://img.shields.io/nuget/dt/Substrate.PolkadotBridgeHub.NET.Extension)  
 ![Build](https://github.com/SubstrateGaming/Substrate.Chains.NET/actions/workflows/publish_polkadotbridgehub.yml/badge.svg) 
+- Collectives .NET SDK ([Link](https://github.com/SubstrateGaming/Substrate.Chains.NET/tree/main/Substrate.Collectives.NET))  
+  - Substrate Collectives .NET API Extension  
+[![Nuget](https://img.shields.io/nuget/v/Substrate.Collectives.NET.Extension)](https://www.nuget.org/packages/Substrate.Collectives.NET.Extension/)
+![Nuget](https://img.shields.io/nuget/dt/Substrate.Collectives.NET.Extension)  
+![Build](https://github.com/SubstrateGaming/Substrate.Chains.NET/actions/workflows/publish_collectives.yml/badge.svg) 
 - Ajuna Network .NET SDK ([Link](https://github.com/SubstrateGaming/Substrate.Chains.NET/tree/main/Substrate.Ajuna.NET))  
   - Substrate Ajuna .NET API Extension   
 [![Nuget](https://img.shields.io/nuget/v/Substrate.Ajuna.NET.Extension)](https://www.nuget.org/packages/Substrate.Ajuna.NET.Extension/)
