@@ -25,6 +25,7 @@ namespace Substrate.Bajun.NET.RestClient.Mockup.Generated.Interfaces
       Task<bool> SetSignalMessages(BaseVec<U8> value, Id key);
       Task<bool> SetQueueConfig(QueueConfigData value);
       Task<bool> SetOverweight(BaseTuple<Id, U32, BaseVec<U8>> value, U64 key);
+      Task<bool> SetCounterForOverweight(U32 value);
       Task<bool> SetOverweightCount(U64 value);
       Task<bool> SetQueueSuspended(Bool value);
    }

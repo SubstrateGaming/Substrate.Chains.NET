@@ -36,7 +36,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_identity.types
     }
     
     /// <summary>
-    /// >> 231 - Variant[pallet_identity.types.IdentityField]
+    /// >> 256 - Variant[pallet_identity.types.IdentityField]
     /// </summary>
     public sealed class EnumIdentityField : BaseEnum<IdentityField>
     {

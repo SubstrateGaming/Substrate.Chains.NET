@@ -18,7 +18,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types
     
     
     /// <summary>
-    /// >> 426 - Composite[pallet_nfts.types.ItemDetails]
+    /// >> 470 - Composite[pallet_nfts.types.ItemDetails]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class ItemDetails : BaseType
@@ -32,7 +32,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types
         /// <summary>
         /// >> approvals
         /// </summary>
-        private Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_btree_map.BoundedBTreeMap _approvals;
+        private Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_map.BoundedBTreeMap _approvals;
         
         /// <summary>
         /// >> deposit
@@ -51,7 +51,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types
             }
         }
         
-        public Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_btree_map.BoundedBTreeMap Approvals
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_map.BoundedBTreeMap Approvals
         {
             get
             {
@@ -94,7 +94,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types
             var start = p;
             Owner = new Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32();
             Owner.Decode(byteArray, ref p);
-            Approvals = new Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_btree_map.BoundedBTreeMap();
+            Approvals = new Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_map.BoundedBTreeMap();
             Approvals.Decode(byteArray, ref p);
             Deposit = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.ItemDeposit();
             Deposit.Decode(byteArray, ref p);

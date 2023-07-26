@@ -18,7 +18,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.frame_system.extensions.
     
     
     /// <summary>
-    /// >> 455 - Composite[frame_system.extensions.check_spec_version.CheckSpecVersion]
+    /// >> 494 - Composite[frame_system.extensions.check_spec_version.CheckSpecVersion]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class CheckSpecVersion : BaseType

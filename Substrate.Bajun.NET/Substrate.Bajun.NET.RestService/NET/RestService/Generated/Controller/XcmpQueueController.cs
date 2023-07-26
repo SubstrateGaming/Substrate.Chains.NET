@@ -130,6 +130,18 @@ namespace Substrate.Bajun.NET.RestService.Generated.Controller
         }
         
         /// <summary>
+        /// >> CounterForOverweight
+        /// Counter for the related counted storage map
+        /// </summary>
+        [HttpGet("CounterForOverweight")]
+        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Primitive.U32), 200)]
+        [StorageKeyBuilder(typeof(Substrate.Bajun.NET.NetApiExt.Generated.Storage.XcmpQueueStorage), "CounterForOverweightParams")]
+        public IActionResult GetCounterForOverweight()
+        {
+            return this.Ok(_xcmpQueueStorage.GetCounterForOverweight());
+        }
+        
+        /// <summary>
         /// >> OverweightCount
         ///  The number of overweight messages ever recorded in `Overweight`. Also doubles as the next
         ///  available free overweight index.

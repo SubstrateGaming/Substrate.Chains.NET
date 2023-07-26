@@ -11,11 +11,11 @@ namespace Substrate.Bajun.NET.RestClient.Generated.Interfaces
 {
    using System;
    using System.Threading.Tasks;
-   using Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    
    public interface IVestingControllerClient
    {
-      Task<BoundedVecT21> GetVestingSchedules(Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
+      Task<BoundedVecT26> GetVestingSchedules(Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
       Task<bool> SubscribeVestingSchedules(Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
    }
 }

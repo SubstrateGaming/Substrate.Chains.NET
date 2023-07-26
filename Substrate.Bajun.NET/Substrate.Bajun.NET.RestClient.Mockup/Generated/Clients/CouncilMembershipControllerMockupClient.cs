@@ -12,7 +12,7 @@ namespace Substrate.Bajun.NET.RestClient.Mockup.Generated.Clients
    using System;
    using System.Threading.Tasks;
    using System.Net.Http;
-   using Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    using Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto;
    using Substrate.Bajun.NET.RestClient.Mockup.Generated.Interfaces;
    
@@ -23,7 +23,7 @@ namespace Substrate.Bajun.NET.RestClient.Mockup.Generated.Clients
       {
          _httpClient = httpClient;
       }
-      public async Task<bool> SetMembers(BoundedVecT28 value)
+      public async Task<bool> SetMembers(BoundedVecT33 value)
       {
          return await SendMockupRequestAsync(_httpClient, "CouncilMembership/Members", value.Encode(), Substrate.Bajun.NET.NetApiExt.Generated.Storage.CouncilMembershipStorage.MembersParams());
       }

@@ -11,14 +11,14 @@ namespace Substrate.Bajun.NET.RestClient.Generated.Interfaces
 {
    using System;
    using System.Threading.Tasks;
-   using Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    using Substrate.NetApi.Model.Types.Primitive;
    
    public interface ICollatorSelectionControllerClient
    {
-      Task<BoundedVecT23> GetInvulnerables();
+      Task<BoundedVecT27> GetInvulnerables();
       Task<bool> SubscribeInvulnerables();
-      Task<BoundedVecT24> GetCandidates();
+      Task<BoundedVecT28> GetCandidates();
       Task<bool> SubscribeCandidates();
       Task<U32> GetLastAuthoredBlock(Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
       Task<bool> SubscribeLastAuthoredBlock(Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);

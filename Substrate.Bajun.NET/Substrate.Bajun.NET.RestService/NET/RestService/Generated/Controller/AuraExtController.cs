@@ -46,7 +46,7 @@ namespace Substrate.Bajun.NET.RestService.Generated.Controller
         ///  be updated to the latest AuRa authorities in `on_finalize`.
         /// </summary>
         [HttpGet("Authorities")]
-        [ProducesResponseType(typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT25), 200)]
+        [ProducesResponseType(typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT29), 200)]
         [StorageKeyBuilder(typeof(Substrate.Bajun.NET.NetApiExt.Generated.Storage.AuraExtStorage), "AuthoritiesParams")]
         public IActionResult GetAuthorities()
         {

@@ -26,23 +26,21 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queu
         
         BadFormat = 3,
         
-        UpwardMessageSent = 4,
+        XcmpMessageSent = 4,
         
-        XcmpMessageSent = 5,
+        OverweightEnqueued = 5,
         
-        OverweightEnqueued = 6,
-        
-        OverweightServiced = 7,
+        OverweightServiced = 6,
     }
     
     /// <summary>
-    /// >> 52 - Variant[cumulus_pallet_xcmp_queue.pallet.Event]
+    /// >> 53 - Variant[cumulus_pallet_xcmp_queue.pallet.Event]
     /// 
     ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
     ///			by this pallet.
     ///			
     /// </summary>
-    public sealed class EnumEvent : BaseEnumExt<Event, BaseTuple<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256>, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>, BaseTuple<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256>, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.v2.traits.EnumError, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256>, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256>, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256>, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256>, BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U64, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U64, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>>
+    public sealed class EnumEvent : BaseEnumExt<Event, BaseTuple<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.Arr32U8>, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>, BaseTuple<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.Arr32U8>, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.v3.traits.EnumError, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.Arr32U8>, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.Arr32U8>, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.Arr32U8>, BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U64, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U64, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>>
     {
     }
 }

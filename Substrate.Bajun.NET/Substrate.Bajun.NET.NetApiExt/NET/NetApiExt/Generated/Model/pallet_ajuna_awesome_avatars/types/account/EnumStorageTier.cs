@@ -32,7 +32,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
     }
     
     /// <summary>
-    /// >> 409 - Variant[pallet_ajuna_awesome_avatars.types.account.StorageTier]
+    /// >> 452 - Variant[pallet_ajuna_awesome_avatars.types.account.StorageTier]
     /// </summary>
     public sealed class EnumStorageTier : BaseEnum<StorageTier>
     {

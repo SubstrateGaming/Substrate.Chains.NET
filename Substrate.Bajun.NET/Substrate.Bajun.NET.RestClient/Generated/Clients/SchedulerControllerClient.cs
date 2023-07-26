@@ -13,7 +13,7 @@ namespace Substrate.Bajun.NET.RestClient.Generated.Clients
    using System.Threading.Tasks;
    using System.Net.Http;
    using Substrate.NetApi.Model.Types.Primitive;
-   using Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    using Substrate.NetApi.Model.Types.Base;
    using Substrate.Bajun.NET.RestClient.Generated.Interfaces;
    
@@ -34,9 +34,9 @@ namespace Substrate.Bajun.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("Scheduler.IncompleteSince");
       }
-      public async Task<BoundedVecT17> GetAgenda(U32 key)
+      public async Task<BoundedVecT21> GetAgenda(U32 key)
       {
-         return await SendRequestAsync<BoundedVecT17>(_httpClient, "scheduler/agenda", Substrate.Bajun.NET.NetApiExt.Generated.Storage.SchedulerStorage.AgendaParams(key));
+         return await SendRequestAsync<BoundedVecT21>(_httpClient, "scheduler/agenda", Substrate.Bajun.NET.NetApiExt.Generated.Storage.SchedulerStorage.AgendaParams(key));
       }
       public async Task<bool> SubscribeAgenda(U32 key)
       {

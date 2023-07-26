@@ -33,7 +33,7 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
         /// <summary>
         /// >> PreimageFor
         /// </summary>
-        Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT19 GetPreimageFor(string key);
+        Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT23 GetPreimageFor(string key);
     }
     
     /// <summary>
@@ -50,7 +50,7 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
         /// <summary>
         /// _preimageForTypedStorage typed storage field
         /// </summary>
-        private TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT19> _preimageForTypedStorage;
+        private TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT23> _preimageForTypedStorage;
         
         /// <summary>
         /// PreimageStorage constructor.
@@ -58,7 +58,7 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
         public PreimageStorage(IStorageDataProvider storageDataProvider, List<IStorageChangeDelegate> storageChangeDelegates)
         {
             this.StatusForTypedStorage = new TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_preimage.EnumRequestStatus>("Preimage.StatusFor", storageDataProvider, storageChangeDelegates);
-            this.PreimageForTypedStorage = new TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT19>("Preimage.PreimageFor", storageDataProvider, storageChangeDelegates);
+            this.PreimageForTypedStorage = new TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT23>("Preimage.PreimageFor", storageDataProvider, storageChangeDelegates);
         }
         
         /// <summary>
@@ -79,7 +79,7 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
         /// <summary>
         /// _preimageForTypedStorage property
         /// </summary>
-        public TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT19> PreimageForTypedStorage
+        public TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT23> PreimageForTypedStorage
         {
             get
             {
@@ -141,13 +141,13 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
         /// <summary>
         /// >> PreimageFor
         /// </summary>
-        public Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT19 GetPreimageFor(string key)
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT23 GetPreimageFor(string key)
         {
             if ((key == null))
             {
                 return null;
             }
-            if (PreimageForTypedStorage.Dictionary.TryGetValue(key, out Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT19 result))
+            if (PreimageForTypedStorage.Dictionary.TryGetValue(key, out Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT23 result))
             {
                 return result;
             }

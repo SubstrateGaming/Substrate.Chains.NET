@@ -14,7 +14,7 @@ namespace Substrate.Bajun.NET.RestClient.Generated.Clients
    using System.Net.Http;
    using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_treasury;
-   using Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    using Substrate.Bajun.NET.RestClient.Generated.Interfaces;
    
    public sealed class TreasuryControllerClient : BaseClient, ITreasuryControllerClient
@@ -50,9 +50,9 @@ namespace Substrate.Bajun.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("Treasury.Deactivated");
       }
-      public async Task<BoundedVecT26> GetApprovals()
+      public async Task<BoundedVecT8> GetApprovals()
       {
-         return await SendRequestAsync<BoundedVecT26>(_httpClient, "treasury/approvals");
+         return await SendRequestAsync<BoundedVecT8>(_httpClient, "treasury/approvals");
       }
       public async Task<bool> SubscribeApprovals()
       {

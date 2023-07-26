@@ -30,7 +30,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         public AuraStorage(SubstrateClientExt client)
         {
             this._client = client;
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("Aura", "Authorities"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT25)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("Aura", "Authorities"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT29)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Aura", "CurrentSlot"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_consensus_slots.Slot)));
         }
         
@@ -56,10 +56,10 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         /// >> Authorities
         ///  The current authority set.
         /// </summary>
-        public async Task<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT25> Authorities(CancellationToken token)
+        public async Task<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT29> Authorities(CancellationToken token)
         {
             string parameters = AuraStorage.AuthoritiesParams();
-            var result = await _client.GetStorageAsync<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT25>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT29>(parameters, token);
             return result;
         }
         

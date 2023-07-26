@@ -18,7 +18,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.bajun_runtime
     
     
     /// <summary>
-    /// >> 463 - Composite[bajun_runtime.Runtime]
+    /// >> 502 - Composite[bajun_runtime.Runtime]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Runtime : BaseType

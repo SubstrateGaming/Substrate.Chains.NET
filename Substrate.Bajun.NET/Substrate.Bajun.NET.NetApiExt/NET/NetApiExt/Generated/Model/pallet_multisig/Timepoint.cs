@@ -18,7 +18,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_multisig
     
     
     /// <summary>
-    /// >> 31 - Composite[pallet_multisig.Timepoint]
+    /// >> 33 - Composite[pallet_multisig.Timepoint]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Timepoint : BaseType

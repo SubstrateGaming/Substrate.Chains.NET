@@ -35,12 +35,6 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
         Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTreasurer(string key);
         
         /// <summary>
-        /// >> CurrentSeasonId
-        ///  Contains the identifier of the current season.
-        /// </summary>
-        Substrate.NetApi.Model.Types.Primitive.U16 GetCurrentSeasonId();
-        
-        /// <summary>
         /// >> CurrentSeasonStatus
         /// </summary>
         Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.season.SeasonStatus GetCurrentSeasonStatus();
@@ -69,7 +63,7 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
         /// <summary>
         /// >> Owners
         /// </summary>
-        Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT30 GetOwners(string key);
+        Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT35 GetOwners(string key);
         
         /// <summary>
         /// >> LockedAvatars
@@ -82,9 +76,14 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
         Substrate.NetApi.Model.Types.Primitive.U32 GetCollectionId();
         
         /// <summary>
-        /// >> Accounts
+        /// >> PlayerConfigs
         /// </summary>
-        Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.AccountInfo GetAccounts(string key);
+        Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.PlayerConfig GetPlayerConfigs(string key);
+        
+        /// <summary>
+        /// >> PlayerSeasonConfigs
+        /// </summary>
+        Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.PlayerSeasonConfig GetPlayerSeasonConfigs(string key);
         
         /// <summary>
         /// >> SeasonStats
@@ -104,7 +103,7 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
         /// <summary>
         /// >> Preparation
         /// </summary>
-        Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT5 GetPreparation(string key);
+        Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9 GetPreparation(string key);
     }
     
     /// <summary>
@@ -122,11 +121,6 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
         /// _treasurerTypedStorage typed storage field
         /// </summary>
         private TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> _treasurerTypedStorage;
-        
-        /// <summary>
-        /// _currentSeasonIdTypedStorage typed storage field
-        /// </summary>
-        private TypedStorage<Substrate.NetApi.Model.Types.Primitive.U16> _currentSeasonIdTypedStorage;
         
         /// <summary>
         /// _currentSeasonStatusTypedStorage typed storage field
@@ -156,7 +150,7 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
         /// <summary>
         /// _ownersTypedStorage typed storage field
         /// </summary>
-        private TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT30> _ownersTypedStorage;
+        private TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT35> _ownersTypedStorage;
         
         /// <summary>
         /// _lockedAvatarsTypedStorage typed storage field
@@ -169,9 +163,14 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
         private TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32> _collectionIdTypedStorage;
         
         /// <summary>
-        /// _accountsTypedStorage typed storage field
+        /// _playerConfigsTypedStorage typed storage field
         /// </summary>
-        private TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.AccountInfo> _accountsTypedStorage;
+        private TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.PlayerConfig> _playerConfigsTypedStorage;
+        
+        /// <summary>
+        /// _playerSeasonConfigsTypedStorage typed storage field
+        /// </summary>
+        private TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.PlayerSeasonConfig> _playerSeasonConfigsTypedStorage;
         
         /// <summary>
         /// _seasonStatsTypedStorage typed storage field
@@ -191,7 +190,7 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
         /// <summary>
         /// _preparationTypedStorage typed storage field
         /// </summary>
-        private TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT5> _preparationTypedStorage;
+        private TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9> _preparationTypedStorage;
         
         /// <summary>
         /// AwesomeAvatarsStorage constructor.
@@ -200,20 +199,20 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
         {
             this.OrganizerTypedStorage = new TypedStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>("AwesomeAvatars.Organizer", storageDataProvider, storageChangeDelegates);
             this.TreasurerTypedStorage = new TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>("AwesomeAvatars.Treasurer", storageDataProvider, storageChangeDelegates);
-            this.CurrentSeasonIdTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U16>("AwesomeAvatars.CurrentSeasonId", storageDataProvider, storageChangeDelegates);
             this.CurrentSeasonStatusTypedStorage = new TypedStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.season.SeasonStatus>("AwesomeAvatars.CurrentSeasonStatus", storageDataProvider, storageChangeDelegates);
             this.SeasonsTypedStorage = new TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.season.Season>("AwesomeAvatars.Seasons", storageDataProvider, storageChangeDelegates);
             this.TreasuryTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Primitive.U128>("AwesomeAvatars.Treasury", storageDataProvider, storageChangeDelegates);
             this.GlobalConfigsTypedStorage = new TypedStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.GlobalConfig>("AwesomeAvatars.GlobalConfigs", storageDataProvider, storageChangeDelegates);
             this.AvatarsTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.avatar.Avatar>>("AwesomeAvatars.Avatars", storageDataProvider, storageChangeDelegates);
-            this.OwnersTypedStorage = new TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT30>("AwesomeAvatars.Owners", storageDataProvider, storageChangeDelegates);
+            this.OwnersTypedStorage = new TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT35>("AwesomeAvatars.Owners", storageDataProvider, storageChangeDelegates);
             this.LockedAvatarsTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseTuple>("AwesomeAvatars.LockedAvatars", storageDataProvider, storageChangeDelegates);
             this.CollectionIdTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32>("AwesomeAvatars.CollectionId", storageDataProvider, storageChangeDelegates);
-            this.AccountsTypedStorage = new TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.AccountInfo>("AwesomeAvatars.Accounts", storageDataProvider, storageChangeDelegates);
+            this.PlayerConfigsTypedStorage = new TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.PlayerConfig>("AwesomeAvatars.PlayerConfigs", storageDataProvider, storageChangeDelegates);
+            this.PlayerSeasonConfigsTypedStorage = new TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.PlayerSeasonConfig>("AwesomeAvatars.PlayerSeasonConfigs", storageDataProvider, storageChangeDelegates);
             this.SeasonStatsTypedStorage = new TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.SeasonInfo>("AwesomeAvatars.SeasonStats", storageDataProvider, storageChangeDelegates);
             this.TradeTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Primitive.U128>("AwesomeAvatars.Trade", storageDataProvider, storageChangeDelegates);
             this.ServiceAccountTypedStorage = new TypedStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>("AwesomeAvatars.ServiceAccount", storageDataProvider, storageChangeDelegates);
-            this.PreparationTypedStorage = new TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT5>("AwesomeAvatars.Preparation", storageDataProvider, storageChangeDelegates);
+            this.PreparationTypedStorage = new TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9>("AwesomeAvatars.Preparation", storageDataProvider, storageChangeDelegates);
         }
         
         /// <summary>
@@ -243,21 +242,6 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
             set
             {
                 _treasurerTypedStorage = value;
-            }
-        }
-        
-        /// <summary>
-        /// _currentSeasonIdTypedStorage property
-        /// </summary>
-        public TypedStorage<Substrate.NetApi.Model.Types.Primitive.U16> CurrentSeasonIdTypedStorage
-        {
-            get
-            {
-                return _currentSeasonIdTypedStorage;
-            }
-            set
-            {
-                _currentSeasonIdTypedStorage = value;
             }
         }
         
@@ -339,7 +323,7 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
         /// <summary>
         /// _ownersTypedStorage property
         /// </summary>
-        public TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT30> OwnersTypedStorage
+        public TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT35> OwnersTypedStorage
         {
             get
             {
@@ -382,17 +366,32 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
         }
         
         /// <summary>
-        /// _accountsTypedStorage property
+        /// _playerConfigsTypedStorage property
         /// </summary>
-        public TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.AccountInfo> AccountsTypedStorage
+        public TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.PlayerConfig> PlayerConfigsTypedStorage
         {
             get
             {
-                return _accountsTypedStorage;
+                return _playerConfigsTypedStorage;
             }
             set
             {
-                _accountsTypedStorage = value;
+                _playerConfigsTypedStorage = value;
+            }
+        }
+        
+        /// <summary>
+        /// _playerSeasonConfigsTypedStorage property
+        /// </summary>
+        public TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.PlayerSeasonConfig> PlayerSeasonConfigsTypedStorage
+        {
+            get
+            {
+                return _playerSeasonConfigsTypedStorage;
+            }
+            set
+            {
+                _playerSeasonConfigsTypedStorage = value;
             }
         }
         
@@ -444,7 +443,7 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
         /// <summary>
         /// _preparationTypedStorage property
         /// </summary>
-        public TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT5> PreparationTypedStorage
+        public TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9> PreparationTypedStorage
         {
             get
             {
@@ -463,7 +462,6 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
         {
             await OrganizerTypedStorage.InitializeAsync("AwesomeAvatars", "Organizer");
             await TreasurerTypedStorage.InitializeAsync("AwesomeAvatars", "Treasurer");
-            await CurrentSeasonIdTypedStorage.InitializeAsync("AwesomeAvatars", "CurrentSeasonId");
             await CurrentSeasonStatusTypedStorage.InitializeAsync("AwesomeAvatars", "CurrentSeasonStatus");
             await SeasonsTypedStorage.InitializeAsync("AwesomeAvatars", "Seasons");
             await TreasuryTypedStorage.InitializeAsync("AwesomeAvatars", "Treasury");
@@ -472,7 +470,8 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
             await OwnersTypedStorage.InitializeAsync("AwesomeAvatars", "Owners");
             await LockedAvatarsTypedStorage.InitializeAsync("AwesomeAvatars", "LockedAvatars");
             await CollectionIdTypedStorage.InitializeAsync("AwesomeAvatars", "CollectionId");
-            await AccountsTypedStorage.InitializeAsync("AwesomeAvatars", "Accounts");
+            await PlayerConfigsTypedStorage.InitializeAsync("AwesomeAvatars", "PlayerConfigs");
+            await PlayerSeasonConfigsTypedStorage.InitializeAsync("AwesomeAvatars", "PlayerSeasonConfigs");
             await SeasonStatsTypedStorage.InitializeAsync("AwesomeAvatars", "SeasonStats");
             await TradeTypedStorage.InitializeAsync("AwesomeAvatars", "Trade");
             await ServiceAccountTypedStorage.InitializeAsync("AwesomeAvatars", "ServiceAccount");
@@ -522,24 +521,6 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
             {
                 return null;
             }
-        }
-        
-        /// <summary>
-        /// Implements any storage change for AwesomeAvatars.CurrentSeasonId
-        /// </summary>
-        [StorageChange("AwesomeAvatars", "CurrentSeasonId")]
-        public void OnUpdateCurrentSeasonId(string data)
-        {
-            CurrentSeasonIdTypedStorage.Update(data);
-        }
-        
-        /// <summary>
-        /// >> CurrentSeasonId
-        ///  Contains the identifier of the current season.
-        /// </summary>
-        public Substrate.NetApi.Model.Types.Primitive.U16 GetCurrentSeasonId()
-        {
-            return CurrentSeasonIdTypedStorage.Get();
         }
         
         /// <summary>
@@ -673,13 +654,13 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
         /// <summary>
         /// >> Owners
         /// </summary>
-        public Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT30 GetOwners(string key)
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT35 GetOwners(string key)
         {
             if ((key == null))
             {
                 return null;
             }
-            if (OwnersTypedStorage.Dictionary.TryGetValue(key, out Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT30 result))
+            if (OwnersTypedStorage.Dictionary.TryGetValue(key, out Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT35 result))
             {
                 return result;
             }
@@ -735,24 +716,52 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
         }
         
         /// <summary>
-        /// Implements any storage change for AwesomeAvatars.Accounts
+        /// Implements any storage change for AwesomeAvatars.PlayerConfigs
         /// </summary>
-        [StorageChange("AwesomeAvatars", "Accounts")]
-        public void OnUpdateAccounts(string key, string data)
+        [StorageChange("AwesomeAvatars", "PlayerConfigs")]
+        public void OnUpdatePlayerConfigs(string key, string data)
         {
-            AccountsTypedStorage.Update(key, data);
+            PlayerConfigsTypedStorage.Update(key, data);
         }
         
         /// <summary>
-        /// >> Accounts
+        /// >> PlayerConfigs
         /// </summary>
-        public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.AccountInfo GetAccounts(string key)
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.PlayerConfig GetPlayerConfigs(string key)
         {
             if ((key == null))
             {
                 return null;
             }
-            if (AccountsTypedStorage.Dictionary.TryGetValue(key, out Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.AccountInfo result))
+            if (PlayerConfigsTypedStorage.Dictionary.TryGetValue(key, out Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.PlayerConfig result))
+            {
+                return result;
+            }
+            else
+            {
+                return null;
+            }
+        }
+        
+        /// <summary>
+        /// Implements any storage change for AwesomeAvatars.PlayerSeasonConfigs
+        /// </summary>
+        [StorageChange("AwesomeAvatars", "PlayerSeasonConfigs")]
+        public void OnUpdatePlayerSeasonConfigs(string key, string data)
+        {
+            PlayerSeasonConfigsTypedStorage.Update(key, data);
+        }
+        
+        /// <summary>
+        /// >> PlayerSeasonConfigs
+        /// </summary>
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.PlayerSeasonConfig GetPlayerSeasonConfigs(string key)
+        {
+            if ((key == null))
+            {
+                return null;
+            }
+            if (PlayerSeasonConfigsTypedStorage.Dictionary.TryGetValue(key, out Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.PlayerSeasonConfig result))
             {
                 return result;
             }
@@ -847,13 +856,13 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
         /// <summary>
         /// >> Preparation
         /// </summary>
-        public Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT5 GetPreparation(string key)
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9 GetPreparation(string key)
         {
             if ((key == null))
             {
                 return null;
             }
-            if (PreparationTypedStorage.Dictionary.TryGetValue(key, out Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT5 result))
+            if (PreparationTypedStorage.Dictionary.TryGetValue(key, out Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9 result))
             {
                 return result;
             }

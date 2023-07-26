@@ -18,7 +18,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
     
     
     /// <summary>
-    /// >> 111 - Composite[pallet_ajuna_awesome_avatars.types.config.MintConfig]
+    /// >> 132 - Composite[pallet_ajuna_awesome_avatars.types.config.MintConfig]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class MintConfig : BaseType
@@ -28,11 +28,6 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
         /// >> open
         /// </summary>
         private Substrate.NetApi.Model.Types.Primitive.Bool _open;
-        
-        /// <summary>
-        /// >> fees
-        /// </summary>
-        private Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.MintFees _fees;
         
         /// <summary>
         /// >> cooldown
@@ -53,18 +48,6 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
             set
             {
                 this._open = value;
-            }
-        }
-        
-        public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.MintFees Fees
-        {
-            get
-            {
-                return this._fees;
-            }
-            set
-            {
-                this._fees = value;
             }
         }
         
@@ -101,7 +84,6 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
         {
             var result = new List<byte>();
             result.AddRange(Open.Encode());
-            result.AddRange(Fees.Encode());
             result.AddRange(Cooldown.Encode());
             result.AddRange(FreeMintFeeMultiplier.Encode());
             return result.ToArray();
@@ -112,8 +94,6 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
             var start = p;
             Open = new Substrate.NetApi.Model.Types.Primitive.Bool();
             Open.Decode(byteArray, ref p);
-            Fees = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.MintFees();
-            Fees.Decode(byteArray, ref p);
             Cooldown = new Substrate.NetApi.Model.Types.Primitive.U32();
             Cooldown.Decode(byteArray, ref p);
             FreeMintFeeMultiplier = new Substrate.NetApi.Model.Types.Primitive.U16();

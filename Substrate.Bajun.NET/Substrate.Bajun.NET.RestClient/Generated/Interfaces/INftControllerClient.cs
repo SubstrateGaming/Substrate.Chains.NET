@@ -14,8 +14,8 @@ namespace Substrate.Bajun.NET.RestClient.Generated.Interfaces
    using Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types;
    using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.NetApi.Model.Types.Base;
-   using Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
-   using Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_btree_set;
+   using Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
+   using Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set;
    
    public interface INftControllerClient
    {
@@ -35,8 +35,8 @@ namespace Substrate.Bajun.NET.RestClient.Generated.Interfaces
       Task<bool> SubscribeCollectionMetadataOf(U32 key);
       Task<ItemMetadata> GetItemMetadataOf(BaseTuple<U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> key);
       Task<bool> SubscribeItemMetadataOf(BaseTuple<U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> key);
-      Task<BaseTuple<BoundedVecT8, AttributeDeposit>> GetAttribute(BaseTuple<U32, BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256>, Substrate.Bajun.NET.NetApiExt.Generated.Model.frame_support.traits.tokens.misc.EnumAttributeNamespace, BoundedVecT7> key);
-      Task<bool> SubscribeAttribute(BaseTuple<U32, BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256>, Substrate.Bajun.NET.NetApiExt.Generated.Model.frame_support.traits.tokens.misc.EnumAttributeNamespace, BoundedVecT7> key);
+      Task<BaseTuple<BoundedVecT12, AttributeDeposit>> GetAttribute(BaseTuple<U32, BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256>, EnumAttributeNamespace, BoundedVecT11> key);
+      Task<bool> SubscribeAttribute(BaseTuple<U32, BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256>, EnumAttributeNamespace, BoundedVecT11> key);
       Task<BaseTuple<U128, BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>>> GetItemPriceOf(BaseTuple<U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> key);
       Task<bool> SubscribeItemPriceOf(BaseTuple<U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> key);
       Task<BoundedBTreeSetT2> GetItemAttributesApprovalsOf(BaseTuple<U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> key);

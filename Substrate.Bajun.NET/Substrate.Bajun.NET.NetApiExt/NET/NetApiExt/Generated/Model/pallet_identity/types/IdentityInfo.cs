@@ -18,7 +18,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_identity.types
     
     
     /// <summary>
-    /// >> 194 - Composite[pallet_identity.types.IdentityInfo]
+    /// >> 219 - Composite[pallet_identity.types.IdentityInfo]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class IdentityInfo : BaseType
@@ -27,7 +27,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_identity.types
         /// <summary>
         /// >> additional
         /// </summary>
-        private Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT10 _additional;
+        private Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT14 _additional;
         
         /// <summary>
         /// >> display
@@ -69,7 +69,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_identity.types
         /// </summary>
         private Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData _twitter;
         
-        public Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT10 Additional
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT14 Additional
         {
             get
             {
@@ -200,7 +200,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_identity.types
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Additional = new Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT10();
+            Additional = new Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT14();
             Additional.Decode(byteArray, ref p);
             Display = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData();
             Display.Decode(byteArray, ref p);

@@ -12,7 +12,7 @@ namespace Substrate.Bajun.NET.RestClient.Generated.Clients
    using System;
    using System.Threading.Tasks;
    using System.Net.Http;
-   using Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.Bajun.NET.RestClient.Generated.Interfaces;
    
@@ -25,17 +25,17 @@ namespace Substrate.Bajun.NET.RestClient.Generated.Clients
          _httpClient = httpClient;
          _subscriptionClient = subscriptionClient;
       }
-      public async Task<BoundedVecT23> GetInvulnerables()
+      public async Task<BoundedVecT27> GetInvulnerables()
       {
-         return await SendRequestAsync<BoundedVecT23>(_httpClient, "collatorselection/invulnerables");
+         return await SendRequestAsync<BoundedVecT27>(_httpClient, "collatorselection/invulnerables");
       }
       public async Task<bool> SubscribeInvulnerables()
       {
          return await _subscriptionClient.SubscribeAsync("CollatorSelection.Invulnerables");
       }
-      public async Task<BoundedVecT24> GetCandidates()
+      public async Task<BoundedVecT28> GetCandidates()
       {
-         return await SendRequestAsync<BoundedVecT24>(_httpClient, "collatorselection/candidates");
+         return await SendRequestAsync<BoundedVecT28>(_httpClient, "collatorselection/candidates");
       }
       public async Task<bool> SubscribeCandidates()
       {

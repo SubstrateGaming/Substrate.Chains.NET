@@ -18,7 +18,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types
     
     
     /// <summary>
-    /// >> 433 - Composite[pallet_nfts.types.ItemMetadata]
+    /// >> 477 - Composite[pallet_nfts.types.ItemMetadata]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class ItemMetadata : BaseType
@@ -27,14 +27,14 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types
         /// <summary>
         /// >> deposit
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U128 _deposit;
+        private Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.ItemMetadataDeposit _deposit;
         
         /// <summary>
         /// >> data
         /// </summary>
-        private Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT6 _data;
+        private Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10 _data;
         
-        public Substrate.NetApi.Model.Types.Primitive.U128 Deposit
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.ItemMetadataDeposit Deposit
         {
             get
             {
@@ -46,7 +46,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types
             }
         }
         
-        public Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT6 Data
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10 Data
         {
             get
             {
@@ -74,9 +74,9 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Deposit = new Substrate.NetApi.Model.Types.Primitive.U128();
+            Deposit = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.ItemMetadataDeposit();
             Deposit.Decode(byteArray, ref p);
-            Data = new Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT6();
+            Data = new Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10();
             Data.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

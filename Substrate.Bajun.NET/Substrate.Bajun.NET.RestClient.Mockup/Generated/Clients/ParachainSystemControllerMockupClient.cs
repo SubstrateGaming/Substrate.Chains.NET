@@ -14,14 +14,14 @@ namespace Substrate.Bajun.NET.RestClient.Mockup.Generated.Clients
    using System.Net.Http;
    using Substrate.NetApi.Model.Types.Base;
    using Substrate.NetApi.Model.Types.Primitive;
-   using Substrate.Bajun.NET.NetApiExt.Generated.Model.polkadot_primitives.v2;
+   using Substrate.Bajun.NET.NetApiExt.Generated.Model.polkadot_primitives.v4;
    using Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_trie.storage_proof;
    using Substrate.Bajun.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.relay_state_snapshot;
    using Substrate.Bajun.NET.NetApiExt.Generated.Model.cumulus_primitives_parachain_inherent;
    using Substrate.Bajun.NET.NetApiExt.Generated.Types.Base;
    using Substrate.Bajun.NET.NetApiExt.Generated.Model.polkadot_core_primitives;
    using Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_weights.weight_v2;
-   using Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types;
+   using Substrate.Bajun.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system;
    using Substrate.Bajun.NET.RestClient.Mockup.Generated.Interfaces;
    
    public sealed class ParachainSystemControllerMockupClient : MockupBaseClient, IParachainSystemControllerMockupClient
@@ -107,7 +107,7 @@ namespace Substrate.Bajun.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "ParachainSystem/ReservedDmpWeightOverride", value.Encode(), Substrate.Bajun.NET.NetApiExt.Generated.Storage.ParachainSystemStorage.ReservedDmpWeightOverrideParams());
       }
-      public async Task<bool> SetAuthorizedUpgrade(H256 value)
+      public async Task<bool> SetAuthorizedUpgrade(CodeUpgradeAuthorization value)
       {
          return await SendMockupRequestAsync(_httpClient, "ParachainSystem/AuthorizedUpgrade", value.Encode(), Substrate.Bajun.NET.NetApiExt.Generated.Storage.ParachainSystemStorage.AuthorizedUpgradeParams());
       }

@@ -18,7 +18,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
     
     
     /// <summary>
-    /// >> 114 - Composite[pallet_ajuna_awesome_avatars.types.config.TransferConfig]
+    /// >> 134 - Composite[pallet_ajuna_awesome_avatars.types.config.TransferConfig]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class TransferConfig : BaseType
@@ -38,11 +38,6 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
         /// >> min_free_mint_transfer
         /// </summary>
         private Substrate.NetApi.Model.Types.Primitive.U16 _minFreeMintTransfer;
-        
-        /// <summary>
-        /// >> avatar_transfer_fee
-        /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U128 _avatarTransferFee;
         
         public Substrate.NetApi.Model.Types.Primitive.Bool Open
         {
@@ -80,18 +75,6 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
             }
         }
         
-        public Substrate.NetApi.Model.Types.Primitive.U128 AvatarTransferFee
-        {
-            get
-            {
-                return this._avatarTransferFee;
-            }
-            set
-            {
-                this._avatarTransferFee = value;
-            }
-        }
-        
         public override string TypeName()
         {
             return "TransferConfig";
@@ -103,7 +86,6 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
             result.AddRange(Open.Encode());
             result.AddRange(FreeMintTransferFee.Encode());
             result.AddRange(MinFreeMintTransfer.Encode());
-            result.AddRange(AvatarTransferFee.Encode());
             return result.ToArray();
         }
         
@@ -116,8 +98,6 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
             FreeMintTransferFee.Decode(byteArray, ref p);
             MinFreeMintTransfer = new Substrate.NetApi.Model.Types.Primitive.U16();
             MinFreeMintTransfer.Decode(byteArray, ref p);
-            AvatarTransferFee = new Substrate.NetApi.Model.Types.Primitive.U128();
-            AvatarTransferFee.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];

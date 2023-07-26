@@ -18,7 +18,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.polkadot_parachain.primi
     
     
     /// <summary>
-    /// >> 151 - Composite[polkadot_parachain.primitives.HeadData]
+    /// >> 174 - Composite[polkadot_parachain.primitives.HeadData]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class HeadData : BaseType

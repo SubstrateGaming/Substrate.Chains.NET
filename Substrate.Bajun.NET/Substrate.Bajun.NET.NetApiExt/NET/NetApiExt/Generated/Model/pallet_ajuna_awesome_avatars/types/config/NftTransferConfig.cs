@@ -18,7 +18,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
     
     
     /// <summary>
-    /// >> 117 - Composite[pallet_ajuna_awesome_avatars.types.config.NftTransferConfig]
+    /// >> 136 - Composite[pallet_ajuna_awesome_avatars.types.config.NftTransferConfig]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class NftTransferConfig : BaseType
@@ -28,11 +28,6 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
         /// >> open
         /// </summary>
         private Substrate.NetApi.Model.Types.Primitive.Bool _open;
-        
-        /// <summary>
-        /// >> prepare_fee
-        /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U128 _prepareFee;
         
         public Substrate.NetApi.Model.Types.Primitive.Bool Open
         {
@@ -46,18 +41,6 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
             }
         }
         
-        public Substrate.NetApi.Model.Types.Primitive.U128 PrepareFee
-        {
-            get
-            {
-                return this._prepareFee;
-            }
-            set
-            {
-                this._prepareFee = value;
-            }
-        }
-        
         public override string TypeName()
         {
             return "NftTransferConfig";
@@ -67,7 +50,6 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
         {
             var result = new List<byte>();
             result.AddRange(Open.Encode());
-            result.AddRange(PrepareFee.Encode());
             return result.ToArray();
         }
         
@@ -76,8 +58,6 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
             var start = p;
             Open = new Substrate.NetApi.Model.Types.Primitive.Bool();
             Open.Decode(byteArray, ref p);
-            PrepareFee = new Substrate.NetApi.Model.Types.Primitive.U128();
-            PrepareFee.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];

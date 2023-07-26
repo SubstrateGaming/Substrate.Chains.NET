@@ -30,7 +30,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_treasury.pallet
     }
     
     /// <summary>
-    /// >> 397 - Variant[pallet_treasury.pallet.Error]
+    /// >> 437 - Variant[pallet_treasury.pallet.Error]
     /// Error for the treasury pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>

@@ -18,7 +18,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
     
     
     /// <summary>
-    /// >> 411 - Composite[pallet_ajuna_awesome_avatars.types.account.PlayStats]
+    /// >> 454 - Composite[pallet_ajuna_awesome_avatars.types.account.PlayStats]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class PlayStats : BaseType
@@ -37,7 +37,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
         /// <summary>
         /// >> seasons_participated
         /// </summary>
-        private Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_btree_set.BoundedBTreeSetT1 _seasonsParticipated;
+        private Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSetT1 _seasonsParticipated;
         
         public Substrate.NetApi.Model.Types.Primitive.U32 First
         {
@@ -63,7 +63,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
             }
         }
         
-        public Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_btree_set.BoundedBTreeSetT1 SeasonsParticipated
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSetT1 SeasonsParticipated
         {
             get
             {
@@ -96,7 +96,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
             First.Decode(byteArray, ref p);
             Last = new Substrate.NetApi.Model.Types.Primitive.U32();
             Last.Decode(byteArray, ref p);
-            SeasonsParticipated = new Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_btree_set.BoundedBTreeSetT1();
+            SeasonsParticipated = new Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSetT1();
             SeasonsParticipated.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

@@ -26,13 +26,13 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.cumulus_pallet_xcm.palle
     }
     
     /// <summary>
-    /// >> 94 - Variant[cumulus_pallet_xcm.pallet.Event]
+    /// >> 111 - Variant[cumulus_pallet_xcm.pallet.Event]
     /// 
     ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
     ///			by this pallet.
     ///			
     /// </summary>
-    public sealed class EnumEvent : BaseEnumExt<Event, Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.Arr8U8, Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.Arr8U8, BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.Arr8U8, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.v2.traits.EnumOutcome>>
+    public sealed class EnumEvent : BaseEnumExt<Event, Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.Arr32U8, Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.Arr32U8, BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.Arr32U8, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.v3.traits.EnumOutcome>>
     {
     }
 }

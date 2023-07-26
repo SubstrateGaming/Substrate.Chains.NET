@@ -18,26 +18,26 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types
     
     
     /// <summary>
-    /// >> 298 - Composite[pallet_nfts.types.MintWitness]
+    /// >> 315 - Composite[pallet_nfts.types.MintWitness]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class MintWitness : BaseType
     {
         
         /// <summary>
-        /// >> owner_of_item
+        /// >> owned_item
         /// </summary>
-        private Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 _ownerOfItem;
+        private Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 _ownedItem;
         
-        public Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 OwnerOfItem
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 OwnedItem
         {
             get
             {
-                return this._ownerOfItem;
+                return this._ownedItem;
             }
             set
             {
-                this._ownerOfItem = value;
+                this._ownedItem = value;
             }
         }
         
@@ -49,15 +49,15 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types
         public override byte[] Encode()
         {
             var result = new List<byte>();
-            result.AddRange(OwnerOfItem.Encode());
+            result.AddRange(OwnedItem.Encode());
             return result.ToArray();
         }
         
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            OwnerOfItem = new Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256();
-            OwnerOfItem.Decode(byteArray, ref p);
+            OwnedItem = new Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256();
+            OwnedItem.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];

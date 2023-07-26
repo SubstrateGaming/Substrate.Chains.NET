@@ -12,7 +12,7 @@ namespace Substrate.Bajun.NET.RestClient.Generated.Clients
    using System;
    using System.Threading.Tasks;
    using System.Net.Http;
-   using Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    using Substrate.Bajun.NET.RestClient.Generated.Interfaces;
    
    public sealed class AuraExtControllerClient : BaseClient, IAuraExtControllerClient
@@ -24,9 +24,9 @@ namespace Substrate.Bajun.NET.RestClient.Generated.Clients
          _httpClient = httpClient;
          _subscriptionClient = subscriptionClient;
       }
-      public async Task<BoundedVecT25> GetAuthorities()
+      public async Task<BoundedVecT29> GetAuthorities()
       {
-         return await SendRequestAsync<BoundedVecT25>(_httpClient, "auraext/authorities");
+         return await SendRequestAsync<BoundedVecT29>(_httpClient, "auraext/authorities");
       }
       public async Task<bool> SubscribeAuthorities()
       {

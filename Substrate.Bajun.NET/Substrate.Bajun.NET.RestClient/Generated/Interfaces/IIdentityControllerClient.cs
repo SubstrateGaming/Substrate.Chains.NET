@@ -15,7 +15,7 @@ namespace Substrate.Bajun.NET.RestClient.Generated.Interfaces
    using Substrate.NetApi.Model.Types.Base;
    using Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto;
    using Substrate.NetApi.Model.Types.Primitive;
-   using Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    
    public interface IIdentityControllerClient
    {
@@ -23,9 +23,9 @@ namespace Substrate.Bajun.NET.RestClient.Generated.Interfaces
       Task<bool> SubscribeIdentityOf(AccountId32 key);
       Task<BaseTuple<AccountId32, EnumData>> GetSuperOf(AccountId32 key);
       Task<bool> SubscribeSuperOf(AccountId32 key);
-      Task<BaseTuple<U128, BoundedVecT13>> GetSubsOf(AccountId32 key);
+      Task<BaseTuple<U128, BoundedVecT17>> GetSubsOf(AccountId32 key);
       Task<bool> SubscribeSubsOf(AccountId32 key);
-      Task<BoundedVecT14> GetRegistrars();
+      Task<BoundedVecT18> GetRegistrars();
       Task<bool> SubscribeRegistrars();
    }
 }

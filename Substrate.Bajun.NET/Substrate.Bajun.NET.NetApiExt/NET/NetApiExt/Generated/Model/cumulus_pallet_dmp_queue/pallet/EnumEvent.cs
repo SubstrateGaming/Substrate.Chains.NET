@@ -29,16 +29,18 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.cumulus_pallet_dmp_queue
         OverweightEnqueued = 4,
         
         OverweightServiced = 5,
+        
+        MaxMessagesExhausted = 6,
     }
     
     /// <summary>
-    /// >> 95 - Variant[cumulus_pallet_dmp_queue.pallet.Event]
+    /// >> 112 - Variant[cumulus_pallet_dmp_queue.pallet.Event]
     /// 
     ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
     ///			by this pallet.
     ///			
     /// </summary>
-    public sealed class EnumEvent : BaseEnumExt<Event, Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.Arr32U8, Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.Arr32U8, BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.Arr32U8, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.v2.traits.EnumOutcome>, BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.Arr32U8, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>, BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.Arr32U8, Substrate.NetApi.Model.Types.Primitive.U64, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U64, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>>
+    public sealed class EnumEvent : BaseEnumExt<Event, Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.Arr32U8, Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.Arr32U8, BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.Arr32U8, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.v3.traits.EnumOutcome>, BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.Arr32U8, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>, BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.Arr32U8, Substrate.NetApi.Model.Types.Primitive.U64, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U64, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>, Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.Arr32U8>
     {
     }
 }

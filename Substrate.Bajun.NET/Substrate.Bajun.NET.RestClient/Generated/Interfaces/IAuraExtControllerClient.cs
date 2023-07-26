@@ -11,11 +11,11 @@ namespace Substrate.Bajun.NET.RestClient.Generated.Interfaces
 {
    using System;
    using System.Threading.Tasks;
-   using Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    
    public interface IAuraExtControllerClient
    {
-      Task<BoundedVecT25> GetAuthorities();
+      Task<BoundedVecT29> GetAuthorities();
       Task<bool> SubscribeAuthorities();
    }
 }

@@ -12,11 +12,11 @@ namespace Substrate.Bajun.NET.RestClient.Mockup.Generated.Interfaces
    using System;
    using System.Threading.Tasks;
    using Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_preimage;
-   using Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    
    public interface IPreimageControllerMockupClient
    {
       Task<bool> SetStatusFor(EnumRequestStatus value, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 key);
-      Task<bool> SetPreimageFor(BoundedVecT19 value, Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Primitive.U32> key);
+      Task<bool> SetPreimageFor(BoundedVecT23 value, Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Primitive.U32> key);
    }
 }

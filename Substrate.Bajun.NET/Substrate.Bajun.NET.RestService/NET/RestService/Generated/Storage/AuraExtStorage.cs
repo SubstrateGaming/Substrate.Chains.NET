@@ -32,7 +32,7 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
         ///  but we require the old authorities to verify the seal when validating a PoV. This will always
         ///  be updated to the latest AuRa authorities in `on_finalize`.
         /// </summary>
-        Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT25 GetAuthorities();
+        Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT29 GetAuthorities();
     }
     
     /// <summary>
@@ -44,20 +44,20 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
         /// <summary>
         /// _authoritiesTypedStorage typed storage field
         /// </summary>
-        private TypedStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT25> _authoritiesTypedStorage;
+        private TypedStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT29> _authoritiesTypedStorage;
         
         /// <summary>
         /// AuraExtStorage constructor.
         /// </summary>
         public AuraExtStorage(IStorageDataProvider storageDataProvider, List<IStorageChangeDelegate> storageChangeDelegates)
         {
-            this.AuthoritiesTypedStorage = new TypedStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT25>("AuraExt.Authorities", storageDataProvider, storageChangeDelegates);
+            this.AuthoritiesTypedStorage = new TypedStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT29>("AuraExt.Authorities", storageDataProvider, storageChangeDelegates);
         }
         
         /// <summary>
         /// _authoritiesTypedStorage property
         /// </summary>
-        public TypedStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT25> AuthoritiesTypedStorage
+        public TypedStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT29> AuthoritiesTypedStorage
         {
             get
             {
@@ -94,7 +94,7 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
         ///  but we require the old authorities to verify the seal when validating a PoV. This will always
         ///  be updated to the latest AuRa authorities in `on_finalize`.
         /// </summary>
-        public Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT25 GetAuthorities()
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT29 GetAuthorities()
         {
             return AuthoritiesTypedStorage.Get();
         }

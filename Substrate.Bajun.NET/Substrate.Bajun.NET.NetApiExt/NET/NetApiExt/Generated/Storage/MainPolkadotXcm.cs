@@ -30,6 +30,407 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         public PolkadotXcmStorage(SubstrateClientExt client)
         {
             this._client = client;
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("PolkadotXcm", "QueryCounter"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Primitive.U64)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("PolkadotXcm", "Queries"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.NetApi.Model.Types.Primitive.U64), typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_xcm.pallet.EnumQueryStatus)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("PolkadotXcm", "AssetTraps"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.Identity}, typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256), typeof(Substrate.NetApi.Model.Types.Primitive.U32)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("PolkadotXcm", "SafeXcmVersion"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Primitive.U32)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("PolkadotXcm", "SupportedVersion"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat,
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation>), typeof(Substrate.NetApi.Model.Types.Primitive.U32)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("PolkadotXcm", "VersionNotifiers"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat,
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation>), typeof(Substrate.NetApi.Model.Types.Primitive.U64)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("PolkadotXcm", "VersionNotifyTargets"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat,
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation>), typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U64, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight, Substrate.NetApi.Model.Types.Primitive.U32>)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("PolkadotXcm", "VersionDiscoveryQueue"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT30)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("PolkadotXcm", "CurrentMigration"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_xcm.pallet.EnumVersionMigrationStage)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("PolkadotXcm", "RemoteLockedFungibles"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat,
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat,
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAssetId>), typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_xcm.pallet.RemoteLockedFungibleRecord)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("PolkadotXcm", "LockedFungibles"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32), typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT31)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("PolkadotXcm", "XcmExecutionSuspended"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Primitive.Bool)));
+        }
+        
+        /// <summary>
+        /// >> QueryCounterParams
+        ///  The latest available query index.
+        /// </summary>
+        public static string QueryCounterParams()
+        {
+            return RequestGenerator.GetStorage("PolkadotXcm", "QueryCounter", Substrate.NetApi.Model.Meta.Storage.Type.Plain);
+        }
+        
+        /// <summary>
+        /// >> QueryCounterDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string QueryCounterDefault()
+        {
+            return "0x0000000000000000";
+        }
+        
+        /// <summary>
+        /// >> QueryCounter
+        ///  The latest available query index.
+        /// </summary>
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U64> QueryCounter(CancellationToken token)
+        {
+            string parameters = PolkadotXcmStorage.QueryCounterParams();
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U64>(parameters, token);
+            return result;
+        }
+        
+        /// <summary>
+        /// >> QueriesParams
+        ///  The ongoing queries.
+        /// </summary>
+        public static string QueriesParams(Substrate.NetApi.Model.Types.Primitive.U64 key)
+        {
+            return RequestGenerator.GetStorage("PolkadotXcm", "Queries", Substrate.NetApi.Model.Meta.Storage.Type.Map, new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
+                        Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, new Substrate.NetApi.Model.Types.IType[] {
+                        key});
+        }
+        
+        /// <summary>
+        /// >> QueriesDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string QueriesDefault()
+        {
+            return "0x00";
+        }
+        
+        /// <summary>
+        /// >> Queries
+        ///  The ongoing queries.
+        /// </summary>
+        public async Task<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_xcm.pallet.EnumQueryStatus> Queries(Substrate.NetApi.Model.Types.Primitive.U64 key, CancellationToken token)
+        {
+            string parameters = PolkadotXcmStorage.QueriesParams(key);
+            var result = await _client.GetStorageAsync<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_xcm.pallet.EnumQueryStatus>(parameters, token);
+            return result;
+        }
+        
+        /// <summary>
+        /// >> AssetTrapsParams
+        ///  The existing asset traps.
+        /// 
+        ///  Key is the blake2 256 hash of (origin, versioned `MultiAssets`) pair. Value is the number of
+        ///  times this pair has been trapped (usually just 1 if it exists at all).
+        /// </summary>
+        public static string AssetTrapsParams(Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 key)
+        {
+            return RequestGenerator.GetStorage("PolkadotXcm", "AssetTraps", Substrate.NetApi.Model.Meta.Storage.Type.Map, new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
+                        Substrate.NetApi.Model.Meta.Storage.Hasher.Identity}, new Substrate.NetApi.Model.Types.IType[] {
+                        key});
+        }
+        
+        /// <summary>
+        /// >> AssetTrapsDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string AssetTrapsDefault()
+        {
+            return "0x00000000";
+        }
+        
+        /// <summary>
+        /// >> AssetTraps
+        ///  The existing asset traps.
+        /// 
+        ///  Key is the blake2 256 hash of (origin, versioned `MultiAssets`) pair. Value is the number of
+        ///  times this pair has been trapped (usually just 1 if it exists at all).
+        /// </summary>
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> AssetTraps(Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 key, CancellationToken token)
+        {
+            string parameters = PolkadotXcmStorage.AssetTrapsParams(key);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, token);
+            return result;
+        }
+        
+        /// <summary>
+        /// >> SafeXcmVersionParams
+        ///  Default version to encode XCM when latest version of destination is unknown. If `None`,
+        ///  then the destinations whose XCM version is unknown are considered unreachable.
+        /// </summary>
+        public static string SafeXcmVersionParams()
+        {
+            return RequestGenerator.GetStorage("PolkadotXcm", "SafeXcmVersion", Substrate.NetApi.Model.Meta.Storage.Type.Plain);
+        }
+        
+        /// <summary>
+        /// >> SafeXcmVersionDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string SafeXcmVersionDefault()
+        {
+            return "0x00";
+        }
+        
+        /// <summary>
+        /// >> SafeXcmVersion
+        ///  Default version to encode XCM when latest version of destination is unknown. If `None`,
+        ///  then the destinations whose XCM version is unknown are considered unreachable.
+        /// </summary>
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> SafeXcmVersion(CancellationToken token)
+        {
+            string parameters = PolkadotXcmStorage.SafeXcmVersionParams();
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, token);
+            return result;
+        }
+        
+        /// <summary>
+        /// >> SupportedVersionParams
+        ///  The Latest versions that we know various locations support.
+        /// </summary>
+        public static string SupportedVersionParams(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation> key)
+        {
+            return RequestGenerator.GetStorage("PolkadotXcm", "SupportedVersion", Substrate.NetApi.Model.Meta.Storage.Type.Map, new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
+                        Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat,
+                        Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, key.Value);
+        }
+        
+        /// <summary>
+        /// >> SupportedVersionDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string SupportedVersionDefault()
+        {
+            return "0x00";
+        }
+        
+        /// <summary>
+        /// >> SupportedVersion
+        ///  The Latest versions that we know various locations support.
+        /// </summary>
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> SupportedVersion(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation> key, CancellationToken token)
+        {
+            string parameters = PolkadotXcmStorage.SupportedVersionParams(key);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, token);
+            return result;
+        }
+        
+        /// <summary>
+        /// >> VersionNotifiersParams
+        ///  All locations that we have requested version notifications from.
+        /// </summary>
+        public static string VersionNotifiersParams(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation> key)
+        {
+            return RequestGenerator.GetStorage("PolkadotXcm", "VersionNotifiers", Substrate.NetApi.Model.Meta.Storage.Type.Map, new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
+                        Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat,
+                        Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, key.Value);
+        }
+        
+        /// <summary>
+        /// >> VersionNotifiersDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string VersionNotifiersDefault()
+        {
+            return "0x00";
+        }
+        
+        /// <summary>
+        /// >> VersionNotifiers
+        ///  All locations that we have requested version notifications from.
+        /// </summary>
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U64> VersionNotifiers(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation> key, CancellationToken token)
+        {
+            string parameters = PolkadotXcmStorage.VersionNotifiersParams(key);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U64>(parameters, token);
+            return result;
+        }
+        
+        /// <summary>
+        /// >> VersionNotifyTargetsParams
+        ///  The target locations that are subscribed to our version changes, as well as the most recent
+        ///  of our versions we informed them of.
+        /// </summary>
+        public static string VersionNotifyTargetsParams(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation> key)
+        {
+            return RequestGenerator.GetStorage("PolkadotXcm", "VersionNotifyTargets", Substrate.NetApi.Model.Meta.Storage.Type.Map, new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
+                        Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat,
+                        Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, key.Value);
+        }
+        
+        /// <summary>
+        /// >> VersionNotifyTargetsDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string VersionNotifyTargetsDefault()
+        {
+            return "0x00";
+        }
+        
+        /// <summary>
+        /// >> VersionNotifyTargets
+        ///  The target locations that are subscribed to our version changes, as well as the most recent
+        ///  of our versions we informed them of.
+        /// </summary>
+        public async Task<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U64, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight, Substrate.NetApi.Model.Types.Primitive.U32>> VersionNotifyTargets(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation> key, CancellationToken token)
+        {
+            string parameters = PolkadotXcmStorage.VersionNotifyTargetsParams(key);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U64, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight, Substrate.NetApi.Model.Types.Primitive.U32>>(parameters, token);
+            return result;
+        }
+        
+        /// <summary>
+        /// >> VersionDiscoveryQueueParams
+        ///  Destinations whose latest XCM version we would like to know. Duplicates not allowed, and
+        ///  the `u32` counter is the number of times that a send to the destination has been attempted,
+        ///  which is used as a prioritization.
+        /// </summary>
+        public static string VersionDiscoveryQueueParams()
+        {
+            return RequestGenerator.GetStorage("PolkadotXcm", "VersionDiscoveryQueue", Substrate.NetApi.Model.Meta.Storage.Type.Plain);
+        }
+        
+        /// <summary>
+        /// >> VersionDiscoveryQueueDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string VersionDiscoveryQueueDefault()
+        {
+            return "0x00";
+        }
+        
+        /// <summary>
+        /// >> VersionDiscoveryQueue
+        ///  Destinations whose latest XCM version we would like to know. Duplicates not allowed, and
+        ///  the `u32` counter is the number of times that a send to the destination has been attempted,
+        ///  which is used as a prioritization.
+        /// </summary>
+        public async Task<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT30> VersionDiscoveryQueue(CancellationToken token)
+        {
+            string parameters = PolkadotXcmStorage.VersionDiscoveryQueueParams();
+            var result = await _client.GetStorageAsync<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT30>(parameters, token);
+            return result;
+        }
+        
+        /// <summary>
+        /// >> CurrentMigrationParams
+        ///  The current migration's stage, if any.
+        /// </summary>
+        public static string CurrentMigrationParams()
+        {
+            return RequestGenerator.GetStorage("PolkadotXcm", "CurrentMigration", Substrate.NetApi.Model.Meta.Storage.Type.Plain);
+        }
+        
+        /// <summary>
+        /// >> CurrentMigrationDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string CurrentMigrationDefault()
+        {
+            return "0x00";
+        }
+        
+        /// <summary>
+        /// >> CurrentMigration
+        ///  The current migration's stage, if any.
+        /// </summary>
+        public async Task<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_xcm.pallet.EnumVersionMigrationStage> CurrentMigration(CancellationToken token)
+        {
+            string parameters = PolkadotXcmStorage.CurrentMigrationParams();
+            var result = await _client.GetStorageAsync<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_xcm.pallet.EnumVersionMigrationStage>(parameters, token);
+            return result;
+        }
+        
+        /// <summary>
+        /// >> RemoteLockedFungiblesParams
+        ///  Fungible assets which we know are locked on a remote chain.
+        /// </summary>
+        public static string RemoteLockedFungiblesParams(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAssetId> key)
+        {
+            return RequestGenerator.GetStorage("PolkadotXcm", "RemoteLockedFungibles", Substrate.NetApi.Model.Meta.Storage.Type.Map, new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
+                        Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat,
+                        Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat,
+                        Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, key.Value);
+        }
+        
+        /// <summary>
+        /// >> RemoteLockedFungiblesDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string RemoteLockedFungiblesDefault()
+        {
+            return "0x00";
+        }
+        
+        /// <summary>
+        /// >> RemoteLockedFungibles
+        ///  Fungible assets which we know are locked on a remote chain.
+        /// </summary>
+        public async Task<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_xcm.pallet.RemoteLockedFungibleRecord> RemoteLockedFungibles(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAssetId> key, CancellationToken token)
+        {
+            string parameters = PolkadotXcmStorage.RemoteLockedFungiblesParams(key);
+            var result = await _client.GetStorageAsync<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_xcm.pallet.RemoteLockedFungibleRecord>(parameters, token);
+            return result;
+        }
+        
+        /// <summary>
+        /// >> LockedFungiblesParams
+        ///  Fungible assets which we know are locked on this chain.
+        /// </summary>
+        public static string LockedFungiblesParams(Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+        {
+            return RequestGenerator.GetStorage("PolkadotXcm", "LockedFungibles", Substrate.NetApi.Model.Meta.Storage.Type.Map, new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
+                        Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, new Substrate.NetApi.Model.Types.IType[] {
+                        key});
+        }
+        
+        /// <summary>
+        /// >> LockedFungiblesDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string LockedFungiblesDefault()
+        {
+            return "0x00";
+        }
+        
+        /// <summary>
+        /// >> LockedFungibles
+        ///  Fungible assets which we know are locked on this chain.
+        /// </summary>
+        public async Task<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT31> LockedFungibles(Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, CancellationToken token)
+        {
+            string parameters = PolkadotXcmStorage.LockedFungiblesParams(key);
+            var result = await _client.GetStorageAsync<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT31>(parameters, token);
+            return result;
+        }
+        
+        /// <summary>
+        /// >> XcmExecutionSuspendedParams
+        ///  Global suspension state of the XCM executor.
+        /// </summary>
+        public static string XcmExecutionSuspendedParams()
+        {
+            return RequestGenerator.GetStorage("PolkadotXcm", "XcmExecutionSuspended", Substrate.NetApi.Model.Meta.Storage.Type.Plain);
+        }
+        
+        /// <summary>
+        /// >> XcmExecutionSuspendedDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string XcmExecutionSuspendedDefault()
+        {
+            return "0x00";
+        }
+        
+        /// <summary>
+        /// >> XcmExecutionSuspended
+        ///  Global suspension state of the XCM executor.
+        /// </summary>
+        public async Task<Substrate.NetApi.Model.Types.Primitive.Bool> XcmExecutionSuspended(CancellationToken token)
+        {
+            string parameters = PolkadotXcmStorage.XcmExecutionSuspendedParams();
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.Bool>(parameters, token);
+            return result;
         }
     }
     
@@ -80,7 +481,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         /// >> execute
         /// Contains one variant per dispatchable that can be called by an extrinsic.
         /// </summary>
-        public static Method Execute(Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedXcm message, Substrate.NetApi.Model.Types.Primitive.U64 max_weight)
+        public static Method Execute(Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedXcm message, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight max_weight)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(message.Encode());
@@ -92,7 +493,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         /// >> force_xcm_version
         /// Contains one variant per dispatchable that can be called by an extrinsic.
         /// </summary>
-        public static Method ForceXcmVersion(Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.v1.multilocation.MultiLocation location, Substrate.NetApi.Model.Types.Primitive.U32 xcm_version)
+        public static Method ForceXcmVersion(Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.v3.multilocation.MultiLocation location, Substrate.NetApi.Model.Types.Primitive.U32 xcm_version)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(location.Encode());
@@ -137,7 +538,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         /// >> limited_reserve_transfer_assets
         /// Contains one variant per dispatchable that can be called by an extrinsic.
         /// </summary>
-        public static Method LimitedReserveTransferAssets(Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation dest, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation beneficiary, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiAssets assets, Substrate.NetApi.Model.Types.Primitive.U32 fee_asset_item, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.v2.EnumWeightLimit weight_limit)
+        public static Method LimitedReserveTransferAssets(Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation dest, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation beneficiary, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiAssets assets, Substrate.NetApi.Model.Types.Primitive.U32 fee_asset_item, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.v3.EnumWeightLimit weight_limit)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(dest.Encode());
@@ -152,7 +553,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         /// >> limited_teleport_assets
         /// Contains one variant per dispatchable that can be called by an extrinsic.
         /// </summary>
-        public static Method LimitedTeleportAssets(Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation dest, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation beneficiary, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiAssets assets, Substrate.NetApi.Model.Types.Primitive.U32 fee_asset_item, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.v2.EnumWeightLimit weight_limit)
+        public static Method LimitedTeleportAssets(Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation dest, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation beneficiary, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiAssets assets, Substrate.NetApi.Model.Types.Primitive.U32 fee_asset_item, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.v3.EnumWeightLimit weight_limit)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(dest.Encode());
@@ -161,6 +562,17 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
             byteArray.AddRange(fee_asset_item.Encode());
             byteArray.AddRange(weight_limit.Encode());
             return new Method(31, "PolkadotXcm", 9, "limited_teleport_assets", byteArray.ToArray());
+        }
+        
+        /// <summary>
+        /// >> force_suspension
+        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// </summary>
+        public static Method ForceSuspension(Substrate.NetApi.Model.Types.Primitive.Bool suspended)
+        {
+            System.Collections.Generic.List<byte> byteArray = new List<byte>();
+            byteArray.AddRange(suspended.Encode());
+            return new Method(31, "PolkadotXcm", 10, "force_suspension", byteArray.ToArray());
         }
     }
     
@@ -251,5 +663,47 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         /// The location is invalid since it already has a subscription from us.
         /// </summary>
         AlreadySubscribed,
+        
+        /// <summary>
+        /// >> InvalidAsset
+        /// Invalid asset for the operation.
+        /// </summary>
+        InvalidAsset,
+        
+        /// <summary>
+        /// >> LowBalance
+        /// The owner does not own (all) of the asset that they wish to do the operation on.
+        /// </summary>
+        LowBalance,
+        
+        /// <summary>
+        /// >> TooManyLocks
+        /// The asset owner has too many locks on the asset.
+        /// </summary>
+        TooManyLocks,
+        
+        /// <summary>
+        /// >> AccountNotSovereign
+        /// The given account is not an identifiable sovereign account for any location.
+        /// </summary>
+        AccountNotSovereign,
+        
+        /// <summary>
+        /// >> FeesNotMet
+        /// The operation required fees to be paid which the initiator could not meet.
+        /// </summary>
+        FeesNotMet,
+        
+        /// <summary>
+        /// >> LockNotFound
+        /// A remote lock with the corresponding data could not be found.
+        /// </summary>
+        LockNotFound,
+        
+        /// <summary>
+        /// >> InUse
+        /// The unlock operation cannot succeed because there are still users of the lock.
+        /// </summary>
+        InUse,
     }
 }

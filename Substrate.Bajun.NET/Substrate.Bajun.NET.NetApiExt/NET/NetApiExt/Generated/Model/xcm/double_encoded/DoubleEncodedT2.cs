@@ -18,7 +18,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.double_encoded
     
     
     /// <summary>
-    /// >> 268 - Composite[xcm.double_encoded.DoubleEncodedT2]
+    /// >> 289 - Composite[xcm.double_encoded.DoubleEncodedT2]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class DoubleEncodedT2 : BaseType

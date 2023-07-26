@@ -26,7 +26,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.orml_vesting.module
     }
     
     /// <summary>
-    /// >> 46 - Variant[orml_vesting.module.Event]
+    /// >> 47 - Variant[orml_vesting.module.Event]
     /// 
     ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
     ///			by this pallet.

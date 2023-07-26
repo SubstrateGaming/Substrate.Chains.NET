@@ -16,12 +16,12 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
    using Substrate.Bajun.NET.RestClient.Mockup.Generated.Clients;
    using Substrate.Bajun.NET.RestClient.Generated.Clients;
    using Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto;
-   using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.season;
+   using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config;
    using Substrate.NetApi.Model.Types.Base;
    using Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.avatar;
-   using Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    using Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account;
    
    public class AwesomeAvatarsControllerClientTest : ClientTestBase
@@ -170,39 +170,11 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      [Test()]
-      public async System.Threading.Tasks.Task TestCurrentSeasonId()
-      {
-         // Construct new Mockup client to test with.
-         AwesomeAvatarsControllerMockupClient mockupClient = new AwesomeAvatarsControllerMockupClient(_httpClient);
-
-         // Construct new subscription client to test with.
-         var subscriptionClient = CreateSubscriptionClient();
-
-         // Construct new RPC client to test with.
-         AwesomeAvatarsControllerClient rpcClient = new AwesomeAvatarsControllerClient(_httpClient, subscriptionClient);
-         Substrate.NetApi.Model.Types.Primitive.U16 mockupValue = this.GetTestValueU16();
-
-
-         Assert.IsTrue(await rpcClient.SubscribeCurrentSeasonId());
-
-         // Save the previously generated mockup value in RPC service storage.
-         bool mockupSetResult = await mockupClient.SetCurrentSeasonId(mockupValue);
-
-         // Test that the expected mockup value was handled successfully from RPC service.
-         Assert.IsTrue(mockupSetResult);
-         var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
-         Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
-
-         Substrate.NetApi.Model.Types.Primitive.U16 rpcResult = await rpcClient.GetCurrentSeasonId();
-
-         // Test that the expected mockup value matches the actual result from RPC service.
-         Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
-      }
-      public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.season.SeasonStatus GetTestValue7()
+      public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.season.SeasonStatus GetTestValue6()
       {
          Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.season.SeasonStatus result;
          result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.season.SeasonStatus();
+         result.SeasonId = this.GetTestValueU16();
          result.Early = this.GetTestValueBool();
          result.Active = this.GetTestValueBool();
          result.EarlyEnded = this.GetTestValueBool();
@@ -220,7 +192,7 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          AwesomeAvatarsControllerClient rpcClient = new AwesomeAvatarsControllerClient(_httpClient, subscriptionClient);
-         Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.season.SeasonStatus mockupValue = this.GetTestValue7();
+         Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.season.SeasonStatus mockupValue = this.GetTestValue6();
 
 
          Assert.IsTrue(await rpcClient.SubscribeCurrentSeasonStatus());
@@ -238,14 +210,14 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.season.Season GetTestValue9()
+      public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.season.Season GetTestValue8()
       {
          Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.season.Season result;
          result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.season.Season();
-         result.Name = new Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT1();
-         result.Name = this.GetTestValue10();
-         result.Description = new Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT2();
-         result.Description = this.GetTestValue11();
+         result.Name = new Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT4();
+         result.Name = this.GetTestValue9();
+         result.Description = new Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT5();
+         result.Description = this.GetTestValue10();
          result.EarlyStart = this.GetTestValueU32();
          result.Start = this.GetTestValueU32();
          result.End = this.GetTestValueU32();
@@ -254,67 +226,106 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
          result.MaxComponents = this.GetTestValueU8();
          result.MinSacrifices = this.GetTestValueU8();
          result.MaxSacrifices = this.GetTestValueU8();
-         result.Tiers = new Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT3();
-         result.Tiers = this.GetTestValue12();
-         result.SingleMintProbs = new Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT4();
-         result.SingleMintProbs = this.GetTestValue14();
-         result.BatchMintProbs = new Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT4();
-         result.BatchMintProbs = this.GetTestValue15();
+         result.Tiers = new Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT6();
+         result.Tiers = this.GetTestValue11();
+         result.SingleMintProbs = new Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT7();
+         result.SingleMintProbs = this.GetTestValue13();
+         result.BatchMintProbs = new Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT7();
+         result.BatchMintProbs = this.GetTestValue14();
          result.BaseProb = this.GetTestValueU8();
          result.PerPeriod = this.GetTestValueU32();
          result.Periods = this.GetTestValueU16();
+         result.TradeFilters = new Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT8();
+         result.TradeFilters = this.GetTestValue15();
+         result.Fee = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.fee.Fee();
+         result.Fee = this.GetTestValue16();
+         result.MintLogic = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.avatar.EnumLogicGeneration();
+         result.MintLogic.Create(this.GetTestValueEnum<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.avatar.LogicGeneration>());
+         result.ForgeLogic = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.avatar.EnumLogicGeneration();
+         result.ForgeLogic.Create(this.GetTestValueEnum<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.avatar.LogicGeneration>());
          return result;
       }
-      public Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT1 GetTestValue10()
+      public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT4 GetTestValue9()
       {
-         Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT1 result;
-         result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT1();
+         Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT4 result;
+         result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT4();
          result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>();
          result.Value.Create(new Substrate.NetApi.Model.Types.Primitive.U8[] {
                   this.GetTestValueU8()});
          return result;
       }
-      public Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT2 GetTestValue11()
+      public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT5 GetTestValue10()
       {
-         Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT2 result;
-         result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT2();
+         Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT5 result;
+         result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT5();
          result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>();
          result.Value.Create(new Substrate.NetApi.Model.Types.Primitive.U8[] {
                   this.GetTestValueU8()});
          return result;
       }
-      public Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT3 GetTestValue12()
+      public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT6 GetTestValue11()
       {
-         Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT3 result;
-         result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT3();
+         Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT6 result;
+         result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT6();
          result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.avatar.rarity_tier.EnumRarityTier>();
          result.Value.Create(new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.avatar.rarity_tier.EnumRarityTier[] {
-                  this.GetTestValue13()});
+                  this.GetTestValue12()});
          return result;
       }
-      public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.avatar.rarity_tier.EnumRarityTier GetTestValue13()
+      public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.avatar.rarity_tier.EnumRarityTier GetTestValue12()
       {
          Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.avatar.rarity_tier.EnumRarityTier result;
          result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.avatar.rarity_tier.EnumRarityTier();
          result.Create(this.GetTestValueEnum<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.avatar.rarity_tier.RarityTier>());
          return result;
       }
-      public Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT4 GetTestValue14()
+      public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT7 GetTestValue13()
       {
-         Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT4 result;
-         result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT4();
+         Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT7 result;
+         result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT7();
          result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>();
          result.Value.Create(new Substrate.NetApi.Model.Types.Primitive.U8[] {
                   this.GetTestValueU8()});
          return result;
       }
-      public Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT4 GetTestValue15()
+      public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT7 GetTestValue14()
       {
-         Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT4 result;
-         result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT4();
+         Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT7 result;
+         result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT7();
          result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>();
          result.Value.Create(new Substrate.NetApi.Model.Types.Primitive.U8[] {
                   this.GetTestValueU8()});
+         return result;
+      }
+      public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT8 GetTestValue15()
+      {
+         Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT8 result;
+         result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT8();
+         result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U32>();
+         result.Value.Create(new Substrate.NetApi.Model.Types.Primitive.U32[] {
+                  this.GetTestValueU32()});
+         return result;
+      }
+      public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.fee.Fee GetTestValue16()
+      {
+         Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.fee.Fee result;
+         result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.fee.Fee();
+         result.Mint = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.fee.MintFees();
+         result.Mint = this.GetTestValue17();
+         result.TransferAvatar = this.GetTestValueU128();
+         result.BuyMinimum = this.GetTestValueU128();
+         result.BuyPercent = this.GetTestValueU8();
+         result.UpgradeStorage = this.GetTestValueU128();
+         result.PrepareAvatar = this.GetTestValueU128();
+         return result;
+      }
+      public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.fee.MintFees GetTestValue17()
+      {
+         Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.fee.MintFees result;
+         result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.fee.MintFees();
+         result.One = this.GetTestValueU128();
+         result.Three = this.GetTestValueU128();
+         result.Six = this.GetTestValueU128();
          return result;
       }
       [Test()]
@@ -328,7 +339,7 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          AwesomeAvatarsControllerClient rpcClient = new AwesomeAvatarsControllerClient(_httpClient, subscriptionClient);
-         Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.season.Season mockupValue = this.GetTestValue9();
+         Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.season.Season mockupValue = this.GetTestValue8();
          Substrate.NetApi.Model.Types.Primitive.U16 mockupKey = this.GetTestValueU16();
 
          Assert.IsTrue(await rpcClient.SubscribeSeasons(mockupKey));
@@ -375,75 +386,52 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.GlobalConfig GetTestValue18()
+      public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.GlobalConfig GetTestValue20()
       {
          Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.GlobalConfig result;
          result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.GlobalConfig();
          result.Mint = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.MintConfig();
-         result.Mint = this.GetTestValue19();
+         result.Mint = this.GetTestValue21();
          result.Forge = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.ForgeConfig();
-         result.Forge = this.GetTestValue21();
+         result.Forge = this.GetTestValue22();
          result.Transfer = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.TransferConfig();
-         result.Transfer = this.GetTestValue22();
+         result.Transfer = this.GetTestValue23();
          result.Trade = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.TradeConfig();
-         result.Trade = this.GetTestValue23();
-         result.Account = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.AccountConfig();
-         result.Account = this.GetTestValue24();
+         result.Trade = this.GetTestValue24();
          result.NftTransfer = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.NftTransferConfig();
          result.NftTransfer = this.GetTestValue25();
          return result;
       }
-      public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.MintConfig GetTestValue19()
+      public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.MintConfig GetTestValue21()
       {
          Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.MintConfig result;
          result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.MintConfig();
          result.Open = this.GetTestValueBool();
-         result.Fees = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.MintFees();
-         result.Fees = this.GetTestValue20();
          result.Cooldown = this.GetTestValueU32();
          result.FreeMintFeeMultiplier = this.GetTestValueU16();
          return result;
       }
-      public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.MintFees GetTestValue20()
-      {
-         Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.MintFees result;
-         result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.MintFees();
-         result.One = this.GetTestValueU128();
-         result.Three = this.GetTestValueU128();
-         result.Six = this.GetTestValueU128();
-         return result;
-      }
-      public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.ForgeConfig GetTestValue21()
+      public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.ForgeConfig GetTestValue22()
       {
          Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.ForgeConfig result;
          result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.ForgeConfig();
          result.Open = this.GetTestValueBool();
          return result;
       }
-      public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.TransferConfig GetTestValue22()
+      public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.TransferConfig GetTestValue23()
       {
          Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.TransferConfig result;
          result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.TransferConfig();
          result.Open = this.GetTestValueBool();
          result.FreeMintTransferFee = this.GetTestValueU16();
          result.MinFreeMintTransfer = this.GetTestValueU16();
-         result.AvatarTransferFee = this.GetTestValueU128();
          return result;
       }
-      public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.TradeConfig GetTestValue23()
+      public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.TradeConfig GetTestValue24()
       {
          Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.TradeConfig result;
          result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.TradeConfig();
          result.Open = this.GetTestValueBool();
-         result.MinFee = this.GetTestValueU128();
-         result.PercentFee = this.GetTestValueU8();
-         return result;
-      }
-      public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.AccountConfig GetTestValue24()
-      {
-         Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.AccountConfig result;
-         result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.AccountConfig();
-         result.StorageUpgradeFee = this.GetTestValueU128();
          return result;
       }
       public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.NftTransferConfig GetTestValue25()
@@ -451,7 +439,6 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
          Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.NftTransferConfig result;
          result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.NftTransferConfig();
          result.Open = this.GetTestValueBool();
-         result.PrepareFee = this.GetTestValueU128();
          return result;
       }
       [Test()]
@@ -465,7 +452,7 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          AwesomeAvatarsControllerClient rpcClient = new AwesomeAvatarsControllerClient(_httpClient, subscriptionClient);
-         Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.GlobalConfig mockupValue = this.GetTestValue18();
+         Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.GlobalConfig mockupValue = this.GetTestValue20();
 
 
          Assert.IsTrue(await rpcClient.SubscribeGlobalConfigs());
@@ -535,15 +522,17 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
          Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.avatar.Avatar result;
          result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.avatar.Avatar();
          result.SeasonId = this.GetTestValueU16();
-         result.Dna = new Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT1();
+         result.Encoding = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.avatar.EnumDnaEncoding();
+         result.Encoding.Create(this.GetTestValueEnum<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.avatar.DnaEncoding>());
+         result.Dna = new Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT4();
          result.Dna = this.GetTestValue30();
          result.Souls = this.GetTestValueU32();
          return result;
       }
-      public Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT1 GetTestValue30()
+      public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT4 GetTestValue30()
       {
-         Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT1 result;
-         result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT1();
+         Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT4 result;
+         result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT4();
          result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>();
          result.Value.Create(new Substrate.NetApi.Model.Types.Primitive.U8[] {
                   this.GetTestValueU8()});
@@ -618,10 +607,10 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT30 GetTestValue33()
+      public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT35 GetTestValue33()
       {
-         Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT30 result;
-         result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT30();
+         Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT35 result;
+         result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT35();
          result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256>();
          result.Value.Create(new Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256[] {
                   this.GetTestValue34()});
@@ -667,7 +656,14 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
                   this.GetTestValueU8()});
          return result;
       }
-      public Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue35()
+      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U16> GetTestValue35()
+      {
+         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U16> result;
+         result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U16>();
+         result.Create(this.GetTestValue36(), this.GetTestValueU16());
+         return result;
+      }
+      public Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue36()
       {
          Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 result;
          result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32();
@@ -718,8 +714,8 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          AwesomeAvatarsControllerClient rpcClient = new AwesomeAvatarsControllerClient(_httpClient, subscriptionClient);
-         Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT30 mockupValue = this.GetTestValue33();
-         Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 mockupKey = this.GetTestValue35();
+         Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT35 mockupValue = this.GetTestValue33();
+         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U16> mockupKey = this.GetTestValue35();
 
          Assert.IsTrue(await rpcClient.SubscribeOwners(mockupKey));
 
@@ -731,18 +727,18 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT30 rpcResult = await rpcClient.GetOwners(mockupKey);
+         Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT35 rpcResult = await rpcClient.GetOwners(mockupKey);
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.NetApi.Model.Types.Base.BaseTuple GetTestValue37()
+      public Substrate.NetApi.Model.Types.Base.BaseTuple GetTestValue38()
       {
          Substrate.NetApi.Model.Types.Base.BaseTuple result;
          result = new Substrate.NetApi.Model.Types.Base.BaseTuple();
          return result;
       }
-      public Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 GetTestValue38()
+      public Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 GetTestValue39()
       {
          Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 result;
          result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256();
@@ -793,8 +789,8 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          AwesomeAvatarsControllerClient rpcClient = new AwesomeAvatarsControllerClient(_httpClient, subscriptionClient);
-         Substrate.NetApi.Model.Types.Base.BaseTuple mockupValue = this.GetTestValue37();
-         Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 mockupKey = this.GetTestValue38();
+         Substrate.NetApi.Model.Types.Base.BaseTuple mockupValue = this.GetTestValue38();
+         Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 mockupKey = this.GetTestValue39();
 
          Assert.IsTrue(await rpcClient.SubscribeLockedAvatars(mockupKey));
 
@@ -840,92 +836,14 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.AccountInfo GetTestValue41()
+      public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.PlayerConfig GetTestValue42()
       {
-         Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.AccountInfo result;
-         result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.AccountInfo();
+         Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.PlayerConfig result;
+         result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.PlayerConfig();
          result.FreeMints = this.GetTestValueU16();
-         result.StorageTier = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.EnumStorageTier();
-         result.StorageTier.Create(this.GetTestValueEnum<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.StorageTier>());
-         result.Stats = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.Stats();
-         result.Stats = this.GetTestValue42();
          return result;
       }
-      public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.Stats GetTestValue42()
-      {
-         Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.Stats result;
-         result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.Stats();
-         result.Mint = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.PlayStats();
-         result.Mint = this.GetTestValue43();
-         result.Forge = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.PlayStats();
-         result.Forge = this.GetTestValue46();
-         result.Trade = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.TradeStats();
-         result.Trade = this.GetTestValue49();
-         return result;
-      }
-      public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.PlayStats GetTestValue43()
-      {
-         Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.PlayStats result;
-         result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.PlayStats();
-         result.First = this.GetTestValueU32();
-         result.Last = this.GetTestValueU32();
-         result.SeasonsParticipated = new Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_btree_set.BoundedBTreeSetT1();
-         result.SeasonsParticipated = this.GetTestValue44();
-         return result;
-      }
-      public Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_btree_set.BoundedBTreeSetT1 GetTestValue44()
-      {
-         Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_btree_set.BoundedBTreeSetT1 result;
-         result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_btree_set.BoundedBTreeSetT1();
-         result.Value = new Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.BTreeSetT2();
-         result.Value = this.GetTestValue45();
-         return result;
-      }
-      public Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.BTreeSetT2 GetTestValue45()
-      {
-         Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.BTreeSetT2 result;
-         result = new Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.BTreeSetT2();
-         result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U16>();
-         result.Value.Create(new Substrate.NetApi.Model.Types.Primitive.U16[] {
-                  this.GetTestValueU16()});
-         return result;
-      }
-      public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.PlayStats GetTestValue46()
-      {
-         Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.PlayStats result;
-         result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.PlayStats();
-         result.First = this.GetTestValueU32();
-         result.Last = this.GetTestValueU32();
-         result.SeasonsParticipated = new Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_btree_set.BoundedBTreeSetT1();
-         result.SeasonsParticipated = this.GetTestValue47();
-         return result;
-      }
-      public Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_btree_set.BoundedBTreeSetT1 GetTestValue47()
-      {
-         Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_btree_set.BoundedBTreeSetT1 result;
-         result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_btree_set.BoundedBTreeSetT1();
-         result.Value = new Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.BTreeSetT2();
-         result.Value = this.GetTestValue48();
-         return result;
-      }
-      public Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.BTreeSetT2 GetTestValue48()
-      {
-         Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.BTreeSetT2 result;
-         result = new Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.BTreeSetT2();
-         result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U16>();
-         result.Value.Create(new Substrate.NetApi.Model.Types.Primitive.U16[] {
-                  this.GetTestValueU16()});
-         return result;
-      }
-      public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.TradeStats GetTestValue49()
-      {
-         Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.TradeStats result;
-         result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.TradeStats();
-         result.Bought = this.GetTestValueU32();
-         result.Sold = this.GetTestValueU32();
-         return result;
-      }
-      public Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue50()
+      public Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue43()
       {
          Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 result;
          result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32();
@@ -966,7 +884,7 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
          return result;
       }
       [Test()]
-      public async System.Threading.Tasks.Task TestAccounts()
+      public async System.Threading.Tasks.Task TestPlayerConfigs()
       {
          // Construct new Mockup client to test with.
          AwesomeAvatarsControllerMockupClient mockupClient = new AwesomeAvatarsControllerMockupClient(_httpClient);
@@ -976,25 +894,185 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          AwesomeAvatarsControllerClient rpcClient = new AwesomeAvatarsControllerClient(_httpClient, subscriptionClient);
-         Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.AccountInfo mockupValue = this.GetTestValue41();
-         Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 mockupKey = this.GetTestValue50();
+         Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.PlayerConfig mockupValue = this.GetTestValue42();
+         Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 mockupKey = this.GetTestValue43();
 
-         Assert.IsTrue(await rpcClient.SubscribeAccounts(mockupKey));
+         Assert.IsTrue(await rpcClient.SubscribePlayerConfigs(mockupKey));
 
          // Save the previously generated mockup value in RPC service storage.
-         bool mockupSetResult = await mockupClient.SetAccounts(mockupValue, mockupKey);
+         bool mockupSetResult = await mockupClient.SetPlayerConfigs(mockupValue, mockupKey);
 
          // Test that the expected mockup value was handled successfully from RPC service.
          Assert.IsTrue(mockupSetResult);
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.AccountInfo rpcResult = await rpcClient.GetAccounts(mockupKey);
+         Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.PlayerConfig rpcResult = await rpcClient.GetPlayerConfigs(mockupKey);
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.SeasonInfo GetTestValue52()
+      public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.PlayerSeasonConfig GetTestValue45()
+      {
+         Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.PlayerSeasonConfig result;
+         result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.PlayerSeasonConfig();
+         result.StorageTier = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.EnumStorageTier();
+         result.StorageTier.Create(this.GetTestValueEnum<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.StorageTier>());
+         result.Stats = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.Stats();
+         result.Stats = this.GetTestValue46();
+         return result;
+      }
+      public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.Stats GetTestValue46()
+      {
+         Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.Stats result;
+         result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.Stats();
+         result.Mint = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.PlayStats();
+         result.Mint = this.GetTestValue47();
+         result.Forge = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.PlayStats();
+         result.Forge = this.GetTestValue50();
+         result.Trade = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.TradeStats();
+         result.Trade = this.GetTestValue53();
+         return result;
+      }
+      public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.PlayStats GetTestValue47()
+      {
+         Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.PlayStats result;
+         result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.PlayStats();
+         result.First = this.GetTestValueU32();
+         result.Last = this.GetTestValueU32();
+         result.SeasonsParticipated = new Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSetT1();
+         result.SeasonsParticipated = this.GetTestValue48();
+         return result;
+      }
+      public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSetT1 GetTestValue48()
+      {
+         Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSetT1 result;
+         result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSetT1();
+         result.Value = new Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.BTreeSetT2();
+         result.Value = this.GetTestValue49();
+         return result;
+      }
+      public Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.BTreeSetT2 GetTestValue49()
+      {
+         Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.BTreeSetT2 result;
+         result = new Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.BTreeSetT2();
+         result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U16>();
+         result.Value.Create(new Substrate.NetApi.Model.Types.Primitive.U16[] {
+                  this.GetTestValueU16()});
+         return result;
+      }
+      public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.PlayStats GetTestValue50()
+      {
+         Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.PlayStats result;
+         result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.PlayStats();
+         result.First = this.GetTestValueU32();
+         result.Last = this.GetTestValueU32();
+         result.SeasonsParticipated = new Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSetT1();
+         result.SeasonsParticipated = this.GetTestValue51();
+         return result;
+      }
+      public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSetT1 GetTestValue51()
+      {
+         Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSetT1 result;
+         result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSetT1();
+         result.Value = new Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.BTreeSetT2();
+         result.Value = this.GetTestValue52();
+         return result;
+      }
+      public Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.BTreeSetT2 GetTestValue52()
+      {
+         Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.BTreeSetT2 result;
+         result = new Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.BTreeSetT2();
+         result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U16>();
+         result.Value.Create(new Substrate.NetApi.Model.Types.Primitive.U16[] {
+                  this.GetTestValueU16()});
+         return result;
+      }
+      public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.TradeStats GetTestValue53()
+      {
+         Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.TradeStats result;
+         result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.TradeStats();
+         result.Bought = this.GetTestValueU32();
+         result.Sold = this.GetTestValueU32();
+         return result;
+      }
+      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U16> GetTestValue54()
+      {
+         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U16> result;
+         result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U16>();
+         result.Create(this.GetTestValue55(), this.GetTestValueU16());
+         return result;
+      }
+      public Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue55()
+      {
+         Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 result;
+         result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32();
+         result.Value = new Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.Arr32U8();
+         result.Value.Create(new Substrate.NetApi.Model.Types.Primitive.U8[] {
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8()});
+         return result;
+      }
+      [Test()]
+      public async System.Threading.Tasks.Task TestPlayerSeasonConfigs()
+      {
+         // Construct new Mockup client to test with.
+         AwesomeAvatarsControllerMockupClient mockupClient = new AwesomeAvatarsControllerMockupClient(_httpClient);
+
+         // Construct new subscription client to test with.
+         var subscriptionClient = CreateSubscriptionClient();
+
+         // Construct new RPC client to test with.
+         AwesomeAvatarsControllerClient rpcClient = new AwesomeAvatarsControllerClient(_httpClient, subscriptionClient);
+         Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.PlayerSeasonConfig mockupValue = this.GetTestValue45();
+         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U16> mockupKey = this.GetTestValue54();
+
+         Assert.IsTrue(await rpcClient.SubscribePlayerSeasonConfigs(mockupKey));
+
+         // Save the previously generated mockup value in RPC service storage.
+         bool mockupSetResult = await mockupClient.SetPlayerSeasonConfigs(mockupValue, mockupKey);
+
+         // Test that the expected mockup value was handled successfully from RPC service.
+         Assert.IsTrue(mockupSetResult);
+         var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
+         Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
+
+         Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.PlayerSeasonConfig rpcResult = await rpcClient.GetPlayerSeasonConfigs(mockupKey);
+
+         // Test that the expected mockup value matches the actual result from RPC service.
+         Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
+      }
+      public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.SeasonInfo GetTestValue57()
       {
          Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.SeasonInfo result;
          result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.SeasonInfo();
@@ -1002,14 +1080,14 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
          result.Forged = this.GetTestValueU32();
          return result;
       }
-      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U16, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> GetTestValue53()
+      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U16, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> GetTestValue58()
       {
          Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U16, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> result;
          result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U16, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>();
-         result.Create(this.GetTestValueU16(), this.GetTestValue54());
+         result.Create(this.GetTestValueU16(), this.GetTestValue59());
          return result;
       }
-      public Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue54()
+      public Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue59()
       {
          Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 result;
          result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32();
@@ -1060,8 +1138,8 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          AwesomeAvatarsControllerClient rpcClient = new AwesomeAvatarsControllerClient(_httpClient, subscriptionClient);
-         Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.SeasonInfo mockupValue = this.GetTestValue52();
-         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U16, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> mockupKey = this.GetTestValue53();
+         Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.SeasonInfo mockupValue = this.GetTestValue57();
+         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U16, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> mockupKey = this.GetTestValue58();
 
          Assert.IsTrue(await rpcClient.SubscribeSeasonStats(mockupKey));
 
@@ -1078,7 +1156,14 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 GetTestValue56()
+      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U16, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> GetTestValue61()
+      {
+         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U16, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> result;
+         result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U16, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256>();
+         result.Create(this.GetTestValueU16(), this.GetTestValue62());
+         return result;
+      }
+      public Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 GetTestValue62()
       {
          Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 result;
          result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256();
@@ -1130,7 +1215,7 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
          // Construct new RPC client to test with.
          AwesomeAvatarsControllerClient rpcClient = new AwesomeAvatarsControllerClient(_httpClient, subscriptionClient);
          Substrate.NetApi.Model.Types.Primitive.U128 mockupValue = this.GetTestValueU128();
-         Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 mockupKey = this.GetTestValue56();
+         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U16, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> mockupKey = this.GetTestValue61();
 
          Assert.IsTrue(await rpcClient.SubscribeTrade(mockupKey));
 
@@ -1147,7 +1232,7 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue58()
+      public Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue64()
       {
          Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 result;
          result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32();
@@ -1198,7 +1283,7 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          AwesomeAvatarsControllerClient rpcClient = new AwesomeAvatarsControllerClient(_httpClient, subscriptionClient);
-         Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 mockupValue = this.GetTestValue58();
+         Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 mockupValue = this.GetTestValue64();
 
 
          Assert.IsTrue(await rpcClient.SubscribeServiceAccount());
@@ -1216,16 +1301,16 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT5 GetTestValue60()
+      public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9 GetTestValue66()
       {
-         Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT5 result;
-         result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT5();
+         Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9 result;
+         result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9();
          result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>();
          result.Value.Create(new Substrate.NetApi.Model.Types.Primitive.U8[] {
                   this.GetTestValueU8()});
          return result;
       }
-      public Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 GetTestValue61()
+      public Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 GetTestValue67()
       {
          Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 result;
          result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256();
@@ -1276,8 +1361,8 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          AwesomeAvatarsControllerClient rpcClient = new AwesomeAvatarsControllerClient(_httpClient, subscriptionClient);
-         Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT5 mockupValue = this.GetTestValue60();
-         Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 mockupKey = this.GetTestValue61();
+         Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9 mockupValue = this.GetTestValue66();
+         Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 mockupKey = this.GetTestValue67();
 
          Assert.IsTrue(await rpcClient.SubscribePreparation(mockupKey));
 
@@ -1289,7 +1374,7 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT5 rpcResult = await rpcClient.GetPreparation(mockupKey);
+         Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9 rpcResult = await rpcClient.GetPreparation(mockupKey);
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());

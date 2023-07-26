@@ -11,12 +11,12 @@ namespace Substrate.Bajun.NET.RestClient.Mockup.Generated.Interfaces
 {
    using System;
    using System.Threading.Tasks;
-   using Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    using Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto;
    
    public interface ICouncilMembershipControllerMockupClient
    {
-      Task<bool> SetMembers(BoundedVecT28 value);
+      Task<bool> SetMembers(BoundedVecT33 value);
       Task<bool> SetPrime(AccountId32 value);
    }
 }

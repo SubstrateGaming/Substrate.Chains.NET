@@ -11,7 +11,7 @@ namespace Substrate.Bajun.NET.RestClient.Generated.Interfaces
 {
    using System;
    using System.Threading.Tasks;
-   using Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    using Substrate.Bajun.NET.NetApiExt.Generated.Model.bajun_runtime;
    using Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_collective;
    using Substrate.NetApi.Model.Types.Primitive;
@@ -20,7 +20,7 @@ namespace Substrate.Bajun.NET.RestClient.Generated.Interfaces
    
    public interface ICouncilControllerClient
    {
-      Task<BoundedVecT27> GetProposals();
+      Task<BoundedVecT32> GetProposals();
       Task<bool> SubscribeProposals();
       Task<EnumRuntimeCall> GetProposalOf(Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 key);
       Task<bool> SubscribeProposalOf(Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 key);

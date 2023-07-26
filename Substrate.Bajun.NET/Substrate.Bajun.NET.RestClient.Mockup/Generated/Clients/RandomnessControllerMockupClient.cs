@@ -12,7 +12,7 @@ namespace Substrate.Bajun.NET.RestClient.Mockup.Generated.Clients
    using System;
    using System.Threading.Tasks;
    using System.Net.Http;
-   using Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    using Substrate.Bajun.NET.RestClient.Mockup.Generated.Interfaces;
    
    public sealed class RandomnessControllerMockupClient : MockupBaseClient, IRandomnessControllerMockupClient
@@ -22,7 +22,7 @@ namespace Substrate.Bajun.NET.RestClient.Mockup.Generated.Clients
       {
          _httpClient = httpClient;
       }
-      public async Task<bool> SetRandomMaterial(BoundedVecT29 value)
+      public async Task<bool> SetRandomMaterial(BoundedVecT34 value)
       {
          return await SendMockupRequestAsync(_httpClient, "Randomness/RandomMaterial", value.Encode(), Substrate.Bajun.NET.NetApiExt.Generated.Storage.RandomnessStorage.RandomMaterialParams());
       }

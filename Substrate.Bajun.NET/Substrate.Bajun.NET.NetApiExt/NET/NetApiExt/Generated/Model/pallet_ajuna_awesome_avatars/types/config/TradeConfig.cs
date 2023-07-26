@@ -18,7 +18,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
     
     
     /// <summary>
-    /// >> 115 - Composite[pallet_ajuna_awesome_avatars.types.config.TradeConfig]
+    /// >> 135 - Composite[pallet_ajuna_awesome_avatars.types.config.TradeConfig]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class TradeConfig : BaseType
@@ -28,16 +28,6 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
         /// >> open
         /// </summary>
         private Substrate.NetApi.Model.Types.Primitive.Bool _open;
-        
-        /// <summary>
-        /// >> min_fee
-        /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U128 _minFee;
-        
-        /// <summary>
-        /// >> percent_fee
-        /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U8 _percentFee;
         
         public Substrate.NetApi.Model.Types.Primitive.Bool Open
         {
@@ -51,30 +41,6 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
             }
         }
         
-        public Substrate.NetApi.Model.Types.Primitive.U128 MinFee
-        {
-            get
-            {
-                return this._minFee;
-            }
-            set
-            {
-                this._minFee = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U8 PercentFee
-        {
-            get
-            {
-                return this._percentFee;
-            }
-            set
-            {
-                this._percentFee = value;
-            }
-        }
-        
         public override string TypeName()
         {
             return "TradeConfig";
@@ -84,8 +50,6 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
         {
             var result = new List<byte>();
             result.AddRange(Open.Encode());
-            result.AddRange(MinFee.Encode());
-            result.AddRange(PercentFee.Encode());
             return result.ToArray();
         }
         
@@ -94,10 +58,6 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
             var start = p;
             Open = new Substrate.NetApi.Model.Types.Primitive.Bool();
             Open.Decode(byteArray, ref p);
-            MinFee = new Substrate.NetApi.Model.Types.Primitive.U128();
-            MinFee.Decode(byteArray, ref p);
-            PercentFee = new Substrate.NetApi.Model.Types.Primitive.U8();
-            PercentFee.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];

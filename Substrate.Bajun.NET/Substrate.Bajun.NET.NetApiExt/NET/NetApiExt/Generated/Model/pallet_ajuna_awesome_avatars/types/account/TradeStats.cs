@@ -18,7 +18,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
     
     
     /// <summary>
-    /// >> 415 - Composite[pallet_ajuna_awesome_avatars.types.account.TradeStats]
+    /// >> 458 - Composite[pallet_ajuna_awesome_avatars.types.account.TradeStats]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class TradeStats : BaseType

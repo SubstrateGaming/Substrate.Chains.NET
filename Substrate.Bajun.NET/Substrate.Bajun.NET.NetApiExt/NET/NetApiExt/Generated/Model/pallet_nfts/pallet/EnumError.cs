@@ -62,37 +62,53 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.pallet
         
         UnknownSwap = 21,
         
-        NotForSale = 22,
+        MetadataNotFound = 22,
         
-        BidTooLow = 23,
+        AttributeNotFound = 23,
         
-        ReachedApprovalLimit = 24,
+        NotForSale = 24,
         
-        DeadlineExpired = 25,
+        BidTooLow = 25,
         
-        WrongDuration = 26,
+        ReachedApprovalLimit = 26,
         
-        MethodDisabled = 27,
+        DeadlineExpired = 27,
         
-        WrongSetting = 28,
+        WrongDuration = 28,
         
-        InconsistentItemConfig = 29,
+        MethodDisabled = 29,
         
-        NoConfig = 30,
+        WrongSetting = 30,
         
-        RolesNotCleared = 31,
+        InconsistentItemConfig = 31,
         
-        MintNotStarted = 32,
+        NoConfig = 32,
         
-        MintEnded = 33,
+        RolesNotCleared = 33,
         
-        AlreadyClaimed = 34,
+        MintNotStarted = 34,
         
-        IncorrectData = 35,
+        MintEnded = 35,
+        
+        AlreadyClaimed = 36,
+        
+        IncorrectData = 37,
+        
+        WrongOrigin = 38,
+        
+        WrongSignature = 39,
+        
+        IncorrectMetadata = 40,
+        
+        MaxAttributesLimitReached = 41,
+        
+        WrongNamespace = 42,
+        
+        CollectionNotEmpty = 43,
     }
     
     /// <summary>
-    /// >> 443 - Variant[pallet_nfts.pallet.Error]
+    /// >> 488 - Variant[pallet_nfts.pallet.Error]
     /// 
     ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
     ///			of this pallet.

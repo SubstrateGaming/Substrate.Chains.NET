@@ -30,7 +30,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         public RandomnessStorage(SubstrateClientExt client)
         {
             this._client = client;
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("Randomness", "RandomMaterial"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT29)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("Randomness", "RandomMaterial"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT34)));
         }
         
         /// <summary>
@@ -59,10 +59,10 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         ///  is arranged as a ring buffer with `block_number % 81` being the index into the `Vec` of
         ///  the oldest hash.
         /// </summary>
-        public async Task<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT29> RandomMaterial(CancellationToken token)
+        public async Task<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT34> RandomMaterial(CancellationToken token)
         {
             string parameters = RandomnessStorage.RandomMaterialParams();
-            var result = await _client.GetStorageAsync<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT29>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT34>(parameters, token);
             return result;
         }
     }

@@ -47,7 +47,7 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
         /// 
         ///  TWOX-NOTE: OK ��� `AccountId` is a secure hash.
         /// </summary>
-        Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT13> GetSubsOf(string key);
+        Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17> GetSubsOf(string key);
         
         /// <summary>
         /// >> Registrars
@@ -56,7 +56,7 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
         /// 
         ///  The index into this can be cast to `RegistrarIndex` to get a valid value.
         /// </summary>
-        Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT14 GetRegistrars();
+        Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18 GetRegistrars();
     }
     
     /// <summary>
@@ -78,12 +78,12 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
         /// <summary>
         /// _subsOfTypedStorage typed storage field
         /// </summary>
-        private TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT13>> _subsOfTypedStorage;
+        private TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17>> _subsOfTypedStorage;
         
         /// <summary>
         /// _registrarsTypedStorage typed storage field
         /// </summary>
-        private TypedStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT14> _registrarsTypedStorage;
+        private TypedStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18> _registrarsTypedStorage;
         
         /// <summary>
         /// IdentityStorage constructor.
@@ -92,8 +92,8 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
         {
             this.IdentityOfTypedStorage = new TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_identity.types.Registration>("Identity.IdentityOf", storageDataProvider, storageChangeDelegates);
             this.SuperOfTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData>>("Identity.SuperOf", storageDataProvider, storageChangeDelegates);
-            this.SubsOfTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT13>>("Identity.SubsOf", storageDataProvider, storageChangeDelegates);
-            this.RegistrarsTypedStorage = new TypedStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT14>("Identity.Registrars", storageDataProvider, storageChangeDelegates);
+            this.SubsOfTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17>>("Identity.SubsOf", storageDataProvider, storageChangeDelegates);
+            this.RegistrarsTypedStorage = new TypedStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18>("Identity.Registrars", storageDataProvider, storageChangeDelegates);
         }
         
         /// <summary>
@@ -129,7 +129,7 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
         /// <summary>
         /// _subsOfTypedStorage property
         /// </summary>
-        public TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT13>> SubsOfTypedStorage
+        public TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17>> SubsOfTypedStorage
         {
             get
             {
@@ -144,7 +144,7 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
         /// <summary>
         /// _registrarsTypedStorage property
         /// </summary>
-        public TypedStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT14> RegistrarsTypedStorage
+        public TypedStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18> RegistrarsTypedStorage
         {
             get
             {
@@ -245,13 +245,13 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
         /// 
         ///  TWOX-NOTE: OK ��� `AccountId` is a secure hash.
         /// </summary>
-        public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT13> GetSubsOf(string key)
+        public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17> GetSubsOf(string key)
         {
             if ((key == null))
             {
                 return null;
             }
-            if (SubsOfTypedStorage.Dictionary.TryGetValue(key, out Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT13> result))
+            if (SubsOfTypedStorage.Dictionary.TryGetValue(key, out Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17> result))
             {
                 return result;
             }
@@ -277,7 +277,7 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
         /// 
         ///  The index into this can be cast to `RegistrarIndex` to get a valid value.
         /// </summary>
-        public Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT14 GetRegistrars()
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18 GetRegistrars()
         {
             return RegistrarsTypedStorage.Get();
         }

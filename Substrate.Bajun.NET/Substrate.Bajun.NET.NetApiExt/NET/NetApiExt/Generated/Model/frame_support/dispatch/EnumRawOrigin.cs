@@ -26,7 +26,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.frame_support.dispatch
     }
     
     /// <summary>
-    /// >> 186 - Variant[frame_support.dispatch.RawOrigin]
+    /// >> 211 - Variant[frame_support.dispatch.RawOrigin]
     /// </summary>
     public sealed class EnumRawOrigin : BaseEnumExt<RawOrigin, BaseVoid, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, BaseVoid>
     {

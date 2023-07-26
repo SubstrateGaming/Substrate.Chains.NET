@@ -79,7 +79,7 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
         /// >> Attribute
         ///  Attributes of a collection.
         /// </summary>
-        Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT8, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.AttributeDeposit> GetAttribute(string key);
+        Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT12, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.AttributeDeposit> GetAttribute(string key);
         
         /// <summary>
         /// >> ItemPriceOf
@@ -91,7 +91,7 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
         /// >> ItemAttributesApprovalsOf
         ///  Item attribute approvals.
         /// </summary>
-        Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_btree_set.BoundedBTreeSetT2 GetItemAttributesApprovalsOf(string key);
+        Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSetT2 GetItemAttributesApprovalsOf(string key);
         
         /// <summary>
         /// >> NextCollectionId
@@ -168,7 +168,7 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
         /// <summary>
         /// _attributeTypedStorage typed storage field
         /// </summary>
-        private TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT8, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.AttributeDeposit>> _attributeTypedStorage;
+        private TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT12, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.AttributeDeposit>> _attributeTypedStorage;
         
         /// <summary>
         /// _itemPriceOfTypedStorage typed storage field
@@ -178,7 +178,7 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
         /// <summary>
         /// _itemAttributesApprovalsOfTypedStorage typed storage field
         /// </summary>
-        private TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_btree_set.BoundedBTreeSetT2> _itemAttributesApprovalsOfTypedStorage;
+        private TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSetT2> _itemAttributesApprovalsOfTypedStorage;
         
         /// <summary>
         /// _nextCollectionIdTypedStorage typed storage field
@@ -213,9 +213,9 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
             this.ItemTypedStorage = new TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.ItemDetails>("Nft.Item", storageDataProvider, storageChangeDelegates);
             this.CollectionMetadataOfTypedStorage = new TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.CollectionMetadata>("Nft.CollectionMetadataOf", storageDataProvider, storageChangeDelegates);
             this.ItemMetadataOfTypedStorage = new TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.ItemMetadata>("Nft.ItemMetadataOf", storageDataProvider, storageChangeDelegates);
-            this.AttributeTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT8, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.AttributeDeposit>>("Nft.Attribute", storageDataProvider, storageChangeDelegates);
+            this.AttributeTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT12, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.AttributeDeposit>>("Nft.Attribute", storageDataProvider, storageChangeDelegates);
             this.ItemPriceOfTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>>>("Nft.ItemPriceOf", storageDataProvider, storageChangeDelegates);
-            this.ItemAttributesApprovalsOfTypedStorage = new TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_btree_set.BoundedBTreeSetT2>("Nft.ItemAttributesApprovalsOf", storageDataProvider, storageChangeDelegates);
+            this.ItemAttributesApprovalsOfTypedStorage = new TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSetT2>("Nft.ItemAttributesApprovalsOf", storageDataProvider, storageChangeDelegates);
             this.NextCollectionIdTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32>("Nft.NextCollectionId", storageDataProvider, storageChangeDelegates);
             this.PendingSwapOfTypedStorage = new TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.PendingSwap>("Nft.PendingSwapOf", storageDataProvider, storageChangeDelegates);
             this.CollectionConfigOfTypedStorage = new TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.CollectionConfig>("Nft.CollectionConfigOf", storageDataProvider, storageChangeDelegates);
@@ -345,7 +345,7 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
         /// <summary>
         /// _attributeTypedStorage property
         /// </summary>
-        public TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT8, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.AttributeDeposit>> AttributeTypedStorage
+        public TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT12, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.AttributeDeposit>> AttributeTypedStorage
         {
             get
             {
@@ -375,7 +375,7 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
         /// <summary>
         /// _itemAttributesApprovalsOfTypedStorage property
         /// </summary>
-        public TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_btree_set.BoundedBTreeSetT2> ItemAttributesApprovalsOfTypedStorage
+        public TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSetT2> ItemAttributesApprovalsOfTypedStorage
         {
             get
             {
@@ -717,13 +717,13 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
         /// >> Attribute
         ///  Attributes of a collection.
         /// </summary>
-        public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT8, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.AttributeDeposit> GetAttribute(string key)
+        public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT12, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.AttributeDeposit> GetAttribute(string key)
         {
             if ((key == null))
             {
                 return null;
             }
-            if (AttributeTypedStorage.Dictionary.TryGetValue(key, out Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT8, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.AttributeDeposit> result))
+            if (AttributeTypedStorage.Dictionary.TryGetValue(key, out Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT12, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.AttributeDeposit> result))
             {
                 return result;
             }
@@ -775,13 +775,13 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
         /// >> ItemAttributesApprovalsOf
         ///  Item attribute approvals.
         /// </summary>
-        public Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_btree_set.BoundedBTreeSetT2 GetItemAttributesApprovalsOf(string key)
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSetT2 GetItemAttributesApprovalsOf(string key)
         {
             if ((key == null))
             {
                 return null;
             }
-            if (ItemAttributesApprovalsOfTypedStorage.Dictionary.TryGetValue(key, out Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_btree_set.BoundedBTreeSetT2 result))
+            if (ItemAttributesApprovalsOfTypedStorage.Dictionary.TryGetValue(key, out Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSetT2 result))
             {
                 return result;
             }

@@ -26,7 +26,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types
     }
     
     /// <summary>
-    /// >> 292 - Variant[pallet_nfts.types.MintType]
+    /// >> 309 - Variant[pallet_nfts.types.MintType]
     /// </summary>
     public sealed class EnumMintType : BaseEnumExt<MintType, BaseVoid, BaseVoid, Substrate.NetApi.Model.Types.Primitive.U32>
     {

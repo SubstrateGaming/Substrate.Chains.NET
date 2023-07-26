@@ -60,18 +60,6 @@ namespace Substrate.Bajun.NET.RestService.Generated.Controller
         }
         
         /// <summary>
-        /// >> CurrentSeasonId
-        ///  Contains the identifier of the current season.
-        /// </summary>
-        [HttpGet("CurrentSeasonId")]
-        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Primitive.U16), 200)]
-        [StorageKeyBuilder(typeof(Substrate.Bajun.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage), "CurrentSeasonIdParams")]
-        public IActionResult GetCurrentSeasonId()
-        {
-            return this.Ok(_awesomeAvatarsStorage.GetCurrentSeasonId());
-        }
-        
-        /// <summary>
         /// >> CurrentSeasonStatus
         /// </summary>
         [HttpGet("CurrentSeasonStatus")]
@@ -131,8 +119,8 @@ namespace Substrate.Bajun.NET.RestService.Generated.Controller
         /// >> Owners
         /// </summary>
         [HttpGet("Owners")]
-        [ProducesResponseType(typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT30), 200)]
-        [StorageKeyBuilder(typeof(Substrate.Bajun.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage), "OwnersParams", typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32))]
+        [ProducesResponseType(typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT35), 200)]
+        [StorageKeyBuilder(typeof(Substrate.Bajun.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage), "OwnersParams", typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U16>))]
         public IActionResult GetOwners(string key)
         {
             return this.Ok(_awesomeAvatarsStorage.GetOwners(key));
@@ -161,14 +149,25 @@ namespace Substrate.Bajun.NET.RestService.Generated.Controller
         }
         
         /// <summary>
-        /// >> Accounts
+        /// >> PlayerConfigs
         /// </summary>
-        [HttpGet("Accounts")]
-        [ProducesResponseType(typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.AccountInfo), 200)]
-        [StorageKeyBuilder(typeof(Substrate.Bajun.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage), "AccountsParams", typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32))]
-        public IActionResult GetAccounts(string key)
+        [HttpGet("PlayerConfigs")]
+        [ProducesResponseType(typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.PlayerConfig), 200)]
+        [StorageKeyBuilder(typeof(Substrate.Bajun.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage), "PlayerConfigsParams", typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32))]
+        public IActionResult GetPlayerConfigs(string key)
         {
-            return this.Ok(_awesomeAvatarsStorage.GetAccounts(key));
+            return this.Ok(_awesomeAvatarsStorage.GetPlayerConfigs(key));
+        }
+        
+        /// <summary>
+        /// >> PlayerSeasonConfigs
+        /// </summary>
+        [HttpGet("PlayerSeasonConfigs")]
+        [ProducesResponseType(typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.PlayerSeasonConfig), 200)]
+        [StorageKeyBuilder(typeof(Substrate.Bajun.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage), "PlayerSeasonConfigsParams", typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U16>))]
+        public IActionResult GetPlayerSeasonConfigs(string key)
+        {
+            return this.Ok(_awesomeAvatarsStorage.GetPlayerSeasonConfigs(key));
         }
         
         /// <summary>
@@ -187,7 +186,7 @@ namespace Substrate.Bajun.NET.RestService.Generated.Controller
         /// </summary>
         [HttpGet("Trade")]
         [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Primitive.U128), 200)]
-        [StorageKeyBuilder(typeof(Substrate.Bajun.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage), "TradeParams", typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256))]
+        [StorageKeyBuilder(typeof(Substrate.Bajun.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage), "TradeParams", typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U16, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256>))]
         public IActionResult GetTrade(string key)
         {
             return this.Ok(_awesomeAvatarsStorage.GetTrade(key));
@@ -208,7 +207,7 @@ namespace Substrate.Bajun.NET.RestService.Generated.Controller
         /// >> Preparation
         /// </summary>
         [HttpGet("Preparation")]
-        [ProducesResponseType(typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT5), 200)]
+        [ProducesResponseType(typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9), 200)]
         [StorageKeyBuilder(typeof(Substrate.Bajun.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage), "PreparationParams", typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256))]
         public IActionResult GetPreparation(string key)
         {

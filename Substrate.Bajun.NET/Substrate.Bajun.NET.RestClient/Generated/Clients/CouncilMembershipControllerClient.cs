@@ -12,7 +12,7 @@ namespace Substrate.Bajun.NET.RestClient.Generated.Clients
    using System;
    using System.Threading.Tasks;
    using System.Net.Http;
-   using Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    using Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto;
    using Substrate.Bajun.NET.RestClient.Generated.Interfaces;
    
@@ -25,9 +25,9 @@ namespace Substrate.Bajun.NET.RestClient.Generated.Clients
          _httpClient = httpClient;
          _subscriptionClient = subscriptionClient;
       }
-      public async Task<BoundedVecT28> GetMembers()
+      public async Task<BoundedVecT33> GetMembers()
       {
-         return await SendRequestAsync<BoundedVecT28>(_httpClient, "councilmembership/members");
+         return await SendRequestAsync<BoundedVecT33>(_httpClient, "councilmembership/members");
       }
       public async Task<bool> SubscribeMembers()
       {

@@ -18,15 +18,15 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
     public enum MintPackSize
     {
         
-        One = 1,
+        One = 0,
         
-        Three = 3,
+        Three = 1,
         
-        Six = 6,
+        Six = 2,
     }
     
     /// <summary>
-    /// >> 286 - Variant[pallet_ajuna_awesome_avatars.types.config.MintPackSize]
+    /// >> 303 - Variant[pallet_ajuna_awesome_avatars.types.config.MintPackSize]
     /// </summary>
     public sealed class EnumMintPackSize : BaseEnum<MintPackSize>
     {

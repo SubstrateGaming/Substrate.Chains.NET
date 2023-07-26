@@ -15,13 +15,13 @@ namespace Substrate.Bajun.NET.RestClient.Mockup.Generated.Interfaces
    using Substrate.NetApi.Model.Types.Base;
    using Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto;
    using Substrate.NetApi.Model.Types.Primitive;
-   using Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    
    public interface IIdentityControllerMockupClient
    {
       Task<bool> SetIdentityOf(Registration value, AccountId32 key);
       Task<bool> SetSuperOf(BaseTuple<AccountId32, EnumData> value, AccountId32 key);
-      Task<bool> SetSubsOf(BaseTuple<U128, BoundedVecT13> value, AccountId32 key);
-      Task<bool> SetRegistrars(BoundedVecT14 value);
+      Task<bool> SetSubsOf(BaseTuple<U128, BoundedVecT17> value, AccountId32 key);
+      Task<bool> SetRegistrars(BoundedVecT18 value);
    }
 }

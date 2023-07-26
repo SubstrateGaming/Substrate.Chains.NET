@@ -18,7 +18,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
     
     
     /// <summary>
-    /// >> 110 - Composite[pallet_ajuna_awesome_avatars.types.config.GlobalConfig]
+    /// >> 131 - Composite[pallet_ajuna_awesome_avatars.types.config.GlobalConfig]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class GlobalConfig : BaseType
@@ -43,11 +43,6 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
         /// >> trade
         /// </summary>
         private Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.TradeConfig _trade;
-        
-        /// <summary>
-        /// >> account
-        /// </summary>
-        private Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.AccountConfig _account;
         
         /// <summary>
         /// >> nft_transfer
@@ -102,18 +97,6 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
             }
         }
         
-        public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.AccountConfig Account
-        {
-            get
-            {
-                return this._account;
-            }
-            set
-            {
-                this._account = value;
-            }
-        }
-        
         public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.NftTransferConfig NftTransfer
         {
             get
@@ -138,7 +121,6 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
             result.AddRange(Forge.Encode());
             result.AddRange(Transfer.Encode());
             result.AddRange(Trade.Encode());
-            result.AddRange(Account.Encode());
             result.AddRange(NftTransfer.Encode());
             return result.ToArray();
         }
@@ -154,8 +136,6 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
             Transfer.Decode(byteArray, ref p);
             Trade = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.TradeConfig();
             Trade.Decode(byteArray, ref p);
-            Account = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.AccountConfig();
-            Account.Decode(byteArray, ref p);
             NftTransfer = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.NftTransferConfig();
             NftTransfer.Decode(byteArray, ref p);
             var bytesLength = p - start;

@@ -18,43 +18,60 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
     
     
     /// <summary>
-    /// >> 284 - Composite[pallet_ajuna_awesome_avatars.types.config.MintOption]
+    /// >> 300 - Composite[pallet_ajuna_awesome_avatars.types.config.MintOption]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class MintOption : BaseType
     {
         
         /// <summary>
-        /// >> mint_type
+        /// >> payment
         /// </summary>
-        private Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.EnumMintType _mintType;
+        private Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.EnumMintPayment _payment;
         
         /// <summary>
-        /// >> count
+        /// >> pack_type
         /// </summary>
-        private Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.EnumMintPackSize _count;
+        private Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.EnumPackType _packType;
         
-        public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.EnumMintType MintType
+        /// <summary>
+        /// >> pack_size
+        /// </summary>
+        private Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.EnumMintPackSize _packSize;
+        
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.EnumMintPayment Payment
         {
             get
             {
-                return this._mintType;
+                return this._payment;
             }
             set
             {
-                this._mintType = value;
+                this._payment = value;
             }
         }
         
-        public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.EnumMintPackSize Count
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.EnumPackType PackType
         {
             get
             {
-                return this._count;
+                return this._packType;
             }
             set
             {
-                this._count = value;
+                this._packType = value;
+            }
+        }
+        
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.EnumMintPackSize PackSize
+        {
+            get
+            {
+                return this._packSize;
+            }
+            set
+            {
+                this._packSize = value;
             }
         }
         
@@ -66,18 +83,21 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
         public override byte[] Encode()
         {
             var result = new List<byte>();
-            result.AddRange(MintType.Encode());
-            result.AddRange(Count.Encode());
+            result.AddRange(Payment.Encode());
+            result.AddRange(PackType.Encode());
+            result.AddRange(PackSize.Encode());
             return result.ToArray();
         }
         
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            MintType = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.EnumMintType();
-            MintType.Decode(byteArray, ref p);
-            Count = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.EnumMintPackSize();
-            Count.Decode(byteArray, ref p);
+            Payment = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.EnumMintPayment();
+            Payment.Decode(byteArray, ref p);
+            PackType = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.EnumPackType();
+            PackType.Decode(byteArray, ref p);
+            PackSize = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.EnumMintPackSize();
+            PackSize.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];

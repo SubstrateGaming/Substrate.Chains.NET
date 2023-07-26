@@ -18,21 +18,23 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
     public enum RarityTier
     {
         
-        Common = 0,
+        None = 0,
         
-        Uncommon = 1,
+        Common = 1,
         
-        Rare = 2,
+        Uncommon = 2,
         
-        Epic = 3,
+        Rare = 3,
         
-        Legendary = 4,
+        Epic = 4,
         
-        Mythical = 5,
+        Legendary = 5,
+        
+        Mythical = 6,
     }
     
     /// <summary>
-    /// >> 107 - Variant[pallet_ajuna_awesome_avatars.types.avatar.rarity_tier.RarityTier]
+    /// >> 123 - Variant[pallet_ajuna_awesome_avatars.types.avatar.rarity_tier.RarityTier]
     /// </summary>
     public sealed class EnumRarityTier : BaseEnum<RarityTier>
     {

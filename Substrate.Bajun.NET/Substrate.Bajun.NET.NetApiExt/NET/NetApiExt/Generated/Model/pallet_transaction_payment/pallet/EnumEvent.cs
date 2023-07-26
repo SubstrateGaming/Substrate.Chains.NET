@@ -22,7 +22,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_transaction_payme
     }
     
     /// <summary>
-    /// >> 45 - Variant[pallet_transaction_payment.pallet.Event]
+    /// >> 46 - Variant[pallet_transaction_payment.pallet.Event]
     /// 
     ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
     ///			by this pallet.

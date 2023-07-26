@@ -18,16 +18,11 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types
     
     
     /// <summary>
-    /// >> 296 - Composite[pallet_nfts.types.DestroyWitness]
+    /// >> 313 - Composite[pallet_nfts.types.DestroyWitness]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class DestroyWitness : BaseType
     {
-        
-        /// <summary>
-        /// >> items
-        /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32> _items;
         
         /// <summary>
         /// >> item_metadatas
@@ -35,21 +30,14 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types
         private Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32> _itemMetadatas;
         
         /// <summary>
+        /// >> item_configs
+        /// </summary>
+        private Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32> _itemConfigs;
+        
+        /// <summary>
         /// >> attributes
         /// </summary>
         private Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32> _attributes;
-        
-        public Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32> Items
-        {
-            get
-            {
-                return this._items;
-            }
-            set
-            {
-                this._items = value;
-            }
-        }
         
         public Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32> ItemMetadatas
         {
@@ -60,6 +48,18 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types
             set
             {
                 this._itemMetadatas = value;
+            }
+        }
+        
+        public Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32> ItemConfigs
+        {
+            get
+            {
+                return this._itemConfigs;
+            }
+            set
+            {
+                this._itemConfigs = value;
             }
         }
         
@@ -83,8 +83,8 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types
         public override byte[] Encode()
         {
             var result = new List<byte>();
-            result.AddRange(Items.Encode());
             result.AddRange(ItemMetadatas.Encode());
+            result.AddRange(ItemConfigs.Encode());
             result.AddRange(Attributes.Encode());
             return result.ToArray();
         }
@@ -92,10 +92,10 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Items = new Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>();
-            Items.Decode(byteArray, ref p);
             ItemMetadatas = new Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>();
             ItemMetadatas.Decode(byteArray, ref p);
+            ItemConfigs = new Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>();
+            ItemConfigs.Decode(byteArray, ref p);
             Attributes = new Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>();
             Attributes.Decode(byteArray, ref p);
             var bytesLength = p - start;

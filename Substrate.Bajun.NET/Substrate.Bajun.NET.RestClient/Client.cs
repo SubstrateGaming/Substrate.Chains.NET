@@ -34,6 +34,7 @@ namespace Substrate.Bajun.NET.RestClient
       public INftTransferControllerClient NftTransferControllerClient;
       public IParachainInfoControllerClient ParachainInfoControllerClient;
       public IParachainSystemControllerClient ParachainSystemControllerClient;
+      public IPolkadotXcmControllerClient PolkadotXcmControllerClient;
       public IPreimageControllerClient PreimageControllerClient;
       public IProxyControllerClient ProxyControllerClient;
       public IRandomnessControllerClient RandomnessControllerClient;
@@ -65,6 +66,7 @@ namespace Substrate.Bajun.NET.RestClient
          NftTransferControllerClient = new NftTransferControllerClient(_httpClient, _subscriptionClient);
          ParachainInfoControllerClient = new ParachainInfoControllerClient(_httpClient, _subscriptionClient);
          ParachainSystemControllerClient = new ParachainSystemControllerClient(_httpClient, _subscriptionClient);
+         PolkadotXcmControllerClient = new PolkadotXcmControllerClient(_httpClient, _subscriptionClient);
          PreimageControllerClient = new PreimageControllerClient(_httpClient, _subscriptionClient);
          ProxyControllerClient = new ProxyControllerClient(_httpClient, _subscriptionClient);
          RandomnessControllerClient = new RandomnessControllerClient(_httpClient, _subscriptionClient);

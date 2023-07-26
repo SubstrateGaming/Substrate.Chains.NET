@@ -13,9 +13,9 @@ namespace Substrate.Bajun.NET.RestClient.Generated.Clients
    using System.Threading.Tasks;
    using System.Net.Http;
    using Substrate.NetApi.Model.Types.Primitive;
-   using Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_balances;
-   using Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.weak_bounded_vec;
-   using Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_balances.types;
+   using Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec;
+   using Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    using Substrate.Bajun.NET.RestClient.Generated.Interfaces;
    
    public sealed class BalancesControllerClient : BaseClient, IBalancesControllerClient
@@ -59,13 +59,29 @@ namespace Substrate.Bajun.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("Balances.Locks", Substrate.Bajun.NET.NetApiExt.Generated.Storage.BalancesStorage.LocksParams(key));
       }
-      public async Task<BoundedVecT20> GetReserves(Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+      public async Task<BoundedVecT24> GetReserves(Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {
-         return await SendRequestAsync<BoundedVecT20>(_httpClient, "balances/reserves", Substrate.Bajun.NET.NetApiExt.Generated.Storage.BalancesStorage.ReservesParams(key));
+         return await SendRequestAsync<BoundedVecT24>(_httpClient, "balances/reserves", Substrate.Bajun.NET.NetApiExt.Generated.Storage.BalancesStorage.ReservesParams(key));
       }
       public async Task<bool> SubscribeReserves(Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {
          return await _subscriptionClient.SubscribeAsync("Balances.Reserves", Substrate.Bajun.NET.NetApiExt.Generated.Storage.BalancesStorage.ReservesParams(key));
+      }
+      public async Task<BoundedVecT25> GetHolds(Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+      {
+         return await SendRequestAsync<BoundedVecT25>(_httpClient, "balances/holds", Substrate.Bajun.NET.NetApiExt.Generated.Storage.BalancesStorage.HoldsParams(key));
+      }
+      public async Task<bool> SubscribeHolds(Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+      {
+         return await _subscriptionClient.SubscribeAsync("Balances.Holds", Substrate.Bajun.NET.NetApiExt.Generated.Storage.BalancesStorage.HoldsParams(key));
+      }
+      public async Task<BoundedVecT25> GetFreezes(Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+      {
+         return await SendRequestAsync<BoundedVecT25>(_httpClient, "balances/freezes", Substrate.Bajun.NET.NetApiExt.Generated.Storage.BalancesStorage.FreezesParams(key));
+      }
+      public async Task<bool> SubscribeFreezes(Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+      {
+         return await _subscriptionClient.SubscribeAsync("Balances.Freezes", Substrate.Bajun.NET.NetApiExt.Generated.Storage.BalancesStorage.FreezesParams(key));
       }
    }
 }

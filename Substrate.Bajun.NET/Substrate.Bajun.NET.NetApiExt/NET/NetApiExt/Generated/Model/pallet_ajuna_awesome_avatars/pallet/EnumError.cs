@@ -48,89 +48,109 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
         
         NonSequentialSeasonId = 14,
         
-        IncorrectRarityPercentages = 15,
+        SingleMintProbsOverflow = 15,
         
-        TooManyRarityPercentages = 16,
+        BatchMintProbsOverflow = 16,
         
-        DuplicatedRarityTier = 17,
+        IncorrectRarityPercentages = 17,
         
-        TooLowFees = 18,
+        TooManyRarityPercentages = 18,
         
-        MintClosed = 19,
+        BaseProbTooHigh = 19,
         
-        ForgeClosed = 20,
+        DuplicatedRarityTier = 20,
         
-        TransferClosed = 21,
+        MintClosed = 21,
         
-        TradeClosed = 22,
+        ForgeClosed = 22,
         
-        NftTransferClosed = 23,
+        TransferClosed = 23,
         
-        SeasonClosed = 24,
+        TradeClosed = 24,
         
-        PrematureSeasonEnd = 25,
+        NftTransferClosed = 25,
         
-        MaxOwnershipReached = 26,
+        SeasonClosed = 26,
         
-        MaxStorageTierReached = 27,
+        PrematureSeasonEnd = 27,
         
-        Ownership = 28,
+        MaxOwnershipReached = 28,
         
-        AlreadyOwned = 29,
+        MaxStorageTierReached = 29,
         
-        IncorrectDna = 30,
+        Ownership = 30,
         
-        IncorrectData = 31,
+        AlreadyOwned = 31,
         
-        IncorrectAvatarId = 32,
+        IncorrectDna = 32,
         
-        IncorrectSeasonId = 33,
+        IncorrectData = 33,
         
-        MintCooldown = 34,
+        IncorrectAvatarId = 34,
         
-        MaxComponentsTooLow = 35,
+        IncorrectSeasonId = 35,
         
-        MaxComponentsTooHigh = 36,
+        MintCooldown = 36,
         
-        MaxVariationsTooLow = 37,
+        MaxComponentsTooLow = 37,
         
-        MaxVariationsTooHigh = 38,
+        MaxComponentsTooHigh = 38,
         
-        InsufficientFreeMints = 39,
+        MaxVariationsTooLow = 39,
         
-        TooLowFreeMints = 40,
+        MaxVariationsTooHigh = 40,
         
-        TooFewSacrifices = 41,
+        InsufficientFreeMints = 41,
         
-        TooManySacrifices = 42,
+        InsufficientBalance = 42,
         
-        LeaderSacrificed = 43,
+        TooLowFreeMints = 43,
         
-        AvatarInTrade = 44,
+        TooFewSacrifices = 44,
         
-        AvatarLocked = 45,
+        TooManySacrifices = 45,
         
-        AvatarUnlocked = 46,
+        LeaderSacrificed = 46,
         
-        IncorrectAvatarSeason = 47,
+        AvatarCannotBeTraded = 47,
         
-        CannotTransferToSelf = 48,
+        AvatarInTrade = 48,
         
-        CannotClaimDuringSeason = 49,
+        AvatarLocked = 49,
         
-        CannotClaimZero = 50,
+        AvatarUnlocked = 50,
         
-        AlreadyPrepared = 51,
+        IncorrectAvatarSeason = 51,
         
-        NotPrepared = 52,
+        IncompatibleAvatarVersions = 52,
         
-        NoServiceAccount = 53,
+        InsufficientStorageForForging = 53,
         
-        EmptyIpfsUrl = 54,
+        CannotTransferToSelf = 54,
+        
+        CannotClaimDuringSeason = 55,
+        
+        CannotClaimZero = 56,
+        
+        IncompatibleMintComponents = 57,
+        
+        IncompatibleForgeComponents = 58,
+        
+        InsufficientSacrifices = 59,
+        
+        ExcessiveSacrifices = 60,
+        
+        AlreadyPrepared = 61,
+        
+        NotPrepared = 62,
+        
+        NoServiceAccount = 63,
+        
+        EmptyIpfsUrl = 64,
     }
     
     /// <summary>
-    /// >> 418 - Variant[pallet_ajuna_awesome_avatars.pallet.Error]
+    /// >> 462 - Variant[pallet_ajuna_awesome_avatars.pallet.Error]
     /// 
     ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
     ///			of this pallet.

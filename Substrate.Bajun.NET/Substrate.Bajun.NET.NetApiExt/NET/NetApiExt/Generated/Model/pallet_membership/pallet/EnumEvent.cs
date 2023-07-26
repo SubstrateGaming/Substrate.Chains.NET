@@ -32,7 +32,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_membership.pallet
     }
     
     /// <summary>
-    /// >> 101 - Variant[pallet_membership.pallet.Event]
+    /// >> 117 - Variant[pallet_membership.pallet.Event]
     /// 
     ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
     ///			by this pallet.

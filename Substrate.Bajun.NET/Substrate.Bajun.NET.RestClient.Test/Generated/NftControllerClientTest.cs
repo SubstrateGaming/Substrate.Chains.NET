@@ -18,8 +18,8 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
    using Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types;
    using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.NetApi.Model.Types.Base;
-   using Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
-   using Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_btree_set;
+   using Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
+   using Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set;
    
    public class NftControllerClientTest : ClientTestBase
    {
@@ -38,6 +38,7 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
          result.OwnerDeposit = this.GetTestValueU128();
          result.Items = this.GetTestValueU32();
          result.ItemMetadatas = this.GetTestValueU32();
+         result.ItemConfigs = this.GetTestValueU32();
          result.Attributes = this.GetTestValueU32();
          return result;
       }
@@ -472,7 +473,7 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
          result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.ItemDetails();
          result.Owner = new Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32();
          result.Owner = this.GetTestValue21();
-         result.Approvals = new Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_btree_map.BoundedBTreeMap();
+         result.Approvals = new Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_map.BoundedBTreeMap();
          result.Approvals = this.GetTestValue22();
          result.Deposit = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.ItemDeposit();
          result.Deposit = this.GetTestValue27();
@@ -518,10 +519,10 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
                   this.GetTestValueU8()});
          return result;
       }
-      public Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_btree_map.BoundedBTreeMap GetTestValue22()
+      public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_map.BoundedBTreeMap GetTestValue22()
       {
-         Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_btree_map.BoundedBTreeMap result;
-         result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_btree_map.BoundedBTreeMap();
+         Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_map.BoundedBTreeMap result;
+         result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_map.BoundedBTreeMap();
          result.Value = new Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.BTreeMapT3();
          result.Value = this.GetTestValue23();
          return result;
@@ -719,14 +720,14 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
          Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.CollectionMetadata result;
          result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.CollectionMetadata();
          result.Deposit = this.GetTestValueU128();
-         result.Data = new Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT6();
+         result.Data = new Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10();
          result.Data = this.GetTestValue33();
          return result;
       }
-      public Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT6 GetTestValue33()
+      public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10 GetTestValue33()
       {
-         Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT6 result;
-         result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT6();
+         Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10 result;
+         result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10();
          result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>();
          result.Value.Create(new Substrate.NetApi.Model.Types.Primitive.U8[] {
                   this.GetTestValueU8()});
@@ -765,28 +766,78 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
       {
          Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.ItemMetadata result;
          result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.ItemMetadata();
-         result.Deposit = this.GetTestValueU128();
-         result.Data = new Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT6();
-         result.Data = this.GetTestValue36();
+         result.Deposit = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.ItemMetadataDeposit();
+         result.Deposit = this.GetTestValue36();
+         result.Data = new Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10();
+         result.Data = this.GetTestValue38();
          return result;
       }
-      public Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT6 GetTestValue36()
+      public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.ItemMetadataDeposit GetTestValue36()
       {
-         Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT6 result;
-         result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT6();
+         Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.ItemMetadataDeposit result;
+         result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.ItemMetadataDeposit();
+         result.Account = new Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>();
+         result.Account.Create(this.GetTestValue37());
+         result.Amount = this.GetTestValueU128();
+         return result;
+      }
+      public Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue37()
+      {
+         Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 result;
+         result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32();
+         result.Value = new Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.Arr32U8();
+         result.Value.Create(new Substrate.NetApi.Model.Types.Primitive.U8[] {
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8()});
+         return result;
+      }
+      public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10 GetTestValue38()
+      {
+         Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10 result;
+         result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10();
          result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>();
          result.Value.Create(new Substrate.NetApi.Model.Types.Primitive.U8[] {
                   this.GetTestValueU8()});
          return result;
       }
-      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> GetTestValue37()
+      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> GetTestValue39()
       {
          Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> result;
          result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256>();
-         result.Create(this.GetTestValueU32(), this.GetTestValue38());
+         result.Create(this.GetTestValueU32(), this.GetTestValue40());
          return result;
       }
-      public Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 GetTestValue38()
+      public Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 GetTestValue40()
       {
          Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 result;
          result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256();
@@ -838,7 +889,7 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
          // Construct new RPC client to test with.
          NftControllerClient rpcClient = new NftControllerClient(_httpClient, subscriptionClient);
          Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.ItemMetadata mockupValue = this.GetTestValue35();
-         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> mockupKey = this.GetTestValue37();
+         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> mockupKey = this.GetTestValue39();
 
          Assert.IsTrue(await rpcClient.SubscribeItemMetadataOf(mockupKey));
 
@@ -855,32 +906,32 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT8, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.AttributeDeposit> GetTestValue40()
+      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT12, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.AttributeDeposit> GetTestValue42()
       {
-         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT8, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.AttributeDeposit> result;
-         result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT8, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.AttributeDeposit>();
-         result.Create(this.GetTestValue41(), this.GetTestValue42());
+         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT12, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.AttributeDeposit> result;
+         result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT12, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.AttributeDeposit>();
+         result.Create(this.GetTestValue43(), this.GetTestValue44());
          return result;
       }
-      public Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT8 GetTestValue41()
+      public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT12 GetTestValue43()
       {
-         Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT8 result;
-         result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT8();
+         Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT12 result;
+         result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT12();
          result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>();
          result.Value.Create(new Substrate.NetApi.Model.Types.Primitive.U8[] {
                   this.GetTestValueU8()});
          return result;
       }
-      public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.AttributeDeposit GetTestValue42()
+      public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.AttributeDeposit GetTestValue44()
       {
          Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.AttributeDeposit result;
          result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.AttributeDeposit();
          result.Account = new Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>();
-         result.Account.Create(this.GetTestValue43());
+         result.Account.Create(this.GetTestValue45());
          result.Amount = this.GetTestValueU128();
          return result;
       }
-      public Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue43()
+      public Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue45()
       {
          Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 result;
          result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32();
@@ -920,21 +971,21 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
                   this.GetTestValueU8()});
          return result;
       }
-      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256>, Substrate.Bajun.NET.NetApiExt.Generated.Model.frame_support.traits.tokens.misc.EnumAttributeNamespace, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT7> GetTestValue44()
+      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256>, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.EnumAttributeNamespace, Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT11> GetTestValue46()
       {
-         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256>, Substrate.Bajun.NET.NetApiExt.Generated.Model.frame_support.traits.tokens.misc.EnumAttributeNamespace, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT7> result;
-         result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256>, Substrate.Bajun.NET.NetApiExt.Generated.Model.frame_support.traits.tokens.misc.EnumAttributeNamespace, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT7>();
-         result.Create(this.GetTestValueU32(), this.GetTestValue45(), this.GetTestValue47(), this.GetTestValue48());
+         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256>, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.EnumAttributeNamespace, Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT11> result;
+         result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256>, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.EnumAttributeNamespace, Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT11>();
+         result.Create(this.GetTestValueU32(), this.GetTestValue47(), this.GetTestValue49(), this.GetTestValue50());
          return result;
       }
-      public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> GetTestValue45()
+      public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> GetTestValue47()
       {
          Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> result;
          result = new Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256>();
-         result.Create(this.GetTestValue46());
+         result.Create(this.GetTestValue48());
          return result;
       }
-      public Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 GetTestValue46()
+      public Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 GetTestValue48()
       {
          Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 result;
          result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256();
@@ -974,17 +1025,17 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
                   this.GetTestValueU8()});
          return result;
       }
-      public Substrate.Bajun.NET.NetApiExt.Generated.Model.frame_support.traits.tokens.misc.EnumAttributeNamespace GetTestValue47()
+      public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.EnumAttributeNamespace GetTestValue49()
       {
-         Substrate.Bajun.NET.NetApiExt.Generated.Model.frame_support.traits.tokens.misc.EnumAttributeNamespace result;
-         result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.frame_support.traits.tokens.misc.EnumAttributeNamespace();
-         result.Create(this.GetTestValueEnum<Substrate.Bajun.NET.NetApiExt.Generated.Model.frame_support.traits.tokens.misc.AttributeNamespace>(), this.GetTestValueBaseVoid());
+         Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.EnumAttributeNamespace result;
+         result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.EnumAttributeNamespace();
+         result.Create(this.GetTestValueEnum<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.AttributeNamespace>(), this.GetTestValueBaseVoid());
          return result;
       }
-      public Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT7 GetTestValue48()
+      public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT11 GetTestValue50()
       {
-         Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT7 result;
-         result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT7();
+         Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT11 result;
+         result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT11();
          result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>();
          result.Value.Create(new Substrate.NetApi.Model.Types.Primitive.U8[] {
                   this.GetTestValueU8()});
@@ -1001,8 +1052,8 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          NftControllerClient rpcClient = new NftControllerClient(_httpClient, subscriptionClient);
-         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT8, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.AttributeDeposit> mockupValue = this.GetTestValue40();
-         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256>, Substrate.Bajun.NET.NetApiExt.Generated.Model.frame_support.traits.tokens.misc.EnumAttributeNamespace, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT7> mockupKey = this.GetTestValue44();
+         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT12, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.AttributeDeposit> mockupValue = this.GetTestValue42();
+         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256>, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.EnumAttributeNamespace, Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT11> mockupKey = this.GetTestValue46();
 
          Assert.IsTrue(await rpcClient.SubscribeAttribute(mockupKey));
 
@@ -1014,26 +1065,26 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT8, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.AttributeDeposit> rpcResult = await rpcClient.GetAttribute(mockupKey);
+         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT12, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.AttributeDeposit> rpcResult = await rpcClient.GetAttribute(mockupKey);
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>> GetTestValue50()
+      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>> GetTestValue52()
       {
          Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>> result;
          result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>>();
-         result.Create(this.GetTestValueU128(), this.GetTestValue51());
+         result.Create(this.GetTestValueU128(), this.GetTestValue53());
          return result;
       }
-      public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> GetTestValue51()
+      public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> GetTestValue53()
       {
          Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> result;
          result = new Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>();
-         result.Create(this.GetTestValue52());
+         result.Create(this.GetTestValue54());
          return result;
       }
-      public Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue52()
+      public Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue54()
       {
          Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 result;
          result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32();
@@ -1073,14 +1124,14 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
                   this.GetTestValueU8()});
          return result;
       }
-      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> GetTestValue53()
+      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> GetTestValue55()
       {
          Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> result;
          result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256>();
-         result.Create(this.GetTestValueU32(), this.GetTestValue54());
+         result.Create(this.GetTestValueU32(), this.GetTestValue56());
          return result;
       }
-      public Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 GetTestValue54()
+      public Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 GetTestValue56()
       {
          Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 result;
          result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256();
@@ -1131,8 +1182,8 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          NftControllerClient rpcClient = new NftControllerClient(_httpClient, subscriptionClient);
-         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>> mockupValue = this.GetTestValue50();
-         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> mockupKey = this.GetTestValue53();
+         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>> mockupValue = this.GetTestValue52();
+         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> mockupKey = this.GetTestValue55();
 
          Assert.IsTrue(await rpcClient.SubscribeItemPriceOf(mockupKey));
 
@@ -1149,24 +1200,24 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_btree_set.BoundedBTreeSetT2 GetTestValue56()
+      public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSetT2 GetTestValue58()
       {
-         Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_btree_set.BoundedBTreeSetT2 result;
-         result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_btree_set.BoundedBTreeSetT2();
+         Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSetT2 result;
+         result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSetT2();
          result.Value = new Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.BTreeSetT3();
-         result.Value = this.GetTestValue57();
+         result.Value = this.GetTestValue59();
          return result;
       }
-      public Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.BTreeSetT3 GetTestValue57()
+      public Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.BTreeSetT3 GetTestValue59()
       {
          Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.BTreeSetT3 result;
          result = new Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.BTreeSetT3();
          result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>();
          result.Value.Create(new Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32[] {
-                  this.GetTestValue58()});
+                  this.GetTestValue60()});
          return result;
       }
-      public Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue58()
+      public Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue60()
       {
          Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 result;
          result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32();
@@ -1206,14 +1257,14 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
                   this.GetTestValueU8()});
          return result;
       }
-      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> GetTestValue59()
+      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> GetTestValue61()
       {
          Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> result;
          result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256>();
-         result.Create(this.GetTestValueU32(), this.GetTestValue60());
+         result.Create(this.GetTestValueU32(), this.GetTestValue62());
          return result;
       }
-      public Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 GetTestValue60()
+      public Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 GetTestValue62()
       {
          Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 result;
          result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256();
@@ -1264,8 +1315,8 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          NftControllerClient rpcClient = new NftControllerClient(_httpClient, subscriptionClient);
-         Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_btree_set.BoundedBTreeSetT2 mockupValue = this.GetTestValue56();
-         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> mockupKey = this.GetTestValue59();
+         Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSetT2 mockupValue = this.GetTestValue58();
+         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> mockupKey = this.GetTestValue61();
 
          Assert.IsTrue(await rpcClient.SubscribeItemAttributesApprovalsOf(mockupKey));
 
@@ -1277,7 +1328,7 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_btree_set.BoundedBTreeSetT2 rpcResult = await rpcClient.GetItemAttributesApprovalsOf(mockupKey);
+         Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSetT2 rpcResult = await rpcClient.GetItemAttributesApprovalsOf(mockupKey);
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
@@ -1311,19 +1362,19 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.PendingSwap GetTestValue63()
+      public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.PendingSwap GetTestValue65()
       {
          Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.PendingSwap result;
          result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.PendingSwap();
          result.DesiredCollection = this.GetTestValueU32();
          result.DesiredItem = new Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256>();
-         result.DesiredItem.Create(this.GetTestValue64());
+         result.DesiredItem.Create(this.GetTestValue66());
          result.Price = new Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.PriceWithDirection>();
-         result.Price.Create(this.GetTestValue65());
+         result.Price.Create(this.GetTestValue67());
          result.Deadline = this.GetTestValueU32();
          return result;
       }
-      public Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 GetTestValue64()
+      public Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 GetTestValue66()
       {
          Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 result;
          result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256();
@@ -1363,7 +1414,7 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
                   this.GetTestValueU8()});
          return result;
       }
-      public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.PriceWithDirection GetTestValue65()
+      public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.PriceWithDirection GetTestValue67()
       {
          Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.PriceWithDirection result;
          result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.PriceWithDirection();
@@ -1372,14 +1423,14 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
          result.Direction.Create(this.GetTestValueEnum<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.PriceDirection>());
          return result;
       }
-      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> GetTestValue66()
+      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> GetTestValue68()
       {
          Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> result;
          result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256>();
-         result.Create(this.GetTestValueU32(), this.GetTestValue67());
+         result.Create(this.GetTestValueU32(), this.GetTestValue69());
          return result;
       }
-      public Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 GetTestValue67()
+      public Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 GetTestValue69()
       {
          Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 result;
          result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256();
@@ -1430,8 +1481,8 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          NftControllerClient rpcClient = new NftControllerClient(_httpClient, subscriptionClient);
-         Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.PendingSwap mockupValue = this.GetTestValue63();
-         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> mockupKey = this.GetTestValue66();
+         Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.PendingSwap mockupValue = this.GetTestValue65();
+         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> mockupKey = this.GetTestValue68();
 
          Assert.IsTrue(await rpcClient.SubscribePendingSwapOf(mockupKey));
 
@@ -1448,26 +1499,26 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.CollectionConfig GetTestValue69()
+      public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.CollectionConfig GetTestValue71()
       {
          Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.CollectionConfig result;
          result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.CollectionConfig();
          result.Settings = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.BitFlagsT1();
-         result.Settings = this.GetTestValue70();
+         result.Settings = this.GetTestValue72();
          result.MaxSupply = new Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32>();
          result.MaxSupply.Create(this.GetTestValueU32());
          result.MintSettings = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.MintSettings();
-         result.MintSettings = this.GetTestValue71();
+         result.MintSettings = this.GetTestValue73();
          return result;
       }
-      public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.BitFlagsT1 GetTestValue70()
+      public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.BitFlagsT1 GetTestValue72()
       {
          Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.BitFlagsT1 result;
          result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.BitFlagsT1();
          result.Value = this.GetTestValueU64();
          return result;
       }
-      public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.MintSettings GetTestValue71()
+      public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.MintSettings GetTestValue73()
       {
          Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.MintSettings result;
          result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.MintSettings();
@@ -1480,10 +1531,10 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
          result.EndBlock = new Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32>();
          result.EndBlock.Create(this.GetTestValueU32());
          result.DefaultItemSettings = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.BitFlagsT2();
-         result.DefaultItemSettings = this.GetTestValue72();
+         result.DefaultItemSettings = this.GetTestValue74();
          return result;
       }
-      public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.BitFlagsT2 GetTestValue72()
+      public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.BitFlagsT2 GetTestValue74()
       {
          Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.BitFlagsT2 result;
          result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.BitFlagsT2();
@@ -1501,7 +1552,7 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          NftControllerClient rpcClient = new NftControllerClient(_httpClient, subscriptionClient);
-         Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.CollectionConfig mockupValue = this.GetTestValue69();
+         Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.CollectionConfig mockupValue = this.GetTestValue71();
          Substrate.NetApi.Model.Types.Primitive.U32 mockupKey = this.GetTestValueU32();
 
          Assert.IsTrue(await rpcClient.SubscribeCollectionConfigOf(mockupKey));
@@ -1519,29 +1570,29 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.ItemConfig GetTestValue74()
+      public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.ItemConfig GetTestValue76()
       {
          Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.ItemConfig result;
          result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.ItemConfig();
          result.Settings = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.BitFlagsT2();
-         result.Settings = this.GetTestValue75();
+         result.Settings = this.GetTestValue77();
          return result;
       }
-      public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.BitFlagsT2 GetTestValue75()
+      public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.BitFlagsT2 GetTestValue77()
       {
          Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.BitFlagsT2 result;
          result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.BitFlagsT2();
          result.Value = this.GetTestValueU64();
          return result;
       }
-      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> GetTestValue76()
+      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> GetTestValue78()
       {
          Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> result;
          result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256>();
-         result.Create(this.GetTestValueU32(), this.GetTestValue77());
+         result.Create(this.GetTestValueU32(), this.GetTestValue79());
          return result;
       }
-      public Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 GetTestValue77()
+      public Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 GetTestValue79()
       {
          Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 result;
          result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256();
@@ -1592,8 +1643,8 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          NftControllerClient rpcClient = new NftControllerClient(_httpClient, subscriptionClient);
-         Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.ItemConfig mockupValue = this.GetTestValue74();
-         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> mockupKey = this.GetTestValue76();
+         Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.ItemConfig mockupValue = this.GetTestValue76();
+         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> mockupKey = this.GetTestValue78();
 
          Assert.IsTrue(await rpcClient.SubscribeItemConfigOf(mockupKey));
 

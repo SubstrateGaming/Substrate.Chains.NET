@@ -18,7 +18,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types
     
     
     /// <summary>
-    /// >> 440 - Composite[pallet_nfts.types.PendingSwap]
+    /// >> 485 - Composite[pallet_nfts.types.PendingSwap]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class PendingSwap : BaseType

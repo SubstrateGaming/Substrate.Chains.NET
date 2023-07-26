@@ -11,13 +11,13 @@ namespace Substrate.Bajun.NET.RestClient.Mockup.Generated.Interfaces
 {
    using System;
    using System.Threading.Tasks;
-   using Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    using Substrate.NetApi.Model.Types.Primitive;
    
    public interface ICollatorSelectionControllerMockupClient
    {
-      Task<bool> SetInvulnerables(BoundedVecT23 value);
-      Task<bool> SetCandidates(BoundedVecT24 value);
+      Task<bool> SetInvulnerables(BoundedVecT27 value);
+      Task<bool> SetCandidates(BoundedVecT28 value);
       Task<bool> SetLastAuthoredBlock(U32 value, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
       Task<bool> SetDesiredCandidates(U32 value);
       Task<bool> SetCandidacyBond(U128 value);

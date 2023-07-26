@@ -40,7 +40,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_collective.pallet
     }
     
     /// <summary>
-    /// >> 400 - Variant[pallet_collective.pallet.Error]
+    /// >> 440 - Variant[pallet_collective.pallet.Error]
     /// 
     ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
     ///			of this pallet.

@@ -56,13 +56,13 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
                             Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat,
                             Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat,
                             Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat,
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256>, Substrate.Bajun.NET.NetApiExt.Generated.Model.frame_support.traits.tokens.misc.EnumAttributeNamespace, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT7>), typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT8, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.AttributeDeposit>)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256>, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.EnumAttributeNamespace, Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT11>), typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT12, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.AttributeDeposit>)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Nft", "ItemPriceOf"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat,
                             Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256>), typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>>)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Nft", "ItemAttributesApprovalsOf"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat,
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256>), typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_btree_set.BoundedBTreeSetT2)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256>), typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSetT2)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Nft", "NextCollectionId"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Primitive.U32)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Nft", "PendingSwapOf"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat,
@@ -333,7 +333,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         /// >> AttributeParams
         ///  Attributes of a collection.
         /// </summary>
-        public static string AttributeParams(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256>, Substrate.Bajun.NET.NetApiExt.Generated.Model.frame_support.traits.tokens.misc.EnumAttributeNamespace, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT7> key)
+        public static string AttributeParams(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256>, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.EnumAttributeNamespace, Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT11> key)
         {
             return RequestGenerator.GetStorage("Nft", "Attribute", Substrate.NetApi.Model.Meta.Storage.Type.Map, new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                         Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat,
@@ -355,10 +355,10 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         /// >> Attribute
         ///  Attributes of a collection.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT8, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.AttributeDeposit>> Attribute(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256>, Substrate.Bajun.NET.NetApiExt.Generated.Model.frame_support.traits.tokens.misc.EnumAttributeNamespace, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT7> key, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT12, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.AttributeDeposit>> Attribute(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256>, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.EnumAttributeNamespace, Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT11> key, CancellationToken token)
         {
             string parameters = NftStorage.AttributeParams(key);
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT8, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.AttributeDeposit>>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT12, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.AttributeDeposit>>(parameters, token);
             return result;
         }
         
@@ -417,10 +417,10 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         /// >> ItemAttributesApprovalsOf
         ///  Item attribute approvals.
         /// </summary>
-        public async Task<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_btree_set.BoundedBTreeSetT2> ItemAttributesApprovalsOf(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> key, CancellationToken token)
+        public async Task<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSetT2> ItemAttributesApprovalsOf(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> key, CancellationToken token)
         {
             string parameters = NftStorage.ItemAttributesApprovalsOfParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_btree_set.BoundedBTreeSetT2>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSetT2>(parameters, token);
             return result;
         }
         
@@ -620,12 +620,11 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         /// >> burn
         /// Contains one variant per dispatchable that can be called by an extrinsic.
         /// </summary>
-        public static Method Burn(Substrate.NetApi.Model.Types.Primitive.U32 collection, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 item, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress> check_owner)
+        public static Method Burn(Substrate.NetApi.Model.Types.Primitive.U32 collection, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 item)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(collection.Encode());
             byteArray.AddRange(item.Encode());
-            byteArray.AddRange(check_owner.Encode());
             return new Method(60, "Nft", 5, "burn", byteArray.ToArray());
         }
         
@@ -706,7 +705,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         /// >> set_team
         /// Contains one variant per dispatchable that can be called by an extrinsic.
         /// </summary>
-        public static Method SetTeam(Substrate.NetApi.Model.Types.Primitive.U32 collection, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress issuer, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress admin, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress freezer)
+        public static Method SetTeam(Substrate.NetApi.Model.Types.Primitive.U32 collection, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress> issuer, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress> admin, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress> freezer)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(collection.Encode());
@@ -797,7 +796,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         /// >> set_attribute
         /// Contains one variant per dispatchable that can be called by an extrinsic.
         /// </summary>
-        public static Method SetAttribute(Substrate.NetApi.Model.Types.Primitive.U32 collection, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> maybe_item, Substrate.Bajun.NET.NetApiExt.Generated.Model.frame_support.traits.tokens.misc.EnumAttributeNamespace @namespace, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT7 key, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT8 value)
+        public static Method SetAttribute(Substrate.NetApi.Model.Types.Primitive.U32 collection, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> maybe_item, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.EnumAttributeNamespace @namespace, Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT11 key, Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT12 value)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(collection.Encode());
@@ -812,7 +811,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         /// >> force_set_attribute
         /// Contains one variant per dispatchable that can be called by an extrinsic.
         /// </summary>
-        public static Method ForceSetAttribute(Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> set_as, Substrate.NetApi.Model.Types.Primitive.U32 collection, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> maybe_item, Substrate.Bajun.NET.NetApiExt.Generated.Model.frame_support.traits.tokens.misc.EnumAttributeNamespace @namespace, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT7 key, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT8 value)
+        public static Method ForceSetAttribute(Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> set_as, Substrate.NetApi.Model.Types.Primitive.U32 collection, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> maybe_item, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.EnumAttributeNamespace @namespace, Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT11 key, Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT12 value)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(set_as.Encode());
@@ -828,7 +827,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         /// >> clear_attribute
         /// Contains one variant per dispatchable that can be called by an extrinsic.
         /// </summary>
-        public static Method ClearAttribute(Substrate.NetApi.Model.Types.Primitive.U32 collection, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> maybe_item, Substrate.Bajun.NET.NetApiExt.Generated.Model.frame_support.traits.tokens.misc.EnumAttributeNamespace @namespace, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT7 key)
+        public static Method ClearAttribute(Substrate.NetApi.Model.Types.Primitive.U32 collection, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> maybe_item, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.EnumAttributeNamespace @namespace, Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT11 key)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(collection.Encode());
@@ -869,7 +868,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         /// >> set_metadata
         /// Contains one variant per dispatchable that can be called by an extrinsic.
         /// </summary>
-        public static Method SetMetadata(Substrate.NetApi.Model.Types.Primitive.U32 collection, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 item, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT6 data)
+        public static Method SetMetadata(Substrate.NetApi.Model.Types.Primitive.U32 collection, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 item, Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10 data)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(collection.Encode());
@@ -894,7 +893,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         /// >> set_collection_metadata
         /// Contains one variant per dispatchable that can be called by an extrinsic.
         /// </summary>
-        public static Method SetCollectionMetadata(Substrate.NetApi.Model.Types.Primitive.U32 collection, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT6 data)
+        public static Method SetCollectionMetadata(Substrate.NetApi.Model.Types.Primitive.U32 collection, Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10 data)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(collection.Encode());
@@ -979,7 +978,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         /// >> pay_tips
         /// Contains one variant per dispatchable that can be called by an extrinsic.
         /// </summary>
-        public static Method PayTips(Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT11 tips)
+        public static Method PayTips(Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT15 tips)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(tips.Encode());
@@ -1028,6 +1027,32 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
             byteArray.AddRange(witness_price.Encode());
             return new Method(60, "Nft", 36, "claim_swap", byteArray.ToArray());
         }
+        
+        /// <summary>
+        /// >> mint_pre_signed
+        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// </summary>
+        public static Method MintPreSigned(Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.PreSignedMint mint_data, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_runtime.EnumMultiSignature signature, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 signer)
+        {
+            System.Collections.Generic.List<byte> byteArray = new List<byte>();
+            byteArray.AddRange(mint_data.Encode());
+            byteArray.AddRange(signature.Encode());
+            byteArray.AddRange(signer.Encode());
+            return new Method(60, "Nft", 37, "mint_pre_signed", byteArray.ToArray());
+        }
+        
+        /// <summary>
+        /// >> set_attributes_pre_signed
+        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// </summary>
+        public static Method SetAttributesPreSigned(Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.PreSignedAttributes data, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_runtime.EnumMultiSignature signature, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 signer)
+        {
+            System.Collections.Generic.List<byte> byteArray = new List<byte>();
+            byteArray.AddRange(data.Encode());
+            byteArray.AddRange(signature.Encode());
+            byteArray.AddRange(signer.Encode());
+            return new Method(60, "Nft", 38, "set_attributes_pre_signed", byteArray.ToArray());
+        }
     }
     
     public sealed class NftConstants
@@ -1040,7 +1065,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         public Substrate.NetApi.Model.Types.Primitive.U128 CollectionDeposit()
         {
             var result = new Substrate.NetApi.Model.Types.Primitive.U128();
-            result.Create("0x40420F00000000000000000000000000");
+            result.Create("0x00407A10F35A00000000000000000000");
             return result;
         }
         
@@ -1051,7 +1076,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         public Substrate.NetApi.Model.Types.Primitive.U128 ItemDeposit()
         {
             var result = new Substrate.NetApi.Model.Types.Primitive.U128();
-            result.Create("0xE8030000000000000000000000000000");
+            result.Create("0x00E87648170000000000000000000000");
             return result;
         }
         
@@ -1163,6 +1188,17 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         {
             var result = new Substrate.NetApi.Model.Types.Primitive.U32();
             result.Create("0x01000000");
+            return result;
+        }
+        
+        /// <summary>
+        /// >> MaxAttributesPerCall
+        ///  The max number of attributes a user could set per call.
+        /// </summary>
+        public Substrate.NetApi.Model.Types.Primitive.U32 MaxAttributesPerCall()
+        {
+            var result = new Substrate.NetApi.Model.Types.Primitive.U32();
+            result.Create("0x0A000000");
             return result;
         }
         
@@ -1314,6 +1350,18 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         UnknownSwap,
         
         /// <summary>
+        /// >> MetadataNotFound
+        /// The given item has no metadata set.
+        /// </summary>
+        MetadataNotFound,
+        
+        /// <summary>
+        /// >> AttributeNotFound
+        /// The provided attribute can't be found.
+        /// </summary>
+        AttributeNotFound,
+        
+        /// <summary>
         /// >> NotForSale
         /// Item is not for sale.
         /// </summary>
@@ -1396,5 +1444,41 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         /// The provided data is incorrect.
         /// </summary>
         IncorrectData,
+        
+        /// <summary>
+        /// >> WrongOrigin
+        /// The extrinsic was sent by the wrong origin.
+        /// </summary>
+        WrongOrigin,
+        
+        /// <summary>
+        /// >> WrongSignature
+        /// The provided signature is incorrect.
+        /// </summary>
+        WrongSignature,
+        
+        /// <summary>
+        /// >> IncorrectMetadata
+        /// The provided metadata might be too long.
+        /// </summary>
+        IncorrectMetadata,
+        
+        /// <summary>
+        /// >> MaxAttributesLimitReached
+        /// Can't set more attributes per one call.
+        /// </summary>
+        MaxAttributesLimitReached,
+        
+        /// <summary>
+        /// >> WrongNamespace
+        /// The provided namespace isn't supported in this call.
+        /// </summary>
+        WrongNamespace,
+        
+        /// <summary>
+        /// >> CollectionNotEmpty
+        /// Can't delete non-empty collections.
+        /// </summary>
+        CollectionNotEmpty,
     }
 }

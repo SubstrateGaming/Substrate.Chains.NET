@@ -18,7 +18,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
     
     
     /// <summary>
-    /// >> 406 - Composite[pallet_ajuna_awesome_avatars.types.avatar.Avatar]
+    /// >> 446 - Composite[pallet_ajuna_awesome_avatars.types.avatar.Avatar]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Avatar : BaseType
@@ -30,9 +30,14 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
         private Substrate.NetApi.Model.Types.Primitive.U16 _seasonId;
         
         /// <summary>
+        /// >> encoding
+        /// </summary>
+        private Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.avatar.EnumDnaEncoding _encoding;
+        
+        /// <summary>
         /// >> dna
         /// </summary>
-        private Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT1 _dna;
+        private Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT4 _dna;
         
         /// <summary>
         /// >> souls
@@ -51,7 +56,19 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
             }
         }
         
-        public Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT1 Dna
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.avatar.EnumDnaEncoding Encoding
+        {
+            get
+            {
+                return this._encoding;
+            }
+            set
+            {
+                this._encoding = value;
+            }
+        }
+        
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT4 Dna
         {
             get
             {
@@ -84,6 +101,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
         {
             var result = new List<byte>();
             result.AddRange(SeasonId.Encode());
+            result.AddRange(Encoding.Encode());
             result.AddRange(Dna.Encode());
             result.AddRange(Souls.Encode());
             return result.ToArray();
@@ -94,7 +112,9 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
             var start = p;
             SeasonId = new Substrate.NetApi.Model.Types.Primitive.U16();
             SeasonId.Decode(byteArray, ref p);
-            Dna = new Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec.BoundedVecT1();
+            Encoding = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.avatar.EnumDnaEncoding();
+            Encoding.Decode(byteArray, ref p);
+            Dna = new Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT4();
             Dna.Decode(byteArray, ref p);
             Souls = new Substrate.NetApi.Model.Types.Primitive.U32();
             Souls.Decode(byteArray, ref p);

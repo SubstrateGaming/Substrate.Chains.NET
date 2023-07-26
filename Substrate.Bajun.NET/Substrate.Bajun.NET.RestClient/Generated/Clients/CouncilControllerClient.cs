@@ -12,7 +12,7 @@ namespace Substrate.Bajun.NET.RestClient.Generated.Clients
    using System;
    using System.Threading.Tasks;
    using System.Net.Http;
-   using Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    using Substrate.Bajun.NET.NetApiExt.Generated.Model.bajun_runtime;
    using Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_collective;
    using Substrate.NetApi.Model.Types.Primitive;
@@ -29,9 +29,9 @@ namespace Substrate.Bajun.NET.RestClient.Generated.Clients
          _httpClient = httpClient;
          _subscriptionClient = subscriptionClient;
       }
-      public async Task<BoundedVecT27> GetProposals()
+      public async Task<BoundedVecT32> GetProposals()
       {
-         return await SendRequestAsync<BoundedVecT27>(_httpClient, "council/proposals");
+         return await SendRequestAsync<BoundedVecT32>(_httpClient, "council/proposals");
       }
       public async Task<bool> SubscribeProposals()
       {

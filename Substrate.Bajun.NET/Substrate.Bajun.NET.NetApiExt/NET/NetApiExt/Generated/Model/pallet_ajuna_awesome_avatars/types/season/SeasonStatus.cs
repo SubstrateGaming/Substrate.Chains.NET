@@ -18,11 +18,16 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
     
     
     /// <summary>
-    /// >> 404 - Composite[pallet_ajuna_awesome_avatars.types.season.SeasonStatus]
+    /// >> 444 - Composite[pallet_ajuna_awesome_avatars.types.season.SeasonStatus]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class SeasonStatus : BaseType
     {
+        
+        /// <summary>
+        /// >> season_id
+        /// </summary>
+        private Substrate.NetApi.Model.Types.Primitive.U16 _seasonId;
         
         /// <summary>
         /// >> early
@@ -43,6 +48,18 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
         /// >> max_tier_avatars
         /// </summary>
         private Substrate.NetApi.Model.Types.Primitive.U32 _maxTierAvatars;
+        
+        public Substrate.NetApi.Model.Types.Primitive.U16 SeasonId
+        {
+            get
+            {
+                return this._seasonId;
+            }
+            set
+            {
+                this._seasonId = value;
+            }
+        }
         
         public Substrate.NetApi.Model.Types.Primitive.Bool Early
         {
@@ -100,6 +117,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
         public override byte[] Encode()
         {
             var result = new List<byte>();
+            result.AddRange(SeasonId.Encode());
             result.AddRange(Early.Encode());
             result.AddRange(Active.Encode());
             result.AddRange(EarlyEnded.Encode());
@@ -110,6 +128,8 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
+            SeasonId = new Substrate.NetApi.Model.Types.Primitive.U16();
+            SeasonId.Decode(byteArray, ref p);
             Early = new Substrate.NetApi.Model.Types.Primitive.Bool();
             Early.Decode(byteArray, ref p);
             Active = new Substrate.NetApi.Model.Types.Primitive.Bool();

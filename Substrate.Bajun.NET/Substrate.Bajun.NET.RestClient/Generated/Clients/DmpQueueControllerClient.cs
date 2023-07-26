@@ -58,5 +58,13 @@ namespace Substrate.Bajun.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("DmpQueue.Overweight", Substrate.Bajun.NET.NetApiExt.Generated.Storage.DmpQueueStorage.OverweightParams(key));
       }
+      public async Task<U32> GetCounterForOverweight()
+      {
+         return await SendRequestAsync<U32>(_httpClient, "dmpqueue/counterforoverweight");
+      }
+      public async Task<bool> SubscribeCounterForOverweight()
+      {
+         return await _subscriptionClient.SubscribeAsync("DmpQueue.CounterForOverweight");
+      }
    }
 }

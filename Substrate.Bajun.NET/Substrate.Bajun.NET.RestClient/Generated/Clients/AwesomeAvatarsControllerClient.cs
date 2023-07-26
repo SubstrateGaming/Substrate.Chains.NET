@@ -13,12 +13,12 @@ namespace Substrate.Bajun.NET.RestClient.Generated.Clients
    using System.Threading.Tasks;
    using System.Net.Http;
    using Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto;
-   using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.season;
+   using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config;
    using Substrate.NetApi.Model.Types.Base;
    using Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.avatar;
-   using Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    using Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account;
    using Substrate.Bajun.NET.RestClient.Generated.Interfaces;
    
@@ -46,14 +46,6 @@ namespace Substrate.Bajun.NET.RestClient.Generated.Clients
       public async Task<bool> SubscribeTreasurer(U16 key)
       {
          return await _subscriptionClient.SubscribeAsync("AwesomeAvatars.Treasurer", Substrate.Bajun.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage.TreasurerParams(key));
-      }
-      public async Task<U16> GetCurrentSeasonId()
-      {
-         return await SendRequestAsync<U16>(_httpClient, "awesomeavatars/currentseasonid");
-      }
-      public async Task<bool> SubscribeCurrentSeasonId()
-      {
-         return await _subscriptionClient.SubscribeAsync("AwesomeAvatars.CurrentSeasonId");
       }
       public async Task<SeasonStatus> GetCurrentSeasonStatus()
       {
@@ -95,11 +87,11 @@ namespace Substrate.Bajun.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("AwesomeAvatars.Avatars", Substrate.Bajun.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage.AvatarsParams(key));
       }
-      public async Task<BoundedVecT30> GetOwners(AccountId32 key)
+      public async Task<BoundedVecT35> GetOwners(BaseTuple<AccountId32, U16> key)
       {
-         return await SendRequestAsync<BoundedVecT30>(_httpClient, "awesomeavatars/owners", Substrate.Bajun.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage.OwnersParams(key));
+         return await SendRequestAsync<BoundedVecT35>(_httpClient, "awesomeavatars/owners", Substrate.Bajun.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage.OwnersParams(key));
       }
-      public async Task<bool> SubscribeOwners(AccountId32 key)
+      public async Task<bool> SubscribeOwners(BaseTuple<AccountId32, U16> key)
       {
          return await _subscriptionClient.SubscribeAsync("AwesomeAvatars.Owners", Substrate.Bajun.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage.OwnersParams(key));
       }
@@ -119,13 +111,21 @@ namespace Substrate.Bajun.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("AwesomeAvatars.CollectionId");
       }
-      public async Task<AccountInfo> GetAccounts(AccountId32 key)
+      public async Task<PlayerConfig> GetPlayerConfigs(AccountId32 key)
       {
-         return await SendRequestAsync<AccountInfo>(_httpClient, "awesomeavatars/accounts", Substrate.Bajun.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage.AccountsParams(key));
+         return await SendRequestAsync<PlayerConfig>(_httpClient, "awesomeavatars/playerconfigs", Substrate.Bajun.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage.PlayerConfigsParams(key));
       }
-      public async Task<bool> SubscribeAccounts(AccountId32 key)
+      public async Task<bool> SubscribePlayerConfigs(AccountId32 key)
       {
-         return await _subscriptionClient.SubscribeAsync("AwesomeAvatars.Accounts", Substrate.Bajun.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage.AccountsParams(key));
+         return await _subscriptionClient.SubscribeAsync("AwesomeAvatars.PlayerConfigs", Substrate.Bajun.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage.PlayerConfigsParams(key));
+      }
+      public async Task<PlayerSeasonConfig> GetPlayerSeasonConfigs(BaseTuple<AccountId32, U16> key)
+      {
+         return await SendRequestAsync<PlayerSeasonConfig>(_httpClient, "awesomeavatars/playerseasonconfigs", Substrate.Bajun.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage.PlayerSeasonConfigsParams(key));
+      }
+      public async Task<bool> SubscribePlayerSeasonConfigs(BaseTuple<AccountId32, U16> key)
+      {
+         return await _subscriptionClient.SubscribeAsync("AwesomeAvatars.PlayerSeasonConfigs", Substrate.Bajun.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage.PlayerSeasonConfigsParams(key));
       }
       public async Task<SeasonInfo> GetSeasonStats(BaseTuple<U16, AccountId32> key)
       {
@@ -135,11 +135,11 @@ namespace Substrate.Bajun.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("AwesomeAvatars.SeasonStats", Substrate.Bajun.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage.SeasonStatsParams(key));
       }
-      public async Task<U128> GetTrade(Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 key)
+      public async Task<U128> GetTrade(BaseTuple<U16, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> key)
       {
          return await SendRequestAsync<U128>(_httpClient, "awesomeavatars/trade", Substrate.Bajun.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage.TradeParams(key));
       }
-      public async Task<bool> SubscribeTrade(Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 key)
+      public async Task<bool> SubscribeTrade(BaseTuple<U16, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> key)
       {
          return await _subscriptionClient.SubscribeAsync("AwesomeAvatars.Trade", Substrate.Bajun.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage.TradeParams(key));
       }
@@ -151,9 +151,9 @@ namespace Substrate.Bajun.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("AwesomeAvatars.ServiceAccount");
       }
-      public async Task<BoundedVecT5> GetPreparation(Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 key)
+      public async Task<BoundedVecT9> GetPreparation(Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 key)
       {
-         return await SendRequestAsync<BoundedVecT5>(_httpClient, "awesomeavatars/preparation", Substrate.Bajun.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage.PreparationParams(key));
+         return await SendRequestAsync<BoundedVecT9>(_httpClient, "awesomeavatars/preparation", Substrate.Bajun.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage.PreparationParams(key));
       }
       public async Task<bool> SubscribePreparation(Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 key)
       {

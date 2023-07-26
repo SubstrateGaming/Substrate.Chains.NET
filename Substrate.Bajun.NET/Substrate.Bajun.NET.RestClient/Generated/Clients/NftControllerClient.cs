@@ -15,8 +15,8 @@ namespace Substrate.Bajun.NET.RestClient.Generated.Clients
    using Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types;
    using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.NetApi.Model.Types.Base;
-   using Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
-   using Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_btree_set;
+   using Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
+   using Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set;
    using Substrate.Bajun.NET.RestClient.Generated.Interfaces;
    
    public sealed class NftControllerClient : BaseClient, INftControllerClient
@@ -92,11 +92,11 @@ namespace Substrate.Bajun.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("Nft.ItemMetadataOf", Substrate.Bajun.NET.NetApiExt.Generated.Storage.NftStorage.ItemMetadataOfParams(key));
       }
-      public async Task<BaseTuple<BoundedVecT8, AttributeDeposit>> GetAttribute(BaseTuple<U32, BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256>, Substrate.Bajun.NET.NetApiExt.Generated.Model.frame_support.traits.tokens.misc.EnumAttributeNamespace, BoundedVecT7> key)
+      public async Task<BaseTuple<BoundedVecT12, AttributeDeposit>> GetAttribute(BaseTuple<U32, BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256>, EnumAttributeNamespace, BoundedVecT11> key)
       {
-         return await SendRequestAsync<BaseTuple<BoundedVecT8, AttributeDeposit>>(_httpClient, "nft/attribute", Substrate.Bajun.NET.NetApiExt.Generated.Storage.NftStorage.AttributeParams(key));
+         return await SendRequestAsync<BaseTuple<BoundedVecT12, AttributeDeposit>>(_httpClient, "nft/attribute", Substrate.Bajun.NET.NetApiExt.Generated.Storage.NftStorage.AttributeParams(key));
       }
-      public async Task<bool> SubscribeAttribute(BaseTuple<U32, BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256>, Substrate.Bajun.NET.NetApiExt.Generated.Model.frame_support.traits.tokens.misc.EnumAttributeNamespace, BoundedVecT7> key)
+      public async Task<bool> SubscribeAttribute(BaseTuple<U32, BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256>, EnumAttributeNamespace, BoundedVecT11> key)
       {
          return await _subscriptionClient.SubscribeAsync("Nft.Attribute", Substrate.Bajun.NET.NetApiExt.Generated.Storage.NftStorage.AttributeParams(key));
       }

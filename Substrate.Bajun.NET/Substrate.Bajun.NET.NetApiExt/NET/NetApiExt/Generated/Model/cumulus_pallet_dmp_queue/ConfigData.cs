@@ -18,7 +18,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.cumulus_pallet_dmp_queue
     
     
     /// <summary>
-    /// >> 387 - Composite[cumulus_pallet_dmp_queue.ConfigData]
+    /// >> 428 - Composite[cumulus_pallet_dmp_queue.ConfigData]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class ConfigData : BaseType

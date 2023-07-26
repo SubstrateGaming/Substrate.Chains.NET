@@ -18,7 +18,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_identity.types
     
     
     /// <summary>
-    /// >> 230 - Composite[pallet_identity.types.BitFlags]
+    /// >> 255 - Composite[pallet_identity.types.BitFlags]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class BitFlags : BaseType

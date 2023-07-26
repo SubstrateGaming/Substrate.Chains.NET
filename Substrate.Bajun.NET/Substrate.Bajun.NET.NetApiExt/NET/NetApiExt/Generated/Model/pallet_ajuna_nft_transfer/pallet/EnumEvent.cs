@@ -24,7 +24,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_nft_transfe
     }
     
     /// <summary>
-    /// >> 129 - Variant[pallet_ajuna_nft_transfer.pallet.Event]
+    /// >> 152 - Variant[pallet_ajuna_nft_transfer.pallet.Event]
     /// 
     ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
     ///			by this pallet.

@@ -13,7 +13,7 @@ namespace Substrate.Bajun.NET.RestClient.Generated.Clients
    using System.Threading.Tasks;
    using System.Net.Http;
    using Substrate.NetApi.Model.Types.Base;
-   using Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.Bajun.NET.RestClient.Generated.Interfaces;
    
@@ -26,17 +26,17 @@ namespace Substrate.Bajun.NET.RestClient.Generated.Clients
          _httpClient = httpClient;
          _subscriptionClient = subscriptionClient;
       }
-      public async Task<BaseTuple<BoundedVecT15, U128>> GetProxies(Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+      public async Task<BaseTuple<BoundedVecT19, U128>> GetProxies(Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {
-         return await SendRequestAsync<BaseTuple<BoundedVecT15, U128>>(_httpClient, "proxy/proxies", Substrate.Bajun.NET.NetApiExt.Generated.Storage.ProxyStorage.ProxiesParams(key));
+         return await SendRequestAsync<BaseTuple<BoundedVecT19, U128>>(_httpClient, "proxy/proxies", Substrate.Bajun.NET.NetApiExt.Generated.Storage.ProxyStorage.ProxiesParams(key));
       }
       public async Task<bool> SubscribeProxies(Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {
          return await _subscriptionClient.SubscribeAsync("Proxy.Proxies", Substrate.Bajun.NET.NetApiExt.Generated.Storage.ProxyStorage.ProxiesParams(key));
       }
-      public async Task<BaseTuple<BoundedVecT16, U128>> GetAnnouncements(Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+      public async Task<BaseTuple<BoundedVecT20, U128>> GetAnnouncements(Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {
-         return await SendRequestAsync<BaseTuple<BoundedVecT16, U128>>(_httpClient, "proxy/announcements", Substrate.Bajun.NET.NetApiExt.Generated.Storage.ProxyStorage.AnnouncementsParams(key));
+         return await SendRequestAsync<BaseTuple<BoundedVecT20, U128>>(_httpClient, "proxy/announcements", Substrate.Bajun.NET.NetApiExt.Generated.Storage.ProxyStorage.AnnouncementsParams(key));
       }
       public async Task<bool> SubscribeAnnouncements(Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {

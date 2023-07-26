@@ -18,7 +18,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types
     
     
     /// <summary>
-    /// >> 419 - Composite[pallet_nfts.types.CollectionDetails]
+    /// >> 463 - Composite[pallet_nfts.types.CollectionDetails]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class CollectionDetails : BaseType
@@ -43,6 +43,11 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types
         /// >> item_metadatas
         /// </summary>
         private Substrate.NetApi.Model.Types.Primitive.U32 _itemMetadatas;
+        
+        /// <summary>
+        /// >> item_configs
+        /// </summary>
+        private Substrate.NetApi.Model.Types.Primitive.U32 _itemConfigs;
         
         /// <summary>
         /// >> attributes
@@ -97,6 +102,18 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types
             }
         }
         
+        public Substrate.NetApi.Model.Types.Primitive.U32 ItemConfigs
+        {
+            get
+            {
+                return this._itemConfigs;
+            }
+            set
+            {
+                this._itemConfigs = value;
+            }
+        }
+        
         public Substrate.NetApi.Model.Types.Primitive.U32 Attributes
         {
             get
@@ -121,6 +138,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types
             result.AddRange(OwnerDeposit.Encode());
             result.AddRange(Items.Encode());
             result.AddRange(ItemMetadatas.Encode());
+            result.AddRange(ItemConfigs.Encode());
             result.AddRange(Attributes.Encode());
             return result.ToArray();
         }
@@ -136,6 +154,8 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types
             Items.Decode(byteArray, ref p);
             ItemMetadatas = new Substrate.NetApi.Model.Types.Primitive.U32();
             ItemMetadatas.Decode(byteArray, ref p);
+            ItemConfigs = new Substrate.NetApi.Model.Types.Primitive.U32();
+            ItemConfigs.Decode(byteArray, ref p);
             Attributes = new Substrate.NetApi.Model.Types.Primitive.U32();
             Attributes.Decode(byteArray, ref p);
             var bytesLength = p - start;

@@ -33,6 +33,7 @@ namespace Substrate.Bajun.NET.RestClient.Mockup
       public INftTransferControllerMockupClient NftTransferControllerClient;
       public IParachainInfoControllerMockupClient ParachainInfoControllerClient;
       public IParachainSystemControllerMockupClient ParachainSystemControllerClient;
+      public IPolkadotXcmControllerMockupClient PolkadotXcmControllerClient;
       public IPreimageControllerMockupClient PreimageControllerClient;
       public IProxyControllerMockupClient ProxyControllerClient;
       public IRandomnessControllerMockupClient RandomnessControllerClient;
@@ -63,6 +64,7 @@ namespace Substrate.Bajun.NET.RestClient.Mockup
          NftTransferControllerClient = new NftTransferControllerMockupClient(_httpClient);
          ParachainInfoControllerClient = new ParachainInfoControllerMockupClient(_httpClient);
          ParachainSystemControllerClient = new ParachainSystemControllerMockupClient(_httpClient);
+         PolkadotXcmControllerClient = new PolkadotXcmControllerMockupClient(_httpClient);
          PreimageControllerClient = new PreimageControllerMockupClient(_httpClient);
          ProxyControllerClient = new ProxyControllerMockupClient(_httpClient);
          RandomnessControllerClient = new RandomnessControllerMockupClient(_httpClient);

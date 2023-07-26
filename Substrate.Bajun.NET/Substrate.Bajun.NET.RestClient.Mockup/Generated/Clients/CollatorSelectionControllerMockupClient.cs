@@ -12,7 +12,7 @@ namespace Substrate.Bajun.NET.RestClient.Mockup.Generated.Clients
    using System;
    using System.Threading.Tasks;
    using System.Net.Http;
-   using Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.bounded.bounded_vec;
+   using Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.Bajun.NET.RestClient.Mockup.Generated.Interfaces;
    
@@ -23,11 +23,11 @@ namespace Substrate.Bajun.NET.RestClient.Mockup.Generated.Clients
       {
          _httpClient = httpClient;
       }
-      public async Task<bool> SetInvulnerables(BoundedVecT23 value)
+      public async Task<bool> SetInvulnerables(BoundedVecT27 value)
       {
          return await SendMockupRequestAsync(_httpClient, "CollatorSelection/Invulnerables", value.Encode(), Substrate.Bajun.NET.NetApiExt.Generated.Storage.CollatorSelectionStorage.InvulnerablesParams());
       }
-      public async Task<bool> SetCandidates(BoundedVecT24 value)
+      public async Task<bool> SetCandidates(BoundedVecT28 value)
       {
          return await SendMockupRequestAsync(_httpClient, "CollatorSelection/Candidates", value.Encode(), Substrate.Bajun.NET.NetApiExt.Generated.Storage.CollatorSelectionStorage.CandidatesParams());
       }
