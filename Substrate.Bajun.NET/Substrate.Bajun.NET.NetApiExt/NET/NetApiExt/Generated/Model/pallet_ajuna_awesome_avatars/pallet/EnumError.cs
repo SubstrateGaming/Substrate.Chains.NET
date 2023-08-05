@@ -128,29 +128,31 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
         
         CannotTransferToSelf = 54,
         
-        CannotClaimDuringSeason = 55,
+        CannotTransferFromInactiveAccount = 55,
         
-        CannotClaimZero = 56,
+        CannotClaimDuringSeason = 56,
         
-        IncompatibleMintComponents = 57,
+        CannotClaimZero = 57,
         
-        IncompatibleForgeComponents = 58,
+        IncompatibleMintComponents = 58,
         
-        InsufficientSacrifices = 59,
+        IncompatibleForgeComponents = 59,
         
-        ExcessiveSacrifices = 60,
+        InsufficientSacrifices = 60,
         
-        AlreadyPrepared = 61,
+        ExcessiveSacrifices = 61,
         
-        NotPrepared = 62,
+        AlreadyPrepared = 62,
         
-        NoServiceAccount = 63,
+        NotPrepared = 63,
         
-        EmptyIpfsUrl = 64,
+        NoServiceAccount = 64,
+        
+        EmptyIpfsUrl = 65,
     }
     
     /// <summary>
-    /// >> 462 - Variant[pallet_ajuna_awesome_avatars.pallet.Error]
+    /// >> 463 - Variant[pallet_ajuna_awesome_avatars.pallet.Error]
     /// 
     ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
     ///			of this pallet.

@@ -18,7 +18,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
     
     
     /// <summary>
-    /// >> 446 - Composite[pallet_ajuna_awesome_avatars.types.avatar.Avatar]
+    /// >> 447 - Composite[pallet_ajuna_awesome_avatars.types.avatar.Avatar]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Avatar : BaseType

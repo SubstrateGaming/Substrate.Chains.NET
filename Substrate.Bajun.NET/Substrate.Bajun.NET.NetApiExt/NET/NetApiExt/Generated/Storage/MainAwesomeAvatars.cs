@@ -608,9 +608,11 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         /// >> upgrade_storage
         /// Contains one variant per dispatchable that can be called by an extrinsic.
         /// </summary>
-        public static Method UpgradeStorage()
+        public static Method UpgradeStorage(Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> beneficiary, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U16> in_season)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
+            byteArray.AddRange(beneficiary.Encode());
+            byteArray.AddRange(in_season.Encode());
             return new Method(51, "AwesomeAvatars", 7, "upgrade_storage", byteArray.ToArray());
         }
         
@@ -1109,6 +1111,12 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         /// Tried transferring to his or her own account.
         /// </summary>
         CannotTransferToSelf,
+        
+        /// <summary>
+        /// >> CannotTransferFromInactiveAccount
+        /// Tried transferring while the account still hasn't minted and forged anything.
+        /// </summary>
+        CannotTransferFromInactiveAccount,
         
         /// <summary>
         /// >> CannotClaimDuringSeason

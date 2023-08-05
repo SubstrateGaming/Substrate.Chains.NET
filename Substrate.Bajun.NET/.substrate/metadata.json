@@ -7514,7 +7514,18 @@
           },
           {
             "Name": "StorageTierUpgraded",
-            "TypeFields": null,
+            "TypeFields": [
+              {
+                "Name": "account",
+                "TypeName": "T::AccountId",
+                "TypeId": 0
+              },
+              {
+                "Name": "season_id",
+                "TypeName": "SeasonId",
+                "TypeId": 40
+              }
+            ],
             "Index": 19,
             "Docs": [
               "Storage tier has been upgraded."
@@ -10838,7 +10849,7 @@
               {
                 "Name": "maybe_timepoint",
                 "TypeName": "Option<Timepoint<T::BlockNumber>>",
-                "TypeId": 330
+                "TypeId": 331
               },
               {
                 "Name": "call",
@@ -10910,7 +10921,7 @@
               {
                 "Name": "maybe_timepoint",
                 "TypeName": "Option<Timepoint<T::BlockNumber>>",
-                "TypeId": 330
+                "TypeId": 331
               },
               {
                 "Name": "call_hash",
@@ -11259,7 +11270,7 @@
             "TypeFields": [
               {
                 "TypeName": "self::sp_api_hidden_includes_construct_runtime::hidden_include::dispatch\n::CallableCallFor<Nft, Runtime>",
-                "TypeId": 304
+                "TypeId": 305
               }
             ],
             "Index": 60
@@ -17480,10 +17491,30 @@
           },
           {
             "Name": "upgrade_storage",
-            "TypeFields": null,
+            "TypeFields": [
+              {
+                "Name": "beneficiary",
+                "TypeName": "Option<AccountIdOf<T>>",
+                "TypeId": 114
+              },
+              {
+                "Name": "in_season",
+                "TypeName": "Option<SeasonId>",
+                "TypeId": 304
+              }
+            ],
             "Index": 7,
             "Docs": [
-              "Upgrade storage.",
+              "Upgrade the avatar inventory space in a season.",
+              "",
+              "* If called with a value in the **beneficiary** parameter, that account will receive the",
+              "  upgrade",
+              "instead of the caller.",
+              "* If the **in_season** parameter contains a value, this will set which specific season",
+              "will the storage be upgraded for, if no value is set then the current season will be the",
+              "one for which the storage will be upgraded.",
+              "",
+              "In all cases the upgrade fees are **paid by the caller**.",
               "",
               "Emits `StorageTierUpgraded` event when successful.",
               "",
@@ -17899,6 +17930,34 @@
       "304": {
         "Variants": [
           {
+            "Name": "None",
+            "TypeFields": null,
+            "Index": 0
+          },
+          {
+            "Name": "Some",
+            "TypeFields": [
+              {
+                "TypeId": 40
+              }
+            ],
+            "Index": 1
+          }
+        ],
+        "Path": [
+          "Option"
+        ],
+        "TypeParams": [
+          {
+            "Name": "T",
+            "TypeId": 40
+          }
+        ],
+        "TypeDef": "Variant"
+      },
+      "305": {
+        "Variants": [
+          {
             "Name": "create",
             "TypeFields": [
               {
@@ -17909,7 +17968,7 @@
               {
                 "Name": "config",
                 "TypeName": "CollectionConfigFor<T, I>",
-                "TypeId": 305
+                "TypeId": 306
               }
             ],
             "Index": 0,
@@ -17942,7 +18001,7 @@
               {
                 "Name": "config",
                 "TypeName": "CollectionConfigFor<T, I>",
-                "TypeId": 305
+                "TypeId": 306
               }
             ],
             "Index": 1,
@@ -17975,7 +18034,7 @@
               {
                 "Name": "witness",
                 "TypeName": "DestroyWitness",
-                "TypeId": 313
+                "TypeId": 314
               }
             ],
             "Index": 2,
@@ -18020,7 +18079,7 @@
               {
                 "Name": "witness_data",
                 "TypeName": "Option<MintWitness<T::ItemId>>",
-                "TypeId": 314
+                "TypeId": 315
               }
             ],
             "Index": 3,
@@ -18063,7 +18122,7 @@
               {
                 "Name": "item_config",
                 "TypeName": "ItemConfig",
-                "TypeId": 316
+                "TypeId": 317
               }
             ],
             "Index": 4,
@@ -18251,7 +18310,7 @@
               {
                 "Name": "lock_settings",
                 "TypeName": "CollectionSettings",
-                "TypeId": 306
+                "TypeId": 307
               }
             ],
             "Index": 10,
@@ -18310,17 +18369,17 @@
               {
                 "Name": "issuer",
                 "TypeName": "Option<AccountIdLookupOf<T>>",
-                "TypeId": 317
+                "TypeId": 318
               },
               {
                 "Name": "admin",
                 "TypeName": "Option<AccountIdLookupOf<T>>",
-                "TypeId": 317
+                "TypeId": 318
               },
               {
                 "Name": "freezer",
                 "TypeName": "Option<AccountIdLookupOf<T>>",
-                "TypeId": 317
+                "TypeId": 318
               }
             ],
             "Index": 12,
@@ -18382,7 +18441,7 @@
               {
                 "Name": "config",
                 "TypeName": "CollectionConfigFor<T, I>",
-                "TypeId": 305
+                "TypeId": 306
               }
             ],
             "Index": 14,
@@ -18760,7 +18819,7 @@
               {
                 "Name": "witness",
                 "TypeName": "CancelAttributesApprovalWitness",
-                "TypeId": 318
+                "TypeId": 319
               }
             ],
             "Index": 23,
@@ -18966,7 +19025,7 @@
               {
                 "Name": "mint_settings",
                 "TypeName": "MintSettings<BalanceOf<T, I>,<T as SystemConfig>::BlockNumber, T::\nCollectionId,>",
-                "TypeId": 308
+                "TypeId": 309
               }
             ],
             "Index": 30,
@@ -18998,12 +19057,12 @@
               {
                 "Name": "price",
                 "TypeName": "Option<ItemPrice<T, I>>",
-                "TypeId": 310
+                "TypeId": 311
               },
               {
                 "Name": "whitelisted_buyer",
                 "TypeName": "Option<AccountIdLookupOf<T>>",
-                "TypeId": 317
+                "TypeId": 318
               }
             ],
             "Index": 31,
@@ -19059,7 +19118,7 @@
               {
                 "Name": "tips",
                 "TypeName": "BoundedVec<ItemTipOf<T, I>, T::MaxTips>",
-                "TypeId": 319
+                "TypeId": 320
               }
             ],
             "Index": 33,
@@ -19205,12 +19264,12 @@
               {
                 "Name": "mint_data",
                 "TypeName": "PreSignedMintOf<T, I>",
-                "TypeId": 322
+                "TypeId": 323
               },
               {
                 "Name": "signature",
                 "TypeName": "T::OffchainSignature",
-                "TypeId": 323
+                "TypeId": 324
               },
               {
                 "Name": "signer",
@@ -19241,12 +19300,12 @@
               {
                 "Name": "data",
                 "TypeName": "PreSignedAttributesOf<T, I>",
-                "TypeId": 329
+                "TypeId": 330
               },
               {
                 "Name": "signature",
                 "TypeName": "T::OffchainSignature",
-                "TypeId": 323
+                "TypeId": 324
               },
               {
                 "Name": "signer",
@@ -19290,12 +19349,12 @@
           "Contains one variant per dispatchable that can be called by an extrinsic."
         ]
       },
-      "305": {
+      "306": {
         "TypeFields": [
           {
             "Name": "settings",
             "TypeName": "CollectionSettings",
-            "TypeId": 306
+            "TypeId": 307
           },
           {
             "Name": "max_supply",
@@ -19305,7 +19364,7 @@
           {
             "Name": "mint_settings",
             "TypeName": "MintSettings<Price, BlockNumber, CollectionId>",
-            "TypeId": 308
+            "TypeId": 309
           }
         ],
         "Path": [
@@ -19329,7 +19388,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "306": {
+      "307": {
         "TypeFields": [
           {
             "TypeName": "CollectionSetting",
@@ -19344,12 +19403,12 @@
         "TypeParams": [
           {
             "Name": "T",
-            "TypeId": 307
+            "TypeId": 308
           }
         ],
         "TypeDef": "Composite"
       },
-      "307": {
+      "308": {
         "Variants": [
           {
             "Name": "TransferableItems",
@@ -19384,17 +19443,17 @@
         ],
         "TypeDef": "Variant"
       },
-      "308": {
+      "309": {
         "TypeFields": [
           {
             "Name": "mint_type",
             "TypeName": "MintType<CollectionId>",
-            "TypeId": 309
+            "TypeId": 310
           },
           {
             "Name": "price",
             "TypeName": "Option<Price>",
-            "TypeId": 310
+            "TypeId": 311
           },
           {
             "Name": "start_block",
@@ -19409,7 +19468,7 @@
           {
             "Name": "default_item_settings",
             "TypeName": "ItemSettings",
-            "TypeId": 311
+            "TypeId": 312
           }
         ],
         "Path": [
@@ -19433,7 +19492,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "309": {
+      "310": {
         "Variants": [
           {
             "Name": "Issuer",
@@ -19469,7 +19528,7 @@
         ],
         "TypeDef": "Variant"
       },
-      "310": {
+      "311": {
         "Variants": [
           {
             "Name": "None",
@@ -19497,7 +19556,7 @@
         ],
         "TypeDef": "Variant"
       },
-      "311": {
+      "312": {
         "TypeFields": [
           {
             "TypeName": "ItemSetting",
@@ -19512,12 +19571,12 @@
         "TypeParams": [
           {
             "Name": "T",
-            "TypeId": 312
+            "TypeId": 313
           }
         ],
         "TypeDef": "Composite"
       },
-      "312": {
+      "313": {
         "Variants": [
           {
             "Name": "Transferable",
@@ -19542,7 +19601,7 @@
         ],
         "TypeDef": "Variant"
       },
-      "313": {
+      "314": {
         "TypeFields": [
           {
             "Name": "item_metadatas",
@@ -19567,7 +19626,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "314": {
+      "315": {
         "Variants": [
           {
             "Name": "None",
@@ -19578,7 +19637,7 @@
             "Name": "Some",
             "TypeFields": [
               {
-                "TypeId": 315
+                "TypeId": 316
               }
             ],
             "Index": 1
@@ -19590,12 +19649,12 @@
         "TypeParams": [
           {
             "Name": "T",
-            "TypeId": 315
+            "TypeId": 316
           }
         ],
         "TypeDef": "Variant"
       },
-      "315": {
+      "316": {
         "TypeFields": [
           {
             "Name": "owned_item",
@@ -19616,12 +19675,12 @@
         ],
         "TypeDef": "Composite"
       },
-      "316": {
+      "317": {
         "TypeFields": [
           {
             "Name": "settings",
             "TypeName": "ItemSettings",
-            "TypeId": 311
+            "TypeId": 312
           }
         ],
         "Path": [
@@ -19631,7 +19690,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "317": {
+      "318": {
         "Variants": [
           {
             "Name": "None",
@@ -19659,7 +19718,7 @@
         ],
         "TypeDef": "Variant"
       },
-      "318": {
+      "319": {
         "TypeFields": [
           {
             "Name": "account_attributes",
@@ -19674,11 +19733,11 @@
         ],
         "TypeDef": "Composite"
       },
-      "319": {
+      "320": {
         "TypeFields": [
           {
             "TypeName": "Vec<T>",
-            "TypeId": 321
+            "TypeId": 322
           }
         ],
         "Path": [
@@ -19689,7 +19748,7 @@
         "TypeParams": [
           {
             "Name": "T",
-            "TypeId": 320
+            "TypeId": 321
           },
           {
             "Name": "S"
@@ -19697,7 +19756,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "320": {
+      "321": {
         "TypeFields": [
           {
             "Name": "collection",
@@ -19745,11 +19804,11 @@
         ],
         "TypeDef": "Composite"
       },
-      "321": {
-        "TypeId": 320,
+      "322": {
+        "TypeId": 321,
         "TypeDef": "Sequence"
       },
-      "322": {
+      "323": {
         "TypeFields": [
           {
             "Name": "collection",
@@ -19807,14 +19866,14 @@
         ],
         "TypeDef": "Composite"
       },
-      "323": {
+      "324": {
         "Variants": [
           {
             "Name": "Ed25519",
             "TypeFields": [
               {
                 "TypeName": "ed25519::Signature",
-                "TypeId": 324
+                "TypeId": 325
               }
             ],
             "Index": 0
@@ -19824,7 +19883,7 @@
             "TypeFields": [
               {
                 "TypeName": "sr25519::Signature",
-                "TypeId": 326
+                "TypeId": 327
               }
             ],
             "Index": 1
@@ -19834,7 +19893,7 @@
             "TypeFields": [
               {
                 "TypeName": "ecdsa::Signature",
-                "TypeId": 327
+                "TypeId": 328
               }
             ],
             "Index": 2
@@ -19846,11 +19905,11 @@
         ],
         "TypeDef": "Variant"
       },
-      "324": {
+      "325": {
         "TypeFields": [
           {
             "TypeName": "[u8; 64]",
-            "TypeId": 325
+            "TypeId": 326
           }
         ],
         "Path": [
@@ -19860,16 +19919,16 @@
         ],
         "TypeDef": "Composite"
       },
-      "325": {
+      "326": {
         "Length": 64,
         "TypeId": 2,
         "TypeDef": "Array"
       },
-      "326": {
+      "327": {
         "TypeFields": [
           {
             "TypeName": "[u8; 64]",
-            "TypeId": 325
+            "TypeId": 326
           }
         ],
         "Path": [
@@ -19879,11 +19938,11 @@
         ],
         "TypeDef": "Composite"
       },
-      "327": {
+      "328": {
         "TypeFields": [
           {
             "TypeName": "[u8; 65]",
-            "TypeId": 328
+            "TypeId": 329
           }
         ],
         "Path": [
@@ -19893,12 +19952,12 @@
         ],
         "TypeDef": "Composite"
       },
-      "328": {
+      "329": {
         "Length": 65,
         "TypeId": 2,
         "TypeDef": "Array"
       },
-      "329": {
+      "330": {
         "TypeFields": [
           {
             "Name": "collection",
@@ -19951,7 +20010,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "330": {
+      "331": {
         "Variants": [
           {
             "Name": "None",
@@ -19979,7 +20038,7 @@
         ],
         "TypeDef": "Variant"
       },
-      "331": {
+      "332": {
         "Variants": [
           {
             "Name": "MinimumThreshold",
@@ -20109,7 +20168,7 @@
           "\n\t\t\tCustom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)\n\t\t\tof this pallet.\n\t\t\t"
         ]
       },
-      "332": {
+      "333": {
         "Variants": [
           {
             "Name": "TooManyCalls",
@@ -20135,12 +20194,12 @@
           "\n\t\t\tCustom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)\n\t\t\tof this pallet.\n\t\t\t"
         ]
       },
-      "333": {
+      "334": {
         "TypeFields": [
           {
             "Name": "judgements",
             "TypeName": "BoundedVec<(RegistrarIndex, Judgement<Balance>), MaxJudgements>",
-            "TypeId": 334
+            "TypeId": 335
           },
           {
             "Name": "deposit",
@@ -20172,11 +20231,11 @@
         ],
         "TypeDef": "Composite"
       },
-      "334": {
+      "335": {
         "TypeFields": [
           {
             "TypeName": "Vec<T>",
-            "TypeId": 336
+            "TypeId": 337
           }
         ],
         "Path": [
@@ -20187,7 +20246,7 @@
         "TypeParams": [
           {
             "Name": "T",
-            "TypeId": 335
+            "TypeId": 336
           },
           {
             "Name": "S"
@@ -20195,25 +20254,25 @@
         ],
         "TypeDef": "Composite"
       },
-      "335": {
+      "336": {
         "TypeIds": [
           4,
           257
         ],
         "TypeDef": "Tuple"
       },
-      "336": {
-        "TypeId": 335,
+      "337": {
+        "TypeId": 336,
         "TypeDef": "Sequence"
       },
-      "337": {
+      "338": {
         "TypeIds": [
           6,
-          338
+          339
         ],
         "TypeDef": "Tuple"
       },
-      "338": {
+      "339": {
         "TypeFields": [
           {
             "TypeName": "Vec<T>",
@@ -20236,11 +20295,11 @@
         ],
         "TypeDef": "Composite"
       },
-      "339": {
+      "340": {
         "TypeFields": [
           {
             "TypeName": "Vec<T>",
-            "TypeId": 342
+            "TypeId": 343
           }
         ],
         "Path": [
@@ -20251,7 +20310,7 @@
         "TypeParams": [
           {
             "Name": "T",
-            "TypeId": 340
+            "TypeId": 341
           },
           {
             "Name": "S"
@@ -20259,7 +20318,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "340": {
+      "341": {
         "Variants": [
           {
             "Name": "None",
@@ -20270,7 +20329,7 @@
             "Name": "Some",
             "TypeFields": [
               {
-                "TypeId": 341
+                "TypeId": 342
               }
             ],
             "Index": 1
@@ -20282,12 +20341,12 @@
         "TypeParams": [
           {
             "Name": "T",
-            "TypeId": 341
+            "TypeId": 342
           }
         ],
         "TypeDef": "Variant"
       },
-      "341": {
+      "342": {
         "TypeFields": [
           {
             "Name": "account",
@@ -20322,11 +20381,11 @@
         ],
         "TypeDef": "Composite"
       },
-      "342": {
-        "TypeId": 340,
+      "343": {
+        "TypeId": 341,
         "TypeDef": "Sequence"
       },
-      "343": {
+      "344": {
         "Variants": [
           {
             "Name": "TooManySubAccounts",
@@ -20488,18 +20547,18 @@
           "\n\t\t\tCustom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)\n\t\t\tof this pallet.\n\t\t\t"
         ]
       },
-      "344": {
+      "345": {
         "TypeIds": [
-          345,
+          346,
           6
         ],
         "TypeDef": "Tuple"
       },
-      "345": {
+      "346": {
         "TypeFields": [
           {
             "TypeName": "Vec<T>",
-            "TypeId": 347
+            "TypeId": 348
           }
         ],
         "Path": [
@@ -20510,7 +20569,7 @@
         "TypeParams": [
           {
             "Name": "T",
-            "TypeId": 346
+            "TypeId": 347
           },
           {
             "Name": "S"
@@ -20518,7 +20577,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "346": {
+      "347": {
         "TypeFields": [
           {
             "Name": "delegate",
@@ -20556,22 +20615,22 @@
         ],
         "TypeDef": "Composite"
       },
-      "347": {
-        "TypeId": 346,
+      "348": {
+        "TypeId": 347,
         "TypeDef": "Sequence"
       },
-      "348": {
+      "349": {
         "TypeIds": [
-          349,
+          350,
           6
         ],
         "TypeDef": "Tuple"
       },
-      "349": {
+      "350": {
         "TypeFields": [
           {
             "TypeName": "Vec<T>",
-            "TypeId": 351
+            "TypeId": 352
           }
         ],
         "Path": [
@@ -20582,7 +20641,7 @@
         "TypeParams": [
           {
             "Name": "T",
-            "TypeId": 350
+            "TypeId": 351
           },
           {
             "Name": "S"
@@ -20590,7 +20649,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "350": {
+      "351": {
         "TypeFields": [
           {
             "Name": "real",
@@ -20628,11 +20687,11 @@
         ],
         "TypeDef": "Composite"
       },
-      "351": {
-        "TypeId": 350,
+      "352": {
+        "TypeId": 351,
         "TypeDef": "Sequence"
       },
-      "352": {
+      "353": {
         "Variants": [
           {
             "Name": "TooMany",
@@ -20714,11 +20773,11 @@
           "\n\t\t\tCustom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)\n\t\t\tof this pallet.\n\t\t\t"
         ]
       },
-      "353": {
+      "354": {
         "TypeFields": [
           {
             "TypeName": "Vec<T>",
-            "TypeId": 358
+            "TypeId": 359
           }
         ],
         "Path": [
@@ -20729,7 +20788,7 @@
         "TypeParams": [
           {
             "Name": "T",
-            "TypeId": 354
+            "TypeId": 355
           },
           {
             "Name": "S"
@@ -20737,7 +20796,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "354": {
+      "355": {
         "Variants": [
           {
             "Name": "None",
@@ -20748,7 +20807,7 @@
             "Name": "Some",
             "TypeFields": [
               {
-                "TypeId": 355
+                "TypeId": 356
               }
             ],
             "Index": 1
@@ -20760,12 +20819,12 @@
         "TypeParams": [
           {
             "Name": "T",
-            "TypeId": 355
+            "TypeId": 356
           }
         ],
         "TypeDef": "Variant"
       },
-      "355": {
+      "356": {
         "TypeFields": [
           {
             "Name": "maybe_id",
@@ -20780,7 +20839,7 @@
           {
             "Name": "call",
             "TypeName": "Call",
-            "TypeId": 356
+            "TypeId": 357
           },
           {
             "Name": "maybe_periodic",
@@ -20804,7 +20863,7 @@
           },
           {
             "Name": "Call",
-            "TypeId": 356
+            "TypeId": 357
           },
           {
             "Name": "BlockNumber",
@@ -20821,7 +20880,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "356": {
+      "357": {
         "Variants": [
           {
             "Name": "Legacy",
@@ -20839,7 +20898,7 @@
             "TypeFields": [
               {
                 "TypeName": "BoundedInline",
-                "TypeId": 357
+                "TypeId": 358
               }
             ],
             "Index": 1
@@ -20875,7 +20934,7 @@
         ],
         "TypeDef": "Variant"
       },
-      "357": {
+      "358": {
         "TypeFields": [
           {
             "TypeName": "Vec<T>",
@@ -20898,11 +20957,11 @@
         ],
         "TypeDef": "Composite"
       },
-      "358": {
-        "TypeId": 354,
+      "359": {
+        "TypeId": 355,
         "TypeDef": "Sequence"
       },
-      "359": {
+      "360": {
         "Variants": [
           {
             "Name": "FailedToSchedule",
@@ -20960,7 +21019,7 @@
           "\n\t\t\tCustom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)\n\t\t\tof this pallet.\n\t\t\t"
         ]
       },
-      "360": {
+      "361": {
         "Variants": [
           {
             "Name": "Unrequested",
@@ -20968,7 +21027,7 @@
               {
                 "Name": "deposit",
                 "TypeName": "(AccountId, Balance)",
-                "TypeId": 361
+                "TypeId": 362
               },
               {
                 "Name": "len",
@@ -20984,7 +21043,7 @@
               {
                 "Name": "deposit",
                 "TypeName": "Option<(AccountId, Balance)>",
-                "TypeId": 362
+                "TypeId": 363
               },
               {
                 "Name": "count",
@@ -21016,14 +21075,14 @@
         ],
         "TypeDef": "Variant"
       },
-      "361": {
+      "362": {
         "TypeIds": [
           0,
           6
         ],
         "TypeDef": "Tuple"
       },
-      "362": {
+      "363": {
         "Variants": [
           {
             "Name": "None",
@@ -21034,7 +21093,7 @@
             "Name": "Some",
             "TypeFields": [
               {
-                "TypeId": 361
+                "TypeId": 362
               }
             ],
             "Index": 1
@@ -21046,19 +21105,19 @@
         "TypeParams": [
           {
             "Name": "T",
-            "TypeId": 361
+            "TypeId": 362
           }
         ],
         "TypeDef": "Variant"
       },
-      "363": {
+      "364": {
         "TypeIds": [
           12,
           4
         ],
         "TypeDef": "Tuple"
       },
-      "364": {
+      "365": {
         "TypeFields": [
           {
             "TypeName": "Vec<T>",
@@ -21081,7 +21140,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "365": {
+      "366": {
         "Variants": [
           {
             "Name": "TooBig",
@@ -21147,11 +21206,11 @@
           "\n\t\t\tCustom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)\n\t\t\tof this pallet.\n\t\t\t"
         ]
       },
-      "366": {
+      "367": {
         "TypeFields": [
           {
             "TypeName": "Vec<T>",
-            "TypeId": 369
+            "TypeId": 370
           }
         ],
         "Path": [
@@ -21162,7 +21221,7 @@
         "TypeParams": [
           {
             "Name": "T",
-            "TypeId": 367
+            "TypeId": 368
           },
           {
             "Name": "S"
@@ -21170,7 +21229,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "367": {
+      "368": {
         "TypeFields": [
           {
             "Name": "id",
@@ -21185,7 +21244,7 @@
           {
             "Name": "reasons",
             "TypeName": "Reasons",
-            "TypeId": 368
+            "TypeId": 369
           }
         ],
         "Path": [
@@ -21201,7 +21260,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "368": {
+      "369": {
         "Variants": [
           {
             "Name": "Fee",
@@ -21226,15 +21285,15 @@
         ],
         "TypeDef": "Variant"
       },
-      "369": {
-        "TypeId": 367,
+      "370": {
+        "TypeId": 368,
         "TypeDef": "Sequence"
       },
-      "370": {
+      "371": {
         "TypeFields": [
           {
             "TypeName": "Vec<T>",
-            "TypeId": 372
+            "TypeId": 373
           }
         ],
         "Path": [
@@ -21245,7 +21304,7 @@
         "TypeParams": [
           {
             "Name": "T",
-            "TypeId": 371
+            "TypeId": 372
           },
           {
             "Name": "S"
@@ -21253,7 +21312,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "371": {
+      "372": {
         "TypeFields": [
           {
             "Name": "id",
@@ -21283,15 +21342,15 @@
         ],
         "TypeDef": "Composite"
       },
-      "372": {
-        "TypeId": 371,
+      "373": {
+        "TypeId": 372,
         "TypeDef": "Sequence"
       },
-      "373": {
+      "374": {
         "TypeFields": [
           {
             "TypeName": "Vec<T>",
-            "TypeId": 375
+            "TypeId": 376
           }
         ],
         "Path": [
@@ -21302,7 +21361,7 @@
         "TypeParams": [
           {
             "Name": "T",
-            "TypeId": 374
+            "TypeId": 375
           },
           {
             "Name": "S"
@@ -21310,7 +21369,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "374": {
+      "375": {
         "TypeFields": [
           {
             "Name": "id",
@@ -21340,11 +21399,11 @@
         ],
         "TypeDef": "Composite"
       },
-      "375": {
-        "TypeId": 374,
+      "376": {
+        "TypeId": 375,
         "TypeDef": "Sequence"
       },
-      "376": {
+      "377": {
         "Variants": [
           {
             "Name": "VestingBalance",
@@ -21445,7 +21504,7 @@
           "\n\t\t\tCustom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)\n\t\t\tof this pallet.\n\t\t\t"
         ]
       },
-      "377": {
+      "378": {
         "TypeFields": [
           {
             "TypeName": "u128",
@@ -21459,7 +21518,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "378": {
+      "379": {
         "Variants": [
           {
             "Name": "V1Ancient",
@@ -21478,7 +21537,7 @@
         ],
         "TypeDef": "Variant"
       },
-      "379": {
+      "380": {
         "TypeFields": [
           {
             "TypeName": "Vec<T>",
@@ -21501,7 +21560,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "380": {
+      "381": {
         "Variants": [
           {
             "Name": "ZeroVestingPeriod",
@@ -21567,7 +21626,7 @@
           "\n\t\t\tCustom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)\n\t\t\tof this pallet.\n\t\t\t"
         ]
       },
-      "381": {
+      "382": {
         "TypeFields": [
           {
             "TypeName": "Vec<T>",
@@ -21590,11 +21649,11 @@
         ],
         "TypeDef": "Composite"
       },
-      "382": {
+      "383": {
         "TypeFields": [
           {
             "TypeName": "Vec<T>",
-            "TypeId": 384
+            "TypeId": 385
           }
         ],
         "Path": [
@@ -21605,7 +21664,7 @@
         "TypeParams": [
           {
             "Name": "T",
-            "TypeId": 383
+            "TypeId": 384
           },
           {
             "Name": "S"
@@ -21613,7 +21672,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "383": {
+      "384": {
         "TypeFields": [
           {
             "Name": "who",
@@ -21643,11 +21702,11 @@
         ],
         "TypeDef": "Composite"
       },
-      "384": {
-        "TypeId": 383,
+      "385": {
+        "TypeId": 384,
         "TypeDef": "Sequence"
       },
-      "385": {
+      "386": {
         "Variants": [
           {
             "Name": "TooManyCandidates",
@@ -21745,25 +21804,25 @@
           "\n\t\t\tCustom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)\n\t\t\tof this pallet.\n\t\t\t"
         ]
       },
-      "386": {
-        "TypeId": 387,
+      "387": {
+        "TypeId": 388,
         "TypeDef": "Sequence"
       },
-      "387": {
+      "388": {
         "TypeIds": [
           0,
           268
         ],
         "TypeDef": "Tuple"
       },
-      "388": {
+      "389": {
         "TypeIds": [
-          389,
+          390,
           13
         ],
         "TypeDef": "Tuple"
       },
-      "389": {
+      "390": {
         "TypeFields": [
           {
             "TypeName": "[u8; 4]",
@@ -21777,7 +21836,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "390": {
+      "391": {
         "Variants": [
           {
             "Name": "InvalidProof",
@@ -21835,11 +21894,11 @@
           "Error for the session pallet."
         ]
       },
-      "391": {
+      "392": {
         "TypeFields": [
           {
             "TypeName": "Vec<T>",
-            "TypeId": 392
+            "TypeId": 393
           }
         ],
         "Path": [
@@ -21858,11 +21917,11 @@
         ],
         "TypeDef": "Composite"
       },
-      "392": {
+      "393": {
         "TypeId": 269,
         "TypeDef": "Sequence"
       },
-      "393": {
+      "394": {
         "TypeFields": [
           {
             "TypeName": "u64",
@@ -21875,11 +21934,11 @@
         ],
         "TypeDef": "Composite"
       },
-      "394": {
-        "TypeId": 395,
+      "395": {
+        "TypeId": 396,
         "TypeDef": "Sequence"
       },
-      "395": {
+      "396": {
         "TypeFields": [
           {
             "Name": "sender",
@@ -21889,12 +21948,12 @@
           {
             "Name": "state",
             "TypeName": "InboundState",
-            "TypeId": 396
+            "TypeId": 397
           },
           {
             "Name": "message_metadata",
             "TypeName": "Vec<(RelayBlockNumber, XcmpMessageFormat)>",
-            "TypeId": 397
+            "TypeId": 398
           }
         ],
         "Path": [
@@ -21903,7 +21962,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "396": {
+      "397": {
         "Variants": [
           {
             "Name": "Ok",
@@ -21922,18 +21981,18 @@
         ],
         "TypeDef": "Variant"
       },
-      "397": {
-        "TypeId": 398,
+      "398": {
+        "TypeId": 399,
         "TypeDef": "Sequence"
       },
-      "398": {
+      "399": {
         "TypeIds": [
           4,
-          399
+          400
         ],
         "TypeDef": "Tuple"
       },
-      "399": {
+      "400": {
         "Variants": [
           {
             "Name": "ConcatenatedVersionedXcm",
@@ -21958,18 +22017,18 @@
         ],
         "TypeDef": "Variant"
       },
-      "400": {
+      "401": {
         "TypeIds": [
           55,
           4
         ],
         "TypeDef": "Tuple"
       },
-      "401": {
-        "TypeId": 402,
+      "402": {
+        "TypeId": 403,
         "TypeDef": "Sequence"
       },
-      "402": {
+      "403": {
         "TypeFields": [
           {
             "Name": "recipient",
@@ -21979,7 +22038,7 @@
           {
             "Name": "state",
             "TypeName": "OutboundState",
-            "TypeId": 403
+            "TypeId": 404
           },
           {
             "Name": "signals_exist",
@@ -22003,7 +22062,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "403": {
+      "404": {
         "Variants": [
           {
             "Name": "Ok",
@@ -22022,14 +22081,14 @@
         ],
         "TypeDef": "Variant"
       },
-      "404": {
+      "405": {
         "TypeIds": [
           55,
           40
         ],
         "TypeDef": "Tuple"
       },
-      "405": {
+      "406": {
         "TypeFields": [
           {
             "Name": "suspend_threshold",
@@ -22068,7 +22127,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "406": {
+      "407": {
         "TypeIds": [
           55,
           4,
@@ -22076,7 +22135,7 @@
         ],
         "TypeDef": "Tuple"
       },
-      "407": {
+      "408": {
         "Variants": [
           {
             "Name": "FailedToSend",
@@ -22134,7 +22193,7 @@
           "\n\t\t\tCustom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)\n\t\t\tof this pallet.\n\t\t\t"
         ]
       },
-      "408": {
+      "409": {
         "Variants": [
           {
             "Name": "Pending",
@@ -22147,12 +22206,12 @@
               {
                 "Name": "maybe_match_querier",
                 "TypeName": "Option<VersionedMultiLocation>",
-                "TypeId": 409
+                "TypeId": 410
               },
               {
                 "Name": "maybe_notify",
                 "TypeName": "Option<(u8, u8)>",
-                "TypeId": 410
+                "TypeId": 411
               },
               {
                 "Name": "timeout",
@@ -22184,7 +22243,7 @@
               {
                 "Name": "response",
                 "TypeName": "VersionedResponse",
-                "TypeId": 412
+                "TypeId": 413
               },
               {
                 "Name": "at",
@@ -22208,7 +22267,7 @@
         ],
         "TypeDef": "Variant"
       },
-      "409": {
+      "410": {
         "Variants": [
           {
             "Name": "None",
@@ -22236,7 +22295,7 @@
         ],
         "TypeDef": "Variant"
       },
-      "410": {
+      "411": {
         "Variants": [
           {
             "Name": "None",
@@ -22247,7 +22306,7 @@
             "Name": "Some",
             "TypeFields": [
               {
-                "TypeId": 411
+                "TypeId": 412
               }
             ],
             "Index": 1
@@ -22259,19 +22318,19 @@
         "TypeParams": [
           {
             "Name": "T",
-            "TypeId": 411
+            "TypeId": 412
           }
         ],
         "TypeDef": "Variant"
       },
-      "411": {
+      "412": {
         "TypeIds": [
           2,
           2
         ],
         "TypeDef": "Tuple"
       },
-      "412": {
+      "413": {
         "Variants": [
           {
             "Name": "V2",
@@ -22300,14 +22359,14 @@
         ],
         "TypeDef": "Variant"
       },
-      "413": {
+      "414": {
         "TypeIds": [
           4,
           110
         ],
         "TypeDef": "Tuple"
       },
-      "414": {
+      "415": {
         "TypeIds": [
           11,
           9,
@@ -22315,11 +22374,11 @@
         ],
         "TypeDef": "Tuple"
       },
-      "415": {
+      "416": {
         "TypeFields": [
           {
             "TypeName": "Vec<T>",
-            "TypeId": 417
+            "TypeId": 418
           }
         ],
         "Path": [
@@ -22330,7 +22389,7 @@
         "TypeParams": [
           {
             "Name": "T",
-            "TypeId": 416
+            "TypeId": 417
           },
           {
             "Name": "S"
@@ -22338,18 +22397,18 @@
         ],
         "TypeDef": "Composite"
       },
-      "416": {
+      "417": {
         "TypeIds": [
           110,
           4
         ],
         "TypeDef": "Tuple"
       },
-      "417": {
-        "TypeId": 416,
+      "418": {
+        "TypeId": 417,
         "TypeDef": "Sequence"
       },
-      "418": {
+      "419": {
         "Variants": [
           {
             "Name": "MigrateSupportedVersion",
@@ -22366,7 +22425,7 @@
             "TypeFields": [
               {
                 "TypeName": "Option<Vec<u8>>",
-                "TypeId": 419
+                "TypeId": 420
               }
             ],
             "Index": 2
@@ -22384,7 +22443,7 @@
         ],
         "TypeDef": "Variant"
       },
-      "419": {
+      "420": {
         "Variants": [
           {
             "Name": "None",
@@ -22412,15 +22471,15 @@
         ],
         "TypeDef": "Variant"
       },
-      "420": {
+      "421": {
         "TypeIds": [
           4,
           0,
-          421
+          422
         ],
         "TypeDef": "Tuple"
       },
-      "421": {
+      "422": {
         "Variants": [
           {
             "Name": "V3",
@@ -22439,7 +22498,7 @@
         ],
         "TypeDef": "Variant"
       },
-      "422": {
+      "423": {
         "TypeFields": [
           {
             "Name": "amount",
@@ -22469,11 +22528,11 @@
         ],
         "TypeDef": "Composite"
       },
-      "423": {
+      "424": {
         "TypeFields": [
           {
             "TypeName": "Vec<T>",
-            "TypeId": 425
+            "TypeId": 426
           }
         ],
         "Path": [
@@ -22484,7 +22543,7 @@
         "TypeParams": [
           {
             "Name": "T",
-            "TypeId": 424
+            "TypeId": 425
           },
           {
             "Name": "S"
@@ -22492,18 +22551,18 @@
         ],
         "TypeDef": "Composite"
       },
-      "424": {
+      "425": {
         "TypeIds": [
           6,
           110
         ],
         "TypeDef": "Tuple"
       },
-      "425": {
-        "TypeId": 424,
+      "426": {
+        "TypeId": 425,
         "TypeDef": "Sequence"
       },
-      "426": {
+      "427": {
         "Variants": [
           {
             "Name": "Unreachable",
@@ -22684,7 +22743,7 @@
           "\n\t\t\tCustom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)\n\t\t\tof this pallet.\n\t\t\t"
         ]
       },
-      "427": {
+      "428": {
         "Variants": null,
         "Path": [
           "cumulus_pallet_xcm",
@@ -22701,7 +22760,7 @@
           "\n\t\t\tCustom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)\n\t\t\tof this pallet.\n\t\t\t"
         ]
       },
-      "428": {
+      "429": {
         "TypeFields": [
           {
             "Name": "max_individual",
@@ -22715,7 +22774,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "429": {
+      "430": {
         "TypeFields": [
           {
             "Name": "begin_used",
@@ -22739,18 +22798,18 @@
         ],
         "TypeDef": "Composite"
       },
-      "430": {
-        "TypeId": 431,
+      "431": {
+        "TypeId": 432,
         "TypeDef": "Sequence"
       },
-      "431": {
+      "432": {
         "TypeIds": [
           4,
           13
         ],
         "TypeDef": "Tuple"
       },
-      "432": {
+      "433": {
         "Variants": [
           {
             "Name": "Unknown",
@@ -22784,7 +22843,7 @@
           "\n\t\t\tCustom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)\n\t\t\tof this pallet.\n\t\t\t"
         ]
       },
-      "433": {
+      "434": {
         "Variants": [
           {
             "Name": "RequireSudo",
@@ -22810,7 +22869,7 @@
           "Error for the Sudo pallet"
         ]
       },
-      "434": {
+      "435": {
         "TypeFields": [
           {
             "Name": "proposer",
@@ -22849,7 +22908,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "435": {
+      "436": {
         "TypeFields": [
           {
             "TypeName": "u32",
@@ -22863,7 +22922,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "436": {
+      "437": {
         "TypeFields": [
           {
             "TypeName": "[u8; 8]",
@@ -22876,7 +22935,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "437": {
+      "438": {
         "Variants": [
           {
             "Name": "InsufficientProposersBalance",
@@ -22938,7 +22997,7 @@
           "Error for the treasury pallet."
         ]
       },
-      "438": {
+      "439": {
         "TypeFields": [
           {
             "TypeName": "Vec<T>",
@@ -22961,7 +23020,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "439": {
+      "440": {
         "TypeFields": [
           {
             "Name": "index",
@@ -23005,7 +23064,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "440": {
+      "441": {
         "Variants": [
           {
             "Name": "NotMember",
@@ -23106,7 +23165,7 @@
           "\n\t\t\tCustom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)\n\t\t\tof this pallet.\n\t\t\t"
         ]
       },
-      "441": {
+      "442": {
         "TypeFields": [
           {
             "TypeName": "Vec<T>",
@@ -23129,7 +23188,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "442": {
+      "443": {
         "Variants": [
           {
             "Name": "AlreadyMember",
@@ -23174,7 +23233,7 @@
           "\n\t\t\tCustom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)\n\t\t\tof this pallet.\n\t\t\t"
         ]
       },
-      "443": {
+      "444": {
         "TypeFields": [
           {
             "TypeName": "Vec<T>",
@@ -23197,7 +23256,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "444": {
+      "445": {
         "TypeFields": [
           {
             "Name": "season_id",
@@ -23233,14 +23292,14 @@
         ],
         "TypeDef": "Composite"
       },
-      "445": {
+      "446": {
         "TypeIds": [
           0,
-          446
+          447
         ],
         "TypeDef": "Tuple"
       },
-      "446": {
+      "447": {
         "TypeFields": [
           {
             "Name": "season_id",
@@ -23250,7 +23309,7 @@
           {
             "Name": "encoding",
             "TypeName": "DnaEncoding",
-            "TypeId": 447
+            "TypeId": 448
           },
           {
             "Name": "dna",
@@ -23271,7 +23330,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "447": {
+      "448": {
         "Variants": [
           {
             "Name": "V1",
@@ -23292,14 +23351,14 @@
         ],
         "TypeDef": "Variant"
       },
-      "448": {
+      "449": {
         "TypeIds": [
           0,
           40
         ],
         "TypeDef": "Tuple"
       },
-      "449": {
+      "450": {
         "TypeFields": [
           {
             "TypeName": "Vec<T>",
@@ -23322,7 +23381,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "450": {
+      "451": {
         "TypeFields": [
           {
             "Name": "free_mints",
@@ -23338,17 +23397,17 @@
         ],
         "TypeDef": "Composite"
       },
-      "451": {
+      "452": {
         "TypeFields": [
           {
             "Name": "storage_tier",
             "TypeName": "StorageTier",
-            "TypeId": 452
+            "TypeId": 453
           },
           {
             "Name": "stats",
             "TypeName": "Stats<BlockNumber>",
-            "TypeId": 453
+            "TypeId": 454
           }
         ],
         "Path": [
@@ -23365,7 +23424,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "452": {
+      "453": {
         "Variants": [
           {
             "Name": "One",
@@ -23406,22 +23465,22 @@
         ],
         "TypeDef": "Variant"
       },
-      "453": {
+      "454": {
         "TypeFields": [
           {
             "Name": "mint",
             "TypeName": "PlayStats<BlockNumber>",
-            "TypeId": 454
+            "TypeId": 455
           },
           {
             "Name": "forge",
             "TypeName": "PlayStats<BlockNumber>",
-            "TypeId": 454
+            "TypeId": 455
           },
           {
             "Name": "trade",
             "TypeName": "TradeStats",
-            "TypeId": 458
+            "TypeId": 459
           }
         ],
         "Path": [
@@ -23438,7 +23497,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "454": {
+      "455": {
         "TypeFields": [
           {
             "Name": "first",
@@ -23453,7 +23512,7 @@
           {
             "Name": "seasons_participated",
             "TypeName": "BoundedBTreeSet<SeasonId, MaxSeasons>",
-            "TypeId": 455
+            "TypeId": 456
           }
         ],
         "Path": [
@@ -23470,11 +23529,11 @@
         ],
         "TypeDef": "Composite"
       },
-      "455": {
+      "456": {
         "TypeFields": [
           {
             "TypeName": "BTreeSet<T>",
-            "TypeId": 456
+            "TypeId": 457
           }
         ],
         "Path": [
@@ -23493,10 +23552,10 @@
         ],
         "TypeDef": "Composite"
       },
-      "456": {
+      "457": {
         "TypeFields": [
           {
-            "TypeId": 457
+            "TypeId": 458
           }
         ],
         "Path": [
@@ -23510,11 +23569,11 @@
         ],
         "TypeDef": "Composite"
       },
-      "457": {
+      "458": {
         "TypeId": 40,
         "TypeDef": "Sequence"
       },
-      "458": {
+      "459": {
         "TypeFields": [
           {
             "Name": "bought",
@@ -23535,14 +23594,14 @@
         ],
         "TypeDef": "Composite"
       },
-      "459": {
+      "460": {
         "TypeIds": [
           40,
           0
         ],
         "TypeDef": "Tuple"
       },
-      "460": {
+      "461": {
         "TypeFields": [
           {
             "Name": "minted",
@@ -23563,14 +23622,14 @@
         ],
         "TypeDef": "Composite"
       },
-      "461": {
+      "462": {
         "TypeIds": [
           40,
           12
         ],
         "TypeDef": "Tuple"
       },
-      "462": {
+      "463": {
         "Variants": [
           {
             "Name": "OrganizerNotSet",
@@ -24014,9 +24073,17 @@
             ]
           },
           {
-            "Name": "CannotClaimDuringSeason",
+            "Name": "CannotTransferFromInactiveAccount",
             "TypeFields": null,
             "Index": 55,
+            "Docs": [
+              "Tried transferring while the account still hasn't minted and forged anything."
+            ]
+          },
+          {
+            "Name": "CannotClaimDuringSeason",
+            "TypeFields": null,
+            "Index": 56,
             "Docs": [
               "Tried claiming treasury during a season."
             ]
@@ -24024,7 +24091,7 @@
           {
             "Name": "CannotClaimZero",
             "TypeFields": null,
-            "Index": 56,
+            "Index": 57,
             "Docs": [
               "Tried claiming treasury which is zero."
             ]
@@ -24032,7 +24099,7 @@
           {
             "Name": "IncompatibleMintComponents",
             "TypeFields": null,
-            "Index": 57,
+            "Index": 58,
             "Docs": [
               "The components tried to mint were not compatible."
             ]
@@ -24040,7 +24107,7 @@
           {
             "Name": "IncompatibleForgeComponents",
             "TypeFields": null,
-            "Index": 58,
+            "Index": 59,
             "Docs": [
               "The components tried to forge were not compatible."
             ]
@@ -24048,7 +24115,7 @@
           {
             "Name": "InsufficientSacrifices",
             "TypeFields": null,
-            "Index": 59,
+            "Index": 60,
             "Docs": [
               "The amount of sacrifices is not sufficient for forging."
             ]
@@ -24056,7 +24123,7 @@
           {
             "Name": "ExcessiveSacrifices",
             "TypeFields": null,
-            "Index": 60,
+            "Index": 61,
             "Docs": [
               "The amount of sacrifices is too much for forging."
             ]
@@ -24064,7 +24131,7 @@
           {
             "Name": "AlreadyPrepared",
             "TypeFields": null,
-            "Index": 61,
+            "Index": 62,
             "Docs": [
               "Tried to prepare an already prepared avatar."
             ]
@@ -24072,7 +24139,7 @@
           {
             "Name": "NotPrepared",
             "TypeFields": null,
-            "Index": 62,
+            "Index": 63,
             "Docs": [
               "Tried to prepare an IPFS URL for an avatar, that is not yet prepared."
             ]
@@ -24080,7 +24147,7 @@
           {
             "Name": "NoServiceAccount",
             "TypeFields": null,
-            "Index": 63,
+            "Index": 64,
             "Docs": [
               "No service account has been set."
             ]
@@ -24088,7 +24155,7 @@
           {
             "Name": "EmptyIpfsUrl",
             "TypeFields": null,
-            "Index": 64,
+            "Index": 65,
             "Docs": [
               "Tried to prepare an IPFS URL for an avatar with an empty URL."
             ]
@@ -24109,7 +24176,7 @@
           "\n\t\t\tCustom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)\n\t\t\tof this pallet.\n\t\t\t"
         ]
       },
-      "463": {
+      "464": {
         "TypeFields": [
           {
             "Name": "owner",
@@ -24159,7 +24226,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "464": {
+      "465": {
         "TypeIds": [
           0,
           4,
@@ -24167,21 +24234,21 @@
         ],
         "TypeDef": "Tuple"
       },
-      "465": {
+      "466": {
         "TypeIds": [
           0,
           4
         ],
         "TypeDef": "Tuple"
       },
-      "466": {
+      "467": {
         "TypeIds": [
           4,
           0
         ],
         "TypeDef": "Tuple"
       },
-      "467": {
+      "468": {
         "TypeFields": [
           {
             "TypeName": "CollectionRole",
@@ -24196,12 +24263,12 @@
         "TypeParams": [
           {
             "Name": "T",
-            "TypeId": 468
+            "TypeId": 469
           }
         ],
         "TypeDef": "Composite"
       },
-      "468": {
+      "469": {
         "Variants": [
           {
             "Name": "Issuer",
@@ -24226,14 +24293,14 @@
         ],
         "TypeDef": "Variant"
       },
-      "469": {
+      "470": {
         "TypeIds": [
           4,
           12
         ],
         "TypeDef": "Tuple"
       },
-      "470": {
+      "471": {
         "TypeFields": [
           {
             "Name": "owner",
@@ -24243,12 +24310,12 @@
           {
             "Name": "approvals",
             "TypeName": "Approvals",
-            "TypeId": 472
+            "TypeId": 473
           },
           {
             "Name": "deposit",
             "TypeName": "Deposit",
-            "TypeId": 471
+            "TypeId": 472
           }
         ],
         "Path": [
@@ -24263,16 +24330,16 @@
           },
           {
             "Name": "Deposit",
-            "TypeId": 471
+            "TypeId": 472
           },
           {
             "Name": "Approvals",
-            "TypeId": 472
+            "TypeId": 473
           }
         ],
         "TypeDef": "Composite"
       },
-      "471": {
+      "472": {
         "TypeFields": [
           {
             "Name": "account",
@@ -24302,11 +24369,11 @@
         ],
         "TypeDef": "Composite"
       },
-      "472": {
+      "473": {
         "TypeFields": [
           {
             "TypeName": "BTreeMap<K, V>",
-            "TypeId": 473
+            "TypeId": 474
           }
         ],
         "Path": [
@@ -24329,10 +24396,10 @@
         ],
         "TypeDef": "Composite"
       },
-      "473": {
+      "474": {
         "TypeFields": [
           {
-            "TypeId": 474
+            "TypeId": 475
           }
         ],
         "Path": [
@@ -24350,18 +24417,18 @@
         ],
         "TypeDef": "Composite"
       },
-      "474": {
-        "TypeId": 475,
+      "475": {
+        "TypeId": 476,
         "TypeDef": "Sequence"
       },
-      "475": {
+      "476": {
         "TypeIds": [
           0,
           142
         ],
         "TypeDef": "Tuple"
       },
-      "476": {
+      "477": {
         "TypeFields": [
           {
             "Name": "deposit",
@@ -24390,12 +24457,12 @@
         ],
         "TypeDef": "Composite"
       },
-      "477": {
+      "478": {
         "TypeFields": [
           {
             "Name": "deposit",
             "TypeName": "Deposit",
-            "TypeId": 478
+            "TypeId": 479
           },
           {
             "Name": "data",
@@ -24411,7 +24478,7 @@
         "TypeParams": [
           {
             "Name": "Deposit",
-            "TypeId": 478
+            "TypeId": 479
           },
           {
             "Name": "StringLimit"
@@ -24419,7 +24486,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "478": {
+      "479": {
         "TypeFields": [
           {
             "Name": "account",
@@ -24449,7 +24516,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "479": {
+      "480": {
         "TypeIds": [
           4,
           144,
@@ -24458,14 +24525,14 @@
         ],
         "TypeDef": "Tuple"
       },
-      "480": {
+      "481": {
         "TypeIds": [
           146,
-          481
+          482
         ],
         "TypeDef": "Tuple"
       },
-      "481": {
+      "482": {
         "TypeFields": [
           {
             "Name": "account",
@@ -24495,18 +24562,18 @@
         ],
         "TypeDef": "Composite"
       },
-      "482": {
+      "483": {
         "TypeIds": [
           6,
           114
         ],
         "TypeDef": "Tuple"
       },
-      "483": {
+      "484": {
         "TypeFields": [
           {
             "TypeName": "BTreeSet<T>",
-            "TypeId": 484
+            "TypeId": 485
           }
         ],
         "Path": [
@@ -24525,7 +24592,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "484": {
+      "485": {
         "TypeFields": [
           {
             "TypeId": 51
@@ -24542,7 +24609,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "485": {
+      "486": {
         "TypeFields": [
           {
             "Name": "desired_collection",
@@ -24590,7 +24657,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "486": {
+      "487": {
         "TypeFields": [
           {
             "TypeName": "PalletFeature",
@@ -24605,12 +24672,12 @@
         "TypeParams": [
           {
             "Name": "T",
-            "TypeId": 487
+            "TypeId": 488
           }
         ],
         "TypeDef": "Composite"
       },
-      "487": {
+      "488": {
         "Variants": [
           {
             "Name": "Trading",
@@ -24640,7 +24707,7 @@
         ],
         "TypeDef": "Variant"
       },
-      "488": {
+      "489": {
         "Variants": [
           {
             "Name": "NoPermission",
@@ -25013,7 +25080,7 @@
           "\n\t\t\tCustom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)\n\t\t\tof this pallet.\n\t\t\t"
         ]
       },
-      "489": {
+      "490": {
         "Variants": [
           {
             "Name": "Stored",
@@ -25033,7 +25100,7 @@
         ],
         "TypeDef": "Variant"
       },
-      "490": {
+      "491": {
         "Variants": [
           {
             "Name": "EmptyIpfsUrl",
@@ -25108,7 +25175,7 @@
           "\n\t\t\tCustom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)\n\t\t\tof this pallet.\n\t\t\t"
         ]
       },
-      "491": {
+      "492": {
         "TypeFields": [
           {
             "TypeId": 13
@@ -25131,29 +25198,29 @@
           },
           {
             "Name": "Signature",
-            "TypeId": 323
+            "TypeId": 324
           },
           {
             "Name": "Extra",
-            "TypeId": 492
+            "TypeId": 493
           }
         ],
         "TypeDef": "Composite"
       },
-      "492": {
+      "493": {
         "TypeIds": [
-          493,
           494,
           495,
           496,
           497,
-          499,
+          498,
           500,
-          501
+          501,
+          502
         ],
         "TypeDef": "Tuple"
       },
-      "493": {
+      "494": {
         "Path": [
           "frame_system",
           "extensions",
@@ -25167,7 +25234,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "494": {
+      "495": {
         "Path": [
           "frame_system",
           "extensions",
@@ -25181,7 +25248,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "495": {
+      "496": {
         "Path": [
           "frame_system",
           "extensions",
@@ -25195,7 +25262,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "496": {
+      "497": {
         "Path": [
           "frame_system",
           "extensions",
@@ -25209,11 +25276,11 @@
         ],
         "TypeDef": "Composite"
       },
-      "497": {
+      "498": {
         "TypeFields": [
           {
             "TypeName": "Era",
-            "TypeId": 498
+            "TypeId": 499
           }
         ],
         "Path": [
@@ -25229,7 +25296,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "498": {
+      "499": {
         "Variants": [
           {
             "Name": "Immortal",
@@ -27540,7 +27607,7 @@
         ],
         "TypeDef": "Variant"
       },
-      "499": {
+      "500": {
         "TypeFields": [
           {
             "TypeName": "T::Index",
@@ -27560,7 +27627,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "500": {
+      "501": {
         "Path": [
           "frame_system",
           "extensions",
@@ -27574,7 +27641,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "501": {
+      "502": {
         "TypeFields": [
           {
             "TypeName": "BalanceOf<T>",
@@ -27592,7 +27659,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "502": {
+      "503": {
         "Path": [
           "bajun_runtime",
           "Runtime"
@@ -27898,7 +27965,7 @@
           {
             "Name": "Version",
             "TypeId": 168,
-            "Value": "FGJhanVuFGJhanVuAQAAAHgAAAAAAAAAKN1xjVzFMmLUAQAAAN9qy2iZB2CbBAAAADfjl/x8kfXkAgAAAED+OtQB+JWaBgAAANK8mJfu0I8VAwAAAPeLJ4vlP0VMAgAAAKs8BXIpH+uLAQAAALydiZBPW5I/AQAAADfIuxNQqaKoBAAAAOqT4/FvPWliAgAAAAEAAAAB",
+            "Value": "FGJhanVuFGJhanVuAQAAAHoAAAAAAAAAKN1xjVzFMmLUAQAAAN9qy2iZB2CbBAAAADfjl/x8kfXkAgAAAED+OtQB+JWaBgAAANK8mJfu0I8VAwAAAPeLJ4vlP0VMAgAAAKs8BXIpH+uLAQAAALydiZBPW5I/AQAAADfIuxNQqaKoBAAAAOqT4/FvPWliAgAAAAEAAAAB",
             "Docs": [
               " Get the chain's current version."
             ]
@@ -28411,7 +28478,7 @@
           }
         ],
         "Errors": {
-          "TypeId": 331
+          "TypeId": 332
         },
         "Index": 4
       },
@@ -28435,7 +28502,7 @@
           }
         ],
         "Errors": {
-          "TypeId": 332
+          "TypeId": 333
         },
         "Index": 5
       },
@@ -28455,7 +28522,7 @@
                     "Twox64Concat"
                   ],
                   "Key": 0,
-                  "Value": 333
+                  "Value": 334
                 }
               },
               "Default": "AA==",
@@ -28496,7 +28563,7 @@
                     "Twox64Concat"
                   ],
                   "Key": 0,
-                  "Value": 337
+                  "Value": 338
                 }
               },
               "Default": "AAAAAAAAAAAAAAAAAAAAAAA=",
@@ -28513,7 +28580,7 @@
               "Modifier": "Default",
               "StorageType": "Plain",
               "TypeMap": {
-                "Item1": 339,
+                "Item1": 340,
                 "Item2": null
               },
               "Default": "AA==",
@@ -28587,7 +28654,7 @@
           }
         ],
         "Errors": {
-          "TypeId": 343
+          "TypeId": 344
         },
         "Index": 6
       },
@@ -28607,7 +28674,7 @@
                     "Twox64Concat"
                   ],
                   "Key": 0,
-                  "Value": 344
+                  "Value": 345
                 }
               },
               "Default": "AAAAAAAAAAAAAAAAAAAAAAA=",
@@ -28627,7 +28694,7 @@
                     "Twox64Concat"
                   ],
                   "Key": 0,
-                  "Value": 348
+                  "Value": 349
                 }
               },
               "Default": "AAAAAAAAAAAAAAAAAAAAAAA=",
@@ -28707,7 +28774,7 @@
           }
         ],
         "Errors": {
-          "TypeId": 352
+          "TypeId": 353
         },
         "Index": 7
       },
@@ -28738,7 +28805,7 @@
                     "Twox64Concat"
                   ],
                   "Key": 4,
-                  "Value": 353
+                  "Value": 354
                 }
               },
               "Default": "AA==",
@@ -28799,7 +28866,7 @@
           }
         ],
         "Errors": {
-          "TypeId": 359
+          "TypeId": 360
         },
         "Index": 8
       },
@@ -28819,7 +28886,7 @@
                     "Identity"
                   ],
                   "Key": 12,
-                  "Value": 360
+                  "Value": 361
                 }
               },
               "Default": "AA==",
@@ -28837,8 +28904,8 @@
                   "Hashers": [
                     "Identity"
                   ],
-                  "Key": 363,
-                  "Value": 364
+                  "Key": 364,
+                  "Value": 365
                 }
               },
               "Default": "AA==",
@@ -28854,7 +28921,7 @@
         },
         "Constants": [],
         "Errors": {
-          "TypeId": 365
+          "TypeId": 366
         },
         "Index": 9
       },
@@ -28942,7 +29009,7 @@
                     "BlakeTwo128Concat"
                   ],
                   "Key": 0,
-                  "Value": 366
+                  "Value": 367
                 }
               },
               "Default": "AA==",
@@ -28962,7 +29029,7 @@
                     "BlakeTwo128Concat"
                   ],
                   "Key": 0,
-                  "Value": 370
+                  "Value": 371
                 }
               },
               "Default": "AA==",
@@ -28981,7 +29048,7 @@
                     "BlakeTwo128Concat"
                   ],
                   "Key": 0,
-                  "Value": 373
+                  "Value": 374
                 }
               },
               "Default": "AA==",
@@ -29000,7 +29067,7 @@
                     "BlakeTwo128Concat"
                   ],
                   "Key": 0,
-                  "Value": 373
+                  "Value": 374
                 }
               },
               "Default": "AA==",
@@ -29067,7 +29134,7 @@
           }
         ],
         "Errors": {
-          "TypeId": 376
+          "TypeId": 377
         },
         "Index": 15
       },
@@ -29081,7 +29148,7 @@
               "Modifier": "Default",
               "StorageType": "Plain",
               "TypeMap": {
-                "Item1": 377,
+                "Item1": 378,
                 "Item2": null
               },
               "Default": "AABkp7O24A0AAAAAAAAAAA==",
@@ -29092,7 +29159,7 @@
               "Modifier": "Default",
               "StorageType": "Plain",
               "TypeMap": {
-                "Item1": 378,
+                "Item1": 379,
                 "Item2": null
               },
               "Default": "AA==",
@@ -29153,7 +29220,7 @@
                     "BlakeTwo128Concat"
                   ],
                   "Key": 0,
-                  "Value": 379
+                  "Value": 380
                 }
               },
               "Default": "AA==",
@@ -29182,7 +29249,7 @@
           }
         ],
         "Errors": {
-          "TypeId": 380
+          "TypeId": 381
         },
         "Index": 17
       },
@@ -29222,7 +29289,7 @@
               "Modifier": "Default",
               "StorageType": "Plain",
               "TypeMap": {
-                "Item1": 381,
+                "Item1": 382,
                 "Item2": null
               },
               "Default": "AA==",
@@ -29235,7 +29302,7 @@
               "Modifier": "Default",
               "StorageType": "Plain",
               "TypeMap": {
-                "Item1": 382,
+                "Item1": 383,
                 "Item2": null
               },
               "Default": "AA==",
@@ -29302,7 +29369,7 @@
         },
         "Constants": [],
         "Errors": {
-          "TypeId": 385
+          "TypeId": 386
         },
         "Index": 21
       },
@@ -29356,7 +29423,7 @@
               "Modifier": "Default",
               "StorageType": "Plain",
               "TypeMap": {
-                "Item1": 386,
+                "Item1": 387,
                 "Item2": null
               },
               "Default": "AA==",
@@ -29411,7 +29478,7 @@
                   "Hashers": [
                     "Twox64Concat"
                   ],
-                  "Key": 388,
+                  "Key": 389,
                   "Value": 0
                 }
               },
@@ -29430,7 +29497,7 @@
         },
         "Constants": [],
         "Errors": {
-          "TypeId": 390
+          "TypeId": 391
         },
         "Index": 22
       },
@@ -29444,7 +29511,7 @@
               "Modifier": "Default",
               "StorageType": "Plain",
               "TypeMap": {
-                "Item1": 391,
+                "Item1": 392,
                 "Item2": null
               },
               "Default": "AA==",
@@ -29457,7 +29524,7 @@
               "Modifier": "Default",
               "StorageType": "Plain",
               "TypeMap": {
-                "Item1": 393,
+                "Item1": 394,
                 "Item2": null
               },
               "Default": "AAAAAAAAAAA=",
@@ -29485,7 +29552,7 @@
               "Modifier": "Default",
               "StorageType": "Plain",
               "TypeMap": {
-                "Item1": 391,
+                "Item1": 392,
                 "Item2": null
               },
               "Default": "AA==",
@@ -29515,7 +29582,7 @@
               "Modifier": "Default",
               "StorageType": "Plain",
               "TypeMap": {
-                "Item1": 394,
+                "Item1": 395,
                 "Item2": null
               },
               "Default": "AA==",
@@ -29534,7 +29601,7 @@
                     "BlakeTwo128Concat",
                     "Twox64Concat"
                   ],
-                  "Key": 400,
+                  "Key": 401,
                   "Value": 13
                 }
               },
@@ -29548,7 +29615,7 @@
               "Modifier": "Default",
               "StorageType": "Plain",
               "TypeMap": {
-                "Item1": 401,
+                "Item1": 402,
                 "Item2": null
               },
               "Default": "AA==",
@@ -29572,7 +29639,7 @@
                     "BlakeTwo128Concat",
                     "Twox64Concat"
                   ],
-                  "Key": 404,
+                  "Key": 405,
                   "Value": 13
                 }
               },
@@ -29605,7 +29672,7 @@
               "Modifier": "Default",
               "StorageType": "Plain",
               "TypeMap": {
-                "Item1": 405,
+                "Item1": 406,
                 "Item2": null
               },
               "Default": "AgAAAAUAAAABAAAAghoGAAAIAAcAyBeoBAIABAA=",
@@ -29624,7 +29691,7 @@
                     "Twox64Concat"
                   ],
                   "Key": 11,
-                  "Value": 406
+                  "Value": 407
                 }
               },
               "Default": "AA==",
@@ -29685,7 +29752,7 @@
         },
         "Constants": [],
         "Errors": {
-          "TypeId": 407
+          "TypeId": 408
         },
         "Index": 30
       },
@@ -29718,7 +29785,7 @@
                     "BlakeTwo128Concat"
                   ],
                   "Key": 11,
-                  "Value": 408
+                  "Value": 409
                 }
               },
               "Default": "AA==",
@@ -29773,7 +29840,7 @@
                     "Twox64Concat",
                     "BlakeTwo128Concat"
                   ],
-                  "Key": 413,
+                  "Key": 414,
                   "Value": 4
                 }
               },
@@ -29793,7 +29860,7 @@
                     "Twox64Concat",
                     "BlakeTwo128Concat"
                   ],
-                  "Key": 413,
+                  "Key": 414,
                   "Value": 11
                 }
               },
@@ -29813,8 +29880,8 @@
                     "Twox64Concat",
                     "BlakeTwo128Concat"
                   ],
-                  "Key": 413,
-                  "Value": 414
+                  "Key": 414,
+                  "Value": 415
                 }
               },
               "Default": "AA==",
@@ -29828,7 +29895,7 @@
               "Modifier": "Default",
               "StorageType": "Plain",
               "TypeMap": {
-                "Item1": 415,
+                "Item1": 416,
                 "Item2": null
               },
               "Default": "AA==",
@@ -29843,7 +29910,7 @@
               "Modifier": "Optional",
               "StorageType": "Plain",
               "TypeMap": {
-                "Item1": 418,
+                "Item1": 419,
                 "Item2": null
               },
               "Default": "AA==",
@@ -29863,8 +29930,8 @@
                     "BlakeTwo128Concat",
                     "BlakeTwo128Concat"
                   ],
-                  "Key": 420,
-                  "Value": 422
+                  "Key": 421,
+                  "Value": 423
                 }
               },
               "Default": "AA==",
@@ -29883,7 +29950,7 @@
                     "BlakeTwo128Concat"
                   ],
                   "Key": 0,
-                  "Value": 423
+                  "Value": 424
                 }
               },
               "Default": "AA==",
@@ -29914,7 +29981,7 @@
         },
         "Constants": [],
         "Errors": {
-          "TypeId": 426
+          "TypeId": 427
         },
         "Index": 31
       },
@@ -29929,7 +29996,7 @@
         },
         "Constants": [],
         "Errors": {
-          "TypeId": 427
+          "TypeId": 428
         },
         "Index": 32
       },
@@ -29943,7 +30010,7 @@
               "Modifier": "Default",
               "StorageType": "Plain",
               "TypeMap": {
-                "Item1": 428,
+                "Item1": 429,
                 "Item2": null
               },
               "Default": "BwDkC1QCAgAEAA==",
@@ -29956,7 +30023,7 @@
               "Modifier": "Default",
               "StorageType": "Plain",
               "TypeMap": {
-                "Item1": 429,
+                "Item1": 430,
                 "Item2": null
               },
               "Default": "AAAAAAAAAAAAAAAAAAAAAA==",
@@ -29975,7 +30042,7 @@
                     "BlakeTwo128Concat"
                   ],
                   "Key": 4,
-                  "Value": 430
+                  "Value": 431
                 }
               },
               "Default": "AA==",
@@ -29994,7 +30061,7 @@
                     "BlakeTwo128Concat"
                   ],
                   "Key": 11,
-                  "Value": 431
+                  "Value": 432
                 }
               },
               "Default": "AA==",
@@ -30025,7 +30092,7 @@
         },
         "Constants": [],
         "Errors": {
-          "TypeId": 432
+          "TypeId": 433
         },
         "Index": 33
       },
@@ -30057,7 +30124,7 @@
         },
         "Constants": [],
         "Errors": {
-          "TypeId": 433
+          "TypeId": 434
         },
         "Index": 40
       },
@@ -30090,7 +30157,7 @@
                     "Twox64Concat"
                   ],
                   "Key": 4,
-                  "Value": 434
+                  "Value": 435
                 }
               },
               "Default": "AA==",
@@ -30135,7 +30202,7 @@
         "Constants": [
           {
             "Name": "ProposalBond",
-            "TypeId": 435,
+            "TypeId": 436,
             "Value": "UMMAAA==",
             "Docs": [
               " Fraction of a proposal's value that should be bonded in order to place the proposal.",
@@ -30152,7 +30219,7 @@
           },
           {
             "Name": "ProposalBondMaximum",
-            "TypeId": 310,
+            "TypeId": 311,
             "Value": "AA==",
             "Docs": [
               " Maximum amount of funds that should be placed in a deposit for making a proposal."
@@ -30168,7 +30235,7 @@
           },
           {
             "Name": "Burn",
-            "TypeId": 435,
+            "TypeId": 436,
             "Value": "AAAAAA==",
             "Docs": [
               " Percentage of spare funds (if any) that are burnt per spend period."
@@ -30176,7 +30243,7 @@
           },
           {
             "Name": "PalletId",
-            "TypeId": 436,
+            "TypeId": 437,
             "Value": "YWovdHJzcnk=",
             "Docs": [
               " The treasury's pallet id, used for deriving its sovereign account ID."
@@ -30194,7 +30261,7 @@
           }
         ],
         "Errors": {
-          "TypeId": 437
+          "TypeId": 438
         },
         "Index": 41
       },
@@ -30208,7 +30275,7 @@
               "Modifier": "Default",
               "StorageType": "Plain",
               "TypeMap": {
-                "Item1": 438,
+                "Item1": 439,
                 "Item2": null
               },
               "Default": "AA==",
@@ -30246,7 +30313,7 @@
                     "Identity"
                   ],
                   "Key": 12,
-                  "Value": 439
+                  "Value": 440
                 }
               },
               "Default": "AA==",
@@ -30312,7 +30379,7 @@
           }
         ],
         "Errors": {
-          "TypeId": 440
+          "TypeId": 441
         },
         "Index": 42
       },
@@ -30326,7 +30393,7 @@
               "Modifier": "Default",
               "StorageType": "Plain",
               "TypeMap": {
-                "Item1": 441,
+                "Item1": 442,
                 "Item2": null
               },
               "Default": "AA==",
@@ -30357,7 +30424,7 @@
         },
         "Constants": [],
         "Errors": {
-          "TypeId": 442
+          "TypeId": 443
         },
         "Index": 43
       },
@@ -30371,7 +30438,7 @@
               "Modifier": "Default",
               "StorageType": "Plain",
               "TypeMap": {
-                "Item1": 443,
+                "Item1": 444,
                 "Item2": null
               },
               "Default": "AA==",
@@ -30427,7 +30494,7 @@
               "Modifier": "Default",
               "StorageType": "Plain",
               "TypeMap": {
-                "Item1": 444,
+                "Item1": 445,
                 "Item2": null
               },
               "Default": "AAAAAAAAAAAA",
@@ -30491,7 +30558,7 @@
                     "Identity"
                   ],
                   "Key": 12,
-                  "Value": 445
+                  "Value": 446
                 }
               },
               "Default": "AA==",
@@ -30508,8 +30575,8 @@
                     "Identity",
                     "Identity"
                   ],
-                  "Key": 448,
-                  "Value": 449
+                  "Key": 449,
+                  "Value": 450
                 }
               },
               "Default": "AA==",
@@ -30554,7 +30621,7 @@
                     "Identity"
                   ],
                   "Key": 0,
-                  "Value": 450
+                  "Value": 451
                 }
               },
               "Default": "AAA=",
@@ -30571,8 +30638,8 @@
                     "Identity",
                     "Identity"
                   ],
-                  "Key": 448,
-                  "Value": 451
+                  "Key": 449,
+                  "Value": 452
                 }
               },
               "Default": "GQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
@@ -30589,8 +30656,8 @@
                     "Identity",
                     "Identity"
                   ],
-                  "Key": 459,
-                  "Value": 460
+                  "Key": 460,
+                  "Value": 461
                 }
               },
               "Default": "AAAAAAAAAAA=",
@@ -30607,7 +30674,7 @@
                     "Identity",
                     "Identity"
                   ],
-                  "Key": 461,
+                  "Key": 462,
                   "Value": 6
                 }
               },
@@ -30653,13 +30720,13 @@
         "Constants": [
           {
             "Name": "PalletId",
-            "TypeId": 436,
+            "TypeId": 437,
             "Value": "YWovYWFhdHI=",
             "Docs": []
           }
         ],
         "Errors": {
-          "TypeId": 462
+          "TypeId": 463
         },
         "Index": 51
       },
@@ -30679,7 +30746,7 @@
                     "BlakeTwo128Concat"
                   ],
                   "Key": 4,
-                  "Value": 463
+                  "Value": 464
                 }
               },
               "Default": "AA==",
@@ -30718,7 +30785,7 @@
                     "BlakeTwo128Concat",
                     "BlakeTwo128Concat"
                   ],
-                  "Key": 464,
+                  "Key": 465,
                   "Value": 35
                 }
               },
@@ -30739,7 +30806,7 @@
                     "BlakeTwo128Concat",
                     "BlakeTwo128Concat"
                   ],
-                  "Key": 465,
+                  "Key": 466,
                   "Value": 35
                 }
               },
@@ -30760,8 +30827,8 @@
                     "BlakeTwo128Concat",
                     "BlakeTwo128Concat"
                   ],
-                  "Key": 466,
-                  "Value": 467
+                  "Key": 467,
+                  "Value": 468
                 }
               },
               "Default": "AA==",
@@ -30781,8 +30848,8 @@
                     "BlakeTwo128Concat",
                     "BlakeTwo128Concat"
                   ],
-                  "Key": 469,
-                  "Value": 470
+                  "Key": 470,
+                  "Value": 471
                 }
               },
               "Default": "AA==",
@@ -30801,7 +30868,7 @@
                     "BlakeTwo128Concat"
                   ],
                   "Key": 4,
-                  "Value": 476
+                  "Value": 477
                 }
               },
               "Default": "AA==",
@@ -30820,8 +30887,8 @@
                     "BlakeTwo128Concat",
                     "BlakeTwo128Concat"
                   ],
-                  "Key": 469,
-                  "Value": 477
+                  "Key": 470,
+                  "Value": 478
                 }
               },
               "Default": "AA==",
@@ -30842,8 +30909,8 @@
                     "BlakeTwo128Concat",
                     "BlakeTwo128Concat"
                   ],
-                  "Key": 479,
-                  "Value": 480
+                  "Key": 480,
+                  "Value": 481
                 }
               },
               "Default": "AA==",
@@ -30862,8 +30929,8 @@
                     "BlakeTwo128Concat",
                     "BlakeTwo128Concat"
                   ],
-                  "Key": 469,
-                  "Value": 482
+                  "Key": 470,
+                  "Value": 483
                 }
               },
               "Default": "AA==",
@@ -30882,8 +30949,8 @@
                     "BlakeTwo128Concat",
                     "BlakeTwo128Concat"
                   ],
-                  "Key": 469,
-                  "Value": 483
+                  "Key": 470,
+                  "Value": 484
                 }
               },
               "Default": "AA==",
@@ -30916,8 +30983,8 @@
                     "BlakeTwo128Concat",
                     "BlakeTwo128Concat"
                   ],
-                  "Key": 469,
-                  "Value": 485
+                  "Key": 470,
+                  "Value": 486
                 }
               },
               "Default": "AA==",
@@ -30936,7 +31003,7 @@
                     "BlakeTwo128Concat"
                   ],
                   "Key": 4,
-                  "Value": 305
+                  "Value": 306
                 }
               },
               "Default": "AA==",
@@ -30955,8 +31022,8 @@
                     "BlakeTwo128Concat",
                     "BlakeTwo128Concat"
                   ],
-                  "Key": 469,
-                  "Value": 316
+                  "Key": 470,
+                  "Value": 317
                 }
               },
               "Default": "AA==",
@@ -30967,7 +31034,7 @@
           ]
         },
         "Calls": {
-          "TypeId": 304
+          "TypeId": 305
         },
         "Events": {
           "TypeId": 141
@@ -31080,7 +31147,7 @@
           },
           {
             "Name": "Features",
-            "TypeId": 486,
+            "TypeId": 487,
             "Value": "AAAAAAAAAAA=",
             "Docs": [
               " Disables some of pallet's features."
@@ -31088,7 +31155,7 @@
           }
         ],
         "Errors": {
-          "TypeId": 488
+          "TypeId": 489
         },
         "Index": 60
       },
@@ -31108,8 +31175,8 @@
                     "Identity",
                     "Identity"
                   ],
-                  "Key": 469,
-                  "Value": 489
+                  "Key": 470,
+                  "Value": 490
                 }
               },
               "Default": "AA==",
@@ -31124,7 +31191,7 @@
         "Constants": [
           {
             "Name": "PalletId",
-            "TypeId": 436,
+            "TypeId": 437,
             "Value": "YWovbmZ0dHI=",
             "Docs": [
               " The NFT-transfer's pallet id, used for deriving its sovereign account ID."
@@ -31132,57 +31199,57 @@
           }
         ],
         "Errors": {
-          "TypeId": 490
+          "TypeId": 491
         },
         "Index": 61
       }
     },
     "Extrinsic": {
-      "TypeId": 491,
+      "TypeId": 492,
       "Version": 4,
       "SignedExtensions": [
         {
           "SignedIdentifier": "CheckNonZeroSender",
-          "SignedExtType": 493,
+          "SignedExtType": 494,
           "AddSignedExtType": 35
         },
         {
           "SignedIdentifier": "CheckSpecVersion",
-          "SignedExtType": 494,
-          "AddSignedExtType": 4
-        },
-        {
-          "SignedIdentifier": "CheckTxVersion",
           "SignedExtType": 495,
           "AddSignedExtType": 4
         },
         {
-          "SignedIdentifier": "CheckGenesis",
+          "SignedIdentifier": "CheckTxVersion",
           "SignedExtType": 496,
-          "AddSignedExtType": 12
+          "AddSignedExtType": 4
         },
         {
-          "SignedIdentifier": "CheckMortality",
+          "SignedIdentifier": "CheckGenesis",
           "SignedExtType": 497,
           "AddSignedExtType": 12
         },
         {
-          "SignedIdentifier": "CheckNonce",
-          "SignedExtType": 499,
-          "AddSignedExtType": 35
+          "SignedIdentifier": "CheckMortality",
+          "SignedExtType": 498,
+          "AddSignedExtType": 12
         },
         {
-          "SignedIdentifier": "CheckWeight",
+          "SignedIdentifier": "CheckNonce",
           "SignedExtType": 500,
           "AddSignedExtType": 35
         },
         {
-          "SignedIdentifier": "ChargeTransactionPayment",
+          "SignedIdentifier": "CheckWeight",
           "SignedExtType": 501,
+          "AddSignedExtType": 35
+        },
+        {
+          "SignedIdentifier": "ChargeTransactionPayment",
+          "SignedExtType": 502,
           "AddSignedExtType": 35
         }
       ]
     },
-    "TypeId": 502
+    "TypeId": 503
   }
 }
