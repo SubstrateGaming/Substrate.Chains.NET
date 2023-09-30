@@ -44,16 +44,16 @@
 [![Nuget](https://img.shields.io/nuget/v/Substrate.Aventus.NET.Extension)](https://www.nuget.org/packages/Substrate.Aventus.NET.Extension/)
 ![Nuget](https://img.shields.io/nuget/dt/Substrate.Aventus.NET.Extension)  
 ![Build](https://github.com/SubstrateGaming/Substrate.Chains.NET/actions/workflows/publish_aventus.yml/badge.svg)  
-- Moonbeam Network .NET SDK ([Link](https://github.com/SubstrateGaming/Substrate.Chains.NET/tree/main/Substrate.Moonbeam.NET))  
-  - Substrate Moonbeam .NET API Extension  
-[![Nuget](https://img.shields.io/nuget/v/Substrate.Moonbeam.NET.Extension)](https://www.nuget.org/packages/Substrate.Moonbeam.NET.Extension/)
-![Nuget](https://img.shields.io/nuget/dt/Substrate.Moonbeam.NET.Extension)  
-![Build](https://github.com/SubstrateGaming/Substrate.Chains.NET/actions/workflows/publish_moonbeam.yml/badge.svg)  
 - KILT Network .NET SDK ([Link](https://github.com/SubstrateGaming/Substrate.Chains.NET/tree/main/Substrate.KILT.NET))  
   - Substrate KILT .NET API Extension  
 [![Nuget](https://img.shields.io/nuget/v/Substrate.KILT.NET.Extension)](https://www.nuget.org/packages/Substrate.KILT.NET.Extension/)
 ![Nuget](https://img.shields.io/nuget/dt/Substrate.KILT.NET.Extension)  
 ![Build](https://github.com/SubstrateGaming/Substrate.Chains.NET/actions/workflows/publish_kilt.yml/badge.svg)  
+- Moonbeam Network .NET SDK ([Link](https://github.com/SubstrateGaming/Substrate.Chains.NET/tree/main/Substrate.Moonbeam.NET))  
+  - Substrate Moonbeam .NET API Extension  
+[![Nuget](https://img.shields.io/nuget/v/Substrate.Moonbeam.NET.Extension)](https://www.nuget.org/packages/Substrate.Moonbeam.NET.Extension/)
+![Nuget](https://img.shields.io/nuget/dt/Substrate.Moonbeam.NET.Extension)  
+![Build](https://github.com/SubstrateGaming/Substrate.Chains.NET/actions/workflows/publish_moonbeam.yml/badge.svg)  
 - Moonsama Network .NET SDK ([Link](https://github.com/SubstrateGaming/Substrate.Chains.NET/tree/main/Substrate.Moonsama.NET))  
   - Substrate Moonsama .NET API Extension  
 [![Nuget](https://img.shields.io/nuget/v/Substrate.Moonsama.NET.Extension)](https://www.nuget.org/packages/Substrate.Moonsama.NET.Extension/)
