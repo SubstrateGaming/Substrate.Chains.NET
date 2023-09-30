@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Substrate.KILT.NET.RestService", "Substrate.KILT.NET.RestService\Substrate.KILT.NET.RestService.csproj", "{8DDC4319-3A59-4FA0-9B7F-C313CC275C3E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Substrate.KILT.NET.NetApiExt", "Substrate.KILT.NET.NetApiExt\Substrate.KILT.NET.NetApiExt.csproj", "{386562A9-4B28-42A0-A9AA-789A40E0ADE4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Substrate.KILT.NET.RestClient", "Substrate.KILT.NET.RestClient\Substrate.KILT.NET.RestClient.csproj", "{01DC347E-4F95-4EE3-A4EC-807016F7922D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Substrate.KILT.NET.RestClient.Mockup", "Substrate.KILT.NET.RestClient.Mockup\Substrate.KILT.NET.RestClient.Mockup.csproj", "{CFBDAD90-8E9D-443A-8A4A-2D7FC624DDA6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Substrate.KILT.NET.RestClient.Test", "Substrate.KILT.NET.RestClient.Test\Substrate.KILT.NET.RestClient.Test.csproj", "{275AA689-5957-4D37-B78A-0EDA109A2EA1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8DDC4319-3A59-4FA0-9B7F-C313CC275C3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DDC4319-3A59-4FA0-9B7F-C313CC275C3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DDC4319-3A59-4FA0-9B7F-C313CC275C3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DDC4319-3A59-4FA0-9B7F-C313CC275C3E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{386562A9-4B28-42A0-A9AA-789A40E0ADE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{386562A9-4B28-42A0-A9AA-789A40E0ADE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{386562A9-4B28-42A0-A9AA-789A40E0ADE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{386562A9-4B28-42A0-A9AA-789A40E0ADE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01DC347E-4F95-4EE3-A4EC-807016F7922D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01DC347E-4F95-4EE3-A4EC-807016F7922D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01DC347E-4F95-4EE3-A4EC-807016F7922D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01DC347E-4F95-4EE3-A4EC-807016F7922D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFBDAD90-8E9D-443A-8A4A-2D7FC624DDA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFBDAD90-8E9D-443A-8A4A-2D7FC624DDA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFBDAD90-8E9D-443A-8A4A-2D7FC624DDA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFBDAD90-8E9D-443A-8A4A-2D7FC624DDA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{275AA689-5957-4D37-B78A-0EDA109A2EA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{275AA689-5957-4D37-B78A-0EDA109A2EA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{275AA689-5957-4D37-B78A-0EDA109A2EA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{275AA689-5957-4D37-B78A-0EDA109A2EA1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

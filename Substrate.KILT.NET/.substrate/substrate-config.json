@@ -1,0 +1,13 @@
+{
+  "projects": {
+    "net_api": "Substrate.KILT.NET.NetApiExt",
+    "rest_service": "Substrate.KILT.NET.RestService",
+    "rest_client": "Substrate.KILT.NET.RestClient"
+  },
+   "metadata": {
+      "websocket": "wss://spiritnet.kilt.io"
+   },
+  "rest_client_settings": {
+    "service_assembly": "Substrate.KILT.NET.RestService.dll"
+  }
+}
