@@ -24,11 +24,11 @@ namespace Substrate.Polkadot.NET.RestClient.Generated.Clients
          _httpClient = httpClient;
          _subscriptionClient = subscriptionClient;
       }
-      public async Task<BaseVec<BaseOpt<BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U128>>>> GetLeases(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id key)
+      public async Task<BaseVec<BaseOpt<BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U128>>>> GetLeases(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key)
       {
          return await SendRequestAsync<BaseVec<BaseOpt<BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U128>>>>(_httpClient, "slots/leases", Substrate.Polkadot.NET.NetApiExt.Generated.Storage.SlotsStorage.LeasesParams(key));
       }
-      public async Task<bool> SubscribeLeases(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id key)
+      public async Task<bool> SubscribeLeases(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key)
       {
          return await _subscriptionClient.SubscribeAsync("Slots.Leases", Substrate.Polkadot.NET.NetApiExt.Generated.Storage.SlotsStorage.LeasesParams(key));
       }

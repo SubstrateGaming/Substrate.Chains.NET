@@ -16,7 +16,7 @@ namespace Substrate.Polkadot.NET.RestClient.Generated.Interfaces
    
    public interface IVestingControllerClient
    {
-      Task<BoundedVecT27> GetVesting(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
+      Task<BoundedVecT22> GetVesting(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
       Task<bool> SubscribeVesting(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
       Task<EnumReleases> GetStorageVersion();
       Task<bool> SubscribeStorageVersion();

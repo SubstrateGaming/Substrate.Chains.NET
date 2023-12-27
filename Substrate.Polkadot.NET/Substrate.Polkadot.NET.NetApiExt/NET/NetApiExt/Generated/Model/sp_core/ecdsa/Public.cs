@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.ecdsa
     
     
     /// <summary>
-    /// >> 368 - Composite[sp_core.ecdsa.Public]
+    /// >> 344 - Composite[sp_core.ecdsa.Public]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Public : BaseType

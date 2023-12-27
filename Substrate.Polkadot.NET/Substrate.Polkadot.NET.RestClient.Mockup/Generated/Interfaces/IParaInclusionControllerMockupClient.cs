@@ -12,12 +12,12 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup.Generated.Interfaces
    using System;
    using System.Threading.Tasks;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.inclusion;
-   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5;
    
    public interface IParaInclusionControllerMockupClient
    {
       Task<bool> SetAvailabilityBitfields(AvailabilityBitfieldRecord value, ValidatorIndex key);
-      Task<bool> SetPendingAvailability(CandidatePendingAvailability value, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id key);
-      Task<bool> SetPendingAvailabilityCommitments(CandidateCommitments value, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id key);
+      Task<bool> SetPendingAvailability(CandidatePendingAvailability value, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key);
+      Task<bool> SetPendingAvailabilityCommitments(CandidateCommitments value, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key);
    }
 }

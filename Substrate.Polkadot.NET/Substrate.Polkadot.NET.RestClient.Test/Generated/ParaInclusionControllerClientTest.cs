@@ -16,7 +16,7 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
    using Substrate.Polkadot.NET.RestClient.Mockup.Generated.Clients;
    using Substrate.Polkadot.NET.RestClient.Generated.Clients;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.inclusion;
-   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5;
    
    public class ParaInclusionControllerClientTest : ClientTestBase
    {
@@ -30,15 +30,15 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
       {
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.inclusion.AvailabilityBitfieldRecord result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.inclusion.AvailabilityBitfieldRecord();
-         result.Bitfield = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.AvailabilityBitfield();
+         result.Bitfield = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.AvailabilityBitfield();
          result.Bitfield = this.GetTestValue3();
          result.SubmittedAt = this.GetTestValueU32();
          return result;
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.AvailabilityBitfield GetTestValue3()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.AvailabilityBitfield GetTestValue3()
       {
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.AvailabilityBitfield result;
-         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.AvailabilityBitfield();
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.AvailabilityBitfield result;
+         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.AvailabilityBitfield();
          result.Value = new Substrate.NetApi.Model.Types.Base.BaseBitSeq<Substrate.NetApi.Model.Types.Primitive.U8, Substrate.Polkadot.NET.NetApiExt.Generated.Model.bitvec.order.Lsb0>();
          result.Value = this.GetTestValue4();
          return result;
@@ -47,13 +47,13 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
       {
          Substrate.NetApi.Model.Types.Base.BaseBitSeq<Substrate.NetApi.Model.Types.Primitive.U8, Substrate.Polkadot.NET.NetApiExt.Generated.Model.bitvec.order.Lsb0> result;
          result = new Substrate.NetApi.Model.Types.Base.BaseBitSeq<Substrate.NetApi.Model.Types.Primitive.U8, Substrate.Polkadot.NET.NetApiExt.Generated.Model.bitvec.order.Lsb0>();
-         // NOT IMPLEMENTED >> Initialize Substrate.NetApi.Model.Types.Base.BaseBitSeq`2[[Substrate.NetApi.Model.Types.Primitive.U8, Substrate.NetApi, Version=0.9.7.0, Culture=neutral, PublicKeyToken=null],[Substrate.Polkadot.NET.NetApiExt.Generated.Model.bitvec.order.Lsb0, Substrate.Polkadot.NET.NetApiExt, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+         // NOT IMPLEMENTED >> Initialize Substrate.NetApi.Model.Types.Base.BaseBitSeq`2[[Substrate.NetApi.Model.Types.Primitive.U8, Substrate.NetApi, Version=0.9.14.0, Culture=neutral, PublicKeyToken=null],[Substrate.Polkadot.NET.NetApiExt.Generated.Model.bitvec.order.Lsb0, Substrate.Polkadot.NET.NetApiExt, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
          return result;
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.ValidatorIndex GetTestValue5()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.ValidatorIndex GetTestValue5()
       {
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.ValidatorIndex result;
-         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.ValidatorIndex();
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.ValidatorIndex result;
+         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.ValidatorIndex();
          result.Value = this.GetTestValueU32();
          return result;
       }
@@ -69,7 +69,7 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
          // Construct new RPC client to test with.
          ParaInclusionControllerClient rpcClient = new ParaInclusionControllerClient(_httpClient, subscriptionClient);
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.inclusion.AvailabilityBitfieldRecord mockupValue = this.GetTestValue2();
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.ValidatorIndex mockupKey = this.GetTestValue5();
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.ValidatorIndex mockupKey = this.GetTestValue5();
 
          Assert.IsTrue(await rpcClient.SubscribeAvailabilityBitfields(mockupKey));
 
@@ -90,11 +90,11 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
       {
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.inclusion.CandidatePendingAvailability result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.inclusion.CandidatePendingAvailability();
-         result.Core = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.CoreIndex();
+         result.Core = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.CoreIndex();
          result.Core = this.GetTestValue8();
          result.Hash = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_core_primitives.CandidateHash();
          result.Hash = this.GetTestValue9();
-         result.Descriptor = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.CandidateDescriptor();
+         result.Descriptor = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.CandidateDescriptor();
          result.Descriptor = this.GetTestValue11();
          result.AvailabilityVotes = new Substrate.NetApi.Model.Types.Base.BaseBitSeq<Substrate.NetApi.Model.Types.Primitive.U8, Substrate.Polkadot.NET.NetApiExt.Generated.Model.bitvec.order.Lsb0>();
          result.AvailabilityVotes = this.GetTestValue24();
@@ -102,14 +102,14 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
          result.Backers = this.GetTestValue25();
          result.RelayParentNumber = this.GetTestValueU32();
          result.BackedInNumber = this.GetTestValueU32();
-         result.BackingGroup = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.GroupIndex();
+         result.BackingGroup = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.GroupIndex();
          result.BackingGroup = this.GetTestValue26();
          return result;
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.CoreIndex GetTestValue8()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.CoreIndex GetTestValue8()
       {
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.CoreIndex result;
-         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.CoreIndex();
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.CoreIndex result;
+         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.CoreIndex();
          result.Value = this.GetTestValueU32();
          return result;
       }
@@ -161,15 +161,15 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
                   this.GetTestValueU8()});
          return result;
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.CandidateDescriptor GetTestValue11()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.CandidateDescriptor GetTestValue11()
       {
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.CandidateDescriptor result;
-         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.CandidateDescriptor();
-         result.ParaId = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id();
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.CandidateDescriptor result;
+         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.CandidateDescriptor();
+         result.ParaId = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id();
          result.ParaId = this.GetTestValue12();
          result.RelayParent = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256();
          result.RelayParent = this.GetTestValue13();
-         result.Collator = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.collator_app.Public();
+         result.Collator = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.collator_app.Public();
          result.Collator = this.GetTestValue14();
          result.PersistedValidationDataHash = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256();
          result.PersistedValidationDataHash = this.GetTestValue16();
@@ -177,18 +177,18 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
          result.PovHash = this.GetTestValue17();
          result.ErasureRoot = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256();
          result.ErasureRoot = this.GetTestValue18();
-         result.Signature = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.collator_app.Signature();
+         result.Signature = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.collator_app.Signature();
          result.Signature = this.GetTestValue19();
          result.ParaHead = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256();
          result.ParaHead = this.GetTestValue21();
-         result.ValidationCodeHash = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.ValidationCodeHash();
+         result.ValidationCodeHash = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash();
          result.ValidationCodeHash = this.GetTestValue22();
          return result;
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id GetTestValue12()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id GetTestValue12()
       {
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id result;
-         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id();
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id result;
+         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id();
          result.Value = this.GetTestValueU32();
          return result;
       }
@@ -232,10 +232,10 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
                   this.GetTestValueU8()});
          return result;
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.collator_app.Public GetTestValue14()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.collator_app.Public GetTestValue14()
       {
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.collator_app.Public result;
-         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.collator_app.Public();
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.collator_app.Public result;
+         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.collator_app.Public();
          result.Value = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.sr25519.Public();
          result.Value = this.GetTestValue15();
          return result;
@@ -400,10 +400,10 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
                   this.GetTestValueU8()});
          return result;
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.collator_app.Signature GetTestValue19()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.collator_app.Signature GetTestValue19()
       {
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.collator_app.Signature result;
-         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.collator_app.Signature();
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.collator_app.Signature result;
+         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.collator_app.Signature();
          result.Value = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.sr25519.Signature();
          result.Value = this.GetTestValue20();
          return result;
@@ -520,10 +520,10 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
                   this.GetTestValueU8()});
          return result;
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.ValidationCodeHash GetTestValue22()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash GetTestValue22()
       {
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.ValidationCodeHash result;
-         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.ValidationCodeHash();
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash result;
+         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash();
          result.Value = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256();
          result.Value = this.GetTestValue23();
          return result;
@@ -572,27 +572,27 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
       {
          Substrate.NetApi.Model.Types.Base.BaseBitSeq<Substrate.NetApi.Model.Types.Primitive.U8, Substrate.Polkadot.NET.NetApiExt.Generated.Model.bitvec.order.Lsb0> result;
          result = new Substrate.NetApi.Model.Types.Base.BaseBitSeq<Substrate.NetApi.Model.Types.Primitive.U8, Substrate.Polkadot.NET.NetApiExt.Generated.Model.bitvec.order.Lsb0>();
-         // NOT IMPLEMENTED >> Initialize Substrate.NetApi.Model.Types.Base.BaseBitSeq`2[[Substrate.NetApi.Model.Types.Primitive.U8, Substrate.NetApi, Version=0.9.7.0, Culture=neutral, PublicKeyToken=null],[Substrate.Polkadot.NET.NetApiExt.Generated.Model.bitvec.order.Lsb0, Substrate.Polkadot.NET.NetApiExt, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+         // NOT IMPLEMENTED >> Initialize Substrate.NetApi.Model.Types.Base.BaseBitSeq`2[[Substrate.NetApi.Model.Types.Primitive.U8, Substrate.NetApi, Version=0.9.14.0, Culture=neutral, PublicKeyToken=null],[Substrate.Polkadot.NET.NetApiExt.Generated.Model.bitvec.order.Lsb0, Substrate.Polkadot.NET.NetApiExt, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
          return result;
       }
       public Substrate.NetApi.Model.Types.Base.BaseBitSeq<Substrate.NetApi.Model.Types.Primitive.U8, Substrate.Polkadot.NET.NetApiExt.Generated.Model.bitvec.order.Lsb0> GetTestValue25()
       {
          Substrate.NetApi.Model.Types.Base.BaseBitSeq<Substrate.NetApi.Model.Types.Primitive.U8, Substrate.Polkadot.NET.NetApiExt.Generated.Model.bitvec.order.Lsb0> result;
          result = new Substrate.NetApi.Model.Types.Base.BaseBitSeq<Substrate.NetApi.Model.Types.Primitive.U8, Substrate.Polkadot.NET.NetApiExt.Generated.Model.bitvec.order.Lsb0>();
-         // NOT IMPLEMENTED >> Initialize Substrate.NetApi.Model.Types.Base.BaseBitSeq`2[[Substrate.NetApi.Model.Types.Primitive.U8, Substrate.NetApi, Version=0.9.7.0, Culture=neutral, PublicKeyToken=null],[Substrate.Polkadot.NET.NetApiExt.Generated.Model.bitvec.order.Lsb0, Substrate.Polkadot.NET.NetApiExt, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+         // NOT IMPLEMENTED >> Initialize Substrate.NetApi.Model.Types.Base.BaseBitSeq`2[[Substrate.NetApi.Model.Types.Primitive.U8, Substrate.NetApi, Version=0.9.14.0, Culture=neutral, PublicKeyToken=null],[Substrate.Polkadot.NET.NetApiExt.Generated.Model.bitvec.order.Lsb0, Substrate.Polkadot.NET.NetApiExt, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
          return result;
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.GroupIndex GetTestValue26()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.GroupIndex GetTestValue26()
       {
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.GroupIndex result;
-         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.GroupIndex();
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.GroupIndex result;
+         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.GroupIndex();
          result.Value = this.GetTestValueU32();
          return result;
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id GetTestValue27()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id GetTestValue27()
       {
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id result;
-         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id();
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id result;
+         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id();
          result.Value = this.GetTestValueU32();
          return result;
       }
@@ -608,7 +608,7 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
          // Construct new RPC client to test with.
          ParaInclusionControllerClient rpcClient = new ParaInclusionControllerClient(_httpClient, subscriptionClient);
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.inclusion.CandidatePendingAvailability mockupValue = this.GetTestValue7();
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id mockupKey = this.GetTestValue27();
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id mockupKey = this.GetTestValue27();
 
          Assert.IsTrue(await rpcClient.SubscribePendingAvailability(mockupKey));
 
@@ -625,17 +625,17 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.CandidateCommitments GetTestValue29()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.CandidateCommitments GetTestValue29()
       {
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.CandidateCommitments result;
-         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.CandidateCommitments();
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.CandidateCommitments result;
+         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.CandidateCommitments();
          result.UpwardMessages = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT2();
          result.UpwardMessages = this.GetTestValue30();
          result.HorizontalMessages = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT3();
          result.HorizontalMessages = this.GetTestValue32();
-         result.NewValidationCode = new Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.ValidationCode>();
+         result.NewValidationCode = new Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCode>();
          result.NewValidationCode.Create(this.GetTestValue35());
-         result.HeadData = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.HeadData();
+         result.HeadData = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.HeadData();
          result.HeadData = this.GetTestValue36();
          result.ProcessedDownwardMessages = this.GetTestValueU32();
          result.HrmpWatermark = this.GetTestValueU32();
@@ -671,42 +671,42 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
       {
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_core_primitives.OutboundHrmpMessage result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_core_primitives.OutboundHrmpMessage();
-         result.Recipient = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id();
+         result.Recipient = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id();
          result.Recipient = this.GetTestValue34();
          result.Data = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>();
          result.Data.Create(new Substrate.NetApi.Model.Types.Primitive.U8[] {
                   this.GetTestValueU8()});
          return result;
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id GetTestValue34()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id GetTestValue34()
       {
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id result;
-         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id();
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id result;
+         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id();
          result.Value = this.GetTestValueU32();
          return result;
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.ValidationCode GetTestValue35()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCode GetTestValue35()
       {
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.ValidationCode result;
-         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.ValidationCode();
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCode result;
+         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCode();
          result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>();
          result.Value.Create(new Substrate.NetApi.Model.Types.Primitive.U8[] {
                   this.GetTestValueU8()});
          return result;
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.HeadData GetTestValue36()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.HeadData GetTestValue36()
       {
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.HeadData result;
-         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.HeadData();
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.HeadData result;
+         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.HeadData();
          result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>();
          result.Value.Create(new Substrate.NetApi.Model.Types.Primitive.U8[] {
                   this.GetTestValueU8()});
          return result;
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id GetTestValue37()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id GetTestValue37()
       {
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id result;
-         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id();
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id result;
+         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id();
          result.Value = this.GetTestValueU32();
          return result;
       }
@@ -721,8 +721,8 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          ParaInclusionControllerClient rpcClient = new ParaInclusionControllerClient(_httpClient, subscriptionClient);
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.CandidateCommitments mockupValue = this.GetTestValue29();
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id mockupKey = this.GetTestValue37();
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.CandidateCommitments mockupValue = this.GetTestValue29();
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id mockupKey = this.GetTestValue37();
 
          Assert.IsTrue(await rpcClient.SubscribePendingAvailabilityCommitments(mockupKey));
 
@@ -734,7 +734,7 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.CandidateCommitments rpcResult = await rpcClient.GetPendingAvailabilityCommitments(mockupKey);
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.CandidateCommitments rpcResult = await rpcClient.GetPendingAvailabilityCommitments(mockupKey);
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());

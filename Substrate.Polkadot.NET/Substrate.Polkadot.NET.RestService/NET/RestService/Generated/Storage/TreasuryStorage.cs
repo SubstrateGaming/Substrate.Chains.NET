@@ -46,7 +46,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// >> Approvals
         ///  Proposal indices that have been approved but not yet awarded.
         /// </summary>
-        Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT23 GetApprovals();
+        Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18 GetApprovals();
     }
     
     /// <summary>
@@ -73,7 +73,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// <summary>
         /// _approvalsTypedStorage typed storage field
         /// </summary>
-        private TypedStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT23> _approvalsTypedStorage;
+        private TypedStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18> _approvalsTypedStorage;
         
         /// <summary>
         /// TreasuryStorage constructor.
@@ -83,7 +83,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
             this.ProposalCountTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32>("Treasury.ProposalCount", storageDataProvider, storageChangeDelegates);
             this.ProposalsTypedStorage = new TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_treasury.Proposal>("Treasury.Proposals", storageDataProvider, storageChangeDelegates);
             this.DeactivatedTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U128>("Treasury.Deactivated", storageDataProvider, storageChangeDelegates);
-            this.ApprovalsTypedStorage = new TypedStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT23>("Treasury.Approvals", storageDataProvider, storageChangeDelegates);
+            this.ApprovalsTypedStorage = new TypedStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18>("Treasury.Approvals", storageDataProvider, storageChangeDelegates);
         }
         
         /// <summary>
@@ -134,7 +134,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// <summary>
         /// _approvalsTypedStorage property
         /// </summary>
-        public TypedStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT23> ApprovalsTypedStorage
+        public TypedStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18> ApprovalsTypedStorage
         {
             get
             {
@@ -235,7 +235,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// >> Approvals
         ///  Proposal indices that have been approved but not yet awarded.
         /// </summary>
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT23 GetApprovals()
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18 GetApprovals()
         {
             return ApprovalsTypedStorage.Get();
         }

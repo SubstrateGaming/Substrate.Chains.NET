@@ -54,7 +54,7 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "XcmPallet/VersionNotifyTargets", value.Encode(), Substrate.Polkadot.NET.NetApiExt.Generated.Storage.XcmPalletStorage.VersionNotifyTargetsParams(key));
       }
-      public async Task<bool> SetVersionDiscoveryQueue(BoundedVecT40 value)
+      public async Task<bool> SetVersionDiscoveryQueue(BoundedVecT35 value)
       {
          return await SendMockupRequestAsync(_httpClient, "XcmPallet/VersionDiscoveryQueue", value.Encode(), Substrate.Polkadot.NET.NetApiExt.Generated.Storage.XcmPalletStorage.VersionDiscoveryQueueParams());
       }
@@ -66,7 +66,7 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "XcmPallet/RemoteLockedFungibles", value.Encode(), Substrate.Polkadot.NET.NetApiExt.Generated.Storage.XcmPalletStorage.RemoteLockedFungiblesParams(key));
       }
-      public async Task<bool> SetLockedFungibles(BoundedVecT42 value, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+      public async Task<bool> SetLockedFungibles(BoundedVecT37 value, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {
          return await SendMockupRequestAsync(_httpClient, "XcmPallet/LockedFungibles", value.Encode(), Substrate.Polkadot.NET.NetApiExt.Generated.Storage.XcmPalletStorage.LockedFungiblesParams(key));
       }

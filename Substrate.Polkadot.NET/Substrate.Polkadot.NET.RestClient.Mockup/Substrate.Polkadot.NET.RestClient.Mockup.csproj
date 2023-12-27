@@ -3,7 +3,7 @@
       <TargetFramework>netstandard2.0</TargetFramework>
    </PropertyGroup>
    <ItemGroup>
-      <PackageReference Include="Substrate.ServiceLayer.Model" Version="0.4.4" />
+      <PackageReference Include="Substrate.ServiceLayer.Model" Version="0.4.8" />
    </ItemGroup>
    <ItemGroup>      
       <ProjectReference Include="..\Substrate.Polkadot.NET.RestClient\Substrate.Polkadot.NET.RestClient.csproj" />

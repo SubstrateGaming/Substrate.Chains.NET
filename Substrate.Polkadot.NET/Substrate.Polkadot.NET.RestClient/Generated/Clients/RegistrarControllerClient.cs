@@ -12,7 +12,7 @@ namespace Substrate.Polkadot.NET.RestClient.Generated.Clients
    using System;
    using System.Threading.Tasks;
    using System.Net.Http;
-   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_common.paras_registrar;
    using Substrate.Polkadot.NET.RestClient.Generated.Interfaces;
    

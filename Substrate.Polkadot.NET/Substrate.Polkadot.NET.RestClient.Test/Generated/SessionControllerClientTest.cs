@@ -228,9 +228,9 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
          result.Babe = this.GetTestValue13();
          result.ImOnline = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_im_online.sr25519.app_sr25519.Public();
          result.ImOnline = this.GetTestValue15();
-         result.ParaValidator = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.validator_app.Public();
+         result.ParaValidator = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.validator_app.Public();
          result.ParaValidator = this.GetTestValue17();
-         result.ParaAssignment = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.assignment_app.Public();
+         result.ParaAssignment = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.assignment_app.Public();
          result.ParaAssignment = this.GetTestValue19();
          result.AuthorityDiscovery = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_authority_discovery.app.Public();
          result.AuthorityDiscovery = this.GetTestValue21();
@@ -380,10 +380,10 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
                   this.GetTestValueU8()});
          return result;
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.validator_app.Public GetTestValue17()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.validator_app.Public GetTestValue17()
       {
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.validator_app.Public result;
-         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.validator_app.Public();
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.validator_app.Public result;
+         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.validator_app.Public();
          result.Value = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.sr25519.Public();
          result.Value = this.GetTestValue18();
          return result;
@@ -428,10 +428,10 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
                   this.GetTestValueU8()});
          return result;
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.assignment_app.Public GetTestValue19()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.assignment_app.Public GetTestValue19()
       {
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.assignment_app.Public result;
-         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.assignment_app.Public();
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.assignment_app.Public result;
+         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.assignment_app.Public();
          result.Value = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.sr25519.Public();
          result.Value = this.GetTestValue20();
          return result;
@@ -600,9 +600,9 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
          result.Babe = this.GetTestValue29();
          result.ImOnline = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_im_online.sr25519.app_sr25519.Public();
          result.ImOnline = this.GetTestValue31();
-         result.ParaValidator = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.validator_app.Public();
+         result.ParaValidator = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.validator_app.Public();
          result.ParaValidator = this.GetTestValue33();
-         result.ParaAssignment = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.assignment_app.Public();
+         result.ParaAssignment = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.assignment_app.Public();
          result.ParaAssignment = this.GetTestValue35();
          result.AuthorityDiscovery = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_authority_discovery.app.Public();
          result.AuthorityDiscovery = this.GetTestValue37();
@@ -752,10 +752,10 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
                   this.GetTestValueU8()});
          return result;
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.validator_app.Public GetTestValue33()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.validator_app.Public GetTestValue33()
       {
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.validator_app.Public result;
-         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.validator_app.Public();
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.validator_app.Public result;
+         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.validator_app.Public();
          result.Value = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.sr25519.Public();
          result.Value = this.GetTestValue34();
          return result;
@@ -800,10 +800,10 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
                   this.GetTestValueU8()});
          return result;
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.assignment_app.Public GetTestValue35()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.assignment_app.Public GetTestValue35()
       {
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.assignment_app.Public result;
-         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.assignment_app.Public();
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.assignment_app.Public result;
+         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.assignment_app.Public();
          result.Value = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.sr25519.Public();
          result.Value = this.GetTestValue36();
          return result;

@@ -27,7 +27,7 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "ConvictionVoting/VotingFor", value.Encode(), Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ConvictionVotingStorage.VotingForParams(key));
       }
-      public async Task<bool> SetClassLocksFor(BoundedVecT25 value, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+      public async Task<bool> SetClassLocksFor(BoundedVecT20 value, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {
          return await SendMockupRequestAsync(_httpClient, "ConvictionVoting/ClassLocksFor", value.Encode(), Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ConvictionVotingStorage.ClassLocksForParams(key));
       }

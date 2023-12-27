@@ -47,7 +47,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// >> ChildBountyDescriptions
         ///  The description of each child-bounty.
         /// </summary>
-        Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT34 GetChildBountyDescriptions(string key);
+        Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT29 GetChildBountyDescriptions(string key);
         
         /// <summary>
         /// >> ChildrenCuratorFees
@@ -80,7 +80,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// <summary>
         /// _childBountyDescriptionsTypedStorage typed storage field
         /// </summary>
-        private TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT34> _childBountyDescriptionsTypedStorage;
+        private TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT29> _childBountyDescriptionsTypedStorage;
         
         /// <summary>
         /// _childrenCuratorFeesTypedStorage typed storage field
@@ -95,7 +95,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
             this.ChildBountyCountTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32>("ChildBounties.ChildBountyCount", storageDataProvider, storageChangeDelegates);
             this.ParentChildBountiesTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Primitive.U32>("ChildBounties.ParentChildBounties", storageDataProvider, storageChangeDelegates);
             this.ChildBountiesTypedStorage = new TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_child_bounties.ChildBounty>("ChildBounties.ChildBounties", storageDataProvider, storageChangeDelegates);
-            this.ChildBountyDescriptionsTypedStorage = new TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT34>("ChildBounties.ChildBountyDescriptions", storageDataProvider, storageChangeDelegates);
+            this.ChildBountyDescriptionsTypedStorage = new TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT29>("ChildBounties.ChildBountyDescriptions", storageDataProvider, storageChangeDelegates);
             this.ChildrenCuratorFeesTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Primitive.U128>("ChildBounties.ChildrenCuratorFees", storageDataProvider, storageChangeDelegates);
         }
         
@@ -147,7 +147,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// <summary>
         /// _childBountyDescriptionsTypedStorage property
         /// </summary>
-        public TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT34> ChildBountyDescriptionsTypedStorage
+        public TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT29> ChildBountyDescriptionsTypedStorage
         {
             get
             {
@@ -276,13 +276,13 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// >> ChildBountyDescriptions
         ///  The description of each child-bounty.
         /// </summary>
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT34 GetChildBountyDescriptions(string key)
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT29 GetChildBountyDescriptions(string key)
         {
             if ((key == null))
             {
                 return null;
             }
-            if (ChildBountyDescriptionsTypedStorage.Dictionary.TryGetValue(key, out Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT34 result))
+            if (ChildBountyDescriptionsTypedStorage.Dictionary.TryGetValue(key, out Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT29 result))
             {
                 return result;
             }

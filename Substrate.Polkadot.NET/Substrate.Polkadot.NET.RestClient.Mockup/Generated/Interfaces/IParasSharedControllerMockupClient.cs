@@ -13,13 +13,15 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup.Generated.Interfaces
    using System.Threading.Tasks;
    using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.NetApi.Model.Types.Base;
-   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4;
-   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.validator_app;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.validator_app;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.shared;
    
    public interface IParasSharedControllerMockupClient
    {
       Task<bool> SetCurrentSessionIndex(U32 value);
       Task<bool> SetActiveValidatorIndices(BaseVec<ValidatorIndex> value);
       Task<bool> SetActiveValidatorKeys(BaseVec<Public> value);
+      Task<bool> SetAllowedRelayParents(AllowedRelayParentsTracker value);
    }
 }

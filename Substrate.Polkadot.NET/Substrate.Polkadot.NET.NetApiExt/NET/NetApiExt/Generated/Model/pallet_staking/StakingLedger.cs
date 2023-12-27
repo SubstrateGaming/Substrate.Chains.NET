@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_staking
     
     
     /// <summary>
-    /// >> 536 - Composite[pallet_staking.StakingLedger]
+    /// >> 515 - Composite[pallet_staking.StakingLedger]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class StakingLedger : BaseType
@@ -42,12 +42,12 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_staking
         /// <summary>
         /// >> unlocking
         /// </summary>
-        private Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT14 _unlocking;
+        private Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT15 _unlocking;
         
         /// <summary>
         /// >> claimed_rewards
         /// </summary>
-        private Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT15 _claimedRewards;
+        private Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT16 _claimedRewards;
         
         public Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 Stash
         {
@@ -85,7 +85,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_staking
             }
         }
         
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT14 Unlocking
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT15 Unlocking
         {
             get
             {
@@ -97,7 +97,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_staking
             }
         }
         
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT15 ClaimedRewards
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT16 ClaimedRewards
         {
             get
             {
@@ -134,9 +134,9 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_staking
             Total.Decode(byteArray, ref p);
             Active = new Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128>();
             Active.Decode(byteArray, ref p);
-            Unlocking = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT14();
+            Unlocking = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT15();
             Unlocking.Decode(byteArray, ref p);
-            ClaimedRewards = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT15();
+            ClaimedRewards = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT16();
             ClaimedRewards.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

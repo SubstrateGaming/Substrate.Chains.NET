@@ -81,7 +81,7 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "NominationPools/CounterForSubPoolsStorage", value.Encode(), Substrate.Polkadot.NET.NetApiExt.Generated.Storage.NominationPoolsStorage.CounterForSubPoolsStorageParams());
       }
-      public async Task<bool> SetMetadata(BoundedVecT37 value, U32 key)
+      public async Task<bool> SetMetadata(BoundedVecT32 value, U32 key)
       {
          return await SendMockupRequestAsync(_httpClient, "NominationPools/Metadata", value.Encode(), Substrate.Polkadot.NET.NetApiExt.Generated.Storage.NominationPoolsStorage.MetadataParams(key));
       }

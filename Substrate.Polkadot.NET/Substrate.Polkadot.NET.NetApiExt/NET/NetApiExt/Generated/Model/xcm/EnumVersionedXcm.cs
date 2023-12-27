@@ -24,7 +24,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm
     }
     
     /// <summary>
-    /// >> 428 - Variant[xcm.VersionedXcm]
+    /// >> 404 - Variant[xcm.VersionedXcm]
     /// </summary>
     public sealed class EnumVersionedXcm : BaseEnumExt<VersionedXcm, BaseVoid, BaseVoid, Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.v2.XcmT2, Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.v3.XcmT2>
     {

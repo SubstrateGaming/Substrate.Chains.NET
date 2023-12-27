@@ -152,7 +152,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Controller
         ///  them one at a time instead of reading and decoding all of them at once.
         /// </summary>
         [HttpGet("SignedSubmissionIndices")]
-        [ProducesResponseType(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT36), 200)]
+        [ProducesResponseType(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT31), 200)]
         [StorageKeyBuilder(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ElectionProviderMultiPhaseStorage), "SignedSubmissionIndicesParams")]
         public IActionResult GetSignedSubmissionIndices()
         {

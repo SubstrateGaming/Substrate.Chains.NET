@@ -14,8 +14,9 @@ namespace Substrate.Polkadot.NET.RestClient.Generated.Clients
    using System.Net.Http;
    using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.NetApi.Model.Types.Base;
-   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4;
-   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.validator_app;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.validator_app;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.shared;
    using Substrate.Polkadot.NET.RestClient.Generated.Interfaces;
    
    public sealed class ParasSharedControllerClient : BaseClient, IParasSharedControllerClient
@@ -50,6 +51,14 @@ namespace Substrate.Polkadot.NET.RestClient.Generated.Clients
       public async Task<bool> SubscribeActiveValidatorKeys()
       {
          return await _subscriptionClient.SubscribeAsync("ParasShared.ActiveValidatorKeys");
+      }
+      public async Task<AllowedRelayParentsTracker> GetAllowedRelayParents()
+      {
+         return await SendRequestAsync<AllowedRelayParentsTracker>(_httpClient, "parasshared/allowedrelayparents");
+      }
+      public async Task<bool> SubscribeAllowedRelayParents()
+      {
+         return await _subscriptionClient.SubscribeAsync("ParasShared.AllowedRelayParents");
       }
    }
 }

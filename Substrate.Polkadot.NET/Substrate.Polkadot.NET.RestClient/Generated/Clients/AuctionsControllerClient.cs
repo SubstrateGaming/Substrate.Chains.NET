@@ -42,11 +42,11 @@ namespace Substrate.Polkadot.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("Auctions.AuctionInfo");
       }
-      public async Task<U128> GetReservedAmounts(BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id> key)
+      public async Task<U128> GetReservedAmounts(BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id> key)
       {
          return await SendRequestAsync<U128>(_httpClient, "auctions/reservedamounts", Substrate.Polkadot.NET.NetApiExt.Generated.Storage.AuctionsStorage.ReservedAmountsParams(key));
       }
-      public async Task<bool> SubscribeReservedAmounts(BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id> key)
+      public async Task<bool> SubscribeReservedAmounts(BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id> key)
       {
          return await _subscriptionClient.SubscribeAsync("Auctions.ReservedAmounts", Substrate.Polkadot.NET.NetApiExt.Generated.Storage.AuctionsStorage.ReservedAmountsParams(key));
       }

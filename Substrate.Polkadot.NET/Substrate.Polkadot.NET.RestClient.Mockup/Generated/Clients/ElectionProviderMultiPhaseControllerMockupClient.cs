@@ -54,7 +54,7 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "ElectionProviderMultiPhase/SignedSubmissionNextIndex", value.Encode(), Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ElectionProviderMultiPhaseStorage.SignedSubmissionNextIndexParams());
       }
-      public async Task<bool> SetSignedSubmissionIndices(BoundedVecT36 value)
+      public async Task<bool> SetSignedSubmissionIndices(BoundedVecT31 value)
       {
          return await SendMockupRequestAsync(_httpClient, "ElectionProviderMultiPhase/SignedSubmissionIndices", value.Encode(), Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ElectionProviderMultiPhaseStorage.SignedSubmissionIndicesParams());
       }

@@ -42,11 +42,8 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_bounties.palle
     }
     
     /// <summary>
-    /// >> 676 - Variant[pallet_bounties.pallet.Error]
-    /// 
-    ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
-    ///			of this pallet.
-    ///			
+    /// >> 622 - Variant[pallet_bounties.pallet.Error]
+    /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>
     {

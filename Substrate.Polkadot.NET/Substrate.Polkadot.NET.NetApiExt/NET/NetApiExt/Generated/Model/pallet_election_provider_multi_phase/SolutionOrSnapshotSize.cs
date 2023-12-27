@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_election_provi
     
     
     /// <summary>
-    /// >> 290 - Composite[pallet_election_provider_multi_phase.SolutionOrSnapshotSize]
+    /// >> 263 - Composite[pallet_election_provider_multi_phase.SolutionOrSnapshotSize]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class SolutionOrSnapshotSize : BaseType

@@ -72,7 +72,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Controller
         /// </summary>
         [HttpGet("ReservedAmounts")]
         [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Primitive.U128), 200)]
-        [StorageKeyBuilder(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Storage.AuctionsStorage), "ReservedAmountsParams", typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id>))]
+        [StorageKeyBuilder(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Storage.AuctionsStorage), "ReservedAmountsParams", typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id>))]
         public IActionResult GetReservedAmounts(string key)
         {
             return this.Ok(_auctionsStorage.GetReservedAmounts(key));

@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_nomination_poo
     
     
     /// <summary>
-    /// >> 306 - Composite[pallet_nomination_pools.CommissionChangeRate]
+    /// >> 282 - Composite[pallet_nomination_pools.CommissionChangeRate]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class CommissionChangeRate : BaseType

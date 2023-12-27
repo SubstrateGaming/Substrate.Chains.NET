@@ -25,15 +25,15 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup.Generated.Clients
       {
          _httpClient = httpClient;
       }
-      public async Task<bool> SetDownwardMessageQueues(BaseVec<InboundDownwardMessage> value, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id key)
+      public async Task<bool> SetDownwardMessageQueues(BaseVec<InboundDownwardMessage> value, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key)
       {
          return await SendMockupRequestAsync(_httpClient, "Dmp/DownwardMessageQueues", value.Encode(), Substrate.Polkadot.NET.NetApiExt.Generated.Storage.DmpStorage.DownwardMessageQueuesParams(key));
       }
-      public async Task<bool> SetDownwardMessageQueueHeads(H256 value, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id key)
+      public async Task<bool> SetDownwardMessageQueueHeads(H256 value, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key)
       {
          return await SendMockupRequestAsync(_httpClient, "Dmp/DownwardMessageQueueHeads", value.Encode(), Substrate.Polkadot.NET.NetApiExt.Generated.Storage.DmpStorage.DownwardMessageQueueHeadsParams(key));
       }
-      public async Task<bool> SetDeliveryFeeFactor(FixedU128 value, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id key)
+      public async Task<bool> SetDeliveryFeeFactor(FixedU128 value, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key)
       {
          return await SendMockupRequestAsync(_httpClient, "Dmp/DeliveryFeeFactor", value.Encode(), Substrate.Polkadot.NET.NetApiExt.Generated.Storage.DmpStorage.DeliveryFeeFactorParams(key));
       }

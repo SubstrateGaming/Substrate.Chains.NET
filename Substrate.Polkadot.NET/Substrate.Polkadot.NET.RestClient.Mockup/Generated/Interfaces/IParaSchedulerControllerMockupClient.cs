@@ -12,17 +12,15 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup.Generated.Interfaces
    using System;
    using System.Threading.Tasks;
    using Substrate.NetApi.Model.Types.Base;
-   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.scheduler;
-   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5;
    using Substrate.NetApi.Model.Types.Primitive;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base;
    
    public interface IParaSchedulerControllerMockupClient
    {
-      Task<bool> SetValidatorGroups(BaseVec<BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.ValidatorIndex>> value);
-      Task<bool> SetParathreadQueue(ParathreadClaimQueue value);
-      Task<bool> SetAvailabilityCores(BaseVec<BaseOpt<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.EnumCoreOccupied>> value);
-      Task<bool> SetParathreadClaimIndex(BaseVec<Id> value);
+      Task<bool> SetValidatorGroups(BaseVec<BaseVec<ValidatorIndex>> value);
+      Task<bool> SetAvailabilityCores(BaseVec<EnumCoreOccupied> value);
       Task<bool> SetSessionStartBlock(U32 value);
-      Task<bool> SetScheduled(BaseVec<CoreAssignment> value);
+      Task<bool> SetClaimQueue(BTreeMapT4 value);
    }
 }

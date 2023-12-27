@@ -13,7 +13,7 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup.Generated.Clients
    using System.Threading.Tasks;
    using System.Net.Http;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.inclusion;
-   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5;
    using Substrate.Polkadot.NET.RestClient.Mockup.Generated.Interfaces;
    
    public sealed class ParaInclusionControllerMockupClient : MockupBaseClient, IParaInclusionControllerMockupClient
@@ -27,11 +27,11 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "ParaInclusion/AvailabilityBitfields", value.Encode(), Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParaInclusionStorage.AvailabilityBitfieldsParams(key));
       }
-      public async Task<bool> SetPendingAvailability(CandidatePendingAvailability value, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id key)
+      public async Task<bool> SetPendingAvailability(CandidatePendingAvailability value, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key)
       {
          return await SendMockupRequestAsync(_httpClient, "ParaInclusion/PendingAvailability", value.Encode(), Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParaInclusionStorage.PendingAvailabilityParams(key));
       }
-      public async Task<bool> SetPendingAvailabilityCommitments(CandidateCommitments value, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id key)
+      public async Task<bool> SetPendingAvailabilityCommitments(CandidateCommitments value, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key)
       {
          return await SendMockupRequestAsync(_httpClient, "ParaInclusion/PendingAvailabilityCommitments", value.Encode(), Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParaInclusionStorage.PendingAvailabilityCommitmentsParams(key));
       }

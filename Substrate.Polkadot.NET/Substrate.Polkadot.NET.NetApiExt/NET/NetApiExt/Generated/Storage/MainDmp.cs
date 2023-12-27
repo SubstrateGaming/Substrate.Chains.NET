@@ -31,18 +31,18 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         {
             this._client = client;
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Dmp", "DownwardMessageQueues"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id), typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_core_primitives.InboundDownwardMessage>)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id), typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_core_primitives.InboundDownwardMessage>)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Dmp", "DownwardMessageQueueHeads"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id), typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id), typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Dmp", "DeliveryFeeFactor"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id), typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedU128)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id), typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedU128)));
         }
         
         /// <summary>
         /// >> DownwardMessageQueuesParams
         ///  The downward messages addressed for a certain para.
         /// </summary>
-        public static string DownwardMessageQueuesParams(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id key)
+        public static string DownwardMessageQueuesParams(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key)
         {
             return RequestGenerator.GetStorage("Dmp", "DownwardMessageQueues", Substrate.NetApi.Model.Meta.Storage.Type.Map, new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                         Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, new Substrate.NetApi.Model.Types.IType[] {
@@ -62,7 +62,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         /// >> DownwardMessageQueues
         ///  The downward messages addressed for a certain para.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_core_primitives.InboundDownwardMessage>> DownwardMessageQueues(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id key, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_core_primitives.InboundDownwardMessage>> DownwardMessageQueues(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key, CancellationToken token)
         {
             string parameters = DmpStorage.DownwardMessageQueuesParams(key);
             var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_core_primitives.InboundDownwardMessage>>(parameters, token);
@@ -79,7 +79,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         ///  - `B`: is the relay-chain block number in which a message was appended.
         ///  - `H(M)`: is the hash of the message being appended.
         /// </summary>
-        public static string DownwardMessageQueueHeadsParams(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id key)
+        public static string DownwardMessageQueueHeadsParams(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key)
         {
             return RequestGenerator.GetStorage("Dmp", "DownwardMessageQueueHeads", Substrate.NetApi.Model.Meta.Storage.Type.Map, new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                         Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, new Substrate.NetApi.Model.Types.IType[] {
@@ -105,7 +105,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         ///  - `B`: is the relay-chain block number in which a message was appended.
         ///  - `H(M)`: is the hash of the message being appended.
         /// </summary>
-        public async Task<Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256> DownwardMessageQueueHeads(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id key, CancellationToken token)
+        public async Task<Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256> DownwardMessageQueueHeads(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key, CancellationToken token)
         {
             string parameters = DmpStorage.DownwardMessageQueueHeadsParams(key);
             var result = await _client.GetStorageAsync<Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256>(parameters, token);
@@ -116,7 +116,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         /// >> DeliveryFeeFactorParams
         ///  The number to multiply the base delivery fee by.
         /// </summary>
-        public static string DeliveryFeeFactorParams(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id key)
+        public static string DeliveryFeeFactorParams(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key)
         {
             return RequestGenerator.GetStorage("Dmp", "DeliveryFeeFactor", Substrate.NetApi.Model.Meta.Storage.Type.Map, new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                         Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, new Substrate.NetApi.Model.Types.IType[] {
@@ -136,7 +136,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         /// >> DeliveryFeeFactor
         ///  The number to multiply the base delivery fee by.
         /// </summary>
-        public async Task<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedU128> DeliveryFeeFactor(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id key, CancellationToken token)
+        public async Task<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedU128> DeliveryFeeFactor(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key, CancellationToken token)
         {
             string parameters = DmpStorage.DeliveryFeeFactorParams(key);
             var result = await _client.GetStorageAsync<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedU128>(parameters, token);

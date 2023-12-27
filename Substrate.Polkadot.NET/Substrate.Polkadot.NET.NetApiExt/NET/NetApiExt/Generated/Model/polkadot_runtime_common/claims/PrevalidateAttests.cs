@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_comm
     
     
     /// <summary>
-    /// >> 839 - Composite[polkadot_runtime_common.claims.PrevalidateAttests]
+    /// >> 785 - Composite[polkadot_runtime_common.claims.PrevalidateAttests]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class PrevalidateAttests : BaseType

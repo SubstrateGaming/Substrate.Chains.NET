@@ -40,7 +40,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// >> PendingAvailabilityCommitments
         ///  The commitments of candidates pending availability, by `ParaId`.
         /// </summary>
-        Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.CandidateCommitments GetPendingAvailabilityCommitments(string key);
+        Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.CandidateCommitments GetPendingAvailabilityCommitments(string key);
     }
     
     /// <summary>
@@ -62,7 +62,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// <summary>
         /// _pendingAvailabilityCommitmentsTypedStorage typed storage field
         /// </summary>
-        private TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.CandidateCommitments> _pendingAvailabilityCommitmentsTypedStorage;
+        private TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.CandidateCommitments> _pendingAvailabilityCommitmentsTypedStorage;
         
         /// <summary>
         /// ParaInclusionStorage constructor.
@@ -71,7 +71,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         {
             this.AvailabilityBitfieldsTypedStorage = new TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.inclusion.AvailabilityBitfieldRecord>("ParaInclusion.AvailabilityBitfields", storageDataProvider, storageChangeDelegates);
             this.PendingAvailabilityTypedStorage = new TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.inclusion.CandidatePendingAvailability>("ParaInclusion.PendingAvailability", storageDataProvider, storageChangeDelegates);
-            this.PendingAvailabilityCommitmentsTypedStorage = new TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.CandidateCommitments>("ParaInclusion.PendingAvailabilityCommitments", storageDataProvider, storageChangeDelegates);
+            this.PendingAvailabilityCommitmentsTypedStorage = new TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.CandidateCommitments>("ParaInclusion.PendingAvailabilityCommitments", storageDataProvider, storageChangeDelegates);
         }
         
         /// <summary>
@@ -107,7 +107,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// <summary>
         /// _pendingAvailabilityCommitmentsTypedStorage property
         /// </summary>
-        public TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.CandidateCommitments> PendingAvailabilityCommitmentsTypedStorage
+        public TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.CandidateCommitments> PendingAvailabilityCommitmentsTypedStorage
         {
             get
             {
@@ -200,13 +200,13 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// >> PendingAvailabilityCommitments
         ///  The commitments of candidates pending availability, by `ParaId`.
         /// </summary>
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.CandidateCommitments GetPendingAvailabilityCommitments(string key)
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.CandidateCommitments GetPendingAvailabilityCommitments(string key)
         {
             if ((key == null))
             {
                 return null;
             }
-            if (PendingAvailabilityCommitmentsTypedStorage.Dictionary.TryGetValue(key, out Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.CandidateCommitments result))
+            if (PendingAvailabilityCommitmentsTypedStorage.Dictionary.TryGetValue(key, out Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.CandidateCommitments result))
             {
                 return result;
             }

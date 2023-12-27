@@ -27,9 +27,7 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup
       public IClaimsControllerMockupClient ClaimsControllerClient;
       public IConfigurationControllerMockupClient ConfigurationControllerClient;
       public IConvictionVotingControllerMockupClient ConvictionVotingControllerClient;
-      public ICouncilControllerMockupClient CouncilControllerClient;
       public ICrowdloanControllerMockupClient CrowdloanControllerClient;
-      public IDemocracyControllerMockupClient DemocracyControllerClient;
       public IDmpControllerMockupClient DmpControllerClient;
       public IElectionProviderMultiPhaseControllerMockupClient ElectionProviderMultiPhaseControllerClient;
       public IFastUnstakeControllerMockupClient FastUnstakeControllerClient;
@@ -51,7 +49,6 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup
       public IParaSessionInfoControllerMockupClient ParaSessionInfoControllerClient;
       public IParasSharedControllerMockupClient ParasSharedControllerClient;
       public IParasSlashingControllerMockupClient ParasSlashingControllerClient;
-      public IPhragmenElectionControllerMockupClient PhragmenElectionControllerClient;
       public IPreimageControllerMockupClient PreimageControllerClient;
       public IProxyControllerMockupClient ProxyControllerClient;
       public IReferendaControllerMockupClient ReferendaControllerClient;
@@ -61,10 +58,7 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup
       public ISlotsControllerMockupClient SlotsControllerClient;
       public IStakingControllerMockupClient StakingControllerClient;
       public ISystemControllerMockupClient SystemControllerClient;
-      public ITechnicalCommitteeControllerMockupClient TechnicalCommitteeControllerClient;
-      public ITechnicalMembershipControllerMockupClient TechnicalMembershipControllerClient;
       public ITimestampControllerMockupClient TimestampControllerClient;
-      public ITipsControllerMockupClient TipsControllerClient;
       public ITransactionPaymentControllerMockupClient TransactionPaymentControllerClient;
       public ITreasuryControllerMockupClient TreasuryControllerClient;
       public IVestingControllerMockupClient VestingControllerClient;
@@ -83,9 +77,7 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup
          ClaimsControllerClient = new ClaimsControllerMockupClient(_httpClient);
          ConfigurationControllerClient = new ConfigurationControllerMockupClient(_httpClient);
          ConvictionVotingControllerClient = new ConvictionVotingControllerMockupClient(_httpClient);
-         CouncilControllerClient = new CouncilControllerMockupClient(_httpClient);
          CrowdloanControllerClient = new CrowdloanControllerMockupClient(_httpClient);
-         DemocracyControllerClient = new DemocracyControllerMockupClient(_httpClient);
          DmpControllerClient = new DmpControllerMockupClient(_httpClient);
          ElectionProviderMultiPhaseControllerClient = new ElectionProviderMultiPhaseControllerMockupClient(_httpClient);
          FastUnstakeControllerClient = new FastUnstakeControllerMockupClient(_httpClient);
@@ -107,7 +99,6 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup
          ParaSessionInfoControllerClient = new ParaSessionInfoControllerMockupClient(_httpClient);
          ParasSharedControllerClient = new ParasSharedControllerMockupClient(_httpClient);
          ParasSlashingControllerClient = new ParasSlashingControllerMockupClient(_httpClient);
-         PhragmenElectionControllerClient = new PhragmenElectionControllerMockupClient(_httpClient);
          PreimageControllerClient = new PreimageControllerMockupClient(_httpClient);
          ProxyControllerClient = new ProxyControllerMockupClient(_httpClient);
          ReferendaControllerClient = new ReferendaControllerMockupClient(_httpClient);
@@ -117,10 +108,7 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup
          SlotsControllerClient = new SlotsControllerMockupClient(_httpClient);
          StakingControllerClient = new StakingControllerMockupClient(_httpClient);
          SystemControllerClient = new SystemControllerMockupClient(_httpClient);
-         TechnicalCommitteeControllerClient = new TechnicalCommitteeControllerMockupClient(_httpClient);
-         TechnicalMembershipControllerClient = new TechnicalMembershipControllerMockupClient(_httpClient);
          TimestampControllerClient = new TimestampControllerMockupClient(_httpClient);
-         TipsControllerClient = new TipsControllerMockupClient(_httpClient);
          TransactionPaymentControllerClient = new TransactionPaymentControllerMockupClient(_httpClient);
          TreasuryControllerClient = new TreasuryControllerMockupClient(_httpClient);
          VestingControllerClient = new VestingControllerMockupClient(_httpClient);

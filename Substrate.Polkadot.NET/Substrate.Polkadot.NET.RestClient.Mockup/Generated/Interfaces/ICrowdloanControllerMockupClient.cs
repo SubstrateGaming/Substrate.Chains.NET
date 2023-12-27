@@ -13,7 +13,7 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup.Generated.Interfaces
    using System.Threading.Tasks;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_common.crowdloan;
    using Substrate.NetApi.Model.Types.Base;
-   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives;
    using Substrate.NetApi.Model.Types.Primitive;
    
    public interface ICrowdloanControllerMockupClient

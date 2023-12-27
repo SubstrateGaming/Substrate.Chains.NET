@@ -13,9 +13,9 @@ namespace Substrate.Polkadot.NET.RestClient.Generated.Clients
    using System.Threading.Tasks;
    using System.Net.Http;
    using Substrate.NetApi.Model.Types.Base;
-   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.scheduler;
-   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5;
    using Substrate.NetApi.Model.Types.Primitive;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base;
    using Substrate.Polkadot.NET.RestClient.Generated.Interfaces;
    
    public sealed class ParaSchedulerControllerClient : BaseClient, IParaSchedulerControllerClient
@@ -27,37 +27,21 @@ namespace Substrate.Polkadot.NET.RestClient.Generated.Clients
          _httpClient = httpClient;
          _subscriptionClient = subscriptionClient;
       }
-      public async Task<BaseVec<BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.ValidatorIndex>>> GetValidatorGroups()
+      public async Task<BaseVec<BaseVec<ValidatorIndex>>> GetValidatorGroups()
       {
-         return await SendRequestAsync<BaseVec<BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.ValidatorIndex>>>(_httpClient, "parascheduler/validatorgroups");
+         return await SendRequestAsync<BaseVec<BaseVec<ValidatorIndex>>>(_httpClient, "parascheduler/validatorgroups");
       }
       public async Task<bool> SubscribeValidatorGroups()
       {
          return await _subscriptionClient.SubscribeAsync("ParaScheduler.ValidatorGroups");
       }
-      public async Task<ParathreadClaimQueue> GetParathreadQueue()
+      public async Task<BaseVec<EnumCoreOccupied>> GetAvailabilityCores()
       {
-         return await SendRequestAsync<ParathreadClaimQueue>(_httpClient, "parascheduler/parathreadqueue");
-      }
-      public async Task<bool> SubscribeParathreadQueue()
-      {
-         return await _subscriptionClient.SubscribeAsync("ParaScheduler.ParathreadQueue");
-      }
-      public async Task<BaseVec<BaseOpt<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.EnumCoreOccupied>>> GetAvailabilityCores()
-      {
-         return await SendRequestAsync<BaseVec<BaseOpt<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.EnumCoreOccupied>>>(_httpClient, "parascheduler/availabilitycores");
+         return await SendRequestAsync<BaseVec<EnumCoreOccupied>>(_httpClient, "parascheduler/availabilitycores");
       }
       public async Task<bool> SubscribeAvailabilityCores()
       {
          return await _subscriptionClient.SubscribeAsync("ParaScheduler.AvailabilityCores");
-      }
-      public async Task<BaseVec<Id>> GetParathreadClaimIndex()
-      {
-         return await SendRequestAsync<BaseVec<Id>>(_httpClient, "parascheduler/parathreadclaimindex");
-      }
-      public async Task<bool> SubscribeParathreadClaimIndex()
-      {
-         return await _subscriptionClient.SubscribeAsync("ParaScheduler.ParathreadClaimIndex");
       }
       public async Task<U32> GetSessionStartBlock()
       {
@@ -67,13 +51,13 @@ namespace Substrate.Polkadot.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("ParaScheduler.SessionStartBlock");
       }
-      public async Task<BaseVec<CoreAssignment>> GetScheduled()
+      public async Task<BTreeMapT4> GetClaimQueue()
       {
-         return await SendRequestAsync<BaseVec<CoreAssignment>>(_httpClient, "parascheduler/scheduled");
+         return await SendRequestAsync<BTreeMapT4>(_httpClient, "parascheduler/claimqueue");
       }
-      public async Task<bool> SubscribeScheduled()
+      public async Task<bool> SubscribeClaimQueue()
       {
-         return await _subscriptionClient.SubscribeAsync("ParaScheduler.Scheduled");
+         return await _subscriptionClient.SubscribeAsync("ParaScheduler.ClaimQueue");
       }
    }
 }

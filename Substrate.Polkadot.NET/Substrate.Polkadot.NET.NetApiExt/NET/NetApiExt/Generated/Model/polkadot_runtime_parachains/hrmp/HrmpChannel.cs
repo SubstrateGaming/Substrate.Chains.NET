@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_para
     
     
     /// <summary>
-    /// >> 767 - Composite[polkadot_runtime_parachains.hrmp.HrmpChannel]
+    /// >> 712 - Composite[polkadot_runtime_parachains.hrmp.HrmpChannel]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class HrmpChannel : BaseType

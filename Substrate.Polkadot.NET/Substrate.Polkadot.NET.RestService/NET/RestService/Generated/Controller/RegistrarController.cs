@@ -42,8 +42,8 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Controller
         ///  Pending swap operations.
         /// </summary>
         [HttpGet("PendingSwap")]
-        [ProducesResponseType(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id), 200)]
-        [StorageKeyBuilder(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Storage.RegistrarStorage), "PendingSwapParams", typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id))]
+        [ProducesResponseType(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id), 200)]
+        [StorageKeyBuilder(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Storage.RegistrarStorage), "PendingSwapParams", typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id))]
         public IActionResult GetPendingSwap(string key)
         {
             return this.Ok(_registrarStorage.GetPendingSwap(key));
@@ -53,12 +53,12 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Controller
         /// >> Paras
         ///  Amount held on deposit for each para and the original depositor.
         /// 
-        ///  The given account ID is responsible for registering the code and initial head data, but may only do
-        ///  so if it isn't yet registered. (After that, it's up to governance to do so.)
+        ///  The given account ID is responsible for registering the code and initial head data, but may
+        ///  only do so if it isn't yet registered. (After that, it's up to governance to do so.)
         /// </summary>
         [HttpGet("Paras")]
         [ProducesResponseType(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_common.paras_registrar.ParaInfo), 200)]
-        [StorageKeyBuilder(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Storage.RegistrarStorage), "ParasParams", typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id))]
+        [StorageKeyBuilder(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Storage.RegistrarStorage), "ParasParams", typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id))]
         public IActionResult GetParas(string key)
         {
             return this.Ok(_registrarStorage.GetParas(key));
@@ -69,7 +69,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Controller
         ///  The next free `ParaId`.
         /// </summary>
         [HttpGet("NextFreeParaId")]
-        [ProducesResponseType(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id), 200)]
+        [ProducesResponseType(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id), 200)]
         [StorageKeyBuilder(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Storage.RegistrarStorage), "NextFreeParaIdParams")]
         public IActionResult GetNextFreeParaId()
         {

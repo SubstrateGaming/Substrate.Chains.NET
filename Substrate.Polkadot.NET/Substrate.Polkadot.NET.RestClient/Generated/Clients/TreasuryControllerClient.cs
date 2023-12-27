@@ -50,9 +50,9 @@ namespace Substrate.Polkadot.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("Treasury.Deactivated");
       }
-      public async Task<BoundedVecT23> GetApprovals()
+      public async Task<BoundedVecT18> GetApprovals()
       {
-         return await SendRequestAsync<BoundedVecT23>(_httpClient, "treasury/approvals");
+         return await SendRequestAsync<BoundedVecT18>(_httpClient, "treasury/approvals");
       }
       public async Task<bool> SubscribeApprovals()
       {

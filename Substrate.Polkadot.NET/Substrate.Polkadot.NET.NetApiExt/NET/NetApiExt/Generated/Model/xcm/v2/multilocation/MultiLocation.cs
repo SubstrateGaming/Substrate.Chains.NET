@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.v2.multilocation
     
     
     /// <summary>
-    /// >> 375 - Composite[xcm.v2.multilocation.MultiLocation]
+    /// >> 351 - Composite[xcm.v2.multilocation.MultiLocation]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class MultiLocation : BaseType

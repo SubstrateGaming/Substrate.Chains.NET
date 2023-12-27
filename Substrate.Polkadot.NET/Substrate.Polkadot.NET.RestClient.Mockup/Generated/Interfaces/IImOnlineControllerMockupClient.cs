@@ -13,13 +13,12 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup.Generated.Interfaces
    using System.Threading.Tasks;
    using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec;
-   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.frame_support.traits.misc;
    
    public interface IImOnlineControllerMockupClient
    {
       Task<bool> SetHeartbeatAfter(U32 value);
       Task<bool> SetKeys(WeakBoundedVecT5 value);
-      Task<bool> SetReceivedHeartbeats(WrapperOpaque value, Substrate.NetApi.Model.Types.Base.BaseTuple<U32, U32> key);
+      Task<bool> SetReceivedHeartbeats(Bool value, Substrate.NetApi.Model.Types.Base.BaseTuple<U32, U32> key);
       Task<bool> SetAuthoredBlocks(U32 value, Substrate.NetApi.Model.Types.Base.BaseTuple<U32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> key);
    }
 }

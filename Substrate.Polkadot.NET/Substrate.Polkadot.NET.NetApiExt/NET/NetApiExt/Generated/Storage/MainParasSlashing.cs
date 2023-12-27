@@ -32,7 +32,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
             this._client = client;
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("ParasSlashing", "UnappliedSlashes"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat,
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_core_primitives.CandidateHash>), typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.disputes.slashing.PendingSlashes)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_core_primitives.CandidateHash>), typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.slashing.PendingSlashes)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("ParasSlashing", "ValidatorSetCounts"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.NetApi.Model.Types.Primitive.U32), typeof(Substrate.NetApi.Model.Types.Primitive.U32)));
         }
@@ -61,10 +61,10 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         /// >> UnappliedSlashes
         ///  Validators pending dispute slashes.
         /// </summary>
-        public async Task<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.disputes.slashing.PendingSlashes> UnappliedSlashes(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_core_primitives.CandidateHash> key, CancellationToken token)
+        public async Task<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.slashing.PendingSlashes> UnappliedSlashes(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_core_primitives.CandidateHash> key, CancellationToken token)
         {
             string parameters = ParasSlashingStorage.UnappliedSlashesParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.disputes.slashing.PendingSlashes>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.slashing.PendingSlashes>(parameters, token);
             return result;
         }
         
@@ -105,9 +105,9 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> report_dispute_lost_unsigned
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method ReportDisputeLostUnsigned(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.disputes.slashing.DisputeProof dispute_proof, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_session.MembershipProof key_owner_proof)
+        public static Method ReportDisputeLostUnsigned(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.slashing.DisputeProof dispute_proof, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_session.MembershipProof key_owner_proof)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(dispute_proof.Encode());

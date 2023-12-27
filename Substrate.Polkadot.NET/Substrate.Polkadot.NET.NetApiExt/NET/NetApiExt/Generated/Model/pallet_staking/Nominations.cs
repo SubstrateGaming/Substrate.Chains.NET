@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_staking
     
     
     /// <summary>
-    /// >> 541 - Composite[pallet_staking.Nominations]
+    /// >> 520 - Composite[pallet_staking.Nominations]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Nominations : BaseType
@@ -27,7 +27,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_staking
         /// <summary>
         /// >> targets
         /// </summary>
-        private Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT16 _targets;
+        private Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17 _targets;
         
         /// <summary>
         /// >> submitted_in
@@ -39,7 +39,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_staking
         /// </summary>
         private Substrate.NetApi.Model.Types.Primitive.Bool _suppressed;
         
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT16 Targets
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17 Targets
         {
             get
             {
@@ -92,7 +92,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_staking
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Targets = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT16();
+            Targets = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17();
             Targets.Decode(byteArray, ref p);
             SubmittedIn = new Substrate.NetApi.Model.Types.Primitive.U32();
             SubmittedIn.Decode(byteArray, ref p);

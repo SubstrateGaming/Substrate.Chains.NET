@@ -40,13 +40,13 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// >> BountyDescriptions
         ///  The description of each bounty.
         /// </summary>
-        Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT34 GetBountyDescriptions(string key);
+        Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT29 GetBountyDescriptions(string key);
         
         /// <summary>
         /// >> BountyApprovals
         ///  Bounty indices that have been approved but not yet funded.
         /// </summary>
-        Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT23 GetBountyApprovals();
+        Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18 GetBountyApprovals();
     }
     
     /// <summary>
@@ -68,12 +68,12 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// <summary>
         /// _bountyDescriptionsTypedStorage typed storage field
         /// </summary>
-        private TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT34> _bountyDescriptionsTypedStorage;
+        private TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT29> _bountyDescriptionsTypedStorage;
         
         /// <summary>
         /// _bountyApprovalsTypedStorage typed storage field
         /// </summary>
-        private TypedStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT23> _bountyApprovalsTypedStorage;
+        private TypedStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18> _bountyApprovalsTypedStorage;
         
         /// <summary>
         /// BountiesStorage constructor.
@@ -82,8 +82,8 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         {
             this.BountyCountTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32>("Bounties.BountyCount", storageDataProvider, storageChangeDelegates);
             this.BountiesTypedStorage = new TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_bounties.Bounty>("Bounties.Bounties", storageDataProvider, storageChangeDelegates);
-            this.BountyDescriptionsTypedStorage = new TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT34>("Bounties.BountyDescriptions", storageDataProvider, storageChangeDelegates);
-            this.BountyApprovalsTypedStorage = new TypedStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT23>("Bounties.BountyApprovals", storageDataProvider, storageChangeDelegates);
+            this.BountyDescriptionsTypedStorage = new TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT29>("Bounties.BountyDescriptions", storageDataProvider, storageChangeDelegates);
+            this.BountyApprovalsTypedStorage = new TypedStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18>("Bounties.BountyApprovals", storageDataProvider, storageChangeDelegates);
         }
         
         /// <summary>
@@ -119,7 +119,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// <summary>
         /// _bountyDescriptionsTypedStorage property
         /// </summary>
-        public TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT34> BountyDescriptionsTypedStorage
+        public TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT29> BountyDescriptionsTypedStorage
         {
             get
             {
@@ -134,7 +134,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// <summary>
         /// _bountyApprovalsTypedStorage property
         /// </summary>
-        public TypedStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT23> BountyApprovalsTypedStorage
+        public TypedStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18> BountyApprovalsTypedStorage
         {
             get
             {
@@ -217,13 +217,13 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// >> BountyDescriptions
         ///  The description of each bounty.
         /// </summary>
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT34 GetBountyDescriptions(string key)
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT29 GetBountyDescriptions(string key)
         {
             if ((key == null))
             {
                 return null;
             }
-            if (BountyDescriptionsTypedStorage.Dictionary.TryGetValue(key, out Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT34 result))
+            if (BountyDescriptionsTypedStorage.Dictionary.TryGetValue(key, out Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT29 result))
             {
                 return result;
             }
@@ -246,7 +246,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// >> BountyApprovals
         ///  Bounty indices that have been approved but not yet funded.
         /// </summary>
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT23 GetBountyApprovals()
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18 GetBountyApprovals()
         {
             return BountyApprovalsTypedStorage.Get();
         }

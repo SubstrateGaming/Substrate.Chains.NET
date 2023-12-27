@@ -73,11 +73,10 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Controller
         
         /// <summary>
         /// >> ReceivedHeartbeats
-        ///  For each session index, we keep a mapping of `SessionIndex` and `AuthIndex` to
-        ///  `WrapperOpaque<BoundedOpaqueNetworkState>`.
+        ///  For each session index, we keep a mapping of `SessionIndex` and `AuthIndex`.
         /// </summary>
         [HttpGet("ReceivedHeartbeats")]
-        [ProducesResponseType(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.frame_support.traits.misc.WrapperOpaque), 200)]
+        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Primitive.Bool), 200)]
         [StorageKeyBuilder(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ImOnlineStorage), "ReceivedHeartbeatsParams", typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>))]
         public IActionResult GetReceivedHeartbeats(string key)
         {

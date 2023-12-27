@@ -28,11 +28,8 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_message_queue.
     }
     
     /// <summary>
-    /// >> 477 - Variant[pallet_message_queue.pallet.Event]
-    /// 
-    ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
-    ///			by this pallet.
-    ///			
+    /// >> 452 - Variant[pallet_message_queue.pallet.Event]
+    /// The `Event` enum of this pallet
     /// </summary>
     public sealed class EnumEvent : BaseEnumExt<Event, BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base.Arr32U8, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.inclusion.EnumAggregateMessageOrigin, Substrate.Polkadot.NET.NetApiExt.Generated.Model.frame_support.traits.messages.EnumProcessMessageError>, BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base.Arr32U8, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.inclusion.EnumAggregateMessageOrigin, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight, Substrate.NetApi.Model.Types.Primitive.Bool>, BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base.Arr32U8, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.inclusion.EnumAggregateMessageOrigin, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>, BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.inclusion.EnumAggregateMessageOrigin, Substrate.NetApi.Model.Types.Primitive.U32>>
     {

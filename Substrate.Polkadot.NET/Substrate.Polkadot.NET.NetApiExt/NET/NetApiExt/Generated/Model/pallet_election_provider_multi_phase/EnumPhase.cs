@@ -28,7 +28,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_election_provi
     }
     
     /// <summary>
-    /// >> 457 - Variant[pallet_election_provider_multi_phase.Phase]
+    /// >> 432 - Variant[pallet_election_provider_multi_phase.Phase]
     /// </summary>
     public sealed class EnumPhase : BaseEnumExt<Phase, BaseVoid, BaseVoid, Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.Bool, Substrate.NetApi.Model.Types.Primitive.U32>, BaseVoid>
     {

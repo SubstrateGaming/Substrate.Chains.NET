@@ -40,6 +40,8 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Controller
         /// <summary>
         /// >> Head
         ///  The current "head of the queue" being unstaked.
+        /// 
+        ///  The head in itself can be a batch of up to [`Config::BatchSize`] stakers.
         /// </summary>
         [HttpGet("Head")]
         [ProducesResponseType(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_fast_unstake.types.UnstakeRequest), 200)]
@@ -54,8 +56,6 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Controller
         ///  The map of all accounts wishing to be unstaked.
         /// 
         ///  Keeps track of `AccountId` wishing to unstake and it's corresponding deposit.
-        /// 
-        ///  TWOX-NOTE: SAFE since `AccountId` is a secure hash.
         /// </summary>
         [HttpGet("Queue")]
         [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Primitive.U128), 200)]
@@ -81,10 +81,12 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Controller
         /// >> ErasToCheckPerBlock
         ///  Number of eras to check per block.
         /// 
-        ///  If set to 0, this pallet does absolutely nothing.
+        ///  If set to 0, this pallet does absolutely nothing. Cannot be set to more than
+        ///  [`Config::MaxErasToCheckPerBlock`].
         /// 
-        ///  Based on the amount of weight available at `on_idle`, up to this many eras of a single
-        ///  nominator might be checked.
+        ///  Based on the amount of weight available at [`Pallet::on_idle`], up to this many eras are
+        ///  checked. The checking is represented by updating [`UnstakeRequest::checked`], which is
+        ///  stored in [`Head`].
         /// </summary>
         [HttpGet("ErasToCheckPerBlock")]
         [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Primitive.U32), 200)]

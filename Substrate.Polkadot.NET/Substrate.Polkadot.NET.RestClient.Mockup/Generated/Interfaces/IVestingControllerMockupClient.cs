@@ -16,7 +16,7 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup.Generated.Interfaces
    
    public interface IVestingControllerMockupClient
    {
-      Task<bool> SetVesting(BoundedVecT27 value, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
+      Task<bool> SetVesting(BoundedVecT22 value, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
       Task<bool> SetStorageVersion(EnumReleases value);
    }
 }

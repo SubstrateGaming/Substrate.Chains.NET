@@ -40,17 +40,17 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_para
         
         CandidateScheduledBeforeParaFree = 10,
         
-        WrongCollator = 11,
+        ScheduledOutOfOrder = 11,
         
-        ScheduledOutOfOrder = 12,
+        HeadDataTooLarge = 12,
         
-        HeadDataTooLarge = 13,
+        PrematureCodeUpgrade = 13,
         
-        PrematureCodeUpgrade = 14,
+        NewCodeTooLarge = 14,
         
-        NewCodeTooLarge = 15,
+        DisallowedRelayParent = 15,
         
-        CandidateNotInParentContext = 16,
+        InvalidAssignment = 16,
         
         InvalidGroupIndex = 17,
         
@@ -78,11 +78,8 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_para
     }
     
     /// <summary>
-    /// >> 727 - Variant[polkadot_runtime_parachains.inclusion.pallet.Error]
-    /// 
-    ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
-    ///			of this pallet.
-    ///			
+    /// >> 674 - Variant[polkadot_runtime_parachains.inclusion.pallet.Error]
+    /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>
     {

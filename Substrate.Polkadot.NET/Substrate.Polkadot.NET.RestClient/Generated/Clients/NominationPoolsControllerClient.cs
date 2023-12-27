@@ -139,9 +139,9 @@ namespace Substrate.Polkadot.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("NominationPools.CounterForSubPoolsStorage");
       }
-      public async Task<BoundedVecT37> GetMetadata(U32 key)
+      public async Task<BoundedVecT32> GetMetadata(U32 key)
       {
-         return await SendRequestAsync<BoundedVecT37>(_httpClient, "nominationpools/metadata", Substrate.Polkadot.NET.NetApiExt.Generated.Storage.NominationPoolsStorage.MetadataParams(key));
+         return await SendRequestAsync<BoundedVecT32>(_httpClient, "nominationpools/metadata", Substrate.Polkadot.NET.NetApiExt.Generated.Storage.NominationPoolsStorage.MetadataParams(key));
       }
       public async Task<bool> SubscribeMetadata(U32 key)
       {
