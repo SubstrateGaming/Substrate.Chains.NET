@@ -18,7 +18,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_nfts.t
     
     
     /// <summary>
-    /// >> 300 - Composite[pallet_nfts.types.CancelAttributesApprovalWitness]
+    /// >> 316 - Composite[pallet_nfts.types.CancelAttributesApprovalWitness]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class CancelAttributesApprovalWitness : BaseType

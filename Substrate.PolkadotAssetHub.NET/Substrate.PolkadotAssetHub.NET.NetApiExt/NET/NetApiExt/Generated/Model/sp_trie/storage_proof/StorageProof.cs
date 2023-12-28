@@ -18,7 +18,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_trie.stora
     
     
     /// <summary>
-    /// >> 150 - Composite[sp_trie.storage_proof.StorageProof]
+    /// >> 161 - Composite[sp_trie.storage_proof.StorageProof]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class StorageProof : BaseType

@@ -18,7 +18,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_xcm.pa
     
     
     /// <summary>
-    /// >> 244 - Composite[pallet_xcm.pallet.RemoteLockedFungibleRecord]
+    /// >> 260 - Composite[pallet_xcm.pallet.RemoteLockedFungibleRecord]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class RemoteLockedFungibleRecord : BaseType
@@ -42,7 +42,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_xcm.pa
         /// <summary>
         /// >> consumers
         /// </summary>
-        private Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT14 _consumers;
+        private Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT15 _consumers;
         
         public Substrate.NetApi.Model.Types.Primitive.U128 Amount
         {
@@ -80,7 +80,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_xcm.pa
             }
         }
         
-        public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT14 Consumers
+        public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT15 Consumers
         {
             get
             {
@@ -116,7 +116,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_xcm.pa
             Owner.Decode(byteArray, ref p);
             Locker = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation();
             Locker.Decode(byteArray, ref p);
-            Consumers = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT14();
+            Consumers = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT15();
             Consumers.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

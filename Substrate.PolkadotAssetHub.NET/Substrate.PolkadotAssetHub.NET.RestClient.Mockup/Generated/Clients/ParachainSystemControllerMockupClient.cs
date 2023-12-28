@@ -13,8 +13,9 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Mockup.Generated.Clients
    using System.Threading.Tasks;
    using System.Net.Http;
    using Substrate.NetApi.Model.Types.Base;
+   using Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.unincluded_segment;
    using Substrate.NetApi.Model.Types.Primitive;
-   using Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v4;
+   using Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v5;
    using Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_trie.storage_proof;
    using Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.relay_state_snapshot;
    using Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_primitives_parachain_inherent;
@@ -30,6 +31,14 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Mockup.Generated.Clients
       public ParachainSystemControllerMockupClient(HttpClient httpClient)
       {
          _httpClient = httpClient;
+      }
+      public async Task<bool> SetUnincludedSegment(BaseVec<Ancestor> value)
+      {
+         return await SendMockupRequestAsync(_httpClient, "ParachainSystem/UnincludedSegment", value.Encode(), Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage.ParachainSystemStorage.UnincludedSegmentParams());
+      }
+      public async Task<bool> SetAggregatedUnincludedSegment(SegmentTracker value)
+      {
+         return await SendMockupRequestAsync(_httpClient, "ParachainSystem/AggregatedUnincludedSegment", value.Encode(), Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage.ParachainSystemStorage.AggregatedUnincludedSegmentParams());
       }
       public async Task<bool> SetPendingValidationCode(BaseVec<U8> value)
       {
@@ -55,6 +64,10 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "ParachainSystem/UpgradeRestrictionSignal", value.Encode(), Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage.ParachainSystemStorage.UpgradeRestrictionSignalParams());
       }
+      public async Task<bool> SetUpgradeGoAhead(BaseOpt<EnumUpgradeGoAhead> value)
+      {
+         return await SendMockupRequestAsync(_httpClient, "ParachainSystem/UpgradeGoAhead", value.Encode(), Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage.ParachainSystemStorage.UpgradeGoAheadParams());
+      }
       public async Task<bool> SetRelayStateProof(StorageProof value)
       {
          return await SendMockupRequestAsync(_httpClient, "ParachainSystem/RelayStateProof", value.Encode(), Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage.ParachainSystemStorage.RelayStateProofParams());
@@ -71,7 +84,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "ParachainSystem/LastDmqMqcHead", value.Encode(), Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage.ParachainSystemStorage.LastDmqMqcHeadParams());
       }
-      public async Task<bool> SetLastHrmpMqcHeads(BTreeMapT1 value)
+      public async Task<bool> SetLastHrmpMqcHeads(BTreeMapT2 value)
       {
          return await SendMockupRequestAsync(_httpClient, "ParachainSystem/LastHrmpMqcHeads", value.Encode(), Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage.ParachainSystemStorage.LastHrmpMqcHeadsParams());
       }

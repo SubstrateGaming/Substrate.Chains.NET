@@ -26,10 +26,10 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Mockup.Generated.Interfaces
       Task<bool> SetSupportedVersion(U32 value, BaseTuple<U32, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation> key);
       Task<bool> SetVersionNotifiers(U64 value, BaseTuple<U32, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation> key);
       Task<bool> SetVersionNotifyTargets(BaseTuple<U64, Weight, U32> value, BaseTuple<U32, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation> key);
-      Task<bool> SetVersionDiscoveryQueue(BoundedVecT13 value);
+      Task<bool> SetVersionDiscoveryQueue(BoundedVecT14 value);
       Task<bool> SetCurrentMigration(EnumVersionMigrationStage value);
       Task<bool> SetRemoteLockedFungibles(RemoteLockedFungibleRecord value, BaseTuple<U32, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAssetId> key);
-      Task<bool> SetLockedFungibles(BoundedVecT15 value, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
+      Task<bool> SetLockedFungibles(BoundedVecT16 value, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
       Task<bool> SetXcmExecutionSuspended(Bool value);
    }
 }

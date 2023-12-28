@@ -18,7 +18,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.ed255
     
     
     /// <summary>
-    /// >> 306 - Composite[sp_core.ed25519.Signature]
+    /// >> 322 - Composite[sp_core.ed25519.Signature]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Signature : BaseType

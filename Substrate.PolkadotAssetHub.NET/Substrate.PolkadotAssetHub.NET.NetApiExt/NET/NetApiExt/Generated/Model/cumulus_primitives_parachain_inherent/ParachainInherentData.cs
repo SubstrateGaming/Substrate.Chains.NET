@@ -18,7 +18,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_primi
     
     
     /// <summary>
-    /// >> 167 - Composite[cumulus_primitives_parachain_inherent.ParachainInherentData]
+    /// >> 178 - Composite[cumulus_primitives_parachain_inherent.ParachainInherentData]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class ParachainInherentData : BaseType
@@ -27,7 +27,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_primi
         /// <summary>
         /// >> validation_data
         /// </summary>
-        private Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.PersistedValidationData _validationData;
+        private Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.PersistedValidationData _validationData;
         
         /// <summary>
         /// >> relay_chain_state
@@ -42,9 +42,9 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_primi
         /// <summary>
         /// >> horizontal_messages
         /// </summary>
-        private Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.BTreeMapT2 _horizontalMessages;
+        private Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.BTreeMapT3 _horizontalMessages;
         
-        public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.PersistedValidationData ValidationData
+        public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.PersistedValidationData ValidationData
         {
             get
             {
@@ -80,7 +80,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_primi
             }
         }
         
-        public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.BTreeMapT2 HorizontalMessages
+        public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.BTreeMapT3 HorizontalMessages
         {
             get
             {
@@ -110,13 +110,13 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_primi
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            ValidationData = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.PersistedValidationData();
+            ValidationData = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.PersistedValidationData();
             ValidationData.Decode(byteArray, ref p);
             RelayChainState = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_trie.storage_proof.StorageProof();
             RelayChainState.Decode(byteArray, ref p);
             DownwardMessages = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_core_primitives.InboundDownwardMessage>();
             DownwardMessages.Decode(byteArray, ref p);
-            HorizontalMessages = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.BTreeMapT2();
+            HorizontalMessages = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.BTreeMapT3();
             HorizontalMessages.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

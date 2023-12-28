@@ -11,7 +11,7 @@ using Substrate.NetApi.Model.Types.Base;
 using System.Collections.Generic;
 
 
-namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.statemint_runtime
+namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.asset_hub_polkadot_runtime
 {
     
     
@@ -28,7 +28,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.statemint_run
     }
     
     /// <summary>
-    /// >> 313 - Variant[statemint_runtime.OriginCaller]
+    /// >> 329 - Variant[asset_hub_polkadot_runtime.OriginCaller]
     /// </summary>
     public sealed class EnumOriginCaller : BaseEnumExt<OriginCaller, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.frame_support.dispatch.EnumRawOrigin, BaseVoid, BaseVoid, Substrate.NetApi.Model.Types.Base.BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_xcm.pallet.EnumOrigin, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_pallet_xcm.pallet.EnumOrigin>
     {

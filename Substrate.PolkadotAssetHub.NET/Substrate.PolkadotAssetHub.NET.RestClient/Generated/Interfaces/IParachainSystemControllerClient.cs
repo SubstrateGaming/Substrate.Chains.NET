@@ -12,8 +12,9 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Generated.Interfaces
    using System;
    using System.Threading.Tasks;
    using Substrate.NetApi.Model.Types.Base;
+   using Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.unincluded_segment;
    using Substrate.NetApi.Model.Types.Primitive;
-   using Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v4;
+   using Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v5;
    using Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_trie.storage_proof;
    using Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.relay_state_snapshot;
    using Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_primitives_parachain_inherent;
@@ -24,6 +25,10 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Generated.Interfaces
    
    public interface IParachainSystemControllerClient
    {
+      Task<BaseVec<Ancestor>> GetUnincludedSegment();
+      Task<bool> SubscribeUnincludedSegment();
+      Task<SegmentTracker> GetAggregatedUnincludedSegment();
+      Task<bool> SubscribeAggregatedUnincludedSegment();
       Task<BaseVec<U8>> GetPendingValidationCode();
       Task<bool> SubscribePendingValidationCode();
       Task<BaseVec<U8>> GetNewValidationCode();
@@ -36,6 +41,8 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Generated.Interfaces
       Task<bool> SubscribeLastRelayChainBlockNumber();
       Task<BaseOpt<EnumUpgradeRestriction>> GetUpgradeRestrictionSignal();
       Task<bool> SubscribeUpgradeRestrictionSignal();
+      Task<BaseOpt<EnumUpgradeGoAhead>> GetUpgradeGoAhead();
+      Task<bool> SubscribeUpgradeGoAhead();
       Task<StorageProof> GetRelayStateProof();
       Task<bool> SubscribeRelayStateProof();
       Task<MessagingStateSnapshot> GetRelevantMessagingState();
@@ -44,7 +51,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Generated.Interfaces
       Task<bool> SubscribeHostConfiguration();
       Task<MessageQueueChain> GetLastDmqMqcHead();
       Task<bool> SubscribeLastDmqMqcHead();
-      Task<BTreeMapT1> GetLastHrmpMqcHeads();
+      Task<BTreeMapT2> GetLastHrmpMqcHeads();
       Task<bool> SubscribeLastHrmpMqcHeads();
       Task<U32> GetProcessedDownwardMessages();
       Task<bool> SubscribeProcessedDownwardMessages();

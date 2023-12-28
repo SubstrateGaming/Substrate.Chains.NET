@@ -13,51 +13,71 @@ using Substrate.NetApi.Model.Types.Metadata.V14;
 using System.Collections.Generic;
 
 
-namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.statemint_runtime
+namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.unincluded_segment
 {
     
     
     /// <summary>
-    /// >> 201 - Composite[statemint_runtime.SessionKeys]
+    /// >> 150 - Composite[cumulus_pallet_parachain_system.unincluded_segment.HrmpChannelUpdate]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
-    public sealed class SessionKeys : BaseType
+    public sealed class HrmpChannelUpdate : BaseType
     {
         
         /// <summary>
-        /// >> aura
+        /// >> msg_count
         /// </summary>
-        private Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_consensus_aura.ed25519.app_ed25519.Public _aura;
+        private Substrate.NetApi.Model.Types.Primitive.U32 _msgCount;
         
-        public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_consensus_aura.ed25519.app_ed25519.Public Aura
+        /// <summary>
+        /// >> total_bytes
+        /// </summary>
+        private Substrate.NetApi.Model.Types.Primitive.U32 _totalBytes;
+        
+        public Substrate.NetApi.Model.Types.Primitive.U32 MsgCount
         {
             get
             {
-                return this._aura;
+                return this._msgCount;
             }
             set
             {
-                this._aura = value;
+                this._msgCount = value;
+            }
+        }
+        
+        public Substrate.NetApi.Model.Types.Primitive.U32 TotalBytes
+        {
+            get
+            {
+                return this._totalBytes;
+            }
+            set
+            {
+                this._totalBytes = value;
             }
         }
         
         public override string TypeName()
         {
-            return "SessionKeys";
+            return "HrmpChannelUpdate";
         }
         
         public override byte[] Encode()
         {
             var result = new List<byte>();
-            result.AddRange(Aura.Encode());
+            result.AddRange(MsgCount.Encode());
+            result.AddRange(TotalBytes.Encode());
             return result.ToArray();
         }
         
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Aura = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_consensus_aura.ed25519.app_ed25519.Public();
-            Aura.Decode(byteArray, ref p);
+            MsgCount = new Substrate.NetApi.Model.Types.Primitive.U32();
+            MsgCount.Decode(byteArray, ref p);
+            TotalBytes = new Substrate.NetApi.Model.Types.Primitive.U32();
+            TotalBytes.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];

@@ -30,7 +30,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_assets
     }
     
     /// <summary>
-    /// >> 337 - Variant[pallet_assets.types.ExistenceReason]
+    /// >> 353 - Variant[pallet_assets.types.ExistenceReason]
     /// </summary>
     public sealed class EnumExistenceReason : BaseEnumExt<ExistenceReason, BaseVoid, BaseVoid, Substrate.NetApi.Model.Types.Primitive.U128, BaseVoid, BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U128>>
     {

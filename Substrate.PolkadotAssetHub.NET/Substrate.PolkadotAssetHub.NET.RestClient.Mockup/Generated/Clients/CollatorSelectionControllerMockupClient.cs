@@ -23,11 +23,11 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Mockup.Generated.Clients
       {
          _httpClient = httpClient;
       }
-      public async Task<bool> SetInvulnerables(BoundedVecT10 value)
+      public async Task<bool> SetInvulnerables(BoundedVecT11 value)
       {
          return await SendMockupRequestAsync(_httpClient, "CollatorSelection/Invulnerables", value.Encode(), Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage.CollatorSelectionStorage.InvulnerablesParams());
       }
-      public async Task<bool> SetCandidates(BoundedVecT11 value)
+      public async Task<bool> SetCandidates(BoundedVecT12 value)
       {
          return await SendMockupRequestAsync(_httpClient, "CollatorSelection/Candidates", value.Encode(), Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage.CollatorSelectionStorage.CandidatesParams());
       }

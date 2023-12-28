@@ -18,7 +18,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_colle
     
     
     /// <summary>
-    /// >> 358 - Composite[bounded_collections.bounded_btree_map.BoundedBTreeMap]
+    /// >> 374 - Composite[bounded_collections.bounded_btree_map.BoundedBTreeMap]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class BoundedBTreeMap : BaseType
@@ -27,9 +27,9 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_colle
         /// <summary>
         /// >> value
         /// </summary>
-        private Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.BTreeMapT3 _value;
+        private Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.BTreeMapT4 _value;
         
-        public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.BTreeMapT3 Value
+        public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.BTreeMapT4 Value
         {
             get
             {
@@ -56,7 +56,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_colle
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Value = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.BTreeMapT3();
+            Value = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.BTreeMapT4();
             Value.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

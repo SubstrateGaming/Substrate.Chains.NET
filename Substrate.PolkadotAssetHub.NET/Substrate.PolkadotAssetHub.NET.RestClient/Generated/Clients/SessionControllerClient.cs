@@ -15,7 +15,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Generated.Clients
    using Substrate.NetApi.Model.Types.Base;
    using Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto;
    using Substrate.NetApi.Model.Types.Primitive;
-   using Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.statemint_runtime;
+   using Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.asset_hub_polkadot_runtime;
    using Substrate.PolkadotAssetHub.NET.RestClient.Generated.Interfaces;
    
    public sealed class SessionControllerClient : BaseClient, ISessionControllerClient

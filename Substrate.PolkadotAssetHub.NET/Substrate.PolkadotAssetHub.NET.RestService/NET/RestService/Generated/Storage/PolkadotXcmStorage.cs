@@ -77,7 +77,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestService.Generated.Storage
         ///  the `u32` counter is the number of times that a send to the destination has been attempted,
         ///  which is used as a prioritization.
         /// </summary>
-        Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT13 GetVersionDiscoveryQueue();
+        Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT14 GetVersionDiscoveryQueue();
         
         /// <summary>
         /// >> CurrentMigration
@@ -95,7 +95,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestService.Generated.Storage
         /// >> LockedFungibles
         ///  Fungible assets which we know are locked on this chain.
         /// </summary>
-        Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT15 GetLockedFungibles(string key);
+        Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT16 GetLockedFungibles(string key);
         
         /// <summary>
         /// >> XcmExecutionSuspended
@@ -148,7 +148,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestService.Generated.Storage
         /// <summary>
         /// _versionDiscoveryQueueTypedStorage typed storage field
         /// </summary>
-        private TypedStorage<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT13> _versionDiscoveryQueueTypedStorage;
+        private TypedStorage<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT14> _versionDiscoveryQueueTypedStorage;
         
         /// <summary>
         /// _currentMigrationTypedStorage typed storage field
@@ -163,7 +163,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestService.Generated.Storage
         /// <summary>
         /// _lockedFungiblesTypedStorage typed storage field
         /// </summary>
-        private TypedMapStorage<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT15> _lockedFungiblesTypedStorage;
+        private TypedMapStorage<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT16> _lockedFungiblesTypedStorage;
         
         /// <summary>
         /// _xcmExecutionSuspendedTypedStorage typed storage field
@@ -182,10 +182,10 @@ namespace Substrate.PolkadotAssetHub.NET.RestService.Generated.Storage
             this.SupportedVersionTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Primitive.U32>("PolkadotXcm.SupportedVersion", storageDataProvider, storageChangeDelegates);
             this.VersionNotifiersTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Primitive.U64>("PolkadotXcm.VersionNotifiers", storageDataProvider, storageChangeDelegates);
             this.VersionNotifyTargetsTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U64, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight, Substrate.NetApi.Model.Types.Primitive.U32>>("PolkadotXcm.VersionNotifyTargets", storageDataProvider, storageChangeDelegates);
-            this.VersionDiscoveryQueueTypedStorage = new TypedStorage<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT13>("PolkadotXcm.VersionDiscoveryQueue", storageDataProvider, storageChangeDelegates);
+            this.VersionDiscoveryQueueTypedStorage = new TypedStorage<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT14>("PolkadotXcm.VersionDiscoveryQueue", storageDataProvider, storageChangeDelegates);
             this.CurrentMigrationTypedStorage = new TypedStorage<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_xcm.pallet.EnumVersionMigrationStage>("PolkadotXcm.CurrentMigration", storageDataProvider, storageChangeDelegates);
             this.RemoteLockedFungiblesTypedStorage = new TypedMapStorage<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_xcm.pallet.RemoteLockedFungibleRecord>("PolkadotXcm.RemoteLockedFungibles", storageDataProvider, storageChangeDelegates);
-            this.LockedFungiblesTypedStorage = new TypedMapStorage<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT15>("PolkadotXcm.LockedFungibles", storageDataProvider, storageChangeDelegates);
+            this.LockedFungiblesTypedStorage = new TypedMapStorage<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT16>("PolkadotXcm.LockedFungibles", storageDataProvider, storageChangeDelegates);
             this.XcmExecutionSuspendedTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.Bool>("PolkadotXcm.XcmExecutionSuspended", storageDataProvider, storageChangeDelegates);
         }
         
@@ -297,7 +297,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestService.Generated.Storage
         /// <summary>
         /// _versionDiscoveryQueueTypedStorage property
         /// </summary>
-        public TypedStorage<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT13> VersionDiscoveryQueueTypedStorage
+        public TypedStorage<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT14> VersionDiscoveryQueueTypedStorage
         {
             get
             {
@@ -342,7 +342,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestService.Generated.Storage
         /// <summary>
         /// _lockedFungiblesTypedStorage property
         /// </summary>
-        public TypedMapStorage<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT15> LockedFungiblesTypedStorage
+        public TypedMapStorage<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT16> LockedFungiblesTypedStorage
         {
             get
             {
@@ -589,7 +589,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestService.Generated.Storage
         ///  the `u32` counter is the number of times that a send to the destination has been attempted,
         ///  which is used as a prioritization.
         /// </summary>
-        public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT13 GetVersionDiscoveryQueue()
+        public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT14 GetVersionDiscoveryQueue()
         {
             return VersionDiscoveryQueueTypedStorage.Get();
         }
@@ -654,13 +654,13 @@ namespace Substrate.PolkadotAssetHub.NET.RestService.Generated.Storage
         /// >> LockedFungibles
         ///  Fungible assets which we know are locked on this chain.
         /// </summary>
-        public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT15 GetLockedFungibles(string key)
+        public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT16 GetLockedFungibles(string key)
         {
             if ((key == null))
             {
                 return null;
             }
-            if (LockedFungiblesTypedStorage.Dictionary.TryGetValue(key, out Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT15 result))
+            if (LockedFungiblesTypedStorage.Dictionary.TryGetValue(key, out Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT16 result))
             {
                 return result;
             }

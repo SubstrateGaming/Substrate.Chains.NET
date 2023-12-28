@@ -18,7 +18,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.frame_system.
     
     
     /// <summary>
-    /// >> 385 - Composite[frame_system.extensions.check_mortality.CheckMortality]
+    /// >> 401 - Composite[frame_system.extensions.check_mortality.CheckMortality]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class CheckMortality : BaseType

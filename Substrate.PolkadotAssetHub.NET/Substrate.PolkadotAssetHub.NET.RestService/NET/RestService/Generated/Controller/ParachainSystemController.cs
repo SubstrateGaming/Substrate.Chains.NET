@@ -38,13 +38,44 @@ namespace Substrate.PolkadotAssetHub.NET.RestService.Generated.Controller
         }
         
         /// <summary>
+        /// >> UnincludedSegment
+        ///  Latest included block descendants the runtime accepted. In other words, these are
+        ///  ancestors of the currently executing block which have not been included in the observed
+        ///  relay-chain state.
+        /// 
+        ///  The segment length is limited by the capacity returned from the [`ConsensusHook`] configured
+        ///  in the pallet.
+        /// </summary>
+        [HttpGet("UnincludedSegment")]
+        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.unincluded_segment.Ancestor>), 200)]
+        [StorageKeyBuilder(typeof(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage.ParachainSystemStorage), "UnincludedSegmentParams")]
+        public IActionResult GetUnincludedSegment()
+        {
+            return this.Ok(_parachainSystemStorage.GetUnincludedSegment());
+        }
+        
+        /// <summary>
+        /// >> AggregatedUnincludedSegment
+        ///  Storage field that keeps track of bandwidth used by the unincluded segment along with the
+        ///  latest the latest HRMP watermark. Used for limiting the acceptance of new blocks with
+        ///  respect to relay chain constraints.
+        /// </summary>
+        [HttpGet("AggregatedUnincludedSegment")]
+        [ProducesResponseType(typeof(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.unincluded_segment.SegmentTracker), 200)]
+        [StorageKeyBuilder(typeof(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage.ParachainSystemStorage), "AggregatedUnincludedSegmentParams")]
+        public IActionResult GetAggregatedUnincludedSegment()
+        {
+            return this.Ok(_parachainSystemStorage.GetAggregatedUnincludedSegment());
+        }
+        
+        /// <summary>
         /// >> PendingValidationCode
-        ///  In case of a scheduled upgrade, this storage field contains the validation code to be applied.
+        ///  In case of a scheduled upgrade, this storage field contains the validation code to be
+        ///  applied.
         /// 
-        ///  As soon as the relay chain gives us the go-ahead signal, we will overwrite the [`:code`][well_known_keys::CODE]
-        ///  which will result the next block process with the new validation code. This concludes the upgrade process.
-        /// 
-        ///  [well_known_keys::CODE]: sp_core::storage::well_known_keys::CODE
+        ///  As soon as the relay chain gives us the go-ahead signal, we will overwrite the
+        ///  [`:code`][sp_core::storage::well_known_keys::CODE] which will result the next block process
+        ///  with the new validation code. This concludes the upgrade process.
         /// </summary>
         [HttpGet("PendingValidationCode")]
         [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>), 200)]
@@ -77,7 +108,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestService.Generated.Controller
         ///  in the trie.
         /// </summary>
         [HttpGet("ValidationData")]
-        [ProducesResponseType(typeof(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.PersistedValidationData), 200)]
+        [ProducesResponseType(typeof(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.PersistedValidationData), 200)]
         [StorageKeyBuilder(typeof(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage.ParachainSystemStorage), "ValidationDataParams")]
         public IActionResult GetValidationData()
         {
@@ -119,11 +150,27 @@ namespace Substrate.PolkadotAssetHub.NET.RestService.Generated.Controller
         ///  set after the inherent.
         /// </summary>
         [HttpGet("UpgradeRestrictionSignal")]
-        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.EnumUpgradeRestriction>), 200)]
+        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.EnumUpgradeRestriction>), 200)]
         [StorageKeyBuilder(typeof(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage.ParachainSystemStorage), "UpgradeRestrictionSignalParams")]
         public IActionResult GetUpgradeRestrictionSignal()
         {
             return this.Ok(_parachainSystemStorage.GetUpgradeRestrictionSignal());
+        }
+        
+        /// <summary>
+        /// >> UpgradeGoAhead
+        ///  Optional upgrade go-ahead signal from the relay-chain.
+        /// 
+        ///  This storage item is a mirror of the corresponding value for the current parachain from the
+        ///  relay-chain. This value is ephemeral which means it doesn't hit the storage. This value is
+        ///  set after the inherent.
+        /// </summary>
+        [HttpGet("UpgradeGoAhead")]
+        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.EnumUpgradeGoAhead>), 200)]
+        [StorageKeyBuilder(typeof(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage.ParachainSystemStorage), "UpgradeGoAheadParams")]
+        public IActionResult GetUpgradeGoAhead()
+        {
+            return this.Ok(_parachainSystemStorage.GetUpgradeGoAhead());
         }
         
         /// <summary>
@@ -171,7 +218,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestService.Generated.Controller
         ///  This data is also absent from the genesis.
         /// </summary>
         [HttpGet("HostConfiguration")]
-        [ProducesResponseType(typeof(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.AbridgedHostConfiguration), 200)]
+        [ProducesResponseType(typeof(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.AbridgedHostConfiguration), 200)]
         [StorageKeyBuilder(typeof(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage.ParachainSystemStorage), "HostConfigurationParams")]
         public IActionResult GetHostConfiguration()
         {
@@ -201,7 +248,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestService.Generated.Controller
         ///  by the system inherent.
         /// </summary>
         [HttpGet("LastHrmpMqcHeads")]
-        [ProducesResponseType(typeof(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.BTreeMapT1), 200)]
+        [ProducesResponseType(typeof(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.BTreeMapT2), 200)]
         [StorageKeyBuilder(typeof(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage.ParachainSystemStorage), "LastHrmpMqcHeadsParams")]
         public IActionResult GetLastHrmpMqcHeads()
         {
@@ -331,7 +378,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestService.Generated.Controller
         /// >> CustomValidationHeadData
         ///  A custom head data that should be returned as result of `validate_block`.
         /// 
-        ///  See [`Pallet::set_custom_validation_head_data`] for more information.
+        ///  See `Pallet::set_custom_validation_head_data` for more information.
         /// </summary>
         [HttpGet("CustomValidationHeadData")]
         [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>), 200)]

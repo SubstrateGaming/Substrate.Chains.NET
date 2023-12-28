@@ -13,12 +13,12 @@ using Substrate.NetApi.Model.Types.Metadata.V14;
 using System.Collections.Generic;
 
 
-namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v4
+namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v5
 {
     
     
     /// <summary>
-    /// >> 158 - Composite[polkadot_primitives.v4.AbridgedHostConfiguration]
+    /// >> 168 - Composite[polkadot_primitives.v5.AbridgedHostConfiguration]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class AbridgedHostConfiguration : BaseType
@@ -68,6 +68,11 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_prim
         /// >> validation_upgrade_delay
         /// </summary>
         private Substrate.NetApi.Model.Types.Primitive.U32 _validationUpgradeDelay;
+        
+        /// <summary>
+        /// >> async_backing_params
+        /// </summary>
+        private Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.vstaging.AsyncBackingParams _asyncBackingParams;
         
         public Substrate.NetApi.Model.Types.Primitive.U32 MaxCodeSize
         {
@@ -177,6 +182,18 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_prim
             }
         }
         
+        public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.vstaging.AsyncBackingParams AsyncBackingParams
+        {
+            get
+            {
+                return this._asyncBackingParams;
+            }
+            set
+            {
+                this._asyncBackingParams = value;
+            }
+        }
+        
         public override string TypeName()
         {
             return "AbridgedHostConfiguration";
@@ -194,6 +211,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_prim
             result.AddRange(HrmpMaxMessageNumPerCandidate.Encode());
             result.AddRange(ValidationUpgradeCooldown.Encode());
             result.AddRange(ValidationUpgradeDelay.Encode());
+            result.AddRange(AsyncBackingParams.Encode());
             return result.ToArray();
         }
         
@@ -218,6 +236,8 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_prim
             ValidationUpgradeCooldown.Decode(byteArray, ref p);
             ValidationUpgradeDelay = new Substrate.NetApi.Model.Types.Primitive.U32();
             ValidationUpgradeDelay.Decode(byteArray, ref p);
+            AsyncBackingParams = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.vstaging.AsyncBackingParams();
+            AsyncBackingParams.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];

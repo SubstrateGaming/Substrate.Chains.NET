@@ -30,7 +30,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
         public ParachainInfoStorage(SubstrateClientExt client)
         {
             this._client = client;
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("ParachainInfo", "ParachainId"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("ParachainInfo", "ParachainId"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id)));
         }
         
         /// <summary>
@@ -53,10 +53,10 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
         /// <summary>
         /// >> ParachainId
         /// </summary>
-        public async Task<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id> ParachainId(CancellationToken token)
+        public async Task<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id> ParachainId(CancellationToken token)
         {
             string parameters = ParachainInfoStorage.ParachainIdParams();
-            var result = await _client.GetStorageAsync<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id>(parameters, token);
             return result;
         }
     }

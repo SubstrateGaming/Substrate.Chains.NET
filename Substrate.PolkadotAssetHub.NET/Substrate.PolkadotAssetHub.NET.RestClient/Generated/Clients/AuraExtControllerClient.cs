@@ -13,6 +13,9 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Generated.Clients
    using System.Threading.Tasks;
    using System.Net.Http;
    using Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
+   using Substrate.NetApi.Model.Types.Base;
+   using Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_consensus_slots;
+   using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.PolkadotAssetHub.NET.RestClient.Generated.Interfaces;
    
    public sealed class AuraExtControllerClient : BaseClient, IAuraExtControllerClient
@@ -24,13 +27,21 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Generated.Clients
          _httpClient = httpClient;
          _subscriptionClient = subscriptionClient;
       }
-      public async Task<BoundedVecT12> GetAuthorities()
+      public async Task<BoundedVecT13> GetAuthorities()
       {
-         return await SendRequestAsync<BoundedVecT12>(_httpClient, "auraext/authorities");
+         return await SendRequestAsync<BoundedVecT13>(_httpClient, "auraext/authorities");
       }
       public async Task<bool> SubscribeAuthorities()
       {
          return await _subscriptionClient.SubscribeAsync("AuraExt.Authorities");
+      }
+      public async Task<BaseTuple<Slot, U32>> GetSlotInfo()
+      {
+         return await SendRequestAsync<BaseTuple<Slot, U32>>(_httpClient, "auraext/slotinfo");
+      }
+      public async Task<bool> SubscribeSlotInfo()
+      {
+         return await _subscriptionClient.SubscribeAsync("AuraExt.SlotInfo");
       }
    }
 }

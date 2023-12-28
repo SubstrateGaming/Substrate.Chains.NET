@@ -12,8 +12,9 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Mockup.Generated.Interfaces
    using System;
    using System.Threading.Tasks;
    using Substrate.NetApi.Model.Types.Base;
+   using Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.unincluded_segment;
    using Substrate.NetApi.Model.Types.Primitive;
-   using Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v4;
+   using Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v5;
    using Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_trie.storage_proof;
    using Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.relay_state_snapshot;
    using Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_primitives_parachain_inherent;
@@ -24,17 +25,20 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Mockup.Generated.Interfaces
    
    public interface IParachainSystemControllerMockupClient
    {
+      Task<bool> SetUnincludedSegment(BaseVec<Ancestor> value);
+      Task<bool> SetAggregatedUnincludedSegment(SegmentTracker value);
       Task<bool> SetPendingValidationCode(BaseVec<U8> value);
       Task<bool> SetNewValidationCode(BaseVec<U8> value);
       Task<bool> SetValidationData(PersistedValidationData value);
       Task<bool> SetDidSetValidationCode(Bool value);
       Task<bool> SetLastRelayChainBlockNumber(U32 value);
       Task<bool> SetUpgradeRestrictionSignal(BaseOpt<EnumUpgradeRestriction> value);
+      Task<bool> SetUpgradeGoAhead(BaseOpt<EnumUpgradeGoAhead> value);
       Task<bool> SetRelayStateProof(StorageProof value);
       Task<bool> SetRelevantMessagingState(MessagingStateSnapshot value);
       Task<bool> SetHostConfiguration(AbridgedHostConfiguration value);
       Task<bool> SetLastDmqMqcHead(MessageQueueChain value);
-      Task<bool> SetLastHrmpMqcHeads(BTreeMapT1 value);
+      Task<bool> SetLastHrmpMqcHeads(BTreeMapT2 value);
       Task<bool> SetProcessedDownwardMessages(U32 value);
       Task<bool> SetHrmpWatermark(U32 value);
       Task<bool> SetHrmpOutboundMessages(BaseVec<OutboundHrmpMessage> value);

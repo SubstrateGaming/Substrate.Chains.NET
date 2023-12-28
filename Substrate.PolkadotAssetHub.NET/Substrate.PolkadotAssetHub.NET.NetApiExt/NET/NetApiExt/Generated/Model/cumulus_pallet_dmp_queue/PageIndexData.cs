@@ -18,7 +18,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_palle
     
     
     /// <summary>
-    /// >> 271 - Composite[cumulus_pallet_dmp_queue.PageIndexData]
+    /// >> 287 - Composite[cumulus_pallet_dmp_queue.PageIndexData]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class PageIndexData : BaseType

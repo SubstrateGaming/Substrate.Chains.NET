@@ -39,10 +39,10 @@ namespace Substrate.PolkadotAssetHub.NET.RestService.Generated.Controller
         
         /// <summary>
         /// >> Invulnerables
-        ///  The invulnerable, fixed collators.
+        ///  The invulnerable, permissioned collators. This list must be sorted.
         /// </summary>
         [HttpGet("Invulnerables")]
-        [ProducesResponseType(typeof(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10), 200)]
+        [ProducesResponseType(typeof(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT11), 200)]
         [StorageKeyBuilder(typeof(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage.CollatorSelectionStorage), "InvulnerablesParams")]
         public IActionResult GetInvulnerables()
         {
@@ -51,10 +51,11 @@ namespace Substrate.PolkadotAssetHub.NET.RestService.Generated.Controller
         
         /// <summary>
         /// >> Candidates
-        ///  The (community, limited) collation candidates.
+        ///  The (community, limited) collation candidates. `Candidates` and `Invulnerables` should be
+        ///  mutually exclusive.
         /// </summary>
         [HttpGet("Candidates")]
-        [ProducesResponseType(typeof(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT11), 200)]
+        [ProducesResponseType(typeof(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT12), 200)]
         [StorageKeyBuilder(typeof(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage.CollatorSelectionStorage), "CandidatesParams")]
         public IActionResult GetCandidates()
         {

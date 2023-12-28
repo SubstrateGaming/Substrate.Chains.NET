@@ -26,7 +26,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_assets
     }
     
     /// <summary>
-    /// >> 336 - Variant[pallet_assets.types.AccountStatus]
+    /// >> 352 - Variant[pallet_assets.types.AccountStatus]
     /// </summary>
     public sealed class EnumAccountStatus : BaseEnum<AccountStatus>
     {

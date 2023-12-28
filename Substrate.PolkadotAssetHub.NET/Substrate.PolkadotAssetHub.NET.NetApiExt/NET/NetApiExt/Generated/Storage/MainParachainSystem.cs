@@ -30,17 +30,20 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
         public ParachainSystemStorage(SubstrateClientExt client)
         {
             this._client = client;
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("ParachainSystem", "UnincludedSegment"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.unincluded_segment.Ancestor>)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("ParachainSystem", "AggregatedUnincludedSegment"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.unincluded_segment.SegmentTracker)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("ParachainSystem", "PendingValidationCode"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("ParachainSystem", "NewValidationCode"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>)));
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("ParachainSystem", "ValidationData"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.PersistedValidationData)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("ParachainSystem", "ValidationData"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.PersistedValidationData)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("ParachainSystem", "DidSetValidationCode"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Primitive.Bool)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("ParachainSystem", "LastRelayChainBlockNumber"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Primitive.U32)));
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("ParachainSystem", "UpgradeRestrictionSignal"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.EnumUpgradeRestriction>)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("ParachainSystem", "UpgradeRestrictionSignal"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.EnumUpgradeRestriction>)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("ParachainSystem", "UpgradeGoAhead"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.EnumUpgradeGoAhead>)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("ParachainSystem", "RelayStateProof"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_trie.storage_proof.StorageProof)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("ParachainSystem", "RelevantMessagingState"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.relay_state_snapshot.MessagingStateSnapshot)));
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("ParachainSystem", "HostConfiguration"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.AbridgedHostConfiguration)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("ParachainSystem", "HostConfiguration"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.AbridgedHostConfiguration)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("ParachainSystem", "LastDmqMqcHead"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_primitives_parachain_inherent.MessageQueueChain)));
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("ParachainSystem", "LastHrmpMqcHeads"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.BTreeMapT1)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("ParachainSystem", "LastHrmpMqcHeads"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.BTreeMapT2)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("ParachainSystem", "ProcessedDownwardMessages"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Primitive.U32)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("ParachainSystem", "HrmpWatermark"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Primitive.U32)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("ParachainSystem", "HrmpOutboundMessages"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_core_primitives.OutboundHrmpMessage>)));
@@ -54,13 +57,85 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
         }
         
         /// <summary>
+        /// >> UnincludedSegmentParams
+        ///  Latest included block descendants the runtime accepted. In other words, these are
+        ///  ancestors of the currently executing block which have not been included in the observed
+        ///  relay-chain state.
+        /// 
+        ///  The segment length is limited by the capacity returned from the [`ConsensusHook`] configured
+        ///  in the pallet.
+        /// </summary>
+        public static string UnincludedSegmentParams()
+        {
+            return RequestGenerator.GetStorage("ParachainSystem", "UnincludedSegment", Substrate.NetApi.Model.Meta.Storage.Type.Plain);
+        }
+        
+        /// <summary>
+        /// >> UnincludedSegmentDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string UnincludedSegmentDefault()
+        {
+            return "0x00";
+        }
+        
+        /// <summary>
+        /// >> UnincludedSegment
+        ///  Latest included block descendants the runtime accepted. In other words, these are
+        ///  ancestors of the currently executing block which have not been included in the observed
+        ///  relay-chain state.
+        /// 
+        ///  The segment length is limited by the capacity returned from the [`ConsensusHook`] configured
+        ///  in the pallet.
+        /// </summary>
+        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.unincluded_segment.Ancestor>> UnincludedSegment(CancellationToken token)
+        {
+            string parameters = ParachainSystemStorage.UnincludedSegmentParams();
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.unincluded_segment.Ancestor>>(parameters, token);
+            return result;
+        }
+        
+        /// <summary>
+        /// >> AggregatedUnincludedSegmentParams
+        ///  Storage field that keeps track of bandwidth used by the unincluded segment along with the
+        ///  latest the latest HRMP watermark. Used for limiting the acceptance of new blocks with
+        ///  respect to relay chain constraints.
+        /// </summary>
+        public static string AggregatedUnincludedSegmentParams()
+        {
+            return RequestGenerator.GetStorage("ParachainSystem", "AggregatedUnincludedSegment", Substrate.NetApi.Model.Meta.Storage.Type.Plain);
+        }
+        
+        /// <summary>
+        /// >> AggregatedUnincludedSegmentDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string AggregatedUnincludedSegmentDefault()
+        {
+            return "0x00";
+        }
+        
+        /// <summary>
+        /// >> AggregatedUnincludedSegment
+        ///  Storage field that keeps track of bandwidth used by the unincluded segment along with the
+        ///  latest the latest HRMP watermark. Used for limiting the acceptance of new blocks with
+        ///  respect to relay chain constraints.
+        /// </summary>
+        public async Task<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.unincluded_segment.SegmentTracker> AggregatedUnincludedSegment(CancellationToken token)
+        {
+            string parameters = ParachainSystemStorage.AggregatedUnincludedSegmentParams();
+            var result = await _client.GetStorageAsync<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.unincluded_segment.SegmentTracker>(parameters, token);
+            return result;
+        }
+        
+        /// <summary>
         /// >> PendingValidationCodeParams
-        ///  In case of a scheduled upgrade, this storage field contains the validation code to be applied.
+        ///  In case of a scheduled upgrade, this storage field contains the validation code to be
+        ///  applied.
         /// 
-        ///  As soon as the relay chain gives us the go-ahead signal, we will overwrite the [`:code`][well_known_keys::CODE]
-        ///  which will result the next block process with the new validation code. This concludes the upgrade process.
-        /// 
-        ///  [well_known_keys::CODE]: sp_core::storage::well_known_keys::CODE
+        ///  As soon as the relay chain gives us the go-ahead signal, we will overwrite the
+        ///  [`:code`][sp_core::storage::well_known_keys::CODE] which will result the next block process
+        ///  with the new validation code. This concludes the upgrade process.
         /// </summary>
         public static string PendingValidationCodeParams()
         {
@@ -78,12 +153,12 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> PendingValidationCode
-        ///  In case of a scheduled upgrade, this storage field contains the validation code to be applied.
+        ///  In case of a scheduled upgrade, this storage field contains the validation code to be
+        ///  applied.
         /// 
-        ///  As soon as the relay chain gives us the go-ahead signal, we will overwrite the [`:code`][well_known_keys::CODE]
-        ///  which will result the next block process with the new validation code. This concludes the upgrade process.
-        /// 
-        ///  [well_known_keys::CODE]: sp_core::storage::well_known_keys::CODE
+        ///  As soon as the relay chain gives us the go-ahead signal, we will overwrite the
+        ///  [`:code`][sp_core::storage::well_known_keys::CODE] which will result the next block process
+        ///  with the new validation code. This concludes the upgrade process.
         /// </summary>
         public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>> PendingValidationCode(CancellationToken token)
         {
@@ -155,10 +230,10 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
         ///  This value is expected to be set only once per block and it's never stored
         ///  in the trie.
         /// </summary>
-        public async Task<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.PersistedValidationData> ValidationData(CancellationToken token)
+        public async Task<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.PersistedValidationData> ValidationData(CancellationToken token)
         {
             string parameters = ParachainSystemStorage.ValidationDataParams();
-            var result = await _client.GetStorageAsync<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.PersistedValidationData>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.PersistedValidationData>(parameters, token);
             return result;
         }
         
@@ -254,10 +329,47 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
         ///  relay-chain. This value is ephemeral which means it doesn't hit the storage. This value is
         ///  set after the inherent.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.EnumUpgradeRestriction>> UpgradeRestrictionSignal(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.EnumUpgradeRestriction>> UpgradeRestrictionSignal(CancellationToken token)
         {
             string parameters = ParachainSystemStorage.UpgradeRestrictionSignalParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.EnumUpgradeRestriction>>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.EnumUpgradeRestriction>>(parameters, token);
+            return result;
+        }
+        
+        /// <summary>
+        /// >> UpgradeGoAheadParams
+        ///  Optional upgrade go-ahead signal from the relay-chain.
+        /// 
+        ///  This storage item is a mirror of the corresponding value for the current parachain from the
+        ///  relay-chain. This value is ephemeral which means it doesn't hit the storage. This value is
+        ///  set after the inherent.
+        /// </summary>
+        public static string UpgradeGoAheadParams()
+        {
+            return RequestGenerator.GetStorage("ParachainSystem", "UpgradeGoAhead", Substrate.NetApi.Model.Meta.Storage.Type.Plain);
+        }
+        
+        /// <summary>
+        /// >> UpgradeGoAheadDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string UpgradeGoAheadDefault()
+        {
+            return "0x00";
+        }
+        
+        /// <summary>
+        /// >> UpgradeGoAhead
+        ///  Optional upgrade go-ahead signal from the relay-chain.
+        /// 
+        ///  This storage item is a mirror of the corresponding value for the current parachain from the
+        ///  relay-chain. This value is ephemeral which means it doesn't hit the storage. This value is
+        ///  set after the inherent.
+        /// </summary>
+        public async Task<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.EnumUpgradeGoAhead>> UpgradeGoAhead(CancellationToken token)
+        {
+            string parameters = ParachainSystemStorage.UpgradeGoAheadParams();
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.EnumUpgradeGoAhead>>(parameters, token);
             return result;
         }
         
@@ -373,10 +485,10 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
         /// 
         ///  This data is also absent from the genesis.
         /// </summary>
-        public async Task<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.AbridgedHostConfiguration> HostConfiguration(CancellationToken token)
+        public async Task<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.AbridgedHostConfiguration> HostConfiguration(CancellationToken token)
         {
             string parameters = ParachainSystemStorage.HostConfigurationParams();
-            var result = await _client.GetStorageAsync<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.AbridgedHostConfiguration>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.AbridgedHostConfiguration>(parameters, token);
             return result;
         }
         
@@ -443,10 +555,10 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
         ///  This value is loaded before and saved after processing inbound downward messages carried
         ///  by the system inherent.
         /// </summary>
-        public async Task<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.BTreeMapT1> LastHrmpMqcHeads(CancellationToken token)
+        public async Task<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.BTreeMapT2> LastHrmpMqcHeads(CancellationToken token)
         {
             string parameters = ParachainSystemStorage.LastHrmpMqcHeadsParams();
-            var result = await _client.GetStorageAsync<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.BTreeMapT1>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.BTreeMapT2>(parameters, token);
             return result;
         }
         
@@ -737,7 +849,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
         /// >> CustomValidationHeadDataParams
         ///  A custom head data that should be returned as result of `validate_block`.
         /// 
-        ///  See [`Pallet::set_custom_validation_head_data`] for more information.
+        ///  See `Pallet::set_custom_validation_head_data` for more information.
         /// </summary>
         public static string CustomValidationHeadDataParams()
         {
@@ -757,7 +869,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
         /// >> CustomValidationHeadData
         ///  A custom head data that should be returned as result of `validate_block`.
         /// 
-        ///  See [`Pallet::set_custom_validation_head_data`] for more information.
+        ///  See `Pallet::set_custom_validation_head_data` for more information.
         /// </summary>
         public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>> CustomValidationHeadData(CancellationToken token)
         {
@@ -772,7 +884,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> set_validation_data
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method SetValidationData(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_primitives_parachain_inherent.ParachainInherentData data)
         {
@@ -783,7 +895,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> sudo_send_upward_message
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method SudoSendUpwardMessage(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> message)
         {
@@ -794,7 +906,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> authorize_upgrade
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method AuthorizeUpgrade(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.primitive_types.H256 code_hash, Substrate.NetApi.Model.Types.Primitive.Bool check_version)
         {
@@ -806,7 +918,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> enact_authorized_upgrade
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method EnactAuthorizedUpgrade(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> code)
         {

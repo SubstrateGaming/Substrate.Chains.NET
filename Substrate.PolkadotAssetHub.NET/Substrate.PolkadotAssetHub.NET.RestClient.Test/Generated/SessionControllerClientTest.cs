@@ -18,7 +18,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Test.Generated
    using Substrate.NetApi.Model.Types.Base;
    using Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto;
    using Substrate.NetApi.Model.Types.Primitive;
-   using Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.statemint_runtime;
+   using Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.asset_hub_polkadot_runtime;
    
    public class SessionControllerClientTest : ClientTestBase
    {
@@ -163,18 +163,18 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.statemint_runtime.SessionKeys>> GetTestValue7()
+      public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.asset_hub_polkadot_runtime.SessionKeys>> GetTestValue7()
       {
-         Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.statemint_runtime.SessionKeys>> result;
-         result = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.statemint_runtime.SessionKeys>>();
-         result.Create(new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.statemint_runtime.SessionKeys>[] {
+         Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.asset_hub_polkadot_runtime.SessionKeys>> result;
+         result = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.asset_hub_polkadot_runtime.SessionKeys>>();
+         result.Create(new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.asset_hub_polkadot_runtime.SessionKeys>[] {
                   this.GetTestValue8()});
          return result;
       }
-      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.statemint_runtime.SessionKeys> GetTestValue8()
+      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.asset_hub_polkadot_runtime.SessionKeys> GetTestValue8()
       {
-         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.statemint_runtime.SessionKeys> result;
-         result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.statemint_runtime.SessionKeys>();
+         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.asset_hub_polkadot_runtime.SessionKeys> result;
+         result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.asset_hub_polkadot_runtime.SessionKeys>();
          result.Create(this.GetTestValue9(), this.GetTestValue10());
          return result;
       }
@@ -218,10 +218,10 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Test.Generated
                   this.GetTestValueU8()});
          return result;
       }
-      public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.statemint_runtime.SessionKeys GetTestValue10()
+      public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.asset_hub_polkadot_runtime.SessionKeys GetTestValue10()
       {
-         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.statemint_runtime.SessionKeys result;
-         result = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.statemint_runtime.SessionKeys();
+         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.asset_hub_polkadot_runtime.SessionKeys result;
+         result = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.asset_hub_polkadot_runtime.SessionKeys();
          result.Aura = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_consensus_aura.ed25519.app_ed25519.Public();
          result.Aura = this.GetTestValue11();
          return result;
@@ -285,7 +285,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          SessionControllerClient rpcClient = new SessionControllerClient(_httpClient, subscriptionClient);
-         Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.statemint_runtime.SessionKeys>> mockupValue = this.GetTestValue7();
+         Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.asset_hub_polkadot_runtime.SessionKeys>> mockupValue = this.GetTestValue7();
 
 
          Assert.IsTrue(await rpcClient.SubscribeQueuedKeys());
@@ -298,7 +298,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Test.Generated
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.statemint_runtime.SessionKeys>> rpcResult = await rpcClient.GetQueuedKeys();
+         Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.asset_hub_polkadot_runtime.SessionKeys>> rpcResult = await rpcClient.GetQueuedKeys();
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
@@ -340,10 +340,10 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.statemint_runtime.SessionKeys GetTestValue16()
+      public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.asset_hub_polkadot_runtime.SessionKeys GetTestValue16()
       {
-         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.statemint_runtime.SessionKeys result;
-         result = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.statemint_runtime.SessionKeys();
+         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.asset_hub_polkadot_runtime.SessionKeys result;
+         result = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.asset_hub_polkadot_runtime.SessionKeys();
          result.Aura = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_consensus_aura.ed25519.app_ed25519.Public();
          result.Aura = this.GetTestValue17();
          return result;
@@ -447,7 +447,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          SessionControllerClient rpcClient = new SessionControllerClient(_httpClient, subscriptionClient);
-         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.statemint_runtime.SessionKeys mockupValue = this.GetTestValue16();
+         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.asset_hub_polkadot_runtime.SessionKeys mockupValue = this.GetTestValue16();
          Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 mockupKey = this.GetTestValue19();
 
          Assert.IsTrue(await rpcClient.SubscribeNextKeys(mockupKey));
@@ -460,7 +460,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Test.Generated
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.statemint_runtime.SessionKeys rpcResult = await rpcClient.GetNextKeys(mockupKey);
+         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.asset_hub_polkadot_runtime.SessionKeys rpcResult = await rpcClient.GetNextKeys(mockupKey);
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());

@@ -32,7 +32,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.frame_system
         /// <summary>
         /// >> event
         /// </summary>
-        private Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.statemint_runtime.EnumRuntimeEvent _event;
+        private Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.asset_hub_polkadot_runtime.EnumRuntimeEvent _event;
         
         /// <summary>
         /// >> topics
@@ -51,7 +51,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.frame_system
             }
         }
         
-        public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.statemint_runtime.EnumRuntimeEvent Event
+        public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.asset_hub_polkadot_runtime.EnumRuntimeEvent Event
         {
             get
             {
@@ -94,7 +94,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.frame_system
             var start = p;
             Phase = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.frame_system.EnumPhase();
             Phase.Decode(byteArray, ref p);
-            Event = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.statemint_runtime.EnumRuntimeEvent();
+            Event = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.asset_hub_polkadot_runtime.EnumRuntimeEvent();
             Event.Decode(byteArray, ref p);
             Topics = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.primitive_types.H256>();
             Topics.Decode(byteArray, ref p);

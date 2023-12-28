@@ -18,7 +18,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_nfts.t
     
     
     /// <summary>
-    /// >> 304 - Composite[pallet_nfts.types.PreSignedMint]
+    /// >> 320 - Composite[pallet_nfts.types.PreSignedMint]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class PreSignedMint : BaseType
@@ -53,6 +53,11 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_nfts.t
         /// >> deadline
         /// </summary>
         private Substrate.NetApi.Model.Types.Primitive.U32 _deadline;
+        
+        /// <summary>
+        /// >> mint_price
+        /// </summary>
+        private Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U128> _mintPrice;
         
         public Substrate.NetApi.Model.Types.Primitive.U32 Collection
         {
@@ -126,6 +131,18 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_nfts.t
             }
         }
         
+        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U128> MintPrice
+        {
+            get
+            {
+                return this._mintPrice;
+            }
+            set
+            {
+                this._mintPrice = value;
+            }
+        }
+        
         public override string TypeName()
         {
             return "PreSignedMint";
@@ -140,6 +157,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_nfts.t
             result.AddRange(Metadata.Encode());
             result.AddRange(OnlyAccount.Encode());
             result.AddRange(Deadline.Encode());
+            result.AddRange(MintPrice.Encode());
             return result.ToArray();
         }
         
@@ -158,6 +176,8 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_nfts.t
             OnlyAccount.Decode(byteArray, ref p);
             Deadline = new Substrate.NetApi.Model.Types.Primitive.U32();
             Deadline.Decode(byteArray, ref p);
+            MintPrice = new Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U128>();
+            MintPrice.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];

@@ -42,7 +42,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestService.Generated.Controller
         ///  The current authority set.
         /// </summary>
         [HttpGet("Authorities")]
-        [ProducesResponseType(typeof(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT12), 200)]
+        [ProducesResponseType(typeof(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT13), 200)]
         [StorageKeyBuilder(typeof(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage.AuraStorage), "AuthoritiesParams")]
         public IActionResult GetAuthorities()
         {

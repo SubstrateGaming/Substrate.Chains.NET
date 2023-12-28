@@ -30,7 +30,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_nfts.t
     }
     
     /// <summary>
-    /// >> 291 - Variant[pallet_nfts.types.CollectionSetting]
+    /// >> 307 - Variant[pallet_nfts.types.CollectionSetting]
     /// </summary>
     public sealed class EnumCollectionSetting : BaseEnum<CollectionSetting>
     {

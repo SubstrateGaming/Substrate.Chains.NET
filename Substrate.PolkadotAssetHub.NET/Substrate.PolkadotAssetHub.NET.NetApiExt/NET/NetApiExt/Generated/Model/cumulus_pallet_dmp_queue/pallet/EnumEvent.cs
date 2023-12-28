@@ -35,12 +35,9 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_palle
     
     /// <summary>
     /// >> 100 - Variant[cumulus_pallet_dmp_queue.pallet.Event]
-    /// 
-    ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
-    ///			by this pallet.
-    ///			
+    /// The `Event` enum of this pallet
     /// </summary>
-    public sealed class EnumEvent : BaseEnumExt<Event, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.Arr32U8, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.Arr32U8, BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.Arr32U8, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v3.traits.EnumOutcome>, BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.Arr32U8, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>, BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.Arr32U8, Substrate.NetApi.Model.Types.Primitive.U64, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U64, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.Arr32U8>
+    public sealed class EnumEvent : BaseEnumExt<Event, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.Arr32U8, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.Arr32U8, BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.Arr32U8, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.Arr32U8, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v3.traits.EnumOutcome>, BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.Arr32U8, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.Arr32U8, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>, BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.Arr32U8, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.Arr32U8, Substrate.NetApi.Model.Types.Primitive.U64, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U64, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.Arr32U8>
     {
     }
 }

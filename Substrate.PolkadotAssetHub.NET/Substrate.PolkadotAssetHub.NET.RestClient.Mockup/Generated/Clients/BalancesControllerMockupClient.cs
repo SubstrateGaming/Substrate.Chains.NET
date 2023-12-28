@@ -49,7 +49,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "Balances/Holds", value.Encode(), Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage.BalancesStorage.HoldsParams(key));
       }
-      public async Task<bool> SetFreezes(BoundedVecT9 value, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+      public async Task<bool> SetFreezes(BoundedVecT10 value, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {
          return await SendMockupRequestAsync(_httpClient, "Balances/Freezes", value.Encode(), Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage.BalancesStorage.FreezesParams(key));
       }

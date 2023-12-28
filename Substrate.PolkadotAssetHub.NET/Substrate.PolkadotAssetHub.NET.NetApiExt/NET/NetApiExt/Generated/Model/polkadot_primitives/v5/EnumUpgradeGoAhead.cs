@@ -11,32 +11,22 @@ using Substrate.NetApi.Model.Types.Base;
 using System.Collections.Generic;
 
 
-namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.statemint_runtime
+namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v5
 {
     
     
-    public enum ProxyType
+    public enum UpgradeGoAhead
     {
         
-        Any = 0,
+        Abort = 0,
         
-        NonTransfer = 1,
-        
-        CancelProxy = 2,
-        
-        Assets = 3,
-        
-        AssetOwner = 4,
-        
-        AssetManager = 5,
-        
-        Collator = 6,
+        GoAhead = 1,
     }
     
     /// <summary>
-    /// >> 107 - Variant[statemint_runtime.ProxyType]
+    /// >> 155 - Variant[polkadot_primitives.v5.UpgradeGoAhead]
     /// </summary>
-    public sealed class EnumProxyType : BaseEnum<ProxyType>
+    public sealed class EnumUpgradeGoAhead : BaseEnum<UpgradeGoAhead>
     {
     }
 }

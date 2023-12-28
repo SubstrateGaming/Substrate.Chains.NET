@@ -24,9 +24,9 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_xcm.pa
     }
     
     /// <summary>
-    /// >> 315 - Variant[pallet_xcm.pallet.Origin]
+    /// >> 331 - Variant[pallet_xcm.pallet.Origin]
     /// </summary>
-    public sealed class EnumOrigin : BaseEnumExt<Origin, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v3.multilocation.MultiLocation, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v3.multilocation.MultiLocation>
+    public sealed class EnumOrigin : BaseEnumExt<Origin, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation>
     {
     }
 }

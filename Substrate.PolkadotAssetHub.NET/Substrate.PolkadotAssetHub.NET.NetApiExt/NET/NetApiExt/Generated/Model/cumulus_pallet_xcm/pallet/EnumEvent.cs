@@ -27,10 +27,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_palle
     
     /// <summary>
     /// >> 99 - Variant[cumulus_pallet_xcm.pallet.Event]
-    /// 
-    ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
-    ///			by this pallet.
-    ///			
+    /// The `Event` enum of this pallet
     /// </summary>
     public sealed class EnumEvent : BaseEnumExt<Event, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.Arr32U8, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.Arr32U8, BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.Arr32U8, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v3.traits.EnumOutcome>>
     {

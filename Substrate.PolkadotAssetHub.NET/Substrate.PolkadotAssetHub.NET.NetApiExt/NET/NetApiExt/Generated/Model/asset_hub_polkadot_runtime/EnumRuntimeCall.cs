@@ -11,7 +11,7 @@ using Substrate.NetApi.Model.Types.Base;
 using System.Collections.Generic;
 
 
-namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.statemint_runtime
+namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.asset_hub_polkadot_runtime
 {
     
     
@@ -52,7 +52,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.statemint_run
     }
     
     /// <summary>
-    /// >> 278 - Variant[statemint_runtime.RuntimeCall]
+    /// >> 294 - Variant[asset_hub_polkadot_runtime.RuntimeCall]
     /// </summary>
     public sealed class EnumRuntimeCall : BaseEnumExt<RuntimeCall, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.frame_system.pallet.EnumCall, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.pallet.EnumCall, BaseVoid, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_timestamp.pallet.EnumCall, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_balances.pallet.EnumCall, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_collator_selection.pallet.EnumCall, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_session.pallet.EnumCall, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue.pallet.EnumCall, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_xcm.pallet.EnumCall, BaseVoid, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_pallet_dmp_queue.pallet.EnumCall, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_utility.pallet.EnumCall, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_multisig.pallet.EnumCall, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_proxy.pallet.EnumCall, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_assets.pallet.EnumCall, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_uniques.pallet.EnumCall, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_nfts.pallet.EnumCall, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_assets.pallet.EnumCall>
     {

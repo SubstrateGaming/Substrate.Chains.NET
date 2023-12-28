@@ -18,7 +18,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.frame_system.
     
     
     /// <summary>
-    /// >> 381 - Composite[frame_system.extensions.check_non_zero_sender.CheckNonZeroSender]
+    /// >> 397 - Composite[frame_system.extensions.check_non_zero_sender.CheckNonZeroSender]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class CheckNonZeroSender : BaseType

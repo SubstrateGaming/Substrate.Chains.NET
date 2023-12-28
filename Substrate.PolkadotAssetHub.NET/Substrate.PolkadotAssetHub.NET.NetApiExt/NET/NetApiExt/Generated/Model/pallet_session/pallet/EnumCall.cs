@@ -24,10 +24,10 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_sessio
     }
     
     /// <summary>
-    /// >> 206 - Variant[pallet_session.pallet.Call]
-    /// Contains one variant per dispatchable that can be called by an extrinsic.
+    /// >> 221 - Variant[pallet_session.pallet.Call]
+    /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
-    public sealed class EnumCall : BaseEnumExt<Call, BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.statemint_runtime.SessionKeys, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>, BaseVoid>
+    public sealed class EnumCall : BaseEnumExt<Call, BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.asset_hub_polkadot_runtime.SessionKeys, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>, BaseVoid>
     {
     }
 }

@@ -35,12 +35,9 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_palle
     
     /// <summary>
     /// >> 40 - Variant[cumulus_pallet_xcmp_queue.pallet.Event]
-    /// 
-    ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
-    ///			by this pallet.
-    ///			
+    /// The `Event` enum of this pallet
     /// </summary>
-    public sealed class EnumEvent : BaseEnumExt<Event, BaseTuple<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.Arr32U8>, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>, BaseTuple<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.Arr32U8>, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v3.traits.EnumError, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.Arr32U8>, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.Arr32U8>, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.Arr32U8>, BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U64, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U64, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>>
+    public sealed class EnumEvent : BaseEnumExt<Event, BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.Arr32U8, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.Arr32U8, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>, BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.Arr32U8, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.Arr32U8, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v3.traits.EnumError, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.Arr32U8, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.Arr32U8, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.Arr32U8, BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U64, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U64, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>>
     {
     }
 }

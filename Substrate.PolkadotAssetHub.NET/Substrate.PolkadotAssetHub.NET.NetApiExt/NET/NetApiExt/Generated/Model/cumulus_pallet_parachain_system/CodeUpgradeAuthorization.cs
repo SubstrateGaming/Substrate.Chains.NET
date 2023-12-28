@@ -18,7 +18,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_palle
     
     
     /// <summary>
-    /// >> 165 - Composite[cumulus_pallet_parachain_system.CodeUpgradeAuthorization]
+    /// >> 176 - Composite[cumulus_pallet_parachain_system.CodeUpgradeAuthorization]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class CodeUpgradeAuthorization : BaseType

@@ -26,15 +26,16 @@ namespace Substrate.PolkadotAssetHub.NET.RestService.Generated.Storage
         
         /// <summary>
         /// >> Invulnerables
-        ///  The invulnerable, fixed collators.
+        ///  The invulnerable, permissioned collators. This list must be sorted.
         /// </summary>
-        Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10 GetInvulnerables();
+        Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT11 GetInvulnerables();
         
         /// <summary>
         /// >> Candidates
-        ///  The (community, limited) collation candidates.
+        ///  The (community, limited) collation candidates. `Candidates` and `Invulnerables` should be
+        ///  mutually exclusive.
         /// </summary>
-        Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT11 GetCandidates();
+        Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT12 GetCandidates();
         
         /// <summary>
         /// >> LastAuthoredBlock
@@ -68,12 +69,12 @@ namespace Substrate.PolkadotAssetHub.NET.RestService.Generated.Storage
         /// <summary>
         /// _invulnerablesTypedStorage typed storage field
         /// </summary>
-        private TypedStorage<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10> _invulnerablesTypedStorage;
+        private TypedStorage<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT11> _invulnerablesTypedStorage;
         
         /// <summary>
         /// _candidatesTypedStorage typed storage field
         /// </summary>
-        private TypedStorage<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT11> _candidatesTypedStorage;
+        private TypedStorage<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT12> _candidatesTypedStorage;
         
         /// <summary>
         /// _lastAuthoredBlockTypedStorage typed storage field
@@ -95,8 +96,8 @@ namespace Substrate.PolkadotAssetHub.NET.RestService.Generated.Storage
         /// </summary>
         public CollatorSelectionStorage(IStorageDataProvider storageDataProvider, List<IStorageChangeDelegate> storageChangeDelegates)
         {
-            this.InvulnerablesTypedStorage = new TypedStorage<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10>("CollatorSelection.Invulnerables", storageDataProvider, storageChangeDelegates);
-            this.CandidatesTypedStorage = new TypedStorage<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT11>("CollatorSelection.Candidates", storageDataProvider, storageChangeDelegates);
+            this.InvulnerablesTypedStorage = new TypedStorage<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT11>("CollatorSelection.Invulnerables", storageDataProvider, storageChangeDelegates);
+            this.CandidatesTypedStorage = new TypedStorage<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT12>("CollatorSelection.Candidates", storageDataProvider, storageChangeDelegates);
             this.LastAuthoredBlockTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Primitive.U32>("CollatorSelection.LastAuthoredBlock", storageDataProvider, storageChangeDelegates);
             this.DesiredCandidatesTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32>("CollatorSelection.DesiredCandidates", storageDataProvider, storageChangeDelegates);
             this.CandidacyBondTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U128>("CollatorSelection.CandidacyBond", storageDataProvider, storageChangeDelegates);
@@ -105,7 +106,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestService.Generated.Storage
         /// <summary>
         /// _invulnerablesTypedStorage property
         /// </summary>
-        public TypedStorage<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10> InvulnerablesTypedStorage
+        public TypedStorage<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT11> InvulnerablesTypedStorage
         {
             get
             {
@@ -120,7 +121,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestService.Generated.Storage
         /// <summary>
         /// _candidatesTypedStorage property
         /// </summary>
-        public TypedStorage<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT11> CandidatesTypedStorage
+        public TypedStorage<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT12> CandidatesTypedStorage
         {
             get
             {
@@ -200,9 +201,9 @@ namespace Substrate.PolkadotAssetHub.NET.RestService.Generated.Storage
         
         /// <summary>
         /// >> Invulnerables
-        ///  The invulnerable, fixed collators.
+        ///  The invulnerable, permissioned collators. This list must be sorted.
         /// </summary>
-        public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10 GetInvulnerables()
+        public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT11 GetInvulnerables()
         {
             return InvulnerablesTypedStorage.Get();
         }
@@ -218,9 +219,10 @@ namespace Substrate.PolkadotAssetHub.NET.RestService.Generated.Storage
         
         /// <summary>
         /// >> Candidates
-        ///  The (community, limited) collation candidates.
+        ///  The (community, limited) collation candidates. `Candidates` and `Invulnerables` should be
+        ///  mutually exclusive.
         /// </summary>
-        public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT11 GetCandidates()
+        public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT12 GetCandidates()
         {
             return CandidatesTypedStorage.Get();
         }

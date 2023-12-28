@@ -24,7 +24,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_transa
     }
     
     /// <summary>
-    /// >> 192 - Variant[pallet_transaction_payment.Releases]
+    /// >> 207 - Variant[pallet_transaction_payment.Releases]
     /// </summary>
     public sealed class EnumReleases : BaseEnum<Releases>
     {
