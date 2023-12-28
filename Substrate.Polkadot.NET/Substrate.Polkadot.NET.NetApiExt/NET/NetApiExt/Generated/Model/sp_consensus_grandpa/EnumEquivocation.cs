@@ -24,7 +24,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_consensus_grandpa
     }
     
     /// <summary>
-    /// >> 121 - Variant[sp_consensus_grandpa.Equivocation]
+    /// >> 109 - Variant[sp_consensus_grandpa.Equivocation]
     /// </summary>
     public sealed class EnumEquivocation : BaseEnumExt<Equivocation, Substrate.Polkadot.NET.NetApiExt.Generated.Model.finality_grandpa.EquivocationT1, Substrate.Polkadot.NET.NetApiExt.Generated.Model.finality_grandpa.EquivocationT2>
     {

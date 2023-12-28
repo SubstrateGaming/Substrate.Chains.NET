@@ -73,7 +73,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Controller
         ///  TWOX-NOTE: OK ��� `AccountId` is a secure hash.
         /// </summary>
         [HttpGet("SubsOf")]
-        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT29>), 200)]
+        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT24>), 200)]
         [StorageKeyBuilder(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Storage.IdentityStorage), "SubsOfParams", typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32))]
         public IActionResult GetSubsOf(string key)
         {
@@ -88,7 +88,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Controller
         ///  The index into this can be cast to `RegistrarIndex` to get a valid value.
         /// </summary>
         [HttpGet("Registrars")]
-        [ProducesResponseType(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT30), 200)]
+        [ProducesResponseType(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT25), 200)]
         [StorageKeyBuilder(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Storage.IdentityStorage), "RegistrarsParams")]
         public IActionResult GetRegistrars()
         {

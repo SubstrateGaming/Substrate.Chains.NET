@@ -26,7 +26,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.frame_support.dispatc
     }
     
     /// <summary>
-    /// >> 157 - Variant[frame_support.dispatch.RawOrigin]
+    /// >> 131 - Variant[frame_support.dispatch.RawOrigin]
     /// </summary>
     public sealed class EnumRawOrigin : BaseEnumExt<RawOrigin, BaseVoid, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, BaseVoid>
     {

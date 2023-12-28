@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.b
     
     
     /// <summary>
-    /// >> 620 - Composite[bounded_collections.bounded_vec.BoundedVecT25]
+    /// >> 601 - Composite[bounded_collections.bounded_vec.BoundedVecT25]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class BoundedVecT25 : BaseType
@@ -27,9 +27,9 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.b
         /// <summary>
         /// >> value
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U16, Substrate.NetApi.Model.Types.Primitive.U128>> _value;
+        private Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types.RegistrarInfo>> _value;
         
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U16, Substrate.NetApi.Model.Types.Primitive.U128>> Value
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types.RegistrarInfo>> Value
         {
             get
             {
@@ -56,7 +56,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.b
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U16, Substrate.NetApi.Model.Types.Primitive.U128>>();
+            Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types.RegistrarInfo>>();
             Value.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

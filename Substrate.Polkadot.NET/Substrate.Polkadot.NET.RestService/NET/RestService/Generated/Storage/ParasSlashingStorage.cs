@@ -28,7 +28,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// >> UnappliedSlashes
         ///  Validators pending dispute slashes.
         /// </summary>
-        Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.disputes.slashing.PendingSlashes GetUnappliedSlashes(string key);
+        Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.slashing.PendingSlashes GetUnappliedSlashes(string key);
         
         /// <summary>
         /// >> ValidatorSetCounts
@@ -46,7 +46,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// <summary>
         /// _unappliedSlashesTypedStorage typed storage field
         /// </summary>
-        private TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.disputes.slashing.PendingSlashes> _unappliedSlashesTypedStorage;
+        private TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.slashing.PendingSlashes> _unappliedSlashesTypedStorage;
         
         /// <summary>
         /// _validatorSetCountsTypedStorage typed storage field
@@ -58,14 +58,14 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// </summary>
         public ParasSlashingStorage(IStorageDataProvider storageDataProvider, List<IStorageChangeDelegate> storageChangeDelegates)
         {
-            this.UnappliedSlashesTypedStorage = new TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.disputes.slashing.PendingSlashes>("ParasSlashing.UnappliedSlashes", storageDataProvider, storageChangeDelegates);
+            this.UnappliedSlashesTypedStorage = new TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.slashing.PendingSlashes>("ParasSlashing.UnappliedSlashes", storageDataProvider, storageChangeDelegates);
             this.ValidatorSetCountsTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Primitive.U32>("ParasSlashing.ValidatorSetCounts", storageDataProvider, storageChangeDelegates);
         }
         
         /// <summary>
         /// _unappliedSlashesTypedStorage property
         /// </summary>
-        public TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.disputes.slashing.PendingSlashes> UnappliedSlashesTypedStorage
+        public TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.slashing.PendingSlashes> UnappliedSlashesTypedStorage
         {
             get
             {
@@ -114,13 +114,13 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// >> UnappliedSlashes
         ///  Validators pending dispute slashes.
         /// </summary>
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.disputes.slashing.PendingSlashes GetUnappliedSlashes(string key)
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.slashing.PendingSlashes GetUnappliedSlashes(string key)
         {
             if ((key == null))
             {
                 return null;
             }
-            if (UnappliedSlashesTypedStorage.Dictionary.TryGetValue(key, out Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.disputes.slashing.PendingSlashes result))
+            if (UnappliedSlashesTypedStorage.Dictionary.TryGetValue(key, out Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.slashing.PendingSlashes result))
             {
                 return result;
             }

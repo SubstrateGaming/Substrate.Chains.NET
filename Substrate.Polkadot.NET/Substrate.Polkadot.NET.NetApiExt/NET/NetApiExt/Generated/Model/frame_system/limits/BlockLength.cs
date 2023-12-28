@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.frame_system.limits
     
     
     /// <summary>
-    /// >> 487 - Composite[frame_system.limits.BlockLength]
+    /// >> 462 - Composite[frame_system.limits.BlockLength]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class BlockLength : BaseType

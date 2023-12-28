@@ -48,7 +48,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime.gove
     }
     
     /// <summary>
-    /// >> 160 - Variant[polkadot_runtime.governance.origins.pallet_custom_origins.Origin]
+    /// >> 132 - Variant[polkadot_runtime.governance.origins.pallet_custom_origins.Origin]
     /// </summary>
     public sealed class EnumOrigin : BaseEnum<Origin>
     {

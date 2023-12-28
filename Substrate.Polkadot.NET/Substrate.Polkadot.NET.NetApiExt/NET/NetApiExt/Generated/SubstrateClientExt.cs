@@ -107,31 +107,6 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated
         public AuthorityDiscoveryStorage AuthorityDiscoveryStorage;
         
         /// <summary>
-        /// DemocracyStorage storage calls.
-        /// </summary>
-        public DemocracyStorage DemocracyStorage;
-        
-        /// <summary>
-        /// CouncilStorage storage calls.
-        /// </summary>
-        public CouncilStorage CouncilStorage;
-        
-        /// <summary>
-        /// TechnicalCommitteeStorage storage calls.
-        /// </summary>
-        public TechnicalCommitteeStorage TechnicalCommitteeStorage;
-        
-        /// <summary>
-        /// PhragmenElectionStorage storage calls.
-        /// </summary>
-        public PhragmenElectionStorage PhragmenElectionStorage;
-        
-        /// <summary>
-        /// TechnicalMembershipStorage storage calls.
-        /// </summary>
-        public TechnicalMembershipStorage TechnicalMembershipStorage;
-        
-        /// <summary>
         /// TreasuryStorage storage calls.
         /// </summary>
         public TreasuryStorage TreasuryStorage;
@@ -190,11 +165,6 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated
         /// ChildBountiesStorage storage calls.
         /// </summary>
         public ChildBountiesStorage ChildBountiesStorage;
-        
-        /// <summary>
-        /// TipsStorage storage calls.
-        /// </summary>
-        public TipsStorage TipsStorage;
         
         /// <summary>
         /// ElectionProviderMultiPhaseStorage storage calls.
@@ -282,6 +252,11 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated
         public ParasSlashingStorage ParasSlashingStorage;
         
         /// <summary>
+        /// ParaAssignmentProviderStorage storage calls.
+        /// </summary>
+        public ParaAssignmentProviderStorage ParaAssignmentProviderStorage;
+        
+        /// <summary>
         /// RegistrarStorage storage calls.
         /// </summary>
         public RegistrarStorage RegistrarStorage;
@@ -331,11 +306,6 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated
             this.GrandpaStorage = new GrandpaStorage(this);
             this.ImOnlineStorage = new ImOnlineStorage(this);
             this.AuthorityDiscoveryStorage = new AuthorityDiscoveryStorage(this);
-            this.DemocracyStorage = new DemocracyStorage(this);
-            this.CouncilStorage = new CouncilStorage(this);
-            this.TechnicalCommitteeStorage = new TechnicalCommitteeStorage(this);
-            this.PhragmenElectionStorage = new PhragmenElectionStorage(this);
-            this.TechnicalMembershipStorage = new TechnicalMembershipStorage(this);
             this.TreasuryStorage = new TreasuryStorage(this);
             this.ConvictionVotingStorage = new ConvictionVotingStorage(this);
             this.ReferendaStorage = new ReferendaStorage(this);
@@ -348,7 +318,6 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated
             this.MultisigStorage = new MultisigStorage(this);
             this.BountiesStorage = new BountiesStorage(this);
             this.ChildBountiesStorage = new ChildBountiesStorage(this);
-            this.TipsStorage = new TipsStorage(this);
             this.ElectionProviderMultiPhaseStorage = new ElectionProviderMultiPhaseStorage(this);
             this.VoterListStorage = new VoterListStorage(this);
             this.NominationPoolsStorage = new NominationPoolsStorage(this);
@@ -366,6 +335,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated
             this.ParaSessionInfoStorage = new ParaSessionInfoStorage(this);
             this.ParasDisputesStorage = new ParasDisputesStorage(this);
             this.ParasSlashingStorage = new ParasSlashingStorage(this);
+            this.ParaAssignmentProviderStorage = new ParaAssignmentProviderStorage(this);
             this.RegistrarStorage = new RegistrarStorage(this);
             this.SlotsStorage = new SlotsStorage(this);
             this.AuctionsStorage = new AuctionsStorage(this);

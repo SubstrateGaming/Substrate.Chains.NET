@@ -13,9 +13,9 @@ namespace Substrate.Polkadot.NET.RestClient.Generated.Interfaces
    using System.Threading.Tasks;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.paras;
    using Substrate.NetApi.Model.Types.Base;
-   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives;
    using Substrate.NetApi.Model.Types.Primitive;
-   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5;
    
    public interface IParasControllerClient
    {
@@ -29,6 +29,8 @@ namespace Substrate.Polkadot.NET.RestClient.Generated.Interfaces
       Task<bool> SubscribeParaLifecycles(Id key);
       Task<HeadData> GetHeads(Id key);
       Task<bool> SubscribeHeads(Id key);
+      Task<U32> GetMostRecentContext(Id key);
+      Task<bool> SubscribeMostRecentContext(Id key);
       Task<ValidationCodeHash> GetCurrentCodeHash(Id key);
       Task<bool> SubscribeCurrentCodeHash(Id key);
       Task<ValidationCodeHash> GetPastCodeHash(BaseTuple<Id, U32> key);

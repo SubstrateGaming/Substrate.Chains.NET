@@ -43,7 +43,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Controller
         /// </summary>
         [HttpGet("Funds")]
         [ProducesResponseType(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_common.crowdloan.FundInfo), 200)]
-        [StorageKeyBuilder(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Storage.CrowdloanStorage), "FundsParams", typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id))]
+        [StorageKeyBuilder(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Storage.CrowdloanStorage), "FundsParams", typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id))]
         public IActionResult GetFunds(string key)
         {
             return this.Ok(_crowdloanStorage.GetFunds(key));
@@ -55,7 +55,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Controller
         ///  in order to determine which funds should submit new or updated bids.
         /// </summary>
         [HttpGet("NewRaise")]
-        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id>), 200)]
+        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id>), 200)]
         [StorageKeyBuilder(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Storage.CrowdloanStorage), "NewRaiseParams")]
         public IActionResult GetNewRaise()
         {

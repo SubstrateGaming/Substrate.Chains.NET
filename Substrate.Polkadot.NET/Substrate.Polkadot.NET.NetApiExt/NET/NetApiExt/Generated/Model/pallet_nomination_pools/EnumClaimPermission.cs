@@ -28,7 +28,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_nomination_poo
     }
     
     /// <summary>
-    /// >> 303 - Variant[pallet_nomination_pools.ClaimPermission]
+    /// >> 279 - Variant[pallet_nomination_pools.ClaimPermission]
     /// </summary>
     public sealed class EnumClaimPermission : BaseEnum<ClaimPermission>
     {

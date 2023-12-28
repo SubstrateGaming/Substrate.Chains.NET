@@ -34,8 +34,8 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Bounties", "Bounties"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.NetApi.Model.Types.Primitive.U32), typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_bounties.Bounty)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Bounties", "BountyDescriptions"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.NetApi.Model.Types.Primitive.U32), typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT34)));
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("Bounties", "BountyApprovals"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT23)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.NetApi.Model.Types.Primitive.U32), typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT29)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("Bounties", "BountyApprovals"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18)));
         }
         
         /// <summary>
@@ -122,10 +122,10 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         /// >> BountyDescriptions
         ///  The description of each bounty.
         /// </summary>
-        public async Task<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT34> BountyDescriptions(Substrate.NetApi.Model.Types.Primitive.U32 key, CancellationToken token)
+        public async Task<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT29> BountyDescriptions(Substrate.NetApi.Model.Types.Primitive.U32 key, CancellationToken token)
         {
             string parameters = BountiesStorage.BountyDescriptionsParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT34>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT29>(parameters, token);
             return result;
         }
         
@@ -151,10 +151,10 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         /// >> BountyApprovals
         ///  Bounty indices that have been approved but not yet funded.
         /// </summary>
-        public async Task<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT23> BountyApprovals(CancellationToken token)
+        public async Task<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18> BountyApprovals(CancellationToken token)
         {
             string parameters = BountiesStorage.BountyApprovalsParams();
-            var result = await _client.GetStorageAsync<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT23>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18>(parameters, token);
             return result;
         }
     }
@@ -164,7 +164,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> propose_bounty
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method ProposeBounty(Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128> value, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> description)
         {
@@ -176,7 +176,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> approve_bounty
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method ApproveBounty(Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32> bounty_id)
         {
@@ -187,7 +187,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> propose_curator
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method ProposeCurator(Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32> bounty_id, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress curator, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128> fee)
         {
@@ -200,7 +200,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> unassign_curator
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method UnassignCurator(Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32> bounty_id)
         {
@@ -211,7 +211,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> accept_curator
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method AcceptCurator(Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32> bounty_id)
         {
@@ -222,7 +222,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> award_bounty
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method AwardBounty(Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32> bounty_id, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress beneficiary)
         {
@@ -234,7 +234,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> claim_bounty
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method ClaimBounty(Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32> bounty_id)
         {
@@ -245,7 +245,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> close_bounty
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method CloseBounty(Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32> bounty_id)
         {
@@ -256,7 +256,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> extend_bounty_expiry
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method ExtendBountyExpiry(Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32> bounty_id, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> remark)
         {

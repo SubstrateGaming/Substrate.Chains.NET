@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_core_primiti
     
     
     /// <summary>
-    /// >> 336 - Composite[polkadot_core_primitives.OutboundHrmpMessage]
+    /// >> 312 - Composite[polkadot_core_primitives.OutboundHrmpMessage]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class OutboundHrmpMessage : BaseType
@@ -27,14 +27,14 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_core_primiti
         /// <summary>
         /// >> recipient
         /// </summary>
-        private Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id _recipient;
+        private Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id _recipient;
         
         /// <summary>
         /// >> data
         /// </summary>
         private Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> _data;
         
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id Recipient
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id Recipient
         {
             get
             {
@@ -74,7 +74,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_core_primiti
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Recipient = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id();
+            Recipient = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id();
             Recipient.Decode(byteArray, ref p);
             Data = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>();
             Data.Decode(byteArray, ref p);

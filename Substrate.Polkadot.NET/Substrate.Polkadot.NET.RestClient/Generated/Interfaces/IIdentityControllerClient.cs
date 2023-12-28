@@ -23,9 +23,9 @@ namespace Substrate.Polkadot.NET.RestClient.Generated.Interfaces
       Task<bool> SubscribeIdentityOf(AccountId32 key);
       Task<BaseTuple<AccountId32, EnumData>> GetSuperOf(AccountId32 key);
       Task<bool> SubscribeSuperOf(AccountId32 key);
-      Task<BaseTuple<U128, BoundedVecT29>> GetSubsOf(AccountId32 key);
+      Task<BaseTuple<U128, BoundedVecT24>> GetSubsOf(AccountId32 key);
       Task<bool> SubscribeSubsOf(AccountId32 key);
-      Task<BoundedVecT30> GetRegistrars();
+      Task<BoundedVecT25> GetRegistrars();
       Task<bool> SubscribeRegistrars();
    }
 }

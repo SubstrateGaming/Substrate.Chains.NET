@@ -38,8 +38,8 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_referenda.pall
     }
     
     /// <summary>
-    /// >> 155 - Variant[pallet_referenda.pallet.Call]
-    /// Contains one variant per dispatchable that can be called by an extrinsic.
+    /// >> 129 - Variant[pallet_referenda.pallet.Call]
+    /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
     public sealed class EnumCall : BaseEnumExt<Call, BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime.EnumOriginCaller, Substrate.Polkadot.NET.NetApiExt.Generated.Model.frame_support.traits.preimages.EnumBounded, Substrate.Polkadot.NET.NetApiExt.Generated.Model.frame_support.traits.schedule.EnumDispatchTime>, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U16, Substrate.NetApi.Model.Types.Primitive.U32, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256>>>
     {

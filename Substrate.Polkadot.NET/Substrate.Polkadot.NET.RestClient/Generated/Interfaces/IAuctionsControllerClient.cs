@@ -21,8 +21,8 @@ namespace Substrate.Polkadot.NET.RestClient.Generated.Interfaces
       Task<bool> SubscribeAuctionCounter();
       Task<BaseTuple<U32, U32>> GetAuctionInfo();
       Task<bool> SubscribeAuctionInfo();
-      Task<U128> GetReservedAmounts(BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id> key);
-      Task<bool> SubscribeReservedAmounts(BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id> key);
+      Task<U128> GetReservedAmounts(BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id> key);
+      Task<bool> SubscribeReservedAmounts(BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id> key);
       Task<Arr36BaseOpt> GetWinning(U32 key);
       Task<bool> SubscribeWinning(U32 key);
    }

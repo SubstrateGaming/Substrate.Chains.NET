@@ -49,7 +49,7 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "Balances/Holds", value.Encode(), Substrate.Polkadot.NET.NetApiExt.Generated.Storage.BalancesStorage.HoldsParams(key));
       }
-      public async Task<bool> SetFreezes(BoundedVecT13 value, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+      public async Task<bool> SetFreezes(BoundedVecT14 value, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {
          return await SendMockupRequestAsync(_httpClient, "Balances/Freezes", value.Encode(), Substrate.Polkadot.NET.NetApiExt.Generated.Storage.BalancesStorage.FreezesParams(key));
       }

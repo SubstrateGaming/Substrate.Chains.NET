@@ -22,7 +22,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm
     }
     
     /// <summary>
-    /// >> 812 - Variant[xcm.VersionedAssetId]
+    /// >> 758 - Variant[xcm.VersionedAssetId]
     /// </summary>
     public sealed class EnumVersionedAssetId : BaseEnumExt<VersionedAssetId, BaseVoid, BaseVoid, BaseVoid, Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.v3.multiasset.EnumAssetId>
     {

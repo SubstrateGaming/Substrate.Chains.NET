@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime
     
     
     /// <summary>
-    /// >> 238 - Composite[polkadot_runtime.NposCompactSolution16]
+    /// >> 211 - Composite[polkadot_runtime.NposCompactSolution16]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class NposCompactSolution16 : BaseType

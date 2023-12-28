@@ -37,7 +37,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
                             Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat,
                             Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>), typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_child_bounties.ChildBounty)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("ChildBounties", "ChildBountyDescriptions"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.NetApi.Model.Types.Primitive.U32), typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT34)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.NetApi.Model.Types.Primitive.U32), typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT29)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("ChildBounties", "ChildrenCuratorFees"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.NetApi.Model.Types.Primitive.U32), typeof(Substrate.NetApi.Model.Types.Primitive.U128)));
         }
@@ -159,10 +159,10 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         /// >> ChildBountyDescriptions
         ///  The description of each child-bounty.
         /// </summary>
-        public async Task<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT34> ChildBountyDescriptions(Substrate.NetApi.Model.Types.Primitive.U32 key, CancellationToken token)
+        public async Task<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT29> ChildBountyDescriptions(Substrate.NetApi.Model.Types.Primitive.U32 key, CancellationToken token)
         {
             string parameters = ChildBountiesStorage.ChildBountyDescriptionsParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT34>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT29>(parameters, token);
             return result;
         }
         
@@ -203,7 +203,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> add_child_bounty
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method AddChildBounty(Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32> parent_bounty_id, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128> value, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> description)
         {
@@ -216,7 +216,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> propose_curator
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method ProposeCurator(Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32> parent_bounty_id, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32> child_bounty_id, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress curator, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128> fee)
         {
@@ -230,7 +230,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> accept_curator
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method AcceptCurator(Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32> parent_bounty_id, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32> child_bounty_id)
         {
@@ -242,7 +242,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> unassign_curator
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method UnassignCurator(Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32> parent_bounty_id, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32> child_bounty_id)
         {
@@ -254,7 +254,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> award_child_bounty
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method AwardChildBounty(Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32> parent_bounty_id, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32> child_bounty_id, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress beneficiary)
         {
@@ -267,7 +267,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> claim_child_bounty
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method ClaimChildBounty(Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32> parent_bounty_id, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32> child_bounty_id)
         {
@@ -279,7 +279,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> close_child_bounty
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method CloseChildBounty(Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32> parent_bounty_id, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32> child_bounty_id)
         {

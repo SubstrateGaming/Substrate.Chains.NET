@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_referenda.type
     
     
     /// <summary>
-    /// >> 625 - Composite[pallet_referenda.types.ReferendumStatus]
+    /// >> 571 - Composite[pallet_referenda.types.ReferendumStatus]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class ReferendumStatus : BaseType

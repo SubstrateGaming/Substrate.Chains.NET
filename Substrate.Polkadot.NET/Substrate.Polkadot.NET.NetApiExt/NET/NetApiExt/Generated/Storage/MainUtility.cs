@@ -38,7 +38,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> batch
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method Batch(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime.EnumRuntimeCall> calls)
         {
@@ -49,7 +49,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> as_derivative
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method AsDerivative(Substrate.NetApi.Model.Types.Primitive.U16 index, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime.EnumRuntimeCall call)
         {
@@ -61,7 +61,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> batch_all
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method BatchAll(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime.EnumRuntimeCall> calls)
         {
@@ -72,7 +72,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> dispatch_as
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method DispatchAs(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime.EnumOriginCaller as_origin, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime.EnumRuntimeCall call)
         {
@@ -84,7 +84,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> force_batch
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method ForceBatch(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime.EnumRuntimeCall> calls)
         {
@@ -95,7 +95,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> with_weight
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method WithWeight(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime.EnumRuntimeCall call, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight weight)
         {

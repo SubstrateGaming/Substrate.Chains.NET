@@ -37,15 +37,16 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// >> PvfActiveVoteList
         ///  The list of all currently active PVF votes. Auxiliary to `PvfActiveVoteMap`.
         /// </summary>
-        Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.ValidationCodeHash> GetPvfActiveVoteList();
+        Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash> GetPvfActiveVoteList();
         
         /// <summary>
         /// >> Parachains
-        ///  All parachains. Ordered ascending by `ParaId`. Parathreads are not included.
+        ///  All lease holding parachains. Ordered ascending by `ParaId`. On demand parachains are not
+        ///  included.
         /// 
         ///  Consider using the [`ParachainsCache`] type of modifying.
         /// </summary>
-        Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id> GetParachains();
+        Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id> GetParachains();
         
         /// <summary>
         /// >> ParaLifecycles
@@ -57,7 +58,13 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// >> Heads
         ///  The head-data of every registered para.
         /// </summary>
-        Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.HeadData GetHeads(string key);
+        Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.HeadData GetHeads(string key);
+        
+        /// <summary>
+        /// >> MostRecentContext
+        ///  The context (relay-chain block number) of the most recent parachain head.
+        /// </summary>
+        Substrate.NetApi.Model.Types.Primitive.U32 GetMostRecentContext(string key);
         
         /// <summary>
         /// >> CurrentCodeHash
@@ -65,7 +72,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// 
         ///  Corresponding code can be retrieved with [`CodeByHash`].
         /// </summary>
-        Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.ValidationCodeHash GetCurrentCodeHash(string key);
+        Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash GetCurrentCodeHash(string key);
         
         /// <summary>
         /// >> PastCodeHash
@@ -74,7 +81,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// 
         ///  Corresponding code can be retrieved with [`CodeByHash`].
         /// </summary>
-        Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.ValidationCodeHash GetPastCodeHash(string key);
+        Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash GetPastCodeHash(string key);
         
         /// <summary>
         /// >> PastCodeMeta
@@ -86,14 +93,14 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         
         /// <summary>
         /// >> PastCodePruning
-        ///  Which paras have past code that needs pruning and the relay-chain block at which the code was replaced.
-        ///  Note that this is the actual height of the included block, not the expected height at which the
-        ///  code upgrade would be applied, although they may be equal.
-        ///  This is to ensure the entire acceptance period is covered, not an offset acceptance period starting
-        ///  from the time at which the parachain perceives a code upgrade as having occurred.
+        ///  Which paras have past code that needs pruning and the relay-chain block at which the code
+        ///  was replaced. Note that this is the actual height of the included block, not the expected
+        ///  height at which the code upgrade would be applied, although they may be equal.
+        ///  This is to ensure the entire acceptance period is covered, not an offset acceptance period
+        ///  starting from the time at which the parachain perceives a code upgrade as having occurred.
         ///  Multiple entries for a single para are permitted. Ordered ascending by block number.
         /// </summary>
-        Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32>> GetPastCodePruning();
+        Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32>> GetPastCodePruning();
         
         /// <summary>
         /// >> FutureCodeUpgrades
@@ -109,21 +116,22 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// 
         ///  Corresponding code can be retrieved with [`CodeByHash`].
         /// </summary>
-        Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.ValidationCodeHash GetFutureCodeHash(string key);
+        Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash GetFutureCodeHash(string key);
         
         /// <summary>
         /// >> UpgradeGoAheadSignal
-        ///  This is used by the relay-chain to communicate to a parachain a go-ahead with in the upgrade procedure.
+        ///  This is used by the relay-chain to communicate to a parachain a go-ahead with in the upgrade
+        ///  procedure.
         /// 
         ///  This value is absent when there are no upgrades scheduled or during the time the relay chain
-        ///  performs the checks. It is set at the first relay-chain block when the corresponding parachain
-        ///  can switch its upgrade function. As soon as the parachain's block is included, the value
-        ///  gets reset to `None`.
+        ///  performs the checks. It is set at the first relay-chain block when the corresponding
+        ///  parachain can switch its upgrade function. As soon as the parachain's block is included, the
+        ///  value gets reset to `None`.
         /// 
         ///  NOTE that this field is used by parachains via merkle storage proofs, therefore changing
         ///  the format will require migration of parachains.
         /// </summary>
-        Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.EnumUpgradeGoAhead GetUpgradeGoAheadSignal(string key);
+        Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.EnumUpgradeGoAhead GetUpgradeGoAheadSignal(string key);
         
         /// <summary>
         /// >> UpgradeRestrictionSignal
@@ -137,7 +145,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         ///  NOTE that this field is used by parachains via merkle storage proofs, therefore changing
         ///  the format will require migration of parachains.
         /// </summary>
-        Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.EnumUpgradeRestriction GetUpgradeRestrictionSignal(string key);
+        Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.EnumUpgradeRestriction GetUpgradeRestrictionSignal(string key);
         
         /// <summary>
         /// >> UpgradeCooldowns
@@ -145,7 +153,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// 
         ///  Ordered ascending by block number.
         /// </summary>
-        Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32>> GetUpgradeCooldowns();
+        Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32>> GetUpgradeCooldowns();
         
         /// <summary>
         /// >> UpcomingUpgrades
@@ -154,13 +162,13 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// 
         ///  Ordered ascending by block number.
         /// </summary>
-        Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32>> GetUpcomingUpgrades();
+        Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32>> GetUpcomingUpgrades();
         
         /// <summary>
         /// >> ActionsQueue
         ///  The actions to perform during the start of a specific session index.
         /// </summary>
-        Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id> GetActionsQueue(string key);
+        Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id> GetActionsQueue(string key);
         
         /// <summary>
         /// >> UpcomingParasGenesis
@@ -184,7 +192,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         ///  This storage is consistent with [`FutureCodeHash`], [`CurrentCodeHash`] and
         ///  [`PastCodeHash`].
         /// </summary>
-        Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.ValidationCode GetCodeByHash(string key);
+        Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCode GetCodeByHash(string key);
     }
     
     /// <summary>
@@ -201,12 +209,12 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// <summary>
         /// _pvfActiveVoteListTypedStorage typed storage field
         /// </summary>
-        private TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.ValidationCodeHash>> _pvfActiveVoteListTypedStorage;
+        private TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash>> _pvfActiveVoteListTypedStorage;
         
         /// <summary>
         /// _parachainsTypedStorage typed storage field
         /// </summary>
-        private TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id>> _parachainsTypedStorage;
+        private TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id>> _parachainsTypedStorage;
         
         /// <summary>
         /// _paraLifecyclesTypedStorage typed storage field
@@ -216,17 +224,22 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// <summary>
         /// _headsTypedStorage typed storage field
         /// </summary>
-        private TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.HeadData> _headsTypedStorage;
+        private TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.HeadData> _headsTypedStorage;
+        
+        /// <summary>
+        /// _mostRecentContextTypedStorage typed storage field
+        /// </summary>
+        private TypedMapStorage<Substrate.NetApi.Model.Types.Primitive.U32> _mostRecentContextTypedStorage;
         
         /// <summary>
         /// _currentCodeHashTypedStorage typed storage field
         /// </summary>
-        private TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.ValidationCodeHash> _currentCodeHashTypedStorage;
+        private TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash> _currentCodeHashTypedStorage;
         
         /// <summary>
         /// _pastCodeHashTypedStorage typed storage field
         /// </summary>
-        private TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.ValidationCodeHash> _pastCodeHashTypedStorage;
+        private TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash> _pastCodeHashTypedStorage;
         
         /// <summary>
         /// _pastCodeMetaTypedStorage typed storage field
@@ -236,7 +249,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// <summary>
         /// _pastCodePruningTypedStorage typed storage field
         /// </summary>
-        private TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32>>> _pastCodePruningTypedStorage;
+        private TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32>>> _pastCodePruningTypedStorage;
         
         /// <summary>
         /// _futureCodeUpgradesTypedStorage typed storage field
@@ -246,32 +259,32 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// <summary>
         /// _futureCodeHashTypedStorage typed storage field
         /// </summary>
-        private TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.ValidationCodeHash> _futureCodeHashTypedStorage;
+        private TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash> _futureCodeHashTypedStorage;
         
         /// <summary>
         /// _upgradeGoAheadSignalTypedStorage typed storage field
         /// </summary>
-        private TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.EnumUpgradeGoAhead> _upgradeGoAheadSignalTypedStorage;
+        private TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.EnumUpgradeGoAhead> _upgradeGoAheadSignalTypedStorage;
         
         /// <summary>
         /// _upgradeRestrictionSignalTypedStorage typed storage field
         /// </summary>
-        private TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.EnumUpgradeRestriction> _upgradeRestrictionSignalTypedStorage;
+        private TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.EnumUpgradeRestriction> _upgradeRestrictionSignalTypedStorage;
         
         /// <summary>
         /// _upgradeCooldownsTypedStorage typed storage field
         /// </summary>
-        private TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32>>> _upgradeCooldownsTypedStorage;
+        private TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32>>> _upgradeCooldownsTypedStorage;
         
         /// <summary>
         /// _upcomingUpgradesTypedStorage typed storage field
         /// </summary>
-        private TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32>>> _upcomingUpgradesTypedStorage;
+        private TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32>>> _upcomingUpgradesTypedStorage;
         
         /// <summary>
         /// _actionsQueueTypedStorage typed storage field
         /// </summary>
-        private TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id>> _actionsQueueTypedStorage;
+        private TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id>> _actionsQueueTypedStorage;
         
         /// <summary>
         /// _upcomingParasGenesisTypedStorage typed storage field
@@ -286,7 +299,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// <summary>
         /// _codeByHashTypedStorage typed storage field
         /// </summary>
-        private TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.ValidationCode> _codeByHashTypedStorage;
+        private TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCode> _codeByHashTypedStorage;
         
         /// <summary>
         /// ParasStorage constructor.
@@ -294,24 +307,25 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         public ParasStorage(IStorageDataProvider storageDataProvider, List<IStorageChangeDelegate> storageChangeDelegates)
         {
             this.PvfActiveVoteMapTypedStorage = new TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.paras.PvfCheckActiveVoteState>("Paras.PvfActiveVoteMap", storageDataProvider, storageChangeDelegates);
-            this.PvfActiveVoteListTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.ValidationCodeHash>>("Paras.PvfActiveVoteList", storageDataProvider, storageChangeDelegates);
-            this.ParachainsTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id>>("Paras.Parachains", storageDataProvider, storageChangeDelegates);
+            this.PvfActiveVoteListTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash>>("Paras.PvfActiveVoteList", storageDataProvider, storageChangeDelegates);
+            this.ParachainsTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id>>("Paras.Parachains", storageDataProvider, storageChangeDelegates);
             this.ParaLifecyclesTypedStorage = new TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.paras.EnumParaLifecycle>("Paras.ParaLifecycles", storageDataProvider, storageChangeDelegates);
-            this.HeadsTypedStorage = new TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.HeadData>("Paras.Heads", storageDataProvider, storageChangeDelegates);
-            this.CurrentCodeHashTypedStorage = new TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.ValidationCodeHash>("Paras.CurrentCodeHash", storageDataProvider, storageChangeDelegates);
-            this.PastCodeHashTypedStorage = new TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.ValidationCodeHash>("Paras.PastCodeHash", storageDataProvider, storageChangeDelegates);
+            this.HeadsTypedStorage = new TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.HeadData>("Paras.Heads", storageDataProvider, storageChangeDelegates);
+            this.MostRecentContextTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Primitive.U32>("Paras.MostRecentContext", storageDataProvider, storageChangeDelegates);
+            this.CurrentCodeHashTypedStorage = new TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash>("Paras.CurrentCodeHash", storageDataProvider, storageChangeDelegates);
+            this.PastCodeHashTypedStorage = new TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash>("Paras.PastCodeHash", storageDataProvider, storageChangeDelegates);
             this.PastCodeMetaTypedStorage = new TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.paras.ParaPastCodeMeta>("Paras.PastCodeMeta", storageDataProvider, storageChangeDelegates);
-            this.PastCodePruningTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32>>>("Paras.PastCodePruning", storageDataProvider, storageChangeDelegates);
+            this.PastCodePruningTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32>>>("Paras.PastCodePruning", storageDataProvider, storageChangeDelegates);
             this.FutureCodeUpgradesTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Primitive.U32>("Paras.FutureCodeUpgrades", storageDataProvider, storageChangeDelegates);
-            this.FutureCodeHashTypedStorage = new TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.ValidationCodeHash>("Paras.FutureCodeHash", storageDataProvider, storageChangeDelegates);
-            this.UpgradeGoAheadSignalTypedStorage = new TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.EnumUpgradeGoAhead>("Paras.UpgradeGoAheadSignal", storageDataProvider, storageChangeDelegates);
-            this.UpgradeRestrictionSignalTypedStorage = new TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.EnumUpgradeRestriction>("Paras.UpgradeRestrictionSignal", storageDataProvider, storageChangeDelegates);
-            this.UpgradeCooldownsTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32>>>("Paras.UpgradeCooldowns", storageDataProvider, storageChangeDelegates);
-            this.UpcomingUpgradesTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32>>>("Paras.UpcomingUpgrades", storageDataProvider, storageChangeDelegates);
-            this.ActionsQueueTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id>>("Paras.ActionsQueue", storageDataProvider, storageChangeDelegates);
+            this.FutureCodeHashTypedStorage = new TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash>("Paras.FutureCodeHash", storageDataProvider, storageChangeDelegates);
+            this.UpgradeGoAheadSignalTypedStorage = new TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.EnumUpgradeGoAhead>("Paras.UpgradeGoAheadSignal", storageDataProvider, storageChangeDelegates);
+            this.UpgradeRestrictionSignalTypedStorage = new TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.EnumUpgradeRestriction>("Paras.UpgradeRestrictionSignal", storageDataProvider, storageChangeDelegates);
+            this.UpgradeCooldownsTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32>>>("Paras.UpgradeCooldowns", storageDataProvider, storageChangeDelegates);
+            this.UpcomingUpgradesTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32>>>("Paras.UpcomingUpgrades", storageDataProvider, storageChangeDelegates);
+            this.ActionsQueueTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id>>("Paras.ActionsQueue", storageDataProvider, storageChangeDelegates);
             this.UpcomingParasGenesisTypedStorage = new TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.paras.ParaGenesisArgs>("Paras.UpcomingParasGenesis", storageDataProvider, storageChangeDelegates);
             this.CodeByHashRefsTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Primitive.U32>("Paras.CodeByHashRefs", storageDataProvider, storageChangeDelegates);
-            this.CodeByHashTypedStorage = new TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.ValidationCode>("Paras.CodeByHash", storageDataProvider, storageChangeDelegates);
+            this.CodeByHashTypedStorage = new TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCode>("Paras.CodeByHash", storageDataProvider, storageChangeDelegates);
         }
         
         /// <summary>
@@ -332,7 +346,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// <summary>
         /// _pvfActiveVoteListTypedStorage property
         /// </summary>
-        public TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.ValidationCodeHash>> PvfActiveVoteListTypedStorage
+        public TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash>> PvfActiveVoteListTypedStorage
         {
             get
             {
@@ -347,7 +361,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// <summary>
         /// _parachainsTypedStorage property
         /// </summary>
-        public TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id>> ParachainsTypedStorage
+        public TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id>> ParachainsTypedStorage
         {
             get
             {
@@ -377,7 +391,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// <summary>
         /// _headsTypedStorage property
         /// </summary>
-        public TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.HeadData> HeadsTypedStorage
+        public TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.HeadData> HeadsTypedStorage
         {
             get
             {
@@ -390,9 +404,24 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         }
         
         /// <summary>
+        /// _mostRecentContextTypedStorage property
+        /// </summary>
+        public TypedMapStorage<Substrate.NetApi.Model.Types.Primitive.U32> MostRecentContextTypedStorage
+        {
+            get
+            {
+                return _mostRecentContextTypedStorage;
+            }
+            set
+            {
+                _mostRecentContextTypedStorage = value;
+            }
+        }
+        
+        /// <summary>
         /// _currentCodeHashTypedStorage property
         /// </summary>
-        public TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.ValidationCodeHash> CurrentCodeHashTypedStorage
+        public TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash> CurrentCodeHashTypedStorage
         {
             get
             {
@@ -407,7 +436,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// <summary>
         /// _pastCodeHashTypedStorage property
         /// </summary>
-        public TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.ValidationCodeHash> PastCodeHashTypedStorage
+        public TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash> PastCodeHashTypedStorage
         {
             get
             {
@@ -437,7 +466,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// <summary>
         /// _pastCodePruningTypedStorage property
         /// </summary>
-        public TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32>>> PastCodePruningTypedStorage
+        public TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32>>> PastCodePruningTypedStorage
         {
             get
             {
@@ -467,7 +496,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// <summary>
         /// _futureCodeHashTypedStorage property
         /// </summary>
-        public TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.ValidationCodeHash> FutureCodeHashTypedStorage
+        public TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash> FutureCodeHashTypedStorage
         {
             get
             {
@@ -482,7 +511,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// <summary>
         /// _upgradeGoAheadSignalTypedStorage property
         /// </summary>
-        public TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.EnumUpgradeGoAhead> UpgradeGoAheadSignalTypedStorage
+        public TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.EnumUpgradeGoAhead> UpgradeGoAheadSignalTypedStorage
         {
             get
             {
@@ -497,7 +526,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// <summary>
         /// _upgradeRestrictionSignalTypedStorage property
         /// </summary>
-        public TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.EnumUpgradeRestriction> UpgradeRestrictionSignalTypedStorage
+        public TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.EnumUpgradeRestriction> UpgradeRestrictionSignalTypedStorage
         {
             get
             {
@@ -512,7 +541,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// <summary>
         /// _upgradeCooldownsTypedStorage property
         /// </summary>
-        public TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32>>> UpgradeCooldownsTypedStorage
+        public TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32>>> UpgradeCooldownsTypedStorage
         {
             get
             {
@@ -527,7 +556,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// <summary>
         /// _upcomingUpgradesTypedStorage property
         /// </summary>
-        public TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32>>> UpcomingUpgradesTypedStorage
+        public TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32>>> UpcomingUpgradesTypedStorage
         {
             get
             {
@@ -542,7 +571,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// <summary>
         /// _actionsQueueTypedStorage property
         /// </summary>
-        public TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id>> ActionsQueueTypedStorage
+        public TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id>> ActionsQueueTypedStorage
         {
             get
             {
@@ -587,7 +616,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// <summary>
         /// _codeByHashTypedStorage property
         /// </summary>
-        public TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.ValidationCode> CodeByHashTypedStorage
+        public TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCode> CodeByHashTypedStorage
         {
             get
             {
@@ -609,6 +638,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
             await ParachainsTypedStorage.InitializeAsync("Paras", "Parachains");
             await ParaLifecyclesTypedStorage.InitializeAsync("Paras", "ParaLifecycles");
             await HeadsTypedStorage.InitializeAsync("Paras", "Heads");
+            await MostRecentContextTypedStorage.InitializeAsync("Paras", "MostRecentContext");
             await CurrentCodeHashTypedStorage.InitializeAsync("Paras", "CurrentCodeHash");
             await PastCodeHashTypedStorage.InitializeAsync("Paras", "PastCodeHash");
             await PastCodeMetaTypedStorage.InitializeAsync("Paras", "PastCodeMeta");
@@ -670,7 +700,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// >> PvfActiveVoteList
         ///  The list of all currently active PVF votes. Auxiliary to `PvfActiveVoteMap`.
         /// </summary>
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.ValidationCodeHash> GetPvfActiveVoteList()
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash> GetPvfActiveVoteList()
         {
             return PvfActiveVoteListTypedStorage.Get();
         }
@@ -686,11 +716,12 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         
         /// <summary>
         /// >> Parachains
-        ///  All parachains. Ordered ascending by `ParaId`. Parathreads are not included.
+        ///  All lease holding parachains. Ordered ascending by `ParaId`. On demand parachains are not
+        ///  included.
         /// 
         ///  Consider using the [`ParachainsCache`] type of modifying.
         /// </summary>
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id> GetParachains()
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id> GetParachains()
         {
             return ParachainsTypedStorage.Get();
         }
@@ -737,13 +768,42 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// >> Heads
         ///  The head-data of every registered para.
         /// </summary>
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.HeadData GetHeads(string key)
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.HeadData GetHeads(string key)
         {
             if ((key == null))
             {
                 return null;
             }
-            if (HeadsTypedStorage.Dictionary.TryGetValue(key, out Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.HeadData result))
+            if (HeadsTypedStorage.Dictionary.TryGetValue(key, out Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.HeadData result))
+            {
+                return result;
+            }
+            else
+            {
+                return null;
+            }
+        }
+        
+        /// <summary>
+        /// Implements any storage change for Paras.MostRecentContext
+        /// </summary>
+        [StorageChange("Paras", "MostRecentContext")]
+        public void OnUpdateMostRecentContext(string key, string data)
+        {
+            MostRecentContextTypedStorage.Update(key, data);
+        }
+        
+        /// <summary>
+        /// >> MostRecentContext
+        ///  The context (relay-chain block number) of the most recent parachain head.
+        /// </summary>
+        public Substrate.NetApi.Model.Types.Primitive.U32 GetMostRecentContext(string key)
+        {
+            if ((key == null))
+            {
+                return null;
+            }
+            if (MostRecentContextTypedStorage.Dictionary.TryGetValue(key, out Substrate.NetApi.Model.Types.Primitive.U32 result))
             {
                 return result;
             }
@@ -768,13 +828,13 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// 
         ///  Corresponding code can be retrieved with [`CodeByHash`].
         /// </summary>
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.ValidationCodeHash GetCurrentCodeHash(string key)
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash GetCurrentCodeHash(string key)
         {
             if ((key == null))
             {
                 return null;
             }
-            if (CurrentCodeHashTypedStorage.Dictionary.TryGetValue(key, out Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.ValidationCodeHash result))
+            if (CurrentCodeHashTypedStorage.Dictionary.TryGetValue(key, out Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash result))
             {
                 return result;
             }
@@ -800,13 +860,13 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// 
         ///  Corresponding code can be retrieved with [`CodeByHash`].
         /// </summary>
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.ValidationCodeHash GetPastCodeHash(string key)
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash GetPastCodeHash(string key)
         {
             if ((key == null))
             {
                 return null;
             }
-            if (PastCodeHashTypedStorage.Dictionary.TryGetValue(key, out Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.ValidationCodeHash result))
+            if (PastCodeHashTypedStorage.Dictionary.TryGetValue(key, out Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash result))
             {
                 return result;
             }
@@ -858,14 +918,14 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         
         /// <summary>
         /// >> PastCodePruning
-        ///  Which paras have past code that needs pruning and the relay-chain block at which the code was replaced.
-        ///  Note that this is the actual height of the included block, not the expected height at which the
-        ///  code upgrade would be applied, although they may be equal.
-        ///  This is to ensure the entire acceptance period is covered, not an offset acceptance period starting
-        ///  from the time at which the parachain perceives a code upgrade as having occurred.
+        ///  Which paras have past code that needs pruning and the relay-chain block at which the code
+        ///  was replaced. Note that this is the actual height of the included block, not the expected
+        ///  height at which the code upgrade would be applied, although they may be equal.
+        ///  This is to ensure the entire acceptance period is covered, not an offset acceptance period
+        ///  starting from the time at which the parachain perceives a code upgrade as having occurred.
         ///  Multiple entries for a single para are permitted. Ordered ascending by block number.
         /// </summary>
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32>> GetPastCodePruning()
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32>> GetPastCodePruning()
         {
             return PastCodePruningTypedStorage.Get();
         }
@@ -916,13 +976,13 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// 
         ///  Corresponding code can be retrieved with [`CodeByHash`].
         /// </summary>
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.ValidationCodeHash GetFutureCodeHash(string key)
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash GetFutureCodeHash(string key)
         {
             if ((key == null))
             {
                 return null;
             }
-            if (FutureCodeHashTypedStorage.Dictionary.TryGetValue(key, out Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.ValidationCodeHash result))
+            if (FutureCodeHashTypedStorage.Dictionary.TryGetValue(key, out Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash result))
             {
                 return result;
             }
@@ -943,23 +1003,24 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         
         /// <summary>
         /// >> UpgradeGoAheadSignal
-        ///  This is used by the relay-chain to communicate to a parachain a go-ahead with in the upgrade procedure.
+        ///  This is used by the relay-chain to communicate to a parachain a go-ahead with in the upgrade
+        ///  procedure.
         /// 
         ///  This value is absent when there are no upgrades scheduled or during the time the relay chain
-        ///  performs the checks. It is set at the first relay-chain block when the corresponding parachain
-        ///  can switch its upgrade function. As soon as the parachain's block is included, the value
-        ///  gets reset to `None`.
+        ///  performs the checks. It is set at the first relay-chain block when the corresponding
+        ///  parachain can switch its upgrade function. As soon as the parachain's block is included, the
+        ///  value gets reset to `None`.
         /// 
         ///  NOTE that this field is used by parachains via merkle storage proofs, therefore changing
         ///  the format will require migration of parachains.
         /// </summary>
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.EnumUpgradeGoAhead GetUpgradeGoAheadSignal(string key)
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.EnumUpgradeGoAhead GetUpgradeGoAheadSignal(string key)
         {
             if ((key == null))
             {
                 return null;
             }
-            if (UpgradeGoAheadSignalTypedStorage.Dictionary.TryGetValue(key, out Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.EnumUpgradeGoAhead result))
+            if (UpgradeGoAheadSignalTypedStorage.Dictionary.TryGetValue(key, out Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.EnumUpgradeGoAhead result))
             {
                 return result;
             }
@@ -990,13 +1051,13 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         ///  NOTE that this field is used by parachains via merkle storage proofs, therefore changing
         ///  the format will require migration of parachains.
         /// </summary>
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.EnumUpgradeRestriction GetUpgradeRestrictionSignal(string key)
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.EnumUpgradeRestriction GetUpgradeRestrictionSignal(string key)
         {
             if ((key == null))
             {
                 return null;
             }
-            if (UpgradeRestrictionSignalTypedStorage.Dictionary.TryGetValue(key, out Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.EnumUpgradeRestriction result))
+            if (UpgradeRestrictionSignalTypedStorage.Dictionary.TryGetValue(key, out Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.EnumUpgradeRestriction result))
             {
                 return result;
             }
@@ -1021,7 +1082,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// 
         ///  Ordered ascending by block number.
         /// </summary>
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32>> GetUpgradeCooldowns()
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32>> GetUpgradeCooldowns()
         {
             return UpgradeCooldownsTypedStorage.Get();
         }
@@ -1042,7 +1103,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// 
         ///  Ordered ascending by block number.
         /// </summary>
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32>> GetUpcomingUpgrades()
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32>> GetUpcomingUpgrades()
         {
             return UpcomingUpgradesTypedStorage.Get();
         }
@@ -1060,13 +1121,13 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// >> ActionsQueue
         ///  The actions to perform during the start of a specific session index.
         /// </summary>
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id> GetActionsQueue(string key)
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id> GetActionsQueue(string key)
         {
             if ((key == null))
             {
                 return null;
             }
-            if (ActionsQueueTypedStorage.Dictionary.TryGetValue(key, out Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id> result))
+            if (ActionsQueueTypedStorage.Dictionary.TryGetValue(key, out Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id> result))
             {
                 return result;
             }
@@ -1153,13 +1214,13 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         ///  This storage is consistent with [`FutureCodeHash`], [`CurrentCodeHash`] and
         ///  [`PastCodeHash`].
         /// </summary>
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.ValidationCode GetCodeByHash(string key)
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCode GetCodeByHash(string key)
         {
             if ((key == null))
             {
                 return null;
             }
-            if (CodeByHashTypedStorage.Dictionary.TryGetValue(key, out Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.ValidationCode result))
+            if (CodeByHashTypedStorage.Dictionary.TryGetValue(key, out Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCode result))
             {
                 return result;
             }

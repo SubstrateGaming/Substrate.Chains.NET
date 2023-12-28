@@ -26,7 +26,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.v3.traits
     }
     
     /// <summary>
-    /// >> 476 - Variant[xcm.v3.traits.Outcome]
+    /// >> 451 - Variant[xcm.v3.traits.Outcome]
     /// </summary>
     public sealed class EnumOutcome : BaseEnumExt<Outcome, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight, BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight, Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.v3.traits.EnumError>, Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.v3.traits.EnumError>
     {

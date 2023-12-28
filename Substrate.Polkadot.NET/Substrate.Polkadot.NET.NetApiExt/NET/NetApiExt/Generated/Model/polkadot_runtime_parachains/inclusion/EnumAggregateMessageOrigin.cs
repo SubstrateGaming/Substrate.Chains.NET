@@ -22,7 +22,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_para
     }
     
     /// <summary>
-    /// >> 437 - Variant[polkadot_runtime_parachains.inclusion.AggregateMessageOrigin]
+    /// >> 413 - Variant[polkadot_runtime_parachains.inclusion.AggregateMessageOrigin]
     /// </summary>
     public sealed class EnumAggregateMessageOrigin : BaseEnumExt<AggregateMessageOrigin, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.inclusion.EnumUmpQueueId>
     {

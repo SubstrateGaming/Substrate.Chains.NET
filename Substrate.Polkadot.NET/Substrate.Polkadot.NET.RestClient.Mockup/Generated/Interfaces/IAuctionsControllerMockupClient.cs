@@ -19,7 +19,7 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup.Generated.Interfaces
    {
       Task<bool> SetAuctionCounter(U32 value);
       Task<bool> SetAuctionInfo(BaseTuple<U32, U32> value);
-      Task<bool> SetReservedAmounts(U128 value, BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id> key);
+      Task<bool> SetReservedAmounts(U128 value, BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id> key);
       Task<bool> SetWinning(Arr36BaseOpt value, U32 key);
    }
 }

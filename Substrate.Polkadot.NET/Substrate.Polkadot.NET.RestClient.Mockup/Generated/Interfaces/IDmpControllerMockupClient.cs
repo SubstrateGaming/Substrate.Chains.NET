@@ -18,8 +18,8 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup.Generated.Interfaces
    
    public interface IDmpControllerMockupClient
    {
-      Task<bool> SetDownwardMessageQueues(BaseVec<InboundDownwardMessage> value, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id key);
-      Task<bool> SetDownwardMessageQueueHeads(H256 value, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id key);
-      Task<bool> SetDeliveryFeeFactor(FixedU128 value, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id key);
+      Task<bool> SetDownwardMessageQueues(BaseVec<InboundDownwardMessage> value, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key);
+      Task<bool> SetDownwardMessageQueueHeads(H256 value, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key);
+      Task<bool> SetDeliveryFeeFactor(FixedU128 value, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key);
    }
 }

@@ -24,7 +24,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.v2.multiasset
     }
     
     /// <summary>
-    /// >> 390 - Variant[xcm.v2.multiasset.Fungibility]
+    /// >> 366 - Variant[xcm.v2.multiasset.Fungibility]
     /// </summary>
     public sealed class EnumFungibility : BaseEnumExt<Fungibility, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128>, Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.v2.multiasset.EnumAssetInstance>
     {

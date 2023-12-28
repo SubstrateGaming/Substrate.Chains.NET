@@ -30,7 +30,7 @@ namespace Substrate.Polkadot.NET.RestClient.Generated.Interfaces
       Task<bool> SubscribeReserves(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
       Task<BoundedVecT13> GetHolds(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
       Task<bool> SubscribeHolds(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
-      Task<BoundedVecT13> GetFreezes(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
+      Task<BoundedVecT14> GetFreezes(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
       Task<bool> SubscribeFreezes(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
    }
 }

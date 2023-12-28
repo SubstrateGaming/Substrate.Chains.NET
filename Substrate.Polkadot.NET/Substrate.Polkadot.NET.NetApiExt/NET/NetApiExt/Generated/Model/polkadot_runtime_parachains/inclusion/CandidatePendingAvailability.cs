@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_para
     
     
     /// <summary>
-    /// >> 726 - Composite[polkadot_runtime_parachains.inclusion.CandidatePendingAvailability]
+    /// >> 673 - Composite[polkadot_runtime_parachains.inclusion.CandidatePendingAvailability]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class CandidatePendingAvailability : BaseType
@@ -27,7 +27,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_para
         /// <summary>
         /// >> core
         /// </summary>
-        private Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.CoreIndex _core;
+        private Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.CoreIndex _core;
         
         /// <summary>
         /// >> hash
@@ -37,7 +37,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_para
         /// <summary>
         /// >> descriptor
         /// </summary>
-        private Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.CandidateDescriptor _descriptor;
+        private Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.CandidateDescriptor _descriptor;
         
         /// <summary>
         /// >> availability_votes
@@ -62,9 +62,9 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_para
         /// <summary>
         /// >> backing_group
         /// </summary>
-        private Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.GroupIndex _backingGroup;
+        private Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.GroupIndex _backingGroup;
         
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.CoreIndex Core
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.CoreIndex Core
         {
             get
             {
@@ -88,7 +88,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_para
             }
         }
         
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.CandidateDescriptor Descriptor
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.CandidateDescriptor Descriptor
         {
             get
             {
@@ -148,7 +148,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_para
             }
         }
         
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.GroupIndex BackingGroup
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.GroupIndex BackingGroup
         {
             get
             {
@@ -182,11 +182,11 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_para
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Core = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.CoreIndex();
+            Core = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.CoreIndex();
             Core.Decode(byteArray, ref p);
             Hash = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_core_primitives.CandidateHash();
             Hash.Decode(byteArray, ref p);
-            Descriptor = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.CandidateDescriptor();
+            Descriptor = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.CandidateDescriptor();
             Descriptor.Decode(byteArray, ref p);
             AvailabilityVotes = new Substrate.NetApi.Model.Types.Base.BaseBitSeq<Substrate.NetApi.Model.Types.Primitive.U8, Substrate.Polkadot.NET.NetApiExt.Generated.Model.bitvec.order.Lsb0>();
             AvailabilityVotes.Decode(byteArray, ref p);
@@ -196,7 +196,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_para
             RelayParentNumber.Decode(byteArray, ref p);
             BackedInNumber = new Substrate.NetApi.Model.Types.Primitive.U32();
             BackedInNumber.Decode(byteArray, ref p);
-            BackingGroup = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.GroupIndex();
+            BackingGroup = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.GroupIndex();
             BackingGroup.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

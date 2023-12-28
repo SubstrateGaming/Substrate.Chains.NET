@@ -11,7 +11,7 @@ namespace Substrate.Polkadot.NET.RestClient.Generated.Interfaces
 {
    using System;
    using System.Threading.Tasks;
-   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_common.paras_registrar;
    
    public interface IRegistrarControllerClient

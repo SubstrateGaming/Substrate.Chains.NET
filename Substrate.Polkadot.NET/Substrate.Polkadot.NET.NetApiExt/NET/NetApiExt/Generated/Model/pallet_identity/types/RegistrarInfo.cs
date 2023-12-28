@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types
     
     
     /// <summary>
-    /// >> 657 - Composite[pallet_identity.types.RegistrarInfo]
+    /// >> 603 - Composite[pallet_identity.types.RegistrarInfo]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class RegistrarInfo : BaseType

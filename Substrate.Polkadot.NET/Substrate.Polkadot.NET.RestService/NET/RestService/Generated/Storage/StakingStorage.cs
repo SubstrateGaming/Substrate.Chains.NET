@@ -120,7 +120,8 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         ///  they wish to support.
         /// 
         ///  Note that the keys of this storage map might become non-decodable in case the
-        ///  [`Config::MaxNominations`] configuration is decreased. In this rare case, these nominators
+        ///  account's [`NominationsQuota::MaxNominations`] configuration is decreased.
+        ///  In this rare case, these nominators
         ///  are still existent in storage, their key is correct and retrievable (i.e. `contains_key`
         ///  indicates that they exist), but their value cannot be decoded. Therefore, the non-decodable
         ///  nominators will effectively not-exist, until they re-submit their preferences such that it
@@ -1469,7 +1470,8 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         ///  they wish to support.
         /// 
         ///  Note that the keys of this storage map might become non-decodable in case the
-        ///  [`Config::MaxNominations`] configuration is decreased. In this rare case, these nominators
+        ///  account's [`NominationsQuota::MaxNominations`] configuration is decreased.
+        ///  In this rare case, these nominators
         ///  are still existent in storage, their key is correct and retrievable (i.e. `contains_key`
         ///  indicates that they exist), but their value cannot be decoded. Therefore, the non-decodable
         ///  nominators will effectively not-exist, until they re-submit their preferences such that it

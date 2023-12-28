@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base
     
     
     /// <summary>
-    /// >> 783 - Composite[BTreeMapT4]
+    /// >> 686 - Composite[BTreeMapT4]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class BTreeMapT4 : BaseType
@@ -27,9 +27,9 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base
         /// <summary>
         /// >> value
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.ValidatorIndex, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.validator_app.Public>> _value;
+        private Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.CoreIndex, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.ParasEntry>>>> _value;
         
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.ValidatorIndex, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.validator_app.Public>> Value
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.CoreIndex, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.ParasEntry>>>> Value
         {
             get
             {
@@ -56,7 +56,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.ValidatorIndex, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.validator_app.Public>>();
+            Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.CoreIndex, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.ParasEntry>>>>();
             Value.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

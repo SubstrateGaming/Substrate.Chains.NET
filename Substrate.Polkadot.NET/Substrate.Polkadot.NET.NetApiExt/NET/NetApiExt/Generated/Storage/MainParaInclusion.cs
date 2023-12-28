@@ -31,18 +31,18 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         {
             this._client = client;
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("ParaInclusion", "AvailabilityBitfields"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.ValidatorIndex), typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.inclusion.AvailabilityBitfieldRecord)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.ValidatorIndex), typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.inclusion.AvailabilityBitfieldRecord)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("ParaInclusion", "PendingAvailability"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id), typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.inclusion.CandidatePendingAvailability)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id), typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.inclusion.CandidatePendingAvailability)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("ParaInclusion", "PendingAvailabilityCommitments"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id), typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.CandidateCommitments)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id), typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.CandidateCommitments)));
         }
         
         /// <summary>
         /// >> AvailabilityBitfieldsParams
         ///  The latest bitfield for each validator, referred to by their index in the validator set.
         /// </summary>
-        public static string AvailabilityBitfieldsParams(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.ValidatorIndex key)
+        public static string AvailabilityBitfieldsParams(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.ValidatorIndex key)
         {
             return RequestGenerator.GetStorage("ParaInclusion", "AvailabilityBitfields", Substrate.NetApi.Model.Meta.Storage.Type.Map, new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                         Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, new Substrate.NetApi.Model.Types.IType[] {
@@ -62,7 +62,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         /// >> AvailabilityBitfields
         ///  The latest bitfield for each validator, referred to by their index in the validator set.
         /// </summary>
-        public async Task<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.inclusion.AvailabilityBitfieldRecord> AvailabilityBitfields(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.ValidatorIndex key, CancellationToken token)
+        public async Task<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.inclusion.AvailabilityBitfieldRecord> AvailabilityBitfields(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.ValidatorIndex key, CancellationToken token)
         {
             string parameters = ParaInclusionStorage.AvailabilityBitfieldsParams(key);
             var result = await _client.GetStorageAsync<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.inclusion.AvailabilityBitfieldRecord>(parameters, token);
@@ -73,7 +73,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         /// >> PendingAvailabilityParams
         ///  Candidates pending availability by `ParaId`.
         /// </summary>
-        public static string PendingAvailabilityParams(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id key)
+        public static string PendingAvailabilityParams(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key)
         {
             return RequestGenerator.GetStorage("ParaInclusion", "PendingAvailability", Substrate.NetApi.Model.Meta.Storage.Type.Map, new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                         Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, new Substrate.NetApi.Model.Types.IType[] {
@@ -93,7 +93,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         /// >> PendingAvailability
         ///  Candidates pending availability by `ParaId`.
         /// </summary>
-        public async Task<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.inclusion.CandidatePendingAvailability> PendingAvailability(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id key, CancellationToken token)
+        public async Task<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.inclusion.CandidatePendingAvailability> PendingAvailability(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key, CancellationToken token)
         {
             string parameters = ParaInclusionStorage.PendingAvailabilityParams(key);
             var result = await _client.GetStorageAsync<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.inclusion.CandidatePendingAvailability>(parameters, token);
@@ -104,7 +104,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         /// >> PendingAvailabilityCommitmentsParams
         ///  The commitments of candidates pending availability, by `ParaId`.
         /// </summary>
-        public static string PendingAvailabilityCommitmentsParams(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id key)
+        public static string PendingAvailabilityCommitmentsParams(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key)
         {
             return RequestGenerator.GetStorage("ParaInclusion", "PendingAvailabilityCommitments", Substrate.NetApi.Model.Meta.Storage.Type.Map, new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                         Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, new Substrate.NetApi.Model.Types.IType[] {
@@ -124,10 +124,10 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         /// >> PendingAvailabilityCommitments
         ///  The commitments of candidates pending availability, by `ParaId`.
         /// </summary>
-        public async Task<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.CandidateCommitments> PendingAvailabilityCommitments(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id key, CancellationToken token)
+        public async Task<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.CandidateCommitments> PendingAvailabilityCommitments(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key, CancellationToken token)
         {
             string parameters = ParaInclusionStorage.PendingAvailabilityCommitmentsParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.CandidateCommitments>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.CandidateCommitments>(parameters, token);
             return result;
         }
     }
@@ -210,12 +210,6 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         CandidateScheduledBeforeParaFree,
         
         /// <summary>
-        /// >> WrongCollator
-        /// Candidate included with the wrong collator.
-        /// </summary>
-        WrongCollator,
-        
-        /// <summary>
         /// >> ScheduledOutOfOrder
         /// Scheduled cores out of order.
         /// </summary>
@@ -240,10 +234,18 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         NewCodeTooLarge,
         
         /// <summary>
-        /// >> CandidateNotInParentContext
-        /// Candidate not in parent context.
+        /// >> DisallowedRelayParent
+        /// The candidate's relay-parent was not allowed. Either it was
+        /// not recent enough or it didn't advance based on the last parachain block.
         /// </summary>
-        CandidateNotInParentContext,
+        DisallowedRelayParent,
+        
+        /// <summary>
+        /// >> InvalidAssignment
+        /// Failed to compute group index for the core: either it's out of bounds
+        /// or the relay parent doesn't belong to the current session.
+        /// </summary>
+        InvalidAssignment,
         
         /// <summary>
         /// >> InvalidGroupIndex
@@ -307,8 +309,8 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> ParaHeadMismatch
-        /// The `para_head` hash in the candidate descriptor doesn't match the hash of the actual para head in the
-        /// commitments.
+        /// The `para_head` hash in the candidate descriptor doesn't match the hash of the actual
+        /// para head in the commitments.
         /// </summary>
         ParaHeadMismatch,
         

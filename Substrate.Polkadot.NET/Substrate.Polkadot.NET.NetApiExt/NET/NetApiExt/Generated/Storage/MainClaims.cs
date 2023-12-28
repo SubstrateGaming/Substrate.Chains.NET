@@ -202,7 +202,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> claim
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method Claim(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 dest, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_common.claims.EcdsaSignature ethereum_signature)
         {
@@ -214,7 +214,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> mint_claim
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method MintClaim(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_common.claims.EthereumAddress who, Substrate.NetApi.Model.Types.Primitive.U128 value, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.NetApi.Model.Types.Primitive.U128, Substrate.NetApi.Model.Types.Primitive.U32>> vesting_schedule, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_common.claims.EnumStatementKind> statement)
         {
@@ -228,7 +228,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> claim_attest
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method ClaimAttest(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 dest, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_common.claims.EcdsaSignature ethereum_signature, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> statement)
         {
@@ -241,7 +241,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> attest
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method Attest(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> statement)
         {
@@ -252,7 +252,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> move_claim
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method MoveClaim(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_common.claims.EthereumAddress old, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_common.claims.EthereumAddress @new, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> maybe_preclaim)
         {
@@ -301,8 +301,8 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> PotUnderflow
-        /// There's not enough in the pot to pay out some unvested amount. Generally implies a logic
-        /// error.
+        /// There's not enough in the pot to pay out some unvested amount. Generally implies a
+        /// logic error.
         /// </summary>
         PotUnderflow,
         

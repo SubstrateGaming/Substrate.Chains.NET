@@ -41,9 +41,9 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         ///  Semantically a `bool`, but this guarantees it should never hit the trie,
         ///  as this is cleared in `on_finalize` and Frame optimizes `None` values to be empty values.
         /// 
-        ///  As a `bool`, `set(false)` and `remove()` both lead to the next `get()` being false, but one of
-        ///  them writes to the trie and one does not. This confusion makes `Option<()>` more suitable for
-        ///  the semantics of this variable.
+        ///  As a `bool`, `set(false)` and `remove()` both lead to the next `get()` being false, but one
+        ///  of them writes to the trie and one does not. This confusion makes `Option<()>` more suitable
+        ///  for the semantics of this variable.
         /// </summary>
         public static string HasInitializedParams()
         {
@@ -66,9 +66,9 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         ///  Semantically a `bool`, but this guarantees it should never hit the trie,
         ///  as this is cleared in `on_finalize` and Frame optimizes `None` values to be empty values.
         /// 
-        ///  As a `bool`, `set(false)` and `remove()` both lead to the next `get()` being false, but one of
-        ///  them writes to the trie and one does not. This confusion makes `Option<()>` more suitable for
-        ///  the semantics of this variable.
+        ///  As a `bool`, `set(false)` and `remove()` both lead to the next `get()` being false, but one
+        ///  of them writes to the trie and one does not. This confusion makes `Option<()>` more suitable
+        ///  for the semantics of this variable.
         /// </summary>
         public async Task<Substrate.NetApi.Model.Types.Base.BaseTuple> HasInitialized(CancellationToken token)
         {
@@ -124,7 +124,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> force_approve
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method ForceApprove(Substrate.NetApi.Model.Types.Primitive.U32 up_to)
         {

@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_arithmetic.per_thi
     
     
     /// <summary>
-    /// >> 607 - Composite[sp_arithmetic.per_things.Permill]
+    /// >> 553 - Composite[sp_arithmetic.per_things.Permill]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Permill : BaseType

@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_para
     
     
     /// <summary>
-    /// >> 759 - Composite[polkadot_runtime_parachains.paras.ParaGenesisArgs]
+    /// >> 704 - Composite[polkadot_runtime_parachains.paras.ParaGenesisArgs]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class ParaGenesisArgs : BaseType
@@ -27,19 +27,19 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_para
         /// <summary>
         /// >> genesis_head
         /// </summary>
-        private Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.HeadData _genesisHead;
+        private Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.HeadData _genesisHead;
         
         /// <summary>
         /// >> validation_code
         /// </summary>
-        private Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.ValidationCode _validationCode;
+        private Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCode _validationCode;
         
         /// <summary>
         /// >> para_kind
         /// </summary>
         private Substrate.NetApi.Model.Types.Primitive.Bool _paraKind;
         
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.HeadData GenesisHead
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.HeadData GenesisHead
         {
             get
             {
@@ -51,7 +51,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_para
             }
         }
         
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.ValidationCode ValidationCode
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCode ValidationCode
         {
             get
             {
@@ -92,9 +92,9 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_para
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            GenesisHead = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.HeadData();
+            GenesisHead = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.HeadData();
             GenesisHead.Decode(byteArray, ref p);
-            ValidationCode = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.ValidationCode();
+            ValidationCode = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCode();
             ValidationCode.Decode(byteArray, ref p);
             ParaKind = new Substrate.NetApi.Model.Types.Primitive.Bool();
             ParaKind.Decode(byteArray, ref p);

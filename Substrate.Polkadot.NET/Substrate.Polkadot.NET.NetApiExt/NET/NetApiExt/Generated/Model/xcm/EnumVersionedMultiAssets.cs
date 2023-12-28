@@ -24,7 +24,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm
     }
     
     /// <summary>
-    /// >> 427 - Variant[xcm.VersionedMultiAssets]
+    /// >> 403 - Variant[xcm.VersionedMultiAssets]
     /// </summary>
     public sealed class EnumVersionedMultiAssets : BaseEnumExt<VersionedMultiAssets, BaseVoid, Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.v2.multiasset.MultiAssets, BaseVoid, Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.v3.multiasset.MultiAssets>
     {

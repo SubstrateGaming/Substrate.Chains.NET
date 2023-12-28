@@ -14,7 +14,6 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup.Generated.Clients
    using System.Net.Http;
    using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec;
-   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.frame_support.traits.misc;
    using Substrate.Polkadot.NET.RestClient.Mockup.Generated.Interfaces;
    
    public sealed class ImOnlineControllerMockupClient : MockupBaseClient, IImOnlineControllerMockupClient
@@ -32,7 +31,7 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "ImOnline/Keys", value.Encode(), Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ImOnlineStorage.KeysParams());
       }
-      public async Task<bool> SetReceivedHeartbeats(WrapperOpaque value, Substrate.NetApi.Model.Types.Base.BaseTuple<U32, U32> key)
+      public async Task<bool> SetReceivedHeartbeats(Bool value, Substrate.NetApi.Model.Types.Base.BaseTuple<U32, U32> key)
       {
          return await SendMockupRequestAsync(_httpClient, "ImOnline/ReceivedHeartbeats", value.Encode(), Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ImOnlineStorage.ReceivedHeartbeatsParams(key));
       }

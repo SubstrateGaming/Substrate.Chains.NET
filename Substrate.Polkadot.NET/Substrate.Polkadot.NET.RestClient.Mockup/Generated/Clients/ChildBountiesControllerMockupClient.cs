@@ -36,7 +36,7 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "ChildBounties/ChildBounties", value.Encode(), Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ChildBountiesStorage.ChildBountiesParams(key));
       }
-      public async Task<bool> SetChildBountyDescriptions(BoundedVecT34 value, U32 key)
+      public async Task<bool> SetChildBountyDescriptions(BoundedVecT29 value, U32 key)
       {
          return await SendMockupRequestAsync(_httpClient, "ChildBounties/ChildBountyDescriptions", value.Encode(), Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ChildBountiesStorage.ChildBountyDescriptionsParams(key));
       }

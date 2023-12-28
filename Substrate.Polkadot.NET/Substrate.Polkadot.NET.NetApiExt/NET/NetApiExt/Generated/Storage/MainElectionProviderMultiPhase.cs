@@ -37,7 +37,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("ElectionProviderMultiPhase", "DesiredTargets"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Primitive.U32)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("ElectionProviderMultiPhase", "SnapshotMetadata"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_election_provider_multi_phase.SolutionOrSnapshotSize)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("ElectionProviderMultiPhase", "SignedSubmissionNextIndex"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Primitive.U32)));
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("ElectionProviderMultiPhase", "SignedSubmissionIndices"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT36)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("ElectionProviderMultiPhase", "SignedSubmissionIndices"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT31)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("ElectionProviderMultiPhase", "SignedSubmissionsMap"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.NetApi.Model.Types.Primitive.U32), typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_election_provider_multi_phase.signed.SignedSubmission)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("ElectionProviderMultiPhase", "MinimumUntrustedScore"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_npos_elections.ElectionScore)));
@@ -320,10 +320,10 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         ///  can be quite large, so we're willing to pay the cost of multiple database accesses to access
         ///  them one at a time instead of reading and decoding all of them at once.
         /// </summary>
-        public async Task<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT36> SignedSubmissionIndices(CancellationToken token)
+        public async Task<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT31> SignedSubmissionIndices(CancellationToken token)
         {
             string parameters = ElectionProviderMultiPhaseStorage.SignedSubmissionIndicesParams();
-            var result = await _client.GetStorageAsync<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT36>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT31>(parameters, token);
             return result;
         }
         
@@ -411,7 +411,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> submit_unsigned
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method SubmitUnsigned(Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_election_provider_multi_phase.RawSolution raw_solution, Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_election_provider_multi_phase.SolutionOrSnapshotSize witness)
         {
@@ -423,7 +423,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> set_minimum_untrusted_score
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method SetMinimumUntrustedScore(Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_npos_elections.ElectionScore> maybe_next_score)
         {
@@ -434,7 +434,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> set_emergency_election_result
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method SetEmergencyElectionResult(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_npos_elections.Support>> supports)
         {
@@ -445,7 +445,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> submit
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method Submit(Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_election_provider_multi_phase.RawSolution raw_solution)
         {
@@ -456,7 +456,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> governance_fallback
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method GovernanceFallback(Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32> maybe_max_voters, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32> maybe_max_targets)
         {
@@ -569,7 +569,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         public Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight SignedMaxWeight()
         {
             var result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight();
-            result.Create("0x0BC83C7727560113A3703D0AD7A370BD");
+            result.Create("0x0B08C77258550113A3703D0AD7A370BD");
             return result;
         }
         
@@ -629,30 +629,6 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         }
         
         /// <summary>
-        /// >> MaxElectingVoters
-        ///  The maximum number of electing voters to put in the snapshot. At the moment, snapshots
-        ///  are only over a single block, but once multi-block elections are introduced they will
-        ///  take place over multiple blocks.
-        /// </summary>
-        public Substrate.NetApi.Model.Types.Primitive.U32 MaxElectingVoters()
-        {
-            var result = new Substrate.NetApi.Model.Types.Primitive.U32();
-            result.Create("0xE4570000");
-            return result;
-        }
-        
-        /// <summary>
-        /// >> MaxElectableTargets
-        ///  The maximum number of electable targets to put in the snapshot.
-        /// </summary>
-        public Substrate.NetApi.Model.Types.Primitive.U16 MaxElectableTargets()
-        {
-            var result = new Substrate.NetApi.Model.Types.Primitive.U16();
-            result.Create("0xFFFF");
-            return result;
-        }
-        
-        /// <summary>
         /// >> MaxWinners
         ///  The maximum number of winners that can be elected by this `ElectionProvider`
         ///  implementation.
@@ -682,7 +658,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         public Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight MinerMaxWeight()
         {
             var result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight();
-            result.Create("0x0BC83C7727560113A3703D0AD7A370BD");
+            result.Create("0x0B08C77258550113A3703D0AD7A370BD");
             return result;
         }
         

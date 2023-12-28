@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.b
     
     
     /// <summary>
-    /// >> 708 - Composite[bounded_collections.bounded_btree_map.BoundedBTreeMapT2]
+    /// >> 652 - Composite[bounded_collections.bounded_btree_map.BoundedBTreeMapT2]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class BoundedBTreeMapT2 : BaseType

@@ -42,7 +42,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Controller
         ///  Information regarding the vesting of a given account.
         /// </summary>
         [HttpGet("Vesting")]
-        [ProducesResponseType(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT27), 200)]
+        [ProducesResponseType(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT22), 200)]
         [StorageKeyBuilder(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Storage.VestingStorage), "VestingParams", typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32))]
         public IActionResult GetVesting(string key)
         {

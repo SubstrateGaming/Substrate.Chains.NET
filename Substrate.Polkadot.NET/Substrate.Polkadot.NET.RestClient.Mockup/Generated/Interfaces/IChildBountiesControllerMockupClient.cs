@@ -20,7 +20,7 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup.Generated.Interfaces
       Task<bool> SetChildBountyCount(U32 value);
       Task<bool> SetParentChildBounties(U32 value, U32 key);
       Task<bool> SetChildBounties(ChildBounty value, Substrate.NetApi.Model.Types.Base.BaseTuple<U32, U32> key);
-      Task<bool> SetChildBountyDescriptions(BoundedVecT34 value, U32 key);
+      Task<bool> SetChildBountyDescriptions(BoundedVecT29 value, U32 key);
       Task<bool> SetChildrenCuratorFees(U128 value, U32 key);
    }
 }

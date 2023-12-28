@@ -15,6 +15,6 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup.Generated.Interfaces
    
    public interface ISlotsControllerMockupClient
    {
-      Task<bool> SetLeases(BaseVec<BaseOpt<BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U128>>> value, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id key);
+      Task<bool> SetLeases(BaseVec<BaseOpt<BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U128>>> value, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key);
    }
 }

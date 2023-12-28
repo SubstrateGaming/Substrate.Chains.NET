@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_consensus_grandpa
     
     
     /// <summary>
-    /// >> 120 - Composite[sp_consensus_grandpa.EquivocationProof]
+    /// >> 108 - Composite[sp_consensus_grandpa.EquivocationProof]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class EquivocationProof : BaseType

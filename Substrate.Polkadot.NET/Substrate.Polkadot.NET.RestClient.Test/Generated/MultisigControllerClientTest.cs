@@ -34,7 +34,7 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
          result.Deposit = this.GetTestValueU128();
          result.Depositor = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32();
          result.Depositor = this.GetTestValue4();
-         result.Approvals = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT33();
+         result.Approvals = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT28();
          result.Approvals = this.GetTestValue5();
          return result;
       }
@@ -86,10 +86,10 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
                   this.GetTestValueU8()});
          return result;
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT33 GetTestValue5()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT28 GetTestValue5()
       {
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT33 result;
-         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT33();
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT28 result;
+         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT28();
          result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>();
          result.Value.Create(new Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32[] {
                   this.GetTestValue6()});

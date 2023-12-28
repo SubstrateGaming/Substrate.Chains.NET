@@ -40,7 +40,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.v3.junction
     }
     
     /// <summary>
-    /// >> 168 - Variant[xcm.v3.junction.NetworkId]
+    /// >> 140 - Variant[xcm.v3.junction.NetworkId]
     /// </summary>
     public sealed class EnumNetworkId : BaseEnumExt<NetworkId, Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base.Arr32U8, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U64, Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base.Arr32U8>, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U64>, BaseVoid, BaseVoid>
     {

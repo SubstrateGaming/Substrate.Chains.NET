@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_para
     
     
     /// <summary>
-    /// >> 725 - Composite[polkadot_runtime_parachains.inclusion.AvailabilityBitfieldRecord]
+    /// >> 672 - Composite[polkadot_runtime_parachains.inclusion.AvailabilityBitfieldRecord]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class AvailabilityBitfieldRecord : BaseType
@@ -27,14 +27,14 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_para
         /// <summary>
         /// >> bitfield
         /// </summary>
-        private Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.AvailabilityBitfield _bitfield;
+        private Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.AvailabilityBitfield _bitfield;
         
         /// <summary>
         /// >> submitted_at
         /// </summary>
         private Substrate.NetApi.Model.Types.Primitive.U32 _submittedAt;
         
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.AvailabilityBitfield Bitfield
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.AvailabilityBitfield Bitfield
         {
             get
             {
@@ -74,7 +74,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_para
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Bitfield = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.AvailabilityBitfield();
+            Bitfield = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.AvailabilityBitfield();
             Bitfield.Decode(byteArray, ref p);
             SubmittedAt = new Substrate.NetApi.Model.Types.Primitive.U32();
             SubmittedAt.Decode(byteArray, ref p);

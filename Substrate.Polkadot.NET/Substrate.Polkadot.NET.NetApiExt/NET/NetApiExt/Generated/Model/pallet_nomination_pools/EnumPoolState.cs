@@ -26,7 +26,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_nomination_poo
     }
     
     /// <summary>
-    /// >> 298 - Variant[pallet_nomination_pools.PoolState]
+    /// >> 274 - Variant[pallet_nomination_pools.PoolState]
     /// </summary>
     public sealed class EnumPoolState : BaseEnum<PoolState>
     {

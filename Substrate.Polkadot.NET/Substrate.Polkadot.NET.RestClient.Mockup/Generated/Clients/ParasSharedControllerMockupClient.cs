@@ -14,8 +14,9 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup.Generated.Clients
    using System.Net.Http;
    using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.NetApi.Model.Types.Base;
-   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4;
-   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.validator_app;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.validator_app;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.shared;
    using Substrate.Polkadot.NET.RestClient.Mockup.Generated.Interfaces;
    
    public sealed class ParasSharedControllerMockupClient : MockupBaseClient, IParasSharedControllerMockupClient
@@ -36,6 +37,10 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup.Generated.Clients
       public async Task<bool> SetActiveValidatorKeys(BaseVec<Public> value)
       {
          return await SendMockupRequestAsync(_httpClient, "ParasShared/ActiveValidatorKeys", value.Encode(), Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParasSharedStorage.ActiveValidatorKeysParams());
+      }
+      public async Task<bool> SetAllowedRelayParents(AllowedRelayParentsTracker value)
+      {
+         return await SendMockupRequestAsync(_httpClient, "ParasShared/AllowedRelayParents", value.Encode(), Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParasSharedStorage.AllowedRelayParentsParams());
       }
    }
 }

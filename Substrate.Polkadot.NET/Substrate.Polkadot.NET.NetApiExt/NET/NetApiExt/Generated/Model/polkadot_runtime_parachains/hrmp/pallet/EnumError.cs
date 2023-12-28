@@ -58,11 +58,8 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_para
     }
     
     /// <summary>
-    /// >> 772 - Variant[polkadot_runtime_parachains.hrmp.pallet.Error]
-    /// 
-    ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
-    ///			of this pallet.
-    ///			
+    /// >> 717 - Variant[polkadot_runtime_parachains.hrmp.pallet.Error]
+    /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>
     {

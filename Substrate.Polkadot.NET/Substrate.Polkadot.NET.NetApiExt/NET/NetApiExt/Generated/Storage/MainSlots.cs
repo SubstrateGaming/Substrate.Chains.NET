@@ -31,15 +31,15 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         {
             this._client = client;
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Slots", "Leases"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id), typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U128>>>)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id), typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U128>>>)));
         }
         
         /// <summary>
         /// >> LeasesParams
         ///  Amounts held on deposit for each (possibly future) leased parachain.
         /// 
-        ///  The actual amount locked on its behalf by any account at any time is the maximum of the second values
-        ///  of the items in this list whose first value is the account.
+        ///  The actual amount locked on its behalf by any account at any time is the maximum of the
+        ///  second values of the items in this list whose first value is the account.
         /// 
         ///  The first item in the list is the amount locked for the current Lease Period. Following
         ///  items are for the subsequent lease periods.
@@ -53,7 +53,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         /// 
         ///  It is illegal for a `None` value to trail in the list.
         /// </summary>
-        public static string LeasesParams(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id key)
+        public static string LeasesParams(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key)
         {
             return RequestGenerator.GetStorage("Slots", "Leases", Substrate.NetApi.Model.Meta.Storage.Type.Map, new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                         Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, new Substrate.NetApi.Model.Types.IType[] {
@@ -73,8 +73,8 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         /// >> Leases
         ///  Amounts held on deposit for each (possibly future) leased parachain.
         /// 
-        ///  The actual amount locked on its behalf by any account at any time is the maximum of the second values
-        ///  of the items in this list whose first value is the account.
+        ///  The actual amount locked on its behalf by any account at any time is the maximum of the
+        ///  second values of the items in this list whose first value is the account.
         /// 
         ///  The first item in the list is the amount locked for the current Lease Period. Following
         ///  items are for the subsequent lease periods.
@@ -88,7 +88,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         /// 
         ///  It is illegal for a `None` value to trail in the list.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U128>>>> Leases(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id key, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U128>>>> Leases(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key, CancellationToken token)
         {
             string parameters = SlotsStorage.LeasesParams(key);
             var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U128>>>>(parameters, token);
@@ -101,9 +101,9 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> force_lease
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method ForceLease(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id para, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 leaser, Substrate.NetApi.Model.Types.Primitive.U128 amount, Substrate.NetApi.Model.Types.Primitive.U32 period_begin, Substrate.NetApi.Model.Types.Primitive.U32 period_count)
+        public static Method ForceLease(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id para, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 leaser, Substrate.NetApi.Model.Types.Primitive.U128 amount, Substrate.NetApi.Model.Types.Primitive.U32 period_begin, Substrate.NetApi.Model.Types.Primitive.U32 period_count)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(para.Encode());
@@ -116,9 +116,9 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> clear_all_leases
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method ClearAllLeases(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id para)
+        public static Method ClearAllLeases(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id para)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(para.Encode());
@@ -127,9 +127,9 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> trigger_onboard
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method TriggerOnboard(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id para)
+        public static Method TriggerOnboard(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id para)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(para.Encode());

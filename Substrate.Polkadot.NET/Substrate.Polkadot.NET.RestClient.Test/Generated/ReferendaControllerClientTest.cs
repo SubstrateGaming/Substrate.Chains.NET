@@ -295,10 +295,10 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT26 GetTestValue16()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT21 GetTestValue16()
       {
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT26 result;
-         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT26();
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT21 result;
+         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT21();
          result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U128>>();
          result.Value.Create(new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U128>[] {
                   this.GetTestValue17()});
@@ -322,7 +322,7 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          ReferendaControllerClient rpcClient = new ReferendaControllerClient(_httpClient, subscriptionClient);
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT26 mockupValue = this.GetTestValue16();
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT21 mockupValue = this.GetTestValue16();
          Substrate.NetApi.Model.Types.Primitive.U16 mockupKey = this.GetTestValueU16();
 
          Assert.IsTrue(await rpcClient.SubscribeTrackQueue(mockupKey));
@@ -335,7 +335,7 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT26 rpcResult = await rpcClient.GetTrackQueue(mockupKey);
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT21 rpcResult = await rpcClient.GetTrackQueue(mockupKey);
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());

@@ -55,7 +55,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Controller
         ///  Indices are into the broader validator set.
         /// </summary>
         [HttpGet("ActiveValidatorIndices")]
-        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.ValidatorIndex>), 200)]
+        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.ValidatorIndex>), 200)]
         [StorageKeyBuilder(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParasSharedStorage), "ActiveValidatorIndicesParams")]
         public IActionResult GetActiveValidatorIndices()
         {
@@ -64,15 +64,27 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Controller
         
         /// <summary>
         /// >> ActiveValidatorKeys
-        ///  The parachain attestation keys of the validators actively participating in parachain consensus.
-        ///  This should be the same length as `ActiveValidatorIndices`.
+        ///  The parachain attestation keys of the validators actively participating in parachain
+        ///  consensus. This should be the same length as `ActiveValidatorIndices`.
         /// </summary>
         [HttpGet("ActiveValidatorKeys")]
-        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.validator_app.Public>), 200)]
+        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.validator_app.Public>), 200)]
         [StorageKeyBuilder(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParasSharedStorage), "ActiveValidatorKeysParams")]
         public IActionResult GetActiveValidatorKeys()
         {
             return this.Ok(_parasSharedStorage.GetActiveValidatorKeys());
+        }
+        
+        /// <summary>
+        /// >> AllowedRelayParents
+        ///  All allowed relay-parents.
+        /// </summary>
+        [HttpGet("AllowedRelayParents")]
+        [ProducesResponseType(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.shared.AllowedRelayParentsTracker), 200)]
+        [StorageKeyBuilder(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParasSharedStorage), "AllowedRelayParentsParams")]
+        public IActionResult GetAllowedRelayParents()
+        {
+            return this.Ok(_parasSharedStorage.GetAllowedRelayParents());
         }
     }
 }

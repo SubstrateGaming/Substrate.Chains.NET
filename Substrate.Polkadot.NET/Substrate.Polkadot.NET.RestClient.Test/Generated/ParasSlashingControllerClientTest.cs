@@ -15,7 +15,7 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
    using System.Net.Http;
    using Substrate.Polkadot.NET.RestClient.Mockup.Generated.Clients;
    using Substrate.Polkadot.NET.RestClient.Generated.Clients;
-   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.disputes.slashing;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.slashing;
    using Substrate.NetApi.Model.Types.Primitive;
    
    public class ParasSlashingControllerClientTest : ClientTestBase
@@ -26,43 +26,43 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
       {
          _httpClient = CreateHttpClient();
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.disputes.slashing.PendingSlashes GetTestValue2()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.slashing.PendingSlashes GetTestValue2()
       {
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.disputes.slashing.PendingSlashes result;
-         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.disputes.slashing.PendingSlashes();
-         result.Keys = new Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base.BTreeMapT4();
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.slashing.PendingSlashes result;
+         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.slashing.PendingSlashes();
+         result.Keys = new Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base.BTreeMapT5();
          result.Keys = this.GetTestValue3();
-         result.Kind = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.disputes.slashing.EnumSlashingOffenceKind();
-         result.Kind.Create(this.GetTestValueEnum<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.disputes.slashing.SlashingOffenceKind>());
+         result.Kind = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.slashing.EnumSlashingOffenceKind();
+         result.Kind.Create(this.GetTestValueEnum<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.slashing.SlashingOffenceKind>());
          return result;
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base.BTreeMapT4 GetTestValue3()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base.BTreeMapT5 GetTestValue3()
       {
-         Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base.BTreeMapT4 result;
-         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base.BTreeMapT4();
-         result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.ValidatorIndex, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.validator_app.Public>>();
-         result.Value.Create(new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.ValidatorIndex, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.validator_app.Public>[] {
+         Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base.BTreeMapT5 result;
+         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base.BTreeMapT5();
+         result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.ValidatorIndex, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.validator_app.Public>>();
+         result.Value.Create(new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.ValidatorIndex, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.validator_app.Public>[] {
                   this.GetTestValue4()});
          return result;
       }
-      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.ValidatorIndex, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.validator_app.Public> GetTestValue4()
+      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.ValidatorIndex, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.validator_app.Public> GetTestValue4()
       {
-         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.ValidatorIndex, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.validator_app.Public> result;
-         result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.ValidatorIndex, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.validator_app.Public>();
+         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.ValidatorIndex, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.validator_app.Public> result;
+         result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.ValidatorIndex, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.validator_app.Public>();
          result.Create(this.GetTestValue5(), this.GetTestValue6());
          return result;
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.ValidatorIndex GetTestValue5()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.ValidatorIndex GetTestValue5()
       {
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.ValidatorIndex result;
-         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.ValidatorIndex();
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.ValidatorIndex result;
+         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.ValidatorIndex();
          result.Value = this.GetTestValueU32();
          return result;
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.validator_app.Public GetTestValue6()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.validator_app.Public GetTestValue6()
       {
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.validator_app.Public result;
-         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.validator_app.Public();
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.validator_app.Public result;
+         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.validator_app.Public();
          result.Value = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.sr25519.Public();
          result.Value = this.GetTestValue7();
          return result;
@@ -173,7 +173,7 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          ParasSlashingControllerClient rpcClient = new ParasSlashingControllerClient(_httpClient, subscriptionClient);
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.disputes.slashing.PendingSlashes mockupValue = this.GetTestValue2();
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.slashing.PendingSlashes mockupValue = this.GetTestValue2();
          Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_core_primitives.CandidateHash> mockupKey = this.GetTestValue8();
 
          Assert.IsTrue(await rpcClient.SubscribeUnappliedSlashes(mockupKey));
@@ -186,7 +186,7 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.disputes.slashing.PendingSlashes rpcResult = await rpcClient.GetUnappliedSlashes(mockupKey);
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.slashing.PendingSlashes rpcResult = await rpcClient.GetUnappliedSlashes(mockupKey);
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());

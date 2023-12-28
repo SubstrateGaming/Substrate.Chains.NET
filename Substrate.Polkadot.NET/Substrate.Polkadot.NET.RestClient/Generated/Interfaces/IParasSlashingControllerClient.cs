@@ -11,7 +11,7 @@ namespace Substrate.Polkadot.NET.RestClient.Generated.Interfaces
 {
    using System;
    using System.Threading.Tasks;
-   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.disputes.slashing;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.slashing;
    using Substrate.NetApi.Model.Types.Primitive;
    
    public interface IParasSlashingControllerClient

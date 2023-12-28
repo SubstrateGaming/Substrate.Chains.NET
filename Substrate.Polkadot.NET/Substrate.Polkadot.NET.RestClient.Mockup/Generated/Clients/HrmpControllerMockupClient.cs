@@ -14,7 +14,7 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup.Generated.Clients
    using System.Net.Http;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.hrmp;
    using Substrate.NetApi.Model.Types.Base;
-   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives;
    using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_core_primitives;
    using Substrate.Polkadot.NET.RestClient.Mockup.Generated.Interfaces;

@@ -225,7 +225,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Controller
         ///  Metadata for the pool.
         /// </summary>
         [HttpGet("Metadata")]
-        [ProducesResponseType(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT37), 200)]
+        [ProducesResponseType(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT32), 200)]
         [StorageKeyBuilder(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Storage.NominationPoolsStorage), "MetadataParams", typeof(Substrate.NetApi.Model.Types.Primitive.U32))]
         public IActionResult GetMetadata(string key)
         {

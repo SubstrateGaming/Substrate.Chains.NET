@@ -42,7 +42,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Controller
         ///  Validators pending dispute slashes.
         /// </summary>
         [HttpGet("UnappliedSlashes")]
-        [ProducesResponseType(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.disputes.slashing.PendingSlashes), 200)]
+        [ProducesResponseType(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.slashing.PendingSlashes), 200)]
         [StorageKeyBuilder(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParasSlashingStorage), "UnappliedSlashesParams", typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_core_primitives.CandidateHash>))]
         public IActionResult GetUnappliedSlashes(string key)
         {

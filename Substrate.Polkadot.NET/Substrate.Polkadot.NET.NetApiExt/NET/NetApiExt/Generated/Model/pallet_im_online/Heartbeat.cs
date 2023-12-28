@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_im_online
     
     
     /// <summary>
-    /// >> 132 - Composite[pallet_im_online.Heartbeat]
+    /// >> 120 - Composite[pallet_im_online.Heartbeat]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Heartbeat : BaseType
@@ -28,11 +28,6 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_im_online
         /// >> block_number
         /// </summary>
         private Substrate.NetApi.Model.Types.Primitive.U32 _blockNumber;
-        
-        /// <summary>
-        /// >> network_state
-        /// </summary>
-        private Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.offchain.OpaqueNetworkState _networkState;
         
         /// <summary>
         /// >> session_index
@@ -58,18 +53,6 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_im_online
             set
             {
                 this._blockNumber = value;
-            }
-        }
-        
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.offchain.OpaqueNetworkState NetworkState
-        {
-            get
-            {
-                return this._networkState;
-            }
-            set
-            {
-                this._networkState = value;
             }
         }
         
@@ -118,7 +101,6 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_im_online
         {
             var result = new List<byte>();
             result.AddRange(BlockNumber.Encode());
-            result.AddRange(NetworkState.Encode());
             result.AddRange(SessionIndex.Encode());
             result.AddRange(AuthorityIndex.Encode());
             result.AddRange(ValidatorsLen.Encode());
@@ -130,8 +112,6 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_im_online
             var start = p;
             BlockNumber = new Substrate.NetApi.Model.Types.Primitive.U32();
             BlockNumber.Decode(byteArray, ref p);
-            NetworkState = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.offchain.OpaqueNetworkState();
-            NetworkState.Decode(byteArray, ref p);
             SessionIndex = new Substrate.NetApi.Model.Types.Primitive.U32();
             SessionIndex.Decode(byteArray, ref p);
             AuthorityIndex = new Substrate.NetApi.Model.Types.Primitive.U32();

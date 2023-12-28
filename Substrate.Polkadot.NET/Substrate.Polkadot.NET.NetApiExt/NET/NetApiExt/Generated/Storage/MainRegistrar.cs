@@ -31,17 +31,17 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         {
             this._client = client;
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Registrar", "PendingSwap"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id), typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id), typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Registrar", "Paras"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id), typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_common.paras_registrar.ParaInfo)));
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("Registrar", "NextFreeParaId"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id), typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_common.paras_registrar.ParaInfo)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("Registrar", "NextFreeParaId"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id)));
         }
         
         /// <summary>
         /// >> PendingSwapParams
         ///  Pending swap operations.
         /// </summary>
-        public static string PendingSwapParams(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id key)
+        public static string PendingSwapParams(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key)
         {
             return RequestGenerator.GetStorage("Registrar", "PendingSwap", Substrate.NetApi.Model.Meta.Storage.Type.Map, new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                         Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, new Substrate.NetApi.Model.Types.IType[] {
@@ -61,10 +61,10 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         /// >> PendingSwap
         ///  Pending swap operations.
         /// </summary>
-        public async Task<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id> PendingSwap(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id key, CancellationToken token)
+        public async Task<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id> PendingSwap(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key, CancellationToken token)
         {
             string parameters = RegistrarStorage.PendingSwapParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id>(parameters, token);
             return result;
         }
         
@@ -72,10 +72,10 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         /// >> ParasParams
         ///  Amount held on deposit for each para and the original depositor.
         /// 
-        ///  The given account ID is responsible for registering the code and initial head data, but may only do
-        ///  so if it isn't yet registered. (After that, it's up to governance to do so.)
+        ///  The given account ID is responsible for registering the code and initial head data, but may
+        ///  only do so if it isn't yet registered. (After that, it's up to governance to do so.)
         /// </summary>
-        public static string ParasParams(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id key)
+        public static string ParasParams(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key)
         {
             return RequestGenerator.GetStorage("Registrar", "Paras", Substrate.NetApi.Model.Meta.Storage.Type.Map, new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                         Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, new Substrate.NetApi.Model.Types.IType[] {
@@ -95,10 +95,10 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         /// >> Paras
         ///  Amount held on deposit for each para and the original depositor.
         /// 
-        ///  The given account ID is responsible for registering the code and initial head data, but may only do
-        ///  so if it isn't yet registered. (After that, it's up to governance to do so.)
+        ///  The given account ID is responsible for registering the code and initial head data, but may
+        ///  only do so if it isn't yet registered. (After that, it's up to governance to do so.)
         /// </summary>
-        public async Task<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_common.paras_registrar.ParaInfo> Paras(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id key, CancellationToken token)
+        public async Task<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_common.paras_registrar.ParaInfo> Paras(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key, CancellationToken token)
         {
             string parameters = RegistrarStorage.ParasParams(key);
             var result = await _client.GetStorageAsync<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_common.paras_registrar.ParaInfo>(parameters, token);
@@ -127,10 +127,10 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         /// >> NextFreeParaId
         ///  The next free `ParaId`.
         /// </summary>
-        public async Task<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id> NextFreeParaId(CancellationToken token)
+        public async Task<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id> NextFreeParaId(CancellationToken token)
         {
             string parameters = RegistrarStorage.NextFreeParaIdParams();
-            var result = await _client.GetStorageAsync<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id>(parameters, token);
             return result;
         }
     }
@@ -140,9 +140,9 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> register
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method Register(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id id, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.HeadData genesis_head, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.ValidationCode validation_code)
+        public static Method Register(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id id, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.HeadData genesis_head, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCode validation_code)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(id.Encode());
@@ -153,9 +153,9 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> force_register
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method ForceRegister(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 who, Substrate.NetApi.Model.Types.Primitive.U128 deposit, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id id, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.HeadData genesis_head, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.ValidationCode validation_code)
+        public static Method ForceRegister(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 who, Substrate.NetApi.Model.Types.Primitive.U128 deposit, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id id, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.HeadData genesis_head, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCode validation_code)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(who.Encode());
@@ -168,9 +168,9 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> deregister
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method Deregister(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id id)
+        public static Method Deregister(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id id)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(id.Encode());
@@ -179,9 +179,9 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> swap
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method Swap(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id id, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id other)
+        public static Method Swap(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id id, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id other)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(id.Encode());
@@ -191,9 +191,9 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> remove_lock
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method RemoveLock(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id para)
+        public static Method RemoveLock(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id para)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(para.Encode());
@@ -202,7 +202,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> reserve
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method Reserve()
         {
@@ -212,9 +212,9 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> add_lock
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method AddLock(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id para)
+        public static Method AddLock(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id para)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(para.Encode());
@@ -223,9 +223,9 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> schedule_code_upgrade
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method ScheduleCodeUpgrade(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id para, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.ValidationCode new_code)
+        public static Method ScheduleCodeUpgrade(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id para, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCode new_code)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(para.Encode());
@@ -235,9 +235,9 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> set_current_head
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method SetCurrentHead(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id para, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.HeadData new_head)
+        public static Method SetCurrentHead(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id para, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.HeadData new_head)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(para.Encode());
@@ -251,7 +251,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> ParaDeposit
-        ///  The deposit to be paid to run a parathread.
+        ///  The deposit to be paid to run a on-demand parachain.
         ///  This should include the cost for storing the genesis head and validation code.
         /// </summary>
         public Substrate.NetApi.Model.Types.Primitive.U128 ParaDeposit()
@@ -314,7 +314,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> NotParathread
-        /// Para is not a Parathread.
+        /// Para is not a Parathread (on-demand parachain).
         /// </summary>
         NotParathread,
         
@@ -326,19 +326,20 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> CannotDowngrade
-        /// Cannot schedule downgrade of parachain to parathread
+        /// Cannot schedule downgrade of lease holding parachain to on-demand parachain
         /// </summary>
         CannotDowngrade,
         
         /// <summary>
         /// >> CannotUpgrade
-        /// Cannot schedule upgrade of parathread to parachain
+        /// Cannot schedule upgrade of on-demand parachain to lease holding parachain
         /// </summary>
         CannotUpgrade,
         
         /// <summary>
         /// >> ParaLocked
-        /// Para is locked from manipulation by the manager. Must use parachain or relay chain governance.
+        /// Para is locked from manipulation by the manager. Must use parachain or relay chain
+        /// governance.
         /// </summary>
         ParaLocked,
         
@@ -356,8 +357,8 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> CannotSwap
-        /// Cannot perform a parachain slot / lifecycle swap. Check that the state of both paras are
-        /// correct for the swap to work.
+        /// Cannot perform a parachain slot / lifecycle swap. Check that the state of both paras
+        /// are correct for the swap to work.
         /// </summary>
         CannotSwap,
     }

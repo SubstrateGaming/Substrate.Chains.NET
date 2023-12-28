@@ -32,11 +32,8 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_para
     }
     
     /// <summary>
-    /// >> 786 - Variant[polkadot_runtime_parachains.disputes.slashing.pallet.Error]
-    /// 
-    ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
-    ///			of this pallet.
-    ///			
+    /// >> 731 - Variant[polkadot_runtime_parachains.disputes.slashing.pallet.Error]
+    /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>
     {

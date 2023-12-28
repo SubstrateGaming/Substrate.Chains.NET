@@ -22,8 +22,8 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_im_online.pall
     }
     
     /// <summary>
-    /// >> 131 - Variant[pallet_im_online.pallet.Call]
-    /// Contains one variant per dispatchable that can be called by an extrinsic.
+    /// >> 119 - Variant[pallet_im_online.pallet.Call]
+    /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
     public sealed class EnumCall : BaseEnumExt<Call, BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_im_online.Heartbeat, Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_im_online.sr25519.app_sr25519.Signature>>
     {

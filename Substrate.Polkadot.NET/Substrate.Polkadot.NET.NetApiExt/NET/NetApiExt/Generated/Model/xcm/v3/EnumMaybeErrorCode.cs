@@ -26,7 +26,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.v3
     }
     
     /// <summary>
-    /// >> 419 - Variant[xcm.v3.MaybeErrorCode]
+    /// >> 395 - Variant[xcm.v3.MaybeErrorCode]
     /// </summary>
     public sealed class EnumMaybeErrorCode : BaseEnumExt<MaybeErrorCode, BaseVoid, Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT6, Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT6>
     {

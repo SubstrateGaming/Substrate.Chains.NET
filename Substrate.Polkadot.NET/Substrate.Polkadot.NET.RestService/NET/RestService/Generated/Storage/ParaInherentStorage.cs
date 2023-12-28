@@ -39,7 +39,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// >> OnChainVotes
         ///  Scraped on chain data for extracting resolved disputes as well as backing votes.
         /// </summary>
-        Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.ScrapedOnChainVotes GetOnChainVotes();
+        Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.ScrapedOnChainVotes GetOnChainVotes();
     }
     
     /// <summary>
@@ -56,7 +56,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// <summary>
         /// _onChainVotesTypedStorage typed storage field
         /// </summary>
-        private TypedStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.ScrapedOnChainVotes> _onChainVotesTypedStorage;
+        private TypedStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.ScrapedOnChainVotes> _onChainVotesTypedStorage;
         
         /// <summary>
         /// ParaInherentStorage constructor.
@@ -64,7 +64,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         public ParaInherentStorage(IStorageDataProvider storageDataProvider, List<IStorageChangeDelegate> storageChangeDelegates)
         {
             this.IncludedTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Base.BaseTuple>("ParaInherent.Included", storageDataProvider, storageChangeDelegates);
-            this.OnChainVotesTypedStorage = new TypedStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.ScrapedOnChainVotes>("ParaInherent.OnChainVotes", storageDataProvider, storageChangeDelegates);
+            this.OnChainVotesTypedStorage = new TypedStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.ScrapedOnChainVotes>("ParaInherent.OnChainVotes", storageDataProvider, storageChangeDelegates);
         }
         
         /// <summary>
@@ -85,7 +85,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// <summary>
         /// _onChainVotesTypedStorage property
         /// </summary>
-        public TypedStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.ScrapedOnChainVotes> OnChainVotesTypedStorage
+        public TypedStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.ScrapedOnChainVotes> OnChainVotesTypedStorage
         {
             get
             {
@@ -142,7 +142,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// >> OnChainVotes
         ///  Scraped on chain data for extracting resolved disputes as well as backing votes.
         /// </summary>
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.ScrapedOnChainVotes GetOnChainVotes()
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.ScrapedOnChainVotes GetOnChainVotes()
         {
             return OnChainVotesTypedStorage.Get();
         }

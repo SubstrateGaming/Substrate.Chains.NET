@@ -27,27 +27,27 @@ namespace Substrate.Polkadot.NET.RestClient.Generated.Clients
          _httpClient = httpClient;
          _subscriptionClient = subscriptionClient;
       }
-      public async Task<BaseVec<InboundDownwardMessage>> GetDownwardMessageQueues(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id key)
+      public async Task<BaseVec<InboundDownwardMessage>> GetDownwardMessageQueues(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key)
       {
          return await SendRequestAsync<BaseVec<InboundDownwardMessage>>(_httpClient, "dmp/downwardmessagequeues", Substrate.Polkadot.NET.NetApiExt.Generated.Storage.DmpStorage.DownwardMessageQueuesParams(key));
       }
-      public async Task<bool> SubscribeDownwardMessageQueues(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id key)
+      public async Task<bool> SubscribeDownwardMessageQueues(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key)
       {
          return await _subscriptionClient.SubscribeAsync("Dmp.DownwardMessageQueues", Substrate.Polkadot.NET.NetApiExt.Generated.Storage.DmpStorage.DownwardMessageQueuesParams(key));
       }
-      public async Task<H256> GetDownwardMessageQueueHeads(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id key)
+      public async Task<H256> GetDownwardMessageQueueHeads(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key)
       {
          return await SendRequestAsync<H256>(_httpClient, "dmp/downwardmessagequeueheads", Substrate.Polkadot.NET.NetApiExt.Generated.Storage.DmpStorage.DownwardMessageQueueHeadsParams(key));
       }
-      public async Task<bool> SubscribeDownwardMessageQueueHeads(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id key)
+      public async Task<bool> SubscribeDownwardMessageQueueHeads(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key)
       {
          return await _subscriptionClient.SubscribeAsync("Dmp.DownwardMessageQueueHeads", Substrate.Polkadot.NET.NetApiExt.Generated.Storage.DmpStorage.DownwardMessageQueueHeadsParams(key));
       }
-      public async Task<FixedU128> GetDeliveryFeeFactor(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id key)
+      public async Task<FixedU128> GetDeliveryFeeFactor(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key)
       {
          return await SendRequestAsync<FixedU128>(_httpClient, "dmp/deliveryfeefactor", Substrate.Polkadot.NET.NetApiExt.Generated.Storage.DmpStorage.DeliveryFeeFactorParams(key));
       }
-      public async Task<bool> SubscribeDeliveryFeeFactor(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id key)
+      public async Task<bool> SubscribeDeliveryFeeFactor(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key)
       {
          return await _subscriptionClient.SubscribeAsync("Dmp.DeliveryFeeFactor", Substrate.Polkadot.NET.NetApiExt.Generated.Storage.DmpStorage.DeliveryFeeFactorParams(key));
       }

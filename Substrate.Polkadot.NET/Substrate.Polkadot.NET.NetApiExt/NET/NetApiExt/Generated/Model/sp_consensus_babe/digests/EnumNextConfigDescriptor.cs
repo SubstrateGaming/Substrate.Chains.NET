@@ -22,7 +22,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_consensus_babe.dig
     }
     
     /// <summary>
-    /// >> 95 - Variant[sp_consensus_babe.digests.NextConfigDescriptor]
+    /// >> 83 - Variant[sp_consensus_babe.digests.NextConfigDescriptor]
     /// </summary>
     public sealed class EnumNextConfigDescriptor : BaseEnumExt<NextConfigDescriptor, BaseVoid, BaseTuple<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U64, Substrate.NetApi.Model.Types.Primitive.U64>, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_consensus_babe.EnumAllowedSlots>>
     {

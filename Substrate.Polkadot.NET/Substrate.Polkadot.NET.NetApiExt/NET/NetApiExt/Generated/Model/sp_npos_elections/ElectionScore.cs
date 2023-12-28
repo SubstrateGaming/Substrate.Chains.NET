@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_npos_elections
     
     
     /// <summary>
-    /// >> 289 - Composite[sp_npos_elections.ElectionScore]
+    /// >> 262 - Composite[sp_npos_elections.ElectionScore]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class ElectionScore : BaseType

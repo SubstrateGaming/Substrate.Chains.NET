@@ -32,7 +32,7 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "Auctions/AuctionInfo", value.Encode(), Substrate.Polkadot.NET.NetApiExt.Generated.Storage.AuctionsStorage.AuctionInfoParams());
       }
-      public async Task<bool> SetReservedAmounts(U128 value, BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id> key)
+      public async Task<bool> SetReservedAmounts(U128 value, BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id> key)
       {
          return await SendMockupRequestAsync(_httpClient, "Auctions/ReservedAmounts", value.Encode(), Substrate.Polkadot.NET.NetApiExt.Generated.Storage.AuctionsStorage.ReservedAmountsParams(key));
       }

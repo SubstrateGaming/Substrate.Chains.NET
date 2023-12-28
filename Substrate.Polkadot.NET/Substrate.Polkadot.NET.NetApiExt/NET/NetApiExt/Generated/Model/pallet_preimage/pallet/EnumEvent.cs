@@ -27,10 +27,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_preimage.palle
     
     /// <summary>
     /// >> 35 - Variant[pallet_preimage.pallet.Event]
-    /// 
-    ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
-    ///			by this pallet.
-    ///			
+    /// The `Event` enum of this pallet
     /// </summary>
     public sealed class EnumEvent : BaseEnumExt<Event, Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256>
     {

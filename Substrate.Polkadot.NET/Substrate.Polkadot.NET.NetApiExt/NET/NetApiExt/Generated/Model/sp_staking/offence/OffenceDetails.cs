@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_staking.offence
     
     
     /// <summary>
-    /// >> 558 - Composite[sp_staking.offence.OffenceDetails]
+    /// >> 537 - Composite[sp_staking.offence.OffenceDetails]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class OffenceDetails : BaseType

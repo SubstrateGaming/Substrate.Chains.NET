@@ -28,7 +28,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_child_bounties
     }
     
     /// <summary>
-    /// >> 678 - Variant[pallet_child_bounties.ChildBountyStatus]
+    /// >> 624 - Variant[pallet_child_bounties.ChildBountyStatus]
     /// </summary>
     public sealed class EnumChildBountyStatus : BaseEnumExt<ChildBountyStatus, BaseVoid, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U32>>
     {

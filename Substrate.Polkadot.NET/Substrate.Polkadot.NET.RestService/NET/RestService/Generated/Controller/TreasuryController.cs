@@ -78,7 +78,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Controller
         ///  Proposal indices that have been approved but not yet awarded.
         /// </summary>
         [HttpGet("Approvals")]
-        [ProducesResponseType(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT23), 200)]
+        [ProducesResponseType(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18), 200)]
         [StorageKeyBuilder(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Storage.TreasuryStorage), "ApprovalsParams")]
         public IActionResult GetApprovals()
         {

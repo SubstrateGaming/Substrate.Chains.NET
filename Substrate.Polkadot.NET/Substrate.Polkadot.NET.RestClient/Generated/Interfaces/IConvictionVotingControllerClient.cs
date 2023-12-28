@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.RestClient.Generated.Interfaces
    {
       Task<EnumVoting> GetVotingFor(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U16> key);
       Task<bool> SubscribeVotingFor(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U16> key);
-      Task<BoundedVecT25> GetClassLocksFor(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
+      Task<BoundedVecT20> GetClassLocksFor(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
       Task<bool> SubscribeClassLocksFor(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
    }
 }

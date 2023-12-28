@@ -32,8 +32,8 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_scheduler.pall
     }
     
     /// <summary>
-    /// >> 84 - Variant[pallet_scheduler.pallet.Call]
-    /// Contains one variant per dispatchable that can be called by an extrinsic.
+    /// >> 73 - Variant[pallet_scheduler.pallet.Call]
+    /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
     public sealed class EnumCall : BaseEnumExt<Call, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>>, Substrate.NetApi.Model.Types.Primitive.U8, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime.EnumRuntimeCall>, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>, BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base.Arr32U8, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>>, Substrate.NetApi.Model.Types.Primitive.U8, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime.EnumRuntimeCall>, Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base.Arr32U8, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>>, Substrate.NetApi.Model.Types.Primitive.U8, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime.EnumRuntimeCall>, BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base.Arr32U8, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>>, Substrate.NetApi.Model.Types.Primitive.U8, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime.EnumRuntimeCall>>
     {

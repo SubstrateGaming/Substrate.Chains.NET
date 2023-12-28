@@ -24,11 +24,11 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup.Generated.Clients
       {
          _httpClient = httpClient;
       }
-      public async Task<bool> SetProxies(BaseTuple<BoundedVecT31, U128> value, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+      public async Task<bool> SetProxies(BaseTuple<BoundedVecT26, U128> value, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {
          return await SendMockupRequestAsync(_httpClient, "Proxy/Proxies", value.Encode(), Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ProxyStorage.ProxiesParams(key));
       }
-      public async Task<bool> SetAnnouncements(BaseTuple<BoundedVecT32, U128> value, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+      public async Task<bool> SetAnnouncements(BaseTuple<BoundedVecT27, U128> value, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {
          return await SendMockupRequestAsync(_httpClient, "Proxy/Announcements", value.Encode(), Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ProxyStorage.AnnouncementsParams(key));
       }

@@ -24,11 +24,8 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_bags_list.pall
     }
     
     /// <summary>
-    /// >> 459 - Variant[pallet_bags_list.pallet.Event]
-    /// 
-    ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
-    ///			by this pallet.
-    ///			
+    /// >> 434 - Variant[pallet_bags_list.pallet.Event]
+    /// The `Event` enum of this pallet
     /// </summary>
     public sealed class EnumEvent : BaseEnumExt<Event, BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U64, Substrate.NetApi.Model.Types.Primitive.U64>, BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U64>>
     {

@@ -46,10 +46,10 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
                   this.GetTestValueU8()});
          return result;
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id GetTestValue4()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id GetTestValue4()
       {
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id result;
-         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id();
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id result;
+         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id();
          result.Value = this.GetTestValueU32();
          return result;
       }
@@ -65,7 +65,7 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
          // Construct new RPC client to test with.
          DmpControllerClient rpcClient = new DmpControllerClient(_httpClient, subscriptionClient);
          Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_core_primitives.InboundDownwardMessage> mockupValue = this.GetTestValue2();
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id mockupKey = this.GetTestValue4();
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id mockupKey = this.GetTestValue4();
 
          Assert.IsTrue(await rpcClient.SubscribeDownwardMessageQueues(mockupKey));
 
@@ -122,10 +122,10 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
                   this.GetTestValueU8()});
          return result;
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id GetTestValue7()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id GetTestValue7()
       {
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id result;
-         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id();
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id result;
+         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id();
          result.Value = this.GetTestValueU32();
          return result;
       }
@@ -141,7 +141,7 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
          // Construct new RPC client to test with.
          DmpControllerClient rpcClient = new DmpControllerClient(_httpClient, subscriptionClient);
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256 mockupValue = this.GetTestValue6();
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id mockupKey = this.GetTestValue7();
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id mockupKey = this.GetTestValue7();
 
          Assert.IsTrue(await rpcClient.SubscribeDownwardMessageQueueHeads(mockupKey));
 
@@ -165,10 +165,10 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
          result.Value = this.GetTestValueU128();
          return result;
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id GetTestValue10()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id GetTestValue10()
       {
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id result;
-         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id();
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id result;
+         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id();
          result.Value = this.GetTestValueU32();
          return result;
       }
@@ -184,7 +184,7 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
          // Construct new RPC client to test with.
          DmpControllerClient rpcClient = new DmpControllerClient(_httpClient, subscriptionClient);
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedU128 mockupValue = this.GetTestValue9();
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id mockupKey = this.GetTestValue10();
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id mockupKey = this.GetTestValue10();
 
          Assert.IsTrue(await rpcClient.SubscribeDeliveryFeeFactor(mockupKey));
 

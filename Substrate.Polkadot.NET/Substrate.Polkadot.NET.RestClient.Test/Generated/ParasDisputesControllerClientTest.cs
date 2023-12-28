@@ -16,7 +16,7 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
    using Substrate.Polkadot.NET.RestClient.Mockup.Generated.Clients;
    using Substrate.Polkadot.NET.RestClient.Generated.Clients;
    using Substrate.NetApi.Model.Types.Primitive;
-   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base;
    using Substrate.NetApi.Model.Types.Base;
    
@@ -57,10 +57,10 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.DisputeState GetTestValue3()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.DisputeState GetTestValue3()
       {
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.DisputeState result;
-         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.DisputeState();
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.DisputeState result;
+         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.DisputeState();
          result.ValidatorsFor = new Substrate.NetApi.Model.Types.Base.BaseBitSeq<Substrate.NetApi.Model.Types.Primitive.U8, Substrate.Polkadot.NET.NetApiExt.Generated.Model.bitvec.order.Lsb0>();
          result.ValidatorsFor = this.GetTestValue4();
          result.ValidatorsAgainst = new Substrate.NetApi.Model.Types.Base.BaseBitSeq<Substrate.NetApi.Model.Types.Primitive.U8, Substrate.Polkadot.NET.NetApiExt.Generated.Model.bitvec.order.Lsb0>();
@@ -74,14 +74,14 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
       {
          Substrate.NetApi.Model.Types.Base.BaseBitSeq<Substrate.NetApi.Model.Types.Primitive.U8, Substrate.Polkadot.NET.NetApiExt.Generated.Model.bitvec.order.Lsb0> result;
          result = new Substrate.NetApi.Model.Types.Base.BaseBitSeq<Substrate.NetApi.Model.Types.Primitive.U8, Substrate.Polkadot.NET.NetApiExt.Generated.Model.bitvec.order.Lsb0>();
-         // NOT IMPLEMENTED >> Initialize Substrate.NetApi.Model.Types.Base.BaseBitSeq`2[[Substrate.NetApi.Model.Types.Primitive.U8, Substrate.NetApi, Version=0.9.7.0, Culture=neutral, PublicKeyToken=null],[Substrate.Polkadot.NET.NetApiExt.Generated.Model.bitvec.order.Lsb0, Substrate.Polkadot.NET.NetApiExt, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+         // NOT IMPLEMENTED >> Initialize Substrate.NetApi.Model.Types.Base.BaseBitSeq`2[[Substrate.NetApi.Model.Types.Primitive.U8, Substrate.NetApi, Version=0.9.14.0, Culture=neutral, PublicKeyToken=null],[Substrate.Polkadot.NET.NetApiExt.Generated.Model.bitvec.order.Lsb0, Substrate.Polkadot.NET.NetApiExt, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
          return result;
       }
       public Substrate.NetApi.Model.Types.Base.BaseBitSeq<Substrate.NetApi.Model.Types.Primitive.U8, Substrate.Polkadot.NET.NetApiExt.Generated.Model.bitvec.order.Lsb0> GetTestValue5()
       {
          Substrate.NetApi.Model.Types.Base.BaseBitSeq<Substrate.NetApi.Model.Types.Primitive.U8, Substrate.Polkadot.NET.NetApiExt.Generated.Model.bitvec.order.Lsb0> result;
          result = new Substrate.NetApi.Model.Types.Base.BaseBitSeq<Substrate.NetApi.Model.Types.Primitive.U8, Substrate.Polkadot.NET.NetApiExt.Generated.Model.bitvec.order.Lsb0>();
-         // NOT IMPLEMENTED >> Initialize Substrate.NetApi.Model.Types.Base.BaseBitSeq`2[[Substrate.NetApi.Model.Types.Primitive.U8, Substrate.NetApi, Version=0.9.7.0, Culture=neutral, PublicKeyToken=null],[Substrate.Polkadot.NET.NetApiExt.Generated.Model.bitvec.order.Lsb0, Substrate.Polkadot.NET.NetApiExt, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+         // NOT IMPLEMENTED >> Initialize Substrate.NetApi.Model.Types.Base.BaseBitSeq`2[[Substrate.NetApi.Model.Types.Primitive.U8, Substrate.NetApi, Version=0.9.14.0, Culture=neutral, PublicKeyToken=null],[Substrate.Polkadot.NET.NetApiExt.Generated.Model.bitvec.order.Lsb0, Substrate.Polkadot.NET.NetApiExt, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
          return result;
       }
       public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_core_primitives.CandidateHash> GetTestValue6()
@@ -150,7 +150,7 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          ParasDisputesControllerClient rpcClient = new ParasDisputesControllerClient(_httpClient, subscriptionClient);
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.DisputeState mockupValue = this.GetTestValue3();
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.DisputeState mockupValue = this.GetTestValue3();
          Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_core_primitives.CandidateHash> mockupKey = this.GetTestValue6();
 
          Assert.IsTrue(await rpcClient.SubscribeDisputes(mockupKey));
@@ -163,7 +163,7 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.DisputeState rpcResult = await rpcClient.GetDisputes(mockupKey);
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.DisputeState rpcResult = await rpcClient.GetDisputes(mockupKey);
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
@@ -172,15 +172,15 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
       {
          Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base.BTreeSet result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base.BTreeSet();
-         result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.ValidatorIndex>();
-         result.Value.Create(new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.ValidatorIndex[] {
+         result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.ValidatorIndex>();
+         result.Value.Create(new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.ValidatorIndex[] {
                   this.GetTestValue11()});
          return result;
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.ValidatorIndex GetTestValue11()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.ValidatorIndex GetTestValue11()
       {
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.ValidatorIndex result;
-         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.ValidatorIndex();
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.ValidatorIndex result;
+         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.ValidatorIndex();
          result.Value = this.GetTestValueU32();
          return result;
       }

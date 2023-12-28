@@ -24,9 +24,9 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.v3.multiasset
     }
     
     /// <summary>
-    /// >> 408 - Variant[xcm.v3.multiasset.AssetId]
+    /// >> 384 - Variant[xcm.v3.multiasset.AssetId]
     /// </summary>
-    public sealed class EnumAssetId : BaseEnumExt<AssetId, Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.v3.multilocation.MultiLocation, Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base.Arr32U8>
+    public sealed class EnumAssetId : BaseEnumExt<AssetId, Substrate.Polkadot.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation, Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base.Arr32U8>
     {
     }
 }
