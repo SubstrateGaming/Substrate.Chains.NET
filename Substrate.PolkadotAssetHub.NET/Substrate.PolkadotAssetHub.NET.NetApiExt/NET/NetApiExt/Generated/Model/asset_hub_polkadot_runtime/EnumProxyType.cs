@@ -11,20 +11,32 @@ using Substrate.NetApi.Model.Types.Base;
 using System.Collections.Generic;
 
 
-namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v4
+namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.asset_hub_polkadot_runtime
 {
     
     
-    public enum UpgradeRestriction
+    public enum ProxyType
     {
         
-        Present = 0,
+        Any = 0,
+        
+        NonTransfer = 1,
+        
+        CancelProxy = 2,
+        
+        Assets = 3,
+        
+        AssetOwner = 4,
+        
+        AssetManager = 5,
+        
+        Collator = 6,
     }
     
     /// <summary>
-    /// >> 149 - Variant[polkadot_primitives.v4.UpgradeRestriction]
+    /// >> 107 - Variant[asset_hub_polkadot_runtime.ProxyType]
     /// </summary>
-    public sealed class EnumUpgradeRestriction : BaseEnum<UpgradeRestriction>
+    public sealed class EnumProxyType : BaseEnum<ProxyType>
     {
     }
 }

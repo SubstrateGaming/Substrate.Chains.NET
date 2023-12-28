@@ -72,7 +72,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestService.Generated.Storage
         ///  These message stay in this storage map until they are manually dispatched via
         ///  `service_overweight`.
         /// </summary>
-        Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>> GetOverweight(string key);
+        Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>> GetOverweight(string key);
         
         /// <summary>
         /// >> CounterForOverweight
@@ -133,7 +133,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestService.Generated.Storage
         /// <summary>
         /// _overweightTypedStorage typed storage field
         /// </summary>
-        private TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>> _overweightTypedStorage;
+        private TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>> _overweightTypedStorage;
         
         /// <summary>
         /// _counterForOverweightTypedStorage typed storage field
@@ -161,7 +161,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestService.Generated.Storage
             this.OutboundXcmpMessagesTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>("XcmpQueue.OutboundXcmpMessages", storageDataProvider, storageChangeDelegates);
             this.SignalMessagesTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>("XcmpQueue.SignalMessages", storageDataProvider, storageChangeDelegates);
             this.QueueConfigTypedStorage = new TypedStorage<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue.QueueConfigData>("XcmpQueue.QueueConfig", storageDataProvider, storageChangeDelegates);
-            this.OverweightTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>>("XcmpQueue.Overweight", storageDataProvider, storageChangeDelegates);
+            this.OverweightTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>>("XcmpQueue.Overweight", storageDataProvider, storageChangeDelegates);
             this.CounterForOverweightTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32>("XcmpQueue.CounterForOverweight", storageDataProvider, storageChangeDelegates);
             this.OverweightCountTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U64>("XcmpQueue.OverweightCount", storageDataProvider, storageChangeDelegates);
             this.QueueSuspendedTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.Bool>("XcmpQueue.QueueSuspended", storageDataProvider, storageChangeDelegates);
@@ -260,7 +260,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestService.Generated.Storage
         /// <summary>
         /// _overweightTypedStorage property
         /// </summary>
-        public TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>> OverweightTypedStorage
+        public TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>> OverweightTypedStorage
         {
             get
             {
@@ -496,13 +496,13 @@ namespace Substrate.PolkadotAssetHub.NET.RestService.Generated.Storage
         ///  These message stay in this storage map until they are manually dispatched via
         ///  `service_overweight`.
         /// </summary>
-        public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>> GetOverweight(string key)
+        public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>> GetOverweight(string key)
         {
             if ((key == null))
             {
                 return null;
             }
-            if (OverweightTypedStorage.Dictionary.TryGetValue(key, out Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>> result))
+            if (OverweightTypedStorage.Dictionary.TryGetValue(key, out Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>> result))
             {
                 return result;
             }

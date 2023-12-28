@@ -369,16 +369,17 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Test.Generated
       {
          Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9 result;
          result = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9();
-         result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_balances.types.IdAmount>();
-         result.Value.Create(new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_balances.types.IdAmount[] {
+         result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_balances.types.IdAmountT1>();
+         result.Value.Create(new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_balances.types.IdAmountT1[] {
                   this.GetTestValue17()});
          return result;
       }
-      public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_balances.types.IdAmount GetTestValue17()
+      public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_balances.types.IdAmountT1 GetTestValue17()
       {
-         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_balances.types.IdAmount result;
-         result = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_balances.types.IdAmount();
-         result.Id = new Substrate.NetApi.Model.Types.Base.BaseTuple();
+         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_balances.types.IdAmountT1 result;
+         result = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_balances.types.IdAmountT1();
+         result.Id = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.asset_hub_polkadot_runtime.EnumRuntimeHoldReason();
+         result.Id.Create(this.GetTestValueEnum<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.asset_hub_polkadot_runtime.RuntimeHoldReason>());
          result.Amount = this.GetTestValueU128();
          return result;
       }
@@ -451,19 +452,19 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9 GetTestValue20()
+      public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10 GetTestValue20()
       {
-         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9 result;
-         result = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9();
-         result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_balances.types.IdAmount>();
-         result.Value.Create(new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_balances.types.IdAmount[] {
+         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10 result;
+         result = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10();
+         result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_balances.types.IdAmountT2>();
+         result.Value.Create(new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_balances.types.IdAmountT2[] {
                   this.GetTestValue21()});
          return result;
       }
-      public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_balances.types.IdAmount GetTestValue21()
+      public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_balances.types.IdAmountT2 GetTestValue21()
       {
-         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_balances.types.IdAmount result;
-         result = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_balances.types.IdAmount();
+         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_balances.types.IdAmountT2 result;
+         result = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_balances.types.IdAmountT2();
          result.Id = new Substrate.NetApi.Model.Types.Base.BaseTuple();
          result.Amount = this.GetTestValueU128();
          return result;
@@ -519,7 +520,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          BalancesControllerClient rpcClient = new BalancesControllerClient(_httpClient, subscriptionClient);
-         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9 mockupValue = this.GetTestValue20();
+         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10 mockupValue = this.GetTestValue20();
          Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 mockupKey = this.GetTestValue22();
 
          Assert.IsTrue(await rpcClient.SubscribeFreezes(mockupKey));
@@ -532,7 +533,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Test.Generated
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9 rpcResult = await rpcClient.GetFreezes(mockupKey);
+         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10 rpcResult = await rpcClient.GetFreezes(mockupKey);
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());

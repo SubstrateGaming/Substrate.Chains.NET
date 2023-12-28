@@ -16,9 +16,9 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Generated.Interfaces
    
    public interface ICollatorSelectionControllerClient
    {
-      Task<BoundedVecT10> GetInvulnerables();
+      Task<BoundedVecT11> GetInvulnerables();
       Task<bool> SubscribeInvulnerables();
-      Task<BoundedVecT11> GetCandidates();
+      Task<BoundedVecT12> GetCandidates();
       Task<bool> SubscribeCandidates();
       Task<U32> GetLastAuthoredBlock(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
       Task<bool> SubscribeLastAuthoredBlock(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);

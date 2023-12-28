@@ -12,10 +12,15 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Generated.Interfaces
    using System;
    using System.Threading.Tasks;
    using Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
+   using Substrate.NetApi.Model.Types.Base;
+   using Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_consensus_slots;
+   using Substrate.NetApi.Model.Types.Primitive;
    
    public interface IAuraExtControllerClient
    {
-      Task<BoundedVecT12> GetAuthorities();
+      Task<BoundedVecT13> GetAuthorities();
       Task<bool> SubscribeAuthorities();
+      Task<BaseTuple<Slot, U32>> GetSlotInfo();
+      Task<bool> SubscribeSlotInfo();
    }
 }

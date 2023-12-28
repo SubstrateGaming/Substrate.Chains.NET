@@ -28,7 +28,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_nfts.t
     }
     
     /// <summary>
-    /// >> 372 - Variant[pallet_nfts.types.PalletFeature]
+    /// >> 388 - Variant[pallet_nfts.types.PalletFeature]
     /// </summary>
     public sealed class EnumPalletFeature : BaseEnum<PalletFeature>
     {

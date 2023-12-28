@@ -529,8 +529,8 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Test.Generated
          result = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.frame_system.EventRecord();
          result.Phase = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.frame_system.EnumPhase();
          result.Phase.Create(this.GetTestValueEnum<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.frame_system.Phase>(), this.GetTestValueU32());
-         result.Event = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.statemint_runtime.EnumRuntimeEvent();
-         result.Event.Create(this.GetTestValueEnum<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.statemint_runtime.RuntimeEvent>(), this.GetTestValue27());
+         result.Event = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.asset_hub_polkadot_runtime.EnumRuntimeEvent();
+         result.Event.Create(this.GetTestValueEnum<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.asset_hub_polkadot_runtime.RuntimeEvent>(), this.GetTestValue27());
          result.Topics = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.primitive_types.H256>();
          result.Topics.Create(new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.primitive_types.H256[] {
                   this.GetTestValue30()});

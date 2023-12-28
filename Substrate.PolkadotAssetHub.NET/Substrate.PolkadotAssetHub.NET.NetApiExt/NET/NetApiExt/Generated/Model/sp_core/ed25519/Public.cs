@@ -18,7 +18,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.ed255
     
     
     /// <summary>
-    /// >> 203 - Composite[sp_core.ed25519.Public]
+    /// >> 218 - Composite[sp_core.ed25519.Public]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Public : BaseType

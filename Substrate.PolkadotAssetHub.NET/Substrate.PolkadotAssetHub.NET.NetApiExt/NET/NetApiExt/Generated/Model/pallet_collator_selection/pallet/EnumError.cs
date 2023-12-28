@@ -20,31 +20,26 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_collat
         
         TooManyCandidates = 0,
         
-        TooFewCandidates = 1,
+        TooFewEligibleCollators = 1,
         
-        Unknown = 2,
+        AlreadyCandidate = 2,
         
-        Permission = 3,
+        NotCandidate = 3,
         
-        AlreadyCandidate = 4,
+        TooManyInvulnerables = 4,
         
-        NotCandidate = 5,
+        AlreadyInvulnerable = 5,
         
-        TooManyInvulnerables = 6,
+        NotInvulnerable = 6,
         
-        AlreadyInvulnerable = 7,
+        NoAssociatedValidatorId = 7,
         
-        NoAssociatedValidatorId = 8,
-        
-        ValidatorNotRegistered = 9,
+        ValidatorNotRegistered = 8,
     }
     
     /// <summary>
-    /// >> 198 - Variant[pallet_collator_selection.pallet.Error]
-    /// 
-    ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
-    ///			of this pallet.
-    ///			
+    /// >> 213 - Variant[pallet_collator_selection.pallet.Error]
+    /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>
     {

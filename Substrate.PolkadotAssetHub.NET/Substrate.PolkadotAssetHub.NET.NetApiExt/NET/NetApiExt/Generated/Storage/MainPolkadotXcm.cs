@@ -45,14 +45,14 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("PolkadotXcm", "VersionNotifyTargets"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat,
                             Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation>), typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U64, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight, Substrate.NetApi.Model.Types.Primitive.U32>)));
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("PolkadotXcm", "VersionDiscoveryQueue"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT13)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("PolkadotXcm", "VersionDiscoveryQueue"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT14)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("PolkadotXcm", "CurrentMigration"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_xcm.pallet.EnumVersionMigrationStage)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("PolkadotXcm", "RemoteLockedFungibles"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat,
                             Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat,
                             Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAssetId>), typeof(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_xcm.pallet.RemoteLockedFungibleRecord)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("PolkadotXcm", "LockedFungibles"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32), typeof(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT15)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32), typeof(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT16)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("PolkadotXcm", "XcmExecutionSuspended"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Primitive.Bool)));
         }
         
@@ -305,10 +305,10 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
         ///  the `u32` counter is the number of times that a send to the destination has been attempted,
         ///  which is used as a prioritization.
         /// </summary>
-        public async Task<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT13> VersionDiscoveryQueue(CancellationToken token)
+        public async Task<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT14> VersionDiscoveryQueue(CancellationToken token)
         {
             string parameters = PolkadotXcmStorage.VersionDiscoveryQueueParams();
-            var result = await _client.GetStorageAsync<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT13>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT14>(parameters, token);
             return result;
         }
         
@@ -397,10 +397,10 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
         /// >> LockedFungibles
         ///  Fungible assets which we know are locked on this chain.
         /// </summary>
-        public async Task<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT15> LockedFungibles(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, CancellationToken token)
+        public async Task<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT16> LockedFungibles(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, CancellationToken token)
         {
             string parameters = PolkadotXcmStorage.LockedFungiblesParams(key);
-            var result = await _client.GetStorageAsync<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT15>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT16>(parameters, token);
             return result;
         }
         
@@ -439,7 +439,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> send
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method Send(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation dest, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.EnumVersionedXcm message)
         {
@@ -451,7 +451,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> teleport_assets
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method TeleportAssets(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation dest, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation beneficiary, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiAssets assets, Substrate.NetApi.Model.Types.Primitive.U32 fee_asset_item)
         {
@@ -465,7 +465,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> reserve_transfer_assets
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method ReserveTransferAssets(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation dest, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation beneficiary, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiAssets assets, Substrate.NetApi.Model.Types.Primitive.U32 fee_asset_item)
         {
@@ -479,7 +479,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> execute
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method Execute(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.EnumVersionedXcm message, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight max_weight)
         {
@@ -491,19 +491,19 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> force_xcm_version
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method ForceXcmVersion(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v3.multilocation.MultiLocation location, Substrate.NetApi.Model.Types.Primitive.U32 xcm_version)
+        public static Method ForceXcmVersion(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation location, Substrate.NetApi.Model.Types.Primitive.U32 version)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(location.Encode());
-            byteArray.AddRange(xcm_version.Encode());
+            byteArray.AddRange(version.Encode());
             return new Method(31, "PolkadotXcm", 4, "force_xcm_version", byteArray.ToArray());
         }
         
         /// <summary>
         /// >> force_default_xcm_version
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method ForceDefaultXcmVersion(Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32> maybe_xcm_version)
         {
@@ -514,7 +514,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> force_subscribe_version_notify
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method ForceSubscribeVersionNotify(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation location)
         {
@@ -525,7 +525,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> force_unsubscribe_version_notify
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method ForceUnsubscribeVersionNotify(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation location)
         {
@@ -536,7 +536,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> limited_reserve_transfer_assets
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method LimitedReserveTransferAssets(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation dest, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation beneficiary, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiAssets assets, Substrate.NetApi.Model.Types.Primitive.U32 fee_asset_item, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v3.EnumWeightLimit weight_limit)
         {
@@ -551,7 +551,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> limited_teleport_assets
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method LimitedTeleportAssets(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation dest, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation beneficiary, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiAssets assets, Substrate.NetApi.Model.Types.Primitive.U32 fee_asset_item, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v3.EnumWeightLimit weight_limit)
         {
@@ -566,7 +566,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> force_suspension
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method ForceSuspension(Substrate.NetApi.Model.Types.Primitive.Bool suspended)
         {
@@ -592,8 +592,8 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> SendFailure
-        /// There was some other issue (i.e. not to do with routing) in sending the message. Perhaps
-        /// a lack of space for buffering the message.
+        /// There was some other issue (i.e. not to do with routing) in sending the message.
+        /// Perhaps a lack of space for buffering the message.
         /// </summary>
         SendFailure,
         

@@ -13,12 +13,12 @@ using Substrate.NetApi.Model.Types.Metadata.V14;
 using System.Collections.Generic;
 
 
-namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v4
+namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v5
 {
     
     
     /// <summary>
-    /// >> 146 - Composite[polkadot_primitives.v4.PersistedValidationData]
+    /// >> 157 - Composite[polkadot_primitives.v5.PersistedValidationData]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class PersistedValidationData : BaseType
@@ -27,7 +27,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_prim
         /// <summary>
         /// >> parent_head
         /// </summary>
-        private Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.HeadData _parentHead;
+        private Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.HeadData _parentHead;
         
         /// <summary>
         /// >> relay_parent_number
@@ -44,7 +44,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_prim
         /// </summary>
         private Substrate.NetApi.Model.Types.Primitive.U32 _maxPovSize;
         
-        public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.HeadData ParentHead
+        public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.HeadData ParentHead
         {
             get
             {
@@ -110,7 +110,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_prim
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            ParentHead = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.HeadData();
+            ParentHead = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.HeadData();
             ParentHead.Decode(byteArray, ref p);
             RelayParentNumber = new Substrate.NetApi.Model.Types.Primitive.U32();
             RelayParentNumber.Decode(byteArray, ref p);

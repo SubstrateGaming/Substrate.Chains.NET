@@ -15,13 +15,13 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Generated.Interfaces
    
    public interface IForeignAssetsControllerClient
    {
-      Task<AssetDetails> GetAsset(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v3.multilocation.MultiLocation key);
-      Task<bool> SubscribeAsset(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v3.multilocation.MultiLocation key);
-      Task<AssetAccount> GetAccount(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v3.multilocation.MultiLocation, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> key);
-      Task<bool> SubscribeAccount(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v3.multilocation.MultiLocation, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> key);
-      Task<Approval> GetApprovals(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v3.multilocation.MultiLocation, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> key);
-      Task<bool> SubscribeApprovals(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v3.multilocation.MultiLocation, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> key);
-      Task<AssetMetadataT2> GetMetadata(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v3.multilocation.MultiLocation key);
-      Task<bool> SubscribeMetadata(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v3.multilocation.MultiLocation key);
+      Task<AssetDetails> GetAsset(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation key);
+      Task<bool> SubscribeAsset(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation key);
+      Task<AssetAccount> GetAccount(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> key);
+      Task<bool> SubscribeAccount(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> key);
+      Task<Approval> GetApprovals(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> key);
+      Task<bool> SubscribeApprovals(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> key);
+      Task<AssetMetadataT2> GetMetadata(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation key);
+      Task<bool> SubscribeMetadata(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation key);
    }
 }

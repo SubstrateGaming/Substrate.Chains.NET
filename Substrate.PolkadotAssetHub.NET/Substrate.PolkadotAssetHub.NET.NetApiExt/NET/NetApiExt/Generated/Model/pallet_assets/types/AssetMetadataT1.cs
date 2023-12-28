@@ -18,7 +18,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_assets
     
     
     /// <summary>
-    /// >> 340 - Composite[pallet_assets.types.AssetMetadataT1]
+    /// >> 356 - Composite[pallet_assets.types.AssetMetadataT1]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class AssetMetadataT1 : BaseType
@@ -32,12 +32,12 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_assets
         /// <summary>
         /// >> name
         /// </summary>
-        private Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT20 _name;
+        private Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT21 _name;
         
         /// <summary>
         /// >> symbol
         /// </summary>
-        private Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT20 _symbol;
+        private Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT21 _symbol;
         
         /// <summary>
         /// >> decimals
@@ -61,7 +61,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_assets
             }
         }
         
-        public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT20 Name
+        public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT21 Name
         {
             get
             {
@@ -73,7 +73,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_assets
             }
         }
         
-        public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT20 Symbol
+        public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT21 Symbol
         {
             get
             {
@@ -130,9 +130,9 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_assets
             var start = p;
             Deposit = new Substrate.NetApi.Model.Types.Primitive.U128();
             Deposit.Decode(byteArray, ref p);
-            Name = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT20();
+            Name = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT21();
             Name.Decode(byteArray, ref p);
-            Symbol = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT20();
+            Symbol = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT21();
             Symbol.Decode(byteArray, ref p);
             Decimals = new Substrate.NetApi.Model.Types.Primitive.U8();
             Decimals.Decode(byteArray, ref p);

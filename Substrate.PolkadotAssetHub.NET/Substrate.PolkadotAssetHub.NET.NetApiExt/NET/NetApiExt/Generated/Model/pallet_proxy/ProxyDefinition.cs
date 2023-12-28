@@ -18,7 +18,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_proxy
     
     
     /// <summary>
-    /// >> 325 - Composite[pallet_proxy.ProxyDefinition]
+    /// >> 341 - Composite[pallet_proxy.ProxyDefinition]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class ProxyDefinition : BaseType
@@ -32,7 +32,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_proxy
         /// <summary>
         /// >> proxy_type
         /// </summary>
-        private Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.statemint_runtime.EnumProxyType _proxyType;
+        private Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.asset_hub_polkadot_runtime.EnumProxyType _proxyType;
         
         /// <summary>
         /// >> delay
@@ -51,7 +51,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_proxy
             }
         }
         
-        public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.statemint_runtime.EnumProxyType ProxyType
+        public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.asset_hub_polkadot_runtime.EnumProxyType ProxyType
         {
             get
             {
@@ -94,7 +94,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_proxy
             var start = p;
             Delegate = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32();
             Delegate.Decode(byteArray, ref p);
-            ProxyType = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.statemint_runtime.EnumProxyType();
+            ProxyType = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.asset_hub_polkadot_runtime.EnumProxyType();
             ProxyType.Decode(byteArray, ref p);
             Delay = new Substrate.NetApi.Model.Types.Primitive.U32();
             Delay.Decode(byteArray, ref p);

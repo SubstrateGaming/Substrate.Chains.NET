@@ -31,9 +31,9 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
         {
             this._client = client;
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Proxy", "Proxies"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32), typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18, Substrate.NetApi.Model.Types.Primitive.U128>)));
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("Proxy", "Announcements"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32), typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT19, Substrate.NetApi.Model.Types.Primitive.U128>)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("Proxy", "Announcements"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32), typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT20, Substrate.NetApi.Model.Types.Primitive.U128>)));
         }
         
         /// <summary>
@@ -62,10 +62,10 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
         ///  The set of account proxies. Maps the account which has delegated to the accounts
         ///  which are being delegated to, together with the amount held on deposit.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18, Substrate.NetApi.Model.Types.Primitive.U128>> Proxies(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT19, Substrate.NetApi.Model.Types.Primitive.U128>> Proxies(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, CancellationToken token)
         {
             string parameters = ProxyStorage.ProxiesParams(key);
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18, Substrate.NetApi.Model.Types.Primitive.U128>>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT19, Substrate.NetApi.Model.Types.Primitive.U128>>(parameters, token);
             return result;
         }
         
@@ -93,10 +93,10 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
         /// >> Announcements
         ///  The announcements made by the proxy (key).
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT19, Substrate.NetApi.Model.Types.Primitive.U128>> Announcements(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT20, Substrate.NetApi.Model.Types.Primitive.U128>> Announcements(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, CancellationToken token)
         {
             string parameters = ProxyStorage.AnnouncementsParams(key);
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT19, Substrate.NetApi.Model.Types.Primitive.U128>>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT20, Substrate.NetApi.Model.Types.Primitive.U128>>(parameters, token);
             return result;
         }
     }
@@ -106,9 +106,9 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> proxy
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method Proxy(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress real, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.statemint_runtime.EnumProxyType> force_proxy_type, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.statemint_runtime.EnumRuntimeCall call)
+        public static Method Proxy(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress real, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.asset_hub_polkadot_runtime.EnumProxyType> force_proxy_type, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.asset_hub_polkadot_runtime.EnumRuntimeCall call)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(real.Encode());
@@ -119,9 +119,9 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> add_proxy
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method AddProxy(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress @delegate, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.statemint_runtime.EnumProxyType proxy_type, Substrate.NetApi.Model.Types.Primitive.U32 delay)
+        public static Method AddProxy(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress @delegate, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.asset_hub_polkadot_runtime.EnumProxyType proxy_type, Substrate.NetApi.Model.Types.Primitive.U32 delay)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(@delegate.Encode());
@@ -132,9 +132,9 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> remove_proxy
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method RemoveProxy(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress @delegate, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.statemint_runtime.EnumProxyType proxy_type, Substrate.NetApi.Model.Types.Primitive.U32 delay)
+        public static Method RemoveProxy(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress @delegate, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.asset_hub_polkadot_runtime.EnumProxyType proxy_type, Substrate.NetApi.Model.Types.Primitive.U32 delay)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(@delegate.Encode());
@@ -145,7 +145,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> remove_proxies
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method RemoveProxies()
         {
@@ -155,9 +155,9 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> create_pure
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method CreatePure(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.statemint_runtime.EnumProxyType proxy_type, Substrate.NetApi.Model.Types.Primitive.U32 delay, Substrate.NetApi.Model.Types.Primitive.U16 index)
+        public static Method CreatePure(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.asset_hub_polkadot_runtime.EnumProxyType proxy_type, Substrate.NetApi.Model.Types.Primitive.U32 delay, Substrate.NetApi.Model.Types.Primitive.U16 index)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(proxy_type.Encode());
@@ -168,9 +168,9 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> kill_pure
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method KillPure(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress spawner, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.statemint_runtime.EnumProxyType proxy_type, Substrate.NetApi.Model.Types.Primitive.U16 index, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32> height, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32> ext_index)
+        public static Method KillPure(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress spawner, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.asset_hub_polkadot_runtime.EnumProxyType proxy_type, Substrate.NetApi.Model.Types.Primitive.U16 index, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32> height, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32> ext_index)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(spawner.Encode());
@@ -183,7 +183,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> announce
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method Announce(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress real, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.primitive_types.H256 call_hash)
         {
@@ -195,7 +195,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> remove_announcement
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method RemoveAnnouncement(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress real, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.primitive_types.H256 call_hash)
         {
@@ -207,7 +207,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> reject_announcement
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method RejectAnnouncement(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress @delegate, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.primitive_types.H256 call_hash)
         {
@@ -219,9 +219,9 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> proxy_announced
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method ProxyAnnounced(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress @delegate, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress real, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.statemint_runtime.EnumProxyType> force_proxy_type, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.statemint_runtime.EnumRuntimeCall call)
+        public static Method ProxyAnnounced(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress @delegate, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress real, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.asset_hub_polkadot_runtime.EnumProxyType> force_proxy_type, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.asset_hub_polkadot_runtime.EnumRuntimeCall call)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(@delegate.Encode());

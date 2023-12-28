@@ -88,7 +88,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestService.Generated.Storage
         /// >> Freezes
         ///  Freeze locks on account balances.
         /// </summary>
-        Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9 GetFreezes(string key);
+        Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10 GetFreezes(string key);
     }
     
     /// <summary>
@@ -130,7 +130,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestService.Generated.Storage
         /// <summary>
         /// _freezesTypedStorage typed storage field
         /// </summary>
-        private TypedMapStorage<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9> _freezesTypedStorage;
+        private TypedMapStorage<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10> _freezesTypedStorage;
         
         /// <summary>
         /// BalancesStorage constructor.
@@ -143,7 +143,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestService.Generated.Storage
             this.LocksTypedStorage = new TypedMapStorage<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT2>("Balances.Locks", storageDataProvider, storageChangeDelegates);
             this.ReservesTypedStorage = new TypedMapStorage<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT8>("Balances.Reserves", storageDataProvider, storageChangeDelegates);
             this.HoldsTypedStorage = new TypedMapStorage<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9>("Balances.Holds", storageDataProvider, storageChangeDelegates);
-            this.FreezesTypedStorage = new TypedMapStorage<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9>("Balances.Freezes", storageDataProvider, storageChangeDelegates);
+            this.FreezesTypedStorage = new TypedMapStorage<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10>("Balances.Freezes", storageDataProvider, storageChangeDelegates);
         }
         
         /// <summary>
@@ -239,7 +239,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestService.Generated.Storage
         /// <summary>
         /// _freezesTypedStorage property
         /// </summary>
-        public TypedMapStorage<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9> FreezesTypedStorage
+        public TypedMapStorage<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10> FreezesTypedStorage
         {
             get
             {
@@ -454,13 +454,13 @@ namespace Substrate.PolkadotAssetHub.NET.RestService.Generated.Storage
         /// >> Freezes
         ///  Freeze locks on account balances.
         /// </summary>
-        public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9 GetFreezes(string key)
+        public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10 GetFreezes(string key)
         {
             if ((key == null))
             {
                 return null;
             }
-            if (FreezesTypedStorage.Dictionary.TryGetValue(key, out Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9 result))
+            if (FreezesTypedStorage.Dictionary.TryGetValue(key, out Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10 result))
             {
                 return result;
             }

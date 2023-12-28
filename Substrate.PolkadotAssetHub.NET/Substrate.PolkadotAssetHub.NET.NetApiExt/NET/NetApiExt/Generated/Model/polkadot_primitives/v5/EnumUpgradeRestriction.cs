@@ -11,24 +11,20 @@ using Substrate.NetApi.Model.Types.Base;
 using System.Collections.Generic;
 
 
-namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives
+namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v5
 {
     
     
-    public enum XcmpMessageFormat
+    public enum UpgradeRestriction
     {
         
-        ConcatenatedVersionedXcm = 0,
-        
-        ConcatenatedEncodedBlob = 1,
-        
-        Signals = 2,
+        Present = 0,
     }
     
     /// <summary>
-    /// >> 216 - Variant[polkadot_parachain.primitives.XcmpMessageFormat]
+    /// >> 160 - Variant[polkadot_primitives.v5.UpgradeRestriction]
     /// </summary>
-    public sealed class EnumXcmpMessageFormat : BaseEnum<XcmpMessageFormat>
+    public sealed class EnumUpgradeRestriction : BaseEnum<UpgradeRestriction>
     {
     }
 }

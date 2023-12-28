@@ -30,8 +30,8 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
         public CollatorSelectionStorage(SubstrateClientExt client)
         {
             this._client = client;
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("CollatorSelection", "Invulnerables"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10)));
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("CollatorSelection", "Candidates"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT11)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("CollatorSelection", "Invulnerables"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT11)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("CollatorSelection", "Candidates"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT12)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("CollatorSelection", "LastAuthoredBlock"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32), typeof(Substrate.NetApi.Model.Types.Primitive.U32)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("CollatorSelection", "DesiredCandidates"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Primitive.U32)));
@@ -40,7 +40,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> InvulnerablesParams
-        ///  The invulnerable, fixed collators.
+        ///  The invulnerable, permissioned collators. This list must be sorted.
         /// </summary>
         public static string InvulnerablesParams()
         {
@@ -58,18 +58,19 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> Invulnerables
-        ///  The invulnerable, fixed collators.
+        ///  The invulnerable, permissioned collators. This list must be sorted.
         /// </summary>
-        public async Task<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10> Invulnerables(CancellationToken token)
+        public async Task<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT11> Invulnerables(CancellationToken token)
         {
             string parameters = CollatorSelectionStorage.InvulnerablesParams();
-            var result = await _client.GetStorageAsync<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT11>(parameters, token);
             return result;
         }
         
         /// <summary>
         /// >> CandidatesParams
-        ///  The (community, limited) collation candidates.
+        ///  The (community, limited) collation candidates. `Candidates` and `Invulnerables` should be
+        ///  mutually exclusive.
         /// </summary>
         public static string CandidatesParams()
         {
@@ -87,12 +88,13 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> Candidates
-        ///  The (community, limited) collation candidates.
+        ///  The (community, limited) collation candidates. `Candidates` and `Invulnerables` should be
+        ///  mutually exclusive.
         /// </summary>
-        public async Task<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT11> Candidates(CancellationToken token)
+        public async Task<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT12> Candidates(CancellationToken token)
         {
             string parameters = CollatorSelectionStorage.CandidatesParams();
-            var result = await _client.GetStorageAsync<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT11>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT12>(parameters, token);
             return result;
         }
         
@@ -199,7 +201,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> set_invulnerables
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method SetInvulnerables(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> @new)
         {
@@ -210,7 +212,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> set_desired_candidates
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method SetDesiredCandidates(Substrate.NetApi.Model.Types.Primitive.U32 max)
         {
@@ -221,7 +223,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> set_candidacy_bond
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method SetCandidacyBond(Substrate.NetApi.Model.Types.Primitive.U128 bond)
         {
@@ -232,7 +234,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> register_as_candidate
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method RegisterAsCandidate()
         {
@@ -242,12 +244,34 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> leave_intent
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method LeaveIntent()
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             return new Method(21, "CollatorSelection", 4, "leave_intent", byteArray.ToArray());
+        }
+        
+        /// <summary>
+        /// >> add_invulnerable
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
+        /// </summary>
+        public static Method AddInvulnerable(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 who)
+        {
+            System.Collections.Generic.List<byte> byteArray = new List<byte>();
+            byteArray.AddRange(who.Encode());
+            return new Method(21, "CollatorSelection", 5, "add_invulnerable", byteArray.ToArray());
+        }
+        
+        /// <summary>
+        /// >> remove_invulnerable
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
+        /// </summary>
+        public static Method RemoveInvulnerable(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 who)
+        {
+            System.Collections.Generic.List<byte> byteArray = new List<byte>();
+            byteArray.AddRange(who.Encode());
+            return new Method(21, "CollatorSelection", 6, "remove_invulnerable", byteArray.ToArray());
         }
     }
     
@@ -260,61 +284,55 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> TooManyCandidates
-        /// Too many candidates
+        /// The pallet has too many candidates.
         /// </summary>
         TooManyCandidates,
         
         /// <summary>
-        /// >> TooFewCandidates
-        /// Too few candidates
+        /// >> TooFewEligibleCollators
+        /// Leaving would result in too few candidates.
         /// </summary>
-        TooFewCandidates,
-        
-        /// <summary>
-        /// >> Unknown
-        /// Unknown error
-        /// </summary>
-        Unknown,
-        
-        /// <summary>
-        /// >> Permission
-        /// Permission issue
-        /// </summary>
-        Permission,
+        TooFewEligibleCollators,
         
         /// <summary>
         /// >> AlreadyCandidate
-        /// User is already a candidate
+        /// Account is already a candidate.
         /// </summary>
         AlreadyCandidate,
         
         /// <summary>
         /// >> NotCandidate
-        /// User is not a candidate
+        /// Account is not a candidate.
         /// </summary>
         NotCandidate,
         
         /// <summary>
         /// >> TooManyInvulnerables
-        /// Too many invulnerables
+        /// There are too many Invulnerables.
         /// </summary>
         TooManyInvulnerables,
         
         /// <summary>
         /// >> AlreadyInvulnerable
-        /// User is already an Invulnerable
+        /// Account is already an Invulnerable.
         /// </summary>
         AlreadyInvulnerable,
         
         /// <summary>
+        /// >> NotInvulnerable
+        /// Account is not an Invulnerable.
+        /// </summary>
+        NotInvulnerable,
+        
+        /// <summary>
         /// >> NoAssociatedValidatorId
-        /// Account has no associated validator ID
+        /// Account has no associated validator ID.
         /// </summary>
         NoAssociatedValidatorId,
         
         /// <summary>
         /// >> ValidatorNotRegistered
-        /// Validator ID is not yet registered
+        /// Validator ID is not yet registered.
         /// </summary>
         ValidatorNotRegistered,
     }

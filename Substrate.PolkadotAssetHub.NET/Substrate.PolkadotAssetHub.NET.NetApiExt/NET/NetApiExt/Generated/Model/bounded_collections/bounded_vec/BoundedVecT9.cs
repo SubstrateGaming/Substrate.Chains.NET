@@ -18,7 +18,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_colle
     
     
     /// <summary>
-    /// >> 184 - Composite[bounded_collections.bounded_vec.BoundedVecT9]
+    /// >> 195 - Composite[bounded_collections.bounded_vec.BoundedVecT9]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class BoundedVecT9 : BaseType
@@ -27,9 +27,9 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_colle
         /// <summary>
         /// >> value
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_balances.types.IdAmount> _value;
+        private Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_balances.types.IdAmountT1> _value;
         
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_balances.types.IdAmount> Value
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_balances.types.IdAmountT1> Value
         {
             get
             {
@@ -56,7 +56,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_colle
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_balances.types.IdAmount>();
+            Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_balances.types.IdAmountT1>();
             Value.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

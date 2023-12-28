@@ -382,7 +382,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> create
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method Create(Substrate.NetApi.Model.Types.Primitive.U32 collection, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress admin)
         {
@@ -394,7 +394,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> force_create
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method ForceCreate(Substrate.NetApi.Model.Types.Primitive.U32 collection, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress owner, Substrate.NetApi.Model.Types.Primitive.Bool free_holding)
         {
@@ -407,7 +407,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> destroy
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method Destroy(Substrate.NetApi.Model.Types.Primitive.U32 collection, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_uniques.types.DestroyWitness witness)
         {
@@ -419,7 +419,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> mint
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method Mint(Substrate.NetApi.Model.Types.Primitive.U32 collection, Substrate.NetApi.Model.Types.Primitive.U32 item, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress owner)
         {
@@ -432,7 +432,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> burn
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method Burn(Substrate.NetApi.Model.Types.Primitive.U32 collection, Substrate.NetApi.Model.Types.Primitive.U32 item, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress> check_owner)
         {
@@ -445,7 +445,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> transfer
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method Transfer(Substrate.NetApi.Model.Types.Primitive.U32 collection, Substrate.NetApi.Model.Types.Primitive.U32 item, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress dest)
         {
@@ -458,7 +458,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> redeposit
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method Redeposit(Substrate.NetApi.Model.Types.Primitive.U32 collection, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U32> items)
         {
@@ -470,7 +470,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> freeze
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method Freeze(Substrate.NetApi.Model.Types.Primitive.U32 collection, Substrate.NetApi.Model.Types.Primitive.U32 item)
         {
@@ -482,7 +482,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> thaw
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method Thaw(Substrate.NetApi.Model.Types.Primitive.U32 collection, Substrate.NetApi.Model.Types.Primitive.U32 item)
         {
@@ -494,7 +494,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> freeze_collection
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method FreezeCollection(Substrate.NetApi.Model.Types.Primitive.U32 collection)
         {
@@ -505,7 +505,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> thaw_collection
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method ThawCollection(Substrate.NetApi.Model.Types.Primitive.U32 collection)
         {
@@ -516,7 +516,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> transfer_ownership
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method TransferOwnership(Substrate.NetApi.Model.Types.Primitive.U32 collection, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress owner)
         {
@@ -528,7 +528,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> set_team
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method SetTeam(Substrate.NetApi.Model.Types.Primitive.U32 collection, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress issuer, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress admin, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress freezer)
         {
@@ -542,7 +542,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> approve_transfer
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method ApproveTransfer(Substrate.NetApi.Model.Types.Primitive.U32 collection, Substrate.NetApi.Model.Types.Primitive.U32 item, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress @delegate)
         {
@@ -555,7 +555,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> cancel_approval
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method CancelApproval(Substrate.NetApi.Model.Types.Primitive.U32 collection, Substrate.NetApi.Model.Types.Primitive.U32 item, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress> maybe_check_delegate)
         {
@@ -568,7 +568,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> force_item_status
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method ForceItemStatus(Substrate.NetApi.Model.Types.Primitive.U32 collection, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress owner, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress issuer, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress admin, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress freezer, Substrate.NetApi.Model.Types.Primitive.Bool free_holding, Substrate.NetApi.Model.Types.Primitive.Bool is_frozen)
         {
@@ -585,7 +585,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> set_attribute
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method SetAttribute(Substrate.NetApi.Model.Types.Primitive.U32 collection, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32> maybe_item, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT5 key, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT6 value)
         {
@@ -599,7 +599,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> clear_attribute
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method ClearAttribute(Substrate.NetApi.Model.Types.Primitive.U32 collection, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32> maybe_item, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT5 key)
         {
@@ -612,7 +612,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> set_metadata
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method SetMetadata(Substrate.NetApi.Model.Types.Primitive.U32 collection, Substrate.NetApi.Model.Types.Primitive.U32 item, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT4 data, Substrate.NetApi.Model.Types.Primitive.Bool is_frozen)
         {
@@ -626,7 +626,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> clear_metadata
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method ClearMetadata(Substrate.NetApi.Model.Types.Primitive.U32 collection, Substrate.NetApi.Model.Types.Primitive.U32 item)
         {
@@ -638,7 +638,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> set_collection_metadata
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method SetCollectionMetadata(Substrate.NetApi.Model.Types.Primitive.U32 collection, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT4 data, Substrate.NetApi.Model.Types.Primitive.Bool is_frozen)
         {
@@ -651,7 +651,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> clear_collection_metadata
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method ClearCollectionMetadata(Substrate.NetApi.Model.Types.Primitive.U32 collection)
         {
@@ -662,7 +662,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> set_accept_ownership
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method SetAcceptOwnership(Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32> maybe_collection)
         {
@@ -673,7 +673,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> set_collection_max_supply
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method SetCollectionMaxSupply(Substrate.NetApi.Model.Types.Primitive.U32 collection, Substrate.NetApi.Model.Types.Primitive.U32 max_supply)
         {
@@ -685,7 +685,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> set_price
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method SetPrice(Substrate.NetApi.Model.Types.Primitive.U32 collection, Substrate.NetApi.Model.Types.Primitive.U32 item, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U128> price, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress> whitelisted_buyer)
         {
@@ -699,7 +699,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> buy_item
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method BuyItem(Substrate.NetApi.Model.Types.Primitive.U32 collection, Substrate.NetApi.Model.Types.Primitive.U32 item, Substrate.NetApi.Model.Types.Primitive.U128 bid_price)
         {

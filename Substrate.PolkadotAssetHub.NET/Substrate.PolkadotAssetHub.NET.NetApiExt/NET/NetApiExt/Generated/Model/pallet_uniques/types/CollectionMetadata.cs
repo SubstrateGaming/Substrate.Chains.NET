@@ -18,7 +18,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_unique
     
     
     /// <summary>
-    /// >> 347 - Composite[pallet_uniques.types.CollectionMetadata]
+    /// >> 363 - Composite[pallet_uniques.types.CollectionMetadata]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class CollectionMetadata : BaseType

@@ -18,7 +18,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.frame_system.
     
     
     /// <summary>
-    /// >> 382 - Composite[frame_system.extensions.check_spec_version.CheckSpecVersion]
+    /// >> 398 - Composite[frame_system.extensions.check_spec_version.CheckSpecVersion]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class CheckSpecVersion : BaseType

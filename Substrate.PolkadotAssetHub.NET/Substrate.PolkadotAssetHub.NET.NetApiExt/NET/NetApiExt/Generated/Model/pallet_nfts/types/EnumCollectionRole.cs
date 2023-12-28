@@ -26,7 +26,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_nfts.t
     }
     
     /// <summary>
-    /// >> 355 - Variant[pallet_nfts.types.CollectionRole]
+    /// >> 371 - Variant[pallet_nfts.types.CollectionRole]
     /// </summary>
     public sealed class EnumCollectionRole : BaseEnum<CollectionRole>
     {

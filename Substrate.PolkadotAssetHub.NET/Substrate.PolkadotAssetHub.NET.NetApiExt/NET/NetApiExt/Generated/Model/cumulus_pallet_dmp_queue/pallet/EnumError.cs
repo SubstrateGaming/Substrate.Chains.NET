@@ -24,11 +24,8 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_palle
     }
     
     /// <summary>
-    /// >> 275 - Variant[cumulus_pallet_dmp_queue.pallet.Error]
-    /// 
-    ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
-    ///			of this pallet.
-    ///			
+    /// >> 291 - Variant[cumulus_pallet_dmp_queue.pallet.Error]
+    /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>
     {

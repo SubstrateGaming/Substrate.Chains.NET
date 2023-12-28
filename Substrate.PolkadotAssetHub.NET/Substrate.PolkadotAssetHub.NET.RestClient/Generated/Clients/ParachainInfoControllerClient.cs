@@ -12,7 +12,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Generated.Clients
    using System;
    using System.Threading.Tasks;
    using System.Net.Http;
-   using Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives;
+   using Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives;
    using Substrate.PolkadotAssetHub.NET.RestClient.Generated.Interfaces;
    
    public sealed class ParachainInfoControllerClient : BaseClient, IParachainInfoControllerClient

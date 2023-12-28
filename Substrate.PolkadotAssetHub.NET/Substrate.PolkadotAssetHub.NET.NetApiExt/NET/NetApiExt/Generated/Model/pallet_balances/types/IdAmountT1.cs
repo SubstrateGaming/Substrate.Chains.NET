@@ -13,71 +13,71 @@ using Substrate.NetApi.Model.Types.Metadata.V14;
 using System.Collections.Generic;
 
 
-namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v3.multilocation
+namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_balances.types
 {
     
     
     /// <summary>
-    /// >> 45 - Composite[xcm.v3.multilocation.MultiLocation]
+    /// >> 196 - Composite[pallet_balances.types.IdAmountT1]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
-    public sealed class MultiLocation : BaseType
+    public sealed class IdAmountT1 : BaseType
     {
         
         /// <summary>
-        /// >> parents
+        /// >> id
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U8 _parents;
+        private Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.asset_hub_polkadot_runtime.EnumRuntimeHoldReason _id;
         
         /// <summary>
-        /// >> interior
+        /// >> amount
         /// </summary>
-        private Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v3.junctions.EnumJunctions _interior;
+        private Substrate.NetApi.Model.Types.Primitive.U128 _amount;
         
-        public Substrate.NetApi.Model.Types.Primitive.U8 Parents
+        public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.asset_hub_polkadot_runtime.EnumRuntimeHoldReason Id
         {
             get
             {
-                return this._parents;
+                return this._id;
             }
             set
             {
-                this._parents = value;
+                this._id = value;
             }
         }
         
-        public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v3.junctions.EnumJunctions Interior
+        public Substrate.NetApi.Model.Types.Primitive.U128 Amount
         {
             get
             {
-                return this._interior;
+                return this._amount;
             }
             set
             {
-                this._interior = value;
+                this._amount = value;
             }
         }
         
         public override string TypeName()
         {
-            return "MultiLocation";
+            return "IdAmountT1";
         }
         
         public override byte[] Encode()
         {
             var result = new List<byte>();
-            result.AddRange(Parents.Encode());
-            result.AddRange(Interior.Encode());
+            result.AddRange(Id.Encode());
+            result.AddRange(Amount.Encode());
             return result.ToArray();
         }
         
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Parents = new Substrate.NetApi.Model.Types.Primitive.U8();
-            Parents.Decode(byteArray, ref p);
-            Interior = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v3.junctions.EnumJunctions();
-            Interior.Decode(byteArray, ref p);
+            Id = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.asset_hub_polkadot_runtime.EnumRuntimeHoldReason();
+            Id.Decode(byteArray, ref p);
+            Amount = new Substrate.NetApi.Model.Types.Primitive.U128();
+            Amount.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];

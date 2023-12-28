@@ -24,9 +24,9 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_palle
     }
     
     /// <summary>
-    /// >> 316 - Variant[cumulus_pallet_xcm.pallet.Origin]
+    /// >> 332 - Variant[cumulus_pallet_xcm.pallet.Origin]
     /// </summary>
-    public sealed class EnumOrigin : BaseEnumExt<Origin, BaseVoid, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id>
+    public sealed class EnumOrigin : BaseEnumExt<Origin, BaseVoid, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id>
     {
     }
 }

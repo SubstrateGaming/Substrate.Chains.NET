@@ -48,7 +48,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestService.Generated.Storage
         ///  The queued keys for the next session. When the next session begins, these keys
         ///  will be used to determine the validator's session keys.
         /// </summary>
-        Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.statemint_runtime.SessionKeys>> GetQueuedKeys();
+        Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.asset_hub_polkadot_runtime.SessionKeys>> GetQueuedKeys();
         
         /// <summary>
         /// >> DisabledValidators
@@ -64,7 +64,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestService.Generated.Storage
         /// >> NextKeys
         ///  The next session keys for a validator.
         /// </summary>
-        Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.statemint_runtime.SessionKeys GetNextKeys(string key);
+        Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.asset_hub_polkadot_runtime.SessionKeys GetNextKeys(string key);
         
         /// <summary>
         /// >> KeyOwner
@@ -97,7 +97,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestService.Generated.Storage
         /// <summary>
         /// _queuedKeysTypedStorage typed storage field
         /// </summary>
-        private TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.statemint_runtime.SessionKeys>>> _queuedKeysTypedStorage;
+        private TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.asset_hub_polkadot_runtime.SessionKeys>>> _queuedKeysTypedStorage;
         
         /// <summary>
         /// _disabledValidatorsTypedStorage typed storage field
@@ -107,7 +107,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestService.Generated.Storage
         /// <summary>
         /// _nextKeysTypedStorage typed storage field
         /// </summary>
-        private TypedMapStorage<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.statemint_runtime.SessionKeys> _nextKeysTypedStorage;
+        private TypedMapStorage<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.asset_hub_polkadot_runtime.SessionKeys> _nextKeysTypedStorage;
         
         /// <summary>
         /// _keyOwnerTypedStorage typed storage field
@@ -122,9 +122,9 @@ namespace Substrate.PolkadotAssetHub.NET.RestService.Generated.Storage
             this.ValidatorsTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>>("Session.Validators", storageDataProvider, storageChangeDelegates);
             this.CurrentIndexTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32>("Session.CurrentIndex", storageDataProvider, storageChangeDelegates);
             this.QueuedChangedTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.Bool>("Session.QueuedChanged", storageDataProvider, storageChangeDelegates);
-            this.QueuedKeysTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.statemint_runtime.SessionKeys>>>("Session.QueuedKeys", storageDataProvider, storageChangeDelegates);
+            this.QueuedKeysTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.asset_hub_polkadot_runtime.SessionKeys>>>("Session.QueuedKeys", storageDataProvider, storageChangeDelegates);
             this.DisabledValidatorsTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U32>>("Session.DisabledValidators", storageDataProvider, storageChangeDelegates);
-            this.NextKeysTypedStorage = new TypedMapStorage<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.statemint_runtime.SessionKeys>("Session.NextKeys", storageDataProvider, storageChangeDelegates);
+            this.NextKeysTypedStorage = new TypedMapStorage<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.asset_hub_polkadot_runtime.SessionKeys>("Session.NextKeys", storageDataProvider, storageChangeDelegates);
             this.KeyOwnerTypedStorage = new TypedMapStorage<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>("Session.KeyOwner", storageDataProvider, storageChangeDelegates);
         }
         
@@ -176,7 +176,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestService.Generated.Storage
         /// <summary>
         /// _queuedKeysTypedStorage property
         /// </summary>
-        public TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.statemint_runtime.SessionKeys>>> QueuedKeysTypedStorage
+        public TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.asset_hub_polkadot_runtime.SessionKeys>>> QueuedKeysTypedStorage
         {
             get
             {
@@ -206,7 +206,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestService.Generated.Storage
         /// <summary>
         /// _nextKeysTypedStorage property
         /// </summary>
-        public TypedMapStorage<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.statemint_runtime.SessionKeys> NextKeysTypedStorage
+        public TypedMapStorage<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.asset_hub_polkadot_runtime.SessionKeys> NextKeysTypedStorage
         {
             get
             {
@@ -316,7 +316,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestService.Generated.Storage
         ///  The queued keys for the next session. When the next session begins, these keys
         ///  will be used to determine the validator's session keys.
         /// </summary>
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.statemint_runtime.SessionKeys>> GetQueuedKeys()
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.asset_hub_polkadot_runtime.SessionKeys>> GetQueuedKeys()
         {
             return QueuedKeysTypedStorage.Get();
         }
@@ -356,13 +356,13 @@ namespace Substrate.PolkadotAssetHub.NET.RestService.Generated.Storage
         /// >> NextKeys
         ///  The next session keys for a validator.
         /// </summary>
-        public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.statemint_runtime.SessionKeys GetNextKeys(string key)
+        public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.asset_hub_polkadot_runtime.SessionKeys GetNextKeys(string key)
         {
             if ((key == null))
             {
                 return null;
             }
-            if (NextKeysTypedStorage.Dictionary.TryGetValue(key, out Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.statemint_runtime.SessionKeys result))
+            if (NextKeysTypedStorage.Dictionary.TryGetValue(key, out Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.asset_hub_polkadot_runtime.SessionKeys result))
             {
                 return result;
             }

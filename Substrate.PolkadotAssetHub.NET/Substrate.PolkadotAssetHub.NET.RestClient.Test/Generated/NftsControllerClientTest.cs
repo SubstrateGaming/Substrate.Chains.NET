@@ -483,14 +483,14 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Test.Generated
       {
          Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_map.BoundedBTreeMap result;
          result = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_map.BoundedBTreeMap();
-         result.Value = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.BTreeMapT3();
+         result.Value = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.BTreeMapT4();
          result.Value = this.GetTestValue22();
          return result;
       }
-      public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.BTreeMapT3 GetTestValue22()
+      public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.BTreeMapT4 GetTestValue22()
       {
-         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.BTreeMapT3 result;
-         result = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.BTreeMapT3();
+         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.BTreeMapT4 result;
+         result = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.BTreeMapT4();
          result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32>>>();
          result.Value.Create(new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32>>[] {
                   this.GetTestValue23()});

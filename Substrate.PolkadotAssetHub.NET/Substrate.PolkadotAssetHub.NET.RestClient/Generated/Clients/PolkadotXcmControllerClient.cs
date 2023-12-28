@@ -84,9 +84,9 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("PolkadotXcm.VersionNotifyTargets", Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage.PolkadotXcmStorage.VersionNotifyTargetsParams(key));
       }
-      public async Task<BoundedVecT13> GetVersionDiscoveryQueue()
+      public async Task<BoundedVecT14> GetVersionDiscoveryQueue()
       {
-         return await SendRequestAsync<BoundedVecT13>(_httpClient, "polkadotxcm/versiondiscoveryqueue");
+         return await SendRequestAsync<BoundedVecT14>(_httpClient, "polkadotxcm/versiondiscoveryqueue");
       }
       public async Task<bool> SubscribeVersionDiscoveryQueue()
       {
@@ -108,9 +108,9 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("PolkadotXcm.RemoteLockedFungibles", Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage.PolkadotXcmStorage.RemoteLockedFungiblesParams(key));
       }
-      public async Task<BoundedVecT15> GetLockedFungibles(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+      public async Task<BoundedVecT16> GetLockedFungibles(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {
-         return await SendRequestAsync<BoundedVecT15>(_httpClient, "polkadotxcm/lockedfungibles", Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage.PolkadotXcmStorage.LockedFungiblesParams(key));
+         return await SendRequestAsync<BoundedVecT16>(_httpClient, "polkadotxcm/lockedfungibles", Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage.PolkadotXcmStorage.LockedFungiblesParams(key));
       }
       public async Task<bool> SubscribeLockedFungibles(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {

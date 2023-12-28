@@ -18,7 +18,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_consensus_
     
     
     /// <summary>
-    /// >> 202 - Composite[sp_consensus_aura.ed25519.app_ed25519.Public]
+    /// >> 217 - Composite[sp_consensus_aura.ed25519.app_ed25519.Public]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Public : BaseType

@@ -24,7 +24,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_palle
     }
     
     /// <summary>
-    /// >> 213 - Variant[cumulus_pallet_xcmp_queue.InboundState]
+    /// >> 229 - Variant[cumulus_pallet_xcmp_queue.InboundState]
     /// </summary>
     public sealed class EnumInboundState : BaseEnum<InboundState>
     {

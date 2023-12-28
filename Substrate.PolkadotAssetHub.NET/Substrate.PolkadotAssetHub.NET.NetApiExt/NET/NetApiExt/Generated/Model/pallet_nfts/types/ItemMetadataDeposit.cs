@@ -18,7 +18,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_nfts.t
     
     
     /// <summary>
-    /// >> 364 - Composite[pallet_nfts.types.ItemMetadataDeposit]
+    /// >> 380 - Composite[pallet_nfts.types.ItemMetadataDeposit]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class ItemMetadataDeposit : BaseType

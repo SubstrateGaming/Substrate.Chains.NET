@@ -33,10 +33,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_utilit
     
     /// <summary>
     /// >> 101 - Variant[pallet_utility.pallet.Event]
-    /// 
-    ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
-    ///			by this pallet.
-    ///			
+    /// The `Event` enum of this pallet
     /// </summary>
     public sealed class EnumEvent : BaseEnumExt<Event, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_runtime.EnumDispatchError>, BaseVoid, BaseVoid, BaseVoid, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_runtime.EnumDispatchError, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.EnumResult>
     {

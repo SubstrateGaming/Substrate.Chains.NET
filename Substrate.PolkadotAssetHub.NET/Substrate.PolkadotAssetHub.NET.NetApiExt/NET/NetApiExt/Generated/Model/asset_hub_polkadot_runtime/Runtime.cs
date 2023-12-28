@@ -13,51 +13,31 @@ using Substrate.NetApi.Model.Types.Metadata.V14;
 using System.Collections.Generic;
 
 
-namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives
+namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.asset_hub_polkadot_runtime
 {
     
     
     /// <summary>
-    /// >> 147 - Composite[polkadot_parachain.primitives.HeadData]
+    /// >> 406 - Composite[asset_hub_polkadot_runtime.Runtime]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
-    public sealed class HeadData : BaseType
+    public sealed class Runtime : BaseType
     {
-        
-        /// <summary>
-        /// >> value
-        /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> _value;
-        
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> Value
-        {
-            get
-            {
-                return this._value;
-            }
-            set
-            {
-                this._value = value;
-            }
-        }
         
         public override string TypeName()
         {
-            return "HeadData";
+            return "Runtime";
         }
         
         public override byte[] Encode()
         {
             var result = new List<byte>();
-            result.AddRange(Value.Encode());
             return result.ToArray();
         }
         
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>();
-            Value.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];

@@ -36,11 +36,8 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_palle
     }
     
     /// <summary>
-    /// >> 175 - Variant[cumulus_pallet_parachain_system.pallet.Error]
-    /// 
-    ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
-    ///			of this pallet.
-    ///			
+    /// >> 186 - Variant[cumulus_pallet_parachain_system.pallet.Error]
+    /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>
     {

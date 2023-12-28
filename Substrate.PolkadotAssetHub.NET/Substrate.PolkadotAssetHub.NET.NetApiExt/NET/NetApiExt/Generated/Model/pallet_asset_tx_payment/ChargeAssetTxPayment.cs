@@ -18,7 +18,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_asset_
     
     
     /// <summary>
-    /// >> 389 - Composite[pallet_asset_tx_payment.ChargeAssetTxPayment]
+    /// >> 405 - Composite[pallet_asset_tx_payment.ChargeAssetTxPayment]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class ChargeAssetTxPayment : BaseType

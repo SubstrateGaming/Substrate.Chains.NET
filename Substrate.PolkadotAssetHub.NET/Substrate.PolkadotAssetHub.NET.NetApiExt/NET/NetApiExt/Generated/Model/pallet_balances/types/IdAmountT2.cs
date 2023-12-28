@@ -13,51 +13,71 @@ using Substrate.NetApi.Model.Types.Metadata.V14;
 using System.Collections.Generic;
 
 
-namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives
+namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_balances.types
 {
     
     
     /// <summary>
-    /// >> 42 - Composite[polkadot_parachain.primitives.Id]
+    /// >> 200 - Composite[pallet_balances.types.IdAmountT2]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
-    public sealed class Id : BaseType
+    public sealed class IdAmountT2 : BaseType
     {
         
         /// <summary>
-        /// >> value
+        /// >> id
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _value;
+        private Substrate.NetApi.Model.Types.Base.BaseTuple _id;
         
-        public Substrate.NetApi.Model.Types.Primitive.U32 Value
+        /// <summary>
+        /// >> amount
+        /// </summary>
+        private Substrate.NetApi.Model.Types.Primitive.U128 _amount;
+        
+        public Substrate.NetApi.Model.Types.Base.BaseTuple Id
         {
             get
             {
-                return this._value;
+                return this._id;
             }
             set
             {
-                this._value = value;
+                this._id = value;
+            }
+        }
+        
+        public Substrate.NetApi.Model.Types.Primitive.U128 Amount
+        {
+            get
+            {
+                return this._amount;
+            }
+            set
+            {
+                this._amount = value;
             }
         }
         
         public override string TypeName()
         {
-            return "Id";
+            return "IdAmountT2";
         }
         
         public override byte[] Encode()
         {
             var result = new List<byte>();
-            result.AddRange(Value.Encode());
+            result.AddRange(Id.Encode());
+            result.AddRange(Amount.Encode());
             return result.ToArray();
         }
         
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Value = new Substrate.NetApi.Model.Types.Primitive.U32();
-            Value.Decode(byteArray, ref p);
+            Id = new Substrate.NetApi.Model.Types.Base.BaseTuple();
+            Id.Decode(byteArray, ref p);
+            Amount = new Substrate.NetApi.Model.Types.Primitive.U128();
+            Amount.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];

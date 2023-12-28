@@ -18,7 +18,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_nfts.t
     
     
     /// <summary>
-    /// >> 353 - Composite[pallet_nfts.types.CollectionDetails]
+    /// >> 369 - Composite[pallet_nfts.types.CollectionDetails]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class CollectionDetails : BaseType

@@ -22,8 +22,8 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_timest
     }
     
     /// <summary>
-    /// >> 176 - Variant[pallet_timestamp.pallet.Call]
-    /// Contains one variant per dispatchable that can be called by an extrinsic.
+    /// >> 187 - Variant[pallet_timestamp.pallet.Call]
+    /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
     public sealed class EnumCall : BaseEnumExt<Call, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U64>>
     {

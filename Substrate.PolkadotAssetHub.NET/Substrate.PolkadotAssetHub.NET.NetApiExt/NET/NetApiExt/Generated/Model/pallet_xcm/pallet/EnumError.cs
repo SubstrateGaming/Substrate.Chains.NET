@@ -60,11 +60,8 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_xcm.pa
     }
     
     /// <summary>
-    /// >> 268 - Variant[pallet_xcm.pallet.Error]
-    /// 
-    ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
-    ///			of this pallet.
-    ///			
+    /// >> 284 - Variant[pallet_xcm.pallet.Error]
+    /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>
     {

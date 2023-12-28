@@ -26,7 +26,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_nfts.t
     }
     
     /// <summary>
-    /// >> 293 - Variant[pallet_nfts.types.MintType]
+    /// >> 309 - Variant[pallet_nfts.types.MintType]
     /// </summary>
     public sealed class EnumMintType : BaseEnumExt<MintType, BaseVoid, BaseVoid, Substrate.NetApi.Model.Types.Primitive.U32>
     {

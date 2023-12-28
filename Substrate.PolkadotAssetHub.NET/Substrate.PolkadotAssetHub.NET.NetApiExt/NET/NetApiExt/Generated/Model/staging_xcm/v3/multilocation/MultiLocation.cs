@@ -13,71 +13,71 @@ using Substrate.NetApi.Model.Types.Metadata.V14;
 using System.Collections.Generic;
 
 
-namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.relay_state_snapshot
+namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation
 {
     
     
     /// <summary>
-    /// >> 153 - Composite[cumulus_pallet_parachain_system.relay_state_snapshot.RelayDispachQueueSize]
+    /// >> 45 - Composite[staging_xcm.v3.multilocation.MultiLocation]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
-    public sealed class RelayDispachQueueSize : BaseType
+    public sealed class MultiLocation : BaseType
     {
         
         /// <summary>
-        /// >> remaining_count
+        /// >> parents
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _remainingCount;
+        private Substrate.NetApi.Model.Types.Primitive.U8 _parents;
         
         /// <summary>
-        /// >> remaining_size
+        /// >> interior
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _remainingSize;
+        private Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v3.junctions.EnumJunctions _interior;
         
-        public Substrate.NetApi.Model.Types.Primitive.U32 RemainingCount
+        public Substrate.NetApi.Model.Types.Primitive.U8 Parents
         {
             get
             {
-                return this._remainingCount;
+                return this._parents;
             }
             set
             {
-                this._remainingCount = value;
+                this._parents = value;
             }
         }
         
-        public Substrate.NetApi.Model.Types.Primitive.U32 RemainingSize
+        public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v3.junctions.EnumJunctions Interior
         {
             get
             {
-                return this._remainingSize;
+                return this._interior;
             }
             set
             {
-                this._remainingSize = value;
+                this._interior = value;
             }
         }
         
         public override string TypeName()
         {
-            return "RelayDispachQueueSize";
+            return "MultiLocation";
         }
         
         public override byte[] Encode()
         {
             var result = new List<byte>();
-            result.AddRange(RemainingCount.Encode());
-            result.AddRange(RemainingSize.Encode());
+            result.AddRange(Parents.Encode());
+            result.AddRange(Interior.Encode());
             return result.ToArray();
         }
         
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            RemainingCount = new Substrate.NetApi.Model.Types.Primitive.U32();
-            RemainingCount.Decode(byteArray, ref p);
-            RemainingSize = new Substrate.NetApi.Model.Types.Primitive.U32();
-            RemainingSize.Decode(byteArray, ref p);
+            Parents = new Substrate.NetApi.Model.Types.Primitive.U8();
+            Parents.Decode(byteArray, ref p);
+            Interior = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v3.junctions.EnumJunctions();
+            Interior.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];

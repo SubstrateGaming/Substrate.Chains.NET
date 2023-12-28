@@ -14,7 +14,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Mockup.Generated.Interfaces
    using Substrate.NetApi.Model.Types.Base;
    using Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue;
    using Substrate.NetApi.Model.Types.Primitive;
-   using Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives;
+   using Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives;
    
    public interface IXcmpQueueControllerMockupClient
    {

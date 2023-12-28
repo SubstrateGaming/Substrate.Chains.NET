@@ -22,8 +22,8 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_palle
     }
     
     /// <summary>
-    /// >> 274 - Variant[cumulus_pallet_dmp_queue.pallet.Call]
-    /// Contains one variant per dispatchable that can be called by an extrinsic.
+    /// >> 290 - Variant[cumulus_pallet_dmp_queue.pallet.Call]
+    /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
     public sealed class EnumCall : BaseEnumExt<Call, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U64, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>>
     {
