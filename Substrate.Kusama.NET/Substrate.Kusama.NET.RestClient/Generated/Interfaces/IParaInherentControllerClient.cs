@@ -12,7 +12,7 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Interfaces
    using System;
    using System.Threading.Tasks;
    using Substrate.NetApi.Model.Types.Base;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5;
    
    public interface IParaInherentControllerClient
    {

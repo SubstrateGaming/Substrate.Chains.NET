@@ -51,33 +51,33 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("NisCounterpartBalances.Account", Substrate.Kusama.NET.NetApiExt.Generated.Storage.NisCounterpartBalancesStorage.AccountParams(key));
       }
-      public async Task<WeakBoundedVecT8> GetLocks(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+      public async Task<WeakBoundedVecT6> GetLocks(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {
-         return await SendRequestAsync<WeakBoundedVecT8>(_httpClient, "niscounterpartbalances/locks", Substrate.Kusama.NET.NetApiExt.Generated.Storage.NisCounterpartBalancesStorage.LocksParams(key));
+         return await SendRequestAsync<WeakBoundedVecT6>(_httpClient, "niscounterpartbalances/locks", Substrate.Kusama.NET.NetApiExt.Generated.Storage.NisCounterpartBalancesStorage.LocksParams(key));
       }
       public async Task<bool> SubscribeLocks(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {
          return await _subscriptionClient.SubscribeAsync("NisCounterpartBalances.Locks", Substrate.Kusama.NET.NetApiExt.Generated.Storage.NisCounterpartBalancesStorage.LocksParams(key));
       }
-      public async Task<BoundedVecT37> GetReserves(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+      public async Task<BoundedVecT42> GetReserves(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {
-         return await SendRequestAsync<BoundedVecT37>(_httpClient, "niscounterpartbalances/reserves", Substrate.Kusama.NET.NetApiExt.Generated.Storage.NisCounterpartBalancesStorage.ReservesParams(key));
+         return await SendRequestAsync<BoundedVecT42>(_httpClient, "niscounterpartbalances/reserves", Substrate.Kusama.NET.NetApiExt.Generated.Storage.NisCounterpartBalancesStorage.ReservesParams(key));
       }
       public async Task<bool> SubscribeReserves(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {
          return await _subscriptionClient.SubscribeAsync("NisCounterpartBalances.Reserves", Substrate.Kusama.NET.NetApiExt.Generated.Storage.NisCounterpartBalancesStorage.ReservesParams(key));
       }
-      public async Task<BoundedVecT38> GetHolds(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+      public async Task<BoundedVecT43> GetHolds(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {
-         return await SendRequestAsync<BoundedVecT38>(_httpClient, "niscounterpartbalances/holds", Substrate.Kusama.NET.NetApiExt.Generated.Storage.NisCounterpartBalancesStorage.HoldsParams(key));
+         return await SendRequestAsync<BoundedVecT43>(_httpClient, "niscounterpartbalances/holds", Substrate.Kusama.NET.NetApiExt.Generated.Storage.NisCounterpartBalancesStorage.HoldsParams(key));
       }
       public async Task<bool> SubscribeHolds(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {
          return await _subscriptionClient.SubscribeAsync("NisCounterpartBalances.Holds", Substrate.Kusama.NET.NetApiExt.Generated.Storage.NisCounterpartBalancesStorage.HoldsParams(key));
       }
-      public async Task<BoundedVecT38> GetFreezes(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+      public async Task<BoundedVecT44> GetFreezes(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {
-         return await SendRequestAsync<BoundedVecT38>(_httpClient, "niscounterpartbalances/freezes", Substrate.Kusama.NET.NetApiExt.Generated.Storage.NisCounterpartBalancesStorage.FreezesParams(key));
+         return await SendRequestAsync<BoundedVecT44>(_httpClient, "niscounterpartbalances/freezes", Substrate.Kusama.NET.NetApiExt.Generated.Storage.NisCounterpartBalancesStorage.FreezesParams(key));
       }
       public async Task<bool> SubscribeFreezes(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {

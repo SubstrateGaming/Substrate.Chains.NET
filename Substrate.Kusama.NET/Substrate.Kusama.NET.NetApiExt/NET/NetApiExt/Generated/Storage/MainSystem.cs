@@ -400,7 +400,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         ///  allows light-clients to leverage the changes trie storage tracking mechanism and
         ///  in case of changes fetch the list of events of interest.
         /// 
-        ///  The value has the type `(T::BlockNumber, EventIndex)` because if we used only just
+        ///  The value has the type `(BlockNumberFor<T>, EventIndex)` because if we used only just
         ///  the `EventIndex` then in case if the topic has the same contents on the next block
         ///  no notification will be triggered thus the event might be lost.
         /// </summary>
@@ -429,7 +429,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         ///  allows light-clients to leverage the changes trie storage tracking mechanism and
         ///  in case of changes fetch the list of events of interest.
         /// 
-        ///  The value has the type `(T::BlockNumber, EventIndex)` because if we used only just
+        ///  The value has the type `(BlockNumberFor<T>, EventIndex)` because if we used only just
         ///  the `EventIndex` then in case if the topic has the same contents on the next block
         ///  no notification will be triggered thus the event might be lost.
         /// </summary>
@@ -564,7 +564,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> remark
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method Remark(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> remark)
         {
@@ -575,7 +575,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> set_heap_pages
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method SetHeapPages(Substrate.NetApi.Model.Types.Primitive.U64 pages)
         {
@@ -586,7 +586,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> set_code
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method SetCode(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> code)
         {
@@ -597,7 +597,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> set_code_without_checks
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method SetCodeWithoutChecks(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> code)
         {
@@ -608,7 +608,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> set_storage
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method SetStorage(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>> items)
         {
@@ -619,7 +619,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> kill_storage
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method KillStorage(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>> keys)
         {
@@ -630,7 +630,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> kill_prefix
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method KillPrefix(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> prefix, Substrate.NetApi.Model.Types.Primitive.U32 subkeys)
         {
@@ -642,7 +642,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> remark_with_event
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method RemarkWithEvent(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> remark)
         {
@@ -662,7 +662,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         public Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_system.limits.BlockWeights BlockWeights()
         {
             var result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_system.limits.BlockWeights();
-            result.Create(@"0x07685F1C6F02000B00204AA9D10113FFFFFFFFFFFFFFFF020CDF1900010B000D6890580113A3703D0AD7A370BD010B0098F73E5D0113FFFFFFFFFFFFFFBF010000020CDF1900010B0095BAFACC0113A3703D0AD7A370FD010B00204AA9D10113FFFFFFFFFFFFFFFF01070088526A74130000000000000040020CDF1900000000");
+            result.Create(@"0x07A81A0A5303000B00204AA9D10113FFFFFFFFFFFFFFFF4273BB1D00010B30F3708F580113A3703D0AD7A370BD010B0098F73E5D0113FFFFFFFFFFFFFFBF0100004273BB1D00010B307BC3F9CC0113A3703D0AD7A370FD010B00204AA9D10113FFFFFFFFFFFFFFFF01070088526A741300000000000000404273BB1D00000000");
             return result;
         }
         
@@ -706,7 +706,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_version.RuntimeVersion Version()
         {
             var result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_version.RuntimeVersion();
-            result.Create(@"0x186B7573616D61347061726974792D6B7573616D6102000000D62400000000000044DF6ACB689907609B0400000037E397FC7C91F5E40200000040FE3AD401F8959A06000000D2BC9897EED08F1503000000F78B278BE53F454C02000000AF2C0297A23E6D3D0400000049EAAF1B548A0CB00200000091D5DF18B0D2CF5802000000ED99C5ACB25EEDF503000000CBCA25E39F14238702000000687AD44AD37F03C201000000AB3C0572291FEB8B01000000BC9D89904F5B923F0100000037C8BB1350A9A2A804000000F3FF14D5AB5270590300000017A6BC0D0062AEB30100000018EF58A3B67BA770010000001700000000");
+            result.Create(@"0x186B7573616D61347061726974792D6B7573616D610200000040420F000000000048DF6ACB689907609B0400000037E397FC7C91F5E40200000040FE3AD401F8959A06000000D2BC9897EED08F1503000000F78B278BE53F454C02000000AF2C0297A23E6D3D0500000049EAAF1B548A0CB00300000091D5DF18B0D2CF58020000002A5E924655399E6001000000ED99C5ACB25EEDF503000000CBCA25E39F14238702000000687AD44AD37F03C201000000AB3C0572291FEB8B01000000BC9D89904F5B923F0100000037C8BB1350A9A2A804000000F3FF14D5AB5270590300000017A6BC0D0062AEB30100000018EF58A3B67BA770010000001800000001");
             return result;
         }
         

@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_thing
     
     
     /// <summary>
-    /// >> 89 - Composite[sp_arithmetic.per_things.Percent]
+    /// >> 88 - Composite[sp_arithmetic.per_things.Percent]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Percent : BaseType

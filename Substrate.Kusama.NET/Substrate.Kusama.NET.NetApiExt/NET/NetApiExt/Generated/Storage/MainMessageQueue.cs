@@ -135,7 +135,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> reap_page
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method ReapPage(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.inclusion.EnumAggregateMessageOrigin message_origin, Substrate.NetApi.Model.Types.Primitive.U32 page_index)
         {
@@ -147,7 +147,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> execute_overweight
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method ExecuteOverweight(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.inclusion.EnumAggregateMessageOrigin message_origin, Substrate.NetApi.Model.Types.Primitive.U32 page, Substrate.NetApi.Model.Types.Primitive.U32 index, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight weight_limit)
         {
@@ -255,5 +255,13 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// retrying.
         /// </summary>
         TemporarilyUnprocessable,
+        
+        /// <summary>
+        /// >> QueuePaused
+        /// The queue is paused and no message can be executed from it.
+        /// 
+        /// This can change at any time and may resolve in the future by re-trying.
+        /// </summary>
+        QueuePaused,
     }
 }

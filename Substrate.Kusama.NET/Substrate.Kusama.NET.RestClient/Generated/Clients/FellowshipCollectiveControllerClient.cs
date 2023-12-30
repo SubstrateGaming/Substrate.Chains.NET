@@ -67,9 +67,9 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("FellowshipCollective.Voting", Substrate.Kusama.NET.NetApiExt.Generated.Storage.FellowshipCollectiveStorage.VotingParams(key));
       }
-      public async Task<BoundedVecT20> GetVotingCleanup(U32 key)
+      public async Task<BoundedVecT22> GetVotingCleanup(U32 key)
       {
-         return await SendRequestAsync<BoundedVecT20>(_httpClient, "fellowshipcollective/votingcleanup", Substrate.Kusama.NET.NetApiExt.Generated.Storage.FellowshipCollectiveStorage.VotingCleanupParams(key));
+         return await SendRequestAsync<BoundedVecT22>(_httpClient, "fellowshipcollective/votingcleanup", Substrate.Kusama.NET.NetApiExt.Generated.Storage.FellowshipCollectiveStorage.VotingCleanupParams(key));
       }
       public async Task<bool> SubscribeVotingCleanup(U32 key)
       {

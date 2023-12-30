@@ -14,7 +14,7 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Clients
    using System.Net.Http;
    using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.hrmp;
    using Substrate.NetApi.Model.Types.Base;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives;
    using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_core_primitives;
    using Substrate.Kusama.NET.RestClient.Generated.Interfaces;

@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.slashing
     
     
     /// <summary>
-    /// >> 570 - Composite[pallet_staking.slashing.SpanRecord]
+    /// >> 583 - Composite[pallet_staking.slashing.SpanRecord]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class SpanRecord : BaseType

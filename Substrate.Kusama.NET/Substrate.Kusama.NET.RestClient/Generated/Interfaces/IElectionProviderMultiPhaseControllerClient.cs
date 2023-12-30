@@ -33,7 +33,7 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Interfaces
       Task<bool> SubscribeSnapshotMetadata();
       Task<U32> GetSignedSubmissionNextIndex();
       Task<bool> SubscribeSignedSubmissionNextIndex();
-      Task<BoundedVecT34> GetSignedSubmissionIndices();
+      Task<BoundedVecT39> GetSignedSubmissionIndices();
       Task<bool> SubscribeSignedSubmissionIndices();
       Task<SignedSubmission> GetSignedSubmissionsMap(U32 key);
       Task<bool> SubscribeSignedSubmissionsMap(U32 key);

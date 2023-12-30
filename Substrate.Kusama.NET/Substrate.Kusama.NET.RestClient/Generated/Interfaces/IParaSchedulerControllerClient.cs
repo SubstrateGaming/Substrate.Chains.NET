@@ -12,23 +12,19 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Interfaces
    using System;
    using System.Threading.Tasks;
    using Substrate.NetApi.Model.Types.Base;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.scheduler;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5;
    using Substrate.NetApi.Model.Types.Primitive;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Types.Base;
    
    public interface IParaSchedulerControllerClient
    {
-      Task<BaseVec<BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.ValidatorIndex>>> GetValidatorGroups();
+      Task<BaseVec<BaseVec<ValidatorIndex>>> GetValidatorGroups();
       Task<bool> SubscribeValidatorGroups();
-      Task<ParathreadClaimQueue> GetParathreadQueue();
-      Task<bool> SubscribeParathreadQueue();
-      Task<BaseVec<BaseOpt<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.EnumCoreOccupied>>> GetAvailabilityCores();
+      Task<BaseVec<EnumCoreOccupied>> GetAvailabilityCores();
       Task<bool> SubscribeAvailabilityCores();
-      Task<BaseVec<Id>> GetParathreadClaimIndex();
-      Task<bool> SubscribeParathreadClaimIndex();
       Task<U32> GetSessionStartBlock();
       Task<bool> SubscribeSessionStartBlock();
-      Task<BaseVec<CoreAssignment>> GetScheduled();
-      Task<bool> SubscribeScheduled();
+      Task<BTreeMapT4> GetClaimQueue();
+      Task<bool> SubscribeClaimQueue();
    }
 }

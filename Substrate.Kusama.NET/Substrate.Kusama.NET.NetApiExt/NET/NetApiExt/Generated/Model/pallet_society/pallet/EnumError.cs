@@ -18,49 +18,74 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.pallet
     public enum Error
     {
         
-        BadPosition = 0,
+        NotMember = 0,
         
-        NotMember = 1,
+        AlreadyMember = 1,
         
-        AlreadyMember = 2,
+        Suspended = 2,
         
-        Suspended = 3,
+        NotSuspended = 3,
         
-        NotSuspended = 4,
+        NoPayout = 4,
         
-        NoPayout = 5,
+        AlreadyFounded = 5,
         
-        AlreadyFounded = 6,
+        InsufficientPot = 6,
         
-        InsufficientPot = 7,
+        AlreadyVouching = 7,
         
-        AlreadyVouching = 8,
+        NotVouchingOnBidder = 8,
         
-        NotVouching = 9,
+        Head = 9,
         
-        Head = 10,
+        Founder = 10,
         
-        Founder = 11,
+        AlreadyBid = 11,
         
-        AlreadyBid = 12,
+        AlreadyCandidate = 12,
         
-        AlreadyCandidate = 13,
+        NotCandidate = 13,
         
-        NotCandidate = 14,
+        MaxMembers = 14,
         
-        MaxMembers = 15,
+        NotFounder = 15,
         
-        NotFounder = 16,
+        NotHead = 16,
         
-        NotHead = 17,
+        NotApproved = 17,
+        
+        NotRejected = 18,
+        
+        Approved = 19,
+        
+        Rejected = 20,
+        
+        InProgress = 21,
+        
+        TooEarly = 22,
+        
+        Voted = 23,
+        
+        Expired = 24,
+        
+        NotBidder = 25,
+        
+        NoDefender = 26,
+        
+        NotGroup = 27,
+        
+        AlreadyElevated = 28,
+        
+        AlreadyPunished = 29,
+        
+        InsufficientFunds = 30,
+        
+        NoVotes = 31,
     }
     
     /// <summary>
-    /// >> 660 - Variant[pallet_society.pallet.Error]
-    /// 
-    ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
-    ///			of this pallet.
-    ///			
+    /// >> 681 - Variant[pallet_society.pallet.Error]
+    /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>
     {

@@ -16,7 +16,7 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Interfaces
    
    public interface IVestingControllerMockupClient
    {
-      Task<bool> SetVesting(BoundedVecT26 value, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
+      Task<bool> SetVesting(BoundedVecT31 value, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
       Task<bool> SetStorageVersion(EnumReleases value);
    }
 }

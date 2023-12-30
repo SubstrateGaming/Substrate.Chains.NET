@@ -50,7 +50,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// </summary>
         public static string ActiveConfigDefault()
         {
-            return @"0x000000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000010000000100000000000000000006000000640000000100000000000000000000000000000000000000000200000002000000";
+            return @"0x0000000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001027000080B2E60E80C3C9018096980000000000000000000000000005000000010000000100000001000000000006000000640000000100000000000000000000000000000000000000020000000200000002000000";
         }
         
         /// <summary>
@@ -142,7 +142,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> set_validation_upgrade_cooldown
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method SetValidationUpgradeCooldown(Substrate.NetApi.Model.Types.Primitive.U32 @new)
         {
@@ -153,7 +153,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> set_validation_upgrade_delay
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method SetValidationUpgradeDelay(Substrate.NetApi.Model.Types.Primitive.U32 @new)
         {
@@ -164,7 +164,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> set_code_retention_period
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method SetCodeRetentionPeriod(Substrate.NetApi.Model.Types.Primitive.U32 @new)
         {
@@ -175,7 +175,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> set_max_code_size
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method SetMaxCodeSize(Substrate.NetApi.Model.Types.Primitive.U32 @new)
         {
@@ -186,7 +186,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> set_max_pov_size
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method SetMaxPovSize(Substrate.NetApi.Model.Types.Primitive.U32 @new)
         {
@@ -197,7 +197,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> set_max_head_data_size
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method SetMaxHeadDataSize(Substrate.NetApi.Model.Types.Primitive.U32 @new)
         {
@@ -207,30 +207,30 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         }
         
         /// <summary>
-        /// >> set_parathread_cores
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// >> set_on_demand_cores
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method SetParathreadCores(Substrate.NetApi.Model.Types.Primitive.U32 @new)
+        public static Method SetOnDemandCores(Substrate.NetApi.Model.Types.Primitive.U32 @new)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(@new.Encode());
-            return new Method(51, "Configuration", 6, "set_parathread_cores", byteArray.ToArray());
+            return new Method(51, "Configuration", 6, "set_on_demand_cores", byteArray.ToArray());
         }
         
         /// <summary>
-        /// >> set_parathread_retries
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// >> set_on_demand_retries
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method SetParathreadRetries(Substrate.NetApi.Model.Types.Primitive.U32 @new)
+        public static Method SetOnDemandRetries(Substrate.NetApi.Model.Types.Primitive.U32 @new)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(@new.Encode());
-            return new Method(51, "Configuration", 7, "set_parathread_retries", byteArray.ToArray());
+            return new Method(51, "Configuration", 7, "set_on_demand_retries", byteArray.ToArray());
         }
         
         /// <summary>
         /// >> set_group_rotation_frequency
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method SetGroupRotationFrequency(Substrate.NetApi.Model.Types.Primitive.U32 @new)
         {
@@ -240,30 +240,19 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         }
         
         /// <summary>
-        /// >> set_chain_availability_period
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// >> set_paras_availability_period
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method SetChainAvailabilityPeriod(Substrate.NetApi.Model.Types.Primitive.U32 @new)
+        public static Method SetParasAvailabilityPeriod(Substrate.NetApi.Model.Types.Primitive.U32 @new)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(@new.Encode());
-            return new Method(51, "Configuration", 9, "set_chain_availability_period", byteArray.ToArray());
-        }
-        
-        /// <summary>
-        /// >> set_thread_availability_period
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
-        /// </summary>
-        public static Method SetThreadAvailabilityPeriod(Substrate.NetApi.Model.Types.Primitive.U32 @new)
-        {
-            System.Collections.Generic.List<byte> byteArray = new List<byte>();
-            byteArray.AddRange(@new.Encode());
-            return new Method(51, "Configuration", 10, "set_thread_availability_period", byteArray.ToArray());
+            return new Method(51, "Configuration", 9, "set_paras_availability_period", byteArray.ToArray());
         }
         
         /// <summary>
         /// >> set_scheduling_lookahead
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method SetSchedulingLookahead(Substrate.NetApi.Model.Types.Primitive.U32 @new)
         {
@@ -274,7 +263,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> set_max_validators_per_core
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method SetMaxValidatorsPerCore(Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32> @new)
         {
@@ -285,7 +274,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> set_max_validators
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method SetMaxValidators(Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32> @new)
         {
@@ -296,7 +285,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> set_dispute_period
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method SetDisputePeriod(Substrate.NetApi.Model.Types.Primitive.U32 @new)
         {
@@ -307,7 +296,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> set_dispute_post_conclusion_acceptance_period
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method SetDisputePostConclusionAcceptancePeriod(Substrate.NetApi.Model.Types.Primitive.U32 @new)
         {
@@ -318,7 +307,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> set_no_show_slots
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method SetNoShowSlots(Substrate.NetApi.Model.Types.Primitive.U32 @new)
         {
@@ -329,7 +318,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> set_n_delay_tranches
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method SetNDelayTranches(Substrate.NetApi.Model.Types.Primitive.U32 @new)
         {
@@ -340,7 +329,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> set_zeroth_delay_tranche_width
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method SetZerothDelayTrancheWidth(Substrate.NetApi.Model.Types.Primitive.U32 @new)
         {
@@ -351,7 +340,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> set_needed_approvals
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method SetNeededApprovals(Substrate.NetApi.Model.Types.Primitive.U32 @new)
         {
@@ -362,7 +351,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> set_relay_vrf_modulo_samples
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method SetRelayVrfModuloSamples(Substrate.NetApi.Model.Types.Primitive.U32 @new)
         {
@@ -373,7 +362,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> set_max_upward_queue_count
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method SetMaxUpwardQueueCount(Substrate.NetApi.Model.Types.Primitive.U32 @new)
         {
@@ -384,7 +373,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> set_max_upward_queue_size
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method SetMaxUpwardQueueSize(Substrate.NetApi.Model.Types.Primitive.U32 @new)
         {
@@ -395,7 +384,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> set_max_downward_message_size
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method SetMaxDownwardMessageSize(Substrate.NetApi.Model.Types.Primitive.U32 @new)
         {
@@ -406,7 +395,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> set_max_upward_message_size
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method SetMaxUpwardMessageSize(Substrate.NetApi.Model.Types.Primitive.U32 @new)
         {
@@ -417,7 +406,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> set_max_upward_message_num_per_candidate
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method SetMaxUpwardMessageNumPerCandidate(Substrate.NetApi.Model.Types.Primitive.U32 @new)
         {
@@ -428,7 +417,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> set_hrmp_open_request_ttl
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method SetHrmpOpenRequestTtl(Substrate.NetApi.Model.Types.Primitive.U32 @new)
         {
@@ -439,7 +428,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> set_hrmp_sender_deposit
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method SetHrmpSenderDeposit(Substrate.NetApi.Model.Types.Primitive.U128 @new)
         {
@@ -450,7 +439,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> set_hrmp_recipient_deposit
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method SetHrmpRecipientDeposit(Substrate.NetApi.Model.Types.Primitive.U128 @new)
         {
@@ -461,7 +450,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> set_hrmp_channel_max_capacity
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method SetHrmpChannelMaxCapacity(Substrate.NetApi.Model.Types.Primitive.U32 @new)
         {
@@ -472,7 +461,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> set_hrmp_channel_max_total_size
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method SetHrmpChannelMaxTotalSize(Substrate.NetApi.Model.Types.Primitive.U32 @new)
         {
@@ -483,7 +472,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> set_hrmp_max_parachain_inbound_channels
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method SetHrmpMaxParachainInboundChannels(Substrate.NetApi.Model.Types.Primitive.U32 @new)
         {
@@ -493,19 +482,8 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         }
         
         /// <summary>
-        /// >> set_hrmp_max_parathread_inbound_channels
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
-        /// </summary>
-        public static Method SetHrmpMaxParathreadInboundChannels(Substrate.NetApi.Model.Types.Primitive.U32 @new)
-        {
-            System.Collections.Generic.List<byte> byteArray = new List<byte>();
-            byteArray.AddRange(@new.Encode());
-            return new Method(51, "Configuration", 35, "set_hrmp_max_parathread_inbound_channels", byteArray.ToArray());
-        }
-        
-        /// <summary>
         /// >> set_hrmp_channel_max_message_size
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method SetHrmpChannelMaxMessageSize(Substrate.NetApi.Model.Types.Primitive.U32 @new)
         {
@@ -516,7 +494,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> set_hrmp_max_parachain_outbound_channels
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method SetHrmpMaxParachainOutboundChannels(Substrate.NetApi.Model.Types.Primitive.U32 @new)
         {
@@ -526,19 +504,8 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         }
         
         /// <summary>
-        /// >> set_hrmp_max_parathread_outbound_channels
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
-        /// </summary>
-        public static Method SetHrmpMaxParathreadOutboundChannels(Substrate.NetApi.Model.Types.Primitive.U32 @new)
-        {
-            System.Collections.Generic.List<byte> byteArray = new List<byte>();
-            byteArray.AddRange(@new.Encode());
-            return new Method(51, "Configuration", 38, "set_hrmp_max_parathread_outbound_channels", byteArray.ToArray());
-        }
-        
-        /// <summary>
         /// >> set_hrmp_max_message_num_per_candidate
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method SetHrmpMaxMessageNumPerCandidate(Substrate.NetApi.Model.Types.Primitive.U32 @new)
         {
@@ -548,19 +515,8 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         }
         
         /// <summary>
-        /// >> set_pvf_checking_enabled
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
-        /// </summary>
-        public static Method SetPvfCheckingEnabled(Substrate.NetApi.Model.Types.Primitive.Bool @new)
-        {
-            System.Collections.Generic.List<byte> byteArray = new List<byte>();
-            byteArray.AddRange(@new.Encode());
-            return new Method(51, "Configuration", 41, "set_pvf_checking_enabled", byteArray.ToArray());
-        }
-        
-        /// <summary>
         /// >> set_pvf_voting_ttl
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method SetPvfVotingTtl(Substrate.NetApi.Model.Types.Primitive.U32 @new)
         {
@@ -571,7 +527,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> set_minimum_validation_upgrade_delay
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method SetMinimumValidationUpgradeDelay(Substrate.NetApi.Model.Types.Primitive.U32 @new)
         {
@@ -582,7 +538,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> set_bypass_consistency_check
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method SetBypassConsistencyCheck(Substrate.NetApi.Model.Types.Primitive.Bool @new)
         {
@@ -593,7 +549,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> set_async_backing_params
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method SetAsyncBackingParams(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.vstaging.AsyncBackingParams @new)
         {
@@ -604,13 +560,79 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> set_executor_params
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method SetExecutorParams(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.executor_params.ExecutorParams @new)
+        public static Method SetExecutorParams(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.executor_params.ExecutorParams @new)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(@new.Encode());
             return new Method(51, "Configuration", 46, "set_executor_params", byteArray.ToArray());
+        }
+        
+        /// <summary>
+        /// >> set_on_demand_base_fee
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
+        /// </summary>
+        public static Method SetOnDemandBaseFee(Substrate.NetApi.Model.Types.Primitive.U128 @new)
+        {
+            System.Collections.Generic.List<byte> byteArray = new List<byte>();
+            byteArray.AddRange(@new.Encode());
+            return new Method(51, "Configuration", 47, "set_on_demand_base_fee", byteArray.ToArray());
+        }
+        
+        /// <summary>
+        /// >> set_on_demand_fee_variability
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
+        /// </summary>
+        public static Method SetOnDemandFeeVariability(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill @new)
+        {
+            System.Collections.Generic.List<byte> byteArray = new List<byte>();
+            byteArray.AddRange(@new.Encode());
+            return new Method(51, "Configuration", 48, "set_on_demand_fee_variability", byteArray.ToArray());
+        }
+        
+        /// <summary>
+        /// >> set_on_demand_queue_max_size
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
+        /// </summary>
+        public static Method SetOnDemandQueueMaxSize(Substrate.NetApi.Model.Types.Primitive.U32 @new)
+        {
+            System.Collections.Generic.List<byte> byteArray = new List<byte>();
+            byteArray.AddRange(@new.Encode());
+            return new Method(51, "Configuration", 49, "set_on_demand_queue_max_size", byteArray.ToArray());
+        }
+        
+        /// <summary>
+        /// >> set_on_demand_target_queue_utilization
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
+        /// </summary>
+        public static Method SetOnDemandTargetQueueUtilization(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill @new)
+        {
+            System.Collections.Generic.List<byte> byteArray = new List<byte>();
+            byteArray.AddRange(@new.Encode());
+            return new Method(51, "Configuration", 50, "set_on_demand_target_queue_utilization", byteArray.ToArray());
+        }
+        
+        /// <summary>
+        /// >> set_on_demand_ttl
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
+        /// </summary>
+        public static Method SetOnDemandTtl(Substrate.NetApi.Model.Types.Primitive.U32 @new)
+        {
+            System.Collections.Generic.List<byte> byteArray = new List<byte>();
+            byteArray.AddRange(@new.Encode());
+            return new Method(51, "Configuration", 51, "set_on_demand_ttl", byteArray.ToArray());
+        }
+        
+        /// <summary>
+        /// >> set_minimum_backing_votes
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
+        /// </summary>
+        public static Method SetMinimumBackingVotes(Substrate.NetApi.Model.Types.Primitive.U32 @new)
+        {
+            System.Collections.Generic.List<byte> byteArray = new List<byte>();
+            byteArray.AddRange(@new.Encode());
+            return new Method(51, "Configuration", 52, "set_minimum_backing_votes", byteArray.ToArray());
         }
     }
     

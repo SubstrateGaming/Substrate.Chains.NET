@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_election_provide
     
     
     /// <summary>
-    /// >> 216 - Composite[pallet_election_provider_multi_phase.RawSolution]
+    /// >> 222 - Composite[pallet_election_provider_multi_phase.RawSolution]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class RawSolution : BaseType
@@ -27,7 +27,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_election_provide
         /// <summary>
         /// >> solution
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.kusama_runtime.NposCompactSolution24 _solution;
+        private Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_kusama_runtime.NposCompactSolution24 _solution;
         
         /// <summary>
         /// >> score
@@ -39,7 +39,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_election_provide
         /// </summary>
         private Substrate.NetApi.Model.Types.Primitive.U32 _round;
         
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.kusama_runtime.NposCompactSolution24 Solution
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_kusama_runtime.NposCompactSolution24 Solution
         {
             get
             {
@@ -92,7 +92,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_election_provide
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Solution = new Substrate.Kusama.NET.NetApiExt.Generated.Model.kusama_runtime.NposCompactSolution24();
+            Solution = new Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_kusama_runtime.NposCompactSolution24();
             Solution.Decode(byteArray, ref p);
             Score = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_npos_elections.ElectionScore();
             Score.Decode(byteArray, ref p);

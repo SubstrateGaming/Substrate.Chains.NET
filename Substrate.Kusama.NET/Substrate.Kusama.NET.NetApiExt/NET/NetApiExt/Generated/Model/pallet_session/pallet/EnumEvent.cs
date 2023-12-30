@@ -23,10 +23,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_session.pallet
     
     /// <summary>
     /// >> 42 - Variant[pallet_session.pallet.Event]
-    /// 
-    ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
-    ///			by this pallet.
-    ///			
+    /// The `Event` enum of this pallet
     /// </summary>
     public sealed class EnumEvent : BaseEnumExt<Event, Substrate.NetApi.Model.Types.Primitive.U32>
     {

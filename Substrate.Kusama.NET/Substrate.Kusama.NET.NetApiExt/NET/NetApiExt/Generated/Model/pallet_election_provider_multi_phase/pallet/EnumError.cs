@@ -48,7 +48,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_election_provide
     }
     
     /// <summary>
-    /// >> 708 - Variant[pallet_election_provider_multi_phase.pallet.Error]
+    /// >> 729 - Variant[pallet_election_provider_multi_phase.pallet.Error]
     /// Error of the pallet that can be returned in response to dispatches.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>

@@ -19,7 +19,7 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Interfaces
    {
       Task<U32> GetIncompleteSince();
       Task<bool> SubscribeIncompleteSince();
-      Task<BoundedVecT27> GetAgenda(U32 key);
+      Task<BoundedVecT32> GetAgenda(U32 key);
       Task<bool> SubscribeAgenda(U32 key);
       Task<BaseTuple<U32, U32>> GetLookup(Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr32U8 key);
       Task<bool> SubscribeLookup(Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr32U8 key);

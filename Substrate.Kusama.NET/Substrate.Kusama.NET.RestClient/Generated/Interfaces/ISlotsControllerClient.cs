@@ -15,7 +15,7 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Interfaces
    
    public interface ISlotsControllerClient
    {
-      Task<BaseVec<BaseOpt<BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U128>>>> GetLeases(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id key);
-      Task<bool> SubscribeLeases(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id key);
+      Task<BaseVec<BaseOpt<BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U128>>>> GetLeases(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key);
+      Task<bool> SubscribeLeases(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key);
    }
 }

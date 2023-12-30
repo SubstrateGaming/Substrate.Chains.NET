@@ -14,9 +14,9 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Clients
    using System.Net.Http;
    using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.paras;
    using Substrate.NetApi.Model.Types.Base;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives;
    using Substrate.NetApi.Model.Types.Primitive;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5;
    using Substrate.Kusama.NET.RestClient.Generated.Interfaces;
    
    public sealed class ParasControllerClient : BaseClient, IParasControllerClient
@@ -67,6 +67,14 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Clients
       public async Task<bool> SubscribeHeads(Id key)
       {
          return await _subscriptionClient.SubscribeAsync("Paras.Heads", Substrate.Kusama.NET.NetApiExt.Generated.Storage.ParasStorage.HeadsParams(key));
+      }
+      public async Task<U32> GetMostRecentContext(Id key)
+      {
+         return await SendRequestAsync<U32>(_httpClient, "paras/mostrecentcontext", Substrate.Kusama.NET.NetApiExt.Generated.Storage.ParasStorage.MostRecentContextParams(key));
+      }
+      public async Task<bool> SubscribeMostRecentContext(Id key)
+      {
+         return await _subscriptionClient.SubscribeAsync("Paras.MostRecentContext", Substrate.Kusama.NET.NetApiExt.Generated.Storage.ParasStorage.MostRecentContextParams(key));
       }
       public async Task<ValidationCodeHash> GetCurrentCodeHash(Id key)
       {

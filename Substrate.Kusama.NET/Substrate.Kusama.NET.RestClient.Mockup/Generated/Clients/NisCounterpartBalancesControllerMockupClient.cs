@@ -37,19 +37,19 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "NisCounterpartBalances/Account", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.NisCounterpartBalancesStorage.AccountParams(key));
       }
-      public async Task<bool> SetLocks(WeakBoundedVecT8 value, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+      public async Task<bool> SetLocks(WeakBoundedVecT6 value, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {
          return await SendMockupRequestAsync(_httpClient, "NisCounterpartBalances/Locks", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.NisCounterpartBalancesStorage.LocksParams(key));
       }
-      public async Task<bool> SetReserves(BoundedVecT37 value, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+      public async Task<bool> SetReserves(BoundedVecT42 value, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {
          return await SendMockupRequestAsync(_httpClient, "NisCounterpartBalances/Reserves", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.NisCounterpartBalancesStorage.ReservesParams(key));
       }
-      public async Task<bool> SetHolds(BoundedVecT38 value, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+      public async Task<bool> SetHolds(BoundedVecT43 value, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {
          return await SendMockupRequestAsync(_httpClient, "NisCounterpartBalances/Holds", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.NisCounterpartBalancesStorage.HoldsParams(key));
       }
-      public async Task<bool> SetFreezes(BoundedVecT38 value, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+      public async Task<bool> SetFreezes(BoundedVecT44 value, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {
          return await SendMockupRequestAsync(_httpClient, "NisCounterpartBalances/Freezes", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.NisCounterpartBalancesStorage.FreezesParams(key));
       }

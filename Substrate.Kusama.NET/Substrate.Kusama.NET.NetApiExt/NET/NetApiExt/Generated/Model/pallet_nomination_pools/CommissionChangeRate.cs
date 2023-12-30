@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools
     
     
     /// <summary>
-    /// >> 316 - Composite[pallet_nomination_pools.CommissionChangeRate]
+    /// >> 322 - Composite[pallet_nomination_pools.CommissionChangeRate]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class CommissionChangeRate : BaseType

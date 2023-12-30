@@ -26,11 +26,8 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parach
     }
     
     /// <summary>
-    /// >> 489 - Variant[polkadot_runtime_parachains.disputes.pallet.Event]
-    /// 
-    ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
-    ///			by this pallet.
-    ///			
+    /// >> 499 - Variant[polkadot_runtime_parachains.disputes.pallet.Event]
+    /// The `Event` enum of this pallet
     /// </summary>
     public sealed class EnumEvent : BaseEnumExt<Event, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_core_primitives.CandidateHash, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.disputes.EnumDisputeLocation>, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_core_primitives.CandidateHash, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.disputes.EnumDisputeResult>, Substrate.NetApi.Model.Types.Primitive.U32>
     {

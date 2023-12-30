@@ -21,9 +21,9 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Interfaces
       Task<bool> SubscribeBountyCount();
       Task<Bounty> GetBounties(U32 key);
       Task<bool> SubscribeBounties(U32 key);
-      Task<BoundedVecT32> GetBountyDescriptions(U32 key);
+      Task<BoundedVecT37> GetBountyDescriptions(U32 key);
       Task<bool> SubscribeBountyDescriptions(U32 key);
-      Task<BoundedVecT16> GetBountyApprovals();
+      Task<BoundedVecT18> GetBountyApprovals();
       Task<bool> SubscribeBountyApprovals();
    }
 }

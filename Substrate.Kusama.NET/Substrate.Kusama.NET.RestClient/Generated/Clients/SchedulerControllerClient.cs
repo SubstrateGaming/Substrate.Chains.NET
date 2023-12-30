@@ -34,9 +34,9 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("Scheduler.IncompleteSince");
       }
-      public async Task<BoundedVecT27> GetAgenda(U32 key)
+      public async Task<BoundedVecT32> GetAgenda(U32 key)
       {
-         return await SendRequestAsync<BoundedVecT27>(_httpClient, "scheduler/agenda", Substrate.Kusama.NET.NetApiExt.Generated.Storage.SchedulerStorage.AgendaParams(key));
+         return await SendRequestAsync<BoundedVecT32>(_httpClient, "scheduler/agenda", Substrate.Kusama.NET.NetApiExt.Generated.Storage.SchedulerStorage.AgendaParams(key));
       }
       public async Task<bool> SubscribeAgenda(U32 key)
       {

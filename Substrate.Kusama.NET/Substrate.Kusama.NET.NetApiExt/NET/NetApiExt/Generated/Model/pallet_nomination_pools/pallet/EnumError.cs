@@ -64,29 +64,28 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools
         
         CommissionExceedsMaximum = 22,
         
-        CommissionChangeThrottled = 23,
+        CommissionExceedsGlobalMaximum = 23,
         
-        CommissionChangeRateNotAllowed = 24,
+        CommissionChangeThrottled = 24,
         
-        NoPendingCommission = 25,
+        CommissionChangeRateNotAllowed = 25,
         
-        NoCommissionCurrentSet = 26,
+        NoPendingCommission = 26,
         
-        PoolIdInUse = 27,
+        NoCommissionCurrentSet = 27,
         
-        InvalidPoolId = 28,
+        PoolIdInUse = 28,
         
-        BondExtraRestricted = 29,
+        InvalidPoolId = 29,
+        
+        BondExtraRestricted = 30,
     }
     
     /// <summary>
-    /// >> 742 - Variant[pallet_nomination_pools.pallet.Error]
-    /// 
-    ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
-    ///			of this pallet.
-    ///			
+    /// >> 764 - Variant[pallet_nomination_pools.pallet.Error]
+    /// The `Error` enum of this pallet.
     /// </summary>
-    public sealed class EnumError : BaseEnumExt<Error, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools.pallet.EnumDefensiveError, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid>
+    public sealed class EnumError : BaseEnumExt<Error, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools.pallet.EnumDefensiveError, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid>
     {
     }
 }

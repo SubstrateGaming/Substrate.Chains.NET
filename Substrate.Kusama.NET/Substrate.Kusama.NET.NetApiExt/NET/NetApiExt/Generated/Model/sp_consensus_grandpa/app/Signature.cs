@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_grandpa.ap
     
     
     /// <summary>
-    /// >> 105 - Composite[sp_consensus_grandpa.app.Signature]
+    /// >> 118 - Composite[sp_consensus_grandpa.app.Signature]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Signature : BaseType

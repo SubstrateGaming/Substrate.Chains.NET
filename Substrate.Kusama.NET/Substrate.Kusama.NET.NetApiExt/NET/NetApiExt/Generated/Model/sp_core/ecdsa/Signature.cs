@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.ecdsa
     
     
     /// <summary>
-    /// >> 382 - Composite[sp_core.ecdsa.Signature]
+    /// >> 100 - Composite[sp_core.ecdsa.Signature]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Signature : BaseType

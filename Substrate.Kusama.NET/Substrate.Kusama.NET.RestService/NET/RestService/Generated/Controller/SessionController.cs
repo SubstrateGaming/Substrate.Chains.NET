@@ -80,7 +80,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Controller
         ///  will be used to determine the validator's session keys.
         /// </summary>
         [HttpGet("QueuedKeys")]
-        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Kusama.NET.NetApiExt.Generated.Model.kusama_runtime.SessionKeys>>), 200)]
+        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_kusama_runtime.SessionKeys>>), 200)]
         [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.SessionStorage), "QueuedKeysParams")]
         public IActionResult GetQueuedKeys()
         {
@@ -108,7 +108,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Controller
         ///  The next session keys for a validator.
         /// </summary>
         [HttpGet("NextKeys")]
-        [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.kusama_runtime.SessionKeys), 200)]
+        [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_kusama_runtime.SessionKeys), 200)]
         [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.SessionStorage), "NextKeysParams", typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32))]
         public IActionResult GetNextKeys(string key)
         {

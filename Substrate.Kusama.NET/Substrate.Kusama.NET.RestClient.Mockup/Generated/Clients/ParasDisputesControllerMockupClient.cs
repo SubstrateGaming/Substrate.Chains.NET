@@ -13,7 +13,7 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Clients
    using System.Threading.Tasks;
    using System.Net.Http;
    using Substrate.NetApi.Model.Types.Primitive;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5;
    using Substrate.Kusama.NET.NetApiExt.Generated.Types.Base;
    using Substrate.NetApi.Model.Types.Base;
    using Substrate.Kusama.NET.RestClient.Mockup.Generated.Interfaces;

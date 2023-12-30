@@ -13,9 +13,9 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Clients
    using System.Threading.Tasks;
    using System.Net.Http;
    using Substrate.NetApi.Model.Types.Base;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.scheduler;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5;
    using Substrate.NetApi.Model.Types.Primitive;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Types.Base;
    using Substrate.Kusama.NET.RestClient.Mockup.Generated.Interfaces;
    
    public sealed class ParaSchedulerControllerMockupClient : MockupBaseClient, IParaSchedulerControllerMockupClient
@@ -25,29 +25,21 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Clients
       {
          _httpClient = httpClient;
       }
-      public async Task<bool> SetValidatorGroups(BaseVec<BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.ValidatorIndex>> value)
+      public async Task<bool> SetValidatorGroups(BaseVec<BaseVec<ValidatorIndex>> value)
       {
          return await SendMockupRequestAsync(_httpClient, "ParaScheduler/ValidatorGroups", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.ParaSchedulerStorage.ValidatorGroupsParams());
       }
-      public async Task<bool> SetParathreadQueue(ParathreadClaimQueue value)
-      {
-         return await SendMockupRequestAsync(_httpClient, "ParaScheduler/ParathreadQueue", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.ParaSchedulerStorage.ParathreadQueueParams());
-      }
-      public async Task<bool> SetAvailabilityCores(BaseVec<BaseOpt<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.EnumCoreOccupied>> value)
+      public async Task<bool> SetAvailabilityCores(BaseVec<EnumCoreOccupied> value)
       {
          return await SendMockupRequestAsync(_httpClient, "ParaScheduler/AvailabilityCores", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.ParaSchedulerStorage.AvailabilityCoresParams());
-      }
-      public async Task<bool> SetParathreadClaimIndex(BaseVec<Id> value)
-      {
-         return await SendMockupRequestAsync(_httpClient, "ParaScheduler/ParathreadClaimIndex", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.ParaSchedulerStorage.ParathreadClaimIndexParams());
       }
       public async Task<bool> SetSessionStartBlock(U32 value)
       {
          return await SendMockupRequestAsync(_httpClient, "ParaScheduler/SessionStartBlock", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.ParaSchedulerStorage.SessionStartBlockParams());
       }
-      public async Task<bool> SetScheduled(BaseVec<CoreAssignment> value)
+      public async Task<bool> SetClaimQueue(BTreeMapT4 value)
       {
-         return await SendMockupRequestAsync(_httpClient, "ParaScheduler/Scheduled", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.ParaSchedulerStorage.ScheduledParams());
+         return await SendMockupRequestAsync(_httpClient, "ParaScheduler/ClaimQueue", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.ParaSchedulerStorage.ClaimQueueParams());
       }
    }
 }

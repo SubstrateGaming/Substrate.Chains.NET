@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_babe.app
     
     
     /// <summary>
-    /// >> 72 - Composite[sp_consensus_babe.app.Public]
+    /// >> 71 - Composite[sp_consensus_babe.app.Public]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Public : BaseType

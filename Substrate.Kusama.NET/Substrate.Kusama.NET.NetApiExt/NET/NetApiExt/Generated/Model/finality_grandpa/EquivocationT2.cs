@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.finality_grandpa
     
     
     /// <summary>
-    /// >> 109 - Composite[finality_grandpa.EquivocationT2]
+    /// >> 122 - Composite[finality_grandpa.EquivocationT2]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class EquivocationT2 : BaseType

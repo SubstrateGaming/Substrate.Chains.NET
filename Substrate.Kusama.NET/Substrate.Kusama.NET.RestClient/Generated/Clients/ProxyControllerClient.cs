@@ -26,17 +26,17 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Clients
          _httpClient = httpClient;
          _subscriptionClient = subscriptionClient;
       }
-      public async Task<BaseTuple<BoundedVecT28, U128>> GetProxies(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+      public async Task<BaseTuple<BoundedVecT33, U128>> GetProxies(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {
-         return await SendRequestAsync<BaseTuple<BoundedVecT28, U128>>(_httpClient, "proxy/proxies", Substrate.Kusama.NET.NetApiExt.Generated.Storage.ProxyStorage.ProxiesParams(key));
+         return await SendRequestAsync<BaseTuple<BoundedVecT33, U128>>(_httpClient, "proxy/proxies", Substrate.Kusama.NET.NetApiExt.Generated.Storage.ProxyStorage.ProxiesParams(key));
       }
       public async Task<bool> SubscribeProxies(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {
          return await _subscriptionClient.SubscribeAsync("Proxy.Proxies", Substrate.Kusama.NET.NetApiExt.Generated.Storage.ProxyStorage.ProxiesParams(key));
       }
-      public async Task<BaseTuple<BoundedVecT29, U128>> GetAnnouncements(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+      public async Task<BaseTuple<BoundedVecT34, U128>> GetAnnouncements(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {
-         return await SendRequestAsync<BaseTuple<BoundedVecT29, U128>>(_httpClient, "proxy/announcements", Substrate.Kusama.NET.NetApiExt.Generated.Storage.ProxyStorage.AnnouncementsParams(key));
+         return await SendRequestAsync<BaseTuple<BoundedVecT34, U128>>(_httpClient, "proxy/announcements", Substrate.Kusama.NET.NetApiExt.Generated.Storage.ProxyStorage.AnnouncementsParams(key));
       }
       public async Task<bool> SubscribeAnnouncements(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {

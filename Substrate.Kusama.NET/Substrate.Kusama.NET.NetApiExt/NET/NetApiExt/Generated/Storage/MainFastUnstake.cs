@@ -40,6 +40,8 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// <summary>
         /// >> HeadParams
         ///  The current "head of the queue" being unstaked.
+        /// 
+        ///  The head in itself can be a batch of up to [`Config::BatchSize`] stakers.
         /// </summary>
         public static string HeadParams()
         {
@@ -58,6 +60,8 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// <summary>
         /// >> Head
         ///  The current "head of the queue" being unstaked.
+        /// 
+        ///  The head in itself can be a batch of up to [`Config::BatchSize`] stakers.
         /// </summary>
         public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_fast_unstake.types.UnstakeRequest> Head(CancellationToken token)
         {
@@ -71,8 +75,6 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         ///  The map of all accounts wishing to be unstaked.
         /// 
         ///  Keeps track of `AccountId` wishing to unstake and it's corresponding deposit.
-        /// 
-        ///  TWOX-NOTE: SAFE since `AccountId` is a secure hash.
         /// </summary>
         public static string QueueParams(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
         {
@@ -95,8 +97,6 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         ///  The map of all accounts wishing to be unstaked.
         /// 
         ///  Keeps track of `AccountId` wishing to unstake and it's corresponding deposit.
-        /// 
-        ///  TWOX-NOTE: SAFE since `AccountId` is a secure hash.
         /// </summary>
         public async Task<Substrate.NetApi.Model.Types.Primitive.U128> Queue(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, CancellationToken token)
         {
@@ -138,10 +138,12 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> ErasToCheckPerBlockParams
         ///  Number of eras to check per block.
         /// 
-        ///  If set to 0, this pallet does absolutely nothing.
+        ///  If set to 0, this pallet does absolutely nothing. Cannot be set to more than
+        ///  [`Config::MaxErasToCheckPerBlock`].
         /// 
-        ///  Based on the amount of weight available at `on_idle`, up to this many eras of a single
-        ///  nominator might be checked.
+        ///  Based on the amount of weight available at [`Pallet::on_idle`], up to this many eras are
+        ///  checked. The checking is represented by updating [`UnstakeRequest::checked`], which is
+        ///  stored in [`Head`].
         /// </summary>
         public static string ErasToCheckPerBlockParams()
         {
@@ -161,10 +163,12 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> ErasToCheckPerBlock
         ///  Number of eras to check per block.
         /// 
-        ///  If set to 0, this pallet does absolutely nothing.
+        ///  If set to 0, this pallet does absolutely nothing. Cannot be set to more than
+        ///  [`Config::MaxErasToCheckPerBlock`].
         /// 
-        ///  Based on the amount of weight available at `on_idle`, up to this many eras of a single
-        ///  nominator might be checked.
+        ///  Based on the amount of weight available at [`Pallet::on_idle`], up to this many eras are
+        ///  checked. The checking is represented by updating [`UnstakeRequest::checked`], which is
+        ///  stored in [`Head`].
         /// </summary>
         public async Task<Substrate.NetApi.Model.Types.Primitive.U32> ErasToCheckPerBlock(CancellationToken token)
         {
@@ -179,7 +183,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> register_fast_unstake
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method RegisterFastUnstake()
         {
@@ -189,7 +193,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> deregister
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method Deregister()
         {
@@ -199,7 +203,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> control
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method Control(Substrate.NetApi.Model.Types.Primitive.U32 eras_to_check)
         {

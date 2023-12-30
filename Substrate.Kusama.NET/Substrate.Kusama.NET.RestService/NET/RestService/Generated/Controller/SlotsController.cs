@@ -41,8 +41,8 @@ namespace Substrate.Kusama.NET.RestService.Generated.Controller
         /// >> Leases
         ///  Amounts held on deposit for each (possibly future) leased parachain.
         /// 
-        ///  The actual amount locked on its behalf by any account at any time is the maximum of the second values
-        ///  of the items in this list whose first value is the account.
+        ///  The actual amount locked on its behalf by any account at any time is the maximum of the
+        ///  second values of the items in this list whose first value is the account.
         /// 
         ///  The first item in the list is the amount locked for the current Lease Period. Following
         ///  items are for the subsequent lease periods.
@@ -58,7 +58,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Controller
         /// </summary>
         [HttpGet("Leases")]
         [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U128>>>), 200)]
-        [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.SlotsStorage), "LeasesParams", typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id))]
+        [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.SlotsStorage), "LeasesParams", typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id))]
         public IActionResult GetLeases(string key)
         {
             return this.Ok(_slotsStorage.GetLeases(key));

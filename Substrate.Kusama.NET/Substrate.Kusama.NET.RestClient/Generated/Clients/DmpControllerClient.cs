@@ -27,27 +27,27 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Clients
          _httpClient = httpClient;
          _subscriptionClient = subscriptionClient;
       }
-      public async Task<BaseVec<InboundDownwardMessage>> GetDownwardMessageQueues(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id key)
+      public async Task<BaseVec<InboundDownwardMessage>> GetDownwardMessageQueues(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key)
       {
          return await SendRequestAsync<BaseVec<InboundDownwardMessage>>(_httpClient, "dmp/downwardmessagequeues", Substrate.Kusama.NET.NetApiExt.Generated.Storage.DmpStorage.DownwardMessageQueuesParams(key));
       }
-      public async Task<bool> SubscribeDownwardMessageQueues(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id key)
+      public async Task<bool> SubscribeDownwardMessageQueues(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key)
       {
          return await _subscriptionClient.SubscribeAsync("Dmp.DownwardMessageQueues", Substrate.Kusama.NET.NetApiExt.Generated.Storage.DmpStorage.DownwardMessageQueuesParams(key));
       }
-      public async Task<H256> GetDownwardMessageQueueHeads(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id key)
+      public async Task<H256> GetDownwardMessageQueueHeads(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key)
       {
          return await SendRequestAsync<H256>(_httpClient, "dmp/downwardmessagequeueheads", Substrate.Kusama.NET.NetApiExt.Generated.Storage.DmpStorage.DownwardMessageQueueHeadsParams(key));
       }
-      public async Task<bool> SubscribeDownwardMessageQueueHeads(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id key)
+      public async Task<bool> SubscribeDownwardMessageQueueHeads(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key)
       {
          return await _subscriptionClient.SubscribeAsync("Dmp.DownwardMessageQueueHeads", Substrate.Kusama.NET.NetApiExt.Generated.Storage.DmpStorage.DownwardMessageQueueHeadsParams(key));
       }
-      public async Task<FixedU128> GetDeliveryFeeFactor(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id key)
+      public async Task<FixedU128> GetDeliveryFeeFactor(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key)
       {
          return await SendRequestAsync<FixedU128>(_httpClient, "dmp/deliveryfeefactor", Substrate.Kusama.NET.NetApiExt.Generated.Storage.DmpStorage.DeliveryFeeFactorParams(key));
       }
-      public async Task<bool> SubscribeDeliveryFeeFactor(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id key)
+      public async Task<bool> SubscribeDeliveryFeeFactor(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key)
       {
          return await _subscriptionClient.SubscribeAsync("Dmp.DeliveryFeeFactor", Substrate.Kusama.NET.NetApiExt.Generated.Storage.DmpStorage.DeliveryFeeFactorParams(key));
       }

@@ -27,7 +27,7 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "ConvictionVoting/VotingFor", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.ConvictionVotingStorage.VotingForParams(key));
       }
-      public async Task<bool> SetClassLocksFor(BoundedVecT18 value, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+      public async Task<bool> SetClassLocksFor(BoundedVecT20 value, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {
          return await SendMockupRequestAsync(_httpClient, "ConvictionVoting/ClassLocksFor", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.ConvictionVotingStorage.ClassLocksForParams(key));
       }

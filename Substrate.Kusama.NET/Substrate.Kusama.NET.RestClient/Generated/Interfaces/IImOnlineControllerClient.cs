@@ -13,7 +13,6 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Interfaces
    using System.Threading.Tasks;
    using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_support.traits.misc;
    
    public interface IImOnlineControllerClient
    {
@@ -21,7 +20,7 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Interfaces
       Task<bool> SubscribeHeartbeatAfter();
       Task<WeakBoundedVecT5> GetKeys();
       Task<bool> SubscribeKeys();
-      Task<WrapperOpaque> GetReceivedHeartbeats(Substrate.NetApi.Model.Types.Base.BaseTuple<U32, U32> key);
+      Task<Bool> GetReceivedHeartbeats(Substrate.NetApi.Model.Types.Base.BaseTuple<U32, U32> key);
       Task<bool> SubscribeReceivedHeartbeats(Substrate.NetApi.Model.Types.Base.BaseTuple<U32, U32> key);
       Task<U32> GetAuthoredBlocks(Substrate.NetApi.Model.Types.Base.BaseTuple<U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> key);
       Task<bool> SubscribeAuthoredBlocks(Substrate.NetApi.Model.Types.Base.BaseTuple<U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> key);

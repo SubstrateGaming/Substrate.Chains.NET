@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_scheduler
     
     
     /// <summary>
-    /// >> 671 - Composite[pallet_scheduler.Scheduled]
+    /// >> 692 - Composite[pallet_scheduler.Scheduled]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Scheduled : BaseType
@@ -47,7 +47,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_scheduler
         /// <summary>
         /// >> origin
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.kusama_runtime.EnumOriginCaller _origin;
+        private Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_kusama_runtime.EnumOriginCaller _origin;
         
         public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr32U8> MaybeId
         {
@@ -97,7 +97,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_scheduler
             }
         }
         
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.kusama_runtime.EnumOriginCaller Origin
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_kusama_runtime.EnumOriginCaller Origin
         {
             get
             {
@@ -136,7 +136,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_scheduler
             Call.Decode(byteArray, ref p);
             MaybePeriodic = new Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>>();
             MaybePeriodic.Decode(byteArray, ref p);
-            Origin = new Substrate.Kusama.NET.NetApiExt.Generated.Model.kusama_runtime.EnumOriginCaller();
+            Origin = new Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_kusama_runtime.EnumOriginCaller();
             Origin.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

@@ -13,8 +13,9 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Interfaces
    using System.Threading.Tasks;
    using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.NetApi.Model.Types.Base;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.validator_app;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.validator_app;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.shared;
    
    public interface IParasSharedControllerClient
    {
@@ -24,5 +25,7 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Interfaces
       Task<bool> SubscribeActiveValidatorIndices();
       Task<BaseVec<Public>> GetActiveValidatorKeys();
       Task<bool> SubscribeActiveValidatorKeys();
+      Task<AllowedRelayParentsTracker> GetAllowedRelayParents();
+      Task<bool> SubscribeAllowedRelayParents();
    }
 }

@@ -24,7 +24,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parach
     }
     
     /// <summary>
-    /// >> 491 - Variant[polkadot_runtime_parachains.disputes.DisputeResult]
+    /// >> 501 - Variant[polkadot_runtime_parachains.disputes.DisputeResult]
     /// </summary>
     public sealed class EnumDisputeResult : BaseEnum<DisputeResult>
     {

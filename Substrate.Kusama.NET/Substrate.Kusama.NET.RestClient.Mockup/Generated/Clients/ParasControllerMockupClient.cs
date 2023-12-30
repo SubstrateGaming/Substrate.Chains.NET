@@ -14,9 +14,9 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Clients
    using System.Net.Http;
    using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.paras;
    using Substrate.NetApi.Model.Types.Base;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives;
    using Substrate.NetApi.Model.Types.Primitive;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5;
    using Substrate.Kusama.NET.RestClient.Mockup.Generated.Interfaces;
    
    public sealed class ParasControllerMockupClient : MockupBaseClient, IParasControllerMockupClient
@@ -45,6 +45,10 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Clients
       public async Task<bool> SetHeads(HeadData value, Id key)
       {
          return await SendMockupRequestAsync(_httpClient, "Paras/Heads", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.ParasStorage.HeadsParams(key));
+      }
+      public async Task<bool> SetMostRecentContext(U32 value, Id key)
+      {
+         return await SendMockupRequestAsync(_httpClient, "Paras/MostRecentContext", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.ParasStorage.MostRecentContextParams(key));
       }
       public async Task<bool> SetCurrentCodeHash(ValidationCodeHash value, Id key)
       {

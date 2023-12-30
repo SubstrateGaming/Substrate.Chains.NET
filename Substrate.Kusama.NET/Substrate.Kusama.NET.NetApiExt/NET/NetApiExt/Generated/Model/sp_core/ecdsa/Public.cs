@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.ecdsa
     
     
     /// <summary>
-    /// >> 378 - Composite[sp_core.ecdsa.Public]
+    /// >> 97 - Composite[sp_core.ecdsa.Public]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Public : BaseType

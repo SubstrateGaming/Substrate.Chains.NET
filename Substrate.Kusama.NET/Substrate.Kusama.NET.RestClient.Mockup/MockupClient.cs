@@ -22,6 +22,8 @@ namespace Substrate.Kusama.NET.RestClient.Mockup
       public IAuthorshipControllerMockupClient AuthorshipControllerClient;
       public IBabeControllerMockupClient BabeControllerClient;
       public IBalancesControllerMockupClient BalancesControllerClient;
+      public IBeefyControllerMockupClient BeefyControllerClient;
+      public IBeefyMmrLeafControllerMockupClient BeefyMmrLeafControllerClient;
       public IBountiesControllerMockupClient BountiesControllerClient;
       public IChildBountiesControllerMockupClient ChildBountiesControllerClient;
       public IClaimsControllerMockupClient ClaimsControllerClient;
@@ -40,11 +42,13 @@ namespace Substrate.Kusama.NET.RestClient.Mockup
       public IIndicesControllerMockupClient IndicesControllerClient;
       public IInitializerControllerMockupClient InitializerControllerClient;
       public IMessageQueueControllerMockupClient MessageQueueControllerClient;
+      public IMmrControllerMockupClient MmrControllerClient;
       public IMultisigControllerMockupClient MultisigControllerClient;
       public INisControllerMockupClient NisControllerClient;
       public INisCounterpartBalancesControllerMockupClient NisCounterpartBalancesControllerClient;
       public INominationPoolsControllerMockupClient NominationPoolsControllerClient;
       public IOffencesControllerMockupClient OffencesControllerClient;
+      public IParaAssignmentProviderControllerMockupClient ParaAssignmentProviderControllerClient;
       public IParaInclusionControllerMockupClient ParaInclusionControllerClient;
       public IParaInherentControllerMockupClient ParaInherentControllerClient;
       public IParaSchedulerControllerMockupClient ParaSchedulerControllerClient;
@@ -63,6 +67,7 @@ namespace Substrate.Kusama.NET.RestClient.Mockup
       public ISlotsControllerMockupClient SlotsControllerClient;
       public ISocietyControllerMockupClient SocietyControllerClient;
       public IStakingControllerMockupClient StakingControllerClient;
+      public IStateTrieMigrationControllerMockupClient StateTrieMigrationControllerClient;
       public ISystemControllerMockupClient SystemControllerClient;
       public ITimestampControllerMockupClient TimestampControllerClient;
       public ITransactionPaymentControllerMockupClient TransactionPaymentControllerClient;
@@ -78,6 +83,8 @@ namespace Substrate.Kusama.NET.RestClient.Mockup
          AuthorshipControllerClient = new AuthorshipControllerMockupClient(_httpClient);
          BabeControllerClient = new BabeControllerMockupClient(_httpClient);
          BalancesControllerClient = new BalancesControllerMockupClient(_httpClient);
+         BeefyControllerClient = new BeefyControllerMockupClient(_httpClient);
+         BeefyMmrLeafControllerClient = new BeefyMmrLeafControllerMockupClient(_httpClient);
          BountiesControllerClient = new BountiesControllerMockupClient(_httpClient);
          ChildBountiesControllerClient = new ChildBountiesControllerMockupClient(_httpClient);
          ClaimsControllerClient = new ClaimsControllerMockupClient(_httpClient);
@@ -96,11 +103,13 @@ namespace Substrate.Kusama.NET.RestClient.Mockup
          IndicesControllerClient = new IndicesControllerMockupClient(_httpClient);
          InitializerControllerClient = new InitializerControllerMockupClient(_httpClient);
          MessageQueueControllerClient = new MessageQueueControllerMockupClient(_httpClient);
+         MmrControllerClient = new MmrControllerMockupClient(_httpClient);
          MultisigControllerClient = new MultisigControllerMockupClient(_httpClient);
          NisControllerClient = new NisControllerMockupClient(_httpClient);
          NisCounterpartBalancesControllerClient = new NisCounterpartBalancesControllerMockupClient(_httpClient);
          NominationPoolsControllerClient = new NominationPoolsControllerMockupClient(_httpClient);
          OffencesControllerClient = new OffencesControllerMockupClient(_httpClient);
+         ParaAssignmentProviderControllerClient = new ParaAssignmentProviderControllerMockupClient(_httpClient);
          ParaInclusionControllerClient = new ParaInclusionControllerMockupClient(_httpClient);
          ParaInherentControllerClient = new ParaInherentControllerMockupClient(_httpClient);
          ParaSchedulerControllerClient = new ParaSchedulerControllerMockupClient(_httpClient);
@@ -119,6 +128,7 @@ namespace Substrate.Kusama.NET.RestClient.Mockup
          SlotsControllerClient = new SlotsControllerMockupClient(_httpClient);
          SocietyControllerClient = new SocietyControllerMockupClient(_httpClient);
          StakingControllerClient = new StakingControllerMockupClient(_httpClient);
+         StateTrieMigrationControllerClient = new StateTrieMigrationControllerMockupClient(_httpClient);
          SystemControllerClient = new SystemControllerMockupClient(_httpClient);
          TimestampControllerClient = new TimestampControllerMockupClient(_httpClient);
          TransactionPaymentControllerClient = new TransactionPaymentControllerMockupClient(_httpClient);

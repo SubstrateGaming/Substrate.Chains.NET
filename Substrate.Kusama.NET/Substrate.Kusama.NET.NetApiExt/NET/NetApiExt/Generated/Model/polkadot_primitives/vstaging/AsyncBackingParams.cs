@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.vst
     
     
     /// <summary>
-    /// >> 319 - Composite[polkadot_primitives.vstaging.AsyncBackingParams]
+    /// >> 325 - Composite[polkadot_primitives.vstaging.AsyncBackingParams]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class AsyncBackingParams : BaseType

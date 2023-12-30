@@ -17,7 +17,6 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
    using Substrate.Kusama.NET.RestClient.Generated.Clients;
    using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_support.traits.misc;
    
    public class ImOnlineControllerClientTest : ClientTestBase
    {
@@ -142,54 +141,7 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_support.traits.misc.WrapperOpaque GetTestValue7()
-      {
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_support.traits.misc.WrapperOpaque result;
-         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_support.traits.misc.WrapperOpaque();
-         result.Value0 = new Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>();
-         result.Value0.Create(new Substrate.NetApi.CompactInteger(this.GetTestValueU32().Value));
-         result.T = new Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_im_online.BoundedOpaqueNetworkState();
-         result.T = this.GetTestValue8();
-         return result;
-      }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_im_online.BoundedOpaqueNetworkState GetTestValue8()
-      {
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_im_online.BoundedOpaqueNetworkState result;
-         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_im_online.BoundedOpaqueNetworkState();
-         result.PeerId = new Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT6();
-         result.PeerId = this.GetTestValue9();
-         result.ExternalAddresses = new Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT7();
-         result.ExternalAddresses = this.GetTestValue10();
-         return result;
-      }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT6 GetTestValue9()
-      {
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT6 result;
-         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT6();
-         result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>();
-         result.Value.Create(new Substrate.NetApi.Model.Types.Primitive.U8[] {
-                  this.GetTestValueU8()});
-         return result;
-      }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT7 GetTestValue10()
-      {
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT7 result;
-         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT7();
-         result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT6>();
-         result.Value.Create(new Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT6[] {
-                  this.GetTestValue11()});
-         return result;
-      }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT6 GetTestValue11()
-      {
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT6 result;
-         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT6();
-         result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>();
-         result.Value.Create(new Substrate.NetApi.Model.Types.Primitive.U8[] {
-                  this.GetTestValueU8()});
-         return result;
-      }
-      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32> GetTestValue12()
+      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32> GetTestValue7()
       {
          Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32> result;
          result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>();
@@ -207,8 +159,8 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          ImOnlineControllerClient rpcClient = new ImOnlineControllerClient(_httpClient, subscriptionClient);
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_support.traits.misc.WrapperOpaque mockupValue = this.GetTestValue7();
-         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32> mockupKey = this.GetTestValue12();
+         Substrate.NetApi.Model.Types.Primitive.Bool mockupValue = this.GetTestValueBool();
+         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32> mockupKey = this.GetTestValue7();
 
          Assert.IsTrue(await rpcClient.SubscribeReceivedHeartbeats(mockupKey));
 
@@ -220,19 +172,19 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_support.traits.misc.WrapperOpaque rpcResult = await rpcClient.GetReceivedHeartbeats(mockupKey);
+         Substrate.NetApi.Model.Types.Primitive.Bool rpcResult = await rpcClient.GetReceivedHeartbeats(mockupKey);
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> GetTestValue14()
+      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> GetTestValue9()
       {
          Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> result;
          result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>();
-         result.Create(this.GetTestValueU32(), this.GetTestValue15());
+         result.Create(this.GetTestValueU32(), this.GetTestValue10());
          return result;
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue15()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue10()
       {
          Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 result;
          result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32();
@@ -284,7 +236,7 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
          // Construct new RPC client to test with.
          ImOnlineControllerClient rpcClient = new ImOnlineControllerClient(_httpClient, subscriptionClient);
          Substrate.NetApi.Model.Types.Primitive.U32 mockupValue = this.GetTestValueU32();
-         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> mockupKey = this.GetTestValue14();
+         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> mockupKey = this.GetTestValue9();
 
          Assert.IsTrue(await rpcClient.SubscribeAuthoredBlocks(mockupKey));
 

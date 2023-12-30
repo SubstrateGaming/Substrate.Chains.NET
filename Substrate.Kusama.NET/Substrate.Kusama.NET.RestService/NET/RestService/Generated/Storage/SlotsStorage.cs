@@ -28,8 +28,8 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// >> Leases
         ///  Amounts held on deposit for each (possibly future) leased parachain.
         /// 
-        ///  The actual amount locked on its behalf by any account at any time is the maximum of the second values
-        ///  of the items in this list whose first value is the account.
+        ///  The actual amount locked on its behalf by any account at any time is the maximum of the
+        ///  second values of the items in this list whose first value is the account.
         /// 
         ///  The first item in the list is the amount locked for the current Lease Period. Following
         ///  items are for the subsequent lease periods.
@@ -101,8 +101,8 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// >> Leases
         ///  Amounts held on deposit for each (possibly future) leased parachain.
         /// 
-        ///  The actual amount locked on its behalf by any account at any time is the maximum of the second values
-        ///  of the items in this list whose first value is the account.
+        ///  The actual amount locked on its behalf by any account at any time is the maximum of the
+        ///  second values of the items in this list whose first value is the account.
         /// 
         ///  The first item in the list is the amount locked for the current Lease Period. Following
         ///  items are for the subsequent lease periods.

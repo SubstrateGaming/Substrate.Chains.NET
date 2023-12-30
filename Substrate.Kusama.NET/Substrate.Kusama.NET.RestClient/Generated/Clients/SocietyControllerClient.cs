@@ -12,11 +12,12 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Clients
    using System;
    using System.Threading.Tasks;
    using System.Net.Http;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types;
-   using Substrate.NetApi.Model.Types.Base;
    using Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society;
    using Substrate.NetApi.Model.Types.Primitive;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
+   using Substrate.NetApi.Model.Types.Base;
    using Substrate.Kusama.NET.RestClient.Generated.Interfaces;
    
    public sealed class SocietyControllerClient : BaseClient, ISocietyControllerClient
@@ -28,37 +29,13 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Clients
          _httpClient = httpClient;
          _subscriptionClient = subscriptionClient;
       }
-      public async Task<AccountId32> GetFounder()
+      public async Task<GroupParams> GetParameters()
       {
-         return await SendRequestAsync<AccountId32>(_httpClient, "society/founder");
+         return await SendRequestAsync<GroupParams>(_httpClient, "society/parameters");
       }
-      public async Task<bool> SubscribeFounder()
+      public async Task<bool> SubscribeParameters()
       {
-         return await _subscriptionClient.SubscribeAsync("Society.Founder");
-      }
-      public async Task<H256> GetRules()
-      {
-         return await SendRequestAsync<H256>(_httpClient, "society/rules");
-      }
-      public async Task<bool> SubscribeRules()
-      {
-         return await _subscriptionClient.SubscribeAsync("Society.Rules");
-      }
-      public async Task<BaseVec<Bid>> GetCandidates()
-      {
-         return await SendRequestAsync<BaseVec<Bid>>(_httpClient, "society/candidates");
-      }
-      public async Task<bool> SubscribeCandidates()
-      {
-         return await _subscriptionClient.SubscribeAsync("Society.Candidates");
-      }
-      public async Task<BaseTuple<U128, EnumBidKind>> GetSuspendedCandidates(AccountId32 key)
-      {
-         return await SendRequestAsync<BaseTuple<U128, EnumBidKind>>(_httpClient, "society/suspendedcandidates", Substrate.Kusama.NET.NetApiExt.Generated.Storage.SocietyStorage.SuspendedCandidatesParams(key));
-      }
-      public async Task<bool> SubscribeSuspendedCandidates(AccountId32 key)
-      {
-         return await _subscriptionClient.SubscribeAsync("Society.SuspendedCandidates", Substrate.Kusama.NET.NetApiExt.Generated.Storage.SocietyStorage.SuspendedCandidatesParams(key));
+         return await _subscriptionClient.SubscribeAsync("Society.Parameters");
       }
       public async Task<U128> GetPot()
       {
@@ -68,6 +45,14 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("Society.Pot");
       }
+      public async Task<AccountId32> GetFounder()
+      {
+         return await SendRequestAsync<AccountId32>(_httpClient, "society/founder");
+      }
+      public async Task<bool> SubscribeFounder()
+      {
+         return await _subscriptionClient.SubscribeAsync("Society.Founder");
+      }
       public async Task<AccountId32> GetHead()
       {
          return await SendRequestAsync<AccountId32>(_httpClient, "society/head");
@@ -76,85 +61,133 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("Society.Head");
       }
-      public async Task<BaseVec<AccountId32>> GetMembers()
+      public async Task<H256> GetRules()
       {
-         return await SendRequestAsync<BaseVec<AccountId32>>(_httpClient, "society/members");
+         return await SendRequestAsync<H256>(_httpClient, "society/rules");
       }
-      public async Task<bool> SubscribeMembers()
+      public async Task<bool> SubscribeRules()
       {
-         return await _subscriptionClient.SubscribeAsync("Society.Members");
+         return await _subscriptionClient.SubscribeAsync("Society.Rules");
       }
-      public async Task<Bool> GetSuspendedMembers(AccountId32 key)
+      public async Task<MemberRecord> GetMembers(AccountId32 key)
       {
-         return await SendRequestAsync<Bool>(_httpClient, "society/suspendedmembers", Substrate.Kusama.NET.NetApiExt.Generated.Storage.SocietyStorage.SuspendedMembersParams(key));
+         return await SendRequestAsync<MemberRecord>(_httpClient, "society/members", Substrate.Kusama.NET.NetApiExt.Generated.Storage.SocietyStorage.MembersParams(key));
       }
-      public async Task<bool> SubscribeSuspendedMembers(AccountId32 key)
+      public async Task<bool> SubscribeMembers(AccountId32 key)
       {
-         return await _subscriptionClient.SubscribeAsync("Society.SuspendedMembers", Substrate.Kusama.NET.NetApiExt.Generated.Storage.SocietyStorage.SuspendedMembersParams(key));
+         return await _subscriptionClient.SubscribeAsync("Society.Members", Substrate.Kusama.NET.NetApiExt.Generated.Storage.SocietyStorage.MembersParams(key));
       }
-      public async Task<BaseVec<Bid>> GetBids()
+      public async Task<PayoutRecord> GetPayouts(AccountId32 key)
       {
-         return await SendRequestAsync<BaseVec<Bid>>(_httpClient, "society/bids");
-      }
-      public async Task<bool> SubscribeBids()
-      {
-         return await _subscriptionClient.SubscribeAsync("Society.Bids");
-      }
-      public async Task<EnumVouchingStatus> GetVouching(AccountId32 key)
-      {
-         return await SendRequestAsync<EnumVouchingStatus>(_httpClient, "society/vouching", Substrate.Kusama.NET.NetApiExt.Generated.Storage.SocietyStorage.VouchingParams(key));
-      }
-      public async Task<bool> SubscribeVouching(AccountId32 key)
-      {
-         return await _subscriptionClient.SubscribeAsync("Society.Vouching", Substrate.Kusama.NET.NetApiExt.Generated.Storage.SocietyStorage.VouchingParams(key));
-      }
-      public async Task<BaseVec<BaseTuple<U32, U128>>> GetPayouts(AccountId32 key)
-      {
-         return await SendRequestAsync<BaseVec<BaseTuple<U32, U128>>>(_httpClient, "society/payouts", Substrate.Kusama.NET.NetApiExt.Generated.Storage.SocietyStorage.PayoutsParams(key));
+         return await SendRequestAsync<PayoutRecord>(_httpClient, "society/payouts", Substrate.Kusama.NET.NetApiExt.Generated.Storage.SocietyStorage.PayoutsParams(key));
       }
       public async Task<bool> SubscribePayouts(AccountId32 key)
       {
          return await _subscriptionClient.SubscribeAsync("Society.Payouts", Substrate.Kusama.NET.NetApiExt.Generated.Storage.SocietyStorage.PayoutsParams(key));
       }
-      public async Task<U32> GetStrikes(AccountId32 key)
+      public async Task<U32> GetMemberCount()
       {
-         return await SendRequestAsync<U32>(_httpClient, "society/strikes", Substrate.Kusama.NET.NetApiExt.Generated.Storage.SocietyStorage.StrikesParams(key));
+         return await SendRequestAsync<U32>(_httpClient, "society/membercount");
       }
-      public async Task<bool> SubscribeStrikes(AccountId32 key)
+      public async Task<bool> SubscribeMemberCount()
       {
-         return await _subscriptionClient.SubscribeAsync("Society.Strikes", Substrate.Kusama.NET.NetApiExt.Generated.Storage.SocietyStorage.StrikesParams(key));
+         return await _subscriptionClient.SubscribeAsync("Society.MemberCount");
       }
-      public async Task<EnumVote> GetVotes(BaseTuple<AccountId32, AccountId32> key)
+      public async Task<AccountId32> GetMemberByIndex(U32 key)
       {
-         return await SendRequestAsync<EnumVote>(_httpClient, "society/votes", Substrate.Kusama.NET.NetApiExt.Generated.Storage.SocietyStorage.VotesParams(key));
+         return await SendRequestAsync<AccountId32>(_httpClient, "society/memberbyindex", Substrate.Kusama.NET.NetApiExt.Generated.Storage.SocietyStorage.MemberByIndexParams(key));
+      }
+      public async Task<bool> SubscribeMemberByIndex(U32 key)
+      {
+         return await _subscriptionClient.SubscribeAsync("Society.MemberByIndex", Substrate.Kusama.NET.NetApiExt.Generated.Storage.SocietyStorage.MemberByIndexParams(key));
+      }
+      public async Task<MemberRecord> GetSuspendedMembers(AccountId32 key)
+      {
+         return await SendRequestAsync<MemberRecord>(_httpClient, "society/suspendedmembers", Substrate.Kusama.NET.NetApiExt.Generated.Storage.SocietyStorage.SuspendedMembersParams(key));
+      }
+      public async Task<bool> SubscribeSuspendedMembers(AccountId32 key)
+      {
+         return await _subscriptionClient.SubscribeAsync("Society.SuspendedMembers", Substrate.Kusama.NET.NetApiExt.Generated.Storage.SocietyStorage.SuspendedMembersParams(key));
+      }
+      public async Task<U32> GetRoundCount()
+      {
+         return await SendRequestAsync<U32>(_httpClient, "society/roundcount");
+      }
+      public async Task<bool> SubscribeRoundCount()
+      {
+         return await _subscriptionClient.SubscribeAsync("Society.RoundCount");
+      }
+      public async Task<BoundedVecT28> GetBids()
+      {
+         return await SendRequestAsync<BoundedVecT28>(_httpClient, "society/bids");
+      }
+      public async Task<bool> SubscribeBids()
+      {
+         return await _subscriptionClient.SubscribeAsync("Society.Bids");
+      }
+      public async Task<Candidacy> GetCandidates(AccountId32 key)
+      {
+         return await SendRequestAsync<Candidacy>(_httpClient, "society/candidates", Substrate.Kusama.NET.NetApiExt.Generated.Storage.SocietyStorage.CandidatesParams(key));
+      }
+      public async Task<bool> SubscribeCandidates(AccountId32 key)
+      {
+         return await _subscriptionClient.SubscribeAsync("Society.Candidates", Substrate.Kusama.NET.NetApiExt.Generated.Storage.SocietyStorage.CandidatesParams(key));
+      }
+      public async Task<AccountId32> GetSkeptic()
+      {
+         return await SendRequestAsync<AccountId32>(_httpClient, "society/skeptic");
+      }
+      public async Task<bool> SubscribeSkeptic()
+      {
+         return await _subscriptionClient.SubscribeAsync("Society.Skeptic");
+      }
+      public async Task<Vote> GetVotes(BaseTuple<AccountId32, AccountId32> key)
+      {
+         return await SendRequestAsync<Vote>(_httpClient, "society/votes", Substrate.Kusama.NET.NetApiExt.Generated.Storage.SocietyStorage.VotesParams(key));
       }
       public async Task<bool> SubscribeVotes(BaseTuple<AccountId32, AccountId32> key)
       {
          return await _subscriptionClient.SubscribeAsync("Society.Votes", Substrate.Kusama.NET.NetApiExt.Generated.Storage.SocietyStorage.VotesParams(key));
       }
-      public async Task<AccountId32> GetDefender()
+      public async Task<BoundedVecT29> GetVoteClearCursor(AccountId32 key)
       {
-         return await SendRequestAsync<AccountId32>(_httpClient, "society/defender");
+         return await SendRequestAsync<BoundedVecT29>(_httpClient, "society/voteclearcursor", Substrate.Kusama.NET.NetApiExt.Generated.Storage.SocietyStorage.VoteClearCursorParams(key));
       }
-      public async Task<bool> SubscribeDefender()
+      public async Task<bool> SubscribeVoteClearCursor(AccountId32 key)
       {
-         return await _subscriptionClient.SubscribeAsync("Society.Defender");
+         return await _subscriptionClient.SubscribeAsync("Society.VoteClearCursor", Substrate.Kusama.NET.NetApiExt.Generated.Storage.SocietyStorage.VoteClearCursorParams(key));
       }
-      public async Task<EnumVote> GetDefenderVotes(AccountId32 key)
+      public async Task<IntakeRecord> GetNextHead()
       {
-         return await SendRequestAsync<EnumVote>(_httpClient, "society/defendervotes", Substrate.Kusama.NET.NetApiExt.Generated.Storage.SocietyStorage.DefenderVotesParams(key));
+         return await SendRequestAsync<IntakeRecord>(_httpClient, "society/nexthead");
       }
-      public async Task<bool> SubscribeDefenderVotes(AccountId32 key)
+      public async Task<bool> SubscribeNextHead()
+      {
+         return await _subscriptionClient.SubscribeAsync("Society.NextHead");
+      }
+      public async Task<U32> GetChallengeRoundCount()
+      {
+         return await SendRequestAsync<U32>(_httpClient, "society/challengeroundcount");
+      }
+      public async Task<bool> SubscribeChallengeRoundCount()
+      {
+         return await _subscriptionClient.SubscribeAsync("Society.ChallengeRoundCount");
+      }
+      public async Task<BaseTuple<AccountId32, AccountId32, Tally>> GetDefending()
+      {
+         return await SendRequestAsync<BaseTuple<AccountId32, AccountId32, Tally>>(_httpClient, "society/defending");
+      }
+      public async Task<bool> SubscribeDefending()
+      {
+         return await _subscriptionClient.SubscribeAsync("Society.Defending");
+      }
+      public async Task<Vote> GetDefenderVotes(BaseTuple<U32, AccountId32> key)
+      {
+         return await SendRequestAsync<Vote>(_httpClient, "society/defendervotes", Substrate.Kusama.NET.NetApiExt.Generated.Storage.SocietyStorage.DefenderVotesParams(key));
+      }
+      public async Task<bool> SubscribeDefenderVotes(BaseTuple<U32, AccountId32> key)
       {
          return await _subscriptionClient.SubscribeAsync("Society.DefenderVotes", Substrate.Kusama.NET.NetApiExt.Generated.Storage.SocietyStorage.DefenderVotesParams(key));
-      }
-      public async Task<U32> GetMaxMembers()
-      {
-         return await SendRequestAsync<U32>(_httpClient, "society/maxmembers");
-      }
-      public async Task<bool> SubscribeMaxMembers()
-      {
-         return await _subscriptionClient.SubscribeAsync("Society.MaxMembers");
       }
    }
 }

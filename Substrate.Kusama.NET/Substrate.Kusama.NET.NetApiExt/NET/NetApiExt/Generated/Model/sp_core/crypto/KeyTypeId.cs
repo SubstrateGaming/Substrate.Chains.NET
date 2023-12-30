@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto
     
     
     /// <summary>
-    /// >> 579 - Composite[sp_core.crypto.KeyTypeId]
+    /// >> 596 - Composite[sp_core.crypto.KeyTypeId]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class KeyTypeId : BaseType

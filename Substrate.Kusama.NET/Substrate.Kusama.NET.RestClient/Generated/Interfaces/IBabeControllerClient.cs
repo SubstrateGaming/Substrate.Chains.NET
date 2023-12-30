@@ -40,7 +40,7 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Interfaces
       Task<bool> SubscribeNextAuthorities();
       Task<U32> GetSegmentIndex();
       Task<bool> SubscribeSegmentIndex();
-      Task<BoundedVecT8> GetUnderConstruction(U32 key);
+      Task<BoundedVecT9> GetUnderConstruction(U32 key);
       Task<bool> SubscribeUnderConstruction(U32 key);
       Task<BaseOpt<EnumPreDigest>> GetInitialized();
       Task<bool> SubscribeInitialized();
@@ -54,7 +54,7 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Interfaces
       Task<bool> SubscribeEpochConfig();
       Task<BabeEpochConfiguration> GetNextEpochConfig();
       Task<bool> SubscribeNextEpochConfig();
-      Task<BoundedVecT9> GetSkippedEpochs();
+      Task<BoundedVecT10> GetSkippedEpochs();
       Task<bool> SubscribeSkippedEpochs();
    }
 }

@@ -43,7 +43,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Controller
         /// </summary>
         [HttpGet("DownwardMessageQueues")]
         [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_core_primitives.InboundDownwardMessage>), 200)]
-        [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.DmpStorage), "DownwardMessageQueuesParams", typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id))]
+        [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.DmpStorage), "DownwardMessageQueuesParams", typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id))]
         public IActionResult GetDownwardMessageQueues(string key)
         {
             return this.Ok(_dmpStorage.GetDownwardMessageQueues(key));
@@ -61,7 +61,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Controller
         /// </summary>
         [HttpGet("DownwardMessageQueueHeads")]
         [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256), 200)]
-        [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.DmpStorage), "DownwardMessageQueueHeadsParams", typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id))]
+        [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.DmpStorage), "DownwardMessageQueueHeadsParams", typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id))]
         public IActionResult GetDownwardMessageQueueHeads(string key)
         {
             return this.Ok(_dmpStorage.GetDownwardMessageQueueHeads(key));
@@ -73,7 +73,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Controller
         /// </summary>
         [HttpGet("DeliveryFeeFactor")]
         [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedU128), 200)]
-        [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.DmpStorage), "DeliveryFeeFactorParams", typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id))]
+        [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.DmpStorage), "DeliveryFeeFactorParams", typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id))]
         public IActionResult GetDeliveryFeeFactor(string key)
         {
             return this.Ok(_dmpStorage.GetDeliveryFeeFactor(key));

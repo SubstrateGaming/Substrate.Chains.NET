@@ -23,6 +23,8 @@ namespace Substrate.Kusama.NET.RestClient
       public IAuthorshipControllerClient AuthorshipControllerClient;
       public IBabeControllerClient BabeControllerClient;
       public IBalancesControllerClient BalancesControllerClient;
+      public IBeefyControllerClient BeefyControllerClient;
+      public IBeefyMmrLeafControllerClient BeefyMmrLeafControllerClient;
       public IBountiesControllerClient BountiesControllerClient;
       public IChildBountiesControllerClient ChildBountiesControllerClient;
       public IClaimsControllerClient ClaimsControllerClient;
@@ -41,11 +43,13 @@ namespace Substrate.Kusama.NET.RestClient
       public IIndicesControllerClient IndicesControllerClient;
       public IInitializerControllerClient InitializerControllerClient;
       public IMessageQueueControllerClient MessageQueueControllerClient;
+      public IMmrControllerClient MmrControllerClient;
       public IMultisigControllerClient MultisigControllerClient;
       public INisControllerClient NisControllerClient;
       public INisCounterpartBalancesControllerClient NisCounterpartBalancesControllerClient;
       public INominationPoolsControllerClient NominationPoolsControllerClient;
       public IOffencesControllerClient OffencesControllerClient;
+      public IParaAssignmentProviderControllerClient ParaAssignmentProviderControllerClient;
       public IParaInclusionControllerClient ParaInclusionControllerClient;
       public IParaInherentControllerClient ParaInherentControllerClient;
       public IParaSchedulerControllerClient ParaSchedulerControllerClient;
@@ -64,6 +68,7 @@ namespace Substrate.Kusama.NET.RestClient
       public ISlotsControllerClient SlotsControllerClient;
       public ISocietyControllerClient SocietyControllerClient;
       public IStakingControllerClient StakingControllerClient;
+      public IStateTrieMigrationControllerClient StateTrieMigrationControllerClient;
       public ISystemControllerClient SystemControllerClient;
       public ITimestampControllerClient TimestampControllerClient;
       public ITransactionPaymentControllerClient TransactionPaymentControllerClient;
@@ -80,6 +85,8 @@ namespace Substrate.Kusama.NET.RestClient
          AuthorshipControllerClient = new AuthorshipControllerClient(_httpClient, _subscriptionClient);
          BabeControllerClient = new BabeControllerClient(_httpClient, _subscriptionClient);
          BalancesControllerClient = new BalancesControllerClient(_httpClient, _subscriptionClient);
+         BeefyControllerClient = new BeefyControllerClient(_httpClient, _subscriptionClient);
+         BeefyMmrLeafControllerClient = new BeefyMmrLeafControllerClient(_httpClient, _subscriptionClient);
          BountiesControllerClient = new BountiesControllerClient(_httpClient, _subscriptionClient);
          ChildBountiesControllerClient = new ChildBountiesControllerClient(_httpClient, _subscriptionClient);
          ClaimsControllerClient = new ClaimsControllerClient(_httpClient, _subscriptionClient);
@@ -98,11 +105,13 @@ namespace Substrate.Kusama.NET.RestClient
          IndicesControllerClient = new IndicesControllerClient(_httpClient, _subscriptionClient);
          InitializerControllerClient = new InitializerControllerClient(_httpClient, _subscriptionClient);
          MessageQueueControllerClient = new MessageQueueControllerClient(_httpClient, _subscriptionClient);
+         MmrControllerClient = new MmrControllerClient(_httpClient, _subscriptionClient);
          MultisigControllerClient = new MultisigControllerClient(_httpClient, _subscriptionClient);
          NisControllerClient = new NisControllerClient(_httpClient, _subscriptionClient);
          NisCounterpartBalancesControllerClient = new NisCounterpartBalancesControllerClient(_httpClient, _subscriptionClient);
          NominationPoolsControllerClient = new NominationPoolsControllerClient(_httpClient, _subscriptionClient);
          OffencesControllerClient = new OffencesControllerClient(_httpClient, _subscriptionClient);
+         ParaAssignmentProviderControllerClient = new ParaAssignmentProviderControllerClient(_httpClient, _subscriptionClient);
          ParaInclusionControllerClient = new ParaInclusionControllerClient(_httpClient, _subscriptionClient);
          ParaInherentControllerClient = new ParaInherentControllerClient(_httpClient, _subscriptionClient);
          ParaSchedulerControllerClient = new ParaSchedulerControllerClient(_httpClient, _subscriptionClient);
@@ -121,6 +130,7 @@ namespace Substrate.Kusama.NET.RestClient
          SlotsControllerClient = new SlotsControllerClient(_httpClient, _subscriptionClient);
          SocietyControllerClient = new SocietyControllerClient(_httpClient, _subscriptionClient);
          StakingControllerClient = new StakingControllerClient(_httpClient, _subscriptionClient);
+         StateTrieMigrationControllerClient = new StateTrieMigrationControllerClient(_httpClient, _subscriptionClient);
          SystemControllerClient = new SystemControllerClient(_httpClient, _subscriptionClient);
          TimestampControllerClient = new TimestampControllerClient(_httpClient, _subscriptionClient);
          TransactionPaymentControllerClient = new TransactionPaymentControllerClient(_httpClient, _subscriptionClient);

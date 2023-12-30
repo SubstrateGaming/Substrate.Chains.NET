@@ -43,9 +43,9 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("FellowshipReferenda.ReferendumInfoFor", Substrate.Kusama.NET.NetApiExt.Generated.Storage.FellowshipReferendaStorage.ReferendumInfoForParams(key));
       }
-      public async Task<BoundedVecT21> GetTrackQueue(U16 key)
+      public async Task<BoundedVecT23> GetTrackQueue(U16 key)
       {
-         return await SendRequestAsync<BoundedVecT21>(_httpClient, "fellowshipreferenda/trackqueue", Substrate.Kusama.NET.NetApiExt.Generated.Storage.FellowshipReferendaStorage.TrackQueueParams(key));
+         return await SendRequestAsync<BoundedVecT23>(_httpClient, "fellowshipreferenda/trackqueue", Substrate.Kusama.NET.NetApiExt.Generated.Storage.FellowshipReferendaStorage.TrackQueueParams(key));
       }
       public async Task<bool> SubscribeTrackQueue(U16 key)
       {

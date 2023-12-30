@@ -35,7 +35,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// >> Disputes
         ///  All ongoing or concluded disputes for the last several sessions.
         /// </summary>
-        Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.DisputeState GetDisputes(string key);
+        Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.DisputeState GetDisputes(string key);
         
         /// <summary>
         /// >> BackersOnDisputes
@@ -75,7 +75,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// <summary>
         /// _disputesTypedStorage typed storage field
         /// </summary>
-        private TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.DisputeState> _disputesTypedStorage;
+        private TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.DisputeState> _disputesTypedStorage;
         
         /// <summary>
         /// _backersOnDisputesTypedStorage typed storage field
@@ -98,7 +98,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         public ParasDisputesStorage(IStorageDataProvider storageDataProvider, List<IStorageChangeDelegate> storageChangeDelegates)
         {
             this.LastPrunedSessionTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32>("ParasDisputes.LastPrunedSession", storageDataProvider, storageChangeDelegates);
-            this.DisputesTypedStorage = new TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.DisputeState>("ParasDisputes.Disputes", storageDataProvider, storageChangeDelegates);
+            this.DisputesTypedStorage = new TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.DisputeState>("ParasDisputes.Disputes", storageDataProvider, storageChangeDelegates);
             this.BackersOnDisputesTypedStorage = new TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.BTreeSet>("ParasDisputes.BackersOnDisputes", storageDataProvider, storageChangeDelegates);
             this.IncludedTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Primitive.U32>("ParasDisputes.Included", storageDataProvider, storageChangeDelegates);
             this.FrozenTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32>>("ParasDisputes.Frozen", storageDataProvider, storageChangeDelegates);
@@ -122,7 +122,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// <summary>
         /// _disputesTypedStorage property
         /// </summary>
-        public TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.DisputeState> DisputesTypedStorage
+        public TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.DisputeState> DisputesTypedStorage
         {
             get
             {
@@ -223,13 +223,13 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// >> Disputes
         ///  All ongoing or concluded disputes for the last several sessions.
         /// </summary>
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.DisputeState GetDisputes(string key)
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.DisputeState GetDisputes(string key)
         {
             if ((key == null))
             {
                 return null;
             }
-            if (DisputesTypedStorage.Dictionary.TryGetValue(key, out Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.DisputeState result))
+            if (DisputesTypedStorage.Dictionary.TryGetValue(key, out Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.DisputeState result))
             {
                 return result;
             }

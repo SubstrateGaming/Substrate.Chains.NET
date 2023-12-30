@@ -24,11 +24,11 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Clients
       {
          _httpClient = httpClient;
       }
-      public async Task<bool> SetProxies(BaseTuple<BoundedVecT28, U128> value, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+      public async Task<bool> SetProxies(BaseTuple<BoundedVecT33, U128> value, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {
          return await SendMockupRequestAsync(_httpClient, "Proxy/Proxies", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.ProxyStorage.ProxiesParams(key));
       }
-      public async Task<bool> SetAnnouncements(BaseTuple<BoundedVecT29, U128> value, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+      public async Task<bool> SetAnnouncements(BaseTuple<BoundedVecT34, U128> value, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {
          return await SendMockupRequestAsync(_httpClient, "Proxy/Announcements", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.ProxyStorage.AnnouncementsParams(key));
       }

@@ -42,11 +42,11 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("Auctions.AuctionInfo");
       }
-      public async Task<U128> GetReservedAmounts(BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id> key)
+      public async Task<U128> GetReservedAmounts(BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id> key)
       {
          return await SendRequestAsync<U128>(_httpClient, "auctions/reservedamounts", Substrate.Kusama.NET.NetApiExt.Generated.Storage.AuctionsStorage.ReservedAmountsParams(key));
       }
-      public async Task<bool> SubscribeReservedAmounts(BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id> key)
+      public async Task<bool> SubscribeReservedAmounts(BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id> key)
       {
          return await _subscriptionClient.SubscribeAsync("Auctions.ReservedAmounts", Substrate.Kusama.NET.NetApiExt.Generated.Storage.AuctionsStorage.ReservedAmountsParams(key));
       }

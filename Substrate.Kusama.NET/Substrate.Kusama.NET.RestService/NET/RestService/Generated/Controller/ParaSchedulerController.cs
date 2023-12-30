@@ -43,11 +43,12 @@ namespace Substrate.Kusama.NET.RestService.Generated.Controller
         ///  broader set of Polkadot validators, but instead just the subset used for parachains during
         ///  this session.
         /// 
-        ///  Bound: The number of cores is the sum of the numbers of parachains and parathread multiplexers.
-        ///  Reasonably, 100-1000. The dominant factor is the number of validators: safe upper bound at 10k.
+        ///  Bound: The number of cores is the sum of the numbers of parachains and parathread
+        ///  multiplexers. Reasonably, 100-1000. The dominant factor is the number of validators: safe
+        ///  upper bound at 10k.
         /// </summary>
         [HttpGet("ValidatorGroups")]
-        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.ValidatorIndex>>), 200)]
+        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.ValidatorIndex>>), 200)]
         [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.ParaSchedulerStorage), "ValidatorGroupsParams")]
         public IActionResult GetValidatorGroups()
         {
@@ -55,24 +56,9 @@ namespace Substrate.Kusama.NET.RestService.Generated.Controller
         }
         
         /// <summary>
-        /// >> ParathreadQueue
-        ///  A queue of upcoming claims and which core they should be mapped onto.
-        /// 
-        ///  The number of queued claims is bounded at the `scheduling_lookahead`
-        ///  multiplied by the number of parathread multiplexer cores. Reasonably, 10 * 50 = 500.
-        /// </summary>
-        [HttpGet("ParathreadQueue")]
-        [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.scheduler.ParathreadClaimQueue), 200)]
-        [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.ParaSchedulerStorage), "ParathreadQueueParams")]
-        public IActionResult GetParathreadQueue()
-        {
-            return this.Ok(_paraSchedulerStorage.GetParathreadQueue());
-        }
-        
-        /// <summary>
         /// >> AvailabilityCores
-        ///  One entry for each availability core. Entries are `None` if the core is not currently occupied. Can be
-        ///  temporarily `Some` if scheduled but not occupied.
+        ///  One entry for each availability core. Entries are `None` if the core is not currently
+        ///  occupied. Can be temporarily `Some` if scheduled but not occupied.
         ///  The i'th parachain belongs to the i'th core, with the remaining cores all being
         ///  parathread-multiplexers.
         /// 
@@ -81,7 +67,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Controller
         ///    * The number of validators divided by `configuration.max_validators_per_core`.
         /// </summary>
         [HttpGet("AvailabilityCores")]
-        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.EnumCoreOccupied>>), 200)]
+        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.EnumCoreOccupied>), 200)]
         [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.ParaSchedulerStorage), "AvailabilityCoresParams")]
         public IActionResult GetAvailabilityCores()
         {
@@ -89,23 +75,9 @@ namespace Substrate.Kusama.NET.RestService.Generated.Controller
         }
         
         /// <summary>
-        /// >> ParathreadClaimIndex
-        ///  An index used to ensure that only one claim on a parathread exists in the queue or is
-        ///  currently being handled by an occupied core.
-        /// 
-        ///  Bounded by the number of parathread cores and scheduling lookahead. Reasonably, 10 * 50 = 500.
-        /// </summary>
-        [HttpGet("ParathreadClaimIndex")]
-        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id>), 200)]
-        [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.ParaSchedulerStorage), "ParathreadClaimIndexParams")]
-        public IActionResult GetParathreadClaimIndex()
-        {
-            return this.Ok(_paraSchedulerStorage.GetParathreadClaimIndex());
-        }
-        
-        /// <summary>
         /// >> SessionStartBlock
-        ///  The block number where the session start occurred. Used to track how many group rotations have occurred.
+        ///  The block number where the session start occurred. Used to track how many group rotations
+        ///  have occurred.
         /// 
         ///  Note that in the context of parachains modules the session change is signaled during
         ///  the block and enacted at the end of the block (at the finalization stage, to be exact).
@@ -121,20 +93,19 @@ namespace Substrate.Kusama.NET.RestService.Generated.Controller
         }
         
         /// <summary>
-        /// >> Scheduled
-        ///  Currently scheduled cores - free but up to be occupied.
-        /// 
-        ///  Bounded by the number of cores: one for each parachain and parathread multiplexer.
-        /// 
-        ///  The value contained here will not be valid after the end of a block. Runtime APIs should be used to determine scheduled cores/
-        ///  for the upcoming block.
+        /// >> ClaimQueue
+        ///  One entry for each availability core. The `VecDeque` represents the assignments to be
+        ///  scheduled on that core. `None` is used to signal to not schedule the next para of the core
+        ///  as there is one currently being scheduled. Not using `None` here would overwrite the
+        ///  `CoreState` in the runtime API. The value contained here will not be valid after the end of
+        ///  a block. Runtime APIs should be used to determine scheduled cores/ for the upcoming block.
         /// </summary>
-        [HttpGet("Scheduled")]
-        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.scheduler.CoreAssignment>), 200)]
-        [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.ParaSchedulerStorage), "ScheduledParams")]
-        public IActionResult GetScheduled()
+        [HttpGet("ClaimQueue")]
+        [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.BTreeMapT4), 200)]
+        [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.ParaSchedulerStorage), "ClaimQueueParams")]
+        public IActionResult GetClaimQueue()
         {
-            return this.Ok(_paraSchedulerStorage.GetScheduled());
+            return this.Ok(_paraSchedulerStorage.GetClaimQueue());
         }
     }
 }

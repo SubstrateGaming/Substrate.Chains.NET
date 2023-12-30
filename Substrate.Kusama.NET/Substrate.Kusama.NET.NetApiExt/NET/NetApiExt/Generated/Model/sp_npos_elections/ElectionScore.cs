@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_npos_elections
     
     
     /// <summary>
-    /// >> 292 - Composite[sp_npos_elections.ElectionScore]
+    /// >> 298 - Composite[sp_npos_elections.ElectionScore]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class ElectionScore : BaseType

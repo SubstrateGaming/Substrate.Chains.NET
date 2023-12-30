@@ -43,7 +43,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Controller
         ///  which are being delegated to, together with the amount held on deposit.
         /// </summary>
         [HttpGet("Proxies")]
-        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT28, Substrate.NetApi.Model.Types.Primitive.U128>), 200)]
+        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT33, Substrate.NetApi.Model.Types.Primitive.U128>), 200)]
         [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.ProxyStorage), "ProxiesParams", typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32))]
         public IActionResult GetProxies(string key)
         {
@@ -55,7 +55,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Controller
         ///  The announcements made by the proxy (key).
         /// </summary>
         [HttpGet("Announcements")]
-        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT29, Substrate.NetApi.Model.Types.Primitive.U128>), 200)]
+        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT34, Substrate.NetApi.Model.Types.Primitive.U128>), 200)]
         [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.ProxyStorage), "AnnouncementsParams", typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32))]
         public IActionResult GetAnnouncements(string key)
         {

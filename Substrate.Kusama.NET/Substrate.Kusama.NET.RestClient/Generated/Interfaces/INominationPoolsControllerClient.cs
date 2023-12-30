@@ -46,7 +46,7 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Interfaces
       Task<bool> SubscribeSubPoolsStorage(U32 key);
       Task<U32> GetCounterForSubPoolsStorage();
       Task<bool> SubscribeCounterForSubPoolsStorage();
-      Task<BoundedVecT39> GetMetadata(U32 key);
+      Task<BoundedVecT45> GetMetadata(U32 key);
       Task<bool> SubscribeMetadata(U32 key);
       Task<U32> GetCounterForMetadata();
       Task<bool> SubscribeCounterForMetadata();

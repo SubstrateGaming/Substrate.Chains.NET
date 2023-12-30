@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
    using Substrate.NetApi.Model.Types.Base;
    using Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto;
    using Substrate.NetApi.Model.Types.Primitive;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.kusama_runtime;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_kusama_runtime;
    
    public class SessionControllerClientTest : ClientTestBase
    {
@@ -163,18 +163,18 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Kusama.NET.NetApiExt.Generated.Model.kusama_runtime.SessionKeys>> GetTestValue7()
+      public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_kusama_runtime.SessionKeys>> GetTestValue7()
       {
-         Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Kusama.NET.NetApiExt.Generated.Model.kusama_runtime.SessionKeys>> result;
-         result = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Kusama.NET.NetApiExt.Generated.Model.kusama_runtime.SessionKeys>>();
-         result.Create(new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Kusama.NET.NetApiExt.Generated.Model.kusama_runtime.SessionKeys>[] {
+         Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_kusama_runtime.SessionKeys>> result;
+         result = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_kusama_runtime.SessionKeys>>();
+         result.Create(new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_kusama_runtime.SessionKeys>[] {
                   this.GetTestValue8()});
          return result;
       }
-      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Kusama.NET.NetApiExt.Generated.Model.kusama_runtime.SessionKeys> GetTestValue8()
+      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_kusama_runtime.SessionKeys> GetTestValue8()
       {
-         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Kusama.NET.NetApiExt.Generated.Model.kusama_runtime.SessionKeys> result;
-         result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Kusama.NET.NetApiExt.Generated.Model.kusama_runtime.SessionKeys>();
+         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_kusama_runtime.SessionKeys> result;
+         result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_kusama_runtime.SessionKeys>();
          result.Create(this.GetTestValue9(), this.GetTestValue10());
          return result;
       }
@@ -218,22 +218,24 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
                   this.GetTestValueU8()});
          return result;
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.kusama_runtime.SessionKeys GetTestValue10()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_kusama_runtime.SessionKeys GetTestValue10()
       {
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.kusama_runtime.SessionKeys result;
-         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.kusama_runtime.SessionKeys();
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_kusama_runtime.SessionKeys result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_kusama_runtime.SessionKeys();
          result.Grandpa = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_grandpa.app.Public();
          result.Grandpa = this.GetTestValue11();
          result.Babe = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_babe.app.Public();
          result.Babe = this.GetTestValue13();
          result.ImOnline = new Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_im_online.sr25519.app_sr25519.Public();
          result.ImOnline = this.GetTestValue15();
-         result.ParaValidator = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.validator_app.Public();
+         result.ParaValidator = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.validator_app.Public();
          result.ParaValidator = this.GetTestValue17();
-         result.ParaAssignment = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.assignment_app.Public();
+         result.ParaAssignment = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.assignment_app.Public();
          result.ParaAssignment = this.GetTestValue19();
          result.AuthorityDiscovery = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_authority_discovery.app.Public();
          result.AuthorityDiscovery = this.GetTestValue21();
+         result.Beefy = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_beefy.ecdsa_crypto.Public();
+         result.Beefy = this.GetTestValue23();
          return result;
       }
       public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_grandpa.app.Public GetTestValue11()
@@ -380,10 +382,10 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
                   this.GetTestValueU8()});
          return result;
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.validator_app.Public GetTestValue17()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.validator_app.Public GetTestValue17()
       {
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.validator_app.Public result;
-         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.validator_app.Public();
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.validator_app.Public result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.validator_app.Public();
          result.Value = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.sr25519.Public();
          result.Value = this.GetTestValue18();
          return result;
@@ -428,10 +430,10 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
                   this.GetTestValueU8()});
          return result;
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.assignment_app.Public GetTestValue19()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.assignment_app.Public GetTestValue19()
       {
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.assignment_app.Public result;
-         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.assignment_app.Public();
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.assignment_app.Public result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.assignment_app.Public();
          result.Value = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.sr25519.Public();
          result.Value = this.GetTestValue20();
          return result;
@@ -524,6 +526,55 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
                   this.GetTestValueU8()});
          return result;
       }
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_beefy.ecdsa_crypto.Public GetTestValue23()
+      {
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_beefy.ecdsa_crypto.Public result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_beefy.ecdsa_crypto.Public();
+         result.Value = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.ecdsa.Public();
+         result.Value = this.GetTestValue24();
+         return result;
+      }
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.ecdsa.Public GetTestValue24()
+      {
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.ecdsa.Public result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.ecdsa.Public();
+         result.Value = new Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr33U8();
+         result.Value.Create(new Substrate.NetApi.Model.Types.Primitive.U8[] {
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8()});
+         return result;
+      }
       [Test()]
       public async System.Threading.Tasks.Task TestQueuedKeys()
       {
@@ -535,7 +586,7 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          SessionControllerClient rpcClient = new SessionControllerClient(_httpClient, subscriptionClient);
-         Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Kusama.NET.NetApiExt.Generated.Model.kusama_runtime.SessionKeys>> mockupValue = this.GetTestValue7();
+         Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_kusama_runtime.SessionKeys>> mockupValue = this.GetTestValue7();
 
 
          Assert.IsTrue(await rpcClient.SubscribeQueuedKeys());
@@ -548,12 +599,12 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Kusama.NET.NetApiExt.Generated.Model.kusama_runtime.SessionKeys>> rpcResult = await rpcClient.GetQueuedKeys();
+         Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_kusama_runtime.SessionKeys>> rpcResult = await rpcClient.GetQueuedKeys();
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U32> GetTestValue24()
+      public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U32> GetTestValue26()
       {
          Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U32> result;
          result = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U32>();
@@ -572,7 +623,7 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          SessionControllerClient rpcClient = new SessionControllerClient(_httpClient, subscriptionClient);
-         Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U32> mockupValue = this.GetTestValue24();
+         Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U32> mockupValue = this.GetTestValue26();
 
 
          Assert.IsTrue(await rpcClient.SubscribeDisabledValidators());
@@ -590,33 +641,35 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.kusama_runtime.SessionKeys GetTestValue26()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_kusama_runtime.SessionKeys GetTestValue28()
       {
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.kusama_runtime.SessionKeys result;
-         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.kusama_runtime.SessionKeys();
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_kusama_runtime.SessionKeys result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_kusama_runtime.SessionKeys();
          result.Grandpa = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_grandpa.app.Public();
-         result.Grandpa = this.GetTestValue27();
+         result.Grandpa = this.GetTestValue29();
          result.Babe = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_babe.app.Public();
-         result.Babe = this.GetTestValue29();
+         result.Babe = this.GetTestValue31();
          result.ImOnline = new Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_im_online.sr25519.app_sr25519.Public();
-         result.ImOnline = this.GetTestValue31();
-         result.ParaValidator = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.validator_app.Public();
-         result.ParaValidator = this.GetTestValue33();
-         result.ParaAssignment = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.assignment_app.Public();
-         result.ParaAssignment = this.GetTestValue35();
+         result.ImOnline = this.GetTestValue33();
+         result.ParaValidator = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.validator_app.Public();
+         result.ParaValidator = this.GetTestValue35();
+         result.ParaAssignment = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.assignment_app.Public();
+         result.ParaAssignment = this.GetTestValue37();
          result.AuthorityDiscovery = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_authority_discovery.app.Public();
-         result.AuthorityDiscovery = this.GetTestValue37();
+         result.AuthorityDiscovery = this.GetTestValue39();
+         result.Beefy = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_beefy.ecdsa_crypto.Public();
+         result.Beefy = this.GetTestValue41();
          return result;
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_grandpa.app.Public GetTestValue27()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_grandpa.app.Public GetTestValue29()
       {
          Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_grandpa.app.Public result;
          result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_grandpa.app.Public();
          result.Value = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.ed25519.Public();
-         result.Value = this.GetTestValue28();
+         result.Value = this.GetTestValue30();
          return result;
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.ed25519.Public GetTestValue28()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.ed25519.Public GetTestValue30()
       {
          Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.ed25519.Public result;
          result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.ed25519.Public();
@@ -656,58 +709,10 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
                   this.GetTestValueU8()});
          return result;
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_babe.app.Public GetTestValue29()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_babe.app.Public GetTestValue31()
       {
          Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_babe.app.Public result;
          result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_babe.app.Public();
-         result.Value = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.sr25519.Public();
-         result.Value = this.GetTestValue30();
-         return result;
-      }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.sr25519.Public GetTestValue30()
-      {
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.sr25519.Public result;
-         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.sr25519.Public();
-         result.Value = new Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr32U8();
-         result.Value.Create(new Substrate.NetApi.Model.Types.Primitive.U8[] {
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8()});
-         return result;
-      }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_im_online.sr25519.app_sr25519.Public GetTestValue31()
-      {
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_im_online.sr25519.app_sr25519.Public result;
-         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_im_online.sr25519.app_sr25519.Public();
          result.Value = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.sr25519.Public();
          result.Value = this.GetTestValue32();
          return result;
@@ -752,10 +757,10 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
                   this.GetTestValueU8()});
          return result;
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.validator_app.Public GetTestValue33()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_im_online.sr25519.app_sr25519.Public GetTestValue33()
       {
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.validator_app.Public result;
-         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.validator_app.Public();
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_im_online.sr25519.app_sr25519.Public result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_im_online.sr25519.app_sr25519.Public();
          result.Value = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.sr25519.Public();
          result.Value = this.GetTestValue34();
          return result;
@@ -800,10 +805,10 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
                   this.GetTestValueU8()});
          return result;
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.assignment_app.Public GetTestValue35()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.validator_app.Public GetTestValue35()
       {
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.assignment_app.Public result;
-         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.assignment_app.Public();
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.validator_app.Public result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.validator_app.Public();
          result.Value = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.sr25519.Public();
          result.Value = this.GetTestValue36();
          return result;
@@ -848,10 +853,10 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
                   this.GetTestValueU8()});
          return result;
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_authority_discovery.app.Public GetTestValue37()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.assignment_app.Public GetTestValue37()
       {
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_authority_discovery.app.Public result;
-         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_authority_discovery.app.Public();
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.assignment_app.Public result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.assignment_app.Public();
          result.Value = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.sr25519.Public();
          result.Value = this.GetTestValue38();
          return result;
@@ -896,7 +901,104 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
                   this.GetTestValueU8()});
          return result;
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue39()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_authority_discovery.app.Public GetTestValue39()
+      {
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_authority_discovery.app.Public result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_authority_discovery.app.Public();
+         result.Value = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.sr25519.Public();
+         result.Value = this.GetTestValue40();
+         return result;
+      }
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.sr25519.Public GetTestValue40()
+      {
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.sr25519.Public result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.sr25519.Public();
+         result.Value = new Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr32U8();
+         result.Value.Create(new Substrate.NetApi.Model.Types.Primitive.U8[] {
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8()});
+         return result;
+      }
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_beefy.ecdsa_crypto.Public GetTestValue41()
+      {
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_beefy.ecdsa_crypto.Public result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_beefy.ecdsa_crypto.Public();
+         result.Value = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.ecdsa.Public();
+         result.Value = this.GetTestValue42();
+         return result;
+      }
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.ecdsa.Public GetTestValue42()
+      {
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.ecdsa.Public result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.ecdsa.Public();
+         result.Value = new Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr33U8();
+         result.Value.Create(new Substrate.NetApi.Model.Types.Primitive.U8[] {
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8()});
+         return result;
+      }
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue43()
       {
          Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 result;
          result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32();
@@ -947,8 +1049,8 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          SessionControllerClient rpcClient = new SessionControllerClient(_httpClient, subscriptionClient);
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.kusama_runtime.SessionKeys mockupValue = this.GetTestValue26();
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 mockupKey = this.GetTestValue39();
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_kusama_runtime.SessionKeys mockupValue = this.GetTestValue28();
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 mockupKey = this.GetTestValue43();
 
          Assert.IsTrue(await rpcClient.SubscribeNextKeys(mockupKey));
 
@@ -960,12 +1062,12 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.kusama_runtime.SessionKeys rpcResult = await rpcClient.GetNextKeys(mockupKey);
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_kusama_runtime.SessionKeys rpcResult = await rpcClient.GetNextKeys(mockupKey);
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue41()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue45()
       {
          Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 result;
          result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32();
@@ -1005,14 +1107,14 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
                   this.GetTestValueU8()});
          return result;
       }
-      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.KeyTypeId, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>> GetTestValue42()
+      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.KeyTypeId, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>> GetTestValue46()
       {
          Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.KeyTypeId, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>> result;
          result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.KeyTypeId, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>();
-         result.Create(this.GetTestValue43(), this.GetTestValue44());
+         result.Create(this.GetTestValue47(), this.GetTestValue48());
          return result;
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.KeyTypeId GetTestValue43()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.KeyTypeId GetTestValue47()
       {
          Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.KeyTypeId result;
          result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.KeyTypeId();
@@ -1024,7 +1126,7 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
                   this.GetTestValueU8()});
          return result;
       }
-      public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> GetTestValue44()
+      public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> GetTestValue48()
       {
          Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> result;
          result = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>();
@@ -1043,8 +1145,8 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          SessionControllerClient rpcClient = new SessionControllerClient(_httpClient, subscriptionClient);
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 mockupValue = this.GetTestValue41();
-         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.KeyTypeId, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>> mockupKey = this.GetTestValue42();
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 mockupValue = this.GetTestValue45();
+         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.KeyTypeId, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>> mockupKey = this.GetTestValue46();
 
          Assert.IsTrue(await rpcClient.SubscribeKeyOwner(mockupKey));
 

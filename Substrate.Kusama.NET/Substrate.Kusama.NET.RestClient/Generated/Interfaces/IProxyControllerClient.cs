@@ -17,9 +17,9 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Interfaces
    
    public interface IProxyControllerClient
    {
-      Task<BaseTuple<BoundedVecT28, U128>> GetProxies(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
+      Task<BaseTuple<BoundedVecT33, U128>> GetProxies(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
       Task<bool> SubscribeProxies(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
-      Task<BaseTuple<BoundedVecT29, U128>> GetAnnouncements(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
+      Task<BaseTuple<BoundedVecT34, U128>> GetAnnouncements(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
       Task<bool> SubscribeAnnouncements(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
    }
 }

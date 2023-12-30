@@ -36,7 +36,7 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "ChildBounties/ChildBounties", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.ChildBountiesStorage.ChildBountiesParams(key));
       }
-      public async Task<bool> SetChildBountyDescriptions(BoundedVecT32 value, U32 key)
+      public async Task<bool> SetChildBountyDescriptions(BoundedVecT37 value, U32 key)
       {
          return await SendMockupRequestAsync(_httpClient, "ChildBounties/ChildBountyDescriptions", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.ChildBountiesStorage.ChildBountyDescriptionsParams(key));
       }

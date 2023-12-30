@@ -225,7 +225,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Controller
         ///  Metadata for the pool.
         /// </summary>
         [HttpGet("Metadata")]
-        [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT39), 200)]
+        [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT45), 200)]
         [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.NominationPoolsStorage), "MetadataParams", typeof(Substrate.NetApi.Model.Types.Primitive.U32))]
         public IActionResult GetMetadata(string key)
         {

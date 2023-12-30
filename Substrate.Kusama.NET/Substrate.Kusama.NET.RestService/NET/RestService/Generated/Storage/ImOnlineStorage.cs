@@ -48,10 +48,9 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         
         /// <summary>
         /// >> ReceivedHeartbeats
-        ///  For each session index, we keep a mapping of `SessionIndex` and `AuthIndex` to
-        ///  `WrapperOpaque<BoundedOpaqueNetworkState>`.
+        ///  For each session index, we keep a mapping of `SessionIndex` and `AuthIndex`.
         /// </summary>
-        Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_support.traits.misc.WrapperOpaque GetReceivedHeartbeats(string key);
+        Substrate.NetApi.Model.Types.Primitive.Bool GetReceivedHeartbeats(string key);
         
         /// <summary>
         /// >> AuthoredBlocks
@@ -80,7 +79,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// <summary>
         /// _receivedHeartbeatsTypedStorage typed storage field
         /// </summary>
-        private TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_support.traits.misc.WrapperOpaque> _receivedHeartbeatsTypedStorage;
+        private TypedMapStorage<Substrate.NetApi.Model.Types.Primitive.Bool> _receivedHeartbeatsTypedStorage;
         
         /// <summary>
         /// _authoredBlocksTypedStorage typed storage field
@@ -94,7 +93,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         {
             this.HeartbeatAfterTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32>("ImOnline.HeartbeatAfter", storageDataProvider, storageChangeDelegates);
             this.KeysTypedStorage = new TypedStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT5>("ImOnline.Keys", storageDataProvider, storageChangeDelegates);
-            this.ReceivedHeartbeatsTypedStorage = new TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_support.traits.misc.WrapperOpaque>("ImOnline.ReceivedHeartbeats", storageDataProvider, storageChangeDelegates);
+            this.ReceivedHeartbeatsTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Primitive.Bool>("ImOnline.ReceivedHeartbeats", storageDataProvider, storageChangeDelegates);
             this.AuthoredBlocksTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Primitive.U32>("ImOnline.AuthoredBlocks", storageDataProvider, storageChangeDelegates);
         }
         
@@ -131,7 +130,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// <summary>
         /// _receivedHeartbeatsTypedStorage property
         /// </summary>
-        public TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_support.traits.misc.WrapperOpaque> ReceivedHeartbeatsTypedStorage
+        public TypedMapStorage<Substrate.NetApi.Model.Types.Primitive.Bool> ReceivedHeartbeatsTypedStorage
         {
             get
             {
@@ -226,16 +225,15 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         
         /// <summary>
         /// >> ReceivedHeartbeats
-        ///  For each session index, we keep a mapping of `SessionIndex` and `AuthIndex` to
-        ///  `WrapperOpaque<BoundedOpaqueNetworkState>`.
+        ///  For each session index, we keep a mapping of `SessionIndex` and `AuthIndex`.
         /// </summary>
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_support.traits.misc.WrapperOpaque GetReceivedHeartbeats(string key)
+        public Substrate.NetApi.Model.Types.Primitive.Bool GetReceivedHeartbeats(string key)
         {
             if ((key == null))
             {
                 return null;
             }
-            if (ReceivedHeartbeatsTypedStorage.Dictionary.TryGetValue(key, out Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_support.traits.misc.WrapperOpaque result))
+            if (ReceivedHeartbeatsTypedStorage.Dictionary.TryGetValue(key, out Substrate.NetApi.Model.Types.Primitive.Bool result))
             {
                 return result;
             }

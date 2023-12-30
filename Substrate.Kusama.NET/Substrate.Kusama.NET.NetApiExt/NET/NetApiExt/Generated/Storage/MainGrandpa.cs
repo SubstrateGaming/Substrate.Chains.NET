@@ -241,7 +241,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> report_equivocation
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method ReportEquivocation(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_grandpa.EquivocationProof equivocation_proof, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_session.MembershipProof key_owner_proof)
         {
@@ -253,7 +253,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> report_equivocation_unsigned
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method ReportEquivocationUnsigned(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_grandpa.EquivocationProof equivocation_proof, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_session.MembershipProof key_owner_proof)
         {
@@ -265,7 +265,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> note_stalled
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method NoteStalled(Substrate.NetApi.Model.Types.Primitive.U32 delay, Substrate.NetApi.Model.Types.Primitive.U32 best_finalized_block_number)
         {
@@ -287,6 +287,17 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         {
             var result = new Substrate.NetApi.Model.Types.Primitive.U32();
             result.Create("0xA0860100");
+            return result;
+        }
+        
+        /// <summary>
+        /// >> MaxNominators
+        ///  The maximum number of nominators for each validator.
+        /// </summary>
+        public Substrate.NetApi.Model.Types.Primitive.U32 MaxNominators()
+        {
+            var result = new Substrate.NetApi.Model.Types.Primitive.U32();
+            result.Create("0x00020000");
             return result;
         }
         

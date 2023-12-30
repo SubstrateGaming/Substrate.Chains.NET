@@ -15,7 +15,7 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Clients
    using Substrate.NetApi.Model.Types.Base;
    using Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto;
    using Substrate.NetApi.Model.Types.Primitive;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.kusama_runtime;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_kusama_runtime;
    using Substrate.Kusama.NET.RestClient.Mockup.Generated.Interfaces;
    
    public sealed class SessionControllerMockupClient : MockupBaseClient, ISessionControllerMockupClient

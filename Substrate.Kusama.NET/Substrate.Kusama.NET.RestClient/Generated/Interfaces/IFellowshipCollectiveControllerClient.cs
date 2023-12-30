@@ -28,7 +28,7 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Interfaces
       Task<bool> SubscribeIndexToId(Substrate.NetApi.Model.Types.Base.BaseTuple<U16, U32> key);
       Task<EnumVoteRecord> GetVoting(Substrate.NetApi.Model.Types.Base.BaseTuple<U32, AccountId32> key);
       Task<bool> SubscribeVoting(Substrate.NetApi.Model.Types.Base.BaseTuple<U32, AccountId32> key);
-      Task<BoundedVecT20> GetVotingCleanup(U32 key);
+      Task<BoundedVecT22> GetVotingCleanup(U32 key);
       Task<bool> SubscribeVotingCleanup(U32 key);
    }
 }
