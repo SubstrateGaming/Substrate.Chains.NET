@@ -35,7 +35,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         ///  The funds that have had additional contributions during the last block. This is used
         ///  in order to determine which funds should submit new or updated bids.
         /// </summary>
-        Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id> GetNewRaise();
+        Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id> GetNewRaise();
         
         /// <summary>
         /// >> EndingsCount
@@ -64,7 +64,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// <summary>
         /// _newRaiseTypedStorage typed storage field
         /// </summary>
-        private TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id>> _newRaiseTypedStorage;
+        private TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id>> _newRaiseTypedStorage;
         
         /// <summary>
         /// _endingsCountTypedStorage typed storage field
@@ -82,7 +82,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         public CrowdloanStorage(IStorageDataProvider storageDataProvider, List<IStorageChangeDelegate> storageChangeDelegates)
         {
             this.FundsTypedStorage = new TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_common.crowdloan.FundInfo>("Crowdloan.Funds", storageDataProvider, storageChangeDelegates);
-            this.NewRaiseTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id>>("Crowdloan.NewRaise", storageDataProvider, storageChangeDelegates);
+            this.NewRaiseTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id>>("Crowdloan.NewRaise", storageDataProvider, storageChangeDelegates);
             this.EndingsCountTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32>("Crowdloan.EndingsCount", storageDataProvider, storageChangeDelegates);
             this.NextFundIndexTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32>("Crowdloan.NextFundIndex", storageDataProvider, storageChangeDelegates);
         }
@@ -105,7 +105,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// <summary>
         /// _newRaiseTypedStorage property
         /// </summary>
-        public TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id>> NewRaiseTypedStorage
+        public TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id>> NewRaiseTypedStorage
         {
             get
             {
@@ -201,7 +201,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         ///  The funds that have had additional contributions during the last block. This is used
         ///  in order to determine which funds should submit new or updated bids.
         /// </summary>
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id> GetNewRaise()
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id> GetNewRaise()
         {
             return NewRaiseTypedStorage.Get();
         }

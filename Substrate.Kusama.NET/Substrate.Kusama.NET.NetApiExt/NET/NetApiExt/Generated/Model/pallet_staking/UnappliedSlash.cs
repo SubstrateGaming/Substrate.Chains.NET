@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking
     
     
     /// <summary>
-    /// >> 567 - Composite[pallet_staking.UnappliedSlash]
+    /// >> 580 - Composite[pallet_staking.UnappliedSlash]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class UnappliedSlash : BaseType

@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_babe
     
     
     /// <summary>
-    /// >> 527 - Composite[sp_consensus_babe.BabeEpochConfiguration]
+    /// >> 540 - Composite[sp_consensus_babe.BabeEpochConfiguration]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class BabeEpochConfiguration : BaseType

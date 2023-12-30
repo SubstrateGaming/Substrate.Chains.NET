@@ -26,7 +26,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.pallet.p
     }
     
     /// <summary>
-    /// >> 94 - Variant[pallet_staking.pallet.pallet.ConfigOp]
+    /// >> 93 - Variant[pallet_staking.pallet.pallet.ConfigOp]
     /// </summary>
     public sealed class EnumConfigOp : BaseEnumExt<ConfigOp, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill, BaseVoid>
     {

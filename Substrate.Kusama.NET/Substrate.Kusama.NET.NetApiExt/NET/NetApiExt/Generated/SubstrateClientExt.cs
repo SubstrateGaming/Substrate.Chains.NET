@@ -77,6 +77,21 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated
         public HistoricalStorage HistoricalStorage;
         
         /// <summary>
+        /// BeefyStorage storage calls.
+        /// </summary>
+        public BeefyStorage BeefyStorage;
+        
+        /// <summary>
+        /// MmrStorage storage calls.
+        /// </summary>
+        public MmrStorage MmrStorage;
+        
+        /// <summary>
+        /// BeefyMmrLeafStorage storage calls.
+        /// </summary>
+        public BeefyMmrLeafStorage BeefyMmrLeafStorage;
+        
+        /// <summary>
         /// SessionStorage storage calls.
         /// </summary>
         public SessionStorage SessionStorage;
@@ -282,6 +297,11 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated
         public ParasSlashingStorage ParasSlashingStorage;
         
         /// <summary>
+        /// ParaAssignmentProviderStorage storage calls.
+        /// </summary>
+        public ParaAssignmentProviderStorage ParaAssignmentProviderStorage;
+        
+        /// <summary>
         /// RegistrarStorage storage calls.
         /// </summary>
         public RegistrarStorage RegistrarStorage;
@@ -300,6 +320,11 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated
         /// CrowdloanStorage storage calls.
         /// </summary>
         public CrowdloanStorage CrowdloanStorage;
+        
+        /// <summary>
+        /// StateTrieMigrationStorage storage calls.
+        /// </summary>
+        public StateTrieMigrationStorage StateTrieMigrationStorage;
         
         /// <summary>
         /// XcmPalletStorage storage calls.
@@ -325,6 +350,9 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated
             this.StakingStorage = new StakingStorage(this);
             this.OffencesStorage = new OffencesStorage(this);
             this.HistoricalStorage = new HistoricalStorage(this);
+            this.BeefyStorage = new BeefyStorage(this);
+            this.MmrStorage = new MmrStorage(this);
+            this.BeefyMmrLeafStorage = new BeefyMmrLeafStorage(this);
             this.SessionStorage = new SessionStorage(this);
             this.GrandpaStorage = new GrandpaStorage(this);
             this.ImOnlineStorage = new ImOnlineStorage(this);
@@ -366,10 +394,12 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated
             this.ParaSessionInfoStorage = new ParaSessionInfoStorage(this);
             this.ParasDisputesStorage = new ParasDisputesStorage(this);
             this.ParasSlashingStorage = new ParasSlashingStorage(this);
+            this.ParaAssignmentProviderStorage = new ParaAssignmentProviderStorage(this);
             this.RegistrarStorage = new RegistrarStorage(this);
             this.SlotsStorage = new SlotsStorage(this);
             this.AuctionsStorage = new AuctionsStorage(this);
             this.CrowdloanStorage = new CrowdloanStorage(this);
+            this.StateTrieMigrationStorage = new StateTrieMigrationStorage(this);
             this.XcmPalletStorage = new XcmPalletStorage(this);
             this.MessageQueueStorage = new MessageQueueStorage(this);
         }

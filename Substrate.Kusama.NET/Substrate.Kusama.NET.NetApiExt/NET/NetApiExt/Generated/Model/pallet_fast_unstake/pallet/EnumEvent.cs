@@ -22,18 +22,18 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_fast_unstake.pal
         
         Slashed = 1,
         
-        InternalError = 2,
+        BatchChecked = 2,
         
-        BatchChecked = 3,
+        BatchFinished = 3,
         
-        BatchFinished = 4,
+        InternalError = 4,
     }
     
     /// <summary>
-    /// >> 482 - Variant[pallet_fast_unstake.pallet.Event]
-    /// The events of this pallet.
+    /// >> 492 - Variant[pallet_fast_unstake.pallet.Event]
+    /// The `Event` enum of this pallet
     /// </summary>
-    public sealed class EnumEvent : BaseEnumExt<Event, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.EnumResult>, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U128>, BaseVoid, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.NetApi.Model.Types.Primitive.U32>
+    public sealed class EnumEvent : BaseEnumExt<Event, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.EnumResult>, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U128>, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.NetApi.Model.Types.Primitive.U32, BaseVoid>
     {
     }
 }

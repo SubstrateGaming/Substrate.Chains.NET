@@ -48,7 +48,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Controller
         /// </summary>
         [HttpGet("HrmpOpenChannelRequests")]
         [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.hrmp.HrmpOpenChannelRequest), 200)]
-        [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.HrmpStorage), "HrmpOpenChannelRequestsParams", typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.HrmpChannelId))]
+        [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.HrmpStorage), "HrmpOpenChannelRequestsParams", typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.HrmpChannelId))]
         public IActionResult GetHrmpOpenChannelRequests(string key)
         {
             return this.Ok(_hrmpStorage.GetHrmpOpenChannelRequests(key));
@@ -58,7 +58,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Controller
         /// >> HrmpOpenChannelRequestsList
         /// </summary>
         [HttpGet("HrmpOpenChannelRequestsList")]
-        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.HrmpChannelId>), 200)]
+        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.HrmpChannelId>), 200)]
         [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.HrmpStorage), "HrmpOpenChannelRequestsListParams")]
         public IActionResult GetHrmpOpenChannelRequestsList()
         {
@@ -73,7 +73,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Controller
         /// </summary>
         [HttpGet("HrmpOpenChannelRequestCount")]
         [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Primitive.U32), 200)]
-        [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.HrmpStorage), "HrmpOpenChannelRequestCountParams", typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id))]
+        [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.HrmpStorage), "HrmpOpenChannelRequestCountParams", typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id))]
         public IActionResult GetHrmpOpenChannelRequestCount(string key)
         {
             return this.Ok(_hrmpStorage.GetHrmpOpenChannelRequestCount(key));
@@ -87,7 +87,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Controller
         /// </summary>
         [HttpGet("HrmpAcceptedChannelRequestCount")]
         [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Primitive.U32), 200)]
-        [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.HrmpStorage), "HrmpAcceptedChannelRequestCountParams", typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id))]
+        [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.HrmpStorage), "HrmpAcceptedChannelRequestCountParams", typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id))]
         public IActionResult GetHrmpAcceptedChannelRequestCount(string key)
         {
             return this.Ok(_hrmpStorage.GetHrmpAcceptedChannelRequestCount(key));
@@ -105,7 +105,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Controller
         /// </summary>
         [HttpGet("HrmpCloseChannelRequests")]
         [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseTuple), 200)]
-        [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.HrmpStorage), "HrmpCloseChannelRequestsParams", typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.HrmpChannelId))]
+        [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.HrmpStorage), "HrmpCloseChannelRequestsParams", typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.HrmpChannelId))]
         public IActionResult GetHrmpCloseChannelRequests(string key)
         {
             return this.Ok(_hrmpStorage.GetHrmpCloseChannelRequests(key));
@@ -115,7 +115,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Controller
         /// >> HrmpCloseChannelRequestsList
         /// </summary>
         [HttpGet("HrmpCloseChannelRequestsList")]
-        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.HrmpChannelId>), 200)]
+        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.HrmpChannelId>), 200)]
         [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.HrmpStorage), "HrmpCloseChannelRequestsListParams")]
         public IActionResult GetHrmpCloseChannelRequestsList()
         {
@@ -126,11 +126,12 @@ namespace Substrate.Kusama.NET.RestService.Generated.Controller
         /// >> HrmpWatermarks
         ///  The HRMP watermark associated with each para.
         ///  Invariant:
-        ///  - each para `P` used here as a key should satisfy `Paras::is_valid_para(P)` within a session.
+        ///  - each para `P` used here as a key should satisfy `Paras::is_valid_para(P)` within a
+        ///    session.
         /// </summary>
         [HttpGet("HrmpWatermarks")]
         [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Primitive.U32), 200)]
-        [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.HrmpStorage), "HrmpWatermarksParams", typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id))]
+        [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.HrmpStorage), "HrmpWatermarksParams", typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id))]
         public IActionResult GetHrmpWatermarks(string key)
         {
             return this.Ok(_hrmpStorage.GetHrmpWatermarks(key));
@@ -144,7 +145,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Controller
         /// </summary>
         [HttpGet("HrmpChannels")]
         [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.hrmp.HrmpChannel), 200)]
-        [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.HrmpStorage), "HrmpChannelsParams", typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.HrmpChannelId))]
+        [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.HrmpStorage), "HrmpChannelsParams", typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.HrmpChannelId))]
         public IActionResult GetHrmpChannels(string key)
         {
             return this.Ok(_hrmpStorage.GetHrmpChannels(key));
@@ -167,8 +168,8 @@ namespace Substrate.Kusama.NET.RestService.Generated.Controller
         ///  - the vectors are sorted.
         /// </summary>
         [HttpGet("HrmpIngressChannelsIndex")]
-        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id>), 200)]
-        [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.HrmpStorage), "HrmpIngressChannelsIndexParams", typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id))]
+        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id>), 200)]
+        [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.HrmpStorage), "HrmpIngressChannelsIndexParams", typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id))]
         public IActionResult GetHrmpIngressChannelsIndex(string key)
         {
             return this.Ok(_hrmpStorage.GetHrmpIngressChannelsIndex(key));
@@ -178,8 +179,8 @@ namespace Substrate.Kusama.NET.RestService.Generated.Controller
         /// >> HrmpEgressChannelsIndex
         /// </summary>
         [HttpGet("HrmpEgressChannelsIndex")]
-        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id>), 200)]
-        [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.HrmpStorage), "HrmpEgressChannelsIndexParams", typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id))]
+        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id>), 200)]
+        [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.HrmpStorage), "HrmpEgressChannelsIndexParams", typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id))]
         public IActionResult GetHrmpEgressChannelsIndex(string key)
         {
             return this.Ok(_hrmpStorage.GetHrmpEgressChannelsIndex(key));
@@ -192,7 +193,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Controller
         /// </summary>
         [HttpGet("HrmpChannelContents")]
         [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_core_primitives.InboundHrmpMessage>), 200)]
-        [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.HrmpStorage), "HrmpChannelContentsParams", typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.HrmpChannelId))]
+        [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.HrmpStorage), "HrmpChannelContentsParams", typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.HrmpChannelId))]
         public IActionResult GetHrmpChannelContents(string key)
         {
             return this.Ok(_hrmpStorage.GetHrmpChannelContents(key));
@@ -208,8 +209,8 @@ namespace Substrate.Kusama.NET.RestService.Generated.Controller
         ///    same block number.
         /// </summary>
         [HttpGet("HrmpChannelDigests")]
-        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id>>>), 200)]
-        [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.HrmpStorage), "HrmpChannelDigestsParams", typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id))]
+        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id>>>), 200)]
+        [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.HrmpStorage), "HrmpChannelDigestsParams", typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id))]
         public IActionResult GetHrmpChannelDigests(string key)
         {
             return this.Ok(_hrmpStorage.GetHrmpChannelDigests(key));

@@ -17,6 +17,6 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Interfaces
    public interface IConvictionVotingControllerMockupClient
    {
       Task<bool> SetVotingFor(EnumVoting value, Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U16> key);
-      Task<bool> SetClassLocksFor(BoundedVecT18 value, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
+      Task<bool> SetClassLocksFor(BoundedVecT20 value, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
    }
 }

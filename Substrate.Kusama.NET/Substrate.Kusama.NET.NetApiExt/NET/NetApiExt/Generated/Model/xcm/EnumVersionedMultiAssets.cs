@@ -24,7 +24,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm
     }
     
     /// <summary>
-    /// >> 437 - Variant[xcm.VersionedMultiAssets]
+    /// >> 446 - Variant[xcm.VersionedMultiAssets]
     /// </summary>
     public sealed class EnumVersionedMultiAssets : BaseEnumExt<VersionedMultiAssets, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.v2.multiasset.MultiAssets, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.v3.multiasset.MultiAssets>
     {

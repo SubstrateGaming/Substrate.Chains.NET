@@ -22,7 +22,7 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Clients
       {
          _httpClient = httpClient;
       }
-      public async Task<bool> SetLeases(BaseVec<BaseOpt<BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U128>>> value, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id key)
+      public async Task<bool> SetLeases(BaseVec<BaseOpt<BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U128>>> value, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key)
       {
          return await SendMockupRequestAsync(_httpClient, "Slots/Leases", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.SlotsStorage.LeasesParams(key));
       }

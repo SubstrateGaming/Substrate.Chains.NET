@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_conviction_votin
     
     
     /// <summary>
-    /// >> 601 - Composite[pallet_conviction_voting.vote.Casting]
+    /// >> 613 - Composite[pallet_conviction_voting.vote.Casting]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Casting : BaseType
@@ -27,7 +27,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_conviction_votin
         /// <summary>
         /// >> votes
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17 _votes;
+        private Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT19 _votes;
         
         /// <summary>
         /// >> delegations
@@ -39,7 +39,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_conviction_votin
         /// </summary>
         private Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_conviction_voting.vote.PriorLock _prior;
         
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17 Votes
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT19 Votes
         {
             get
             {
@@ -92,7 +92,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_conviction_votin
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Votes = new Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17();
+            Votes = new Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT19();
             Votes.Decode(byteArray, ref p);
             Delegations = new Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_conviction_voting.types.Delegations();
             Delegations.Decode(byteArray, ref p);

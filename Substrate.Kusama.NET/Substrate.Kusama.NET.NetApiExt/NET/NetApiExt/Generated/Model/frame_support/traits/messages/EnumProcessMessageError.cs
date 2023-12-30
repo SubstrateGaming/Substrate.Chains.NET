@@ -30,7 +30,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_support.traits.me
     }
     
     /// <summary>
-    /// >> 499 - Variant[frame_support.traits.messages.ProcessMessageError]
+    /// >> 512 - Variant[frame_support.traits.messages.ProcessMessageError]
     /// </summary>
     public sealed class EnumProcessMessageError : BaseEnumExt<ProcessMessageError, BaseVoid, BaseVoid, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight, BaseVoid>
     {

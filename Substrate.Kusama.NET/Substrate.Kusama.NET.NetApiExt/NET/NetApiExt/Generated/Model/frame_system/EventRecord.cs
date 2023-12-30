@@ -32,7 +32,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_system
         /// <summary>
         /// >> event
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.kusama_runtime.EnumRuntimeEvent _event;
+        private Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_kusama_runtime.EnumRuntimeEvent _event;
         
         /// <summary>
         /// >> topics
@@ -51,7 +51,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_system
             }
         }
         
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.kusama_runtime.EnumRuntimeEvent Event
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_kusama_runtime.EnumRuntimeEvent Event
         {
             get
             {
@@ -94,7 +94,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_system
             var start = p;
             Phase = new Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_system.EnumPhase();
             Phase.Decode(byteArray, ref p);
-            Event = new Substrate.Kusama.NET.NetApiExt.Generated.Model.kusama_runtime.EnumRuntimeEvent();
+            Event = new Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_kusama_runtime.EnumRuntimeEvent();
             Event.Decode(byteArray, ref p);
             Topics = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256>();
             Topics.Decode(byteArray, ref p);

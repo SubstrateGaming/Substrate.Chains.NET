@@ -28,7 +28,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools
     }
     
     /// <summary>
-    /// >> 313 - Variant[pallet_nomination_pools.ClaimPermission]
+    /// >> 319 - Variant[pallet_nomination_pools.ClaimPermission]
     /// </summary>
     public sealed class EnumClaimPermission : BaseEnum<ClaimPermission>
     {

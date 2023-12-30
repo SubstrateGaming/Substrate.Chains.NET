@@ -28,7 +28,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// >> Vesting
         ///  Information regarding the vesting of a given account.
         /// </summary>
-        Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT26 GetVesting(string key);
+        Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT31 GetVesting(string key);
         
         /// <summary>
         /// >> StorageVersion
@@ -48,7 +48,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// <summary>
         /// _vestingTypedStorage typed storage field
         /// </summary>
-        private TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT26> _vestingTypedStorage;
+        private TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT31> _vestingTypedStorage;
         
         /// <summary>
         /// _storageVersionTypedStorage typed storage field
@@ -60,14 +60,14 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// </summary>
         public VestingStorage(IStorageDataProvider storageDataProvider, List<IStorageChangeDelegate> storageChangeDelegates)
         {
-            this.VestingTypedStorage = new TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT26>("Vesting.Vesting", storageDataProvider, storageChangeDelegates);
+            this.VestingTypedStorage = new TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT31>("Vesting.Vesting", storageDataProvider, storageChangeDelegates);
             this.StorageVersionTypedStorage = new TypedStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_vesting.EnumReleases>("Vesting.StorageVersion", storageDataProvider, storageChangeDelegates);
         }
         
         /// <summary>
         /// _vestingTypedStorage property
         /// </summary>
-        public TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT26> VestingTypedStorage
+        public TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT31> VestingTypedStorage
         {
             get
             {
@@ -116,13 +116,13 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// >> Vesting
         ///  Information regarding the vesting of a given account.
         /// </summary>
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT26 GetVesting(string key)
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT31 GetVesting(string key)
         {
             if ((key == null))
             {
                 return null;
             }
-            if (VestingTypedStorage.Dictionary.TryGetValue(key, out Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT26 result))
+            if (VestingTypedStorage.Dictionary.TryGetValue(key, out Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT31 result))
             {
                 return result;
             }

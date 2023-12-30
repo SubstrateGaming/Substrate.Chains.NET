@@ -44,17 +44,17 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("Identity.SuperOf", Substrate.Kusama.NET.NetApiExt.Generated.Storage.IdentityStorage.SuperOfParams(key));
       }
-      public async Task<BaseTuple<U128, BoundedVecT23>> GetSubsOf(AccountId32 key)
+      public async Task<BaseTuple<U128, BoundedVecT25>> GetSubsOf(AccountId32 key)
       {
-         return await SendRequestAsync<BaseTuple<U128, BoundedVecT23>>(_httpClient, "identity/subsof", Substrate.Kusama.NET.NetApiExt.Generated.Storage.IdentityStorage.SubsOfParams(key));
+         return await SendRequestAsync<BaseTuple<U128, BoundedVecT25>>(_httpClient, "identity/subsof", Substrate.Kusama.NET.NetApiExt.Generated.Storage.IdentityStorage.SubsOfParams(key));
       }
       public async Task<bool> SubscribeSubsOf(AccountId32 key)
       {
          return await _subscriptionClient.SubscribeAsync("Identity.SubsOf", Substrate.Kusama.NET.NetApiExt.Generated.Storage.IdentityStorage.SubsOfParams(key));
       }
-      public async Task<BoundedVecT24> GetRegistrars()
+      public async Task<BoundedVecT26> GetRegistrars()
       {
-         return await SendRequestAsync<BoundedVecT24>(_httpClient, "identity/registrars");
+         return await SendRequestAsync<BoundedVecT26>(_httpClient, "identity/registrars");
       }
       public async Task<bool> SubscribeRegistrars()
       {

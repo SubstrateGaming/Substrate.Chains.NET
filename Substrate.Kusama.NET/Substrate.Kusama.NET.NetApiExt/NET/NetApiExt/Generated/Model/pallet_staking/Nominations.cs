@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking
     
     
     /// <summary>
-    /// >> 557 - Composite[pallet_staking.Nominations]
+    /// >> 570 - Composite[pallet_staking.Nominations]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Nominations : BaseType
@@ -27,7 +27,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking
         /// <summary>
         /// >> targets
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT15 _targets;
+        private Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT16 _targets;
         
         /// <summary>
         /// >> submitted_in
@@ -39,7 +39,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking
         /// </summary>
         private Substrate.NetApi.Model.Types.Primitive.Bool _suppressed;
         
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT15 Targets
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT16 Targets
         {
             get
             {
@@ -92,7 +92,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Targets = new Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT15();
+            Targets = new Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT16();
             Targets.Decode(byteArray, ref p);
             SubmittedIn = new Substrate.NetApi.Model.Types.Primitive.U32();
             SubmittedIn.Decode(byteArray, ref p);

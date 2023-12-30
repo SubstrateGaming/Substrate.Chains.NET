@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_referenda.types
     
     
     /// <summary>
-    /// >> 636 - Composite[pallet_referenda.types.ReferendumStatusT2]
+    /// >> 648 - Composite[pallet_referenda.types.ReferendumStatusT2]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class ReferendumStatusT2 : BaseType
@@ -32,7 +32,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_referenda.types
         /// <summary>
         /// >> origin
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.kusama_runtime.EnumOriginCaller _origin;
+        private Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_kusama_runtime.EnumOriginCaller _origin;
         
         /// <summary>
         /// >> proposal
@@ -91,7 +91,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_referenda.types
             }
         }
         
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.kusama_runtime.EnumOriginCaller Origin
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_kusama_runtime.EnumOriginCaller Origin
         {
             get
             {
@@ -238,7 +238,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_referenda.types
             var start = p;
             Track = new Substrate.NetApi.Model.Types.Primitive.U16();
             Track.Decode(byteArray, ref p);
-            Origin = new Substrate.Kusama.NET.NetApiExt.Generated.Model.kusama_runtime.EnumOriginCaller();
+            Origin = new Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_kusama_runtime.EnumOriginCaller();
             Origin.Decode(byteArray, ref p);
             Proposal = new Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_support.traits.preimages.EnumBounded();
             Proposal.Decode(byteArray, ref p);

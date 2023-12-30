@@ -14,7 +14,7 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Interfaces
    using Substrate.NetApi.Model.Types.Base;
    using Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto;
    using Substrate.NetApi.Model.Types.Primitive;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.kusama_runtime;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_kusama_runtime;
    
    public interface ISessionControllerClient
    {

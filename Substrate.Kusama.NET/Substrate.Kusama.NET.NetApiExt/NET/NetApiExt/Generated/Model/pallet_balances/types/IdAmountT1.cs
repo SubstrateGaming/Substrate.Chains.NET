@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_balances.types
     
     
     /// <summary>
-    /// >> 542 - Composite[pallet_balances.types.IdAmountT1]
+    /// >> 555 - Composite[pallet_balances.types.IdAmountT1]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class IdAmountT1 : BaseType
@@ -27,14 +27,14 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_balances.types
         /// <summary>
         /// >> id
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.kusama_runtime.EnumRuntimeHoldReason _id;
+        private Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_kusama_runtime.EnumRuntimeHoldReason _id;
         
         /// <summary>
         /// >> amount
         /// </summary>
         private Substrate.NetApi.Model.Types.Primitive.U128 _amount;
         
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.kusama_runtime.EnumRuntimeHoldReason Id
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_kusama_runtime.EnumRuntimeHoldReason Id
         {
             get
             {
@@ -74,7 +74,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_balances.types
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Id = new Substrate.Kusama.NET.NetApiExt.Generated.Model.kusama_runtime.EnumRuntimeHoldReason();
+            Id = new Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_kusama_runtime.EnumRuntimeHoldReason();
             Id.Decode(byteArray, ref p);
             Amount = new Substrate.NetApi.Model.Types.Primitive.U128();
             Amount.Decode(byteArray, ref p);

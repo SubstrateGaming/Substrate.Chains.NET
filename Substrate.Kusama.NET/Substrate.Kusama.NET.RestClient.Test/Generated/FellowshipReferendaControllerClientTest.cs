@@ -69,8 +69,8 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
          Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_referenda.types.ReferendumStatusT2 result;
          result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_referenda.types.ReferendumStatusT2();
          result.Track = this.GetTestValueU16();
-         result.Origin = new Substrate.Kusama.NET.NetApiExt.Generated.Model.kusama_runtime.EnumOriginCaller();
-         result.Origin.Create(this.GetTestValueEnum<Substrate.Kusama.NET.NetApiExt.Generated.Model.kusama_runtime.OriginCaller>(), this.GetTestValue5());
+         result.Origin = new Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_kusama_runtime.EnumOriginCaller();
+         result.Origin.Create(this.GetTestValueEnum<Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_kusama_runtime.OriginCaller>(), this.GetTestValue5());
          result.Proposal = new Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_support.traits.preimages.EnumBounded();
          result.Proposal.Create(this.GetTestValueEnum<Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_support.traits.preimages.Bounded>(), this.GetTestValue6());
          result.Enactment = new Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_support.traits.schedule.EnumDispatchTime();
@@ -295,10 +295,10 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT21 GetTestValue16()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT23 GetTestValue16()
       {
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT21 result;
-         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT21();
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT23 result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT23();
          result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>>();
          result.Value.Create(new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>[] {
                   this.GetTestValue17()});
@@ -322,7 +322,7 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          FellowshipReferendaControllerClient rpcClient = new FellowshipReferendaControllerClient(_httpClient, subscriptionClient);
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT21 mockupValue = this.GetTestValue16();
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT23 mockupValue = this.GetTestValue16();
          Substrate.NetApi.Model.Types.Primitive.U16 mockupKey = this.GetTestValueU16();
 
          Assert.IsTrue(await rpcClient.SubscribeTrackQueue(mockupKey));
@@ -335,7 +335,7 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT21 rpcResult = await rpcClient.GetTrackQueue(mockupKey);
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT23 rpcResult = await rpcClient.GetTrackQueue(mockupKey);
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());

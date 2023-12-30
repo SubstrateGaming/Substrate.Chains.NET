@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_proxy
     
     
     /// <summary>
-    /// >> 676 - Composite[pallet_proxy.ProxyDefinition]
+    /// >> 697 - Composite[pallet_proxy.ProxyDefinition]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class ProxyDefinition : BaseType
@@ -32,7 +32,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_proxy
         /// <summary>
         /// >> proxy_type
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.kusama_runtime.EnumProxyType _proxyType;
+        private Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_kusama_runtime.EnumProxyType _proxyType;
         
         /// <summary>
         /// >> delay
@@ -51,7 +51,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_proxy
             }
         }
         
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.kusama_runtime.EnumProxyType ProxyType
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_kusama_runtime.EnumProxyType ProxyType
         {
             get
             {
@@ -94,7 +94,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_proxy
             var start = p;
             Delegate = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32();
             Delegate.Decode(byteArray, ref p);
-            ProxyType = new Substrate.Kusama.NET.NetApiExt.Generated.Model.kusama_runtime.EnumProxyType();
+            ProxyType = new Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_kusama_runtime.EnumProxyType();
             ProxyType.Decode(byteArray, ref p);
             Delay = new Substrate.NetApi.Model.Types.Primitive.U32();
             Delay.Decode(byteArray, ref p);

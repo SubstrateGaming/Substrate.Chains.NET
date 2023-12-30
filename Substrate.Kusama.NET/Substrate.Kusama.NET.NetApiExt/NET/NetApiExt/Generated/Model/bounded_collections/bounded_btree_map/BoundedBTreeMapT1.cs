@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bou
     
     
     /// <summary>
-    /// >> 727 - Composite[bounded_collections.bounded_btree_map.BoundedBTreeMapT1]
+    /// >> 749 - Composite[bounded_collections.bounded_btree_map.BoundedBTreeMapT1]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class BoundedBTreeMapT1 : BaseType

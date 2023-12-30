@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.finality_grandpa
     
     
     /// <summary>
-    /// >> 104 - Composite[finality_grandpa.Prevote]
+    /// >> 117 - Composite[finality_grandpa.Prevote]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Prevote : BaseType

@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_multisig
     
     
     /// <summary>
-    /// >> 684 - Composite[pallet_multisig.Multisig]
+    /// >> 705 - Composite[pallet_multisig.Multisig]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Multisig : BaseType
@@ -42,7 +42,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_multisig
         /// <summary>
         /// >> approvals
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT30 _approvals;
+        private Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT35 _approvals;
         
         public Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_multisig.Timepoint When
         {
@@ -80,7 +80,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_multisig
             }
         }
         
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT30 Approvals
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT35 Approvals
         {
             get
             {
@@ -116,7 +116,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_multisig
             Deposit.Decode(byteArray, ref p);
             Depositor = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32();
             Depositor.Decode(byteArray, ref p);
-            Approvals = new Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT30();
+            Approvals = new Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT35();
             Approvals.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

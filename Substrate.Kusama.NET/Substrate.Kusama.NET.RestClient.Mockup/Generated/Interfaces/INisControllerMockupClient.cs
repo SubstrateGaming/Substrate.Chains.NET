@@ -16,8 +16,8 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Interfaces
    
    public interface INisControllerMockupClient
    {
-      Task<bool> SetQueueTotals(BoundedVecT35 value);
-      Task<bool> SetQueues(BoundedVecT36 value, Substrate.NetApi.Model.Types.Primitive.U32 key);
+      Task<bool> SetQueueTotals(BoundedVecT40 value);
+      Task<bool> SetQueues(BoundedVecT41 value, Substrate.NetApi.Model.Types.Primitive.U32 key);
       Task<bool> SetSummary(SummaryRecord value);
       Task<bool> SetReceipts(ReceiptRecord value, Substrate.NetApi.Model.Types.Primitive.U32 key);
    }

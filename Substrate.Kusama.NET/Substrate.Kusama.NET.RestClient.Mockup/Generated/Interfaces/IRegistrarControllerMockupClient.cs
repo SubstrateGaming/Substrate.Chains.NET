@@ -11,7 +11,7 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Interfaces
 {
    using System;
    using System.Threading.Tasks;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives;
    using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_common.paras_registrar;
    
    public interface IRegistrarControllerMockupClient

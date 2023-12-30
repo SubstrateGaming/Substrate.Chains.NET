@@ -34,11 +34,11 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "Identity/SuperOf", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.IdentityStorage.SuperOfParams(key));
       }
-      public async Task<bool> SetSubsOf(BaseTuple<U128, BoundedVecT23> value, AccountId32 key)
+      public async Task<bool> SetSubsOf(BaseTuple<U128, BoundedVecT25> value, AccountId32 key)
       {
          return await SendMockupRequestAsync(_httpClient, "Identity/SubsOf", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.IdentityStorage.SubsOfParams(key));
       }
-      public async Task<bool> SetRegistrars(BoundedVecT24 value)
+      public async Task<bool> SetRegistrars(BoundedVecT26 value)
       {
          return await SendMockupRequestAsync(_httpClient, "Identity/Registrars", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.IdentityStorage.RegistrarsParams());
       }

@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_babe.diges
     
     
     /// <summary>
-    /// >> 525 - Composite[sp_consensus_babe.digests.SecondaryPlainPreDigest]
+    /// >> 538 - Composite[sp_consensus_babe.digests.SecondaryPlainPreDigest]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class SecondaryPlainPreDigest : BaseType

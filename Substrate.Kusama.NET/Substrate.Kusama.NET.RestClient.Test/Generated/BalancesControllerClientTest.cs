@@ -270,10 +270,10 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10 GetTestValue12()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT11 GetTestValue12()
       {
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10 result;
-         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10();
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT11 result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT11();
          result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_balances.types.ReserveData>();
          result.Value.Create(new Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_balances.types.ReserveData[] {
                   this.GetTestValue13()});
@@ -347,7 +347,7 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          BalancesControllerClient rpcClient = new BalancesControllerClient(_httpClient, subscriptionClient);
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10 mockupValue = this.GetTestValue12();
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT11 mockupValue = this.GetTestValue12();
          Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 mockupKey = this.GetTestValue14();
 
          Assert.IsTrue(await rpcClient.SubscribeReserves(mockupKey));
@@ -360,15 +360,15 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10 rpcResult = await rpcClient.GetReserves(mockupKey);
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT11 rpcResult = await rpcClient.GetReserves(mockupKey);
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT11 GetTestValue16()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT12 GetTestValue16()
       {
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT11 result;
-         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT11();
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT12 result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT12();
          result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_balances.types.IdAmountT1>();
          result.Value.Create(new Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_balances.types.IdAmountT1[] {
                   this.GetTestValue17()});
@@ -378,8 +378,8 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
       {
          Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_balances.types.IdAmountT1 result;
          result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_balances.types.IdAmountT1();
-         result.Id = new Substrate.Kusama.NET.NetApiExt.Generated.Model.kusama_runtime.EnumRuntimeHoldReason();
-         result.Id.Create(this.GetTestValueEnum<Substrate.Kusama.NET.NetApiExt.Generated.Model.kusama_runtime.RuntimeHoldReason>(), this.GetTestValueBaseVoid());
+         result.Id = new Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_kusama_runtime.EnumRuntimeHoldReason();
+         result.Id.Create(this.GetTestValueEnum<Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_kusama_runtime.RuntimeHoldReason>(), this.GetTestValueBaseVoid());
          result.Amount = this.GetTestValueU128();
          return result;
       }
@@ -434,7 +434,7 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          BalancesControllerClient rpcClient = new BalancesControllerClient(_httpClient, subscriptionClient);
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT11 mockupValue = this.GetTestValue16();
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT12 mockupValue = this.GetTestValue16();
          Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 mockupKey = this.GetTestValue18();
 
          Assert.IsTrue(await rpcClient.SubscribeHolds(mockupKey));
@@ -447,15 +447,15 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT11 rpcResult = await rpcClient.GetHolds(mockupKey);
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT12 rpcResult = await rpcClient.GetHolds(mockupKey);
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT12 GetTestValue20()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT13 GetTestValue20()
       {
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT12 result;
-         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT12();
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT13 result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT13();
          result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_balances.types.IdAmountT2>();
          result.Value.Create(new Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_balances.types.IdAmountT2[] {
                   this.GetTestValue21()});
@@ -520,7 +520,7 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          BalancesControllerClient rpcClient = new BalancesControllerClient(_httpClient, subscriptionClient);
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT12 mockupValue = this.GetTestValue20();
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT13 mockupValue = this.GetTestValue20();
          Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 mockupKey = this.GetTestValue22();
 
          Assert.IsTrue(await rpcClient.SubscribeFreezes(mockupKey));
@@ -533,7 +533,7 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT12 rpcResult = await rpcClient.GetFreezes(mockupKey);
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT13 rpcResult = await rpcClient.GetFreezes(mockupKey);
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());

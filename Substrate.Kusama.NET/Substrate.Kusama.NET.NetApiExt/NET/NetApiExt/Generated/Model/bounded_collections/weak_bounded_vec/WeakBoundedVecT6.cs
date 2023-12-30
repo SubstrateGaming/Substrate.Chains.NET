@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.wea
     
     
     /// <summary>
-    /// >> 589 - Composite[bounded_collections.weak_bounded_vec.WeakBoundedVecT6]
+    /// >> 738 - Composite[bounded_collections.weak_bounded_vec.WeakBoundedVecT6]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class WeakBoundedVecT6 : BaseType
@@ -27,9 +27,9 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.wea
         /// <summary>
         /// >> value
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> _value;
+        private Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_balances.types.BalanceLock> _value;
         
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> Value
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_balances.types.BalanceLock> Value
         {
             get
             {
@@ -56,7 +56,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.wea
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>();
+            Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_balances.types.BalanceLock>();
             Value.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

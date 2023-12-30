@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_grandpa
     
     
     /// <summary>
-    /// >> 101 - Composite[sp_consensus_grandpa.EquivocationProof]
+    /// >> 114 - Composite[sp_consensus_grandpa.EquivocationProof]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class EquivocationProof : BaseType

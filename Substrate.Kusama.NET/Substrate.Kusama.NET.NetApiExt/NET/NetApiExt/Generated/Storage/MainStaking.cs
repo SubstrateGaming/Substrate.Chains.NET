@@ -506,7 +506,8 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         ///  they wish to support.
         /// 
         ///  Note that the keys of this storage map might become non-decodable in case the
-        ///  [`Config::MaxNominations`] configuration is decreased. In this rare case, these nominators
+        ///  account's [`NominationsQuota::MaxNominations`] configuration is decreased.
+        ///  In this rare case, these nominators
         ///  are still existent in storage, their key is correct and retrievable (i.e. `contains_key`
         ///  indicates that they exist), but their value cannot be decoded. Therefore, the non-decodable
         ///  nominators will effectively not-exist, until they re-submit their preferences such that it
@@ -543,7 +544,8 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         ///  they wish to support.
         /// 
         ///  Note that the keys of this storage map might become non-decodable in case the
-        ///  [`Config::MaxNominations`] configuration is decreased. In this rare case, these nominators
+        ///  account's [`NominationsQuota::MaxNominations`] configuration is decreased.
+        ///  In this rare case, these nominators
         ///  are still existent in storage, their key is correct and retrievable (i.e. `contains_key`
         ///  indicates that they exist), but their value cannot be decoded. Therefore, the non-decodable
         ///  nominators will effectively not-exist, until they re-submit their preferences such that it
@@ -1370,7 +1372,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> bond
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method Bond(Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128> value, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.EnumRewardDestination payee)
         {
@@ -1382,7 +1384,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> bond_extra
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method BondExtra(Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128> max_additional)
         {
@@ -1393,7 +1395,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> unbond
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method Unbond(Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128> value)
         {
@@ -1404,7 +1406,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> withdraw_unbonded
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method WithdrawUnbonded(Substrate.NetApi.Model.Types.Primitive.U32 num_slashing_spans)
         {
@@ -1415,7 +1417,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> validate
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method Validate(Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.ValidatorPrefs prefs)
         {
@@ -1426,7 +1428,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> nominate
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method Nominate(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress> targets)
         {
@@ -1437,7 +1439,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> chill
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method Chill()
         {
@@ -1447,7 +1449,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> set_payee
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method SetPayee(Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.EnumRewardDestination payee)
         {
@@ -1458,7 +1460,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> set_controller
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method SetController()
         {
@@ -1468,7 +1470,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> set_validator_count
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method SetValidatorCount(Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32> @new)
         {
@@ -1479,7 +1481,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> increase_validator_count
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method IncreaseValidatorCount(Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32> additional)
         {
@@ -1490,7 +1492,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> scale_validator_count
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method ScaleValidatorCount(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Percent factor)
         {
@@ -1501,7 +1503,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> force_no_eras
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method ForceNoEras()
         {
@@ -1511,7 +1513,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> force_new_era
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method ForceNewEra()
         {
@@ -1521,7 +1523,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> set_invulnerables
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method SetInvulnerables(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> invulnerables)
         {
@@ -1532,7 +1534,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> force_unstake
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method ForceUnstake(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 stash, Substrate.NetApi.Model.Types.Primitive.U32 num_slashing_spans)
         {
@@ -1544,7 +1546,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> force_new_era_always
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method ForceNewEraAlways()
         {
@@ -1554,7 +1556,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> cancel_deferred_slash
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method CancelDeferredSlash(Substrate.NetApi.Model.Types.Primitive.U32 era, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U32> slash_indices)
         {
@@ -1566,7 +1568,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> payout_stakers
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method PayoutStakers(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 validator_stash, Substrate.NetApi.Model.Types.Primitive.U32 era)
         {
@@ -1578,7 +1580,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> rebond
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method Rebond(Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128> value)
         {
@@ -1589,7 +1591,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> reap_stash
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method ReapStash(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 stash, Substrate.NetApi.Model.Types.Primitive.U32 num_slashing_spans)
         {
@@ -1601,7 +1603,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> kick
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method Kick(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress> who)
         {
@@ -1612,7 +1614,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> set_staking_configs
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method SetStakingConfigs(Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.pallet.pallet.EnumConfigOp min_nominator_bond, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.pallet.pallet.EnumConfigOp min_validator_bond, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.pallet.pallet.EnumConfigOp max_nominator_count, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.pallet.pallet.EnumConfigOp max_validator_count, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.pallet.pallet.EnumConfigOp chill_threshold, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.pallet.pallet.EnumConfigOp min_commission)
         {
@@ -1628,7 +1630,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> chill_other
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method ChillOther(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 controller)
         {
@@ -1639,7 +1641,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> force_apply_min_commission
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method ForceApplyMinCommission(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 validator_stash)
         {
@@ -1650,7 +1652,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> set_min_commission
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method SetMinCommission(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill @new)
         {
@@ -1662,17 +1664,6 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
     
     public sealed class StakingConstants
     {
-        
-        /// <summary>
-        /// >> MaxNominations
-        ///  Maximum number of nominations per nominator.
-        /// </summary>
-        public Substrate.NetApi.Model.Types.Primitive.U32 MaxNominations()
-        {
-            var result = new Substrate.NetApi.Model.Types.Primitive.U32();
-            result.Create("0x18000000");
-            return result;
-        }
         
         /// <summary>
         /// >> HistoryDepth

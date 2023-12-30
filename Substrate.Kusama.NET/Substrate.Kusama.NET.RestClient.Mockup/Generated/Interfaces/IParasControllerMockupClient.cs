@@ -13,9 +13,9 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Interfaces
    using System.Threading.Tasks;
    using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.paras;
    using Substrate.NetApi.Model.Types.Base;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives;
    using Substrate.NetApi.Model.Types.Primitive;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5;
    
    public interface IParasControllerMockupClient
    {
@@ -24,6 +24,7 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Interfaces
       Task<bool> SetParachains(BaseVec<Id> value);
       Task<bool> SetParaLifecycles(EnumParaLifecycle value, Id key);
       Task<bool> SetHeads(HeadData value, Id key);
+      Task<bool> SetMostRecentContext(U32 value, Id key);
       Task<bool> SetCurrentCodeHash(ValidationCodeHash value, Id key);
       Task<bool> SetPastCodeHash(ValidationCodeHash value, BaseTuple<Id, U32> key);
       Task<bool> SetPastCodeMeta(ParaPastCodeMeta value, Id key);

@@ -12,7 +12,7 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Clients
    using System;
    using System.Threading.Tasks;
    using System.Net.Http;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives;
    using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_common.paras_registrar;
    using Substrate.Kusama.NET.RestClient.Mockup.Generated.Interfaces;
    

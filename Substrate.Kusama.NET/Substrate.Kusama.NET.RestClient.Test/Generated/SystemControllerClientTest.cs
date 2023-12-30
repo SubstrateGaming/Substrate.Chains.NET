@@ -529,8 +529,8 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
          result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_system.EventRecord();
          result.Phase = new Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_system.EnumPhase();
          result.Phase.Create(this.GetTestValueEnum<Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_system.Phase>(), this.GetTestValueU32());
-         result.Event = new Substrate.Kusama.NET.NetApiExt.Generated.Model.kusama_runtime.EnumRuntimeEvent();
-         result.Event.Create(this.GetTestValueEnum<Substrate.Kusama.NET.NetApiExt.Generated.Model.kusama_runtime.RuntimeEvent>(), this.GetTestValue27());
+         result.Event = new Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_kusama_runtime.EnumRuntimeEvent();
+         result.Event.Create(this.GetTestValueEnum<Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_kusama_runtime.RuntimeEvent>(), this.GetTestValue27());
          result.Topics = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256>();
          result.Topics.Create(new Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256[] {
                   this.GetTestValue30()});

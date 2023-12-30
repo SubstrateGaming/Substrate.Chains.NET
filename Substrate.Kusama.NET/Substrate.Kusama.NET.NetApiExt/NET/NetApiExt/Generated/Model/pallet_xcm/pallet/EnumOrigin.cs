@@ -24,9 +24,9 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_xcm.pallet
     }
     
     /// <summary>
-    /// >> 132 - Variant[pallet_xcm.pallet.Origin]
+    /// >> 141 - Variant[pallet_xcm.pallet.Origin]
     /// </summary>
-    public sealed class EnumOrigin : BaseEnumExt<Origin, Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.v3.multilocation.MultiLocation, Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.v3.multilocation.MultiLocation>
+    public sealed class EnumOrigin : BaseEnumExt<Origin, Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation, Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation>
     {
     }
 }

@@ -26,11 +26,8 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_preimage.pallet
     }
     
     /// <summary>
-    /// >> 471 - Variant[pallet_preimage.pallet.Event]
-    /// 
-    ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
-    ///			by this pallet.
-    ///			
+    /// >> 481 - Variant[pallet_preimage.pallet.Event]
+    /// The `Event` enum of this pallet
     /// </summary>
     public sealed class EnumEvent : BaseEnumExt<Event, Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256>
     {

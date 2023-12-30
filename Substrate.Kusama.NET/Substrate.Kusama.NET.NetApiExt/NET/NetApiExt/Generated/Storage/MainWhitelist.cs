@@ -69,7 +69,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> whitelist_call
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method WhitelistCall(Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256 call_hash)
         {
@@ -80,7 +80,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> remove_whitelisted_call
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method RemoveWhitelistedCall(Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256 call_hash)
         {
@@ -91,7 +91,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> dispatch_whitelisted_call
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method DispatchWhitelistedCall(Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256 call_hash, Substrate.NetApi.Model.Types.Primitive.U32 call_encoded_len, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight call_weight_witness)
         {
@@ -104,9 +104,9 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> dispatch_whitelisted_call_with_preimage
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method DispatchWhitelistedCallWithPreimage(Substrate.Kusama.NET.NetApiExt.Generated.Model.kusama_runtime.EnumRuntimeCall call)
+        public static Method DispatchWhitelistedCallWithPreimage(Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_kusama_runtime.EnumRuntimeCall call)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(call.Encode());

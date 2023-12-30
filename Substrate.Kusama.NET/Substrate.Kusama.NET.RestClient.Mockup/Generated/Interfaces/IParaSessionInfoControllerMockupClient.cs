@@ -12,11 +12,11 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Interfaces
    using System;
    using System.Threading.Tasks;
    using Substrate.NetApi.Model.Types.Base;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.assignment_app;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.assignment_app;
    using Substrate.NetApi.Model.Types.Primitive;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5;
    using Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.executor_params;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.executor_params;
    
    public interface IParaSessionInfoControllerMockupClient
    {

@@ -31,7 +31,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         {
             this._client = client;
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("ParaInherent", "Included"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple)));
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("ParaInherent", "OnChainVotes"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.ScrapedOnChainVotes)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("ParaInherent", "OnChainVotes"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.ScrapedOnChainVotes)));
         }
         
         /// <summary>
@@ -95,10 +95,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> OnChainVotes
         ///  Scraped on chain data for extracting resolved disputes as well as backing votes.
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.ScrapedOnChainVotes> OnChainVotes(CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.ScrapedOnChainVotes> OnChainVotes(CancellationToken token)
         {
             string parameters = ParaInherentStorage.OnChainVotesParams();
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.ScrapedOnChainVotes>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.ScrapedOnChainVotes>(parameters, token);
             return result;
         }
     }
@@ -108,9 +108,9 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> enter
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method Enter(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.InherentData data)
+        public static Method Enter(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.InherentData data)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(data.Encode());

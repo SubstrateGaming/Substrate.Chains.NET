@@ -42,17 +42,17 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("Bounties.Bounties", Substrate.Kusama.NET.NetApiExt.Generated.Storage.BountiesStorage.BountiesParams(key));
       }
-      public async Task<BoundedVecT32> GetBountyDescriptions(U32 key)
+      public async Task<BoundedVecT37> GetBountyDescriptions(U32 key)
       {
-         return await SendRequestAsync<BoundedVecT32>(_httpClient, "bounties/bountydescriptions", Substrate.Kusama.NET.NetApiExt.Generated.Storage.BountiesStorage.BountyDescriptionsParams(key));
+         return await SendRequestAsync<BoundedVecT37>(_httpClient, "bounties/bountydescriptions", Substrate.Kusama.NET.NetApiExt.Generated.Storage.BountiesStorage.BountyDescriptionsParams(key));
       }
       public async Task<bool> SubscribeBountyDescriptions(U32 key)
       {
          return await _subscriptionClient.SubscribeAsync("Bounties.BountyDescriptions", Substrate.Kusama.NET.NetApiExt.Generated.Storage.BountiesStorage.BountyDescriptionsParams(key));
       }
-      public async Task<BoundedVecT16> GetBountyApprovals()
+      public async Task<BoundedVecT18> GetBountyApprovals()
       {
-         return await SendRequestAsync<BoundedVecT16>(_httpClient, "bounties/bountyapprovals");
+         return await SendRequestAsync<BoundedVecT18>(_httpClient, "bounties/bountyapprovals");
       }
       public async Task<bool> SubscribeBountyApprovals()
       {

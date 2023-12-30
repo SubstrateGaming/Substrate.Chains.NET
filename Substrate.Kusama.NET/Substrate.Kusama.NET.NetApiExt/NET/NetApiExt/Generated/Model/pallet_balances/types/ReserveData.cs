@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_balances.types
     
     
     /// <summary>
-    /// >> 539 - Composite[pallet_balances.types.ReserveData]
+    /// >> 552 - Composite[pallet_balances.types.ReserveData]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class ReserveData : BaseType

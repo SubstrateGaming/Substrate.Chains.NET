@@ -103,9 +103,9 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("Babe.SegmentIndex");
       }
-      public async Task<BoundedVecT8> GetUnderConstruction(U32 key)
+      public async Task<BoundedVecT9> GetUnderConstruction(U32 key)
       {
-         return await SendRequestAsync<BoundedVecT8>(_httpClient, "babe/underconstruction", Substrate.Kusama.NET.NetApiExt.Generated.Storage.BabeStorage.UnderConstructionParams(key));
+         return await SendRequestAsync<BoundedVecT9>(_httpClient, "babe/underconstruction", Substrate.Kusama.NET.NetApiExt.Generated.Storage.BabeStorage.UnderConstructionParams(key));
       }
       public async Task<bool> SubscribeUnderConstruction(U32 key)
       {
@@ -159,9 +159,9 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("Babe.NextEpochConfig");
       }
-      public async Task<BoundedVecT9> GetSkippedEpochs()
+      public async Task<BoundedVecT10> GetSkippedEpochs()
       {
-         return await SendRequestAsync<BoundedVecT9>(_httpClient, "babe/skippedepochs");
+         return await SendRequestAsync<BoundedVecT10>(_httpClient, "babe/skippedepochs");
       }
       public async Task<bool> SubscribeSkippedEpochs()
       {

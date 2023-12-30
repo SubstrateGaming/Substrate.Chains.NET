@@ -46,11 +46,8 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_referenda.pallet
     }
     
     /// <summary>
-    /// >> 638 - Variant[pallet_referenda.pallet.Error]
-    /// 
-    ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
-    ///			of this pallet.
-    ///			
+    /// >> 650 - Variant[pallet_referenda.pallet.Error]
+    /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>
     {

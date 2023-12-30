@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.v3
     
     
     /// <summary>
-    /// >> 426 - Composite[xcm.v3.PalletInfo]
+    /// >> 435 - Composite[xcm.v3.PalletInfo]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class PalletInfo : BaseType
@@ -32,12 +32,12 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.v3
         /// <summary>
         /// >> name
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT5 _name;
+        private Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT6 _name;
         
         /// <summary>
         /// >> module_name
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT5 _moduleName;
+        private Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT6 _moduleName;
         
         /// <summary>
         /// >> major
@@ -66,7 +66,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.v3
             }
         }
         
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT5 Name
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT6 Name
         {
             get
             {
@@ -78,7 +78,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.v3
             }
         }
         
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT5 ModuleName
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT6 ModuleName
         {
             get
             {
@@ -148,9 +148,9 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.v3
             var start = p;
             Index = new Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>();
             Index.Decode(byteArray, ref p);
-            Name = new Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT5();
+            Name = new Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT6();
             Name.Decode(byteArray, ref p);
-            ModuleName = new Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT5();
+            ModuleName = new Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT6();
             ModuleName.Decode(byteArray, ref p);
             Major = new Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>();
             Major.Decode(byteArray, ref p);

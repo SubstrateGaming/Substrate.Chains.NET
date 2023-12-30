@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_poi
     
     
     /// <summary>
-    /// >> 627 - Composite[sp_arithmetic.fixed_point.FixedI64]
+    /// >> 639 - Composite[sp_arithmetic.fixed_point.FixedI64]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class FixedI64 : BaseType

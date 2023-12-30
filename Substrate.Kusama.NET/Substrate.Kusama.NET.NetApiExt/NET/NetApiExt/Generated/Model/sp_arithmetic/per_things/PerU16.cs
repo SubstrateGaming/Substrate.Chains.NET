@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_thing
     
     
     /// <summary>
-    /// >> 225 - Composite[sp_arithmetic.per_things.PerU16]
+    /// >> 231 - Composite[sp_arithmetic.per_things.PerU16]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class PerU16 : BaseType

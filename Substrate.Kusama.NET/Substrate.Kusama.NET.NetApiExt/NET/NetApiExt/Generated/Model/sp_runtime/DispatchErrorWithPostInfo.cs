@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime
     
     
     /// <summary>
-    /// >> 459 - Composite[sp_runtime.DispatchErrorWithPostInfo]
+    /// >> 468 - Composite[sp_runtime.DispatchErrorWithPostInfo]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class DispatchErrorWithPostInfo : BaseType

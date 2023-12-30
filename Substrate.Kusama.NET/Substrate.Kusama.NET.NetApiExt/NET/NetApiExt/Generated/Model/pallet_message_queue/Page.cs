@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_message_queue
     
     
     /// <summary>
-    /// >> 854 - Composite[pallet_message_queue.Page]
+    /// >> 878 - Composite[pallet_message_queue.Page]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Page : BaseType
@@ -52,7 +52,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_message_queue
         /// <summary>
         /// >> heap
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT45 _heap;
+        private Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT51 _heap;
         
         public Substrate.NetApi.Model.Types.Primitive.U32 Remaining
         {
@@ -114,7 +114,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_message_queue
             }
         }
         
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT45 Heap
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT51 Heap
         {
             get
             {
@@ -156,7 +156,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_message_queue
             First.Decode(byteArray, ref p);
             Last = new Substrate.NetApi.Model.Types.Primitive.U32();
             Last.Decode(byteArray, ref p);
-            Heap = new Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT45();
+            Heap = new Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT51();
             Heap.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

@@ -36,7 +36,7 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "Treasury/Deactivated", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.TreasuryStorage.DeactivatedParams());
       }
-      public async Task<bool> SetApprovals(BoundedVecT16 value)
+      public async Task<bool> SetApprovals(BoundedVecT18 value)
       {
          return await SendMockupRequestAsync(_httpClient, "Treasury/Approvals", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.TreasuryStorage.ApprovalsParams());
       }

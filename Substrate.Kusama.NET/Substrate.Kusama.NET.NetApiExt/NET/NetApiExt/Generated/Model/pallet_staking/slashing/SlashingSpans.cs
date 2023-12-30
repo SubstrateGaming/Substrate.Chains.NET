@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.slashing
     
     
     /// <summary>
-    /// >> 569 - Composite[pallet_staking.slashing.SlashingSpans]
+    /// >> 582 - Composite[pallet_staking.slashing.SlashingSpans]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class SlashingSpans : BaseType

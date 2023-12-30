@@ -28,14 +28,14 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// >> PendingSwap
         ///  Pending swap operations.
         /// </summary>
-        Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id GetPendingSwap(string key);
+        Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id GetPendingSwap(string key);
         
         /// <summary>
         /// >> Paras
         ///  Amount held on deposit for each para and the original depositor.
         /// 
-        ///  The given account ID is responsible for registering the code and initial head data, but may only do
-        ///  so if it isn't yet registered. (After that, it's up to governance to do so.)
+        ///  The given account ID is responsible for registering the code and initial head data, but may
+        ///  only do so if it isn't yet registered. (After that, it's up to governance to do so.)
         /// </summary>
         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_common.paras_registrar.ParaInfo GetParas(string key);
         
@@ -43,7 +43,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// >> NextFreeParaId
         ///  The next free `ParaId`.
         /// </summary>
-        Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id GetNextFreeParaId();
+        Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id GetNextFreeParaId();
     }
     
     /// <summary>
@@ -55,7 +55,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// <summary>
         /// _pendingSwapTypedStorage typed storage field
         /// </summary>
-        private TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id> _pendingSwapTypedStorage;
+        private TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id> _pendingSwapTypedStorage;
         
         /// <summary>
         /// _parasTypedStorage typed storage field
@@ -65,22 +65,22 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// <summary>
         /// _nextFreeParaIdTypedStorage typed storage field
         /// </summary>
-        private TypedStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id> _nextFreeParaIdTypedStorage;
+        private TypedStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id> _nextFreeParaIdTypedStorage;
         
         /// <summary>
         /// RegistrarStorage constructor.
         /// </summary>
         public RegistrarStorage(IStorageDataProvider storageDataProvider, List<IStorageChangeDelegate> storageChangeDelegates)
         {
-            this.PendingSwapTypedStorage = new TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id>("Registrar.PendingSwap", storageDataProvider, storageChangeDelegates);
+            this.PendingSwapTypedStorage = new TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id>("Registrar.PendingSwap", storageDataProvider, storageChangeDelegates);
             this.ParasTypedStorage = new TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_common.paras_registrar.ParaInfo>("Registrar.Paras", storageDataProvider, storageChangeDelegates);
-            this.NextFreeParaIdTypedStorage = new TypedStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id>("Registrar.NextFreeParaId", storageDataProvider, storageChangeDelegates);
+            this.NextFreeParaIdTypedStorage = new TypedStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id>("Registrar.NextFreeParaId", storageDataProvider, storageChangeDelegates);
         }
         
         /// <summary>
         /// _pendingSwapTypedStorage property
         /// </summary>
-        public TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id> PendingSwapTypedStorage
+        public TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id> PendingSwapTypedStorage
         {
             get
             {
@@ -110,7 +110,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// <summary>
         /// _nextFreeParaIdTypedStorage property
         /// </summary>
-        public TypedStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id> NextFreeParaIdTypedStorage
+        public TypedStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id> NextFreeParaIdTypedStorage
         {
             get
             {
@@ -145,13 +145,13 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// >> PendingSwap
         ///  Pending swap operations.
         /// </summary>
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id GetPendingSwap(string key)
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id GetPendingSwap(string key)
         {
             if ((key == null))
             {
                 return null;
             }
-            if (PendingSwapTypedStorage.Dictionary.TryGetValue(key, out Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id result))
+            if (PendingSwapTypedStorage.Dictionary.TryGetValue(key, out Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id result))
             {
                 return result;
             }
@@ -174,8 +174,8 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// >> Paras
         ///  Amount held on deposit for each para and the original depositor.
         /// 
-        ///  The given account ID is responsible for registering the code and initial head data, but may only do
-        ///  so if it isn't yet registered. (After that, it's up to governance to do so.)
+        ///  The given account ID is responsible for registering the code and initial head data, but may
+        ///  only do so if it isn't yet registered. (After that, it's up to governance to do so.)
         /// </summary>
         public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_common.paras_registrar.ParaInfo GetParas(string key)
         {
@@ -206,7 +206,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// >> NextFreeParaId
         ///  The next free `ParaId`.
         /// </summary>
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id GetNextFreeParaId()
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id GetNextFreeParaId()
         {
             return NextFreeParaIdTypedStorage.Get();
         }

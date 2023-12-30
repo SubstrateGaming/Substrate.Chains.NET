@@ -30,11 +30,8 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_whitelist.pallet
     }
     
     /// <summary>
-    /// >> 639 - Variant[pallet_whitelist.pallet.Error]
-    /// 
-    ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
-    ///			of this pallet.
-    ///			
+    /// >> 651 - Variant[pallet_whitelist.pallet.Error]
+    /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>
     {

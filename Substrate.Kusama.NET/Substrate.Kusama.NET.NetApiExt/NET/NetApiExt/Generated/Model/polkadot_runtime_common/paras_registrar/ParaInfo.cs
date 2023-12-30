@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_common
     
     
     /// <summary>
-    /// >> 816 - Composite[polkadot_runtime_common.paras_registrar.ParaInfo]
+    /// >> 839 - Composite[polkadot_runtime_common.paras_registrar.ParaInfo]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class ParaInfo : BaseType
@@ -37,7 +37,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_common
         /// <summary>
         /// >> locked
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.Bool _locked;
+        private Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.Bool> _locked;
         
         public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 Manager
         {
@@ -63,7 +63,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_common
             }
         }
         
-        public Substrate.NetApi.Model.Types.Primitive.Bool Locked
+        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.Bool> Locked
         {
             get
             {
@@ -96,7 +96,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_common
             Manager.Decode(byteArray, ref p);
             Deposit = new Substrate.NetApi.Model.Types.Primitive.U128();
             Deposit.Decode(byteArray, ref p);
-            Locked = new Substrate.NetApi.Model.Types.Primitive.Bool();
+            Locked = new Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.Bool>();
             Locked.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

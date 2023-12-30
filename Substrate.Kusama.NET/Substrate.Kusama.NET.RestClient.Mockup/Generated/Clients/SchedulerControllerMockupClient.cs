@@ -28,7 +28,7 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "Scheduler/IncompleteSince", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.SchedulerStorage.IncompleteSinceParams());
       }
-      public async Task<bool> SetAgenda(BoundedVecT27 value, U32 key)
+      public async Task<bool> SetAgenda(BoundedVecT32 value, U32 key)
       {
          return await SendMockupRequestAsync(_httpClient, "Scheduler/Agenda", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.SchedulerStorage.AgendaParams(key));
       }

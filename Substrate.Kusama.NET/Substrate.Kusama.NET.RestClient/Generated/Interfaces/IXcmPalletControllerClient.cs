@@ -33,13 +33,13 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Interfaces
       Task<bool> SubscribeVersionNotifiers(BaseTuple<U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation> key);
       Task<BaseTuple<U64, Weight, U32>> GetVersionNotifyTargets(BaseTuple<U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation> key);
       Task<bool> SubscribeVersionNotifyTargets(BaseTuple<U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation> key);
-      Task<BoundedVecT42> GetVersionDiscoveryQueue();
+      Task<BoundedVecT48> GetVersionDiscoveryQueue();
       Task<bool> SubscribeVersionDiscoveryQueue();
       Task<EnumVersionMigrationStage> GetCurrentMigration();
       Task<bool> SubscribeCurrentMigration();
       Task<RemoteLockedFungibleRecord> GetRemoteLockedFungibles(BaseTuple<U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAssetId> key);
       Task<bool> SubscribeRemoteLockedFungibles(BaseTuple<U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAssetId> key);
-      Task<BoundedVecT44> GetLockedFungibles(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
+      Task<BoundedVecT50> GetLockedFungibles(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
       Task<bool> SubscribeLockedFungibles(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
       Task<Bool> GetXcmExecutionSuspended();
       Task<bool> SubscribeXcmExecutionSuspended();

@@ -22,10 +22,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parach
     }
     
     /// <summary>
-    /// >> 367 - Variant[polkadot_runtime_parachains.disputes.slashing.pallet.Call]
-    /// Contains one variant per dispatchable that can be called by an extrinsic.
+    /// >> 373 - Variant[polkadot_runtime_parachains.disputes.slashing.pallet.Call]
+    /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
-    public sealed class EnumCall : BaseEnumExt<Call, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.disputes.slashing.DisputeProof, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_session.MembershipProof>>
+    public sealed class EnumCall : BaseEnumExt<Call, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.slashing.DisputeProof, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_session.MembershipProof>>
     {
     }
 }

@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_conviction_votin
     
     
     /// <summary>
-    /// >> 123 - Composite[pallet_conviction_voting.vote.Vote]
+    /// >> 132 - Composite[pallet_conviction_voting.vote.Vote]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Vote : BaseType

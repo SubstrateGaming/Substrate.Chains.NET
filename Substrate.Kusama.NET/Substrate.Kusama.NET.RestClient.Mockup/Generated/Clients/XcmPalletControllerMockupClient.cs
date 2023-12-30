@@ -54,7 +54,7 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "XcmPallet/VersionNotifyTargets", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.XcmPalletStorage.VersionNotifyTargetsParams(key));
       }
-      public async Task<bool> SetVersionDiscoveryQueue(BoundedVecT42 value)
+      public async Task<bool> SetVersionDiscoveryQueue(BoundedVecT48 value)
       {
          return await SendMockupRequestAsync(_httpClient, "XcmPallet/VersionDiscoveryQueue", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.XcmPalletStorage.VersionDiscoveryQueueParams());
       }
@@ -66,7 +66,7 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "XcmPallet/RemoteLockedFungibles", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.XcmPalletStorage.RemoteLockedFungiblesParams(key));
       }
-      public async Task<bool> SetLockedFungibles(BoundedVecT44 value, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+      public async Task<bool> SetLockedFungibles(BoundedVecT50 value, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {
          return await SendMockupRequestAsync(_httpClient, "XcmPallet/LockedFungibles", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.XcmPalletStorage.LockedFungiblesParams(key));
       }

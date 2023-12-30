@@ -5,7 +5,7 @@
     "rest_client": "Substrate.Kusama.NET.RestClient"
   },
    "metadata": {
-      "websocket": "wss://kusama-rpc.polkadot.io"
+      "websocket": "wss://1rpc.io/ksm"
    },
   "rest_client_settings": {
     "service_assembly": "Substrate.Kusama.NET.RestService.dll"

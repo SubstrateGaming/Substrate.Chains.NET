@@ -28,7 +28,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.v2
     }
     
     /// <summary>
-    /// >> 406 - Variant[xcm.v2.OriginKind]
+    /// >> 415 - Variant[xcm.v2.OriginKind]
     /// </summary>
     public sealed class EnumOriginKind : BaseEnum<OriginKind>
     {

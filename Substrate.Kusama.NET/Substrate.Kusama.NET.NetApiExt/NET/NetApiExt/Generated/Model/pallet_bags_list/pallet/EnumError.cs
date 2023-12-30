@@ -22,11 +22,8 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_bags_list.pallet
     }
     
     /// <summary>
-    /// >> 724 - Variant[pallet_bags_list.pallet.Error]
-    /// 
-    ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
-    ///			of this pallet.
-    ///			
+    /// >> 746 - Variant[pallet_bags_list.pallet.Error]
+    /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnumExt<Error, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_bags_list.list.EnumListError>
     {

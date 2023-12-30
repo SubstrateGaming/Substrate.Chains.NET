@@ -87,10 +87,10 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
                   this.GetTestValueU8()});
          return result;
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id GetTestValue6()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id GetTestValue6()
       {
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id result;
-         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id();
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id();
          result.Value = this.GetTestValueU32();
          return result;
       }
@@ -106,7 +106,7 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
          // Construct new RPC client to test with.
          SlotsControllerClient rpcClient = new SlotsControllerClient(_httpClient, subscriptionClient);
          Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U128>>> mockupValue = this.GetTestValue2();
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id mockupKey = this.GetTestValue6();
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id mockupKey = this.GetTestValue6();
 
          Assert.IsTrue(await rpcClient.SubscribeLeases(mockupKey));
 

@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_system.limits
     
     
     /// <summary>
-    /// >> 505 - Composite[frame_system.limits.BlockWeights]
+    /// >> 518 - Composite[frame_system.limits.BlockWeights]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class BlockWeights : BaseType

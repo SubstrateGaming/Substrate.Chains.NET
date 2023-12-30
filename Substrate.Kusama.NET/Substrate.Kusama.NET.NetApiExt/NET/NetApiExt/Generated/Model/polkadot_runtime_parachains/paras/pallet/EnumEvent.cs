@@ -36,13 +36,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parach
     }
     
     /// <summary>
-    /// >> 487 - Variant[polkadot_runtime_parachains.paras.pallet.Event]
-    /// 
-    ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
-    ///			by this pallet.
-    ///			
+    /// >> 497 - Variant[polkadot_runtime_parachains.paras.pallet.Event]
+    /// The `Event` enum of this pallet
     /// </summary>
-    public sealed class EnumEvent : BaseEnumExt<Event, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32>, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.ValidationCodeHash, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id>, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.ValidationCodeHash, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id>, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.ValidationCodeHash, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id>>
+    public sealed class EnumEvent : BaseEnumExt<Event, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32>, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id>, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id>, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id>>
     {
     }
 }

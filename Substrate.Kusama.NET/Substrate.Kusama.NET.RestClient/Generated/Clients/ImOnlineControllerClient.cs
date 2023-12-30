@@ -14,7 +14,6 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Clients
    using System.Net.Http;
    using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_support.traits.misc;
    using Substrate.Kusama.NET.RestClient.Generated.Interfaces;
    
    public sealed class ImOnlineControllerClient : BaseClient, IImOnlineControllerClient
@@ -42,9 +41,9 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("ImOnline.Keys");
       }
-      public async Task<WrapperOpaque> GetReceivedHeartbeats(Substrate.NetApi.Model.Types.Base.BaseTuple<U32, U32> key)
+      public async Task<Bool> GetReceivedHeartbeats(Substrate.NetApi.Model.Types.Base.BaseTuple<U32, U32> key)
       {
-         return await SendRequestAsync<WrapperOpaque>(_httpClient, "imonline/receivedheartbeats", Substrate.Kusama.NET.NetApiExt.Generated.Storage.ImOnlineStorage.ReceivedHeartbeatsParams(key));
+         return await SendRequestAsync<Bool>(_httpClient, "imonline/receivedheartbeats", Substrate.Kusama.NET.NetApiExt.Generated.Storage.ImOnlineStorage.ReceivedHeartbeatsParams(key));
       }
       public async Task<bool> SubscribeReceivedHeartbeats(Substrate.NetApi.Model.Types.Base.BaseTuple<U32, U32> key)
       {

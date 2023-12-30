@@ -18,11 +18,11 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Interfaces
    
    public interface IDmpControllerClient
    {
-      Task<BaseVec<InboundDownwardMessage>> GetDownwardMessageQueues(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id key);
-      Task<bool> SubscribeDownwardMessageQueues(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id key);
-      Task<H256> GetDownwardMessageQueueHeads(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id key);
-      Task<bool> SubscribeDownwardMessageQueueHeads(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id key);
-      Task<FixedU128> GetDeliveryFeeFactor(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id key);
-      Task<bool> SubscribeDeliveryFeeFactor(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id key);
+      Task<BaseVec<InboundDownwardMessage>> GetDownwardMessageQueues(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key);
+      Task<bool> SubscribeDownwardMessageQueues(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key);
+      Task<H256> GetDownwardMessageQueueHeads(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key);
+      Task<bool> SubscribeDownwardMessageQueueHeads(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key);
+      Task<FixedU128> GetDeliveryFeeFactor(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key);
+      Task<bool> SubscribeDeliveryFeeFactor(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key);
    }
 }

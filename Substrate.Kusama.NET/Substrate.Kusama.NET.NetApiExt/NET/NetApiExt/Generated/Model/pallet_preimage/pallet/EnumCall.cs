@@ -28,8 +28,8 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_preimage.pallet
     }
     
     /// <summary>
-    /// >> 212 - Variant[pallet_preimage.pallet.Call]
-    /// Contains one variant per dispatchable that can be called by an extrinsic.
+    /// >> 218 - Variant[pallet_preimage.pallet.Call]
+    /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
     public sealed class EnumCall : BaseEnumExt<Call, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>, Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256>
     {

@@ -30,7 +30,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools
     }
     
     /// <summary>
-    /// >> 743 - Variant[pallet_nomination_pools.pallet.DefensiveError]
+    /// >> 765 - Variant[pallet_nomination_pools.pallet.DefensiveError]
     /// </summary>
     public sealed class EnumDefensiveError : BaseEnum<DefensiveError>
     {
