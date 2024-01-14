@@ -27,59 +27,23 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_consensus_babe.dig
         /// <summary>
         /// >> authority_index
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _authorityIndex;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 AuthorityIndex { get; set; }
         /// <summary>
         /// >> slot
         /// </summary>
-        private Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_consensus_slots.Slot _slot;
-        
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_consensus_slots.Slot Slot { get; set; }
         /// <summary>
         /// >> vrf_signature
         /// </summary>
-        private Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.sr25519.vrf.VrfSignature _vrfSignature;
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.sr25519.vrf.VrfSignature VrfSignature { get; set; }
         
-        public Substrate.NetApi.Model.Types.Primitive.U32 AuthorityIndex
-        {
-            get
-            {
-                return this._authorityIndex;
-            }
-            set
-            {
-                this._authorityIndex = value;
-            }
-        }
-        
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_consensus_slots.Slot Slot
-        {
-            get
-            {
-                return this._slot;
-            }
-            set
-            {
-                this._slot = value;
-            }
-        }
-        
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.sr25519.vrf.VrfSignature VrfSignature
-        {
-            get
-            {
-                return this._vrfSignature;
-            }
-            set
-            {
-                this._vrfSignature = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "PrimaryPreDigest";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -89,6 +53,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_consensus_babe.dig
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

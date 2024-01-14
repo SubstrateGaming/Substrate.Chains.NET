@@ -21,12 +21,18 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> ParaInherentStorage
+    /// </summary>
     public sealed class ParaInherentStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> ParaInherentStorage Constructor
+        /// </summary>
         public ParaInherentStorage(SubstrateClientExt client)
         {
             this._client = client;
@@ -103,6 +109,9 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> ParaInherentCalls
+    /// </summary>
     public sealed class ParaInherentCalls
     {
         
@@ -118,10 +127,16 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> ParaInherentConstants
+    /// </summary>
     public sealed class ParaInherentConstants
     {
     }
     
+    /// <summary>
+    /// >> ParaInherentErrors
+    /// </summary>
     public enum ParaInherentErrors
     {
         

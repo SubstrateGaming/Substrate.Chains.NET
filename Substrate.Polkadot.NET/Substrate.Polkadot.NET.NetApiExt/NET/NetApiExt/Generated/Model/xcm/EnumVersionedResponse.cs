@@ -15,11 +15,20 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm
 {
     
     
+    /// <summary>
+    /// >> VersionedResponse
+    /// </summary>
     public enum VersionedResponse
     {
         
+        /// <summary>
+        /// >> V2
+        /// </summary>
         V2 = 2,
         
+        /// <summary>
+        /// >> V3
+        /// </summary>
         V3 = 3,
     }
     

@@ -15,9 +15,19 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_offences.palle
 {
     
     
+    /// <summary>
+    /// >> Event
+    /// Events type.
+    /// </summary>
     public enum Event
     {
         
+        /// <summary>
+        /// >> Offence
+        /// There is an offence reported of the given `kind` happened at the `session_index` and
+        /// (kind-specific) time slot. This event is not deposited for duplicate slashes.
+        /// \[kind, timeslot\].
+        /// </summary>
         Offence = 0,
     }
     

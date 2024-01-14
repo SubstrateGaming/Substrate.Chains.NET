@@ -15,17 +15,35 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_election_provi
 {
     
     
+    /// <summary>
+    /// >> ElectionCompute
+    /// </summary>
     public enum ElectionCompute
     {
         
+        /// <summary>
+        /// >> OnChain
+        /// </summary>
         OnChain = 0,
         
+        /// <summary>
+        /// >> Signed
+        /// </summary>
         Signed = 1,
         
+        /// <summary>
+        /// >> Unsigned
+        /// </summary>
         Unsigned = 2,
         
+        /// <summary>
+        /// >> Fallback
+        /// </summary>
         Fallback = 3,
         
+        /// <summary>
+        /// >> Emergency
+        /// </summary>
         Emergency = 4,
     }
     

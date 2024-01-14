@@ -27,76 +27,27 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_grandpa
         /// <summary>
         /// >> scheduled_at
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _scheduledAt;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 ScheduledAt { get; set; }
         /// <summary>
         /// >> delay
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _delay;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 Delay { get; set; }
         /// <summary>
         /// >> next_authorities
         /// </summary>
-        private Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT4 _nextAuthorities;
-        
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT4 NextAuthorities { get; set; }
         /// <summary>
         /// >> forced
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32> _forced;
+        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32> Forced { get; set; }
         
-        public Substrate.NetApi.Model.Types.Primitive.U32 ScheduledAt
-        {
-            get
-            {
-                return this._scheduledAt;
-            }
-            set
-            {
-                this._scheduledAt = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 Delay
-        {
-            get
-            {
-                return this._delay;
-            }
-            set
-            {
-                this._delay = value;
-            }
-        }
-        
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT4 NextAuthorities
-        {
-            get
-            {
-                return this._nextAuthorities;
-            }
-            set
-            {
-                this._nextAuthorities = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32> Forced
-        {
-            get
-            {
-                return this._forced;
-            }
-            set
-            {
-                this._forced = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "StoredPendingChange";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -107,6 +58,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_grandpa
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

@@ -27,76 +27,27 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_nomination_poo
         /// <summary>
         /// >> current
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>> _current;
-        
+        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>> Current { get; set; }
         /// <summary>
         /// >> max
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill> _max;
-        
+        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill> Max { get; set; }
         /// <summary>
         /// >> change_rate
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_nomination_pools.CommissionChangeRate> _changeRate;
-        
+        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_nomination_pools.CommissionChangeRate> ChangeRate { get; set; }
         /// <summary>
         /// >> throttle_from
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32> _throttleFrom;
+        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32> ThrottleFrom { get; set; }
         
-        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>> Current
-        {
-            get
-            {
-                return this._current;
-            }
-            set
-            {
-                this._current = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill> Max
-        {
-            get
-            {
-                return this._max;
-            }
-            set
-            {
-                this._max = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_nomination_pools.CommissionChangeRate> ChangeRate
-        {
-            get
-            {
-                return this._changeRate;
-            }
-            set
-            {
-                this._changeRate = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32> ThrottleFrom
-        {
-            get
-            {
-                return this._throttleFrom;
-            }
-            set
-            {
-                this._throttleFrom = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "Commission";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -107,6 +58,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_nomination_poo
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

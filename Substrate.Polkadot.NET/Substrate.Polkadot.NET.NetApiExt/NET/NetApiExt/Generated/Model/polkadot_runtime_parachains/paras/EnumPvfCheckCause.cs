@@ -15,11 +15,20 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_para
 {
     
     
+    /// <summary>
+    /// >> PvfCheckCause
+    /// </summary>
     public enum PvfCheckCause
     {
         
+        /// <summary>
+        /// >> Onboarding
+        /// </summary>
         Onboarding = 0,
         
+        /// <summary>
+        /// >> Upgrade
+        /// </summary>
         Upgrade = 1,
     }
     

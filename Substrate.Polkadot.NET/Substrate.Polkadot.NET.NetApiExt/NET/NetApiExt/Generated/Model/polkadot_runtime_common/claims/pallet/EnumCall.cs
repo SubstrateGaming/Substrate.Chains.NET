@@ -15,17 +15,41 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_comm
 {
     
     
+    /// <summary>
+    /// >> Call
+    /// Contains a variant per dispatchable extrinsic that this pallet has.
+    /// </summary>
     public enum Call
     {
         
+        /// <summary>
+        /// >> claim
+        /// See [`Pallet::claim`].
+        /// </summary>
         claim = 0,
         
+        /// <summary>
+        /// >> mint_claim
+        /// See [`Pallet::mint_claim`].
+        /// </summary>
         mint_claim = 1,
         
+        /// <summary>
+        /// >> claim_attest
+        /// See [`Pallet::claim_attest`].
+        /// </summary>
         claim_attest = 2,
         
+        /// <summary>
+        /// >> attest
+        /// See [`Pallet::attest`].
+        /// </summary>
         attest = 3,
         
+        /// <summary>
+        /// >> move_claim
+        /// See [`Pallet::move_claim`].
+        /// </summary>
         move_claim = 4,
     }
     

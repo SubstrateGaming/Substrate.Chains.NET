@@ -15,11 +15,23 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_im_online.pall
 {
     
     
+    /// <summary>
+    /// >> Error
+    /// The `Error` enum of this pallet.
+    /// </summary>
     public enum Error
     {
         
+        /// <summary>
+        /// >> InvalidKey
+        /// Non existent public key.
+        /// </summary>
         InvalidKey = 0,
         
+        /// <summary>
+        /// >> DuplicatedHeartbeat
+        /// Duplicated heartbeat.
+        /// </summary>
         DuplicatedHeartbeat = 1,
     }
     

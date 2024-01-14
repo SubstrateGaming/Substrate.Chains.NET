@@ -15,9 +15,17 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_comm
 {
     
     
+    /// <summary>
+    /// >> Event
+    /// The `Event` enum of this pallet
+    /// </summary>
     public enum Event
     {
         
+        /// <summary>
+        /// >> Claimed
+        /// Someone claimed some DOTs.
+        /// </summary>
         Claimed = 0,
     }
     

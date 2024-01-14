@@ -27,42 +27,19 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.v2.multilocation
         /// <summary>
         /// >> parents
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U8 _parents;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U8 Parents { get; set; }
         /// <summary>
         /// >> interior
         /// </summary>
-        private Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.v2.multilocation.EnumJunctions _interior;
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.v2.multilocation.EnumJunctions Interior { get; set; }
         
-        public Substrate.NetApi.Model.Types.Primitive.U8 Parents
-        {
-            get
-            {
-                return this._parents;
-            }
-            set
-            {
-                this._parents = value;
-            }
-        }
-        
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.v2.multilocation.EnumJunctions Interior
-        {
-            get
-            {
-                return this._interior;
-            }
-            set
-            {
-                this._interior = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "MultiLocation";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -71,6 +48,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.v2.multilocation
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

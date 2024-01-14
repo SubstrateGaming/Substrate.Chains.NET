@@ -15,13 +15,25 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.frame_system
 {
     
     
+    /// <summary>
+    /// >> Phase
+    /// </summary>
     public enum Phase
     {
         
+        /// <summary>
+        /// >> ApplyExtrinsic
+        /// </summary>
         ApplyExtrinsic = 0,
         
+        /// <summary>
+        /// >> Finalization
+        /// </summary>
         Finalization = 1,
         
+        /// <summary>
+        /// >> Initialization
+        /// </summary>
         Initialization = 2,
     }
     

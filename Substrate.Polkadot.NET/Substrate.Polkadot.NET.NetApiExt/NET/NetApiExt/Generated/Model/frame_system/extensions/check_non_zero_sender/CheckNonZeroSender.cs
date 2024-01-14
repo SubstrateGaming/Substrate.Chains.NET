@@ -24,17 +24,20 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.frame_system.extensio
     public sealed class CheckNonZeroSender : BaseType
     {
         
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "CheckNonZeroSender";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

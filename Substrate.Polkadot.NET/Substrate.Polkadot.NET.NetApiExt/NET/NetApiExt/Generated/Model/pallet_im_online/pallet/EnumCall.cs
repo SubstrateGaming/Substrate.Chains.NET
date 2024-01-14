@@ -15,9 +15,17 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_im_online.pall
 {
     
     
+    /// <summary>
+    /// >> Call
+    /// Contains a variant per dispatchable extrinsic that this pallet has.
+    /// </summary>
     public enum Call
     {
         
+        /// <summary>
+        /// >> heartbeat
+        /// See [`Pallet::heartbeat`].
+        /// </summary>
         heartbeat = 0,
     }
     

@@ -15,17 +15,41 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_treasury.palle
 {
     
     
+    /// <summary>
+    /// >> Call
+    /// Contains a variant per dispatchable extrinsic that this pallet has.
+    /// </summary>
     public enum Call
     {
         
+        /// <summary>
+        /// >> propose_spend
+        /// See [`Pallet::propose_spend`].
+        /// </summary>
         propose_spend = 0,
         
+        /// <summary>
+        /// >> reject_proposal
+        /// See [`Pallet::reject_proposal`].
+        /// </summary>
         reject_proposal = 1,
         
+        /// <summary>
+        /// >> approve_proposal
+        /// See [`Pallet::approve_proposal`].
+        /// </summary>
         approve_proposal = 2,
         
+        /// <summary>
+        /// >> spend
+        /// See [`Pallet::spend`].
+        /// </summary>
         spend = 3,
         
+        /// <summary>
+        /// >> remove_approval
+        /// See [`Pallet::remove_approval`].
+        /// </summary>
         remove_approval = 4,
     }
     

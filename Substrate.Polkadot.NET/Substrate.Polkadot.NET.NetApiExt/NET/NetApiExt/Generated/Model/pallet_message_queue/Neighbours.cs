@@ -27,42 +27,19 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_message_queue
         /// <summary>
         /// >> prev
         /// </summary>
-        private Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.inclusion.EnumAggregateMessageOrigin _prev;
-        
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.inclusion.EnumAggregateMessageOrigin Prev { get; set; }
         /// <summary>
         /// >> next
         /// </summary>
-        private Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.inclusion.EnumAggregateMessageOrigin _next;
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.inclusion.EnumAggregateMessageOrigin Next { get; set; }
         
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.inclusion.EnumAggregateMessageOrigin Prev
-        {
-            get
-            {
-                return this._prev;
-            }
-            set
-            {
-                this._prev = value;
-            }
-        }
-        
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.inclusion.EnumAggregateMessageOrigin Next
-        {
-            get
-            {
-                return this._next;
-            }
-            set
-            {
-                this._next = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "Neighbours";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -71,6 +48,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_message_queue
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

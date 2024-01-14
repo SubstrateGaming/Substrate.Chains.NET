@@ -21,12 +21,18 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> XcmPalletStorage
+    /// </summary>
     public sealed class XcmPalletStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> XcmPalletStorage Constructor
+        /// </summary>
         public XcmPalletStorage(SubstrateClientExt client)
         {
             this._client = client;
@@ -434,6 +440,9 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> XcmPalletCalls
+    /// </summary>
     public sealed class XcmPalletCalls
     {
         
@@ -576,10 +585,16 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> XcmPalletConstants
+    /// </summary>
     public sealed class XcmPalletConstants
     {
     }
     
+    /// <summary>
+    /// >> XcmPalletErrors
+    /// </summary>
     public enum XcmPalletErrors
     {
         

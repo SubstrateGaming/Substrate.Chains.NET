@@ -15,13 +15,25 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_consensus_babe.dig
 {
     
     
+    /// <summary>
+    /// >> PreDigest
+    /// </summary>
     public enum PreDigest
     {
         
+        /// <summary>
+        /// >> Primary
+        /// </summary>
         Primary = 1,
         
+        /// <summary>
+        /// >> SecondaryPlain
+        /// </summary>
         SecondaryPlain = 2,
         
+        /// <summary>
+        /// >> SecondaryVRF
+        /// </summary>
         SecondaryVRF = 3,
     }
     

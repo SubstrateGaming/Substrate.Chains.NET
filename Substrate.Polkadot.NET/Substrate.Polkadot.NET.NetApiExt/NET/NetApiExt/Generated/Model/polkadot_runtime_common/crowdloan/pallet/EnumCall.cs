@@ -15,25 +15,65 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_comm
 {
     
     
+    /// <summary>
+    /// >> Call
+    /// Contains a variant per dispatchable extrinsic that this pallet has.
+    /// </summary>
     public enum Call
     {
         
+        /// <summary>
+        /// >> create
+        /// See [`Pallet::create`].
+        /// </summary>
         create = 0,
         
+        /// <summary>
+        /// >> contribute
+        /// See [`Pallet::contribute`].
+        /// </summary>
         contribute = 1,
         
+        /// <summary>
+        /// >> withdraw
+        /// See [`Pallet::withdraw`].
+        /// </summary>
         withdraw = 2,
         
+        /// <summary>
+        /// >> refund
+        /// See [`Pallet::refund`].
+        /// </summary>
         refund = 3,
         
+        /// <summary>
+        /// >> dissolve
+        /// See [`Pallet::dissolve`].
+        /// </summary>
         dissolve = 4,
         
+        /// <summary>
+        /// >> edit
+        /// See [`Pallet::edit`].
+        /// </summary>
         edit = 5,
         
+        /// <summary>
+        /// >> add_memo
+        /// See [`Pallet::add_memo`].
+        /// </summary>
         add_memo = 6,
         
+        /// <summary>
+        /// >> poke
+        /// See [`Pallet::poke`].
+        /// </summary>
         poke = 7,
         
+        /// <summary>
+        /// >> contribute_all
+        /// See [`Pallet::contribute_all`].
+        /// </summary>
         contribute_all = 8,
     }
     

@@ -15,13 +15,29 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_child_bounties
 {
     
     
+    /// <summary>
+    /// >> Error
+    /// The `Error` enum of this pallet.
+    /// </summary>
     public enum Error
     {
         
+        /// <summary>
+        /// >> ParentBountyNotActive
+        /// The parent bounty is not in active state.
+        /// </summary>
         ParentBountyNotActive = 0,
         
+        /// <summary>
+        /// >> InsufficientBountyBalance
+        /// The bounty balance is not enough to add new child-bounty.
+        /// </summary>
         InsufficientBountyBalance = 1,
         
+        /// <summary>
+        /// >> TooManyChildBounties
+        /// Number of child bounties exceeds limit `MaxActiveChildBountyCount`.
+        /// </summary>
         TooManyChildBounties = 2,
     }
     

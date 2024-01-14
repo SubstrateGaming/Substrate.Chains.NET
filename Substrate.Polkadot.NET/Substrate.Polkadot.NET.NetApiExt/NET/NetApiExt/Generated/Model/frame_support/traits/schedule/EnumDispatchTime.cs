@@ -15,11 +15,20 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.frame_support.traits.
 {
     
     
+    /// <summary>
+    /// >> DispatchTime
+    /// </summary>
     public enum DispatchTime
     {
         
+        /// <summary>
+        /// >> At
+        /// </summary>
         At = 0,
         
+        /// <summary>
+        /// >> After
+        /// </summary>
         After = 1,
     }
     

@@ -27,59 +27,23 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_election_provi
         /// <summary>
         /// >> solution
         /// </summary>
-        private Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime.NposCompactSolution16 _solution;
-        
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime.NposCompactSolution16 Solution { get; set; }
         /// <summary>
         /// >> score
         /// </summary>
-        private Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_npos_elections.ElectionScore _score;
-        
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_npos_elections.ElectionScore Score { get; set; }
         /// <summary>
         /// >> round
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _round;
+        public Substrate.NetApi.Model.Types.Primitive.U32 Round { get; set; }
         
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime.NposCompactSolution16 Solution
-        {
-            get
-            {
-                return this._solution;
-            }
-            set
-            {
-                this._solution = value;
-            }
-        }
-        
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_npos_elections.ElectionScore Score
-        {
-            get
-            {
-                return this._score;
-            }
-            set
-            {
-                this._score = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 Round
-        {
-            get
-            {
-                return this._round;
-            }
-            set
-            {
-                this._round = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "RawSolution";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -89,6 +53,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_election_provi
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

@@ -15,13 +15,25 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_nomination_poo
 {
     
     
+    /// <summary>
+    /// >> ConfigOp
+    /// </summary>
     public enum ConfigOp
     {
         
+        /// <summary>
+        /// >> Noop
+        /// </summary>
         Noop = 0,
         
+        /// <summary>
+        /// >> Set
+        /// </summary>
         Set = 1,
         
+        /// <summary>
+        /// >> Remove
+        /// </summary>
         Remove = 2,
     }
     

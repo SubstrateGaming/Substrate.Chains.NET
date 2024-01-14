@@ -15,13 +15,29 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_im_online.pall
 {
     
     
+    /// <summary>
+    /// >> Event
+    /// The `Event` enum of this pallet
+    /// </summary>
     public enum Event
     {
         
+        /// <summary>
+        /// >> HeartbeatReceived
+        /// A new heartbeat was received from `AuthorityId`.
+        /// </summary>
         HeartbeatReceived = 0,
         
+        /// <summary>
+        /// >> AllGood
+        /// At the end of the session, no offence was committed.
+        /// </summary>
         AllGood = 1,
         
+        /// <summary>
+        /// >> SomeOffline
+        /// At the end of the session, at least one validator was found to be offline.
+        /// </summary>
         SomeOffline = 2,
     }
     

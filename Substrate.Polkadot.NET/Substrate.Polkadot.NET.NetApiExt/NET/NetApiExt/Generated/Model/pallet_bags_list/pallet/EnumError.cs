@@ -15,9 +15,17 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_bags_list.pall
 {
     
     
+    /// <summary>
+    /// >> Error
+    /// The `Error` enum of this pallet.
+    /// </summary>
     public enum Error
     {
         
+        /// <summary>
+        /// >> List
+        /// A error in the list interface implementation.
+        /// </summary>
         List = 0,
     }
     

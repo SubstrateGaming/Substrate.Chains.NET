@@ -21,12 +21,18 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> BountiesStorage
+    /// </summary>
     public sealed class BountiesStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> BountiesStorage Constructor
+        /// </summary>
         public BountiesStorage(SubstrateClientExt client)
         {
             this._client = client;
@@ -159,6 +165,9 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> BountiesCalls
+    /// </summary>
     public sealed class BountiesCalls
     {
         
@@ -267,6 +276,9 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> BountiesConstants
+    /// </summary>
     public sealed class BountiesConstants
     {
         
@@ -375,6 +387,9 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> BountiesErrors
+    /// </summary>
     public enum BountiesErrors
     {
         

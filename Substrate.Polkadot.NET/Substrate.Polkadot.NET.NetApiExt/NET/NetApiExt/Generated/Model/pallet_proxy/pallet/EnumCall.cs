@@ -15,27 +15,71 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_proxy.pallet
 {
     
     
+    /// <summary>
+    /// >> Call
+    /// Contains a variant per dispatchable extrinsic that this pallet has.
+    /// </summary>
     public enum Call
     {
         
+        /// <summary>
+        /// >> proxy
+        /// See [`Pallet::proxy`].
+        /// </summary>
         proxy = 0,
         
+        /// <summary>
+        /// >> add_proxy
+        /// See [`Pallet::add_proxy`].
+        /// </summary>
         add_proxy = 1,
         
+        /// <summary>
+        /// >> remove_proxy
+        /// See [`Pallet::remove_proxy`].
+        /// </summary>
         remove_proxy = 2,
         
+        /// <summary>
+        /// >> remove_proxies
+        /// See [`Pallet::remove_proxies`].
+        /// </summary>
         remove_proxies = 3,
         
+        /// <summary>
+        /// >> create_pure
+        /// See [`Pallet::create_pure`].
+        /// </summary>
         create_pure = 4,
         
+        /// <summary>
+        /// >> kill_pure
+        /// See [`Pallet::kill_pure`].
+        /// </summary>
         kill_pure = 5,
         
+        /// <summary>
+        /// >> announce
+        /// See [`Pallet::announce`].
+        /// </summary>
         announce = 6,
         
+        /// <summary>
+        /// >> remove_announcement
+        /// See [`Pallet::remove_announcement`].
+        /// </summary>
         remove_announcement = 7,
         
+        /// <summary>
+        /// >> reject_announcement
+        /// See [`Pallet::reject_announcement`].
+        /// </summary>
         reject_announcement = 8,
         
+        /// <summary>
+        /// >> proxy_announced
+        /// See [`Pallet::proxy_announced`].
+        /// </summary>
         proxy_announced = 9,
     }
     

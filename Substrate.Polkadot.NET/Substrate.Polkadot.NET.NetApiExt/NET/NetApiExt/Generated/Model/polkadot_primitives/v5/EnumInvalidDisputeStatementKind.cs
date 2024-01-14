@@ -15,9 +15,15 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v
 {
     
     
+    /// <summary>
+    /// >> InvalidDisputeStatementKind
+    /// </summary>
     public enum InvalidDisputeStatementKind
     {
         
+        /// <summary>
+        /// >> Explicit
+        /// </summary>
         Explicit = 0,
     }
     

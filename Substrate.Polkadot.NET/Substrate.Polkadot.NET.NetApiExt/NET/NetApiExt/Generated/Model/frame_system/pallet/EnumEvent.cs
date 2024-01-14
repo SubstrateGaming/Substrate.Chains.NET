@@ -15,19 +15,47 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.frame_system.pallet
 {
     
     
+    /// <summary>
+    /// >> Event
+    /// Event for the System pallet.
+    /// </summary>
     public enum Event
     {
         
+        /// <summary>
+        /// >> ExtrinsicSuccess
+        /// An extrinsic completed successfully.
+        /// </summary>
         ExtrinsicSuccess = 0,
         
+        /// <summary>
+        /// >> ExtrinsicFailed
+        /// An extrinsic failed.
+        /// </summary>
         ExtrinsicFailed = 1,
         
+        /// <summary>
+        /// >> CodeUpdated
+        /// `:code` was updated.
+        /// </summary>
         CodeUpdated = 2,
         
+        /// <summary>
+        /// >> NewAccount
+        /// A new account was created.
+        /// </summary>
         NewAccount = 3,
         
+        /// <summary>
+        /// >> KilledAccount
+        /// An account was reaped.
+        /// </summary>
         KilledAccount = 4,
         
+        /// <summary>
+        /// >> Remarked
+        /// On on-chain remark happened.
+        /// </summary>
         Remarked = 5,
     }
     

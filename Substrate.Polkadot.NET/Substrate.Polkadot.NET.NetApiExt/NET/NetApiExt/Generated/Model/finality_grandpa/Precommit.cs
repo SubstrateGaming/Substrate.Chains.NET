@@ -27,42 +27,19 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.finality_grandpa
         /// <summary>
         /// >> target_hash
         /// </summary>
-        private Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256 _targetHash;
-        
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256 TargetHash { get; set; }
         /// <summary>
         /// >> target_number
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _targetNumber;
+        public Substrate.NetApi.Model.Types.Primitive.U32 TargetNumber { get; set; }
         
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256 TargetHash
-        {
-            get
-            {
-                return this._targetHash;
-            }
-            set
-            {
-                this._targetHash = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 TargetNumber
-        {
-            get
-            {
-                return this._targetNumber;
-            }
-            set
-            {
-                this._targetNumber = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "Precommit";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -71,6 +48,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.finality_grandpa
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

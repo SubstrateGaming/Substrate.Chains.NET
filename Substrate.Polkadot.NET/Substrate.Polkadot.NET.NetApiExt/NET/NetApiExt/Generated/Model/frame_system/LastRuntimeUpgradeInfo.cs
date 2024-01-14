@@ -27,42 +27,19 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.frame_system
         /// <summary>
         /// >> spec_version
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32> _specVersion;
-        
+        public Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32> SpecVersion { get; set; }
         /// <summary>
         /// >> spec_name
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.Str _specName;
+        public Substrate.NetApi.Model.Types.Primitive.Str SpecName { get; set; }
         
-        public Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32> SpecVersion
-        {
-            get
-            {
-                return this._specVersion;
-            }
-            set
-            {
-                this._specVersion = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.Str SpecName
-        {
-            get
-            {
-                return this._specName;
-            }
-            set
-            {
-                this._specName = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "LastRuntimeUpgradeInfo";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -71,6 +48,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.frame_system
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

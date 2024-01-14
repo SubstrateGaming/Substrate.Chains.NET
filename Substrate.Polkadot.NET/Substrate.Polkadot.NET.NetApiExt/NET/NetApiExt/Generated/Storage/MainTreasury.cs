@@ -21,12 +21,18 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> TreasuryStorage
+    /// </summary>
     public sealed class TreasuryStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> TreasuryStorage Constructor
+        /// </summary>
         public TreasuryStorage(SubstrateClientExt client)
         {
             this._client = client;
@@ -156,6 +162,9 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> TreasuryCalls
+    /// </summary>
     public sealed class TreasuryCalls
     {
         
@@ -217,6 +226,9 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> TreasuryConstants
+    /// </summary>
     public sealed class TreasuryConstants
     {
         
@@ -301,6 +313,9 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> TreasuryErrors
+    /// </summary>
     public enum TreasuryErrors
     {
         

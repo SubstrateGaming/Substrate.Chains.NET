@@ -15,21 +15,53 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_child_bounties
 {
     
     
+    /// <summary>
+    /// >> Call
+    /// Contains a variant per dispatchable extrinsic that this pallet has.
+    /// </summary>
     public enum Call
     {
         
+        /// <summary>
+        /// >> add_child_bounty
+        /// See [`Pallet::add_child_bounty`].
+        /// </summary>
         add_child_bounty = 0,
         
+        /// <summary>
+        /// >> propose_curator
+        /// See [`Pallet::propose_curator`].
+        /// </summary>
         propose_curator = 1,
         
+        /// <summary>
+        /// >> accept_curator
+        /// See [`Pallet::accept_curator`].
+        /// </summary>
         accept_curator = 2,
         
+        /// <summary>
+        /// >> unassign_curator
+        /// See [`Pallet::unassign_curator`].
+        /// </summary>
         unassign_curator = 3,
         
+        /// <summary>
+        /// >> award_child_bounty
+        /// See [`Pallet::award_child_bounty`].
+        /// </summary>
         award_child_bounty = 4,
         
+        /// <summary>
+        /// >> claim_child_bounty
+        /// See [`Pallet::claim_child_bounty`].
+        /// </summary>
         claim_child_bounty = 5,
         
+        /// <summary>
+        /// >> close_child_bounty
+        /// See [`Pallet::close_child_bounty`].
+        /// </summary>
         close_child_bounty = 6,
     }
     

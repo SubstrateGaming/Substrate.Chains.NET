@@ -15,19 +15,47 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_conviction_vot
 {
     
     
+    /// <summary>
+    /// >> Call
+    /// Contains a variant per dispatchable extrinsic that this pallet has.
+    /// </summary>
     public enum Call
     {
         
+        /// <summary>
+        /// >> vote
+        /// See [`Pallet::vote`].
+        /// </summary>
         vote = 0,
         
+        /// <summary>
+        /// >> delegate
+        /// See [`Pallet::delegate`].
+        /// </summary>
         @delegate = 1,
         
+        /// <summary>
+        /// >> undelegate
+        /// See [`Pallet::undelegate`].
+        /// </summary>
         undelegate = 2,
         
+        /// <summary>
+        /// >> unlock
+        /// See [`Pallet::unlock`].
+        /// </summary>
         unlock = 3,
         
+        /// <summary>
+        /// >> remove_vote
+        /// See [`Pallet::remove_vote`].
+        /// </summary>
         remove_vote = 4,
         
+        /// <summary>
+        /// >> remove_other_vote
+        /// See [`Pallet::remove_other_vote`].
+        /// </summary>
         remove_other_vote = 5,
     }
     

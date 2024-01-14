@@ -15,19 +15,48 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_utility.pallet
 {
     
     
+    /// <summary>
+    /// >> Event
+    /// The `Event` enum of this pallet
+    /// </summary>
     public enum Event
     {
         
+        /// <summary>
+        /// >> BatchInterrupted
+        /// Batch of dispatches did not complete fully. Index of first failing dispatch given, as
+        /// well as the error.
+        /// </summary>
         BatchInterrupted = 0,
         
+        /// <summary>
+        /// >> BatchCompleted
+        /// Batch of dispatches completed fully with no error.
+        /// </summary>
         BatchCompleted = 1,
         
+        /// <summary>
+        /// >> BatchCompletedWithErrors
+        /// Batch of dispatches completed but has errors.
+        /// </summary>
         BatchCompletedWithErrors = 2,
         
+        /// <summary>
+        /// >> ItemCompleted
+        /// A single item within a Batch of dispatches has completed with no error.
+        /// </summary>
         ItemCompleted = 3,
         
+        /// <summary>
+        /// >> ItemFailed
+        /// A single item within a Batch of dispatches has completed with error.
+        /// </summary>
         ItemFailed = 4,
         
+        /// <summary>
+        /// >> DispatchedAs
+        /// A call was dispatched.
+        /// </summary>
         DispatchedAs = 5,
     }
     

@@ -21,12 +21,18 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> ElectionProviderMultiPhaseStorage
+    /// </summary>
     public sealed class ElectionProviderMultiPhaseStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> ElectionProviderMultiPhaseStorage Constructor
+        /// </summary>
         public ElectionProviderMultiPhaseStorage(SubstrateClientExt client)
         {
             this._client = client;
@@ -406,6 +412,9 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> ElectionProviderMultiPhaseCalls
+    /// </summary>
     public sealed class ElectionProviderMultiPhaseCalls
     {
         
@@ -467,6 +476,9 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> ElectionProviderMultiPhaseConstants
+    /// </summary>
     public sealed class ElectionProviderMultiPhaseConstants
     {
         
@@ -683,6 +695,9 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> ElectionProviderMultiPhaseErrors
+    /// </summary>
     public enum ElectionProviderMultiPhaseErrors
     {
         

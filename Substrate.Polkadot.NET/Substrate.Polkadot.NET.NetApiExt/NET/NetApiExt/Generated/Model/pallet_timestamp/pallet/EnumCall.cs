@@ -15,9 +15,17 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_timestamp.pall
 {
     
     
+    /// <summary>
+    /// >> Call
+    /// Contains a variant per dispatchable extrinsic that this pallet has.
+    /// </summary>
     public enum Call
     {
         
+        /// <summary>
+        /// >> set
+        /// See [`Pallet::set`].
+        /// </summary>
         set = 0,
     }
     

@@ -27,25 +27,15 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_consensus_babe.app
         /// <summary>
         /// >> value
         /// </summary>
-        private Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.sr25519.Public _value;
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.sr25519.Public Value { get; set; }
         
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.sr25519.Public Value
-        {
-            get
-            {
-                return this._value;
-            }
-            set
-            {
-                this._value = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "Public";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -53,6 +43,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_consensus_babe.app
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

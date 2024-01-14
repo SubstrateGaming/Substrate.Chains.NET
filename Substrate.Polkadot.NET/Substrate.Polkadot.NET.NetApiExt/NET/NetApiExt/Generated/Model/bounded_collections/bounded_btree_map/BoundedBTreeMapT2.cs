@@ -27,25 +27,15 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.b
         /// <summary>
         /// >> value
         /// </summary>
-        private Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base.BTreeMapT3 _value;
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base.BTreeMapT3 Value { get; set; }
         
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base.BTreeMapT3 Value
-        {
-            get
-            {
-                return this._value;
-            }
-            set
-            {
-                this._value = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "BoundedBTreeMapT2";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -53,6 +43,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.b
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

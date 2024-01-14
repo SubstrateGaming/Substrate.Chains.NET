@@ -27,110 +27,35 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_message_queue
         /// <summary>
         /// >> remaining
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _remaining;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 Remaining { get; set; }
         /// <summary>
         /// >> remaining_size
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _remainingSize;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 RemainingSize { get; set; }
         /// <summary>
         /// >> first_index
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _firstIndex;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 FirstIndex { get; set; }
         /// <summary>
         /// >> first
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _first;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 First { get; set; }
         /// <summary>
         /// >> last
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _last;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 Last { get; set; }
         /// <summary>
         /// >> heap
         /// </summary>
-        private Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT38 _heap;
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT38 Heap { get; set; }
         
-        public Substrate.NetApi.Model.Types.Primitive.U32 Remaining
-        {
-            get
-            {
-                return this._remaining;
-            }
-            set
-            {
-                this._remaining = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 RemainingSize
-        {
-            get
-            {
-                return this._remainingSize;
-            }
-            set
-            {
-                this._remainingSize = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 FirstIndex
-        {
-            get
-            {
-                return this._firstIndex;
-            }
-            set
-            {
-                this._firstIndex = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 First
-        {
-            get
-            {
-                return this._first;
-            }
-            set
-            {
-                this._first = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 Last
-        {
-            get
-            {
-                return this._last;
-            }
-            set
-            {
-                this._last = value;
-            }
-        }
-        
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT38 Heap
-        {
-            get
-            {
-                return this._heap;
-            }
-            set
-            {
-                this._heap = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "Page";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -143,6 +68,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_message_queue
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

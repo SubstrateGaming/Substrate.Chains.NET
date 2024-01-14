@@ -15,11 +15,20 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_vesting
 {
     
     
+    /// <summary>
+    /// >> Releases
+    /// </summary>
     public enum Releases
     {
         
+        /// <summary>
+        /// >> V0
+        /// </summary>
         V0 = 0,
         
+        /// <summary>
+        /// >> V1
+        /// </summary>
         V1 = 1,
     }
     

@@ -15,13 +15,33 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_para
 {
     
     
+    /// <summary>
+    /// >> Event
+    /// The `Event` enum of this pallet
+    /// </summary>
     public enum Event
     {
         
+        /// <summary>
+        /// >> DisputeInitiated
+        /// A dispute has been initiated. \[candidate hash, dispute location\]
+        /// </summary>
         DisputeInitiated = 0,
         
+        /// <summary>
+        /// >> DisputeConcluded
+        /// A dispute has concluded for or against a candidate.
+        /// `\[para id, candidate hash, dispute result\]`
+        /// </summary>
         DisputeConcluded = 1,
         
+        /// <summary>
+        /// >> Revert
+        /// A dispute has concluded with supermajority against a candidate.
+        /// Block authors should no longer build on top of this head and should
+        /// instead revert the block at the given height. This should be the
+        /// number of the child of the last known valid block in the chain.
+        /// </summary>
         Revert = 2,
     }
     

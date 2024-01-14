@@ -21,12 +21,18 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> WhitelistStorage
+    /// </summary>
     public sealed class WhitelistStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> WhitelistStorage Constructor
+        /// </summary>
         public WhitelistStorage(SubstrateClientExt client)
         {
             this._client = client;
@@ -64,6 +70,9 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> WhitelistCalls
+    /// </summary>
     public sealed class WhitelistCalls
     {
         
@@ -114,10 +123,16 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> WhitelistConstants
+    /// </summary>
     public sealed class WhitelistConstants
     {
     }
     
+    /// <summary>
+    /// >> WhitelistErrors
+    /// </summary>
     public enum WhitelistErrors
     {
         

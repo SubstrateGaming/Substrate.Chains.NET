@@ -21,12 +21,18 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> SlotsStorage
+    /// </summary>
     public sealed class SlotsStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> SlotsStorage Constructor
+        /// </summary>
         public SlotsStorage(SubstrateClientExt client)
         {
             this._client = client;
@@ -96,6 +102,9 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> SlotsCalls
+    /// </summary>
     public sealed class SlotsCalls
     {
         
@@ -137,6 +146,9 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> SlotsConstants
+    /// </summary>
     public sealed class SlotsConstants
     {
         
@@ -163,6 +175,9 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> SlotsErrors
+    /// </summary>
     public enum SlotsErrors
     {
         

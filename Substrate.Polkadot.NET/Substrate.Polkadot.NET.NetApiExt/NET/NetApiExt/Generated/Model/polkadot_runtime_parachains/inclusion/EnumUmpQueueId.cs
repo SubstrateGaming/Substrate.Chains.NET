@@ -15,9 +15,15 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_para
 {
     
     
+    /// <summary>
+    /// >> UmpQueueId
+    /// </summary>
     public enum UmpQueueId
     {
         
+        /// <summary>
+        /// >> Para
+        /// </summary>
         Para = 0,
     }
     

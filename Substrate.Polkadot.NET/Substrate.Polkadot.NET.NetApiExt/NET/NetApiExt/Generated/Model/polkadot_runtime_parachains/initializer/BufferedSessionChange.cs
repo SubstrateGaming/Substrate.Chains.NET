@@ -27,59 +27,23 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_para
         /// <summary>
         /// >> validators
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.validator_app.Public> _validators;
-        
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.validator_app.Public> Validators { get; set; }
         /// <summary>
         /// >> queued
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.validator_app.Public> _queued;
-        
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.validator_app.Public> Queued { get; set; }
         /// <summary>
         /// >> session_index
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _sessionIndex;
+        public Substrate.NetApi.Model.Types.Primitive.U32 SessionIndex { get; set; }
         
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.validator_app.Public> Validators
-        {
-            get
-            {
-                return this._validators;
-            }
-            set
-            {
-                this._validators = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.validator_app.Public> Queued
-        {
-            get
-            {
-                return this._queued;
-            }
-            set
-            {
-                this._queued = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 SessionIndex
-        {
-            get
-            {
-                return this._sessionIndex;
-            }
-            set
-            {
-                this._sessionIndex = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "BufferedSessionChange";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -89,6 +53,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_para
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

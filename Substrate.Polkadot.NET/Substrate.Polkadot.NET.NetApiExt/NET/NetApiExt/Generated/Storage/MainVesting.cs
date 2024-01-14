@@ -21,12 +21,18 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> VestingStorage
+    /// </summary>
     public sealed class VestingStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> VestingStorage Constructor
+        /// </summary>
         public VestingStorage(SubstrateClientExt client)
         {
             this._client = client;
@@ -100,6 +106,9 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> VestingCalls
+    /// </summary>
     public sealed class VestingCalls
     {
         
@@ -162,6 +171,9 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> VestingConstants
+    /// </summary>
     public sealed class VestingConstants
     {
         
@@ -187,6 +199,9 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> VestingErrors
+    /// </summary>
     public enum VestingErrors
     {
         

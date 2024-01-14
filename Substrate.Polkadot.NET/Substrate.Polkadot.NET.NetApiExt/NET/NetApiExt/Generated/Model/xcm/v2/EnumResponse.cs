@@ -15,15 +15,30 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.v2
 {
     
     
+    /// <summary>
+    /// >> Response
+    /// </summary>
     public enum Response
     {
         
+        /// <summary>
+        /// >> Null
+        /// </summary>
         Null = 0,
         
+        /// <summary>
+        /// >> Assets
+        /// </summary>
         Assets = 1,
         
+        /// <summary>
+        /// >> ExecutionResult
+        /// </summary>
         ExecutionResult = 2,
         
+        /// <summary>
+        /// >> Version
+        /// </summary>
         Version = 3,
     }
     

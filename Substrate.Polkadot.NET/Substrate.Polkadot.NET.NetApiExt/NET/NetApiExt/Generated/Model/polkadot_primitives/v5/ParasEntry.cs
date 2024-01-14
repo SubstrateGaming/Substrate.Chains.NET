@@ -27,59 +27,23 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v
         /// <summary>
         /// >> assignment
         /// </summary>
-        private Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.Assignment _assignment;
-        
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.Assignment Assignment { get; set; }
         /// <summary>
         /// >> availability_timeouts
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _availabilityTimeouts;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 AvailabilityTimeouts { get; set; }
         /// <summary>
         /// >> ttl
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _ttl;
+        public Substrate.NetApi.Model.Types.Primitive.U32 Ttl { get; set; }
         
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.Assignment Assignment
-        {
-            get
-            {
-                return this._assignment;
-            }
-            set
-            {
-                this._assignment = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 AvailabilityTimeouts
-        {
-            get
-            {
-                return this._availabilityTimeouts;
-            }
-            set
-            {
-                this._availabilityTimeouts = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 Ttl
-        {
-            get
-            {
-                return this._ttl;
-            }
-            set
-            {
-                this._ttl = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "ParasEntry";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -89,6 +53,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

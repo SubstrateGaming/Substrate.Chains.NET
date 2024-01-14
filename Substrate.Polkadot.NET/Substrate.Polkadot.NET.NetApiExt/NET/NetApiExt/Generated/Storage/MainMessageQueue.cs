@@ -21,12 +21,18 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> MessageQueueStorage
+    /// </summary>
     public sealed class MessageQueueStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> MessageQueueStorage Constructor
+        /// </summary>
         public MessageQueueStorage(SubstrateClientExt client)
         {
             this._client = client;
@@ -130,6 +136,9 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> MessageQueueCalls
+    /// </summary>
     public sealed class MessageQueueCalls
     {
         
@@ -160,6 +169,9 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> MessageQueueConstants
+    /// </summary>
     public sealed class MessageQueueConstants
     {
         
@@ -207,6 +219,9 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> MessageQueueErrors
+    /// </summary>
     public enum MessageQueueErrors
     {
         

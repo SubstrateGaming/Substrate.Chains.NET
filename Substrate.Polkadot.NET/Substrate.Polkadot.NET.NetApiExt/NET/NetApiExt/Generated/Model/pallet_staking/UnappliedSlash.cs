@@ -27,93 +27,31 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_staking
         /// <summary>
         /// >> validator
         /// </summary>
-        private Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 _validator;
-        
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 Validator { get; set; }
         /// <summary>
         /// >> own
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U128 _own;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U128 Own { get; set; }
         /// <summary>
         /// >> others
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U128>> _others;
-        
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U128>> Others { get; set; }
         /// <summary>
         /// >> reporters
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> _reporters;
-        
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> Reporters { get; set; }
         /// <summary>
         /// >> payout
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U128 _payout;
+        public Substrate.NetApi.Model.Types.Primitive.U128 Payout { get; set; }
         
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 Validator
-        {
-            get
-            {
-                return this._validator;
-            }
-            set
-            {
-                this._validator = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U128 Own
-        {
-            get
-            {
-                return this._own;
-            }
-            set
-            {
-                this._own = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U128>> Others
-        {
-            get
-            {
-                return this._others;
-            }
-            set
-            {
-                this._others = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> Reporters
-        {
-            get
-            {
-                return this._reporters;
-            }
-            set
-            {
-                this._reporters = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U128 Payout
-        {
-            get
-            {
-                return this._payout;
-            }
-            set
-            {
-                this._payout = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "UnappliedSlash";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -125,6 +63,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_staking
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

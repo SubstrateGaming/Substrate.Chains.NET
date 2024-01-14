@@ -15,19 +15,47 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_preimage.palle
 {
     
     
+    /// <summary>
+    /// >> Error
+    /// The `Error` enum of this pallet.
+    /// </summary>
     public enum Error
     {
         
+        /// <summary>
+        /// >> TooBig
+        /// Preimage is too large to store on-chain.
+        /// </summary>
         TooBig = 0,
         
+        /// <summary>
+        /// >> AlreadyNoted
+        /// Preimage has already been noted on-chain.
+        /// </summary>
         AlreadyNoted = 1,
         
+        /// <summary>
+        /// >> NotAuthorized
+        /// The user is not authorized to perform this action.
+        /// </summary>
         NotAuthorized = 2,
         
+        /// <summary>
+        /// >> NotNoted
+        /// The preimage cannot be removed since it has not yet been noted.
+        /// </summary>
         NotNoted = 3,
         
+        /// <summary>
+        /// >> Requested
+        /// A preimage may not be removed when there are outstanding requests.
+        /// </summary>
         Requested = 4,
         
+        /// <summary>
+        /// >> NotRequested
+        /// The preimage request cannot be removed since no outstanding requests exist.
+        /// </summary>
         NotRequested = 5,
     }
     

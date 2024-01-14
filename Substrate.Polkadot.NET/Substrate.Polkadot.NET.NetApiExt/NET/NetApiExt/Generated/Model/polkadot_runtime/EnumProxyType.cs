@@ -15,23 +15,50 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime
 {
     
     
+    /// <summary>
+    /// >> ProxyType
+    /// </summary>
     public enum ProxyType
     {
         
+        /// <summary>
+        /// >> Any
+        /// </summary>
         Any = 0,
         
+        /// <summary>
+        /// >> NonTransfer
+        /// </summary>
         NonTransfer = 1,
         
+        /// <summary>
+        /// >> Governance
+        /// </summary>
         Governance = 2,
         
+        /// <summary>
+        /// >> Staking
+        /// </summary>
         Staking = 3,
         
+        /// <summary>
+        /// >> IdentityJudgement
+        /// </summary>
         IdentityJudgement = 5,
         
+        /// <summary>
+        /// >> CancelProxy
+        /// </summary>
         CancelProxy = 6,
         
+        /// <summary>
+        /// >> Auction
+        /// </summary>
         Auction = 7,
         
+        /// <summary>
+        /// >> NominationPools
+        /// </summary>
         NominationPools = 8,
     }
     

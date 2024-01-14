@@ -15,103 +15,250 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.v3
 {
     
     
+    /// <summary>
+    /// >> Instruction
+    /// </summary>
     public enum Instruction
     {
         
+        /// <summary>
+        /// >> WithdrawAsset
+        /// </summary>
         WithdrawAsset = 0,
         
+        /// <summary>
+        /// >> ReserveAssetDeposited
+        /// </summary>
         ReserveAssetDeposited = 1,
         
+        /// <summary>
+        /// >> ReceiveTeleportedAsset
+        /// </summary>
         ReceiveTeleportedAsset = 2,
         
+        /// <summary>
+        /// >> QueryResponse
+        /// </summary>
         QueryResponse = 3,
         
+        /// <summary>
+        /// >> TransferAsset
+        /// </summary>
         TransferAsset = 4,
         
+        /// <summary>
+        /// >> TransferReserveAsset
+        /// </summary>
         TransferReserveAsset = 5,
         
+        /// <summary>
+        /// >> Transact
+        /// </summary>
         Transact = 6,
         
+        /// <summary>
+        /// >> HrmpNewChannelOpenRequest
+        /// </summary>
         HrmpNewChannelOpenRequest = 7,
         
+        /// <summary>
+        /// >> HrmpChannelAccepted
+        /// </summary>
         HrmpChannelAccepted = 8,
         
+        /// <summary>
+        /// >> HrmpChannelClosing
+        /// </summary>
         HrmpChannelClosing = 9,
         
+        /// <summary>
+        /// >> ClearOrigin
+        /// </summary>
         ClearOrigin = 10,
         
+        /// <summary>
+        /// >> DescendOrigin
+        /// </summary>
         DescendOrigin = 11,
         
+        /// <summary>
+        /// >> ReportError
+        /// </summary>
         ReportError = 12,
         
+        /// <summary>
+        /// >> DepositAsset
+        /// </summary>
         DepositAsset = 13,
         
+        /// <summary>
+        /// >> DepositReserveAsset
+        /// </summary>
         DepositReserveAsset = 14,
         
+        /// <summary>
+        /// >> ExchangeAsset
+        /// </summary>
         ExchangeAsset = 15,
         
+        /// <summary>
+        /// >> InitiateReserveWithdraw
+        /// </summary>
         InitiateReserveWithdraw = 16,
         
+        /// <summary>
+        /// >> InitiateTeleport
+        /// </summary>
         InitiateTeleport = 17,
         
+        /// <summary>
+        /// >> ReportHolding
+        /// </summary>
         ReportHolding = 18,
         
+        /// <summary>
+        /// >> BuyExecution
+        /// </summary>
         BuyExecution = 19,
         
+        /// <summary>
+        /// >> RefundSurplus
+        /// </summary>
         RefundSurplus = 20,
         
+        /// <summary>
+        /// >> SetErrorHandler
+        /// </summary>
         SetErrorHandler = 21,
         
+        /// <summary>
+        /// >> SetAppendix
+        /// </summary>
         SetAppendix = 22,
         
+        /// <summary>
+        /// >> ClearError
+        /// </summary>
         ClearError = 23,
         
+        /// <summary>
+        /// >> ClaimAsset
+        /// </summary>
         ClaimAsset = 24,
         
+        /// <summary>
+        /// >> Trap
+        /// </summary>
         Trap = 25,
         
+        /// <summary>
+        /// >> SubscribeVersion
+        /// </summary>
         SubscribeVersion = 26,
         
+        /// <summary>
+        /// >> UnsubscribeVersion
+        /// </summary>
         UnsubscribeVersion = 27,
         
+        /// <summary>
+        /// >> BurnAsset
+        /// </summary>
         BurnAsset = 28,
         
+        /// <summary>
+        /// >> ExpectAsset
+        /// </summary>
         ExpectAsset = 29,
         
+        /// <summary>
+        /// >> ExpectOrigin
+        /// </summary>
         ExpectOrigin = 30,
         
+        /// <summary>
+        /// >> ExpectError
+        /// </summary>
         ExpectError = 31,
         
+        /// <summary>
+        /// >> ExpectTransactStatus
+        /// </summary>
         ExpectTransactStatus = 32,
         
+        /// <summary>
+        /// >> QueryPallet
+        /// </summary>
         QueryPallet = 33,
         
+        /// <summary>
+        /// >> ExpectPallet
+        /// </summary>
         ExpectPallet = 34,
         
+        /// <summary>
+        /// >> ReportTransactStatus
+        /// </summary>
         ReportTransactStatus = 35,
         
+        /// <summary>
+        /// >> ClearTransactStatus
+        /// </summary>
         ClearTransactStatus = 36,
         
+        /// <summary>
+        /// >> UniversalOrigin
+        /// </summary>
         UniversalOrigin = 37,
         
+        /// <summary>
+        /// >> ExportMessage
+        /// </summary>
         ExportMessage = 38,
         
+        /// <summary>
+        /// >> LockAsset
+        /// </summary>
         LockAsset = 39,
         
+        /// <summary>
+        /// >> UnlockAsset
+        /// </summary>
         UnlockAsset = 40,
         
+        /// <summary>
+        /// >> NoteUnlockable
+        /// </summary>
         NoteUnlockable = 41,
         
+        /// <summary>
+        /// >> RequestUnlock
+        /// </summary>
         RequestUnlock = 42,
         
+        /// <summary>
+        /// >> SetFeesMode
+        /// </summary>
         SetFeesMode = 43,
         
+        /// <summary>
+        /// >> SetTopic
+        /// </summary>
         SetTopic = 44,
         
+        /// <summary>
+        /// >> ClearTopic
+        /// </summary>
         ClearTopic = 45,
         
+        /// <summary>
+        /// >> AliasOrigin
+        /// </summary>
         AliasOrigin = 46,
         
+        /// <summary>
+        /// >> UnpaidExecution
+        /// </summary>
         UnpaidExecution = 47,
     }
     

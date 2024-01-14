@@ -27,76 +27,27 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_election_provi
         /// <summary>
         /// >> who
         /// </summary>
-        private Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 _who;
-        
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 Who { get; set; }
         /// <summary>
         /// >> deposit
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U128 _deposit;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U128 Deposit { get; set; }
         /// <summary>
         /// >> raw_solution
         /// </summary>
-        private Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_election_provider_multi_phase.RawSolution _rawSolution;
-        
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_election_provider_multi_phase.RawSolution RawSolution { get; set; }
         /// <summary>
         /// >> call_fee
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U128 _callFee;
+        public Substrate.NetApi.Model.Types.Primitive.U128 CallFee { get; set; }
         
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 Who
-        {
-            get
-            {
-                return this._who;
-            }
-            set
-            {
-                this._who = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U128 Deposit
-        {
-            get
-            {
-                return this._deposit;
-            }
-            set
-            {
-                this._deposit = value;
-            }
-        }
-        
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_election_provider_multi_phase.RawSolution RawSolution
-        {
-            get
-            {
-                return this._rawSolution;
-            }
-            set
-            {
-                this._rawSolution = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U128 CallFee
-        {
-            get
-            {
-                return this._callFee;
-            }
-            set
-            {
-                this._callFee = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "SignedSubmission";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -107,6 +58,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_election_provi
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

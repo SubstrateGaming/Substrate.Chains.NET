@@ -27,76 +27,27 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_im_online
         /// <summary>
         /// >> block_number
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _blockNumber;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 BlockNumber { get; set; }
         /// <summary>
         /// >> session_index
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _sessionIndex;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 SessionIndex { get; set; }
         /// <summary>
         /// >> authority_index
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _authorityIndex;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 AuthorityIndex { get; set; }
         /// <summary>
         /// >> validators_len
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _validatorsLen;
+        public Substrate.NetApi.Model.Types.Primitive.U32 ValidatorsLen { get; set; }
         
-        public Substrate.NetApi.Model.Types.Primitive.U32 BlockNumber
-        {
-            get
-            {
-                return this._blockNumber;
-            }
-            set
-            {
-                this._blockNumber = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 SessionIndex
-        {
-            get
-            {
-                return this._sessionIndex;
-            }
-            set
-            {
-                this._sessionIndex = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 AuthorityIndex
-        {
-            get
-            {
-                return this._authorityIndex;
-            }
-            set
-            {
-                this._authorityIndex = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 ValidatorsLen
-        {
-            get
-            {
-                return this._validatorsLen;
-            }
-            set
-            {
-                this._validatorsLen = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "Heartbeat";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -107,6 +58,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_im_online
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

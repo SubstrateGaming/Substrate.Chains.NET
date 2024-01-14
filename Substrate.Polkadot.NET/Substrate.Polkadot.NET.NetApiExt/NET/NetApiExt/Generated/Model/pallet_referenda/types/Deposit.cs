@@ -27,42 +27,19 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_referenda.type
         /// <summary>
         /// >> who
         /// </summary>
-        private Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 _who;
-        
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 Who { get; set; }
         /// <summary>
         /// >> amount
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U128 _amount;
+        public Substrate.NetApi.Model.Types.Primitive.U128 Amount { get; set; }
         
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 Who
-        {
-            get
-            {
-                return this._who;
-            }
-            set
-            {
-                this._who = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U128 Amount
-        {
-            get
-            {
-                return this._amount;
-            }
-            set
-            {
-                this._amount = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "Deposit";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -71,6 +48,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_referenda.type
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

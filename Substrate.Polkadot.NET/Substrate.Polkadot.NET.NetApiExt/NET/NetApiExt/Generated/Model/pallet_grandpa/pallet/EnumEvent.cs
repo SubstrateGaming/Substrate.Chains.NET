@@ -15,13 +15,29 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_grandpa.pallet
 {
     
     
+    /// <summary>
+    /// >> Event
+    /// The `Event` enum of this pallet
+    /// </summary>
     public enum Event
     {
         
+        /// <summary>
+        /// >> NewAuthorities
+        /// New authority set has been applied.
+        /// </summary>
         NewAuthorities = 0,
         
+        /// <summary>
+        /// >> Paused
+        /// Current authority set has been paused.
+        /// </summary>
         Paused = 1,
         
+        /// <summary>
+        /// >> Resumed
+        /// Current authority set has been resumed.
+        /// </summary>
         Resumed = 2,
     }
     

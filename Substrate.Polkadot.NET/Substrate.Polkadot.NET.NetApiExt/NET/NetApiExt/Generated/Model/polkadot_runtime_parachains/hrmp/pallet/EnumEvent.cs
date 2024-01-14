@@ -15,17 +15,44 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_para
 {
     
     
+    /// <summary>
+    /// >> Event
+    /// The `Event` enum of this pallet
+    /// </summary>
     public enum Event
     {
         
+        /// <summary>
+        /// >> OpenChannelRequested
+        /// Open HRMP channel requested.
+        /// `[sender, recipient, proposed_max_capacity, proposed_max_message_size]`
+        /// </summary>
         OpenChannelRequested = 0,
         
+        /// <summary>
+        /// >> OpenChannelCanceled
+        /// An HRMP channel request sent by the receiver was canceled by either party.
+        /// `[by_parachain, channel_id]`
+        /// </summary>
         OpenChannelCanceled = 1,
         
+        /// <summary>
+        /// >> OpenChannelAccepted
+        /// Open HRMP channel accepted. `[sender, recipient]`
+        /// </summary>
         OpenChannelAccepted = 2,
         
+        /// <summary>
+        /// >> ChannelClosed
+        /// HRMP channel closed. `[by_parachain, channel_id]`
+        /// </summary>
         ChannelClosed = 3,
         
+        /// <summary>
+        /// >> HrmpChannelForceOpened
+        /// An HRMP channel was opened via Root origin.
+        /// `[sender, recipient, proposed_max_capacity, proposed_max_message_size]`
+        /// </summary>
         HrmpChannelForceOpened = 4,
     }
     

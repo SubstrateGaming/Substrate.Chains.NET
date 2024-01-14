@@ -21,12 +21,18 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> ParaSessionInfoStorage
+    /// </summary>
     public sealed class ParaSessionInfoStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> ParaSessionInfoStorage Constructor
+        /// </summary>
         public ParaSessionInfoStorage(SubstrateClientExt client)
         {
             this._client = client;
@@ -200,10 +206,16 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> ParaSessionInfoCalls
+    /// </summary>
     public sealed class ParaSessionInfoCalls
     {
     }
     
+    /// <summary>
+    /// >> ParaSessionInfoConstants
+    /// </summary>
     public sealed class ParaSessionInfoConstants
     {
     }
