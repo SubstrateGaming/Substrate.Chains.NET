@@ -27,42 +27,19 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.
         /// <summary>
         /// >> session_index
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _sessionIndex;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 SessionIndex { get; set; }
         /// <summary>
         /// >> candidate_hash
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_core_primitives.CandidateHash _candidateHash;
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_core_primitives.CandidateHash CandidateHash { get; set; }
         
-        public Substrate.NetApi.Model.Types.Primitive.U32 SessionIndex
-        {
-            get
-            {
-                return this._sessionIndex;
-            }
-            set
-            {
-                this._sessionIndex = value;
-            }
-        }
-        
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_core_primitives.CandidateHash CandidateHash
-        {
-            get
-            {
-                return this._candidateHash;
-            }
-            set
-            {
-                this._candidateHash = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "DisputesTimeSlot";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -71,6 +48,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

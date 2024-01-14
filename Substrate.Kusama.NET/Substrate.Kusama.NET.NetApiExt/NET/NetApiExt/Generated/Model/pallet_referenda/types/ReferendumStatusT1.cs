@@ -27,195 +27,55 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_referenda.types
         /// <summary>
         /// >> track
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U16 _track;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U16 Track { get; set; }
         /// <summary>
         /// >> origin
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_kusama_runtime.EnumOriginCaller _origin;
-        
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_kusama_runtime.EnumOriginCaller Origin { get; set; }
         /// <summary>
         /// >> proposal
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_support.traits.preimages.EnumBounded _proposal;
-        
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_support.traits.preimages.EnumBounded Proposal { get; set; }
         /// <summary>
         /// >> enactment
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_support.traits.schedule.EnumDispatchTime _enactment;
-        
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_support.traits.schedule.EnumDispatchTime Enactment { get; set; }
         /// <summary>
         /// >> submitted
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _submitted;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 Submitted { get; set; }
         /// <summary>
         /// >> submission_deposit
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_referenda.types.Deposit _submissionDeposit;
-        
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_referenda.types.Deposit SubmissionDeposit { get; set; }
         /// <summary>
         /// >> decision_deposit
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_referenda.types.Deposit> _decisionDeposit;
-        
+        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_referenda.types.Deposit> DecisionDeposit { get; set; }
         /// <summary>
         /// >> deciding
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_referenda.types.DecidingStatus> _deciding;
-        
+        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_referenda.types.DecidingStatus> Deciding { get; set; }
         /// <summary>
         /// >> tally
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_conviction_voting.types.Tally _tally;
-        
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_conviction_voting.types.Tally Tally { get; set; }
         /// <summary>
         /// >> in_queue
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.Bool _inQueue;
-        
+        public Substrate.NetApi.Model.Types.Primitive.Bool InQueue { get; set; }
         /// <summary>
         /// >> alarm
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>>> _alarm;
+        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>>> Alarm { get; set; }
         
-        public Substrate.NetApi.Model.Types.Primitive.U16 Track
-        {
-            get
-            {
-                return this._track;
-            }
-            set
-            {
-                this._track = value;
-            }
-        }
-        
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_kusama_runtime.EnumOriginCaller Origin
-        {
-            get
-            {
-                return this._origin;
-            }
-            set
-            {
-                this._origin = value;
-            }
-        }
-        
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_support.traits.preimages.EnumBounded Proposal
-        {
-            get
-            {
-                return this._proposal;
-            }
-            set
-            {
-                this._proposal = value;
-            }
-        }
-        
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_support.traits.schedule.EnumDispatchTime Enactment
-        {
-            get
-            {
-                return this._enactment;
-            }
-            set
-            {
-                this._enactment = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 Submitted
-        {
-            get
-            {
-                return this._submitted;
-            }
-            set
-            {
-                this._submitted = value;
-            }
-        }
-        
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_referenda.types.Deposit SubmissionDeposit
-        {
-            get
-            {
-                return this._submissionDeposit;
-            }
-            set
-            {
-                this._submissionDeposit = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_referenda.types.Deposit> DecisionDeposit
-        {
-            get
-            {
-                return this._decisionDeposit;
-            }
-            set
-            {
-                this._decisionDeposit = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_referenda.types.DecidingStatus> Deciding
-        {
-            get
-            {
-                return this._deciding;
-            }
-            set
-            {
-                this._deciding = value;
-            }
-        }
-        
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_conviction_voting.types.Tally Tally
-        {
-            get
-            {
-                return this._tally;
-            }
-            set
-            {
-                this._tally = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.Bool InQueue
-        {
-            get
-            {
-                return this._inQueue;
-            }
-            set
-            {
-                this._inQueue = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>>> Alarm
-        {
-            get
-            {
-                return this._alarm;
-            }
-            set
-            {
-                this._alarm = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "ReferendumStatusT1";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -233,6 +93,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_referenda.types
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

@@ -15,21 +15,53 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_bounties.palle
 {
     
     
+    /// <summary>
+    /// >> Event
+    /// The `Event` enum of this pallet
+    /// </summary>
     public enum Event
     {
         
+        /// <summary>
+        /// >> BountyProposed
+        /// New bounty proposal.
+        /// </summary>
         BountyProposed = 0,
         
+        /// <summary>
+        /// >> BountyRejected
+        /// A bounty proposal was rejected; funds were slashed.
+        /// </summary>
         BountyRejected = 1,
         
+        /// <summary>
+        /// >> BountyBecameActive
+        /// A bounty proposal is funded and became active.
+        /// </summary>
         BountyBecameActive = 2,
         
+        /// <summary>
+        /// >> BountyAwarded
+        /// A bounty is awarded to a beneficiary.
+        /// </summary>
         BountyAwarded = 3,
         
+        /// <summary>
+        /// >> BountyClaimed
+        /// A bounty is claimed by beneficiary.
+        /// </summary>
         BountyClaimed = 4,
         
+        /// <summary>
+        /// >> BountyCanceled
+        /// A bounty is cancelled.
+        /// </summary>
         BountyCanceled = 5,
         
+        /// <summary>
+        /// >> BountyExtended
+        /// A bounty expiry is extended.
+        /// </summary>
         BountyExtended = 6,
     }
     

@@ -15,13 +15,29 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_fast_unstake.pal
 {
     
     
+    /// <summary>
+    /// >> Call
+    /// Contains a variant per dispatchable extrinsic that this pallet has.
+    /// </summary>
     public enum Call
     {
         
+        /// <summary>
+        /// >> register_fast_unstake
+        /// See [`Pallet::register_fast_unstake`].
+        /// </summary>
         register_fast_unstake = 0,
         
+        /// <summary>
+        /// >> deregister
+        /// See [`Pallet::deregister`].
+        /// </summary>
         deregister = 1,
         
+        /// <summary>
+        /// >> control
+        /// See [`Pallet::control`].
+        /// </summary>
         control = 2,
     }
     

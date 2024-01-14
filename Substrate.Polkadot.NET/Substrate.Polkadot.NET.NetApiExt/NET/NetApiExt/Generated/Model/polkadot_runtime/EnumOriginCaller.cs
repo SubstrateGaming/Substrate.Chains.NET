@@ -15,17 +15,35 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime
 {
     
     
+    /// <summary>
+    /// >> OriginCaller
+    /// </summary>
     public enum OriginCaller
     {
         
+        /// <summary>
+        /// >> system
+        /// </summary>
         system = 0,
         
+        /// <summary>
+        /// >> Origins
+        /// </summary>
         Origins = 22,
         
+        /// <summary>
+        /// >> ParachainsOrigin
+        /// </summary>
         ParachainsOrigin = 50,
         
+        /// <summary>
+        /// >> XcmPallet
+        /// </summary>
         XcmPallet = 99,
         
+        /// <summary>
+        /// >> Void
+        /// </summary>
         Void = 4,
     }
     

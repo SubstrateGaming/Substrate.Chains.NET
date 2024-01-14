@@ -27,42 +27,19 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking
         /// <summary>
         /// >> index
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _index;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 Index { get; set; }
         /// <summary>
         /// >> start
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U64> _start;
+        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U64> Start { get; set; }
         
-        public Substrate.NetApi.Model.Types.Primitive.U32 Index
-        {
-            get
-            {
-                return this._index;
-            }
-            set
-            {
-                this._index = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U64> Start
-        {
-            get
-            {
-                return this._start;
-            }
-            set
-            {
-                this._start = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "ActiveEraInfo";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -71,6 +48,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

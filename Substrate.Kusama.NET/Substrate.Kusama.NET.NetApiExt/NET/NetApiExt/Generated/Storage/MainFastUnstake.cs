@@ -21,12 +21,18 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> FastUnstakeStorage
+    /// </summary>
     public sealed class FastUnstakeStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> FastUnstakeStorage Constructor
+        /// </summary>
         public FastUnstakeStorage(SubstrateClientExt client)
         {
             this._client = client;
@@ -178,6 +184,9 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> FastUnstakeCalls
+    /// </summary>
     public sealed class FastUnstakeCalls
     {
         
@@ -213,6 +222,9 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> FastUnstakeConstants
+    /// </summary>
     public sealed class FastUnstakeConstants
     {
         
@@ -229,6 +241,9 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> FastUnstakeErrors
+    /// </summary>
     public enum FastUnstakeErrors
     {
         

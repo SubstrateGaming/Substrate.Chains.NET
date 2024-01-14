@@ -15,17 +15,41 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_election_provide
 {
     
     
+    /// <summary>
+    /// >> Call
+    /// Contains a variant per dispatchable extrinsic that this pallet has.
+    /// </summary>
     public enum Call
     {
         
+        /// <summary>
+        /// >> submit_unsigned
+        /// See [`Pallet::submit_unsigned`].
+        /// </summary>
         submit_unsigned = 0,
         
+        /// <summary>
+        /// >> set_minimum_untrusted_score
+        /// See [`Pallet::set_minimum_untrusted_score`].
+        /// </summary>
         set_minimum_untrusted_score = 1,
         
+        /// <summary>
+        /// >> set_emergency_election_result
+        /// See [`Pallet::set_emergency_election_result`].
+        /// </summary>
         set_emergency_election_result = 2,
         
+        /// <summary>
+        /// >> submit
+        /// See [`Pallet::submit`].
+        /// </summary>
         submit = 3,
         
+        /// <summary>
+        /// >> governance_fallback
+        /// See [`Pallet::governance_fallback`].
+        /// </summary>
         governance_fallback = 4,
     }
     

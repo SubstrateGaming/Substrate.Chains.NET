@@ -27,161 +27,47 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v
         /// <summary>
         /// >> para_id
         /// </summary>
-        private Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id _paraId;
-        
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id ParaId { get; set; }
         /// <summary>
         /// >> relay_parent
         /// </summary>
-        private Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256 _relayParent;
-        
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256 RelayParent { get; set; }
         /// <summary>
         /// >> collator
         /// </summary>
-        private Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.collator_app.Public _collator;
-        
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.collator_app.Public Collator { get; set; }
         /// <summary>
         /// >> persisted_validation_data_hash
         /// </summary>
-        private Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256 _persistedValidationDataHash;
-        
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256 PersistedValidationDataHash { get; set; }
         /// <summary>
         /// >> pov_hash
         /// </summary>
-        private Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256 _povHash;
-        
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256 PovHash { get; set; }
         /// <summary>
         /// >> erasure_root
         /// </summary>
-        private Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256 _erasureRoot;
-        
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256 ErasureRoot { get; set; }
         /// <summary>
         /// >> signature
         /// </summary>
-        private Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.collator_app.Signature _signature;
-        
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.collator_app.Signature Signature { get; set; }
         /// <summary>
         /// >> para_head
         /// </summary>
-        private Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256 _paraHead;
-        
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256 ParaHead { get; set; }
         /// <summary>
         /// >> validation_code_hash
         /// </summary>
-        private Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash _validationCodeHash;
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash ValidationCodeHash { get; set; }
         
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id ParaId
-        {
-            get
-            {
-                return this._paraId;
-            }
-            set
-            {
-                this._paraId = value;
-            }
-        }
-        
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256 RelayParent
-        {
-            get
-            {
-                return this._relayParent;
-            }
-            set
-            {
-                this._relayParent = value;
-            }
-        }
-        
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.collator_app.Public Collator
-        {
-            get
-            {
-                return this._collator;
-            }
-            set
-            {
-                this._collator = value;
-            }
-        }
-        
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256 PersistedValidationDataHash
-        {
-            get
-            {
-                return this._persistedValidationDataHash;
-            }
-            set
-            {
-                this._persistedValidationDataHash = value;
-            }
-        }
-        
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256 PovHash
-        {
-            get
-            {
-                return this._povHash;
-            }
-            set
-            {
-                this._povHash = value;
-            }
-        }
-        
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256 ErasureRoot
-        {
-            get
-            {
-                return this._erasureRoot;
-            }
-            set
-            {
-                this._erasureRoot = value;
-            }
-        }
-        
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.collator_app.Signature Signature
-        {
-            get
-            {
-                return this._signature;
-            }
-            set
-            {
-                this._signature = value;
-            }
-        }
-        
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256 ParaHead
-        {
-            get
-            {
-                return this._paraHead;
-            }
-            set
-            {
-                this._paraHead = value;
-            }
-        }
-        
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash ValidationCodeHash
-        {
-            get
-            {
-                return this._validationCodeHash;
-            }
-            set
-            {
-                this._validationCodeHash = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "CandidateDescriptor";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -197,6 +83,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

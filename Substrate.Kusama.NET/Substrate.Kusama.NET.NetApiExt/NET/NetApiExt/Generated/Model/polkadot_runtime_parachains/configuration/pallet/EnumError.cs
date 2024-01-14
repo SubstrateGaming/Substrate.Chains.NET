@@ -15,9 +15,17 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parach
 {
     
     
+    /// <summary>
+    /// >> Error
+    /// The `Error` enum of this pallet.
+    /// </summary>
     public enum Error
     {
         
+        /// <summary>
+        /// >> InvalidNewValue
+        /// The new value for a configuration parameter is invalid.
+        /// </summary>
         InvalidNewValue = 0,
     }
     

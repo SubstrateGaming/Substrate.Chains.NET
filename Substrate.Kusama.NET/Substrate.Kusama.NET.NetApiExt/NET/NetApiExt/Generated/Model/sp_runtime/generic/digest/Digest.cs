@@ -27,25 +27,15 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.generic.dige
         /// <summary>
         /// >> logs
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.generic.digest.EnumDigestItem> _logs;
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.generic.digest.EnumDigestItem> Logs { get; set; }
         
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.generic.digest.EnumDigestItem> Logs
-        {
-            get
-            {
-                return this._logs;
-            }
-            set
-            {
-                this._logs = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "Digest";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -53,6 +43,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.generic.dige
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

@@ -27,59 +27,23 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society
         /// <summary>
         /// >> who
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 _who;
-        
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 Who { get; set; }
         /// <summary>
         /// >> kind
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.EnumBidKind _kind;
-        
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.EnumBidKind Kind { get; set; }
         /// <summary>
         /// >> value
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U128 _value;
+        public Substrate.NetApi.Model.Types.Primitive.U128 Value { get; set; }
         
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 Who
-        {
-            get
-            {
-                return this._who;
-            }
-            set
-            {
-                this._who = value;
-            }
-        }
-        
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.EnumBidKind Kind
-        {
-            get
-            {
-                return this._kind;
-            }
-            set
-            {
-                this._kind = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U128 Value
-        {
-            get
-            {
-                return this._value;
-            }
-            set
-            {
-                this._value = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "Bid";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -89,6 +53,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

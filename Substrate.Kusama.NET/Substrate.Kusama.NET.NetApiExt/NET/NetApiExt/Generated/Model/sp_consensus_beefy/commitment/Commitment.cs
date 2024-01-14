@@ -27,59 +27,23 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_beefy.comm
         /// <summary>
         /// >> payload
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_beefy.payload.Payload _payload;
-        
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_beefy.payload.Payload Payload { get; set; }
         /// <summary>
         /// >> block_number
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _blockNumber;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 BlockNumber { get; set; }
         /// <summary>
         /// >> validator_set_id
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U64 _validatorSetId;
+        public Substrate.NetApi.Model.Types.Primitive.U64 ValidatorSetId { get; set; }
         
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_beefy.payload.Payload Payload
-        {
-            get
-            {
-                return this._payload;
-            }
-            set
-            {
-                this._payload = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 BlockNumber
-        {
-            get
-            {
-                return this._blockNumber;
-            }
-            set
-            {
-                this._blockNumber = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U64 ValidatorSetId
-        {
-            get
-            {
-                return this._validatorSetId;
-            }
-            set
-            {
-                this._validatorSetId = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "Commitment";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -89,6 +53,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_beefy.comm
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

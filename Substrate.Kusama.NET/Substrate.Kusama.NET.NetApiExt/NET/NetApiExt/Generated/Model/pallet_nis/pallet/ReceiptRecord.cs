@@ -27,59 +27,23 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nis.pallet
         /// <summary>
         /// >> proportion
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perquintill _proportion;
-        
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perquintill Proportion { get; set; }
         /// <summary>
         /// >> owner
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U128>> _owner;
-        
+        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U128>> Owner { get; set; }
         /// <summary>
         /// >> expiry
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _expiry;
+        public Substrate.NetApi.Model.Types.Primitive.U32 Expiry { get; set; }
         
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perquintill Proportion
-        {
-            get
-            {
-                return this._proportion;
-            }
-            set
-            {
-                this._proportion = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U128>> Owner
-        {
-            get
-            {
-                return this._owner;
-            }
-            set
-            {
-                this._owner = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 Expiry
-        {
-            get
-            {
-                return this._expiry;
-            }
-            set
-            {
-                this._expiry = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "ReceiptRecord";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -89,6 +53,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nis.pallet
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

@@ -15,19 +15,40 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_referenda.types
 {
     
     
+    /// <summary>
+    /// >> ReferendumInfo
+    /// </summary>
     public enum ReferendumInfo
     {
         
+        /// <summary>
+        /// >> Ongoing
+        /// </summary>
         Ongoing = 0,
         
+        /// <summary>
+        /// >> Approved
+        /// </summary>
         Approved = 1,
         
+        /// <summary>
+        /// >> Rejected
+        /// </summary>
         Rejected = 2,
         
+        /// <summary>
+        /// >> Cancelled
+        /// </summary>
         Cancelled = 3,
         
+        /// <summary>
+        /// >> TimedOut
+        /// </summary>
         TimedOut = 4,
         
+        /// <summary>
+        /// >> Killed
+        /// </summary>
         Killed = 5,
     }
     

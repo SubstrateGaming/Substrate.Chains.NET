@@ -21,12 +21,18 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> RegistrarStorage
+    /// </summary>
     public sealed class RegistrarStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> RegistrarStorage Constructor
+        /// </summary>
         public RegistrarStorage(SubstrateClientExt client)
         {
             this._client = client;
@@ -135,6 +141,9 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> RegistrarCalls
+    /// </summary>
     public sealed class RegistrarCalls
     {
         
@@ -246,6 +255,9 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> RegistrarConstants
+    /// </summary>
     public sealed class RegistrarConstants
     {
         
@@ -273,6 +285,9 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> RegistrarErrors
+    /// </summary>
     public enum RegistrarErrors
     {
         

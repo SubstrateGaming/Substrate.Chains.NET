@@ -21,12 +21,18 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> ConvictionVotingStorage
+    /// </summary>
     public sealed class ConvictionVotingStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> ConvictionVotingStorage Constructor
+        /// </summary>
         public ConvictionVotingStorage(SubstrateClientExt client)
         {
             this._client = client;
@@ -107,6 +113,9 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> ConvictionVotingCalls
+    /// </summary>
     public sealed class ConvictionVotingCalls
     {
         
@@ -185,6 +194,9 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> ConvictionVotingConstants
+    /// </summary>
     public sealed class ConvictionVotingConstants
     {
         
@@ -217,6 +229,9 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> ConvictionVotingErrors
+    /// </summary>
     public enum ConvictionVotingErrors
     {
         

@@ -27,59 +27,23 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_staking
         /// <summary>
         /// >> targets
         /// </summary>
-        private Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17 _targets;
-        
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17 Targets { get; set; }
         /// <summary>
         /// >> submitted_in
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _submittedIn;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 SubmittedIn { get; set; }
         /// <summary>
         /// >> suppressed
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.Bool _suppressed;
+        public Substrate.NetApi.Model.Types.Primitive.Bool Suppressed { get; set; }
         
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17 Targets
-        {
-            get
-            {
-                return this._targets;
-            }
-            set
-            {
-                this._targets = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 SubmittedIn
-        {
-            get
-            {
-                return this._submittedIn;
-            }
-            set
-            {
-                this._submittedIn = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.Bool Suppressed
-        {
-            get
-            {
-                return this._suppressed;
-            }
-            set
-            {
-                this._suppressed = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "Nominations";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -89,6 +53,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_staking
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

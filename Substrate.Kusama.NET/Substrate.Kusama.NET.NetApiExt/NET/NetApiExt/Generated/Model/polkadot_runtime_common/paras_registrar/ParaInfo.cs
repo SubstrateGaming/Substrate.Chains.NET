@@ -27,59 +27,23 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_common
         /// <summary>
         /// >> manager
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 _manager;
-        
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 Manager { get; set; }
         /// <summary>
         /// >> deposit
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U128 _deposit;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U128 Deposit { get; set; }
         /// <summary>
         /// >> locked
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.Bool> _locked;
+        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.Bool> Locked { get; set; }
         
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 Manager
-        {
-            get
-            {
-                return this._manager;
-            }
-            set
-            {
-                this._manager = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U128 Deposit
-        {
-            get
-            {
-                return this._deposit;
-            }
-            set
-            {
-                this._deposit = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.Bool> Locked
-        {
-            get
-            {
-                return this._locked;
-            }
-            set
-            {
-                this._locked = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "ParaInfo";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -89,6 +53,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_common
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

@@ -15,21 +15,45 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.
 {
     
     
+    /// <summary>
+    /// >> ExecutorParam
+    /// </summary>
     public enum ExecutorParam
     {
         
+        /// <summary>
+        /// >> MaxMemoryPages
+        /// </summary>
         MaxMemoryPages = 1,
         
+        /// <summary>
+        /// >> StackLogicalMax
+        /// </summary>
         StackLogicalMax = 2,
         
+        /// <summary>
+        /// >> StackNativeMax
+        /// </summary>
         StackNativeMax = 3,
         
+        /// <summary>
+        /// >> PrecheckingMaxMemory
+        /// </summary>
         PrecheckingMaxMemory = 4,
         
+        /// <summary>
+        /// >> PvfPrepTimeout
+        /// </summary>
         PvfPrepTimeout = 5,
         
+        /// <summary>
+        /// >> PvfExecTimeout
+        /// </summary>
         PvfExecTimeout = 6,
         
+        /// <summary>
+        /// >> WasmExtBulkMemory
+        /// </summary>
         WasmExtBulkMemory = 7,
     }
     

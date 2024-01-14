@@ -15,19 +15,48 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_para
 {
     
     
+    /// <summary>
+    /// >> Error
+    /// The `Error` enum of this pallet.
+    /// </summary>
     public enum Error
     {
         
+        /// <summary>
+        /// >> InvalidKeyOwnershipProof
+        /// The key ownership proof is invalid.
+        /// </summary>
         InvalidKeyOwnershipProof = 0,
         
+        /// <summary>
+        /// >> InvalidSessionIndex
+        /// The session index is too old or invalid.
+        /// </summary>
         InvalidSessionIndex = 1,
         
+        /// <summary>
+        /// >> InvalidCandidateHash
+        /// The candidate hash is invalid.
+        /// </summary>
         InvalidCandidateHash = 2,
         
+        /// <summary>
+        /// >> InvalidValidatorIndex
+        /// There is no pending slash for the given validator index and time
+        /// slot.
+        /// </summary>
         InvalidValidatorIndex = 3,
         
+        /// <summary>
+        /// >> ValidatorIndexIdMismatch
+        /// The validator index does not match the validator id.
+        /// </summary>
         ValidatorIndexIdMismatch = 4,
         
+        /// <summary>
+        /// >> DuplicateSlashingReport
+        /// The given slashing report is valid but already previously reported.
+        /// </summary>
         DuplicateSlashingReport = 5,
     }
     

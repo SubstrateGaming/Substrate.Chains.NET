@@ -27,42 +27,19 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.frame_support.dispatc
         /// <summary>
         /// >> actual_weight
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight> _actualWeight;
-        
+        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight> ActualWeight { get; set; }
         /// <summary>
         /// >> pays_fee
         /// </summary>
-        private Substrate.Polkadot.NET.NetApiExt.Generated.Model.frame_support.dispatch.EnumPays _paysFee;
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.frame_support.dispatch.EnumPays PaysFee { get; set; }
         
-        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight> ActualWeight
-        {
-            get
-            {
-                return this._actualWeight;
-            }
-            set
-            {
-                this._actualWeight = value;
-            }
-        }
-        
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.frame_support.dispatch.EnumPays PaysFee
-        {
-            get
-            {
-                return this._paysFee;
-            }
-            set
-            {
-                this._paysFee = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "PostDispatchInfo";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -71,6 +48,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.frame_support.dispatc
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

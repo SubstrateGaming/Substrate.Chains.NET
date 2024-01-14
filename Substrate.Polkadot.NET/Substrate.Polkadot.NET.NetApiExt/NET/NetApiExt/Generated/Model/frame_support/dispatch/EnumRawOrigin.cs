@@ -15,13 +15,25 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.frame_support.dispatc
 {
     
     
+    /// <summary>
+    /// >> RawOrigin
+    /// </summary>
     public enum RawOrigin
     {
         
+        /// <summary>
+        /// >> Root
+        /// </summary>
         Root = 0,
         
+        /// <summary>
+        /// >> Signed
+        /// </summary>
         Signed = 1,
         
+        /// <summary>
+        /// >> None
+        /// </summary>
         None = 2,
     }
     

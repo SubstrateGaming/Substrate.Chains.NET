@@ -21,18 +21,27 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> UtilityStorage
+    /// </summary>
     public sealed class UtilityStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> UtilityStorage Constructor
+        /// </summary>
         public UtilityStorage(SubstrateClientExt client)
         {
             this._client = client;
         }
     }
     
+    /// <summary>
+    /// >> UtilityCalls
+    /// </summary>
     public sealed class UtilityCalls
     {
         
@@ -106,6 +115,9 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> UtilityConstants
+    /// </summary>
     public sealed class UtilityConstants
     {
         
@@ -121,6 +133,9 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> UtilityErrors
+    /// </summary>
     public enum UtilityErrors
     {
         

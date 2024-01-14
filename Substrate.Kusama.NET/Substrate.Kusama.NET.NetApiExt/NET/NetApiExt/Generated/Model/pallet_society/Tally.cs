@@ -27,42 +27,19 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society
         /// <summary>
         /// >> approvals
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _approvals;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 Approvals { get; set; }
         /// <summary>
         /// >> rejections
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _rejections;
+        public Substrate.NetApi.Model.Types.Primitive.U32 Rejections { get; set; }
         
-        public Substrate.NetApi.Model.Types.Primitive.U32 Approvals
-        {
-            get
-            {
-                return this._approvals;
-            }
-            set
-            {
-                this._approvals = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 Rejections
-        {
-            get
-            {
-                return this._rejections;
-            }
-            set
-            {
-                this._rejections = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "Tally";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -71,6 +48,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

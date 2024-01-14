@@ -21,12 +21,18 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> TransactionPaymentStorage
+    /// </summary>
     public sealed class TransactionPaymentStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> TransactionPaymentStorage Constructor
+        /// </summary>
         public TransactionPaymentStorage(SubstrateClientExt client)
         {
             this._client = client;
@@ -89,10 +95,16 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> TransactionPaymentCalls
+    /// </summary>
     public sealed class TransactionPaymentCalls
     {
     }
     
+    /// <summary>
+    /// >> TransactionPaymentConstants
+    /// </summary>
     public sealed class TransactionPaymentConstants
     {
         

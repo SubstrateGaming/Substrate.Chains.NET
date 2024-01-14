@@ -27,93 +27,31 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_nomination_poo
         /// <summary>
         /// >> last_recorded_reward_counter
         /// </summary>
-        private Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedU128 _lastRecordedRewardCounter;
-        
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedU128 LastRecordedRewardCounter { get; set; }
         /// <summary>
         /// >> last_recorded_total_payouts
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U128 _lastRecordedTotalPayouts;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U128 LastRecordedTotalPayouts { get; set; }
         /// <summary>
         /// >> total_rewards_claimed
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U128 _totalRewardsClaimed;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U128 TotalRewardsClaimed { get; set; }
         /// <summary>
         /// >> total_commission_pending
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U128 _totalCommissionPending;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U128 TotalCommissionPending { get; set; }
         /// <summary>
         /// >> total_commission_claimed
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U128 _totalCommissionClaimed;
+        public Substrate.NetApi.Model.Types.Primitive.U128 TotalCommissionClaimed { get; set; }
         
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedU128 LastRecordedRewardCounter
-        {
-            get
-            {
-                return this._lastRecordedRewardCounter;
-            }
-            set
-            {
-                this._lastRecordedRewardCounter = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U128 LastRecordedTotalPayouts
-        {
-            get
-            {
-                return this._lastRecordedTotalPayouts;
-            }
-            set
-            {
-                this._lastRecordedTotalPayouts = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U128 TotalRewardsClaimed
-        {
-            get
-            {
-                return this._totalRewardsClaimed;
-            }
-            set
-            {
-                this._totalRewardsClaimed = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U128 TotalCommissionPending
-        {
-            get
-            {
-                return this._totalCommissionPending;
-            }
-            set
-            {
-                this._totalCommissionPending = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U128 TotalCommissionClaimed
-        {
-            get
-            {
-                return this._totalCommissionClaimed;
-            }
-            set
-            {
-                this._totalCommissionClaimed = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "RewardPool";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -125,6 +63,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_nomination_poo
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

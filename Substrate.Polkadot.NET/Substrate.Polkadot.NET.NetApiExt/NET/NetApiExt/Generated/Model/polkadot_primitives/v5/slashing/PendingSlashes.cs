@@ -27,42 +27,19 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v
         /// <summary>
         /// >> keys
         /// </summary>
-        private Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base.BTreeMapT5 _keys;
-        
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base.BTreeMapT5 Keys { get; set; }
         /// <summary>
         /// >> kind
         /// </summary>
-        private Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.slashing.EnumSlashingOffenceKind _kind;
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.slashing.EnumSlashingOffenceKind Kind { get; set; }
         
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base.BTreeMapT5 Keys
-        {
-            get
-            {
-                return this._keys;
-            }
-            set
-            {
-                this._keys = value;
-            }
-        }
-        
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.slashing.EnumSlashingOffenceKind Kind
-        {
-            get
-            {
-                return this._kind;
-            }
-            set
-            {
-                this._kind = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "PendingSlashes";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -71,6 +48,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

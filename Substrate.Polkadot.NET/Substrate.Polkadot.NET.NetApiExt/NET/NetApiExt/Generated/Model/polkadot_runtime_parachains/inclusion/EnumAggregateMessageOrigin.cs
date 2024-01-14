@@ -15,9 +15,15 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_para
 {
     
     
+    /// <summary>
+    /// >> AggregateMessageOrigin
+    /// </summary>
     public enum AggregateMessageOrigin
     {
         
+        /// <summary>
+        /// >> Ump
+        /// </summary>
         Ump = 0,
     }
     

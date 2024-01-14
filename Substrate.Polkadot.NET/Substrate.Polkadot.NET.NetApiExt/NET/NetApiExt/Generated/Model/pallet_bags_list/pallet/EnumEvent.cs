@@ -15,11 +15,23 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_bags_list.pall
 {
     
     
+    /// <summary>
+    /// >> Event
+    /// The `Event` enum of this pallet
+    /// </summary>
     public enum Event
     {
         
+        /// <summary>
+        /// >> Rebagged
+        /// Moved an account from one bag to another.
+        /// </summary>
         Rebagged = 0,
         
+        /// <summary>
+        /// >> ScoreUpdated
+        /// Updated the score of some account to the given amount.
+        /// </summary>
         ScoreUpdated = 1,
     }
     

@@ -15,11 +15,20 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parach
 {
     
     
+    /// <summary>
+    /// >> DisputeLocation
+    /// </summary>
     public enum DisputeLocation
     {
         
+        /// <summary>
+        /// >> Local
+        /// </summary>
         Local = 0,
         
+        /// <summary>
+        /// >> Remote
+        /// </summary>
         Remote = 1,
     }
     

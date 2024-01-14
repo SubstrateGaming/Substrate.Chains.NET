@@ -15,11 +15,23 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_comm
 {
     
     
+    /// <summary>
+    /// >> Error
+    /// The `Error` enum of this pallet.
+    /// </summary>
     public enum Error
     {
         
+        /// <summary>
+        /// >> ParaNotOnboarding
+        /// The parachain ID is not onboarding.
+        /// </summary>
         ParaNotOnboarding = 0,
         
+        /// <summary>
+        /// >> LeaseError
+        /// There was an error with the lease.
+        /// </summary>
         LeaseError = 1,
     }
     

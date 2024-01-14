@@ -21,12 +21,18 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> BalancesStorage
+    /// </summary>
     public sealed class BalancesStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> BalancesStorage Constructor
+        /// </summary>
         public BalancesStorage(SubstrateClientExt client)
         {
             this._client = client;
@@ -307,6 +313,9 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> BalancesCalls
+    /// </summary>
     public sealed class BalancesCalls
     {
         
@@ -420,6 +429,9 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> BalancesConstants
+    /// </summary>
     public sealed class BalancesConstants
     {
         
@@ -487,6 +499,9 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> BalancesErrors
+    /// </summary>
     public enum BalancesErrors
     {
         

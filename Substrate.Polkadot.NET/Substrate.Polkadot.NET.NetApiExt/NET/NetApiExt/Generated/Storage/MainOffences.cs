@@ -21,12 +21,18 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> OffencesStorage
+    /// </summary>
     public sealed class OffencesStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> OffencesStorage Constructor
+        /// </summary>
         public OffencesStorage(SubstrateClientExt client)
         {
             this._client = client;
@@ -100,10 +106,16 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> OffencesCalls
+    /// </summary>
     public sealed class OffencesCalls
     {
     }
     
+    /// <summary>
+    /// >> OffencesConstants
+    /// </summary>
     public sealed class OffencesConstants
     {
     }

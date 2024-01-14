@@ -21,12 +21,18 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> NisStorage
+    /// </summary>
     public sealed class NisStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> NisStorage Constructor
+        /// </summary>
         public NisStorage(SubstrateClientExt client)
         {
             this._client = client;
@@ -418,6 +424,9 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> NisCalls
+    /// </summary>
     public sealed class NisCalls
     {
         
@@ -501,6 +510,9 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> NisConstants
+    /// </summary>
     public sealed class NisConstants
     {
         
@@ -632,6 +644,9 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> NisErrors
+    /// </summary>
     public enum NisErrors
     {
         

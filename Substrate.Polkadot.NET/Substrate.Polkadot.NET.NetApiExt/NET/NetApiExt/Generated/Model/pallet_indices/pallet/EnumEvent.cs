@@ -15,13 +15,29 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_indices.pallet
 {
     
     
+    /// <summary>
+    /// >> Event
+    /// The `Event` enum of this pallet
+    /// </summary>
     public enum Event
     {
         
+        /// <summary>
+        /// >> IndexAssigned
+        /// A account index was assigned.
+        /// </summary>
         IndexAssigned = 0,
         
+        /// <summary>
+        /// >> IndexFreed
+        /// A account index has been freed up (unassigned).
+        /// </summary>
         IndexFreed = 1,
         
+        /// <summary>
+        /// >> IndexFrozen
+        /// A account index has been frozen to its current account ID.
+        /// </summary>
         IndexFrozen = 2,
     }
     

@@ -27,93 +27,31 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.generic.head
         /// <summary>
         /// >> parent_hash
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256 _parentHash;
-        
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256 ParentHash { get; set; }
         /// <summary>
         /// >> number
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32> _number;
-        
+        public Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32> Number { get; set; }
         /// <summary>
         /// >> state_root
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256 _stateRoot;
-        
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256 StateRoot { get; set; }
         /// <summary>
         /// >> extrinsics_root
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256 _extrinsicsRoot;
-        
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256 ExtrinsicsRoot { get; set; }
         /// <summary>
         /// >> digest
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.generic.digest.Digest _digest;
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.generic.digest.Digest Digest { get; set; }
         
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256 ParentHash
-        {
-            get
-            {
-                return this._parentHash;
-            }
-            set
-            {
-                this._parentHash = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32> Number
-        {
-            get
-            {
-                return this._number;
-            }
-            set
-            {
-                this._number = value;
-            }
-        }
-        
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256 StateRoot
-        {
-            get
-            {
-                return this._stateRoot;
-            }
-            set
-            {
-                this._stateRoot = value;
-            }
-        }
-        
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256 ExtrinsicsRoot
-        {
-            get
-            {
-                return this._extrinsicsRoot;
-            }
-            set
-            {
-                this._extrinsicsRoot = value;
-            }
-        }
-        
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.generic.digest.Digest Digest
-        {
-            get
-            {
-                return this._digest;
-            }
-            set
-            {
-                this._digest = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "Header";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -125,6 +63,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.generic.head
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

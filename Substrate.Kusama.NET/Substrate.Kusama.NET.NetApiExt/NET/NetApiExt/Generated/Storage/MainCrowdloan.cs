@@ -21,12 +21,18 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> CrowdloanStorage
+    /// </summary>
     public sealed class CrowdloanStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> CrowdloanStorage Constructor
+        /// </summary>
         public CrowdloanStorage(SubstrateClientExt client)
         {
             this._client = client;
@@ -158,6 +164,9 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> CrowdloanCalls
+    /// </summary>
     public sealed class CrowdloanCalls
     {
         
@@ -276,6 +285,9 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> CrowdloanConstants
+    /// </summary>
     public sealed class CrowdloanConstants
     {
         
@@ -315,6 +327,9 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> CrowdloanErrors
+    /// </summary>
     public enum CrowdloanErrors
     {
         

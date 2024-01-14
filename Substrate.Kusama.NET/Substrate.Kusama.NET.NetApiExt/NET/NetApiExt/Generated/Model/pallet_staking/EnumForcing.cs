@@ -15,15 +15,30 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking
 {
     
     
+    /// <summary>
+    /// >> Forcing
+    /// </summary>
     public enum Forcing
     {
         
+        /// <summary>
+        /// >> NotForcing
+        /// </summary>
         NotForcing = 0,
         
+        /// <summary>
+        /// >> ForceNew
+        /// </summary>
         ForceNew = 1,
         
+        /// <summary>
+        /// >> ForceNone
+        /// </summary>
         ForceNone = 2,
         
+        /// <summary>
+        /// >> ForceAlways
+        /// </summary>
         ForceAlways = 3,
     }
     

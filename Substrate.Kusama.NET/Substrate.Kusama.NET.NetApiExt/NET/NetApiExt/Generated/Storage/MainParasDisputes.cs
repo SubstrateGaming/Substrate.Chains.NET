@@ -21,12 +21,18 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> ParasDisputesStorage
+    /// </summary>
     public sealed class ParasDisputesStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> ParasDisputesStorage Constructor
+        /// </summary>
         public ParasDisputesStorage(SubstrateClientExt client)
         {
             this._client = client;
@@ -207,6 +213,9 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> ParasDisputesCalls
+    /// </summary>
     public sealed class ParasDisputesCalls
     {
         
@@ -221,10 +230,16 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> ParasDisputesConstants
+    /// </summary>
     public sealed class ParasDisputesConstants
     {
     }
     
+    /// <summary>
+    /// >> ParasDisputesErrors
+    /// </summary>
     public enum ParasDisputesErrors
     {
         

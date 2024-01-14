@@ -15,23 +15,59 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parach
 {
     
     
+    /// <summary>
+    /// >> Call
+    /// Contains a variant per dispatchable extrinsic that this pallet has.
+    /// </summary>
     public enum Call
     {
         
+        /// <summary>
+        /// >> hrmp_init_open_channel
+        /// See [`Pallet::hrmp_init_open_channel`].
+        /// </summary>
         hrmp_init_open_channel = 0,
         
+        /// <summary>
+        /// >> hrmp_accept_open_channel
+        /// See [`Pallet::hrmp_accept_open_channel`].
+        /// </summary>
         hrmp_accept_open_channel = 1,
         
+        /// <summary>
+        /// >> hrmp_close_channel
+        /// See [`Pallet::hrmp_close_channel`].
+        /// </summary>
         hrmp_close_channel = 2,
         
+        /// <summary>
+        /// >> force_clean_hrmp
+        /// See [`Pallet::force_clean_hrmp`].
+        /// </summary>
         force_clean_hrmp = 3,
         
+        /// <summary>
+        /// >> force_process_hrmp_open
+        /// See [`Pallet::force_process_hrmp_open`].
+        /// </summary>
         force_process_hrmp_open = 4,
         
+        /// <summary>
+        /// >> force_process_hrmp_close
+        /// See [`Pallet::force_process_hrmp_close`].
+        /// </summary>
         force_process_hrmp_close = 5,
         
+        /// <summary>
+        /// >> hrmp_cancel_open_request
+        /// See [`Pallet::hrmp_cancel_open_request`].
+        /// </summary>
         hrmp_cancel_open_request = 6,
         
+        /// <summary>
+        /// >> force_open_hrmp_channel
+        /// See [`Pallet::force_open_hrmp_channel`].
+        /// </summary>
         force_open_hrmp_channel = 7,
     }
     

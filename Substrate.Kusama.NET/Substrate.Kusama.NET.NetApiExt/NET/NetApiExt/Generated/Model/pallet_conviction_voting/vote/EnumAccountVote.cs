@@ -15,13 +15,25 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_conviction_votin
 {
     
     
+    /// <summary>
+    /// >> AccountVote
+    /// </summary>
     public enum AccountVote
     {
         
+        /// <summary>
+        /// >> Standard
+        /// </summary>
         Standard = 0,
         
+        /// <summary>
+        /// >> Split
+        /// </summary>
         Split = 1,
         
+        /// <summary>
+        /// >> SplitAbstain
+        /// </summary>
         SplitAbstain = 2,
     }
     

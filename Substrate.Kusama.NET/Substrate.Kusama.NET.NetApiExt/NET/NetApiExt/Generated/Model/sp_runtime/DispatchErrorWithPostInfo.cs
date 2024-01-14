@@ -27,42 +27,19 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime
         /// <summary>
         /// >> post_info
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_support.dispatch.PostDispatchInfo _postInfo;
-        
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_support.dispatch.PostDispatchInfo PostInfo { get; set; }
         /// <summary>
         /// >> error
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.EnumDispatchError _error;
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.EnumDispatchError Error { get; set; }
         
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_support.dispatch.PostDispatchInfo PostInfo
-        {
-            get
-            {
-                return this._postInfo;
-            }
-            set
-            {
-                this._postInfo = value;
-            }
-        }
-        
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.EnumDispatchError Error
-        {
-            get
-            {
-                return this._error;
-            }
-            set
-            {
-                this._error = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "DispatchErrorWithPostInfo";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -71,6 +48,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

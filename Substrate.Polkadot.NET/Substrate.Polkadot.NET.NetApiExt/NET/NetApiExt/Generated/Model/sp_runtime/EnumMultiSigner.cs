@@ -15,13 +15,25 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_runtime
 {
     
     
+    /// <summary>
+    /// >> MultiSigner
+    /// </summary>
     public enum MultiSigner
     {
         
+        /// <summary>
+        /// >> Ed25519
+        /// </summary>
         Ed25519 = 0,
         
+        /// <summary>
+        /// >> Sr25519
+        /// </summary>
         Sr25519 = 1,
         
+        /// <summary>
+        /// >> Ecdsa
+        /// </summary>
         Ecdsa = 2,
     }
     

@@ -15,11 +15,20 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society
 {
     
     
+    /// <summary>
+    /// >> VouchingStatus
+    /// </summary>
     public enum VouchingStatus
     {
         
+        /// <summary>
+        /// >> Vouching
+        /// </summary>
         Vouching = 0,
         
+        /// <summary>
+        /// >> Banned
+        /// </summary>
         Banned = 1,
     }
     

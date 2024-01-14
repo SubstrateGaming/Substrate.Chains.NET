@@ -15,17 +15,42 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_proxy.pallet
 {
     
     
+    /// <summary>
+    /// >> Event
+    /// The `Event` enum of this pallet
+    /// </summary>
     public enum Event
     {
         
+        /// <summary>
+        /// >> ProxyExecuted
+        /// A proxy was executed correctly, with the given.
+        /// </summary>
         ProxyExecuted = 0,
         
+        /// <summary>
+        /// >> PureCreated
+        /// A pure account has been created by new proxy with given
+        /// disambiguation index and proxy type.
+        /// </summary>
         PureCreated = 1,
         
+        /// <summary>
+        /// >> Announced
+        /// An announcement was placed to make a call in the future.
+        /// </summary>
         Announced = 2,
         
+        /// <summary>
+        /// >> ProxyAdded
+        /// A proxy was added.
+        /// </summary>
         ProxyAdded = 3,
         
+        /// <summary>
+        /// >> ProxyRemoved
+        /// A proxy was removed.
+        /// </summary>
         ProxyRemoved = 4,
     }
     

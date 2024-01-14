@@ -15,17 +15,35 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_kusama_runtime
 {
     
     
+    /// <summary>
+    /// >> OriginCaller
+    /// </summary>
     public enum OriginCaller
     {
         
+        /// <summary>
+        /// >> system
+        /// </summary>
         system = 0,
         
+        /// <summary>
+        /// >> Origins
+        /// </summary>
         Origins = 43,
         
+        /// <summary>
+        /// >> ParachainsOrigin
+        /// </summary>
         ParachainsOrigin = 50,
         
+        /// <summary>
+        /// >> XcmPallet
+        /// </summary>
         XcmPallet = 99,
         
+        /// <summary>
+        /// >> Void
+        /// </summary>
         Void = 4,
     }
     

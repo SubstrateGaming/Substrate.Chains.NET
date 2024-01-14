@@ -27,59 +27,23 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_election_provi
         /// <summary>
         /// >> supports
         /// </summary>
-        private Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT30 _supports;
-        
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT30 Supports { get; set; }
         /// <summary>
         /// >> score
         /// </summary>
-        private Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_npos_elections.ElectionScore _score;
-        
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_npos_elections.ElectionScore Score { get; set; }
         /// <summary>
         /// >> compute
         /// </summary>
-        private Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_election_provider_multi_phase.EnumElectionCompute _compute;
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_election_provider_multi_phase.EnumElectionCompute Compute { get; set; }
         
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT30 Supports
-        {
-            get
-            {
-                return this._supports;
-            }
-            set
-            {
-                this._supports = value;
-            }
-        }
-        
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_npos_elections.ElectionScore Score
-        {
-            get
-            {
-                return this._score;
-            }
-            set
-            {
-                this._score = value;
-            }
-        }
-        
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_election_provider_multi_phase.EnumElectionCompute Compute
-        {
-            get
-            {
-                return this._compute;
-            }
-            set
-            {
-                this._compute = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "ReadySolution";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -89,6 +53,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_election_provi
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

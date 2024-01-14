@@ -15,19 +15,47 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_state_trie_migra
 {
     
     
+    /// <summary>
+    /// >> Call
+    /// Contains a variant per dispatchable extrinsic that this pallet has.
+    /// </summary>
     public enum Call
     {
         
+        /// <summary>
+        /// >> control_auto_migration
+        /// See [`Pallet::control_auto_migration`].
+        /// </summary>
         control_auto_migration = 0,
         
+        /// <summary>
+        /// >> continue_migrate
+        /// See [`Pallet::continue_migrate`].
+        /// </summary>
         continue_migrate = 1,
         
+        /// <summary>
+        /// >> migrate_custom_top
+        /// See [`Pallet::migrate_custom_top`].
+        /// </summary>
         migrate_custom_top = 2,
         
+        /// <summary>
+        /// >> migrate_custom_child
+        /// See [`Pallet::migrate_custom_child`].
+        /// </summary>
         migrate_custom_child = 3,
         
+        /// <summary>
+        /// >> set_signed_max_limits
+        /// See [`Pallet::set_signed_max_limits`].
+        /// </summary>
         set_signed_max_limits = 4,
         
+        /// <summary>
+        /// >> force_set_progress
+        /// See [`Pallet::force_set_progress`].
+        /// </summary>
         force_set_progress = 5,
     }
     

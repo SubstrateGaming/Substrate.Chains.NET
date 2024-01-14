@@ -15,11 +15,20 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5
 {
     
     
+    /// <summary>
+    /// >> ValidityAttestation
+    /// </summary>
     public enum ValidityAttestation
     {
         
+        /// <summary>
+        /// >> Implicit
+        /// </summary>
         Implicit = 1,
         
+        /// <summary>
+        /// >> Explicit
+        /// </summary>
         Explicit = 2,
     }
     

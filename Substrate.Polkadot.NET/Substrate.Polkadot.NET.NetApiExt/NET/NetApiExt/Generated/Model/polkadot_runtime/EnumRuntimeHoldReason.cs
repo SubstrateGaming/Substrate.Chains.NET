@@ -15,6 +15,9 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime
 {
     
     
+    /// <summary>
+    /// >> RuntimeHoldReason
+    /// </summary>
     public enum RuntimeHoldReason
     {
     }

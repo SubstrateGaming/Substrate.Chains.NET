@@ -27,59 +27,23 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_balances.types
         /// <summary>
         /// >> id
         /// </summary>
-        private Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base.Arr8U8 _id;
-        
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base.Arr8U8 Id { get; set; }
         /// <summary>
         /// >> amount
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U128 _amount;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U128 Amount { get; set; }
         /// <summary>
         /// >> reasons
         /// </summary>
-        private Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_balances.types.EnumReasons _reasons;
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_balances.types.EnumReasons Reasons { get; set; }
         
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base.Arr8U8 Id
-        {
-            get
-            {
-                return this._id;
-            }
-            set
-            {
-                this._id = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U128 Amount
-        {
-            get
-            {
-                return this._amount;
-            }
-            set
-            {
-                this._amount = value;
-            }
-        }
-        
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_balances.types.EnumReasons Reasons
-        {
-            get
-            {
-                return this._reasons;
-            }
-            set
-            {
-                this._reasons = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "BalanceLock";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -89,6 +53,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_balances.types
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

@@ -15,15 +15,35 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_babe.pallet
 {
     
     
+    /// <summary>
+    /// >> Error
+    /// The `Error` enum of this pallet.
+    /// </summary>
     public enum Error
     {
         
+        /// <summary>
+        /// >> InvalidEquivocationProof
+        /// An equivocation proof provided as part of an equivocation report is invalid.
+        /// </summary>
         InvalidEquivocationProof = 0,
         
+        /// <summary>
+        /// >> InvalidKeyOwnershipProof
+        /// A key ownership proof provided as part of an equivocation report is invalid.
+        /// </summary>
         InvalidKeyOwnershipProof = 1,
         
+        /// <summary>
+        /// >> DuplicateOffenceReport
+        /// A given equivocation report is valid but already previously reported.
+        /// </summary>
         DuplicateOffenceReport = 2,
         
+        /// <summary>
+        /// >> InvalidConfiguration
+        /// Submitted configuration is invalid.
+        /// </summary>
         InvalidConfiguration = 3,
     }
     

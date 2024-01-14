@@ -15,27 +15,60 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.v3.junction
 {
     
     
+    /// <summary>
+    /// >> Junction
+    /// </summary>
     public enum Junction
     {
         
+        /// <summary>
+        /// >> Parachain
+        /// </summary>
         Parachain = 0,
         
+        /// <summary>
+        /// >> AccountId32
+        /// </summary>
         AccountId32 = 1,
         
+        /// <summary>
+        /// >> AccountIndex64
+        /// </summary>
         AccountIndex64 = 2,
         
+        /// <summary>
+        /// >> AccountKey20
+        /// </summary>
         AccountKey20 = 3,
         
+        /// <summary>
+        /// >> PalletInstance
+        /// </summary>
         PalletInstance = 4,
         
+        /// <summary>
+        /// >> GeneralIndex
+        /// </summary>
         GeneralIndex = 5,
         
+        /// <summary>
+        /// >> GeneralKey
+        /// </summary>
         GeneralKey = 6,
         
+        /// <summary>
+        /// >> OnlyChild
+        /// </summary>
         OnlyChild = 7,
         
+        /// <summary>
+        /// >> Plurality
+        /// </summary>
         Plurality = 8,
         
+        /// <summary>
+        /// >> GlobalConsensus
+        /// </summary>
         GlobalConsensus = 9,
     }
     

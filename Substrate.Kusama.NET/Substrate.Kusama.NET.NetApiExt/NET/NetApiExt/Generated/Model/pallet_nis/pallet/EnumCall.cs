@@ -15,21 +15,53 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nis.pallet
 {
     
     
+    /// <summary>
+    /// >> Call
+    /// Contains a variant per dispatchable extrinsic that this pallet has.
+    /// </summary>
     public enum Call
     {
         
+        /// <summary>
+        /// >> place_bid
+        /// See [`Pallet::place_bid`].
+        /// </summary>
         place_bid = 0,
         
+        /// <summary>
+        /// >> retract_bid
+        /// See [`Pallet::retract_bid`].
+        /// </summary>
         retract_bid = 1,
         
+        /// <summary>
+        /// >> fund_deficit
+        /// See [`Pallet::fund_deficit`].
+        /// </summary>
         fund_deficit = 2,
         
+        /// <summary>
+        /// >> thaw_private
+        /// See [`Pallet::thaw_private`].
+        /// </summary>
         thaw_private = 3,
         
+        /// <summary>
+        /// >> thaw_communal
+        /// See [`Pallet::thaw_communal`].
+        /// </summary>
         thaw_communal = 4,
         
+        /// <summary>
+        /// >> communify
+        /// See [`Pallet::communify`].
+        /// </summary>
         communify = 5,
         
+        /// <summary>
+        /// >> privatize
+        /// See [`Pallet::privatize`].
+        /// </summary>
         privatize = 6,
     }
     

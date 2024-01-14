@@ -15,11 +15,20 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_nomination_poo
 {
     
     
+    /// <summary>
+    /// >> BondExtra
+    /// </summary>
     public enum BondExtra
     {
         
+        /// <summary>
+        /// >> FreeBalance
+        /// </summary>
         FreeBalance = 0,
         
+        /// <summary>
+        /// >> Rewards
+        /// </summary>
         Rewards = 1,
     }
     

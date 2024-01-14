@@ -27,59 +27,23 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types
         /// <summary>
         /// >> judgements
         /// </summary>
-        private Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT23 _judgements;
-        
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT23 Judgements { get; set; }
         /// <summary>
         /// >> deposit
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U128 _deposit;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U128 Deposit { get; set; }
         /// <summary>
         /// >> info
         /// </summary>
-        private Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types.IdentityInfo _info;
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types.IdentityInfo Info { get; set; }
         
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT23 Judgements
-        {
-            get
-            {
-                return this._judgements;
-            }
-            set
-            {
-                this._judgements = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U128 Deposit
-        {
-            get
-            {
-                return this._deposit;
-            }
-            set
-            {
-                this._deposit = value;
-            }
-        }
-        
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types.IdentityInfo Info
-        {
-            get
-            {
-                return this._info;
-            }
-            set
-            {
-                this._info = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "Registration";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -89,6 +53,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

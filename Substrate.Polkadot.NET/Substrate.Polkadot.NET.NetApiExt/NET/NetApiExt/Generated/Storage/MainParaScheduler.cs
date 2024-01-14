@@ -21,12 +21,18 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> ParaSchedulerStorage
+    /// </summary>
     public sealed class ParaSchedulerStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> ParaSchedulerStorage Constructor
+        /// </summary>
         public ParaSchedulerStorage(SubstrateClientExt client)
         {
             this._client = client;
@@ -199,10 +205,16 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> ParaSchedulerCalls
+    /// </summary>
     public sealed class ParaSchedulerCalls
     {
     }
     
+    /// <summary>
+    /// >> ParaSchedulerConstants
+    /// </summary>
     public sealed class ParaSchedulerConstants
     {
     }

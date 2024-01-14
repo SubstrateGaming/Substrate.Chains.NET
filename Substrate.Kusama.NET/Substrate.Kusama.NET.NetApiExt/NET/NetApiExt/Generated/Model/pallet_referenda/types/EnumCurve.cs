@@ -15,13 +15,25 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_referenda.types
 {
     
     
+    /// <summary>
+    /// >> Curve
+    /// </summary>
     public enum Curve
     {
         
+        /// <summary>
+        /// >> LinearDecreasing
+        /// </summary>
         LinearDecreasing = 0,
         
+        /// <summary>
+        /// >> SteppedDecreasing
+        /// </summary>
         SteppedDecreasing = 1,
         
+        /// <summary>
+        /// >> Reciprocal
+        /// </summary>
         Reciprocal = 2,
     }
     

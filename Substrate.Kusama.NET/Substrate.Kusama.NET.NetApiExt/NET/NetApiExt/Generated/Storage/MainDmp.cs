@@ -21,12 +21,18 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> DmpStorage
+    /// </summary>
     public sealed class DmpStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> DmpStorage Constructor
+        /// </summary>
         public DmpStorage(SubstrateClientExt client)
         {
             this._client = client;
@@ -144,10 +150,16 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> DmpCalls
+    /// </summary>
     public sealed class DmpCalls
     {
     }
     
+    /// <summary>
+    /// >> DmpConstants
+    /// </summary>
     public sealed class DmpConstants
     {
     }

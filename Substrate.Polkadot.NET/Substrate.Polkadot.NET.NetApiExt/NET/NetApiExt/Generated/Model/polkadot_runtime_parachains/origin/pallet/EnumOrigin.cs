@@ -15,9 +15,15 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_para
 {
     
     
+    /// <summary>
+    /// >> Origin
+    /// </summary>
     public enum Origin
     {
         
+        /// <summary>
+        /// >> Parachain
+        /// </summary>
         Parachain = 0,
     }
     

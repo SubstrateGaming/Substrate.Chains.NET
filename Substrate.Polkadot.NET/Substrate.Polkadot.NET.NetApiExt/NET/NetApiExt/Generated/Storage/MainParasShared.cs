@@ -21,12 +21,18 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> ParasSharedStorage
+    /// </summary>
     public sealed class ParasSharedStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> ParasSharedStorage Constructor
+        /// </summary>
         public ParasSharedStorage(SubstrateClientExt client)
         {
             this._client = client;
@@ -157,10 +163,16 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> ParasSharedCalls
+    /// </summary>
     public sealed class ParasSharedCalls
     {
     }
     
+    /// <summary>
+    /// >> ParasSharedConstants
+    /// </summary>
     public sealed class ParasSharedConstants
     {
     }

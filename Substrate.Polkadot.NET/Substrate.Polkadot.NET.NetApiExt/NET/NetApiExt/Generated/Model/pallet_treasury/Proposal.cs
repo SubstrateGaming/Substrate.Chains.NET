@@ -27,76 +27,27 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_treasury
         /// <summary>
         /// >> proposer
         /// </summary>
-        private Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 _proposer;
-        
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 Proposer { get; set; }
         /// <summary>
         /// >> value
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U128 _value;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U128 Value { get; set; }
         /// <summary>
         /// >> beneficiary
         /// </summary>
-        private Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 _beneficiary;
-        
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 Beneficiary { get; set; }
         /// <summary>
         /// >> bond
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U128 _bond;
+        public Substrate.NetApi.Model.Types.Primitive.U128 Bond { get; set; }
         
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 Proposer
-        {
-            get
-            {
-                return this._proposer;
-            }
-            set
-            {
-                this._proposer = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U128 Value
-        {
-            get
-            {
-                return this._value;
-            }
-            set
-            {
-                this._value = value;
-            }
-        }
-        
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 Beneficiary
-        {
-            get
-            {
-                return this._beneficiary;
-            }
-            set
-            {
-                this._beneficiary = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U128 Bond
-        {
-            get
-            {
-                return this._bond;
-            }
-            set
-            {
-                this._bond = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "Proposal";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -107,6 +58,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_treasury
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

@@ -15,19 +15,40 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_bounties
 {
     
     
+    /// <summary>
+    /// >> BountyStatus
+    /// </summary>
     public enum BountyStatus
     {
         
+        /// <summary>
+        /// >> Proposed
+        /// </summary>
         Proposed = 0,
         
+        /// <summary>
+        /// >> Approved
+        /// </summary>
         Approved = 1,
         
+        /// <summary>
+        /// >> Funded
+        /// </summary>
         Funded = 2,
         
+        /// <summary>
+        /// >> CuratorProposed
+        /// </summary>
         CuratorProposed = 3,
         
+        /// <summary>
+        /// >> Active
+        /// </summary>
         Active = 4,
         
+        /// <summary>
+        /// >> PendingPayout
+        /// </summary>
         PendingPayout = 5,
     }
     

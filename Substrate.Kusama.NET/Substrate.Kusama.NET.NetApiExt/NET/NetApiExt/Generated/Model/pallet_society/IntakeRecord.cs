@@ -27,59 +27,23 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society
         /// <summary>
         /// >> who
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 _who;
-        
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 Who { get; set; }
         /// <summary>
         /// >> bid
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U128 _bid;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U128 Bid { get; set; }
         /// <summary>
         /// >> round
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _round;
+        public Substrate.NetApi.Model.Types.Primitive.U32 Round { get; set; }
         
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 Who
-        {
-            get
-            {
-                return this._who;
-            }
-            set
-            {
-                this._who = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U128 Bid
-        {
-            get
-            {
-                return this._bid;
-            }
-            set
-            {
-                this._bid = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 Round
-        {
-            get
-            {
-                return this._round;
-            }
-            set
-            {
-                this._round = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "IntakeRecord";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -89,6 +53,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

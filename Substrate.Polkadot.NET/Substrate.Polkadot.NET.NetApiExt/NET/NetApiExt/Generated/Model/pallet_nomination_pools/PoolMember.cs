@@ -27,76 +27,27 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_nomination_poo
         /// <summary>
         /// >> pool_id
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _poolId;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 PoolId { get; set; }
         /// <summary>
         /// >> points
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U128 _points;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U128 Points { get; set; }
         /// <summary>
         /// >> last_recorded_reward_counter
         /// </summary>
-        private Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedU128 _lastRecordedRewardCounter;
-        
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedU128 LastRecordedRewardCounter { get; set; }
         /// <summary>
         /// >> unbonding_eras
         /// </summary>
-        private Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_map.BoundedBTreeMapT1 _unbondingEras;
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_map.BoundedBTreeMapT1 UnbondingEras { get; set; }
         
-        public Substrate.NetApi.Model.Types.Primitive.U32 PoolId
-        {
-            get
-            {
-                return this._poolId;
-            }
-            set
-            {
-                this._poolId = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U128 Points
-        {
-            get
-            {
-                return this._points;
-            }
-            set
-            {
-                this._points = value;
-            }
-        }
-        
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedU128 LastRecordedRewardCounter
-        {
-            get
-            {
-                return this._lastRecordedRewardCounter;
-            }
-            set
-            {
-                this._lastRecordedRewardCounter = value;
-            }
-        }
-        
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_map.BoundedBTreeMapT1 UnbondingEras
-        {
-            get
-            {
-                return this._unbondingEras;
-            }
-            set
-            {
-                this._unbondingEras = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "PoolMember";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -107,6 +58,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_nomination_poo
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

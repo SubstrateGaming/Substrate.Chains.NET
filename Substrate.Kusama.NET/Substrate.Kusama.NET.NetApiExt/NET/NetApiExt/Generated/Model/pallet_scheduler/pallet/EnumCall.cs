@@ -15,19 +15,47 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_scheduler.pallet
 {
     
     
+    /// <summary>
+    /// >> Call
+    /// Contains a variant per dispatchable extrinsic that this pallet has.
+    /// </summary>
     public enum Call
     {
         
+        /// <summary>
+        /// >> schedule
+        /// See [`Pallet::schedule`].
+        /// </summary>
         schedule = 0,
         
+        /// <summary>
+        /// >> cancel
+        /// See [`Pallet::cancel`].
+        /// </summary>
         cancel = 1,
         
+        /// <summary>
+        /// >> schedule_named
+        /// See [`Pallet::schedule_named`].
+        /// </summary>
         schedule_named = 2,
         
+        /// <summary>
+        /// >> cancel_named
+        /// See [`Pallet::cancel_named`].
+        /// </summary>
         cancel_named = 3,
         
+        /// <summary>
+        /// >> schedule_after
+        /// See [`Pallet::schedule_after`].
+        /// </summary>
         schedule_after = 4,
         
+        /// <summary>
+        /// >> schedule_named_after
+        /// See [`Pallet::schedule_named_after`].
+        /// </summary>
         schedule_named_after = 5,
     }
     

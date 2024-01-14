@@ -27,110 +27,35 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_message_queue
         /// <summary>
         /// >> begin
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _begin;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 Begin { get; set; }
         /// <summary>
         /// >> end
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _end;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 End { get; set; }
         /// <summary>
         /// >> count
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _count;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 Count { get; set; }
         /// <summary>
         /// >> ready_neighbours
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_message_queue.Neighbours> _readyNeighbours;
-        
+        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_message_queue.Neighbours> ReadyNeighbours { get; set; }
         /// <summary>
         /// >> message_count
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U64 _messageCount;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U64 MessageCount { get; set; }
         /// <summary>
         /// >> size
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U64 _size;
+        public Substrate.NetApi.Model.Types.Primitive.U64 Size { get; set; }
         
-        public Substrate.NetApi.Model.Types.Primitive.U32 Begin
-        {
-            get
-            {
-                return this._begin;
-            }
-            set
-            {
-                this._begin = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 End
-        {
-            get
-            {
-                return this._end;
-            }
-            set
-            {
-                this._end = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 Count
-        {
-            get
-            {
-                return this._count;
-            }
-            set
-            {
-                this._count = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_message_queue.Neighbours> ReadyNeighbours
-        {
-            get
-            {
-                return this._readyNeighbours;
-            }
-            set
-            {
-                this._readyNeighbours = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U64 MessageCount
-        {
-            get
-            {
-                return this._messageCount;
-            }
-            set
-            {
-                this._messageCount = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U64 Size
-        {
-            get
-            {
-                return this._size;
-            }
-            set
-            {
-                this._size = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "BookState";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -143,6 +68,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_message_queue
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

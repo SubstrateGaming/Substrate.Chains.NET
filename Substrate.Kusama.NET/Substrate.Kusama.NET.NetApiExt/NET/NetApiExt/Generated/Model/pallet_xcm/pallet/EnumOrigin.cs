@@ -15,11 +15,20 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_xcm.pallet
 {
     
     
+    /// <summary>
+    /// >> Origin
+    /// </summary>
     public enum Origin
     {
         
+        /// <summary>
+        /// >> Xcm
+        /// </summary>
         Xcm = 0,
         
+        /// <summary>
+        /// >> Response
+        /// </summary>
         Response = 1,
     }
     

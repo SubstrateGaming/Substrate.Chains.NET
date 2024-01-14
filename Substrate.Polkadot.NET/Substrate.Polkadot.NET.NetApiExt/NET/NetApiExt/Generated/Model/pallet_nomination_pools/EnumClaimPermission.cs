@@ -15,15 +15,30 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_nomination_poo
 {
     
     
+    /// <summary>
+    /// >> ClaimPermission
+    /// </summary>
     public enum ClaimPermission
     {
         
+        /// <summary>
+        /// >> Permissioned
+        /// </summary>
         Permissioned = 0,
         
+        /// <summary>
+        /// >> PermissionlessCompound
+        /// </summary>
         PermissionlessCompound = 1,
         
+        /// <summary>
+        /// >> PermissionlessWithdraw
+        /// </summary>
         PermissionlessWithdraw = 2,
         
+        /// <summary>
+        /// >> PermissionlessAll
+        /// </summary>
         PermissionlessAll = 3,
     }
     

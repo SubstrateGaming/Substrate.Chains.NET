@@ -21,12 +21,18 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> GrandpaStorage
+    /// </summary>
     public sealed class GrandpaStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> GrandpaStorage Constructor
+        /// </summary>
         public GrandpaStorage(SubstrateClientExt client)
         {
             this._client = client;
@@ -236,6 +242,9 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> GrandpaCalls
+    /// </summary>
     public sealed class GrandpaCalls
     {
         
@@ -276,6 +285,9 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> GrandpaConstants
+    /// </summary>
     public sealed class GrandpaConstants
     {
         
@@ -318,6 +330,9 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> GrandpaErrors
+    /// </summary>
     public enum GrandpaErrors
     {
         

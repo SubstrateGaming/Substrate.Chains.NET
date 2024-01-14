@@ -21,12 +21,18 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> BabeStorage
+    /// </summary>
     public sealed class BabeStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> BabeStorage Constructor
+        /// </summary>
         public BabeStorage(SubstrateClientExt client)
         {
             this._client = client;
@@ -624,6 +630,9 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> BabeCalls
+    /// </summary>
     public sealed class BabeCalls
     {
         
@@ -663,6 +672,9 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> BabeConstants
+    /// </summary>
     public sealed class BabeConstants
     {
         
@@ -717,6 +729,9 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> BabeErrors
+    /// </summary>
     public enum BabeErrors
     {
         

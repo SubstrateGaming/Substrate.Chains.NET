@@ -21,12 +21,18 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> HrmpStorage
+    /// </summary>
     public sealed class HrmpStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> HrmpStorage Constructor
+        /// </summary>
         public HrmpStorage(SubstrateClientExt client)
         {
             this._client = client;
@@ -493,6 +499,9 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> HrmpCalls
+    /// </summary>
     public sealed class HrmpCalls
     {
         
@@ -593,10 +602,16 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> HrmpConstants
+    /// </summary>
     public sealed class HrmpConstants
     {
     }
     
+    /// <summary>
+    /// >> HrmpErrors
+    /// </summary>
     public enum HrmpErrors
     {
         

@@ -15,81 +15,195 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime
 {
     
     
+    /// <summary>
+    /// >> RuntimeEvent
+    /// </summary>
     public enum RuntimeEvent
     {
         
+        /// <summary>
+        /// >> System
+        /// </summary>
         System = 0,
         
+        /// <summary>
+        /// >> Scheduler
+        /// </summary>
         Scheduler = 1,
         
+        /// <summary>
+        /// >> Preimage
+        /// </summary>
         Preimage = 10,
         
+        /// <summary>
+        /// >> Indices
+        /// </summary>
         Indices = 4,
         
+        /// <summary>
+        /// >> Balances
+        /// </summary>
         Balances = 5,
         
+        /// <summary>
+        /// >> TransactionPayment
+        /// </summary>
         TransactionPayment = 32,
         
+        /// <summary>
+        /// >> Staking
+        /// </summary>
         Staking = 7,
         
+        /// <summary>
+        /// >> Offences
+        /// </summary>
         Offences = 8,
         
+        /// <summary>
+        /// >> Session
+        /// </summary>
         Session = 9,
         
+        /// <summary>
+        /// >> Grandpa
+        /// </summary>
         Grandpa = 11,
         
+        /// <summary>
+        /// >> ImOnline
+        /// </summary>
         ImOnline = 12,
         
+        /// <summary>
+        /// >> Treasury
+        /// </summary>
         Treasury = 19,
         
+        /// <summary>
+        /// >> ConvictionVoting
+        /// </summary>
         ConvictionVoting = 20,
         
+        /// <summary>
+        /// >> Referenda
+        /// </summary>
         Referenda = 21,
         
+        /// <summary>
+        /// >> Whitelist
+        /// </summary>
         Whitelist = 23,
         
+        /// <summary>
+        /// >> Claims
+        /// </summary>
         Claims = 24,
         
+        /// <summary>
+        /// >> Vesting
+        /// </summary>
         Vesting = 25,
         
+        /// <summary>
+        /// >> Utility
+        /// </summary>
         Utility = 26,
         
+        /// <summary>
+        /// >> Identity
+        /// </summary>
         Identity = 28,
         
+        /// <summary>
+        /// >> Proxy
+        /// </summary>
         Proxy = 29,
         
+        /// <summary>
+        /// >> Multisig
+        /// </summary>
         Multisig = 30,
         
+        /// <summary>
+        /// >> Bounties
+        /// </summary>
         Bounties = 34,
         
+        /// <summary>
+        /// >> ChildBounties
+        /// </summary>
         ChildBounties = 38,
         
+        /// <summary>
+        /// >> ElectionProviderMultiPhase
+        /// </summary>
         ElectionProviderMultiPhase = 36,
         
+        /// <summary>
+        /// >> VoterList
+        /// </summary>
         VoterList = 37,
         
+        /// <summary>
+        /// >> NominationPools
+        /// </summary>
         NominationPools = 39,
         
+        /// <summary>
+        /// >> FastUnstake
+        /// </summary>
         FastUnstake = 40,
         
+        /// <summary>
+        /// >> ParaInclusion
+        /// </summary>
         ParaInclusion = 53,
         
+        /// <summary>
+        /// >> Paras
+        /// </summary>
         Paras = 56,
         
+        /// <summary>
+        /// >> Hrmp
+        /// </summary>
         Hrmp = 60,
         
+        /// <summary>
+        /// >> ParasDisputes
+        /// </summary>
         ParasDisputes = 62,
         
+        /// <summary>
+        /// >> Registrar
+        /// </summary>
         Registrar = 70,
         
+        /// <summary>
+        /// >> Slots
+        /// </summary>
         Slots = 71,
         
+        /// <summary>
+        /// >> Auctions
+        /// </summary>
         Auctions = 72,
         
+        /// <summary>
+        /// >> Crowdloan
+        /// </summary>
         Crowdloan = 73,
         
+        /// <summary>
+        /// >> XcmPallet
+        /// </summary>
         XcmPallet = 99,
         
+        /// <summary>
+        /// >> MessageQueue
+        /// </summary>
         MessageQueue = 100,
     }
     

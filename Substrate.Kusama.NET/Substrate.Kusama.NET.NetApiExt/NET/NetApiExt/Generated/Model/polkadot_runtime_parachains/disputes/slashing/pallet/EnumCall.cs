@@ -15,9 +15,17 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parach
 {
     
     
+    /// <summary>
+    /// >> Call
+    /// Contains a variant per dispatchable extrinsic that this pallet has.
+    /// </summary>
     public enum Call
     {
         
+        /// <summary>
+        /// >> report_dispute_lost_unsigned
+        /// See [`Pallet::report_dispute_lost_unsigned`].
+        /// </summary>
         report_dispute_lost_unsigned = 0,
     }
     

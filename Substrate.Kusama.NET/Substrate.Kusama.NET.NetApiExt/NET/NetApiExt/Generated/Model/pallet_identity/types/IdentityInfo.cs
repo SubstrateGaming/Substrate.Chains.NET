@@ -27,161 +27,47 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_identity.types
         /// <summary>
         /// >> additional
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT1 _additional;
-        
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT1 Additional { get; set; }
         /// <summary>
         /// >> display
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData _display;
-        
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData Display { get; set; }
         /// <summary>
         /// >> legal
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData _legal;
-        
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData Legal { get; set; }
         /// <summary>
         /// >> web
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData _web;
-        
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData Web { get; set; }
         /// <summary>
         /// >> riot
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData _riot;
-        
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData Riot { get; set; }
         /// <summary>
         /// >> email
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData _email;
-        
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData Email { get; set; }
         /// <summary>
         /// >> pgp_fingerprint
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr20U8> _pgpFingerprint;
-        
+        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr20U8> PgpFingerprint { get; set; }
         /// <summary>
         /// >> image
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData _image;
-        
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData Image { get; set; }
         /// <summary>
         /// >> twitter
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData _twitter;
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData Twitter { get; set; }
         
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT1 Additional
-        {
-            get
-            {
-                return this._additional;
-            }
-            set
-            {
-                this._additional = value;
-            }
-        }
-        
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData Display
-        {
-            get
-            {
-                return this._display;
-            }
-            set
-            {
-                this._display = value;
-            }
-        }
-        
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData Legal
-        {
-            get
-            {
-                return this._legal;
-            }
-            set
-            {
-                this._legal = value;
-            }
-        }
-        
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData Web
-        {
-            get
-            {
-                return this._web;
-            }
-            set
-            {
-                this._web = value;
-            }
-        }
-        
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData Riot
-        {
-            get
-            {
-                return this._riot;
-            }
-            set
-            {
-                this._riot = value;
-            }
-        }
-        
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData Email
-        {
-            get
-            {
-                return this._email;
-            }
-            set
-            {
-                this._email = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr20U8> PgpFingerprint
-        {
-            get
-            {
-                return this._pgpFingerprint;
-            }
-            set
-            {
-                this._pgpFingerprint = value;
-            }
-        }
-        
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData Image
-        {
-            get
-            {
-                return this._image;
-            }
-            set
-            {
-                this._image = value;
-            }
-        }
-        
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData Twitter
-        {
-            get
-            {
-                return this._twitter;
-            }
-            set
-            {
-                this._twitter = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "IdentityInfo";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -197,6 +83,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_identity.types
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

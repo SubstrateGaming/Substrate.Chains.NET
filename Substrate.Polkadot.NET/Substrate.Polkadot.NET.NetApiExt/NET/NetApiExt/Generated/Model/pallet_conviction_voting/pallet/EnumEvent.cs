@@ -15,11 +15,23 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_conviction_vot
 {
     
     
+    /// <summary>
+    /// >> Event
+    /// The `Event` enum of this pallet
+    /// </summary>
     public enum Event
     {
         
+        /// <summary>
+        /// >> Delegated
+        /// An account has delegated their vote to another account. \[who, target\]
+        /// </summary>
         Delegated = 0,
         
+        /// <summary>
+        /// >> Undelegated
+        /// An \[account\] has cancelled a previous delegation operation.
+        /// </summary>
         Undelegated = 1,
     }
     

@@ -15,11 +15,25 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_common
 {
     
     
+    /// <summary>
+    /// >> Event
+    /// The `Event` enum of this pallet
+    /// </summary>
     public enum Event
     {
         
+        /// <summary>
+        /// >> NewLeasePeriod
+        /// A new `[lease_period]` is beginning.
+        /// </summary>
         NewLeasePeriod = 0,
         
+        /// <summary>
+        /// >> Leased
+        /// A para has won the right to a continuous set of lease periods as a parachain.
+        /// First balance is any extra amount reserved on top of the para's existing deposit.
+        /// Second balance is the total amount reserved.
+        /// </summary>
         Leased = 1,
     }
     

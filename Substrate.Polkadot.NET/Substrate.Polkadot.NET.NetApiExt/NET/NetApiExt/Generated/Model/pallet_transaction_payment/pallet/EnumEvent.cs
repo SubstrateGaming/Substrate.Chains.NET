@@ -15,9 +15,18 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_transaction_pa
 {
     
     
+    /// <summary>
+    /// >> Event
+    /// The `Event` enum of this pallet
+    /// </summary>
     public enum Event
     {
         
+        /// <summary>
+        /// >> TransactionFeePaid
+        /// A transaction fee `actual_fee`, of which `tip` was added to the minimum inclusion fee,
+        /// has been paid by `who`.
+        /// </summary>
         TransactionFeePaid = 0,
     }
     

@@ -15,17 +15,41 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_whitelist.pallet
 {
     
     
+    /// <summary>
+    /// >> Error
+    /// The `Error` enum of this pallet.
+    /// </summary>
     public enum Error
     {
         
+        /// <summary>
+        /// >> UnavailablePreImage
+        /// The preimage of the call hash could not be loaded.
+        /// </summary>
         UnavailablePreImage = 0,
         
+        /// <summary>
+        /// >> UndecodableCall
+        /// The call could not be decoded.
+        /// </summary>
         UndecodableCall = 1,
         
+        /// <summary>
+        /// >> InvalidCallWeightWitness
+        /// The weight of the decoded call was higher than the witness.
+        /// </summary>
         InvalidCallWeightWitness = 2,
         
+        /// <summary>
+        /// >> CallIsNotWhitelisted
+        /// The call was not whitelisted.
+        /// </summary>
         CallIsNotWhitelisted = 3,
         
+        /// <summary>
+        /// >> CallAlreadyWhitelisted
+        /// The call was already whitelisted; No-Op.
+        /// </summary>
         CallAlreadyWhitelisted = 4,
     }
     

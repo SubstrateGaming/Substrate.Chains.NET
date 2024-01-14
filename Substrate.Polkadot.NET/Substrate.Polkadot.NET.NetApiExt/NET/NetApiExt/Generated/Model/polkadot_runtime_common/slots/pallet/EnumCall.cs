@@ -15,13 +15,29 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_comm
 {
     
     
+    /// <summary>
+    /// >> Call
+    /// Contains a variant per dispatchable extrinsic that this pallet has.
+    /// </summary>
     public enum Call
     {
         
+        /// <summary>
+        /// >> force_lease
+        /// See [`Pallet::force_lease`].
+        /// </summary>
         force_lease = 0,
         
+        /// <summary>
+        /// >> clear_all_leases
+        /// See [`Pallet::clear_all_leases`].
+        /// </summary>
         clear_all_leases = 1,
         
+        /// <summary>
+        /// >> trigger_onboard
+        /// See [`Pallet::trigger_onboard`].
+        /// </summary>
         trigger_onboard = 2,
     }
     

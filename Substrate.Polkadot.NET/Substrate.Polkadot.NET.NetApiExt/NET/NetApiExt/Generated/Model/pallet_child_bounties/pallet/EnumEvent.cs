@@ -15,15 +15,35 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_child_bounties
 {
     
     
+    /// <summary>
+    /// >> Event
+    /// The `Event` enum of this pallet
+    /// </summary>
     public enum Event
     {
         
+        /// <summary>
+        /// >> Added
+        /// A child-bounty is added.
+        /// </summary>
         Added = 0,
         
+        /// <summary>
+        /// >> Awarded
+        /// A child-bounty is awarded to a beneficiary.
+        /// </summary>
         Awarded = 1,
         
+        /// <summary>
+        /// >> Claimed
+        /// A child-bounty is claimed by beneficiary.
+        /// </summary>
         Claimed = 2,
         
+        /// <summary>
+        /// >> Canceled
+        /// A child-bounty is cancelled.
+        /// </summary>
         Canceled = 3,
     }
     

@@ -27,59 +27,23 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_ranked_collectiv
         /// <summary>
         /// >> bare_ayes
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _bareAyes;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 BareAyes { get; set; }
         /// <summary>
         /// >> ayes
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _ayes;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 Ayes { get; set; }
         /// <summary>
         /// >> nays
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _nays;
+        public Substrate.NetApi.Model.Types.Primitive.U32 Nays { get; set; }
         
-        public Substrate.NetApi.Model.Types.Primitive.U32 BareAyes
-        {
-            get
-            {
-                return this._bareAyes;
-            }
-            set
-            {
-                this._bareAyes = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 Ayes
-        {
-            get
-            {
-                return this._ayes;
-            }
-            set
-            {
-                this._ayes = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 Nays
-        {
-            get
-            {
-                return this._nays;
-            }
-            set
-            {
-                this._nays = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "Tally";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -89,6 +53,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_ranked_collectiv
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

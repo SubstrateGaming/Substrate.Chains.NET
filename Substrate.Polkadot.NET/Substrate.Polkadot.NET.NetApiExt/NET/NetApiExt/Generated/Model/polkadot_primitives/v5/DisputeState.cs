@@ -27,76 +27,27 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v
         /// <summary>
         /// >> validators_for
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseBitSeq<Substrate.NetApi.Model.Types.Primitive.U8, Substrate.Polkadot.NET.NetApiExt.Generated.Model.bitvec.order.Lsb0> _validatorsFor;
-        
+        public Substrate.NetApi.Model.Types.Base.BaseBitSeq<Substrate.NetApi.Model.Types.Primitive.U8, Substrate.Polkadot.NET.NetApiExt.Generated.Model.bitvec.order.Lsb0> ValidatorsFor { get; set; }
         /// <summary>
         /// >> validators_against
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseBitSeq<Substrate.NetApi.Model.Types.Primitive.U8, Substrate.Polkadot.NET.NetApiExt.Generated.Model.bitvec.order.Lsb0> _validatorsAgainst;
-        
+        public Substrate.NetApi.Model.Types.Base.BaseBitSeq<Substrate.NetApi.Model.Types.Primitive.U8, Substrate.Polkadot.NET.NetApiExt.Generated.Model.bitvec.order.Lsb0> ValidatorsAgainst { get; set; }
         /// <summary>
         /// >> start
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _start;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 Start { get; set; }
         /// <summary>
         /// >> concluded_at
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32> _concludedAt;
+        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32> ConcludedAt { get; set; }
         
-        public Substrate.NetApi.Model.Types.Base.BaseBitSeq<Substrate.NetApi.Model.Types.Primitive.U8, Substrate.Polkadot.NET.NetApiExt.Generated.Model.bitvec.order.Lsb0> ValidatorsFor
-        {
-            get
-            {
-                return this._validatorsFor;
-            }
-            set
-            {
-                this._validatorsFor = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseBitSeq<Substrate.NetApi.Model.Types.Primitive.U8, Substrate.Polkadot.NET.NetApiExt.Generated.Model.bitvec.order.Lsb0> ValidatorsAgainst
-        {
-            get
-            {
-                return this._validatorsAgainst;
-            }
-            set
-            {
-                this._validatorsAgainst = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 Start
-        {
-            get
-            {
-                return this._start;
-            }
-            set
-            {
-                this._start = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32> ConcludedAt
-        {
-            get
-            {
-                return this._concludedAt;
-            }
-            set
-            {
-                this._concludedAt = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "DisputeState";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -107,6 +58,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

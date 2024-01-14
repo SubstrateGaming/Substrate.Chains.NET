@@ -15,15 +15,30 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_grandpa
 {
     
     
+    /// <summary>
+    /// >> StoredState
+    /// </summary>
     public enum StoredState
     {
         
+        /// <summary>
+        /// >> Live
+        /// </summary>
         Live = 0,
         
+        /// <summary>
+        /// >> PendingPause
+        /// </summary>
         PendingPause = 1,
         
+        /// <summary>
+        /// >> Paused
+        /// </summary>
         Paused = 2,
         
+        /// <summary>
+        /// >> PendingResume
+        /// </summary>
         PendingResume = 3,
     }
     

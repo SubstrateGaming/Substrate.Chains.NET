@@ -27,42 +27,19 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.v2.multiasset
         /// <summary>
         /// >> id
         /// </summary>
-        private Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.v2.multiasset.EnumAssetId _id;
-        
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.v2.multiasset.EnumAssetId Id { get; set; }
         /// <summary>
         /// >> fun
         /// </summary>
-        private Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.v2.multiasset.EnumFungibility _fun;
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.v2.multiasset.EnumFungibility Fun { get; set; }
         
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.v2.multiasset.EnumAssetId Id
-        {
-            get
-            {
-                return this._id;
-            }
-            set
-            {
-                this._id = value;
-            }
-        }
-        
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.v2.multiasset.EnumFungibility Fun
-        {
-            get
-            {
-                return this._fun;
-            }
-            set
-            {
-                this._fun = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "MultiAsset";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -71,6 +48,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.v2.multiasset
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

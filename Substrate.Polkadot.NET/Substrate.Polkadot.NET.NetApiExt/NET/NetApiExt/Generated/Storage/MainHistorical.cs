@@ -21,22 +21,34 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> HistoricalStorage
+    /// </summary>
     public sealed class HistoricalStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> HistoricalStorage Constructor
+        /// </summary>
         public HistoricalStorage(SubstrateClientExt client)
         {
             this._client = client;
         }
     }
     
+    /// <summary>
+    /// >> HistoricalCalls
+    /// </summary>
     public sealed class HistoricalCalls
     {
     }
     
+    /// <summary>
+    /// >> HistoricalConstants
+    /// </summary>
     public sealed class HistoricalConstants
     {
     }

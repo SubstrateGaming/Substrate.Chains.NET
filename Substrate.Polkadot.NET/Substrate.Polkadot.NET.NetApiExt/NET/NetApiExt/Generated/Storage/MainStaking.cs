@@ -21,12 +21,18 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> StakingStorage
+    /// </summary>
     public sealed class StakingStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> StakingStorage Constructor
+        /// </summary>
         public StakingStorage(SubstrateClientExt client)
         {
             this._client = client;
@@ -1367,6 +1373,9 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> StakingCalls
+    /// </summary>
     public sealed class StakingCalls
     {
         
@@ -1662,6 +1671,9 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> StakingConstants
+    /// </summary>
     public sealed class StakingConstants
     {
         
@@ -1766,6 +1778,9 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> StakingErrors
+    /// </summary>
     public enum StakingErrors
     {
         

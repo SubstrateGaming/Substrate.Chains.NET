@@ -27,93 +27,31 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nis.pallet
         /// <summary>
         /// >> proportion_owed
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perquintill _proportionOwed;
-        
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perquintill ProportionOwed { get; set; }
         /// <summary>
         /// >> index
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _index;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 Index { get; set; }
         /// <summary>
         /// >> thawed
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perquintill _thawed;
-        
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perquintill Thawed { get; set; }
         /// <summary>
         /// >> last_period
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _lastPeriod;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 LastPeriod { get; set; }
         /// <summary>
         /// >> receipts_on_hold
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U128 _receiptsOnHold;
+        public Substrate.NetApi.Model.Types.Primitive.U128 ReceiptsOnHold { get; set; }
         
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perquintill ProportionOwed
-        {
-            get
-            {
-                return this._proportionOwed;
-            }
-            set
-            {
-                this._proportionOwed = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 Index
-        {
-            get
-            {
-                return this._index;
-            }
-            set
-            {
-                this._index = value;
-            }
-        }
-        
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perquintill Thawed
-        {
-            get
-            {
-                return this._thawed;
-            }
-            set
-            {
-                this._thawed = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 LastPeriod
-        {
-            get
-            {
-                return this._lastPeriod;
-            }
-            set
-            {
-                this._lastPeriod = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U128 ReceiptsOnHold
-        {
-            get
-            {
-                return this._receiptsOnHold;
-            }
-            set
-            {
-                this._receiptsOnHold = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "SummaryRecord";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -125,6 +63,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nis.pallet
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

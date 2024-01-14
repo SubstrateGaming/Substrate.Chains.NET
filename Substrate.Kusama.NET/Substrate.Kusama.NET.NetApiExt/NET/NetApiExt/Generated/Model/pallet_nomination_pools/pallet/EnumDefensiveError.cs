@@ -15,17 +15,35 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools
 {
     
     
+    /// <summary>
+    /// >> DefensiveError
+    /// </summary>
     public enum DefensiveError
     {
         
+        /// <summary>
+        /// >> NotEnoughSpaceInUnbondPool
+        /// </summary>
         NotEnoughSpaceInUnbondPool = 0,
         
+        /// <summary>
+        /// >> PoolNotFound
+        /// </summary>
         PoolNotFound = 1,
         
+        /// <summary>
+        /// >> RewardPoolNotFound
+        /// </summary>
         RewardPoolNotFound = 2,
         
+        /// <summary>
+        /// >> SubPoolsNotFound
+        /// </summary>
         SubPoolsNotFound = 3,
         
+        /// <summary>
+        /// >> BondedStashKilledPrematurely
+        /// </summary>
         BondedStashKilledPrematurely = 4,
     }
     

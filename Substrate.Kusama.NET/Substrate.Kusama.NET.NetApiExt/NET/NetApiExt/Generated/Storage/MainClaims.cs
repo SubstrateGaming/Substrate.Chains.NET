@@ -21,12 +21,18 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> ClaimsStorage
+    /// </summary>
     public sealed class ClaimsStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> ClaimsStorage Constructor
+        /// </summary>
         public ClaimsStorage(SubstrateClientExt client)
         {
             this._client = client;
@@ -197,6 +203,9 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> ClaimsCalls
+    /// </summary>
     public sealed class ClaimsCalls
     {
         
@@ -264,6 +273,9 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> ClaimsConstants
+    /// </summary>
     public sealed class ClaimsConstants
     {
         
@@ -278,6 +290,9 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> ClaimsErrors
+    /// </summary>
     public enum ClaimsErrors
     {
         

@@ -21,12 +21,18 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> RecoveryStorage
+    /// </summary>
     public sealed class RecoveryStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> RecoveryStorage Constructor
+        /// </summary>
         public RecoveryStorage(SubstrateClientExt client)
         {
             this._client = client;
@@ -143,6 +149,9 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> RecoveryCalls
+    /// </summary>
     public sealed class RecoveryCalls
     {
         
@@ -250,6 +259,9 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> RecoveryConstants
+    /// </summary>
     public sealed class RecoveryConstants
     {
         
@@ -316,6 +328,9 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> RecoveryErrors
+    /// </summary>
     public enum RecoveryErrors
     {
         

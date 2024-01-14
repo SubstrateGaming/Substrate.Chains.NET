@@ -15,19 +15,49 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_fast_unstake.pal
 {
     
     
+    /// <summary>
+    /// >> Error
+    /// The `Error` enum of this pallet.
+    /// </summary>
     public enum Error
     {
         
+        /// <summary>
+        /// >> NotController
+        /// The provided Controller account was not found.
+        /// 
+        /// This means that the given account is not bonded.
+        /// </summary>
         NotController = 0,
         
+        /// <summary>
+        /// >> AlreadyQueued
+        /// The bonded account has already been queued.
+        /// </summary>
         AlreadyQueued = 1,
         
+        /// <summary>
+        /// >> NotFullyBonded
+        /// The bonded account has active unlocking chunks.
+        /// </summary>
         NotFullyBonded = 2,
         
+        /// <summary>
+        /// >> NotQueued
+        /// The provided un-staker is not in the `Queue`.
+        /// </summary>
         NotQueued = 3,
         
+        /// <summary>
+        /// >> AlreadyHead
+        /// The provided un-staker is already in Head, and cannot deregister.
+        /// </summary>
         AlreadyHead = 4,
         
+        /// <summary>
+        /// >> CallNotAllowed
+        /// The call is not allowed at this point because the pallet is not active.
+        /// </summary>
         CallNotAllowed = 5,
     }
     

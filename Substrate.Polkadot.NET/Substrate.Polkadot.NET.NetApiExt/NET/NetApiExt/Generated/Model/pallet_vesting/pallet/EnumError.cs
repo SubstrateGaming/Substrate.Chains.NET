@@ -15,17 +15,42 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_vesting.pallet
 {
     
     
+    /// <summary>
+    /// >> Error
+    /// Error for the vesting pallet.
+    /// </summary>
     public enum Error
     {
         
+        /// <summary>
+        /// >> NotVesting
+        /// The account given is not vesting.
+        /// </summary>
         NotVesting = 0,
         
+        /// <summary>
+        /// >> AtMaxVestingSchedules
+        /// The account already has `MaxVestingSchedules` count of schedules and thus
+        /// cannot add another one. Consider merging existing schedules in order to add another.
+        /// </summary>
         AtMaxVestingSchedules = 1,
         
+        /// <summary>
+        /// >> AmountLow
+        /// Amount being transferred is too low to create a vesting schedule.
+        /// </summary>
         AmountLow = 2,
         
+        /// <summary>
+        /// >> ScheduleIndexOutOfBounds
+        /// An index was out of bounds of the vesting schedules.
+        /// </summary>
         ScheduleIndexOutOfBounds = 3,
         
+        /// <summary>
+        /// >> InvalidScheduleParams
+        /// Failed to create a new schedule because some parameter was invalid.
+        /// </summary>
         InvalidScheduleParams = 4,
     }
     

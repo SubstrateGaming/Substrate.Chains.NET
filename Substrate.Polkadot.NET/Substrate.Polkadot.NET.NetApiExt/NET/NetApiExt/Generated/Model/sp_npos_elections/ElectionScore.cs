@@ -27,59 +27,23 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_npos_elections
         /// <summary>
         /// >> minimal_stake
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U128 _minimalStake;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U128 MinimalStake { get; set; }
         /// <summary>
         /// >> sum_stake
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U128 _sumStake;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U128 SumStake { get; set; }
         /// <summary>
         /// >> sum_stake_squared
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U128 _sumStakeSquared;
+        public Substrate.NetApi.Model.Types.Primitive.U128 SumStakeSquared { get; set; }
         
-        public Substrate.NetApi.Model.Types.Primitive.U128 MinimalStake
-        {
-            get
-            {
-                return this._minimalStake;
-            }
-            set
-            {
-                this._minimalStake = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U128 SumStake
-        {
-            get
-            {
-                return this._sumStake;
-            }
-            set
-            {
-                this._sumStake = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U128 SumStakeSquared
-        {
-            get
-            {
-                return this._sumStakeSquared;
-            }
-            set
-            {
-                this._sumStakeSquared = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "ElectionScore";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -89,6 +53,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_npos_elections
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

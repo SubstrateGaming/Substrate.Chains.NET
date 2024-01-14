@@ -15,17 +15,35 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_runtime.generic.di
 {
     
     
+    /// <summary>
+    /// >> DigestItem
+    /// </summary>
     public enum DigestItem
     {
         
+        /// <summary>
+        /// >> PreRuntime
+        /// </summary>
         PreRuntime = 6,
         
+        /// <summary>
+        /// >> Consensus
+        /// </summary>
         Consensus = 4,
         
+        /// <summary>
+        /// >> Seal
+        /// </summary>
         Seal = 5,
         
+        /// <summary>
+        /// >> Other
+        /// </summary>
         Other = 0,
         
+        /// <summary>
+        /// >> RuntimeEnvironmentUpdated
+        /// </summary>
         RuntimeEnvironmentUpdated = 8,
     }
     

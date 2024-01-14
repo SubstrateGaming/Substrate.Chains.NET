@@ -15,11 +15,20 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_grandpa
 {
     
     
+    /// <summary>
+    /// >> Equivocation
+    /// </summary>
     public enum Equivocation
     {
         
+        /// <summary>
+        /// >> Prevote
+        /// </summary>
         Prevote = 0,
         
+        /// <summary>
+        /// >> Precommit
+        /// </summary>
         Precommit = 1,
     }
     

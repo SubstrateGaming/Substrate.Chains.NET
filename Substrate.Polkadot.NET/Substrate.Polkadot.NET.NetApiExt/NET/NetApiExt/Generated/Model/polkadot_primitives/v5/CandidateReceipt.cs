@@ -27,42 +27,19 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v
         /// <summary>
         /// >> descriptor
         /// </summary>
-        private Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.CandidateDescriptor _descriptor;
-        
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.CandidateDescriptor Descriptor { get; set; }
         /// <summary>
         /// >> commitments_hash
         /// </summary>
-        private Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256 _commitmentsHash;
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256 CommitmentsHash { get; set; }
         
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.CandidateDescriptor Descriptor
-        {
-            get
-            {
-                return this._descriptor;
-            }
-            set
-            {
-                this._descriptor = value;
-            }
-        }
-        
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256 CommitmentsHash
-        {
-            get
-            {
-                return this._commitmentsHash;
-            }
-            set
-            {
-                this._commitmentsHash = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "CandidateReceipt";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -71,6 +48,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

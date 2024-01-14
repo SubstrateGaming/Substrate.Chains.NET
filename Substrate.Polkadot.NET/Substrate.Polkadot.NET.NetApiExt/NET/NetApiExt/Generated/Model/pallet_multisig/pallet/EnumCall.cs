@@ -15,15 +15,35 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_multisig.palle
 {
     
     
+    /// <summary>
+    /// >> Call
+    /// Contains a variant per dispatchable extrinsic that this pallet has.
+    /// </summary>
     public enum Call
     {
         
+        /// <summary>
+        /// >> as_multi_threshold_1
+        /// See [`Pallet::as_multi_threshold_1`].
+        /// </summary>
         as_multi_threshold_1 = 0,
         
+        /// <summary>
+        /// >> as_multi
+        /// See [`Pallet::as_multi`].
+        /// </summary>
         as_multi = 1,
         
+        /// <summary>
+        /// >> approve_as_multi
+        /// See [`Pallet::approve_as_multi`].
+        /// </summary>
         approve_as_multi = 2,
         
+        /// <summary>
+        /// >> cancel_as_multi
+        /// See [`Pallet::cancel_as_multi`].
+        /// </summary>
         cancel_as_multi = 3,
     }
     

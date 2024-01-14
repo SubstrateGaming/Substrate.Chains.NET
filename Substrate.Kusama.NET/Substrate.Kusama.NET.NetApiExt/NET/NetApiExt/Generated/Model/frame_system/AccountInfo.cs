@@ -27,93 +27,31 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_system
         /// <summary>
         /// >> nonce
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _nonce;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 Nonce { get; set; }
         /// <summary>
         /// >> consumers
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _consumers;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 Consumers { get; set; }
         /// <summary>
         /// >> providers
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _providers;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 Providers { get; set; }
         /// <summary>
         /// >> sufficients
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _sufficients;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 Sufficients { get; set; }
         /// <summary>
         /// >> data
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_balances.types.AccountData _data;
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_balances.types.AccountData Data { get; set; }
         
-        public Substrate.NetApi.Model.Types.Primitive.U32 Nonce
-        {
-            get
-            {
-                return this._nonce;
-            }
-            set
-            {
-                this._nonce = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 Consumers
-        {
-            get
-            {
-                return this._consumers;
-            }
-            set
-            {
-                this._consumers = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 Providers
-        {
-            get
-            {
-                return this._providers;
-            }
-            set
-            {
-                this._providers = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 Sufficients
-        {
-            get
-            {
-                return this._sufficients;
-            }
-            set
-            {
-                this._sufficients = value;
-            }
-        }
-        
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_balances.types.AccountData Data
-        {
-            get
-            {
-                return this._data;
-            }
-            set
-            {
-                this._data = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "AccountInfo";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -125,6 +63,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_system
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

@@ -15,37 +15,101 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_identity.pallet
 {
     
     
+    /// <summary>
+    /// >> Call
+    /// Identity pallet declaration.
+    /// </summary>
     public enum Call
     {
         
+        /// <summary>
+        /// >> add_registrar
+        /// See [`Pallet::add_registrar`].
+        /// </summary>
         add_registrar = 0,
         
+        /// <summary>
+        /// >> set_identity
+        /// See [`Pallet::set_identity`].
+        /// </summary>
         set_identity = 1,
         
+        /// <summary>
+        /// >> set_subs
+        /// See [`Pallet::set_subs`].
+        /// </summary>
         set_subs = 2,
         
+        /// <summary>
+        /// >> clear_identity
+        /// See [`Pallet::clear_identity`].
+        /// </summary>
         clear_identity = 3,
         
+        /// <summary>
+        /// >> request_judgement
+        /// See [`Pallet::request_judgement`].
+        /// </summary>
         request_judgement = 4,
         
+        /// <summary>
+        /// >> cancel_request
+        /// See [`Pallet::cancel_request`].
+        /// </summary>
         cancel_request = 5,
         
+        /// <summary>
+        /// >> set_fee
+        /// See [`Pallet::set_fee`].
+        /// </summary>
         set_fee = 6,
         
+        /// <summary>
+        /// >> set_account_id
+        /// See [`Pallet::set_account_id`].
+        /// </summary>
         set_account_id = 7,
         
+        /// <summary>
+        /// >> set_fields
+        /// See [`Pallet::set_fields`].
+        /// </summary>
         set_fields = 8,
         
+        /// <summary>
+        /// >> provide_judgement
+        /// See [`Pallet::provide_judgement`].
+        /// </summary>
         provide_judgement = 9,
         
+        /// <summary>
+        /// >> kill_identity
+        /// See [`Pallet::kill_identity`].
+        /// </summary>
         kill_identity = 10,
         
+        /// <summary>
+        /// >> add_sub
+        /// See [`Pallet::add_sub`].
+        /// </summary>
         add_sub = 11,
         
+        /// <summary>
+        /// >> rename_sub
+        /// See [`Pallet::rename_sub`].
+        /// </summary>
         rename_sub = 12,
         
+        /// <summary>
+        /// >> remove_sub
+        /// See [`Pallet::remove_sub`].
+        /// </summary>
         remove_sub = 13,
         
+        /// <summary>
+        /// >> quit_sub
+        /// See [`Pallet::quit_sub`].
+        /// </summary>
         quit_sub = 14,
     }
     

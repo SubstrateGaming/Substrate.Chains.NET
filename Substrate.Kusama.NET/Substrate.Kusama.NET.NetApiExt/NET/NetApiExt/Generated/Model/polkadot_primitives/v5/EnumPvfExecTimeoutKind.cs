@@ -15,11 +15,20 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5
 {
     
     
+    /// <summary>
+    /// >> PvfExecTimeoutKind
+    /// </summary>
     public enum PvfExecTimeoutKind
     {
         
+        /// <summary>
+        /// >> Backing
+        /// </summary>
         Backing = 0,
         
+        /// <summary>
+        /// >> Approval
+        /// </summary>
         Approval = 1,
     }
     

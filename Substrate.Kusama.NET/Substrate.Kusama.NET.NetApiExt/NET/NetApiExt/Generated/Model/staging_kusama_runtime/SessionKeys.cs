@@ -27,127 +27,39 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_kusama_runtime
         /// <summary>
         /// >> grandpa
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_grandpa.app.Public _grandpa;
-        
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_grandpa.app.Public Grandpa { get; set; }
         /// <summary>
         /// >> babe
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_babe.app.Public _babe;
-        
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_babe.app.Public Babe { get; set; }
         /// <summary>
         /// >> im_online
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_im_online.sr25519.app_sr25519.Public _imOnline;
-        
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_im_online.sr25519.app_sr25519.Public ImOnline { get; set; }
         /// <summary>
         /// >> para_validator
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.validator_app.Public _paraValidator;
-        
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.validator_app.Public ParaValidator { get; set; }
         /// <summary>
         /// >> para_assignment
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.assignment_app.Public _paraAssignment;
-        
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.assignment_app.Public ParaAssignment { get; set; }
         /// <summary>
         /// >> authority_discovery
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_authority_discovery.app.Public _authorityDiscovery;
-        
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_authority_discovery.app.Public AuthorityDiscovery { get; set; }
         /// <summary>
         /// >> beefy
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_beefy.ecdsa_crypto.Public _beefy;
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_beefy.ecdsa_crypto.Public Beefy { get; set; }
         
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_grandpa.app.Public Grandpa
-        {
-            get
-            {
-                return this._grandpa;
-            }
-            set
-            {
-                this._grandpa = value;
-            }
-        }
-        
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_babe.app.Public Babe
-        {
-            get
-            {
-                return this._babe;
-            }
-            set
-            {
-                this._babe = value;
-            }
-        }
-        
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_im_online.sr25519.app_sr25519.Public ImOnline
-        {
-            get
-            {
-                return this._imOnline;
-            }
-            set
-            {
-                this._imOnline = value;
-            }
-        }
-        
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.validator_app.Public ParaValidator
-        {
-            get
-            {
-                return this._paraValidator;
-            }
-            set
-            {
-                this._paraValidator = value;
-            }
-        }
-        
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.assignment_app.Public ParaAssignment
-        {
-            get
-            {
-                return this._paraAssignment;
-            }
-            set
-            {
-                this._paraAssignment = value;
-            }
-        }
-        
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_authority_discovery.app.Public AuthorityDiscovery
-        {
-            get
-            {
-                return this._authorityDiscovery;
-            }
-            set
-            {
-                this._authorityDiscovery = value;
-            }
-        }
-        
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_beefy.ecdsa_crypto.Public Beefy
-        {
-            get
-            {
-                return this._beefy;
-            }
-            set
-            {
-                this._beefy = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "SessionKeys";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -161,6 +73,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_kusama_runtime
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

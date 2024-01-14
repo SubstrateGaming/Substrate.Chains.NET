@@ -21,22 +21,34 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> ParachainsOriginStorage
+    /// </summary>
     public sealed class ParachainsOriginStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> ParachainsOriginStorage Constructor
+        /// </summary>
         public ParachainsOriginStorage(SubstrateClientExt client)
         {
             this._client = client;
         }
     }
     
+    /// <summary>
+    /// >> ParachainsOriginCalls
+    /// </summary>
     public sealed class ParachainsOriginCalls
     {
     }
     
+    /// <summary>
+    /// >> ParachainsOriginConstants
+    /// </summary>
     public sealed class ParachainsOriginConstants
     {
     }

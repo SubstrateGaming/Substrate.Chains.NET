@@ -15,29 +15,77 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_xcm.pallet
 {
     
     
+    /// <summary>
+    /// >> Call
+    /// Contains a variant per dispatchable extrinsic that this pallet has.
+    /// </summary>
     public enum Call
     {
         
+        /// <summary>
+        /// >> send
+        /// See [`Pallet::send`].
+        /// </summary>
         send = 0,
         
+        /// <summary>
+        /// >> teleport_assets
+        /// See [`Pallet::teleport_assets`].
+        /// </summary>
         teleport_assets = 1,
         
+        /// <summary>
+        /// >> reserve_transfer_assets
+        /// See [`Pallet::reserve_transfer_assets`].
+        /// </summary>
         reserve_transfer_assets = 2,
         
+        /// <summary>
+        /// >> execute
+        /// See [`Pallet::execute`].
+        /// </summary>
         execute = 3,
         
+        /// <summary>
+        /// >> force_xcm_version
+        /// See [`Pallet::force_xcm_version`].
+        /// </summary>
         force_xcm_version = 4,
         
+        /// <summary>
+        /// >> force_default_xcm_version
+        /// See [`Pallet::force_default_xcm_version`].
+        /// </summary>
         force_default_xcm_version = 5,
         
+        /// <summary>
+        /// >> force_subscribe_version_notify
+        /// See [`Pallet::force_subscribe_version_notify`].
+        /// </summary>
         force_subscribe_version_notify = 6,
         
+        /// <summary>
+        /// >> force_unsubscribe_version_notify
+        /// See [`Pallet::force_unsubscribe_version_notify`].
+        /// </summary>
         force_unsubscribe_version_notify = 7,
         
+        /// <summary>
+        /// >> limited_reserve_transfer_assets
+        /// See [`Pallet::limited_reserve_transfer_assets`].
+        /// </summary>
         limited_reserve_transfer_assets = 8,
         
+        /// <summary>
+        /// >> limited_teleport_assets
+        /// See [`Pallet::limited_teleport_assets`].
+        /// </summary>
         limited_teleport_assets = 9,
         
+        /// <summary>
+        /// >> force_suspension
+        /// See [`Pallet::force_suspension`].
+        /// </summary>
         force_suspension = 10,
     }
     

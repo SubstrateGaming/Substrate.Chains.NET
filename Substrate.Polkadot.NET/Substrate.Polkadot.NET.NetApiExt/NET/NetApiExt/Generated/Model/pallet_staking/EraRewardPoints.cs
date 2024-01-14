@@ -27,42 +27,19 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_staking
         /// <summary>
         /// >> total
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _total;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 Total { get; set; }
         /// <summary>
         /// >> individual
         /// </summary>
-        private Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base.BTreeMapT1 _individual;
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base.BTreeMapT1 Individual { get; set; }
         
-        public Substrate.NetApi.Model.Types.Primitive.U32 Total
-        {
-            get
-            {
-                return this._total;
-            }
-            set
-            {
-                this._total = value;
-            }
-        }
-        
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base.BTreeMapT1 Individual
-        {
-            get
-            {
-                return this._individual;
-            }
-            set
-            {
-                this._individual = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "EraRewardPoints";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -71,6 +48,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_staking
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

@@ -27,110 +27,35 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_bounties
         /// <summary>
         /// >> proposer
         /// </summary>
-        private Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 _proposer;
-        
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 Proposer { get; set; }
         /// <summary>
         /// >> value
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U128 _value;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U128 Value { get; set; }
         /// <summary>
         /// >> fee
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U128 _fee;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U128 Fee { get; set; }
         /// <summary>
         /// >> curator_deposit
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U128 _curatorDeposit;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U128 CuratorDeposit { get; set; }
         /// <summary>
         /// >> bond
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U128 _bond;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U128 Bond { get; set; }
         /// <summary>
         /// >> status
         /// </summary>
-        private Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_bounties.EnumBountyStatus _status;
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_bounties.EnumBountyStatus Status { get; set; }
         
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 Proposer
-        {
-            get
-            {
-                return this._proposer;
-            }
-            set
-            {
-                this._proposer = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U128 Value
-        {
-            get
-            {
-                return this._value;
-            }
-            set
-            {
-                this._value = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U128 Fee
-        {
-            get
-            {
-                return this._fee;
-            }
-            set
-            {
-                this._fee = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U128 CuratorDeposit
-        {
-            get
-            {
-                return this._curatorDeposit;
-            }
-            set
-            {
-                this._curatorDeposit = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U128 Bond
-        {
-            get
-            {
-                return this._bond;
-            }
-            set
-            {
-                this._bond = value;
-            }
-        }
-        
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_bounties.EnumBountyStatus Status
-        {
-            get
-            {
-                return this._status;
-            }
-            set
-            {
-                this._status = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "Bounty";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -143,6 +68,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_bounties
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

@@ -15,9 +15,17 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_im_online.pallet
 {
     
     
+    /// <summary>
+    /// >> Call
+    /// Contains a variant per dispatchable extrinsic that this pallet has.
+    /// </summary>
     public enum Call
     {
         
+        /// <summary>
+        /// >> heartbeat
+        /// See [`Pallet::heartbeat`].
+        /// </summary>
         heartbeat = 0,
     }
     

@@ -15,25 +15,65 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_bounties.pallet
 {
     
     
+    /// <summary>
+    /// >> Call
+    /// Contains a variant per dispatchable extrinsic that this pallet has.
+    /// </summary>
     public enum Call
     {
         
+        /// <summary>
+        /// >> propose_bounty
+        /// See [`Pallet::propose_bounty`].
+        /// </summary>
         propose_bounty = 0,
         
+        /// <summary>
+        /// >> approve_bounty
+        /// See [`Pallet::approve_bounty`].
+        /// </summary>
         approve_bounty = 1,
         
+        /// <summary>
+        /// >> propose_curator
+        /// See [`Pallet::propose_curator`].
+        /// </summary>
         propose_curator = 2,
         
+        /// <summary>
+        /// >> unassign_curator
+        /// See [`Pallet::unassign_curator`].
+        /// </summary>
         unassign_curator = 3,
         
+        /// <summary>
+        /// >> accept_curator
+        /// See [`Pallet::accept_curator`].
+        /// </summary>
         accept_curator = 4,
         
+        /// <summary>
+        /// >> award_bounty
+        /// See [`Pallet::award_bounty`].
+        /// </summary>
         award_bounty = 5,
         
+        /// <summary>
+        /// >> claim_bounty
+        /// See [`Pallet::claim_bounty`].
+        /// </summary>
         claim_bounty = 6,
         
+        /// <summary>
+        /// >> close_bounty
+        /// See [`Pallet::close_bounty`].
+        /// </summary>
         close_bounty = 7,
         
+        /// <summary>
+        /// >> extend_bounty_expiry
+        /// See [`Pallet::extend_bounty_expiry`].
+        /// </summary>
         extend_bounty_expiry = 8,
     }
     

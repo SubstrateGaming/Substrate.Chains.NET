@@ -15,11 +15,20 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.v3.multiasset
 {
     
     
+    /// <summary>
+    /// >> WildFungibility
+    /// </summary>
     public enum WildFungibility
     {
         
+        /// <summary>
+        /// >> Fungible
+        /// </summary>
         Fungible = 0,
         
+        /// <summary>
+        /// >> NonFungible
+        /// </summary>
         NonFungible = 1,
     }
     

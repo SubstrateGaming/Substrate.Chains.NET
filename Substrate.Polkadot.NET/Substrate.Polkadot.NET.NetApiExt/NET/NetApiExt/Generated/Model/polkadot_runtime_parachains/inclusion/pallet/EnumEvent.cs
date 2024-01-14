@@ -15,15 +15,35 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_para
 {
     
     
+    /// <summary>
+    /// >> Event
+    /// The `Event` enum of this pallet
+    /// </summary>
     public enum Event
     {
         
+        /// <summary>
+        /// >> CandidateBacked
+        /// A candidate was backed. `[candidate, head_data]`
+        /// </summary>
         CandidateBacked = 0,
         
+        /// <summary>
+        /// >> CandidateIncluded
+        /// A candidate was included. `[candidate, head_data]`
+        /// </summary>
         CandidateIncluded = 1,
         
+        /// <summary>
+        /// >> CandidateTimedOut
+        /// A candidate timed out. `[candidate, head_data]`
+        /// </summary>
         CandidateTimedOut = 2,
         
+        /// <summary>
+        /// >> UpwardMessagesReceived
+        /// Some upward messages have been received and will be processed.
+        /// </summary>
         UpwardMessagesReceived = 3,
     }
     

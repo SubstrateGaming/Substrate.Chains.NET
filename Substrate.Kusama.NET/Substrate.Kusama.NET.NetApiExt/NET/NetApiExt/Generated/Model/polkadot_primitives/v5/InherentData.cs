@@ -27,76 +27,27 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5
         /// <summary>
         /// >> bitfields
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.signed.UncheckedSigned> _bitfields;
-        
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.signed.UncheckedSigned> Bitfields { get; set; }
         /// <summary>
         /// >> backed_candidates
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.BackedCandidate> _backedCandidates;
-        
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.BackedCandidate> BackedCandidates { get; set; }
         /// <summary>
         /// >> disputes
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.DisputeStatementSet> _disputes;
-        
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.DisputeStatementSet> Disputes { get; set; }
         /// <summary>
         /// >> parent_header
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.generic.header.Header _parentHeader;
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.generic.header.Header ParentHeader { get; set; }
         
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.signed.UncheckedSigned> Bitfields
-        {
-            get
-            {
-                return this._bitfields;
-            }
-            set
-            {
-                this._bitfields = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.BackedCandidate> BackedCandidates
-        {
-            get
-            {
-                return this._backedCandidates;
-            }
-            set
-            {
-                this._backedCandidates = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.DisputeStatementSet> Disputes
-        {
-            get
-            {
-                return this._disputes;
-            }
-            set
-            {
-                this._disputes = value;
-            }
-        }
-        
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.generic.header.Header ParentHeader
-        {
-            get
-            {
-                return this._parentHeader;
-            }
-            set
-            {
-                this._parentHeader = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "InherentData";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -107,6 +58,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

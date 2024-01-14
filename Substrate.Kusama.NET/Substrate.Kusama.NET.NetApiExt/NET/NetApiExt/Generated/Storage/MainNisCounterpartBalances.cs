@@ -21,12 +21,18 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> NisCounterpartBalancesStorage
+    /// </summary>
     public sealed class NisCounterpartBalancesStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> NisCounterpartBalancesStorage Constructor
+        /// </summary>
         public NisCounterpartBalancesStorage(SubstrateClientExt client)
         {
             this._client = client;
@@ -307,6 +313,9 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> NisCounterpartBalancesCalls
+    /// </summary>
     public sealed class NisCounterpartBalancesCalls
     {
         
@@ -420,6 +429,9 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> NisCounterpartBalancesConstants
+    /// </summary>
     public sealed class NisCounterpartBalancesConstants
     {
         
@@ -487,6 +499,9 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> NisCounterpartBalancesErrors
+    /// </summary>
     public enum NisCounterpartBalancesErrors
     {
         

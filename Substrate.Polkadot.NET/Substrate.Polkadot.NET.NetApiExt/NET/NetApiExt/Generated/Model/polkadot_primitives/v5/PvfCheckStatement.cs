@@ -27,76 +27,27 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v
         /// <summary>
         /// >> accept
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.Bool _accept;
-        
+        public Substrate.NetApi.Model.Types.Primitive.Bool Accept { get; set; }
         /// <summary>
         /// >> subject
         /// </summary>
-        private Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash _subject;
-        
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash Subject { get; set; }
         /// <summary>
         /// >> session_index
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _sessionIndex;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 SessionIndex { get; set; }
         /// <summary>
         /// >> validator_index
         /// </summary>
-        private Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.ValidatorIndex _validatorIndex;
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.ValidatorIndex ValidatorIndex { get; set; }
         
-        public Substrate.NetApi.Model.Types.Primitive.Bool Accept
-        {
-            get
-            {
-                return this._accept;
-            }
-            set
-            {
-                this._accept = value;
-            }
-        }
-        
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash Subject
-        {
-            get
-            {
-                return this._subject;
-            }
-            set
-            {
-                this._subject = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 SessionIndex
-        {
-            get
-            {
-                return this._sessionIndex;
-            }
-            set
-            {
-                this._sessionIndex = value;
-            }
-        }
-        
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.ValidatorIndex ValidatorIndex
-        {
-            get
-            {
-                return this._validatorIndex;
-            }
-            set
-            {
-                this._validatorIndex = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "PvfCheckStatement";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -107,6 +58,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

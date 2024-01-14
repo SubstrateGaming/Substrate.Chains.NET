@@ -15,25 +15,65 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_para
 {
     
     
+    /// <summary>
+    /// >> Call
+    /// Contains a variant per dispatchable extrinsic that this pallet has.
+    /// </summary>
     public enum Call
     {
         
+        /// <summary>
+        /// >> force_set_current_code
+        /// See [`Pallet::force_set_current_code`].
+        /// </summary>
         force_set_current_code = 0,
         
+        /// <summary>
+        /// >> force_set_current_head
+        /// See [`Pallet::force_set_current_head`].
+        /// </summary>
         force_set_current_head = 1,
         
+        /// <summary>
+        /// >> force_schedule_code_upgrade
+        /// See [`Pallet::force_schedule_code_upgrade`].
+        /// </summary>
         force_schedule_code_upgrade = 2,
         
+        /// <summary>
+        /// >> force_note_new_head
+        /// See [`Pallet::force_note_new_head`].
+        /// </summary>
         force_note_new_head = 3,
         
+        /// <summary>
+        /// >> force_queue_action
+        /// See [`Pallet::force_queue_action`].
+        /// </summary>
         force_queue_action = 4,
         
+        /// <summary>
+        /// >> add_trusted_validation_code
+        /// See [`Pallet::add_trusted_validation_code`].
+        /// </summary>
         add_trusted_validation_code = 5,
         
+        /// <summary>
+        /// >> poke_unused_validation_code
+        /// See [`Pallet::poke_unused_validation_code`].
+        /// </summary>
         poke_unused_validation_code = 6,
         
+        /// <summary>
+        /// >> include_pvf_check_statement
+        /// See [`Pallet::include_pvf_check_statement`].
+        /// </summary>
         include_pvf_check_statement = 7,
         
+        /// <summary>
+        /// >> force_set_most_recent_context
+        /// See [`Pallet::force_set_most_recent_context`].
+        /// </summary>
         force_set_most_recent_context = 8,
     }
     

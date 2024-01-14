@@ -15,27 +15,60 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.v2
 {
     
     
+    /// <summary>
+    /// >> BodyId
+    /// </summary>
     public enum BodyId
     {
         
+        /// <summary>
+        /// >> Unit
+        /// </summary>
         Unit = 0,
         
+        /// <summary>
+        /// >> Named
+        /// </summary>
         Named = 1,
         
+        /// <summary>
+        /// >> Index
+        /// </summary>
         Index = 2,
         
+        /// <summary>
+        /// >> Executive
+        /// </summary>
         Executive = 3,
         
+        /// <summary>
+        /// >> Technical
+        /// </summary>
         Technical = 4,
         
+        /// <summary>
+        /// >> Legislative
+        /// </summary>
         Legislative = 5,
         
+        /// <summary>
+        /// >> Judicial
+        /// </summary>
         Judicial = 6,
         
+        /// <summary>
+        /// >> Defense
+        /// </summary>
         Defense = 7,
         
+        /// <summary>
+        /// >> Administration
+        /// </summary>
         Administration = 8,
         
+        /// <summary>
+        /// >> Treasury
+        /// </summary>
         Treasury = 9,
     }
     

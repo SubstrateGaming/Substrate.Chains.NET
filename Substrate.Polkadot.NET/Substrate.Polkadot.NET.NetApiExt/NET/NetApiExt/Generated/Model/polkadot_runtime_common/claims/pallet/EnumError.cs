@@ -15,19 +15,48 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_comm
 {
     
     
+    /// <summary>
+    /// >> Error
+    /// The `Error` enum of this pallet.
+    /// </summary>
     public enum Error
     {
         
+        /// <summary>
+        /// >> InvalidEthereumSignature
+        /// Invalid Ethereum signature.
+        /// </summary>
         InvalidEthereumSignature = 0,
         
+        /// <summary>
+        /// >> SignerHasNoClaim
+        /// Ethereum address has no claim.
+        /// </summary>
         SignerHasNoClaim = 1,
         
+        /// <summary>
+        /// >> SenderHasNoClaim
+        /// Account ID sending transaction has no claim.
+        /// </summary>
         SenderHasNoClaim = 2,
         
+        /// <summary>
+        /// >> PotUnderflow
+        /// There's not enough in the pot to pay out some unvested amount. Generally implies a
+        /// logic error.
+        /// </summary>
         PotUnderflow = 3,
         
+        /// <summary>
+        /// >> InvalidStatement
+        /// A needed statement was not included.
+        /// </summary>
         InvalidStatement = 4,
         
+        /// <summary>
+        /// >> VestedBalanceExists
+        /// The account already has a vested balance.
+        /// </summary>
         VestedBalanceExists = 5,
     }
     

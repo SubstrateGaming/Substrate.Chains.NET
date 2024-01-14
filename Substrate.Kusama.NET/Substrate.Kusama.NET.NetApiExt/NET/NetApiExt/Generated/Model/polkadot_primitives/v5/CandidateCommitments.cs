@@ -27,110 +27,35 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5
         /// <summary>
         /// >> upward_messages
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT2 _upwardMessages;
-        
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT2 UpwardMessages { get; set; }
         /// <summary>
         /// >> horizontal_messages
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT3 _horizontalMessages;
-        
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT3 HorizontalMessages { get; set; }
         /// <summary>
         /// >> new_validation_code
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCode> _newValidationCode;
-        
+        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCode> NewValidationCode { get; set; }
         /// <summary>
         /// >> head_data
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.HeadData _headData;
-        
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.HeadData HeadData { get; set; }
         /// <summary>
         /// >> processed_downward_messages
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _processedDownwardMessages;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 ProcessedDownwardMessages { get; set; }
         /// <summary>
         /// >> hrmp_watermark
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _hrmpWatermark;
+        public Substrate.NetApi.Model.Types.Primitive.U32 HrmpWatermark { get; set; }
         
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT2 UpwardMessages
-        {
-            get
-            {
-                return this._upwardMessages;
-            }
-            set
-            {
-                this._upwardMessages = value;
-            }
-        }
-        
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT3 HorizontalMessages
-        {
-            get
-            {
-                return this._horizontalMessages;
-            }
-            set
-            {
-                this._horizontalMessages = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCode> NewValidationCode
-        {
-            get
-            {
-                return this._newValidationCode;
-            }
-            set
-            {
-                this._newValidationCode = value;
-            }
-        }
-        
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.HeadData HeadData
-        {
-            get
-            {
-                return this._headData;
-            }
-            set
-            {
-                this._headData = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 ProcessedDownwardMessages
-        {
-            get
-            {
-                return this._processedDownwardMessages;
-            }
-            set
-            {
-                this._processedDownwardMessages = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 HrmpWatermark
-        {
-            get
-            {
-                return this._hrmpWatermark;
-            }
-            set
-            {
-                this._hrmpWatermark = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "CandidateCommitments";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -143,6 +68,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

@@ -27,42 +27,19 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking
         /// <summary>
         /// >> commission
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill> _commission;
-        
+        public Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill> Commission { get; set; }
         /// <summary>
         /// >> blocked
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.Bool _blocked;
+        public Substrate.NetApi.Model.Types.Primitive.Bool Blocked { get; set; }
         
-        public Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill> Commission
-        {
-            get
-            {
-                return this._commission;
-            }
-            set
-            {
-                this._commission = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.Bool Blocked
-        {
-            get
-            {
-                return this._blocked;
-            }
-            set
-            {
-                this._blocked = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "ValidatorPrefs";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -71,6 +48,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

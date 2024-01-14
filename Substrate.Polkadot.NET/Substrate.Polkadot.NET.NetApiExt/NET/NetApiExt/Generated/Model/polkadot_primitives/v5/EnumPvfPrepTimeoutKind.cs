@@ -15,11 +15,20 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v
 {
     
     
+    /// <summary>
+    /// >> PvfPrepTimeoutKind
+    /// </summary>
     public enum PvfPrepTimeoutKind
     {
         
+        /// <summary>
+        /// >> Precheck
+        /// </summary>
         Precheck = 0,
         
+        /// <summary>
+        /// >> Lenient
+        /// </summary>
         Lenient = 1,
     }
     

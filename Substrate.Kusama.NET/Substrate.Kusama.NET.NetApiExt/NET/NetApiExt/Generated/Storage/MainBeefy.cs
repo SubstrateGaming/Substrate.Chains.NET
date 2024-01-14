@@ -21,12 +21,18 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> BeefyStorage
+    /// </summary>
     public sealed class BeefyStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> BeefyStorage Constructor
+        /// </summary>
         public BeefyStorage(SubstrateClientExt client)
         {
             this._client = client;
@@ -208,6 +214,9 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> BeefyCalls
+    /// </summary>
     public sealed class BeefyCalls
     {
         
@@ -236,6 +245,9 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> BeefyConstants
+    /// </summary>
     public sealed class BeefyConstants
     {
         
@@ -278,6 +290,9 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> BeefyErrors
+    /// </summary>
     public enum BeefyErrors
     {
         

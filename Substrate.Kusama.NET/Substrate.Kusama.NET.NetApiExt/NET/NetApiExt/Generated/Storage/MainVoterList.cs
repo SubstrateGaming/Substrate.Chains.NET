@@ -21,12 +21,18 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> VoterListStorage
+    /// </summary>
     public sealed class VoterListStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> VoterListStorage Constructor
+        /// </summary>
         public VoterListStorage(SubstrateClientExt client)
         {
             this._client = client;
@@ -137,6 +143,9 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> VoterListCalls
+    /// </summary>
     public sealed class VoterListCalls
     {
         
@@ -175,6 +184,9 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> VoterListConstants
+    /// </summary>
     public sealed class VoterListConstants
     {
         
@@ -272,6 +284,9 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> VoterListErrors
+    /// </summary>
     public enum VoterListErrors
     {
         

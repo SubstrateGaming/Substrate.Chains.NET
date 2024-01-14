@@ -27,93 +27,31 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_conviction_votin
         /// <summary>
         /// >> balance
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U128 _balance;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U128 Balance { get; set; }
         /// <summary>
         /// >> target
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 _target;
-        
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 Target { get; set; }
         /// <summary>
         /// >> conviction
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_conviction_voting.conviction.EnumConviction _conviction;
-        
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_conviction_voting.conviction.EnumConviction Conviction { get; set; }
         /// <summary>
         /// >> delegations
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_conviction_voting.types.Delegations _delegations;
-        
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_conviction_voting.types.Delegations Delegations { get; set; }
         /// <summary>
         /// >> prior
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_conviction_voting.vote.PriorLock _prior;
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_conviction_voting.vote.PriorLock Prior { get; set; }
         
-        public Substrate.NetApi.Model.Types.Primitive.U128 Balance
-        {
-            get
-            {
-                return this._balance;
-            }
-            set
-            {
-                this._balance = value;
-            }
-        }
-        
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 Target
-        {
-            get
-            {
-                return this._target;
-            }
-            set
-            {
-                this._target = value;
-            }
-        }
-        
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_conviction_voting.conviction.EnumConviction Conviction
-        {
-            get
-            {
-                return this._conviction;
-            }
-            set
-            {
-                this._conviction = value;
-            }
-        }
-        
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_conviction_voting.types.Delegations Delegations
-        {
-            get
-            {
-                return this._delegations;
-            }
-            set
-            {
-                this._delegations = value;
-            }
-        }
-        
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_conviction_voting.vote.PriorLock Prior
-        {
-            get
-            {
-                return this._prior;
-            }
-            set
-            {
-                this._prior = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "Delegating";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -125,6 +63,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_conviction_votin
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

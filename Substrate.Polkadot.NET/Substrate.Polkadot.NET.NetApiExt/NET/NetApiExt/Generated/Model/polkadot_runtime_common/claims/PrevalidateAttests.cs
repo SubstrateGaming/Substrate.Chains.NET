@@ -24,17 +24,20 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_comm
     public sealed class PrevalidateAttests : BaseType
     {
         
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "PrevalidateAttests";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

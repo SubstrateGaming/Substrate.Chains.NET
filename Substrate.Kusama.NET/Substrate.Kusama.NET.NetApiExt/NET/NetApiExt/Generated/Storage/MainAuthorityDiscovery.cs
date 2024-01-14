@@ -21,22 +21,34 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> AuthorityDiscoveryStorage
+    /// </summary>
     public sealed class AuthorityDiscoveryStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> AuthorityDiscoveryStorage Constructor
+        /// </summary>
         public AuthorityDiscoveryStorage(SubstrateClientExt client)
         {
             this._client = client;
         }
     }
     
+    /// <summary>
+    /// >> AuthorityDiscoveryCalls
+    /// </summary>
     public sealed class AuthorityDiscoveryCalls
     {
     }
     
+    /// <summary>
+    /// >> AuthorityDiscoveryConstants
+    /// </summary>
     public sealed class AuthorityDiscoveryConstants
     {
     }

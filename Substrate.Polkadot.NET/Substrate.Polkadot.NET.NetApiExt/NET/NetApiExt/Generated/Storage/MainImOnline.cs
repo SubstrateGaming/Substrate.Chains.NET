@@ -21,12 +21,18 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> ImOnlineStorage
+    /// </summary>
     public sealed class ImOnlineStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> ImOnlineStorage Constructor
+        /// </summary>
         public ImOnlineStorage(SubstrateClientExt client)
         {
             this._client = client;
@@ -183,6 +189,9 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> ImOnlineCalls
+    /// </summary>
     public sealed class ImOnlineCalls
     {
         
@@ -199,6 +208,9 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> ImOnlineConstants
+    /// </summary>
     public sealed class ImOnlineConstants
     {
         
@@ -217,6 +229,9 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> ImOnlineErrors
+    /// </summary>
     public enum ImOnlineErrors
     {
         

@@ -15,15 +15,30 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_election_provi
 {
     
     
+    /// <summary>
+    /// >> Phase
+    /// </summary>
     public enum Phase
     {
         
+        /// <summary>
+        /// >> Off
+        /// </summary>
         Off = 0,
         
+        /// <summary>
+        /// >> Signed
+        /// </summary>
         Signed = 1,
         
+        /// <summary>
+        /// >> Unsigned
+        /// </summary>
         Unsigned = 2,
         
+        /// <summary>
+        /// >> Emergency
+        /// </summary>
         Emergency = 3,
     }
     

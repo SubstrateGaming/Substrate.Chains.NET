@@ -15,95 +15,230 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_kusama_runtime
 {
     
     
+    /// <summary>
+    /// >> RuntimeEvent
+    /// </summary>
     public enum RuntimeEvent
     {
         
+        /// <summary>
+        /// >> System
+        /// </summary>
         System = 0,
         
+        /// <summary>
+        /// >> Indices
+        /// </summary>
         Indices = 3,
         
+        /// <summary>
+        /// >> Balances
+        /// </summary>
         Balances = 4,
         
+        /// <summary>
+        /// >> TransactionPayment
+        /// </summary>
         TransactionPayment = 33,
         
+        /// <summary>
+        /// >> Staking
+        /// </summary>
         Staking = 6,
         
+        /// <summary>
+        /// >> Offences
+        /// </summary>
         Offences = 7,
         
+        /// <summary>
+        /// >> Session
+        /// </summary>
         Session = 8,
         
+        /// <summary>
+        /// >> Grandpa
+        /// </summary>
         Grandpa = 10,
         
+        /// <summary>
+        /// >> ImOnline
+        /// </summary>
         ImOnline = 11,
         
+        /// <summary>
+        /// >> Treasury
+        /// </summary>
         Treasury = 18,
         
+        /// <summary>
+        /// >> ConvictionVoting
+        /// </summary>
         ConvictionVoting = 20,
         
+        /// <summary>
+        /// >> Referenda
+        /// </summary>
         Referenda = 21,
         
+        /// <summary>
+        /// >> FellowshipCollective
+        /// </summary>
         FellowshipCollective = 22,
         
+        /// <summary>
+        /// >> FellowshipReferenda
+        /// </summary>
         FellowshipReferenda = 23,
         
+        /// <summary>
+        /// >> Whitelist
+        /// </summary>
         Whitelist = 44,
         
+        /// <summary>
+        /// >> Claims
+        /// </summary>
         Claims = 19,
         
+        /// <summary>
+        /// >> Utility
+        /// </summary>
         Utility = 24,
         
+        /// <summary>
+        /// >> Identity
+        /// </summary>
         Identity = 25,
         
+        /// <summary>
+        /// >> Society
+        /// </summary>
         Society = 26,
         
+        /// <summary>
+        /// >> Recovery
+        /// </summary>
         Recovery = 27,
         
+        /// <summary>
+        /// >> Vesting
+        /// </summary>
         Vesting = 28,
         
+        /// <summary>
+        /// >> Scheduler
+        /// </summary>
         Scheduler = 29,
         
+        /// <summary>
+        /// >> Proxy
+        /// </summary>
         Proxy = 30,
         
+        /// <summary>
+        /// >> Multisig
+        /// </summary>
         Multisig = 31,
         
+        /// <summary>
+        /// >> Preimage
+        /// </summary>
         Preimage = 32,
         
+        /// <summary>
+        /// >> Bounties
+        /// </summary>
         Bounties = 35,
         
+        /// <summary>
+        /// >> ChildBounties
+        /// </summary>
         ChildBounties = 40,
         
+        /// <summary>
+        /// >> ElectionProviderMultiPhase
+        /// </summary>
         ElectionProviderMultiPhase = 37,
         
+        /// <summary>
+        /// >> Nis
+        /// </summary>
         Nis = 38,
         
+        /// <summary>
+        /// >> NisCounterpartBalances
+        /// </summary>
         NisCounterpartBalances = 45,
         
+        /// <summary>
+        /// >> VoterList
+        /// </summary>
         VoterList = 39,
         
+        /// <summary>
+        /// >> NominationPools
+        /// </summary>
         NominationPools = 41,
         
+        /// <summary>
+        /// >> FastUnstake
+        /// </summary>
         FastUnstake = 42,
         
+        /// <summary>
+        /// >> ParaInclusion
+        /// </summary>
         ParaInclusion = 53,
         
+        /// <summary>
+        /// >> Paras
+        /// </summary>
         Paras = 56,
         
+        /// <summary>
+        /// >> Hrmp
+        /// </summary>
         Hrmp = 60,
         
+        /// <summary>
+        /// >> ParasDisputes
+        /// </summary>
         ParasDisputes = 62,
         
+        /// <summary>
+        /// >> Registrar
+        /// </summary>
         Registrar = 70,
         
+        /// <summary>
+        /// >> Slots
+        /// </summary>
         Slots = 71,
         
+        /// <summary>
+        /// >> Auctions
+        /// </summary>
         Auctions = 72,
         
+        /// <summary>
+        /// >> Crowdloan
+        /// </summary>
         Crowdloan = 73,
         
+        /// <summary>
+        /// >> StateTrieMigration
+        /// </summary>
         StateTrieMigration = 98,
         
+        /// <summary>
+        /// >> XcmPallet
+        /// </summary>
         XcmPallet = 99,
         
+        /// <summary>
+        /// >> MessageQueue
+        /// </summary>
         MessageQueue = 100,
     }
     

@@ -15,15 +15,35 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_message_queue.
 {
     
     
+    /// <summary>
+    /// >> Event
+    /// The `Event` enum of this pallet
+    /// </summary>
     public enum Event
     {
         
+        /// <summary>
+        /// >> ProcessingFailed
+        /// Message discarded due to an error in the `MessageProcessor` (usually a format error).
+        /// </summary>
         ProcessingFailed = 0,
         
+        /// <summary>
+        /// >> Processed
+        /// Message is processed.
+        /// </summary>
         Processed = 1,
         
+        /// <summary>
+        /// >> OverweightEnqueued
+        /// Message placed in overweight queue.
+        /// </summary>
         OverweightEnqueued = 2,
         
+        /// <summary>
+        /// >> PageReaped
+        /// This page was reaped.
+        /// </summary>
         PageReaped = 3,
     }
     

@@ -15,15 +15,30 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_bags_list.list
 {
     
     
+    /// <summary>
+    /// >> ListError
+    /// </summary>
     public enum ListError
     {
         
+        /// <summary>
+        /// >> Duplicate
+        /// </summary>
         Duplicate = 0,
         
+        /// <summary>
+        /// >> NotHeavier
+        /// </summary>
         NotHeavier = 1,
         
+        /// <summary>
+        /// >> NotInSameBag
+        /// </summary>
         NotInSameBag = 2,
         
+        /// <summary>
+        /// >> NodeNotFound
+        /// </summary>
         NodeNotFound = 3,
     }
     

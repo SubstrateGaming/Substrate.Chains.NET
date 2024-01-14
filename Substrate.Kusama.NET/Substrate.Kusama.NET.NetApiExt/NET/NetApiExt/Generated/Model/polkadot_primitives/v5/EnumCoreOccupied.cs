@@ -15,11 +15,20 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5
 {
     
     
+    /// <summary>
+    /// >> CoreOccupied
+    /// </summary>
     public enum CoreOccupied
     {
         
+        /// <summary>
+        /// >> Free
+        /// </summary>
         Free = 0,
         
+        /// <summary>
+        /// >> Paras
+        /// </summary>
         Paras = 1,
     }
     

@@ -15,13 +15,29 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_preimage.palle
 {
     
     
+    /// <summary>
+    /// >> Event
+    /// The `Event` enum of this pallet
+    /// </summary>
     public enum Event
     {
         
+        /// <summary>
+        /// >> Noted
+        /// A preimage has been noted.
+        /// </summary>
         Noted = 0,
         
+        /// <summary>
+        /// >> Requested
+        /// A preimage has been requested.
+        /// </summary>
         Requested = 1,
         
+        /// <summary>
+        /// >> Cleared
+        /// A preimage has ben cleared.
+        /// </summary>
         Cleared = 2,
     }
     

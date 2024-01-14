@@ -15,13 +15,25 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_conviction_vot
 {
     
     
+    /// <summary>
+    /// >> AccountVote
+    /// </summary>
     public enum AccountVote
     {
         
+        /// <summary>
+        /// >> Standard
+        /// </summary>
         Standard = 0,
         
+        /// <summary>
+        /// >> Split
+        /// </summary>
         Split = 1,
         
+        /// <summary>
+        /// >> SplitAbstain
+        /// </summary>
         SplitAbstain = 2,
     }
     

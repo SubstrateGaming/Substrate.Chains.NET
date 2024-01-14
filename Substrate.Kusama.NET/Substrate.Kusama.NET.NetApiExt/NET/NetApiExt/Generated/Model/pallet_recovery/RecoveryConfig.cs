@@ -27,76 +27,27 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_recovery
         /// <summary>
         /// >> delay_period
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _delayPeriod;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 DelayPeriod { get; set; }
         /// <summary>
         /// >> deposit
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U128 _deposit;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U128 Deposit { get; set; }
         /// <summary>
         /// >> friends
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT30 _friends;
-        
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT30 Friends { get; set; }
         /// <summary>
         /// >> threshold
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U16 _threshold;
+        public Substrate.NetApi.Model.Types.Primitive.U16 Threshold { get; set; }
         
-        public Substrate.NetApi.Model.Types.Primitive.U32 DelayPeriod
-        {
-            get
-            {
-                return this._delayPeriod;
-            }
-            set
-            {
-                this._delayPeriod = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U128 Deposit
-        {
-            get
-            {
-                return this._deposit;
-            }
-            set
-            {
-                this._deposit = value;
-            }
-        }
-        
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT30 Friends
-        {
-            get
-            {
-                return this._friends;
-            }
-            set
-            {
-                this._friends = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U16 Threshold
-        {
-            get
-            {
-                return this._threshold;
-            }
-            set
-            {
-                this._threshold = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "RecoveryConfig";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -107,6 +58,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_recovery
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

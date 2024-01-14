@@ -21,12 +21,18 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> ReferendaStorage
+    /// </summary>
     public sealed class ReferendaStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> ReferendaStorage Constructor
+        /// </summary>
         public ReferendaStorage(SubstrateClientExt client)
         {
             this._client = client;
@@ -211,6 +217,9 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> ReferendaCalls
+    /// </summary>
     public sealed class ReferendaCalls
     {
         
@@ -317,6 +326,9 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> ReferendaConstants
+    /// </summary>
     public sealed class ReferendaConstants
     {
         
@@ -413,6 +425,9 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> ReferendaErrors
+    /// </summary>
     public enum ReferendaErrors
     {
         

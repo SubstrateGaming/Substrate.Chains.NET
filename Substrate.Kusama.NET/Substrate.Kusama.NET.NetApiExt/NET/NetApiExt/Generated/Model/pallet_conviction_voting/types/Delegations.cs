@@ -27,42 +27,19 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_conviction_votin
         /// <summary>
         /// >> votes
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U128 _votes;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U128 Votes { get; set; }
         /// <summary>
         /// >> capital
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U128 _capital;
+        public Substrate.NetApi.Model.Types.Primitive.U128 Capital { get; set; }
         
-        public Substrate.NetApi.Model.Types.Primitive.U128 Votes
-        {
-            get
-            {
-                return this._votes;
-            }
-            set
-            {
-                this._votes = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U128 Capital
-        {
-            get
-            {
-                return this._capital;
-            }
-            set
-            {
-                this._capital = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "Delegations";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -71,6 +48,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_conviction_votin
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

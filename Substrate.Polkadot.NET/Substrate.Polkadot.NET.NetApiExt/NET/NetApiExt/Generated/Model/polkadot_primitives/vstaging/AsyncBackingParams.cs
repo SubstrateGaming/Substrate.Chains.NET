@@ -27,42 +27,19 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v
         /// <summary>
         /// >> max_candidate_depth
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _maxCandidateDepth;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 MaxCandidateDepth { get; set; }
         /// <summary>
         /// >> allowed_ancestry_len
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _allowedAncestryLen;
+        public Substrate.NetApi.Model.Types.Primitive.U32 AllowedAncestryLen { get; set; }
         
-        public Substrate.NetApi.Model.Types.Primitive.U32 MaxCandidateDepth
-        {
-            get
-            {
-                return this._maxCandidateDepth;
-            }
-            set
-            {
-                this._maxCandidateDepth = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 AllowedAncestryLen
-        {
-            get
-            {
-                return this._allowedAncestryLen;
-            }
-            set
-            {
-                this._allowedAncestryLen = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "AsyncBackingParams";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -71,6 +48,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

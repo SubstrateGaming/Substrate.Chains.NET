@@ -15,13 +15,25 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_state_trie_migra
 {
     
     
+    /// <summary>
+    /// >> Progress
+    /// </summary>
     public enum Progress
     {
         
+        /// <summary>
+        /// >> ToStart
+        /// </summary>
         ToStart = 0,
         
+        /// <summary>
+        /// >> LastKey
+        /// </summary>
         LastKey = 1,
         
+        /// <summary>
+        /// >> Complete
+        /// </summary>
         Complete = 2,
     }
     

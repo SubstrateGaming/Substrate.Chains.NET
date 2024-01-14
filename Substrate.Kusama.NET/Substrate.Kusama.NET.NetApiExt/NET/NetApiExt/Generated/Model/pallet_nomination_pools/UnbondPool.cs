@@ -27,42 +27,19 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools
         /// <summary>
         /// >> points
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U128 _points;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U128 Points { get; set; }
         /// <summary>
         /// >> balance
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U128 _balance;
+        public Substrate.NetApi.Model.Types.Primitive.U128 Balance { get; set; }
         
-        public Substrate.NetApi.Model.Types.Primitive.U128 Points
-        {
-            get
-            {
-                return this._points;
-            }
-            set
-            {
-                this._points = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U128 Balance
-        {
-            get
-            {
-                return this._balance;
-            }
-            set
-            {
-                this._balance = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "UnbondPool";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -71,6 +48,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

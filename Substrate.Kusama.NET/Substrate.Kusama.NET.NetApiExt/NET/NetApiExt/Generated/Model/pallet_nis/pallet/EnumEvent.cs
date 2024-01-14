@@ -15,21 +15,53 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nis.pallet
 {
     
     
+    /// <summary>
+    /// >> Event
+    /// The `Event` enum of this pallet
+    /// </summary>
     public enum Event
     {
         
+        /// <summary>
+        /// >> BidPlaced
+        /// A bid was successfully placed.
+        /// </summary>
         BidPlaced = 0,
         
+        /// <summary>
+        /// >> BidRetracted
+        /// A bid was successfully removed (before being accepted).
+        /// </summary>
         BidRetracted = 1,
         
+        /// <summary>
+        /// >> BidDropped
+        /// A bid was dropped from a queue because of another, more substantial, bid was present.
+        /// </summary>
         BidDropped = 2,
         
+        /// <summary>
+        /// >> Issued
+        /// A bid was accepted. The balance may not be released until expiry.
+        /// </summary>
         Issued = 3,
         
+        /// <summary>
+        /// >> Thawed
+        /// An receipt has been (at least partially) thawed.
+        /// </summary>
         Thawed = 4,
         
+        /// <summary>
+        /// >> Funded
+        /// An automatic funding of the deficit was made.
+        /// </summary>
         Funded = 5,
         
+        /// <summary>
+        /// >> Transferred
+        /// A receipt was transfered.
+        /// </summary>
         Transferred = 6,
     }
     

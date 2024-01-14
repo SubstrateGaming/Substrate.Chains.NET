@@ -15,25 +15,65 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_balances.palle
 {
     
     
+    /// <summary>
+    /// >> Call
+    /// Contains a variant per dispatchable extrinsic that this pallet has.
+    /// </summary>
     public enum Call
     {
         
+        /// <summary>
+        /// >> transfer_allow_death
+        /// See [`Pallet::transfer_allow_death`].
+        /// </summary>
         transfer_allow_death = 0,
         
+        /// <summary>
+        /// >> set_balance_deprecated
+        /// See [`Pallet::set_balance_deprecated`].
+        /// </summary>
         set_balance_deprecated = 1,
         
+        /// <summary>
+        /// >> force_transfer
+        /// See [`Pallet::force_transfer`].
+        /// </summary>
         force_transfer = 2,
         
+        /// <summary>
+        /// >> transfer_keep_alive
+        /// See [`Pallet::transfer_keep_alive`].
+        /// </summary>
         transfer_keep_alive = 3,
         
+        /// <summary>
+        /// >> transfer_all
+        /// See [`Pallet::transfer_all`].
+        /// </summary>
         transfer_all = 4,
         
+        /// <summary>
+        /// >> force_unreserve
+        /// See [`Pallet::force_unreserve`].
+        /// </summary>
         force_unreserve = 5,
         
+        /// <summary>
+        /// >> upgrade_accounts
+        /// See [`Pallet::upgrade_accounts`].
+        /// </summary>
         upgrade_accounts = 6,
         
+        /// <summary>
+        /// >> transfer
+        /// See [`Pallet::transfer`].
+        /// </summary>
         transfer = 7,
         
+        /// <summary>
+        /// >> force_set_balance
+        /// See [`Pallet::force_set_balance`].
+        /// </summary>
         force_set_balance = 8,
     }
     

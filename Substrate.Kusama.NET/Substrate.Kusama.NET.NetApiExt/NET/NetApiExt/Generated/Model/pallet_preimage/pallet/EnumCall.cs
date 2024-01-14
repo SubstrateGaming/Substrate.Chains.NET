@@ -15,15 +15,35 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_preimage.pallet
 {
     
     
+    /// <summary>
+    /// >> Call
+    /// Contains a variant per dispatchable extrinsic that this pallet has.
+    /// </summary>
     public enum Call
     {
         
+        /// <summary>
+        /// >> note_preimage
+        /// See [`Pallet::note_preimage`].
+        /// </summary>
         note_preimage = 0,
         
+        /// <summary>
+        /// >> unnote_preimage
+        /// See [`Pallet::unnote_preimage`].
+        /// </summary>
         unnote_preimage = 1,
         
+        /// <summary>
+        /// >> request_preimage
+        /// See [`Pallet::request_preimage`].
+        /// </summary>
         request_preimage = 2,
         
+        /// <summary>
+        /// >> unrequest_preimage
+        /// See [`Pallet::unrequest_preimage`].
+        /// </summary>
         unrequest_preimage = 3,
     }
     

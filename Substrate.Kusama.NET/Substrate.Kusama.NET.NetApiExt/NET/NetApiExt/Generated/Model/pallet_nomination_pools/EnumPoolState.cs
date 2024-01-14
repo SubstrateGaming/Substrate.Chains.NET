@@ -15,13 +15,25 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools
 {
     
     
+    /// <summary>
+    /// >> PoolState
+    /// </summary>
     public enum PoolState
     {
         
+        /// <summary>
+        /// >> Open
+        /// </summary>
         Open = 0,
         
+        /// <summary>
+        /// >> Blocked
+        /// </summary>
         Blocked = 1,
         
+        /// <summary>
+        /// >> Destroying
+        /// </summary>
         Destroying = 2,
     }
     

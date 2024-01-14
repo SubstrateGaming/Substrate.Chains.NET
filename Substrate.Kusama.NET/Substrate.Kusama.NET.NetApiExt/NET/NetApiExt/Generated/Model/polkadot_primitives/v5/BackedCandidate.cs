@@ -27,59 +27,23 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5
         /// <summary>
         /// >> candidate
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.CommittedCandidateReceipt _candidate;
-        
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.CommittedCandidateReceipt Candidate { get; set; }
         /// <summary>
         /// >> validity_votes
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.EnumValidityAttestation> _validityVotes;
-        
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.EnumValidityAttestation> ValidityVotes { get; set; }
         /// <summary>
         /// >> validator_indices
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseBitSeq<Substrate.NetApi.Model.Types.Primitive.U8, Substrate.Kusama.NET.NetApiExt.Generated.Model.bitvec.order.Lsb0> _validatorIndices;
+        public Substrate.NetApi.Model.Types.Base.BaseBitSeq<Substrate.NetApi.Model.Types.Primitive.U8, Substrate.Kusama.NET.NetApiExt.Generated.Model.bitvec.order.Lsb0> ValidatorIndices { get; set; }
         
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.CommittedCandidateReceipt Candidate
-        {
-            get
-            {
-                return this._candidate;
-            }
-            set
-            {
-                this._candidate = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.EnumValidityAttestation> ValidityVotes
-        {
-            get
-            {
-                return this._validityVotes;
-            }
-            set
-            {
-                this._validityVotes = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseBitSeq<Substrate.NetApi.Model.Types.Primitive.U8, Substrate.Kusama.NET.NetApiExt.Generated.Model.bitvec.order.Lsb0> ValidatorIndices
-        {
-            get
-            {
-                return this._validatorIndices;
-            }
-            set
-            {
-                this._validatorIndices = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "BackedCandidate";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -89,6 +53,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

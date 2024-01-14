@@ -27,42 +27,19 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society
         /// <summary>
         /// >> paid
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U128 _paid;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U128 Paid { get; set; }
         /// <summary>
         /// >> payouts
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT27 _payouts;
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT27 Payouts { get; set; }
         
-        public Substrate.NetApi.Model.Types.Primitive.U128 Paid
-        {
-            get
-            {
-                return this._paid;
-            }
-            set
-            {
-                this._paid = value;
-            }
-        }
-        
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT27 Payouts
-        {
-            get
-            {
-                return this._payouts;
-            }
-            set
-            {
-                this._payouts = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "PayoutRecord";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -71,6 +48,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

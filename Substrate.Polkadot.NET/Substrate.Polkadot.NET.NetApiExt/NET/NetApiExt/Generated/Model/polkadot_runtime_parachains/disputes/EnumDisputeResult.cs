@@ -15,11 +15,20 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_para
 {
     
     
+    /// <summary>
+    /// >> DisputeResult
+    /// </summary>
     public enum DisputeResult
     {
         
+        /// <summary>
+        /// >> Valid
+        /// </summary>
         Valid = 0,
         
+        /// <summary>
+        /// >> Invalid
+        /// </summary>
         Invalid = 1,
     }
     

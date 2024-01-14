@@ -27,42 +27,19 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.slashing
         /// <summary>
         /// >> slashed
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U128 _slashed;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U128 Slashed { get; set; }
         /// <summary>
         /// >> paid_out
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U128 _paidOut;
+        public Substrate.NetApi.Model.Types.Primitive.U128 PaidOut { get; set; }
         
-        public Substrate.NetApi.Model.Types.Primitive.U128 Slashed
-        {
-            get
-            {
-                return this._slashed;
-            }
-            set
-            {
-                this._slashed = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U128 PaidOut
-        {
-            get
-            {
-                return this._paidOut;
-            }
-            set
-            {
-                this._paidOut = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "SpanRecord";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -71,6 +48,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.slashing
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

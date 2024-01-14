@@ -15,21 +15,57 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_comm
 {
     
     
+    /// <summary>
+    /// >> Event
+    /// The `Event` enum of this pallet
+    /// </summary>
     public enum Event
     {
         
+        /// <summary>
+        /// >> AuctionStarted
+        /// An auction started. Provides its index and the block number where it will begin to
+        /// close and the first lease period of the quadruplet that is auctioned.
+        /// </summary>
         AuctionStarted = 0,
         
+        /// <summary>
+        /// >> AuctionClosed
+        /// An auction ended. All funds become unreserved.
+        /// </summary>
         AuctionClosed = 1,
         
+        /// <summary>
+        /// >> Reserved
+        /// Funds were reserved for a winning bid. First balance is the extra amount reserved.
+        /// Second is the total.
+        /// </summary>
         Reserved = 2,
         
+        /// <summary>
+        /// >> Unreserved
+        /// Funds were unreserved since bidder is no longer active. `[bidder, amount]`
+        /// </summary>
         Unreserved = 3,
         
+        /// <summary>
+        /// >> ReserveConfiscated
+        /// Someone attempted to lease the same slot twice for a parachain. The amount is held in
+        /// reserve but no parachain slot has been leased.
+        /// </summary>
         ReserveConfiscated = 4,
         
+        /// <summary>
+        /// >> BidAccepted
+        /// A new bid has been accepted as the current winner.
+        /// </summary>
         BidAccepted = 5,
         
+        /// <summary>
+        /// >> WinningOffset
+        /// The winning offset was chosen for an auction. This will map into the `Winning` storage
+        /// map.
+        /// </summary>
         WinningOffset = 6,
     }
     

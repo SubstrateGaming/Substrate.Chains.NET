@@ -15,11 +15,20 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_runtime
 {
     
     
+    /// <summary>
+    /// >> TransactionalError
+    /// </summary>
     public enum TransactionalError
     {
         
+        /// <summary>
+        /// >> LimitReached
+        /// </summary>
         LimitReached = 0,
         
+        /// <summary>
+        /// >> NoLayer
+        /// </summary>
         NoLayer = 1,
     }
     

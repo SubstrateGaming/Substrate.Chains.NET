@@ -15,13 +15,26 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_whitelist.pall
 {
     
     
+    /// <summary>
+    /// >> Event
+    /// The `Event` enum of this pallet
+    /// </summary>
     public enum Event
     {
         
+        /// <summary>
+        /// >> CallWhitelisted
+        /// </summary>
         CallWhitelisted = 0,
         
+        /// <summary>
+        /// >> WhitelistedCallRemoved
+        /// </summary>
         WhitelistedCallRemoved = 1,
         
+        /// <summary>
+        /// >> WhitelistedCallDispatched
+        /// </summary>
         WhitelistedCallDispatched = 2,
     }
     

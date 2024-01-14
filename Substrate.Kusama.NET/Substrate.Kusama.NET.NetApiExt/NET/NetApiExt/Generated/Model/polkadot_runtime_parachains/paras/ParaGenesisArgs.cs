@@ -27,59 +27,23 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parach
         /// <summary>
         /// >> genesis_head
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.HeadData _genesisHead;
-        
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.HeadData GenesisHead { get; set; }
         /// <summary>
         /// >> validation_code
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCode _validationCode;
-        
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCode ValidationCode { get; set; }
         /// <summary>
         /// >> para_kind
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.Bool _paraKind;
+        public Substrate.NetApi.Model.Types.Primitive.Bool ParaKind { get; set; }
         
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.HeadData GenesisHead
-        {
-            get
-            {
-                return this._genesisHead;
-            }
-            set
-            {
-                this._genesisHead = value;
-            }
-        }
-        
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCode ValidationCode
-        {
-            get
-            {
-                return this._validationCode;
-            }
-            set
-            {
-                this._validationCode = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.Bool ParaKind
-        {
-            get
-            {
-                return this._paraKind;
-            }
-            set
-            {
-                this._paraKind = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "ParaGenesisArgs";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -89,6 +53,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parach
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

@@ -15,15 +15,30 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5
 {
     
     
+    /// <summary>
+    /// >> ValidDisputeStatementKind
+    /// </summary>
     public enum ValidDisputeStatementKind
     {
         
+        /// <summary>
+        /// >> Explicit
+        /// </summary>
         Explicit = 0,
         
+        /// <summary>
+        /// >> BackingSeconded
+        /// </summary>
         BackingSeconded = 1,
         
+        /// <summary>
+        /// >> BackingValid
+        /// </summary>
         BackingValid = 2,
         
+        /// <summary>
+        /// >> ApprovalChecking
+        /// </summary>
         ApprovalChecking = 3,
     }
     

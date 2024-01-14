@@ -15,11 +15,20 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.
 {
     
     
+    /// <summary>
+    /// >> SlashingOffenceKind
+    /// </summary>
     public enum SlashingOffenceKind
     {
         
+        /// <summary>
+        /// >> ForInvalid
+        /// </summary>
         ForInvalid = 0,
         
+        /// <summary>
+        /// >> AgainstValid
+        /// </summary>
         AgainstValid = 1,
     }
     

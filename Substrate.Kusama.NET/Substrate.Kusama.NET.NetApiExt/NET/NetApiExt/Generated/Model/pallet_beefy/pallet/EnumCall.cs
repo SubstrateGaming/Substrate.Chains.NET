@@ -15,11 +15,23 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_beefy.pallet
 {
     
     
+    /// <summary>
+    /// >> Call
+    /// Contains a variant per dispatchable extrinsic that this pallet has.
+    /// </summary>
     public enum Call
     {
         
+        /// <summary>
+        /// >> report_equivocation
+        /// See [`Pallet::report_equivocation`].
+        /// </summary>
         report_equivocation = 0,
         
+        /// <summary>
+        /// >> report_equivocation_unsigned
+        /// See [`Pallet::report_equivocation_unsigned`].
+        /// </summary>
         report_equivocation_unsigned = 1,
     }
     

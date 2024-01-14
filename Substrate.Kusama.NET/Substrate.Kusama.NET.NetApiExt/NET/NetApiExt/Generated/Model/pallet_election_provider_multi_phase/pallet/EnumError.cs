@@ -15,35 +15,95 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_election_provide
 {
     
     
+    /// <summary>
+    /// >> Error
+    /// Error of the pallet that can be returned in response to dispatches.
+    /// </summary>
     public enum Error
     {
         
+        /// <summary>
+        /// >> PreDispatchEarlySubmission
+        /// Submission was too early.
+        /// </summary>
         PreDispatchEarlySubmission = 0,
         
+        /// <summary>
+        /// >> PreDispatchWrongWinnerCount
+        /// Wrong number of winners presented.
+        /// </summary>
         PreDispatchWrongWinnerCount = 1,
         
+        /// <summary>
+        /// >> PreDispatchWeakSubmission
+        /// Submission was too weak, score-wise.
+        /// </summary>
         PreDispatchWeakSubmission = 2,
         
+        /// <summary>
+        /// >> SignedQueueFull
+        /// The queue was full, and the solution was not better than any of the existing ones.
+        /// </summary>
         SignedQueueFull = 3,
         
+        /// <summary>
+        /// >> SignedCannotPayDeposit
+        /// The origin failed to pay the deposit.
+        /// </summary>
         SignedCannotPayDeposit = 4,
         
+        /// <summary>
+        /// >> SignedInvalidWitness
+        /// Witness data to dispatchable is invalid.
+        /// </summary>
         SignedInvalidWitness = 5,
         
+        /// <summary>
+        /// >> SignedTooMuchWeight
+        /// The signed submission consumes too much weight
+        /// </summary>
         SignedTooMuchWeight = 6,
         
+        /// <summary>
+        /// >> OcwCallWrongEra
+        /// OCW submitted solution for wrong round
+        /// </summary>
         OcwCallWrongEra = 7,
         
+        /// <summary>
+        /// >> MissingSnapshotMetadata
+        /// Snapshot metadata should exist but didn't.
+        /// </summary>
         MissingSnapshotMetadata = 8,
         
+        /// <summary>
+        /// >> InvalidSubmissionIndex
+        /// `Self::insert_submission` returned an invalid index.
+        /// </summary>
         InvalidSubmissionIndex = 9,
         
+        /// <summary>
+        /// >> CallNotAllowed
+        /// The call is not allowed at this point.
+        /// </summary>
         CallNotAllowed = 10,
         
+        /// <summary>
+        /// >> FallbackFailed
+        /// The fallback failed
+        /// </summary>
         FallbackFailed = 11,
         
+        /// <summary>
+        /// >> BoundNotMet
+        /// Some bound not met
+        /// </summary>
         BoundNotMet = 12,
         
+        /// <summary>
+        /// >> TooManyWinners
+        /// Submitted solution has too many winners
+        /// </summary>
         TooManyWinners = 13,
     }
     

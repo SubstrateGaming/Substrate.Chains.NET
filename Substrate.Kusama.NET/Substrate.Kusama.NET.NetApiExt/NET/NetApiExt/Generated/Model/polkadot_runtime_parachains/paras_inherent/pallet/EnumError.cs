@@ -15,19 +15,48 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parach
 {
     
     
+    /// <summary>
+    /// >> Error
+    /// The `Error` enum of this pallet.
+    /// </summary>
     public enum Error
     {
         
+        /// <summary>
+        /// >> TooManyInclusionInherents
+        /// Inclusion inherent called more than once per block.
+        /// </summary>
         TooManyInclusionInherents = 0,
         
+        /// <summary>
+        /// >> InvalidParentHeader
+        /// The hash of the submitted parent header doesn't correspond to the saved block hash of
+        /// the parent.
+        /// </summary>
         InvalidParentHeader = 1,
         
+        /// <summary>
+        /// >> CandidateConcludedInvalid
+        /// Disputed candidate that was concluded invalid.
+        /// </summary>
         CandidateConcludedInvalid = 2,
         
+        /// <summary>
+        /// >> InherentOverweight
+        /// The data given to the inherent will result in an overweight block.
+        /// </summary>
         InherentOverweight = 3,
         
+        /// <summary>
+        /// >> DisputeStatementsUnsortedOrDuplicates
+        /// The ordering of dispute statements was invalid.
+        /// </summary>
         DisputeStatementsUnsortedOrDuplicates = 4,
         
+        /// <summary>
+        /// >> DisputeInvalid
+        /// A dispute statement was invalid.
+        /// </summary>
         DisputeInvalid = 5,
     }
     

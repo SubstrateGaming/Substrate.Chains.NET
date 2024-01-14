@@ -15,71 +15,203 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.pallet
 {
     
     
+    /// <summary>
+    /// >> Error
+    /// The `Error` enum of this pallet.
+    /// </summary>
     public enum Error
     {
         
+        /// <summary>
+        /// >> NotMember
+        /// User is not a member.
+        /// </summary>
         NotMember = 0,
         
+        /// <summary>
+        /// >> AlreadyMember
+        /// User is already a member.
+        /// </summary>
         AlreadyMember = 1,
         
+        /// <summary>
+        /// >> Suspended
+        /// User is suspended.
+        /// </summary>
         Suspended = 2,
         
+        /// <summary>
+        /// >> NotSuspended
+        /// User is not suspended.
+        /// </summary>
         NotSuspended = 3,
         
+        /// <summary>
+        /// >> NoPayout
+        /// Nothing to payout.
+        /// </summary>
         NoPayout = 4,
         
+        /// <summary>
+        /// >> AlreadyFounded
+        /// Society already founded.
+        /// </summary>
         AlreadyFounded = 5,
         
+        /// <summary>
+        /// >> InsufficientPot
+        /// Not enough in pot to accept candidate.
+        /// </summary>
         InsufficientPot = 6,
         
+        /// <summary>
+        /// >> AlreadyVouching
+        /// Member is already vouching or banned from vouching again.
+        /// </summary>
         AlreadyVouching = 7,
         
+        /// <summary>
+        /// >> NotVouchingOnBidder
+        /// Member is not vouching.
+        /// </summary>
         NotVouchingOnBidder = 8,
         
+        /// <summary>
+        /// >> Head
+        /// Cannot remove the head of the chain.
+        /// </summary>
         Head = 9,
         
+        /// <summary>
+        /// >> Founder
+        /// Cannot remove the founder.
+        /// </summary>
         Founder = 10,
         
+        /// <summary>
+        /// >> AlreadyBid
+        /// User has already made a bid.
+        /// </summary>
         AlreadyBid = 11,
         
+        /// <summary>
+        /// >> AlreadyCandidate
+        /// User is already a candidate.
+        /// </summary>
         AlreadyCandidate = 12,
         
+        /// <summary>
+        /// >> NotCandidate
+        /// User is not a candidate.
+        /// </summary>
         NotCandidate = 13,
         
+        /// <summary>
+        /// >> MaxMembers
+        /// Too many members in the society.
+        /// </summary>
         MaxMembers = 14,
         
+        /// <summary>
+        /// >> NotFounder
+        /// The caller is not the founder.
+        /// </summary>
         NotFounder = 15,
         
+        /// <summary>
+        /// >> NotHead
+        /// The caller is not the head.
+        /// </summary>
         NotHead = 16,
         
+        /// <summary>
+        /// >> NotApproved
+        /// The membership cannot be claimed as the candidate was not clearly approved.
+        /// </summary>
         NotApproved = 17,
         
+        /// <summary>
+        /// >> NotRejected
+        /// The candidate cannot be kicked as the candidate was not clearly rejected.
+        /// </summary>
         NotRejected = 18,
         
+        /// <summary>
+        /// >> Approved
+        /// The candidacy cannot be dropped as the candidate was clearly approved.
+        /// </summary>
         Approved = 19,
         
+        /// <summary>
+        /// >> Rejected
+        /// The candidacy cannot be bestowed as the candidate was clearly rejected.
+        /// </summary>
         Rejected = 20,
         
+        /// <summary>
+        /// >> InProgress
+        /// The candidacy cannot be concluded as the voting is still in progress.
+        /// </summary>
         InProgress = 21,
         
+        /// <summary>
+        /// >> TooEarly
+        /// The candidacy cannot be pruned until a full additional intake period has passed.
+        /// </summary>
         TooEarly = 22,
         
+        /// <summary>
+        /// >> Voted
+        /// The skeptic already voted.
+        /// </summary>
         Voted = 23,
         
+        /// <summary>
+        /// >> Expired
+        /// The skeptic need not vote on candidates from expired rounds.
+        /// </summary>
         Expired = 24,
         
+        /// <summary>
+        /// >> NotBidder
+        /// User is not a bidder.
+        /// </summary>
         NotBidder = 25,
         
+        /// <summary>
+        /// >> NoDefender
+        /// There is no defender currently.
+        /// </summary>
         NoDefender = 26,
         
+        /// <summary>
+        /// >> NotGroup
+        /// Group doesn't exist.
+        /// </summary>
         NotGroup = 27,
         
+        /// <summary>
+        /// >> AlreadyElevated
+        /// The member is already elevated to this rank.
+        /// </summary>
         AlreadyElevated = 28,
         
+        /// <summary>
+        /// >> AlreadyPunished
+        /// The skeptic has already been punished for this offence.
+        /// </summary>
         AlreadyPunished = 29,
         
+        /// <summary>
+        /// >> InsufficientFunds
+        /// Funds are insufficient to pay off society debts.
+        /// </summary>
         InsufficientFunds = 30,
         
+        /// <summary>
+        /// >> NoVotes
+        /// The candidate/defender has no stale votes to remove.
+        /// </summary>
         NoVotes = 31,
     }
     

@@ -15,17 +15,35 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.frame_support.traits.
 {
     
     
+    /// <summary>
+    /// >> ProcessMessageError
+    /// </summary>
     public enum ProcessMessageError
     {
         
+        /// <summary>
+        /// >> BadFormat
+        /// </summary>
         BadFormat = 0,
         
+        /// <summary>
+        /// >> Corrupt
+        /// </summary>
         Corrupt = 1,
         
+        /// <summary>
+        /// >> Unsupported
+        /// </summary>
         Unsupported = 2,
         
+        /// <summary>
+        /// >> Overweight
+        /// </summary>
         Overweight = 3,
         
+        /// <summary>
+        /// >> Yield
+        /// </summary>
         Yield = 4,
     }
     

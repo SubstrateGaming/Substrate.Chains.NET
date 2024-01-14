@@ -21,12 +21,18 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> ProxyStorage
+    /// </summary>
     public sealed class ProxyStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> ProxyStorage Constructor
+        /// </summary>
         public ProxyStorage(SubstrateClientExt client)
         {
             this._client = client;
@@ -101,6 +107,9 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> ProxyCalls
+    /// </summary>
     public sealed class ProxyCalls
     {
         
@@ -232,6 +241,9 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> ProxyConstants
+    /// </summary>
     public sealed class ProxyConstants
     {
         
@@ -315,6 +327,9 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> ProxyErrors
+    /// </summary>
     public enum ProxyErrors
     {
         

@@ -27,42 +27,19 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_consensus_babe
         /// <summary>
         /// >> c
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U64, Substrate.NetApi.Model.Types.Primitive.U64> _c;
-        
+        public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U64, Substrate.NetApi.Model.Types.Primitive.U64> C { get; set; }
         /// <summary>
         /// >> allowed_slots
         /// </summary>
-        private Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_consensus_babe.EnumAllowedSlots _allowedSlots;
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_consensus_babe.EnumAllowedSlots AllowedSlots { get; set; }
         
-        public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U64, Substrate.NetApi.Model.Types.Primitive.U64> C
-        {
-            get
-            {
-                return this._c;
-            }
-            set
-            {
-                this._c = value;
-            }
-        }
-        
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_consensus_babe.EnumAllowedSlots AllowedSlots
-        {
-            get
-            {
-                return this._allowedSlots;
-            }
-            set
-            {
-                this._allowedSlots = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "BabeEpochConfiguration";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -71,6 +48,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_consensus_babe
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

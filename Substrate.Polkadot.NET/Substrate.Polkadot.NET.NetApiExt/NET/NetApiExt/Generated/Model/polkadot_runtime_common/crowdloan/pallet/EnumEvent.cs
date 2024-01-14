@@ -15,27 +15,72 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_comm
 {
     
     
+    /// <summary>
+    /// >> Event
+    /// The `Event` enum of this pallet
+    /// </summary>
     public enum Event
     {
         
+        /// <summary>
+        /// >> Created
+        /// Create a new crowdloaning campaign.
+        /// </summary>
         Created = 0,
         
+        /// <summary>
+        /// >> Contributed
+        /// Contributed to a crowd sale.
+        /// </summary>
         Contributed = 1,
         
+        /// <summary>
+        /// >> Withdrew
+        /// Withdrew full balance of a contributor.
+        /// </summary>
         Withdrew = 2,
         
+        /// <summary>
+        /// >> PartiallyRefunded
+        /// The loans in a fund have been partially dissolved, i.e. there are some left
+        /// over child keys that still need to be killed.
+        /// </summary>
         PartiallyRefunded = 3,
         
+        /// <summary>
+        /// >> AllRefunded
+        /// All loans in a fund have been refunded.
+        /// </summary>
         AllRefunded = 4,
         
+        /// <summary>
+        /// >> Dissolved
+        /// Fund is dissolved.
+        /// </summary>
         Dissolved = 5,
         
+        /// <summary>
+        /// >> HandleBidResult
+        /// The result of trying to submit a new bid to the Slots pallet.
+        /// </summary>
         HandleBidResult = 6,
         
+        /// <summary>
+        /// >> Edited
+        /// The configuration to a crowdloan has been edited.
+        /// </summary>
         Edited = 7,
         
+        /// <summary>
+        /// >> MemoUpdated
+        /// A memo has been updated.
+        /// </summary>
         MemoUpdated = 8,
         
+        /// <summary>
+        /// >> AddedToNewRaise
+        /// A parachain has been moved to `NewRaise`
+        /// </summary>
         AddedToNewRaise = 9,
     }
     

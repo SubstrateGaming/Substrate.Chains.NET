@@ -15,11 +15,24 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_vesting.pallet
 {
     
     
+    /// <summary>
+    /// >> Event
+    /// The `Event` enum of this pallet
+    /// </summary>
     public enum Event
     {
         
+        /// <summary>
+        /// >> VestingUpdated
+        /// The amount vested has been updated. This could indicate a change in funds available.
+        /// The balance given is the amount which is left unvested (and thus locked).
+        /// </summary>
         VestingUpdated = 0,
         
+        /// <summary>
+        /// >> VestingCompleted
+        /// An \[account\] has become fully vested.
+        /// </summary>
         VestingCompleted = 1,
     }
     

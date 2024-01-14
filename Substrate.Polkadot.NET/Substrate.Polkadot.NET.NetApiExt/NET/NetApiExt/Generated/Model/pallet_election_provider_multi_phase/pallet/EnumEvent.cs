@@ -15,19 +15,55 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_election_provi
 {
     
     
+    /// <summary>
+    /// >> Event
+    /// The `Event` enum of this pallet
+    /// </summary>
     public enum Event
     {
         
+        /// <summary>
+        /// >> SolutionStored
+        /// A solution was stored with the given compute.
+        /// 
+        /// The `origin` indicates the origin of the solution. If `origin` is `Some(AccountId)`,
+        /// the stored solution was submited in the signed phase by a miner with the `AccountId`.
+        /// Otherwise, the solution was stored either during the unsigned phase or by
+        /// `T::ForceOrigin`. The `bool` is `true` when a previous solution was ejected to make
+        /// room for this one.
+        /// </summary>
         SolutionStored = 0,
         
+        /// <summary>
+        /// >> ElectionFinalized
+        /// The election has been finalized, with the given computation and score.
+        /// </summary>
         ElectionFinalized = 1,
         
+        /// <summary>
+        /// >> ElectionFailed
+        /// An election failed.
+        /// 
+        /// Not much can be said about which computes failed in the process.
+        /// </summary>
         ElectionFailed = 2,
         
+        /// <summary>
+        /// >> Rewarded
+        /// An account has been rewarded for their signed submission being finalized.
+        /// </summary>
         Rewarded = 3,
         
+        /// <summary>
+        /// >> Slashed
+        /// An account has been slashed for submitting an invalid signed submission.
+        /// </summary>
         Slashed = 4,
         
+        /// <summary>
+        /// >> PhaseTransitioned
+        /// There was a phase transition in a given round.
+        /// </summary>
         PhaseTransitioned = 5,
     }
     

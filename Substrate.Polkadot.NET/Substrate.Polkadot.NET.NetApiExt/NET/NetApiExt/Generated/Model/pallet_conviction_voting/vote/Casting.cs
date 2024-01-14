@@ -27,59 +27,23 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_conviction_vot
         /// <summary>
         /// >> votes
         /// </summary>
-        private Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT19 _votes;
-        
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT19 Votes { get; set; }
         /// <summary>
         /// >> delegations
         /// </summary>
-        private Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_conviction_voting.types.Delegations _delegations;
-        
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_conviction_voting.types.Delegations Delegations { get; set; }
         /// <summary>
         /// >> prior
         /// </summary>
-        private Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_conviction_voting.vote.PriorLock _prior;
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_conviction_voting.vote.PriorLock Prior { get; set; }
         
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT19 Votes
-        {
-            get
-            {
-                return this._votes;
-            }
-            set
-            {
-                this._votes = value;
-            }
-        }
-        
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_conviction_voting.types.Delegations Delegations
-        {
-            get
-            {
-                return this._delegations;
-            }
-            set
-            {
-                this._delegations = value;
-            }
-        }
-        
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_conviction_voting.vote.PriorLock Prior
-        {
-            get
-            {
-                return this._prior;
-            }
-            set
-            {
-                this._prior = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "Casting";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -89,6 +53,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_conviction_vot
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
