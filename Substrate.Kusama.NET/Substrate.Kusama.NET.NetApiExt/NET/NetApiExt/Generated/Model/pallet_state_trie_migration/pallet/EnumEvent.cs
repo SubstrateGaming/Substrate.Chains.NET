@@ -15,15 +15,36 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_state_trie_migra
 {
     
     
+    /// <summary>
+    /// >> Event
+    /// Inner events of this pallet.
+    /// </summary>
     public enum Event
     {
         
+        /// <summary>
+        /// >> Migrated
+        /// Given number of `(top, child)` keys were migrated respectively, with the given
+        /// `compute`.
+        /// </summary>
         Migrated = 0,
         
+        /// <summary>
+        /// >> Slashed
+        /// Some account got slashed by the given amount.
+        /// </summary>
         Slashed = 1,
         
+        /// <summary>
+        /// >> AutoMigrationFinished
+        /// The auto migration task finished.
+        /// </summary>
         AutoMigrationFinished = 2,
         
+        /// <summary>
+        /// >> Halted
+        /// Migration got halted due to an error or miss-configuration.
+        /// </summary>
         Halted = 3,
     }
     

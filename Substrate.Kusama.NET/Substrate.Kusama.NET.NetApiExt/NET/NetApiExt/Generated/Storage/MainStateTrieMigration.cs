@@ -21,12 +21,18 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> StateTrieMigrationStorage
+    /// </summary>
     public sealed class StateTrieMigrationStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> StateTrieMigrationStorage Constructor
+        /// </summary>
         public StateTrieMigrationStorage(SubstrateClientExt client)
         {
             this._client = client;
@@ -137,6 +143,9 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> StateTrieMigrationCalls
+    /// </summary>
     public sealed class StateTrieMigrationCalls
     {
         
@@ -213,6 +222,9 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> StateTrieMigrationConstants
+    /// </summary>
     public sealed class StateTrieMigrationConstants
     {
         
@@ -248,6 +260,9 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> StateTrieMigrationErrors
+    /// </summary>
     public enum StateTrieMigrationErrors
     {
         

@@ -15,17 +15,41 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_indices.pallet
 {
     
     
+    /// <summary>
+    /// >> Error
+    /// The `Error` enum of this pallet.
+    /// </summary>
     public enum Error
     {
         
+        /// <summary>
+        /// >> NotAssigned
+        /// The index was not already assigned.
+        /// </summary>
         NotAssigned = 0,
         
+        /// <summary>
+        /// >> NotOwner
+        /// The index is assigned to another account.
+        /// </summary>
         NotOwner = 1,
         
+        /// <summary>
+        /// >> InUse
+        /// The index was not available.
+        /// </summary>
         InUse = 2,
         
+        /// <summary>
+        /// >> NotTransfer
+        /// The source and destination accounts are identical.
+        /// </summary>
         NotTransfer = 3,
         
+        /// <summary>
+        /// >> Permanent
+        /// The index is permanent and may not be freed/changed.
+        /// </summary>
         Permanent = 4,
     }
     

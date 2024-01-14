@@ -27,59 +27,23 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_beefy
         /// <summary>
         /// >> commitment
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_beefy.commitment.Commitment _commitment;
-        
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_beefy.commitment.Commitment Commitment { get; set; }
         /// <summary>
         /// >> id
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_beefy.ecdsa_crypto.Public _id;
-        
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_beefy.ecdsa_crypto.Public Id { get; set; }
         /// <summary>
         /// >> signature
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_beefy.ecdsa_crypto.Signature _signature;
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_beefy.ecdsa_crypto.Signature Signature { get; set; }
         
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_beefy.commitment.Commitment Commitment
-        {
-            get
-            {
-                return this._commitment;
-            }
-            set
-            {
-                this._commitment = value;
-            }
-        }
-        
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_beefy.ecdsa_crypto.Public Id
-        {
-            get
-            {
-                return this._id;
-            }
-            set
-            {
-                this._id = value;
-            }
-        }
-        
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_beefy.ecdsa_crypto.Signature Signature
-        {
-            get
-            {
-                return this._signature;
-            }
-            set
-            {
-                this._signature = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "VoteMessage";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -89,6 +53,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_beefy
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

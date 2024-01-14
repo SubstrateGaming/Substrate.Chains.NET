@@ -27,229 +27,63 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5
         /// <summary>
         /// >> active_validator_indices
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.ValidatorIndex> _activeValidatorIndices;
-        
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.ValidatorIndex> ActiveValidatorIndices { get; set; }
         /// <summary>
         /// >> random_seed
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr32U8 _randomSeed;
-        
+        public Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr32U8 RandomSeed { get; set; }
         /// <summary>
         /// >> dispute_period
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _disputePeriod;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 DisputePeriod { get; set; }
         /// <summary>
         /// >> validators
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.IndexedVecT1 _validators;
-        
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.IndexedVecT1 Validators { get; set; }
         /// <summary>
         /// >> discovery_keys
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_authority_discovery.app.Public> _discoveryKeys;
-        
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_authority_discovery.app.Public> DiscoveryKeys { get; set; }
         /// <summary>
         /// >> assignment_keys
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.assignment_app.Public> _assignmentKeys;
-        
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.assignment_app.Public> AssignmentKeys { get; set; }
         /// <summary>
         /// >> validator_groups
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.IndexedVecT2 _validatorGroups;
-        
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.IndexedVecT2 ValidatorGroups { get; set; }
         /// <summary>
         /// >> n_cores
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _nCores;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 NCores { get; set; }
         /// <summary>
         /// >> zeroth_delay_tranche_width
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _zerothDelayTrancheWidth;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 ZerothDelayTrancheWidth { get; set; }
         /// <summary>
         /// >> relay_vrf_modulo_samples
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _relayVrfModuloSamples;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 RelayVrfModuloSamples { get; set; }
         /// <summary>
         /// >> n_delay_tranches
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _nDelayTranches;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 NDelayTranches { get; set; }
         /// <summary>
         /// >> no_show_slots
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _noShowSlots;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 NoShowSlots { get; set; }
         /// <summary>
         /// >> needed_approvals
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _neededApprovals;
+        public Substrate.NetApi.Model.Types.Primitive.U32 NeededApprovals { get; set; }
         
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.ValidatorIndex> ActiveValidatorIndices
-        {
-            get
-            {
-                return this._activeValidatorIndices;
-            }
-            set
-            {
-                this._activeValidatorIndices = value;
-            }
-        }
-        
-        public Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr32U8 RandomSeed
-        {
-            get
-            {
-                return this._randomSeed;
-            }
-            set
-            {
-                this._randomSeed = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 DisputePeriod
-        {
-            get
-            {
-                return this._disputePeriod;
-            }
-            set
-            {
-                this._disputePeriod = value;
-            }
-        }
-        
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.IndexedVecT1 Validators
-        {
-            get
-            {
-                return this._validators;
-            }
-            set
-            {
-                this._validators = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_authority_discovery.app.Public> DiscoveryKeys
-        {
-            get
-            {
-                return this._discoveryKeys;
-            }
-            set
-            {
-                this._discoveryKeys = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.assignment_app.Public> AssignmentKeys
-        {
-            get
-            {
-                return this._assignmentKeys;
-            }
-            set
-            {
-                this._assignmentKeys = value;
-            }
-        }
-        
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.IndexedVecT2 ValidatorGroups
-        {
-            get
-            {
-                return this._validatorGroups;
-            }
-            set
-            {
-                this._validatorGroups = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 NCores
-        {
-            get
-            {
-                return this._nCores;
-            }
-            set
-            {
-                this._nCores = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 ZerothDelayTrancheWidth
-        {
-            get
-            {
-                return this._zerothDelayTrancheWidth;
-            }
-            set
-            {
-                this._zerothDelayTrancheWidth = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 RelayVrfModuloSamples
-        {
-            get
-            {
-                return this._relayVrfModuloSamples;
-            }
-            set
-            {
-                this._relayVrfModuloSamples = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 NDelayTranches
-        {
-            get
-            {
-                return this._nDelayTranches;
-            }
-            set
-            {
-                this._nDelayTranches = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 NoShowSlots
-        {
-            get
-            {
-                return this._noShowSlots;
-            }
-            set
-            {
-                this._noShowSlots = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 NeededApprovals
-        {
-            get
-            {
-                return this._neededApprovals;
-            }
-            set
-            {
-                this._neededApprovals = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "SessionInfo";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -269,6 +103,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

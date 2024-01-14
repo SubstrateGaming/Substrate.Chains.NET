@@ -15,17 +15,41 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_indices.pallet
 {
     
     
+    /// <summary>
+    /// >> Call
+    /// Contains a variant per dispatchable extrinsic that this pallet has.
+    /// </summary>
     public enum Call
     {
         
+        /// <summary>
+        /// >> claim
+        /// See [`Pallet::claim`].
+        /// </summary>
         claim = 0,
         
+        /// <summary>
+        /// >> transfer
+        /// See [`Pallet::transfer`].
+        /// </summary>
         transfer = 1,
         
+        /// <summary>
+        /// >> free
+        /// See [`Pallet::free`].
+        /// </summary>
         free = 2,
         
+        /// <summary>
+        /// >> force_transfer
+        /// See [`Pallet::force_transfer`].
+        /// </summary>
         force_transfer = 3,
         
+        /// <summary>
+        /// >> freeze
+        /// See [`Pallet::freeze`].
+        /// </summary>
         freeze = 4,
     }
     

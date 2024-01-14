@@ -27,93 +27,31 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools
         /// <summary>
         /// >> commission
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools.Commission _commission;
-        
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools.Commission Commission { get; set; }
         /// <summary>
         /// >> member_counter
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _memberCounter;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 MemberCounter { get; set; }
         /// <summary>
         /// >> points
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U128 _points;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U128 Points { get; set; }
         /// <summary>
         /// >> roles
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools.PoolRoles _roles;
-        
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools.PoolRoles Roles { get; set; }
         /// <summary>
         /// >> state
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools.EnumPoolState _state;
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools.EnumPoolState State { get; set; }
         
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools.Commission Commission
-        {
-            get
-            {
-                return this._commission;
-            }
-            set
-            {
-                this._commission = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 MemberCounter
-        {
-            get
-            {
-                return this._memberCounter;
-            }
-            set
-            {
-                this._memberCounter = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U128 Points
-        {
-            get
-            {
-                return this._points;
-            }
-            set
-            {
-                this._points = value;
-            }
-        }
-        
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools.PoolRoles Roles
-        {
-            get
-            {
-                return this._roles;
-            }
-            set
-            {
-                this._roles = value;
-            }
-        }
-        
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools.EnumPoolState State
-        {
-            get
-            {
-                return this._state;
-            }
-            set
-            {
-                this._state = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "BondedPoolInner";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -125,6 +63,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

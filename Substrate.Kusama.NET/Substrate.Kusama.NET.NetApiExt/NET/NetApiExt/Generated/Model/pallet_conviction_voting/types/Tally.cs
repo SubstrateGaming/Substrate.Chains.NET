@@ -27,59 +27,23 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_conviction_votin
         /// <summary>
         /// >> ayes
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U128 _ayes;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U128 Ayes { get; set; }
         /// <summary>
         /// >> nays
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U128 _nays;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U128 Nays { get; set; }
         /// <summary>
         /// >> support
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U128 _support;
+        public Substrate.NetApi.Model.Types.Primitive.U128 Support { get; set; }
         
-        public Substrate.NetApi.Model.Types.Primitive.U128 Ayes
-        {
-            get
-            {
-                return this._ayes;
-            }
-            set
-            {
-                this._ayes = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U128 Nays
-        {
-            get
-            {
-                return this._nays;
-            }
-            set
-            {
-                this._nays = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U128 Support
-        {
-            get
-            {
-                return this._support;
-            }
-            set
-            {
-                this._support = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "Tally";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -89,6 +53,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_conviction_votin
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

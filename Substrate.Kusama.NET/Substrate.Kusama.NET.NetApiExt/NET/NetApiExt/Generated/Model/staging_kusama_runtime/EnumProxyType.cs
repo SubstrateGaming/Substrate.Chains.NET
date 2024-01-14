@@ -15,25 +15,55 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_kusama_runtime
 {
     
     
+    /// <summary>
+    /// >> ProxyType
+    /// </summary>
     public enum ProxyType
     {
         
+        /// <summary>
+        /// >> Any
+        /// </summary>
         Any = 0,
         
+        /// <summary>
+        /// >> NonTransfer
+        /// </summary>
         NonTransfer = 1,
         
+        /// <summary>
+        /// >> Governance
+        /// </summary>
         Governance = 2,
         
+        /// <summary>
+        /// >> Staking
+        /// </summary>
         Staking = 3,
         
+        /// <summary>
+        /// >> IdentityJudgement
+        /// </summary>
         IdentityJudgement = 4,
         
+        /// <summary>
+        /// >> CancelProxy
+        /// </summary>
         CancelProxy = 5,
         
+        /// <summary>
+        /// >> Auction
+        /// </summary>
         Auction = 6,
         
+        /// <summary>
+        /// >> Society
+        /// </summary>
         Society = 7,
         
+        /// <summary>
+        /// >> NominationPools
+        /// </summary>
         NominationPools = 8,
     }
     

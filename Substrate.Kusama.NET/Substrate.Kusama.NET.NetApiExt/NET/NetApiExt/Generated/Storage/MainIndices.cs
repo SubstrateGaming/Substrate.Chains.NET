@@ -21,12 +21,18 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> IndicesStorage
+    /// </summary>
     public sealed class IndicesStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> IndicesStorage Constructor
+        /// </summary>
         public IndicesStorage(SubstrateClientExt client)
         {
             this._client = client;
@@ -66,6 +72,9 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> IndicesCalls
+    /// </summary>
     public sealed class IndicesCalls
     {
         
@@ -128,6 +137,9 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> IndicesConstants
+    /// </summary>
     public sealed class IndicesConstants
     {
         
@@ -143,6 +155,9 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> IndicesErrors
+    /// </summary>
     public enum IndicesErrors
     {
         

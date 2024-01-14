@@ -21,22 +21,34 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> ParaAssignmentProviderStorage
+    /// </summary>
     public sealed class ParaAssignmentProviderStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> ParaAssignmentProviderStorage Constructor
+        /// </summary>
         public ParaAssignmentProviderStorage(SubstrateClientExt client)
         {
             this._client = client;
         }
     }
     
+    /// <summary>
+    /// >> ParaAssignmentProviderCalls
+    /// </summary>
     public sealed class ParaAssignmentProviderCalls
     {
     }
     
+    /// <summary>
+    /// >> ParaAssignmentProviderConstants
+    /// </summary>
     public sealed class ParaAssignmentProviderConstants
     {
     }

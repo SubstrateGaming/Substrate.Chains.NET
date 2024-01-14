@@ -15,9 +15,15 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_kusama_runtime
 {
     
     
+    /// <summary>
+    /// >> RuntimeHoldReason
+    /// </summary>
     public enum RuntimeHoldReason
     {
         
+        /// <summary>
+        /// >> Nis
+        /// </summary>
         Nis = 38,
     }
     

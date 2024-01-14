@@ -24,17 +24,20 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_system.extensions
     public sealed class CheckTxVersion : BaseType
     {
         
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "CheckTxVersion";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

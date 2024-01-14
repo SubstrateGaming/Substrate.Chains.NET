@@ -21,12 +21,18 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> ConfigurationStorage
+    /// </summary>
     public sealed class ConfigurationStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> ConfigurationStorage Constructor
+        /// </summary>
         public ConfigurationStorage(SubstrateClientExt client)
         {
             this._client = client;
@@ -137,6 +143,9 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> ConfigurationCalls
+    /// </summary>
     public sealed class ConfigurationCalls
     {
         
@@ -636,10 +645,16 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> ConfigurationConstants
+    /// </summary>
     public sealed class ConfigurationConstants
     {
     }
     
+    /// <summary>
+    /// >> ConfigurationErrors
+    /// </summary>
     public enum ConfigurationErrors
     {
         

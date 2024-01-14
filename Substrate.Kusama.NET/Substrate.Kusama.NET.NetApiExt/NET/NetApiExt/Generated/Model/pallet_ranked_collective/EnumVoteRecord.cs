@@ -15,11 +15,20 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_ranked_collectiv
 {
     
     
+    /// <summary>
+    /// >> VoteRecord
+    /// </summary>
     public enum VoteRecord
     {
         
+        /// <summary>
+        /// >> Aye
+        /// </summary>
         Aye = 0,
         
+        /// <summary>
+        /// >> Nay
+        /// </summary>
         Nay = 1,
     }
     

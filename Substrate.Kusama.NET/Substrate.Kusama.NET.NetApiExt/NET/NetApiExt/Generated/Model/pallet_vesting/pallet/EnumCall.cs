@@ -15,17 +15,41 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_vesting.pallet
 {
     
     
+    /// <summary>
+    /// >> Call
+    /// Contains a variant per dispatchable extrinsic that this pallet has.
+    /// </summary>
     public enum Call
     {
         
+        /// <summary>
+        /// >> vest
+        /// See [`Pallet::vest`].
+        /// </summary>
         vest = 0,
         
+        /// <summary>
+        /// >> vest_other
+        /// See [`Pallet::vest_other`].
+        /// </summary>
         vest_other = 1,
         
+        /// <summary>
+        /// >> vested_transfer
+        /// See [`Pallet::vested_transfer`].
+        /// </summary>
         vested_transfer = 2,
         
+        /// <summary>
+        /// >> force_vested_transfer
+        /// See [`Pallet::force_vested_transfer`].
+        /// </summary>
         force_vested_transfer = 3,
         
+        /// <summary>
+        /// >> merge_schedules
+        /// See [`Pallet::merge_schedules`].
+        /// </summary>
         merge_schedules = 4,
     }
     

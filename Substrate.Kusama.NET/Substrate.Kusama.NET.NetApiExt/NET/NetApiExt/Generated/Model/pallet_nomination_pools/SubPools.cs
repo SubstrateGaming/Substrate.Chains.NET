@@ -27,42 +27,19 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools
         /// <summary>
         /// >> no_era
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools.UnbondPool _noEra;
-        
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools.UnbondPool NoEra { get; set; }
         /// <summary>
         /// >> with_era
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_map.BoundedBTreeMapT2 _withEra;
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_map.BoundedBTreeMapT2 WithEra { get; set; }
         
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools.UnbondPool NoEra
-        {
-            get
-            {
-                return this._noEra;
-            }
-            set
-            {
-                this._noEra = value;
-            }
-        }
-        
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_map.BoundedBTreeMapT2 WithEra
-        {
-            get
-            {
-                return this._withEra;
-            }
-            set
-            {
-                this._withEra = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "SubPools";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -71,6 +48,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

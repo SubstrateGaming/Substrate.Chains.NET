@@ -15,13 +15,25 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_babe
 {
     
     
+    /// <summary>
+    /// >> AllowedSlots
+    /// </summary>
     public enum AllowedSlots
     {
         
+        /// <summary>
+        /// >> PrimarySlots
+        /// </summary>
         PrimarySlots = 0,
         
+        /// <summary>
+        /// >> PrimaryAndSecondaryPlainSlots
+        /// </summary>
         PrimaryAndSecondaryPlainSlots = 1,
         
+        /// <summary>
+        /// >> PrimaryAndSecondaryVRFSlots
+        /// </summary>
         PrimaryAndSecondaryVRFSlots = 2,
     }
     

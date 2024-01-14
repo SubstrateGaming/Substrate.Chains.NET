@@ -21,12 +21,18 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> SocietyStorage
+    /// </summary>
     public sealed class SocietyStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> SocietyStorage Constructor
+        /// </summary>
         public SocietyStorage(SubstrateClientExt client)
         {
             this._client = client;
@@ -665,6 +671,9 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> SocietyCalls
+    /// </summary>
     public sealed class SocietyCalls
     {
         
@@ -896,6 +905,9 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> SocietyConstants
+    /// </summary>
     public sealed class SocietyConstants
     {
         
@@ -1001,6 +1013,9 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> SocietyErrors
+    /// </summary>
     public enum SocietyErrors
     {
         

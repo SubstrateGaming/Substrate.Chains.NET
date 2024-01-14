@@ -15,41 +15,116 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.pallet
 {
     
     
+    /// <summary>
+    /// >> Event
+    /// The `Event` enum of this pallet
+    /// </summary>
     public enum Event
     {
         
+        /// <summary>
+        /// >> Founded
+        /// The society is founded by the given identity.
+        /// </summary>
         Founded = 0,
         
+        /// <summary>
+        /// >> Bid
+        /// A membership bid just happened. The given account is the candidate's ID and their offer
+        /// is the second.
+        /// </summary>
         Bid = 1,
         
+        /// <summary>
+        /// >> Vouch
+        /// A membership bid just happened by vouching. The given account is the candidate's ID and
+        /// their offer is the second. The vouching party is the third.
+        /// </summary>
         Vouch = 2,
         
+        /// <summary>
+        /// >> AutoUnbid
+        /// A candidate was dropped (due to an excess of bids in the system).
+        /// </summary>
         AutoUnbid = 3,
         
+        /// <summary>
+        /// >> Unbid
+        /// A candidate was dropped (by their request).
+        /// </summary>
         Unbid = 4,
         
+        /// <summary>
+        /// >> Unvouch
+        /// A candidate was dropped (by request of who vouched for them).
+        /// </summary>
         Unvouch = 5,
         
+        /// <summary>
+        /// >> Inducted
+        /// A group of candidates have been inducted. The batch's primary is the first value, the
+        /// batch in full is the second.
+        /// </summary>
         Inducted = 6,
         
+        /// <summary>
+        /// >> SuspendedMemberJudgement
+        /// A suspended member has been judged.
+        /// </summary>
         SuspendedMemberJudgement = 7,
         
+        /// <summary>
+        /// >> CandidateSuspended
+        /// A candidate has been suspended
+        /// </summary>
         CandidateSuspended = 8,
         
+        /// <summary>
+        /// >> MemberSuspended
+        /// A member has been suspended
+        /// </summary>
         MemberSuspended = 9,
         
+        /// <summary>
+        /// >> Challenged
+        /// A member has been challenged
+        /// </summary>
         Challenged = 10,
         
+        /// <summary>
+        /// >> Vote
+        /// A vote has been placed
+        /// </summary>
         Vote = 11,
         
+        /// <summary>
+        /// >> DefenderVote
+        /// A vote has been placed for a defending member
+        /// </summary>
         DefenderVote = 12,
         
+        /// <summary>
+        /// >> NewParams
+        /// A new set of \[params\] has been set for the group.
+        /// </summary>
         NewParams = 13,
         
+        /// <summary>
+        /// >> Unfounded
+        /// Society is unfounded.
+        /// </summary>
         Unfounded = 14,
         
+        /// <summary>
+        /// >> Deposit
+        /// Some funds were deposited into the society account.
+        /// </summary>
         Deposit = 15,
         
+        /// <summary>
+        /// >> Elevated
+        /// A \[member\] got elevated to \[rank\].
+        /// </summary>
         Elevated = 16,
     }
     

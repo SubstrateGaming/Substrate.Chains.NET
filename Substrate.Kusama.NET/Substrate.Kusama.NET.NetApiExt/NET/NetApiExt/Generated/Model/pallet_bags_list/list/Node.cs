@@ -27,93 +27,31 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_bags_list.list
         /// <summary>
         /// >> id
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 _id;
-        
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 Id { get; set; }
         /// <summary>
         /// >> prev
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> _prev;
-        
+        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> Prev { get; set; }
         /// <summary>
         /// >> next
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> _next;
-        
+        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> Next { get; set; }
         /// <summary>
         /// >> bag_upper
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U64 _bagUpper;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U64 BagUpper { get; set; }
         /// <summary>
         /// >> score
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U64 _score;
+        public Substrate.NetApi.Model.Types.Primitive.U64 Score { get; set; }
         
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 Id
-        {
-            get
-            {
-                return this._id;
-            }
-            set
-            {
-                this._id = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> Prev
-        {
-            get
-            {
-                return this._prev;
-            }
-            set
-            {
-                this._prev = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> Next
-        {
-            get
-            {
-                return this._next;
-            }
-            set
-            {
-                this._next = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U64 BagUpper
-        {
-            get
-            {
-                return this._bagUpper;
-            }
-            set
-            {
-                this._bagUpper = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U64 Score
-        {
-            get
-            {
-                return this._score;
-            }
-            set
-            {
-                this._score = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "Node";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -125,6 +63,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_bags_list.list
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

@@ -21,12 +21,18 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> ParasSlashingStorage
+    /// </summary>
     public sealed class ParasSlashingStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> ParasSlashingStorage Constructor
+        /// </summary>
         public ParasSlashingStorage(SubstrateClientExt client)
         {
             this._client = client;
@@ -100,6 +106,9 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> ParasSlashingCalls
+    /// </summary>
     public sealed class ParasSlashingCalls
     {
         
@@ -116,10 +125,16 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> ParasSlashingConstants
+    /// </summary>
     public sealed class ParasSlashingConstants
     {
     }
     
+    /// <summary>
+    /// >> ParasSlashingErrors
+    /// </summary>
     public enum ParasSlashingErrors
     {
         

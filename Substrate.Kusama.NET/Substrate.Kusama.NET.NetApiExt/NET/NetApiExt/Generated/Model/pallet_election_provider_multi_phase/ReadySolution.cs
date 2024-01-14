@@ -27,59 +27,23 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_election_provide
         /// <summary>
         /// >> supports
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT38 _supports;
-        
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT38 Supports { get; set; }
         /// <summary>
         /// >> score
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_npos_elections.ElectionScore _score;
-        
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_npos_elections.ElectionScore Score { get; set; }
         /// <summary>
         /// >> compute
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_election_provider_multi_phase.EnumElectionCompute _compute;
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_election_provider_multi_phase.EnumElectionCompute Compute { get; set; }
         
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT38 Supports
-        {
-            get
-            {
-                return this._supports;
-            }
-            set
-            {
-                this._supports = value;
-            }
-        }
-        
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_npos_elections.ElectionScore Score
-        {
-            get
-            {
-                return this._score;
-            }
-            set
-            {
-                this._score = value;
-            }
-        }
-        
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_election_provider_multi_phase.EnumElectionCompute Compute
-        {
-            get
-            {
-                return this._compute;
-            }
-            set
-            {
-                this._compute = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "ReadySolution";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -89,6 +53,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_election_provide
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

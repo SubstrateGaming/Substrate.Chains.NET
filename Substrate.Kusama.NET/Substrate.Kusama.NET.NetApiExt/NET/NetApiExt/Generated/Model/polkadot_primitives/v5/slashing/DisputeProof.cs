@@ -27,76 +27,27 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.
         /// <summary>
         /// >> time_slot
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.slashing.DisputesTimeSlot _timeSlot;
-        
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.slashing.DisputesTimeSlot TimeSlot { get; set; }
         /// <summary>
         /// >> kind
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.slashing.EnumSlashingOffenceKind _kind;
-        
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.slashing.EnumSlashingOffenceKind Kind { get; set; }
         /// <summary>
         /// >> validator_index
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.ValidatorIndex _validatorIndex;
-        
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.ValidatorIndex ValidatorIndex { get; set; }
         /// <summary>
         /// >> validator_id
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.validator_app.Public _validatorId;
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.validator_app.Public ValidatorId { get; set; }
         
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.slashing.DisputesTimeSlot TimeSlot
-        {
-            get
-            {
-                return this._timeSlot;
-            }
-            set
-            {
-                this._timeSlot = value;
-            }
-        }
-        
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.slashing.EnumSlashingOffenceKind Kind
-        {
-            get
-            {
-                return this._kind;
-            }
-            set
-            {
-                this._kind = value;
-            }
-        }
-        
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.ValidatorIndex ValidatorIndex
-        {
-            get
-            {
-                return this._validatorIndex;
-            }
-            set
-            {
-                this._validatorIndex = value;
-            }
-        }
-        
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.validator_app.Public ValidatorId
-        {
-            get
-            {
-                return this._validatorId;
-            }
-            set
-            {
-                this._validatorId = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "DisputeProof";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -107,6 +58,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

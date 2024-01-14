@@ -15,15 +15,31 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_common
 {
     
     
+    /// <summary>
+    /// >> Event
+    /// The `Event` enum of this pallet
+    /// </summary>
     public enum Event
     {
         
+        /// <summary>
+        /// >> Registered
+        /// </summary>
         Registered = 0,
         
+        /// <summary>
+        /// >> Deregistered
+        /// </summary>
         Deregistered = 1,
         
+        /// <summary>
+        /// >> Reserved
+        /// </summary>
         Reserved = 2,
         
+        /// <summary>
+        /// >> Swapped
+        /// </summary>
         Swapped = 3,
     }
     

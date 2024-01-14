@@ -27,76 +27,27 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society
         /// <summary>
         /// >> rank
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _rank;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 Rank { get; set; }
         /// <summary>
         /// >> strikes
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _strikes;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 Strikes { get; set; }
         /// <summary>
         /// >> vouching
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.EnumVouchingStatus> _vouching;
-        
+        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.EnumVouchingStatus> Vouching { get; set; }
         /// <summary>
         /// >> index
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _index;
+        public Substrate.NetApi.Model.Types.Primitive.U32 Index { get; set; }
         
-        public Substrate.NetApi.Model.Types.Primitive.U32 Rank
-        {
-            get
-            {
-                return this._rank;
-            }
-            set
-            {
-                this._rank = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 Strikes
-        {
-            get
-            {
-                return this._strikes;
-            }
-            set
-            {
-                this._strikes = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.EnumVouchingStatus> Vouching
-        {
-            get
-            {
-                return this._vouching;
-            }
-            set
-            {
-                this._vouching = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 Index
-        {
-            get
-            {
-                return this._index;
-            }
-            set
-            {
-                this._index = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "MemberRecord";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -107,6 +58,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

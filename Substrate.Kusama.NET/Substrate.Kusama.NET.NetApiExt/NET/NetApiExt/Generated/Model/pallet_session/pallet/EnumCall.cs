@@ -15,11 +15,23 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_session.pallet
 {
     
     
+    /// <summary>
+    /// >> Call
+    /// Contains a variant per dispatchable extrinsic that this pallet has.
+    /// </summary>
     public enum Call
     {
         
+        /// <summary>
+        /// >> set_keys
+        /// See [`Pallet::set_keys`].
+        /// </summary>
         set_keys = 0,
         
+        /// <summary>
+        /// >> purge_keys
+        /// See [`Pallet::purge_keys`].
+        /// </summary>
         purge_keys = 1,
     }
     

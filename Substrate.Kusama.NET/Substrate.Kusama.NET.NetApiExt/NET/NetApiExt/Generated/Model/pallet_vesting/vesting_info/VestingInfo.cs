@@ -27,59 +27,23 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_vesting.vesting_
         /// <summary>
         /// >> locked
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U128 _locked;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U128 Locked { get; set; }
         /// <summary>
         /// >> per_block
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U128 _perBlock;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U128 PerBlock { get; set; }
         /// <summary>
         /// >> starting_block
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _startingBlock;
+        public Substrate.NetApi.Model.Types.Primitive.U32 StartingBlock { get; set; }
         
-        public Substrate.NetApi.Model.Types.Primitive.U128 Locked
-        {
-            get
-            {
-                return this._locked;
-            }
-            set
-            {
-                this._locked = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U128 PerBlock
-        {
-            get
-            {
-                return this._perBlock;
-            }
-            set
-            {
-                this._perBlock = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 StartingBlock
-        {
-            get
-            {
-                return this._startingBlock;
-            }
-            set
-            {
-                this._startingBlock = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "VestingInfo";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -89,6 +53,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_vesting.vesting_
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

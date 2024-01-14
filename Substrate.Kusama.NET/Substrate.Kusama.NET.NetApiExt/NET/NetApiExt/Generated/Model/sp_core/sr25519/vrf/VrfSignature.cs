@@ -27,42 +27,19 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.sr25519.vrf
         /// <summary>
         /// >> output
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr32U8 _output;
-        
+        public Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr32U8 Output { get; set; }
         /// <summary>
         /// >> proof
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr64U8 _proof;
+        public Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr64U8 Proof { get; set; }
         
-        public Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr32U8 Output
-        {
-            get
-            {
-                return this._output;
-            }
-            set
-            {
-                this._output = value;
-            }
-        }
-        
-        public Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr64U8 Proof
-        {
-            get
-            {
-                return this._proof;
-            }
-            set
-            {
-                this._proof = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "VrfSignature";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -71,6 +48,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.sr25519.vrf
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

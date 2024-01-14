@@ -27,25 +27,15 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.ecdsa
         /// <summary>
         /// >> value
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr65U8 _value;
+        public Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr65U8 Value { get; set; }
         
-        public Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr65U8 Value
-        {
-            get
-            {
-                return this._value;
-            }
-            set
-            {
-                this._value = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "Signature";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -53,6 +43,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.ecdsa
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

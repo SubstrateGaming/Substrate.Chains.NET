@@ -21,12 +21,18 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> BeefyMmrLeafStorage
+    /// </summary>
     public sealed class BeefyMmrLeafStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> BeefyMmrLeafStorage Constructor
+        /// </summary>
         public BeefyMmrLeafStorage(SubstrateClientExt client)
         {
             this._client = client;
@@ -99,10 +105,16 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> BeefyMmrLeafCalls
+    /// </summary>
     public sealed class BeefyMmrLeafCalls
     {
     }
     
+    /// <summary>
+    /// >> BeefyMmrLeafConstants
+    /// </summary>
     public sealed class BeefyMmrLeafConstants
     {
     }

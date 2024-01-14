@@ -15,23 +15,50 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_identity.types
 {
     
     
+    /// <summary>
+    /// >> IdentityField
+    /// </summary>
     public enum IdentityField
     {
         
+        /// <summary>
+        /// >> Display
+        /// </summary>
         Display = 1,
         
+        /// <summary>
+        /// >> Legal
+        /// </summary>
         Legal = 2,
         
+        /// <summary>
+        /// >> Web
+        /// </summary>
         Web = 4,
         
+        /// <summary>
+        /// >> Riot
+        /// </summary>
         Riot = 8,
         
+        /// <summary>
+        /// >> Email
+        /// </summary>
         Email = 16,
         
+        /// <summary>
+        /// >> PgpFingerprint
+        /// </summary>
         PgpFingerprint = 32,
         
+        /// <summary>
+        /// >> Image
+        /// </summary>
         Image = 64,
         
+        /// <summary>
+        /// >> Twitter
+        /// </summary>
         Twitter = 128,
     }
     

@@ -27,76 +27,27 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_slots
         /// <summary>
         /// >> offender
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_babe.app.Public _offender;
-        
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_babe.app.Public Offender { get; set; }
         /// <summary>
         /// >> slot
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_slots.Slot _slot;
-        
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_slots.Slot Slot { get; set; }
         /// <summary>
         /// >> first_header
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.generic.header.Header _firstHeader;
-        
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.generic.header.Header FirstHeader { get; set; }
         /// <summary>
         /// >> second_header
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.generic.header.Header _secondHeader;
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.generic.header.Header SecondHeader { get; set; }
         
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_babe.app.Public Offender
-        {
-            get
-            {
-                return this._offender;
-            }
-            set
-            {
-                this._offender = value;
-            }
-        }
-        
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_slots.Slot Slot
-        {
-            get
-            {
-                return this._slot;
-            }
-            set
-            {
-                this._slot = value;
-            }
-        }
-        
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.generic.header.Header FirstHeader
-        {
-            get
-            {
-                return this._firstHeader;
-            }
-            set
-            {
-                this._firstHeader = value;
-            }
-        }
-        
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.generic.header.Header SecondHeader
-        {
-            get
-            {
-                return this._secondHeader;
-            }
-            set
-            {
-                this._secondHeader = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "EquivocationProof";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -107,6 +58,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_slots
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

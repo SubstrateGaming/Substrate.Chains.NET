@@ -27,42 +27,19 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools
         /// <summary>
         /// >> max_increase
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill _maxIncrease;
-        
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill MaxIncrease { get; set; }
         /// <summary>
         /// >> min_delay
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _minDelay;
+        public Substrate.NetApi.Model.Types.Primitive.U32 MinDelay { get; set; }
         
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill MaxIncrease
-        {
-            get
-            {
-                return this._maxIncrease;
-            }
-            set
-            {
-                this._maxIncrease = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 MinDelay
-        {
-            get
-            {
-                return this._minDelay;
-            }
-            set
-            {
-                this._minDelay = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "CommissionChangeRate";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -71,6 +48,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

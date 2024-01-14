@@ -27,42 +27,19 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5
         /// <summary>
         /// >> descriptor
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.CandidateDescriptor _descriptor;
-        
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.CandidateDescriptor Descriptor { get; set; }
         /// <summary>
         /// >> commitments
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.CandidateCommitments _commitments;
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.CandidateCommitments Commitments { get; set; }
         
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.CandidateDescriptor Descriptor
-        {
-            get
-            {
-                return this._descriptor;
-            }
-            set
-            {
-                this._descriptor = value;
-            }
-        }
-        
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.CandidateCommitments Commitments
-        {
-            get
-            {
-                return this._commitments;
-            }
-            set
-            {
-                this._commitments = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "CommittedCandidateReceipt";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -71,6 +48,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

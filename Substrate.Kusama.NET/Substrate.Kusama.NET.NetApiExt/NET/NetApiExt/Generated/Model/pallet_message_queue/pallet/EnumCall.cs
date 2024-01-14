@@ -15,11 +15,23 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_message_queue.pa
 {
     
     
+    /// <summary>
+    /// >> Call
+    /// Contains a variant per dispatchable extrinsic that this pallet has.
+    /// </summary>
     public enum Call
     {
         
+        /// <summary>
+        /// >> reap_page
+        /// See [`Pallet::reap_page`].
+        /// </summary>
         reap_page = 0,
         
+        /// <summary>
+        /// >> execute_overweight
+        /// See [`Pallet::execute_overweight`].
+        /// </summary>
         execute_overweight = 1,
     }
     

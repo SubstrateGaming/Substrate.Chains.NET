@@ -15,9 +15,15 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm
 {
     
     
+    /// <summary>
+    /// >> VersionedAssetId
+    /// </summary>
     public enum VersionedAssetId
     {
         
+        /// <summary>
+        /// >> V3
+        /// </summary>
         V3 = 3,
     }
     

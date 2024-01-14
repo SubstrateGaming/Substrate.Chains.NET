@@ -21,12 +21,18 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> ChildBountiesStorage
+    /// </summary>
     public sealed class ChildBountiesStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> ChildBountiesStorage Constructor
+        /// </summary>
         public ChildBountiesStorage(SubstrateClientExt client)
         {
             this._client = client;
@@ -198,6 +204,9 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> ChildBountiesCalls
+    /// </summary>
     public sealed class ChildBountiesCalls
     {
         
@@ -290,6 +299,9 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> ChildBountiesConstants
+    /// </summary>
     public sealed class ChildBountiesConstants
     {
         
@@ -316,6 +328,9 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> ChildBountiesErrors
+    /// </summary>
     public enum ChildBountiesErrors
     {
         

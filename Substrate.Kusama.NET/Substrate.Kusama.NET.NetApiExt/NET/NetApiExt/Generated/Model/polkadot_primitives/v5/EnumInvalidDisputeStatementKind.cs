@@ -15,9 +15,15 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5
 {
     
     
+    /// <summary>
+    /// >> InvalidDisputeStatementKind
+    /// </summary>
     public enum InvalidDisputeStatementKind
     {
         
+        /// <summary>
+        /// >> Explicit
+        /// </summary>
         Explicit = 0,
     }
     

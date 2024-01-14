@@ -21,12 +21,18 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> FellowshipCollectiveStorage
+    /// </summary>
     public sealed class FellowshipCollectiveStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> FellowshipCollectiveStorage Constructor
+        /// </summary>
         public FellowshipCollectiveStorage(SubstrateClientExt client)
         {
             this._client = client;
@@ -236,6 +242,9 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> FellowshipCollectiveCalls
+    /// </summary>
     public sealed class FellowshipCollectiveCalls
     {
         
@@ -309,10 +318,16 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> FellowshipCollectiveConstants
+    /// </summary>
     public sealed class FellowshipCollectiveConstants
     {
     }
     
+    /// <summary>
+    /// >> FellowshipCollectiveErrors
+    /// </summary>
     public enum FellowshipCollectiveErrors
     {
         

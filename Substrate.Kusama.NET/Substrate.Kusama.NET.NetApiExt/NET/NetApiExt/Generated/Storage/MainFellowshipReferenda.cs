@@ -21,12 +21,18 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> FellowshipReferendaStorage
+    /// </summary>
     public sealed class FellowshipReferendaStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> FellowshipReferendaStorage Constructor
+        /// </summary>
         public FellowshipReferendaStorage(SubstrateClientExt client)
         {
             this._client = client;
@@ -211,6 +217,9 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> FellowshipReferendaCalls
+    /// </summary>
     public sealed class FellowshipReferendaCalls
     {
         
@@ -317,6 +326,9 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> FellowshipReferendaConstants
+    /// </summary>
     public sealed class FellowshipReferendaConstants
     {
         
@@ -397,6 +409,9 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> FellowshipReferendaErrors
+    /// </summary>
     public enum FellowshipReferendaErrors
     {
         

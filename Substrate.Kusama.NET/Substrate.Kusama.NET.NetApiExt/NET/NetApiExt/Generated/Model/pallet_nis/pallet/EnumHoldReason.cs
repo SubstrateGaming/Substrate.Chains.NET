@@ -15,9 +15,15 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nis.pallet
 {
     
     
+    /// <summary>
+    /// >> HoldReason
+    /// </summary>
     public enum HoldReason
     {
         
+        /// <summary>
+        /// >> NftReceipt
+        /// </summary>
         NftReceipt = 0,
     }
     

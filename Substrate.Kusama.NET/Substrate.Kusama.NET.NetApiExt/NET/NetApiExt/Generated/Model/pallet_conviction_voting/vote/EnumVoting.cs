@@ -15,11 +15,20 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_conviction_votin
 {
     
     
+    /// <summary>
+    /// >> Voting
+    /// </summary>
     public enum Voting
     {
         
+        /// <summary>
+        /// >> Casting
+        /// </summary>
         Casting = 0,
         
+        /// <summary>
+        /// >> Delegating
+        /// </summary>
         Delegating = 1,
     }
     

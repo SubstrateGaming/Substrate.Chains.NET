@@ -27,42 +27,19 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_grandpa
         /// <summary>
         /// >> set_id
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U64 _setId;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U64 SetId { get; set; }
         /// <summary>
         /// >> equivocation
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_grandpa.EnumEquivocation _equivocation;
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_grandpa.EnumEquivocation Equivocation { get; set; }
         
-        public Substrate.NetApi.Model.Types.Primitive.U64 SetId
-        {
-            get
-            {
-                return this._setId;
-            }
-            set
-            {
-                this._setId = value;
-            }
-        }
-        
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_grandpa.EnumEquivocation Equivocation
-        {
-            get
-            {
-                return this._equivocation;
-            }
-            set
-            {
-                this._equivocation = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "EquivocationProof";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -71,6 +48,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_grandpa
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

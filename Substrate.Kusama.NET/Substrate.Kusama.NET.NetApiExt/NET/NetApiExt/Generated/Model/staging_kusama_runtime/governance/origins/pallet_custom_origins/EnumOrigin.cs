@@ -15,61 +15,145 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_kusama_runtime.
 {
     
     
+    /// <summary>
+    /// >> Origin
+    /// </summary>
     public enum Origin
     {
         
+        /// <summary>
+        /// >> StakingAdmin
+        /// </summary>
         StakingAdmin = 0,
         
+        /// <summary>
+        /// >> Treasurer
+        /// </summary>
         Treasurer = 1,
         
+        /// <summary>
+        /// >> FellowshipAdmin
+        /// </summary>
         FellowshipAdmin = 2,
         
+        /// <summary>
+        /// >> GeneralAdmin
+        /// </summary>
         GeneralAdmin = 3,
         
+        /// <summary>
+        /// >> AuctionAdmin
+        /// </summary>
         AuctionAdmin = 4,
         
+        /// <summary>
+        /// >> LeaseAdmin
+        /// </summary>
         LeaseAdmin = 5,
         
+        /// <summary>
+        /// >> ReferendumCanceller
+        /// </summary>
         ReferendumCanceller = 6,
         
+        /// <summary>
+        /// >> ReferendumKiller
+        /// </summary>
         ReferendumKiller = 7,
         
+        /// <summary>
+        /// >> SmallTipper
+        /// </summary>
         SmallTipper = 8,
         
+        /// <summary>
+        /// >> BigTipper
+        /// </summary>
         BigTipper = 9,
         
+        /// <summary>
+        /// >> SmallSpender
+        /// </summary>
         SmallSpender = 10,
         
+        /// <summary>
+        /// >> MediumSpender
+        /// </summary>
         MediumSpender = 11,
         
+        /// <summary>
+        /// >> BigSpender
+        /// </summary>
         BigSpender = 12,
         
+        /// <summary>
+        /// >> WhitelistedCaller
+        /// </summary>
         WhitelistedCaller = 13,
         
+        /// <summary>
+        /// >> FellowshipInitiates
+        /// </summary>
         FellowshipInitiates = 14,
         
+        /// <summary>
+        /// >> Fellows
+        /// </summary>
         Fellows = 15,
         
+        /// <summary>
+        /// >> FellowshipExperts
+        /// </summary>
         FellowshipExperts = 16,
         
+        /// <summary>
+        /// >> FellowshipMasters
+        /// </summary>
         FellowshipMasters = 17,
         
+        /// <summary>
+        /// >> Fellowship1Dan
+        /// </summary>
         Fellowship1Dan = 18,
         
+        /// <summary>
+        /// >> Fellowship2Dan
+        /// </summary>
         Fellowship2Dan = 19,
         
+        /// <summary>
+        /// >> Fellowship3Dan
+        /// </summary>
         Fellowship3Dan = 20,
         
+        /// <summary>
+        /// >> Fellowship4Dan
+        /// </summary>
         Fellowship4Dan = 21,
         
+        /// <summary>
+        /// >> Fellowship5Dan
+        /// </summary>
         Fellowship5Dan = 22,
         
+        /// <summary>
+        /// >> Fellowship6Dan
+        /// </summary>
         Fellowship6Dan = 23,
         
+        /// <summary>
+        /// >> Fellowship7Dan
+        /// </summary>
         Fellowship7Dan = 24,
         
+        /// <summary>
+        /// >> Fellowship8Dan
+        /// </summary>
         Fellowship8Dan = 25,
         
+        /// <summary>
+        /// >> Fellowship9Dan
+        /// </summary>
         Fellowship9Dan = 26,
     }
     

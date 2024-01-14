@@ -15,13 +15,25 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_common
 {
     
     
+    /// <summary>
+    /// >> LastContribution
+    /// </summary>
     public enum LastContribution
     {
         
+        /// <summary>
+        /// >> Never
+        /// </summary>
         Never = 0,
         
+        /// <summary>
+        /// >> PreEnding
+        /// </summary>
         PreEnding = 1,
         
+        /// <summary>
+        /// >> Ending
+        /// </summary>
         Ending = 2,
     }
     

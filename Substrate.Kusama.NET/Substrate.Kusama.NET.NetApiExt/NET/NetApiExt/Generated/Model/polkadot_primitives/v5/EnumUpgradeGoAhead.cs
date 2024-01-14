@@ -15,11 +15,20 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5
 {
     
     
+    /// <summary>
+    /// >> UpgradeGoAhead
+    /// </summary>
     public enum UpgradeGoAhead
     {
         
+        /// <summary>
+        /// >> Abort
+        /// </summary>
         Abort = 0,
         
+        /// <summary>
+        /// >> GoAhead
+        /// </summary>
         GoAhead = 1,
     }
     

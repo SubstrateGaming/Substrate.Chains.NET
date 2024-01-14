@@ -15,37 +15,102 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nis.pallet
 {
     
     
+    /// <summary>
+    /// >> Error
+    /// The `Error` enum of this pallet.
+    /// </summary>
     public enum Error
     {
         
+        /// <summary>
+        /// >> DurationTooSmall
+        /// The duration of the bid is less than one.
+        /// </summary>
         DurationTooSmall = 0,
         
+        /// <summary>
+        /// >> DurationTooBig
+        /// The duration is the bid is greater than the number of queues.
+        /// </summary>
         DurationTooBig = 1,
         
+        /// <summary>
+        /// >> AmountTooSmall
+        /// The amount of the bid is less than the minimum allowed.
+        /// </summary>
         AmountTooSmall = 2,
         
+        /// <summary>
+        /// >> BidTooLow
+        /// The queue for the bid's duration is full and the amount bid is too low to get in
+        /// through replacing an existing bid.
+        /// </summary>
         BidTooLow = 3,
         
+        /// <summary>
+        /// >> UnknownReceipt
+        /// Receipt index is unknown.
+        /// </summary>
         UnknownReceipt = 4,
         
+        /// <summary>
+        /// >> NotOwner
+        /// Not the owner of the receipt.
+        /// </summary>
         NotOwner = 5,
         
+        /// <summary>
+        /// >> NotExpired
+        /// Bond not yet at expiry date.
+        /// </summary>
         NotExpired = 6,
         
+        /// <summary>
+        /// >> UnknownBid
+        /// The given bid for retraction is not found.
+        /// </summary>
         UnknownBid = 7,
         
+        /// <summary>
+        /// >> PortionTooBig
+        /// The portion supplied is beyond the value of the receipt.
+        /// </summary>
         PortionTooBig = 8,
         
+        /// <summary>
+        /// >> Unfunded
+        /// Not enough funds are held to pay out.
+        /// </summary>
         Unfunded = 9,
         
+        /// <summary>
+        /// >> AlreadyFunded
+        /// There are enough funds for what is required.
+        /// </summary>
         AlreadyFunded = 10,
         
+        /// <summary>
+        /// >> Throttled
+        /// The thaw throttle has been reached for this period.
+        /// </summary>
         Throttled = 11,
         
+        /// <summary>
+        /// >> MakesDust
+        /// The operation would result in a receipt worth an insignficant value.
+        /// </summary>
         MakesDust = 12,
         
+        /// <summary>
+        /// >> AlreadyCommunal
+        /// The receipt is already communal.
+        /// </summary>
         AlreadyCommunal = 13,
         
+        /// <summary>
+        /// >> AlreadyPrivate
+        /// The receipt is already private.
+        /// </summary>
         AlreadyPrivate = 14,
     }
     

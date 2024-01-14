@@ -27,93 +27,31 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society
         /// <summary>
         /// >> round
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _round;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 Round { get; set; }
         /// <summary>
         /// >> kind
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.EnumBidKind _kind;
-        
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.EnumBidKind Kind { get; set; }
         /// <summary>
         /// >> bid
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U128 _bid;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U128 Bid { get; set; }
         /// <summary>
         /// >> tally
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.Tally _tally;
-        
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.Tally Tally { get; set; }
         /// <summary>
         /// >> skeptic_struck
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.Bool _skepticStruck;
+        public Substrate.NetApi.Model.Types.Primitive.Bool SkepticStruck { get; set; }
         
-        public Substrate.NetApi.Model.Types.Primitive.U32 Round
-        {
-            get
-            {
-                return this._round;
-            }
-            set
-            {
-                this._round = value;
-            }
-        }
-        
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.EnumBidKind Kind
-        {
-            get
-            {
-                return this._kind;
-            }
-            set
-            {
-                this._kind = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U128 Bid
-        {
-            get
-            {
-                return this._bid;
-            }
-            set
-            {
-                this._bid = value;
-            }
-        }
-        
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.Tally Tally
-        {
-            get
-            {
-                return this._tally;
-            }
-            set
-            {
-                this._tally = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.Bool SkepticStruck
-        {
-            get
-            {
-                return this._skepticStruck;
-            }
-            set
-            {
-                this._skepticStruck = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "Candidacy";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -125,6 +63,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

@@ -24,8 +24,12 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Types.Base
     public sealed class Arr4BaseTuple : BaseType
     {
         
-        private Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U16>, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.PerU16>>[] _value;
+        /// <summary>
+        /// >> Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U16>, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.PerU16>>[]
+        /// </summary>
+        public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U16>, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.PerU16>>[] Value { get; set; }
         
+        /// <inheritdoc/>
         public override int TypeSize
         {
             get
@@ -34,23 +38,13 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Types.Base
             }
         }
         
-        public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U16>, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.PerU16>>[] Value
-        {
-            get
-            {
-                return this._value;
-            }
-            set
-            {
-                this._value = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return string.Format("[{0}; {1}]", new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U16>, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.PerU16>>().TypeName(), this.TypeSize);
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -58,6 +52,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Types.Base
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
@@ -69,6 +64,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Types.Base
             Value = array;
         }
         
+        /// <inheritdoc/>
         public void Create(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U16>, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.PerU16>>[] array)
         {
             Value = array;

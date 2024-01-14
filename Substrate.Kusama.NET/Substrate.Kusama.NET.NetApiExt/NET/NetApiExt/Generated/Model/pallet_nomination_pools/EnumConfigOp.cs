@@ -15,13 +15,25 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools
 {
     
     
+    /// <summary>
+    /// >> ConfigOp
+    /// </summary>
     public enum ConfigOp
     {
         
+        /// <summary>
+        /// >> Noop
+        /// </summary>
         Noop = 0,
         
+        /// <summary>
+        /// >> Set
+        /// </summary>
         Set = 1,
         
+        /// <summary>
+        /// >> Remove
+        /// </summary>
         Remove = 2,
     }
     

@@ -21,12 +21,18 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> AuctionsStorage
+    /// </summary>
     public sealed class AuctionsStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> AuctionsStorage Constructor
+        /// </summary>
         public AuctionsStorage(SubstrateClientExt client)
         {
             this._client = client;
@@ -173,6 +179,9 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> AuctionsCalls
+    /// </summary>
     public sealed class AuctionsCalls
     {
         
@@ -214,6 +223,9 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> AuctionsConstants
+    /// </summary>
     public sealed class AuctionsConstants
     {
         
@@ -262,6 +274,9 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> AuctionsErrors
+    /// </summary>
     public enum AuctionsErrors
     {
         

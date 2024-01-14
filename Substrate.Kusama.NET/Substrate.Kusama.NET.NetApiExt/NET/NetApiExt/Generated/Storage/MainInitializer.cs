@@ -21,12 +21,18 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> InitializerStorage
+    /// </summary>
     public sealed class InitializerStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> InitializerStorage Constructor
+        /// </summary>
         public InitializerStorage(SubstrateClientExt client)
         {
             this._client = client;
@@ -119,6 +125,9 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> InitializerCalls
+    /// </summary>
     public sealed class InitializerCalls
     {
         
@@ -134,6 +143,9 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> InitializerConstants
+    /// </summary>
     public sealed class InitializerConstants
     {
     }

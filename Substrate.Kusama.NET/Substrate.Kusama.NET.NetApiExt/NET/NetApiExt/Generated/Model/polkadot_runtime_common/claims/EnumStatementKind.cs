@@ -15,11 +15,20 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_common
 {
     
     
+    /// <summary>
+    /// >> StatementKind
+    /// </summary>
     public enum StatementKind
     {
         
+        /// <summary>
+        /// >> Regular
+        /// </summary>
         Regular = 0,
         
+        /// <summary>
+        /// >> Saft
+        /// </summary>
         Saft = 1,
     }
     

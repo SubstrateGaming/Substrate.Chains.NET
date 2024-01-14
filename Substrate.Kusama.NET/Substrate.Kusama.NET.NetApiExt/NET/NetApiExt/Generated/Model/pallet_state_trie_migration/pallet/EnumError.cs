@@ -15,19 +15,53 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_state_trie_migra
 {
     
     
+    /// <summary>
+    /// >> Error
+    /// The `Error` enum of this pallet.
+    /// </summary>
     public enum Error
     {
         
+        /// <summary>
+        /// >> MaxSignedLimits
+        /// Max signed limits not respected.
+        /// </summary>
         MaxSignedLimits = 0,
         
+        /// <summary>
+        /// >> KeyTooLong
+        /// A key was longer than the configured maximum.
+        /// 
+        /// This means that the migration halted at the current [`Progress`] and
+        /// can be resumed with a larger [`crate::Config::MaxKeyLen`] value.
+        /// Retrying with the same [`crate::Config::MaxKeyLen`] value will not work.
+        /// The value should only be increased to avoid a storage migration for the currently
+        /// stored [`crate::Progress::LastKey`].
+        /// </summary>
         KeyTooLong = 1,
         
+        /// <summary>
+        /// >> NotEnoughFunds
+        /// submitter does not have enough funds.
+        /// </summary>
         NotEnoughFunds = 2,
         
+        /// <summary>
+        /// >> BadWitness
+        /// Bad witness data provided.
+        /// </summary>
         BadWitness = 3,
         
+        /// <summary>
+        /// >> SignedMigrationNotAllowed
+        /// Signed migration is not allowed because the maximum limit is not set yet.
+        /// </summary>
         SignedMigrationNotAllowed = 4,
         
+        /// <summary>
+        /// >> BadChildRoot
+        /// Bad child root provided.
+        /// </summary>
         BadChildRoot = 5,
     }
     

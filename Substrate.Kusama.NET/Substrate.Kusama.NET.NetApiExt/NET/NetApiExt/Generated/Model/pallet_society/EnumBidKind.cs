@@ -15,11 +15,20 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society
 {
     
     
+    /// <summary>
+    /// >> BidKind
+    /// </summary>
     public enum BidKind
     {
         
+        /// <summary>
+        /// >> Deposit
+        /// </summary>
         Deposit = 0,
         
+        /// <summary>
+        /// >> Vouch
+        /// </summary>
         Vouch = 1,
     }
     

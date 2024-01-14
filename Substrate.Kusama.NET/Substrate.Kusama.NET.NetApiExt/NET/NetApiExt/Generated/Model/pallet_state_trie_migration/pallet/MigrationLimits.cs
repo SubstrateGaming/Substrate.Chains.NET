@@ -27,42 +27,19 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_state_trie_migra
         /// <summary>
         /// >> size
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _size;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 Size { get; set; }
         /// <summary>
         /// >> item
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _item;
+        public Substrate.NetApi.Model.Types.Primitive.U32 Item { get; set; }
         
-        public Substrate.NetApi.Model.Types.Primitive.U32 Size
-        {
-            get
-            {
-                return this._size;
-            }
-            set
-            {
-                this._size = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 Item
-        {
-            get
-            {
-                return this._item;
-            }
-            set
-            {
-                this._item = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "MigrationLimits";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -71,6 +48,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_state_trie_migra
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

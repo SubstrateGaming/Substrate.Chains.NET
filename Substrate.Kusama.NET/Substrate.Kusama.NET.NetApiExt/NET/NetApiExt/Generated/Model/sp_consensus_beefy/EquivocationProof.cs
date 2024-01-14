@@ -27,42 +27,19 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_beefy
         /// <summary>
         /// >> first
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_beefy.VoteMessage _first;
-        
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_beefy.VoteMessage First { get; set; }
         /// <summary>
         /// >> second
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_beefy.VoteMessage _second;
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_beefy.VoteMessage Second { get; set; }
         
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_beefy.VoteMessage First
-        {
-            get
-            {
-                return this._first;
-            }
-            set
-            {
-                this._first = value;
-            }
-        }
-        
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_beefy.VoteMessage Second
-        {
-            get
-            {
-                return this._second;
-            }
-            set
-            {
-                this._second = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "EquivocationProof";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -71,6 +48,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_beefy
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

@@ -27,59 +27,23 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5
         /// <summary>
         /// >> session
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _session;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 Session { get; set; }
         /// <summary>
         /// >> backing_validators_per_candidate
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.CandidateReceipt, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.ValidatorIndex, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.EnumValidityAttestation>>>> _backingValidatorsPerCandidate;
-        
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.CandidateReceipt, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.ValidatorIndex, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.EnumValidityAttestation>>>> BackingValidatorsPerCandidate { get; set; }
         /// <summary>
         /// >> disputes
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.DisputeStatementSet> _disputes;
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.DisputeStatementSet> Disputes { get; set; }
         
-        public Substrate.NetApi.Model.Types.Primitive.U32 Session
-        {
-            get
-            {
-                return this._session;
-            }
-            set
-            {
-                this._session = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.CandidateReceipt, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.ValidatorIndex, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.EnumValidityAttestation>>>> BackingValidatorsPerCandidate
-        {
-            get
-            {
-                return this._backingValidatorsPerCandidate;
-            }
-            set
-            {
-                this._backingValidatorsPerCandidate = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.DisputeStatementSet> Disputes
-        {
-            get
-            {
-                return this._disputes;
-            }
-            set
-            {
-                this._disputes = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "ScrapedOnChainVotes";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -89,6 +53,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

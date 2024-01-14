@@ -27,42 +27,19 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_babe.diges
         /// <summary>
         /// >> authority_index
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _authorityIndex;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 AuthorityIndex { get; set; }
         /// <summary>
         /// >> slot
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_slots.Slot _slot;
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_slots.Slot Slot { get; set; }
         
-        public Substrate.NetApi.Model.Types.Primitive.U32 AuthorityIndex
-        {
-            get
-            {
-                return this._authorityIndex;
-            }
-            set
-            {
-                this._authorityIndex = value;
-            }
-        }
-        
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_slots.Slot Slot
-        {
-            get
-            {
-                return this._slot;
-            }
-            set
-            {
-                this._slot = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "SecondaryPlainPreDigest";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -71,6 +48,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_babe.diges
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

@@ -27,42 +27,19 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parach
         /// <summary>
         /// >> bitfield
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.AvailabilityBitfield _bitfield;
-        
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.AvailabilityBitfield Bitfield { get; set; }
         /// <summary>
         /// >> submitted_at
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _submittedAt;
+        public Substrate.NetApi.Model.Types.Primitive.U32 SubmittedAt { get; set; }
         
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.AvailabilityBitfield Bitfield
-        {
-            get
-            {
-                return this._bitfield;
-            }
-            set
-            {
-                this._bitfield = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 SubmittedAt
-        {
-            get
-            {
-                return this._submittedAt;
-            }
-            set
-            {
-                this._submittedAt = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "AvailabilityBitfieldRecord";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -71,6 +48,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parach
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

@@ -15,19 +15,47 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_recovery.pallet
 {
     
     
+    /// <summary>
+    /// >> Event
+    /// Events type.
+    /// </summary>
     public enum Event
     {
         
+        /// <summary>
+        /// >> RecoveryCreated
+        /// A recovery process has been set up for an account.
+        /// </summary>
         RecoveryCreated = 0,
         
+        /// <summary>
+        /// >> RecoveryInitiated
+        /// A recovery process has been initiated for lost account by rescuer account.
+        /// </summary>
         RecoveryInitiated = 1,
         
+        /// <summary>
+        /// >> RecoveryVouched
+        /// A recovery process for lost account by rescuer account has been vouched for by sender.
+        /// </summary>
         RecoveryVouched = 2,
         
+        /// <summary>
+        /// >> RecoveryClosed
+        /// A recovery process for lost account by rescuer account has been closed.
+        /// </summary>
         RecoveryClosed = 3,
         
+        /// <summary>
+        /// >> AccountRecovered
+        /// Lost account has been successfully recovered by rescuer account.
+        /// </summary>
         AccountRecovered = 4,
         
+        /// <summary>
+        /// >> RecoveryRemoved
+        /// A recovery process has been removed for an account.
+        /// </summary>
         RecoveryRemoved = 5,
     }
     

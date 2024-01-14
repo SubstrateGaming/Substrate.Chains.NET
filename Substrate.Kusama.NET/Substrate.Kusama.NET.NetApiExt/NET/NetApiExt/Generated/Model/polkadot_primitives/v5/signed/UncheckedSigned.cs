@@ -27,59 +27,23 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.
         /// <summary>
         /// >> payload
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.AvailabilityBitfield _payload;
-        
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.AvailabilityBitfield Payload { get; set; }
         /// <summary>
         /// >> validator_index
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.ValidatorIndex _validatorIndex;
-        
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.ValidatorIndex ValidatorIndex { get; set; }
         /// <summary>
         /// >> signature
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.validator_app.Signature _signature;
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.validator_app.Signature Signature { get; set; }
         
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.AvailabilityBitfield Payload
-        {
-            get
-            {
-                return this._payload;
-            }
-            set
-            {
-                this._payload = value;
-            }
-        }
-        
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.ValidatorIndex ValidatorIndex
-        {
-            get
-            {
-                return this._validatorIndex;
-            }
-            set
-            {
-                this._validatorIndex = value;
-            }
-        }
-        
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.validator_app.Signature Signature
-        {
-            get
-            {
-                return this._signature;
-            }
-            set
-            {
-                this._signature = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "UncheckedSigned";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -89,6 +53,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

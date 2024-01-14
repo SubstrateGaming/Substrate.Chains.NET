@@ -15,17 +15,35 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking
 {
     
     
+    /// <summary>
+    /// >> RewardDestination
+    /// </summary>
     public enum RewardDestination
     {
         
+        /// <summary>
+        /// >> Staked
+        /// </summary>
         Staked = 0,
         
+        /// <summary>
+        /// >> Stash
+        /// </summary>
         Stash = 1,
         
+        /// <summary>
+        /// >> Controller
+        /// </summary>
         Controller = 2,
         
+        /// <summary>
+        /// >> Account
+        /// </summary>
         Account = 3,
         
+        /// <summary>
+        /// >> None
+        /// </summary>
         None = 4,
     }
     

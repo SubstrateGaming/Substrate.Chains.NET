@@ -27,76 +27,27 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.slashing
         /// <summary>
         /// >> span_index
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _spanIndex;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 SpanIndex { get; set; }
         /// <summary>
         /// >> last_start
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _lastStart;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 LastStart { get; set; }
         /// <summary>
         /// >> last_nonzero_slash
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _lastNonzeroSlash;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 LastNonzeroSlash { get; set; }
         /// <summary>
         /// >> prior
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U32> _prior;
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U32> Prior { get; set; }
         
-        public Substrate.NetApi.Model.Types.Primitive.U32 SpanIndex
-        {
-            get
-            {
-                return this._spanIndex;
-            }
-            set
-            {
-                this._spanIndex = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 LastStart
-        {
-            get
-            {
-                return this._lastStart;
-            }
-            set
-            {
-                this._lastStart = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 LastNonzeroSlash
-        {
-            get
-            {
-                return this._lastNonzeroSlash;
-            }
-            set
-            {
-                this._lastNonzeroSlash = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U32> Prior
-        {
-            get
-            {
-                return this._prior;
-            }
-            set
-            {
-                this._prior = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "SlashingSpans";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -107,6 +58,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.slashing
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

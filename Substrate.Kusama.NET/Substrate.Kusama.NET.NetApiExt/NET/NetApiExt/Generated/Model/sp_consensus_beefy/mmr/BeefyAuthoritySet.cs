@@ -27,59 +27,23 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_beefy.mmr
         /// <summary>
         /// >> id
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U64 _id;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U64 Id { get; set; }
         /// <summary>
         /// >> len
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _len;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 Len { get; set; }
         /// <summary>
         /// >> keyset_commitment
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256 _keysetCommitment;
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256 KeysetCommitment { get; set; }
         
-        public Substrate.NetApi.Model.Types.Primitive.U64 Id
-        {
-            get
-            {
-                return this._id;
-            }
-            set
-            {
-                this._id = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 Len
-        {
-            get
-            {
-                return this._len;
-            }
-            set
-            {
-                this._len = value;
-            }
-        }
-        
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256 KeysetCommitment
-        {
-            get
-            {
-                return this._keysetCommitment;
-            }
-            set
-            {
-                this._keysetCommitment = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "BeefyAuthoritySet";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -89,6 +53,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_beefy.mmr
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

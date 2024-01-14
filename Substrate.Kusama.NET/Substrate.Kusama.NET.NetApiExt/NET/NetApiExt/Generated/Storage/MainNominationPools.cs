@@ -21,12 +21,18 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> NominationPoolsStorage
+    /// </summary>
     public sealed class NominationPoolsStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> NominationPoolsStorage Constructor
+        /// </summary>
         public NominationPoolsStorage(SubstrateClientExt client)
         {
             this._client = client;
@@ -690,6 +696,9 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> NominationPoolsCalls
+    /// </summary>
     public sealed class NominationPoolsCalls
     {
         
@@ -950,6 +959,9 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> NominationPoolsConstants
+    /// </summary>
     public sealed class NominationPoolsConstants
     {
         
@@ -987,6 +999,9 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> NominationPoolsErrors
+    /// </summary>
     public enum NominationPoolsErrors
     {
         

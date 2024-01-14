@@ -27,76 +27,27 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society
         /// <summary>
         /// >> max_members
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _maxMembers;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 MaxMembers { get; set; }
         /// <summary>
         /// >> max_intake
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _maxIntake;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 MaxIntake { get; set; }
         /// <summary>
         /// >> max_strikes
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _maxStrikes;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 MaxStrikes { get; set; }
         /// <summary>
         /// >> candidate_deposit
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U128 _candidateDeposit;
+        public Substrate.NetApi.Model.Types.Primitive.U128 CandidateDeposit { get; set; }
         
-        public Substrate.NetApi.Model.Types.Primitive.U32 MaxMembers
-        {
-            get
-            {
-                return this._maxMembers;
-            }
-            set
-            {
-                this._maxMembers = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 MaxIntake
-        {
-            get
-            {
-                return this._maxIntake;
-            }
-            set
-            {
-                this._maxIntake = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 MaxStrikes
-        {
-            get
-            {
-                return this._maxStrikes;
-            }
-            set
-            {
-                this._maxStrikes = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U128 CandidateDeposit
-        {
-            get
-            {
-                return this._candidateDeposit;
-            }
-            set
-            {
-                this._candidateDeposit = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "GroupParams";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -107,6 +58,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

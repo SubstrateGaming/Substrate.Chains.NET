@@ -27,59 +27,23 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_session
         /// <summary>
         /// >> session
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _session;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 Session { get; set; }
         /// <summary>
         /// >> trie_nodes
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>> _trieNodes;
-        
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>> TrieNodes { get; set; }
         /// <summary>
         /// >> validator_count
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _validatorCount;
+        public Substrate.NetApi.Model.Types.Primitive.U32 ValidatorCount { get; set; }
         
-        public Substrate.NetApi.Model.Types.Primitive.U32 Session
-        {
-            get
-            {
-                return this._session;
-            }
-            set
-            {
-                this._session = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>> TrieNodes
-        {
-            get
-            {
-                return this._trieNodes;
-            }
-            set
-            {
-                this._trieNodes = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 ValidatorCount
-        {
-            get
-            {
-                return this._validatorCount;
-            }
-            set
-            {
-                this._validatorCount = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "MembershipProof";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -89,6 +53,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_session
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

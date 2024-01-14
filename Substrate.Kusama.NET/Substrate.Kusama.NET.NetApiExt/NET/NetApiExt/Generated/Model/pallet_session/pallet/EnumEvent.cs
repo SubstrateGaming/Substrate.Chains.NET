@@ -15,9 +15,18 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_session.pallet
 {
     
     
+    /// <summary>
+    /// >> Event
+    /// The `Event` enum of this pallet
+    /// </summary>
     public enum Event
     {
         
+        /// <summary>
+        /// >> NewSession
+        /// New session has happened. Note that the argument is the session index, not the
+        /// block number as the type might suggest.
+        /// </summary>
         NewSession = 0,
     }
     

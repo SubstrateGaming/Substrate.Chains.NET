@@ -15,9 +15,15 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_babe.diges
 {
     
     
+    /// <summary>
+    /// >> NextConfigDescriptor
+    /// </summary>
     public enum NextConfigDescriptor
     {
         
+        /// <summary>
+        /// >> V1
+        /// </summary>
         V1 = 1,
     }
     

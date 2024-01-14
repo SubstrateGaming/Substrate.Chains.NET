@@ -15,13 +15,25 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_babe.diges
 {
     
     
+    /// <summary>
+    /// >> PreDigest
+    /// </summary>
     public enum PreDigest
     {
         
+        /// <summary>
+        /// >> Primary
+        /// </summary>
         Primary = 1,
         
+        /// <summary>
+        /// >> SecondaryPlain
+        /// </summary>
         SecondaryPlain = 2,
         
+        /// <summary>
+        /// >> SecondaryVRF
+        /// </summary>
         SecondaryVRF = 3,
     }
     

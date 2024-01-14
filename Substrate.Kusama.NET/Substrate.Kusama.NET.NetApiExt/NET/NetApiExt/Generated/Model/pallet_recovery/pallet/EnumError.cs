@@ -15,39 +15,107 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_recovery.pallet
 {
     
     
+    /// <summary>
+    /// >> Error
+    /// The `Error` enum of this pallet.
+    /// </summary>
     public enum Error
     {
         
+        /// <summary>
+        /// >> NotAllowed
+        /// User is not allowed to make a call on behalf of this account
+        /// </summary>
         NotAllowed = 0,
         
+        /// <summary>
+        /// >> ZeroThreshold
+        /// Threshold must be greater than zero
+        /// </summary>
         ZeroThreshold = 1,
         
+        /// <summary>
+        /// >> NotEnoughFriends
+        /// Friends list must be greater than zero and threshold
+        /// </summary>
         NotEnoughFriends = 2,
         
+        /// <summary>
+        /// >> MaxFriends
+        /// Friends list must be less than max friends
+        /// </summary>
         MaxFriends = 3,
         
+        /// <summary>
+        /// >> NotSorted
+        /// Friends list must be sorted and free of duplicates
+        /// </summary>
         NotSorted = 4,
         
+        /// <summary>
+        /// >> NotRecoverable
+        /// This account is not set up for recovery
+        /// </summary>
         NotRecoverable = 5,
         
+        /// <summary>
+        /// >> AlreadyRecoverable
+        /// This account is already set up for recovery
+        /// </summary>
         AlreadyRecoverable = 6,
         
+        /// <summary>
+        /// >> AlreadyStarted
+        /// A recovery process has already started for this account
+        /// </summary>
         AlreadyStarted = 7,
         
+        /// <summary>
+        /// >> NotStarted
+        /// A recovery process has not started for this rescuer
+        /// </summary>
         NotStarted = 8,
         
+        /// <summary>
+        /// >> NotFriend
+        /// This account is not a friend who can vouch
+        /// </summary>
         NotFriend = 9,
         
+        /// <summary>
+        /// >> DelayPeriod
+        /// The friend must wait until the delay period to vouch for this recovery
+        /// </summary>
         DelayPeriod = 10,
         
+        /// <summary>
+        /// >> AlreadyVouched
+        /// This user has already vouched for this recovery
+        /// </summary>
         AlreadyVouched = 11,
         
+        /// <summary>
+        /// >> Threshold
+        /// The threshold for recovering this account has not been met
+        /// </summary>
         Threshold = 12,
         
+        /// <summary>
+        /// >> StillActive
+        /// There are still active recovery attempts that need to be closed
+        /// </summary>
         StillActive = 13,
         
+        /// <summary>
+        /// >> AlreadyProxy
+        /// This account is already set up for recovery
+        /// </summary>
         AlreadyProxy = 14,
         
+        /// <summary>
+        /// >> BadState
+        /// Some internal state is broken.
+        /// </summary>
         BadState = 15,
     }
     

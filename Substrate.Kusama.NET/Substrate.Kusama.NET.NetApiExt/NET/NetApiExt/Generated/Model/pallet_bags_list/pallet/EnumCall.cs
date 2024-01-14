@@ -15,13 +15,29 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_bags_list.pallet
 {
     
     
+    /// <summary>
+    /// >> Call
+    /// Contains a variant per dispatchable extrinsic that this pallet has.
+    /// </summary>
     public enum Call
     {
         
+        /// <summary>
+        /// >> rebag
+        /// See [`Pallet::rebag`].
+        /// </summary>
         rebag = 0,
         
+        /// <summary>
+        /// >> put_in_front_of
+        /// See [`Pallet::put_in_front_of`].
+        /// </summary>
         put_in_front_of = 1,
         
+        /// <summary>
+        /// >> put_in_front_of_other
+        /// See [`Pallet::put_in_front_of_other`].
+        /// </summary>
         put_in_front_of_other = 2,
     }
     

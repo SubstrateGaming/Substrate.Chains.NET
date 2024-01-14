@@ -27,59 +27,23 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_support.dispatch
         /// <summary>
         /// >> normal
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_system.limits.WeightsPerClass _normal;
-        
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_system.limits.WeightsPerClass Normal { get; set; }
         /// <summary>
         /// >> operational
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_system.limits.WeightsPerClass _operational;
-        
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_system.limits.WeightsPerClass Operational { get; set; }
         /// <summary>
         /// >> mandatory
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_system.limits.WeightsPerClass _mandatory;
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_system.limits.WeightsPerClass Mandatory { get; set; }
         
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_system.limits.WeightsPerClass Normal
-        {
-            get
-            {
-                return this._normal;
-            }
-            set
-            {
-                this._normal = value;
-            }
-        }
-        
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_system.limits.WeightsPerClass Operational
-        {
-            get
-            {
-                return this._operational;
-            }
-            set
-            {
-                this._operational = value;
-            }
-        }
-        
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_system.limits.WeightsPerClass Mandatory
-        {
-            get
-            {
-                return this._mandatory;
-            }
-            set
-            {
-                this._mandatory = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "PerDispatchClassT2";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -89,6 +53,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_support.dispatch
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

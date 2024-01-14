@@ -27,59 +27,23 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_identity.types
         /// <summary>
         /// >> account
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 _account;
-        
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 Account { get; set; }
         /// <summary>
         /// >> fee
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U128 _fee;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U128 Fee { get; set; }
         /// <summary>
         /// >> fields
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_identity.types.BitFlags _fields;
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_identity.types.BitFlags Fields { get; set; }
         
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 Account
-        {
-            get
-            {
-                return this._account;
-            }
-            set
-            {
-                this._account = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U128 Fee
-        {
-            get
-            {
-                return this._fee;
-            }
-            set
-            {
-                this._fee = value;
-            }
-        }
-        
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_identity.types.BitFlags Fields
-        {
-            get
-            {
-                return this._fields;
-            }
-            set
-            {
-                this._fields = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "RegistrarInfo";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -89,6 +53,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_identity.types
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

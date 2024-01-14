@@ -15,15 +15,36 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_ranked_collectiv
 {
     
     
+    /// <summary>
+    /// >> Event
+    /// The `Event` enum of this pallet
+    /// </summary>
     public enum Event
     {
         
+        /// <summary>
+        /// >> MemberAdded
+        /// A member `who` has been added.
+        /// </summary>
         MemberAdded = 0,
         
+        /// <summary>
+        /// >> RankChanged
+        /// The member `who`se rank has been changed to the given `rank`.
+        /// </summary>
         RankChanged = 1,
         
+        /// <summary>
+        /// >> MemberRemoved
+        /// The member `who` of given `rank` has been removed from the collective.
+        /// </summary>
         MemberRemoved = 2,
         
+        /// <summary>
+        /// >> Voted
+        /// The member `who` has voted for the `poll` with the given `vote` leading to an updated
+        /// `tally`.
+        /// </summary>
         Voted = 3,
     }
     

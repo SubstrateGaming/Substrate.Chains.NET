@@ -21,12 +21,18 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> MmrStorage
+    /// </summary>
     public sealed class MmrStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> MmrStorage Constructor
+        /// </summary>
         public MmrStorage(SubstrateClientExt client)
         {
             this._client = client;
@@ -132,10 +138,16 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> MmrCalls
+    /// </summary>
     public sealed class MmrCalls
     {
     }
     
+    /// <summary>
+    /// >> MmrConstants
+    /// </summary>
     public sealed class MmrConstants
     {
     }

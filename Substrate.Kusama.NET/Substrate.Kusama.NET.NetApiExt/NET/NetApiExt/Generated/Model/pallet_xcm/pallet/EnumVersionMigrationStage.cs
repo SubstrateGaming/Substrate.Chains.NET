@@ -15,15 +15,30 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_xcm.pallet
 {
     
     
+    /// <summary>
+    /// >> VersionMigrationStage
+    /// </summary>
     public enum VersionMigrationStage
     {
         
+        /// <summary>
+        /// >> MigrateSupportedVersion
+        /// </summary>
         MigrateSupportedVersion = 0,
         
+        /// <summary>
+        /// >> MigrateVersionNotifiers
+        /// </summary>
         MigrateVersionNotifiers = 1,
         
+        /// <summary>
+        /// >> NotifyCurrentTargets
+        /// </summary>
         NotifyCurrentTargets = 2,
         
+        /// <summary>
+        /// >> MigrateAndNotifyOldTargets
+        /// </summary>
         MigrateAndNotifyOldTargets = 3,
     }
     

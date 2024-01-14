@@ -27,76 +27,27 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.finality_grandpa
         /// <summary>
         /// >> round_number
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U64 _roundNumber;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U64 RoundNumber { get; set; }
         /// <summary>
         /// >> identity
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_grandpa.app.Public _identity;
-        
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_grandpa.app.Public Identity { get; set; }
         /// <summary>
         /// >> first
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.finality_grandpa.Prevote, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_grandpa.app.Signature> _first;
-        
+        public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.finality_grandpa.Prevote, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_grandpa.app.Signature> First { get; set; }
         /// <summary>
         /// >> second
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.finality_grandpa.Prevote, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_grandpa.app.Signature> _second;
+        public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.finality_grandpa.Prevote, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_grandpa.app.Signature> Second { get; set; }
         
-        public Substrate.NetApi.Model.Types.Primitive.U64 RoundNumber
-        {
-            get
-            {
-                return this._roundNumber;
-            }
-            set
-            {
-                this._roundNumber = value;
-            }
-        }
-        
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_grandpa.app.Public Identity
-        {
-            get
-            {
-                return this._identity;
-            }
-            set
-            {
-                this._identity = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.finality_grandpa.Prevote, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_grandpa.app.Signature> First
-        {
-            get
-            {
-                return this._first;
-            }
-            set
-            {
-                this._first = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.finality_grandpa.Prevote, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_grandpa.app.Signature> Second
-        {
-            get
-            {
-                return this._second;
-            }
-            set
-            {
-                this._second = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "EquivocationT1";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -107,6 +58,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.finality_grandpa
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

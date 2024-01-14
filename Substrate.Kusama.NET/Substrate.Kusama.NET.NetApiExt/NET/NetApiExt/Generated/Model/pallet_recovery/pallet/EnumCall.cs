@@ -15,25 +15,65 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_recovery.pallet
 {
     
     
+    /// <summary>
+    /// >> Call
+    /// Contains a variant per dispatchable extrinsic that this pallet has.
+    /// </summary>
     public enum Call
     {
         
+        /// <summary>
+        /// >> as_recovered
+        /// See [`Pallet::as_recovered`].
+        /// </summary>
         as_recovered = 0,
         
+        /// <summary>
+        /// >> set_recovered
+        /// See [`Pallet::set_recovered`].
+        /// </summary>
         set_recovered = 1,
         
+        /// <summary>
+        /// >> create_recovery
+        /// See [`Pallet::create_recovery`].
+        /// </summary>
         create_recovery = 2,
         
+        /// <summary>
+        /// >> initiate_recovery
+        /// See [`Pallet::initiate_recovery`].
+        /// </summary>
         initiate_recovery = 3,
         
+        /// <summary>
+        /// >> vouch_recovery
+        /// See [`Pallet::vouch_recovery`].
+        /// </summary>
         vouch_recovery = 4,
         
+        /// <summary>
+        /// >> claim_recovery
+        /// See [`Pallet::claim_recovery`].
+        /// </summary>
         claim_recovery = 5,
         
+        /// <summary>
+        /// >> close_recovery
+        /// See [`Pallet::close_recovery`].
+        /// </summary>
         close_recovery = 6,
         
+        /// <summary>
+        /// >> remove_recovery
+        /// See [`Pallet::remove_recovery`].
+        /// </summary>
         remove_recovery = 7,
         
+        /// <summary>
+        /// >> cancel_recovered
+        /// See [`Pallet::cancel_recovered`].
+        /// </summary>
         cancel_recovered = 8,
     }
     

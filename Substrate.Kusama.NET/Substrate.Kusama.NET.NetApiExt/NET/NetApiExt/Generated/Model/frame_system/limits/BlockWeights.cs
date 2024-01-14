@@ -27,59 +27,23 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_system.limits
         /// <summary>
         /// >> base_block
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight _baseBlock;
-        
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight BaseBlock { get; set; }
         /// <summary>
         /// >> max_block
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight _maxBlock;
-        
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight MaxBlock { get; set; }
         /// <summary>
         /// >> per_class
         /// </summary>
-        private Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_support.dispatch.PerDispatchClassT2 _perClass;
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_support.dispatch.PerDispatchClassT2 PerClass { get; set; }
         
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight BaseBlock
-        {
-            get
-            {
-                return this._baseBlock;
-            }
-            set
-            {
-                this._baseBlock = value;
-            }
-        }
-        
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight MaxBlock
-        {
-            get
-            {
-                return this._maxBlock;
-            }
-            set
-            {
-                this._maxBlock = value;
-            }
-        }
-        
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_support.dispatch.PerDispatchClassT2 PerClass
-        {
-            get
-            {
-                return this._perClass;
-            }
-            set
-            {
-                this._perClass = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "BlockWeights";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -89,6 +53,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_system.limits
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

@@ -21,12 +21,18 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> SystemStorage
+    /// </summary>
     public sealed class SystemStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> SystemStorage Constructor
+        /// </summary>
         public SystemStorage(SubstrateClientExt client)
         {
             this._client = client;
@@ -559,6 +565,9 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> SystemCalls
+    /// </summary>
     public sealed class SystemCalls
     {
         
@@ -652,6 +661,9 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> SystemConstants
+    /// </summary>
     public sealed class SystemConstants
     {
         
@@ -726,6 +738,9 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> SystemErrors
+    /// </summary>
     public enum SystemErrors
     {
         

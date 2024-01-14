@@ -15,17 +15,44 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_fast_unstake.pal
 {
     
     
+    /// <summary>
+    /// >> Event
+    /// The `Event` enum of this pallet
+    /// </summary>
     public enum Event
     {
         
+        /// <summary>
+        /// >> Unstaked
+        /// A staker was unstaked.
+        /// </summary>
         Unstaked = 0,
         
+        /// <summary>
+        /// >> Slashed
+        /// A staker was slashed for requesting fast-unstake whilst being exposed.
+        /// </summary>
         Slashed = 1,
         
+        /// <summary>
+        /// >> BatchChecked
+        /// A batch was partially checked for the given eras, but the process did not finish.
+        /// </summary>
         BatchChecked = 2,
         
+        /// <summary>
+        /// >> BatchFinished
+        /// A batch of a given size was terminated.
+        /// 
+        /// This is always follows by a number of `Unstaked` or `Slashed` events, marking the end
+        /// of the batch. A new batch will be created upon next block.
+        /// </summary>
         BatchFinished = 3,
         
+        /// <summary>
+        /// >> InternalError
+        /// An internal error happened. Operations will be paused now.
+        /// </summary>
         InternalError = 4,
     }
     
