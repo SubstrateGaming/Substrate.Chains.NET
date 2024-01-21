@@ -15,15 +15,30 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types
 {
     
     
+    /// <summary>
+    /// >> PalletFeature
+    /// </summary>
     public enum PalletFeature
     {
         
+        /// <summary>
+        /// >> Trading
+        /// </summary>
         Trading = 1,
         
+        /// <summary>
+        /// >> Attributes
+        /// </summary>
         Attributes = 2,
         
+        /// <summary>
+        /// >> Approvals
+        /// </summary>
         Approvals = 4,
         
+        /// <summary>
+        /// >> Swaps
+        /// </summary>
         Swaps = 8,
     }
     

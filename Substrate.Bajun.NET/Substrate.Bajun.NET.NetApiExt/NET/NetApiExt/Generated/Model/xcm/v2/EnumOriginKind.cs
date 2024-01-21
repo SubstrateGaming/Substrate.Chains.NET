@@ -15,15 +15,30 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.v2
 {
     
     
+    /// <summary>
+    /// >> OriginKind
+    /// </summary>
     public enum OriginKind
     {
         
+        /// <summary>
+        /// >> Native
+        /// </summary>
         Native = 0,
         
+        /// <summary>
+        /// >> SovereignAccount
+        /// </summary>
         SovereignAccount = 1,
         
+        /// <summary>
+        /// >> Superuser
+        /// </summary>
         Superuser = 2,
         
+        /// <summary>
+        /// >> Xcm
+        /// </summary>
         Xcm = 3,
     }
     

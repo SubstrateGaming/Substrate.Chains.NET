@@ -27,59 +27,23 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
         /// <summary>
         /// >> mint
         /// </summary>
-        private Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.PlayStats _mint;
-        
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.PlayStats Mint { get; set; }
         /// <summary>
         /// >> forge
         /// </summary>
-        private Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.PlayStats _forge;
-        
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.PlayStats Forge { get; set; }
         /// <summary>
         /// >> trade
         /// </summary>
-        private Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.TradeStats _trade;
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.TradeStats Trade { get; set; }
         
-        public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.PlayStats Mint
-        {
-            get
-            {
-                return this._mint;
-            }
-            set
-            {
-                this._mint = value;
-            }
-        }
-        
-        public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.PlayStats Forge
-        {
-            get
-            {
-                return this._forge;
-            }
-            set
-            {
-                this._forge = value;
-            }
-        }
-        
-        public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.TradeStats Trade
-        {
-            get
-            {
-                return this._trade;
-            }
-            set
-            {
-                this._trade = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "Stats";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -89,6 +53,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

@@ -27,42 +27,19 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain
         /// <summary>
         /// >> code_hash
         /// </summary>
-        private Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 _codeHash;
-        
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 CodeHash { get; set; }
         /// <summary>
         /// >> check_version
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.Bool _checkVersion;
+        public Substrate.NetApi.Model.Types.Primitive.Bool CheckVersion { get; set; }
         
-        public Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 CodeHash
-        {
-            get
-            {
-                return this._codeHash;
-            }
-            set
-            {
-                this._codeHash = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.Bool CheckVersion
-        {
-            get
-            {
-                return this._checkVersion;
-            }
-            set
-            {
-                this._checkVersion = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "CodeUpgradeAuthorization";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -71,6 +48,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

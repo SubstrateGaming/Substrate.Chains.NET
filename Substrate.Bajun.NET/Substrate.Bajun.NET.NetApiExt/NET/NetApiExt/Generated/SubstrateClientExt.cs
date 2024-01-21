@@ -18,6 +18,9 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated
 {
     
     
+    /// <summary>
+    /// >> Substrate Client Extension, including all Storage classes direct access.
+    /// </summary>
     public sealed class SubstrateClientExt : Substrate.NetApi.SubstrateClient
     {
         

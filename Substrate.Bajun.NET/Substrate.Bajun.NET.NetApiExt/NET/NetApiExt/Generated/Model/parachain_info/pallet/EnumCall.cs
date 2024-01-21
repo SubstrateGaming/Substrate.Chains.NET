@@ -15,6 +15,10 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.parachain_info.pallet
 {
     
     
+    /// <summary>
+    /// >> Call
+    /// Contains one variant per dispatchable that can be called by an extrinsic.
+    /// </summary>
     public enum Call
     {
     }

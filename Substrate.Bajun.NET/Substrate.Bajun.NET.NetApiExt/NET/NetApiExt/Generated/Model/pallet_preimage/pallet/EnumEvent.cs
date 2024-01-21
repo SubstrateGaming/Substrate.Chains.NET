@@ -15,13 +15,32 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_preimage.pallet
 {
     
     
+    /// <summary>
+    /// >> Event
+    /// 
+    ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
+    ///			by this pallet.
+    ///			
+    /// </summary>
     public enum Event
     {
         
+        /// <summary>
+        /// >> Noted
+        /// A preimage has been noted.
+        /// </summary>
         Noted = 0,
         
+        /// <summary>
+        /// >> Requested
+        /// A preimage has been requested.
+        /// </summary>
         Requested = 1,
         
+        /// <summary>
+        /// >> Cleared
+        /// A preimage has ben cleared.
+        /// </summary>
         Cleared = 2,
     }
     

@@ -27,59 +27,23 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.frame_support.dispatch
         /// <summary>
         /// >> normal
         /// </summary>
-        private Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight _normal;
-        
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight Normal { get; set; }
         /// <summary>
         /// >> operational
         /// </summary>
-        private Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight _operational;
-        
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight Operational { get; set; }
         /// <summary>
         /// >> mandatory
         /// </summary>
-        private Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight _mandatory;
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight Mandatory { get; set; }
         
-        public Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight Normal
-        {
-            get
-            {
-                return this._normal;
-            }
-            set
-            {
-                this._normal = value;
-            }
-        }
-        
-        public Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight Operational
-        {
-            get
-            {
-                return this._operational;
-            }
-            set
-            {
-                this._operational = value;
-            }
-        }
-        
-        public Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight Mandatory
-        {
-            get
-            {
-                return this._mandatory;
-            }
-            set
-            {
-                this._mandatory = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "PerDispatchClassT1";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -89,6 +53,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.frame_support.dispatch
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

@@ -15,11 +15,20 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queu
 {
     
     
+    /// <summary>
+    /// >> OutboundState
+    /// </summary>
     public enum OutboundState
     {
         
+        /// <summary>
+        /// >> Ok
+        /// </summary>
         Ok = 0,
         
+        /// <summary>
+        /// >> Suspended
+        /// </summary>
         Suspended = 1,
     }
     

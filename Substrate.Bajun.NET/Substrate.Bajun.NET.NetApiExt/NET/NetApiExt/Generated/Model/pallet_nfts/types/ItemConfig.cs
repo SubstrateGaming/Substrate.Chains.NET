@@ -27,25 +27,15 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types
         /// <summary>
         /// >> settings
         /// </summary>
-        private Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.BitFlagsT2 _settings;
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.BitFlagsT2 Settings { get; set; }
         
-        public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.BitFlagsT2 Settings
-        {
-            get
-            {
-                return this._settings;
-            }
-            set
-            {
-                this._settings = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "ItemConfig";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -53,6 +43,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

@@ -27,93 +27,31 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
         /// <summary>
         /// >> mint
         /// </summary>
-        private Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.MintConfig _mint;
-        
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.MintConfig Mint { get; set; }
         /// <summary>
         /// >> forge
         /// </summary>
-        private Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.ForgeConfig _forge;
-        
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.ForgeConfig Forge { get; set; }
         /// <summary>
         /// >> transfer
         /// </summary>
-        private Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.TransferConfig _transfer;
-        
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.TransferConfig Transfer { get; set; }
         /// <summary>
         /// >> trade
         /// </summary>
-        private Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.TradeConfig _trade;
-        
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.TradeConfig Trade { get; set; }
         /// <summary>
         /// >> nft_transfer
         /// </summary>
-        private Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.NftTransferConfig _nftTransfer;
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.NftTransferConfig NftTransfer { get; set; }
         
-        public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.MintConfig Mint
-        {
-            get
-            {
-                return this._mint;
-            }
-            set
-            {
-                this._mint = value;
-            }
-        }
-        
-        public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.ForgeConfig Forge
-        {
-            get
-            {
-                return this._forge;
-            }
-            set
-            {
-                this._forge = value;
-            }
-        }
-        
-        public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.TransferConfig Transfer
-        {
-            get
-            {
-                return this._transfer;
-            }
-            set
-            {
-                this._transfer = value;
-            }
-        }
-        
-        public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.TradeConfig Trade
-        {
-            get
-            {
-                return this._trade;
-            }
-            set
-            {
-                this._trade = value;
-            }
-        }
-        
-        public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.NftTransferConfig NftTransfer
-        {
-            get
-            {
-                return this._nftTransfer;
-            }
-            set
-            {
-                this._nftTransfer = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "GlobalConfig";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -125,6 +63,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

@@ -21,12 +21,18 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> AwesomeAvatarsStorage
+    /// </summary>
     public sealed class AwesomeAvatarsStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> AwesomeAvatarsStorage Constructor
+        /// </summary>
         public AwesomeAvatarsStorage(SubstrateClientExt client)
         {
             this._client = client;
@@ -520,6 +526,9 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> AwesomeAvatarsCalls
+    /// </summary>
     public sealed class AwesomeAvatarsCalls
     {
         
@@ -764,6 +773,9 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> AwesomeAvatarsConstants
+    /// </summary>
     public sealed class AwesomeAvatarsConstants
     {
         
@@ -776,8 +788,33 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
             result.Create("0x616A2F6161617472");
             return result;
         }
+        
+        /// <summary>
+        /// >> KeyLimit
+        ///  The maximum length of an attribute key.
+        /// </summary>
+        public Substrate.NetApi.Model.Types.Primitive.U32 KeyLimit()
+        {
+            var result = new Substrate.NetApi.Model.Types.Primitive.U32();
+            result.Create("0x20000000");
+            return result;
+        }
+        
+        /// <summary>
+        /// >> ValueLimit
+        ///  The maximum length of an attribute value.
+        /// </summary>
+        public Substrate.NetApi.Model.Types.Primitive.U32 ValueLimit()
+        {
+            var result = new Substrate.NetApi.Model.Types.Primitive.U32();
+            result.Create("0x40000000");
+            return result;
+        }
     }
     
+    /// <summary>
+    /// >> AwesomeAvatarsErrors
+    /// </summary>
     public enum AwesomeAvatarsErrors
     {
         

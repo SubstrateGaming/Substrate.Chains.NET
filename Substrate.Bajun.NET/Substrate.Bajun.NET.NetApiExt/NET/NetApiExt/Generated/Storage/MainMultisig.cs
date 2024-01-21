@@ -21,12 +21,18 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> MultisigStorage
+    /// </summary>
     public sealed class MultisigStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> MultisigStorage Constructor
+        /// </summary>
         public MultisigStorage(SubstrateClientExt client)
         {
             this._client = client;
@@ -67,6 +73,9 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> MultisigCalls
+    /// </summary>
     public sealed class MultisigCalls
     {
         
@@ -127,6 +136,9 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> MultisigConstants
+    /// </summary>
     public sealed class MultisigConstants
     {
         
@@ -171,6 +183,9 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> MultisigErrors
+    /// </summary>
     public enum MultisigErrors
     {
         

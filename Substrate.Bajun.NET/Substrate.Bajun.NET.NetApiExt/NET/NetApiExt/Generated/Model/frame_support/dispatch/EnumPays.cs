@@ -15,11 +15,20 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.frame_support.dispatch
 {
     
     
+    /// <summary>
+    /// >> Pays
+    /// </summary>
     public enum Pays
     {
         
+        /// <summary>
+        /// >> Yes
+        /// </summary>
         Yes = 0,
         
+        /// <summary>
+        /// >> No
+        /// </summary>
         No = 1,
     }
     

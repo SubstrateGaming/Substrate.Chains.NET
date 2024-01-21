@@ -27,76 +27,27 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types
         /// <summary>
         /// >> desired_collection
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _desiredCollection;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 DesiredCollection { get; set; }
         /// <summary>
         /// >> desired_item
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> _desiredItem;
-        
+        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> DesiredItem { get; set; }
         /// <summary>
         /// >> price
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.PriceWithDirection> _price;
-        
+        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.PriceWithDirection> Price { get; set; }
         /// <summary>
         /// >> deadline
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _deadline;
+        public Substrate.NetApi.Model.Types.Primitive.U32 Deadline { get; set; }
         
-        public Substrate.NetApi.Model.Types.Primitive.U32 DesiredCollection
-        {
-            get
-            {
-                return this._desiredCollection;
-            }
-            set
-            {
-                this._desiredCollection = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> DesiredItem
-        {
-            get
-            {
-                return this._desiredItem;
-            }
-            set
-            {
-                this._desiredItem = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.PriceWithDirection> Price
-        {
-            get
-            {
-                return this._price;
-            }
-            set
-            {
-                this._price = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 Deadline
-        {
-            get
-            {
-                return this._deadline;
-            }
-            set
-            {
-                this._deadline = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "PendingSwap";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -107,6 +58,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

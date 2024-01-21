@@ -27,25 +27,15 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types
         /// <summary>
         /// >> owned_item
         /// </summary>
-        private Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 _ownedItem;
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 OwnedItem { get; set; }
         
-        public Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 OwnedItem
-        {
-            get
-            {
-                return this._ownedItem;
-            }
-            set
-            {
-                this._ownedItem = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "MintWitness";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -53,6 +43,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

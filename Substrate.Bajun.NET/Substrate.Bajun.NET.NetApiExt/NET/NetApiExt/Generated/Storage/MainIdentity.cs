@@ -21,12 +21,18 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> IdentityStorage
+    /// </summary>
     public sealed class IdentityStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> IdentityStorage Constructor
+        /// </summary>
         public IdentityStorage(SubstrateClientExt client)
         {
             this._client = client;
@@ -182,6 +188,9 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> IdentityCalls
+    /// </summary>
     public sealed class IdentityCalls
     {
         
@@ -358,6 +367,9 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> IdentityConstants
+    /// </summary>
     public sealed class IdentityConstants
     {
         
@@ -432,6 +444,9 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> IdentityErrors
+    /// </summary>
     public enum IdentityErrors
     {
         

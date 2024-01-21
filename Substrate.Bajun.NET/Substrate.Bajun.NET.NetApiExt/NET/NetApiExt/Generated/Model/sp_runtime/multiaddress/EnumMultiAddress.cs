@@ -15,17 +15,35 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress
 {
     
     
+    /// <summary>
+    /// >> MultiAddress
+    /// </summary>
     public enum MultiAddress
     {
         
+        /// <summary>
+        /// >> Id
+        /// </summary>
         Id = 0,
         
+        /// <summary>
+        /// >> Index
+        /// </summary>
         Index = 1,
         
+        /// <summary>
+        /// >> Raw
+        /// </summary>
         Raw = 2,
         
+        /// <summary>
+        /// >> Address32
+        /// </summary>
         Address32 = 3,
         
+        /// <summary>
+        /// >> Address20
+        /// </summary>
         Address20 = 4,
     }
     

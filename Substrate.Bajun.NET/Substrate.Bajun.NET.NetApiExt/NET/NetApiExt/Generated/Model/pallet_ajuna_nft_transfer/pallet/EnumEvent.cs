@@ -15,11 +15,26 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_nft_transfe
 {
     
     
+    /// <summary>
+    /// >> Event
+    /// 
+    ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
+    ///			by this pallet.
+    ///			
+    /// </summary>
     public enum Event
     {
         
+        /// <summary>
+        /// >> ItemStored
+        /// Item has been stored as an NFT [collection_id, item_id, owner]
+        /// </summary>
         ItemStored = 0,
         
+        /// <summary>
+        /// >> ItemRestored
+        /// Item has been restored back from its NFT representation [collection_id, item_id, owner]
+        /// </summary>
         ItemRestored = 1,
     }
     

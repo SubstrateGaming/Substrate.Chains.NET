@@ -27,76 +27,27 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain
         /// <summary>
         /// >> dmq_mqc_head
         /// </summary>
-        private Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 _dmqMqcHead;
-        
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 DmqMqcHead { get; set; }
         /// <summary>
         /// >> relay_dispatch_queue_size
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32> _relayDispatchQueueSize;
-        
+        public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32> RelayDispatchQueueSize { get; set; }
         /// <summary>
         /// >> ingress_channels
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.Bajun.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.AbridgedHrmpChannel>> _ingressChannels;
-        
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.Bajun.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.AbridgedHrmpChannel>> IngressChannels { get; set; }
         /// <summary>
         /// >> egress_channels
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.Bajun.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.AbridgedHrmpChannel>> _egressChannels;
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.Bajun.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.AbridgedHrmpChannel>> EgressChannels { get; set; }
         
-        public Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 DmqMqcHead
-        {
-            get
-            {
-                return this._dmqMqcHead;
-            }
-            set
-            {
-                this._dmqMqcHead = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32> RelayDispatchQueueSize
-        {
-            get
-            {
-                return this._relayDispatchQueueSize;
-            }
-            set
-            {
-                this._relayDispatchQueueSize = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.Bajun.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.AbridgedHrmpChannel>> IngressChannels
-        {
-            get
-            {
-                return this._ingressChannels;
-            }
-            set
-            {
-                this._ingressChannels = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.Bajun.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.AbridgedHrmpChannel>> EgressChannels
-        {
-            get
-            {
-                return this._egressChannels;
-            }
-            set
-            {
-                this._egressChannels = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "MessagingStateSnapshot";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -107,6 +58,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

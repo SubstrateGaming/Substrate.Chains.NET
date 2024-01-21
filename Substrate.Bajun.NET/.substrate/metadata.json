@@ -27965,7 +27965,7 @@
           {
             "Name": "Version",
             "TypeId": 168,
-            "Value": "FGJhanVuFGJhanVuAQAAAHoAAAAAAAAAKN1xjVzFMmLUAQAAAN9qy2iZB2CbBAAAADfjl/x8kfXkAgAAAED+OtQB+JWaBgAAANK8mJfu0I8VAwAAAPeLJ4vlP0VMAgAAAKs8BXIpH+uLAQAAALydiZBPW5I/AQAAADfIuxNQqaKoBAAAAOqT4/FvPWliAgAAAAEAAAAB",
+            "Value": "FGJhanVuFGJhanVuAQAAAHsAAAAAAAAAKN1xjVzFMmLUAQAAAN9qy2iZB2CbBAAAADfjl/x8kfXkAgAAAED+OtQB+JWaBgAAANK8mJfu0I8VAwAAAPeLJ4vlP0VMAgAAAKs8BXIpH+uLAQAAALydiZBPW5I/AQAAADfIuxNQqaKoBAAAAOqT4/FvPWliAgAAAAEAAAAB",
             "Docs": [
               " Get the chain's current version."
             ]
@@ -30723,6 +30723,22 @@
             "TypeId": 437,
             "Value": "YWovYWFhdHI=",
             "Docs": []
+          },
+          {
+            "Name": "KeyLimit",
+            "TypeId": 4,
+            "Value": "IAAAAA==",
+            "Docs": [
+              " The maximum length of an attribute key."
+            ]
+          },
+          {
+            "Name": "ValueLimit",
+            "TypeId": 4,
+            "Value": "QAAAAA==",
+            "Docs": [
+              " The maximum length of an attribute value."
+            ]
           }
         ],
         "Errors": {
@@ -31100,7 +31116,7 @@
           {
             "Name": "ValueLimit",
             "TypeId": 4,
-            "Value": "yAAAAA==",
+            "Value": "QAAAAA==",
             "Docs": [
               " The maximum length of an attribute value."
             ]
@@ -31195,6 +31211,22 @@
             "Value": "YWovbmZ0dHI=",
             "Docs": [
               " The NFT-transfer's pallet id, used for deriving its sovereign account ID."
+            ]
+          },
+          {
+            "Name": "KeyLimit",
+            "TypeId": 4,
+            "Value": "IAAAAA==",
+            "Docs": [
+              " The maximum length of an attribute key."
+            ]
+          },
+          {
+            "Name": "ValueLimit",
+            "TypeId": 4,
+            "Value": "QAAAAA==",
+            "Docs": [
+              " The maximum length of an attribute value."
             ]
           }
         ],

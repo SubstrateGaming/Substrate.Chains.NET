@@ -15,13 +15,35 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.cumulus_pallet_xcm.palle
 {
     
     
+    /// <summary>
+    /// >> Event
+    /// 
+    ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
+    ///			by this pallet.
+    ///			
+    /// </summary>
     public enum Event
     {
         
+        /// <summary>
+        /// >> InvalidFormat
+        /// Downward message is invalid XCM.
+        /// \[ id \]
+        /// </summary>
         InvalidFormat = 0,
         
+        /// <summary>
+        /// >> UnsupportedVersion
+        /// Downward message is unsupported version of XCM.
+        /// \[ id \]
+        /// </summary>
         UnsupportedVersion = 1,
         
+        /// <summary>
+        /// >> ExecutedDownward
+        /// Downward message executed with the given outcome.
+        /// \[ id, outcome \]
+        /// </summary>
         ExecutedDownward = 2,
     }
     

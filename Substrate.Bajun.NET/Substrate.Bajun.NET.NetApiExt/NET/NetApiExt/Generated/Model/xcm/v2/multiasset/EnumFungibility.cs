@@ -15,11 +15,20 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.v2.multiasset
 {
     
     
+    /// <summary>
+    /// >> Fungibility
+    /// </summary>
     public enum Fungibility
     {
         
+        /// <summary>
+        /// >> Fungible
+        /// </summary>
         Fungible = 0,
         
+        /// <summary>
+        /// >> NonFungible
+        /// </summary>
         NonFungible = 1,
     }
     

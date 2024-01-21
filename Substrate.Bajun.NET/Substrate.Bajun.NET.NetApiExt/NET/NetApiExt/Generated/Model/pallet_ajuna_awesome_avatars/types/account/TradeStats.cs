@@ -27,42 +27,19 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
         /// <summary>
         /// >> bought
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _bought;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 Bought { get; set; }
         /// <summary>
         /// >> sold
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _sold;
+        public Substrate.NetApi.Model.Types.Primitive.U32 Sold { get; set; }
         
-        public Substrate.NetApi.Model.Types.Primitive.U32 Bought
-        {
-            get
-            {
-                return this._bought;
-            }
-            set
-            {
-                this._bought = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 Sold
-        {
-            get
-            {
-                return this._sold;
-            }
-            set
-            {
-                this._sold = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "TradeStats";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -71,6 +48,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

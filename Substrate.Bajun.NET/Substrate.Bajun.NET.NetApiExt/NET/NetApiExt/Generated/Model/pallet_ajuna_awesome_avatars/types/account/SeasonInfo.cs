@@ -27,42 +27,19 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
         /// <summary>
         /// >> minted
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _minted;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 Minted { get; set; }
         /// <summary>
         /// >> forged
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _forged;
+        public Substrate.NetApi.Model.Types.Primitive.U32 Forged { get; set; }
         
-        public Substrate.NetApi.Model.Types.Primitive.U32 Minted
-        {
-            get
-            {
-                return this._minted;
-            }
-            set
-            {
-                this._minted = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 Forged
-        {
-            get
-            {
-                return this._forged;
-            }
-            set
-            {
-                this._forged = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "SeasonInfo";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -71,6 +48,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

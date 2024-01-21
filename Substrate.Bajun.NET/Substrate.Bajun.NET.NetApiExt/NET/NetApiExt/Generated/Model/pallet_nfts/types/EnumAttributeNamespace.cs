@@ -15,15 +15,30 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types
 {
     
     
+    /// <summary>
+    /// >> AttributeNamespace
+    /// </summary>
     public enum AttributeNamespace
     {
         
+        /// <summary>
+        /// >> Pallet
+        /// </summary>
         Pallet = 0,
         
+        /// <summary>
+        /// >> CollectionOwner
+        /// </summary>
         CollectionOwner = 1,
         
+        /// <summary>
+        /// >> ItemOwner
+        /// </summary>
         ItemOwner = 2,
         
+        /// <summary>
+        /// >> Account
+        /// </summary>
         Account = 3,
     }
     

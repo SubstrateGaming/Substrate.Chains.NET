@@ -21,12 +21,18 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> AuthorshipStorage
+    /// </summary>
     public sealed class AuthorshipStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> AuthorshipStorage Constructor
+        /// </summary>
         public AuthorshipStorage(SubstrateClientExt client)
         {
             this._client = client;
@@ -63,10 +69,16 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> AuthorshipCalls
+    /// </summary>
     public sealed class AuthorshipCalls
     {
     }
     
+    /// <summary>
+    /// >> AuthorshipConstants
+    /// </summary>
     public sealed class AuthorshipConstants
     {
     }

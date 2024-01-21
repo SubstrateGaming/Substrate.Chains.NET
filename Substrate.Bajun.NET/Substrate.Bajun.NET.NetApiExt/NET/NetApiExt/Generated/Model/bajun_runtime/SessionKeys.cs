@@ -27,25 +27,15 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.bajun_runtime
         /// <summary>
         /// >> aura
         /// </summary>
-        private Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_consensus_aura.sr25519.app_sr25519.Public _aura;
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_consensus_aura.sr25519.app_sr25519.Public Aura { get; set; }
         
-        public Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_consensus_aura.sr25519.app_sr25519.Public Aura
-        {
-            get
-            {
-                return this._aura;
-            }
-            set
-            {
-                this._aura = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "SessionKeys";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -53,6 +43,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.bajun_runtime
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

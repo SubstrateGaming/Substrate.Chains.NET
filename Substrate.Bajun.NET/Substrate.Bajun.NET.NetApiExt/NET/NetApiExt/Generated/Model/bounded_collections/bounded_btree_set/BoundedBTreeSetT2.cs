@@ -27,25 +27,15 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.boun
         /// <summary>
         /// >> value
         /// </summary>
-        private Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.BTreeSetT3 _value;
+        public Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.BTreeSetT3 Value { get; set; }
         
-        public Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.BTreeSetT3 Value
-        {
-            get
-            {
-                return this._value;
-            }
-            set
-            {
-                this._value = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "BoundedBTreeSetT2";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -53,6 +43,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.boun
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

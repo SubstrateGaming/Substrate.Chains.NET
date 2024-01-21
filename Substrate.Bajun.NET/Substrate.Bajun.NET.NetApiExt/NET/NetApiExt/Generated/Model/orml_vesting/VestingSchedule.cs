@@ -27,76 +27,27 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.orml_vesting
         /// <summary>
         /// >> start
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _start;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 Start { get; set; }
         /// <summary>
         /// >> period
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _period;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 Period { get; set; }
         /// <summary>
         /// >> period_count
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _periodCount;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 PeriodCount { get; set; }
         /// <summary>
         /// >> per_period
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128> _perPeriod;
+        public Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128> PerPeriod { get; set; }
         
-        public Substrate.NetApi.Model.Types.Primitive.U32 Start
-        {
-            get
-            {
-                return this._start;
-            }
-            set
-            {
-                this._start = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 Period
-        {
-            get
-            {
-                return this._period;
-            }
-            set
-            {
-                this._period = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 PeriodCount
-        {
-            get
-            {
-                return this._periodCount;
-            }
-            set
-            {
-                this._periodCount = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128> PerPeriod
-        {
-            get
-            {
-                return this._perPeriod;
-            }
-            set
-            {
-                this._perPeriod = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "VestingSchedule";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -107,6 +58,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.orml_vesting
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

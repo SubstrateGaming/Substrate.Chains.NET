@@ -27,42 +27,19 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types
         /// <summary>
         /// >> amount
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U128 _amount;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U128 Amount { get; set; }
         /// <summary>
         /// >> direction
         /// </summary>
-        private Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.EnumPriceDirection _direction;
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.EnumPriceDirection Direction { get; set; }
         
-        public Substrate.NetApi.Model.Types.Primitive.U128 Amount
-        {
-            get
-            {
-                return this._amount;
-            }
-            set
-            {
-                this._amount = value;
-            }
-        }
-        
-        public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.EnumPriceDirection Direction
-        {
-            get
-            {
-                return this._direction;
-            }
-            set
-            {
-                this._direction = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "PriceWithDirection";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -71,6 +48,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

@@ -27,76 +27,27 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
         /// <summary>
         /// >> season_id
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U16 _seasonId;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U16 SeasonId { get; set; }
         /// <summary>
         /// >> encoding
         /// </summary>
-        private Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.avatar.EnumDnaEncoding _encoding;
-        
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.avatar.EnumDnaEncoding Encoding { get; set; }
         /// <summary>
         /// >> dna
         /// </summary>
-        private Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT4 _dna;
-        
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT4 Dna { get; set; }
         /// <summary>
         /// >> souls
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _souls;
+        public Substrate.NetApi.Model.Types.Primitive.U32 Souls { get; set; }
         
-        public Substrate.NetApi.Model.Types.Primitive.U16 SeasonId
-        {
-            get
-            {
-                return this._seasonId;
-            }
-            set
-            {
-                this._seasonId = value;
-            }
-        }
-        
-        public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.avatar.EnumDnaEncoding Encoding
-        {
-            get
-            {
-                return this._encoding;
-            }
-            set
-            {
-                this._encoding = value;
-            }
-        }
-        
-        public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT4 Dna
-        {
-            get
-            {
-                return this._dna;
-            }
-            set
-            {
-                this._dna = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 Souls
-        {
-            get
-            {
-                return this._souls;
-            }
-            set
-            {
-                this._souls = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "Avatar";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -107,6 +58,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

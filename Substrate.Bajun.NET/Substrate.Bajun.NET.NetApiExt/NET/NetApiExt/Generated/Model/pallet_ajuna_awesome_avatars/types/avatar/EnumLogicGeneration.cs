@@ -15,11 +15,20 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
 {
     
     
+    /// <summary>
+    /// >> LogicGeneration
+    /// </summary>
     public enum LogicGeneration
     {
         
+        /// <summary>
+        /// >> First
+        /// </summary>
         First = 0,
         
+        /// <summary>
+        /// >> Second
+        /// </summary>
         Second = 1,
     }
     

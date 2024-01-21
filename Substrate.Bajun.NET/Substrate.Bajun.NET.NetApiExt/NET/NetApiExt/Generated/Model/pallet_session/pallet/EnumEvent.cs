@@ -15,9 +15,21 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_session.pallet
 {
     
     
+    /// <summary>
+    /// >> Event
+    /// 
+    ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
+    ///			by this pallet.
+    ///			
+    /// </summary>
     public enum Event
     {
         
+        /// <summary>
+        /// >> NewSession
+        /// New session has happened. Note that the argument is the session index, not the
+        /// block number as the type might suggest.
+        /// </summary>
         NewSession = 0,
     }
     

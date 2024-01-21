@@ -15,21 +15,56 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.cumulus_pallet_dmp_queue
 {
     
     
+    /// <summary>
+    /// >> Event
+    /// 
+    ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
+    ///			by this pallet.
+    ///			
+    /// </summary>
     public enum Event
     {
         
+        /// <summary>
+        /// >> InvalidFormat
+        /// Downward message is invalid XCM.
+        /// </summary>
         InvalidFormat = 0,
         
+        /// <summary>
+        /// >> UnsupportedVersion
+        /// Downward message is unsupported version of XCM.
+        /// </summary>
         UnsupportedVersion = 1,
         
+        /// <summary>
+        /// >> ExecutedDownward
+        /// Downward message executed with the given outcome.
+        /// </summary>
         ExecutedDownward = 2,
         
+        /// <summary>
+        /// >> WeightExhausted
+        /// The weight limit for handling downward messages was reached.
+        /// </summary>
         WeightExhausted = 3,
         
+        /// <summary>
+        /// >> OverweightEnqueued
+        /// Downward message is overweight and was placed in the overweight queue.
+        /// </summary>
         OverweightEnqueued = 4,
         
+        /// <summary>
+        /// >> OverweightServiced
+        /// Downward message from the overweight queue was executed.
+        /// </summary>
         OverweightServiced = 5,
         
+        /// <summary>
+        /// >> MaxMessagesExhausted
+        /// The maximum number of downward messages was.
+        /// </summary>
         MaxMessagesExhausted = 6,
     }
     

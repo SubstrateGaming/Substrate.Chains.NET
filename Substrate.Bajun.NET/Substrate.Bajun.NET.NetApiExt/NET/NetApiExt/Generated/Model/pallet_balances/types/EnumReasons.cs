@@ -15,13 +15,25 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_balances.types
 {
     
     
+    /// <summary>
+    /// >> Reasons
+    /// </summary>
     public enum Reasons
     {
         
+        /// <summary>
+        /// >> Fee
+        /// </summary>
         Fee = 0,
         
+        /// <summary>
+        /// >> Misc
+        /// </summary>
         Misc = 1,
         
+        /// <summary>
+        /// >> All
+        /// </summary>
         All = 2,
     }
     

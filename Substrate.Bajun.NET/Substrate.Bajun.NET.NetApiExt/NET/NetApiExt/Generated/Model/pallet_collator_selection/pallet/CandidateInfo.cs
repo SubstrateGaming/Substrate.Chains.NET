@@ -27,42 +27,19 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_collator_selectio
         /// <summary>
         /// >> who
         /// </summary>
-        private Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 _who;
-        
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 Who { get; set; }
         /// <summary>
         /// >> deposit
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U128 _deposit;
+        public Substrate.NetApi.Model.Types.Primitive.U128 Deposit { get; set; }
         
-        public Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 Who
-        {
-            get
-            {
-                return this._who;
-            }
-            set
-            {
-                this._who = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U128 Deposit
-        {
-            get
-            {
-                return this._deposit;
-            }
-            set
-            {
-                this._deposit = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "CandidateInfo";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -71,6 +48,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_collator_selectio
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

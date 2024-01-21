@@ -27,76 +27,27 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_xcm.pallet
         /// <summary>
         /// >> amount
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U128 _amount;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U128 Amount { get; set; }
         /// <summary>
         /// >> owner
         /// </summary>
-        private Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation _owner;
-        
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation Owner { get; set; }
         /// <summary>
         /// >> locker
         /// </summary>
-        private Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation _locker;
-        
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation Locker { get; set; }
         /// <summary>
         /// >> users
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _users;
+        public Substrate.NetApi.Model.Types.Primitive.U32 Users { get; set; }
         
-        public Substrate.NetApi.Model.Types.Primitive.U128 Amount
-        {
-            get
-            {
-                return this._amount;
-            }
-            set
-            {
-                this._amount = value;
-            }
-        }
-        
-        public Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation Owner
-        {
-            get
-            {
-                return this._owner;
-            }
-            set
-            {
-                this._owner = value;
-            }
-        }
-        
-        public Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation Locker
-        {
-            get
-            {
-                return this._locker;
-            }
-            set
-            {
-                this._locker = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 Users
-        {
-            get
-            {
-                return this._users;
-            }
-            set
-            {
-                this._users = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "RemoteLockedFungibleRecord";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -107,6 +58,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_xcm.pallet
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

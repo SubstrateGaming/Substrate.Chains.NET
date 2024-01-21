@@ -27,110 +27,35 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.polkadot_primitives.v4
         /// <summary>
         /// >> max_capacity
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _maxCapacity;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 MaxCapacity { get; set; }
         /// <summary>
         /// >> max_total_size
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _maxTotalSize;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 MaxTotalSize { get; set; }
         /// <summary>
         /// >> max_message_size
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _maxMessageSize;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 MaxMessageSize { get; set; }
         /// <summary>
         /// >> msg_count
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _msgCount;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 MsgCount { get; set; }
         /// <summary>
         /// >> total_size
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _totalSize;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 TotalSize { get; set; }
         /// <summary>
         /// >> mqc_head
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> _mqcHead;
+        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> MqcHead { get; set; }
         
-        public Substrate.NetApi.Model.Types.Primitive.U32 MaxCapacity
-        {
-            get
-            {
-                return this._maxCapacity;
-            }
-            set
-            {
-                this._maxCapacity = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 MaxTotalSize
-        {
-            get
-            {
-                return this._maxTotalSize;
-            }
-            set
-            {
-                this._maxTotalSize = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 MaxMessageSize
-        {
-            get
-            {
-                return this._maxMessageSize;
-            }
-            set
-            {
-                this._maxMessageSize = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 MsgCount
-        {
-            get
-            {
-                return this._msgCount;
-            }
-            set
-            {
-                this._msgCount = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 TotalSize
-        {
-            get
-            {
-                return this._totalSize;
-            }
-            set
-            {
-                this._totalSize = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> MqcHead
-        {
-            get
-            {
-                return this._mqcHead;
-            }
-            set
-            {
-                this._mqcHead = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "AbridgedHrmpChannel";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -143,6 +68,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.polkadot_primitives.v4
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

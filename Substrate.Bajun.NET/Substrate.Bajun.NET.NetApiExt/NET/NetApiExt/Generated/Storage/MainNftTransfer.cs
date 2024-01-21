@@ -21,12 +21,18 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> NftTransferStorage
+    /// </summary>
     public sealed class NftTransferStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> NftTransferStorage Constructor
+        /// </summary>
         public NftTransferStorage(SubstrateClientExt client)
         {
             this._client = client;
@@ -65,10 +71,16 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> NftTransferCalls
+    /// </summary>
     public sealed class NftTransferCalls
     {
     }
     
+    /// <summary>
+    /// >> NftTransferConstants
+    /// </summary>
     public sealed class NftTransferConstants
     {
         
@@ -82,8 +94,33 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
             result.Create("0x616A2F6E66747472");
             return result;
         }
+        
+        /// <summary>
+        /// >> KeyLimit
+        ///  The maximum length of an attribute key.
+        /// </summary>
+        public Substrate.NetApi.Model.Types.Primitive.U32 KeyLimit()
+        {
+            var result = new Substrate.NetApi.Model.Types.Primitive.U32();
+            result.Create("0x20000000");
+            return result;
+        }
+        
+        /// <summary>
+        /// >> ValueLimit
+        ///  The maximum length of an attribute value.
+        /// </summary>
+        public Substrate.NetApi.Model.Types.Primitive.U32 ValueLimit()
+        {
+            var result = new Substrate.NetApi.Model.Types.Primitive.U32();
+            result.Create("0x40000000");
+            return result;
+        }
     }
     
+    /// <summary>
+    /// >> NftTransferErrors
+    /// </summary>
     public enum NftTransferErrors
     {
         

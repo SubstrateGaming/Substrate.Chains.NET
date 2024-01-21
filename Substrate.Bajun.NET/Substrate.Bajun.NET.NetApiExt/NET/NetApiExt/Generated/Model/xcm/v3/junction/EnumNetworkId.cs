@@ -15,27 +15,60 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.v3.junction
 {
     
     
+    /// <summary>
+    /// >> NetworkId
+    /// </summary>
     public enum NetworkId
     {
         
+        /// <summary>
+        /// >> ByGenesis
+        /// </summary>
         ByGenesis = 0,
         
+        /// <summary>
+        /// >> ByFork
+        /// </summary>
         ByFork = 1,
         
+        /// <summary>
+        /// >> Polkadot
+        /// </summary>
         Polkadot = 2,
         
+        /// <summary>
+        /// >> Kusama
+        /// </summary>
         Kusama = 3,
         
+        /// <summary>
+        /// >> Westend
+        /// </summary>
         Westend = 4,
         
+        /// <summary>
+        /// >> Rococo
+        /// </summary>
         Rococo = 5,
         
+        /// <summary>
+        /// >> Wococo
+        /// </summary>
         Wococo = 6,
         
+        /// <summary>
+        /// >> Ethereum
+        /// </summary>
         Ethereum = 7,
         
+        /// <summary>
+        /// >> BitcoinCore
+        /// </summary>
         BitcoinCore = 8,
         
+        /// <summary>
+        /// >> BitcoinCash
+        /// </summary>
         BitcoinCash = 9,
     }
     

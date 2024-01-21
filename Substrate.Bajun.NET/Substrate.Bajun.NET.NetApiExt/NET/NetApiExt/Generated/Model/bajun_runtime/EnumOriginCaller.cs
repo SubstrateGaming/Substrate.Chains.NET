@@ -15,17 +15,35 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.bajun_runtime
 {
     
     
+    /// <summary>
+    /// >> OriginCaller
+    /// </summary>
     public enum OriginCaller
     {
         
+        /// <summary>
+        /// >> system
+        /// </summary>
         system = 0,
         
+        /// <summary>
+        /// >> PolkadotXcm
+        /// </summary>
         PolkadotXcm = 31,
         
+        /// <summary>
+        /// >> CumulusXcm
+        /// </summary>
         CumulusXcm = 32,
         
+        /// <summary>
+        /// >> Council
+        /// </summary>
         Council = 42,
         
+        /// <summary>
+        /// >> Void
+        /// </summary>
         Void = 4,
     }
     

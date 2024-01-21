@@ -27,42 +27,19 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.polkadot_core_primitives
         /// <summary>
         /// >> recipient
         /// </summary>
-        private Substrate.Bajun.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id _recipient;
-        
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id Recipient { get; set; }
         /// <summary>
         /// >> data
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> _data;
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> Data { get; set; }
         
-        public Substrate.Bajun.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id Recipient
-        {
-            get
-            {
-                return this._recipient;
-            }
-            set
-            {
-                this._recipient = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> Data
-        {
-            get
-            {
-                return this._data;
-            }
-            set
-            {
-                this._data = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "OutboundHrmpMessage";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -71,6 +48,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.polkadot_core_primitives
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

@@ -21,12 +21,18 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> ParachainSystemStorage
+    /// </summary>
     public sealed class ParachainSystemStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> ParachainSystemStorage Constructor
+        /// </summary>
         public ParachainSystemStorage(SubstrateClientExt client)
         {
             this._client = client;
@@ -767,6 +773,9 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> ParachainSystemCalls
+    /// </summary>
     public sealed class ParachainSystemCalls
     {
         
@@ -816,10 +825,16 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> ParachainSystemConstants
+    /// </summary>
     public sealed class ParachainSystemConstants
     {
     }
     
+    /// <summary>
+    /// >> ParachainSystemErrors
+    /// </summary>
     public enum ParachainSystemErrors
     {
         

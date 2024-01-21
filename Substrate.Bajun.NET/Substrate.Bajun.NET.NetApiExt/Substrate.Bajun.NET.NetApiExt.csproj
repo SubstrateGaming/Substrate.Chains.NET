@@ -3,7 +3,7 @@
 	<PropertyGroup>
 		<PackageId>Substrate.Bajun.NET.Extension</PackageId>
 		<TargetFrameworks>netstandard2.0;netstandard2.1;net6.0</TargetFrameworks>
-		<Version>1.122.1</Version>
+		<Version>1.123.0</Version>
 		<Company>Substrate Gaming</Company>
 		<Authors>Substrate Gaming</Authors>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
@@ -16,7 +16,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Substrate.NET.API" Version="0.9.10" />
+		<PackageReference Include="Substrate.NET.API" Version="0.9.15" />
 	</ItemGroup>
 
 	<ItemGroup>

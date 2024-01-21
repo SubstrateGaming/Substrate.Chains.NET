@@ -15,9 +15,21 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_transaction_payme
 {
     
     
+    /// <summary>
+    /// >> Event
+    /// 
+    ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
+    ///			by this pallet.
+    ///			
+    /// </summary>
     public enum Event
     {
         
+        /// <summary>
+        /// >> TransactionFeePaid
+        /// A transaction fee `actual_fee`, of which `tip` was added to the minimum inclusion fee,
+        /// has been paid by `who`.
+        /// </summary>
         TransactionFeePaid = 0,
     }
     

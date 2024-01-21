@@ -21,12 +21,18 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> NftStorage
+    /// </summary>
     public sealed class NftStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> NftStorage Constructor
+        /// </summary>
         public NftStorage(SubstrateClientExt client)
         {
             this._client = client;
@@ -549,6 +555,9 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> NftCalls
+    /// </summary>
     public sealed class NftCalls
     {
         
@@ -1055,6 +1064,9 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> NftConstants
+    /// </summary>
     public sealed class NftConstants
     {
         
@@ -1143,7 +1155,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         public Substrate.NetApi.Model.Types.Primitive.U32 ValueLimit()
         {
             var result = new Substrate.NetApi.Model.Types.Primitive.U32();
-            result.Create("0xC8000000");
+            result.Create("0x40000000");
             return result;
         }
         
@@ -1214,6 +1226,9 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> NftErrors
+    /// </summary>
     public enum NftErrors
     {
         

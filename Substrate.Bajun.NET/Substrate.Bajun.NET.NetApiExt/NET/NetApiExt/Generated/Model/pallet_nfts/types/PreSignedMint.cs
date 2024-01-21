@@ -27,110 +27,35 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types
         /// <summary>
         /// >> collection
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _collection;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 Collection { get; set; }
         /// <summary>
         /// >> item
         /// </summary>
-        private Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 _item;
-        
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 Item { get; set; }
         /// <summary>
         /// >> attributes
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>> _attributes;
-        
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>> Attributes { get; set; }
         /// <summary>
         /// >> metadata
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> _metadata;
-        
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> Metadata { get; set; }
         /// <summary>
         /// >> only_account
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> _onlyAccount;
-        
+        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> OnlyAccount { get; set; }
         /// <summary>
         /// >> deadline
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _deadline;
+        public Substrate.NetApi.Model.Types.Primitive.U32 Deadline { get; set; }
         
-        public Substrate.NetApi.Model.Types.Primitive.U32 Collection
-        {
-            get
-            {
-                return this._collection;
-            }
-            set
-            {
-                this._collection = value;
-            }
-        }
-        
-        public Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 Item
-        {
-            get
-            {
-                return this._item;
-            }
-            set
-            {
-                this._item = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>> Attributes
-        {
-            get
-            {
-                return this._attributes;
-            }
-            set
-            {
-                this._attributes = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> Metadata
-        {
-            get
-            {
-                return this._metadata;
-            }
-            set
-            {
-                this._metadata = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> OnlyAccount
-        {
-            get
-            {
-                return this._onlyAccount;
-            }
-            set
-            {
-                this._onlyAccount = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 Deadline
-        {
-            get
-            {
-                return this._deadline;
-            }
-            set
-            {
-                this._deadline = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "PreSignedMint";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -143,6 +68,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

@@ -15,13 +15,25 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
 {
     
     
+    /// <summary>
+    /// >> MintPackSize
+    /// </summary>
     public enum MintPackSize
     {
         
+        /// <summary>
+        /// >> One
+        /// </summary>
         One = 0,
         
+        /// <summary>
+        /// >> Three
+        /// </summary>
         Three = 1,
         
+        /// <summary>
+        /// >> Six
+        /// </summary>
         Six = 2,
     }
     

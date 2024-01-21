@@ -15,11 +15,20 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
 {
     
     
+    /// <summary>
+    /// >> DnaEncoding
+    /// </summary>
     public enum DnaEncoding
     {
         
+        /// <summary>
+        /// >> V1
+        /// </summary>
         V1 = 0,
         
+        /// <summary>
+        /// >> V2
+        /// </summary>
         V2 = 1,
     }
     

@@ -27,59 +27,23 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
         /// <summary>
         /// >> open
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.Bool _open;
-        
+        public Substrate.NetApi.Model.Types.Primitive.Bool Open { get; set; }
         /// <summary>
         /// >> free_mint_transfer_fee
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U16 _freeMintTransferFee;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U16 FreeMintTransferFee { get; set; }
         /// <summary>
         /// >> min_free_mint_transfer
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U16 _minFreeMintTransfer;
+        public Substrate.NetApi.Model.Types.Primitive.U16 MinFreeMintTransfer { get; set; }
         
-        public Substrate.NetApi.Model.Types.Primitive.Bool Open
-        {
-            get
-            {
-                return this._open;
-            }
-            set
-            {
-                this._open = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U16 FreeMintTransferFee
-        {
-            get
-            {
-                return this._freeMintTransferFee;
-            }
-            set
-            {
-                this._freeMintTransferFee = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U16 MinFreeMintTransfer
-        {
-            get
-            {
-                return this._minFreeMintTransfer;
-            }
-            set
-            {
-                this._minFreeMintTransfer = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "TransferConfig";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -89,6 +53,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

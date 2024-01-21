@@ -27,25 +27,15 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types
         /// <summary>
         /// >> account_attributes
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _accountAttributes;
+        public Substrate.NetApi.Model.Types.Primitive.U32 AccountAttributes { get; set; }
         
-        public Substrate.NetApi.Model.Types.Primitive.U32 AccountAttributes
-        {
-            get
-            {
-                return this._accountAttributes;
-            }
-            set
-            {
-                this._accountAttributes = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "CancelAttributesApprovalWitness";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -53,6 +43,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

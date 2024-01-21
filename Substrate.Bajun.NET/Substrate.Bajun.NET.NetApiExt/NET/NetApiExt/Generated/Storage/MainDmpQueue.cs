@@ -21,12 +21,18 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> DmpQueueStorage
+    /// </summary>
     public sealed class DmpQueueStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> DmpQueueStorage Constructor
+        /// </summary>
         public DmpQueueStorage(SubstrateClientExt client)
         {
             this._client = client;
@@ -189,6 +195,9 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> DmpQueueCalls
+    /// </summary>
     public sealed class DmpQueueCalls
     {
         
@@ -205,10 +214,16 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> DmpQueueConstants
+    /// </summary>
     public sealed class DmpQueueConstants
     {
     }
     
+    /// <summary>
+    /// >> DmpQueueErrors
+    /// </summary>
     public enum DmpQueueErrors
     {
         

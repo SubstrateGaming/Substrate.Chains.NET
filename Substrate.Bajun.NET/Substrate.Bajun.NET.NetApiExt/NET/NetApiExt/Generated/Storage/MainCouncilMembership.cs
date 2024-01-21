@@ -21,12 +21,18 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> CouncilMembershipStorage
+    /// </summary>
     public sealed class CouncilMembershipStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> CouncilMembershipStorage Constructor
+        /// </summary>
         public CouncilMembershipStorage(SubstrateClientExt client)
         {
             this._client = client;
@@ -93,6 +99,9 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> CouncilMembershipCalls
+    /// </summary>
     public sealed class CouncilMembershipCalls
     {
         
@@ -174,10 +183,16 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> CouncilMembershipConstants
+    /// </summary>
     public sealed class CouncilMembershipConstants
     {
     }
     
+    /// <summary>
+    /// >> CouncilMembershipErrors
+    /// </summary>
     public enum CouncilMembershipErrors
     {
         

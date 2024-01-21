@@ -27,25 +27,15 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_trie.storage_proof
         /// <summary>
         /// >> trie_nodes
         /// </summary>
-        private Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.BTreeSetT1 _trieNodes;
+        public Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.BTreeSetT1 TrieNodes { get; set; }
         
-        public Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.BTreeSetT1 TrieNodes
-        {
-            get
-            {
-                return this._trieNodes;
-            }
-            set
-            {
-                this._trieNodes = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "StorageProof";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -53,6 +43,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_trie.storage_proof
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

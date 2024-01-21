@@ -21,12 +21,18 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> RandomnessStorage
+    /// </summary>
     public sealed class RandomnessStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> RandomnessStorage Constructor
+        /// </summary>
         public RandomnessStorage(SubstrateClientExt client)
         {
             this._client = client;
@@ -67,10 +73,16 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> RandomnessCalls
+    /// </summary>
     public sealed class RandomnessCalls
     {
     }
     
+    /// <summary>
+    /// >> RandomnessConstants
+    /// </summary>
     public sealed class RandomnessConstants
     {
     }

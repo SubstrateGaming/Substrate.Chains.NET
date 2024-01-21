@@ -21,12 +21,18 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> SchedulerStorage
+    /// </summary>
     public sealed class SchedulerStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> SchedulerStorage Constructor
+        /// </summary>
         public SchedulerStorage(SubstrateClientExt client)
         {
             this._client = client;
@@ -133,6 +139,9 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> SchedulerCalls
+    /// </summary>
     public sealed class SchedulerCalls
     {
         
@@ -218,6 +227,9 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> SchedulerConstants
+    /// </summary>
     public sealed class SchedulerConstants
     {
         
@@ -248,6 +260,9 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> SchedulerErrors
+    /// </summary>
     public enum SchedulerErrors
     {
         

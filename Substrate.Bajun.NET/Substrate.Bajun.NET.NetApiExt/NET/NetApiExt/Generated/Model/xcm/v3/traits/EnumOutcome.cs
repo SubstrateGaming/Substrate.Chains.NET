@@ -15,13 +15,25 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.v3.traits
 {
     
     
+    /// <summary>
+    /// >> Outcome
+    /// </summary>
     public enum Outcome
     {
         
+        /// <summary>
+        /// >> Complete
+        /// </summary>
         Complete = 0,
         
+        /// <summary>
+        /// >> Incomplete
+        /// </summary>
         Incomplete = 1,
         
+        /// <summary>
+        /// >> Error
+        /// </summary>
         Error = 2,
     }
     

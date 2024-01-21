@@ -27,76 +27,27 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.cumulus_primitives_parac
         /// <summary>
         /// >> validation_data
         /// </summary>
-        private Substrate.Bajun.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.PersistedValidationData _validationData;
-        
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.PersistedValidationData ValidationData { get; set; }
         /// <summary>
         /// >> relay_chain_state
         /// </summary>
-        private Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_trie.storage_proof.StorageProof _relayChainState;
-        
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_trie.storage_proof.StorageProof RelayChainState { get; set; }
         /// <summary>
         /// >> downward_messages
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Bajun.NET.NetApiExt.Generated.Model.polkadot_core_primitives.InboundDownwardMessage> _downwardMessages;
-        
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Bajun.NET.NetApiExt.Generated.Model.polkadot_core_primitives.InboundDownwardMessage> DownwardMessages { get; set; }
         /// <summary>
         /// >> horizontal_messages
         /// </summary>
-        private Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.BTreeMapT2 _horizontalMessages;
+        public Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.BTreeMapT2 HorizontalMessages { get; set; }
         
-        public Substrate.Bajun.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.PersistedValidationData ValidationData
-        {
-            get
-            {
-                return this._validationData;
-            }
-            set
-            {
-                this._validationData = value;
-            }
-        }
-        
-        public Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_trie.storage_proof.StorageProof RelayChainState
-        {
-            get
-            {
-                return this._relayChainState;
-            }
-            set
-            {
-                this._relayChainState = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Bajun.NET.NetApiExt.Generated.Model.polkadot_core_primitives.InboundDownwardMessage> DownwardMessages
-        {
-            get
-            {
-                return this._downwardMessages;
-            }
-            set
-            {
-                this._downwardMessages = value;
-            }
-        }
-        
-        public Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.BTreeMapT2 HorizontalMessages
-        {
-            get
-            {
-                return this._horizontalMessages;
-            }
-            set
-            {
-                this._horizontalMessages = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "ParachainInherentData";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -107,6 +58,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.cumulus_primitives_parac
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

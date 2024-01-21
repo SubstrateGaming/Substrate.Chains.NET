@@ -27,42 +27,19 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_balances.types
         /// <summary>
         /// >> id
         /// </summary>
-        private Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.Arr8U8 _id;
-        
+        public Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.Arr8U8 Id { get; set; }
         /// <summary>
         /// >> amount
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U128 _amount;
+        public Substrate.NetApi.Model.Types.Primitive.U128 Amount { get; set; }
         
-        public Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.Arr8U8 Id
-        {
-            get
-            {
-                return this._id;
-            }
-            set
-            {
-                this._id = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U128 Amount
-        {
-            get
-            {
-                return this._amount;
-            }
-            set
-            {
-                this._amount = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "ReserveData";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -71,6 +48,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_balances.types
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

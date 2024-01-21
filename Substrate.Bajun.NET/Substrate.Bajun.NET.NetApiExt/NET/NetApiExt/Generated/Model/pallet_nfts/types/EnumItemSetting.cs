@@ -15,13 +15,25 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types
 {
     
     
+    /// <summary>
+    /// >> ItemSetting
+    /// </summary>
     public enum ItemSetting
     {
         
+        /// <summary>
+        /// >> Transferable
+        /// </summary>
         Transferable = 1,
         
+        /// <summary>
+        /// >> UnlockedMetadata
+        /// </summary>
         UnlockedMetadata = 2,
         
+        /// <summary>
+        /// >> UnlockedAttributes
+        /// </summary>
         UnlockedAttributes = 4,
     }
     

@@ -21,12 +21,18 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> TimestampStorage
+    /// </summary>
     public sealed class TimestampStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> TimestampStorage Constructor
+        /// </summary>
         public TimestampStorage(SubstrateClientExt client)
         {
             this._client = client;
@@ -93,6 +99,9 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> TimestampCalls
+    /// </summary>
     public sealed class TimestampCalls
     {
         
@@ -108,6 +117,9 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> TimestampConstants
+    /// </summary>
     public sealed class TimestampConstants
     {
         

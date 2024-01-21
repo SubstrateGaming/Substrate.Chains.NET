@@ -15,9 +15,15 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types
 {
     
     
+    /// <summary>
+    /// >> PalletAttributes
+    /// </summary>
     public enum PalletAttributes
     {
         
+        /// <summary>
+        /// >> UsedToClaim
+        /// </summary>
         UsedToClaim = 0,
     }
     

@@ -15,21 +15,57 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_nft_transfe
 {
     
     
+    /// <summary>
+    /// >> Error
+    /// 
+    ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
+    ///			of this pallet.
+    ///			
+    /// </summary>
     public enum Error
     {
         
+        /// <summary>
+        /// >> EmptyIpfsUrl
+        /// IPFS URL must not be an empty string.
+        /// </summary>
         EmptyIpfsUrl = 0,
         
+        /// <summary>
+        /// >> DuplicateItemCode
+        /// Item code must be different to attribute codes.
+        /// </summary>
         DuplicateItemCode = 1,
         
+        /// <summary>
+        /// >> UnknownItem
+        /// The given NFT item doesn't exist.
+        /// </summary>
         UnknownItem = 2,
         
+        /// <summary>
+        /// >> UnknownClaim
+        /// The given claim doesn't exist.
+        /// </summary>
         UnknownClaim = 3,
         
+        /// <summary>
+        /// >> NftNotOwned
+        /// The given NFT is not owned by the requester.
+        /// </summary>
         NftNotOwned = 4,
         
+        /// <summary>
+        /// >> NftOutsideOfChain
+        /// The given NFT is currently outside of the chain, transfer it back before attempting a
+        /// restore.
+        /// </summary>
         NftOutsideOfChain = 5,
         
+        /// <summary>
+        /// >> ItemRestoreFailure
+        /// The process of restoring an NFT into an item has failed.
+        /// </summary>
         ItemRestoreFailure = 6,
     }
     

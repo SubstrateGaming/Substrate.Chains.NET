@@ -15,21 +15,72 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_membership.pallet
 {
     
     
+    /// <summary>
+    /// >> Call
+    /// Contains one variant per dispatchable that can be called by an extrinsic.
+    /// </summary>
     public enum Call
     {
         
+        /// <summary>
+        /// >> add_member
+        /// Add a member `who` to the set.
+        /// 
+        /// May only be called from `T::AddOrigin`.
+        /// </summary>
         add_member = 0,
         
+        /// <summary>
+        /// >> remove_member
+        /// Remove a member `who` from the set.
+        /// 
+        /// May only be called from `T::RemoveOrigin`.
+        /// </summary>
         remove_member = 1,
         
+        /// <summary>
+        /// >> swap_member
+        /// Swap out one member `remove` for another `add`.
+        /// 
+        /// May only be called from `T::SwapOrigin`.
+        /// 
+        /// Prime membership is *not* passed from `remove` to `add`, if extant.
+        /// </summary>
         swap_member = 2,
         
+        /// <summary>
+        /// >> reset_members
+        /// Change the membership to a new set, disregarding the existing membership. Be nice and
+        /// pass `members` pre-sorted.
+        /// 
+        /// May only be called from `T::ResetOrigin`.
+        /// </summary>
         reset_members = 3,
         
+        /// <summary>
+        /// >> change_key
+        /// Swap out the sending member for some other key `new`.
+        /// 
+        /// May only be called from `Signed` origin of a current member.
+        /// 
+        /// Prime membership is passed from the origin account to `new`, if extant.
+        /// </summary>
         change_key = 4,
         
+        /// <summary>
+        /// >> set_prime
+        /// Set the prime member. Must be a current member.
+        /// 
+        /// May only be called from `T::PrimeOrigin`.
+        /// </summary>
         set_prime = 5,
         
+        /// <summary>
+        /// >> clear_prime
+        /// Remove the prime member if it exists.
+        /// 
+        /// May only be called from `T::PrimeOrigin`.
+        /// </summary>
         clear_prime = 6,
     }
     

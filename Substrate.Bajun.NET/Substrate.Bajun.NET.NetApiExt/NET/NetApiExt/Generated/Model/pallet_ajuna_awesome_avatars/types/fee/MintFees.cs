@@ -27,59 +27,23 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
         /// <summary>
         /// >> one
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U128 _one;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U128 One { get; set; }
         /// <summary>
         /// >> three
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U128 _three;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U128 Three { get; set; }
         /// <summary>
         /// >> six
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U128 _six;
+        public Substrate.NetApi.Model.Types.Primitive.U128 Six { get; set; }
         
-        public Substrate.NetApi.Model.Types.Primitive.U128 One
-        {
-            get
-            {
-                return this._one;
-            }
-            set
-            {
-                this._one = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U128 Three
-        {
-            get
-            {
-                return this._three;
-            }
-            set
-            {
-                this._three = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U128 Six
-        {
-            get
-            {
-                return this._six;
-            }
-            set
-            {
-                this._six = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "MintFees";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -89,6 +53,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

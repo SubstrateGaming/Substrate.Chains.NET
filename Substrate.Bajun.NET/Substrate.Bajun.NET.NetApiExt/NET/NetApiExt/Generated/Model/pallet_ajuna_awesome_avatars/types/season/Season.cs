@@ -27,348 +27,91 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
         /// <summary>
         /// >> name
         /// </summary>
-        private Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT4 _name;
-        
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT4 Name { get; set; }
         /// <summary>
         /// >> description
         /// </summary>
-        private Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT5 _description;
-        
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT5 Description { get; set; }
         /// <summary>
         /// >> early_start
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _earlyStart;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 EarlyStart { get; set; }
         /// <summary>
         /// >> start
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _start;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 Start { get; set; }
         /// <summary>
         /// >> end
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _end;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 End { get; set; }
         /// <summary>
         /// >> max_tier_forges
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _maxTierForges;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 MaxTierForges { get; set; }
         /// <summary>
         /// >> max_variations
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U8 _maxVariations;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U8 MaxVariations { get; set; }
         /// <summary>
         /// >> max_components
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U8 _maxComponents;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U8 MaxComponents { get; set; }
         /// <summary>
         /// >> min_sacrifices
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U8 _minSacrifices;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U8 MinSacrifices { get; set; }
         /// <summary>
         /// >> max_sacrifices
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U8 _maxSacrifices;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U8 MaxSacrifices { get; set; }
         /// <summary>
         /// >> tiers
         /// </summary>
-        private Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT6 _tiers;
-        
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT6 Tiers { get; set; }
         /// <summary>
         /// >> single_mint_probs
         /// </summary>
-        private Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT7 _singleMintProbs;
-        
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT7 SingleMintProbs { get; set; }
         /// <summary>
         /// >> batch_mint_probs
         /// </summary>
-        private Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT7 _batchMintProbs;
-        
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT7 BatchMintProbs { get; set; }
         /// <summary>
         /// >> base_prob
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U8 _baseProb;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U8 BaseProb { get; set; }
         /// <summary>
         /// >> per_period
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _perPeriod;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 PerPeriod { get; set; }
         /// <summary>
         /// >> periods
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U16 _periods;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U16 Periods { get; set; }
         /// <summary>
         /// >> trade_filters
         /// </summary>
-        private Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT8 _tradeFilters;
-        
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT8 TradeFilters { get; set; }
         /// <summary>
         /// >> fee
         /// </summary>
-        private Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.fee.Fee _fee;
-        
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.fee.Fee Fee { get; set; }
         /// <summary>
         /// >> mint_logic
         /// </summary>
-        private Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.avatar.EnumLogicGeneration _mintLogic;
-        
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.avatar.EnumLogicGeneration MintLogic { get; set; }
         /// <summary>
         /// >> forge_logic
         /// </summary>
-        private Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.avatar.EnumLogicGeneration _forgeLogic;
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.avatar.EnumLogicGeneration ForgeLogic { get; set; }
         
-        public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT4 Name
-        {
-            get
-            {
-                return this._name;
-            }
-            set
-            {
-                this._name = value;
-            }
-        }
-        
-        public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT5 Description
-        {
-            get
-            {
-                return this._description;
-            }
-            set
-            {
-                this._description = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 EarlyStart
-        {
-            get
-            {
-                return this._earlyStart;
-            }
-            set
-            {
-                this._earlyStart = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 Start
-        {
-            get
-            {
-                return this._start;
-            }
-            set
-            {
-                this._start = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 End
-        {
-            get
-            {
-                return this._end;
-            }
-            set
-            {
-                this._end = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 MaxTierForges
-        {
-            get
-            {
-                return this._maxTierForges;
-            }
-            set
-            {
-                this._maxTierForges = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U8 MaxVariations
-        {
-            get
-            {
-                return this._maxVariations;
-            }
-            set
-            {
-                this._maxVariations = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U8 MaxComponents
-        {
-            get
-            {
-                return this._maxComponents;
-            }
-            set
-            {
-                this._maxComponents = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U8 MinSacrifices
-        {
-            get
-            {
-                return this._minSacrifices;
-            }
-            set
-            {
-                this._minSacrifices = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U8 MaxSacrifices
-        {
-            get
-            {
-                return this._maxSacrifices;
-            }
-            set
-            {
-                this._maxSacrifices = value;
-            }
-        }
-        
-        public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT6 Tiers
-        {
-            get
-            {
-                return this._tiers;
-            }
-            set
-            {
-                this._tiers = value;
-            }
-        }
-        
-        public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT7 SingleMintProbs
-        {
-            get
-            {
-                return this._singleMintProbs;
-            }
-            set
-            {
-                this._singleMintProbs = value;
-            }
-        }
-        
-        public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT7 BatchMintProbs
-        {
-            get
-            {
-                return this._batchMintProbs;
-            }
-            set
-            {
-                this._batchMintProbs = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U8 BaseProb
-        {
-            get
-            {
-                return this._baseProb;
-            }
-            set
-            {
-                this._baseProb = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 PerPeriod
-        {
-            get
-            {
-                return this._perPeriod;
-            }
-            set
-            {
-                this._perPeriod = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U16 Periods
-        {
-            get
-            {
-                return this._periods;
-            }
-            set
-            {
-                this._periods = value;
-            }
-        }
-        
-        public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT8 TradeFilters
-        {
-            get
-            {
-                return this._tradeFilters;
-            }
-            set
-            {
-                this._tradeFilters = value;
-            }
-        }
-        
-        public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.fee.Fee Fee
-        {
-            get
-            {
-                return this._fee;
-            }
-            set
-            {
-                this._fee = value;
-            }
-        }
-        
-        public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.avatar.EnumLogicGeneration MintLogic
-        {
-            get
-            {
-                return this._mintLogic;
-            }
-            set
-            {
-                this._mintLogic = value;
-            }
-        }
-        
-        public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.avatar.EnumLogicGeneration ForgeLogic
-        {
-            get
-            {
-                return this._forgeLogic;
-            }
-            set
-            {
-                this._forgeLogic = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "Season";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -395,6 +138,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

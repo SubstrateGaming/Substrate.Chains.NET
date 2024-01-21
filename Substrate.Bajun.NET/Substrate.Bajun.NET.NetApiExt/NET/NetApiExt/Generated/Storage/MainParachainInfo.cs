@@ -21,12 +21,18 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> ParachainInfoStorage
+    /// </summary>
     public sealed class ParachainInfoStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> ParachainInfoStorage Constructor
+        /// </summary>
         public ParachainInfoStorage(SubstrateClientExt client)
         {
             this._client = client;
@@ -61,10 +67,16 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> ParachainInfoCalls
+    /// </summary>
     public sealed class ParachainInfoCalls
     {
     }
     
+    /// <summary>
+    /// >> ParachainInfoConstants
+    /// </summary>
     public sealed class ParachainInfoConstants
     {
     }

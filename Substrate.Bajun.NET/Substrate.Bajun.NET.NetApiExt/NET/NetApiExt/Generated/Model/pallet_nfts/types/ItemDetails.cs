@@ -27,59 +27,23 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types
         /// <summary>
         /// >> owner
         /// </summary>
-        private Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 _owner;
-        
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 Owner { get; set; }
         /// <summary>
         /// >> approvals
         /// </summary>
-        private Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_map.BoundedBTreeMap _approvals;
-        
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_map.BoundedBTreeMap Approvals { get; set; }
         /// <summary>
         /// >> deposit
         /// </summary>
-        private Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.ItemDeposit _deposit;
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.ItemDeposit Deposit { get; set; }
         
-        public Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 Owner
-        {
-            get
-            {
-                return this._owner;
-            }
-            set
-            {
-                this._owner = value;
-            }
-        }
-        
-        public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_map.BoundedBTreeMap Approvals
-        {
-            get
-            {
-                return this._approvals;
-            }
-            set
-            {
-                this._approvals = value;
-            }
-        }
-        
-        public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.ItemDeposit Deposit
-        {
-            get
-            {
-                return this._deposit;
-            }
-            set
-            {
-                this._deposit = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "ItemDetails";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -89,6 +53,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

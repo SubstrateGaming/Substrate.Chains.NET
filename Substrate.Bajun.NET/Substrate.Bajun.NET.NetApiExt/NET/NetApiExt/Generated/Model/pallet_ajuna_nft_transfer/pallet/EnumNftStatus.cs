@@ -15,11 +15,20 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_nft_transfe
 {
     
     
+    /// <summary>
+    /// >> NftStatus
+    /// </summary>
     public enum NftStatus
     {
         
+        /// <summary>
+        /// >> Stored
+        /// </summary>
         Stored = 0,
         
+        /// <summary>
+        /// >> Uploaded
+        /// </summary>
         Uploaded = 1,
     }
     

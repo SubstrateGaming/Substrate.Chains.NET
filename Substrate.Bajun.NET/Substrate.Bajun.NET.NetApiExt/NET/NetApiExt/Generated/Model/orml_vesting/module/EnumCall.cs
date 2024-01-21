@@ -15,15 +15,31 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.orml_vesting.module
 {
     
     
+    /// <summary>
+    /// >> Call
+    /// Contains one variant per dispatchable that can be called by an extrinsic.
+    /// </summary>
     public enum Call
     {
         
+        /// <summary>
+        /// >> claim
+        /// </summary>
         claim = 0,
         
+        /// <summary>
+        /// >> vested_transfer
+        /// </summary>
         vested_transfer = 1,
         
+        /// <summary>
+        /// >> update_vesting_schedules
+        /// </summary>
         update_vesting_schedules = 2,
         
+        /// <summary>
+        /// >> claim_for
+        /// </summary>
         claim_for = 3,
     }
     

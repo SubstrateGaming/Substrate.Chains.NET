@@ -27,110 +27,35 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types
         /// <summary>
         /// >> owner
         /// </summary>
-        private Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 _owner;
-        
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 Owner { get; set; }
         /// <summary>
         /// >> owner_deposit
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U128 _ownerDeposit;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U128 OwnerDeposit { get; set; }
         /// <summary>
         /// >> items
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _items;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 Items { get; set; }
         /// <summary>
         /// >> item_metadatas
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _itemMetadatas;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 ItemMetadatas { get; set; }
         /// <summary>
         /// >> item_configs
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _itemConfigs;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 ItemConfigs { get; set; }
         /// <summary>
         /// >> attributes
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _attributes;
+        public Substrate.NetApi.Model.Types.Primitive.U32 Attributes { get; set; }
         
-        public Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 Owner
-        {
-            get
-            {
-                return this._owner;
-            }
-            set
-            {
-                this._owner = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U128 OwnerDeposit
-        {
-            get
-            {
-                return this._ownerDeposit;
-            }
-            set
-            {
-                this._ownerDeposit = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 Items
-        {
-            get
-            {
-                return this._items;
-            }
-            set
-            {
-                this._items = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 ItemMetadatas
-        {
-            get
-            {
-                return this._itemMetadatas;
-            }
-            set
-            {
-                this._itemMetadatas = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 ItemConfigs
-        {
-            get
-            {
-                return this._itemConfigs;
-            }
-            set
-            {
-                this._itemConfigs = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 Attributes
-        {
-            get
-            {
-                return this._attributes;
-            }
-            set
-            {
-                this._attributes = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "CollectionDetails";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -143,6 +68,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

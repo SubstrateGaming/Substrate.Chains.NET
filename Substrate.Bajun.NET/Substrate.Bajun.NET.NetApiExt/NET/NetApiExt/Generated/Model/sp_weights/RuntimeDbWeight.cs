@@ -27,42 +27,19 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_weights
         /// <summary>
         /// >> read
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U64 _read;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U64 Read { get; set; }
         /// <summary>
         /// >> write
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U64 _write;
+        public Substrate.NetApi.Model.Types.Primitive.U64 Write { get; set; }
         
-        public Substrate.NetApi.Model.Types.Primitive.U64 Read
-        {
-            get
-            {
-                return this._read;
-            }
-            set
-            {
-                this._read = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U64 Write
-        {
-            get
-            {
-                return this._write;
-            }
-            set
-            {
-                this._write = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "RuntimeDbWeight";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -71,6 +48,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_weights
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

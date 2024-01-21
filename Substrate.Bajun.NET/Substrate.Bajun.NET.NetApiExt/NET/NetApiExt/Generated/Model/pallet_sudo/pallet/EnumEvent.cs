@@ -15,13 +15,32 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_sudo.pallet
 {
     
     
+    /// <summary>
+    /// >> Event
+    /// 
+    ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
+    ///			by this pallet.
+    ///			
+    /// </summary>
     public enum Event
     {
         
+        /// <summary>
+        /// >> Sudid
+        /// A sudo just took place. \[result\]
+        /// </summary>
         Sudid = 0,
         
+        /// <summary>
+        /// >> KeyChanged
+        /// The \[sudoer\] just switched identity; the old key is supplied if one existed.
+        /// </summary>
         KeyChanged = 1,
         
+        /// <summary>
+        /// >> SudoAsDone
+        /// A sudo just took place. \[result\]
+        /// </summary>
         SudoAsDone = 2,
     }
     

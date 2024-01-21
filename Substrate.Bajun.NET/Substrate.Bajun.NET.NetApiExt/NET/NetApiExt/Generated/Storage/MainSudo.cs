@@ -21,12 +21,18 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> SudoStorage
+    /// </summary>
     public sealed class SudoStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> SudoStorage Constructor
+        /// </summary>
         public SudoStorage(SubstrateClientExt client)
         {
             this._client = client;
@@ -63,6 +69,9 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> SudoCalls
+    /// </summary>
     public sealed class SudoCalls
     {
         
@@ -113,10 +122,16 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> SudoConstants
+    /// </summary>
     public sealed class SudoConstants
     {
     }
     
+    /// <summary>
+    /// >> SudoErrors
+    /// </summary>
     public enum SudoErrors
     {
         

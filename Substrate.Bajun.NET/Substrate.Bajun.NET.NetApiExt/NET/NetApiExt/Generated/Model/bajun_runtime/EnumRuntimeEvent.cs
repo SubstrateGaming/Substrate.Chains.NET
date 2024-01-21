@@ -15,55 +15,130 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.bajun_runtime
 {
     
     
+    /// <summary>
+    /// >> RuntimeEvent
+    /// </summary>
     public enum RuntimeEvent
     {
         
+        /// <summary>
+        /// >> System
+        /// </summary>
         System = 0,
         
+        /// <summary>
+        /// >> ParachainSystem
+        /// </summary>
         ParachainSystem = 1,
         
+        /// <summary>
+        /// >> Multisig
+        /// </summary>
         Multisig = 4,
         
+        /// <summary>
+        /// >> Utility
+        /// </summary>
         Utility = 5,
         
+        /// <summary>
+        /// >> Identity
+        /// </summary>
         Identity = 6,
         
+        /// <summary>
+        /// >> Proxy
+        /// </summary>
         Proxy = 7,
         
+        /// <summary>
+        /// >> Scheduler
+        /// </summary>
         Scheduler = 8,
         
+        /// <summary>
+        /// >> Preimage
+        /// </summary>
         Preimage = 9,
         
+        /// <summary>
+        /// >> Balances
+        /// </summary>
         Balances = 15,
         
+        /// <summary>
+        /// >> TransactionPayment
+        /// </summary>
         TransactionPayment = 16,
         
+        /// <summary>
+        /// >> Vesting
+        /// </summary>
         Vesting = 17,
         
+        /// <summary>
+        /// >> CollatorSelection
+        /// </summary>
         CollatorSelection = 21,
         
+        /// <summary>
+        /// >> Session
+        /// </summary>
         Session = 22,
         
+        /// <summary>
+        /// >> XcmpQueue
+        /// </summary>
         XcmpQueue = 30,
         
+        /// <summary>
+        /// >> PolkadotXcm
+        /// </summary>
         PolkadotXcm = 31,
         
+        /// <summary>
+        /// >> CumulusXcm
+        /// </summary>
         CumulusXcm = 32,
         
+        /// <summary>
+        /// >> DmpQueue
+        /// </summary>
         DmpQueue = 33,
         
+        /// <summary>
+        /// >> Sudo
+        /// </summary>
         Sudo = 40,
         
+        /// <summary>
+        /// >> Treasury
+        /// </summary>
         Treasury = 41,
         
+        /// <summary>
+        /// >> Council
+        /// </summary>
         Council = 42,
         
+        /// <summary>
+        /// >> CouncilMembership
+        /// </summary>
         CouncilMembership = 43,
         
+        /// <summary>
+        /// >> AwesomeAvatars
+        /// </summary>
         AwesomeAvatars = 51,
         
+        /// <summary>
+        /// >> Nft
+        /// </summary>
         Nft = 60,
         
+        /// <summary>
+        /// >> NftTransfer
+        /// </summary>
         NftTransfer = 61,
     }
     

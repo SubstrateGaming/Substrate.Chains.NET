@@ -27,93 +27,31 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
         /// <summary>
         /// >> season_id
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U16 _seasonId;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U16 SeasonId { get; set; }
         /// <summary>
         /// >> early
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.Bool _early;
-        
+        public Substrate.NetApi.Model.Types.Primitive.Bool Early { get; set; }
         /// <summary>
         /// >> active
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.Bool _active;
-        
+        public Substrate.NetApi.Model.Types.Primitive.Bool Active { get; set; }
         /// <summary>
         /// >> early_ended
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.Bool _earlyEnded;
-        
+        public Substrate.NetApi.Model.Types.Primitive.Bool EarlyEnded { get; set; }
         /// <summary>
         /// >> max_tier_avatars
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _maxTierAvatars;
+        public Substrate.NetApi.Model.Types.Primitive.U32 MaxTierAvatars { get; set; }
         
-        public Substrate.NetApi.Model.Types.Primitive.U16 SeasonId
-        {
-            get
-            {
-                return this._seasonId;
-            }
-            set
-            {
-                this._seasonId = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.Bool Early
-        {
-            get
-            {
-                return this._early;
-            }
-            set
-            {
-                this._early = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.Bool Active
-        {
-            get
-            {
-                return this._active;
-            }
-            set
-            {
-                this._active = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.Bool EarlyEnded
-        {
-            get
-            {
-                return this._earlyEnded;
-            }
-            set
-            {
-                this._earlyEnded = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 MaxTierAvatars
-        {
-            get
-            {
-                return this._maxTierAvatars;
-            }
-            set
-            {
-                this._maxTierAvatars = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "SeasonStatus";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -125,6 +63,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

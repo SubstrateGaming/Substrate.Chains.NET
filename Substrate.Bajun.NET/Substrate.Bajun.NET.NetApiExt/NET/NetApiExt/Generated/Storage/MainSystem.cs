@@ -21,12 +21,18 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> SystemStorage
+    /// </summary>
     public sealed class SystemStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> SystemStorage Constructor
+        /// </summary>
         public SystemStorage(SubstrateClientExt client)
         {
             this._client = client;
@@ -559,6 +565,9 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> SystemCalls
+    /// </summary>
     public sealed class SystemCalls
     {
         
@@ -652,6 +661,9 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> SystemConstants
+    /// </summary>
     public sealed class SystemConstants
     {
         
@@ -708,7 +720,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         public Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_version.RuntimeVersion Version()
         {
             var result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_version.RuntimeVersion();
-            result.Create(@"0x1462616A756E1462616A756E010000007A0000000000000028DD718D5CC53262D401000000DF6ACB689907609B0400000037E397FC7C91F5E40200000040FE3AD401F8959A06000000D2BC9897EED08F1503000000F78B278BE53F454C02000000AB3C0572291FEB8B01000000BC9D89904F5B923F0100000037C8BB1350A9A2A804000000EA93E3F16F3D6962020000000100000001");
+            result.Create(@"0x1462616A756E1462616A756E010000007B0000000000000028DD718D5CC53262D401000000DF6ACB689907609B0400000037E397FC7C91F5E40200000040FE3AD401F8959A06000000D2BC9897EED08F1503000000F78B278BE53F454C02000000AB3C0572291FEB8B01000000BC9D89904F5B923F0100000037C8BB1350A9A2A804000000EA93E3F16F3D6962020000000100000001");
             return result;
         }
         
@@ -728,6 +740,9 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> SystemErrors
+    /// </summary>
     public enum SystemErrors
     {
         

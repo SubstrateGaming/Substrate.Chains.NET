@@ -21,12 +21,18 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> PreimageStorage
+    /// </summary>
     public sealed class PreimageStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> PreimageStorage Constructor
+        /// </summary>
         public PreimageStorage(SubstrateClientExt client)
         {
             this._client = client;
@@ -97,6 +103,9 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> PreimageCalls
+    /// </summary>
     public sealed class PreimageCalls
     {
         
@@ -145,10 +154,16 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> PreimageConstants
+    /// </summary>
     public sealed class PreimageConstants
     {
     }
     
+    /// <summary>
+    /// >> PreimageErrors
+    /// </summary>
     public enum PreimageErrors
     {
         

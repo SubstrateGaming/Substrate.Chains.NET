@@ -27,76 +27,27 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types
         /// <summary>
         /// >> collection
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _collection;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 Collection { get; set; }
         /// <summary>
         /// >> item
         /// </summary>
-        private Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 _item;
-        
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 Item { get; set; }
         /// <summary>
         /// >> receiver
         /// </summary>
-        private Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 _receiver;
-        
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 Receiver { get; set; }
         /// <summary>
         /// >> amount
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U128 _amount;
+        public Substrate.NetApi.Model.Types.Primitive.U128 Amount { get; set; }
         
-        public Substrate.NetApi.Model.Types.Primitive.U32 Collection
-        {
-            get
-            {
-                return this._collection;
-            }
-            set
-            {
-                this._collection = value;
-            }
-        }
-        
-        public Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 Item
-        {
-            get
-            {
-                return this._item;
-            }
-            set
-            {
-                this._item = value;
-            }
-        }
-        
-        public Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 Receiver
-        {
-            get
-            {
-                return this._receiver;
-            }
-            set
-            {
-                this._receiver = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U128 Amount
-        {
-            get
-            {
-                return this._amount;
-            }
-            set
-            {
-                this._amount = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "ItemTip";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -107,6 +58,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

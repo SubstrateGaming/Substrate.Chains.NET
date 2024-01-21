@@ -15,13 +15,32 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_membership.pallet
 {
     
     
+    /// <summary>
+    /// >> Error
+    /// 
+    ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
+    ///			of this pallet.
+    ///			
+    /// </summary>
     public enum Error
     {
         
+        /// <summary>
+        /// >> AlreadyMember
+        /// Already a member.
+        /// </summary>
         AlreadyMember = 0,
         
+        /// <summary>
+        /// >> NotMember
+        /// Not a member.
+        /// </summary>
         NotMember = 1,
         
+        /// <summary>
+        /// >> TooManyMembers
+        /// Too many members.
+        /// </summary>
         TooManyMembers = 2,
     }
     

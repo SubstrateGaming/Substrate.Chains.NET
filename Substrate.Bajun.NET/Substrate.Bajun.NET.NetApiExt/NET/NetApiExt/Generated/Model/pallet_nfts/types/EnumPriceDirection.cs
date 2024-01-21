@@ -15,11 +15,20 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types
 {
     
     
+    /// <summary>
+    /// >> PriceDirection
+    /// </summary>
     public enum PriceDirection
     {
         
+        /// <summary>
+        /// >> Send
+        /// </summary>
         Send = 0,
         
+        /// <summary>
+        /// >> Receive
+        /// </summary>
         Receive = 1,
     }
     

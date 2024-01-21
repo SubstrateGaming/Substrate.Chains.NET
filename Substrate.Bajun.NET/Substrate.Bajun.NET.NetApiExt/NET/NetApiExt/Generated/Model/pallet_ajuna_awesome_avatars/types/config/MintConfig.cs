@@ -27,59 +27,23 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
         /// <summary>
         /// >> open
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.Bool _open;
-        
+        public Substrate.NetApi.Model.Types.Primitive.Bool Open { get; set; }
         /// <summary>
         /// >> cooldown
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _cooldown;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 Cooldown { get; set; }
         /// <summary>
         /// >> free_mint_fee_multiplier
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U16 _freeMintFeeMultiplier;
+        public Substrate.NetApi.Model.Types.Primitive.U16 FreeMintFeeMultiplier { get; set; }
         
-        public Substrate.NetApi.Model.Types.Primitive.Bool Open
-        {
-            get
-            {
-                return this._open;
-            }
-            set
-            {
-                this._open = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 Cooldown
-        {
-            get
-            {
-                return this._cooldown;
-            }
-            set
-            {
-                this._cooldown = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U16 FreeMintFeeMultiplier
-        {
-            get
-            {
-                return this._freeMintFeeMultiplier;
-            }
-            set
-            {
-                this._freeMintFeeMultiplier = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "MintConfig";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -89,6 +53,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

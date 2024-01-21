@@ -27,110 +27,35 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queu
         /// <summary>
         /// >> suspend_threshold
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _suspendThreshold;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 SuspendThreshold { get; set; }
         /// <summary>
         /// >> drop_threshold
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _dropThreshold;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 DropThreshold { get; set; }
         /// <summary>
         /// >> resume_threshold
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _resumeThreshold;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 ResumeThreshold { get; set; }
         /// <summary>
         /// >> threshold_weight
         /// </summary>
-        private Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight _thresholdWeight;
-        
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight ThresholdWeight { get; set; }
         /// <summary>
         /// >> weight_restrict_decay
         /// </summary>
-        private Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight _weightRestrictDecay;
-        
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight WeightRestrictDecay { get; set; }
         /// <summary>
         /// >> xcmp_max_individual_weight
         /// </summary>
-        private Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight _xcmpMaxIndividualWeight;
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight XcmpMaxIndividualWeight { get; set; }
         
-        public Substrate.NetApi.Model.Types.Primitive.U32 SuspendThreshold
-        {
-            get
-            {
-                return this._suspendThreshold;
-            }
-            set
-            {
-                this._suspendThreshold = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 DropThreshold
-        {
-            get
-            {
-                return this._dropThreshold;
-            }
-            set
-            {
-                this._dropThreshold = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 ResumeThreshold
-        {
-            get
-            {
-                return this._resumeThreshold;
-            }
-            set
-            {
-                this._resumeThreshold = value;
-            }
-        }
-        
-        public Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight ThresholdWeight
-        {
-            get
-            {
-                return this._thresholdWeight;
-            }
-            set
-            {
-                this._thresholdWeight = value;
-            }
-        }
-        
-        public Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight WeightRestrictDecay
-        {
-            get
-            {
-                return this._weightRestrictDecay;
-            }
-            set
-            {
-                this._weightRestrictDecay = value;
-            }
-        }
-        
-        public Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight XcmpMaxIndividualWeight
-        {
-            get
-            {
-                return this._xcmpMaxIndividualWeight;
-            }
-            set
-            {
-                this._xcmpMaxIndividualWeight = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "QueueConfigData";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -143,6 +68,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queu
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

@@ -15,53 +15,152 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
 {
     
     
+    /// <summary>
+    /// >> Event
+    /// 
+    ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
+    ///			by this pallet.
+    ///			
+    /// </summary>
     public enum Event
     {
         
+        /// <summary>
+        /// >> OrganizerSet
+        /// An organizer has been set.
+        /// </summary>
         OrganizerSet = 0,
         
+        /// <summary>
+        /// >> ServiceAccountSet
+        /// A service account has been set.
+        /// </summary>
         ServiceAccountSet = 1,
         
+        /// <summary>
+        /// >> CollectionIdSet
+        /// A collection ID has been set.
+        /// </summary>
         CollectionIdSet = 2,
         
+        /// <summary>
+        /// >> TreasurerSet
+        /// A treasurer has been set for a season.
+        /// </summary>
         TreasurerSet = 3,
         
+        /// <summary>
+        /// >> TreasuryClaimed
+        /// A season's treasury has been claimed by a treasurer.
+        /// </summary>
         TreasuryClaimed = 4,
         
+        /// <summary>
+        /// >> UpdatedSeason
+        /// The season configuration for {season_id} has been updated.
+        /// </summary>
         UpdatedSeason = 5,
         
+        /// <summary>
+        /// >> UpdatedGlobalConfig
+        /// Global configuration updated.
+        /// </summary>
         UpdatedGlobalConfig = 6,
         
+        /// <summary>
+        /// >> AvatarsMinted
+        /// Avatars minted.
+        /// </summary>
         AvatarsMinted = 7,
         
+        /// <summary>
+        /// >> AvatarsForged
+        /// Avatar forged.
+        /// </summary>
         AvatarsForged = 8,
         
+        /// <summary>
+        /// >> AvatarTransferred
+        /// Avatar transferred.
+        /// </summary>
         AvatarTransferred = 9,
         
+        /// <summary>
+        /// >> SeasonStarted
+        /// A season has started.
+        /// </summary>
         SeasonStarted = 10,
         
+        /// <summary>
+        /// >> SeasonFinished
+        /// A season has finished.
+        /// </summary>
         SeasonFinished = 11,
         
+        /// <summary>
+        /// >> FreeMintsTransferred
+        /// Free mints transferred between accounts.
+        /// </summary>
         FreeMintsTransferred = 12,
         
+        /// <summary>
+        /// >> FreeMintsSet
+        /// Free mints set for target account.
+        /// </summary>
         FreeMintsSet = 13,
         
+        /// <summary>
+        /// >> AvatarPriceSet
+        /// Avatar has price set for trade.
+        /// </summary>
         AvatarPriceSet = 14,
         
+        /// <summary>
+        /// >> AvatarPriceUnset
+        /// Avatar has price removed for trade.
+        /// </summary>
         AvatarPriceUnset = 15,
         
+        /// <summary>
+        /// >> AvatarTraded
+        /// Avatar has been traded.
+        /// </summary>
         AvatarTraded = 16,
         
+        /// <summary>
+        /// >> AvatarLocked
+        /// Avatar locked.
+        /// </summary>
         AvatarLocked = 17,
         
+        /// <summary>
+        /// >> AvatarUnlocked
+        /// Avatar unlocked.
+        /// </summary>
         AvatarUnlocked = 18,
         
+        /// <summary>
+        /// >> StorageTierUpgraded
+        /// Storage tier has been upgraded.
+        /// </summary>
         StorageTierUpgraded = 19,
         
+        /// <summary>
+        /// >> PreparedAvatar
+        /// Avatar prepared.
+        /// </summary>
         PreparedAvatar = 20,
         
+        /// <summary>
+        /// >> UnpreparedAvatar
+        /// Avatar unprepared.
+        /// </summary>
         UnpreparedAvatar = 21,
         
+        /// <summary>
+        /// >> PreparedIpfsUrl
+        /// IPFS URL prepared.
+        /// </summary>
         PreparedIpfsUrl = 22,
     }
     

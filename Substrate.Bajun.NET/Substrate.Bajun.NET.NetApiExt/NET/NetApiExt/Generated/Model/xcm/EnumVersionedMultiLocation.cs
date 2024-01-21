@@ -15,11 +15,20 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm
 {
     
     
+    /// <summary>
+    /// >> VersionedMultiLocation
+    /// </summary>
     public enum VersionedMultiLocation
     {
         
+        /// <summary>
+        /// >> V2
+        /// </summary>
         V2 = 1,
         
+        /// <summary>
+        /// >> V3
+        /// </summary>
         V3 = 3,
     }
     

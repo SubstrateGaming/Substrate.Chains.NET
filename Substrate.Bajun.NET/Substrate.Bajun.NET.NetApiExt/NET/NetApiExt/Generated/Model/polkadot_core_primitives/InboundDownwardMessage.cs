@@ -27,42 +27,19 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.polkadot_core_primitives
         /// <summary>
         /// >> sent_at
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _sentAt;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 SentAt { get; set; }
         /// <summary>
         /// >> msg
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> _msg;
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> Msg { get; set; }
         
-        public Substrate.NetApi.Model.Types.Primitive.U32 SentAt
-        {
-            get
-            {
-                return this._sentAt;
-            }
-            set
-            {
-                this._sentAt = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> Msg
-        {
-            get
-            {
-                return this._msg;
-            }
-            set
-            {
-                this._msg = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "InboundDownwardMessage";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -71,6 +48,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.polkadot_core_primitives
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

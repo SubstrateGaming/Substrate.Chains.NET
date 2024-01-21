@@ -24,17 +24,20 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.frame_system.extensions.
     public sealed class CheckGenesis : BaseType
     {
         
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "CheckGenesis";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

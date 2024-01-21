@@ -15,13 +15,25 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types
 {
     
     
+    /// <summary>
+    /// >> MintType
+    /// </summary>
     public enum MintType
     {
         
+        /// <summary>
+        /// >> Issuer
+        /// </summary>
         Issuer = 0,
         
+        /// <summary>
+        /// >> Public
+        /// </summary>
         Public = 1,
         
+        /// <summary>
+        /// >> HolderOf
+        /// </summary>
         HolderOf = 2,
     }
     

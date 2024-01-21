@@ -21,12 +21,18 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> SessionStorage
+    /// </summary>
     public sealed class SessionStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> SessionStorage Constructor
+        /// </summary>
         public SessionStorage(SubstrateClientExt client)
         {
             this._client = client;
@@ -261,6 +267,9 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> SessionCalls
+    /// </summary>
     public sealed class SessionCalls
     {
         
@@ -287,10 +296,16 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> SessionConstants
+    /// </summary>
     public sealed class SessionConstants
     {
     }
     
+    /// <summary>
+    /// >> SessionErrors
+    /// </summary>
     public enum SessionErrors
     {
         

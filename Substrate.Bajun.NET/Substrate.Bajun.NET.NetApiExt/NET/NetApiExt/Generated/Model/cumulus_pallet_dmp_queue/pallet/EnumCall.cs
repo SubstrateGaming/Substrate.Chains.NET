@@ -15,9 +15,17 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.cumulus_pallet_dmp_queue
 {
     
     
+    /// <summary>
+    /// >> Call
+    /// Contains one variant per dispatchable that can be called by an extrinsic.
+    /// </summary>
     public enum Call
     {
         
+        /// <summary>
+        /// >> service_overweight
+        /// Service a single overweight message.
+        /// </summary>
         service_overweight = 0,
     }
     

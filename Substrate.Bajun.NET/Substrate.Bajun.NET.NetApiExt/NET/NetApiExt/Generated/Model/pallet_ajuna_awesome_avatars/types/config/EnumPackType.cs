@@ -15,13 +15,25 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
 {
     
     
+    /// <summary>
+    /// >> PackType
+    /// </summary>
     public enum PackType
     {
         
+        /// <summary>
+        /// >> Material
+        /// </summary>
         Material = 1,
         
+        /// <summary>
+        /// >> Equipment
+        /// </summary>
         Equipment = 2,
         
+        /// <summary>
+        /// >> Special
+        /// </summary>
         Special = 3,
     }
     

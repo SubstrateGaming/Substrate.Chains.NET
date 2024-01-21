@@ -27,59 +27,23 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
         /// <summary>
         /// >> first
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _first;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 First { get; set; }
         /// <summary>
         /// >> last
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _last;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 Last { get; set; }
         /// <summary>
         /// >> seasons_participated
         /// </summary>
-        private Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSetT1 _seasonsParticipated;
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSetT1 SeasonsParticipated { get; set; }
         
-        public Substrate.NetApi.Model.Types.Primitive.U32 First
-        {
-            get
-            {
-                return this._first;
-            }
-            set
-            {
-                this._first = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 Last
-        {
-            get
-            {
-                return this._last;
-            }
-            set
-            {
-                this._last = value;
-            }
-        }
-        
-        public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSetT1 SeasonsParticipated
-        {
-            get
-            {
-                return this._seasonsParticipated;
-            }
-            set
-            {
-                this._seasonsParticipated = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "PlayStats";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -89,6 +53,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

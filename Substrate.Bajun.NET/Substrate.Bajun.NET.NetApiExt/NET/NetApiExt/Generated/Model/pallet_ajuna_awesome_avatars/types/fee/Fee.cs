@@ -27,110 +27,35 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
         /// <summary>
         /// >> mint
         /// </summary>
-        private Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.fee.MintFees _mint;
-        
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.fee.MintFees Mint { get; set; }
         /// <summary>
         /// >> transfer_avatar
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U128 _transferAvatar;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U128 TransferAvatar { get; set; }
         /// <summary>
         /// >> buy_minimum
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U128 _buyMinimum;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U128 BuyMinimum { get; set; }
         /// <summary>
         /// >> buy_percent
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U8 _buyPercent;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U8 BuyPercent { get; set; }
         /// <summary>
         /// >> upgrade_storage
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U128 _upgradeStorage;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U128 UpgradeStorage { get; set; }
         /// <summary>
         /// >> prepare_avatar
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U128 _prepareAvatar;
+        public Substrate.NetApi.Model.Types.Primitive.U128 PrepareAvatar { get; set; }
         
-        public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.fee.MintFees Mint
-        {
-            get
-            {
-                return this._mint;
-            }
-            set
-            {
-                this._mint = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U128 TransferAvatar
-        {
-            get
-            {
-                return this._transferAvatar;
-            }
-            set
-            {
-                this._transferAvatar = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U128 BuyMinimum
-        {
-            get
-            {
-                return this._buyMinimum;
-            }
-            set
-            {
-                this._buyMinimum = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U8 BuyPercent
-        {
-            get
-            {
-                return this._buyPercent;
-            }
-            set
-            {
-                this._buyPercent = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U128 UpgradeStorage
-        {
-            get
-            {
-                return this._upgradeStorage;
-            }
-            set
-            {
-                this._upgradeStorage = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U128 PrepareAvatar
-        {
-            get
-            {
-                return this._prepareAvatar;
-            }
-            set
-            {
-                this._prepareAvatar = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "Fee";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -143,6 +68,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

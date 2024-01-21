@@ -21,12 +21,18 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> AuraExtStorage
+    /// </summary>
     public sealed class AuraExtStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> AuraExtStorage Constructor
+        /// </summary>
         public AuraExtStorage(SubstrateClientExt client)
         {
             this._client = client;
@@ -71,10 +77,16 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> AuraExtCalls
+    /// </summary>
     public sealed class AuraExtCalls
     {
     }
     
+    /// <summary>
+    /// >> AuraExtConstants
+    /// </summary>
     public sealed class AuraExtConstants
     {
     }

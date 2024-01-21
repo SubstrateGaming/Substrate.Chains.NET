@@ -15,21 +15,45 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
 {
     
     
+    /// <summary>
+    /// >> RarityTier
+    /// </summary>
     public enum RarityTier
     {
         
+        /// <summary>
+        /// >> None
+        /// </summary>
         None = 0,
         
+        /// <summary>
+        /// >> Common
+        /// </summary>
         Common = 1,
         
+        /// <summary>
+        /// >> Uncommon
+        /// </summary>
         Uncommon = 2,
         
+        /// <summary>
+        /// >> Rare
+        /// </summary>
         Rare = 3,
         
+        /// <summary>
+        /// >> Epic
+        /// </summary>
         Epic = 4,
         
+        /// <summary>
+        /// >> Legendary
+        /// </summary>
         Legendary = 5,
         
+        /// <summary>
+        /// >> Mythical
+        /// </summary>
         Mythical = 6,
     }
     

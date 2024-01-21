@@ -15,6 +15,13 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.cumulus_pallet_xcm.palle
 {
     
     
+    /// <summary>
+    /// >> Error
+    /// 
+    ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
+    ///			of this pallet.
+    ///			
+    /// </summary>
     public enum Error
     {
     }

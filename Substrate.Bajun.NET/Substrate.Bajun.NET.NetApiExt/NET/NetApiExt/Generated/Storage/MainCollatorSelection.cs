@@ -21,12 +21,18 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> CollatorSelectionStorage
+    /// </summary>
     public sealed class CollatorSelectionStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> CollatorSelectionStorage Constructor
+        /// </summary>
         public CollatorSelectionStorage(SubstrateClientExt client)
         {
             this._client = client;
@@ -194,6 +200,9 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> CollatorSelectionCalls
+    /// </summary>
     public sealed class CollatorSelectionCalls
     {
         
@@ -251,10 +260,16 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> CollatorSelectionConstants
+    /// </summary>
     public sealed class CollatorSelectionConstants
     {
     }
     
+    /// <summary>
+    /// >> CollatorSelectionErrors
+    /// </summary>
     public enum CollatorSelectionErrors
     {
         

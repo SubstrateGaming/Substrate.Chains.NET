@@ -21,12 +21,18 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> PolkadotXcmStorage
+    /// </summary>
     public sealed class PolkadotXcmStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> PolkadotXcmStorage Constructor
+        /// </summary>
         public PolkadotXcmStorage(SubstrateClientExt client)
         {
             this._client = client;
@@ -434,6 +440,9 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> PolkadotXcmCalls
+    /// </summary>
     public sealed class PolkadotXcmCalls
     {
         
@@ -576,10 +585,16 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> PolkadotXcmConstants
+    /// </summary>
     public sealed class PolkadotXcmConstants
     {
     }
     
+    /// <summary>
+    /// >> PolkadotXcmErrors
+    /// </summary>
     public enum PolkadotXcmErrors
     {
         

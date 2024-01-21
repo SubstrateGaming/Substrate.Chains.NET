@@ -27,93 +27,31 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types
         /// <summary>
         /// >> mint_type
         /// </summary>
-        private Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.EnumMintType _mintType;
-        
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.EnumMintType MintType { get; set; }
         /// <summary>
         /// >> price
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U128> _price;
-        
+        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U128> Price { get; set; }
         /// <summary>
         /// >> start_block
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32> _startBlock;
-        
+        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32> StartBlock { get; set; }
         /// <summary>
         /// >> end_block
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32> _endBlock;
-        
+        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32> EndBlock { get; set; }
         /// <summary>
         /// >> default_item_settings
         /// </summary>
-        private Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.BitFlagsT2 _defaultItemSettings;
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.BitFlagsT2 DefaultItemSettings { get; set; }
         
-        public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.EnumMintType MintType
-        {
-            get
-            {
-                return this._mintType;
-            }
-            set
-            {
-                this._mintType = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U128> Price
-        {
-            get
-            {
-                return this._price;
-            }
-            set
-            {
-                this._price = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32> StartBlock
-        {
-            get
-            {
-                return this._startBlock;
-            }
-            set
-            {
-                this._startBlock = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32> EndBlock
-        {
-            get
-            {
-                return this._endBlock;
-            }
-            set
-            {
-                this._endBlock = value;
-            }
-        }
-        
-        public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.BitFlagsT2 DefaultItemSettings
-        {
-            get
-            {
-                return this._defaultItemSettings;
-            }
-            set
-            {
-                this._defaultItemSettings = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "MintSettings";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -125,6 +63,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

@@ -21,12 +21,18 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> XcmpQueueStorage
+    /// </summary>
     public sealed class XcmpQueueStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> XcmpQueueStorage Constructor
+        /// </summary>
         public XcmpQueueStorage(SubstrateClientExt client)
         {
             this._client = client;
@@ -365,6 +371,9 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> XcmpQueueCalls
+    /// </summary>
     public sealed class XcmpQueueCalls
     {
         
@@ -467,10 +476,16 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> XcmpQueueConstants
+    /// </summary>
     public sealed class XcmpQueueConstants
     {
     }
     
+    /// <summary>
+    /// >> XcmpQueueErrors
+    /// </summary>
     public enum XcmpQueueErrors
     {
         

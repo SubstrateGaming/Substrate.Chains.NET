@@ -15,9 +15,15 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.polkadot_primitives.v4
 {
     
     
+    /// <summary>
+    /// >> UpgradeRestriction
+    /// </summary>
     public enum UpgradeRestriction
     {
         
+        /// <summary>
+        /// >> Present
+        /// </summary>
         Present = 0,
     }
     

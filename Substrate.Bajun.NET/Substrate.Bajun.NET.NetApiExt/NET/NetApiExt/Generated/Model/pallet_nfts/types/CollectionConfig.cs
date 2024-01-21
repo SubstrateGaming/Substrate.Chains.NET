@@ -27,59 +27,23 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types
         /// <summary>
         /// >> settings
         /// </summary>
-        private Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.BitFlagsT1 _settings;
-        
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.BitFlagsT1 Settings { get; set; }
         /// <summary>
         /// >> max_supply
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32> _maxSupply;
-        
+        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32> MaxSupply { get; set; }
         /// <summary>
         /// >> mint_settings
         /// </summary>
-        private Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.MintSettings _mintSettings;
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.MintSettings MintSettings { get; set; }
         
-        public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.BitFlagsT1 Settings
-        {
-            get
-            {
-                return this._settings;
-            }
-            set
-            {
-                this._settings = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32> MaxSupply
-        {
-            get
-            {
-                return this._maxSupply;
-            }
-            set
-            {
-                this._maxSupply = value;
-            }
-        }
-        
-        public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.MintSettings MintSettings
-        {
-            get
-            {
-                return this._mintSettings;
-            }
-            set
-            {
-                this._mintSettings = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "CollectionConfig";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -89,6 +53,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

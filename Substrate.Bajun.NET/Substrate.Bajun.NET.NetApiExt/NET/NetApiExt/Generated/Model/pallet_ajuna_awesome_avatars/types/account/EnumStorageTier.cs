@@ -15,19 +15,40 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
 {
     
     
+    /// <summary>
+    /// >> StorageTier
+    /// </summary>
     public enum StorageTier
     {
         
+        /// <summary>
+        /// >> One
+        /// </summary>
         One = 25,
         
+        /// <summary>
+        /// >> Two
+        /// </summary>
         Two = 50,
         
+        /// <summary>
+        /// >> Three
+        /// </summary>
         Three = 75,
         
+        /// <summary>
+        /// >> Four
+        /// </summary>
         Four = 100,
         
+        /// <summary>
+        /// >> Five
+        /// </summary>
         Five = 150,
         
+        /// <summary>
+        /// >> Max
+        /// </summary>
         Max = 200,
     }
     

@@ -15,17 +15,35 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types
 {
     
     
+    /// <summary>
+    /// >> CollectionSetting
+    /// </summary>
     public enum CollectionSetting
     {
         
+        /// <summary>
+        /// >> TransferableItems
+        /// </summary>
         TransferableItems = 1,
         
+        /// <summary>
+        /// >> UnlockedMetadata
+        /// </summary>
         UnlockedMetadata = 2,
         
+        /// <summary>
+        /// >> UnlockedAttributes
+        /// </summary>
         UnlockedAttributes = 4,
         
+        /// <summary>
+        /// >> UnlockedMaxSupply
+        /// </summary>
         UnlockedMaxSupply = 8,
         
+        /// <summary>
+        /// >> DepositRequired
+        /// </summary>
         DepositRequired = 16,
     }
     

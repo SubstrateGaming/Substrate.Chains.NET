@@ -15,13 +15,25 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.frame_support.traits.pre
 {
     
     
+    /// <summary>
+    /// >> Bounded
+    /// </summary>
     public enum Bounded
     {
         
+        /// <summary>
+        /// >> Legacy
+        /// </summary>
         Legacy = 0,
         
+        /// <summary>
+        /// >> Inline
+        /// </summary>
         Inline = 1,
         
+        /// <summary>
+        /// >> Lookup
+        /// </summary>
         Lookup = 2,
     }
     

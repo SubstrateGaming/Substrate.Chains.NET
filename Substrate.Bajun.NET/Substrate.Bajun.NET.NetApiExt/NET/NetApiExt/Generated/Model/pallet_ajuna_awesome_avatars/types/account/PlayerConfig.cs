@@ -27,25 +27,15 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
         /// <summary>
         /// >> free_mints
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U16 _freeMints;
+        public Substrate.NetApi.Model.Types.Primitive.U16 FreeMints { get; set; }
         
-        public Substrate.NetApi.Model.Types.Primitive.U16 FreeMints
-        {
-            get
-            {
-                return this._freeMints;
-            }
-            set
-            {
-                this._freeMints = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "PlayerConfig";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -53,6 +43,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

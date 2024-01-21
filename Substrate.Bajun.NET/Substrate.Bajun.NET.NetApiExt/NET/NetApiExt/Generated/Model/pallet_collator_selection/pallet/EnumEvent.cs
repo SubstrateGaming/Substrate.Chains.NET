@@ -15,17 +15,39 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_collator_selectio
 {
     
     
+    /// <summary>
+    /// >> Event
+    /// 
+    ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
+    ///			by this pallet.
+    ///			
+    /// </summary>
     public enum Event
     {
         
+        /// <summary>
+        /// >> NewInvulnerables
+        /// </summary>
         NewInvulnerables = 0,
         
+        /// <summary>
+        /// >> NewDesiredCandidates
+        /// </summary>
         NewDesiredCandidates = 1,
         
+        /// <summary>
+        /// >> NewCandidacyBond
+        /// </summary>
         NewCandidacyBond = 2,
         
+        /// <summary>
+        /// >> CandidateAdded
+        /// </summary>
         CandidateAdded = 3,
         
+        /// <summary>
+        /// >> CandidateRemoved
+        /// </summary>
         CandidateRemoved = 4,
     }
     

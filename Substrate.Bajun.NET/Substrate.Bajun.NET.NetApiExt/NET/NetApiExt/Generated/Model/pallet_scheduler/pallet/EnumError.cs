@@ -15,17 +15,44 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_scheduler.pallet
 {
     
     
+    /// <summary>
+    /// >> Error
+    /// 
+    ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
+    ///			of this pallet.
+    ///			
+    /// </summary>
     public enum Error
     {
         
+        /// <summary>
+        /// >> FailedToSchedule
+        /// Failed to schedule a call
+        /// </summary>
         FailedToSchedule = 0,
         
+        /// <summary>
+        /// >> NotFound
+        /// Cannot find the scheduled call.
+        /// </summary>
         NotFound = 1,
         
+        /// <summary>
+        /// >> TargetBlockNumberInPast
+        /// Given target block number is in the past.
+        /// </summary>
         TargetBlockNumberInPast = 2,
         
+        /// <summary>
+        /// >> RescheduleNoChange
+        /// Reschedule failed because it does not change scheduled time.
+        /// </summary>
         RescheduleNoChange = 3,
         
+        /// <summary>
+        /// >> Named
+        /// Attempt to use a non-named function on a named task.
+        /// </summary>
         Named = 4,
     }
     
