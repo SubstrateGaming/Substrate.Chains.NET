@@ -15,63 +15,150 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.v2
 {
     
     
+    /// <summary>
+    /// >> Instruction
+    /// </summary>
     public enum Instruction
     {
         
+        /// <summary>
+        /// >> WithdrawAsset
+        /// </summary>
         WithdrawAsset = 0,
         
+        /// <summary>
+        /// >> ReserveAssetDeposited
+        /// </summary>
         ReserveAssetDeposited = 1,
         
+        /// <summary>
+        /// >> ReceiveTeleportedAsset
+        /// </summary>
         ReceiveTeleportedAsset = 2,
         
+        /// <summary>
+        /// >> QueryResponse
+        /// </summary>
         QueryResponse = 3,
         
+        /// <summary>
+        /// >> TransferAsset
+        /// </summary>
         TransferAsset = 4,
         
+        /// <summary>
+        /// >> TransferReserveAsset
+        /// </summary>
         TransferReserveAsset = 5,
         
+        /// <summary>
+        /// >> Transact
+        /// </summary>
         Transact = 6,
         
+        /// <summary>
+        /// >> HrmpNewChannelOpenRequest
+        /// </summary>
         HrmpNewChannelOpenRequest = 7,
         
+        /// <summary>
+        /// >> HrmpChannelAccepted
+        /// </summary>
         HrmpChannelAccepted = 8,
         
+        /// <summary>
+        /// >> HrmpChannelClosing
+        /// </summary>
         HrmpChannelClosing = 9,
         
+        /// <summary>
+        /// >> ClearOrigin
+        /// </summary>
         ClearOrigin = 10,
         
+        /// <summary>
+        /// >> DescendOrigin
+        /// </summary>
         DescendOrigin = 11,
         
+        /// <summary>
+        /// >> ReportError
+        /// </summary>
         ReportError = 12,
         
+        /// <summary>
+        /// >> DepositAsset
+        /// </summary>
         DepositAsset = 13,
         
+        /// <summary>
+        /// >> DepositReserveAsset
+        /// </summary>
         DepositReserveAsset = 14,
         
+        /// <summary>
+        /// >> ExchangeAsset
+        /// </summary>
         ExchangeAsset = 15,
         
+        /// <summary>
+        /// >> InitiateReserveWithdraw
+        /// </summary>
         InitiateReserveWithdraw = 16,
         
+        /// <summary>
+        /// >> InitiateTeleport
+        /// </summary>
         InitiateTeleport = 17,
         
+        /// <summary>
+        /// >> QueryHolding
+        /// </summary>
         QueryHolding = 18,
         
+        /// <summary>
+        /// >> BuyExecution
+        /// </summary>
         BuyExecution = 19,
         
+        /// <summary>
+        /// >> RefundSurplus
+        /// </summary>
         RefundSurplus = 20,
         
+        /// <summary>
+        /// >> SetErrorHandler
+        /// </summary>
         SetErrorHandler = 21,
         
+        /// <summary>
+        /// >> SetAppendix
+        /// </summary>
         SetAppendix = 22,
         
+        /// <summary>
+        /// >> ClearError
+        /// </summary>
         ClearError = 23,
         
+        /// <summary>
+        /// >> ClaimAsset
+        /// </summary>
         ClaimAsset = 24,
         
+        /// <summary>
+        /// >> Trap
+        /// </summary>
         Trap = 25,
         
+        /// <summary>
+        /// >> SubscribeVersion
+        /// </summary>
         SubscribeVersion = 26,
         
+        /// <summary>
+        /// >> UnsubscribeVersion
+        /// </summary>
         UnsubscribeVersion = 27,
     }
     

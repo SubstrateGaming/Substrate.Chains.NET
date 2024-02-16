@@ -15,13 +15,32 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.orml_vesting.module
 {
     
     
+    /// <summary>
+    /// >> Event
+    /// 
+    ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
+    ///			by this pallet.
+    ///			
+    /// </summary>
     public enum Event
     {
         
+        /// <summary>
+        /// >> VestingScheduleAdded
+        /// Added new vesting schedule.
+        /// </summary>
         VestingScheduleAdded = 0,
         
+        /// <summary>
+        /// >> Claimed
+        /// Claimed vesting.
+        /// </summary>
         Claimed = 1,
         
+        /// <summary>
+        /// >> VestingSchedulesUpdated
+        /// Updated vesting schedules.
+        /// </summary>
         VestingSchedulesUpdated = 2,
     }
     

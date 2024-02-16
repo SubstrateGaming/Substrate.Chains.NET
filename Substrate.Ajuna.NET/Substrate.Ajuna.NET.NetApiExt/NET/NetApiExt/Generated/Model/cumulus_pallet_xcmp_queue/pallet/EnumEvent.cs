@@ -15,21 +15,56 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queu
 {
     
     
+    /// <summary>
+    /// >> Event
+    /// 
+    ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
+    ///			by this pallet.
+    ///			
+    /// </summary>
     public enum Event
     {
         
+        /// <summary>
+        /// >> Success
+        /// Some XCM was executed ok.
+        /// </summary>
         Success = 0,
         
+        /// <summary>
+        /// >> Fail
+        /// Some XCM failed.
+        /// </summary>
         Fail = 1,
         
+        /// <summary>
+        /// >> BadVersion
+        /// Bad XCM version used.
+        /// </summary>
         BadVersion = 2,
         
+        /// <summary>
+        /// >> BadFormat
+        /// Bad XCM format used.
+        /// </summary>
         BadFormat = 3,
         
+        /// <summary>
+        /// >> XcmpMessageSent
+        /// An HRMP message was sent to a sibling parachain.
+        /// </summary>
         XcmpMessageSent = 4,
         
+        /// <summary>
+        /// >> OverweightEnqueued
+        /// An XCM exceeded the individual message weight budget.
+        /// </summary>
         OverweightEnqueued = 5,
         
+        /// <summary>
+        /// >> OverweightServiced
+        /// An XCM from the overweight queue was executed with the given actual weight used.
+        /// </summary>
         OverweightServiced = 6,
     }
     

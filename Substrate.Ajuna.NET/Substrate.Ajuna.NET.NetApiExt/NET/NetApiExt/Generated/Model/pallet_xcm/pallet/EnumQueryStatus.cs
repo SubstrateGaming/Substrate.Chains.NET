@@ -15,13 +15,25 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_xcm.pallet
 {
     
     
+    /// <summary>
+    /// >> QueryStatus
+    /// </summary>
     public enum QueryStatus
     {
         
+        /// <summary>
+        /// >> Pending
+        /// </summary>
         Pending = 0,
         
+        /// <summary>
+        /// >> VersionNotifier
+        /// </summary>
         VersionNotifier = 1,
         
+        /// <summary>
+        /// >> Ready
+        /// </summary>
         Ready = 2,
     }
     

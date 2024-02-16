@@ -15,11 +15,26 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_pallet_dmp_queue
 {
     
     
+    /// <summary>
+    /// >> Error
+    /// 
+    ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
+    ///			of this pallet.
+    ///			
+    /// </summary>
     public enum Error
     {
         
+        /// <summary>
+        /// >> Unknown
+        /// The message index given is unknown.
+        /// </summary>
         Unknown = 0,
         
+        /// <summary>
+        /// >> OverLimit
+        /// The amount of weight given is possibly not enough for executing the message.
+        /// </summary>
         OverLimit = 1,
     }
     

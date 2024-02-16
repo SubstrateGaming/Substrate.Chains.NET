@@ -21,12 +21,18 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> AuraStorage
+    /// </summary>
     public sealed class AuraStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> AuraStorage Constructor
+        /// </summary>
         public AuraStorage(SubstrateClientExt client)
         {
             this._client = client;
@@ -56,10 +62,10 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         /// >> Authorities
         ///  The current authority set.
         /// </summary>
-        public async Task<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT19> Authorities(CancellationToken token)
+        public async Task<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT19> Authorities(string blockhash, CancellationToken token)
         {
             string parameters = AuraStorage.AuthoritiesParams();
-            var result = await _client.GetStorageAsync<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT19>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT19>(parameters, blockhash, token);
             return result;
         }
         
@@ -89,18 +95,24 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         /// 
         ///  This will be set in `on_initialize`.
         /// </summary>
-        public async Task<Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_consensus_slots.Slot> CurrentSlot(CancellationToken token)
+        public async Task<Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_consensus_slots.Slot> CurrentSlot(string blockhash, CancellationToken token)
         {
             string parameters = AuraStorage.CurrentSlotParams();
-            var result = await _client.GetStorageAsync<Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_consensus_slots.Slot>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_consensus_slots.Slot>(parameters, blockhash, token);
             return result;
         }
     }
     
+    /// <summary>
+    /// >> AuraCalls
+    /// </summary>
     public sealed class AuraCalls
     {
     }
     
+    /// <summary>
+    /// >> AuraConstants
+    /// </summary>
     public sealed class AuraConstants
     {
     }

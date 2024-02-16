@@ -27,76 +27,27 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_multisig
         /// <summary>
         /// >> when
         /// </summary>
-        private Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_multisig.Timepoint _when;
-        
+        public Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_multisig.Timepoint When { get; set; }
         /// <summary>
         /// >> deposit
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U128 _deposit;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U128 Deposit { get; set; }
         /// <summary>
         /// >> depositor
         /// </summary>
-        private Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 _depositor;
-        
+        public Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 Depositor { get; set; }
         /// <summary>
         /// >> approvals
         /// </summary>
-        private Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT4 _approvals;
+        public Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT4 Approvals { get; set; }
         
-        public Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_multisig.Timepoint When
-        {
-            get
-            {
-                return this._when;
-            }
-            set
-            {
-                this._when = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U128 Deposit
-        {
-            get
-            {
-                return this._deposit;
-            }
-            set
-            {
-                this._deposit = value;
-            }
-        }
-        
-        public Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 Depositor
-        {
-            get
-            {
-                return this._depositor;
-            }
-            set
-            {
-                this._depositor = value;
-            }
-        }
-        
-        public Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT4 Approvals
-        {
-            get
-            {
-                return this._approvals;
-            }
-            set
-            {
-                this._approvals = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "Multisig";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -107,6 +58,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_multisig
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

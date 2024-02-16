@@ -27,93 +27,31 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_scheduler
         /// <summary>
         /// >> maybe_id
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Ajuna.NET.NetApiExt.Generated.Types.Base.Arr32U8> _maybeId;
-        
+        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Ajuna.NET.NetApiExt.Generated.Types.Base.Arr32U8> MaybeId { get; set; }
         /// <summary>
         /// >> priority
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U8 _priority;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U8 Priority { get; set; }
         /// <summary>
         /// >> call
         /// </summary>
-        private Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.traits.preimages.EnumBounded _call;
-        
+        public Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.traits.preimages.EnumBounded Call { get; set; }
         /// <summary>
         /// >> maybe_periodic
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>> _maybePeriodic;
-        
+        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>> MaybePeriodic { get; set; }
         /// <summary>
         /// >> origin
         /// </summary>
-        private Substrate.Ajuna.NET.NetApiExt.Generated.Model.ajuna_runtime.EnumOriginCaller _origin;
+        public Substrate.Ajuna.NET.NetApiExt.Generated.Model.ajuna_runtime.EnumOriginCaller Origin { get; set; }
         
-        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Ajuna.NET.NetApiExt.Generated.Types.Base.Arr32U8> MaybeId
-        {
-            get
-            {
-                return this._maybeId;
-            }
-            set
-            {
-                this._maybeId = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U8 Priority
-        {
-            get
-            {
-                return this._priority;
-            }
-            set
-            {
-                this._priority = value;
-            }
-        }
-        
-        public Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.traits.preimages.EnumBounded Call
-        {
-            get
-            {
-                return this._call;
-            }
-            set
-            {
-                this._call = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>> MaybePeriodic
-        {
-            get
-            {
-                return this._maybePeriodic;
-            }
-            set
-            {
-                this._maybePeriodic = value;
-            }
-        }
-        
-        public Substrate.Ajuna.NET.NetApiExt.Generated.Model.ajuna_runtime.EnumOriginCaller Origin
-        {
-            get
-            {
-                return this._origin;
-            }
-            set
-            {
-                this._origin = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "Scheduled";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -125,6 +63,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_scheduler
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

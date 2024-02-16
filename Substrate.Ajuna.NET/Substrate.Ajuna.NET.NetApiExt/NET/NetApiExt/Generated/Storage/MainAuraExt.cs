@@ -21,12 +21,18 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> AuraExtStorage
+    /// </summary>
     public sealed class AuraExtStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> AuraExtStorage Constructor
+        /// </summary>
         public AuraExtStorage(SubstrateClientExt client)
         {
             this._client = client;
@@ -63,18 +69,24 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         ///  but we require the old authorities to verify the seal when validating a PoV. This will always
         ///  be updated to the latest AuRa authorities in `on_finalize`.
         /// </summary>
-        public async Task<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT19> Authorities(CancellationToken token)
+        public async Task<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT19> Authorities(string blockhash, CancellationToken token)
         {
             string parameters = AuraExtStorage.AuthoritiesParams();
-            var result = await _client.GetStorageAsync<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT19>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT19>(parameters, blockhash, token);
             return result;
         }
     }
     
+    /// <summary>
+    /// >> AuraExtCalls
+    /// </summary>
     public sealed class AuraExtCalls
     {
     }
     
+    /// <summary>
+    /// >> AuraExtConstants
+    /// </summary>
     public sealed class AuraExtConstants
     {
     }

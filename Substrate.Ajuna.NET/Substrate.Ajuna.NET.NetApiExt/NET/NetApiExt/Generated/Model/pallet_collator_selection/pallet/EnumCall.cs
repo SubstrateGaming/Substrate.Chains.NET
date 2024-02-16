@@ -15,17 +15,51 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_collator_selectio
 {
     
     
+    /// <summary>
+    /// >> Call
+    /// Contains one variant per dispatchable that can be called by an extrinsic.
+    /// </summary>
     public enum Call
     {
         
+        /// <summary>
+        /// >> set_invulnerables
+        /// Set the list of invulnerable (fixed) collators.
+        /// </summary>
         set_invulnerables = 0,
         
+        /// <summary>
+        /// >> set_desired_candidates
+        /// Set the ideal number of collators (not including the invulnerables).
+        /// If lowering this number, then the number of running collators could be higher than this figure.
+        /// Aside from that edge case, there should be no other way to have more collators than the desired number.
+        /// </summary>
         set_desired_candidates = 1,
         
+        /// <summary>
+        /// >> set_candidacy_bond
+        /// Set the candidacy bond amount.
+        /// </summary>
         set_candidacy_bond = 2,
         
+        /// <summary>
+        /// >> register_as_candidate
+        /// Register this account as a collator candidate. The account must (a) already have
+        /// registered session keys and (b) be able to reserve the `CandidacyBond`.
+        /// 
+        /// This call is not available to `Invulnerable` collators.
+        /// </summary>
         register_as_candidate = 3,
         
+        /// <summary>
+        /// >> leave_intent
+        /// Deregister `origin` as a collator candidate. Note that the collator can only leave on
+        /// session change. The `CandidacyBond` will be unreserved immediately.
+        /// 
+        /// This call will fail if the total number of candidates would drop below `MinCandidates`.
+        /// 
+        /// This call is not available to `Invulnerable` collators.
+        /// </summary>
         leave_intent = 4,
     }
     

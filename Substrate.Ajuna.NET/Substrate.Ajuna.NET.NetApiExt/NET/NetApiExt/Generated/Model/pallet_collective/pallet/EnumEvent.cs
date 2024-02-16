@@ -15,21 +15,58 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_collective.pallet
 {
     
     
+    /// <summary>
+    /// >> Event
+    /// 
+    ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
+    ///			by this pallet.
+    ///			
+    /// </summary>
     public enum Event
     {
         
+        /// <summary>
+        /// >> Proposed
+        /// A motion (given hash) has been proposed (by given account) with a threshold (given
+        /// `MemberCount`).
+        /// </summary>
         Proposed = 0,
         
+        /// <summary>
+        /// >> Voted
+        /// A motion (given hash) has been voted on by given account, leaving
+        /// a tally (yes votes and no votes given respectively as `MemberCount`).
+        /// </summary>
         Voted = 1,
         
+        /// <summary>
+        /// >> Approved
+        /// A motion was approved by the required threshold.
+        /// </summary>
         Approved = 2,
         
+        /// <summary>
+        /// >> Disapproved
+        /// A motion was not approved by the required threshold.
+        /// </summary>
         Disapproved = 3,
         
+        /// <summary>
+        /// >> Executed
+        /// A motion was executed; result will be `Ok` if it returned without error.
+        /// </summary>
         Executed = 4,
         
+        /// <summary>
+        /// >> MemberExecuted
+        /// A single member did some action; result will be `Ok` if it returned without error.
+        /// </summary>
         MemberExecuted = 5,
         
+        /// <summary>
+        /// >> Closed
+        /// A proposal was closed because its threshold was reached or after its duration was up.
+        /// </summary>
         Closed = 6,
     }
     

@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Substrate.Ajuna.NET.RestService", "Substrate.Ajuna.NET.RestService\Substrate.Ajuna.NET.RestService.csproj", "{41CFB5DF-8BBF-4A93-B320-F205839905DC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Substrate.Ajuna.NET.RestService", "Substrate.Ajuna.NET.RestService\Substrate.Ajuna.NET.RestService.csproj", "{AE0AB636-7A70-4F79-962A-E3490E2F5C85}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Substrate.Ajuna.NET.NetApiExt", "Substrate.Ajuna.NET.NetApiExt\Substrate.Ajuna.NET.NetApiExt.csproj", "{084AF9DF-4436-4739-8979-C0B9891CBBC4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Substrate.Ajuna.NET.NetApiExt", "Substrate.Ajuna.NET.NetApiExt\Substrate.Ajuna.NET.NetApiExt.csproj", "{315CD630-FD5E-4E32-A325-9F872D2310F8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Substrate.Ajuna.NET.RestClient", "Substrate.Ajuna.NET.RestClient\Substrate.Ajuna.NET.RestClient.csproj", "{BB54D987-6778-4ACF-957C-C8ABB7B91B27}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Substrate.Ajuna.NET.RestClient", "Substrate.Ajuna.NET.RestClient\Substrate.Ajuna.NET.RestClient.csproj", "{AD0483A2-E906-4A2B-9A4F-7157E263CBC0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Substrate.Ajuna.NET.RestClient.Mockup", "Substrate.Ajuna.NET.RestClient.Mockup\Substrate.Ajuna.NET.RestClient.Mockup.csproj", "{AEF11B52-41CA-4113-B7FE-09F8C6EE27D2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Substrate.Ajuna.NET.RestClient.Mockup", "Substrate.Ajuna.NET.RestClient.Mockup\Substrate.Ajuna.NET.RestClient.Mockup.csproj", "{A088B2E6-3F59-4CA6-9832-D9A5638B775C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Substrate.Ajuna.NET.RestClient.Test", "Substrate.Ajuna.NET.RestClient.Test\Substrate.Ajuna.NET.RestClient.Test.csproj", "{92C3CBBE-CBDF-44A2-9D6D-976AEB5C78D4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Substrate.Ajuna.NET.RestClient.Test", "Substrate.Ajuna.NET.RestClient.Test\Substrate.Ajuna.NET.RestClient.Test.csproj", "{1709D9EB-45C6-4C7E-B2F1-395EC81CACEC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -22,25 +22,25 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{41CFB5DF-8BBF-4A93-B320-F205839905DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{41CFB5DF-8BBF-4A93-B320-F205839905DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{41CFB5DF-8BBF-4A93-B320-F205839905DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{41CFB5DF-8BBF-4A93-B320-F205839905DC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{084AF9DF-4436-4739-8979-C0B9891CBBC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{084AF9DF-4436-4739-8979-C0B9891CBBC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{084AF9DF-4436-4739-8979-C0B9891CBBC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{084AF9DF-4436-4739-8979-C0B9891CBBC4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BB54D987-6778-4ACF-957C-C8ABB7B91B27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BB54D987-6778-4ACF-957C-C8ABB7B91B27}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BB54D987-6778-4ACF-957C-C8ABB7B91B27}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BB54D987-6778-4ACF-957C-C8ABB7B91B27}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AEF11B52-41CA-4113-B7FE-09F8C6EE27D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AEF11B52-41CA-4113-B7FE-09F8C6EE27D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AEF11B52-41CA-4113-B7FE-09F8C6EE27D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AEF11B52-41CA-4113-B7FE-09F8C6EE27D2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{92C3CBBE-CBDF-44A2-9D6D-976AEB5C78D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{92C3CBBE-CBDF-44A2-9D6D-976AEB5C78D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{92C3CBBE-CBDF-44A2-9D6D-976AEB5C78D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{92C3CBBE-CBDF-44A2-9D6D-976AEB5C78D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE0AB636-7A70-4F79-962A-E3490E2F5C85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE0AB636-7A70-4F79-962A-E3490E2F5C85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE0AB636-7A70-4F79-962A-E3490E2F5C85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE0AB636-7A70-4F79-962A-E3490E2F5C85}.Release|Any CPU.Build.0 = Release|Any CPU
+		{315CD630-FD5E-4E32-A325-9F872D2310F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{315CD630-FD5E-4E32-A325-9F872D2310F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{315CD630-FD5E-4E32-A325-9F872D2310F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{315CD630-FD5E-4E32-A325-9F872D2310F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD0483A2-E906-4A2B-9A4F-7157E263CBC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD0483A2-E906-4A2B-9A4F-7157E263CBC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD0483A2-E906-4A2B-9A4F-7157E263CBC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD0483A2-E906-4A2B-9A4F-7157E263CBC0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A088B2E6-3F59-4CA6-9832-D9A5638B775C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A088B2E6-3F59-4CA6-9832-D9A5638B775C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A088B2E6-3F59-4CA6-9832-D9A5638B775C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A088B2E6-3F59-4CA6-9832-D9A5638B775C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1709D9EB-45C6-4C7E-B2F1-395EC81CACEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1709D9EB-45C6-4C7E-B2F1-395EC81CACEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1709D9EB-45C6-4C7E-B2F1-395EC81CACEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1709D9EB-45C6-4C7E-B2F1-395EC81CACEC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

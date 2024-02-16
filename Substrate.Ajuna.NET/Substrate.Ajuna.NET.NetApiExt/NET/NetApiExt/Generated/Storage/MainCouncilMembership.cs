@@ -21,12 +21,18 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> CouncilMembershipStorage
+    /// </summary>
     public sealed class CouncilMembershipStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> CouncilMembershipStorage Constructor
+        /// </summary>
         public CouncilMembershipStorage(SubstrateClientExt client)
         {
             this._client = client;
@@ -56,10 +62,10 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         /// >> Members
         ///  The current membership, stored as an ordered Vec.
         /// </summary>
-        public async Task<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT24> Members(CancellationToken token)
+        public async Task<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT24> Members(string blockhash, CancellationToken token)
         {
             string parameters = CouncilMembershipStorage.MembersParams();
-            var result = await _client.GetStorageAsync<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT24>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT24>(parameters, blockhash, token);
             return result;
         }
         
@@ -85,14 +91,17 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         /// >> Prime
         ///  The current prime member, if one exists.
         /// </summary>
-        public async Task<Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> Prime(CancellationToken token)
+        public async Task<Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> Prime(string blockhash, CancellationToken token)
         {
             string parameters = CouncilMembershipStorage.PrimeParams();
-            var result = await _client.GetStorageAsync<Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>(parameters, blockhash, token);
             return result;
         }
     }
     
+    /// <summary>
+    /// >> CouncilMembershipCalls
+    /// </summary>
     public sealed class CouncilMembershipCalls
     {
         
@@ -174,10 +183,16 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> CouncilMembershipConstants
+    /// </summary>
     public sealed class CouncilMembershipConstants
     {
     }
     
+    /// <summary>
+    /// >> CouncilMembershipErrors
+    /// </summary>
     public enum CouncilMembershipErrors
     {
         

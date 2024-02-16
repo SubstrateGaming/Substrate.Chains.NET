@@ -15,27 +15,75 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_identity.pallet
 {
     
     
+    /// <summary>
+    /// >> Event
+    /// 
+    ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
+    ///			by this pallet.
+    ///			
+    /// </summary>
     public enum Event
     {
         
+        /// <summary>
+        /// >> IdentitySet
+        /// A name was set or reset (which will remove all judgements).
+        /// </summary>
         IdentitySet = 0,
         
+        /// <summary>
+        /// >> IdentityCleared
+        /// A name was cleared, and the given balance returned.
+        /// </summary>
         IdentityCleared = 1,
         
+        /// <summary>
+        /// >> IdentityKilled
+        /// A name was removed and the given balance slashed.
+        /// </summary>
         IdentityKilled = 2,
         
+        /// <summary>
+        /// >> JudgementRequested
+        /// A judgement was asked from a registrar.
+        /// </summary>
         JudgementRequested = 3,
         
+        /// <summary>
+        /// >> JudgementUnrequested
+        /// A judgement request was retracted.
+        /// </summary>
         JudgementUnrequested = 4,
         
+        /// <summary>
+        /// >> JudgementGiven
+        /// A judgement was given by a registrar.
+        /// </summary>
         JudgementGiven = 5,
         
+        /// <summary>
+        /// >> RegistrarAdded
+        /// A registrar was added.
+        /// </summary>
         RegistrarAdded = 6,
         
+        /// <summary>
+        /// >> SubIdentityAdded
+        /// A sub-identity was added to an identity and the deposit paid.
+        /// </summary>
         SubIdentityAdded = 7,
         
+        /// <summary>
+        /// >> SubIdentityRemoved
+        /// A sub-identity was removed from an identity and the deposit freed.
+        /// </summary>
         SubIdentityRemoved = 8,
         
+        /// <summary>
+        /// >> SubIdentityRevoked
+        /// A sub-identity was cleared, and the given deposit repatriated from the
+        /// main identity account to the sub-identity account.
+        /// </summary>
         SubIdentityRevoked = 9,
     }
     

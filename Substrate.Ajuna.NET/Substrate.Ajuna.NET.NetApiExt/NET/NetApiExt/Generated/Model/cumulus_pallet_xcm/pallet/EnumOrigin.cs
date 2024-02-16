@@ -15,11 +15,20 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_pallet_xcm.palle
 {
     
     
+    /// <summary>
+    /// >> Origin
+    /// </summary>
     public enum Origin
     {
         
+        /// <summary>
+        /// >> Relay
+        /// </summary>
         Relay = 0,
         
+        /// <summary>
+        /// >> SiblingParachain
+        /// </summary>
         SiblingParachain = 1,
     }
     

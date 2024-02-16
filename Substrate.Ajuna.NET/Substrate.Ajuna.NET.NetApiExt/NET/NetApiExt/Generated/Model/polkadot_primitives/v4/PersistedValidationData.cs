@@ -27,76 +27,27 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v4
         /// <summary>
         /// >> parent_head
         /// </summary>
-        private Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.HeadData _parentHead;
-        
+        public Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.HeadData ParentHead { get; set; }
         /// <summary>
         /// >> relay_parent_number
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _relayParentNumber;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 RelayParentNumber { get; set; }
         /// <summary>
         /// >> relay_parent_storage_root
         /// </summary>
-        private Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256 _relayParentStorageRoot;
-        
+        public Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256 RelayParentStorageRoot { get; set; }
         /// <summary>
         /// >> max_pov_size
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _maxPovSize;
+        public Substrate.NetApi.Model.Types.Primitive.U32 MaxPovSize { get; set; }
         
-        public Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.HeadData ParentHead
-        {
-            get
-            {
-                return this._parentHead;
-            }
-            set
-            {
-                this._parentHead = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 RelayParentNumber
-        {
-            get
-            {
-                return this._relayParentNumber;
-            }
-            set
-            {
-                this._relayParentNumber = value;
-            }
-        }
-        
-        public Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256 RelayParentStorageRoot
-        {
-            get
-            {
-                return this._relayParentStorageRoot;
-            }
-            set
-            {
-                this._relayParentStorageRoot = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 MaxPovSize
-        {
-            get
-            {
-                return this._maxPovSize;
-            }
-            set
-            {
-                this._maxPovSize = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "PersistedValidationData";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -107,6 +58,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v4
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

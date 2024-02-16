@@ -5,7 +5,7 @@
     "rest_client": "Substrate.Ajuna.NET.RestClient"
   },
    "metadata": {
-      "websocket": "wss://rpc-parachain.ajuna.network"
+      "websocket": "wss://ajuna.public.curie.radiumblock.co/ws"
    },
   "rest_client_settings": {
     "service_assembly": "Substrate.Ajuna.NET.RestService.dll"

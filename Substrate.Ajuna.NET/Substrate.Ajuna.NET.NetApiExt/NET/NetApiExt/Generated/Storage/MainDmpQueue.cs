@@ -21,12 +21,18 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> DmpQueueStorage
+    /// </summary>
     public sealed class DmpQueueStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> DmpQueueStorage Constructor
+        /// </summary>
         public DmpQueueStorage(SubstrateClientExt client)
         {
             this._client = client;
@@ -61,10 +67,10 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         /// >> Configuration
         ///  The configuration.
         /// </summary>
-        public async Task<Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_pallet_dmp_queue.ConfigData> Configuration(CancellationToken token)
+        public async Task<Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_pallet_dmp_queue.ConfigData> Configuration(string blockhash, CancellationToken token)
         {
             string parameters = DmpQueueStorage.ConfigurationParams();
-            var result = await _client.GetStorageAsync<Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_pallet_dmp_queue.ConfigData>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_pallet_dmp_queue.ConfigData>(parameters, blockhash, token);
             return result;
         }
         
@@ -90,10 +96,10 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         /// >> PageIndex
         ///  The page index.
         /// </summary>
-        public async Task<Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_pallet_dmp_queue.PageIndexData> PageIndex(CancellationToken token)
+        public async Task<Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_pallet_dmp_queue.PageIndexData> PageIndex(string blockhash, CancellationToken token)
         {
             string parameters = DmpQueueStorage.PageIndexParams();
-            var result = await _client.GetStorageAsync<Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_pallet_dmp_queue.PageIndexData>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_pallet_dmp_queue.PageIndexData>(parameters, blockhash, token);
             return result;
         }
         
@@ -121,10 +127,10 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         /// >> Pages
         ///  The queue pages.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>>> Pages(Substrate.NetApi.Model.Types.Primitive.U32 key, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>>> Pages(Substrate.NetApi.Model.Types.Primitive.U32 key, string blockhash, CancellationToken token)
         {
             string parameters = DmpQueueStorage.PagesParams(key);
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>>>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>>>(parameters, blockhash, token);
             return result;
         }
         
@@ -152,10 +158,10 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         /// >> Overweight
         ///  The overweight messages.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>> Overweight(Substrate.NetApi.Model.Types.Primitive.U64 key, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>> Overweight(Substrate.NetApi.Model.Types.Primitive.U64 key, string blockhash, CancellationToken token)
         {
             string parameters = DmpQueueStorage.OverweightParams(key);
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>>(parameters, blockhash, token);
             return result;
         }
         
@@ -181,14 +187,17 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         /// >> CounterForOverweight
         /// Counter for the related counted storage map
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> CounterForOverweight(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> CounterForOverweight(string blockhash, CancellationToken token)
         {
             string parameters = DmpQueueStorage.CounterForOverweightParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, blockhash, token);
             return result;
         }
     }
     
+    /// <summary>
+    /// >> DmpQueueCalls
+    /// </summary>
     public sealed class DmpQueueCalls
     {
         
@@ -205,10 +214,16 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> DmpQueueConstants
+    /// </summary>
     public sealed class DmpQueueConstants
     {
     }
     
+    /// <summary>
+    /// >> DmpQueueErrors
+    /// </summary>
     public enum DmpQueueErrors
     {
         

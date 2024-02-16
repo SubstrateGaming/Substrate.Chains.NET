@@ -24,17 +24,20 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.ajuna_runtime
     public sealed class Runtime : BaseType
     {
         
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "Runtime";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

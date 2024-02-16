@@ -21,12 +21,18 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> CollatorSelectionStorage
+    /// </summary>
     public sealed class CollatorSelectionStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> CollatorSelectionStorage Constructor
+        /// </summary>
         public CollatorSelectionStorage(SubstrateClientExt client)
         {
             this._client = client;
@@ -60,10 +66,10 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         /// >> Invulnerables
         ///  The invulnerable, fixed collators.
         /// </summary>
-        public async Task<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17> Invulnerables(CancellationToken token)
+        public async Task<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17> Invulnerables(string blockhash, CancellationToken token)
         {
             string parameters = CollatorSelectionStorage.InvulnerablesParams();
-            var result = await _client.GetStorageAsync<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17>(parameters, blockhash, token);
             return result;
         }
         
@@ -89,10 +95,10 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         /// >> Candidates
         ///  The (community, limited) collation candidates.
         /// </summary>
-        public async Task<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18> Candidates(CancellationToken token)
+        public async Task<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18> Candidates(string blockhash, CancellationToken token)
         {
             string parameters = CollatorSelectionStorage.CandidatesParams();
-            var result = await _client.GetStorageAsync<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18>(parameters, blockhash, token);
             return result;
         }
         
@@ -120,10 +126,10 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         /// >> LastAuthoredBlock
         ///  Last block authored by collator.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> LastAuthoredBlock(Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> LastAuthoredBlock(Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, string blockhash, CancellationToken token)
         {
             string parameters = CollatorSelectionStorage.LastAuthoredBlockParams(key);
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, blockhash, token);
             return result;
         }
         
@@ -153,10 +159,10 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         /// 
         ///  This should ideally always be less than [`Config::MaxCandidates`] for weights to be correct.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> DesiredCandidates(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> DesiredCandidates(string blockhash, CancellationToken token)
         {
             string parameters = CollatorSelectionStorage.DesiredCandidatesParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, blockhash, token);
             return result;
         }
         
@@ -186,14 +192,17 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         /// 
         ///  When a collator calls `leave_intent` they immediately receive the deposit back.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U128> CandidacyBond(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U128> CandidacyBond(string blockhash, CancellationToken token)
         {
             string parameters = CollatorSelectionStorage.CandidacyBondParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U128>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U128>(parameters, blockhash, token);
             return result;
         }
     }
     
+    /// <summary>
+    /// >> CollatorSelectionCalls
+    /// </summary>
     public sealed class CollatorSelectionCalls
     {
         
@@ -251,10 +260,16 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> CollatorSelectionConstants
+    /// </summary>
     public sealed class CollatorSelectionConstants
     {
     }
     
+    /// <summary>
+    /// >> CollatorSelectionErrors
+    /// </summary>
     public enum CollatorSelectionErrors
     {
         

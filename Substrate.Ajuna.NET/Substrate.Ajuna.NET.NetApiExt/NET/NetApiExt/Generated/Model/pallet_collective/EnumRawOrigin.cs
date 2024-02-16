@@ -15,13 +15,25 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_collective
 {
     
     
+    /// <summary>
+    /// >> RawOrigin
+    /// </summary>
     public enum RawOrigin
     {
         
+        /// <summary>
+        /// >> Members
+        /// </summary>
         Members = 0,
         
+        /// <summary>
+        /// >> Member
+        /// </summary>
         Member = 1,
         
+        /// <summary>
+        /// >> _Phantom
+        /// </summary>
         _Phantom = 2,
     }
     

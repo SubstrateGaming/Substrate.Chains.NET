@@ -15,15 +15,59 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_sudo.pallet
 {
     
     
+    /// <summary>
+    /// >> Call
+    /// Contains one variant per dispatchable that can be called by an extrinsic.
+    /// </summary>
     public enum Call
     {
         
+        /// <summary>
+        /// >> sudo
+        /// Authenticates the sudo key and dispatches a function call with `Root` origin.
+        /// 
+        /// The dispatch origin for this call must be _Signed_.
+        /// 
+        /// ## Complexity
+        /// - O(1).
+        /// </summary>
         sudo = 0,
         
+        /// <summary>
+        /// >> sudo_unchecked_weight
+        /// Authenticates the sudo key and dispatches a function call with `Root` origin.
+        /// This function does not check the weight of the call, and instead allows the
+        /// Sudo user to specify the weight of the call.
+        /// 
+        /// The dispatch origin for this call must be _Signed_.
+        /// 
+        /// ## Complexity
+        /// - O(1).
+        /// </summary>
         sudo_unchecked_weight = 1,
         
+        /// <summary>
+        /// >> set_key
+        /// Authenticates the current sudo key and sets the given AccountId (`new`) as the new sudo
+        /// key.
+        /// 
+        /// The dispatch origin for this call must be _Signed_.
+        /// 
+        /// ## Complexity
+        /// - O(1).
+        /// </summary>
         set_key = 2,
         
+        /// <summary>
+        /// >> sudo_as
+        /// Authenticates the sudo key and dispatches a function call with `Signed` origin from
+        /// a given account.
+        /// 
+        /// The dispatch origin for this call must be _Signed_.
+        /// 
+        /// ## Complexity
+        /// - O(1).
+        /// </summary>
         sudo_as = 3,
     }
     

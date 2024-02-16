@@ -21,12 +21,18 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> SudoStorage
+    /// </summary>
     public sealed class SudoStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> SudoStorage Constructor
+        /// </summary>
         public SudoStorage(SubstrateClientExt client)
         {
             this._client = client;
@@ -55,14 +61,17 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         /// >> Key
         ///  The `AccountId` of the sudo key.
         /// </summary>
-        public async Task<Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> Key(CancellationToken token)
+        public async Task<Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> Key(string blockhash, CancellationToken token)
         {
             string parameters = SudoStorage.KeyParams();
-            var result = await _client.GetStorageAsync<Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>(parameters, blockhash, token);
             return result;
         }
     }
     
+    /// <summary>
+    /// >> SudoCalls
+    /// </summary>
     public sealed class SudoCalls
     {
         
@@ -113,10 +122,16 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> SudoConstants
+    /// </summary>
     public sealed class SudoConstants
     {
     }
     
+    /// <summary>
+    /// >> SudoErrors
+    /// </summary>
     public enum SudoErrors
     {
         

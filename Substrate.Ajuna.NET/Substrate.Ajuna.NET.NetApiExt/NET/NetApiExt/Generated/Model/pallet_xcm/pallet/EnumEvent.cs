@@ -15,53 +15,229 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_xcm.pallet
 {
     
     
+    /// <summary>
+    /// >> Event
+    /// 
+    ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
+    ///			by this pallet.
+    ///			
+    /// </summary>
     public enum Event
     {
         
+        /// <summary>
+        /// >> Attempted
+        /// Execution of an XCM message was attempted.
+        /// 
+        /// \[ outcome \]
+        /// </summary>
         Attempted = 0,
         
+        /// <summary>
+        /// >> Sent
+        /// A XCM message was sent.
+        /// 
+        /// \[ origin, destination, message \]
+        /// </summary>
         Sent = 1,
         
+        /// <summary>
+        /// >> UnexpectedResponse
+        /// Query response received which does not match a registered query. This may be because a
+        /// matching query was never registered, it may be because it is a duplicate response, or
+        /// because the query timed out.
+        /// 
+        /// \[ origin location, id \]
+        /// </summary>
         UnexpectedResponse = 2,
         
+        /// <summary>
+        /// >> ResponseReady
+        /// Query response has been received and is ready for taking with `take_response`. There is
+        /// no registered notification call.
+        /// 
+        /// \[ id, response \]
+        /// </summary>
         ResponseReady = 3,
         
+        /// <summary>
+        /// >> Notified
+        /// Query response has been received and query is removed. The registered notification has
+        /// been dispatched and executed successfully.
+        /// 
+        /// \[ id, pallet index, call index \]
+        /// </summary>
         Notified = 4,
         
+        /// <summary>
+        /// >> NotifyOverweight
+        /// Query response has been received and query is removed. The registered notification could
+        /// not be dispatched because the dispatch weight is greater than the maximum weight
+        /// originally budgeted by this runtime for the query result.
+        /// 
+        /// \[ id, pallet index, call index, actual weight, max budgeted weight \]
+        /// </summary>
         NotifyOverweight = 5,
         
+        /// <summary>
+        /// >> NotifyDispatchError
+        /// Query response has been received and query is removed. There was a general error with
+        /// dispatching the notification call.
+        /// 
+        /// \[ id, pallet index, call index \]
+        /// </summary>
         NotifyDispatchError = 6,
         
+        /// <summary>
+        /// >> NotifyDecodeFailed
+        /// Query response has been received and query is removed. The dispatch was unable to be
+        /// decoded into a `Call`; this might be due to dispatch function having a signature which
+        /// is not `(origin, QueryId, Response)`.
+        /// 
+        /// \[ id, pallet index, call index \]
+        /// </summary>
         NotifyDecodeFailed = 7,
         
+        /// <summary>
+        /// >> InvalidResponder
+        /// Expected query response has been received but the origin location of the response does
+        /// not match that expected. The query remains registered for a later, valid, response to
+        /// be received and acted upon.
+        /// 
+        /// \[ origin location, id, expected location \]
+        /// </summary>
         InvalidResponder = 8,
         
+        /// <summary>
+        /// >> InvalidResponderVersion
+        /// Expected query response has been received but the expected origin location placed in
+        /// storage by this runtime previously cannot be decoded. The query remains registered.
+        /// 
+        /// This is unexpected (since a location placed in storage in a previously executing
+        /// runtime should be readable prior to query timeout) and dangerous since the possibly
+        /// valid response will be dropped. Manual governance intervention is probably going to be
+        /// needed.
+        /// 
+        /// \[ origin location, id \]
+        /// </summary>
         InvalidResponderVersion = 9,
         
+        /// <summary>
+        /// >> ResponseTaken
+        /// Received query response has been read and removed.
+        /// 
+        /// \[ id \]
+        /// </summary>
         ResponseTaken = 10,
         
+        /// <summary>
+        /// >> AssetsTrapped
+        /// Some assets have been placed in an asset trap.
+        /// 
+        /// \[ hash, origin, assets \]
+        /// </summary>
         AssetsTrapped = 11,
         
+        /// <summary>
+        /// >> VersionChangeNotified
+        /// An XCM version change notification message has been attempted to be sent.
+        /// 
+        /// The cost of sending it (borne by the chain) is included.
+        /// 
+        /// \[ destination, result, cost \]
+        /// </summary>
         VersionChangeNotified = 12,
         
+        /// <summary>
+        /// >> SupportedVersionChanged
+        /// The supported version of a location has been changed. This might be through an
+        /// automatic notification or a manual intervention.
+        /// 
+        /// \[ location, XCM version \]
+        /// </summary>
         SupportedVersionChanged = 13,
         
+        /// <summary>
+        /// >> NotifyTargetSendFail
+        /// A given location which had a version change subscription was dropped owing to an error
+        /// sending the notification to it.
+        /// 
+        /// \[ location, query ID, error \]
+        /// </summary>
         NotifyTargetSendFail = 14,
         
+        /// <summary>
+        /// >> NotifyTargetMigrationFail
+        /// A given location which had a version change subscription was dropped owing to an error
+        /// migrating the location to our new XCM format.
+        /// 
+        /// \[ location, query ID \]
+        /// </summary>
         NotifyTargetMigrationFail = 15,
         
+        /// <summary>
+        /// >> InvalidQuerierVersion
+        /// Expected query response has been received but the expected querier location placed in
+        /// storage by this runtime previously cannot be decoded. The query remains registered.
+        /// 
+        /// This is unexpected (since a location placed in storage in a previously executing
+        /// runtime should be readable prior to query timeout) and dangerous since the possibly
+        /// valid response will be dropped. Manual governance intervention is probably going to be
+        /// needed.
+        /// 
+        /// \[ origin location, id \]
+        /// </summary>
         InvalidQuerierVersion = 16,
         
+        /// <summary>
+        /// >> InvalidQuerier
+        /// Expected query response has been received but the querier location of the response does
+        /// not match the expected. The query remains registered for a later, valid, response to
+        /// be received and acted upon.
+        /// 
+        /// \[ origin location, id, expected querier, maybe actual querier \]
+        /// </summary>
         InvalidQuerier = 17,
         
+        /// <summary>
+        /// >> VersionNotifyStarted
+        /// A remote has requested XCM version change notification from us and we have honored it.
+        /// A version information message is sent to them and its cost is included.
+        /// 
+        /// \[ destination location, cost \]
+        /// </summary>
         VersionNotifyStarted = 18,
         
+        /// <summary>
+        /// >> VersionNotifyRequested
+        /// We have requested that a remote chain sends us XCM version change notifications.
+        /// 
+        /// \[ destination location, cost \]
+        /// </summary>
         VersionNotifyRequested = 19,
         
+        /// <summary>
+        /// >> VersionNotifyUnrequested
+        /// We have requested that a remote chain stops sending us XCM version change notifications.
+        /// 
+        /// \[ destination location, cost \]
+        /// </summary>
         VersionNotifyUnrequested = 20,
         
+        /// <summary>
+        /// >> FeesPaid
+        /// Fees were paid from a location for an operation (often for using `SendXcm`).
+        /// 
+        /// \[ paying location, fees \]
+        /// </summary>
         FeesPaid = 21,
         
+        /// <summary>
+        /// >> AssetsClaimed
+        /// Some assets have been claimed from an asset trap
+        /// 
+        /// \[ hash, origin, assets \]
+        /// </summary>
         AssetsClaimed = 22,
     }
     

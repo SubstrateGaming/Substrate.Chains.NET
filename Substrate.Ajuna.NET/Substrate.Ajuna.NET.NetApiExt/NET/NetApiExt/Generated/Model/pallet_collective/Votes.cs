@@ -27,93 +27,31 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_collective
         /// <summary>
         /// >> index
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _index;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 Index { get; set; }
         /// <summary>
         /// >> threshold
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _threshold;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 Threshold { get; set; }
         /// <summary>
         /// >> ayes
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> _ayes;
-        
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> Ayes { get; set; }
         /// <summary>
         /// >> nays
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> _nays;
-        
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> Nays { get; set; }
         /// <summary>
         /// >> end
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _end;
+        public Substrate.NetApi.Model.Types.Primitive.U32 End { get; set; }
         
-        public Substrate.NetApi.Model.Types.Primitive.U32 Index
-        {
-            get
-            {
-                return this._index;
-            }
-            set
-            {
-                this._index = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 Threshold
-        {
-            get
-            {
-                return this._threshold;
-            }
-            set
-            {
-                this._threshold = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> Ayes
-        {
-            get
-            {
-                return this._ayes;
-            }
-            set
-            {
-                this._ayes = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> Nays
-        {
-            get
-            {
-                return this._nays;
-            }
-            set
-            {
-                this._nays = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 End
-        {
-            get
-            {
-                return this._end;
-            }
-            set
-            {
-                this._end = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "Votes";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -125,6 +63,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_collective
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

@@ -15,17 +15,76 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_treasury.pallet
 {
     
     
+    /// <summary>
+    /// >> Call
+    /// Contains one variant per dispatchable that can be called by an extrinsic.
+    /// </summary>
     public enum Call
     {
         
+        /// <summary>
+        /// >> propose_spend
+        /// Put forward a suggestion for spending. A deposit proportional to the value
+        /// is reserved and slashed if the proposal is rejected. It is returned once the
+        /// proposal is awarded.
+        /// 
+        /// ## Complexity
+        /// - O(1)
+        /// </summary>
         propose_spend = 0,
         
+        /// <summary>
+        /// >> reject_proposal
+        /// Reject a proposed spend. The original deposit will be slashed.
+        /// 
+        /// May only be called from `T::RejectOrigin`.
+        /// 
+        /// ## Complexity
+        /// - O(1)
+        /// </summary>
         reject_proposal = 1,
         
+        /// <summary>
+        /// >> approve_proposal
+        /// Approve a proposal. At a later time, the proposal will be allocated to the beneficiary
+        /// and the original deposit will be returned.
+        /// 
+        /// May only be called from `T::ApproveOrigin`.
+        /// 
+        /// ## Complexity
+        ///  - O(1).
+        /// </summary>
         approve_proposal = 2,
         
+        /// <summary>
+        /// >> spend
+        /// Propose and approve a spend of treasury funds.
+        /// 
+        /// - `origin`: Must be `SpendOrigin` with the `Success` value being at least `amount`.
+        /// - `amount`: The amount to be transferred from the treasury to the `beneficiary`.
+        /// - `beneficiary`: The destination account for the transfer.
+        /// 
+        /// NOTE: For record-keeping purposes, the proposer is deemed to be equivalent to the
+        /// beneficiary.
+        /// </summary>
         spend = 3,
         
+        /// <summary>
+        /// >> remove_approval
+        /// Force a previously approved proposal to be removed from the approval queue.
+        /// The original deposit will no longer be returned.
+        /// 
+        /// May only be called from `T::RejectOrigin`.
+        /// - `proposal_id`: The index of a proposal
+        /// 
+        /// ## Complexity
+        /// - O(A) where `A` is the number of approvals
+        /// 
+        /// Errors:
+        /// - `ProposalNotApproved`: The `proposal_id` supplied was not found in the approval queue,
+        /// i.e., the proposal has not been approved. This could also mean the proposal does not
+        /// exist altogether, thus there is no way it would have been approved in the first place.
+        /// </summary>
         remove_approval = 4,
     }
     

@@ -15,19 +15,47 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_scheduler.pallet
 {
     
     
+    /// <summary>
+    /// >> Call
+    /// Contains one variant per dispatchable that can be called by an extrinsic.
+    /// </summary>
     public enum Call
     {
         
+        /// <summary>
+        /// >> schedule
+        /// Anonymously schedule a task.
+        /// </summary>
         schedule = 0,
         
+        /// <summary>
+        /// >> cancel
+        /// Cancel an anonymously scheduled task.
+        /// </summary>
         cancel = 1,
         
+        /// <summary>
+        /// >> schedule_named
+        /// Schedule a named task.
+        /// </summary>
         schedule_named = 2,
         
+        /// <summary>
+        /// >> cancel_named
+        /// Cancel a named scheduled task.
+        /// </summary>
         cancel_named = 3,
         
+        /// <summary>
+        /// >> schedule_after
+        /// Anonymously schedule a task after a delay.
+        /// </summary>
         schedule_after = 4,
         
+        /// <summary>
+        /// >> schedule_named_after
+        /// Schedule a named task after a delay.
+        /// </summary>
         schedule_named_after = 5,
     }
     

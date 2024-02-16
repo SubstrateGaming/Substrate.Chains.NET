@@ -15,23 +15,71 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_system.pallet
 {
     
     
+    /// <summary>
+    /// >> Call
+    /// Contains one variant per dispatchable that can be called by an extrinsic.
+    /// </summary>
     public enum Call
     {
         
+        /// <summary>
+        /// >> remark
+        /// Make some on-chain remark.
+        /// 
+        /// ## Complexity
+        /// - `O(1)`
+        /// </summary>
         remark = 0,
         
+        /// <summary>
+        /// >> set_heap_pages
+        /// Set the number of pages in the WebAssembly environment's heap.
+        /// </summary>
         set_heap_pages = 1,
         
+        /// <summary>
+        /// >> set_code
+        /// Set the new runtime code.
+        /// 
+        /// ## Complexity
+        /// - `O(C + S)` where `C` length of `code` and `S` complexity of `can_set_code`
+        /// </summary>
         set_code = 2,
         
+        /// <summary>
+        /// >> set_code_without_checks
+        /// Set the new runtime code without doing any checks of the given `code`.
+        /// 
+        /// ## Complexity
+        /// - `O(C)` where `C` length of `code`
+        /// </summary>
         set_code_without_checks = 3,
         
+        /// <summary>
+        /// >> set_storage
+        /// Set some items of storage.
+        /// </summary>
         set_storage = 4,
         
+        /// <summary>
+        /// >> kill_storage
+        /// Kill some items from storage.
+        /// </summary>
         kill_storage = 5,
         
+        /// <summary>
+        /// >> kill_prefix
+        /// Kill all storage items with a key that starts with the given prefix.
+        /// 
+        /// **NOTE:** We rely on the Root origin to provide us the number of subkeys under
+        /// the prefix we are removing to accurately calculate the weight of this function.
+        /// </summary>
         kill_prefix = 6,
         
+        /// <summary>
+        /// >> remark_with_event
+        /// Make some on-chain remark and emit event.
+        /// </summary>
         remark_with_event = 7,
     }
     

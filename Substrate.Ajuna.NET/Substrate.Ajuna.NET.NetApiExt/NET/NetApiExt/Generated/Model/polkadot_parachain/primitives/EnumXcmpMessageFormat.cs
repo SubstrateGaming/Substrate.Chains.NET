@@ -15,13 +15,25 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_parachain.primi
 {
     
     
+    /// <summary>
+    /// >> XcmpMessageFormat
+    /// </summary>
     public enum XcmpMessageFormat
     {
         
+        /// <summary>
+        /// >> ConcatenatedVersionedXcm
+        /// </summary>
         ConcatenatedVersionedXcm = 0,
         
+        /// <summary>
+        /// >> ConcatenatedEncodedBlob
+        /// </summary>
         ConcatenatedEncodedBlob = 1,
         
+        /// <summary>
+        /// >> Signals
+        /// </summary>
         Signals = 2,
     }
     

@@ -15,11 +15,20 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_transaction_payme
 {
     
     
+    /// <summary>
+    /// >> Releases
+    /// </summary>
     public enum Releases
     {
         
+        /// <summary>
+        /// >> V1Ancient
+        /// </summary>
         V1Ancient = 0,
         
+        /// <summary>
+        /// >> V2
+        /// </summary>
         V2 = 1,
     }
     

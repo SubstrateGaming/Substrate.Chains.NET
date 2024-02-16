@@ -15,9 +15,17 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_sudo.pallet
 {
     
     
+    /// <summary>
+    /// >> Error
+    /// Error for the Sudo pallet
+    /// </summary>
     public enum Error
     {
         
+        /// <summary>
+        /// >> RequireSudo
+        /// Sender must be the Sudo account
+        /// </summary>
         RequireSudo = 0,
     }
     
