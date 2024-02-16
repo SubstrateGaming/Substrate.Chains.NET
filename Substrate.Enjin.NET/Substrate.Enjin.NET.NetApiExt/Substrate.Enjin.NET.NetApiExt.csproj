@@ -1,7 +1,17 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
+		<PackageId>Substrate.Enjin.NET.Extension</PackageId>
 		<TargetFrameworks>netstandard2.0;netstandard2.1;net6.0</TargetFrameworks>
+		<Version>1.0.25</Version>
+		<Company>Substrate Gaming</Company>
+		<Authors>Substrate Gaming</Authors>
 		<GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+		<Description>Substrate Enjin .NET API Extension</Description>
+		<PackageProjectUrl>https://github.com/SubstrateGaming/Substrate.Chains.NET/tree/main/Substrate.Enjin.NET/Substrate.Enjin.NET.NetApiExt/</PackageProjectUrl>
+		<PackageLicenseFile>LICENSE</PackageLicenseFile>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<RepositoryUrl>https://github.com/SubstrateGaming/Substrate.Chains.NET/</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
 		<GenerateDocumentationFile>true</GenerateDocumentationFile>
 		<DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
 	</PropertyGroup>
