@@ -61,10 +61,10 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         /// >> Key
         ///  The `AccountId` of the sudo key.
         /// </summary>
-        public async Task<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> Key(CancellationToken token)
+        public async Task<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> Key(string blockhash, CancellationToken token)
         {
             string parameters = SudoStorage.KeyParams();
-            var result = await _client.GetStorageAsync<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>(parameters, blockhash, token);
             return result;
         }
     }

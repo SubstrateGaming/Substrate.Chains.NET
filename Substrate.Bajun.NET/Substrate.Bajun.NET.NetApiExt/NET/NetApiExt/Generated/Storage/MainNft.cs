@@ -104,10 +104,10 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         /// >> Collection
         ///  Details of a collection.
         /// </summary>
-        public async Task<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.CollectionDetails> Collection(Substrate.NetApi.Model.Types.Primitive.U32 key, CancellationToken token)
+        public async Task<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.CollectionDetails> Collection(Substrate.NetApi.Model.Types.Primitive.U32 key, string blockhash, CancellationToken token)
         {
             string parameters = NftStorage.CollectionParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.CollectionDetails>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.CollectionDetails>(parameters, blockhash, token);
             return result;
         }
         
@@ -135,10 +135,10 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         /// >> OwnershipAcceptance
         ///  The collection, if any, of which an account is willing to take ownership.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> OwnershipAcceptance(Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> OwnershipAcceptance(Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, string blockhash, CancellationToken token)
         {
             string parameters = NftStorage.OwnershipAcceptanceParams(key);
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, blockhash, token);
             return result;
         }
         
@@ -169,10 +169,10 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         ///  The items held by any given account; set out this way so that items owned by a single
         ///  account can be enumerated.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Base.BaseTuple> Account(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> key, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Base.BaseTuple> Account(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> key, string blockhash, CancellationToken token)
         {
             string parameters = NftStorage.AccountParams(key);
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseTuple>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseTuple>(parameters, blockhash, token);
             return result;
         }
         
@@ -202,10 +202,10 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         ///  The collections owned by any given account; set out this way so that collections owned by
         ///  a single account can be enumerated.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Base.BaseTuple> CollectionAccount(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U32> key, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Base.BaseTuple> CollectionAccount(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U32> key, string blockhash, CancellationToken token)
         {
             string parameters = NftStorage.CollectionAccountParams(key);
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseTuple>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseTuple>(parameters, blockhash, token);
             return result;
         }
         
@@ -235,10 +235,10 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         ///  The items in existence and their ownership details.
         ///  Stores collection roles as per account.
         /// </summary>
-        public async Task<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.BitFlagsT3> CollectionRoleOf(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> key, CancellationToken token)
+        public async Task<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.BitFlagsT3> CollectionRoleOf(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> key, string blockhash, CancellationToken token)
         {
             string parameters = NftStorage.CollectionRoleOfParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.BitFlagsT3>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.BitFlagsT3>(parameters, blockhash, token);
             return result;
         }
         
@@ -266,10 +266,10 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         /// >> Item
         ///  The items in existence and their ownership details.
         /// </summary>
-        public async Task<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.ItemDetails> Item(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> key, CancellationToken token)
+        public async Task<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.ItemDetails> Item(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> key, string blockhash, CancellationToken token)
         {
             string parameters = NftStorage.ItemParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.ItemDetails>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.ItemDetails>(parameters, blockhash, token);
             return result;
         }
         
@@ -297,10 +297,10 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         /// >> CollectionMetadataOf
         ///  Metadata of a collection.
         /// </summary>
-        public async Task<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.CollectionMetadata> CollectionMetadataOf(Substrate.NetApi.Model.Types.Primitive.U32 key, CancellationToken token)
+        public async Task<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.CollectionMetadata> CollectionMetadataOf(Substrate.NetApi.Model.Types.Primitive.U32 key, string blockhash, CancellationToken token)
         {
             string parameters = NftStorage.CollectionMetadataOfParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.CollectionMetadata>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.CollectionMetadata>(parameters, blockhash, token);
             return result;
         }
         
@@ -328,10 +328,10 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         /// >> ItemMetadataOf
         ///  Metadata of an item.
         /// </summary>
-        public async Task<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.ItemMetadata> ItemMetadataOf(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> key, CancellationToken token)
+        public async Task<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.ItemMetadata> ItemMetadataOf(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> key, string blockhash, CancellationToken token)
         {
             string parameters = NftStorage.ItemMetadataOfParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.ItemMetadata>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.ItemMetadata>(parameters, blockhash, token);
             return result;
         }
         
@@ -361,10 +361,10 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         /// >> Attribute
         ///  Attributes of a collection.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT12, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.AttributeDeposit>> Attribute(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256>, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.EnumAttributeNamespace, Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT11> key, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT12, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.AttributeDeposit>> Attribute(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256>, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.EnumAttributeNamespace, Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT11> key, string blockhash, CancellationToken token)
         {
             string parameters = NftStorage.AttributeParams(key);
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT12, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.AttributeDeposit>>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT12, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.AttributeDeposit>>(parameters, blockhash, token);
             return result;
         }
         
@@ -392,10 +392,10 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         /// >> ItemPriceOf
         ///  A price of an item.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>>> ItemPriceOf(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> key, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>>> ItemPriceOf(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> key, string blockhash, CancellationToken token)
         {
             string parameters = NftStorage.ItemPriceOfParams(key);
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>>>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>>>(parameters, blockhash, token);
             return result;
         }
         
@@ -423,10 +423,10 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         /// >> ItemAttributesApprovalsOf
         ///  Item attribute approvals.
         /// </summary>
-        public async Task<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSetT2> ItemAttributesApprovalsOf(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> key, CancellationToken token)
+        public async Task<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSetT2> ItemAttributesApprovalsOf(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> key, string blockhash, CancellationToken token)
         {
             string parameters = NftStorage.ItemAttributesApprovalsOfParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSetT2>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSetT2>(parameters, blockhash, token);
             return result;
         }
         
@@ -454,10 +454,10 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         ///  Stores the `CollectionId` that is going to be used for the next collection.
         ///  This gets incremented whenever a new collection is created.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> NextCollectionId(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> NextCollectionId(string blockhash, CancellationToken token)
         {
             string parameters = NftStorage.NextCollectionIdParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, blockhash, token);
             return result;
         }
         
@@ -485,10 +485,10 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         /// >> PendingSwapOf
         ///  Handles all the pending swaps.
         /// </summary>
-        public async Task<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.PendingSwap> PendingSwapOf(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> key, CancellationToken token)
+        public async Task<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.PendingSwap> PendingSwapOf(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> key, string blockhash, CancellationToken token)
         {
             string parameters = NftStorage.PendingSwapOfParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.PendingSwap>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.PendingSwap>(parameters, blockhash, token);
             return result;
         }
         
@@ -516,10 +516,10 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         /// >> CollectionConfigOf
         ///  Config of a collection.
         /// </summary>
-        public async Task<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.CollectionConfig> CollectionConfigOf(Substrate.NetApi.Model.Types.Primitive.U32 key, CancellationToken token)
+        public async Task<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.CollectionConfig> CollectionConfigOf(Substrate.NetApi.Model.Types.Primitive.U32 key, string blockhash, CancellationToken token)
         {
             string parameters = NftStorage.CollectionConfigOfParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.CollectionConfig>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.CollectionConfig>(parameters, blockhash, token);
             return result;
         }
         
@@ -547,10 +547,10 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         /// >> ItemConfigOf
         ///  Config of an item.
         /// </summary>
-        public async Task<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.ItemConfig> ItemConfigOf(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> key, CancellationToken token)
+        public async Task<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.ItemConfig> ItemConfigOf(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> key, string blockhash, CancellationToken token)
         {
             string parameters = NftStorage.ItemConfigOfParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.ItemConfig>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types.ItemConfig>(parameters, blockhash, token);
             return result;
         }
     }

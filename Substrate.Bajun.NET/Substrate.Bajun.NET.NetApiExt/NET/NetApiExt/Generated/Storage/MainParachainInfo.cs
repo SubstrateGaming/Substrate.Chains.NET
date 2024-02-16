@@ -59,10 +59,10 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         /// <summary>
         /// >> ParachainId
         /// </summary>
-        public async Task<Substrate.Bajun.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id> ParachainId(CancellationToken token)
+        public async Task<Substrate.Bajun.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id> ParachainId(string blockhash, CancellationToken token)
         {
             string parameters = ParachainInfoStorage.ParachainIdParams();
-            var result = await _client.GetStorageAsync<Substrate.Bajun.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Bajun.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id>(parameters, blockhash, token);
             return result;
         }
     }

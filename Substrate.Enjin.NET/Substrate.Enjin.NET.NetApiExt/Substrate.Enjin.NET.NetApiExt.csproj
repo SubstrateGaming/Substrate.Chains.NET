@@ -12,7 +12,11 @@
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<RepositoryUrl>https://github.com/SubstrateGaming/Substrate.Chains.NET/</RepositoryUrl>
 		<RepositoryType>git</RepositoryType>
-		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+	</PropertyGroup>
+
+	<!--Set this to true if you want to generate all necessary/dependent documentation-->
+	<PropertyGroup>
+		<GenerateDocumentationFile>false</GenerateDocumentationFile>
 		<DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
 	</PropertyGroup>
 
