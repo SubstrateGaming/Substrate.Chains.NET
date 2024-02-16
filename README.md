@@ -94,12 +94,12 @@
   - Substrate Vara Network .NET API Extension  
 [![Nuget](https://img.shields.io/nuget/v/Substrate.Vara.NET.Extension)](https://www.nuget.org/packages/Substrate.Vara.NET.Extension/)
 ![Nuget](https://img.shields.io/nuget/dt/Substrate.Vara.NET.Extension)  
-![Build](https://github.com/SubstrateGaming/Substrate.Chains.NET/actions/workflows/vara.yml/badge.svg)
+![Build](https://github.com/SubstrateGaming/Substrate.Chains.NET/actions/workflows/publish_vara.yml/badge.svg)
 - Enjin Relaychain .NET SDK ([Link](https://github.com/SubstrateGaming/Substrate.Chains.NET/tree/main/Substrate.Enjin.NET))  
   - Substrate Enjin Relaychain .NET API Extension  
 [![Nuget](https://img.shields.io/nuget/v/Substrate.Enjin.NET.Extension)](https://www.nuget.org/packages/Substrate.Enjin.NET.Extension/)
 ![Nuget](https://img.shields.io/nuget/dt/Substrate.Enjin.NET.Extension)  
-![Build](https://github.com/SubstrateGaming/Substrate.Chains.NET/actions/workflows/enjin.yml/badge.svg)
+![Build](https://github.com/SubstrateGaming/Substrate.Chains.NET/actions/workflows/publish_enjin.yml/badge.svg)
 
 
 ## Add or update Package
