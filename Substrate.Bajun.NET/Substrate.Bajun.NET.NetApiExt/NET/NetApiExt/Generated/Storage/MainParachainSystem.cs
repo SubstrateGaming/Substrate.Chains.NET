@@ -91,10 +91,10 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         /// 
         ///  [well_known_keys::CODE]: sp_core::storage::well_known_keys::CODE
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>> PendingValidationCode(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>> PendingValidationCode(string blockhash, CancellationToken token)
         {
             string parameters = ParachainSystemStorage.PendingValidationCodeParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>(parameters, blockhash, token);
             return result;
         }
         
@@ -128,10 +128,10 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         ///  This will be cleared in `on_initialize` of each new block if no other pallet already set
         ///  the value.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>> NewValidationCode(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>> NewValidationCode(string blockhash, CancellationToken token)
         {
             string parameters = ParachainSystemStorage.NewValidationCodeParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>(parameters, blockhash, token);
             return result;
         }
         
@@ -161,10 +161,10 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         ///  This value is expected to be set only once per block and it's never stored
         ///  in the trie.
         /// </summary>
-        public async Task<Substrate.Bajun.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.PersistedValidationData> ValidationData(CancellationToken token)
+        public async Task<Substrate.Bajun.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.PersistedValidationData> ValidationData(string blockhash, CancellationToken token)
         {
             string parameters = ParachainSystemStorage.ValidationDataParams();
-            var result = await _client.GetStorageAsync<Substrate.Bajun.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.PersistedValidationData>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Bajun.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.PersistedValidationData>(parameters, blockhash, token);
             return result;
         }
         
@@ -190,10 +190,10 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         /// >> DidSetValidationCode
         ///  Were the validation data set to notify the relay chain?
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.Bool> DidSetValidationCode(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.Bool> DidSetValidationCode(string blockhash, CancellationToken token)
         {
             string parameters = ParachainSystemStorage.DidSetValidationCodeParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.Bool>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.Bool>(parameters, blockhash, token);
             return result;
         }
         
@@ -219,10 +219,10 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         /// >> LastRelayChainBlockNumber
         ///  The relay chain block number associated with the last parachain block.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> LastRelayChainBlockNumber(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> LastRelayChainBlockNumber(string blockhash, CancellationToken token)
         {
             string parameters = ParachainSystemStorage.LastRelayChainBlockNumberParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, blockhash, token);
             return result;
         }
         
@@ -260,10 +260,10 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         ///  relay-chain. This value is ephemeral which means it doesn't hit the storage. This value is
         ///  set after the inherent.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.EnumUpgradeRestriction>> UpgradeRestrictionSignal(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.EnumUpgradeRestriction>> UpgradeRestrictionSignal(string blockhash, CancellationToken token)
         {
             string parameters = ParachainSystemStorage.UpgradeRestrictionSignalParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.EnumUpgradeRestriction>>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.EnumUpgradeRestriction>>(parameters, blockhash, token);
             return result;
         }
         
@@ -299,10 +299,10 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         /// 
         ///  This data is also absent from the genesis.
         /// </summary>
-        public async Task<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_trie.storage_proof.StorageProof> RelayStateProof(CancellationToken token)
+        public async Task<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_trie.storage_proof.StorageProof> RelayStateProof(string blockhash, CancellationToken token)
         {
             string parameters = ParachainSystemStorage.RelayStateProofParams();
-            var result = await _client.GetStorageAsync<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_trie.storage_proof.StorageProof>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_trie.storage_proof.StorageProof>(parameters, blockhash, token);
             return result;
         }
         
@@ -340,10 +340,10 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         /// 
         ///  This data is also absent from the genesis.
         /// </summary>
-        public async Task<Substrate.Bajun.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.relay_state_snapshot.MessagingStateSnapshot> RelevantMessagingState(CancellationToken token)
+        public async Task<Substrate.Bajun.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.relay_state_snapshot.MessagingStateSnapshot> RelevantMessagingState(string blockhash, CancellationToken token)
         {
             string parameters = ParachainSystemStorage.RelevantMessagingStateParams();
-            var result = await _client.GetStorageAsync<Substrate.Bajun.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.relay_state_snapshot.MessagingStateSnapshot>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Bajun.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.relay_state_snapshot.MessagingStateSnapshot>(parameters, blockhash, token);
             return result;
         }
         
@@ -379,10 +379,10 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         /// 
         ///  This data is also absent from the genesis.
         /// </summary>
-        public async Task<Substrate.Bajun.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.AbridgedHostConfiguration> HostConfiguration(CancellationToken token)
+        public async Task<Substrate.Bajun.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.AbridgedHostConfiguration> HostConfiguration(string blockhash, CancellationToken token)
         {
             string parameters = ParachainSystemStorage.HostConfigurationParams();
-            var result = await _client.GetStorageAsync<Substrate.Bajun.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.AbridgedHostConfiguration>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Bajun.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.AbridgedHostConfiguration>(parameters, blockhash, token);
             return result;
         }
         
@@ -414,10 +414,10 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         ///  This value is loaded before and saved after processing inbound downward messages carried
         ///  by the system inherent.
         /// </summary>
-        public async Task<Substrate.Bajun.NET.NetApiExt.Generated.Model.cumulus_primitives_parachain_inherent.MessageQueueChain> LastDmqMqcHead(CancellationToken token)
+        public async Task<Substrate.Bajun.NET.NetApiExt.Generated.Model.cumulus_primitives_parachain_inherent.MessageQueueChain> LastDmqMqcHead(string blockhash, CancellationToken token)
         {
             string parameters = ParachainSystemStorage.LastDmqMqcHeadParams();
-            var result = await _client.GetStorageAsync<Substrate.Bajun.NET.NetApiExt.Generated.Model.cumulus_primitives_parachain_inherent.MessageQueueChain>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Bajun.NET.NetApiExt.Generated.Model.cumulus_primitives_parachain_inherent.MessageQueueChain>(parameters, blockhash, token);
             return result;
         }
         
@@ -449,10 +449,10 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         ///  This value is loaded before and saved after processing inbound downward messages carried
         ///  by the system inherent.
         /// </summary>
-        public async Task<Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.BTreeMapT1> LastHrmpMqcHeads(CancellationToken token)
+        public async Task<Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.BTreeMapT1> LastHrmpMqcHeads(string blockhash, CancellationToken token)
         {
             string parameters = ParachainSystemStorage.LastHrmpMqcHeadsParams();
-            var result = await _client.GetStorageAsync<Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.BTreeMapT1>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.BTreeMapT1>(parameters, blockhash, token);
             return result;
         }
         
@@ -482,10 +482,10 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         /// 
         ///  This will be cleared in `on_initialize` of each new block.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> ProcessedDownwardMessages(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> ProcessedDownwardMessages(string blockhash, CancellationToken token)
         {
             string parameters = ParachainSystemStorage.ProcessedDownwardMessagesParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, blockhash, token);
             return result;
         }
         
@@ -515,10 +515,10 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         /// 
         ///  This will be cleared in `on_initialize` of each new block.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> HrmpWatermark(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> HrmpWatermark(string blockhash, CancellationToken token)
         {
             string parameters = ParachainSystemStorage.HrmpWatermarkParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, blockhash, token);
             return result;
         }
         
@@ -548,10 +548,10 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         /// 
         ///  This will be cleared in `on_initialize` of each new block.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Bajun.NET.NetApiExt.Generated.Model.polkadot_core_primitives.OutboundHrmpMessage>> HrmpOutboundMessages(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Bajun.NET.NetApiExt.Generated.Model.polkadot_core_primitives.OutboundHrmpMessage>> HrmpOutboundMessages(string blockhash, CancellationToken token)
         {
             string parameters = ParachainSystemStorage.HrmpOutboundMessagesParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Bajun.NET.NetApiExt.Generated.Model.polkadot_core_primitives.OutboundHrmpMessage>>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Bajun.NET.NetApiExt.Generated.Model.polkadot_core_primitives.OutboundHrmpMessage>>(parameters, blockhash, token);
             return result;
         }
         
@@ -581,10 +581,10 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         /// 
         ///  This will be cleared in `on_initialize` of each new block.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>> UpwardMessages(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>> UpwardMessages(string blockhash, CancellationToken token)
         {
             string parameters = ParachainSystemStorage.UpwardMessagesParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>>(parameters, blockhash, token);
             return result;
         }
         
@@ -610,10 +610,10 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         /// >> PendingUpwardMessages
         ///  Upward messages that are still pending and not yet send to the relay chain.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>> PendingUpwardMessages(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>> PendingUpwardMessages(string blockhash, CancellationToken token)
         {
             string parameters = ParachainSystemStorage.PendingUpwardMessagesParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>>(parameters, blockhash, token);
             return result;
         }
         
@@ -641,10 +641,10 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         ///  The number of HRMP messages we observed in `on_initialize` and thus used that number for
         ///  announcing the weight of `on_initialize` and `on_finalize`.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> AnnouncedHrmpMessagesPerCandidate(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> AnnouncedHrmpMessagesPerCandidate(string blockhash, CancellationToken token)
         {
             string parameters = ParachainSystemStorage.AnnouncedHrmpMessagesPerCandidateParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, blockhash, token);
             return result;
         }
         
@@ -672,10 +672,10 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         ///  The weight we reserve at the beginning of the block for processing XCMP messages. This
         ///  overrides the amount set in the Config trait.
         /// </summary>
-        public async Task<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight> ReservedXcmpWeightOverride(CancellationToken token)
+        public async Task<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight> ReservedXcmpWeightOverride(string blockhash, CancellationToken token)
         {
             string parameters = ParachainSystemStorage.ReservedXcmpWeightOverrideParams();
-            var result = await _client.GetStorageAsync<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>(parameters, blockhash, token);
             return result;
         }
         
@@ -703,10 +703,10 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         ///  The weight we reserve at the beginning of the block for processing DMP messages. This
         ///  overrides the amount set in the Config trait.
         /// </summary>
-        public async Task<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight> ReservedDmpWeightOverride(CancellationToken token)
+        public async Task<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight> ReservedDmpWeightOverride(string blockhash, CancellationToken token)
         {
             string parameters = ParachainSystemStorage.ReservedDmpWeightOverrideParams();
-            var result = await _client.GetStorageAsync<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>(parameters, blockhash, token);
             return result;
         }
         
@@ -732,10 +732,10 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         /// >> AuthorizedUpgrade
         ///  The next authorized upgrade, if there is one.
         /// </summary>
-        public async Task<Substrate.Bajun.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.CodeUpgradeAuthorization> AuthorizedUpgrade(CancellationToken token)
+        public async Task<Substrate.Bajun.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.CodeUpgradeAuthorization> AuthorizedUpgrade(string blockhash, CancellationToken token)
         {
             string parameters = ParachainSystemStorage.AuthorizedUpgradeParams();
-            var result = await _client.GetStorageAsync<Substrate.Bajun.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.CodeUpgradeAuthorization>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Bajun.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.CodeUpgradeAuthorization>(parameters, blockhash, token);
             return result;
         }
         
@@ -765,10 +765,10 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         /// 
         ///  See [`Pallet::set_custom_validation_head_data`] for more information.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>> CustomValidationHeadData(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>> CustomValidationHeadData(string blockhash, CancellationToken token)
         {
             string parameters = ParachainSystemStorage.CustomValidationHeadDataParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>(parameters, blockhash, token);
             return result;
         }
     }

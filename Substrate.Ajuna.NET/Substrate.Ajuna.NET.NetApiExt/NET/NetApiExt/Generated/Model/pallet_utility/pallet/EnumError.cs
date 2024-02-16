@@ -15,9 +15,20 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_utility.pallet
 {
     
     
+    /// <summary>
+    /// >> Error
+    /// 
+    ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
+    ///			of this pallet.
+    ///			
+    /// </summary>
     public enum Error
     {
         
+        /// <summary>
+        /// >> TooManyCalls
+        /// Too many calls batched.
+        /// </summary>
         TooManyCalls = 0,
     }
     

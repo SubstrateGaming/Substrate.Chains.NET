@@ -15,13 +15,25 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.dispatch
 {
     
     
+    /// <summary>
+    /// >> DispatchClass
+    /// </summary>
     public enum DispatchClass
     {
         
+        /// <summary>
+        /// >> Normal
+        /// </summary>
         Normal = 0,
         
+        /// <summary>
+        /// >> Operational
+        /// </summary>
         Operational = 1,
         
+        /// <summary>
+        /// >> Mandatory
+        /// </summary>
         Mandatory = 2,
     }
     

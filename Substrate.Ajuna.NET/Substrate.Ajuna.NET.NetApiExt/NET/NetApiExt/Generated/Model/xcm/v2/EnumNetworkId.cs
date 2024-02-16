@@ -15,15 +15,30 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.v2
 {
     
     
+    /// <summary>
+    /// >> NetworkId
+    /// </summary>
     public enum NetworkId
     {
         
+        /// <summary>
+        /// >> Any
+        /// </summary>
         Any = 0,
         
+        /// <summary>
+        /// >> Named
+        /// </summary>
         Named = 1,
         
+        /// <summary>
+        /// >> Polkadot
+        /// </summary>
         Polkadot = 2,
         
+        /// <summary>
+        /// >> Kusama
+        /// </summary>
         Kusama = 3,
     }
     

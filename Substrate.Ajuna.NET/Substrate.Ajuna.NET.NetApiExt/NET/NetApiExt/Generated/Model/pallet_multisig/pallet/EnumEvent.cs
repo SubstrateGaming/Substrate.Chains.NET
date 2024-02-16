@@ -15,15 +15,38 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_multisig.pallet
 {
     
     
+    /// <summary>
+    /// >> Event
+    /// 
+    ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
+    ///			by this pallet.
+    ///			
+    /// </summary>
     public enum Event
     {
         
+        /// <summary>
+        /// >> NewMultisig
+        /// A new multisig operation has begun.
+        /// </summary>
         NewMultisig = 0,
         
+        /// <summary>
+        /// >> MultisigApproval
+        /// A multisig operation has been approved by someone.
+        /// </summary>
         MultisigApproval = 1,
         
+        /// <summary>
+        /// >> MultisigExecuted
+        /// A multisig operation has been executed.
+        /// </summary>
         MultisigExecuted = 2,
         
+        /// <summary>
+        /// >> MultisigCancelled
+        /// A multisig operation has been cancelled.
+        /// </summary>
         MultisigCancelled = 3,
     }
     

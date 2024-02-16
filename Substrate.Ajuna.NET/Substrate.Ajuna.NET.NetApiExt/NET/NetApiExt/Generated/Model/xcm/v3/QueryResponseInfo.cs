@@ -27,59 +27,23 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.v3
         /// <summary>
         /// >> destination
         /// </summary>
-        private Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.v3.multilocation.MultiLocation _destination;
-        
+        public Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.v3.multilocation.MultiLocation Destination { get; set; }
         /// <summary>
         /// >> query_id
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U64> _queryId;
-        
+        public Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U64> QueryId { get; set; }
         /// <summary>
         /// >> max_weight
         /// </summary>
-        private Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight _maxWeight;
+        public Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight MaxWeight { get; set; }
         
-        public Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.v3.multilocation.MultiLocation Destination
-        {
-            get
-            {
-                return this._destination;
-            }
-            set
-            {
-                this._destination = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U64> QueryId
-        {
-            get
-            {
-                return this._queryId;
-            }
-            set
-            {
-                this._queryId = value;
-            }
-        }
-        
-        public Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight MaxWeight
-        {
-            get
-            {
-                return this._maxWeight;
-            }
-            set
-            {
-                this._maxWeight = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "QueryResponseInfo";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -89,6 +53,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.v3
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

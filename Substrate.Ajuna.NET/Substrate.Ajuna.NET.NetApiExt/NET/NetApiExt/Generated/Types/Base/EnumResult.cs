@@ -15,11 +15,20 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Types.Base
 {
     
     
+    /// <summary>
+    /// >> Result
+    /// </summary>
     public enum Result
     {
         
+        /// <summary>
+        /// >> Ok
+        /// </summary>
         Ok = 0,
         
+        /// <summary>
+        /// >> Err
+        /// </summary>
         Err = 1,
     }
     

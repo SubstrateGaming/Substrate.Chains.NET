@@ -15,21 +15,45 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_identity.types
 {
     
     
+    /// <summary>
+    /// >> Judgement
+    /// </summary>
     public enum Judgement
     {
         
+        /// <summary>
+        /// >> Unknown
+        /// </summary>
         Unknown = 0,
         
+        /// <summary>
+        /// >> FeePaid
+        /// </summary>
         FeePaid = 1,
         
+        /// <summary>
+        /// >> Reasonable
+        /// </summary>
         Reasonable = 2,
         
+        /// <summary>
+        /// >> KnownGood
+        /// </summary>
         KnownGood = 3,
         
+        /// <summary>
+        /// >> OutOfDate
+        /// </summary>
         OutOfDate = 4,
         
+        /// <summary>
+        /// >> LowQuality
+        /// </summary>
         LowQuality = 5,
         
+        /// <summary>
+        /// >> Erroneous
+        /// </summary>
         Erroneous = 6,
     }
     

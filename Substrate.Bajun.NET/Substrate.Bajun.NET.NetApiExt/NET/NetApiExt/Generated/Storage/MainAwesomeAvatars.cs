@@ -89,10 +89,10 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         /// <summary>
         /// >> Organizer
         /// </summary>
-        public async Task<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> Organizer(CancellationToken token)
+        public async Task<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> Organizer(string blockhash, CancellationToken token)
         {
             string parameters = AwesomeAvatarsStorage.OrganizerParams();
-            var result = await _client.GetStorageAsync<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>(parameters, blockhash, token);
             return result;
         }
         
@@ -118,10 +118,10 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         /// <summary>
         /// >> Treasurer
         /// </summary>
-        public async Task<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> Treasurer(Substrate.NetApi.Model.Types.Primitive.U16 key, CancellationToken token)
+        public async Task<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> Treasurer(Substrate.NetApi.Model.Types.Primitive.U16 key, string blockhash, CancellationToken token)
         {
             string parameters = AwesomeAvatarsStorage.TreasurerParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>(parameters, blockhash, token);
             return result;
         }
         
@@ -145,10 +145,10 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         /// <summary>
         /// >> CurrentSeasonStatus
         /// </summary>
-        public async Task<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.season.SeasonStatus> CurrentSeasonStatus(CancellationToken token)
+        public async Task<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.season.SeasonStatus> CurrentSeasonStatus(string blockhash, CancellationToken token)
         {
             string parameters = AwesomeAvatarsStorage.CurrentSeasonStatusParams();
-            var result = await _client.GetStorageAsync<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.season.SeasonStatus>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.season.SeasonStatus>(parameters, blockhash, token);
             return result;
         }
         
@@ -176,10 +176,10 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         /// >> Seasons
         ///  Storage for the seasons.
         /// </summary>
-        public async Task<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.season.Season> Seasons(Substrate.NetApi.Model.Types.Primitive.U16 key, CancellationToken token)
+        public async Task<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.season.Season> Seasons(Substrate.NetApi.Model.Types.Primitive.U16 key, string blockhash, CancellationToken token)
         {
             string parameters = AwesomeAvatarsStorage.SeasonsParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.season.Season>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.season.Season>(parameters, blockhash, token);
             return result;
         }
         
@@ -205,10 +205,10 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         /// <summary>
         /// >> Treasury
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U128> Treasury(Substrate.NetApi.Model.Types.Primitive.U16 key, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U128> Treasury(Substrate.NetApi.Model.Types.Primitive.U16 key, string blockhash, CancellationToken token)
         {
             string parameters = AwesomeAvatarsStorage.TreasuryParams(key);
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U128>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U128>(parameters, blockhash, token);
             return result;
         }
         
@@ -232,10 +232,10 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         /// <summary>
         /// >> GlobalConfigs
         /// </summary>
-        public async Task<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.GlobalConfig> GlobalConfigs(CancellationToken token)
+        public async Task<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.GlobalConfig> GlobalConfigs(string blockhash, CancellationToken token)
         {
             string parameters = AwesomeAvatarsStorage.GlobalConfigsParams();
-            var result = await _client.GetStorageAsync<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.GlobalConfig>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.GlobalConfig>(parameters, blockhash, token);
             return result;
         }
         
@@ -261,10 +261,10 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         /// <summary>
         /// >> Avatars
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.avatar.Avatar>> Avatars(Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 key, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.avatar.Avatar>> Avatars(Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 key, string blockhash, CancellationToken token)
         {
             string parameters = AwesomeAvatarsStorage.AvatarsParams(key);
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.avatar.Avatar>>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.avatar.Avatar>>(parameters, blockhash, token);
             return result;
         }
         
@@ -290,10 +290,10 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         /// <summary>
         /// >> Owners
         /// </summary>
-        public async Task<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT35> Owners(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U16> key, CancellationToken token)
+        public async Task<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT35> Owners(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U16> key, string blockhash, CancellationToken token)
         {
             string parameters = AwesomeAvatarsStorage.OwnersParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT35>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT35>(parameters, blockhash, token);
             return result;
         }
         
@@ -319,10 +319,10 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         /// <summary>
         /// >> LockedAvatars
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Base.BaseTuple> LockedAvatars(Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 key, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Base.BaseTuple> LockedAvatars(Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 key, string blockhash, CancellationToken token)
         {
             string parameters = AwesomeAvatarsStorage.LockedAvatarsParams(key);
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseTuple>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseTuple>(parameters, blockhash, token);
             return result;
         }
         
@@ -346,10 +346,10 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         /// <summary>
         /// >> CollectionId
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> CollectionId(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> CollectionId(string blockhash, CancellationToken token)
         {
             string parameters = AwesomeAvatarsStorage.CollectionIdParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, blockhash, token);
             return result;
         }
         
@@ -375,10 +375,10 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         /// <summary>
         /// >> PlayerConfigs
         /// </summary>
-        public async Task<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.PlayerConfig> PlayerConfigs(Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, CancellationToken token)
+        public async Task<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.PlayerConfig> PlayerConfigs(Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, string blockhash, CancellationToken token)
         {
             string parameters = AwesomeAvatarsStorage.PlayerConfigsParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.PlayerConfig>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.PlayerConfig>(parameters, blockhash, token);
             return result;
         }
         
@@ -404,10 +404,10 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         /// <summary>
         /// >> PlayerSeasonConfigs
         /// </summary>
-        public async Task<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.PlayerSeasonConfig> PlayerSeasonConfigs(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U16> key, CancellationToken token)
+        public async Task<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.PlayerSeasonConfig> PlayerSeasonConfigs(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U16> key, string blockhash, CancellationToken token)
         {
             string parameters = AwesomeAvatarsStorage.PlayerSeasonConfigsParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.PlayerSeasonConfig>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.PlayerSeasonConfig>(parameters, blockhash, token);
             return result;
         }
         
@@ -433,10 +433,10 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         /// <summary>
         /// >> SeasonStats
         /// </summary>
-        public async Task<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.SeasonInfo> SeasonStats(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U16, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> key, CancellationToken token)
+        public async Task<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.SeasonInfo> SeasonStats(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U16, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> key, string blockhash, CancellationToken token)
         {
             string parameters = AwesomeAvatarsStorage.SeasonStatsParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.SeasonInfo>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.SeasonInfo>(parameters, blockhash, token);
             return result;
         }
         
@@ -462,10 +462,10 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         /// <summary>
         /// >> Trade
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U128> Trade(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U16, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> key, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U128> Trade(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U16, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> key, string blockhash, CancellationToken token)
         {
             string parameters = AwesomeAvatarsStorage.TradeParams(key);
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U128>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U128>(parameters, blockhash, token);
             return result;
         }
         
@@ -489,10 +489,10 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         /// <summary>
         /// >> ServiceAccount
         /// </summary>
-        public async Task<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> ServiceAccount(CancellationToken token)
+        public async Task<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> ServiceAccount(string blockhash, CancellationToken token)
         {
             string parameters = AwesomeAvatarsStorage.ServiceAccountParams();
-            var result = await _client.GetStorageAsync<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>(parameters, blockhash, token);
             return result;
         }
         
@@ -518,10 +518,10 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         /// <summary>
         /// >> Preparation
         /// </summary>
-        public async Task<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9> Preparation(Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 key, CancellationToken token)
+        public async Task<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9> Preparation(Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 key, string blockhash, CancellationToken token)
         {
             string parameters = AwesomeAvatarsStorage.PreparationParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9>(parameters, blockhash, token);
             return result;
         }
     }

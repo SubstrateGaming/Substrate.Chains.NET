@@ -21,12 +21,18 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> TimestampStorage
+    /// </summary>
     public sealed class TimestampStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> TimestampStorage Constructor
+        /// </summary>
         public TimestampStorage(SubstrateClientExt client)
         {
             this._client = client;
@@ -56,10 +62,10 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         /// >> Now
         ///  Current time for the current block.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U64> Now(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U64> Now(string blockhash, CancellationToken token)
         {
             string parameters = TimestampStorage.NowParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U64>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U64>(parameters, blockhash, token);
             return result;
         }
         
@@ -85,14 +91,17 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         /// >> DidUpdate
         ///  Did the timestamp get updated in this block?
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.Bool> DidUpdate(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.Bool> DidUpdate(string blockhash, CancellationToken token)
         {
             string parameters = TimestampStorage.DidUpdateParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.Bool>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.Bool>(parameters, blockhash, token);
             return result;
         }
     }
     
+    /// <summary>
+    /// >> TimestampCalls
+    /// </summary>
     public sealed class TimestampCalls
     {
         
@@ -108,6 +117,9 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> TimestampConstants
+    /// </summary>
     public sealed class TimestampConstants
     {
         

@@ -21,12 +21,18 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> TreasuryStorage
+    /// </summary>
     public sealed class TreasuryStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> TreasuryStorage Constructor
+        /// </summary>
         public TreasuryStorage(SubstrateClientExt client)
         {
             this._client = client;
@@ -59,10 +65,10 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         /// >> ProposalCount
         ///  Number of proposals that have been made.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> ProposalCount(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> ProposalCount(string blockhash, CancellationToken token)
         {
             string parameters = TreasuryStorage.ProposalCountParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, blockhash, token);
             return result;
         }
         
@@ -90,10 +96,10 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         /// >> Proposals
         ///  Proposals that have been made.
         /// </summary>
-        public async Task<Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_treasury.Proposal> Proposals(Substrate.NetApi.Model.Types.Primitive.U32 key, CancellationToken token)
+        public async Task<Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_treasury.Proposal> Proposals(Substrate.NetApi.Model.Types.Primitive.U32 key, string blockhash, CancellationToken token)
         {
             string parameters = TreasuryStorage.ProposalsParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_treasury.Proposal>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_treasury.Proposal>(parameters, blockhash, token);
             return result;
         }
         
@@ -119,10 +125,10 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         /// >> Deactivated
         ///  The amount which has been reported as inactive to Currency.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U128> Deactivated(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U128> Deactivated(string blockhash, CancellationToken token)
         {
             string parameters = TreasuryStorage.DeactivatedParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U128>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U128>(parameters, blockhash, token);
             return result;
         }
         
@@ -148,14 +154,17 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         /// >> Approvals
         ///  Proposal indices that have been approved but not yet awarded.
         /// </summary>
-        public async Task<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT22> Approvals(CancellationToken token)
+        public async Task<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT22> Approvals(string blockhash, CancellationToken token)
         {
             string parameters = TreasuryStorage.ApprovalsParams();
-            var result = await _client.GetStorageAsync<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT22>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT22>(parameters, blockhash, token);
             return result;
         }
     }
     
+    /// <summary>
+    /// >> TreasuryCalls
+    /// </summary>
     public sealed class TreasuryCalls
     {
         
@@ -217,6 +226,9 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> TreasuryConstants
+    /// </summary>
     public sealed class TreasuryConstants
     {
         
@@ -301,6 +313,9 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> TreasuryErrors
+    /// </summary>
     public enum TreasuryErrors
     {
         

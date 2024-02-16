@@ -89,7 +89,7 @@ namespace Substrate.Ajuna.NET.RestService
          else
          {
             // Configure regular data provider
-            _storageDataProvider = new SubstrateDataProvider(Environment.GetEnvironmentVariable("SUBSTRATE_WEBSOCKET_ENDPOINT") ?? "wss://rpc-parachain.ajuna.network");
+            _storageDataProvider = new SubstrateDataProvider(Environment.GetEnvironmentVariable("SUBSTRATE_WEBSOCKET_ENDPOINT") ?? "wss://ajuna.public.curie.radiumblock.co/ws");
          }
 
          // Configure web sockets to allow clients to subscribe to storage changes.

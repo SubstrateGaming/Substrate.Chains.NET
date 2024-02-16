@@ -15,13 +15,25 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.v3
 {
     
     
+    /// <summary>
+    /// >> MaybeErrorCode
+    /// </summary>
     public enum MaybeErrorCode
     {
         
+        /// <summary>
+        /// >> Success
+        /// </summary>
         Success = 0,
         
+        /// <summary>
+        /// >> Error
+        /// </summary>
         Error = 1,
         
+        /// <summary>
+        /// >> TruncatedError
+        /// </summary>
         TruncatedError = 2,
     }
     

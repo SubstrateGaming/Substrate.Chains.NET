@@ -27965,7 +27965,7 @@
           {
             "Name": "Version",
             "TypeId": 168,
-            "Value": "FGJhanVuFGJhanVuAQAAAHsAAAAAAAAAKN1xjVzFMmLUAQAAAN9qy2iZB2CbBAAAADfjl/x8kfXkAgAAAED+OtQB+JWaBgAAANK8mJfu0I8VAwAAAPeLJ4vlP0VMAgAAAKs8BXIpH+uLAQAAALydiZBPW5I/AQAAADfIuxNQqaKoBAAAAOqT4/FvPWliAgAAAAEAAAAB",
+            "Value": "FGJhanVuFGJhanVuAQAAAHwAAAAAAAAAKN1xjVzFMmLUAQAAAN9qy2iZB2CbBAAAADfjl/x8kfXkAgAAAED+OtQB+JWaBgAAANK8mJfu0I8VAwAAAPeLJ4vlP0VMAgAAAKs8BXIpH+uLAQAAALydiZBPW5I/AQAAADfIuxNQqaKoBAAAAOqT4/FvPWliAgAAAAEAAAAB",
             "Docs": [
               " Get the chain's current version."
             ]

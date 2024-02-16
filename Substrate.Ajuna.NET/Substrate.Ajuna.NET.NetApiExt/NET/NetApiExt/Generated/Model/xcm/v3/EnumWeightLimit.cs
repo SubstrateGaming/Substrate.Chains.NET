@@ -15,11 +15,20 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.v3
 {
     
     
+    /// <summary>
+    /// >> WeightLimit
+    /// </summary>
     public enum WeightLimit
     {
         
+        /// <summary>
+        /// >> Unlimited
+        /// </summary>
         Unlimited = 0,
         
+        /// <summary>
+        /// >> Limited
+        /// </summary>
         Limited = 1,
     }
     

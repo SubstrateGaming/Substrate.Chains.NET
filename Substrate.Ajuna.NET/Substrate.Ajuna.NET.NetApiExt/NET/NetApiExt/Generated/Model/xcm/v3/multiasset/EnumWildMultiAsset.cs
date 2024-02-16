@@ -15,15 +15,30 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.v3.multiasset
 {
     
     
+    /// <summary>
+    /// >> WildMultiAsset
+    /// </summary>
     public enum WildMultiAsset
     {
         
+        /// <summary>
+        /// >> All
+        /// </summary>
         All = 0,
         
+        /// <summary>
+        /// >> AllOf
+        /// </summary>
         AllOf = 1,
         
+        /// <summary>
+        /// >> AllCounted
+        /// </summary>
         AllCounted = 2,
         
+        /// <summary>
+        /// >> AllOfCounted
+        /// </summary>
         AllOfCounted = 3,
     }
     

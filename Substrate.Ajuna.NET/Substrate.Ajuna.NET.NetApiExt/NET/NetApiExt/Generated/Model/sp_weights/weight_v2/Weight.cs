@@ -27,42 +27,19 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_weights.weight_v2
         /// <summary>
         /// >> ref_time
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U64> _refTime;
-        
+        public Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U64> RefTime { get; set; }
         /// <summary>
         /// >> proof_size
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U64> _proofSize;
+        public Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U64> ProofSize { get; set; }
         
-        public Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U64> RefTime
-        {
-            get
-            {
-                return this._refTime;
-            }
-            set
-            {
-                this._refTime = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U64> ProofSize
-        {
-            get
-            {
-                return this._proofSize;
-            }
-            set
-            {
-                this._proofSize = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "Weight";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -71,6 +48,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_weights.weight_v2
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

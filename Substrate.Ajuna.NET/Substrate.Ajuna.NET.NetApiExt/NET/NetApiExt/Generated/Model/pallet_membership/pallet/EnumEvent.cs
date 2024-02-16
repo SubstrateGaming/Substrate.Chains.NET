@@ -15,19 +15,50 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_membership.pallet
 {
     
     
+    /// <summary>
+    /// >> Event
+    /// 
+    ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
+    ///			by this pallet.
+    ///			
+    /// </summary>
     public enum Event
     {
         
+        /// <summary>
+        /// >> MemberAdded
+        /// The given member was added; see the transaction for who.
+        /// </summary>
         MemberAdded = 0,
         
+        /// <summary>
+        /// >> MemberRemoved
+        /// The given member was removed; see the transaction for who.
+        /// </summary>
         MemberRemoved = 1,
         
+        /// <summary>
+        /// >> MembersSwapped
+        /// Two members were swapped; see the transaction for who.
+        /// </summary>
         MembersSwapped = 2,
         
+        /// <summary>
+        /// >> MembersReset
+        /// The membership was reset; see the transaction for who the new set is.
+        /// </summary>
         MembersReset = 3,
         
+        /// <summary>
+        /// >> KeyChanged
+        /// One of the members' keys changed.
+        /// </summary>
         KeyChanged = 4,
         
+        /// <summary>
+        /// >> Dummy
+        /// Phantom member, never used.
+        /// </summary>
         Dummy = 5,
     }
     

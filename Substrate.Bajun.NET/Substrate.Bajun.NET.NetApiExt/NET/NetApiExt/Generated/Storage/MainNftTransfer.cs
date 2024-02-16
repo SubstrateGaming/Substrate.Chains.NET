@@ -63,10 +63,10 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         /// <summary>
         /// >> NftStatuses
         /// </summary>
-        public async Task<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_nft_transfer.pallet.EnumNftStatus> NftStatuses(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> key, CancellationToken token)
+        public async Task<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_nft_transfer.pallet.EnumNftStatus> NftStatuses(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> key, string blockhash, CancellationToken token)
         {
             string parameters = NftTransferStorage.NftStatusesParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_nft_transfer.pallet.EnumNftStatus>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_nft_transfer.pallet.EnumNftStatus>(parameters, blockhash, token);
             return result;
         }
     }

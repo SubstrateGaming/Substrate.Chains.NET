@@ -15,19 +15,40 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.ajuna_runtime.proxy_type
 {
     
     
+    /// <summary>
+    /// >> ProxyType
+    /// </summary>
     public enum ProxyType
     {
         
+        /// <summary>
+        /// >> Any
+        /// </summary>
         Any = 0,
         
+        /// <summary>
+        /// >> NonTransfer
+        /// </summary>
         NonTransfer = 1,
         
+        /// <summary>
+        /// >> Governance
+        /// </summary>
         Governance = 2,
         
+        /// <summary>
+        /// >> Staking
+        /// </summary>
         Staking = 3,
         
+        /// <summary>
+        /// >> IdentityJudgement
+        /// </summary>
         IdentityJudgement = 4,
         
+        /// <summary>
+        /// >> CancelProxy
+        /// </summary>
         CancelProxy = 5,
     }
     

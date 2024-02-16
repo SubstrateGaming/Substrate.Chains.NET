@@ -21,12 +21,18 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> MultisigStorage
+    /// </summary>
     public sealed class MultisigStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> MultisigStorage Constructor
+        /// </summary>
         public MultisigStorage(SubstrateClientExt client)
         {
             this._client = client;
@@ -59,14 +65,17 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         /// >> Multisigs
         ///  The set of open multisig operations.
         /// </summary>
-        public async Task<Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_multisig.Multisig> Multisigs(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Ajuna.NET.NetApiExt.Generated.Types.Base.Arr32U8> key, CancellationToken token)
+        public async Task<Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_multisig.Multisig> Multisigs(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Ajuna.NET.NetApiExt.Generated.Types.Base.Arr32U8> key, string blockhash, CancellationToken token)
         {
             string parameters = MultisigStorage.MultisigsParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_multisig.Multisig>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_multisig.Multisig>(parameters, blockhash, token);
             return result;
         }
     }
     
+    /// <summary>
+    /// >> MultisigCalls
+    /// </summary>
     public sealed class MultisigCalls
     {
         
@@ -127,6 +136,9 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> MultisigConstants
+    /// </summary>
     public sealed class MultisigConstants
     {
         
@@ -171,6 +183,9 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> MultisigErrors
+    /// </summary>
     public enum MultisigErrors
     {
         

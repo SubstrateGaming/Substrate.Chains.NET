@@ -15,19 +15,51 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_system.pallet
 {
     
     
+    /// <summary>
+    /// >> Error
+    /// Error for the System pallet
+    /// </summary>
     public enum Error
     {
         
+        /// <summary>
+        /// >> InvalidSpecName
+        /// The name of specification does not match between the current runtime
+        /// and the new runtime.
+        /// </summary>
         InvalidSpecName = 0,
         
+        /// <summary>
+        /// >> SpecVersionNeedsToIncrease
+        /// The specification version is not allowed to decrease between the current runtime
+        /// and the new runtime.
+        /// </summary>
         SpecVersionNeedsToIncrease = 1,
         
+        /// <summary>
+        /// >> FailedToExtractRuntimeVersion
+        /// Failed to extract the runtime version from the new runtime.
+        /// 
+        /// Either calling `Core_version` or decoding `RuntimeVersion` failed.
+        /// </summary>
         FailedToExtractRuntimeVersion = 2,
         
+        /// <summary>
+        /// >> NonDefaultComposite
+        /// Suicide called when the account has non-default composite data.
+        /// </summary>
         NonDefaultComposite = 3,
         
+        /// <summary>
+        /// >> NonZeroRefCount
+        /// There is a non-zero reference count preventing the account from being purged.
+        /// </summary>
         NonZeroRefCount = 4,
         
+        /// <summary>
+        /// >> CallFiltered
+        /// The origin filter prevent the call to be dispatched.
+        /// </summary>
         CallFiltered = 5,
     }
     

@@ -15,11 +15,20 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_preimage
 {
     
     
+    /// <summary>
+    /// >> RequestStatus
+    /// </summary>
     public enum RequestStatus
     {
         
+        /// <summary>
+        /// >> Unrequested
+        /// </summary>
         Unrequested = 0,
         
+        /// <summary>
+        /// >> Requested
+        /// </summary>
         Requested = 1,
     }
     

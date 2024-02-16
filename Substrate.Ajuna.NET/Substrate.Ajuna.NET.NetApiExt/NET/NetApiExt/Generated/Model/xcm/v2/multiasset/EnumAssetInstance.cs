@@ -15,21 +15,45 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.v2.multiasset
 {
     
     
+    /// <summary>
+    /// >> AssetInstance
+    /// </summary>
     public enum AssetInstance
     {
         
+        /// <summary>
+        /// >> Undefined
+        /// </summary>
         Undefined = 0,
         
+        /// <summary>
+        /// >> Index
+        /// </summary>
         Index = 1,
         
+        /// <summary>
+        /// >> Array4
+        /// </summary>
         Array4 = 2,
         
+        /// <summary>
+        /// >> Array8
+        /// </summary>
         Array8 = 3,
         
+        /// <summary>
+        /// >> Array16
+        /// </summary>
         Array16 = 4,
         
+        /// <summary>
+        /// >> Array32
+        /// </summary>
         Array32 = 5,
         
+        /// <summary>
+        /// >> Blob
+        /// </summary>
         Blob = 6,
     }
     

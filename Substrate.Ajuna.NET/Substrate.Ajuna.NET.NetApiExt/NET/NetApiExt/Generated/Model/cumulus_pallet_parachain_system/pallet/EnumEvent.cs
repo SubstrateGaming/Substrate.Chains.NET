@@ -15,21 +15,56 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain
 {
     
     
+    /// <summary>
+    /// >> Event
+    /// 
+    ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
+    ///			by this pallet.
+    ///			
+    /// </summary>
     public enum Event
     {
         
+        /// <summary>
+        /// >> ValidationFunctionStored
+        /// The validation function has been scheduled to apply.
+        /// </summary>
         ValidationFunctionStored = 0,
         
+        /// <summary>
+        /// >> ValidationFunctionApplied
+        /// The validation function was applied as of the contained relay chain block number.
+        /// </summary>
         ValidationFunctionApplied = 1,
         
+        /// <summary>
+        /// >> ValidationFunctionDiscarded
+        /// The relay-chain aborted the upgrade process.
+        /// </summary>
         ValidationFunctionDiscarded = 2,
         
+        /// <summary>
+        /// >> UpgradeAuthorized
+        /// An upgrade has been authorized.
+        /// </summary>
         UpgradeAuthorized = 3,
         
+        /// <summary>
+        /// >> DownwardMessagesReceived
+        /// Some downward messages have been received and will be processed.
+        /// </summary>
         DownwardMessagesReceived = 4,
         
+        /// <summary>
+        /// >> DownwardMessagesProcessed
+        /// Downward messages were processed using the given weight.
+        /// </summary>
         DownwardMessagesProcessed = 5,
         
+        /// <summary>
+        /// >> UpwardMessageSent
+        /// An upward message was sent to the relay chain.
+        /// </summary>
         UpwardMessageSent = 6,
     }
     
