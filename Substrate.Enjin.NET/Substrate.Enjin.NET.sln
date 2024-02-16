@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Substrate.Enjin.NET.RestService", "Substrate.Enjin.NET.RestService\Substrate.Enjin.NET.RestService.csproj", "{0C66E97C-CF08-42DA-9D1A-D24B33D2BFDB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Substrate.Enjin.NET.NetApiExt", "Substrate.Enjin.NET.NetApiExt\Substrate.Enjin.NET.NetApiExt.csproj", "{69DD8762-C4C6-463E-B69B-645A3B7AD7B5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Substrate.Enjin.NET.RestClient", "Substrate.Enjin.NET.RestClient\Substrate.Enjin.NET.RestClient.csproj", "{A04A1580-191E-4CC3-834A-5C9CF20BD111}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Substrate.Enjin.NET.RestClient.Mockup", "Substrate.Enjin.NET.RestClient.Mockup\Substrate.Enjin.NET.RestClient.Mockup.csproj", "{1A397E88-6BDE-4745-BF48-78A1FE9CA56A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Substrate.Enjin.NET.RestClient.Test", "Substrate.Enjin.NET.RestClient.Test\Substrate.Enjin.NET.RestClient.Test.csproj", "{BA3B85D5-D10B-4DD0-B044-7C1CBEC1BB0E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0C66E97C-CF08-42DA-9D1A-D24B33D2BFDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C66E97C-CF08-42DA-9D1A-D24B33D2BFDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C66E97C-CF08-42DA-9D1A-D24B33D2BFDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C66E97C-CF08-42DA-9D1A-D24B33D2BFDB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69DD8762-C4C6-463E-B69B-645A3B7AD7B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69DD8762-C4C6-463E-B69B-645A3B7AD7B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69DD8762-C4C6-463E-B69B-645A3B7AD7B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69DD8762-C4C6-463E-B69B-645A3B7AD7B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A04A1580-191E-4CC3-834A-5C9CF20BD111}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A04A1580-191E-4CC3-834A-5C9CF20BD111}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A04A1580-191E-4CC3-834A-5C9CF20BD111}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A04A1580-191E-4CC3-834A-5C9CF20BD111}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A397E88-6BDE-4745-BF48-78A1FE9CA56A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A397E88-6BDE-4745-BF48-78A1FE9CA56A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A397E88-6BDE-4745-BF48-78A1FE9CA56A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A397E88-6BDE-4745-BF48-78A1FE9CA56A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA3B85D5-D10B-4DD0-B044-7C1CBEC1BB0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA3B85D5-D10B-4DD0-B044-7C1CBEC1BB0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA3B85D5-D10B-4DD0-B044-7C1CBEC1BB0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA3B85D5-D10B-4DD0-B044-7C1CBEC1BB0E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
