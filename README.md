@@ -91,12 +91,12 @@
 
 ### Other Ecosystem
 - Vara Network .NET SDK ([Link](https://github.com/SubstrateGaming/Substrate.Chains.NET/tree/main/Substrate.Vara.NET))  
-  - Substrate Vara Network .NET API Extension (https://explorer.vara-network.io/)  
+  - Substrate Vara Network .NET API Extension  
 [![Nuget](https://img.shields.io/nuget/v/Substrate.Vara.NET.Extension)](https://www.nuget.org/packages/Substrate.Vara.NET.Extension/)
 ![Nuget](https://img.shields.io/nuget/dt/Substrate.Vara.NET.Extension)  
 ![Build](https://github.com/SubstrateGaming/Substrate.Chains.NET/actions/workflows/Vara.yml/badge.svg)
 - Enjin Relaychain .NET SDK ([Link](https://github.com/SubstrateGaming/Substrate.Chains.NET/tree/main/Substrate.Enjin.NET))  
-  - Substrate Enjin Relaychain .NET API Extension (https://console.enjin.io/#/explorer)
+  - Substrate Enjin Relaychain .NET API Extension  
 [![Nuget](https://img.shields.io/nuget/v/Substrate.Enjin.NET.Extension)](https://www.nuget.org/packages/Substrate.Enjin.NET.Extension/)
 ![Nuget](https://img.shields.io/nuget/dt/Substrate.Enjin.NET.Extension)  
 ![Build](https://github.com/SubstrateGaming/Substrate.Chains.NET/actions/workflows/Enjin.yml/badge.svg)
@@ -116,7 +116,7 @@ ex. for Substrate.Statemint.NET
 ```
 dotnet new sln
 dotnet new substrate \
-        --sdk_version 0.4.0 \
+        --sdk_version 0.5.2 \
         --rest_service Substrate.Statemint.NET.RestService \
         --net_api Substrate.Statemint.NET.NetApiExt \
         --rest_client Substrate.Statemint.NET.RestClient \
