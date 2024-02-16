@@ -1,0 +1,13 @@
+{
+  "projects": {
+    "net_api": "Substrate.Enjin.NET.NetApiExt",
+    "rest_service": "Substrate.Enjin.NET.RestService",
+    "rest_client": "Substrate.Enjin.NET.RestClient"
+  },
+   "metadata": {
+      "websocket": "wss://rpc.relay.blockchain.enjin.io"
+   },
+  "rest_client_settings": {
+    "service_assembly": "Substrate.Enjin.NET.RestService.dll"
+  }
+}

@@ -89,6 +89,19 @@
 ![Nuget](https://img.shields.io/nuget/dt/Substrate.Bajun.NET.Extension)  
 ![Build](https://github.com/SubstrateGaming/Substrate.Chains.NET/actions/workflows/publish_bajun.yml/badge.svg)  
 
+### Other Ecosystem
+- Vara Network .NET SDK ([Link](https://github.com/SubstrateGaming/Substrate.Chains.NET/tree/main/Substrate.Vara.NET))  
+  - Substrate Vara Network .NET API Extension (https://explorer.vara-network.io/)  
+[![Nuget](https://img.shields.io/nuget/v/Substrate.Vara.NET.Extension)](https://www.nuget.org/packages/Substrate.Vara.NET.Extension/)
+![Nuget](https://img.shields.io/nuget/dt/Substrate.Vara.NET.Extension)  
+![Build](https://github.com/SubstrateGaming/Substrate.Chains.NET/actions/workflows/Vara.yml/badge.svg)
+- Enjin Relaychain .NET SDK ([Link](https://github.com/SubstrateGaming/Substrate.Chains.NET/tree/main/Substrate.Enjin.NET))  
+  - Substrate Enjin Relaychain .NET API Extension (https://console.enjin.io/#/explorer)
+[![Nuget](https://img.shields.io/nuget/v/Substrate.Enjin.NET.Extension)](https://www.nuget.org/packages/Substrate.Enjin.NET.Extension/)
+![Nuget](https://img.shields.io/nuget/dt/Substrate.Enjin.NET.Extension)  
+![Build](https://github.com/SubstrateGaming/Substrate.Chains.NET/actions/workflows/Enjin.yml/badge.svg)
+
+
 ## Add or update Package
 
 Make sure you have .NET installed ([Linux, macOS & Windows .NET Install](https://learn.microsoft.com/en-us/dotnet/core/install/))

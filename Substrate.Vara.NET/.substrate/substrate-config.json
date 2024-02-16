@@ -1,0 +1,13 @@
+{
+  "projects": {
+    "net_api": "Substrate.Vara.NET.NetApiExt",
+    "rest_service": "Substrate.Vara.NET.RestService",
+    "rest_client": "Substrate.Vara.NET.RestClient"
+  },
+   "metadata": {
+      "websocket": "wss://rpc.vara.network"
+   },
+  "rest_client_settings": {
+    "service_assembly": "Substrate.Vara.NET.RestService.dll"
+  }
+}
