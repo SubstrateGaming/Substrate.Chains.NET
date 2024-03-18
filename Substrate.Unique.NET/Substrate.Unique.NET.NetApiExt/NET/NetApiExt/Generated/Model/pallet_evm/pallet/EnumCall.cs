@@ -15,21 +15,41 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_evm.pallet
 {
     
     
+    /// <summary>
+    /// >> Call
+    /// Contains a variant per dispatchable extrinsic that this pallet has.
+    /// </summary>
     public enum Call
     {
         
+        /// <summary>
+        /// >> withdraw
+        /// See [`Pallet::withdraw`].
+        /// </summary>
         withdraw = 0,
         
+        /// <summary>
+        /// >> call
+        /// See [`Pallet::call`].
+        /// </summary>
         call = 1,
         
+        /// <summary>
+        /// >> create
+        /// See [`Pallet::create`].
+        /// </summary>
         create = 2,
         
+        /// <summary>
+        /// >> create2
+        /// See [`Pallet::create2`].
+        /// </summary>
         create2 = 3,
     }
     
     /// <summary>
-    /// >> 320 - Variant[pallet_evm.pallet.Call]
-    /// Contains one variant per dispatchable that can be called by an extrinsic.
+    /// >> 326 - Variant[pallet_evm.pallet.Call]
+    /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
     public sealed class EnumCall : BaseEnumExt<Call, BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H160, Substrate.NetApi.Model.Types.Primitive.U128>, BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H160, Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H160, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>, Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.U256, Substrate.NetApi.Model.Types.Primitive.U64, Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.U256, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.U256>, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.U256>, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H160, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H256>>>>, BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H160, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>, Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.U256, Substrate.NetApi.Model.Types.Primitive.U64, Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.U256, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.U256>, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.U256>, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H160, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H256>>>>, BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H160, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>, Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.U256, Substrate.NetApi.Model.Types.Primitive.U64, Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.U256, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.U256>, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.U256>, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H160, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H256>>>>>
     {

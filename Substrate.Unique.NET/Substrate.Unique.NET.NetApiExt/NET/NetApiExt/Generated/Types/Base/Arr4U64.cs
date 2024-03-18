@@ -18,14 +18,18 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Types.Base
     
     
     /// <summary>
-    /// >> 322 - Array
+    /// >> 328 - Array
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Array)]
     public sealed class Arr4U64 : BaseType
     {
         
-        private Substrate.NetApi.Model.Types.Primitive.U64[] _value;
+        /// <summary>
+        /// >> Substrate.NetApi.Model.Types.Primitive.U64[]
+        /// </summary>
+        public Substrate.NetApi.Model.Types.Primitive.U64[] Value { get; set; }
         
+        /// <inheritdoc/>
         public override int TypeSize
         {
             get
@@ -34,23 +38,13 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Types.Base
             }
         }
         
-        public Substrate.NetApi.Model.Types.Primitive.U64[] Value
-        {
-            get
-            {
-                return this._value;
-            }
-            set
-            {
-                this._value = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return string.Format("[{0}; {1}]", new Substrate.NetApi.Model.Types.Primitive.U64().TypeName(), this.TypeSize);
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -58,6 +52,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Types.Base
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
@@ -69,6 +64,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Types.Base
             Value = array;
         }
         
+        /// <inheritdoc/>
         public void Create(Substrate.NetApi.Model.Types.Primitive.U64[] array)
         {
             Value = array;

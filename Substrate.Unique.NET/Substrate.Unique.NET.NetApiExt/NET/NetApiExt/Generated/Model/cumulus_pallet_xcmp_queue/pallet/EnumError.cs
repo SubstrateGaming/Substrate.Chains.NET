@@ -15,26 +15,47 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_que
 {
     
     
+    /// <summary>
+    /// >> Error
+    /// The `Error` enum of this pallet.
+    /// </summary>
     public enum Error
     {
         
+        /// <summary>
+        /// >> FailedToSend
+        /// Failed to send XCM message.
+        /// </summary>
         FailedToSend = 0,
         
+        /// <summary>
+        /// >> BadXcmOrigin
+        /// Bad XCM origin.
+        /// </summary>
         BadXcmOrigin = 1,
         
+        /// <summary>
+        /// >> BadXcm
+        /// Bad XCM data.
+        /// </summary>
         BadXcm = 2,
         
+        /// <summary>
+        /// >> BadOverweightIndex
+        /// Bad overweight index.
+        /// </summary>
         BadOverweightIndex = 3,
         
+        /// <summary>
+        /// >> WeightOverLimit
+        /// Provided weight is possibly not enough to execute the message.
+        /// </summary>
         WeightOverLimit = 4,
     }
     
     /// <summary>
-    /// >> 370 - Variant[cumulus_pallet_xcmp_queue.pallet.Error]
-    /// 
-    ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
-    ///			of this pallet.
-    ///			
+    /// >> 540 - Variant[cumulus_pallet_xcmp_queue.pallet.Error]
+    /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>
     {

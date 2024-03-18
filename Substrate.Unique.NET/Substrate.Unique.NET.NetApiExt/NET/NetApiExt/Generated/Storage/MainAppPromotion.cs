@@ -21,12 +21,18 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> AppPromotionStorage
+    /// </summary>
     public sealed class AppPromotionStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> AppPromotionStorage Constructor
+        /// </summary>
         public AppPromotionStorage(SubstrateClientExt client)
         {
             this._client = client;
@@ -38,7 +44,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("AppPromotion", "StakesPerAccount"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.Unique.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32), typeof(Substrate.NetApi.Model.Types.Primitive.U8)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("AppPromotion", "PendingUnstake"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.NetApi.Model.Types.Primitive.U32), typeof(Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT27)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.NetApi.Model.Types.Primitive.U32), typeof(Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT41)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("AppPromotion", "PreviousCalculatedRecord"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U32>)));
         }
         
@@ -64,10 +70,10 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         /// >> TotalStaked
         ///  Stores the total staked amount.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U128> TotalStaked(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U128> TotalStaked(string blockhash, CancellationToken token)
         {
             string parameters = AppPromotionStorage.TotalStakedParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U128>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U128>(parameters, blockhash, token);
             return result;
         }
         
@@ -93,10 +99,10 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         /// >> Admin
         ///  Stores the `admin` account. Some extrinsics can only be executed if they were signed by `admin`.
         /// </summary>
-        public async Task<Substrate.Unique.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> Admin(CancellationToken token)
+        public async Task<Substrate.Unique.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> Admin(string blockhash, CancellationToken token)
         {
             string parameters = AppPromotionStorage.AdminParams();
-            var result = await _client.GetStorageAsync<Substrate.Unique.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Unique.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>(parameters, blockhash, token);
             return result;
         }
         
@@ -134,10 +140,10 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         ///  * **(Balance, BlockNumber)** - Balance of the stake.
         ///  The number of the relay block in which we must perform the interest recalculation
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.NetApi.Model.Types.Primitive.U32>> Staked(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U32> key, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.NetApi.Model.Types.Primitive.U32>> Staked(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U32> key, string blockhash, CancellationToken token)
         {
             string parameters = AppPromotionStorage.StakedParams(key);
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.NetApi.Model.Types.Primitive.U32>>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.NetApi.Model.Types.Primitive.U32>>(parameters, blockhash, token);
             return result;
         }
         
@@ -171,10 +177,10 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         ///  * **Key** - Staker account.
         ///  * **Value** - Amount of stakes.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U8> StakesPerAccount(Substrate.Unique.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U8> StakesPerAccount(Substrate.Unique.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, string blockhash, CancellationToken token)
         {
             string parameters = AppPromotionStorage.StakesPerAccountParams(key);
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U8>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U8>(parameters, blockhash, token);
             return result;
         }
         
@@ -208,10 +214,10 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         ///  * **Key** - Staker account.
         ///  * **Value** - Amount of stakes.
         /// </summary>
-        public async Task<Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT27> PendingUnstake(Substrate.NetApi.Model.Types.Primitive.U32 key, CancellationToken token)
+        public async Task<Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT41> PendingUnstake(Substrate.NetApi.Model.Types.Primitive.U32 key, string blockhash, CancellationToken token)
         {
             string parameters = AppPromotionStorage.PendingUnstakeParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT27>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT41>(parameters, blockhash, token);
             return result;
         }
         
@@ -239,20 +245,23 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         ///  Stores a key for record for which the revenue recalculation was performed.
         ///  If `None`, then recalculation has not yet been performed or calculations have been completed for all stakers.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U32>> PreviousCalculatedRecord(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U32>> PreviousCalculatedRecord(string blockhash, CancellationToken token)
         {
             string parameters = AppPromotionStorage.PreviousCalculatedRecordParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U32>>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U32>>(parameters, blockhash, token);
             return result;
         }
     }
     
+    /// <summary>
+    /// >> AppPromotionCalls
+    /// </summary>
     public sealed class AppPromotionCalls
     {
         
         /// <summary>
         /// >> set_admin_address
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method SetAdminAddress(Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_evm.account.EnumBasicCrossAccountIdRepr admin)
         {
@@ -263,7 +272,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> stake
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method Stake(Substrate.NetApi.Model.Types.Primitive.U128 amount)
         {
@@ -274,7 +283,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> unstake_all
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method UnstakeAll()
         {
@@ -284,7 +293,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> unstake_partial
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method UnstakePartial(Substrate.NetApi.Model.Types.Primitive.U128 amount)
         {
@@ -295,7 +304,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> sponsor_collection
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method SponsorCollection(Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId collection_id)
         {
@@ -306,7 +315,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> stop_sponsoring_collection
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method StopSponsoringCollection(Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId collection_id)
         {
@@ -317,7 +326,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> sponsor_contract
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method SponsorContract(Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H160 contract_id)
         {
@@ -328,7 +337,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> stop_sponsoring_contract
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method StopSponsoringContract(Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H160 contract_id)
         {
@@ -339,7 +348,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> payout_stakers
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method PayoutStakers(Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U8> stakers_number)
         {
@@ -349,28 +358,20 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         }
         
         /// <summary>
-        /// >> upgrade_accounts
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
-        /// </summary>
-        public static Method UpgradeAccounts(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Unique.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> stakers)
-        {
-            System.Collections.Generic.List<byte> byteArray = new List<byte>();
-            byteArray.AddRange(stakers.Encode());
-            return new Method(73, "AppPromotion", 9, "upgrade_accounts", byteArray.ToArray());
-        }
-        
-        /// <summary>
         /// >> force_unstake
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method ForceUnstake(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U32> pending_blocks)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(pending_blocks.Encode());
-            return new Method(73, "AppPromotion", 10, "force_unstake", byteArray.ToArray());
+            return new Method(73, "AppPromotion", 9, "force_unstake", byteArray.ToArray());
         }
     }
     
+    /// <summary>
+    /// >> AppPromotionConstants
+    /// </summary>
     public sealed class AppPromotionConstants
     {
         
@@ -425,7 +426,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         public Substrate.Unique.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill IntervalIncome()
         {
             var result = new Substrate.Unique.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill();
-            result.Create("0x20A10700");
+            result.Create("0x88EA0600");
             return result;
         }
         
@@ -441,6 +442,9 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> AppPromotionErrors
+    /// </summary>
     public enum AppPromotionErrors
     {
         

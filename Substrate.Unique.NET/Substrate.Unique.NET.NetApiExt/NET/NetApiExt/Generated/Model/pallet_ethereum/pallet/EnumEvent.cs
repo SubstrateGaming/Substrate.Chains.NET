@@ -15,18 +15,23 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_ethereum.pallet
 {
     
     
+    /// <summary>
+    /// >> Event
+    /// The `Event` enum of this pallet
+    /// </summary>
     public enum Event
     {
         
+        /// <summary>
+        /// >> Executed
+        /// An ethereum transaction was successfully executed.
+        /// </summary>
         Executed = 0,
     }
     
     /// <summary>
-    /// >> 128 - Variant[pallet_ethereum.pallet.Event]
-    /// 
-    ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
-    ///			by this pallet.
-    ///			
+    /// >> 366 - Variant[pallet_ethereum.pallet.Event]
+    /// The `Event` enum of this pallet
     /// </summary>
     public sealed class EnumEvent : BaseEnumExt<Event, BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H160, Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H160, Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.Unique.NET.NetApiExt.Generated.Model.evm_core.error.EnumExitReason, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>>
     {

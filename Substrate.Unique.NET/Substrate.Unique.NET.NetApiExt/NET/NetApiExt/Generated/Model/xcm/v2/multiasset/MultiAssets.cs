@@ -18,7 +18,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v2.multiasset
     
     
     /// <summary>
-    /// >> 94 - Composite[xcm.v2.multiasset.MultiAssets]
+    /// >> 137 - Composite[xcm.v2.multiasset.MultiAssets]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class MultiAssets : BaseType
@@ -27,25 +27,15 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v2.multiasset
         /// <summary>
         /// >> value
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v2.multiasset.MultiAsset> _value;
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v2.multiasset.MultiAsset> Value { get; set; }
         
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v2.multiasset.MultiAsset> Value
-        {
-            get
-            {
-                return this._value;
-            }
-            set
-            {
-                this._value = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "MultiAssets";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -53,6 +43,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v2.multiasset
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

@@ -18,7 +18,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v3
     
     
     /// <summary>
-    /// >> 79 - Composite[xcm.v3.PalletInfo]
+    /// >> 238 - Composite[xcm.v3.PalletInfo]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class PalletInfo : BaseType
@@ -27,110 +27,35 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v3
         /// <summary>
         /// >> index
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32> _index;
-        
+        public Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32> Index { get; set; }
         /// <summary>
         /// >> name
         /// </summary>
-        private Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT2 _name;
-        
+        public Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT6 Name { get; set; }
         /// <summary>
         /// >> module_name
         /// </summary>
-        private Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT2 _moduleName;
-        
+        public Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT6 ModuleName { get; set; }
         /// <summary>
         /// >> major
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32> _major;
-        
+        public Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32> Major { get; set; }
         /// <summary>
         /// >> minor
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32> _minor;
-        
+        public Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32> Minor { get; set; }
         /// <summary>
         /// >> patch
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32> _patch;
+        public Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32> Patch { get; set; }
         
-        public Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32> Index
-        {
-            get
-            {
-                return this._index;
-            }
-            set
-            {
-                this._index = value;
-            }
-        }
-        
-        public Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT2 Name
-        {
-            get
-            {
-                return this._name;
-            }
-            set
-            {
-                this._name = value;
-            }
-        }
-        
-        public Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT2 ModuleName
-        {
-            get
-            {
-                return this._moduleName;
-            }
-            set
-            {
-                this._moduleName = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32> Major
-        {
-            get
-            {
-                return this._major;
-            }
-            set
-            {
-                this._major = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32> Minor
-        {
-            get
-            {
-                return this._minor;
-            }
-            set
-            {
-                this._minor = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32> Patch
-        {
-            get
-            {
-                return this._patch;
-            }
-            set
-            {
-                this._patch = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "PalletInfo";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -143,14 +68,15 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v3
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
             Index = new Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>();
             Index.Decode(byteArray, ref p);
-            Name = new Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT2();
+            Name = new Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT6();
             Name.Decode(byteArray, ref p);
-            ModuleName = new Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT2();
+            ModuleName = new Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT6();
             ModuleName.Decode(byteArray, ref p);
             Major = new Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>();
             Major.Decode(byteArray, ref p);

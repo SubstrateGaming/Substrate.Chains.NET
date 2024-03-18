@@ -15,16 +15,25 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs
 {
     
     
+    /// <summary>
+    /// >> AccessMode
+    /// </summary>
     public enum AccessMode
     {
         
+        /// <summary>
+        /// >> Normal
+        /// </summary>
         Normal = 0,
         
+        /// <summary>
+        /// >> AllowList
+        /// </summary>
         AllowList = 1,
     }
     
     /// <summary>
-    /// >> 270 - Variant[up_data_structs.AccessMode]
+    /// >> 268 - Variant[up_data_structs.AccessMode]
     /// </summary>
     public sealed class EnumAccessMode : BaseEnum<AccessMode>
     {

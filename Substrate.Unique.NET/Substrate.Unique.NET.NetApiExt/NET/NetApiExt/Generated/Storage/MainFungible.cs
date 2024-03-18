@@ -21,12 +21,18 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> FungibleStorage
+    /// </summary>
     public sealed class FungibleStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> FungibleStorage Constructor
+        /// </summary>
         public FungibleStorage(SubstrateClientExt client)
         {
             this._client = client;
@@ -65,10 +71,10 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         /// >> TotalSupply
         ///  Total amount of fungible tokens inside a collection.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U128> TotalSupply(Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId key, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U128> TotalSupply(Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId key, string blockhash, CancellationToken token)
         {
             string parameters = FungibleStorage.TotalSupplyParams(key);
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U128>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U128>(parameters, blockhash, token);
             return result;
         }
         
@@ -96,10 +102,10 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         /// >> Balance
         ///  Amount of tokens owned by an account inside a collection.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U128> Balance(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId, Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_evm.account.EnumBasicCrossAccountIdRepr> key, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U128> Balance(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId, Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_evm.account.EnumBasicCrossAccountIdRepr> key, string blockhash, CancellationToken token)
         {
             string parameters = FungibleStorage.BalanceParams(key);
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U128>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U128>(parameters, blockhash, token);
             return result;
         }
         
@@ -128,36 +134,33 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         /// >> Allowance
         ///  Storage for assets delegated to a limited extent to other users.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U128> Allowance(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId, Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_evm.account.EnumBasicCrossAccountIdRepr, Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_evm.account.EnumBasicCrossAccountIdRepr> key, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U128> Allowance(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId, Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_evm.account.EnumBasicCrossAccountIdRepr, Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_evm.account.EnumBasicCrossAccountIdRepr> key, string blockhash, CancellationToken token)
         {
             string parameters = FungibleStorage.AllowanceParams(key);
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U128>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U128>(parameters, blockhash, token);
             return result;
         }
     }
     
+    /// <summary>
+    /// >> FungibleCalls
+    /// </summary>
     public sealed class FungibleCalls
     {
     }
     
+    /// <summary>
+    /// >> FungibleConstants
+    /// </summary>
     public sealed class FungibleConstants
     {
     }
     
+    /// <summary>
+    /// >> FungibleErrors
+    /// </summary>
     public enum FungibleErrors
     {
-        
-        /// <summary>
-        /// >> NotFungibleDataUsedToMintFungibleCollectionToken
-        /// Not Fungible item data used to mint in Fungible collection.
-        /// </summary>
-        NotFungibleDataUsedToMintFungibleCollectionToken,
-        
-        /// <summary>
-        /// >> FungibleItemsHaveNoId
-        /// Fungible tokens hold no ID, and the default value of TokenId for Fungible collection is 0.
-        /// </summary>
-        FungibleItemsHaveNoId,
         
         /// <summary>
         /// >> FungibleItemsDontHaveData

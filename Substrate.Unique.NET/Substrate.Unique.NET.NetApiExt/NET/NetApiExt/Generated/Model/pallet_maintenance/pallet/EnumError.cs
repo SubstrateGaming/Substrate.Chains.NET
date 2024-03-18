@@ -15,16 +15,17 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_maintenance.pall
 {
     
     
+    /// <summary>
+    /// >> Error
+    /// The `Error` enum of this pallet.
+    /// </summary>
     public enum Error
     {
     }
     
     /// <summary>
-    /// >> 484 - Variant[pallet_maintenance.pallet.Error]
-    /// 
-    ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
-    ///			of this pallet.
-    ///			
+    /// >> 655 - Variant[pallet_maintenance.pallet.Error]
+    /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>
     {

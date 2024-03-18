@@ -15,22 +15,35 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.orml_vesting.module
 {
     
     
+    /// <summary>
+    /// >> Event
+    /// The `Event` enum of this pallet
+    /// </summary>
     public enum Event
     {
         
+        /// <summary>
+        /// >> VestingScheduleAdded
+        /// Added new vesting schedule.
+        /// </summary>
         VestingScheduleAdded = 0,
         
+        /// <summary>
+        /// >> Claimed
+        /// Claimed vesting.
+        /// </summary>
         Claimed = 1,
         
+        /// <summary>
+        /// >> VestingSchedulesUpdated
+        /// Updated vesting schedules.
+        /// </summary>
         VestingSchedulesUpdated = 2,
     }
     
     /// <summary>
     /// >> 43 - Variant[orml_vesting.module.Event]
-    /// 
-    ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
-    ///			by this pallet.
-    ///			
+    /// The `Event` enum of this pallet
     /// </summary>
     public sealed class EnumEvent : BaseEnumExt<Event, BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Unique.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Unique.NET.NetApiExt.Generated.Model.orml_vesting.VestingSchedule>, BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U128>, Substrate.Unique.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>
     {

@@ -18,7 +18,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs
     
     
     /// <summary>
-    /// >> 423 - Composite[up_data_structs.RpcCollection]
+    /// >> 593 - Composite[up_data_structs.RpcCollection]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class RpcCollection : BaseType
@@ -27,212 +27,59 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs
         /// <summary>
         /// >> owner
         /// </summary>
-        private Substrate.Unique.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 _owner;
-        
+        public Substrate.Unique.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 Owner { get; set; }
         /// <summary>
         /// >> mode
         /// </summary>
-        private Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.EnumCollectionMode _mode;
-        
+        public Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.EnumCollectionMode Mode { get; set; }
         /// <summary>
         /// >> name
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U16> _name;
-        
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U16> Name { get; set; }
         /// <summary>
         /// >> description
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U16> _description;
-        
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U16> Description { get; set; }
         /// <summary>
         /// >> token_prefix
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> _tokenPrefix;
-        
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> TokenPrefix { get; set; }
         /// <summary>
         /// >> sponsorship
         /// </summary>
-        private Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.EnumSponsorshipState _sponsorship;
-        
+        public Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.EnumSponsorshipState Sponsorship { get; set; }
         /// <summary>
         /// >> limits
         /// </summary>
-        private Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionLimits _limits;
-        
+        public Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionLimits Limits { get; set; }
         /// <summary>
         /// >> permissions
         /// </summary>
-        private Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionPermissions _permissions;
-        
+        public Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionPermissions Permissions { get; set; }
         /// <summary>
         /// >> token_property_permissions
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.PropertyKeyPermission> _tokenPropertyPermissions;
-        
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.PropertyKeyPermission> TokenPropertyPermissions { get; set; }
         /// <summary>
         /// >> properties
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.Property> _properties;
-        
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.Property> Properties { get; set; }
         /// <summary>
         /// >> read_only
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.Bool _readOnly;
-        
+        public Substrate.NetApi.Model.Types.Primitive.Bool ReadOnly { get; set; }
         /// <summary>
         /// >> flags
         /// </summary>
-        private Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.RpcCollectionFlags _flags;
+        public Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.RpcCollectionFlags Flags { get; set; }
         
-        public Substrate.Unique.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 Owner
-        {
-            get
-            {
-                return this._owner;
-            }
-            set
-            {
-                this._owner = value;
-            }
-        }
-        
-        public Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.EnumCollectionMode Mode
-        {
-            get
-            {
-                return this._mode;
-            }
-            set
-            {
-                this._mode = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U16> Name
-        {
-            get
-            {
-                return this._name;
-            }
-            set
-            {
-                this._name = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U16> Description
-        {
-            get
-            {
-                return this._description;
-            }
-            set
-            {
-                this._description = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> TokenPrefix
-        {
-            get
-            {
-                return this._tokenPrefix;
-            }
-            set
-            {
-                this._tokenPrefix = value;
-            }
-        }
-        
-        public Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.EnumSponsorshipState Sponsorship
-        {
-            get
-            {
-                return this._sponsorship;
-            }
-            set
-            {
-                this._sponsorship = value;
-            }
-        }
-        
-        public Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionLimits Limits
-        {
-            get
-            {
-                return this._limits;
-            }
-            set
-            {
-                this._limits = value;
-            }
-        }
-        
-        public Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionPermissions Permissions
-        {
-            get
-            {
-                return this._permissions;
-            }
-            set
-            {
-                this._permissions = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.PropertyKeyPermission> TokenPropertyPermissions
-        {
-            get
-            {
-                return this._tokenPropertyPermissions;
-            }
-            set
-            {
-                this._tokenPropertyPermissions = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.Property> Properties
-        {
-            get
-            {
-                return this._properties;
-            }
-            set
-            {
-                this._properties = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.Bool ReadOnly
-        {
-            get
-            {
-                return this._readOnly;
-            }
-            set
-            {
-                this._readOnly = value;
-            }
-        }
-        
-        public Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.RpcCollectionFlags Flags
-        {
-            get
-            {
-                return this._flags;
-            }
-            set
-            {
-                this._flags = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "RpcCollection";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -251,6 +98,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

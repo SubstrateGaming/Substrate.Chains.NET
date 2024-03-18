@@ -18,7 +18,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_que
     
     
     /// <summary>
-    /// >> 358 - Composite[cumulus_pallet_xcmp_queue.InboundChannelDetails]
+    /// >> 528 - Composite[cumulus_pallet_xcmp_queue.InboundChannelDetails]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class InboundChannelDetails : BaseType
@@ -27,59 +27,23 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_que
         /// <summary>
         /// >> sender
         /// </summary>
-        private Substrate.Unique.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id _sender;
-        
+        public Substrate.Unique.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id Sender { get; set; }
         /// <summary>
         /// >> state
         /// </summary>
-        private Substrate.Unique.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue.EnumInboundState _state;
-        
+        public Substrate.Unique.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue.EnumInboundState State { get; set; }
         /// <summary>
         /// >> message_metadata
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Unique.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.EnumXcmpMessageFormat>> _messageMetadata;
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Unique.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.EnumXcmpMessageFormat>> MessageMetadata { get; set; }
         
-        public Substrate.Unique.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id Sender
-        {
-            get
-            {
-                return this._sender;
-            }
-            set
-            {
-                this._sender = value;
-            }
-        }
-        
-        public Substrate.Unique.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue.EnumInboundState State
-        {
-            get
-            {
-                return this._state;
-            }
-            set
-            {
-                this._state = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Unique.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.EnumXcmpMessageFormat>> MessageMetadata
-        {
-            get
-            {
-                return this._messageMetadata;
-            }
-            set
-            {
-                this._messageMetadata = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "InboundChannelDetails";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -89,14 +53,15 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_que
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Sender = new Substrate.Unique.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id();
+            Sender = new Substrate.Unique.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id();
             Sender.Decode(byteArray, ref p);
             State = new Substrate.Unique.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue.EnumInboundState();
             State.Decode(byteArray, ref p);
-            MessageMetadata = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Unique.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.EnumXcmpMessageFormat>>();
+            MessageMetadata = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Unique.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.EnumXcmpMessageFormat>>();
             MessageMetadata.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

@@ -18,7 +18,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.sp_trie.storage_proof
     
     
     /// <summary>
-    /// >> 171 - Composite[sp_trie.storage_proof.StorageProof]
+    /// >> 97 - Composite[sp_trie.storage_proof.StorageProof]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class StorageProof : BaseType
@@ -27,25 +27,15 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.sp_trie.storage_proof
         /// <summary>
         /// >> trie_nodes
         /// </summary>
-        private Substrate.Unique.NET.NetApiExt.Generated.Types.Base.BTreeSetT1 _trieNodes;
+        public Substrate.Unique.NET.NetApiExt.Generated.Types.Base.BTreeSetT1 TrieNodes { get; set; }
         
-        public Substrate.Unique.NET.NetApiExt.Generated.Types.Base.BTreeSetT1 TrieNodes
-        {
-            get
-            {
-                return this._trieNodes;
-            }
-            set
-            {
-                this._trieNodes = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "StorageProof";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -53,6 +43,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.sp_trie.storage_proof
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

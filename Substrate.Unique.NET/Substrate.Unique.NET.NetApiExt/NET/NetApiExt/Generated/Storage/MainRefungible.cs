@@ -21,12 +21,18 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> RefungibleStorage
+    /// </summary>
     public sealed class RefungibleStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> RefungibleStorage Constructor
+        /// </summary>
         public RefungibleStorage(SubstrateClientExt client)
         {
             this._client = client;
@@ -86,10 +92,10 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         /// >> TokensMinted
         ///  Total amount of minted tokens in a collection.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> TokensMinted(Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId key, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> TokensMinted(Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId key, string blockhash, CancellationToken token)
         {
             string parameters = RefungibleStorage.TokensMintedParams(key);
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, blockhash, token);
             return result;
         }
         
@@ -117,10 +123,10 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         /// >> TokensBurnt
         ///  Amount of tokens burnt in a collection.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> TokensBurnt(Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId key, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> TokensBurnt(Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId key, string blockhash, CancellationToken token)
         {
             string parameters = RefungibleStorage.TokensBurntParams(key);
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, blockhash, token);
             return result;
         }
         
@@ -141,17 +147,17 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         /// </summary>
         public static string TokenPropertiesDefault()
         {
-            return "0x000000000000000000";
+            return "0x00";
         }
         
         /// <summary>
         /// >> TokenProperties
         ///  Amount of pieces a refungible token is split into.
         /// </summary>
-        public async Task<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.PropertiesT2> TokenProperties(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId, Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.TokenId> key, CancellationToken token)
+        public async Task<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.PropertiesT2> TokenProperties(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId, Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.TokenId> key, string blockhash, CancellationToken token)
         {
             string parameters = RefungibleStorage.TokenPropertiesParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.PropertiesT2>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.PropertiesT2>(parameters, blockhash, token);
             return result;
         }
         
@@ -179,10 +185,10 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         /// >> TotalSupply
         ///  Total amount of pieces for token
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U128> TotalSupply(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId, Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.TokenId> key, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U128> TotalSupply(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId, Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.TokenId> key, string blockhash, CancellationToken token)
         {
             string parameters = RefungibleStorage.TotalSupplyParams(key);
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U128>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U128>(parameters, blockhash, token);
             return result;
         }
         
@@ -211,10 +217,10 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         /// >> Owned
         ///  Used to enumerate tokens owned by account.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.Bool> Owned(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId, Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_evm.account.EnumBasicCrossAccountIdRepr, Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.TokenId> key, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.Bool> Owned(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId, Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_evm.account.EnumBasicCrossAccountIdRepr, Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.TokenId> key, string blockhash, CancellationToken token)
         {
             string parameters = RefungibleStorage.OwnedParams(key);
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.Bool>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.Bool>(parameters, blockhash, token);
             return result;
         }
         
@@ -242,10 +248,10 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         /// >> AccountBalance
         ///  Amount of tokens (not pieces) partially owned by an account within a collection.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> AccountBalance(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId, Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_evm.account.EnumBasicCrossAccountIdRepr> key, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> AccountBalance(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId, Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_evm.account.EnumBasicCrossAccountIdRepr> key, string blockhash, CancellationToken token)
         {
             string parameters = RefungibleStorage.AccountBalanceParams(key);
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, blockhash, token);
             return result;
         }
         
@@ -274,10 +280,10 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         /// >> Balance
         ///  Amount of token pieces owned by account.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U128> Balance(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId, Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.TokenId, Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_evm.account.EnumBasicCrossAccountIdRepr> key, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U128> Balance(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId, Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.TokenId, Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_evm.account.EnumBasicCrossAccountIdRepr> key, string blockhash, CancellationToken token)
         {
             string parameters = RefungibleStorage.BalanceParams(key);
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U128>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U128>(parameters, blockhash, token);
             return result;
         }
         
@@ -307,10 +313,10 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         /// >> Allowance
         ///  Allowance set by a token owner for another user to perform one of certain transactions on a number of pieces of a token.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U128> Allowance(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId, Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.TokenId, Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_evm.account.EnumBasicCrossAccountIdRepr, Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_evm.account.EnumBasicCrossAccountIdRepr> key, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U128> Allowance(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId, Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.TokenId, Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_evm.account.EnumBasicCrossAccountIdRepr, Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_evm.account.EnumBasicCrossAccountIdRepr> key, string blockhash, CancellationToken token)
         {
             string parameters = RefungibleStorage.AllowanceParams(key);
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U128>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U128>(parameters, blockhash, token);
             return result;
         }
         
@@ -339,22 +345,31 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         /// >> CollectionAllowance
         ///  Spender set by a wallet owner that could perform certain transactions on all tokens in the wallet.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.Bool> CollectionAllowance(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId, Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_evm.account.EnumBasicCrossAccountIdRepr, Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_evm.account.EnumBasicCrossAccountIdRepr> key, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.Bool> CollectionAllowance(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId, Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_evm.account.EnumBasicCrossAccountIdRepr, Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_evm.account.EnumBasicCrossAccountIdRepr> key, string blockhash, CancellationToken token)
         {
             string parameters = RefungibleStorage.CollectionAllowanceParams(key);
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.Bool>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.Bool>(parameters, blockhash, token);
             return result;
         }
     }
     
+    /// <summary>
+    /// >> RefungibleCalls
+    /// </summary>
     public sealed class RefungibleCalls
     {
     }
     
+    /// <summary>
+    /// >> RefungibleConstants
+    /// </summary>
     public sealed class RefungibleConstants
     {
     }
     
+    /// <summary>
+    /// >> RefungibleErrors
+    /// </summary>
     public enum RefungibleErrors
     {
         

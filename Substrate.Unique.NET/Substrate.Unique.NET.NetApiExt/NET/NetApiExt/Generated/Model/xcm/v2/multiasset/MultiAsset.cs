@@ -18,7 +18,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v2.multiasset
     
     
     /// <summary>
-    /// >> 96 - Composite[xcm.v2.multiasset.MultiAsset]
+    /// >> 130 - Composite[xcm.v2.multiasset.MultiAsset]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class MultiAsset : BaseType
@@ -27,42 +27,19 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v2.multiasset
         /// <summary>
         /// >> id
         /// </summary>
-        private Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v2.multiasset.EnumAssetId _id;
-        
+        public Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v2.multiasset.EnumAssetId Id { get; set; }
         /// <summary>
         /// >> fun
         /// </summary>
-        private Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v2.multiasset.EnumFungibility _fun;
+        public Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v2.multiasset.EnumFungibility Fun { get; set; }
         
-        public Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v2.multiasset.EnumAssetId Id
-        {
-            get
-            {
-                return this._id;
-            }
-            set
-            {
-                this._id = value;
-            }
-        }
-        
-        public Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v2.multiasset.EnumFungibility Fun
-        {
-            get
-            {
-                return this._fun;
-            }
-            set
-            {
-                this._fun = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "MultiAsset";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -71,6 +48,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v2.multiasset
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

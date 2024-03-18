@@ -18,7 +18,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs
     
     
     /// <summary>
-    /// >> 418 - Composite[up_data_structs.TokenChild]
+    /// >> 589 - Composite[up_data_structs.TokenChild]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class TokenChild : BaseType
@@ -27,42 +27,19 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs
         /// <summary>
         /// >> token
         /// </summary>
-        private Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.TokenId _token;
-        
+        public Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.TokenId Token { get; set; }
         /// <summary>
         /// >> collection
         /// </summary>
-        private Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId _collection;
+        public Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId Collection { get; set; }
         
-        public Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.TokenId Token
-        {
-            get
-            {
-                return this._token;
-            }
-            set
-            {
-                this._token = value;
-            }
-        }
-        
-        public Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId Collection
-        {
-            get
-            {
-                return this._collection;
-            }
-            set
-            {
-                this._collection = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "TokenChild";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -71,6 +48,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

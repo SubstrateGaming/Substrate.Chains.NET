@@ -18,7 +18,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bou
     
     
     /// <summary>
-    /// >> 285 - Composite[bounded_collections.bounded_vec.BoundedVecT16]
+    /// >> 309 - Composite[bounded_collections.bounded_vec.BoundedVecT16]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class BoundedVecT16 : BaseType
@@ -27,25 +27,15 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bou
         /// <summary>
         /// >> value
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.PropertyKeyPermission> _value;
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CreateRefungibleExSingleOwner> Value { get; set; }
         
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.PropertyKeyPermission> Value
-        {
-            get
-            {
-                return this._value;
-            }
-            set
-            {
-                this._value = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "BoundedVecT16";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -53,10 +43,11 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bou
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.PropertyKeyPermission>();
+            Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CreateRefungibleExSingleOwner>();
             Value.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

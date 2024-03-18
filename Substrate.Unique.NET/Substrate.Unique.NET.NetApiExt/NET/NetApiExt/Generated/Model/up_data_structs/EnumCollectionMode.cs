@@ -15,18 +15,30 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs
 {
     
     
+    /// <summary>
+    /// >> CollectionMode
+    /// </summary>
     public enum CollectionMode
     {
         
+        /// <summary>
+        /// >> NFT
+        /// </summary>
         NFT = 0,
         
+        /// <summary>
+        /// >> Fungible
+        /// </summary>
         Fungible = 1,
         
+        /// <summary>
+        /// >> ReFungible
+        /// </summary>
         ReFungible = 2,
     }
     
     /// <summary>
-    /// >> 267 - Variant[up_data_structs.CollectionMode]
+    /// >> 264 - Variant[up_data_structs.CollectionMode]
     /// </summary>
     public sealed class EnumCollectionMode : BaseEnumExt<CollectionMode, BaseVoid, Substrate.NetApi.Model.Types.Primitive.U8, BaseVoid>
     {

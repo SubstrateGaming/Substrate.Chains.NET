@@ -15,22 +15,35 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_sudo.pallet
 {
     
     
+    /// <summary>
+    /// >> Event
+    /// The `Event` enum of this pallet
+    /// </summary>
     public enum Event
     {
         
+        /// <summary>
+        /// >> Sudid
+        /// A sudo call just took place.
+        /// </summary>
         Sudid = 0,
         
+        /// <summary>
+        /// >> KeyChanged
+        /// The sudo key has been updated.
+        /// </summary>
         KeyChanged = 1,
         
+        /// <summary>
+        /// >> SudoAsDone
+        /// A [sudo_as](Pallet::sudo_as) call just took place.
+        /// </summary>
         SudoAsDone = 2,
     }
     
     /// <summary>
-    /// >> 39 - Variant[pallet_sudo.pallet.Event]
-    /// 
-    ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
-    ///			by this pallet.
-    ///			
+    /// >> 40 - Variant[pallet_sudo.pallet.Event]
+    /// The `Event` enum of this pallet
     /// </summary>
     public sealed class EnumEvent : BaseEnumExt<Event, Substrate.Unique.NET.NetApiExt.Generated.Types.Base.EnumResult, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Unique.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>, Substrate.Unique.NET.NetApiExt.Generated.Types.Base.EnumResult>
     {

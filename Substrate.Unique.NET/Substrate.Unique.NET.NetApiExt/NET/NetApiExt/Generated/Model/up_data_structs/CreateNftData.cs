@@ -18,7 +18,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs
     
     
     /// <summary>
-    /// >> 294 - Composite[up_data_structs.CreateNftData]
+    /// >> 295 - Composite[up_data_structs.CreateNftData]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class CreateNftData : BaseType
@@ -27,25 +27,15 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs
         /// <summary>
         /// >> properties
         /// </summary>
-        private Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17 _properties;
+        public Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT13 Properties { get; set; }
         
-        public Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17 Properties
-        {
-            get
-            {
-                return this._properties;
-            }
-            set
-            {
-                this._properties = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "CreateNftData";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -53,10 +43,11 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Properties = new Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17();
+            Properties = new Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT13();
             Properties.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

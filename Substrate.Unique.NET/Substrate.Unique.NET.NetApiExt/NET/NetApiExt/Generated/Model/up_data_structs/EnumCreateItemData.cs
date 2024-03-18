@@ -15,18 +15,30 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs
 {
     
     
+    /// <summary>
+    /// >> CreateItemData
+    /// </summary>
     public enum CreateItemData
     {
         
+        /// <summary>
+        /// >> NFT
+        /// </summary>
         NFT = 0,
         
+        /// <summary>
+        /// >> Fungible
+        /// </summary>
         Fungible = 1,
         
+        /// <summary>
+        /// >> ReFungible
+        /// </summary>
         ReFungible = 2,
     }
     
     /// <summary>
-    /// >> 293 - Variant[up_data_structs.CreateItemData]
+    /// >> 294 - Variant[up_data_structs.CreateItemData]
     /// </summary>
     public sealed class EnumCreateItemData : BaseEnumExt<CreateItemData, Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CreateNftData, Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CreateFungibleData, Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CreateReFungibleData>
     {

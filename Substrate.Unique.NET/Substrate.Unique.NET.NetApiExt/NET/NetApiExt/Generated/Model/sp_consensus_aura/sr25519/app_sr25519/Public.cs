@@ -18,7 +18,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.sp_consensus_aura.sr255
     
     
     /// <summary>
-    /// >> 198 - Composite[sp_consensus_aura.sr25519.app_sr25519.Public]
+    /// >> 423 - Composite[sp_consensus_aura.sr25519.app_sr25519.Public]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Public : BaseType
@@ -27,25 +27,15 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.sp_consensus_aura.sr255
         /// <summary>
         /// >> value
         /// </summary>
-        private Substrate.Unique.NET.NetApiExt.Generated.Model.sp_core.sr25519.Public _value;
+        public Substrate.Unique.NET.NetApiExt.Generated.Model.sp_core.sr25519.Public Value { get; set; }
         
-        public Substrate.Unique.NET.NetApiExt.Generated.Model.sp_core.sr25519.Public Value
-        {
-            get
-            {
-                return this._value;
-            }
-            set
-            {
-                this._value = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "Public";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -53,6 +43,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.sp_consensus_aura.sr255
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

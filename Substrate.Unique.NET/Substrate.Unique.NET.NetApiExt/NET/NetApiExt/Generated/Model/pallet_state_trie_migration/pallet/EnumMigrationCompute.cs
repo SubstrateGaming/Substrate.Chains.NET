@@ -15,11 +15,20 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_state_trie_migra
 {
     
     
+    /// <summary>
+    /// >> MigrationCompute
+    /// </summary>
     public enum MigrationCompute
     {
         
+        /// <summary>
+        /// >> Signed
+        /// </summary>
         Signed = 0,
         
+        /// <summary>
+        /// >> Auto
+        /// </summary>
         Auto = 1,
     }
     

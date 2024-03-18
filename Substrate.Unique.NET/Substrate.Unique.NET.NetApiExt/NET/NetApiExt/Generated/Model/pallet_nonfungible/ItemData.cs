@@ -18,7 +18,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_nonfungible
     
     
     /// <summary>
-    /// >> 442 - Composite[pallet_nonfungible.ItemData]
+    /// >> 612 - Composite[pallet_nonfungible.ItemData]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class ItemData : BaseType
@@ -27,25 +27,15 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_nonfungible
         /// <summary>
         /// >> owner
         /// </summary>
-        private Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_evm.account.EnumBasicCrossAccountIdRepr _owner;
+        public Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_evm.account.EnumBasicCrossAccountIdRepr Owner { get; set; }
         
-        public Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_evm.account.EnumBasicCrossAccountIdRepr Owner
-        {
-            get
-            {
-                return this._owner;
-            }
-            set
-            {
-                this._owner = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "ItemData";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -53,6 +43,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_nonfungible
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

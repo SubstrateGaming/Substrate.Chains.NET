@@ -18,7 +18,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.ethereum.header
     
     
     /// <summary>
-    /// >> 467 - Composite[ethereum.header.Header]
+    /// >> 638 - Composite[ethereum.header.Header]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Header : BaseType
@@ -27,263 +27,71 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.ethereum.header
         /// <summary>
         /// >> parent_hash
         /// </summary>
-        private Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H256 _parentHash;
-        
+        public Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H256 ParentHash { get; set; }
         /// <summary>
         /// >> ommers_hash
         /// </summary>
-        private Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H256 _ommersHash;
-        
+        public Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H256 OmmersHash { get; set; }
         /// <summary>
         /// >> beneficiary
         /// </summary>
-        private Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H160 _beneficiary;
-        
+        public Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H160 Beneficiary { get; set; }
         /// <summary>
         /// >> state_root
         /// </summary>
-        private Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H256 _stateRoot;
-        
+        public Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H256 StateRoot { get; set; }
         /// <summary>
         /// >> transactions_root
         /// </summary>
-        private Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H256 _transactionsRoot;
-        
+        public Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H256 TransactionsRoot { get; set; }
         /// <summary>
         /// >> receipts_root
         /// </summary>
-        private Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H256 _receiptsRoot;
-        
+        public Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H256 ReceiptsRoot { get; set; }
         /// <summary>
         /// >> logs_bloom
         /// </summary>
-        private Substrate.Unique.NET.NetApiExt.Generated.Model.ethbloom.Bloom _logsBloom;
-        
+        public Substrate.Unique.NET.NetApiExt.Generated.Model.ethbloom.Bloom LogsBloom { get; set; }
         /// <summary>
         /// >> difficulty
         /// </summary>
-        private Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.U256 _difficulty;
-        
+        public Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.U256 Difficulty { get; set; }
         /// <summary>
         /// >> number
         /// </summary>
-        private Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.U256 _number;
-        
+        public Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.U256 Number { get; set; }
         /// <summary>
         /// >> gas_limit
         /// </summary>
-        private Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.U256 _gasLimit;
-        
+        public Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.U256 GasLimit { get; set; }
         /// <summary>
         /// >> gas_used
         /// </summary>
-        private Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.U256 _gasUsed;
-        
+        public Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.U256 GasUsed { get; set; }
         /// <summary>
         /// >> timestamp
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U64 _timestamp;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U64 Timestamp { get; set; }
         /// <summary>
         /// >> extra_data
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> _extraData;
-        
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> ExtraData { get; set; }
         /// <summary>
         /// >> mix_hash
         /// </summary>
-        private Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H256 _mixHash;
-        
+        public Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H256 MixHash { get; set; }
         /// <summary>
         /// >> nonce
         /// </summary>
-        private Substrate.Unique.NET.NetApiExt.Generated.Model.ethereum_types.hash.H64 _nonce;
+        public Substrate.Unique.NET.NetApiExt.Generated.Model.ethereum_types.hash.H64 Nonce { get; set; }
         
-        public Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H256 ParentHash
-        {
-            get
-            {
-                return this._parentHash;
-            }
-            set
-            {
-                this._parentHash = value;
-            }
-        }
-        
-        public Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H256 OmmersHash
-        {
-            get
-            {
-                return this._ommersHash;
-            }
-            set
-            {
-                this._ommersHash = value;
-            }
-        }
-        
-        public Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H160 Beneficiary
-        {
-            get
-            {
-                return this._beneficiary;
-            }
-            set
-            {
-                this._beneficiary = value;
-            }
-        }
-        
-        public Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H256 StateRoot
-        {
-            get
-            {
-                return this._stateRoot;
-            }
-            set
-            {
-                this._stateRoot = value;
-            }
-        }
-        
-        public Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H256 TransactionsRoot
-        {
-            get
-            {
-                return this._transactionsRoot;
-            }
-            set
-            {
-                this._transactionsRoot = value;
-            }
-        }
-        
-        public Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H256 ReceiptsRoot
-        {
-            get
-            {
-                return this._receiptsRoot;
-            }
-            set
-            {
-                this._receiptsRoot = value;
-            }
-        }
-        
-        public Substrate.Unique.NET.NetApiExt.Generated.Model.ethbloom.Bloom LogsBloom
-        {
-            get
-            {
-                return this._logsBloom;
-            }
-            set
-            {
-                this._logsBloom = value;
-            }
-        }
-        
-        public Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.U256 Difficulty
-        {
-            get
-            {
-                return this._difficulty;
-            }
-            set
-            {
-                this._difficulty = value;
-            }
-        }
-        
-        public Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.U256 Number
-        {
-            get
-            {
-                return this._number;
-            }
-            set
-            {
-                this._number = value;
-            }
-        }
-        
-        public Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.U256 GasLimit
-        {
-            get
-            {
-                return this._gasLimit;
-            }
-            set
-            {
-                this._gasLimit = value;
-            }
-        }
-        
-        public Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.U256 GasUsed
-        {
-            get
-            {
-                return this._gasUsed;
-            }
-            set
-            {
-                this._gasUsed = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U64 Timestamp
-        {
-            get
-            {
-                return this._timestamp;
-            }
-            set
-            {
-                this._timestamp = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> ExtraData
-        {
-            get
-            {
-                return this._extraData;
-            }
-            set
-            {
-                this._extraData = value;
-            }
-        }
-        
-        public Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H256 MixHash
-        {
-            get
-            {
-                return this._mixHash;
-            }
-            set
-            {
-                this._mixHash = value;
-            }
-        }
-        
-        public Substrate.Unique.NET.NetApiExt.Generated.Model.ethereum_types.hash.H64 Nonce
-        {
-            get
-            {
-                return this._nonce;
-            }
-            set
-            {
-                this._nonce = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "Header";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -305,6 +113,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.ethereum.header
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

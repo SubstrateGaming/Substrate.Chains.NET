@@ -15,18 +15,30 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_evm_contract_hel
 {
     
     
+    /// <summary>
+    /// >> SponsoringModeT
+    /// </summary>
     public enum SponsoringModeT
     {
         
+        /// <summary>
+        /// >> Disabled
+        /// </summary>
         Disabled = 0,
         
+        /// <summary>
+        /// >> Allowlisted
+        /// </summary>
         Allowlisted = 1,
         
+        /// <summary>
+        /// >> Generous
+        /// </summary>
         Generous = 2,
     }
     
     /// <summary>
-    /// >> 476 - Variant[pallet_evm_contract_helpers.SponsoringModeT]
+    /// >> 647 - Variant[pallet_evm_contract_helpers.SponsoringModeT]
     /// </summary>
     public sealed class EnumSponsoringModeT : BaseEnum<SponsoringModeT>
     {

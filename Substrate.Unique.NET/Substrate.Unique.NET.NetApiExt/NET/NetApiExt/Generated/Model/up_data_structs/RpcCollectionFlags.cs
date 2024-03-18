@@ -18,7 +18,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs
     
     
     /// <summary>
-    /// >> 424 - Composite[up_data_structs.RpcCollectionFlags]
+    /// >> 594 - Composite[up_data_structs.RpcCollectionFlags]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class RpcCollectionFlags : BaseType
@@ -27,42 +27,19 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs
         /// <summary>
         /// >> foreign
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.Bool _foreign;
-        
+        public Substrate.NetApi.Model.Types.Primitive.Bool Foreign { get; set; }
         /// <summary>
         /// >> erc721metadata
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.Bool _erc721metadata;
+        public Substrate.NetApi.Model.Types.Primitive.Bool Erc721metadata { get; set; }
         
-        public Substrate.NetApi.Model.Types.Primitive.Bool Foreign
-        {
-            get
-            {
-                return this._foreign;
-            }
-            set
-            {
-                this._foreign = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.Bool Erc721metadata
-        {
-            get
-            {
-                return this._erc721metadata;
-            }
-            set
-            {
-                this._erc721metadata = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "RpcCollectionFlags";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -71,6 +48,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

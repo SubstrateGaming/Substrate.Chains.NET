@@ -15,21 +15,41 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_sudo.pallet
 {
     
     
+    /// <summary>
+    /// >> Call
+    /// Contains a variant per dispatchable extrinsic that this pallet has.
+    /// </summary>
     public enum Call
     {
         
+        /// <summary>
+        /// >> sudo
+        /// See [`Pallet::sudo`].
+        /// </summary>
         sudo = 0,
         
+        /// <summary>
+        /// >> sudo_unchecked_weight
+        /// See [`Pallet::sudo_unchecked_weight`].
+        /// </summary>
         sudo_unchecked_weight = 1,
         
+        /// <summary>
+        /// >> set_key
+        /// See [`Pallet::set_key`].
+        /// </summary>
         set_key = 2,
         
+        /// <summary>
+        /// >> sudo_as
+        /// See [`Pallet::sudo_as`].
+        /// </summary>
         sudo_as = 3,
     }
     
     /// <summary>
-    /// >> 228 - Variant[pallet_sudo.pallet.Call]
-    /// Contains one variant per dispatchable that can be called by an extrinsic.
+    /// >> 115 - Variant[pallet_sudo.pallet.Call]
+    /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
     public sealed class EnumCall : BaseEnumExt<Call, Substrate.Unique.NET.NetApiExt.Generated.Model.unique_runtime.EnumRuntimeCall, BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.unique_runtime.EnumRuntimeCall, Substrate.Unique.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>, Substrate.Unique.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.Unique.NET.NetApiExt.Generated.Model.unique_runtime.EnumRuntimeCall>>
     {

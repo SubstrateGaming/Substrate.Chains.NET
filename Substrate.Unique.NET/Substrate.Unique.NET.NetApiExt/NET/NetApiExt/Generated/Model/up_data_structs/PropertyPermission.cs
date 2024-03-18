@@ -18,7 +18,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs
     
     
     /// <summary>
-    /// >> 287 - Composite[up_data_structs.PropertyPermission]
+    /// >> 286 - Composite[up_data_structs.PropertyPermission]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class PropertyPermission : BaseType
@@ -27,59 +27,23 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs
         /// <summary>
         /// >> mutable
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.Bool _mutable;
-        
+        public Substrate.NetApi.Model.Types.Primitive.Bool Mutable { get; set; }
         /// <summary>
         /// >> collection_admin
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.Bool _collectionAdmin;
-        
+        public Substrate.NetApi.Model.Types.Primitive.Bool CollectionAdmin { get; set; }
         /// <summary>
         /// >> token_owner
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.Bool _tokenOwner;
+        public Substrate.NetApi.Model.Types.Primitive.Bool TokenOwner { get; set; }
         
-        public Substrate.NetApi.Model.Types.Primitive.Bool Mutable
-        {
-            get
-            {
-                return this._mutable;
-            }
-            set
-            {
-                this._mutable = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.Bool CollectionAdmin
-        {
-            get
-            {
-                return this._collectionAdmin;
-            }
-            set
-            {
-                this._collectionAdmin = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.Bool TokenOwner
-        {
-            get
-            {
-                return this._tokenOwner;
-            }
-            set
-            {
-                this._tokenOwner = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "PropertyPermission";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -89,6 +53,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

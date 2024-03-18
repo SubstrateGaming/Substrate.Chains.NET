@@ -15,18 +15,30 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v3.traits
 {
     
     
+    /// <summary>
+    /// >> Outcome
+    /// </summary>
     public enum Outcome
     {
         
+        /// <summary>
+        /// >> Complete
+        /// </summary>
         Complete = 0,
         
+        /// <summary>
+        /// >> Incomplete
+        /// </summary>
         Incomplete = 1,
         
+        /// <summary>
+        /// >> Error
+        /// </summary>
         Error = 2,
     }
     
     /// <summary>
-    /// >> 71 - Variant[xcm.v3.traits.Outcome]
+    /// >> 357 - Variant[xcm.v3.traits.Outcome]
     /// </summary>
     public sealed class EnumOutcome : BaseEnumExt<Outcome, Substrate.Unique.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight, BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight, Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v3.traits.EnumError>, Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v3.traits.EnumError>
     {

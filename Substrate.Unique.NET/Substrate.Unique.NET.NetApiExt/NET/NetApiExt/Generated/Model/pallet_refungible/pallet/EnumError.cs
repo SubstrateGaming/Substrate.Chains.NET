@@ -15,26 +15,47 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_refungible.palle
 {
     
     
+    /// <summary>
+    /// >> Error
+    /// The `Error` enum of this pallet.
+    /// </summary>
     public enum Error
     {
         
+        /// <summary>
+        /// >> NotRefungibleDataUsedToMintFungibleCollectionToken
+        /// Not Refungible item data used to mint in Refungible collection.
+        /// </summary>
         NotRefungibleDataUsedToMintFungibleCollectionToken = 0,
         
+        /// <summary>
+        /// >> WrongRefungiblePieces
+        /// Maximum refungibility exceeded.
+        /// </summary>
         WrongRefungiblePieces = 1,
         
+        /// <summary>
+        /// >> RepartitionWhileNotOwningAllPieces
+        /// Refungible token can't be repartitioned by user who isn't owns all pieces.
+        /// </summary>
         RepartitionWhileNotOwningAllPieces = 2,
         
+        /// <summary>
+        /// >> RefungibleDisallowsNesting
+        /// Refungible token can't nest other tokens.
+        /// </summary>
         RefungibleDisallowsNesting = 3,
         
+        /// <summary>
+        /// >> SettingPropertiesNotAllowed
+        /// Setting item properties is not allowed.
+        /// </summary>
         SettingPropertiesNotAllowed = 4,
     }
     
     /// <summary>
-    /// >> 441 - Variant[pallet_refungible.pallet.Error]
-    /// 
-    ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
-    ///			of this pallet.
-    ///			
+    /// >> 611 - Variant[pallet_refungible.pallet.Error]
+    /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>
     {

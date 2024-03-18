@@ -15,24 +15,57 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_app_promotion.pa
 {
     
     
+    /// <summary>
+    /// >> Event
+    /// The `Event` enum of this pallet
+    /// </summary>
     public enum Event
     {
         
+        /// <summary>
+        /// >> StakingRecalculation
+        /// Staking recalculation was performed
+        /// 
+        /// # Arguments
+        /// * AccountId: account of the staker.
+        /// * Balance : recalculation base
+        /// * Balance : total income
+        /// </summary>
         StakingRecalculation = 0,
         
+        /// <summary>
+        /// >> Stake
+        /// Staking was performed
+        /// 
+        /// # Arguments
+        /// * AccountId: account of the staker
+        /// * Balance : staking amount
+        /// </summary>
         Stake = 1,
         
+        /// <summary>
+        /// >> Unstake
+        /// Unstaking was performed
+        /// 
+        /// # Arguments
+        /// * AccountId: account of the staker
+        /// * Balance : unstaking amount
+        /// </summary>
         Unstake = 2,
         
+        /// <summary>
+        /// >> SetAdmin
+        /// The admin was set
+        /// 
+        /// # Arguments
+        /// * AccountId: account address of the admin
+        /// </summary>
         SetAdmin = 3,
     }
     
     /// <summary>
-    /// >> 120 - Variant[pallet_app_promotion.pallet.Event]
-    /// 
-    ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
-    ///			by this pallet.
-    ///			
+    /// >> 363 - Variant[pallet_app_promotion.pallet.Event]
+    /// The `Event` enum of this pallet
     /// </summary>
     public sealed class EnumEvent : BaseEnumExt<Event, BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U128, Substrate.NetApi.Model.Types.Primitive.U128>, BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U128>, BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U128>, Substrate.Unique.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>
     {

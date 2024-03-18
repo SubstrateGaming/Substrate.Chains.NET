@@ -15,18 +15,27 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v3.multiasset
 {
     
     
+    /// <summary>
+    /// >> AssetId
+    /// </summary>
     public enum AssetId
     {
         
+        /// <summary>
+        /// >> Concrete
+        /// </summary>
         Concrete = 0,
         
+        /// <summary>
+        /// >> Abstract
+        /// </summary>
         Abstract = 1,
     }
     
     /// <summary>
     /// >> 50 - Variant[xcm.v3.multiasset.AssetId]
     /// </summary>
-    public sealed class EnumAssetId : BaseEnumExt<AssetId, Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v3.multilocation.MultiLocation, Substrate.Unique.NET.NetApiExt.Generated.Types.Base.Arr32U8>
+    public sealed class EnumAssetId : BaseEnumExt<AssetId, Substrate.Unique.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation, Substrate.Unique.NET.NetApiExt.Generated.Types.Base.Arr32U8>
     {
     }
 }

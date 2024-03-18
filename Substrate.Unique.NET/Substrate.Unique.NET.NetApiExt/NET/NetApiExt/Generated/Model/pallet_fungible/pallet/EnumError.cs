@@ -15,30 +15,47 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_fungible.pallet
 {
     
     
+    /// <summary>
+    /// >> Error
+    /// The `Error` enum of this pallet.
+    /// </summary>
     public enum Error
     {
         
-        NotFungibleDataUsedToMintFungibleCollectionToken = 0,
+        /// <summary>
+        /// >> FungibleItemsDontHaveData
+        /// Tried to set data for fungible item.
+        /// </summary>
+        FungibleItemsDontHaveData = 0,
         
-        FungibleItemsHaveNoId = 1,
+        /// <summary>
+        /// >> FungibleDisallowsNesting
+        /// Fungible token does not support nesting.
+        /// </summary>
+        FungibleDisallowsNesting = 1,
         
-        FungibleItemsDontHaveData = 2,
+        /// <summary>
+        /// >> SettingPropertiesNotAllowed
+        /// Setting item properties is not allowed.
+        /// </summary>
+        SettingPropertiesNotAllowed = 2,
         
-        FungibleDisallowsNesting = 3,
+        /// <summary>
+        /// >> SettingAllowanceForAllNotAllowed
+        /// Setting allowance for all is not allowed.
+        /// </summary>
+        SettingAllowanceForAllNotAllowed = 3,
         
-        SettingPropertiesNotAllowed = 4,
-        
-        SettingAllowanceForAllNotAllowed = 5,
-        
-        FungibleTokensAreAlwaysValid = 6,
+        /// <summary>
+        /// >> FungibleTokensAreAlwaysValid
+        /// Only a fungible collection could be possibly broken; any fungible token is valid.
+        /// </summary>
+        FungibleTokensAreAlwaysValid = 4,
     }
     
     /// <summary>
-    /// >> 436 - Variant[pallet_fungible.pallet.Error]
-    /// 
-    ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
-    ///			of this pallet.
-    ///			
+    /// >> 606 - Variant[pallet_fungible.pallet.Error]
+    /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>
     {

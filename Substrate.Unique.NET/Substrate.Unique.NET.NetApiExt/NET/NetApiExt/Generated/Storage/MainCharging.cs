@@ -21,22 +21,34 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> ChargingStorage
+    /// </summary>
     public sealed class ChargingStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> ChargingStorage Constructor
+        /// </summary>
         public ChargingStorage(SubstrateClientExt client)
         {
             this._client = client;
         }
     }
     
+    /// <summary>
+    /// >> ChargingCalls
+    /// </summary>
     public sealed class ChargingCalls
     {
     }
     
+    /// <summary>
+    /// >> ChargingConstants
+    /// </summary>
     public sealed class ChargingConstants
     {
     }

@@ -15,18 +15,23 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_evm_migration.pa
 {
     
     
+    /// <summary>
+    /// >> Event
+    /// The `Event` enum of this pallet
+    /// </summary>
     public enum Event
     {
         
+        /// <summary>
+        /// >> TestEvent
+        /// This event is used in benchmarking and can be used for tests
+        /// </summary>
         TestEvent = 0,
     }
     
     /// <summary>
-    /// >> 138 - Variant[pallet_evm_migration.pallet.Event]
-    /// 
-    ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
-    ///			by this pallet.
-    ///			
+    /// >> 376 - Variant[pallet_evm_migration.pallet.Event]
+    /// The `Event` enum of this pallet
     /// </summary>
     public sealed class EnumEvent : BaseEnum<Event>
     {

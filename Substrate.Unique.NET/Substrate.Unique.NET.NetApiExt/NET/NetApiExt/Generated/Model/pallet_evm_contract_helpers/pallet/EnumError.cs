@@ -15,22 +15,35 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_evm_contract_hel
 {
     
     
+    /// <summary>
+    /// >> Error
+    /// The `Error` enum of this pallet.
+    /// </summary>
     public enum Error
     {
         
+        /// <summary>
+        /// >> NoPermission
+        /// This method is only executable by contract owner
+        /// </summary>
         NoPermission = 0,
         
+        /// <summary>
+        /// >> NoPendingSponsor
+        /// No pending sponsor for contract.
+        /// </summary>
         NoPendingSponsor = 1,
         
+        /// <summary>
+        /// >> TooManyMethodsHaveSponsoredLimit
+        /// Number of methods that sponsored limit is defined for exceeds maximum.
+        /// </summary>
         TooManyMethodsHaveSponsoredLimit = 2,
     }
     
     /// <summary>
-    /// >> 482 - Variant[pallet_evm_contract_helpers.pallet.Error]
-    /// 
-    ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
-    ///			of this pallet.
-    ///			
+    /// >> 653 - Variant[pallet_evm_contract_helpers.pallet.Error]
+    /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>
     {

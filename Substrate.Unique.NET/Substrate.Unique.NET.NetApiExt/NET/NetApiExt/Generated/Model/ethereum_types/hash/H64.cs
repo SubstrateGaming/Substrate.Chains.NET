@@ -18,7 +18,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.ethereum_types.hash
     
     
     /// <summary>
-    /// >> 468 - Composite[ethereum_types.hash.H64]
+    /// >> 639 - Composite[ethereum_types.hash.H64]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class H64 : BaseType
@@ -27,25 +27,15 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.ethereum_types.hash
         /// <summary>
         /// >> value
         /// </summary>
-        private Substrate.Unique.NET.NetApiExt.Generated.Types.Base.Arr8U8 _value;
+        public Substrate.Unique.NET.NetApiExt.Generated.Types.Base.Arr8U8 Value { get; set; }
         
-        public Substrate.Unique.NET.NetApiExt.Generated.Types.Base.Arr8U8 Value
-        {
-            get
-            {
-                return this._value;
-            }
-            set
-            {
-                this._value = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "H64";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -53,6 +43,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.ethereum_types.hash
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

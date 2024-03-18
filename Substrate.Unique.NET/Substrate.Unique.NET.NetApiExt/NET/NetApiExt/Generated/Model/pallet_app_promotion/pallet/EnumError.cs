@@ -15,30 +15,59 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_app_promotion.pa
 {
     
     
+    /// <summary>
+    /// >> Error
+    /// The `Error` enum of this pallet.
+    /// </summary>
     public enum Error
     {
         
+        /// <summary>
+        /// >> AdminNotSet
+        /// Error due to action requiring admin to be set.
+        /// </summary>
         AdminNotSet = 0,
         
+        /// <summary>
+        /// >> NoPermission
+        /// No permission to perform an action.
+        /// </summary>
         NoPermission = 1,
         
+        /// <summary>
+        /// >> NotSufficientFunds
+        /// Insufficient funds to perform an action.
+        /// </summary>
         NotSufficientFunds = 2,
         
+        /// <summary>
+        /// >> PendingForBlockOverflow
+        /// Occurs when a pending unstake cannot be added in this block. PENDING_LIMIT_PER_BLOCK` limits exceeded.
+        /// </summary>
         PendingForBlockOverflow = 3,
         
+        /// <summary>
+        /// >> SponsorNotSet
+        /// The error is due to the fact that the collection/contract must already be sponsored in order to perform the action.
+        /// </summary>
         SponsorNotSet = 4,
         
+        /// <summary>
+        /// >> InsufficientStakedBalance
+        /// Errors caused by insufficient staked balance.
+        /// </summary>
         InsufficientStakedBalance = 5,
         
+        /// <summary>
+        /// >> InconsistencyState
+        /// Errors caused by incorrect state of a staker in context of the pallet.
+        /// </summary>
         InconsistencyState = 6,
     }
     
     /// <summary>
-    /// >> 454 - Variant[pallet_app_promotion.pallet.Error]
-    /// 
-    ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
-    ///			of this pallet.
-    ///			
+    /// >> 623 - Variant[pallet_app_promotion.pallet.Error]
+    /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>
     {

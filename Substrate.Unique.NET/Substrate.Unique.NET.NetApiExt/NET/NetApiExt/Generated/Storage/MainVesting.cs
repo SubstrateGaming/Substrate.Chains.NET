@@ -21,17 +21,23 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> VestingStorage
+    /// </summary>
     public sealed class VestingStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> VestingStorage Constructor
+        /// </summary>
         public VestingStorage(SubstrateClientExt client)
         {
             this._client = client;
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Vesting", "VestingSchedules"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.Unique.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32), typeof(Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT21)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.Unique.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32), typeof(Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT23)));
         }
         
         /// <summary>
@@ -62,20 +68,23 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         /// 
         ///  VestingSchedules: map AccountId => Vec<VestingSchedule>
         /// </summary>
-        public async Task<Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT21> VestingSchedules(Substrate.Unique.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, CancellationToken token)
+        public async Task<Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT23> VestingSchedules(Substrate.Unique.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, string blockhash, CancellationToken token)
         {
             string parameters = VestingStorage.VestingSchedulesParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT21>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT23>(parameters, blockhash, token);
             return result;
         }
     }
     
+    /// <summary>
+    /// >> VestingCalls
+    /// </summary>
     public sealed class VestingCalls
     {
         
         /// <summary>
         /// >> claim
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method Claim()
         {
@@ -85,7 +94,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> vested_transfer
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method VestedTransfer(Substrate.Unique.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress dest, Substrate.Unique.NET.NetApiExt.Generated.Model.orml_vesting.VestingSchedule schedule)
         {
@@ -97,7 +106,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> update_vesting_schedules
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method UpdateVestingSchedules(Substrate.Unique.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress who, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Unique.NET.NetApiExt.Generated.Model.orml_vesting.VestingSchedule> vesting_schedules)
         {
@@ -109,7 +118,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> claim_for
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method ClaimFor(Substrate.Unique.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress dest)
         {
@@ -119,6 +128,9 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> VestingConstants
+    /// </summary>
     public sealed class VestingConstants
     {
         
@@ -134,6 +146,9 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> VestingErrors
+    /// </summary>
     public enum VestingErrors
     {
         

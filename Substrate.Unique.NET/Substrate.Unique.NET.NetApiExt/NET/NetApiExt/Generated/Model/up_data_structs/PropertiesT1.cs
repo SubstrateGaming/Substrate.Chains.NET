@@ -18,7 +18,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs
     
     
     /// <summary>
-    /// >> 404 - Composite[up_data_structs.PropertiesT1]
+    /// >> 575 - Composite[up_data_structs.PropertiesT1]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class PropertiesT1 : BaseType
@@ -27,59 +27,23 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs
         /// <summary>
         /// >> map
         /// </summary>
-        private Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.PropertiesMapT1 _map;
-        
+        public Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.PropertiesMapT1 Map { get; set; }
         /// <summary>
         /// >> consumed_space
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _consumedSpace;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 ConsumedSpace { get; set; }
         /// <summary>
         /// >> _reserved
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _reserved;
+        public Substrate.NetApi.Model.Types.Primitive.U32 Reserved { get; set; }
         
-        public Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.PropertiesMapT1 Map
-        {
-            get
-            {
-                return this._map;
-            }
-            set
-            {
-                this._map = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 ConsumedSpace
-        {
-            get
-            {
-                return this._consumedSpace;
-            }
-            set
-            {
-                this._consumedSpace = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 Reserved
-        {
-            get
-            {
-                return this._reserved;
-            }
-            set
-            {
-                this._reserved = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "PropertiesT1";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -89,6 +53,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

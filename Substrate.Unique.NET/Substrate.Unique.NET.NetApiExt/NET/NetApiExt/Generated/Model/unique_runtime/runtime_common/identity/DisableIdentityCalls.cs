@@ -18,23 +18,26 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.unique_runtime.runtime_
     
     
     /// <summary>
-    /// >> 501 - Composite[unique_runtime.runtime_common.identity.DisableIdentityCalls]
+    /// >> 673 - Composite[unique_runtime.runtime_common.identity.DisableIdentityCalls]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class DisableIdentityCalls : BaseType
     {
         
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "DisableIdentityCalls";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

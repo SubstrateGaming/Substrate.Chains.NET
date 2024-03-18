@@ -18,23 +18,26 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.unique_runtime.runtime_
     
     
     /// <summary>
-    /// >> 500 - Composite[unique_runtime.runtime_common.maintenance.CheckMaintenance]
+    /// >> 672 - Composite[unique_runtime.runtime_common.maintenance.CheckMaintenance]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class CheckMaintenance : BaseType
     {
         
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "CheckMaintenance";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

@@ -15,22 +15,35 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_evm_contract_hel
 {
     
     
+    /// <summary>
+    /// >> Event
+    /// The `Event` enum of this pallet
+    /// </summary>
     public enum Event
     {
         
+        /// <summary>
+        /// >> ContractSponsorSet
+        /// Contract sponsor was set.
+        /// </summary>
         ContractSponsorSet = 0,
         
+        /// <summary>
+        /// >> ContractSponsorshipConfirmed
+        /// New sponsor was confirm.
+        /// </summary>
         ContractSponsorshipConfirmed = 1,
         
+        /// <summary>
+        /// >> ContractSponsorRemoved
+        /// Collection sponsor was removed.
+        /// </summary>
         ContractSponsorRemoved = 2,
     }
     
     /// <summary>
-    /// >> 137 - Variant[pallet_evm_contract_helpers.pallet.Event]
-    /// 
-    ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
-    ///			by this pallet.
-    ///			
+    /// >> 375 - Variant[pallet_evm_contract_helpers.pallet.Event]
+    /// The `Event` enum of this pallet
     /// </summary>
     public sealed class EnumEvent : BaseEnumExt<Event, BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H160, Substrate.Unique.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>, BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H160, Substrate.Unique.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>, Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H160>
     {

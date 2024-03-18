@@ -18,7 +18,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.frame_system.extensions
     
     
     /// <summary>
-    /// >> 496 - Composite[frame_system.extensions.check_mortality.CheckMortality]
+    /// >> 668 - Composite[frame_system.extensions.check_mortality.CheckMortality]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class CheckMortality : BaseType
@@ -27,25 +27,15 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.frame_system.extensions
         /// <summary>
         /// >> value
         /// </summary>
-        private Substrate.Unique.NET.NetApiExt.Generated.Model.sp_runtime.generic.era.EnumEra _value;
+        public Substrate.Unique.NET.NetApiExt.Generated.Model.sp_runtime.generic.era.EnumEra Value { get; set; }
         
-        public Substrate.Unique.NET.NetApiExt.Generated.Model.sp_runtime.generic.era.EnumEra Value
-        {
-            get
-            {
-                return this._value;
-            }
-            set
-            {
-                this._value = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "CheckMortality";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -53,6 +43,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.frame_system.extensions
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

@@ -114,7 +114,7 @@ namespace Substrate.Unique.NET.RestService.Generated.Controller
         ///  Named reserves on some account balances.
         /// </summary>
         [HttpGet("Reserves")]
-        [ProducesResponseType(typeof(Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9), 200)]
+        [ProducesResponseType(typeof(Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT19), 200)]
         [StorageKeyBuilder(typeof(Substrate.Unique.NET.NetApiExt.Generated.Storage.BalancesStorage), "ReservesParams", typeof(Substrate.Unique.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32))]
         public IActionResult GetReserves(string key)
         {
@@ -126,7 +126,7 @@ namespace Substrate.Unique.NET.RestService.Generated.Controller
         ///  Holds on account balances.
         /// </summary>
         [HttpGet("Holds")]
-        [ProducesResponseType(typeof(Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10), 200)]
+        [ProducesResponseType(typeof(Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT20), 200)]
         [StorageKeyBuilder(typeof(Substrate.Unique.NET.NetApiExt.Generated.Storage.BalancesStorage), "HoldsParams", typeof(Substrate.Unique.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32))]
         public IActionResult GetHolds(string key)
         {
@@ -138,7 +138,7 @@ namespace Substrate.Unique.NET.RestService.Generated.Controller
         ///  Freeze locks on account balances.
         /// </summary>
         [HttpGet("Freezes")]
-        [ProducesResponseType(typeof(Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT11), 200)]
+        [ProducesResponseType(typeof(Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT21), 200)]
         [StorageKeyBuilder(typeof(Substrate.Unique.NET.NetApiExt.Generated.Storage.BalancesStorage), "FreezesParams", typeof(Substrate.Unique.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32))]
         public IActionResult GetFreezes(string key)
         {

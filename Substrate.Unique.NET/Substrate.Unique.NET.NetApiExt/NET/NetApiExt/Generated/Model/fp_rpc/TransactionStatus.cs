@@ -18,7 +18,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.fp_rpc
     
     
     /// <summary>
-    /// >> 460 - Composite[fp_rpc.TransactionStatus]
+    /// >> 631 - Composite[fp_rpc.TransactionStatus]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class TransactionStatus : BaseType
@@ -27,127 +27,39 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.fp_rpc
         /// <summary>
         /// >> transaction_hash
         /// </summary>
-        private Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H256 _transactionHash;
-        
+        public Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H256 TransactionHash { get; set; }
         /// <summary>
         /// >> transaction_index
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _transactionIndex;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 TransactionIndex { get; set; }
         /// <summary>
         /// >> from
         /// </summary>
-        private Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H160 _from;
-        
+        public Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H160 From { get; set; }
         /// <summary>
         /// >> to
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H160> _to;
-        
+        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H160> To { get; set; }
         /// <summary>
         /// >> contract_address
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H160> _contractAddress;
-        
+        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H160> ContractAddress { get; set; }
         /// <summary>
         /// >> logs
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Unique.NET.NetApiExt.Generated.Model.ethereum.log.Log> _logs;
-        
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Unique.NET.NetApiExt.Generated.Model.ethereum.log.Log> Logs { get; set; }
         /// <summary>
         /// >> logs_bloom
         /// </summary>
-        private Substrate.Unique.NET.NetApiExt.Generated.Model.ethbloom.Bloom _logsBloom;
+        public Substrate.Unique.NET.NetApiExt.Generated.Model.ethbloom.Bloom LogsBloom { get; set; }
         
-        public Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H256 TransactionHash
-        {
-            get
-            {
-                return this._transactionHash;
-            }
-            set
-            {
-                this._transactionHash = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 TransactionIndex
-        {
-            get
-            {
-                return this._transactionIndex;
-            }
-            set
-            {
-                this._transactionIndex = value;
-            }
-        }
-        
-        public Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H160 From
-        {
-            get
-            {
-                return this._from;
-            }
-            set
-            {
-                this._from = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H160> To
-        {
-            get
-            {
-                return this._to;
-            }
-            set
-            {
-                this._to = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H160> ContractAddress
-        {
-            get
-            {
-                return this._contractAddress;
-            }
-            set
-            {
-                this._contractAddress = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Unique.NET.NetApiExt.Generated.Model.ethereum.log.Log> Logs
-        {
-            get
-            {
-                return this._logs;
-            }
-            set
-            {
-                this._logs = value;
-            }
-        }
-        
-        public Substrate.Unique.NET.NetApiExt.Generated.Model.ethbloom.Bloom LogsBloom
-        {
-            get
-            {
-                return this._logsBloom;
-            }
-            set
-            {
-                this._logsBloom = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "TransactionStatus";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -161,6 +73,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.fp_rpc
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

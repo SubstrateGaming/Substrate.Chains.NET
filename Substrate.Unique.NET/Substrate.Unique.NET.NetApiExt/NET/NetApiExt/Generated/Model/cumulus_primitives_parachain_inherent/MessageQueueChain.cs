@@ -18,7 +18,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.cumulus_primitives_para
     
     
     /// <summary>
-    /// >> 179 - Composite[cumulus_primitives_parachain_inherent.MessageQueueChain]
+    /// >> 413 - Composite[cumulus_primitives_parachain_inherent.MessageQueueChain]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class MessageQueueChain : BaseType
@@ -27,25 +27,15 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.cumulus_primitives_para
         /// <summary>
         /// >> value
         /// </summary>
-        private Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H256 _value;
+        public Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H256 Value { get; set; }
         
-        public Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H256 Value
-        {
-            get
-            {
-                return this._value;
-            }
-            set
-            {
-                this._value = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "MessageQueueChain";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -53,6 +43,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.cumulus_primitives_para
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

@@ -21,26 +21,41 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> StructureStorage
+    /// </summary>
     public sealed class StructureStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> StructureStorage Constructor
+        /// </summary>
         public StructureStorage(SubstrateClientExt client)
         {
             this._client = client;
         }
     }
     
+    /// <summary>
+    /// >> StructureCalls
+    /// </summary>
     public sealed class StructureCalls
     {
     }
     
+    /// <summary>
+    /// >> StructureConstants
+    /// </summary>
     public sealed class StructureConstants
     {
     }
     
+    /// <summary>
+    /// >> StructureErrors
+    /// </summary>
     public enum StructureErrors
     {
         

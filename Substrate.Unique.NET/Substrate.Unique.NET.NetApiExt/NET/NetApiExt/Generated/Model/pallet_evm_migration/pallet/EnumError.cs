@@ -15,22 +15,35 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_evm_migration.pa
 {
     
     
+    /// <summary>
+    /// >> Error
+    /// The `Error` enum of this pallet.
+    /// </summary>
     public enum Error
     {
         
+        /// <summary>
+        /// >> AccountNotEmpty
+        /// Can only migrate to empty address.
+        /// </summary>
         AccountNotEmpty = 0,
         
+        /// <summary>
+        /// >> AccountIsNotMigrating
+        /// Migration of this account is not yet started, or already finished.
+        /// </summary>
         AccountIsNotMigrating = 1,
         
+        /// <summary>
+        /// >> BadEvent
+        /// Failed to decode event bytes
+        /// </summary>
         BadEvent = 2,
     }
     
     /// <summary>
-    /// >> 483 - Variant[pallet_evm_migration.pallet.Error]
-    /// 
-    ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
-    ///			of this pallet.
-    ///			
+    /// >> 654 - Variant[pallet_evm_migration.pallet.Error]
+    /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>
     {

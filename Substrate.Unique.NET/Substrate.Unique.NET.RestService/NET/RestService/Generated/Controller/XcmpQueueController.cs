@@ -55,7 +55,7 @@ namespace Substrate.Unique.NET.RestService.Generated.Controller
         /// </summary>
         [HttpGet("InboundXcmpMessages")]
         [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>), 200)]
-        [StorageKeyBuilder(typeof(Substrate.Unique.NET.NetApiExt.Generated.Storage.XcmpQueueStorage), "InboundXcmpMessagesParams", typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32>))]
+        [StorageKeyBuilder(typeof(Substrate.Unique.NET.NetApiExt.Generated.Storage.XcmpQueueStorage), "InboundXcmpMessagesParams", typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32>))]
         public IActionResult GetInboundXcmpMessages(string key)
         {
             return this.Ok(_xcmpQueueStorage.GetInboundXcmpMessages(key));
@@ -84,7 +84,7 @@ namespace Substrate.Unique.NET.RestService.Generated.Controller
         /// </summary>
         [HttpGet("OutboundXcmpMessages")]
         [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>), 200)]
-        [StorageKeyBuilder(typeof(Substrate.Unique.NET.NetApiExt.Generated.Storage.XcmpQueueStorage), "OutboundXcmpMessagesParams", typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U16>))]
+        [StorageKeyBuilder(typeof(Substrate.Unique.NET.NetApiExt.Generated.Storage.XcmpQueueStorage), "OutboundXcmpMessagesParams", typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U16>))]
         public IActionResult GetOutboundXcmpMessages(string key)
         {
             return this.Ok(_xcmpQueueStorage.GetOutboundXcmpMessages(key));
@@ -96,7 +96,7 @@ namespace Substrate.Unique.NET.RestService.Generated.Controller
         /// </summary>
         [HttpGet("SignalMessages")]
         [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>), 200)]
-        [StorageKeyBuilder(typeof(Substrate.Unique.NET.NetApiExt.Generated.Storage.XcmpQueueStorage), "SignalMessagesParams", typeof(Substrate.Unique.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id))]
+        [StorageKeyBuilder(typeof(Substrate.Unique.NET.NetApiExt.Generated.Storage.XcmpQueueStorage), "SignalMessagesParams", typeof(Substrate.Unique.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id))]
         public IActionResult GetSignalMessages(string key)
         {
             return this.Ok(_xcmpQueueStorage.GetSignalMessages(key));
@@ -122,7 +122,7 @@ namespace Substrate.Unique.NET.RestService.Generated.Controller
         ///  `service_overweight`.
         /// </summary>
         [HttpGet("Overweight")]
-        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>), 200)]
+        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>), 200)]
         [StorageKeyBuilder(typeof(Substrate.Unique.NET.NetApiExt.Generated.Storage.XcmpQueueStorage), "OverweightParams", typeof(Substrate.NetApi.Model.Types.Primitive.U64))]
         public IActionResult GetOverweight(string key)
         {
@@ -164,6 +164,18 @@ namespace Substrate.Unique.NET.RestService.Generated.Controller
         public IActionResult GetQueueSuspended()
         {
             return this.Ok(_xcmpQueueStorage.GetQueueSuspended());
+        }
+        
+        /// <summary>
+        /// >> DeliveryFeeFactor
+        ///  The factor to multiply the base delivery fee by.
+        /// </summary>
+        [HttpGet("DeliveryFeeFactor")]
+        [ProducesResponseType(typeof(Substrate.Unique.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedU128), 200)]
+        [StorageKeyBuilder(typeof(Substrate.Unique.NET.NetApiExt.Generated.Storage.XcmpQueueStorage), "DeliveryFeeFactorParams", typeof(Substrate.Unique.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id))]
+        public IActionResult GetDeliveryFeeFactor(string key)
+        {
+            return this.Ok(_xcmpQueueStorage.GetDeliveryFeeFactor(key));
         }
     }
 }

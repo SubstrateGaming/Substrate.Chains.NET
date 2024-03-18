@@ -18,7 +18,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs
     
     
     /// <summary>
-    /// >> 417 - Composite[up_data_structs.CollectionStats]
+    /// >> 588 - Composite[up_data_structs.CollectionStats]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class CollectionStats : BaseType
@@ -27,59 +27,23 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs
         /// <summary>
         /// >> created
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _created;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 Created { get; set; }
         /// <summary>
         /// >> destroyed
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _destroyed;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 Destroyed { get; set; }
         /// <summary>
         /// >> alive
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _alive;
+        public Substrate.NetApi.Model.Types.Primitive.U32 Alive { get; set; }
         
-        public Substrate.NetApi.Model.Types.Primitive.U32 Created
-        {
-            get
-            {
-                return this._created;
-            }
-            set
-            {
-                this._created = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 Destroyed
-        {
-            get
-            {
-                return this._destroyed;
-            }
-            set
-            {
-                this._destroyed = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 Alive
-        {
-            get
-            {
-                return this._alive;
-            }
-            set
-            {
-                this._alive = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "CollectionStats";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -89,6 +53,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

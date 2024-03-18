@@ -15,16 +15,25 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.ethereum.transaction
 {
     
     
+    /// <summary>
+    /// >> TransactionAction
+    /// </summary>
     public enum TransactionAction
     {
         
+        /// <summary>
+        /// >> Call
+        /// </summary>
         Call = 0,
         
+        /// <summary>
+        /// >> Create
+        /// </summary>
         Create = 1,
     }
     
     /// <summary>
-    /// >> 329 - Variant[ethereum.transaction.TransactionAction]
+    /// >> 335 - Variant[ethereum.transaction.TransactionAction]
     /// </summary>
     public sealed class EnumTransactionAction : BaseEnumExt<TransactionAction, Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H160, BaseVoid>
     {

@@ -15,16 +15,25 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.xcm
 {
     
     
+    /// <summary>
+    /// >> VersionedMultiAssets
+    /// </summary>
     public enum VersionedMultiAssets
     {
         
+        /// <summary>
+        /// >> V2
+        /// </summary>
         V2 = 1,
         
+        /// <summary>
+        /// >> V3
+        /// </summary>
         V3 = 3,
     }
     
     /// <summary>
-    /// >> 93 - Variant[xcm.VersionedMultiAssets]
+    /// >> 136 - Variant[xcm.VersionedMultiAssets]
     /// </summary>
     public sealed class EnumVersionedMultiAssets : BaseEnumExt<VersionedMultiAssets, BaseVoid, Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v2.multiasset.MultiAssets, BaseVoid, Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v3.multiasset.MultiAssets>
     {

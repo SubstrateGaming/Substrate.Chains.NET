@@ -15,16 +15,25 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Types.Base
 {
     
     
+    /// <summary>
+    /// >> Result
+    /// </summary>
     public enum Result
     {
         
+        /// <summary>
+        /// >> Ok
+        /// </summary>
         Ok = 0,
         
+        /// <summary>
+        /// >> Err
+        /// </summary>
         Err = 1,
     }
     
     /// <summary>
-    /// >> 427 - Variant[Result]
+    /// >> 597 - Variant[Result]
     /// </summary>
     public sealed class EnumResult : BaseEnumExt<Result, Substrate.Unique.NET.NetApiExt.Generated.Types.Base.EnumResult, Substrate.Unique.NET.NetApiExt.Generated.Model.sp_runtime.transaction_validity.EnumTransactionValidityError>
     {

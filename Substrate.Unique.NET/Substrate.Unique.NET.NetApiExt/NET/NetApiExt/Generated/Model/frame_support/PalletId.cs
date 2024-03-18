@@ -18,7 +18,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.frame_support
     
     
     /// <summary>
-    /// >> 226 - Composite[frame_support.PalletId]
+    /// >> 451 - Composite[frame_support.PalletId]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class PalletId : BaseType
@@ -27,25 +27,15 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.frame_support
         /// <summary>
         /// >> value
         /// </summary>
-        private Substrate.Unique.NET.NetApiExt.Generated.Types.Base.Arr8U8 _value;
+        public Substrate.Unique.NET.NetApiExt.Generated.Types.Base.Arr8U8 Value { get; set; }
         
-        public Substrate.Unique.NET.NetApiExt.Generated.Types.Base.Arr8U8 Value
-        {
-            get
-            {
-                return this._value;
-            }
-            set
-            {
-                this._value = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "PalletId";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -53,6 +43,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.frame_support
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

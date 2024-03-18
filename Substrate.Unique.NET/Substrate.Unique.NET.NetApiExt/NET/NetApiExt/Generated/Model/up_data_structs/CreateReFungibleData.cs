@@ -18,7 +18,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs
     
     
     /// <summary>
-    /// >> 296 - Composite[up_data_structs.CreateReFungibleData]
+    /// >> 297 - Composite[up_data_structs.CreateReFungibleData]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class CreateReFungibleData : BaseType
@@ -27,42 +27,19 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs
         /// <summary>
         /// >> pieces
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U128 _pieces;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U128 Pieces { get; set; }
         /// <summary>
         /// >> properties
         /// </summary>
-        private Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17 _properties;
+        public Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT13 Properties { get; set; }
         
-        public Substrate.NetApi.Model.Types.Primitive.U128 Pieces
-        {
-            get
-            {
-                return this._pieces;
-            }
-            set
-            {
-                this._pieces = value;
-            }
-        }
-        
-        public Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17 Properties
-        {
-            get
-            {
-                return this._properties;
-            }
-            set
-            {
-                this._properties = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "CreateReFungibleData";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -71,12 +48,13 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
             Pieces = new Substrate.NetApi.Model.Types.Primitive.U128();
             Pieces.Decode(byteArray, ref p);
-            Properties = new Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17();
+            Properties = new Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT13();
             Properties.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

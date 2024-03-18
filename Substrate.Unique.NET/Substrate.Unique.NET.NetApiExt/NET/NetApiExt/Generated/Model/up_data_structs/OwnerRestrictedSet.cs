@@ -18,7 +18,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs
     
     
     /// <summary>
-    /// >> 281 - Composite[up_data_structs.OwnerRestrictedSet]
+    /// >> 279 - Composite[up_data_structs.OwnerRestrictedSet]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class OwnerRestrictedSet : BaseType
@@ -27,25 +27,15 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs
         /// <summary>
         /// >> value
         /// </summary>
-        private Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSet _value;
+        public Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSet Value { get; set; }
         
-        public Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSet Value
-        {
-            get
-            {
-                return this._value;
-            }
-            set
-            {
-                this._value = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "OwnerRestrictedSet";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -53,6 +43,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

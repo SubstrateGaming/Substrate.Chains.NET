@@ -72,7 +72,7 @@ namespace Substrate.Unique.NET.RestService.Generated.Storage
         ///  These message stay in this storage map until they are manually dispatched via
         ///  `service_overweight`.
         /// </summary>
-        Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>> GetOverweight(string key);
+        Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>> GetOverweight(string key);
         
         /// <summary>
         /// >> CounterForOverweight
@@ -92,6 +92,12 @@ namespace Substrate.Unique.NET.RestService.Generated.Storage
         ///  Whether or not the XCMP queue is suspended from executing incoming XCMs or not.
         /// </summary>
         Substrate.NetApi.Model.Types.Primitive.Bool GetQueueSuspended();
+        
+        /// <summary>
+        /// >> DeliveryFeeFactor
+        ///  The factor to multiply the base delivery fee by.
+        /// </summary>
+        Substrate.Unique.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedU128 GetDeliveryFeeFactor(string key);
     }
     
     /// <summary>
@@ -133,7 +139,7 @@ namespace Substrate.Unique.NET.RestService.Generated.Storage
         /// <summary>
         /// _overweightTypedStorage typed storage field
         /// </summary>
-        private TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>> _overweightTypedStorage;
+        private TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>> _overweightTypedStorage;
         
         /// <summary>
         /// _counterForOverweightTypedStorage typed storage field
@@ -151,6 +157,11 @@ namespace Substrate.Unique.NET.RestService.Generated.Storage
         private TypedStorage<Substrate.NetApi.Model.Types.Primitive.Bool> _queueSuspendedTypedStorage;
         
         /// <summary>
+        /// _deliveryFeeFactorTypedStorage typed storage field
+        /// </summary>
+        private TypedMapStorage<Substrate.Unique.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedU128> _deliveryFeeFactorTypedStorage;
+        
+        /// <summary>
         /// XcmpQueueStorage constructor.
         /// </summary>
         public XcmpQueueStorage(IStorageDataProvider storageDataProvider, List<IStorageChangeDelegate> storageChangeDelegates)
@@ -161,10 +172,11 @@ namespace Substrate.Unique.NET.RestService.Generated.Storage
             this.OutboundXcmpMessagesTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>("XcmpQueue.OutboundXcmpMessages", storageDataProvider, storageChangeDelegates);
             this.SignalMessagesTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>("XcmpQueue.SignalMessages", storageDataProvider, storageChangeDelegates);
             this.QueueConfigTypedStorage = new TypedStorage<Substrate.Unique.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue.QueueConfigData>("XcmpQueue.QueueConfig", storageDataProvider, storageChangeDelegates);
-            this.OverweightTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>>("XcmpQueue.Overweight", storageDataProvider, storageChangeDelegates);
+            this.OverweightTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>>("XcmpQueue.Overweight", storageDataProvider, storageChangeDelegates);
             this.CounterForOverweightTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32>("XcmpQueue.CounterForOverweight", storageDataProvider, storageChangeDelegates);
             this.OverweightCountTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U64>("XcmpQueue.OverweightCount", storageDataProvider, storageChangeDelegates);
             this.QueueSuspendedTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.Bool>("XcmpQueue.QueueSuspended", storageDataProvider, storageChangeDelegates);
+            this.DeliveryFeeFactorTypedStorage = new TypedMapStorage<Substrate.Unique.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedU128>("XcmpQueue.DeliveryFeeFactor", storageDataProvider, storageChangeDelegates);
         }
         
         /// <summary>
@@ -260,7 +272,7 @@ namespace Substrate.Unique.NET.RestService.Generated.Storage
         /// <summary>
         /// _overweightTypedStorage property
         /// </summary>
-        public TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>> OverweightTypedStorage
+        public TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>> OverweightTypedStorage
         {
             get
             {
@@ -318,6 +330,21 @@ namespace Substrate.Unique.NET.RestService.Generated.Storage
         }
         
         /// <summary>
+        /// _deliveryFeeFactorTypedStorage property
+        /// </summary>
+        public TypedMapStorage<Substrate.Unique.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedU128> DeliveryFeeFactorTypedStorage
+        {
+            get
+            {
+                return _deliveryFeeFactorTypedStorage;
+            }
+            set
+            {
+                _deliveryFeeFactorTypedStorage = value;
+            }
+        }
+        
+        /// <summary>
         /// Connects to all storages and initializes the change subscription handling.
         /// </summary>
         public async Task InitializeAsync(Substrate.ServiceLayer.Storage.IStorageDataProvider dataProvider)
@@ -332,6 +359,7 @@ namespace Substrate.Unique.NET.RestService.Generated.Storage
             await CounterForOverweightTypedStorage.InitializeAsync("XcmpQueue", "CounterForOverweight");
             await OverweightCountTypedStorage.InitializeAsync("XcmpQueue", "OverweightCount");
             await QueueSuspendedTypedStorage.InitializeAsync("XcmpQueue", "QueueSuspended");
+            await DeliveryFeeFactorTypedStorage.InitializeAsync("XcmpQueue", "DeliveryFeeFactor");
         }
         
         /// <summary>
@@ -496,13 +524,13 @@ namespace Substrate.Unique.NET.RestService.Generated.Storage
         ///  These message stay in this storage map until they are manually dispatched via
         ///  `service_overweight`.
         /// </summary>
-        public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>> GetOverweight(string key)
+        public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>> GetOverweight(string key)
         {
             if ((key == null))
             {
                 return null;
             }
-            if (OverweightTypedStorage.Dictionary.TryGetValue(key, out Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>> result))
+            if (OverweightTypedStorage.Dictionary.TryGetValue(key, out Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>> result))
             {
                 return result;
             }
@@ -565,6 +593,35 @@ namespace Substrate.Unique.NET.RestService.Generated.Storage
         public Substrate.NetApi.Model.Types.Primitive.Bool GetQueueSuspended()
         {
             return QueueSuspendedTypedStorage.Get();
+        }
+        
+        /// <summary>
+        /// Implements any storage change for XcmpQueue.DeliveryFeeFactor
+        /// </summary>
+        [StorageChange("XcmpQueue", "DeliveryFeeFactor")]
+        public void OnUpdateDeliveryFeeFactor(string key, string data)
+        {
+            DeliveryFeeFactorTypedStorage.Update(key, data);
+        }
+        
+        /// <summary>
+        /// >> DeliveryFeeFactor
+        ///  The factor to multiply the base delivery fee by.
+        /// </summary>
+        public Substrate.Unique.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedU128 GetDeliveryFeeFactor(string key)
+        {
+            if ((key == null))
+            {
+                return null;
+            }
+            if (DeliveryFeeFactorTypedStorage.Dictionary.TryGetValue(key, out Substrate.Unique.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedU128 result))
+            {
+                return result;
+            }
+            else
+            {
+                return null;
+            }
         }
     }
 }

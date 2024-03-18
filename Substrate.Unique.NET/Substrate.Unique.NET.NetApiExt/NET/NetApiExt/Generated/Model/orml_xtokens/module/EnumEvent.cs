@@ -15,20 +15,25 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.orml_xtokens.module
 {
     
     
+    /// <summary>
+    /// >> Event
+    /// The `Event` enum of this pallet
+    /// </summary>
     public enum Event
     {
         
+        /// <summary>
+        /// >> TransferredMultiAssets
+        /// Transferred `MultiAsset` with fee.
+        /// </summary>
         TransferredMultiAssets = 0,
     }
     
     /// <summary>
     /// >> 46 - Variant[orml_xtokens.module.Event]
-    /// 
-    ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
-    ///			by this pallet.
-    ///			
+    /// The `Event` enum of this pallet
     /// </summary>
-    public sealed class EnumEvent : BaseEnumExt<Event, BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v3.multiasset.MultiAssets, Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v3.multiasset.MultiAsset, Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v3.multilocation.MultiLocation>>
+    public sealed class EnumEvent : BaseEnumExt<Event, BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v3.multiasset.MultiAssets, Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v3.multiasset.MultiAsset, Substrate.Unique.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation>>
     {
     }
 }

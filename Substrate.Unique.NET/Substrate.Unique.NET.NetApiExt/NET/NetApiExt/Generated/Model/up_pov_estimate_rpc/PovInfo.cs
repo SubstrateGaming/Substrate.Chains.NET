@@ -18,7 +18,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.up_pov_estimate_rpc
     
     
     /// <summary>
-    /// >> 425 - Composite[up_pov_estimate_rpc.PovInfo]
+    /// >> 595 - Composite[up_pov_estimate_rpc.PovInfo]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class PovInfo : BaseType
@@ -27,93 +27,31 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.up_pov_estimate_rpc
         /// <summary>
         /// >> proof_size
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U64 _proofSize;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U64 ProofSize { get; set; }
         /// <summary>
         /// >> compact_proof_size
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U64 _compactProofSize;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U64 CompactProofSize { get; set; }
         /// <summary>
         /// >> compressed_proof_size
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U64 _compressedProofSize;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U64 CompressedProofSize { get; set; }
         /// <summary>
         /// >> results
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Unique.NET.NetApiExt.Generated.Types.Base.EnumResult> _results;
-        
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Unique.NET.NetApiExt.Generated.Types.Base.EnumResult> Results { get; set; }
         /// <summary>
         /// >> key_values
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Unique.NET.NetApiExt.Generated.Model.up_pov_estimate_rpc.TrieKeyValue> _keyValues;
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Unique.NET.NetApiExt.Generated.Model.up_pov_estimate_rpc.TrieKeyValue> KeyValues { get; set; }
         
-        public Substrate.NetApi.Model.Types.Primitive.U64 ProofSize
-        {
-            get
-            {
-                return this._proofSize;
-            }
-            set
-            {
-                this._proofSize = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U64 CompactProofSize
-        {
-            get
-            {
-                return this._compactProofSize;
-            }
-            set
-            {
-                this._compactProofSize = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U64 CompressedProofSize
-        {
-            get
-            {
-                return this._compressedProofSize;
-            }
-            set
-            {
-                this._compressedProofSize = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Unique.NET.NetApiExt.Generated.Types.Base.EnumResult> Results
-        {
-            get
-            {
-                return this._results;
-            }
-            set
-            {
-                this._results = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Unique.NET.NetApiExt.Generated.Model.up_pov_estimate_rpc.TrieKeyValue> KeyValues
-        {
-            get
-            {
-                return this._keyValues;
-            }
-            set
-            {
-                this._keyValues = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "PovInfo";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -125,6 +63,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.up_pov_estimate_rpc
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

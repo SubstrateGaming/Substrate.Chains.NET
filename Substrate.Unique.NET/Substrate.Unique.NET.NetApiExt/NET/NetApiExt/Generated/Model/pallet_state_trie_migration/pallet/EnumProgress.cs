@@ -15,20 +15,32 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_state_trie_migra
 {
     
     
+    /// <summary>
+    /// >> Progress
+    /// </summary>
     public enum Progress
     {
         
+        /// <summary>
+        /// >> ToStart
+        /// </summary>
         ToStart = 0,
         
+        /// <summary>
+        /// >> LastKey
+        /// </summary>
         LastKey = 1,
         
+        /// <summary>
+        /// >> Complete
+        /// </summary>
         Complete = 2,
     }
     
     /// <summary>
-    /// >> 162 - Variant[pallet_state_trie_migration.pallet.Progress]
+    /// >> 91 - Variant[pallet_state_trie_migration.pallet.Progress]
     /// </summary>
-    public sealed class EnumProgress : BaseEnumExt<Progress, BaseVoid, Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT7, BaseVoid>
+    public sealed class EnumProgress : BaseEnumExt<Progress, BaseVoid, Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT1, BaseVoid>
     {
     }
 }

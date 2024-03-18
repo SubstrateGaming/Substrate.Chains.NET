@@ -18,7 +18,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.fp_self_contained.unche
     
     
     /// <summary>
-    /// >> 485 - Composite[fp_self_contained.unchecked_extrinsic.UncheckedExtrinsic]
+    /// >> 657 - Composite[fp_self_contained.unchecked_extrinsic.UncheckedExtrinsic]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class UncheckedExtrinsic : BaseType
@@ -27,25 +27,15 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.fp_self_contained.unche
         /// <summary>
         /// >> value
         /// </summary>
-        private Substrate.Unique.NET.NetApiExt.Generated.Model.sp_runtime.generic.unchecked_extrinsic.UncheckedExtrinsic _value;
+        public Substrate.Unique.NET.NetApiExt.Generated.Model.sp_runtime.generic.unchecked_extrinsic.UncheckedExtrinsic Value { get; set; }
         
-        public Substrate.Unique.NET.NetApiExt.Generated.Model.sp_runtime.generic.unchecked_extrinsic.UncheckedExtrinsic Value
-        {
-            get
-            {
-                return this._value;
-            }
-            set
-            {
-                this._value = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "UncheckedExtrinsic";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -53,6 +43,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.fp_self_contained.unche
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

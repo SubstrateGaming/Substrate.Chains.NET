@@ -15,20 +15,35 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.evm_core.error
 {
     
     
+    /// <summary>
+    /// >> ExitFatal
+    /// </summary>
     public enum ExitFatal
     {
         
+        /// <summary>
+        /// >> NotSupported
+        /// </summary>
         NotSupported = 0,
         
+        /// <summary>
+        /// >> UnhandledInterrupt
+        /// </summary>
         UnhandledInterrupt = 1,
         
+        /// <summary>
+        /// >> CallErrorAsFatal
+        /// </summary>
         CallErrorAsFatal = 2,
         
+        /// <summary>
+        /// >> Other
+        /// </summary>
         Other = 3,
     }
     
     /// <summary>
-    /// >> 136 - Variant[evm_core.error.ExitFatal]
+    /// >> 374 - Variant[evm_core.error.ExitFatal]
     /// </summary>
     public sealed class EnumExitFatal : BaseEnumExt<ExitFatal, BaseVoid, BaseVoid, Substrate.Unique.NET.NetApiExt.Generated.Model.evm_core.error.EnumExitError, Substrate.Unique.NET.NetApiExt.Generated.Types.Base.CowT1>
     {

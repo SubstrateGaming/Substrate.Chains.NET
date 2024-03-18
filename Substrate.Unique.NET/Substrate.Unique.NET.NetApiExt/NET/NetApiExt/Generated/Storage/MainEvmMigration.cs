@@ -21,12 +21,18 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> EvmMigrationStorage
+    /// </summary>
     public sealed class EvmMigrationStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> EvmMigrationStorage Constructor
+        /// </summary>
         public EvmMigrationStorage(SubstrateClientExt client)
         {
             this._client = client;
@@ -56,20 +62,23 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         /// <summary>
         /// >> MigrationPending
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.Bool> MigrationPending(Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H160 key, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.Bool> MigrationPending(Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H160 key, string blockhash, CancellationToken token)
         {
             string parameters = EvmMigrationStorage.MigrationPendingParams(key);
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.Bool>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.Bool>(parameters, blockhash, token);
             return result;
         }
     }
     
+    /// <summary>
+    /// >> EvmMigrationCalls
+    /// </summary>
     public sealed class EvmMigrationCalls
     {
         
         /// <summary>
         /// >> begin
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method Begin(Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H160 address)
         {
@@ -80,7 +89,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> set_data
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method SetData(Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H160 address, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H256>> data)
         {
@@ -92,7 +101,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> finish
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method Finish(Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H160 address, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> code)
         {
@@ -104,7 +113,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> insert_eth_logs
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method InsertEthLogs(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Unique.NET.NetApiExt.Generated.Model.ethereum.log.Log> logs)
         {
@@ -115,7 +124,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> insert_events
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method InsertEvents(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>> events)
         {
@@ -126,7 +135,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> remove_rmrk_data
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method RemoveRmrkData()
         {
@@ -135,10 +144,16 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> EvmMigrationConstants
+    /// </summary>
     public sealed class EvmMigrationConstants
     {
     }
     
+    /// <summary>
+    /// >> EvmMigrationErrors
+    /// </summary>
     public enum EvmMigrationErrors
     {
         

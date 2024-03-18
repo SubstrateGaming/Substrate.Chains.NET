@@ -15,11 +15,20 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.frame_support.traits.to
 {
     
     
+    /// <summary>
+    /// >> BalanceStatus
+    /// </summary>
     public enum BalanceStatus
     {
         
+        /// <summary>
+        /// >> Free
+        /// </summary>
         Free = 0,
         
+        /// <summary>
+        /// >> Reserved
+        /// </summary>
         Reserved = 1,
     }
     

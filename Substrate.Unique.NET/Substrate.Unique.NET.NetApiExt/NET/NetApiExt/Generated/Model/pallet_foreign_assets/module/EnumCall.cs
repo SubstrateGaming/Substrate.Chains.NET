@@ -15,19 +15,25 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_foreign_assets.m
 {
     
     
+    /// <summary>
+    /// >> Call
+    /// Contains a variant per dispatchable extrinsic that this pallet has.
+    /// </summary>
     public enum Call
     {
         
-        register_foreign_asset = 0,
-        
-        update_foreign_asset = 1,
+        /// <summary>
+        /// >> force_register_foreign_asset
+        /// See [`Pallet::force_register_foreign_asset`].
+        /// </summary>
+        force_register_foreign_asset = 0,
     }
     
     /// <summary>
-    /// >> 319 - Variant[pallet_foreign_assets.module.Call]
-    /// Contains one variant per dispatchable that can be called by an extrinsic.
+    /// >> 323 - Variant[pallet_foreign_assets.module.Call]
+    /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
-    public sealed class EnumCall : BaseEnumExt<Call, BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation, Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_foreign_assets.module.AssetMetadata>, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation, Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_foreign_assets.module.AssetMetadata>>
+    public sealed class EnumCall : BaseEnumExt<Call, BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAssetId, Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT8, Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10, Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_foreign_assets.EnumForeignCollectionMode>>
     {
     }
 }

@@ -18,7 +18,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_que
     
     
     /// <summary>
-    /// >> 365 - Composite[cumulus_pallet_xcmp_queue.OutboundChannelDetails]
+    /// >> 535 - Composite[cumulus_pallet_xcmp_queue.OutboundChannelDetails]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class OutboundChannelDetails : BaseType
@@ -27,93 +27,31 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_que
         /// <summary>
         /// >> recipient
         /// </summary>
-        private Substrate.Unique.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id _recipient;
-        
+        public Substrate.Unique.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id Recipient { get; set; }
         /// <summary>
         /// >> state
         /// </summary>
-        private Substrate.Unique.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue.EnumOutboundState _state;
-        
+        public Substrate.Unique.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue.EnumOutboundState State { get; set; }
         /// <summary>
         /// >> signals_exist
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.Bool _signalsExist;
-        
+        public Substrate.NetApi.Model.Types.Primitive.Bool SignalsExist { get; set; }
         /// <summary>
         /// >> first_index
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U16 _firstIndex;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U16 FirstIndex { get; set; }
         /// <summary>
         /// >> last_index
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U16 _lastIndex;
+        public Substrate.NetApi.Model.Types.Primitive.U16 LastIndex { get; set; }
         
-        public Substrate.Unique.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id Recipient
-        {
-            get
-            {
-                return this._recipient;
-            }
-            set
-            {
-                this._recipient = value;
-            }
-        }
-        
-        public Substrate.Unique.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue.EnumOutboundState State
-        {
-            get
-            {
-                return this._state;
-            }
-            set
-            {
-                this._state = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.Bool SignalsExist
-        {
-            get
-            {
-                return this._signalsExist;
-            }
-            set
-            {
-                this._signalsExist = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U16 FirstIndex
-        {
-            get
-            {
-                return this._firstIndex;
-            }
-            set
-            {
-                this._firstIndex = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U16 LastIndex
-        {
-            get
-            {
-                return this._lastIndex;
-            }
-            set
-            {
-                this._lastIndex = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "OutboundChannelDetails";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -125,10 +63,11 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_que
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Recipient = new Substrate.Unique.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id();
+            Recipient = new Substrate.Unique.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id();
             Recipient.Decode(byteArray, ref p);
             State = new Substrate.Unique.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue.EnumOutboundState();
             State.Decode(byteArray, ref p);

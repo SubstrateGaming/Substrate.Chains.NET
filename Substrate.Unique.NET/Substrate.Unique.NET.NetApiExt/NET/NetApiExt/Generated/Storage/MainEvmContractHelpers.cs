@@ -21,12 +21,18 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> EvmContractHelpersStorage
+    /// </summary>
     public sealed class EvmContractHelpersStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> EvmContractHelpersStorage Constructor
+        /// </summary>
         public EvmContractHelpersStorage(SubstrateClientExt client)
         {
             this._client = client;
@@ -82,10 +88,10 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         ///  * **Key** - contract address.
         ///  * **Value** - owner for contract.
         /// </summary>
-        public async Task<Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H160> Owner(Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H160 key, CancellationToken token)
+        public async Task<Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H160> Owner(Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H160 key, string blockhash, CancellationToken token)
         {
             string parameters = EvmContractHelpersStorage.OwnerParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H160>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H160>(parameters, blockhash, token);
             return result;
         }
         
@@ -113,10 +119,10 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         /// >> SelfSponsoring
         ///  Deprecated: this storage is deprecated
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.Bool> SelfSponsoring(Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H160 key, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.Bool> SelfSponsoring(Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H160 key, string blockhash, CancellationToken token)
         {
             string parameters = EvmContractHelpersStorage.SelfSponsoringParams(key);
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.Bool>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.Bool>(parameters, blockhash, token);
             return result;
         }
         
@@ -150,10 +156,10 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         ///  * **Key** - contract address.
         ///  * **Value** - sponsorship state.
         /// </summary>
-        public async Task<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.EnumSponsorshipState> Sponsoring(Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H160 key, CancellationToken token)
+        public async Task<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.EnumSponsorshipState> Sponsoring(Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H160 key, string blockhash, CancellationToken token)
         {
             string parameters = EvmContractHelpersStorage.SponsoringParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.EnumSponsorshipState>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.EnumSponsorshipState>(parameters, blockhash, token);
             return result;
         }
         
@@ -193,10 +199,10 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         ///  * **Key** - contract address.
         ///  * **Value** - [`sponsoring mode`](SponsoringModeT).
         /// </summary>
-        public async Task<Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_evm_contract_helpers.EnumSponsoringModeT> SponsoringMode(Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H160 key, CancellationToken token)
+        public async Task<Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_evm_contract_helpers.EnumSponsoringModeT> SponsoringMode(Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H160 key, string blockhash, CancellationToken token)
         {
             string parameters = EvmContractHelpersStorage.SponsoringModeParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_evm_contract_helpers.EnumSponsoringModeT>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_evm_contract_helpers.EnumSponsoringModeT>(parameters, blockhash, token);
             return result;
         }
         
@@ -230,10 +236,10 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         ///  * **Key** - contract address.
         ///  * **Value** - amount of sponsored blocks.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> SponsoringRateLimit(Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H160 key, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> SponsoringRateLimit(Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H160 key, string blockhash, CancellationToken token)
         {
             string parameters = EvmContractHelpersStorage.SponsoringRateLimitParams(key);
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, blockhash, token);
             return result;
         }
         
@@ -269,10 +275,10 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         ///  * **Key2** - sponsored user address.
         ///  * **Value** - last sponsored block number.
         /// </summary>
-        public async Task<Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_map.BoundedBTreeMapT4> SponsoringFeeLimit(Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H160 key, CancellationToken token)
+        public async Task<Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_map.BoundedBTreeMapT4> SponsoringFeeLimit(Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H160 key, string blockhash, CancellationToken token)
         {
             string parameters = EvmContractHelpersStorage.SponsoringFeeLimitParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_map.BoundedBTreeMapT4>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_map.BoundedBTreeMapT4>(parameters, blockhash, token);
             return result;
         }
         
@@ -298,10 +304,10 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         /// <summary>
         /// >> SponsorBasket
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> SponsorBasket(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H160, Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H160> key, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> SponsorBasket(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H160, Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H160> key, string blockhash, CancellationToken token)
         {
             string parameters = EvmContractHelpersStorage.SponsorBasketParams(key);
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, blockhash, token);
             return result;
         }
         
@@ -341,10 +347,10 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         ///  * **Key** - contract address.
         ///  * **Value** - is contract in [`Allowlisted`](SponsoringModeT::Allowlisted) mode.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.Bool> AllowlistEnabled(Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H160 key, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.Bool> AllowlistEnabled(Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H160 key, string blockhash, CancellationToken token)
         {
             string parameters = EvmContractHelpersStorage.AllowlistEnabledParams(key);
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.Bool>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.Bool>(parameters, blockhash, token);
             return result;
         }
         
@@ -386,20 +392,23 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         ///  * **Key2** - user that allowed for sponsorship.
         ///  * **Value** - allowance for sponsorship.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.Bool> Allowlist(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H160, Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H160> key, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.Bool> Allowlist(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H160, Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H160> key, string blockhash, CancellationToken token)
         {
             string parameters = EvmContractHelpersStorage.AllowlistParams(key);
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.Bool>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.Bool>(parameters, blockhash, token);
             return result;
         }
     }
     
+    /// <summary>
+    /// >> EvmContractHelpersCalls
+    /// </summary>
     public sealed class EvmContractHelpersCalls
     {
         
         /// <summary>
         /// >> migrate_from_self_sponsoring
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method MigrateFromSelfSponsoring(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H160> addresses)
         {
@@ -409,6 +418,9 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> EvmContractHelpersConstants
+    /// </summary>
     public sealed class EvmContractHelpersConstants
     {
         
@@ -424,6 +436,9 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> EvmContractHelpersErrors
+    /// </summary>
     public enum EvmContractHelpersErrors
     {
         

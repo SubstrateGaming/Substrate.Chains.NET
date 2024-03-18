@@ -18,7 +18,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_configuration
     
     
     /// <summary>
-    /// >> 313 - Composite[pallet_configuration.AppPromotionConfiguration]
+    /// >> 315 - Composite[pallet_configuration.AppPromotionConfiguration]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class AppPromotionConfiguration : BaseType
@@ -27,76 +27,27 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_configuration
         /// <summary>
         /// >> recalculation_interval
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32> _recalculationInterval;
-        
+        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32> RecalculationInterval { get; set; }
         /// <summary>
         /// >> pending_interval
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32> _pendingInterval;
-        
+        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32> PendingInterval { get; set; }
         /// <summary>
         /// >> interval_income
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Unique.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill> _intervalIncome;
-        
+        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Unique.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill> IntervalIncome { get; set; }
         /// <summary>
         /// >> max_stakers_per_calculation
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U8> _maxStakersPerCalculation;
+        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U8> MaxStakersPerCalculation { get; set; }
         
-        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32> RecalculationInterval
-        {
-            get
-            {
-                return this._recalculationInterval;
-            }
-            set
-            {
-                this._recalculationInterval = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32> PendingInterval
-        {
-            get
-            {
-                return this._pendingInterval;
-            }
-            set
-            {
-                this._pendingInterval = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Unique.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill> IntervalIncome
-        {
-            get
-            {
-                return this._intervalIncome;
-            }
-            set
-            {
-                this._intervalIncome = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U8> MaxStakersPerCalculation
-        {
-            get
-            {
-                return this._maxStakersPerCalculation;
-            }
-            set
-            {
-                this._maxStakersPerCalculation = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "AppPromotionConfiguration";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -107,6 +58,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_configuration
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

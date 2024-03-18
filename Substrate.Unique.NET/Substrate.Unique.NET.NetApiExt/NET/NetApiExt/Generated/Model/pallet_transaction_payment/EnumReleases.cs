@@ -15,16 +15,25 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_transaction_paym
 {
     
     
+    /// <summary>
+    /// >> Releases
+    /// </summary>
     public enum Releases
     {
         
+        /// <summary>
+        /// >> V1Ancient
+        /// </summary>
         V1Ancient = 0,
         
+        /// <summary>
+        /// >> V2
+        /// </summary>
         V2 = 1,
     }
     
     /// <summary>
-    /// >> 220 - Variant[pallet_transaction_payment.Releases]
+    /// >> 445 - Variant[pallet_transaction_payment.Releases]
     /// </summary>
     public sealed class EnumReleases : BaseEnum<Releases>
     {

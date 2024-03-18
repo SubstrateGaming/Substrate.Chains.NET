@@ -18,7 +18,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.ethereum.transaction
     
     
     /// <summary>
-    /// >> 330 - Composite[ethereum.transaction.TransactionSignature]
+    /// >> 336 - Composite[ethereum.transaction.TransactionSignature]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class TransactionSignature : BaseType
@@ -27,59 +27,23 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.ethereum.transaction
         /// <summary>
         /// >> v
         /// </summary>
-        private Substrate.Unique.NET.NetApiExt.Generated.Model.ethereum.transaction.TransactionRecoveryId _v;
-        
+        public Substrate.Unique.NET.NetApiExt.Generated.Model.ethereum.transaction.TransactionRecoveryId V { get; set; }
         /// <summary>
         /// >> r
         /// </summary>
-        private Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H256 _r;
-        
+        public Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H256 R { get; set; }
         /// <summary>
         /// >> s
         /// </summary>
-        private Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H256 _s;
+        public Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H256 S { get; set; }
         
-        public Substrate.Unique.NET.NetApiExt.Generated.Model.ethereum.transaction.TransactionRecoveryId V
-        {
-            get
-            {
-                return this._v;
-            }
-            set
-            {
-                this._v = value;
-            }
-        }
-        
-        public Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H256 R
-        {
-            get
-            {
-                return this._r;
-            }
-            set
-            {
-                this._r = value;
-            }
-        }
-        
-        public Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H256 S
-        {
-            get
-            {
-                return this._s;
-            }
-            set
-            {
-                this._s = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "TransactionSignature";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -89,6 +53,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.ethereum.transaction
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

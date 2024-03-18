@@ -21,12 +21,18 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> StateTrieMigrationStorage
+    /// </summary>
     public sealed class StateTrieMigrationStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> StateTrieMigrationStorage Constructor
+        /// </summary>
         public StateTrieMigrationStorage(SubstrateClientExt client)
         {
             this._client = client;
@@ -63,10 +69,10 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         ///  This stores the snapshot of the last migrated keys. It can be set into motion and move
         ///  forward by any of the means provided by this pallet.
         /// </summary>
-        public async Task<Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.MigrationTask> MigrationProcess(CancellationToken token)
+        public async Task<Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.MigrationTask> MigrationProcess(string blockhash, CancellationToken token)
         {
             string parameters = StateTrieMigrationStorage.MigrationProcessParams();
-            var result = await _client.GetStorageAsync<Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.MigrationTask>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.MigrationTask>(parameters, blockhash, token);
             return result;
         }
         
@@ -96,10 +102,10 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         /// 
         ///  If set to None, then no automatic migration happens.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.MigrationLimits>> AutoLimits(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.MigrationLimits>> AutoLimits(string blockhash, CancellationToken token)
         {
             string parameters = StateTrieMigrationStorage.AutoLimitsParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.MigrationLimits>>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.MigrationLimits>>(parameters, blockhash, token);
             return result;
         }
         
@@ -129,20 +135,23 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         /// 
         ///  If not set, no signed submission is allowed.
         /// </summary>
-        public async Task<Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.MigrationLimits> SignedMigrationMaxLimits(CancellationToken token)
+        public async Task<Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.MigrationLimits> SignedMigrationMaxLimits(string blockhash, CancellationToken token)
         {
             string parameters = StateTrieMigrationStorage.SignedMigrationMaxLimitsParams();
-            var result = await _client.GetStorageAsync<Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.MigrationLimits>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.MigrationLimits>(parameters, blockhash, token);
             return result;
         }
     }
     
+    /// <summary>
+    /// >> StateTrieMigrationCalls
+    /// </summary>
     public sealed class StateTrieMigrationCalls
     {
         
         /// <summary>
         /// >> control_auto_migration
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method ControlAutoMigration(Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.MigrationLimits> maybe_config)
         {
@@ -153,7 +162,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> continue_migrate
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method ContinueMigrate(Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.MigrationLimits limits, Substrate.NetApi.Model.Types.Primitive.U32 real_size_upper, Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.MigrationTask witness_task)
         {
@@ -166,7 +175,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> migrate_custom_top
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method MigrateCustomTop(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>> keys, Substrate.NetApi.Model.Types.Primitive.U32 witness_size)
         {
@@ -178,7 +187,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> migrate_custom_child
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method MigrateCustomChild(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> root, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>> child_keys, Substrate.NetApi.Model.Types.Primitive.U32 total_size)
         {
@@ -191,7 +200,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> set_signed_max_limits
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method SetSignedMaxLimits(Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.MigrationLimits limits)
         {
@@ -202,7 +211,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> force_set_progress
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method ForceSetProgress(Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.EnumProgress progress_top, Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.EnumProgress progress_child)
         {
@@ -213,6 +222,9 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> StateTrieMigrationConstants
+    /// </summary>
     public sealed class StateTrieMigrationConstants
     {
         
@@ -248,6 +260,9 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> StateTrieMigrationErrors
+    /// </summary>
     public enum StateTrieMigrationErrors
     {
         

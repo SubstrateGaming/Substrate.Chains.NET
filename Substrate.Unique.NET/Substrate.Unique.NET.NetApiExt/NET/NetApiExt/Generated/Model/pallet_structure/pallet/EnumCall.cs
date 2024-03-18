@@ -15,13 +15,17 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_structure.pallet
 {
     
     
+    /// <summary>
+    /// >> Call
+    /// Contains a variant per dispatchable extrinsic that this pallet has.
+    /// </summary>
     public enum Call
     {
     }
     
     /// <summary>
-    /// >> 317 - Variant[pallet_structure.pallet.Call]
-    /// Contains one variant per dispatchable that can be called by an extrinsic.
+    /// >> 320 - Variant[pallet_structure.pallet.Call]
+    /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
     public sealed class EnumCall : BaseEnum<Call>
     {

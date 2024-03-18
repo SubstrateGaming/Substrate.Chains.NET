@@ -15,32 +15,61 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.cumulus_pallet_dmp_queu
 {
     
     
+    /// <summary>
+    /// >> Event
+    /// The `Event` enum of this pallet
+    /// </summary>
     public enum Event
     {
         
+        /// <summary>
+        /// >> InvalidFormat
+        /// Downward message is invalid XCM.
+        /// </summary>
         InvalidFormat = 0,
         
+        /// <summary>
+        /// >> UnsupportedVersion
+        /// Downward message is unsupported version of XCM.
+        /// </summary>
         UnsupportedVersion = 1,
         
+        /// <summary>
+        /// >> ExecutedDownward
+        /// Downward message executed with the given outcome.
+        /// </summary>
         ExecutedDownward = 2,
         
+        /// <summary>
+        /// >> WeightExhausted
+        /// The weight limit for handling downward messages was reached.
+        /// </summary>
         WeightExhausted = 3,
         
+        /// <summary>
+        /// >> OverweightEnqueued
+        /// Downward message is overweight and was placed in the overweight queue.
+        /// </summary>
         OverweightEnqueued = 4,
         
+        /// <summary>
+        /// >> OverweightServiced
+        /// Downward message from the overweight queue was executed.
+        /// </summary>
         OverweightServiced = 5,
         
+        /// <summary>
+        /// >> MaxMessagesExhausted
+        /// The maximum number of downward messages was reached.
+        /// </summary>
         MaxMessagesExhausted = 6,
     }
     
     /// <summary>
-    /// >> 109 - Variant[cumulus_pallet_dmp_queue.pallet.Event]
-    /// 
-    ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
-    ///			by this pallet.
-    ///			
+    /// >> 359 - Variant[cumulus_pallet_dmp_queue.pallet.Event]
+    /// The `Event` enum of this pallet
     /// </summary>
-    public sealed class EnumEvent : BaseEnumExt<Event, Substrate.Unique.NET.NetApiExt.Generated.Types.Base.Arr32U8, Substrate.Unique.NET.NetApiExt.Generated.Types.Base.Arr32U8, BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Types.Base.Arr32U8, Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v3.traits.EnumOutcome>, BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Types.Base.Arr32U8, Substrate.Unique.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight, Substrate.Unique.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>, BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Types.Base.Arr32U8, Substrate.NetApi.Model.Types.Primitive.U64, Substrate.Unique.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U64, Substrate.Unique.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>, Substrate.Unique.NET.NetApiExt.Generated.Types.Base.Arr32U8>
+    public sealed class EnumEvent : BaseEnumExt<Event, Substrate.Unique.NET.NetApiExt.Generated.Types.Base.Arr32U8, Substrate.Unique.NET.NetApiExt.Generated.Types.Base.Arr32U8, BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Types.Base.Arr32U8, Substrate.Unique.NET.NetApiExt.Generated.Types.Base.Arr32U8, Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v3.traits.EnumOutcome>, BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Types.Base.Arr32U8, Substrate.Unique.NET.NetApiExt.Generated.Types.Base.Arr32U8, Substrate.Unique.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight, Substrate.Unique.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>, BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Types.Base.Arr32U8, Substrate.Unique.NET.NetApiExt.Generated.Types.Base.Arr32U8, Substrate.NetApi.Model.Types.Primitive.U64, Substrate.Unique.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U64, Substrate.Unique.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>, Substrate.Unique.NET.NetApiExt.Generated.Types.Base.Arr32U8>
     {
     }
 }

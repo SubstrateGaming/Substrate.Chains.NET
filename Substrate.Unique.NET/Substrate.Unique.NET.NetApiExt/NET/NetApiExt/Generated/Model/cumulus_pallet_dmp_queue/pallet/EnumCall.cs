@@ -15,15 +15,23 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.cumulus_pallet_dmp_queu
 {
     
     
+    /// <summary>
+    /// >> Call
+    /// Contains a variant per dispatchable extrinsic that this pallet has.
+    /// </summary>
     public enum Call
     {
         
+        /// <summary>
+        /// >> service_overweight
+        /// See [`Pallet::service_overweight`].
+        /// </summary>
         service_overweight = 0,
     }
     
     /// <summary>
-    /// >> 260 - Variant[cumulus_pallet_dmp_queue.pallet.Call]
-    /// Contains one variant per dispatchable that can be called by an extrinsic.
+    /// >> 257 - Variant[cumulus_pallet_dmp_queue.pallet.Call]
+    /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
     public sealed class EnumCall : BaseEnumExt<Call, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U64, Substrate.Unique.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>>
     {

@@ -18,7 +18,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types
     
     
     /// <summary>
-    /// >> 321 - Composite[primitive_types.U256]
+    /// >> 327 - Composite[primitive_types.U256]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class U256 : BaseType
@@ -27,25 +27,15 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types
         /// <summary>
         /// >> value
         /// </summary>
-        private Substrate.Unique.NET.NetApiExt.Generated.Types.Base.Arr4U64 _value;
+        public Substrate.Unique.NET.NetApiExt.Generated.Types.Base.Arr4U64 Value { get; set; }
         
-        public Substrate.Unique.NET.NetApiExt.Generated.Types.Base.Arr4U64 Value
-        {
-            get
-            {
-                return this._value;
-            }
-            set
-            {
-                this._value = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "U256";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -53,6 +43,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

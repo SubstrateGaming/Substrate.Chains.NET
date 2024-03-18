@@ -21,12 +21,18 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> InflationStorage
+    /// </summary>
     public sealed class InflationStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> InflationStorage Constructor
+        /// </summary>
         public InflationStorage(SubstrateClientExt client)
         {
             this._client = client;
@@ -59,10 +65,10 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         /// >> StartingYearTotalIssuance
         ///  starting year total issuance
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U128> StartingYearTotalIssuance(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U128> StartingYearTotalIssuance(string blockhash, CancellationToken token)
         {
             string parameters = InflationStorage.StartingYearTotalIssuanceParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U128>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U128>(parameters, blockhash, token);
             return result;
         }
         
@@ -88,10 +94,10 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         /// >> BlockInflation
         ///  Current inflation for `InflationBlockInterval` number of blocks
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U128> BlockInflation(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U128> BlockInflation(string blockhash, CancellationToken token)
         {
             string parameters = InflationStorage.BlockInflationParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U128>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U128>(parameters, blockhash, token);
             return result;
         }
         
@@ -117,10 +123,10 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         /// >> NextInflationBlock
         ///  Next target (relay) block when inflation will be applied
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> NextInflationBlock(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> NextInflationBlock(string blockhash, CancellationToken token)
         {
             string parameters = InflationStorage.NextInflationBlockParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, blockhash, token);
             return result;
         }
         
@@ -146,10 +152,10 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         /// >> NextRecalculationBlock
         ///  Next target (relay) block when inflation is recalculated
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> NextRecalculationBlock(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> NextRecalculationBlock(string blockhash, CancellationToken token)
         {
             string parameters = InflationStorage.NextRecalculationBlockParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, blockhash, token);
             return result;
         }
         
@@ -175,20 +181,23 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         /// >> StartBlock
         ///  Relay block when inflation has started
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> StartBlock(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> StartBlock(string blockhash, CancellationToken token)
         {
             string parameters = InflationStorage.StartBlockParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, blockhash, token);
             return result;
         }
     }
     
+    /// <summary>
+    /// >> InflationCalls
+    /// </summary>
     public sealed class InflationCalls
     {
         
         /// <summary>
         /// >> start_inflation
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method StartInflation(Substrate.NetApi.Model.Types.Primitive.U32 inflation_start_relay_block)
         {
@@ -198,6 +207,9 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> InflationConstants
+    /// </summary>
     public sealed class InflationConstants
     {
         

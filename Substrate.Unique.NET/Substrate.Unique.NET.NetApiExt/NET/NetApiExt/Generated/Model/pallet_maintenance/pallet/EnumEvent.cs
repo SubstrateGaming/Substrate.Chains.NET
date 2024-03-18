@@ -15,20 +15,27 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_maintenance.pall
 {
     
     
+    /// <summary>
+    /// >> Event
+    /// The `Event` enum of this pallet
+    /// </summary>
     public enum Event
     {
         
+        /// <summary>
+        /// >> MaintenanceEnabled
+        /// </summary>
         MaintenanceEnabled = 0,
         
+        /// <summary>
+        /// >> MaintenanceDisabled
+        /// </summary>
         MaintenanceDisabled = 1,
     }
     
     /// <summary>
-    /// >> 139 - Variant[pallet_maintenance.pallet.Event]
-    /// 
-    ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
-    ///			by this pallet.
-    ///			
+    /// >> 377 - Variant[pallet_maintenance.pallet.Event]
+    /// The `Event` enum of this pallet
     /// </summary>
     public sealed class EnumEvent : BaseEnum<Event>
     {

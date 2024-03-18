@@ -18,7 +18,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.cumulus_pallet_dmp_queu
     
     
     /// <summary>
-    /// >> 391 - Composite[cumulus_pallet_dmp_queue.ConfigData]
+    /// >> 563 - Composite[cumulus_pallet_dmp_queue.ConfigData]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class ConfigData : BaseType
@@ -27,25 +27,15 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.cumulus_pallet_dmp_queu
         /// <summary>
         /// >> max_individual
         /// </summary>
-        private Substrate.Unique.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight _maxIndividual;
+        public Substrate.Unique.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight MaxIndividual { get; set; }
         
-        public Substrate.Unique.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight MaxIndividual
-        {
-            get
-            {
-                return this._maxIndividual;
-            }
-            set
-            {
-                this._maxIndividual = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "ConfigData";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -53,6 +43,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.cumulus_pallet_dmp_queu
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

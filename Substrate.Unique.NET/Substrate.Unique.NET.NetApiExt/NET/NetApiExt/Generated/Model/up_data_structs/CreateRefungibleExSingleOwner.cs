@@ -18,7 +18,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs
     
     
     /// <summary>
-    /// >> 308 - Composite[up_data_structs.CreateRefungibleExSingleOwner]
+    /// >> 310 - Composite[up_data_structs.CreateRefungibleExSingleOwner]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class CreateRefungibleExSingleOwner : BaseType
@@ -27,59 +27,23 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs
         /// <summary>
         /// >> user
         /// </summary>
-        private Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_evm.account.EnumBasicCrossAccountIdRepr _user;
-        
+        public Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_evm.account.EnumBasicCrossAccountIdRepr User { get; set; }
         /// <summary>
         /// >> pieces
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U128 _pieces;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U128 Pieces { get; set; }
         /// <summary>
         /// >> properties
         /// </summary>
-        private Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17 _properties;
+        public Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT13 Properties { get; set; }
         
-        public Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_evm.account.EnumBasicCrossAccountIdRepr User
-        {
-            get
-            {
-                return this._user;
-            }
-            set
-            {
-                this._user = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U128 Pieces
-        {
-            get
-            {
-                return this._pieces;
-            }
-            set
-            {
-                this._pieces = value;
-            }
-        }
-        
-        public Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17 Properties
-        {
-            get
-            {
-                return this._properties;
-            }
-            set
-            {
-                this._properties = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "CreateRefungibleExSingleOwner";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -89,6 +53,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
@@ -96,7 +61,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs
             User.Decode(byteArray, ref p);
             Pieces = new Substrate.NetApi.Model.Types.Primitive.U128();
             Pieces.Decode(byteArray, ref p);
-            Properties = new Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17();
+            Properties = new Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT13();
             Properties.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

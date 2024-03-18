@@ -18,6 +18,9 @@ namespace Substrate.Unique.NET.NetApiExt.Generated
 {
     
     
+    /// <summary>
+    /// >> Substrate Client Extension, including all Storage classes direct access.
+    /// </summary>
     public sealed class SubstrateClientExt : Substrate.NetApi.SubstrateClient
     {
         
@@ -92,9 +95,59 @@ namespace Substrate.Unique.NET.NetApiExt.Generated
         public XTokensStorage XTokensStorage;
         
         /// <summary>
-        /// TokensStorage storage calls.
+        /// IdentityStorage storage calls.
         /// </summary>
-        public TokensStorage TokensStorage;
+        public IdentityStorage IdentityStorage;
+        
+        /// <summary>
+        /// PreimageStorage storage calls.
+        /// </summary>
+        public PreimageStorage PreimageStorage;
+        
+        /// <summary>
+        /// DemocracyStorage storage calls.
+        /// </summary>
+        public DemocracyStorage DemocracyStorage;
+        
+        /// <summary>
+        /// CouncilStorage storage calls.
+        /// </summary>
+        public CouncilStorage CouncilStorage;
+        
+        /// <summary>
+        /// TechnicalCommitteeStorage storage calls.
+        /// </summary>
+        public TechnicalCommitteeStorage TechnicalCommitteeStorage;
+        
+        /// <summary>
+        /// CouncilMembershipStorage storage calls.
+        /// </summary>
+        public CouncilMembershipStorage CouncilMembershipStorage;
+        
+        /// <summary>
+        /// TechnicalCommitteeMembershipStorage storage calls.
+        /// </summary>
+        public TechnicalCommitteeMembershipStorage TechnicalCommitteeMembershipStorage;
+        
+        /// <summary>
+        /// FellowshipCollectiveStorage storage calls.
+        /// </summary>
+        public FellowshipCollectiveStorage FellowshipCollectiveStorage;
+        
+        /// <summary>
+        /// FellowshipReferendaStorage storage calls.
+        /// </summary>
+        public FellowshipReferendaStorage FellowshipReferendaStorage;
+        
+        /// <summary>
+        /// SchedulerStorage storage calls.
+        /// </summary>
+        public SchedulerStorage SchedulerStorage;
+        
+        /// <summary>
+        /// OriginsStorage storage calls.
+        /// </summary>
+        public OriginsStorage OriginsStorage;
         
         /// <summary>
         /// XcmpQueueStorage storage calls.
@@ -211,6 +264,11 @@ namespace Substrate.Unique.NET.NetApiExt.Generated
         /// </summary>
         public BalancesAdapterStorage BalancesAdapterStorage;
         
+        /// <summary>
+        /// UtilityStorage storage calls.
+        /// </summary>
+        public UtilityStorage UtilityStorage;
+        
         public SubstrateClientExt(System.Uri uri, Substrate.NetApi.Model.Extrinsics.ChargeType chargeType) : 
                 base(uri, chargeType)
         {
@@ -228,7 +286,17 @@ namespace Substrate.Unique.NET.NetApiExt.Generated
             this.SudoStorage = new SudoStorage(this);
             this.VestingStorage = new VestingStorage(this);
             this.XTokensStorage = new XTokensStorage(this);
-            this.TokensStorage = new TokensStorage(this);
+            this.IdentityStorage = new IdentityStorage(this);
+            this.PreimageStorage = new PreimageStorage(this);
+            this.DemocracyStorage = new DemocracyStorage(this);
+            this.CouncilStorage = new CouncilStorage(this);
+            this.TechnicalCommitteeStorage = new TechnicalCommitteeStorage(this);
+            this.CouncilMembershipStorage = new CouncilMembershipStorage(this);
+            this.TechnicalCommitteeMembershipStorage = new TechnicalCommitteeMembershipStorage(this);
+            this.FellowshipCollectiveStorage = new FellowshipCollectiveStorage(this);
+            this.FellowshipReferendaStorage = new FellowshipReferendaStorage(this);
+            this.SchedulerStorage = new SchedulerStorage(this);
+            this.OriginsStorage = new OriginsStorage(this);
             this.XcmpQueueStorage = new XcmpQueueStorage(this);
             this.PolkadotXcmStorage = new PolkadotXcmStorage(this);
             this.CumulusXcmStorage = new CumulusXcmStorage(this);
@@ -252,6 +320,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated
             this.EvmMigrationStorage = new EvmMigrationStorage(this);
             this.MaintenanceStorage = new MaintenanceStorage(this);
             this.BalancesAdapterStorage = new BalancesAdapterStorage(this);
+            this.UtilityStorage = new UtilityStorage(this);
         }
     }
 }

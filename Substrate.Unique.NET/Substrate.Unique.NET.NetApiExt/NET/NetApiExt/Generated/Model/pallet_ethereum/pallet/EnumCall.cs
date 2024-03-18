@@ -15,15 +15,23 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_ethereum.pallet
 {
     
     
+    /// <summary>
+    /// >> Call
+    /// Contains a variant per dispatchable extrinsic that this pallet has.
+    /// </summary>
     public enum Call
     {
         
+        /// <summary>
+        /// >> transact
+        /// See [`Pallet::transact`].
+        /// </summary>
         transact = 0,
     }
     
     /// <summary>
-    /// >> 326 - Variant[pallet_ethereum.pallet.Call]
-    /// Contains one variant per dispatchable that can be called by an extrinsic.
+    /// >> 332 - Variant[pallet_ethereum.pallet.Call]
+    /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
     public sealed class EnumCall : BaseEnumExt<Call, Substrate.Unique.NET.NetApiExt.Generated.Model.ethereum.transaction.EnumTransactionV2>
     {
