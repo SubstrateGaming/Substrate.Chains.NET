@@ -15,16 +15,25 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_evm.account
 {
     
     
+    /// <summary>
+    /// >> BasicCrossAccountIdRepr
+    /// </summary>
     public enum BasicCrossAccountIdRepr
     {
         
+        /// <summary>
+        /// >> Substrate
+        /// </summary>
         Substrate = 0,
         
+        /// <summary>
+        /// >> Ethereum
+        /// </summary>
         Ethereum = 1,
     }
     
     /// <summary>
-    /// >> 116 - Variant[pallet_evm.account.BasicCrossAccountIdRepr]
+    /// >> 266 - Variant[pallet_evm.account.BasicCrossAccountIdRepr]
     /// </summary>
     public sealed class EnumBasicCrossAccountIdRepr : BaseEnumExt<BasicCrossAccountIdRepr, Substrate.Unique.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H160>
     {

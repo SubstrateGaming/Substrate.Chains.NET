@@ -21,22 +21,34 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> BalancesAdapterStorage
+    /// </summary>
     public sealed class BalancesAdapterStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> BalancesAdapterStorage Constructor
+        /// </summary>
         public BalancesAdapterStorage(SubstrateClientExt client)
         {
             this._client = client;
         }
     }
     
+    /// <summary>
+    /// >> BalancesAdapterCalls
+    /// </summary>
     public sealed class BalancesAdapterCalls
     {
     }
     
+    /// <summary>
+    /// >> BalancesAdapterConstants
+    /// </summary>
     public sealed class BalancesAdapterConstants
     {
     }

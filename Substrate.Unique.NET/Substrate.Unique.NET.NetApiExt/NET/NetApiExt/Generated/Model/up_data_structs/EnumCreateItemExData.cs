@@ -15,22 +15,37 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs
 {
     
     
+    /// <summary>
+    /// >> CreateItemExData
+    /// </summary>
     public enum CreateItemExData
     {
         
+        /// <summary>
+        /// >> NFT
+        /// </summary>
         NFT = 0,
         
+        /// <summary>
+        /// >> Fungible
+        /// </summary>
         Fungible = 1,
         
+        /// <summary>
+        /// >> RefungibleMultipleItems
+        /// </summary>
         RefungibleMultipleItems = 2,
         
+        /// <summary>
+        /// >> RefungibleMultipleOwners
+        /// </summary>
         RefungibleMultipleOwners = 3,
     }
     
     /// <summary>
-    /// >> 299 - Variant[up_data_structs.CreateItemExData]
+    /// >> 301 - Variant[up_data_structs.CreateItemExData]
     /// </summary>
-    public sealed class EnumCreateItemExData : BaseEnumExt<CreateItemExData, Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT19, Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_map.BoundedBTreeMapT1, Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT20, Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CreateRefungibleExMultipleOwners>
+    public sealed class EnumCreateItemExData : BaseEnumExt<CreateItemExData, Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT15, Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_map.BoundedBTreeMapT1, Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT16, Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CreateRefungibleExMultipleOwners>
     {
     }
 }

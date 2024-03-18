@@ -18,7 +18,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bou
     
     
     /// <summary>
-    /// >> 303 - Composite[bounded_collections.bounded_btree_map.BoundedBTreeMapT1]
+    /// >> 305 - Composite[bounded_collections.bounded_btree_map.BoundedBTreeMapT1]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class BoundedBTreeMapT1 : BaseType
@@ -27,25 +27,15 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bou
         /// <summary>
         /// >> value
         /// </summary>
-        private Substrate.Unique.NET.NetApiExt.Generated.Types.Base.BTreeMapT3 _value;
+        public Substrate.Unique.NET.NetApiExt.Generated.Types.Base.BTreeMapT2 Value { get; set; }
         
-        public Substrate.Unique.NET.NetApiExt.Generated.Types.Base.BTreeMapT3 Value
-        {
-            get
-            {
-                return this._value;
-            }
-            set
-            {
-                this._value = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "BoundedBTreeMapT1";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -53,10 +43,11 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bou
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Value = new Substrate.Unique.NET.NetApiExt.Generated.Types.Base.BTreeMapT3();
+            Value = new Substrate.Unique.NET.NetApiExt.Generated.Types.Base.BTreeMapT2();
             Value.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

@@ -15,15 +15,23 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_timestamp.pallet
 {
     
     
+    /// <summary>
+    /// >> Call
+    /// Contains a variant per dispatchable extrinsic that this pallet has.
+    /// </summary>
     public enum Call
     {
         
+        /// <summary>
+        /// >> set
+        /// See [`Pallet::set`].
+        /// </summary>
         set = 0,
     }
     
     /// <summary>
-    /// >> 218 - Variant[pallet_timestamp.pallet.Call]
-    /// Contains one variant per dispatchable that can be called by an extrinsic.
+    /// >> 112 - Variant[pallet_timestamp.pallet.Call]
+    /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
     public sealed class EnumCall : BaseEnumExt<Call, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U64>>
     {

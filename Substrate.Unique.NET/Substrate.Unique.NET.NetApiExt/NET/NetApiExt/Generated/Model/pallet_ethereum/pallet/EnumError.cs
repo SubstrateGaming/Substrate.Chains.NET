@@ -15,20 +15,29 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_ethereum.pallet
 {
     
     
+    /// <summary>
+    /// >> Error
+    /// The `Error` enum of this pallet.
+    /// </summary>
     public enum Error
     {
         
+        /// <summary>
+        /// >> InvalidSignature
+        /// Signature is invalid.
+        /// </summary>
         InvalidSignature = 0,
         
+        /// <summary>
+        /// >> PreLogExists
+        /// Pre-log is present, therefore transact is not allowed.
+        /// </summary>
         PreLogExists = 1,
     }
     
     /// <summary>
-    /// >> 473 - Variant[pallet_ethereum.pallet.Error]
-    /// 
-    ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
-    ///			of this pallet.
-    ///			
+    /// >> 644 - Variant[pallet_ethereum.pallet.Error]
+    /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>
     {

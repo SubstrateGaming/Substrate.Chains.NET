@@ -18,7 +18,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs
     
     
     /// <summary>
-    /// >> 277 - Composite[up_data_structs.CollectionPermissions]
+    /// >> 275 - Composite[up_data_structs.CollectionPermissions]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class CollectionPermissions : BaseType
@@ -27,59 +27,23 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs
         /// <summary>
         /// >> access
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.EnumAccessMode> _access;
-        
+        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.EnumAccessMode> Access { get; set; }
         /// <summary>
         /// >> mint_mode
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.Bool> _mintMode;
-        
+        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.Bool> MintMode { get; set; }
         /// <summary>
         /// >> nesting
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.NestingPermissions> _nesting;
+        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.NestingPermissions> Nesting { get; set; }
         
-        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.EnumAccessMode> Access
-        {
-            get
-            {
-                return this._access;
-            }
-            set
-            {
-                this._access = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.Bool> MintMode
-        {
-            get
-            {
-                return this._mintMode;
-            }
-            set
-            {
-                this._mintMode = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.NestingPermissions> Nesting
-        {
-            get
-            {
-                return this._nesting;
-            }
-            set
-            {
-                this._nesting = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "CollectionPermissions";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -89,6 +53,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

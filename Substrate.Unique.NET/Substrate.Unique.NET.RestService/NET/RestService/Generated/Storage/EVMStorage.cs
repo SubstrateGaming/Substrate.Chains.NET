@@ -30,6 +30,11 @@ namespace Substrate.Unique.NET.RestService.Generated.Storage
         Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> GetAccountCodes(string key);
         
         /// <summary>
+        /// >> AccountCodesMetadata
+        /// </summary>
+        Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_evm.CodeMetadata GetAccountCodesMetadata(string key);
+        
+        /// <summary>
         /// >> AccountStorages
         /// </summary>
         Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H256 GetAccountStorages(string key);
@@ -54,6 +59,11 @@ namespace Substrate.Unique.NET.RestService.Generated.Storage
         private TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>> _accountCodesTypedStorage;
         
         /// <summary>
+        /// _accountCodesMetadataTypedStorage typed storage field
+        /// </summary>
+        private TypedMapStorage<Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_evm.CodeMetadata> _accountCodesMetadataTypedStorage;
+        
+        /// <summary>
         /// _accountStoragesTypedStorage typed storage field
         /// </summary>
         private TypedMapStorage<Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H256> _accountStoragesTypedStorage;
@@ -69,6 +79,7 @@ namespace Substrate.Unique.NET.RestService.Generated.Storage
         public EVMStorage(IStorageDataProvider storageDataProvider, List<IStorageChangeDelegate> storageChangeDelegates)
         {
             this.AccountCodesTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>("EVM.AccountCodes", storageDataProvider, storageChangeDelegates);
+            this.AccountCodesMetadataTypedStorage = new TypedMapStorage<Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_evm.CodeMetadata>("EVM.AccountCodesMetadata", storageDataProvider, storageChangeDelegates);
             this.AccountStoragesTypedStorage = new TypedMapStorage<Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H256>("EVM.AccountStorages", storageDataProvider, storageChangeDelegates);
             this.CurrentLogsTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Unique.NET.NetApiExt.Generated.Model.ethereum.log.Log>>("EVM.CurrentLogs", storageDataProvider, storageChangeDelegates);
         }
@@ -85,6 +96,21 @@ namespace Substrate.Unique.NET.RestService.Generated.Storage
             set
             {
                 _accountCodesTypedStorage = value;
+            }
+        }
+        
+        /// <summary>
+        /// _accountCodesMetadataTypedStorage property
+        /// </summary>
+        public TypedMapStorage<Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_evm.CodeMetadata> AccountCodesMetadataTypedStorage
+        {
+            get
+            {
+                return _accountCodesMetadataTypedStorage;
+            }
+            set
+            {
+                _accountCodesMetadataTypedStorage = value;
             }
         }
         
@@ -124,6 +150,7 @@ namespace Substrate.Unique.NET.RestService.Generated.Storage
         public async Task InitializeAsync(Substrate.ServiceLayer.Storage.IStorageDataProvider dataProvider)
         {
             await AccountCodesTypedStorage.InitializeAsync("EVM", "AccountCodes");
+            await AccountCodesMetadataTypedStorage.InitializeAsync("EVM", "AccountCodesMetadata");
             await AccountStoragesTypedStorage.InitializeAsync("EVM", "AccountStorages");
             await CurrentLogsTypedStorage.InitializeAsync("EVM", "CurrentLogs");
         }
@@ -147,6 +174,34 @@ namespace Substrate.Unique.NET.RestService.Generated.Storage
                 return null;
             }
             if (AccountCodesTypedStorage.Dictionary.TryGetValue(key, out Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> result))
+            {
+                return result;
+            }
+            else
+            {
+                return null;
+            }
+        }
+        
+        /// <summary>
+        /// Implements any storage change for EVM.AccountCodesMetadata
+        /// </summary>
+        [StorageChange("EVM", "AccountCodesMetadata")]
+        public void OnUpdateAccountCodesMetadata(string key, string data)
+        {
+            AccountCodesMetadataTypedStorage.Update(key, data);
+        }
+        
+        /// <summary>
+        /// >> AccountCodesMetadata
+        /// </summary>
+        public Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_evm.CodeMetadata GetAccountCodesMetadata(string key)
+        {
+            if ((key == null))
+            {
+                return null;
+            }
+            if (AccountCodesMetadataTypedStorage.Dictionary.TryGetValue(key, out Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_evm.CodeMetadata result))
             {
                 return result;
             }

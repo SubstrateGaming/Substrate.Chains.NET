@@ -15,26 +15,47 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_evm.pallet
 {
     
     
+    /// <summary>
+    /// >> Event
+    /// The `Event` enum of this pallet
+    /// </summary>
     public enum Event
     {
         
+        /// <summary>
+        /// >> Log
+        /// Ethereum events from contracts.
+        /// </summary>
         Log = 0,
         
+        /// <summary>
+        /// >> Created
+        /// A contract has been created at given address.
+        /// </summary>
         Created = 1,
         
+        /// <summary>
+        /// >> CreatedFailed
+        /// A contract was attempted to be created, but the execution failed.
+        /// </summary>
         CreatedFailed = 2,
         
+        /// <summary>
+        /// >> Executed
+        /// A contract has been executed successfully with states applied.
+        /// </summary>
         Executed = 3,
         
+        /// <summary>
+        /// >> ExecutedFailed
+        /// A contract has been executed with errors. States are reverted with only gas fees applied.
+        /// </summary>
         ExecutedFailed = 4,
     }
     
     /// <summary>
-    /// >> 125 - Variant[pallet_evm.pallet.Event]
-    /// 
-    ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
-    ///			by this pallet.
-    ///			
+    /// >> 365 - Variant[pallet_evm.pallet.Event]
+    /// The `Event` enum of this pallet
     /// </summary>
     public sealed class EnumEvent : BaseEnumExt<Event, Substrate.Unique.NET.NetApiExt.Generated.Model.ethereum.log.Log, Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H160, Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H160, Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H160, Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H160>
     {

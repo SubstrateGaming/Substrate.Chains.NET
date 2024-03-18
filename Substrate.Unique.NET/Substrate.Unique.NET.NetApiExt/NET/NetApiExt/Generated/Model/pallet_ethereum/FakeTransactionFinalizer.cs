@@ -18,23 +18,26 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_ethereum
     
     
     /// <summary>
-    /// >> 504 - Composite[pallet_ethereum.FakeTransactionFinalizer]
+    /// >> 676 - Composite[pallet_ethereum.FakeTransactionFinalizer]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class FakeTransactionFinalizer : BaseType
     {
         
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "FakeTransactionFinalizer";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

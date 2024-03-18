@@ -18,7 +18,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.cumulus_pallet_dmp_queu
     
     
     /// <summary>
-    /// >> 392 - Composite[cumulus_pallet_dmp_queue.PageIndexData]
+    /// >> 564 - Composite[cumulus_pallet_dmp_queue.PageIndexData]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class PageIndexData : BaseType
@@ -27,59 +27,23 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.cumulus_pallet_dmp_queu
         /// <summary>
         /// >> begin_used
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _beginUsed;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 BeginUsed { get; set; }
         /// <summary>
         /// >> end_used
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _endUsed;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 EndUsed { get; set; }
         /// <summary>
         /// >> overweight_count
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U64 _overweightCount;
+        public Substrate.NetApi.Model.Types.Primitive.U64 OverweightCount { get; set; }
         
-        public Substrate.NetApi.Model.Types.Primitive.U32 BeginUsed
-        {
-            get
-            {
-                return this._beginUsed;
-            }
-            set
-            {
-                this._beginUsed = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 EndUsed
-        {
-            get
-            {
-                return this._endUsed;
-            }
-            set
-            {
-                this._endUsed = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U64 OverweightCount
-        {
-            get
-            {
-                return this._overweightCount;
-            }
-            set
-            {
-                this._overweightCount = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "PageIndexData";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -89,6 +53,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.cumulus_pallet_dmp_queu
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

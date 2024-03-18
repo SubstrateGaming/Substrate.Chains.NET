@@ -15,20 +15,35 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.evm_core.error
 {
     
     
+    /// <summary>
+    /// >> ExitReason
+    /// </summary>
     public enum ExitReason
     {
         
+        /// <summary>
+        /// >> Succeed
+        /// </summary>
         Succeed = 0,
         
+        /// <summary>
+        /// >> Error
+        /// </summary>
         Error = 1,
         
+        /// <summary>
+        /// >> Revert
+        /// </summary>
         Revert = 2,
         
+        /// <summary>
+        /// >> Fatal
+        /// </summary>
         Fatal = 3,
     }
     
     /// <summary>
-    /// >> 129 - Variant[evm_core.error.ExitReason]
+    /// >> 367 - Variant[evm_core.error.ExitReason]
     /// </summary>
     public sealed class EnumExitReason : BaseEnumExt<ExitReason, Substrate.Unique.NET.NetApiExt.Generated.Model.evm_core.error.EnumExitSucceed, Substrate.Unique.NET.NetApiExt.Generated.Model.evm_core.error.EnumExitError, Substrate.Unique.NET.NetApiExt.Generated.Model.evm_core.error.EnumExitRevert, Substrate.Unique.NET.NetApiExt.Generated.Model.evm_core.error.EnumExitFatal>
     {

@@ -38,72 +38,51 @@ namespace Substrate.Unique.NET.RestService.Generated.Controller
         }
         
         /// <summary>
-        /// >> NextForeignAssetId
-        ///  Next available Foreign AssetId ID.
-        /// 
-        ///  NextForeignAssetId: ForeignAssetId
+        /// >> ForeignAssetToCollection
+        ///  The corresponding collections of foreign assets.
         /// </summary>
-        [HttpGet("NextForeignAssetId")]
-        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Primitive.U32), 200)]
-        [StorageKeyBuilder(typeof(Substrate.Unique.NET.NetApiExt.Generated.Storage.ForeignAssetsStorage), "NextForeignAssetIdParams")]
-        public IActionResult GetNextForeignAssetId()
-        {
-            return this.Ok(_foreignAssetsStorage.GetNextForeignAssetId());
-        }
-        
-        /// <summary>
-        /// >> ForeignAssetLocations
-        ///  The storages for MultiLocations.
-        /// 
-        ///  ForeignAssetLocations: map ForeignAssetId => Option<MultiLocation>
-        /// </summary>
-        [HttpGet("ForeignAssetLocations")]
-        [ProducesResponseType(typeof(Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v3.multilocation.MultiLocation), 200)]
-        [StorageKeyBuilder(typeof(Substrate.Unique.NET.NetApiExt.Generated.Storage.ForeignAssetsStorage), "ForeignAssetLocationsParams", typeof(Substrate.NetApi.Model.Types.Primitive.U32))]
-        public IActionResult GetForeignAssetLocations(string key)
-        {
-            return this.Ok(_foreignAssetsStorage.GetForeignAssetLocations(key));
-        }
-        
-        /// <summary>
-        /// >> LocationToCurrencyIds
-        ///  The storages for CurrencyIds.
-        /// 
-        ///  LocationToCurrencyIds: map MultiLocation => Option<ForeignAssetId>
-        /// </summary>
-        [HttpGet("LocationToCurrencyIds")]
-        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Primitive.U32), 200)]
-        [StorageKeyBuilder(typeof(Substrate.Unique.NET.NetApiExt.Generated.Storage.ForeignAssetsStorage), "LocationToCurrencyIdsParams", typeof(Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v3.multilocation.MultiLocation))]
-        public IActionResult GetLocationToCurrencyIds(string key)
-        {
-            return this.Ok(_foreignAssetsStorage.GetLocationToCurrencyIds(key));
-        }
-        
-        /// <summary>
-        /// >> AssetMetadatas
-        ///  The storages for AssetMetadatas.
-        /// 
-        ///  AssetMetadatas: map AssetIds => Option<AssetMetadata>
-        /// </summary>
-        [HttpGet("AssetMetadatas")]
-        [ProducesResponseType(typeof(Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_foreign_assets.module.AssetMetadata), 200)]
-        [StorageKeyBuilder(typeof(Substrate.Unique.NET.NetApiExt.Generated.Storage.ForeignAssetsStorage), "AssetMetadatasParams", typeof(Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_foreign_assets.EnumAssetIds))]
-        public IActionResult GetAssetMetadatas(string key)
-        {
-            return this.Ok(_foreignAssetsStorage.GetAssetMetadatas(key));
-        }
-        
-        /// <summary>
-        /// >> AssetBinding
-        ///  The storages for assets to fungible collection binding
-        /// 
-        /// </summary>
-        [HttpGet("AssetBinding")]
+        [HttpGet("ForeignAssetToCollection")]
         [ProducesResponseType(typeof(Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId), 200)]
-        [StorageKeyBuilder(typeof(Substrate.Unique.NET.NetApiExt.Generated.Storage.ForeignAssetsStorage), "AssetBindingParams", typeof(Substrate.NetApi.Model.Types.Primitive.U32))]
-        public IActionResult GetAssetBinding(string key)
+        [StorageKeyBuilder(typeof(Substrate.Unique.NET.NetApiExt.Generated.Storage.ForeignAssetsStorage), "ForeignAssetToCollectionParams", typeof(Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v3.multiasset.EnumAssetId))]
+        public IActionResult GetForeignAssetToCollection(string key)
         {
-            return this.Ok(_foreignAssetsStorage.GetAssetBinding(key));
+            return this.Ok(_foreignAssetsStorage.GetForeignAssetToCollection(key));
+        }
+        
+        /// <summary>
+        /// >> CollectionToForeignAsset
+        ///  The corresponding foreign assets of collections.
+        /// </summary>
+        [HttpGet("CollectionToForeignAsset")]
+        [ProducesResponseType(typeof(Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v3.multiasset.EnumAssetId), 200)]
+        [StorageKeyBuilder(typeof(Substrate.Unique.NET.NetApiExt.Generated.Storage.ForeignAssetsStorage), "CollectionToForeignAssetParams", typeof(Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId))]
+        public IActionResult GetCollectionToForeignAsset(string key)
+        {
+            return this.Ok(_foreignAssetsStorage.GetCollectionToForeignAsset(key));
+        }
+        
+        /// <summary>
+        /// >> ForeignReserveAssetInstanceToTokenId
+        ///  The correponding NFT token id of reserve NFTs
+        /// </summary>
+        [HttpGet("ForeignReserveAssetInstanceToTokenId")]
+        [ProducesResponseType(typeof(Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.TokenId), 200)]
+        [StorageKeyBuilder(typeof(Substrate.Unique.NET.NetApiExt.Generated.Storage.ForeignAssetsStorage), "ForeignReserveAssetInstanceToTokenIdParams", typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId, Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v3.multiasset.EnumAssetInstance>))]
+        public IActionResult GetForeignReserveAssetInstanceToTokenId(string key)
+        {
+            return this.Ok(_foreignAssetsStorage.GetForeignReserveAssetInstanceToTokenId(key));
+        }
+        
+        /// <summary>
+        /// >> TokenIdToForeignReserveAssetInstance
+        ///  The correponding reserve NFT of a token ID
+        /// </summary>
+        [HttpGet("TokenIdToForeignReserveAssetInstance")]
+        [ProducesResponseType(typeof(Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v3.multiasset.EnumAssetInstance), 200)]
+        [StorageKeyBuilder(typeof(Substrate.Unique.NET.NetApiExt.Generated.Storage.ForeignAssetsStorage), "TokenIdToForeignReserveAssetInstanceParams", typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId, Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.TokenId>))]
+        public IActionResult GetTokenIdToForeignReserveAssetInstance(string key)
+        {
+            return this.Ok(_foreignAssetsStorage.GetTokenIdToForeignReserveAssetInstance(key));
         }
     }
 }

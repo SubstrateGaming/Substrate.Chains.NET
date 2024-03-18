@@ -21,12 +21,18 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> MaintenanceStorage
+    /// </summary>
     public sealed class MaintenanceStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> MaintenanceStorage Constructor
+        /// </summary>
         public MaintenanceStorage(SubstrateClientExt client)
         {
             this._client = client;
@@ -53,20 +59,23 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         /// <summary>
         /// >> Enabled
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.Bool> Enabled(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.Bool> Enabled(string blockhash, CancellationToken token)
         {
             string parameters = MaintenanceStorage.EnabledParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.Bool>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.Bool>(parameters, blockhash, token);
             return result;
         }
     }
     
+    /// <summary>
+    /// >> MaintenanceCalls
+    /// </summary>
     public sealed class MaintenanceCalls
     {
         
         /// <summary>
         /// >> enable
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method Enable()
         {
@@ -76,31 +85,25 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> disable
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method Disable()
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             return new Method(154, "Maintenance", 1, "disable", byteArray.ToArray());
         }
-        
-        /// <summary>
-        /// >> execute_preimage
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
-        /// </summary>
-        public static Method ExecutePreimage(Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H256 hash, Substrate.Unique.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight weight_bound)
-        {
-            System.Collections.Generic.List<byte> byteArray = new List<byte>();
-            byteArray.AddRange(hash.Encode());
-            byteArray.AddRange(weight_bound.Encode());
-            return new Method(154, "Maintenance", 2, "execute_preimage", byteArray.ToArray());
-        }
     }
     
+    /// <summary>
+    /// >> MaintenanceConstants
+    /// </summary>
     public sealed class MaintenanceConstants
     {
     }
     
+    /// <summary>
+    /// >> MaintenanceErrors
+    /// </summary>
     public enum MaintenanceErrors
     {
     }

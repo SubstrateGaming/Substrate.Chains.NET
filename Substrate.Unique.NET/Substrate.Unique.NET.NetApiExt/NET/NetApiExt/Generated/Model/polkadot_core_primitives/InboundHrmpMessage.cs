@@ -18,7 +18,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.polkadot_core_primitive
     
     
     /// <summary>
-    /// >> 192 - Composite[polkadot_core_primitives.InboundHrmpMessage]
+    /// >> 104 - Composite[polkadot_core_primitives.InboundHrmpMessage]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class InboundHrmpMessage : BaseType
@@ -27,42 +27,19 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.polkadot_core_primitive
         /// <summary>
         /// >> sent_at
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _sentAt;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 SentAt { get; set; }
         /// <summary>
         /// >> data
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> _data;
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> Data { get; set; }
         
-        public Substrate.NetApi.Model.Types.Primitive.U32 SentAt
-        {
-            get
-            {
-                return this._sentAt;
-            }
-            set
-            {
-                this._sentAt = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> Data
-        {
-            get
-            {
-                return this._data;
-            }
-            set
-            {
-                this._data = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "InboundHrmpMessage";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -71,6 +48,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.polkadot_core_primitive
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

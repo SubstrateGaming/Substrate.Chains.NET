@@ -21,12 +21,18 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> SudoStorage
+    /// </summary>
     public sealed class SudoStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> SudoStorage Constructor
+        /// </summary>
         public SudoStorage(SubstrateClientExt client)
         {
             this._client = client;
@@ -55,20 +61,23 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         /// >> Key
         ///  The `AccountId` of the sudo key.
         /// </summary>
-        public async Task<Substrate.Unique.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> Key(CancellationToken token)
+        public async Task<Substrate.Unique.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> Key(string blockhash, CancellationToken token)
         {
             string parameters = SudoStorage.KeyParams();
-            var result = await _client.GetStorageAsync<Substrate.Unique.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Unique.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>(parameters, blockhash, token);
             return result;
         }
     }
     
+    /// <summary>
+    /// >> SudoCalls
+    /// </summary>
     public sealed class SudoCalls
     {
         
         /// <summary>
         /// >> sudo
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method Sudo(Substrate.Unique.NET.NetApiExt.Generated.Model.unique_runtime.EnumRuntimeCall call)
         {
@@ -79,7 +88,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> sudo_unchecked_weight
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method SudoUncheckedWeight(Substrate.Unique.NET.NetApiExt.Generated.Model.unique_runtime.EnumRuntimeCall call, Substrate.Unique.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight weight)
         {
@@ -91,7 +100,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> set_key
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method SetKey(Substrate.Unique.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress @new)
         {
@@ -102,7 +111,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> sudo_as
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method SudoAs(Substrate.Unique.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress who, Substrate.Unique.NET.NetApiExt.Generated.Model.unique_runtime.EnumRuntimeCall call)
         {
@@ -113,10 +122,16 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> SudoConstants
+    /// </summary>
     public sealed class SudoConstants
     {
     }
     
+    /// <summary>
+    /// >> SudoErrors
+    /// </summary>
     public enum SudoErrors
     {
         

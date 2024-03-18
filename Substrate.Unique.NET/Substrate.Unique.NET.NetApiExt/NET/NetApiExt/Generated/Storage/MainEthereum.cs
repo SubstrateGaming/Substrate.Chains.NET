@@ -21,12 +21,18 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> EthereumStorage
+    /// </summary>
     public sealed class EthereumStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> EthereumStorage Constructor
+        /// </summary>
         public EthereumStorage(SubstrateClientExt client)
         {
             this._client = client;
@@ -61,10 +67,10 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         /// >> Pending
         ///  Current building block's transactions and receipts.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.ethereum.transaction.EnumTransactionV2, Substrate.Unique.NET.NetApiExt.Generated.Model.fp_rpc.TransactionStatus, Substrate.Unique.NET.NetApiExt.Generated.Model.ethereum.receipt.EnumReceiptV3>>> Pending(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.ethereum.transaction.EnumTransactionV2, Substrate.Unique.NET.NetApiExt.Generated.Model.fp_rpc.TransactionStatus, Substrate.Unique.NET.NetApiExt.Generated.Model.ethereum.receipt.EnumReceiptV3>>> Pending(string blockhash, CancellationToken token)
         {
             string parameters = EthereumStorage.PendingParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.ethereum.transaction.EnumTransactionV2, Substrate.Unique.NET.NetApiExt.Generated.Model.fp_rpc.TransactionStatus, Substrate.Unique.NET.NetApiExt.Generated.Model.ethereum.receipt.EnumReceiptV3>>>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.ethereum.transaction.EnumTransactionV2, Substrate.Unique.NET.NetApiExt.Generated.Model.fp_rpc.TransactionStatus, Substrate.Unique.NET.NetApiExt.Generated.Model.ethereum.receipt.EnumReceiptV3>>>(parameters, blockhash, token);
             return result;
         }
         
@@ -90,10 +96,10 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         /// >> CurrentBlock
         ///  The current Ethereum block.
         /// </summary>
-        public async Task<Substrate.Unique.NET.NetApiExt.Generated.Model.ethereum.block.Block> CurrentBlock(CancellationToken token)
+        public async Task<Substrate.Unique.NET.NetApiExt.Generated.Model.ethereum.block.Block> CurrentBlock(string blockhash, CancellationToken token)
         {
             string parameters = EthereumStorage.CurrentBlockParams();
-            var result = await _client.GetStorageAsync<Substrate.Unique.NET.NetApiExt.Generated.Model.ethereum.block.Block>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Unique.NET.NetApiExt.Generated.Model.ethereum.block.Block>(parameters, blockhash, token);
             return result;
         }
         
@@ -119,10 +125,10 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         /// >> CurrentReceipts
         ///  The current Ethereum receipts.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Unique.NET.NetApiExt.Generated.Model.ethereum.receipt.EnumReceiptV3>> CurrentReceipts(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Unique.NET.NetApiExt.Generated.Model.ethereum.receipt.EnumReceiptV3>> CurrentReceipts(string blockhash, CancellationToken token)
         {
             string parameters = EthereumStorage.CurrentReceiptsParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Unique.NET.NetApiExt.Generated.Model.ethereum.receipt.EnumReceiptV3>>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Unique.NET.NetApiExt.Generated.Model.ethereum.receipt.EnumReceiptV3>>(parameters, blockhash, token);
             return result;
         }
         
@@ -148,10 +154,10 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         /// >> CurrentTransactionStatuses
         ///  The current transaction statuses.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Unique.NET.NetApiExt.Generated.Model.fp_rpc.TransactionStatus>> CurrentTransactionStatuses(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Unique.NET.NetApiExt.Generated.Model.fp_rpc.TransactionStatus>> CurrentTransactionStatuses(string blockhash, CancellationToken token)
         {
             string parameters = EthereumStorage.CurrentTransactionStatusesParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Unique.NET.NetApiExt.Generated.Model.fp_rpc.TransactionStatus>>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Unique.NET.NetApiExt.Generated.Model.fp_rpc.TransactionStatus>>(parameters, blockhash, token);
             return result;
         }
         
@@ -177,10 +183,10 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         /// <summary>
         /// >> BlockHash
         /// </summary>
-        public async Task<Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H256> BlockHash(Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.U256 key, CancellationToken token)
+        public async Task<Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H256> BlockHash(Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.U256 key, string blockhash, CancellationToken token)
         {
             string parameters = EthereumStorage.BlockHashParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H256>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H256>(parameters, blockhash, token);
             return result;
         }
         
@@ -206,20 +212,23 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         /// >> InjectedNonce
         ///  Injected transactions should have unique nonce, here we store current
         /// </summary>
-        public async Task<Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.U256> InjectedNonce(CancellationToken token)
+        public async Task<Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.U256> InjectedNonce(string blockhash, CancellationToken token)
         {
             string parameters = EthereumStorage.InjectedNonceParams();
-            var result = await _client.GetStorageAsync<Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.U256>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.U256>(parameters, blockhash, token);
             return result;
         }
     }
     
+    /// <summary>
+    /// >> EthereumCalls
+    /// </summary>
     public sealed class EthereumCalls
     {
         
         /// <summary>
         /// >> transact
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method Transact(Substrate.Unique.NET.NetApiExt.Generated.Model.ethereum.transaction.EnumTransactionV2 transaction)
         {
@@ -229,10 +238,16 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> EthereumConstants
+    /// </summary>
     public sealed class EthereumConstants
     {
     }
     
+    /// <summary>
+    /// >> EthereumErrors
+    /// </summary>
     public enum EthereumErrors
     {
         

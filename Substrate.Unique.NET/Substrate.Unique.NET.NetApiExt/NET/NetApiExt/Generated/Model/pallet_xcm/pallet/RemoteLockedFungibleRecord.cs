@@ -18,7 +18,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_xcm.pallet
     
     
     /// <summary>
-    /// >> 385 - Composite[pallet_xcm.pallet.RemoteLockedFungibleRecord]
+    /// >> 554 - Composite[pallet_xcm.pallet.RemoteLockedFungibleRecord]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class RemoteLockedFungibleRecord : BaseType
@@ -27,86 +27,38 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_xcm.pallet
         /// <summary>
         /// >> amount
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U128 _amount;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U128 Amount { get; set; }
         /// <summary>
         /// >> owner
         /// </summary>
-        private Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation _owner;
-        
+        public Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation Owner { get; set; }
         /// <summary>
         /// >> locker
         /// </summary>
-        private Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation _locker;
-        
+        public Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation Locker { get; set; }
         /// <summary>
-        /// >> users
+        /// >> consumers
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _users;
+        public Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT38 Consumers { get; set; }
         
-        public Substrate.NetApi.Model.Types.Primitive.U128 Amount
-        {
-            get
-            {
-                return this._amount;
-            }
-            set
-            {
-                this._amount = value;
-            }
-        }
-        
-        public Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation Owner
-        {
-            get
-            {
-                return this._owner;
-            }
-            set
-            {
-                this._owner = value;
-            }
-        }
-        
-        public Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation Locker
-        {
-            get
-            {
-                return this._locker;
-            }
-            set
-            {
-                this._locker = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 Users
-        {
-            get
-            {
-                return this._users;
-            }
-            set
-            {
-                this._users = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "RemoteLockedFungibleRecord";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
             result.AddRange(Amount.Encode());
             result.AddRange(Owner.Encode());
             result.AddRange(Locker.Encode());
-            result.AddRange(Users.Encode());
+            result.AddRange(Consumers.Encode());
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
@@ -116,8 +68,8 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_xcm.pallet
             Owner.Decode(byteArray, ref p);
             Locker = new Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation();
             Locker.Decode(byteArray, ref p);
-            Users = new Substrate.NetApi.Model.Types.Primitive.U32();
-            Users.Decode(byteArray, ref p);
+            Consumers = new Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT38();
+            Consumers.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];

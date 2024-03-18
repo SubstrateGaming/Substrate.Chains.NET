@@ -21,36 +21,41 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> EvmCoderSubstrateStorage
+    /// </summary>
     public sealed class EvmCoderSubstrateStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> EvmCoderSubstrateStorage Constructor
+        /// </summary>
         public EvmCoderSubstrateStorage(SubstrateClientExt client)
         {
             this._client = client;
         }
     }
     
+    /// <summary>
+    /// >> EvmCoderSubstrateCalls
+    /// </summary>
     public sealed class EvmCoderSubstrateCalls
     {
-        
-        /// <summary>
-        /// >> empty_call
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
-        /// </summary>
-        public static Method EmptyCall()
-        {
-            System.Collections.Generic.List<byte> byteArray = new List<byte>();
-            return new Method(150, "EvmCoderSubstrate", 0, "empty_call", byteArray.ToArray());
-        }
     }
     
+    /// <summary>
+    /// >> EvmCoderSubstrateConstants
+    /// </summary>
     public sealed class EvmCoderSubstrateConstants
     {
     }
     
+    /// <summary>
+    /// >> EvmCoderSubstrateErrors
+    /// </summary>
     public enum EvmCoderSubstrateErrors
     {
         

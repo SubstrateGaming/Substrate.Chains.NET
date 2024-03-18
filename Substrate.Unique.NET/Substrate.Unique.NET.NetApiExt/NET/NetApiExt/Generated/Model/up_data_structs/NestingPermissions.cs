@@ -18,7 +18,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs
     
     
     /// <summary>
-    /// >> 279 - Composite[up_data_structs.NestingPermissions]
+    /// >> 277 - Composite[up_data_structs.NestingPermissions]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class NestingPermissions : BaseType
@@ -27,59 +27,23 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs
         /// <summary>
         /// >> token_owner
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.Bool _tokenOwner;
-        
+        public Substrate.NetApi.Model.Types.Primitive.Bool TokenOwner { get; set; }
         /// <summary>
         /// >> collection_admin
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.Bool _collectionAdmin;
-        
+        public Substrate.NetApi.Model.Types.Primitive.Bool CollectionAdmin { get; set; }
         /// <summary>
         /// >> restricted
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.OwnerRestrictedSet> _restricted;
+        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.OwnerRestrictedSet> Restricted { get; set; }
         
-        public Substrate.NetApi.Model.Types.Primitive.Bool TokenOwner
-        {
-            get
-            {
-                return this._tokenOwner;
-            }
-            set
-            {
-                this._tokenOwner = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.Bool CollectionAdmin
-        {
-            get
-            {
-                return this._collectionAdmin;
-            }
-            set
-            {
-                this._collectionAdmin = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.OwnerRestrictedSet> Restricted
-        {
-            get
-            {
-                return this._restricted;
-            }
-            set
-            {
-                this._restricted = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "NestingPermissions";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -89,6 +53,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

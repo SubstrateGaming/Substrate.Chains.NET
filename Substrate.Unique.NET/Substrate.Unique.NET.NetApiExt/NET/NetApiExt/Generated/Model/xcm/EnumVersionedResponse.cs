@@ -15,16 +15,25 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.xcm
 {
     
     
+    /// <summary>
+    /// >> VersionedResponse
+    /// </summary>
     public enum VersionedResponse
     {
         
+        /// <summary>
+        /// >> V2
+        /// </summary>
         V2 = 2,
         
+        /// <summary>
+        /// >> V3
+        /// </summary>
         V3 = 3,
     }
     
     /// <summary>
-    /// >> 375 - Variant[xcm.VersionedResponse]
+    /// >> 545 - Variant[xcm.VersionedResponse]
     /// </summary>
     public sealed class EnumVersionedResponse : BaseEnumExt<VersionedResponse, BaseVoid, BaseVoid, Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v2.EnumResponse, Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v3.EnumResponse>
     {

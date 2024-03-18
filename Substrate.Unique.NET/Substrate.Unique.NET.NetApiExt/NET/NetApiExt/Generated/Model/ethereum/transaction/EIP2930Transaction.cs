@@ -18,7 +18,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.ethereum.transaction
     
     
     /// <summary>
-    /// >> 332 - Composite[ethereum.transaction.EIP2930Transaction]
+    /// >> 338 - Composite[ethereum.transaction.EIP2930Transaction]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class EIP2930Transaction : BaseType
@@ -27,195 +27,55 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.ethereum.transaction
         /// <summary>
         /// >> chain_id
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U64 _chainId;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U64 ChainId { get; set; }
         /// <summary>
         /// >> nonce
         /// </summary>
-        private Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.U256 _nonce;
-        
+        public Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.U256 Nonce { get; set; }
         /// <summary>
         /// >> gas_price
         /// </summary>
-        private Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.U256 _gasPrice;
-        
+        public Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.U256 GasPrice { get; set; }
         /// <summary>
         /// >> gas_limit
         /// </summary>
-        private Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.U256 _gasLimit;
-        
+        public Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.U256 GasLimit { get; set; }
         /// <summary>
         /// >> action
         /// </summary>
-        private Substrate.Unique.NET.NetApiExt.Generated.Model.ethereum.transaction.EnumTransactionAction _action;
-        
+        public Substrate.Unique.NET.NetApiExt.Generated.Model.ethereum.transaction.EnumTransactionAction Action { get; set; }
         /// <summary>
         /// >> value
         /// </summary>
-        private Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.U256 _value;
-        
+        public Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.U256 Value { get; set; }
         /// <summary>
         /// >> input
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> _input;
-        
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> Input { get; set; }
         /// <summary>
         /// >> access_list
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Unique.NET.NetApiExt.Generated.Model.ethereum.transaction.AccessListItem> _accessList;
-        
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Unique.NET.NetApiExt.Generated.Model.ethereum.transaction.AccessListItem> AccessList { get; set; }
         /// <summary>
         /// >> odd_y_parity
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.Bool _oddYParity;
-        
+        public Substrate.NetApi.Model.Types.Primitive.Bool OddYParity { get; set; }
         /// <summary>
         /// >> r
         /// </summary>
-        private Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H256 _r;
-        
+        public Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H256 R { get; set; }
         /// <summary>
         /// >> s
         /// </summary>
-        private Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H256 _s;
+        public Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H256 S { get; set; }
         
-        public Substrate.NetApi.Model.Types.Primitive.U64 ChainId
-        {
-            get
-            {
-                return this._chainId;
-            }
-            set
-            {
-                this._chainId = value;
-            }
-        }
-        
-        public Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.U256 Nonce
-        {
-            get
-            {
-                return this._nonce;
-            }
-            set
-            {
-                this._nonce = value;
-            }
-        }
-        
-        public Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.U256 GasPrice
-        {
-            get
-            {
-                return this._gasPrice;
-            }
-            set
-            {
-                this._gasPrice = value;
-            }
-        }
-        
-        public Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.U256 GasLimit
-        {
-            get
-            {
-                return this._gasLimit;
-            }
-            set
-            {
-                this._gasLimit = value;
-            }
-        }
-        
-        public Substrate.Unique.NET.NetApiExt.Generated.Model.ethereum.transaction.EnumTransactionAction Action
-        {
-            get
-            {
-                return this._action;
-            }
-            set
-            {
-                this._action = value;
-            }
-        }
-        
-        public Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.U256 Value
-        {
-            get
-            {
-                return this._value;
-            }
-            set
-            {
-                this._value = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> Input
-        {
-            get
-            {
-                return this._input;
-            }
-            set
-            {
-                this._input = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Unique.NET.NetApiExt.Generated.Model.ethereum.transaction.AccessListItem> AccessList
-        {
-            get
-            {
-                return this._accessList;
-            }
-            set
-            {
-                this._accessList = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.Bool OddYParity
-        {
-            get
-            {
-                return this._oddYParity;
-            }
-            set
-            {
-                this._oddYParity = value;
-            }
-        }
-        
-        public Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H256 R
-        {
-            get
-            {
-                return this._r;
-            }
-            set
-            {
-                this._r = value;
-            }
-        }
-        
-        public Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H256 S
-        {
-            get
-            {
-                return this._s;
-            }
-            set
-            {
-                this._s = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "EIP2930Transaction";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -233,6 +93,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.ethereum.transaction
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

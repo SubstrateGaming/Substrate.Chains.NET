@@ -18,7 +18,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.ethereum.block
     
     
     /// <summary>
-    /// >> 466 - Composite[ethereum.block.Block]
+    /// >> 637 - Composite[ethereum.block.Block]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Block : BaseType
@@ -27,59 +27,23 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.ethereum.block
         /// <summary>
         /// >> header
         /// </summary>
-        private Substrate.Unique.NET.NetApiExt.Generated.Model.ethereum.header.Header _header;
-        
+        public Substrate.Unique.NET.NetApiExt.Generated.Model.ethereum.header.Header Header { get; set; }
         /// <summary>
         /// >> transactions
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Unique.NET.NetApiExt.Generated.Model.ethereum.transaction.EnumTransactionV2> _transactions;
-        
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Unique.NET.NetApiExt.Generated.Model.ethereum.transaction.EnumTransactionV2> Transactions { get; set; }
         /// <summary>
         /// >> ommers
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Unique.NET.NetApiExt.Generated.Model.ethereum.header.Header> _ommers;
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Unique.NET.NetApiExt.Generated.Model.ethereum.header.Header> Ommers { get; set; }
         
-        public Substrate.Unique.NET.NetApiExt.Generated.Model.ethereum.header.Header Header
-        {
-            get
-            {
-                return this._header;
-            }
-            set
-            {
-                this._header = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Unique.NET.NetApiExt.Generated.Model.ethereum.transaction.EnumTransactionV2> Transactions
-        {
-            get
-            {
-                return this._transactions;
-            }
-            set
-            {
-                this._transactions = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Unique.NET.NetApiExt.Generated.Model.ethereum.header.Header> Ommers
-        {
-            get
-            {
-                return this._ommers;
-            }
-            set
-            {
-                this._ommers = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "Block";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -89,6 +53,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.ethereum.block
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

@@ -21,12 +21,18 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> CommonStorage
+    /// </summary>
     public sealed class CommonStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> CommonStorage Constructor
+        /// </summary>
         public CommonStorage(SubstrateClientExt client)
         {
             this._client = client;
@@ -71,10 +77,10 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         /// >> CreatedCollectionCount
         ///  Storage of the count of created collections. Essentially contains the last collection ID.
         /// </summary>
-        public async Task<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId> CreatedCollectionCount(CancellationToken token)
+        public async Task<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId> CreatedCollectionCount(string blockhash, CancellationToken token)
         {
             string parameters = CommonStorage.CreatedCollectionCountParams();
-            var result = await _client.GetStorageAsync<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId>(parameters, blockhash, token);
             return result;
         }
         
@@ -100,10 +106,10 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         /// >> DestroyedCollectionCount
         ///  Storage of the count of deleted collections.
         /// </summary>
-        public async Task<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId> DestroyedCollectionCount(CancellationToken token)
+        public async Task<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId> DestroyedCollectionCount(string blockhash, CancellationToken token)
         {
             string parameters = CommonStorage.DestroyedCollectionCountParams();
-            var result = await _client.GetStorageAsync<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId>(parameters, blockhash, token);
             return result;
         }
         
@@ -131,10 +137,10 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         /// >> CollectionById
         ///  Storage of collection info.
         /// </summary>
-        public async Task<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.Collection> CollectionById(Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId key, CancellationToken token)
+        public async Task<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.Collection> CollectionById(Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId key, string blockhash, CancellationToken token)
         {
             string parameters = CommonStorage.CollectionByIdParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.Collection>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.Collection>(parameters, blockhash, token);
             return result;
         }
         
@@ -162,10 +168,10 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         /// >> CollectionProperties
         ///  Storage of collection properties.
         /// </summary>
-        public async Task<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.PropertiesT1> CollectionProperties(Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId key, CancellationToken token)
+        public async Task<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.PropertiesT1> CollectionProperties(Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId key, string blockhash, CancellationToken token)
         {
             string parameters = CommonStorage.CollectionPropertiesParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.PropertiesT1>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.PropertiesT1>(parameters, blockhash, token);
             return result;
         }
         
@@ -193,10 +199,10 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         /// >> CollectionPropertyPermissions
         ///  Storage of token property permissions of a collection.
         /// </summary>
-        public async Task<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.PropertiesMapT2> CollectionPropertyPermissions(Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId key, CancellationToken token)
+        public async Task<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.PropertiesMapT2> CollectionPropertyPermissions(Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId key, string blockhash, CancellationToken token)
         {
             string parameters = CommonStorage.CollectionPropertyPermissionsParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.PropertiesMapT2>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.PropertiesMapT2>(parameters, blockhash, token);
             return result;
         }
         
@@ -224,10 +230,10 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         /// >> AdminAmount
         ///  Storage of the amount of collection admins.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> AdminAmount(Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId key, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> AdminAmount(Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId key, string blockhash, CancellationToken token)
         {
             string parameters = CommonStorage.AdminAmountParams(key);
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, blockhash, token);
             return result;
         }
         
@@ -255,10 +261,10 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         /// >> IsAdmin
         ///  List of collection admins.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.Bool> IsAdmin(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId, Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_evm.account.EnumBasicCrossAccountIdRepr> key, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.Bool> IsAdmin(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId, Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_evm.account.EnumBasicCrossAccountIdRepr> key, string blockhash, CancellationToken token)
         {
             string parameters = CommonStorage.IsAdminParams(key);
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.Bool>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.Bool>(parameters, blockhash, token);
             return result;
         }
         
@@ -286,10 +292,10 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         /// >> Allowlist
         ///  Allowlisted collection users.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.Bool> Allowlist(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId, Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_evm.account.EnumBasicCrossAccountIdRepr> key, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.Bool> Allowlist(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId, Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_evm.account.EnumBasicCrossAccountIdRepr> key, string blockhash, CancellationToken token)
         {
             string parameters = CommonStorage.AllowlistParams(key);
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.Bool>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.Bool>(parameters, blockhash, token);
             return result;
         }
         
@@ -310,23 +316,29 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         {
             return "0x00";
         }
-
+        
         /// <summary>
         /// >> DummyStorageValue
         ///  Not used by code, exists only to provide some types to metadata.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionStats, Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId, Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.TokenId, Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.TokenChild, Substrate.Unique.NET.NetApiExt.Generated.Model.PhantomType.up_data_structs>> DummyStorageValue(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionStats, Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId, Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.TokenId, Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.TokenChild, Substrate.Unique.NET.NetApiExt.Generated.Model.PhantomType.up_data_structs>> DummyStorageValue(string blockhash, CancellationToken token)
         {
             string parameters = CommonStorage.DummyStorageValueParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionStats, Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId, Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.TokenId, Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.TokenChild, Substrate.Unique.NET.NetApiExt.Generated.Model.PhantomType.up_data_structs>>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionStats, Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId, Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.TokenId, Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.TokenChild, Substrate.Unique.NET.NetApiExt.Generated.Model.PhantomType.up_data_structs>>(parameters, blockhash, token);
             return result;
         }
     }
     
+    /// <summary>
+    /// >> CommonCalls
+    /// </summary>
     public sealed class CommonCalls
     {
     }
     
+    /// <summary>
+    /// >> CommonConstants
+    /// </summary>
     public sealed class CommonConstants
     {
         
@@ -364,6 +376,9 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> CommonErrors
+    /// </summary>
     public enum CommonErrors
     {
         
@@ -588,5 +603,17 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         /// The user is not an administrator.
         /// </summary>
         UserIsNotCollectionAdmin,
+        
+        /// <summary>
+        /// >> FungibleItemsHaveNoId
+        /// Fungible tokens hold no ID, and the default value of TokenId for a fungible collection is 0.
+        /// </summary>
+        FungibleItemsHaveNoId,
+        
+        /// <summary>
+        /// >> NotFungibleDataUsedToMintFungibleCollectionToken
+        /// Not Fungible item data used to mint in Fungible collection.
+        /// </summary>
+        NotFungibleDataUsedToMintFungibleCollectionToken,
     }
 }

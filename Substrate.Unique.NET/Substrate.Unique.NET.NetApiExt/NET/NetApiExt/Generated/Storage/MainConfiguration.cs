@@ -21,12 +21,18 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> ConfigurationStorage
+    /// </summary>
     public sealed class ConfigurationStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> ConfigurationStorage Constructor
+        /// </summary>
         public ConfigurationStorage(SubstrateClientExt client)
         {
             this._client = client;
@@ -52,16 +58,16 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         /// </summary>
         public static string WeightToFeeCoefficientOverrideDefault()
         {
-            return "0x3AECA2BF09FE1001";
+            return "0x0198DE44373B0801";
         }
         
         /// <summary>
         /// >> WeightToFeeCoefficientOverride
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U64> WeightToFeeCoefficientOverride(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U64> WeightToFeeCoefficientOverride(string blockhash, CancellationToken token)
         {
             string parameters = ConfigurationStorage.WeightToFeeCoefficientOverrideParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U64>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U64>(parameters, blockhash, token);
             return result;
         }
         
@@ -79,16 +85,16 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         /// </summary>
         public static string MinGasPriceOverrideDefault()
         {
-            return "0x2D6BC6EBBB010000";
+            return "0x2BBC2938B4010000";
         }
         
         /// <summary>
         /// >> MinGasPriceOverride
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U64> MinGasPriceOverride(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U64> MinGasPriceOverride(string blockhash, CancellationToken token)
         {
             string parameters = ConfigurationStorage.MinGasPriceOverrideParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U64>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U64>(parameters, blockhash, token);
             return result;
         }
         
@@ -112,10 +118,10 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         /// <summary>
         /// >> AppPromomotionConfigurationOverride
         /// </summary>
-        public async Task<Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_configuration.AppPromotionConfiguration> AppPromomotionConfigurationOverride(CancellationToken token)
+        public async Task<Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_configuration.AppPromotionConfiguration> AppPromomotionConfigurationOverride(string blockhash, CancellationToken token)
         {
             string parameters = ConfigurationStorage.AppPromomotionConfigurationOverrideParams();
-            var result = await _client.GetStorageAsync<Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_configuration.AppPromotionConfiguration>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_configuration.AppPromotionConfiguration>(parameters, blockhash, token);
             return result;
         }
         
@@ -139,10 +145,10 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         /// <summary>
         /// >> CollatorSelectionDesiredCollatorsOverride
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> CollatorSelectionDesiredCollatorsOverride(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> CollatorSelectionDesiredCollatorsOverride(string blockhash, CancellationToken token)
         {
             string parameters = ConfigurationStorage.CollatorSelectionDesiredCollatorsOverrideParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, blockhash, token);
             return result;
         }
         
@@ -166,10 +172,10 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         /// <summary>
         /// >> CollatorSelectionLicenseBondOverride
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U128> CollatorSelectionLicenseBondOverride(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U128> CollatorSelectionLicenseBondOverride(string blockhash, CancellationToken token)
         {
             string parameters = ConfigurationStorage.CollatorSelectionLicenseBondOverrideParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U128>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U128>(parameters, blockhash, token);
             return result;
         }
         
@@ -193,20 +199,23 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         /// <summary>
         /// >> CollatorSelectionKickThresholdOverride
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> CollatorSelectionKickThresholdOverride(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> CollatorSelectionKickThresholdOverride(string blockhash, CancellationToken token)
         {
             string parameters = ConfigurationStorage.CollatorSelectionKickThresholdOverrideParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, blockhash, token);
             return result;
         }
     }
     
+    /// <summary>
+    /// >> ConfigurationCalls
+    /// </summary>
     public sealed class ConfigurationCalls
     {
         
         /// <summary>
         /// >> set_weight_to_fee_coefficient_override
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method SetWeightToFeeCoefficientOverride(Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U64> coeff)
         {
@@ -217,7 +226,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> set_min_gas_price_override
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method SetMinGasPriceOverride(Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U64> coeff)
         {
@@ -228,7 +237,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> set_app_promotion_configuration_override
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method SetAppPromotionConfigurationOverride(Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_configuration.AppPromotionConfiguration configuration)
         {
@@ -239,7 +248,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> set_collator_selection_desired_collators
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method SetCollatorSelectionDesiredCollators(Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32> max)
         {
@@ -250,7 +259,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> set_collator_selection_license_bond
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method SetCollatorSelectionLicenseBond(Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U128> amount)
         {
@@ -261,7 +270,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> set_collator_selection_kick_threshold
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method SetCollatorSelectionKickThreshold(Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32> threshold)
         {
@@ -271,6 +280,9 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> ConfigurationConstants
+    /// </summary>
     public sealed class ConfigurationConstants
     {
         
@@ -280,7 +292,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         public Substrate.NetApi.Model.Types.Primitive.U64 DefaultWeightToFeeCoefficient()
         {
             var result = new Substrate.NetApi.Model.Types.Primitive.U64();
-            result.Create("0x3AECA2BF09FE1001");
+            result.Create("0x0198DE44373B0801");
             return result;
         }
         
@@ -290,7 +302,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         public Substrate.NetApi.Model.Types.Primitive.U64 DefaultMinGasPrice()
         {
             var result = new Substrate.NetApi.Model.Types.Primitive.U64();
-            result.Create("0x2D6BC6EBBB010000");
+            result.Create("0x2BBC2938B4010000");
             return result;
         }
         
@@ -310,7 +322,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         public Substrate.Unique.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill AppPromotionDailyRate()
         {
             var result = new Substrate.Unique.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill();
-            result.Create("0x20A10700");
+            result.Create("0x88EA0600");
             return result;
         }
         
@@ -355,6 +367,9 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> ConfigurationErrors
+    /// </summary>
     public enum ConfigurationErrors
     {
         

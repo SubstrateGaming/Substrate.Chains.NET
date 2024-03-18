@@ -15,18 +15,34 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_unique.pallet
 {
     
     
+    /// <summary>
+    /// >> Error
+    /// Errors for the common Unique transactions.
+    /// </summary>
     public enum Error
     {
         
+        /// <summary>
+        /// >> CollectionDecimalPointLimitExceeded
+        /// Decimal_points parameter must be lower than [`up_data_structs::MAX_DECIMAL_POINTS`].
+        /// </summary>
         CollectionDecimalPointLimitExceeded = 0,
         
+        /// <summary>
+        /// >> EmptyArgument
+        /// Length of items properties must be greater than 0.
+        /// </summary>
         EmptyArgument = 1,
         
+        /// <summary>
+        /// >> RepartitionCalledOnNonRefungibleCollection
+        /// Repertition is only supported by refungible collection.
+        /// </summary>
         RepartitionCalledOnNonRefungibleCollection = 2,
     }
     
     /// <summary>
-    /// >> 399 - Variant[pallet_unique.pallet.Error]
+    /// >> 571 - Variant[pallet_unique.pallet.Error]
     /// Errors for the common Unique transactions.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>

@@ -18,7 +18,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.PhantomType
     
     
     /// <summary>
-    /// >> 419 - Composite[PhantomType.up_data_structs]
+    /// >> 590 - Composite[PhantomType.up_data_structs]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class up_data_structs : BaseType
@@ -27,25 +27,15 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.PhantomType
         /// <summary>
         /// >> value
         /// </summary>
-        private Substrate.Unique.NET.NetApiExt.Generated.Types.Base.Arr0BaseTuple _value;
+        public Substrate.Unique.NET.NetApiExt.Generated.Types.Base.Arr0BaseTuple Value { get; set; }
         
-        public Substrate.Unique.NET.NetApiExt.Generated.Types.Base.Arr0BaseTuple Value
-        {
-            get
-            {
-                return this._value;
-            }
-            set
-            {
-                this._value = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "up_data_structs";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -53,6 +43,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.PhantomType
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

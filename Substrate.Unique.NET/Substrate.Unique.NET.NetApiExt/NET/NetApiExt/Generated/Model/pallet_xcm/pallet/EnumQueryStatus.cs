@@ -15,18 +15,30 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_xcm.pallet
 {
     
     
+    /// <summary>
+    /// >> QueryStatus
+    /// </summary>
     public enum QueryStatus
     {
         
+        /// <summary>
+        /// >> Pending
+        /// </summary>
         Pending = 0,
         
+        /// <summary>
+        /// >> VersionNotifier
+        /// </summary>
         VersionNotifier = 1,
         
+        /// <summary>
+        /// >> Ready
+        /// </summary>
         Ready = 2,
     }
     
     /// <summary>
-    /// >> 371 - Variant[pallet_xcm.pallet.QueryStatus]
+    /// >> 541 - Variant[pallet_xcm.pallet.QueryStatus]
     /// </summary>
     public sealed class EnumQueryStatus : BaseEnumExt<QueryStatus, BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation>, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U8, Substrate.NetApi.Model.Types.Primitive.U8>>, Substrate.NetApi.Model.Types.Primitive.U32>, BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation, Substrate.NetApi.Model.Types.Primitive.Bool>, BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.EnumVersionedResponse, Substrate.NetApi.Model.Types.Primitive.U32>>
     {

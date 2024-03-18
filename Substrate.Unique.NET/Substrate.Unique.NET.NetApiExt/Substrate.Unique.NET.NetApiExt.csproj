@@ -3,7 +3,7 @@
 	<PropertyGroup>
 		<PackageId>Substrate.Unique.NET.Extension</PackageId>
 		<TargetFrameworks>netstandard2.0;netstandard2.1;net6.0</TargetFrameworks>
-		<Version>1.942.0</Version>
+		<Version>1.3007.0</Version>
 		<Company>Substrate Gaming</Company>
 		<Authors>Substrate Gaming</Authors>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
@@ -15,8 +15,13 @@
 		<RepositoryType>git</RepositoryType>
 	</PropertyGroup>
 
+	<!--Set this to true if you want to generate all necessary/dependent DLLs in order to use them in Unity Project for example-->
+	<PropertyGroup>
+		<CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
+	</PropertyGroup>
+
 	<ItemGroup>
-		<PackageReference Include="Substrate.NET.API" Version="0.9.7" />
+		<PackageReference Include="Substrate.NET.API" Version="0.9.19" />
 	</ItemGroup>
 
 	<ItemGroup>

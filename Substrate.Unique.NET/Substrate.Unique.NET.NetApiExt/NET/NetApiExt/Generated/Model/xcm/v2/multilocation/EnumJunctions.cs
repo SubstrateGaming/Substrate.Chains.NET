@@ -15,30 +15,60 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v2.multilocation
 {
     
     
+    /// <summary>
+    /// >> Junctions
+    /// </summary>
     public enum Junctions
     {
         
+        /// <summary>
+        /// >> Here
+        /// </summary>
         Here = 0,
         
+        /// <summary>
+        /// >> X1
+        /// </summary>
         X1 = 1,
         
+        /// <summary>
+        /// >> X2
+        /// </summary>
         X2 = 2,
         
+        /// <summary>
+        /// >> X3
+        /// </summary>
         X3 = 3,
         
+        /// <summary>
+        /// >> X4
+        /// </summary>
         X4 = 4,
         
+        /// <summary>
+        /// >> X5
+        /// </summary>
         X5 = 5,
         
+        /// <summary>
+        /// >> X6
+        /// </summary>
         X6 = 6,
         
+        /// <summary>
+        /// >> X7
+        /// </summary>
         X7 = 7,
         
+        /// <summary>
+        /// >> X8
+        /// </summary>
         X8 = 8,
     }
     
     /// <summary>
-    /// >> 99 - Variant[xcm.v2.multilocation.Junctions]
+    /// >> 122 - Variant[xcm.v2.multilocation.Junctions]
     /// </summary>
     public sealed class EnumJunctions : BaseEnumExt<Junctions, BaseVoid, Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v2.junction.EnumJunction, BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v2.junction.EnumJunction, Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v2.junction.EnumJunction>, BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v2.junction.EnumJunction, Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v2.junction.EnumJunction, Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v2.junction.EnumJunction>, BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v2.junction.EnumJunction, Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v2.junction.EnumJunction, Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v2.junction.EnumJunction, Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v2.junction.EnumJunction>, BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v2.junction.EnumJunction, Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v2.junction.EnumJunction, Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v2.junction.EnumJunction, Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v2.junction.EnumJunction, Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v2.junction.EnumJunction>, BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v2.junction.EnumJunction, Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v2.junction.EnumJunction, Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v2.junction.EnumJunction, Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v2.junction.EnumJunction, Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v2.junction.EnumJunction, Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v2.junction.EnumJunction>, BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v2.junction.EnumJunction, Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v2.junction.EnumJunction, Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v2.junction.EnumJunction, Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v2.junction.EnumJunction, Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v2.junction.EnumJunction, Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v2.junction.EnumJunction, Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v2.junction.EnumJunction>, BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v2.junction.EnumJunction, Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v2.junction.EnumJunction, Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v2.junction.EnumJunction, Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v2.junction.EnumJunction, Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v2.junction.EnumJunction, Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v2.junction.EnumJunction, Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v2.junction.EnumJunction, Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v2.junction.EnumJunction>>
     {

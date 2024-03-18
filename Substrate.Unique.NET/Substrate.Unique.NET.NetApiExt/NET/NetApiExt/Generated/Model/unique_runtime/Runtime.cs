@@ -18,23 +18,26 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.unique_runtime
     
     
     /// <summary>
-    /// >> 503 - Composite[unique_runtime.Runtime]
+    /// >> 675 - Composite[unique_runtime.Runtime]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Runtime : BaseType
     {
         
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "Runtime";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

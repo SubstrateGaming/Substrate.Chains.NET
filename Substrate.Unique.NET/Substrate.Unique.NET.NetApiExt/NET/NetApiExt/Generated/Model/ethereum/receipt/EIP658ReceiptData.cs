@@ -18,7 +18,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.ethereum.receipt
     
     
     /// <summary>
-    /// >> 465 - Composite[ethereum.receipt.EIP658ReceiptData]
+    /// >> 636 - Composite[ethereum.receipt.EIP658ReceiptData]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class EIP658ReceiptData : BaseType
@@ -27,76 +27,27 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.ethereum.receipt
         /// <summary>
         /// >> status_code
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U8 _statusCode;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U8 StatusCode { get; set; }
         /// <summary>
         /// >> used_gas
         /// </summary>
-        private Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.U256 _usedGas;
-        
+        public Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.U256 UsedGas { get; set; }
         /// <summary>
         /// >> logs_bloom
         /// </summary>
-        private Substrate.Unique.NET.NetApiExt.Generated.Model.ethbloom.Bloom _logsBloom;
-        
+        public Substrate.Unique.NET.NetApiExt.Generated.Model.ethbloom.Bloom LogsBloom { get; set; }
         /// <summary>
         /// >> logs
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Unique.NET.NetApiExt.Generated.Model.ethereum.log.Log> _logs;
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Unique.NET.NetApiExt.Generated.Model.ethereum.log.Log> Logs { get; set; }
         
-        public Substrate.NetApi.Model.Types.Primitive.U8 StatusCode
-        {
-            get
-            {
-                return this._statusCode;
-            }
-            set
-            {
-                this._statusCode = value;
-            }
-        }
-        
-        public Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.U256 UsedGas
-        {
-            get
-            {
-                return this._usedGas;
-            }
-            set
-            {
-                this._usedGas = value;
-            }
-        }
-        
-        public Substrate.Unique.NET.NetApiExt.Generated.Model.ethbloom.Bloom LogsBloom
-        {
-            get
-            {
-                return this._logsBloom;
-            }
-            set
-            {
-                this._logsBloom = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Unique.NET.NetApiExt.Generated.Model.ethereum.log.Log> Logs
-        {
-            get
-            {
-                return this._logs;
-            }
-            set
-            {
-                this._logs = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "EIP658ReceiptData";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -107,6 +58,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.ethereum.receipt
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

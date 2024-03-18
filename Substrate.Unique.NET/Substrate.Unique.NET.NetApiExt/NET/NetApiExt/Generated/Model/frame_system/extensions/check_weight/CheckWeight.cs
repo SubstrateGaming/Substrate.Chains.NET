@@ -18,23 +18,26 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.frame_system.extensions
     
     
     /// <summary>
-    /// >> 499 - Composite[frame_system.extensions.check_weight.CheckWeight]
+    /// >> 671 - Composite[frame_system.extensions.check_weight.CheckWeight]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class CheckWeight : BaseType
     {
         
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "CheckWeight";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

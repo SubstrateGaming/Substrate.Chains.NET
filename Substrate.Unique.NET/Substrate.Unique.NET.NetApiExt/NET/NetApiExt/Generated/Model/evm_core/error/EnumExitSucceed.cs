@@ -15,18 +15,30 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.evm_core.error
 {
     
     
+    /// <summary>
+    /// >> ExitSucceed
+    /// </summary>
     public enum ExitSucceed
     {
         
+        /// <summary>
+        /// >> Stopped
+        /// </summary>
         Stopped = 0,
         
+        /// <summary>
+        /// >> Returned
+        /// </summary>
         Returned = 1,
         
+        /// <summary>
+        /// >> Suicided
+        /// </summary>
         Suicided = 2,
     }
     
     /// <summary>
-    /// >> 130 - Variant[evm_core.error.ExitSucceed]
+    /// >> 368 - Variant[evm_core.error.ExitSucceed]
     /// </summary>
     public sealed class EnumExitSucceed : BaseEnum<ExitSucceed>
     {

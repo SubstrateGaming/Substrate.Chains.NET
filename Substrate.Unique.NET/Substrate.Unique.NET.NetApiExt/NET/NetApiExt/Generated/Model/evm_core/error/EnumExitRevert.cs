@@ -15,14 +15,20 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.evm_core.error
 {
     
     
+    /// <summary>
+    /// >> ExitRevert
+    /// </summary>
     public enum ExitRevert
     {
         
+        /// <summary>
+        /// >> Reverted
+        /// </summary>
         Reverted = 0,
     }
     
     /// <summary>
-    /// >> 135 - Variant[evm_core.error.ExitRevert]
+    /// >> 373 - Variant[evm_core.error.ExitRevert]
     /// </summary>
     public sealed class EnumExitRevert : BaseEnum<ExitRevert>
     {

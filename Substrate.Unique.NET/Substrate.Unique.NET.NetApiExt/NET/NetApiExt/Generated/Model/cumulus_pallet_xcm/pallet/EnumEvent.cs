@@ -15,22 +15,38 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.cumulus_pallet_xcm.pall
 {
     
     
+    /// <summary>
+    /// >> Event
+    /// The `Event` enum of this pallet
+    /// </summary>
     public enum Event
     {
         
+        /// <summary>
+        /// >> InvalidFormat
+        /// Downward message is invalid XCM.
+        /// \[ id \]
+        /// </summary>
         InvalidFormat = 0,
         
+        /// <summary>
+        /// >> UnsupportedVersion
+        /// Downward message is unsupported version of XCM.
+        /// \[ id \]
+        /// </summary>
         UnsupportedVersion = 1,
         
+        /// <summary>
+        /// >> ExecutedDownward
+        /// Downward message executed with the given outcome.
+        /// \[ id, outcome \]
+        /// </summary>
         ExecutedDownward = 2,
     }
     
     /// <summary>
-    /// >> 108 - Variant[cumulus_pallet_xcm.pallet.Event]
-    /// 
-    ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
-    ///			by this pallet.
-    ///			
+    /// >> 358 - Variant[cumulus_pallet_xcm.pallet.Event]
+    /// The `Event` enum of this pallet
     /// </summary>
     public sealed class EnumEvent : BaseEnumExt<Event, Substrate.Unique.NET.NetApiExt.Generated.Types.Base.Arr32U8, Substrate.Unique.NET.NetApiExt.Generated.Types.Base.Arr32U8, BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Types.Base.Arr32U8, Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v3.traits.EnumOutcome>>
     {

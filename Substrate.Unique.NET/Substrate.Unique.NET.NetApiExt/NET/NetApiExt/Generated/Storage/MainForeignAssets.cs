@@ -21,258 +21,202 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> ForeignAssetsStorage
+    /// </summary>
     public sealed class ForeignAssetsStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> ForeignAssetsStorage Constructor
+        /// </summary>
         public ForeignAssetsStorage(SubstrateClientExt client)
         {
             this._client = client;
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("ForeignAssets", "NextForeignAssetId"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Primitive.U32)));
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("ForeignAssets", "ForeignAssetLocations"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.NetApi.Model.Types.Primitive.U32), typeof(Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v3.multilocation.MultiLocation)));
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("ForeignAssets", "LocationToCurrencyIds"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v3.multilocation.MultiLocation), typeof(Substrate.NetApi.Model.Types.Primitive.U32)));
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("ForeignAssets", "AssetMetadatas"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_foreign_assets.EnumAssetIds), typeof(Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_foreign_assets.module.AssetMetadata)));
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("ForeignAssets", "AssetBinding"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.NetApi.Model.Types.Primitive.U32), typeof(Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("ForeignAssets", "ForeignAssetToCollection"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v3.multiasset.EnumAssetId), typeof(Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("ForeignAssets", "CollectionToForeignAsset"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId), typeof(Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v3.multiasset.EnumAssetId)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("ForeignAssets", "ForeignReserveAssetInstanceToTokenId"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat,
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId, Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v3.multiasset.EnumAssetInstance>), typeof(Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.TokenId)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("ForeignAssets", "TokenIdToForeignReserveAssetInstance"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat,
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId, Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.TokenId>), typeof(Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v3.multiasset.EnumAssetInstance)));
         }
         
         /// <summary>
-        /// >> NextForeignAssetIdParams
-        ///  Next available Foreign AssetId ID.
-        /// 
-        ///  NextForeignAssetId: ForeignAssetId
+        /// >> ForeignAssetToCollectionParams
+        ///  The corresponding collections of foreign assets.
         /// </summary>
-        public static string NextForeignAssetIdParams()
+        public static string ForeignAssetToCollectionParams(Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v3.multiasset.EnumAssetId key)
         {
-            return RequestGenerator.GetStorage("ForeignAssets", "NextForeignAssetId", Substrate.NetApi.Model.Meta.Storage.Type.Plain);
-        }
-        
-        /// <summary>
-        /// >> NextForeignAssetIdDefault
-        /// Default value as hex string
-        /// </summary>
-        public static string NextForeignAssetIdDefault()
-        {
-            return "0x00000000";
-        }
-        
-        /// <summary>
-        /// >> NextForeignAssetId
-        ///  Next available Foreign AssetId ID.
-        /// 
-        ///  NextForeignAssetId: ForeignAssetId
-        /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> NextForeignAssetId(CancellationToken token)
-        {
-            string parameters = ForeignAssetsStorage.NextForeignAssetIdParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, token);
-            return result;
-        }
-        
-        /// <summary>
-        /// >> ForeignAssetLocationsParams
-        ///  The storages for MultiLocations.
-        /// 
-        ///  ForeignAssetLocations: map ForeignAssetId => Option<MultiLocation>
-        /// </summary>
-        public static string ForeignAssetLocationsParams(Substrate.NetApi.Model.Types.Primitive.U32 key)
-        {
-            return RequestGenerator.GetStorage("ForeignAssets", "ForeignAssetLocations", Substrate.NetApi.Model.Meta.Storage.Type.Map, new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
+            return RequestGenerator.GetStorage("ForeignAssets", "ForeignAssetToCollection", Substrate.NetApi.Model.Meta.Storage.Type.Map, new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                         Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, new Substrate.NetApi.Model.Types.IType[] {
                         key});
         }
         
         /// <summary>
-        /// >> ForeignAssetLocationsDefault
+        /// >> ForeignAssetToCollectionDefault
         /// Default value as hex string
         /// </summary>
-        public static string ForeignAssetLocationsDefault()
+        public static string ForeignAssetToCollectionDefault()
         {
             return "0x00";
         }
         
         /// <summary>
-        /// >> ForeignAssetLocations
-        ///  The storages for MultiLocations.
-        /// 
-        ///  ForeignAssetLocations: map ForeignAssetId => Option<MultiLocation>
+        /// >> ForeignAssetToCollection
+        ///  The corresponding collections of foreign assets.
         /// </summary>
-        public async Task<Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v3.multilocation.MultiLocation> ForeignAssetLocations(Substrate.NetApi.Model.Types.Primitive.U32 key, CancellationToken token)
+        public async Task<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId> ForeignAssetToCollection(Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v3.multiasset.EnumAssetId key, string blockhash, CancellationToken token)
         {
-            string parameters = ForeignAssetsStorage.ForeignAssetLocationsParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v3.multilocation.MultiLocation>(parameters, token);
+            string parameters = ForeignAssetsStorage.ForeignAssetToCollectionParams(key);
+            var result = await _client.GetStorageAsync<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId>(parameters, blockhash, token);
             return result;
         }
         
         /// <summary>
-        /// >> LocationToCurrencyIdsParams
-        ///  The storages for CurrencyIds.
-        /// 
-        ///  LocationToCurrencyIds: map MultiLocation => Option<ForeignAssetId>
+        /// >> CollectionToForeignAssetParams
+        ///  The corresponding foreign assets of collections.
         /// </summary>
-        public static string LocationToCurrencyIdsParams(Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v3.multilocation.MultiLocation key)
+        public static string CollectionToForeignAssetParams(Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId key)
         {
-            return RequestGenerator.GetStorage("ForeignAssets", "LocationToCurrencyIds", Substrate.NetApi.Model.Meta.Storage.Type.Map, new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
+            return RequestGenerator.GetStorage("ForeignAssets", "CollectionToForeignAsset", Substrate.NetApi.Model.Meta.Storage.Type.Map, new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                         Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, new Substrate.NetApi.Model.Types.IType[] {
                         key});
         }
         
         /// <summary>
-        /// >> LocationToCurrencyIdsDefault
+        /// >> CollectionToForeignAssetDefault
         /// Default value as hex string
         /// </summary>
-        public static string LocationToCurrencyIdsDefault()
+        public static string CollectionToForeignAssetDefault()
         {
             return "0x00";
         }
         
         /// <summary>
-        /// >> LocationToCurrencyIds
-        ///  The storages for CurrencyIds.
-        /// 
-        ///  LocationToCurrencyIds: map MultiLocation => Option<ForeignAssetId>
+        /// >> CollectionToForeignAsset
+        ///  The corresponding foreign assets of collections.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> LocationToCurrencyIds(Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v3.multilocation.MultiLocation key, CancellationToken token)
+        public async Task<Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v3.multiasset.EnumAssetId> CollectionToForeignAsset(Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId key, string blockhash, CancellationToken token)
         {
-            string parameters = ForeignAssetsStorage.LocationToCurrencyIdsParams(key);
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, token);
+            string parameters = ForeignAssetsStorage.CollectionToForeignAssetParams(key);
+            var result = await _client.GetStorageAsync<Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v3.multiasset.EnumAssetId>(parameters, blockhash, token);
             return result;
         }
         
         /// <summary>
-        /// >> AssetMetadatasParams
-        ///  The storages for AssetMetadatas.
-        /// 
-        ///  AssetMetadatas: map AssetIds => Option<AssetMetadata>
+        /// >> ForeignReserveAssetInstanceToTokenIdParams
+        ///  The correponding NFT token id of reserve NFTs
         /// </summary>
-        public static string AssetMetadatasParams(Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_foreign_assets.EnumAssetIds key)
+        public static string ForeignReserveAssetInstanceToTokenIdParams(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId, Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v3.multiasset.EnumAssetInstance> key)
         {
-            return RequestGenerator.GetStorage("ForeignAssets", "AssetMetadatas", Substrate.NetApi.Model.Meta.Storage.Type.Map, new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                        Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, new Substrate.NetApi.Model.Types.IType[] {
-                        key});
+            return RequestGenerator.GetStorage("ForeignAssets", "ForeignReserveAssetInstanceToTokenId", Substrate.NetApi.Model.Meta.Storage.Type.Map, new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
+                        Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat,
+                        Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, key.Value);
         }
         
         /// <summary>
-        /// >> AssetMetadatasDefault
+        /// >> ForeignReserveAssetInstanceToTokenIdDefault
         /// Default value as hex string
         /// </summary>
-        public static string AssetMetadatasDefault()
+        public static string ForeignReserveAssetInstanceToTokenIdDefault()
         {
             return "0x00";
         }
         
         /// <summary>
-        /// >> AssetMetadatas
-        ///  The storages for AssetMetadatas.
-        /// 
-        ///  AssetMetadatas: map AssetIds => Option<AssetMetadata>
+        /// >> ForeignReserveAssetInstanceToTokenId
+        ///  The correponding NFT token id of reserve NFTs
         /// </summary>
-        public async Task<Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_foreign_assets.module.AssetMetadata> AssetMetadatas(Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_foreign_assets.EnumAssetIds key, CancellationToken token)
+        public async Task<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.TokenId> ForeignReserveAssetInstanceToTokenId(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId, Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v3.multiasset.EnumAssetInstance> key, string blockhash, CancellationToken token)
         {
-            string parameters = ForeignAssetsStorage.AssetMetadatasParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_foreign_assets.module.AssetMetadata>(parameters, token);
+            string parameters = ForeignAssetsStorage.ForeignReserveAssetInstanceToTokenIdParams(key);
+            var result = await _client.GetStorageAsync<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.TokenId>(parameters, blockhash, token);
             return result;
         }
         
         /// <summary>
-        /// >> AssetBindingParams
-        ///  The storages for assets to fungible collection binding
-        /// 
+        /// >> TokenIdToForeignReserveAssetInstanceParams
+        ///  The correponding reserve NFT of a token ID
         /// </summary>
-        public static string AssetBindingParams(Substrate.NetApi.Model.Types.Primitive.U32 key)
+        public static string TokenIdToForeignReserveAssetInstanceParams(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId, Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.TokenId> key)
         {
-            return RequestGenerator.GetStorage("ForeignAssets", "AssetBinding", Substrate.NetApi.Model.Meta.Storage.Type.Map, new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                        Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, new Substrate.NetApi.Model.Types.IType[] {
-                        key});
+            return RequestGenerator.GetStorage("ForeignAssets", "TokenIdToForeignReserveAssetInstance", Substrate.NetApi.Model.Meta.Storage.Type.Map, new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
+                        Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat,
+                        Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, key.Value);
         }
         
         /// <summary>
-        /// >> AssetBindingDefault
+        /// >> TokenIdToForeignReserveAssetInstanceDefault
         /// Default value as hex string
         /// </summary>
-        public static string AssetBindingDefault()
+        public static string TokenIdToForeignReserveAssetInstanceDefault()
         {
             return "0x00";
         }
         
         /// <summary>
-        /// >> AssetBinding
-        ///  The storages for assets to fungible collection binding
-        /// 
+        /// >> TokenIdToForeignReserveAssetInstance
+        ///  The correponding reserve NFT of a token ID
         /// </summary>
-        public async Task<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId> AssetBinding(Substrate.NetApi.Model.Types.Primitive.U32 key, CancellationToken token)
+        public async Task<Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v3.multiasset.EnumAssetInstance> TokenIdToForeignReserveAssetInstance(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId, Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.TokenId> key, string blockhash, CancellationToken token)
         {
-            string parameters = ForeignAssetsStorage.AssetBindingParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId>(parameters, token);
+            string parameters = ForeignAssetsStorage.TokenIdToForeignReserveAssetInstanceParams(key);
+            var result = await _client.GetStorageAsync<Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v3.multiasset.EnumAssetInstance>(parameters, blockhash, token);
             return result;
         }
     }
     
+    /// <summary>
+    /// >> ForeignAssetsCalls
+    /// </summary>
     public sealed class ForeignAssetsCalls
     {
         
         /// <summary>
-        /// >> register_foreign_asset
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// >> force_register_foreign_asset
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method RegisterForeignAsset(Substrate.Unique.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 owner, Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation location, Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_foreign_assets.module.AssetMetadata metadata)
+        public static Method ForceRegisterForeignAsset(Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAssetId versioned_asset_id, Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT8 name, Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10 token_prefix, Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_foreign_assets.EnumForeignCollectionMode mode)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
-            byteArray.AddRange(owner.Encode());
-            byteArray.AddRange(location.Encode());
-            byteArray.AddRange(metadata.Encode());
-            return new Method(80, "ForeignAssets", 0, "register_foreign_asset", byteArray.ToArray());
-        }
-        
-        /// <summary>
-        /// >> update_foreign_asset
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
-        /// </summary>
-        public static Method UpdateForeignAsset(Substrate.NetApi.Model.Types.Primitive.U32 foreign_asset_id, Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation location, Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_foreign_assets.module.AssetMetadata metadata)
-        {
-            System.Collections.Generic.List<byte> byteArray = new List<byte>();
-            byteArray.AddRange(foreign_asset_id.Encode());
-            byteArray.AddRange(location.Encode());
-            byteArray.AddRange(metadata.Encode());
-            return new Method(80, "ForeignAssets", 1, "update_foreign_asset", byteArray.ToArray());
+            byteArray.AddRange(versioned_asset_id.Encode());
+            byteArray.AddRange(name.Encode());
+            byteArray.AddRange(token_prefix.Encode());
+            byteArray.AddRange(mode.Encode());
+            return new Method(80, "ForeignAssets", 0, "force_register_foreign_asset", byteArray.ToArray());
         }
     }
     
+    /// <summary>
+    /// >> ForeignAssetsConstants
+    /// </summary>
     public sealed class ForeignAssetsConstants
     {
     }
     
+    /// <summary>
+    /// >> ForeignAssetsErrors
+    /// </summary>
     public enum ForeignAssetsErrors
     {
         
         /// <summary>
-        /// >> BadLocation
-        /// The given location could not be used (e.g. because it cannot be expressed in the
-        /// desired version of XCM).
+        /// >> ForeignAssetAlreadyRegistered
+        /// The foreign asset is already registered.
         /// </summary>
-        BadLocation,
+        ForeignAssetAlreadyRegistered,
         
         /// <summary>
-        /// >> MultiLocationExisted
-        /// MultiLocation existed
+        /// >> BadForeignAssetId
+        /// The given asset ID could not be converted into the current XCM version.
         /// </summary>
-        MultiLocationExisted,
-        
-        /// <summary>
-        /// >> AssetIdNotExists
-        /// AssetId not exists
-        /// </summary>
-        AssetIdNotExists,
-        
-        /// <summary>
-        /// >> AssetIdExisted
-        /// AssetId exists
-        /// </summary>
-        AssetIdExisted,
+        BadForeignAssetId,
     }
 }

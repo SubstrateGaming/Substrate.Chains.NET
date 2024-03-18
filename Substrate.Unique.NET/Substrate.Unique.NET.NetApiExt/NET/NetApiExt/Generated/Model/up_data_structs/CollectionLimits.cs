@@ -18,7 +18,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs
     
     
     /// <summary>
-    /// >> 272 - Composite[up_data_structs.CollectionLimits]
+    /// >> 270 - Composite[up_data_structs.CollectionLimits]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class CollectionLimits : BaseType
@@ -27,161 +27,47 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs
         /// <summary>
         /// >> account_token_ownership_limit
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32> _accountTokenOwnershipLimit;
-        
+        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32> AccountTokenOwnershipLimit { get; set; }
         /// <summary>
         /// >> sponsored_data_size
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32> _sponsoredDataSize;
-        
+        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32> SponsoredDataSize { get; set; }
         /// <summary>
         /// >> sponsored_data_rate_limit
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.EnumSponsoringRateLimit> _sponsoredDataRateLimit;
-        
+        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.EnumSponsoringRateLimit> SponsoredDataRateLimit { get; set; }
         /// <summary>
         /// >> token_limit
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32> _tokenLimit;
-        
+        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32> TokenLimit { get; set; }
         /// <summary>
         /// >> sponsor_transfer_timeout
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32> _sponsorTransferTimeout;
-        
+        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32> SponsorTransferTimeout { get; set; }
         /// <summary>
         /// >> sponsor_approve_timeout
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32> _sponsorApproveTimeout;
-        
+        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32> SponsorApproveTimeout { get; set; }
         /// <summary>
         /// >> owner_can_transfer
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.Bool> _ownerCanTransfer;
-        
+        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.Bool> OwnerCanTransfer { get; set; }
         /// <summary>
         /// >> owner_can_destroy
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.Bool> _ownerCanDestroy;
-        
+        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.Bool> OwnerCanDestroy { get; set; }
         /// <summary>
         /// >> transfers_enabled
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.Bool> _transfersEnabled;
+        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.Bool> TransfersEnabled { get; set; }
         
-        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32> AccountTokenOwnershipLimit
-        {
-            get
-            {
-                return this._accountTokenOwnershipLimit;
-            }
-            set
-            {
-                this._accountTokenOwnershipLimit = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32> SponsoredDataSize
-        {
-            get
-            {
-                return this._sponsoredDataSize;
-            }
-            set
-            {
-                this._sponsoredDataSize = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.EnumSponsoringRateLimit> SponsoredDataRateLimit
-        {
-            get
-            {
-                return this._sponsoredDataRateLimit;
-            }
-            set
-            {
-                this._sponsoredDataRateLimit = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32> TokenLimit
-        {
-            get
-            {
-                return this._tokenLimit;
-            }
-            set
-            {
-                this._tokenLimit = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32> SponsorTransferTimeout
-        {
-            get
-            {
-                return this._sponsorTransferTimeout;
-            }
-            set
-            {
-                this._sponsorTransferTimeout = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32> SponsorApproveTimeout
-        {
-            get
-            {
-                return this._sponsorApproveTimeout;
-            }
-            set
-            {
-                this._sponsorApproveTimeout = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.Bool> OwnerCanTransfer
-        {
-            get
-            {
-                return this._ownerCanTransfer;
-            }
-            set
-            {
-                this._ownerCanTransfer = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.Bool> OwnerCanDestroy
-        {
-            get
-            {
-                return this._ownerCanDestroy;
-            }
-            set
-            {
-                this._ownerCanDestroy = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.Bool> TransfersEnabled
-        {
-            get
-            {
-                return this._transfersEnabled;
-            }
-            set
-            {
-                this._transfersEnabled = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "CollectionLimits";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -197,6 +83,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

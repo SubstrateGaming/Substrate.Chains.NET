@@ -18,7 +18,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.ethereum.log
     
     
     /// <summary>
-    /// >> 126 - Composite[ethereum.log.Log]
+    /// >> 348 - Composite[ethereum.log.Log]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Log : BaseType
@@ -27,59 +27,23 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.ethereum.log
         /// <summary>
         /// >> address
         /// </summary>
-        private Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H160 _address;
-        
+        public Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H160 Address { get; set; }
         /// <summary>
         /// >> topics
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H256> _topics;
-        
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H256> Topics { get; set; }
         /// <summary>
         /// >> data
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> _data;
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> Data { get; set; }
         
-        public Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H160 Address
-        {
-            get
-            {
-                return this._address;
-            }
-            set
-            {
-                this._address = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H256> Topics
-        {
-            get
-            {
-                return this._topics;
-            }
-            set
-            {
-                this._topics = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> Data
-        {
-            get
-            {
-                return this._data;
-            }
-            set
-            {
-                this._data = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "Log";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -89,6 +53,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.ethereum.log
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

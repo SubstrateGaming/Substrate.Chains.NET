@@ -15,26 +15,25 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_foreign_assets.m
 {
     
     
+    /// <summary>
+    /// >> Event
+    /// The `Event` enum of this pallet
+    /// </summary>
     public enum Event
     {
         
+        /// <summary>
+        /// >> ForeignAssetRegistered
+        /// The foreign asset registered.
+        /// </summary>
         ForeignAssetRegistered = 0,
-        
-        ForeignAssetUpdated = 1,
-        
-        AssetRegistered = 2,
-        
-        AssetUpdated = 3,
     }
     
     /// <summary>
-    /// >> 121 - Variant[pallet_foreign_assets.module.Event]
-    /// 
-    ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
-    ///			by this pallet.
-    ///			
+    /// >> 364 - Variant[pallet_foreign_assets.module.Event]
+    /// The `Event` enum of this pallet
     /// </summary>
-    public sealed class EnumEvent : BaseEnumExt<Event, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v3.multilocation.MultiLocation, Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_foreign_assets.module.AssetMetadata>, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v3.multilocation.MultiLocation, Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_foreign_assets.module.AssetMetadata>, BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_foreign_assets.EnumAssetIds, Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_foreign_assets.module.AssetMetadata>, BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_foreign_assets.EnumAssetIds, Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_foreign_assets.module.AssetMetadata>>
+    public sealed class EnumEvent : BaseEnumExt<Event, BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId, Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAssetId>>
     {
     }
 }

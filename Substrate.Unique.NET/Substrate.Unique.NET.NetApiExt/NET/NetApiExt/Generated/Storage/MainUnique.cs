@@ -21,12 +21,18 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> UniqueStorage
+    /// </summary>
     public sealed class UniqueStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> UniqueStorage Constructor
+        /// </summary>
         public UniqueStorage(SubstrateClientExt client)
         {
             this._client = client;
@@ -80,10 +86,10 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         /// >> ChainVersion
         ///  Used for migrations
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U64> ChainVersion(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U64> ChainVersion(string blockhash, CancellationToken token)
         {
             string parameters = UniqueStorage.ChainVersionParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U64>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U64>(parameters, blockhash, token);
             return result;
         }
         
@@ -113,10 +119,10 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         ///  (Collection id (controlled?2), who created (real))
         ///  TODO: Off chain worker should remove from this map when collection gets removed
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> CreateItemBasket(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId, Substrate.Unique.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> key, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> CreateItemBasket(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId, Substrate.Unique.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> key, string blockhash, CancellationToken token)
         {
             string parameters = UniqueStorage.CreateItemBasketParams(key);
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, blockhash, token);
             return result;
         }
         
@@ -144,10 +150,10 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         /// >> NftTransferBasket
         ///  Collection id (controlled?2), token id (controlled?2)
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> NftTransferBasket(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId, Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.TokenId> key, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> NftTransferBasket(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId, Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.TokenId> key, string blockhash, CancellationToken token)
         {
             string parameters = UniqueStorage.NftTransferBasketParams(key);
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, blockhash, token);
             return result;
         }
         
@@ -175,10 +181,10 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         /// >> FungibleTransferBasket
         ///  Collection id (controlled?2), owning user (real)
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> FungibleTransferBasket(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId, Substrate.Unique.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> key, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> FungibleTransferBasket(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId, Substrate.Unique.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> key, string blockhash, CancellationToken token)
         {
             string parameters = UniqueStorage.FungibleTransferBasketParams(key);
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, blockhash, token);
             return result;
         }
         
@@ -207,10 +213,10 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         /// >> ReFungibleTransferBasket
         ///  Collection id (controlled?2), token id (controlled?2)
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> ReFungibleTransferBasket(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId, Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.TokenId, Substrate.Unique.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> key, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> ReFungibleTransferBasket(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId, Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.TokenId, Substrate.Unique.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> key, string blockhash, CancellationToken token)
         {
             string parameters = UniqueStorage.ReFungibleTransferBasketParams(key);
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, blockhash, token);
             return result;
         }
         
@@ -238,10 +244,10 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         /// >> TokenPropertyBasket
         ///  Last sponsoring of token property setting // todo:doc rephrase this and the following
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> TokenPropertyBasket(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId, Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.TokenId> key, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> TokenPropertyBasket(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId, Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.TokenId> key, string blockhash, CancellationToken token)
         {
             string parameters = UniqueStorage.TokenPropertyBasketParams(key);
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, blockhash, token);
             return result;
         }
         
@@ -269,10 +275,10 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         /// >> NftApproveBasket
         ///  Last sponsoring of NFT approval in a collection
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> NftApproveBasket(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId, Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.TokenId> key, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> NftApproveBasket(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId, Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.TokenId> key, string blockhash, CancellationToken token)
         {
             string parameters = UniqueStorage.NftApproveBasketParams(key);
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, blockhash, token);
             return result;
         }
         
@@ -300,10 +306,10 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         /// >> FungibleApproveBasket
         ///  Last sponsoring of fungible tokens approval in a collection
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> FungibleApproveBasket(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId, Substrate.Unique.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> key, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> FungibleApproveBasket(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId, Substrate.Unique.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> key, string blockhash, CancellationToken token)
         {
             string parameters = UniqueStorage.FungibleApproveBasketParams(key);
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, blockhash, token);
             return result;
         }
         
@@ -332,14 +338,17 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         /// >> RefungibleApproveBasket
         ///  Last sponsoring of RFT approval in a collection
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> RefungibleApproveBasket(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId, Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.TokenId, Substrate.Unique.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> key, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> RefungibleApproveBasket(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId, Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.TokenId, Substrate.Unique.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> key, string blockhash, CancellationToken token)
         {
             string parameters = UniqueStorage.RefungibleApproveBasketParams(key);
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, blockhash, token);
             return result;
         }
     }
     
+    /// <summary>
+    /// >> UniqueCalls
+    /// </summary>
     public sealed class UniqueCalls
     {
         
@@ -347,7 +356,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         /// >> create_collection
         /// Type alias to Pallet, to be used by construct_runtime.
         /// </summary>
-        public static Method CreateCollection(Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT13 collection_name, Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT14 collection_description, Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT15 token_prefix, Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.EnumCollectionMode mode)
+        public static Method CreateCollection(Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT8 collection_name, Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9 collection_description, Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10 token_prefix, Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.EnumCollectionMode mode)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(collection_name.Encode());
@@ -515,7 +524,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         /// >> delete_collection_properties
         /// Type alias to Pallet, to be used by construct_runtime.
         /// </summary>
-        public static Method DeleteCollectionProperties(Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId collection_id, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT4> property_keys)
+        public static Method DeleteCollectionProperties(Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId collection_id, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT12> property_keys)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(collection_id.Encode());
@@ -540,7 +549,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         /// >> delete_token_properties
         /// Type alias to Pallet, to be used by construct_runtime.
         /// </summary>
-        public static Method DeleteTokenProperties(Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId collection_id, Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.TokenId token_id, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT4> property_keys)
+        public static Method DeleteTokenProperties(Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId collection_id, Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.TokenId token_id, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT12> property_keys)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(collection_id.Encode());
@@ -744,6 +753,9 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> UniqueConstants
+    /// </summary>
     public sealed class UniqueConstants
     {
         
@@ -864,7 +876,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         public Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionLimits nft_default_collection_limits()
         {
             var result = new Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionLimits();
-            result.Create("0x0140420F000100080000010001FFFFFFFF01050000000105000000010001010101");
+            result.Create("0x0100E1F5050100080000010001FFFFFFFF01050000000105000000010001010101");
             return result;
         }
         
@@ -875,7 +887,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         public Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionLimits rft_default_collection_limits()
         {
             var result = new Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionLimits();
-            result.Create("0x0140420F000100080000010001FFFFFFFF01050000000105000000010001010101");
+            result.Create("0x0100E1F5050100080000010001FFFFFFFF01050000000105000000010001010101");
             return result;
         }
         
@@ -886,11 +898,14 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         public Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionLimits ft_default_collection_limits()
         {
             var result = new Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionLimits();
-            result.Create("0x0140420F000100080000010001FFFFFFFF01050000000105000000010001010101");
+            result.Create("0x0100E1F5050100080000010001FFFFFFFF01050000000105000000010001010101");
             return result;
         }
     }
     
+    /// <summary>
+    /// >> UniqueErrors
+    /// </summary>
     public enum UniqueErrors
     {
         

@@ -15,15 +15,23 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_evm_contract_hel
 {
     
     
+    /// <summary>
+    /// >> Call
+    /// Contains a variant per dispatchable extrinsic that this pallet has.
+    /// </summary>
     public enum Call
     {
         
+        /// <summary>
+        /// >> migrate_from_self_sponsoring
+        /// See [`Pallet::migrate_from_self_sponsoring`].
+        /// </summary>
         migrate_from_self_sponsoring = 0,
     }
     
     /// <summary>
-    /// >> 337 - Variant[pallet_evm_contract_helpers.pallet.Call]
-    /// Contains one variant per dispatchable that can be called by an extrinsic.
+    /// >> 342 - Variant[pallet_evm_contract_helpers.pallet.Call]
+    /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
     public sealed class EnumCall : BaseEnumExt<Call, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H160>>
     {

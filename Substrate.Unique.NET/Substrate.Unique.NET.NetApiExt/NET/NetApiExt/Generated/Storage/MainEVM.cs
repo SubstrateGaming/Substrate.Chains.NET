@@ -21,17 +21,25 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> EVMStorage
+    /// </summary>
     public sealed class EVMStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> EVMStorage Constructor
+        /// </summary>
         public EVMStorage(SubstrateClientExt client)
         {
             this._client = client;
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("EVM", "AccountCodes"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H160), typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("EVM", "AccountCodesMetadata"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H160), typeof(Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_evm.CodeMetadata)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("EVM", "AccountStorages"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat,
                             Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H160, Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H256>), typeof(Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H256)));
@@ -60,10 +68,39 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         /// <summary>
         /// >> AccountCodes
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>> AccountCodes(Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H160 key, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>> AccountCodes(Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H160 key, string blockhash, CancellationToken token)
         {
             string parameters = EVMStorage.AccountCodesParams(key);
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>(parameters, blockhash, token);
+            return result;
+        }
+        
+        /// <summary>
+        /// >> AccountCodesMetadataParams
+        /// </summary>
+        public static string AccountCodesMetadataParams(Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H160 key)
+        {
+            return RequestGenerator.GetStorage("EVM", "AccountCodesMetadata", Substrate.NetApi.Model.Meta.Storage.Type.Map, new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
+                        Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, new Substrate.NetApi.Model.Types.IType[] {
+                        key});
+        }
+        
+        /// <summary>
+        /// >> AccountCodesMetadataDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string AccountCodesMetadataDefault()
+        {
+            return "0x00";
+        }
+        
+        /// <summary>
+        /// >> AccountCodesMetadata
+        /// </summary>
+        public async Task<Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_evm.CodeMetadata> AccountCodesMetadata(Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H160 key, string blockhash, CancellationToken token)
+        {
+            string parameters = EVMStorage.AccountCodesMetadataParams(key);
+            var result = await _client.GetStorageAsync<Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_evm.CodeMetadata>(parameters, blockhash, token);
             return result;
         }
         
@@ -89,10 +126,10 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         /// <summary>
         /// >> AccountStorages
         /// </summary>
-        public async Task<Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H256> AccountStorages(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H160, Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H256> key, CancellationToken token)
+        public async Task<Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H256> AccountStorages(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H160, Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H256> key, string blockhash, CancellationToken token)
         {
             string parameters = EVMStorage.AccountStoragesParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H256>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H256>(parameters, blockhash, token);
             return result;
         }
         
@@ -120,20 +157,23 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         ///  Written on log, reset after transaction
         ///  Should be empty between transactions
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Unique.NET.NetApiExt.Generated.Model.ethereum.log.Log>> CurrentLogs(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Unique.NET.NetApiExt.Generated.Model.ethereum.log.Log>> CurrentLogs(string blockhash, CancellationToken token)
         {
             string parameters = EVMStorage.CurrentLogsParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Unique.NET.NetApiExt.Generated.Model.ethereum.log.Log>>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Unique.NET.NetApiExt.Generated.Model.ethereum.log.Log>>(parameters, blockhash, token);
             return result;
         }
     }
     
+    /// <summary>
+    /// >> EVMCalls
+    /// </summary>
     public sealed class EVMCalls
     {
         
         /// <summary>
         /// >> withdraw
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method Withdraw(Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H160 address, Substrate.NetApi.Model.Types.Primitive.U128 value)
         {
@@ -145,7 +185,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> call
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method Call(Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H160 source, Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H160 target, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> input, Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.U256 value, Substrate.NetApi.Model.Types.Primitive.U64 gas_limit, Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.U256 max_fee_per_gas, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.U256> max_priority_fee_per_gas, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.U256> nonce, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H160, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H256>>> access_list)
         {
@@ -164,7 +204,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> create
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method Create(Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H160 source, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> init, Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.U256 value, Substrate.NetApi.Model.Types.Primitive.U64 gas_limit, Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.U256 max_fee_per_gas, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.U256> max_priority_fee_per_gas, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.U256> nonce, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H160, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H256>>> access_list)
         {
@@ -182,7 +222,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> create2
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method Create2(Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H160 source, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> init, Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H256 salt, Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.U256 value, Substrate.NetApi.Model.Types.Primitive.U64 gas_limit, Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.U256 max_fee_per_gas, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.U256> max_priority_fee_per_gas, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.U256> nonce, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H160, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H256>>> access_list)
         {
@@ -200,10 +240,16 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> EVMConstants
+    /// </summary>
     public sealed class EVMConstants
     {
     }
     
+    /// <summary>
+    /// >> EVMErrors
+    /// </summary>
     public enum EVMErrors
     {
         

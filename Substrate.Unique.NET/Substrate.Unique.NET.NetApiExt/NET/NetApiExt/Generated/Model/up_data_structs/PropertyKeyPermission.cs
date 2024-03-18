@@ -18,7 +18,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs
     
     
     /// <summary>
-    /// >> 286 - Composite[up_data_structs.PropertyKeyPermission]
+    /// >> 284 - Composite[up_data_structs.PropertyKeyPermission]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class PropertyKeyPermission : BaseType
@@ -27,42 +27,19 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs
         /// <summary>
         /// >> key
         /// </summary>
-        private Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT4 _key;
-        
+        public Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT12 Key { get; set; }
         /// <summary>
         /// >> permission
         /// </summary>
-        private Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.PropertyPermission _permission;
+        public Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.PropertyPermission Permission { get; set; }
         
-        public Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT4 Key
-        {
-            get
-            {
-                return this._key;
-            }
-            set
-            {
-                this._key = value;
-            }
-        }
-        
-        public Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.PropertyPermission Permission
-        {
-            get
-            {
-                return this._permission;
-            }
-            set
-            {
-                this._permission = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "PropertyKeyPermission";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -71,10 +48,11 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Key = new Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT4();
+            Key = new Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT12();
             Key.Decode(byteArray, ref p);
             Permission = new Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.PropertyPermission();
             Permission.Decode(byteArray, ref p);

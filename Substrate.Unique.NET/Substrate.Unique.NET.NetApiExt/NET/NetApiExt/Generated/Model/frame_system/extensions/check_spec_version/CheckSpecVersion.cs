@@ -18,23 +18,26 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.frame_system.extensions
     
     
     /// <summary>
-    /// >> 493 - Composite[frame_system.extensions.check_spec_version.CheckSpecVersion]
+    /// >> 665 - Composite[frame_system.extensions.check_spec_version.CheckSpecVersion]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class CheckSpecVersion : BaseType
     {
         
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "CheckSpecVersion";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

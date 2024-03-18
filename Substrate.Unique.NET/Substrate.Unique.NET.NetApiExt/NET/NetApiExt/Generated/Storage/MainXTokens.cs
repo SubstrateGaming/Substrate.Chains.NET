@@ -21,26 +21,35 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> XTokensStorage
+    /// </summary>
     public sealed class XTokensStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> XTokensStorage Constructor
+        /// </summary>
         public XTokensStorage(SubstrateClientExt client)
         {
             this._client = client;
         }
     }
     
+    /// <summary>
+    /// >> XTokensCalls
+    /// </summary>
     public sealed class XTokensCalls
     {
         
         /// <summary>
         /// >> transfer
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method Transfer(Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_foreign_assets.EnumAssetIds currency_id, Substrate.NetApi.Model.Types.Primitive.U128 amount, Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation dest, Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v3.EnumWeightLimit dest_weight_limit)
+        public static Method Transfer(Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId currency_id, Substrate.NetApi.Model.Types.Primitive.U128 amount, Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation dest, Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v3.EnumWeightLimit dest_weight_limit)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(currency_id.Encode());
@@ -52,7 +61,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> transfer_multiasset
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method TransferMultiasset(Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiAsset asset, Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation dest, Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v3.EnumWeightLimit dest_weight_limit)
         {
@@ -65,9 +74,9 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> transfer_with_fee
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method TransferWithFee(Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_foreign_assets.EnumAssetIds currency_id, Substrate.NetApi.Model.Types.Primitive.U128 amount, Substrate.NetApi.Model.Types.Primitive.U128 fee, Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation dest, Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v3.EnumWeightLimit dest_weight_limit)
+        public static Method TransferWithFee(Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId currency_id, Substrate.NetApi.Model.Types.Primitive.U128 amount, Substrate.NetApi.Model.Types.Primitive.U128 fee, Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation dest, Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v3.EnumWeightLimit dest_weight_limit)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(currency_id.Encode());
@@ -80,7 +89,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> transfer_multiasset_with_fee
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method TransferMultiassetWithFee(Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiAsset asset, Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiAsset fee, Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation dest, Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v3.EnumWeightLimit dest_weight_limit)
         {
@@ -94,9 +103,9 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> transfer_multicurrencies
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method TransferMulticurrencies(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_foreign_assets.EnumAssetIds, Substrate.NetApi.Model.Types.Primitive.U128>> currencies, Substrate.NetApi.Model.Types.Primitive.U32 fee_item, Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation dest, Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v3.EnumWeightLimit dest_weight_limit)
+        public static Method TransferMulticurrencies(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs.CollectionId, Substrate.NetApi.Model.Types.Primitive.U128>> currencies, Substrate.NetApi.Model.Types.Primitive.U32 fee_item, Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation dest, Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v3.EnumWeightLimit dest_weight_limit)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(currencies.Encode());
@@ -108,7 +117,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> transfer_multiassets
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method TransferMultiassets(Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiAssets assets, Substrate.NetApi.Model.Types.Primitive.U32 fee_item, Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation dest, Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v3.EnumWeightLimit dest_weight_limit)
         {
@@ -121,6 +130,9 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> XTokensConstants
+    /// </summary>
     public sealed class XTokensConstants
     {
         
@@ -128,9 +140,9 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         /// >> SelfLocation
         ///  Self chain location.
         /// </summary>
-        public Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v3.multilocation.MultiLocation SelfLocation()
+        public Substrate.Unique.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation SelfLocation()
         {
-            var result = new Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v3.multilocation.MultiLocation();
+            var result = new Substrate.Unique.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation();
             result.Create("0x010100D51F");
             return result;
         }
@@ -150,6 +162,9 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> XTokensErrors
+    /// </summary>
     public enum XTokensErrors
     {
         

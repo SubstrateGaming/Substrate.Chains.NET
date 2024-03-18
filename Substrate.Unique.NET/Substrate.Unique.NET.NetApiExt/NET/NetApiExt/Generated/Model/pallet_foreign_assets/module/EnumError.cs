@@ -15,24 +15,29 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_foreign_assets.m
 {
     
     
+    /// <summary>
+    /// >> Error
+    /// The `Error` enum of this pallet.
+    /// </summary>
     public enum Error
     {
         
-        BadLocation = 0,
+        /// <summary>
+        /// >> ForeignAssetAlreadyRegistered
+        /// The foreign asset is already registered.
+        /// </summary>
+        ForeignAssetAlreadyRegistered = 0,
         
-        MultiLocationExisted = 1,
-        
-        AssetIdNotExists = 2,
-        
-        AssetIdExisted = 3,
+        /// <summary>
+        /// >> BadForeignAssetId
+        /// The given asset ID could not be converted into the current XCM version.
+        /// </summary>
+        BadForeignAssetId = 1,
     }
     
     /// <summary>
-    /// >> 455 - Variant[pallet_foreign_assets.module.Error]
-    /// 
-    ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
-    ///			of this pallet.
-    ///			
+    /// >> 625 - Variant[pallet_foreign_assets.module.Error]
+    /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>
     {

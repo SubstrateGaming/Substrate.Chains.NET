@@ -15,16 +15,30 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_evm_coder_substr
 {
     
     
+    /// <summary>
+    /// >> Error
+    /// DispatchError is opaque, but we need to somehow extract correct error in case of OutOfGas failure
+    /// So we have this pallet, which defines OutOfGas error, and knews its own id to check if DispatchError
+    /// is thrown because of it
+    /// 
+    /// These errors shouldn't end in extrinsic results, as they only used in evm execution path
+    /// </summary>
     public enum Error
     {
         
+        /// <summary>
+        /// >> OutOfGas
+        /// </summary>
         OutOfGas = 0,
         
+        /// <summary>
+        /// >> OutOfFund
+        /// </summary>
         OutOfFund = 1,
     }
     
     /// <summary>
-    /// >> 474 - Variant[pallet_evm_coder_substrate.pallet.Error]
+    /// >> 645 - Variant[pallet_evm_coder_substrate.pallet.Error]
     /// DispatchError is opaque, but we need to somehow extract correct error in case of OutOfGas failure
     /// So we have this pallet, which defines OutOfGas error, and knews its own id to check if DispatchError
     /// is thrown because of it

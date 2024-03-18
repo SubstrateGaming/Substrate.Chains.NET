@@ -15,34 +15,70 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.sp_runtime.transaction_
 {
     
     
+    /// <summary>
+    /// >> InvalidTransaction
+    /// </summary>
     public enum InvalidTransaction
     {
         
+        /// <summary>
+        /// >> Call
+        /// </summary>
         Call = 0,
         
+        /// <summary>
+        /// >> Payment
+        /// </summary>
         Payment = 1,
         
+        /// <summary>
+        /// >> Future
+        /// </summary>
         Future = 2,
         
+        /// <summary>
+        /// >> Stale
+        /// </summary>
         Stale = 3,
         
+        /// <summary>
+        /// >> BadProof
+        /// </summary>
         BadProof = 4,
         
+        /// <summary>
+        /// >> AncientBirthBlock
+        /// </summary>
         AncientBirthBlock = 5,
         
+        /// <summary>
+        /// >> ExhaustsResources
+        /// </summary>
         ExhaustsResources = 6,
         
+        /// <summary>
+        /// >> Custom
+        /// </summary>
         Custom = 7,
         
+        /// <summary>
+        /// >> BadMandatory
+        /// </summary>
         BadMandatory = 8,
         
+        /// <summary>
+        /// >> MandatoryValidation
+        /// </summary>
         MandatoryValidation = 9,
         
+        /// <summary>
+        /// >> BadSigner
+        /// </summary>
         BadSigner = 10,
     }
     
     /// <summary>
-    /// >> 429 - Variant[sp_runtime.transaction_validity.InvalidTransaction]
+    /// >> 599 - Variant[sp_runtime.transaction_validity.InvalidTransaction]
     /// </summary>
     public sealed class EnumInvalidTransaction : BaseEnumExt<InvalidTransaction, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.NetApi.Model.Types.Primitive.U8, BaseVoid, BaseVoid, BaseVoid>
     {

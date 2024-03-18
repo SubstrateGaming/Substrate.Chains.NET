@@ -49,6 +49,17 @@ namespace Substrate.Unique.NET.RestService.Generated.Controller
         }
         
         /// <summary>
+        /// >> AccountCodesMetadata
+        /// </summary>
+        [HttpGet("AccountCodesMetadata")]
+        [ProducesResponseType(typeof(Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_evm.CodeMetadata), 200)]
+        [StorageKeyBuilder(typeof(Substrate.Unique.NET.NetApiExt.Generated.Storage.EVMStorage), "AccountCodesMetadataParams", typeof(Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H160))]
+        public IActionResult GetAccountCodesMetadata(string key)
+        {
+            return this.Ok(_eVMStorage.GetAccountCodesMetadata(key));
+        }
+        
+        /// <summary>
         /// >> AccountStorages
         /// </summary>
         [HttpGet("AccountStorages")]

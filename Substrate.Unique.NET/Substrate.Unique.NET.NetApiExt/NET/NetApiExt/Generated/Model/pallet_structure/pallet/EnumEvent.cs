@@ -15,18 +15,23 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_structure.pallet
 {
     
     
+    /// <summary>
+    /// >> Event
+    /// The `Event` enum of this pallet
+    /// </summary>
     public enum Event
     {
         
+        /// <summary>
+        /// >> Executed
+        /// Executed call on behalf of the token.
+        /// </summary>
         Executed = 0,
     }
     
     /// <summary>
-    /// >> 119 - Variant[pallet_structure.pallet.Event]
-    /// 
-    ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
-    ///			by this pallet.
-    ///			
+    /// >> 362 - Variant[pallet_structure.pallet.Event]
+    /// The `Event` enum of this pallet
     /// </summary>
     public sealed class EnumEvent : BaseEnumExt<Event, Substrate.Unique.NET.NetApiExt.Generated.Types.Base.EnumResult>
     {

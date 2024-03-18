@@ -18,7 +18,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.cumulus_primitives_para
     
     
     /// <summary>
-    /// >> 187 - Composite[cumulus_primitives_parachain_inherent.ParachainInherentData]
+    /// >> 94 - Composite[cumulus_primitives_parachain_inherent.ParachainInherentData]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class ParachainInherentData : BaseType
@@ -27,76 +27,27 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.cumulus_primitives_para
         /// <summary>
         /// >> validation_data
         /// </summary>
-        private Substrate.Unique.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.PersistedValidationData _validationData;
-        
+        public Substrate.Unique.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.PersistedValidationData ValidationData { get; set; }
         /// <summary>
         /// >> relay_chain_state
         /// </summary>
-        private Substrate.Unique.NET.NetApiExt.Generated.Model.sp_trie.storage_proof.StorageProof _relayChainState;
-        
+        public Substrate.Unique.NET.NetApiExt.Generated.Model.sp_trie.storage_proof.StorageProof RelayChainState { get; set; }
         /// <summary>
         /// >> downward_messages
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Unique.NET.NetApiExt.Generated.Model.polkadot_core_primitives.InboundDownwardMessage> _downwardMessages;
-        
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Unique.NET.NetApiExt.Generated.Model.polkadot_core_primitives.InboundDownwardMessage> DownwardMessages { get; set; }
         /// <summary>
         /// >> horizontal_messages
         /// </summary>
-        private Substrate.Unique.NET.NetApiExt.Generated.Types.Base.BTreeMapT2 _horizontalMessages;
+        public Substrate.Unique.NET.NetApiExt.Generated.Types.Base.BTreeMapT1 HorizontalMessages { get; set; }
         
-        public Substrate.Unique.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.PersistedValidationData ValidationData
-        {
-            get
-            {
-                return this._validationData;
-            }
-            set
-            {
-                this._validationData = value;
-            }
-        }
-        
-        public Substrate.Unique.NET.NetApiExt.Generated.Model.sp_trie.storage_proof.StorageProof RelayChainState
-        {
-            get
-            {
-                return this._relayChainState;
-            }
-            set
-            {
-                this._relayChainState = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Unique.NET.NetApiExt.Generated.Model.polkadot_core_primitives.InboundDownwardMessage> DownwardMessages
-        {
-            get
-            {
-                return this._downwardMessages;
-            }
-            set
-            {
-                this._downwardMessages = value;
-            }
-        }
-        
-        public Substrate.Unique.NET.NetApiExt.Generated.Types.Base.BTreeMapT2 HorizontalMessages
-        {
-            get
-            {
-                return this._horizontalMessages;
-            }
-            set
-            {
-                this._horizontalMessages = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "ParachainInherentData";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -107,16 +58,17 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.cumulus_primitives_para
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            ValidationData = new Substrate.Unique.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.PersistedValidationData();
+            ValidationData = new Substrate.Unique.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.PersistedValidationData();
             ValidationData.Decode(byteArray, ref p);
             RelayChainState = new Substrate.Unique.NET.NetApiExt.Generated.Model.sp_trie.storage_proof.StorageProof();
             RelayChainState.Decode(byteArray, ref p);
             DownwardMessages = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Unique.NET.NetApiExt.Generated.Model.polkadot_core_primitives.InboundDownwardMessage>();
             DownwardMessages.Decode(byteArray, ref p);
-            HorizontalMessages = new Substrate.Unique.NET.NetApiExt.Generated.Types.Base.BTreeMapT2();
+            HorizontalMessages = new Substrate.Unique.NET.NetApiExt.Generated.Types.Base.BTreeMapT1();
             HorizontalMessages.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

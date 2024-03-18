@@ -21,22 +21,34 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> EvmTransactionPaymentStorage
+    /// </summary>
     public sealed class EvmTransactionPaymentStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> EvmTransactionPaymentStorage Constructor
+        /// </summary>
         public EvmTransactionPaymentStorage(SubstrateClientExt client)
         {
             this._client = client;
         }
     }
     
+    /// <summary>
+    /// >> EvmTransactionPaymentCalls
+    /// </summary>
     public sealed class EvmTransactionPaymentCalls
     {
     }
     
+    /// <summary>
+    /// >> EvmTransactionPaymentConstants
+    /// </summary>
     public sealed class EvmTransactionPaymentConstants
     {
     }

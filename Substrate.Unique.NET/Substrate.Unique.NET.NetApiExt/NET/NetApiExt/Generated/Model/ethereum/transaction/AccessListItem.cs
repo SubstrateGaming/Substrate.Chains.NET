@@ -18,7 +18,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.ethereum.transaction
     
     
     /// <summary>
-    /// >> 334 - Composite[ethereum.transaction.AccessListItem]
+    /// >> 340 - Composite[ethereum.transaction.AccessListItem]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class AccessListItem : BaseType
@@ -27,42 +27,19 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.ethereum.transaction
         /// <summary>
         /// >> address
         /// </summary>
-        private Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H160 _address;
-        
+        public Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H160 Address { get; set; }
         /// <summary>
         /// >> storage_keys
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H256> _storageKeys;
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H256> StorageKeys { get; set; }
         
-        public Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H160 Address
-        {
-            get
-            {
-                return this._address;
-            }
-            set
-            {
-                this._address = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H256> StorageKeys
-        {
-            get
-            {
-                return this._storageKeys;
-            }
-            set
-            {
-                this._storageKeys = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "AccessListItem";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -71,6 +48,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.ethereum.transaction
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

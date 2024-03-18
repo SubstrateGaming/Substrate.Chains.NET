@@ -133,7 +133,7 @@ namespace Substrate.Unique.NET.RestService.Generated.Controller
         ///  which is used as a prioritization.
         /// </summary>
         [HttpGet("VersionDiscoveryQueue")]
-        [ProducesResponseType(typeof(Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT24), 200)]
+        [ProducesResponseType(typeof(Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT37), 200)]
         [StorageKeyBuilder(typeof(Substrate.Unique.NET.NetApiExt.Generated.Storage.PolkadotXcmStorage), "VersionDiscoveryQueueParams")]
         public IActionResult GetVersionDiscoveryQueue()
         {
@@ -169,7 +169,7 @@ namespace Substrate.Unique.NET.RestService.Generated.Controller
         ///  Fungible assets which we know are locked on this chain.
         /// </summary>
         [HttpGet("LockedFungibles")]
-        [ProducesResponseType(typeof(Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT25), 200)]
+        [ProducesResponseType(typeof(Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT39), 200)]
         [StorageKeyBuilder(typeof(Substrate.Unique.NET.NetApiExt.Generated.Storage.PolkadotXcmStorage), "LockedFungiblesParams", typeof(Substrate.Unique.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32))]
         public IActionResult GetLockedFungibles(string key)
         {

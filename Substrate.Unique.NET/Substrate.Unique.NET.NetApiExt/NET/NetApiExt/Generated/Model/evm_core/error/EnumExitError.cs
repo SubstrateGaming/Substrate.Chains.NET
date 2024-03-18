@@ -15,42 +15,95 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.evm_core.error
 {
     
     
+    /// <summary>
+    /// >> ExitError
+    /// </summary>
     public enum ExitError
     {
         
+        /// <summary>
+        /// >> StackUnderflow
+        /// </summary>
         StackUnderflow = 0,
         
+        /// <summary>
+        /// >> StackOverflow
+        /// </summary>
         StackOverflow = 1,
         
+        /// <summary>
+        /// >> InvalidJump
+        /// </summary>
         InvalidJump = 2,
         
+        /// <summary>
+        /// >> InvalidRange
+        /// </summary>
         InvalidRange = 3,
         
+        /// <summary>
+        /// >> DesignatedInvalid
+        /// </summary>
         DesignatedInvalid = 4,
         
+        /// <summary>
+        /// >> CallTooDeep
+        /// </summary>
         CallTooDeep = 5,
         
+        /// <summary>
+        /// >> CreateCollision
+        /// </summary>
         CreateCollision = 6,
         
+        /// <summary>
+        /// >> CreateContractLimit
+        /// </summary>
         CreateContractLimit = 7,
         
+        /// <summary>
+        /// >> InvalidCode
+        /// </summary>
         InvalidCode = 15,
         
+        /// <summary>
+        /// >> OutOfOffset
+        /// </summary>
         OutOfOffset = 8,
         
+        /// <summary>
+        /// >> OutOfGas
+        /// </summary>
         OutOfGas = 9,
         
+        /// <summary>
+        /// >> OutOfFund
+        /// </summary>
         OutOfFund = 10,
         
+        /// <summary>
+        /// >> PCUnderflow
+        /// </summary>
         PCUnderflow = 11,
         
+        /// <summary>
+        /// >> CreateEmpty
+        /// </summary>
         CreateEmpty = 12,
         
+        /// <summary>
+        /// >> Other
+        /// </summary>
         Other = 13,
+        
+        /// <summary>
+        /// >> MaxNonce
+        /// </summary>
+        MaxNonce = 14,
     }
     
     /// <summary>
-    /// >> 131 - Variant[evm_core.error.ExitError]
+    /// >> 369 - Variant[evm_core.error.ExitError]
     /// </summary>
     public sealed class EnumExitError : BaseEnumExt<ExitError, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.Unique.NET.NetApiExt.Generated.Types.Base.CowT1, BaseVoid, Substrate.Unique.NET.NetApiExt.Generated.Model.evm_core.opcode.Opcode>
     {

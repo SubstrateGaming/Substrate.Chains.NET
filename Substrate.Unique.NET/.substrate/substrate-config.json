@@ -5,7 +5,7 @@
     "rest_client": "Substrate.Unique.NET.RestClient"
   },
    "metadata": {
-      "websocket": "wss://eu-ws.unique.network"
+      "websocket": "wss://unique-rpc.dwellir.com"
    },
   "rest_client_settings": {
     "service_assembly": "Substrate.Unique.NET.RestService.dll"

@@ -15,18 +15,30 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.sp_runtime.transaction_
 {
     
     
+    /// <summary>
+    /// >> UnknownTransaction
+    /// </summary>
     public enum UnknownTransaction
     {
         
+        /// <summary>
+        /// >> CannotLookup
+        /// </summary>
         CannotLookup = 0,
         
+        /// <summary>
+        /// >> NoUnsignedValidator
+        /// </summary>
         NoUnsignedValidator = 1,
         
+        /// <summary>
+        /// >> Custom
+        /// </summary>
         Custom = 2,
     }
     
     /// <summary>
-    /// >> 430 - Variant[sp_runtime.transaction_validity.UnknownTransaction]
+    /// >> 600 - Variant[sp_runtime.transaction_validity.UnknownTransaction]
     /// </summary>
     public sealed class EnumUnknownTransaction : BaseEnumExt<UnknownTransaction, BaseVoid, BaseVoid, Substrate.NetApi.Model.Types.Primitive.U8>
     {

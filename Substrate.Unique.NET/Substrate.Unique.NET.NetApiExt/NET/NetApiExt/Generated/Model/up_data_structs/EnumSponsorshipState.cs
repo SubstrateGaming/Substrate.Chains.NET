@@ -15,18 +15,30 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.up_data_structs
 {
     
     
+    /// <summary>
+    /// >> SponsorshipState
+    /// </summary>
     public enum SponsorshipState
     {
         
+        /// <summary>
+        /// >> Disabled
+        /// </summary>
         Disabled = 0,
         
+        /// <summary>
+        /// >> Unconfirmed
+        /// </summary>
         Unconfirmed = 1,
         
+        /// <summary>
+        /// >> Confirmed
+        /// </summary>
         Confirmed = 2,
     }
     
     /// <summary>
-    /// >> 475 - Variant[up_data_structs.SponsorshipState]
+    /// >> 646 - Variant[up_data_structs.SponsorshipState]
     /// </summary>
     public sealed class EnumSponsorshipState : BaseEnumExt<SponsorshipState, BaseVoid, Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_evm.account.EnumBasicCrossAccountIdRepr, Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_evm.account.EnumBasicCrossAccountIdRepr>
     {

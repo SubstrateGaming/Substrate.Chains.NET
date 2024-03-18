@@ -15,38 +15,83 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_evm.pallet
 {
     
     
+    /// <summary>
+    /// >> Error
+    /// The `Error` enum of this pallet.
+    /// </summary>
     public enum Error
     {
         
+        /// <summary>
+        /// >> BalanceLow
+        /// Not enough balance to perform action
+        /// </summary>
         BalanceLow = 0,
         
+        /// <summary>
+        /// >> FeeOverflow
+        /// Calculating total fee overflowed
+        /// </summary>
         FeeOverflow = 1,
         
+        /// <summary>
+        /// >> PaymentOverflow
+        /// Calculating total payment overflowed
+        /// </summary>
         PaymentOverflow = 2,
         
+        /// <summary>
+        /// >> WithdrawFailed
+        /// Withdraw fee failed
+        /// </summary>
         WithdrawFailed = 3,
         
+        /// <summary>
+        /// >> GasPriceTooLow
+        /// Gas price is too low.
+        /// </summary>
         GasPriceTooLow = 4,
         
+        /// <summary>
+        /// >> InvalidNonce
+        /// Nonce is invalid
+        /// </summary>
         InvalidNonce = 5,
         
+        /// <summary>
+        /// >> GasLimitTooLow
+        /// Gas limit is too low.
+        /// </summary>
         GasLimitTooLow = 6,
         
+        /// <summary>
+        /// >> GasLimitTooHigh
+        /// Gas limit is too high.
+        /// </summary>
         GasLimitTooHigh = 7,
         
+        /// <summary>
+        /// >> Undefined
+        /// Undefined error.
+        /// </summary>
         Undefined = 8,
         
+        /// <summary>
+        /// >> Reentrancy
+        /// EVM reentrancy
+        /// </summary>
         Reentrancy = 9,
         
+        /// <summary>
+        /// >> TransactionMustComeFromEOA
+        /// EIP-3607,
+        /// </summary>
         TransactionMustComeFromEOA = 10,
     }
     
     /// <summary>
-    /// >> 457 - Variant[pallet_evm.pallet.Error]
-    /// 
-    ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
-    ///			of this pallet.
-    ///			
+    /// >> 628 - Variant[pallet_evm.pallet.Error]
+    /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>
     {

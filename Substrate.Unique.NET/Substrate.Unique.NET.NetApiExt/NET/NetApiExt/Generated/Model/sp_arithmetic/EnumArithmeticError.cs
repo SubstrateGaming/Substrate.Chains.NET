@@ -15,13 +15,25 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.sp_arithmetic
 {
     
     
+    /// <summary>
+    /// >> ArithmeticError
+    /// </summary>
     public enum ArithmeticError
     {
         
+        /// <summary>
+        /// >> Underflow
+        /// </summary>
         Underflow = 0,
         
+        /// <summary>
+        /// >> Overflow
+        /// </summary>
         Overflow = 1,
         
+        /// <summary>
+        /// >> DivisionByZero
+        /// </summary>
         DivisionByZero = 2,
     }
     

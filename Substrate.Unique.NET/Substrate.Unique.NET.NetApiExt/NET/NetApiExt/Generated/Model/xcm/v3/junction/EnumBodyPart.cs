@@ -15,17 +15,35 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.xcm.v3.junction
 {
     
     
+    /// <summary>
+    /// >> BodyPart
+    /// </summary>
     public enum BodyPart
     {
         
+        /// <summary>
+        /// >> Voice
+        /// </summary>
         Voice = 0,
         
+        /// <summary>
+        /// >> Members
+        /// </summary>
         Members = 1,
         
+        /// <summary>
+        /// >> Fraction
+        /// </summary>
         Fraction = 2,
         
+        /// <summary>
+        /// >> AtLeastProportion
+        /// </summary>
         AtLeastProportion = 3,
         
+        /// <summary>
+        /// >> MoreThanProportion
+        /// </summary>
         MoreThanProportion = 4,
     }
     

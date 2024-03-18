@@ -18,7 +18,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.ethereum.transaction
     
     
     /// <summary>
-    /// >> 328 - Composite[ethereum.transaction.LegacyTransaction]
+    /// >> 334 - Composite[ethereum.transaction.LegacyTransaction]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class LegacyTransaction : BaseType
@@ -27,127 +27,39 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.ethereum.transaction
         /// <summary>
         /// >> nonce
         /// </summary>
-        private Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.U256 _nonce;
-        
+        public Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.U256 Nonce { get; set; }
         /// <summary>
         /// >> gas_price
         /// </summary>
-        private Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.U256 _gasPrice;
-        
+        public Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.U256 GasPrice { get; set; }
         /// <summary>
         /// >> gas_limit
         /// </summary>
-        private Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.U256 _gasLimit;
-        
+        public Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.U256 GasLimit { get; set; }
         /// <summary>
         /// >> action
         /// </summary>
-        private Substrate.Unique.NET.NetApiExt.Generated.Model.ethereum.transaction.EnumTransactionAction _action;
-        
+        public Substrate.Unique.NET.NetApiExt.Generated.Model.ethereum.transaction.EnumTransactionAction Action { get; set; }
         /// <summary>
         /// >> value
         /// </summary>
-        private Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.U256 _value;
-        
+        public Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.U256 Value { get; set; }
         /// <summary>
         /// >> input
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> _input;
-        
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> Input { get; set; }
         /// <summary>
         /// >> signature
         /// </summary>
-        private Substrate.Unique.NET.NetApiExt.Generated.Model.ethereum.transaction.TransactionSignature _signature;
+        public Substrate.Unique.NET.NetApiExt.Generated.Model.ethereum.transaction.TransactionSignature Signature { get; set; }
         
-        public Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.U256 Nonce
-        {
-            get
-            {
-                return this._nonce;
-            }
-            set
-            {
-                this._nonce = value;
-            }
-        }
-        
-        public Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.U256 GasPrice
-        {
-            get
-            {
-                return this._gasPrice;
-            }
-            set
-            {
-                this._gasPrice = value;
-            }
-        }
-        
-        public Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.U256 GasLimit
-        {
-            get
-            {
-                return this._gasLimit;
-            }
-            set
-            {
-                this._gasLimit = value;
-            }
-        }
-        
-        public Substrate.Unique.NET.NetApiExt.Generated.Model.ethereum.transaction.EnumTransactionAction Action
-        {
-            get
-            {
-                return this._action;
-            }
-            set
-            {
-                this._action = value;
-            }
-        }
-        
-        public Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.U256 Value
-        {
-            get
-            {
-                return this._value;
-            }
-            set
-            {
-                this._value = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> Input
-        {
-            get
-            {
-                return this._input;
-            }
-            set
-            {
-                this._input = value;
-            }
-        }
-        
-        public Substrate.Unique.NET.NetApiExt.Generated.Model.ethereum.transaction.TransactionSignature Signature
-        {
-            get
-            {
-                return this._signature;
-            }
-            set
-            {
-                this._signature = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "LegacyTransaction";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -161,6 +73,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.ethereum.transaction
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

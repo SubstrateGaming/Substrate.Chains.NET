@@ -15,25 +15,53 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_evm_migration.pa
 {
     
     
+    /// <summary>
+    /// >> Call
+    /// Contains a variant per dispatchable extrinsic that this pallet has.
+    /// </summary>
     public enum Call
     {
         
+        /// <summary>
+        /// >> begin
+        /// See [`Pallet::begin`].
+        /// </summary>
         begin = 0,
         
+        /// <summary>
+        /// >> set_data
+        /// See [`Pallet::set_data`].
+        /// </summary>
         set_data = 1,
         
+        /// <summary>
+        /// >> finish
+        /// See [`Pallet::finish`].
+        /// </summary>
         finish = 2,
         
+        /// <summary>
+        /// >> insert_eth_logs
+        /// See [`Pallet::insert_eth_logs`].
+        /// </summary>
         insert_eth_logs = 3,
         
+        /// <summary>
+        /// >> insert_events
+        /// See [`Pallet::insert_events`].
+        /// </summary>
         insert_events = 4,
         
+        /// <summary>
+        /// >> remove_rmrk_data
+        /// See [`Pallet::remove_rmrk_data`].
+        /// </summary>
         remove_rmrk_data = 5,
     }
     
     /// <summary>
-    /// >> 339 - Variant[pallet_evm_migration.pallet.Call]
-    /// Contains one variant per dispatchable that can be called by an extrinsic.
+    /// >> 344 - Variant[pallet_evm_migration.pallet.Call]
+    /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
     public sealed class EnumCall : BaseEnumExt<Call, Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H160, BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H160, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H256>>>, BaseTuple<Substrate.Unique.NET.NetApiExt.Generated.Model.primitive_types.H160, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Unique.NET.NetApiExt.Generated.Model.ethereum.log.Log>, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>, BaseVoid>
     {

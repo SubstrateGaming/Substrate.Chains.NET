@@ -15,15 +15,23 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_inflation.pallet
 {
     
     
+    /// <summary>
+    /// >> Call
+    /// Contains a variant per dispatchable extrinsic that this pallet has.
+    /// </summary>
     public enum Call
     {
         
+        /// <summary>
+        /// >> start_inflation
+        /// See [`Pallet::start_inflation`].
+        /// </summary>
         start_inflation = 0,
     }
     
     /// <summary>
-    /// >> 261 - Variant[pallet_inflation.pallet.Call]
-    /// Contains one variant per dispatchable that can be called by an extrinsic.
+    /// >> 258 - Variant[pallet_inflation.pallet.Call]
+    /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
     public sealed class EnumCall : BaseEnumExt<Call, Substrate.NetApi.Model.Types.Primitive.U32>
     {

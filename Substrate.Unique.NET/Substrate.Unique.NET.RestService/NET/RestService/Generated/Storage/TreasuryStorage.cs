@@ -46,7 +46,19 @@ namespace Substrate.Unique.NET.RestService.Generated.Storage
         /// >> Approvals
         ///  Proposal indices that have been approved but not yet awarded.
         /// </summary>
-        Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT12 GetApprovals();
+        Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT22 GetApprovals();
+        
+        /// <summary>
+        /// >> SpendCount
+        ///  The count of spends that have been made.
+        /// </summary>
+        Substrate.NetApi.Model.Types.Primitive.U32 GetSpendCount();
+        
+        /// <summary>
+        /// >> Spends
+        ///  Spends that have been approved and being processed.
+        /// </summary>
+        Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_treasury.SpendStatus GetSpends(string key);
     }
     
     /// <summary>
@@ -73,7 +85,17 @@ namespace Substrate.Unique.NET.RestService.Generated.Storage
         /// <summary>
         /// _approvalsTypedStorage typed storage field
         /// </summary>
-        private TypedStorage<Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT12> _approvalsTypedStorage;
+        private TypedStorage<Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT22> _approvalsTypedStorage;
+        
+        /// <summary>
+        /// _spendCountTypedStorage typed storage field
+        /// </summary>
+        private TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32> _spendCountTypedStorage;
+        
+        /// <summary>
+        /// _spendsTypedStorage typed storage field
+        /// </summary>
+        private TypedMapStorage<Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_treasury.SpendStatus> _spendsTypedStorage;
         
         /// <summary>
         /// TreasuryStorage constructor.
@@ -83,7 +105,9 @@ namespace Substrate.Unique.NET.RestService.Generated.Storage
             this.ProposalCountTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32>("Treasury.ProposalCount", storageDataProvider, storageChangeDelegates);
             this.ProposalsTypedStorage = new TypedMapStorage<Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_treasury.Proposal>("Treasury.Proposals", storageDataProvider, storageChangeDelegates);
             this.DeactivatedTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U128>("Treasury.Deactivated", storageDataProvider, storageChangeDelegates);
-            this.ApprovalsTypedStorage = new TypedStorage<Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT12>("Treasury.Approvals", storageDataProvider, storageChangeDelegates);
+            this.ApprovalsTypedStorage = new TypedStorage<Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT22>("Treasury.Approvals", storageDataProvider, storageChangeDelegates);
+            this.SpendCountTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32>("Treasury.SpendCount", storageDataProvider, storageChangeDelegates);
+            this.SpendsTypedStorage = new TypedMapStorage<Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_treasury.SpendStatus>("Treasury.Spends", storageDataProvider, storageChangeDelegates);
         }
         
         /// <summary>
@@ -134,7 +158,7 @@ namespace Substrate.Unique.NET.RestService.Generated.Storage
         /// <summary>
         /// _approvalsTypedStorage property
         /// </summary>
-        public TypedStorage<Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT12> ApprovalsTypedStorage
+        public TypedStorage<Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT22> ApprovalsTypedStorage
         {
             get
             {
@@ -147,6 +171,36 @@ namespace Substrate.Unique.NET.RestService.Generated.Storage
         }
         
         /// <summary>
+        /// _spendCountTypedStorage property
+        /// </summary>
+        public TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32> SpendCountTypedStorage
+        {
+            get
+            {
+                return _spendCountTypedStorage;
+            }
+            set
+            {
+                _spendCountTypedStorage = value;
+            }
+        }
+        
+        /// <summary>
+        /// _spendsTypedStorage property
+        /// </summary>
+        public TypedMapStorage<Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_treasury.SpendStatus> SpendsTypedStorage
+        {
+            get
+            {
+                return _spendsTypedStorage;
+            }
+            set
+            {
+                _spendsTypedStorage = value;
+            }
+        }
+        
+        /// <summary>
         /// Connects to all storages and initializes the change subscription handling.
         /// </summary>
         public async Task InitializeAsync(Substrate.ServiceLayer.Storage.IStorageDataProvider dataProvider)
@@ -155,6 +209,8 @@ namespace Substrate.Unique.NET.RestService.Generated.Storage
             await ProposalsTypedStorage.InitializeAsync("Treasury", "Proposals");
             await DeactivatedTypedStorage.InitializeAsync("Treasury", "Deactivated");
             await ApprovalsTypedStorage.InitializeAsync("Treasury", "Approvals");
+            await SpendCountTypedStorage.InitializeAsync("Treasury", "SpendCount");
+            await SpendsTypedStorage.InitializeAsync("Treasury", "Spends");
         }
         
         /// <summary>
@@ -235,9 +291,56 @@ namespace Substrate.Unique.NET.RestService.Generated.Storage
         /// >> Approvals
         ///  Proposal indices that have been approved but not yet awarded.
         /// </summary>
-        public Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT12 GetApprovals()
+        public Substrate.Unique.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT22 GetApprovals()
         {
             return ApprovalsTypedStorage.Get();
+        }
+        
+        /// <summary>
+        /// Implements any storage change for Treasury.SpendCount
+        /// </summary>
+        [StorageChange("Treasury", "SpendCount")]
+        public void OnUpdateSpendCount(string data)
+        {
+            SpendCountTypedStorage.Update(data);
+        }
+        
+        /// <summary>
+        /// >> SpendCount
+        ///  The count of spends that have been made.
+        /// </summary>
+        public Substrate.NetApi.Model.Types.Primitive.U32 GetSpendCount()
+        {
+            return SpendCountTypedStorage.Get();
+        }
+        
+        /// <summary>
+        /// Implements any storage change for Treasury.Spends
+        /// </summary>
+        [StorageChange("Treasury", "Spends")]
+        public void OnUpdateSpends(string key, string data)
+        {
+            SpendsTypedStorage.Update(key, data);
+        }
+        
+        /// <summary>
+        /// >> Spends
+        ///  Spends that have been approved and being processed.
+        /// </summary>
+        public Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_treasury.SpendStatus GetSpends(string key)
+        {
+            if ((key == null))
+            {
+                return null;
+            }
+            if (SpendsTypedStorage.Dictionary.TryGetValue(key, out Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_treasury.SpendStatus result))
+            {
+                return result;
+            }
+            else
+            {
+                return null;
+            }
         }
     }
 }

@@ -15,22 +15,32 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_configuration.pa
 {
     
     
+    /// <summary>
+    /// >> Event
+    /// The `Event` enum of this pallet
+    /// </summary>
     public enum Event
     {
         
+        /// <summary>
+        /// >> NewDesiredCollators
+        /// </summary>
         NewDesiredCollators = 0,
         
+        /// <summary>
+        /// >> NewCollatorLicenseBond
+        /// </summary>
         NewCollatorLicenseBond = 1,
         
+        /// <summary>
+        /// >> NewCollatorKickThreshold
+        /// </summary>
         NewCollatorKickThreshold = 2,
     }
     
     /// <summary>
-    /// >> 110 - Variant[pallet_configuration.pallet.Event]
-    /// 
-    ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
-    ///			by this pallet.
-    ///			
+    /// >> 360 - Variant[pallet_configuration.pallet.Event]
+    /// The `Event` enum of this pallet
     /// </summary>
     public sealed class EnumEvent : BaseEnumExt<Event, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U128>, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32>>
     {

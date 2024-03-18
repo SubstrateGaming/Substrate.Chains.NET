@@ -18,7 +18,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_state_trie_migra
     
     
     /// <summary>
-    /// >> 161 - Composite[pallet_state_trie_migration.pallet.MigrationTask]
+    /// >> 90 - Composite[pallet_state_trie_migration.pallet.MigrationTask]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class MigrationTask : BaseType
@@ -27,93 +27,31 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_state_trie_migra
         /// <summary>
         /// >> progress_top
         /// </summary>
-        private Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.EnumProgress _progressTop;
-        
+        public Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.EnumProgress ProgressTop { get; set; }
         /// <summary>
         /// >> progress_child
         /// </summary>
-        private Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.EnumProgress _progressChild;
-        
+        public Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.EnumProgress ProgressChild { get; set; }
         /// <summary>
         /// >> size
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _size;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 Size { get; set; }
         /// <summary>
         /// >> top_items
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _topItems;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 TopItems { get; set; }
         /// <summary>
         /// >> child_items
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _childItems;
+        public Substrate.NetApi.Model.Types.Primitive.U32 ChildItems { get; set; }
         
-        public Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.EnumProgress ProgressTop
-        {
-            get
-            {
-                return this._progressTop;
-            }
-            set
-            {
-                this._progressTop = value;
-            }
-        }
-        
-        public Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.EnumProgress ProgressChild
-        {
-            get
-            {
-                return this._progressChild;
-            }
-            set
-            {
-                this._progressChild = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 Size
-        {
-            get
-            {
-                return this._size;
-            }
-            set
-            {
-                this._size = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 TopItems
-        {
-            get
-            {
-                return this._topItems;
-            }
-            set
-            {
-                this._topItems = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 ChildItems
-        {
-            get
-            {
-                return this._childItems;
-            }
-            set
-            {
-                this._childItems = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "MigrationTask";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -125,6 +63,7 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.pallet_state_trie_migra
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;

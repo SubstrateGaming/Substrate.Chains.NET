@@ -15,16 +15,25 @@ namespace Substrate.Unique.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_que
 {
     
     
+    /// <summary>
+    /// >> OutboundState
+    /// </summary>
     public enum OutboundState
     {
         
+        /// <summary>
+        /// >> Ok
+        /// </summary>
         Ok = 0,
         
+        /// <summary>
+        /// >> Suspended
+        /// </summary>
         Suspended = 1,
     }
     
     /// <summary>
-    /// >> 366 - Variant[cumulus_pallet_xcmp_queue.OutboundState]
+    /// >> 536 - Variant[cumulus_pallet_xcmp_queue.OutboundState]
     /// </summary>
     public sealed class EnumOutboundState : BaseEnum<OutboundState>
     {
