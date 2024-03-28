@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Substrate.Zeitgeist.NET.RestService", "Substrate.Zeitgeist.NET.RestService\Substrate.Zeitgeist.NET.RestService.csproj", "{23035559-2294-4702-96EC-0BC475EBD020}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Substrate.Zeitgeist.NET.NetApiExt", "Substrate.Zeitgeist.NET.NetApiExt\Substrate.Zeitgeist.NET.NetApiExt.csproj", "{4B1FB718-3C0B-498D-904B-6CF9E309D397}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Substrate.Zeitgeist.NET.RestClient", "Substrate.Zeitgeist.NET.RestClient\Substrate.Zeitgeist.NET.RestClient.csproj", "{7BC7145F-7A32-42E1-A7A3-958E63760E14}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Substrate.Zeitgeist.NET.RestClient.Mockup", "Substrate.Zeitgeist.NET.RestClient.Mockup\Substrate.Zeitgeist.NET.RestClient.Mockup.csproj", "{CA9FE358-DF8B-4BD1-9397-9F7EED654E81}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Substrate.Zeitgeist.NET.RestClient.Test", "Substrate.Zeitgeist.NET.RestClient.Test\Substrate.Zeitgeist.NET.RestClient.Test.csproj", "{FF6E7281-7845-4231-8E31-559AE2205BDD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{23035559-2294-4702-96EC-0BC475EBD020}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23035559-2294-4702-96EC-0BC475EBD020}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23035559-2294-4702-96EC-0BC475EBD020}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23035559-2294-4702-96EC-0BC475EBD020}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B1FB718-3C0B-498D-904B-6CF9E309D397}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B1FB718-3C0B-498D-904B-6CF9E309D397}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B1FB718-3C0B-498D-904B-6CF9E309D397}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B1FB718-3C0B-498D-904B-6CF9E309D397}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7BC7145F-7A32-42E1-A7A3-958E63760E14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BC7145F-7A32-42E1-A7A3-958E63760E14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BC7145F-7A32-42E1-A7A3-958E63760E14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7BC7145F-7A32-42E1-A7A3-958E63760E14}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA9FE358-DF8B-4BD1-9397-9F7EED654E81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA9FE358-DF8B-4BD1-9397-9F7EED654E81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA9FE358-DF8B-4BD1-9397-9F7EED654E81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA9FE358-DF8B-4BD1-9397-9F7EED654E81}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF6E7281-7845-4231-8E31-559AE2205BDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF6E7281-7845-4231-8E31-559AE2205BDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF6E7281-7845-4231-8E31-559AE2205BDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF6E7281-7845-4231-8E31-559AE2205BDD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

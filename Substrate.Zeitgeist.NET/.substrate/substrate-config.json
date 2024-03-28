@@ -1,0 +1,13 @@
+{
+  "projects": {
+    "net_api": "Substrate.Zeitgeist.NET.NetApiExt",
+    "rest_service": "Substrate.Zeitgeist.NET.RestService",
+    "rest_client": "Substrate.Zeitgeist.NET.RestClient"
+  },
+   "metadata": {
+      "websocket": "wss://zeitgeist-rpc.dwellir.com"
+   },
+  "rest_client_settings": {
+    "service_assembly": "Substrate.Zeitgeist.NET.RestService.dll"
+  }
+}

@@ -1,0 +1,54 @@
+name: publish Zeitgeist.NET
+
+on:
+  push:
+    branches: [ main ]
+    paths-ignore:
+      - '*.md'
+      
+jobs:
+  build:
+    name: build & test & publish
+    runs-on: ubuntu-latest
+        
+    steps:
+      - uses: actions/checkout@v3
+
+      ##
+      # Setup
+      # Setup multiple .NET versions so we can build against all referenced .NET versions.
+      ##
+      - name: Setup .NET 6.0.x
+        uses: actions/setup-dotnet@v2
+        with:
+          dotnet-version: 6.0.x
+
+      ##
+      # Dependencies
+      # Restore the project and its dependencies.
+      ##
+      - name: Install dependencies
+        run: dotnet restore Substrate.Zeitgeist.NET
+
+      ##
+      # Dependencies
+      # Restore the project and its dependencies.
+      ##
+      - name: Build Zeitgeist
+        run: |
+            dotnet build Substrate.Zeitgeist.NET --configuration Release
+
+      ##
+      # Publishing
+      # Publish all NuGet packages from Substrate Chains .NET
+      ##
+      - name: Publish Substrate Zeitgeist .NET API Extension
+        id: publish_nuget
+        uses: alirezanet/publish-nuget@v3.0.4
+        with:
+          # Filepath of the project to be packaged, relative to root of repository
+          PROJECT_FILE_PATH: Substrate.Zeitgeist.NET/Substrate.Zeitgeist.NET.NetApiExt/Substrate.Zeitgeist.NET.NetApiExt.csproj
+          # NuGet package id, used for version detection & defaults to project name
+          PACKAGE_NAME: Substrate.Zeitgeist.NET.Extension
+          # API key to authenticate with NuGet server
+          NUGET_KEY: ${{secrets.NUGET_API_KEY}}

@@ -64,6 +64,11 @@
 [![Nuget](https://img.shields.io/nuget/v/Substrate.Unique.NET.Extension)](https://www.nuget.org/packages/Substrate.Unique.NET.Extension/)
 ![Nuget](https://img.shields.io/nuget/dt/Substrate.Unique.NET.Extension)  
 ![Build](https://github.com/SubstrateGaming/Substrate.Chains.NET/actions/workflows/publish_unique.yml/badge.svg)  
+- Zeitgeist Network .NET SDK ([Link](https://github.com/SubstrateGaming/Substrate.Chains.NET/tree/main/Substrate.Zeitgeist.NET))  
+  - Substrate Zeitgeist .NET API Extension  
+[![Nuget](https://img.shields.io/nuget/v/Substrate.Zeitgeist.NET.Extension)](https://www.nuget.org/packages/Substrate.Zeitgeist.NET.Extension/)
+![Nuget](https://img.shields.io/nuget/dt/Substrate.Zeitgeist.NET.Extension)  
+![Build](https://github.com/SubstrateGaming/Substrate.Chains.NET/actions/workflows/publish_zeitgeist.yml/badge.svg)  
 
 ### Kusama (Relay Chain)
 - Kusama Network .NET SDK ([Link](https://github.com/SubstrateGaming/Substrate.Chains.NET/tree/main/Substrate.Kusama.NET))  
