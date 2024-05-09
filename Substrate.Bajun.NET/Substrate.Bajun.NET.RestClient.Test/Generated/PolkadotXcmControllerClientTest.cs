@@ -65,32 +65,32 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
          result.Create(this.GetTestValueEnum<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_xcm.pallet.QueryStatus>(), this.GetTestValue4());
          return result;
       }
-      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation>, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U8, Substrate.NetApi.Model.Types.Primitive.U8>>, Substrate.NetApi.Model.Types.Primitive.U32> GetTestValue4()
+      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation>, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U8, Substrate.NetApi.Model.Types.Primitive.U8>>, Substrate.NetApi.Model.Types.Primitive.U32> GetTestValue4()
       {
-         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation>, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U8, Substrate.NetApi.Model.Types.Primitive.U8>>, Substrate.NetApi.Model.Types.Primitive.U32> result;
-         result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation>, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U8, Substrate.NetApi.Model.Types.Primitive.U8>>, Substrate.NetApi.Model.Types.Primitive.U32>();
+         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation>, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U8, Substrate.NetApi.Model.Types.Primitive.U8>>, Substrate.NetApi.Model.Types.Primitive.U32> result;
+         result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation>, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U8, Substrate.NetApi.Model.Types.Primitive.U8>>, Substrate.NetApi.Model.Types.Primitive.U32>();
          result.Create(this.GetTestValue5(), this.GetTestValue6(), this.GetTestValue8(), this.GetTestValueU32());
          return result;
       }
-      public Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation GetTestValue5()
+      public Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation GetTestValue5()
       {
-         Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation result;
-         result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation();
-         result.Create(this.GetTestValueEnum<Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.VersionedMultiLocation>(), this.GetTestValueBaseVoid());
+         Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation result;
+         result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation();
+         result.Create(this.GetTestValueEnum<Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.VersionedLocation>(), this.GetTestValueBaseVoid());
          return result;
       }
-      public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation> GetTestValue6()
+      public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation> GetTestValue6()
       {
-         Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation> result;
-         result = new Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation>();
+         Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation> result;
+         result = new Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation>();
          result.Create(this.GetTestValue7());
          return result;
       }
-      public Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation GetTestValue7()
+      public Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation GetTestValue7()
       {
-         Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation result;
-         result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation();
-         result.Create(this.GetTestValueEnum<Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.VersionedMultiLocation>(), this.GetTestValueBaseVoid());
+         Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation result;
+         result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation();
+         result.Create(this.GetTestValueEnum<Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.VersionedLocation>(), this.GetTestValueBaseVoid());
          return result;
       }
       public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U8, Substrate.NetApi.Model.Types.Primitive.U8>> GetTestValue8()
@@ -234,18 +234,18 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation> GetTestValue14()
+      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation> GetTestValue14()
       {
-         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation> result;
-         result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation>();
+         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation> result;
+         result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation>();
          result.Create(this.GetTestValueU32(), this.GetTestValue15());
          return result;
       }
-      public Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation GetTestValue15()
+      public Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation GetTestValue15()
       {
-         Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation result;
-         result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation();
-         result.Create(this.GetTestValueEnum<Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.VersionedMultiLocation>(), this.GetTestValueBaseVoid());
+         Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation result;
+         result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation();
+         result.Create(this.GetTestValueEnum<Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.VersionedLocation>(), this.GetTestValueBaseVoid());
          return result;
       }
       [Test()]
@@ -260,7 +260,7 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
          // Construct new RPC client to test with.
          PolkadotXcmControllerClient rpcClient = new PolkadotXcmControllerClient(_httpClient, subscriptionClient);
          Substrate.NetApi.Model.Types.Primitive.U32 mockupValue = this.GetTestValueU32();
-         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation> mockupKey = this.GetTestValue14();
+         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation> mockupKey = this.GetTestValue14();
 
          Assert.IsTrue(await rpcClient.SubscribeSupportedVersion(mockupKey));
 
@@ -277,18 +277,18 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation> GetTestValue17()
+      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation> GetTestValue17()
       {
-         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation> result;
-         result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation>();
+         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation> result;
+         result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation>();
          result.Create(this.GetTestValueU32(), this.GetTestValue18());
          return result;
       }
-      public Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation GetTestValue18()
+      public Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation GetTestValue18()
       {
-         Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation result;
-         result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation();
-         result.Create(this.GetTestValueEnum<Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.VersionedMultiLocation>(), this.GetTestValueBaseVoid());
+         Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation result;
+         result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation();
+         result.Create(this.GetTestValueEnum<Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.VersionedLocation>(), this.GetTestValueBaseVoid());
          return result;
       }
       [Test()]
@@ -303,7 +303,7 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
          // Construct new RPC client to test with.
          PolkadotXcmControllerClient rpcClient = new PolkadotXcmControllerClient(_httpClient, subscriptionClient);
          Substrate.NetApi.Model.Types.Primitive.U64 mockupValue = this.GetTestValueU64();
-         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation> mockupKey = this.GetTestValue17();
+         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation> mockupKey = this.GetTestValue17();
 
          Assert.IsTrue(await rpcClient.SubscribeVersionNotifiers(mockupKey));
 
@@ -337,18 +337,18 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
          result.ProofSize.Create(new Substrate.NetApi.CompactInteger(this.GetTestValueU64().Value));
          return result;
       }
-      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation> GetTestValue22()
+      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation> GetTestValue22()
       {
-         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation> result;
-         result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation>();
+         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation> result;
+         result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation>();
          result.Create(this.GetTestValueU32(), this.GetTestValue23());
          return result;
       }
-      public Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation GetTestValue23()
+      public Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation GetTestValue23()
       {
-         Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation result;
-         result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation();
-         result.Create(this.GetTestValueEnum<Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.VersionedMultiLocation>(), this.GetTestValueBaseVoid());
+         Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation result;
+         result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation();
+         result.Create(this.GetTestValueEnum<Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.VersionedLocation>(), this.GetTestValueBaseVoid());
          return result;
       }
       [Test()]
@@ -363,7 +363,7 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
          // Construct new RPC client to test with.
          PolkadotXcmControllerClient rpcClient = new PolkadotXcmControllerClient(_httpClient, subscriptionClient);
          Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U64, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight, Substrate.NetApi.Model.Types.Primitive.U32> mockupValue = this.GetTestValue20();
-         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation> mockupKey = this.GetTestValue22();
+         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation> mockupKey = this.GetTestValue22();
 
          Assert.IsTrue(await rpcClient.SubscribeVersionNotifyTargets(mockupKey));
 
@@ -380,27 +380,27 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT30 GetTestValue25()
+      public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT38 GetTestValue25()
       {
-         Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT30 result;
-         result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT30();
-         result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation, Substrate.NetApi.Model.Types.Primitive.U32>>();
-         result.Value.Create(new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation, Substrate.NetApi.Model.Types.Primitive.U32>[] {
+         Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT38 result;
+         result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT38();
+         result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation, Substrate.NetApi.Model.Types.Primitive.U32>>();
+         result.Value.Create(new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation, Substrate.NetApi.Model.Types.Primitive.U32>[] {
                   this.GetTestValue26()});
          return result;
       }
-      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation, Substrate.NetApi.Model.Types.Primitive.U32> GetTestValue26()
+      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation, Substrate.NetApi.Model.Types.Primitive.U32> GetTestValue26()
       {
-         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation, Substrate.NetApi.Model.Types.Primitive.U32> result;
-         result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation, Substrate.NetApi.Model.Types.Primitive.U32>();
+         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation, Substrate.NetApi.Model.Types.Primitive.U32> result;
+         result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation, Substrate.NetApi.Model.Types.Primitive.U32>();
          result.Create(this.GetTestValue27(), this.GetTestValueU32());
          return result;
       }
-      public Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation GetTestValue27()
+      public Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation GetTestValue27()
       {
-         Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation result;
-         result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation();
-         result.Create(this.GetTestValueEnum<Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.VersionedMultiLocation>(), this.GetTestValueBaseVoid());
+         Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation result;
+         result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation();
+         result.Create(this.GetTestValueEnum<Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.VersionedLocation>(), this.GetTestValueBaseVoid());
          return result;
       }
       [Test()]
@@ -414,7 +414,7 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          PolkadotXcmControllerClient rpcClient = new PolkadotXcmControllerClient(_httpClient, subscriptionClient);
-         Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT30 mockupValue = this.GetTestValue25();
+         Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT38 mockupValue = this.GetTestValue25();
 
 
          Assert.IsTrue(await rpcClient.SubscribeVersionDiscoveryQueue());
@@ -427,7 +427,7 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT30 rpcResult = await rpcClient.GetVersionDiscoveryQueue();
+         Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT38 rpcResult = await rpcClient.GetVersionDiscoveryQueue();
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
@@ -473,21 +473,44 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
          Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_xcm.pallet.RemoteLockedFungibleRecord result;
          result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_xcm.pallet.RemoteLockedFungibleRecord();
          result.Amount = this.GetTestValueU128();
-         result.Owner = new Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation();
-         result.Owner.Create(this.GetTestValueEnum<Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.VersionedMultiLocation>(), this.GetTestValueBaseVoid());
-         result.Locker = new Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation();
-         result.Locker.Create(this.GetTestValueEnum<Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.VersionedMultiLocation>(), this.GetTestValueBaseVoid());
-         result.Users = this.GetTestValueU32();
+         result.Owner = new Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation();
+         result.Owner.Create(this.GetTestValueEnum<Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.VersionedLocation>(), this.GetTestValueBaseVoid());
+         result.Locker = new Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation();
+         result.Locker.Create(this.GetTestValueEnum<Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.VersionedLocation>(), this.GetTestValueBaseVoid());
+         result.Consumers = new Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT39();
+         result.Consumers = this.GetTestValue32();
          return result;
       }
-      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAssetId> GetTestValue32()
+      public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT39 GetTestValue32()
+      {
+         Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT39 result;
+         result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT39();
+         result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Base.BaseTuple, Substrate.NetApi.Model.Types.Primitive.U128>>();
+         result.Value.Create(new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Base.BaseTuple, Substrate.NetApi.Model.Types.Primitive.U128>[] {
+                  this.GetTestValue33()});
+         return result;
+      }
+      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Base.BaseTuple, Substrate.NetApi.Model.Types.Primitive.U128> GetTestValue33()
+      {
+         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Base.BaseTuple, Substrate.NetApi.Model.Types.Primitive.U128> result;
+         result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Base.BaseTuple, Substrate.NetApi.Model.Types.Primitive.U128>();
+         result.Create(this.GetTestValue34(), this.GetTestValueU128());
+         return result;
+      }
+      public Substrate.NetApi.Model.Types.Base.BaseTuple GetTestValue34()
+      {
+         Substrate.NetApi.Model.Types.Base.BaseTuple result;
+         result = new Substrate.NetApi.Model.Types.Base.BaseTuple();
+         return result;
+      }
+      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAssetId> GetTestValue35()
       {
          Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAssetId> result;
          result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAssetId>();
-         result.Create(this.GetTestValueU32(), this.GetTestValue33(), this.GetTestValue34());
+         result.Create(this.GetTestValueU32(), this.GetTestValue36(), this.GetTestValue37());
          return result;
       }
-      public Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue33()
+      public Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue36()
       {
          Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 result;
          result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32();
@@ -527,7 +550,7 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
                   this.GetTestValueU8()});
          return result;
       }
-      public Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAssetId GetTestValue34()
+      public Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAssetId GetTestValue37()
       {
          Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAssetId result;
          result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAssetId();
@@ -546,7 +569,7 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
          // Construct new RPC client to test with.
          PolkadotXcmControllerClient rpcClient = new PolkadotXcmControllerClient(_httpClient, subscriptionClient);
          Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_xcm.pallet.RemoteLockedFungibleRecord mockupValue = this.GetTestValue31();
-         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAssetId> mockupKey = this.GetTestValue32();
+         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAssetId> mockupKey = this.GetTestValue35();
 
          Assert.IsTrue(await rpcClient.SubscribeRemoteLockedFungibles(mockupKey));
 
@@ -563,30 +586,30 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT31 GetTestValue36()
+      public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT40 GetTestValue39()
       {
-         Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT31 result;
-         result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT31();
-         result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation>>();
-         result.Value.Create(new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation>[] {
-                  this.GetTestValue37()});
+         Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT40 result;
+         result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT40();
+         result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation>>();
+         result.Value.Create(new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation>[] {
+                  this.GetTestValue40()});
          return result;
       }
-      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation> GetTestValue37()
+      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation> GetTestValue40()
       {
-         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation> result;
-         result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation>();
-         result.Create(this.GetTestValueU128(), this.GetTestValue38());
+         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation> result;
+         result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation>();
+         result.Create(this.GetTestValueU128(), this.GetTestValue41());
          return result;
       }
-      public Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation GetTestValue38()
+      public Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation GetTestValue41()
       {
-         Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation result;
-         result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation();
-         result.Create(this.GetTestValueEnum<Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.VersionedMultiLocation>(), this.GetTestValueBaseVoid());
+         Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation result;
+         result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation();
+         result.Create(this.GetTestValueEnum<Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.VersionedLocation>(), this.GetTestValueBaseVoid());
          return result;
       }
-      public Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue39()
+      public Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue42()
       {
          Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 result;
          result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32();
@@ -637,8 +660,8 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          PolkadotXcmControllerClient rpcClient = new PolkadotXcmControllerClient(_httpClient, subscriptionClient);
-         Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT31 mockupValue = this.GetTestValue36();
-         Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 mockupKey = this.GetTestValue39();
+         Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT40 mockupValue = this.GetTestValue39();
+         Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 mockupKey = this.GetTestValue42();
 
          Assert.IsTrue(await rpcClient.SubscribeLockedFungibles(mockupKey));
 
@@ -650,7 +673,7 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT31 rpcResult = await rpcClient.GetLockedFungibles(mockupKey);
+         Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT40 rpcResult = await rpcClient.GetLockedFungibles(mockupKey);
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());

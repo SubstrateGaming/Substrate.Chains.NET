@@ -16,9 +16,11 @@ namespace Substrate.Bajun.NET.RestClient.Generated.Interfaces
    
    public interface IPreimageControllerClient
    {
-      Task<EnumRequestStatus> GetStatusFor(Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 key);
+      Task<EnumOldRequestStatus> GetStatusFor(Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 key);
       Task<bool> SubscribeStatusFor(Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 key);
-      Task<BoundedVecT23> GetPreimageFor(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Primitive.U32> key);
+      Task<EnumRequestStatus> GetRequestStatusFor(Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 key);
+      Task<bool> SubscribeRequestStatusFor(Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 key);
+      Task<BoundedVecT30> GetPreimageFor(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Primitive.U32> key);
       Task<bool> SubscribePreimageFor(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Primitive.U32> key);
    }
 }

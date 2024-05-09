@@ -206,10 +206,10 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT8 GetTestValue8()
+      public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9 GetTestValue8()
       {
-         Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT8 result;
-         result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT8();
+         Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9 result;
+         result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9();
          result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U32>();
          result.Value.Create(new Substrate.NetApi.Model.Types.Primitive.U32[] {
                   this.GetTestValueU32()});
@@ -226,7 +226,7 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          TreasuryControllerClient rpcClient = new TreasuryControllerClient(_httpClient, subscriptionClient);
-         Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT8 mockupValue = this.GetTestValue8();
+         Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9 mockupValue = this.GetTestValue8();
 
 
          Assert.IsTrue(await rpcClient.SubscribeApprovals());
@@ -239,7 +239,119 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT8 rpcResult = await rpcClient.GetApprovals();
+         Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9 rpcResult = await rpcClient.GetApprovals();
+
+         // Test that the expected mockup value matches the actual result from RPC service.
+         Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
+      }
+      [Test()]
+      public async System.Threading.Tasks.Task TestSpendCount()
+      {
+         // Construct new Mockup client to test with.
+         TreasuryControllerMockupClient mockupClient = new TreasuryControllerMockupClient(_httpClient);
+
+         // Construct new subscription client to test with.
+         var subscriptionClient = CreateSubscriptionClient();
+
+         // Construct new RPC client to test with.
+         TreasuryControllerClient rpcClient = new TreasuryControllerClient(_httpClient, subscriptionClient);
+         Substrate.NetApi.Model.Types.Primitive.U32 mockupValue = this.GetTestValueU32();
+
+
+         Assert.IsTrue(await rpcClient.SubscribeSpendCount());
+
+         // Save the previously generated mockup value in RPC service storage.
+         bool mockupSetResult = await mockupClient.SetSpendCount(mockupValue);
+
+         // Test that the expected mockup value was handled successfully from RPC service.
+         Assert.IsTrue(mockupSetResult);
+         var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
+         Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
+
+         Substrate.NetApi.Model.Types.Primitive.U32 rpcResult = await rpcClient.GetSpendCount();
+
+         // Test that the expected mockup value matches the actual result from RPC service.
+         Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
+      }
+      public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_treasury.SpendStatus GetTestValue11()
+      {
+         Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_treasury.SpendStatus result;
+         result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_treasury.SpendStatus();
+         result.AssetKind = new Substrate.NetApi.Model.Types.Base.BaseTuple();
+         result.Amount = this.GetTestValueU128();
+         result.Beneficiary = new Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32();
+         result.Beneficiary = this.GetTestValue12();
+         result.ValidFrom = this.GetTestValueU32();
+         result.ExpireAt = this.GetTestValueU32();
+         result.Status = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_treasury.EnumPaymentState();
+         result.Status.Create(this.GetTestValueEnum<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_treasury.PaymentState>(), this.GetTestValueBaseVoid());
+         return result;
+      }
+      public Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue12()
+      {
+         Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 result;
+         result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32();
+         result.Value = new Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.Arr32U8();
+         result.Value.Create(new Substrate.NetApi.Model.Types.Primitive.U8[] {
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8()});
+         return result;
+      }
+      [Test()]
+      public async System.Threading.Tasks.Task TestSpends()
+      {
+         // Construct new Mockup client to test with.
+         TreasuryControllerMockupClient mockupClient = new TreasuryControllerMockupClient(_httpClient);
+
+         // Construct new subscription client to test with.
+         var subscriptionClient = CreateSubscriptionClient();
+
+         // Construct new RPC client to test with.
+         TreasuryControllerClient rpcClient = new TreasuryControllerClient(_httpClient, subscriptionClient);
+         Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_treasury.SpendStatus mockupValue = this.GetTestValue11();
+         Substrate.NetApi.Model.Types.Primitive.U32 mockupKey = this.GetTestValueU32();
+
+         Assert.IsTrue(await rpcClient.SubscribeSpends(mockupKey));
+
+         // Save the previously generated mockup value in RPC service storage.
+         bool mockupSetResult = await mockupClient.SetSpends(mockupValue, mockupKey);
+
+         // Test that the expected mockup value was handled successfully from RPC service.
+         Assert.IsTrue(mockupSetResult);
+         var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
+         Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
+
+         Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_treasury.SpendStatus rpcResult = await rpcClient.GetSpends(mockupKey);
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());

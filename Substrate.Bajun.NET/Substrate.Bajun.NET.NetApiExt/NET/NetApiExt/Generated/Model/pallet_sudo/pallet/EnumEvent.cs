@@ -17,41 +17,41 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_sudo.pallet
     
     /// <summary>
     /// >> Event
-    /// 
-    ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
-    ///			by this pallet.
-    ///			
+    /// The `Event` enum of this pallet
     /// </summary>
     public enum Event
     {
         
         /// <summary>
         /// >> Sudid
-        /// A sudo just took place. \[result\]
+        /// A sudo call just took place.
         /// </summary>
         Sudid = 0,
         
         /// <summary>
         /// >> KeyChanged
-        /// The \[sudoer\] just switched identity; the old key is supplied if one existed.
+        /// The sudo key has been updated.
         /// </summary>
         KeyChanged = 1,
         
         /// <summary>
-        /// >> SudoAsDone
-        /// A sudo just took place. \[result\]
+        /// >> KeyRemoved
+        /// The key was permanently removed.
         /// </summary>
-        SudoAsDone = 2,
+        KeyRemoved = 2,
+        
+        /// <summary>
+        /// >> SudoAsDone
+        /// A [sudo_as](Pallet::sudo_as) call just took place.
+        /// </summary>
+        SudoAsDone = 3,
     }
     
     /// <summary>
-    /// >> 113 - Variant[pallet_sudo.pallet.Event]
-    /// 
-    ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
-    ///			by this pallet.
-    ///			
+    /// >> 137 - Variant[pallet_sudo.pallet.Event]
+    /// The `Event` enum of this pallet
     /// </summary>
-    public sealed class EnumEvent : BaseEnumExt<Event, Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.EnumResult, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>, Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.EnumResult>
+    public sealed class EnumEvent : BaseEnumExt<Event, Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.EnumResult, BaseTuple<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>, BaseVoid, Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.EnumResult>
     {
     }
 }

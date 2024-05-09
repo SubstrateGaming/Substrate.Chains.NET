@@ -18,7 +18,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Types.Base
     
     
     /// <summary>
-    /// >> 233 - Array
+    /// >> 278 - Array
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Array)]
     public sealed class Arr12U8 : BaseType

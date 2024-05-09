@@ -17,10 +17,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_xcm.pallet
     
     /// <summary>
     /// >> Error
-    /// 
-    ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
-    ///			of this pallet.
-    ///			
+    /// The `Error` enum of this pallet.
     /// </summary>
     public enum Error
     {
@@ -34,8 +31,8 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_xcm.pallet
         
         /// <summary>
         /// >> SendFailure
-        /// There was some other issue (i.e. not to do with routing) in sending the message. Perhaps
-        /// a lack of space for buffering the message.
+        /// There was some other issue (i.e. not to do with routing) in sending the message.
+        /// Perhaps a lack of space for buffering the message.
         /// </summary>
         SendFailure = 1,
         
@@ -53,7 +50,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_xcm.pallet
         
         /// <summary>
         /// >> DestinationNotInvertible
-        /// The destination `MultiLocation` provided cannot be inverted.
+        /// The destination `Location` provided cannot be inverted.
         /// </summary>
         DestinationNotInvertible = 4,
         
@@ -107,10 +104,10 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_xcm.pallet
         AlreadySubscribed = 12,
         
         /// <summary>
-        /// >> InvalidAsset
-        /// Invalid asset for the operation.
+        /// >> CannotCheckOutTeleport
+        /// Could not check-out the assets for teleportation to the destination chain.
         /// </summary>
-        InvalidAsset = 13,
+        CannotCheckOutTeleport = 13,
         
         /// <summary>
         /// >> LowBalance
@@ -144,17 +141,57 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_xcm.pallet
         
         /// <summary>
         /// >> InUse
-        /// The unlock operation cannot succeed because there are still users of the lock.
+        /// The unlock operation cannot succeed because there are still consumers of the lock.
         /// </summary>
         InUse = 19,
+        
+        /// <summary>
+        /// >> InvalidAssetNotConcrete
+        /// Invalid non-concrete asset.
+        /// </summary>
+        InvalidAssetNotConcrete = 20,
+        
+        /// <summary>
+        /// >> InvalidAssetUnknownReserve
+        /// Invalid asset, reserve chain could not be determined for it.
+        /// </summary>
+        InvalidAssetUnknownReserve = 21,
+        
+        /// <summary>
+        /// >> InvalidAssetUnsupportedReserve
+        /// Invalid asset, do not support remote asset reserves with different fees reserves.
+        /// </summary>
+        InvalidAssetUnsupportedReserve = 22,
+        
+        /// <summary>
+        /// >> TooManyReserves
+        /// Too many assets with different reserve locations have been attempted for transfer.
+        /// </summary>
+        TooManyReserves = 23,
+        
+        /// <summary>
+        /// >> LocalExecutionIncomplete
+        /// Local XCM execution incomplete.
+        /// </summary>
+        LocalExecutionIncomplete = 24,
+        
+        /// <summary>
+        /// >> UnableToDecode
+        /// Could not decode XCM.
+        /// </summary>
+        UnableToDecode = 25,
+        
+        /// <summary>
+        /// >> XcmTooLarge
+        /// XCM encoded length is too large.
+        /// Returned when an XCM encoded length is larger than `MaxXcmEncodedSize`.
+        /// </summary>
+        XcmTooLarge = 26,
     }
     
     /// <summary>
-    /// >> 427 - Variant[pallet_xcm.pallet.Error]
-    /// 
-    ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
-    ///			of this pallet.
-    ///			
+    /// >> 512 - Variant[pallet_xcm.pallet.Error]
+    /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>
     {

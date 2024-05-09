@@ -18,7 +18,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
     
     
     /// <summary>
-    /// >> 119 - Composite[pallet_ajuna_awesome_avatars.types.season.Season]
+    /// >> 150 - Composite[pallet_ajuna_awesome_avatars.types.season.Season]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Season : BaseType
@@ -27,11 +27,11 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
         /// <summary>
         /// >> name
         /// </summary>
-        public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT4 Name { get; set; }
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT5 Name { get; set; }
         /// <summary>
         /// >> description
         /// </summary>
-        public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT5 Description { get; set; }
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT6 Description { get; set; }
         /// <summary>
         /// >> early_start
         /// </summary>
@@ -67,15 +67,15 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
         /// <summary>
         /// >> tiers
         /// </summary>
-        public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT6 Tiers { get; set; }
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT7 Tiers { get; set; }
         /// <summary>
         /// >> single_mint_probs
         /// </summary>
-        public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT7 SingleMintProbs { get; set; }
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT8 SingleMintProbs { get; set; }
         /// <summary>
         /// >> batch_mint_probs
         /// </summary>
-        public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT7 BatchMintProbs { get; set; }
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT8 BatchMintProbs { get; set; }
         /// <summary>
         /// >> base_prob
         /// </summary>
@@ -91,7 +91,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
         /// <summary>
         /// >> trade_filters
         /// </summary>
-        public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT8 TradeFilters { get; set; }
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9 TradeFilters { get; set; }
         /// <summary>
         /// >> fee
         /// </summary>
@@ -142,9 +142,9 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Name = new Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT4();
+            Name = new Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT5();
             Name.Decode(byteArray, ref p);
-            Description = new Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT5();
+            Description = new Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT6();
             Description.Decode(byteArray, ref p);
             EarlyStart = new Substrate.NetApi.Model.Types.Primitive.U32();
             EarlyStart.Decode(byteArray, ref p);
@@ -162,11 +162,11 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
             MinSacrifices.Decode(byteArray, ref p);
             MaxSacrifices = new Substrate.NetApi.Model.Types.Primitive.U8();
             MaxSacrifices.Decode(byteArray, ref p);
-            Tiers = new Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT6();
+            Tiers = new Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT7();
             Tiers.Decode(byteArray, ref p);
-            SingleMintProbs = new Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT7();
+            SingleMintProbs = new Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT8();
             SingleMintProbs.Decode(byteArray, ref p);
-            BatchMintProbs = new Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT7();
+            BatchMintProbs = new Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT8();
             BatchMintProbs.Decode(byteArray, ref p);
             BaseProb = new Substrate.NetApi.Model.Types.Primitive.U8();
             BaseProb.Decode(byteArray, ref p);
@@ -174,7 +174,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
             PerPeriod.Decode(byteArray, ref p);
             Periods = new Substrate.NetApi.Model.Types.Primitive.U16();
             Periods.Decode(byteArray, ref p);
-            TradeFilters = new Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT8();
+            TradeFilters = new Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9();
             TradeFilters.Decode(byteArray, ref p);
             Fee = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.fee.Fee();
             Fee.Decode(byteArray, ref p);

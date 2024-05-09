@@ -26,8 +26,10 @@ namespace Substrate.Bajun.NET.RestClient.Mockup
       public ICollatorSelectionControllerMockupClient CollatorSelectionControllerClient;
       public ICouncilControllerMockupClient CouncilControllerClient;
       public ICouncilMembershipControllerMockupClient CouncilMembershipControllerClient;
-      public IDmpQueueControllerMockupClient DmpQueueControllerClient;
+      public IDemocracyControllerMockupClient DemocracyControllerClient;
       public IIdentityControllerMockupClient IdentityControllerClient;
+      public IMessageQueueControllerMockupClient MessageQueueControllerClient;
+      public IMigrationsControllerMockupClient MigrationsControllerClient;
       public IMultisigControllerMockupClient MultisigControllerClient;
       public INftControllerMockupClient NftControllerClient;
       public INftTransferControllerMockupClient NftTransferControllerClient;
@@ -41,6 +43,8 @@ namespace Substrate.Bajun.NET.RestClient.Mockup
       public ISessionControllerMockupClient SessionControllerClient;
       public ISudoControllerMockupClient SudoControllerClient;
       public ISystemControllerMockupClient SystemControllerClient;
+      public ITechnicalCommitteeControllerMockupClient TechnicalCommitteeControllerClient;
+      public ITechnicalCommitteeMembershipControllerMockupClient TechnicalCommitteeMembershipControllerClient;
       public ITimestampControllerMockupClient TimestampControllerClient;
       public ITransactionPaymentControllerMockupClient TransactionPaymentControllerClient;
       public ITreasuryControllerMockupClient TreasuryControllerClient;
@@ -57,8 +61,10 @@ namespace Substrate.Bajun.NET.RestClient.Mockup
          CollatorSelectionControllerClient = new CollatorSelectionControllerMockupClient(_httpClient);
          CouncilControllerClient = new CouncilControllerMockupClient(_httpClient);
          CouncilMembershipControllerClient = new CouncilMembershipControllerMockupClient(_httpClient);
-         DmpQueueControllerClient = new DmpQueueControllerMockupClient(_httpClient);
+         DemocracyControllerClient = new DemocracyControllerMockupClient(_httpClient);
          IdentityControllerClient = new IdentityControllerMockupClient(_httpClient);
+         MessageQueueControllerClient = new MessageQueueControllerMockupClient(_httpClient);
+         MigrationsControllerClient = new MigrationsControllerMockupClient(_httpClient);
          MultisigControllerClient = new MultisigControllerMockupClient(_httpClient);
          NftControllerClient = new NftControllerMockupClient(_httpClient);
          NftTransferControllerClient = new NftTransferControllerMockupClient(_httpClient);
@@ -72,6 +78,8 @@ namespace Substrate.Bajun.NET.RestClient.Mockup
          SessionControllerClient = new SessionControllerMockupClient(_httpClient);
          SudoControllerClient = new SudoControllerMockupClient(_httpClient);
          SystemControllerClient = new SystemControllerMockupClient(_httpClient);
+         TechnicalCommitteeControllerClient = new TechnicalCommitteeControllerMockupClient(_httpClient);
+         TechnicalCommitteeMembershipControllerClient = new TechnicalCommitteeMembershipControllerMockupClient(_httpClient);
          TimestampControllerClient = new TimestampControllerMockupClient(_httpClient);
          TransactionPaymentControllerClient = new TransactionPaymentControllerMockupClient(_httpClient);
          TreasuryControllerClient = new TreasuryControllerMockupClient(_httpClient);

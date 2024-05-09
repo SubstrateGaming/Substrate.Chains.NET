@@ -33,7 +33,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.v3
     }
     
     /// <summary>
-    /// >> 95 - Variant[xcm.v3.WeightLimit]
+    /// >> 105 - Variant[xcm.v3.WeightLimit]
     /// </summary>
     public sealed class EnumWeightLimit : BaseEnumExt<WeightLimit, BaseVoid, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>
     {

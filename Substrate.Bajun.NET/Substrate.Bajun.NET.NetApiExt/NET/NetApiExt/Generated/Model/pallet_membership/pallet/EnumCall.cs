@@ -17,7 +17,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_membership.pallet
     
     /// <summary>
     /// >> Call
-    /// Contains one variant per dispatchable that can be called by an extrinsic.
+    /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
     public enum Call
     {
@@ -85,8 +85,8 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_membership.pallet
     }
     
     /// <summary>
-    /// >> 298 - Variant[pallet_membership.pallet.Call]
-    /// Contains one variant per dispatchable that can be called by an extrinsic.
+    /// >> 373 - Variant[pallet_membership.pallet.Call]
+    /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
     public sealed class EnumCall : BaseEnumExt<Call, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress>, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, BaseVoid>
     {

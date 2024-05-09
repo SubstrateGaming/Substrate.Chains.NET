@@ -3,15 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Substrate.Bajun.NET.RestService", "Substrate.Bajun.NET.RestService\Substrate.Bajun.NET.RestService.csproj", "{89DC9875-B9C9-4A9D-B6A0-398D250057E1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Substrate.Bajun.NET.RestService", "Substrate.Bajun.NET.RestService\Substrate.Bajun.NET.RestService.csproj", "{92ACA099-C4B5-4A73-A195-8DA70C2EC93A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Substrate.Bajun.NET.NetApiExt", "Substrate.Bajun.NET.NetApiExt\Substrate.Bajun.NET.NetApiExt.csproj", "{169BB632-ECCC-432B-B67A-EEFA4689D1AC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Substrate.Bajun.NET.NetApiExt", "Substrate.Bajun.NET.NetApiExt\Substrate.Bajun.NET.NetApiExt.csproj", "{63BAB1E7-BA63-43EC-959F-4E51606352A2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Substrate.Bajun.NET.RestClient", "Substrate.Bajun.NET.RestClient\Substrate.Bajun.NET.RestClient.csproj", "{B733EA91-5119-4023-A1C5-A5411FCD9166}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Substrate.Bajun.NET.Integration", "Substrate.Bajun.NET.Integration\Substrate.Bajun.NET.Integration.csproj", "{9A1010FD-26B6-4B7B-BE7F-1A4881C659BB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Substrate.Bajun.NET.RestClient.Mockup", "Substrate.Bajun.NET.RestClient.Mockup\Substrate.Bajun.NET.RestClient.Mockup.csproj", "{BE4C4F11-48EE-40BE-8019-A69ADE6D8D2E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Substrate.Bajun.NET.RestClient", "Substrate.Bajun.NET.RestClient\Substrate.Bajun.NET.RestClient.csproj", "{5FC4146F-3F09-4F00-A4A8-5F0D42346ADB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Substrate.Bajun.NET.RestClient.Test", "Substrate.Bajun.NET.RestClient.Test\Substrate.Bajun.NET.RestClient.Test.csproj", "{42CFE1F9-9F8C-4205-8723-CD0ADA50BD98}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Substrate.Bajun.NET.RestClient.Mockup", "Substrate.Bajun.NET.RestClient.Mockup\Substrate.Bajun.NET.RestClient.Mockup.csproj", "{793731A9-05CD-4924-8B3C-B7492F6E1294}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Substrate.Bajun.NET.RestClient.Test", "Substrate.Bajun.NET.RestClient.Test\Substrate.Bajun.NET.RestClient.Test.csproj", "{6F06A818-31E7-41BA-A74B-66D49CB83282}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -22,25 +24,29 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{89DC9875-B9C9-4A9D-B6A0-398D250057E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{89DC9875-B9C9-4A9D-B6A0-398D250057E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{89DC9875-B9C9-4A9D-B6A0-398D250057E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{89DC9875-B9C9-4A9D-B6A0-398D250057E1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{169BB632-ECCC-432B-B67A-EEFA4689D1AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{169BB632-ECCC-432B-B67A-EEFA4689D1AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{169BB632-ECCC-432B-B67A-EEFA4689D1AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{169BB632-ECCC-432B-B67A-EEFA4689D1AC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B733EA91-5119-4023-A1C5-A5411FCD9166}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B733EA91-5119-4023-A1C5-A5411FCD9166}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B733EA91-5119-4023-A1C5-A5411FCD9166}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B733EA91-5119-4023-A1C5-A5411FCD9166}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BE4C4F11-48EE-40BE-8019-A69ADE6D8D2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BE4C4F11-48EE-40BE-8019-A69ADE6D8D2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BE4C4F11-48EE-40BE-8019-A69ADE6D8D2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BE4C4F11-48EE-40BE-8019-A69ADE6D8D2E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{42CFE1F9-9F8C-4205-8723-CD0ADA50BD98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{42CFE1F9-9F8C-4205-8723-CD0ADA50BD98}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{42CFE1F9-9F8C-4205-8723-CD0ADA50BD98}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{42CFE1F9-9F8C-4205-8723-CD0ADA50BD98}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92ACA099-C4B5-4A73-A195-8DA70C2EC93A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92ACA099-C4B5-4A73-A195-8DA70C2EC93A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92ACA099-C4B5-4A73-A195-8DA70C2EC93A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92ACA099-C4B5-4A73-A195-8DA70C2EC93A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63BAB1E7-BA63-43EC-959F-4E51606352A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63BAB1E7-BA63-43EC-959F-4E51606352A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63BAB1E7-BA63-43EC-959F-4E51606352A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63BAB1E7-BA63-43EC-959F-4E51606352A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A1010FD-26B6-4B7B-BE7F-1A4881C659BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A1010FD-26B6-4B7B-BE7F-1A4881C659BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A1010FD-26B6-4B7B-BE7F-1A4881C659BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A1010FD-26B6-4B7B-BE7F-1A4881C659BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FC4146F-3F09-4F00-A4A8-5F0D42346ADB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FC4146F-3F09-4F00-A4A8-5F0D42346ADB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FC4146F-3F09-4F00-A4A8-5F0D42346ADB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FC4146F-3F09-4F00-A4A8-5F0D42346ADB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{793731A9-05CD-4924-8B3C-B7492F6E1294}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{793731A9-05CD-4924-8B3C-B7492F6E1294}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{793731A9-05CD-4924-8B3C-B7492F6E1294}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{793731A9-05CD-4924-8B3C-B7492F6E1294}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F06A818-31E7-41BA-A74B-66D49CB83282}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F06A818-31E7-41BA-A74B-66D49CB83282}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F06A818-31E7-41BA-A74B-66D49CB83282}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F06A818-31E7-41BA-A74B-66D49CB83282}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

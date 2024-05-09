@@ -18,7 +18,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types
     
     
     /// <summary>
-    /// >> 316 - Composite[pallet_nfts.types.MintWitness]
+    /// >> 396 - Composite[pallet_nfts.types.MintWitness]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class MintWitness : BaseType
@@ -27,7 +27,11 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types
         /// <summary>
         /// >> owned_item
         /// </summary>
-        public Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 OwnedItem { get; set; }
+        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> OwnedItem { get; set; }
+        /// <summary>
+        /// >> mint_price
+        /// </summary>
+        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U128> MintPrice { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
@@ -40,6 +44,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types
         {
             var result = new List<byte>();
             result.AddRange(OwnedItem.Encode());
+            result.AddRange(MintPrice.Encode());
             return result.ToArray();
         }
         
@@ -47,8 +52,10 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            OwnedItem = new Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256();
+            OwnedItem = new Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256>();
             OwnedItem.Decode(byteArray, ref p);
+            MintPrice = new Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U128>();
+            MintPrice.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];

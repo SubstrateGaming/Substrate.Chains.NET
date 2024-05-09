@@ -53,7 +53,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.v3.multiasset
     }
     
     /// <summary>
-    /// >> 75 - Variant[xcm.v3.multiasset.AssetInstance]
+    /// >> 130 - Variant[xcm.v3.multiasset.AssetInstance]
     /// </summary>
     public sealed class EnumAssetInstance : BaseEnumExt<AssetInstance, BaseVoid, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128>, Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.Arr4U8, Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.Arr8U8, Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.Arr16U8, Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.Arr32U8>
     {

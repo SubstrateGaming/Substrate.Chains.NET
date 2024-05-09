@@ -92,11 +92,11 @@ namespace Substrate.Bajun.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("Nft.ItemMetadataOf", Substrate.Bajun.NET.NetApiExt.Generated.Storage.NftStorage.ItemMetadataOfParams(key));
       }
-      public async Task<BaseTuple<BoundedVecT12, AttributeDeposit>> GetAttribute(BaseTuple<U32, BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256>, EnumAttributeNamespace, BoundedVecT11> key)
+      public async Task<BaseTuple<BoundedVecT13, AttributeDeposit>> GetAttribute(BaseTuple<U32, BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256>, EnumAttributeNamespace, BoundedVecT12> key)
       {
-         return await SendRequestAsync<BaseTuple<BoundedVecT12, AttributeDeposit>>(_httpClient, "nft/attribute", Substrate.Bajun.NET.NetApiExt.Generated.Storage.NftStorage.AttributeParams(key));
+         return await SendRequestAsync<BaseTuple<BoundedVecT13, AttributeDeposit>>(_httpClient, "nft/attribute", Substrate.Bajun.NET.NetApiExt.Generated.Storage.NftStorage.AttributeParams(key));
       }
-      public async Task<bool> SubscribeAttribute(BaseTuple<U32, BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256>, EnumAttributeNamespace, BoundedVecT11> key)
+      public async Task<bool> SubscribeAttribute(BaseTuple<U32, BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256>, EnumAttributeNamespace, BoundedVecT12> key)
       {
          return await _subscriptionClient.SubscribeAsync("Nft.Attribute", Substrate.Bajun.NET.NetApiExt.Generated.Storage.NftStorage.AttributeParams(key));
       }
@@ -108,9 +108,9 @@ namespace Substrate.Bajun.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("Nft.ItemPriceOf", Substrate.Bajun.NET.NetApiExt.Generated.Storage.NftStorage.ItemPriceOfParams(key));
       }
-      public async Task<BoundedBTreeSetT2> GetItemAttributesApprovalsOf(BaseTuple<U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> key)
+      public async Task<BoundedBTreeSetT3> GetItemAttributesApprovalsOf(BaseTuple<U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> key)
       {
-         return await SendRequestAsync<BoundedBTreeSetT2>(_httpClient, "nft/itemattributesapprovalsof", Substrate.Bajun.NET.NetApiExt.Generated.Storage.NftStorage.ItemAttributesApprovalsOfParams(key));
+         return await SendRequestAsync<BoundedBTreeSetT3>(_httpClient, "nft/itemattributesapprovalsof", Substrate.Bajun.NET.NetApiExt.Generated.Storage.NftStorage.ItemAttributesApprovalsOfParams(key));
       }
       public async Task<bool> SubscribeItemAttributesApprovalsOf(BaseTuple<U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> key)
       {

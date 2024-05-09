@@ -17,10 +17,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_nft_transfe
     
     /// <summary>
     /// >> Event
-    /// 
-    ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
-    ///			by this pallet.
-    ///			
+    /// The `Event` enum of this pallet
     /// </summary>
     public enum Event
     {
@@ -39,11 +36,8 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_nft_transfe
     }
     
     /// <summary>
-    /// >> 152 - Variant[pallet_ajuna_nft_transfer.pallet.Event]
-    /// 
-    ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
-    ///			by this pallet.
-    ///			
+    /// >> 183 - Variant[pallet_ajuna_nft_transfer.pallet.Event]
+    /// The `Event` enum of this pallet
     /// </summary>
     public sealed class EnumEvent : BaseEnumExt<Event, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>>
     {

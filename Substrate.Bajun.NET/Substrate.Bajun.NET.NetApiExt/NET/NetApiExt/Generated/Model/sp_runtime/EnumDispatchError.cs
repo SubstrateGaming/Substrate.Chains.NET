@@ -85,12 +85,17 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_runtime
         /// >> Unavailable
         /// </summary>
         Unavailable = 12,
+        
+        /// <summary>
+        /// >> RootNotAllowed
+        /// </summary>
+        RootNotAllowed = 13,
     }
     
     /// <summary>
-    /// >> 25 - Variant[sp_runtime.DispatchError]
+    /// >> 26 - Variant[sp_runtime.DispatchError]
     /// </summary>
-    public sealed class EnumDispatchError : BaseEnumExt<DispatchError, BaseVoid, BaseVoid, BaseVoid, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_runtime.ModuleError, BaseVoid, BaseVoid, BaseVoid, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_runtime.EnumTokenError, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_arithmetic.EnumArithmeticError, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_runtime.EnumTransactionalError, BaseVoid, BaseVoid, BaseVoid>
+    public sealed class EnumDispatchError : BaseEnumExt<DispatchError, BaseVoid, BaseVoid, BaseVoid, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_runtime.ModuleError, BaseVoid, BaseVoid, BaseVoid, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_runtime.EnumTokenError, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_arithmetic.EnumArithmeticError, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_runtime.EnumTransactionalError, BaseVoid, BaseVoid, BaseVoid, BaseVoid>
     {
     }
 }

@@ -80,6 +80,11 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated
         public PreimageStorage PreimageStorage;
         
         /// <summary>
+        /// MigrationsStorage storage calls.
+        /// </summary>
+        public MigrationsStorage MigrationsStorage;
+        
+        /// <summary>
         /// BalancesStorage storage calls.
         /// </summary>
         public BalancesStorage BalancesStorage;
@@ -135,9 +140,9 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated
         public CumulusXcmStorage CumulusXcmStorage;
         
         /// <summary>
-        /// DmpQueueStorage storage calls.
+        /// MessageQueueStorage storage calls.
         /// </summary>
-        public DmpQueueStorage DmpQueueStorage;
+        public MessageQueueStorage MessageQueueStorage;
         
         /// <summary>
         /// SudoStorage storage calls.
@@ -158,6 +163,21 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated
         /// CouncilMembershipStorage storage calls.
         /// </summary>
         public CouncilMembershipStorage CouncilMembershipStorage;
+        
+        /// <summary>
+        /// TechnicalCommitteeStorage storage calls.
+        /// </summary>
+        public TechnicalCommitteeStorage TechnicalCommitteeStorage;
+        
+        /// <summary>
+        /// TechnicalCommitteeMembershipStorage storage calls.
+        /// </summary>
+        public TechnicalCommitteeMembershipStorage TechnicalCommitteeMembershipStorage;
+        
+        /// <summary>
+        /// DemocracyStorage storage calls.
+        /// </summary>
+        public DemocracyStorage DemocracyStorage;
         
         /// <summary>
         /// RandomnessStorage storage calls.
@@ -193,6 +213,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated
             this.ProxyStorage = new ProxyStorage(this);
             this.SchedulerStorage = new SchedulerStorage(this);
             this.PreimageStorage = new PreimageStorage(this);
+            this.MigrationsStorage = new MigrationsStorage(this);
             this.BalancesStorage = new BalancesStorage(this);
             this.TransactionPaymentStorage = new TransactionPaymentStorage(this);
             this.VestingStorage = new VestingStorage(this);
@@ -204,11 +225,14 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated
             this.XcmpQueueStorage = new XcmpQueueStorage(this);
             this.PolkadotXcmStorage = new PolkadotXcmStorage(this);
             this.CumulusXcmStorage = new CumulusXcmStorage(this);
-            this.DmpQueueStorage = new DmpQueueStorage(this);
+            this.MessageQueueStorage = new MessageQueueStorage(this);
             this.SudoStorage = new SudoStorage(this);
             this.TreasuryStorage = new TreasuryStorage(this);
             this.CouncilStorage = new CouncilStorage(this);
             this.CouncilMembershipStorage = new CouncilMembershipStorage(this);
+            this.TechnicalCommitteeStorage = new TechnicalCommitteeStorage(this);
+            this.TechnicalCommitteeMembershipStorage = new TechnicalCommitteeMembershipStorage(this);
+            this.DemocracyStorage = new DemocracyStorage(this);
             this.RandomnessStorage = new RandomnessStorage(this);
             this.AwesomeAvatarsStorage = new AwesomeAvatarsStorage(this);
             this.NftStorage = new NftStorage(this);

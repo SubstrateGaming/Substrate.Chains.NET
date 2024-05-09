@@ -33,9 +33,9 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.v3.multiasset
     }
     
     /// <summary>
-    /// >> 73 - Variant[xcm.v3.multiasset.AssetId]
+    /// >> 123 - Variant[xcm.v3.multiasset.AssetId]
     /// </summary>
-    public sealed class EnumAssetId : BaseEnumExt<AssetId, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.v3.multilocation.MultiLocation, Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.Arr32U8>
+    public sealed class EnumAssetId : BaseEnumExt<AssetId, Substrate.Bajun.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation, Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.Arr32U8>
     {
     }
 }

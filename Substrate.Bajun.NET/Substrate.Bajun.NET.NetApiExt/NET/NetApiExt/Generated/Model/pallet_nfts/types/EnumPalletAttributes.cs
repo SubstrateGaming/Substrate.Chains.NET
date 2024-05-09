@@ -25,12 +25,17 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types
         /// >> UsedToClaim
         /// </summary>
         UsedToClaim = 0,
+        
+        /// <summary>
+        /// >> TransferDisabled
+        /// </summary>
+        TransferDisabled = 1,
     }
     
     /// <summary>
-    /// >> 151 - Variant[pallet_nfts.types.PalletAttributes]
+    /// >> 182 - Variant[pallet_nfts.types.PalletAttributes]
     /// </summary>
-    public sealed class EnumPalletAttributes : BaseEnumExt<PalletAttributes, Substrate.NetApi.Model.Types.Primitive.U32>
+    public sealed class EnumPalletAttributes : BaseEnumExt<PalletAttributes, Substrate.NetApi.Model.Types.Primitive.U32, BaseVoid>
     {
     }
 }

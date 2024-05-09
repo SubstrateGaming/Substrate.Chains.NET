@@ -17,7 +17,7 @@ namespace Substrate.Bajun.NET.RestClient.Mockup.Generated.Interfaces
    
    public interface IProxyControllerMockupClient
    {
-      Task<bool> SetProxies(BaseTuple<BoundedVecT19, U128> value, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
-      Task<bool> SetAnnouncements(BaseTuple<BoundedVecT20, U128> value, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
+      Task<bool> SetProxies(BaseTuple<BoundedVecT27, U128> value, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
+      Task<bool> SetAnnouncements(BaseTuple<BoundedVecT28, U128> value, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
    }
 }

@@ -230,14 +230,6 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
       {
          Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_consensus_aura.sr25519.app_sr25519.Public result;
          result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_consensus_aura.sr25519.app_sr25519.Public();
-         result.Value = new Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.sr25519.Public();
-         result.Value = this.GetTestValue12();
-         return result;
-      }
-      public Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.sr25519.Public GetTestValue12()
-      {
-         Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.sr25519.Public result;
-         result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.sr25519.Public();
          result.Value = new Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.Arr32U8();
          result.Value.Create(new Substrate.NetApi.Model.Types.Primitive.U8[] {
                   this.GetTestValueU8(),
@@ -303,7 +295,7 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U32> GetTestValue14()
+      public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U32> GetTestValue13()
       {
          Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U32> result;
          result = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U32>();
@@ -322,7 +314,7 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          SessionControllerClient rpcClient = new SessionControllerClient(_httpClient, subscriptionClient);
-         Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U32> mockupValue = this.GetTestValue14();
+         Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U32> mockupValue = this.GetTestValue13();
 
 
          Assert.IsTrue(await rpcClient.SubscribeDisabledValidators());
@@ -340,26 +332,18 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Bajun.NET.NetApiExt.Generated.Model.bajun_runtime.SessionKeys GetTestValue16()
+      public Substrate.Bajun.NET.NetApiExt.Generated.Model.bajun_runtime.SessionKeys GetTestValue15()
       {
          Substrate.Bajun.NET.NetApiExt.Generated.Model.bajun_runtime.SessionKeys result;
          result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.bajun_runtime.SessionKeys();
          result.Aura = new Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_consensus_aura.sr25519.app_sr25519.Public();
-         result.Aura = this.GetTestValue17();
+         result.Aura = this.GetTestValue16();
          return result;
       }
-      public Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_consensus_aura.sr25519.app_sr25519.Public GetTestValue17()
+      public Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_consensus_aura.sr25519.app_sr25519.Public GetTestValue16()
       {
          Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_consensus_aura.sr25519.app_sr25519.Public result;
          result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_consensus_aura.sr25519.app_sr25519.Public();
-         result.Value = new Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.sr25519.Public();
-         result.Value = this.GetTestValue18();
-         return result;
-      }
-      public Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.sr25519.Public GetTestValue18()
-      {
-         Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.sr25519.Public result;
-         result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.sr25519.Public();
          result.Value = new Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.Arr32U8();
          result.Value.Create(new Substrate.NetApi.Model.Types.Primitive.U8[] {
                   this.GetTestValueU8(),
@@ -396,7 +380,7 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
                   this.GetTestValueU8()});
          return result;
       }
-      public Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue19()
+      public Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue17()
       {
          Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 result;
          result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32();
@@ -447,8 +431,8 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          SessionControllerClient rpcClient = new SessionControllerClient(_httpClient, subscriptionClient);
-         Substrate.Bajun.NET.NetApiExt.Generated.Model.bajun_runtime.SessionKeys mockupValue = this.GetTestValue16();
-         Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 mockupKey = this.GetTestValue19();
+         Substrate.Bajun.NET.NetApiExt.Generated.Model.bajun_runtime.SessionKeys mockupValue = this.GetTestValue15();
+         Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 mockupKey = this.GetTestValue17();
 
          Assert.IsTrue(await rpcClient.SubscribeNextKeys(mockupKey));
 
@@ -465,7 +449,7 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue21()
+      public Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue19()
       {
          Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 result;
          result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32();
@@ -505,14 +489,14 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
                   this.GetTestValueU8()});
          return result;
       }
-      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.KeyTypeId, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>> GetTestValue22()
+      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.KeyTypeId, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>> GetTestValue20()
       {
          Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.KeyTypeId, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>> result;
          result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.KeyTypeId, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>();
-         result.Create(this.GetTestValue23(), this.GetTestValue24());
+         result.Create(this.GetTestValue21(), this.GetTestValue22());
          return result;
       }
-      public Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.KeyTypeId GetTestValue23()
+      public Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.KeyTypeId GetTestValue21()
       {
          Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.KeyTypeId result;
          result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.KeyTypeId();
@@ -524,7 +508,7 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
                   this.GetTestValueU8()});
          return result;
       }
-      public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> GetTestValue24()
+      public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> GetTestValue22()
       {
          Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> result;
          result = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>();
@@ -543,8 +527,8 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          SessionControllerClient rpcClient = new SessionControllerClient(_httpClient, subscriptionClient);
-         Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 mockupValue = this.GetTestValue21();
-         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.KeyTypeId, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>> mockupKey = this.GetTestValue22();
+         Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 mockupValue = this.GetTestValue19();
+         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.KeyTypeId, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>> mockupKey = this.GetTestValue20();
 
          Assert.IsTrue(await rpcClient.SubscribeKeyOwner(mockupKey));
 

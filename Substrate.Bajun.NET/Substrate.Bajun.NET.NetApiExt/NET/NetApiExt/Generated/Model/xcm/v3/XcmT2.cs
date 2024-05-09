@@ -18,7 +18,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.v3
     
     
     /// <summary>
-    /// >> 290 - Composite[xcm.v3.XcmT2]
+    /// >> 359 - Composite[xcm.v3.XcmT2]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class XcmT2 : BaseType

@@ -24,9 +24,9 @@ namespace Substrate.Bajun.NET.RestClient.Generated.Clients
          _httpClient = httpClient;
          _subscriptionClient = subscriptionClient;
       }
-      public async Task<BoundedVecT34> GetRandomMaterial()
+      public async Task<BoundedVecT48> GetRandomMaterial()
       {
-         return await SendRequestAsync<BoundedVecT34>(_httpClient, "randomness/randommaterial");
+         return await SendRequestAsync<BoundedVecT48>(_httpClient, "randomness/randommaterial");
       }
       public async Task<bool> SubscribeRandomMaterial()
       {

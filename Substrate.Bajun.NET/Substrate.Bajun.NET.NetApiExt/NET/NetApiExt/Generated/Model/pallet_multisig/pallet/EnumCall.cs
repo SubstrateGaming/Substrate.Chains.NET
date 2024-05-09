@@ -17,7 +17,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_multisig.pallet
     
     /// <summary>
     /// >> Call
-    /// Contains one variant per dispatchable that can be called by an extrinsic.
+    /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
     public enum Call
     {
@@ -146,8 +146,8 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_multisig.pallet
     }
     
     /// <summary>
-    /// >> 206 - Variant[pallet_multisig.pallet.Call]
-    /// Contains one variant per dispatchable that can be called by an extrinsic.
+    /// >> 250 - Variant[pallet_multisig.pallet.Call]
+    /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
     public sealed class EnumCall : BaseEnumExt<Call, BaseTuple<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>, Substrate.Bajun.NET.NetApiExt.Generated.Model.bajun_runtime.EnumRuntimeCall>, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U16, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_multisig.Timepoint>, Substrate.Bajun.NET.NetApiExt.Generated.Model.bajun_runtime.EnumRuntimeCall, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U16, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_multisig.Timepoint>, Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.Arr32U8, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U16, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_multisig.Timepoint, Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.Arr32U8>>
     {

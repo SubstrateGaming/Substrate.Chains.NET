@@ -38,7 +38,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types
     }
     
     /// <summary>
-    /// >> 469 - Variant[pallet_nfts.types.CollectionRole]
+    /// >> 576 - Variant[pallet_nfts.types.CollectionRole]
     /// </summary>
     public sealed class EnumCollectionRole : BaseEnum<CollectionRole>
     {

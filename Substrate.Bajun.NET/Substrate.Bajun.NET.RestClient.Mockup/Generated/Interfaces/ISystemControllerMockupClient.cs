@@ -22,6 +22,7 @@ namespace Substrate.Bajun.NET.RestClient.Mockup.Generated.Interfaces
    {
       Task<bool> SetAccount(AccountInfo value, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
       Task<bool> SetExtrinsicCount(U32 value);
+      Task<bool> SetInherentsApplied(Bool value);
       Task<bool> SetBlockWeight(PerDispatchClassT1 value);
       Task<bool> SetAllExtrinsicsLen(U32 value);
       Task<bool> SetBlockHash(H256 value, U32 key);
@@ -36,5 +37,6 @@ namespace Substrate.Bajun.NET.RestClient.Mockup.Generated.Interfaces
       Task<bool> SetUpgradedToU32RefCount(Bool value);
       Task<bool> SetUpgradedToTripleRefCount(Bool value);
       Task<bool> SetExecutionPhase(EnumPhase value);
+      Task<bool> SetAuthorizedUpgrade(CodeUpgradeAuthorization value);
    }
 }

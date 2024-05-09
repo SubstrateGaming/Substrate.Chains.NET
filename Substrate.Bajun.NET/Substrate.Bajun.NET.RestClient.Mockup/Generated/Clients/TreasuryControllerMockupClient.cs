@@ -36,9 +36,17 @@ namespace Substrate.Bajun.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "Treasury/Deactivated", value.Encode(), Substrate.Bajun.NET.NetApiExt.Generated.Storage.TreasuryStorage.DeactivatedParams());
       }
-      public async Task<bool> SetApprovals(BoundedVecT8 value)
+      public async Task<bool> SetApprovals(BoundedVecT9 value)
       {
          return await SendMockupRequestAsync(_httpClient, "Treasury/Approvals", value.Encode(), Substrate.Bajun.NET.NetApiExt.Generated.Storage.TreasuryStorage.ApprovalsParams());
+      }
+      public async Task<bool> SetSpendCount(U32 value)
+      {
+         return await SendMockupRequestAsync(_httpClient, "Treasury/SpendCount", value.Encode(), Substrate.Bajun.NET.NetApiExt.Generated.Storage.TreasuryStorage.SpendCountParams());
+      }
+      public async Task<bool> SetSpends(SpendStatus value, U32 key)
+      {
+         return await SendMockupRequestAsync(_httpClient, "Treasury/Spends", value.Encode(), Substrate.Bajun.NET.NetApiExt.Generated.Storage.TreasuryStorage.SpendsParams(key));
       }
    }
 }

@@ -25,10 +25,10 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
       {
          _httpClient = CreateHttpClient();
       }
-      public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT26 GetTestValue2()
+      public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT34 GetTestValue2()
       {
-         Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT26 result;
-         result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT26();
+         Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT34 result;
+         result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT34();
          result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Bajun.NET.NetApiExt.Generated.Model.orml_vesting.VestingSchedule>();
          result.Value.Create(new Substrate.Bajun.NET.NetApiExt.Generated.Model.orml_vesting.VestingSchedule[] {
                   this.GetTestValue3()});
@@ -96,7 +96,7 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          VestingControllerClient rpcClient = new VestingControllerClient(_httpClient, subscriptionClient);
-         Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT26 mockupValue = this.GetTestValue2();
+         Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT34 mockupValue = this.GetTestValue2();
          Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 mockupKey = this.GetTestValue4();
 
          Assert.IsTrue(await rpcClient.SubscribeVestingSchedules(mockupKey));
@@ -109,7 +109,7 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT26 rpcResult = await rpcClient.GetVestingSchedules(mockupKey);
+         Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT34 rpcResult = await rpcClient.GetVestingSchedules(mockupKey);
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());

@@ -34,7 +34,7 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
          result.Deposit = this.GetTestValueU128();
          result.Depositor = new Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32();
          result.Depositor = this.GetTestValue4();
-         result.Approvals = new Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT13();
+         result.Approvals = new Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT14();
          result.Approvals = this.GetTestValue5();
          return result;
       }
@@ -86,10 +86,10 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
                   this.GetTestValueU8()});
          return result;
       }
-      public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT13 GetTestValue5()
+      public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT14 GetTestValue5()
       {
-         Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT13 result;
-         result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT13();
+         Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT14 result;
+         result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT14();
          result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>();
          result.Value.Create(new Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32[] {
                   this.GetTestValue6()});

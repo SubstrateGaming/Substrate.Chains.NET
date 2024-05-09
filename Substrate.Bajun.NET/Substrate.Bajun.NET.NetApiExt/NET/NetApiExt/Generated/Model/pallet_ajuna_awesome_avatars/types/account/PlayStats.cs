@@ -18,7 +18,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
     
     
     /// <summary>
-    /// >> 455 - Composite[pallet_ajuna_awesome_avatars.types.account.PlayStats]
+    /// >> 563 - Composite[pallet_ajuna_awesome_avatars.types.account.PlayStats]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class PlayStats : BaseType
@@ -35,7 +35,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
         /// <summary>
         /// >> seasons_participated
         /// </summary>
-        public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSetT1 SeasonsParticipated { get; set; }
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSetT2 SeasonsParticipated { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
@@ -61,7 +61,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
             First.Decode(byteArray, ref p);
             Last = new Substrate.NetApi.Model.Types.Primitive.U32();
             Last.Decode(byteArray, ref p);
-            SeasonsParticipated = new Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSetT1();
+            SeasonsParticipated = new Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSetT2();
             SeasonsParticipated.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

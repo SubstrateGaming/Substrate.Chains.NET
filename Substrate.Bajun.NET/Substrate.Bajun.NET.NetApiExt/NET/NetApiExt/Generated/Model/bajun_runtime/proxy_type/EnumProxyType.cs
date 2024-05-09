@@ -53,7 +53,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.bajun_runtime.proxy_type
     }
     
     /// <summary>
-    /// >> 39 - Variant[bajun_runtime.proxy_type.ProxyType]
+    /// >> 41 - Variant[bajun_runtime.proxy_type.ProxyType]
     /// </summary>
     public sealed class EnumProxyType : BaseEnum<ProxyType>
     {

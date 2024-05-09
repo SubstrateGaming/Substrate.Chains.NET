@@ -17,15 +17,15 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.cumulus_pallet_xcm.palle
     
     /// <summary>
     /// >> Call
-    /// Contains one variant per dispatchable that can be called by an extrinsic.
+    /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
     public enum Call
     {
     }
     
     /// <summary>
-    /// >> 293 - Variant[cumulus_pallet_xcm.pallet.Call]
-    /// Contains one variant per dispatchable that can be called by an extrinsic.
+    /// >> 366 - Variant[cumulus_pallet_xcm.pallet.Call]
+    /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
     public sealed class EnumCall : BaseEnum<Call>
     {

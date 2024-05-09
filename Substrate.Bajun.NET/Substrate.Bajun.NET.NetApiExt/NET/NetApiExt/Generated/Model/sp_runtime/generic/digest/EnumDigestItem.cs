@@ -48,7 +48,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_runtime.generic.diges
     }
     
     /// <summary>
-    /// >> 16 - Variant[sp_runtime.generic.digest.DigestItem]
+    /// >> 17 - Variant[sp_runtime.generic.digest.DigestItem]
     /// </summary>
     public sealed class EnumDigestItem : BaseEnumExt<DigestItem, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>, BaseVoid, BaseVoid, BaseVoid, BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.Arr4U8, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>, BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.Arr4U8, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>, BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.Arr4U8, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>, BaseVoid, BaseVoid>
     {

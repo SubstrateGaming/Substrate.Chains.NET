@@ -17,10 +17,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain
     
     /// <summary>
     /// >> Event
-    /// 
-    ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
-    ///			by this pallet.
-    ///			
+    /// The `Event` enum of this pallet
     /// </summary>
     public enum Event
     {
@@ -44,38 +41,29 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain
         ValidationFunctionDiscarded = 2,
         
         /// <summary>
-        /// >> UpgradeAuthorized
-        /// An upgrade has been authorized.
-        /// </summary>
-        UpgradeAuthorized = 3,
-        
-        /// <summary>
         /// >> DownwardMessagesReceived
         /// Some downward messages have been received and will be processed.
         /// </summary>
-        DownwardMessagesReceived = 4,
+        DownwardMessagesReceived = 3,
         
         /// <summary>
         /// >> DownwardMessagesProcessed
         /// Downward messages were processed using the given weight.
         /// </summary>
-        DownwardMessagesProcessed = 5,
+        DownwardMessagesProcessed = 4,
         
         /// <summary>
         /// >> UpwardMessageSent
         /// An upward message was sent to the relay chain.
         /// </summary>
-        UpwardMessageSent = 6,
+        UpwardMessageSent = 5,
     }
     
     /// <summary>
-    /// >> 30 - Variant[cumulus_pallet_parachain_system.pallet.Event]
-    /// 
-    ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
-    ///			by this pallet.
-    ///			
+    /// >> 31 - Variant[cumulus_pallet_parachain_system.pallet.Event]
+    /// The `Event` enum of this pallet
     /// </summary>
-    public sealed class EnumEvent : BaseEnumExt<Event, BaseVoid, Substrate.NetApi.Model.Types.Primitive.U32, BaseVoid, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Primitive.U32, BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256>, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.Arr32U8>>
+    public sealed class EnumEvent : BaseEnumExt<Event, BaseVoid, Substrate.NetApi.Model.Types.Primitive.U32, BaseVoid, Substrate.NetApi.Model.Types.Primitive.U32, BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256>, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.Arr32U8>>
     {
     }
 }

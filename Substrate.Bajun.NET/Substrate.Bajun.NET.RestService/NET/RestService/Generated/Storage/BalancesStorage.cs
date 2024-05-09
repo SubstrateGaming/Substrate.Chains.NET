@@ -69,26 +69,30 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
         /// >> Locks
         ///  Any liquidity locks on some account balances.
         ///  NOTE: Should only be accessed when setting, changing and freeing a lock.
+        /// 
+        ///  Use of locks is deprecated in favour of freezes. See `https://github.com/paritytech/substrate/pull/12951/`
         /// </summary>
         Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT2 GetLocks(string key);
         
         /// <summary>
         /// >> Reserves
         ///  Named reserves on some account balances.
+        /// 
+        ///  Use of reserves is deprecated in favour of holds. See `https://github.com/paritytech/substrate/pull/12951/`
         /// </summary>
-        Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT24 GetReserves(string key);
+        Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT31 GetReserves(string key);
         
         /// <summary>
         /// >> Holds
         ///  Holds on account balances.
         /// </summary>
-        Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT25 GetHolds(string key);
+        Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT32 GetHolds(string key);
         
         /// <summary>
         /// >> Freezes
         ///  Freeze locks on account balances.
         /// </summary>
-        Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT25 GetFreezes(string key);
+        Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT33 GetFreezes(string key);
     }
     
     /// <summary>
@@ -120,17 +124,17 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
         /// <summary>
         /// _reservesTypedStorage typed storage field
         /// </summary>
-        private TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT24> _reservesTypedStorage;
+        private TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT31> _reservesTypedStorage;
         
         /// <summary>
         /// _holdsTypedStorage typed storage field
         /// </summary>
-        private TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT25> _holdsTypedStorage;
+        private TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT32> _holdsTypedStorage;
         
         /// <summary>
         /// _freezesTypedStorage typed storage field
         /// </summary>
-        private TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT25> _freezesTypedStorage;
+        private TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT33> _freezesTypedStorage;
         
         /// <summary>
         /// BalancesStorage constructor.
@@ -141,9 +145,9 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
             this.InactiveIssuanceTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U128>("Balances.InactiveIssuance", storageDataProvider, storageChangeDelegates);
             this.AccountTypedStorage = new TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_balances.types.AccountData>("Balances.Account", storageDataProvider, storageChangeDelegates);
             this.LocksTypedStorage = new TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT2>("Balances.Locks", storageDataProvider, storageChangeDelegates);
-            this.ReservesTypedStorage = new TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT24>("Balances.Reserves", storageDataProvider, storageChangeDelegates);
-            this.HoldsTypedStorage = new TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT25>("Balances.Holds", storageDataProvider, storageChangeDelegates);
-            this.FreezesTypedStorage = new TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT25>("Balances.Freezes", storageDataProvider, storageChangeDelegates);
+            this.ReservesTypedStorage = new TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT31>("Balances.Reserves", storageDataProvider, storageChangeDelegates);
+            this.HoldsTypedStorage = new TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT32>("Balances.Holds", storageDataProvider, storageChangeDelegates);
+            this.FreezesTypedStorage = new TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT33>("Balances.Freezes", storageDataProvider, storageChangeDelegates);
         }
         
         /// <summary>
@@ -209,7 +213,7 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
         /// <summary>
         /// _reservesTypedStorage property
         /// </summary>
-        public TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT24> ReservesTypedStorage
+        public TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT31> ReservesTypedStorage
         {
             get
             {
@@ -224,7 +228,7 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
         /// <summary>
         /// _holdsTypedStorage property
         /// </summary>
-        public TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT25> HoldsTypedStorage
+        public TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT32> HoldsTypedStorage
         {
             get
             {
@@ -239,7 +243,7 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
         /// <summary>
         /// _freezesTypedStorage property
         /// </summary>
-        public TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT25> FreezesTypedStorage
+        public TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT33> FreezesTypedStorage
         {
             get
             {
@@ -366,6 +370,8 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
         /// >> Locks
         ///  Any liquidity locks on some account balances.
         ///  NOTE: Should only be accessed when setting, changing and freeing a lock.
+        /// 
+        ///  Use of locks is deprecated in favour of freezes. See `https://github.com/paritytech/substrate/pull/12951/`
         /// </summary>
         public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT2 GetLocks(string key)
         {
@@ -395,14 +401,16 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
         /// <summary>
         /// >> Reserves
         ///  Named reserves on some account balances.
+        /// 
+        ///  Use of reserves is deprecated in favour of holds. See `https://github.com/paritytech/substrate/pull/12951/`
         /// </summary>
-        public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT24 GetReserves(string key)
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT31 GetReserves(string key)
         {
             if ((key == null))
             {
                 return null;
             }
-            if (ReservesTypedStorage.Dictionary.TryGetValue(key, out Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT24 result))
+            if (ReservesTypedStorage.Dictionary.TryGetValue(key, out Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT31 result))
             {
                 return result;
             }
@@ -425,13 +433,13 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
         /// >> Holds
         ///  Holds on account balances.
         /// </summary>
-        public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT25 GetHolds(string key)
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT32 GetHolds(string key)
         {
             if ((key == null))
             {
                 return null;
             }
-            if (HoldsTypedStorage.Dictionary.TryGetValue(key, out Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT25 result))
+            if (HoldsTypedStorage.Dictionary.TryGetValue(key, out Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT32 result))
             {
                 return result;
             }
@@ -454,13 +462,13 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
         /// >> Freezes
         ///  Freeze locks on account balances.
         /// </summary>
-        public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT25 GetFreezes(string key)
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT33 GetFreezes(string key)
         {
             if ((key == null))
             {
                 return null;
             }
-            if (FreezesTypedStorage.Dictionary.TryGetValue(key, out Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT25 result))
+            if (FreezesTypedStorage.Dictionary.TryGetValue(key, out Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT33 result))
             {
                 return result;
             }

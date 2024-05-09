@@ -18,7 +18,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types
     
     
     /// <summary>
-    /// >> 321 - Composite[pallet_nfts.types.ItemTip]
+    /// >> 401 - Composite[pallet_nfts.types.ItemTip]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class ItemTip : BaseType

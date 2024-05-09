@@ -17,10 +17,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_membership.pallet
     
     /// <summary>
     /// >> Event
-    /// 
-    ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
-    ///			by this pallet.
-    ///			
+    /// The `Event` enum of this pallet
     /// </summary>
     public enum Event
     {
@@ -63,11 +60,8 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_membership.pallet
     }
     
     /// <summary>
-    /// >> 117 - Variant[pallet_membership.pallet.Event]
-    /// 
-    ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
-    ///			by this pallet.
-    ///			
+    /// >> 143 - Variant[pallet_membership.pallet.Event]
+    /// The `Event` enum of this pallet
     /// </summary>
     public sealed class EnumEvent : BaseEnum<Event>
     {

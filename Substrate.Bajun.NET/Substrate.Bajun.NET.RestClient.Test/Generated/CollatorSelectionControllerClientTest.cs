@@ -26,10 +26,10 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
       {
          _httpClient = CreateHttpClient();
       }
-      public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT27 GetTestValue2()
+      public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT35 GetTestValue2()
       {
-         Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT27 result;
-         result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT27();
+         Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT35 result;
+         result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT35();
          result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>();
          result.Value.Create(new Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32[] {
                   this.GetTestValue3()});
@@ -86,7 +86,7 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          CollatorSelectionControllerClient rpcClient = new CollatorSelectionControllerClient(_httpClient, subscriptionClient);
-         Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT27 mockupValue = this.GetTestValue2();
+         Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT35 mockupValue = this.GetTestValue2();
 
 
          Assert.IsTrue(await rpcClient.SubscribeInvulnerables());
@@ -99,15 +99,15 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT27 rpcResult = await rpcClient.GetInvulnerables();
+         Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT35 rpcResult = await rpcClient.GetInvulnerables();
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT28 GetTestValue5()
+      public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT36 GetTestValue5()
       {
-         Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT28 result;
-         result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT28();
+         Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT36 result;
+         result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT36();
          result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_collator_selection.pallet.CandidateInfo>();
          result.Value.Create(new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_collator_selection.pallet.CandidateInfo[] {
                   this.GetTestValue6()});
@@ -163,7 +163,7 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
          return result;
       }
       [Test()]
-      public async System.Threading.Tasks.Task TestCandidates()
+      public async System.Threading.Tasks.Task TestCandidateList()
       {
          // Construct new Mockup client to test with.
          CollatorSelectionControllerMockupClient mockupClient = new CollatorSelectionControllerMockupClient(_httpClient);
@@ -173,20 +173,20 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          CollatorSelectionControllerClient rpcClient = new CollatorSelectionControllerClient(_httpClient, subscriptionClient);
-         Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT28 mockupValue = this.GetTestValue5();
+         Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT36 mockupValue = this.GetTestValue5();
 
 
-         Assert.IsTrue(await rpcClient.SubscribeCandidates());
+         Assert.IsTrue(await rpcClient.SubscribeCandidateList());
 
          // Save the previously generated mockup value in RPC service storage.
-         bool mockupSetResult = await mockupClient.SetCandidates(mockupValue);
+         bool mockupSetResult = await mockupClient.SetCandidateList(mockupValue);
 
          // Test that the expected mockup value was handled successfully from RPC service.
          Assert.IsTrue(mockupSetResult);
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT28 rpcResult = await rpcClient.GetCandidates();
+         Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT36 rpcResult = await rpcClient.GetCandidateList();
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());

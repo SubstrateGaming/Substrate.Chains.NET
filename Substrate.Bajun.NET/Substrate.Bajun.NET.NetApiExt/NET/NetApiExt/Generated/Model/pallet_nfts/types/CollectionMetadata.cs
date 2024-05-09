@@ -18,7 +18,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types
     
     
     /// <summary>
-    /// >> 477 - Composite[pallet_nfts.types.CollectionMetadata]
+    /// >> 584 - Composite[pallet_nfts.types.CollectionMetadata]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class CollectionMetadata : BaseType
@@ -31,7 +31,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types
         /// <summary>
         /// >> data
         /// </summary>
-        public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10 Data { get; set; }
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT11 Data { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
@@ -54,7 +54,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types
             var start = p;
             Deposit = new Substrate.NetApi.Model.Types.Primitive.U128();
             Deposit.Decode(byteArray, ref p);
-            Data = new Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10();
+            Data = new Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT11();
             Data.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

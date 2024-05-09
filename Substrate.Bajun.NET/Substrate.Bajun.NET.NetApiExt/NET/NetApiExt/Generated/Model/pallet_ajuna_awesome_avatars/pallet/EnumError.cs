@@ -17,10 +17,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
     
     /// <summary>
     /// >> Error
-    /// 
-    ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
-    ///			of this pallet.
-    ///			
+    /// The `Error` enum of this pallet.
     /// </summary>
     public enum Error
     {
@@ -424,11 +421,8 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
     }
     
     /// <summary>
-    /// >> 463 - Variant[pallet_ajuna_awesome_avatars.pallet.Error]
-    /// 
-    ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
-    ///			of this pallet.
-    ///			
+    /// >> 571 - Variant[pallet_ajuna_awesome_avatars.pallet.Error]
+    /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>
     {

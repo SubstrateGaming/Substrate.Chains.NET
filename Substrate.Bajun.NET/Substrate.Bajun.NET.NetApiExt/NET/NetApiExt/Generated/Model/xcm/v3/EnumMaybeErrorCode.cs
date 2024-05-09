@@ -38,9 +38,9 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.v3
     }
     
     /// <summary>
-    /// >> 85 - Variant[xcm.v3.MaybeErrorCode]
+    /// >> 96 - Variant[xcm.v3.MaybeErrorCode]
     /// </summary>
-    public sealed class EnumMaybeErrorCode : BaseEnumExt<MaybeErrorCode, BaseVoid, Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT3, Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT3>
+    public sealed class EnumMaybeErrorCode : BaseEnumExt<MaybeErrorCode, BaseVoid, Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT4, Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT4>
     {
     }
 }

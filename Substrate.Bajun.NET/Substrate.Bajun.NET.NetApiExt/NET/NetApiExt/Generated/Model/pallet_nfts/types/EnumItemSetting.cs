@@ -38,7 +38,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types
     }
     
     /// <summary>
-    /// >> 313 - Variant[pallet_nfts.types.ItemSetting]
+    /// >> 393 - Variant[pallet_nfts.types.ItemSetting]
     /// </summary>
     public sealed class EnumItemSetting : BaseEnum<ItemSetting>
     {

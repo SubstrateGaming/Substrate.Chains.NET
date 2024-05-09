@@ -18,7 +18,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_scheduler
     
     
     /// <summary>
-    /// >> 356 - Composite[pallet_scheduler.Scheduled]
+    /// >> 435 - Composite[pallet_scheduler.Scheduled]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Scheduled : BaseType

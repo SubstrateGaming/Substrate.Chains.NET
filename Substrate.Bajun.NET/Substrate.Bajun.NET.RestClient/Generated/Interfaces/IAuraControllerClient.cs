@@ -16,7 +16,7 @@ namespace Substrate.Bajun.NET.RestClient.Generated.Interfaces
    
    public interface IAuraControllerClient
    {
-      Task<BoundedVecT29> GetAuthorities();
+      Task<BoundedVecT37> GetAuthorities();
       Task<bool> SubscribeAuthorities();
       Task<Slot> GetCurrentSlot();
       Task<bool> SubscribeCurrentSlot();

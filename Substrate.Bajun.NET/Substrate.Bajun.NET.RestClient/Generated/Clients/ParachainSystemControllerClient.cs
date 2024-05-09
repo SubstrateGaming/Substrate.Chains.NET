@@ -13,15 +13,16 @@ namespace Substrate.Bajun.NET.RestClient.Generated.Clients
    using System.Threading.Tasks;
    using System.Net.Http;
    using Substrate.NetApi.Model.Types.Base;
+   using Substrate.Bajun.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.unincluded_segment;
    using Substrate.NetApi.Model.Types.Primitive;
-   using Substrate.Bajun.NET.NetApiExt.Generated.Model.polkadot_primitives.v4;
+   using Substrate.Bajun.NET.NetApiExt.Generated.Model.polkadot_primitives.v7;
    using Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_trie.storage_proof;
    using Substrate.Bajun.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.relay_state_snapshot;
    using Substrate.Bajun.NET.NetApiExt.Generated.Model.cumulus_primitives_parachain_inherent;
    using Substrate.Bajun.NET.NetApiExt.Generated.Types.Base;
    using Substrate.Bajun.NET.NetApiExt.Generated.Model.polkadot_core_primitives;
+   using Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point;
    using Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_weights.weight_v2;
-   using Substrate.Bajun.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system;
    using Substrate.Bajun.NET.RestClient.Generated.Interfaces;
    
    public sealed class ParachainSystemControllerClient : BaseClient, IParachainSystemControllerClient
@@ -32,6 +33,22 @@ namespace Substrate.Bajun.NET.RestClient.Generated.Clients
       {
          _httpClient = httpClient;
          _subscriptionClient = subscriptionClient;
+      }
+      public async Task<BaseVec<Ancestor>> GetUnincludedSegment()
+      {
+         return await SendRequestAsync<BaseVec<Ancestor>>(_httpClient, "parachainsystem/unincludedsegment");
+      }
+      public async Task<bool> SubscribeUnincludedSegment()
+      {
+         return await _subscriptionClient.SubscribeAsync("ParachainSystem.UnincludedSegment");
+      }
+      public async Task<SegmentTracker> GetAggregatedUnincludedSegment()
+      {
+         return await SendRequestAsync<SegmentTracker>(_httpClient, "parachainsystem/aggregatedunincludedsegment");
+      }
+      public async Task<bool> SubscribeAggregatedUnincludedSegment()
+      {
+         return await _subscriptionClient.SubscribeAsync("ParachainSystem.AggregatedUnincludedSegment");
       }
       public async Task<BaseVec<U8>> GetPendingValidationCode()
       {
@@ -81,6 +98,14 @@ namespace Substrate.Bajun.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("ParachainSystem.UpgradeRestrictionSignal");
       }
+      public async Task<BaseOpt<EnumUpgradeGoAhead>> GetUpgradeGoAhead()
+      {
+         return await SendRequestAsync<BaseOpt<EnumUpgradeGoAhead>>(_httpClient, "parachainsystem/upgradegoahead");
+      }
+      public async Task<bool> SubscribeUpgradeGoAhead()
+      {
+         return await _subscriptionClient.SubscribeAsync("ParachainSystem.UpgradeGoAhead");
+      }
       public async Task<StorageProof> GetRelayStateProof()
       {
          return await SendRequestAsync<StorageProof>(_httpClient, "parachainsystem/relaystateproof");
@@ -113,9 +138,9 @@ namespace Substrate.Bajun.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("ParachainSystem.LastDmqMqcHead");
       }
-      public async Task<BTreeMapT1> GetLastHrmpMqcHeads()
+      public async Task<BTreeMapT2> GetLastHrmpMqcHeads()
       {
-         return await SendRequestAsync<BTreeMapT1>(_httpClient, "parachainsystem/lasthrmpmqcheads");
+         return await SendRequestAsync<BTreeMapT2>(_httpClient, "parachainsystem/lasthrmpmqcheads");
       }
       public async Task<bool> SubscribeLastHrmpMqcHeads()
       {
@@ -161,6 +186,14 @@ namespace Substrate.Bajun.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("ParachainSystem.PendingUpwardMessages");
       }
+      public async Task<FixedU128> GetUpwardDeliveryFeeFactor()
+      {
+         return await SendRequestAsync<FixedU128>(_httpClient, "parachainsystem/upwarddeliveryfeefactor");
+      }
+      public async Task<bool> SubscribeUpwardDeliveryFeeFactor()
+      {
+         return await _subscriptionClient.SubscribeAsync("ParachainSystem.UpwardDeliveryFeeFactor");
+      }
       public async Task<U32> GetAnnouncedHrmpMessagesPerCandidate()
       {
          return await SendRequestAsync<U32>(_httpClient, "parachainsystem/announcedhrmpmessagespercandidate");
@@ -184,14 +217,6 @@ namespace Substrate.Bajun.NET.RestClient.Generated.Clients
       public async Task<bool> SubscribeReservedDmpWeightOverride()
       {
          return await _subscriptionClient.SubscribeAsync("ParachainSystem.ReservedDmpWeightOverride");
-      }
-      public async Task<CodeUpgradeAuthorization> GetAuthorizedUpgrade()
-      {
-         return await SendRequestAsync<CodeUpgradeAuthorization>(_httpClient, "parachainsystem/authorizedupgrade");
-      }
-      public async Task<bool> SubscribeAuthorizedUpgrade()
-      {
-         return await _subscriptionClient.SubscribeAsync("ParachainSystem.AuthorizedUpgrade");
       }
       public async Task<BaseVec<U8>> GetCustomValidationHeadData()
       {

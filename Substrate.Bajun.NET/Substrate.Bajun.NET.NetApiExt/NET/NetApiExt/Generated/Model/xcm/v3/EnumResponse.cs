@@ -53,9 +53,9 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.v3
     }
     
     /// <summary>
-    /// >> 78 - Variant[xcm.v3.Response]
+    /// >> 344 - Variant[xcm.v3.Response]
     /// </summary>
-    public sealed class EnumResponse : BaseEnumExt<Response, BaseVoid, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.v3.multiasset.MultiAssets, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.v3.traits.EnumError>>, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT1, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.v3.EnumMaybeErrorCode>
+    public sealed class EnumResponse : BaseEnumExt<Response, BaseVoid, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.v3.multiasset.MultiAssets, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.v3.traits.EnumError>>, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.v3.EnumMaybeErrorCode>
     {
     }
 }

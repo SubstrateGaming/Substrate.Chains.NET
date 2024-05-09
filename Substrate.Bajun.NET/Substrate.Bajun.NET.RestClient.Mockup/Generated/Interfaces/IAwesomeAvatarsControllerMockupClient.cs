@@ -29,7 +29,7 @@ namespace Substrate.Bajun.NET.RestClient.Mockup.Generated.Interfaces
       Task<bool> SetTreasury(U128 value, U16 key);
       Task<bool> SetGlobalConfigs(GlobalConfig value);
       Task<bool> SetAvatars(BaseTuple<AccountId32, Avatar> value, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 key);
-      Task<bool> SetOwners(BoundedVecT35 value, BaseTuple<AccountId32, U16> key);
+      Task<bool> SetOwners(BoundedVecT49 value, BaseTuple<AccountId32, U16> key);
       Task<bool> SetLockedAvatars(BaseTuple value, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 key);
       Task<bool> SetCollectionId(U32 value);
       Task<bool> SetPlayerConfigs(PlayerConfig value, AccountId32 key);
@@ -37,6 +37,6 @@ namespace Substrate.Bajun.NET.RestClient.Mockup.Generated.Interfaces
       Task<bool> SetSeasonStats(SeasonInfo value, BaseTuple<U16, AccountId32> key);
       Task<bool> SetTrade(U128 value, BaseTuple<U16, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> key);
       Task<bool> SetServiceAccount(AccountId32 value);
-      Task<bool> SetPreparation(BoundedVecT9 value, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 key);
+      Task<bool> SetPreparation(BoundedVecT10 value, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 key);
    }
 }
