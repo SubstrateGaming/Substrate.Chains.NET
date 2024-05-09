@@ -17,65 +17,23 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queu
     
     /// <summary>
     /// >> Event
-    /// 
-    ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
-    ///			by this pallet.
-    ///			
+    /// The `Event` enum of this pallet
     /// </summary>
     public enum Event
     {
         
         /// <summary>
-        /// >> Success
-        /// Some XCM was executed ok.
-        /// </summary>
-        Success = 0,
-        
-        /// <summary>
-        /// >> Fail
-        /// Some XCM failed.
-        /// </summary>
-        Fail = 1,
-        
-        /// <summary>
-        /// >> BadVersion
-        /// Bad XCM version used.
-        /// </summary>
-        BadVersion = 2,
-        
-        /// <summary>
-        /// >> BadFormat
-        /// Bad XCM format used.
-        /// </summary>
-        BadFormat = 3,
-        
-        /// <summary>
         /// >> XcmpMessageSent
         /// An HRMP message was sent to a sibling parachain.
         /// </summary>
-        XcmpMessageSent = 4,
-        
-        /// <summary>
-        /// >> OverweightEnqueued
-        /// An XCM exceeded the individual message weight budget.
-        /// </summary>
-        OverweightEnqueued = 5,
-        
-        /// <summary>
-        /// >> OverweightServiced
-        /// An XCM from the overweight queue was executed with the given actual weight used.
-        /// </summary>
-        OverweightServiced = 6,
+        XcmpMessageSent = 0,
     }
     
     /// <summary>
-    /// >> 53 - Variant[cumulus_pallet_xcmp_queue.pallet.Event]
-    /// 
-    ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
-    ///			by this pallet.
-    ///			
+    /// >> 57 - Variant[cumulus_pallet_xcmp_queue.pallet.Event]
+    /// The `Event` enum of this pallet
     /// </summary>
-    public sealed class EnumEvent : BaseEnumExt<Event, BaseTuple<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.Arr32U8>, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>, BaseTuple<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.Arr32U8>, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.v3.traits.EnumError, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.Arr32U8>, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.Arr32U8>, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.Arr32U8>, BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U64, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U64, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>>
+    public sealed class EnumEvent : BaseEnumExt<Event, Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.Arr32U8>
     {
     }
 }

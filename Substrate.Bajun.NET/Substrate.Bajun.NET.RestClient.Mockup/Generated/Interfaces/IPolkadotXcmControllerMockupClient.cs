@@ -23,13 +23,13 @@ namespace Substrate.Bajun.NET.RestClient.Mockup.Generated.Interfaces
       Task<bool> SetQueries(EnumQueryStatus value, U64 key);
       Task<bool> SetAssetTraps(U32 value, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 key);
       Task<bool> SetSafeXcmVersion(U32 value);
-      Task<bool> SetSupportedVersion(U32 value, BaseTuple<U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation> key);
-      Task<bool> SetVersionNotifiers(U64 value, BaseTuple<U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation> key);
-      Task<bool> SetVersionNotifyTargets(BaseTuple<U64, Weight, U32> value, BaseTuple<U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation> key);
-      Task<bool> SetVersionDiscoveryQueue(BoundedVecT30 value);
+      Task<bool> SetSupportedVersion(U32 value, BaseTuple<U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation> key);
+      Task<bool> SetVersionNotifiers(U64 value, BaseTuple<U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation> key);
+      Task<bool> SetVersionNotifyTargets(BaseTuple<U64, Weight, U32> value, BaseTuple<U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation> key);
+      Task<bool> SetVersionDiscoveryQueue(BoundedVecT38 value);
       Task<bool> SetCurrentMigration(EnumVersionMigrationStage value);
       Task<bool> SetRemoteLockedFungibles(RemoteLockedFungibleRecord value, BaseTuple<U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAssetId> key);
-      Task<bool> SetLockedFungibles(BoundedVecT31 value, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
+      Task<bool> SetLockedFungibles(BoundedVecT40 value, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
       Task<bool> SetXcmExecutionSuspended(Bool value);
    }
 }

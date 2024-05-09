@@ -18,7 +18,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types
     
     
     /// <summary>
-    /// >> 330 - Composite[pallet_nfts.types.PreSignedAttributes]
+    /// >> 404 - Composite[pallet_nfts.types.PreSignedAttributes]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class PreSignedAttributes : BaseType

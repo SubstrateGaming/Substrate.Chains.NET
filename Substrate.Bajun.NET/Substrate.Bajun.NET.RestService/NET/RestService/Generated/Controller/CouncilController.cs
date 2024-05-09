@@ -42,7 +42,7 @@ namespace Substrate.Bajun.NET.RestService.Generated.Controller
         ///  The hashes of the active proposals.
         /// </summary>
         [HttpGet("Proposals")]
-        [ProducesResponseType(typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT32), 200)]
+        [ProducesResponseType(typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT42), 200)]
         [StorageKeyBuilder(typeof(Substrate.Bajun.NET.NetApiExt.Generated.Storage.CouncilStorage), "ProposalsParams")]
         public IActionResult GetProposals()
         {
@@ -99,7 +99,7 @@ namespace Substrate.Bajun.NET.RestService.Generated.Controller
         
         /// <summary>
         /// >> Prime
-        ///  The prime member that helps determine the default vote behavior in case of absentations.
+        ///  The prime member that helps determine the default vote behavior in case of abstentions.
         /// </summary>
         [HttpGet("Prime")]
         [ProducesResponseType(typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32), 200)]

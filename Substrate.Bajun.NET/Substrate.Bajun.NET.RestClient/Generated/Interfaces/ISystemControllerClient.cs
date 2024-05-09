@@ -24,6 +24,8 @@ namespace Substrate.Bajun.NET.RestClient.Generated.Interfaces
       Task<bool> SubscribeAccount(Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
       Task<U32> GetExtrinsicCount();
       Task<bool> SubscribeExtrinsicCount();
+      Task<Bool> GetInherentsApplied();
+      Task<bool> SubscribeInherentsApplied();
       Task<PerDispatchClassT1> GetBlockWeight();
       Task<bool> SubscribeBlockWeight();
       Task<U32> GetAllExtrinsicsLen();
@@ -52,5 +54,7 @@ namespace Substrate.Bajun.NET.RestClient.Generated.Interfaces
       Task<bool> SubscribeUpgradedToTripleRefCount();
       Task<EnumPhase> GetExecutionPhase();
       Task<bool> SubscribeExecutionPhase();
+      Task<CodeUpgradeAuthorization> GetAuthorizedUpgrade();
+      Task<bool> SubscribeAuthorizedUpgrade();
    }
 }

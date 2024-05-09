@@ -18,7 +18,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_multisig
     
     
     /// <summary>
-    /// >> 204 - Composite[pallet_multisig.Multisig]
+    /// >> 248 - Composite[pallet_multisig.Multisig]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Multisig : BaseType
@@ -39,7 +39,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_multisig
         /// <summary>
         /// >> approvals
         /// </summary>
-        public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT13 Approvals { get; set; }
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT14 Approvals { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
@@ -68,7 +68,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_multisig
             Deposit.Decode(byteArray, ref p);
             Depositor = new Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32();
             Depositor.Decode(byteArray, ref p);
-            Approvals = new Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT13();
+            Approvals = new Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT14();
             Approvals.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

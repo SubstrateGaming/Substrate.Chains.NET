@@ -40,7 +40,7 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
         /// >> AssetTraps
         ///  The existing asset traps.
         /// 
-        ///  Key is the blake2 256 hash of (origin, versioned `MultiAssets`) pair. Value is the number of
+        ///  Key is the blake2 256 hash of (origin, versioned `Assets`) pair. Value is the number of
         ///  times this pair has been trapped (usually just 1 if it exists at all).
         /// </summary>
         Substrate.NetApi.Model.Types.Primitive.U32 GetAssetTraps(string key);
@@ -77,7 +77,7 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
         ///  the `u32` counter is the number of times that a send to the destination has been attempted,
         ///  which is used as a prioritization.
         /// </summary>
-        Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT30 GetVersionDiscoveryQueue();
+        Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT38 GetVersionDiscoveryQueue();
         
         /// <summary>
         /// >> CurrentMigration
@@ -95,7 +95,7 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
         /// >> LockedFungibles
         ///  Fungible assets which we know are locked on this chain.
         /// </summary>
-        Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT31 GetLockedFungibles(string key);
+        Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT40 GetLockedFungibles(string key);
         
         /// <summary>
         /// >> XcmExecutionSuspended
@@ -148,7 +148,7 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
         /// <summary>
         /// _versionDiscoveryQueueTypedStorage typed storage field
         /// </summary>
-        private TypedStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT30> _versionDiscoveryQueueTypedStorage;
+        private TypedStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT38> _versionDiscoveryQueueTypedStorage;
         
         /// <summary>
         /// _currentMigrationTypedStorage typed storage field
@@ -163,7 +163,7 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
         /// <summary>
         /// _lockedFungiblesTypedStorage typed storage field
         /// </summary>
-        private TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT31> _lockedFungiblesTypedStorage;
+        private TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT40> _lockedFungiblesTypedStorage;
         
         /// <summary>
         /// _xcmExecutionSuspendedTypedStorage typed storage field
@@ -182,10 +182,10 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
             this.SupportedVersionTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Primitive.U32>("PolkadotXcm.SupportedVersion", storageDataProvider, storageChangeDelegates);
             this.VersionNotifiersTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Primitive.U64>("PolkadotXcm.VersionNotifiers", storageDataProvider, storageChangeDelegates);
             this.VersionNotifyTargetsTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U64, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight, Substrate.NetApi.Model.Types.Primitive.U32>>("PolkadotXcm.VersionNotifyTargets", storageDataProvider, storageChangeDelegates);
-            this.VersionDiscoveryQueueTypedStorage = new TypedStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT30>("PolkadotXcm.VersionDiscoveryQueue", storageDataProvider, storageChangeDelegates);
+            this.VersionDiscoveryQueueTypedStorage = new TypedStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT38>("PolkadotXcm.VersionDiscoveryQueue", storageDataProvider, storageChangeDelegates);
             this.CurrentMigrationTypedStorage = new TypedStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_xcm.pallet.EnumVersionMigrationStage>("PolkadotXcm.CurrentMigration", storageDataProvider, storageChangeDelegates);
             this.RemoteLockedFungiblesTypedStorage = new TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_xcm.pallet.RemoteLockedFungibleRecord>("PolkadotXcm.RemoteLockedFungibles", storageDataProvider, storageChangeDelegates);
-            this.LockedFungiblesTypedStorage = new TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT31>("PolkadotXcm.LockedFungibles", storageDataProvider, storageChangeDelegates);
+            this.LockedFungiblesTypedStorage = new TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT40>("PolkadotXcm.LockedFungibles", storageDataProvider, storageChangeDelegates);
             this.XcmExecutionSuspendedTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.Bool>("PolkadotXcm.XcmExecutionSuspended", storageDataProvider, storageChangeDelegates);
         }
         
@@ -297,7 +297,7 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
         /// <summary>
         /// _versionDiscoveryQueueTypedStorage property
         /// </summary>
-        public TypedStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT30> VersionDiscoveryQueueTypedStorage
+        public TypedStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT38> VersionDiscoveryQueueTypedStorage
         {
             get
             {
@@ -342,7 +342,7 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
         /// <summary>
         /// _lockedFungiblesTypedStorage property
         /// </summary>
-        public TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT31> LockedFungiblesTypedStorage
+        public TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT40> LockedFungiblesTypedStorage
         {
             get
             {
@@ -448,7 +448,7 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
         /// >> AssetTraps
         ///  The existing asset traps.
         /// 
-        ///  Key is the blake2 256 hash of (origin, versioned `MultiAssets`) pair. Value is the number of
+        ///  Key is the blake2 256 hash of (origin, versioned `Assets`) pair. Value is the number of
         ///  times this pair has been trapped (usually just 1 if it exists at all).
         /// </summary>
         public Substrate.NetApi.Model.Types.Primitive.U32 GetAssetTraps(string key)
@@ -589,7 +589,7 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
         ///  the `u32` counter is the number of times that a send to the destination has been attempted,
         ///  which is used as a prioritization.
         /// </summary>
-        public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT30 GetVersionDiscoveryQueue()
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT38 GetVersionDiscoveryQueue()
         {
             return VersionDiscoveryQueueTypedStorage.Get();
         }
@@ -654,13 +654,13 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
         /// >> LockedFungibles
         ///  Fungible assets which we know are locked on this chain.
         /// </summary>
-        public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT31 GetLockedFungibles(string key)
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT40 GetLockedFungibles(string key)
         {
             if ((key == null))
             {
                 return null;
             }
-            if (LockedFungiblesTypedStorage.Dictionary.TryGetValue(key, out Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT31 result))
+            if (LockedFungiblesTypedStorage.Dictionary.TryGetValue(key, out Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT40 result))
             {
                 return result;
             }

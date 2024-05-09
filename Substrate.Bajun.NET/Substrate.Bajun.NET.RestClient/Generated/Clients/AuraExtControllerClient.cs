@@ -13,6 +13,9 @@ namespace Substrate.Bajun.NET.RestClient.Generated.Clients
    using System.Threading.Tasks;
    using System.Net.Http;
    using Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
+   using Substrate.NetApi.Model.Types.Base;
+   using Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_consensus_slots;
+   using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.Bajun.NET.RestClient.Generated.Interfaces;
    
    public sealed class AuraExtControllerClient : BaseClient, IAuraExtControllerClient
@@ -24,13 +27,21 @@ namespace Substrate.Bajun.NET.RestClient.Generated.Clients
          _httpClient = httpClient;
          _subscriptionClient = subscriptionClient;
       }
-      public async Task<BoundedVecT29> GetAuthorities()
+      public async Task<BoundedVecT37> GetAuthorities()
       {
-         return await SendRequestAsync<BoundedVecT29>(_httpClient, "auraext/authorities");
+         return await SendRequestAsync<BoundedVecT37>(_httpClient, "auraext/authorities");
       }
       public async Task<bool> SubscribeAuthorities()
       {
          return await _subscriptionClient.SubscribeAsync("AuraExt.Authorities");
+      }
+      public async Task<BaseTuple<Slot, U32>> GetSlotInfo()
+      {
+         return await SendRequestAsync<BaseTuple<Slot, U32>>(_httpClient, "auraext/slotinfo");
+      }
+      public async Task<bool> SubscribeSlotInfo()
+      {
+         return await _subscriptionClient.SubscribeAsync("AuraExt.SlotInfo");
       }
    }
 }

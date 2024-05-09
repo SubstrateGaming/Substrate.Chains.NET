@@ -18,7 +18,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.boun
     
     
     /// <summary>
-    /// >> 473 - Composite[bounded_collections.bounded_btree_map.BoundedBTreeMap]
+    /// >> 580 - Composite[bounded_collections.bounded_btree_map.BoundedBTreeMap]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class BoundedBTreeMap : BaseType
@@ -27,7 +27,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.boun
         /// <summary>
         /// >> value
         /// </summary>
-        public Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.BTreeMapT3 Value { get; set; }
+        public Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.BTreeMapT4 Value { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
@@ -47,7 +47,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.boun
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Value = new Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.BTreeMapT3();
+            Value = new Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.BTreeMapT4();
             Value.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

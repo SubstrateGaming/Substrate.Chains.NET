@@ -73,7 +73,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.v2
     }
     
     /// <summary>
-    /// >> 106 - Variant[xcm.v2.BodyId]
+    /// >> 116 - Variant[xcm.v2.BodyId]
     /// </summary>
     public sealed class EnumBodyId : BaseEnumExt<BodyId, BaseVoid, Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT1, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid>
     {

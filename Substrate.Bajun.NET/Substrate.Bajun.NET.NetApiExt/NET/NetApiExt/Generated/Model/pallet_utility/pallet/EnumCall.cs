@@ -17,7 +17,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_utility.pallet
     
     /// <summary>
     /// >> Call
-    /// Contains one variant per dispatchable that can be called by an extrinsic.
+    /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
     public enum Call
     {
@@ -123,8 +123,8 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_utility.pallet
     }
     
     /// <summary>
-    /// >> 208 - Variant[pallet_utility.pallet.Call]
-    /// Contains one variant per dispatchable that can be called by an extrinsic.
+    /// >> 252 - Variant[pallet_utility.pallet.Call]
+    /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
     public sealed class EnumCall : BaseEnumExt<Call, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Bajun.NET.NetApiExt.Generated.Model.bajun_runtime.EnumRuntimeCall>, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U16, Substrate.Bajun.NET.NetApiExt.Generated.Model.bajun_runtime.EnumRuntimeCall>, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Bajun.NET.NetApiExt.Generated.Model.bajun_runtime.EnumRuntimeCall>, BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.bajun_runtime.EnumOriginCaller, Substrate.Bajun.NET.NetApiExt.Generated.Model.bajun_runtime.EnumRuntimeCall>, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Bajun.NET.NetApiExt.Generated.Model.bajun_runtime.EnumRuntimeCall>, BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.bajun_runtime.EnumRuntimeCall, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>>
     {

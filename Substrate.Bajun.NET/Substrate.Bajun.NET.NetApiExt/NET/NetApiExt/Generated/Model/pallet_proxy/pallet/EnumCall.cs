@@ -17,7 +17,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_proxy.pallet
     
     /// <summary>
     /// >> Call
-    /// Contains one variant per dispatchable that can be called by an extrinsic.
+    /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
     public enum Call
     {
@@ -185,8 +185,8 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_proxy.pallet
     }
     
     /// <summary>
-    /// >> 258 - Variant[pallet_proxy.pallet.Call]
-    /// Contains one variant per dispatchable that can be called by an extrinsic.
+    /// >> 305 - Variant[pallet_proxy.pallet.Call]
+    /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
     public sealed class EnumCall : BaseEnumExt<Call, BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.bajun_runtime.proxy_type.EnumProxyType>, Substrate.Bajun.NET.NetApiExt.Generated.Model.bajun_runtime.EnumRuntimeCall>, BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.Bajun.NET.NetApiExt.Generated.Model.bajun_runtime.proxy_type.EnumProxyType, Substrate.NetApi.Model.Types.Primitive.U32>, BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.Bajun.NET.NetApiExt.Generated.Model.bajun_runtime.proxy_type.EnumProxyType, Substrate.NetApi.Model.Types.Primitive.U32>, BaseVoid, BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.bajun_runtime.proxy_type.EnumProxyType, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U16>, BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.Bajun.NET.NetApiExt.Generated.Model.bajun_runtime.proxy_type.EnumProxyType, Substrate.NetApi.Model.Types.Primitive.U16, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>>, BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256>, BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256>, BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256>, BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.bajun_runtime.proxy_type.EnumProxyType>, Substrate.Bajun.NET.NetApiExt.Generated.Model.bajun_runtime.EnumRuntimeCall>>
     {

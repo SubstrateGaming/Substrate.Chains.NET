@@ -17,10 +17,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.cumulus_pallet_xcm.palle
     
     /// <summary>
     /// >> Event
-    /// 
-    ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
-    ///			by this pallet.
-    ///			
+    /// The `Event` enum of this pallet
     /// </summary>
     public enum Event
     {
@@ -48,13 +45,10 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.cumulus_pallet_xcm.palle
     }
     
     /// <summary>
-    /// >> 111 - Variant[cumulus_pallet_xcm.pallet.Event]
-    /// 
-    ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
-    ///			by this pallet.
-    ///			
+    /// >> 132 - Variant[cumulus_pallet_xcm.pallet.Event]
+    /// The `Event` enum of this pallet
     /// </summary>
-    public sealed class EnumEvent : BaseEnumExt<Event, Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.Arr32U8, Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.Arr32U8, BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.Arr32U8, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.v3.traits.EnumOutcome>>
+    public sealed class EnumEvent : BaseEnumExt<Event, Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.Arr32U8, Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.Arr32U8, BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.Arr32U8, Substrate.Bajun.NET.NetApiExt.Generated.Model.staging_xcm.v4.traits.EnumOutcome>>
     {
     }
 }

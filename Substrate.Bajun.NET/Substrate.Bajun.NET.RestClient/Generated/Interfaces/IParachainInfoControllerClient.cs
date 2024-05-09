@@ -11,7 +11,7 @@ namespace Substrate.Bajun.NET.RestClient.Generated.Interfaces
 {
    using System;
    using System.Threading.Tasks;
-   using Substrate.Bajun.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives;
+   using Substrate.Bajun.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives;
    
    public interface IParachainInfoControllerClient
    {

@@ -77,7 +77,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> sudo
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method Sudo(Substrate.Bajun.NET.NetApiExt.Generated.Model.bajun_runtime.EnumRuntimeCall call)
         {
@@ -88,7 +88,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> sudo_unchecked_weight
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method SudoUncheckedWeight(Substrate.Bajun.NET.NetApiExt.Generated.Model.bajun_runtime.EnumRuntimeCall call, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight weight)
         {
@@ -100,7 +100,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> set_key
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method SetKey(Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress @new)
         {
@@ -111,7 +111,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> sudo_as
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method SudoAs(Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress who, Substrate.Bajun.NET.NetApiExt.Generated.Model.bajun_runtime.EnumRuntimeCall call)
         {
@@ -119,6 +119,16 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
             byteArray.AddRange(who.Encode());
             byteArray.AddRange(call.Encode());
             return new Method(40, "Sudo", 3, "sudo_as", byteArray.ToArray());
+        }
+        
+        /// <summary>
+        /// >> remove_key
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
+        /// </summary>
+        public static Method RemoveKey()
+        {
+            System.Collections.Generic.List<byte> byteArray = new List<byte>();
+            return new Method(40, "Sudo", 4, "remove_key", byteArray.ToArray());
         }
     }
     
@@ -137,7 +147,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> RequireSudo
-        /// Sender must be the Sudo account
+        /// Sender must be the Sudo account.
         /// </summary>
         RequireSudo,
     }

@@ -18,7 +18,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.v2.multilocation
     
     
     /// <summary>
-    /// >> 101 - Composite[xcm.v2.multilocation.MultiLocation]
+    /// >> 111 - Composite[xcm.v2.multilocation.MultiLocation]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class MultiLocation : BaseType

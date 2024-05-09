@@ -33,9 +33,9 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_xcm.pallet
     }
     
     /// <summary>
-    /// >> 212 - Variant[pallet_xcm.pallet.Origin]
+    /// >> 256 - Variant[pallet_xcm.pallet.Origin]
     /// </summary>
-    public sealed class EnumOrigin : BaseEnumExt<Origin, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.v3.multilocation.MultiLocation, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.v3.multilocation.MultiLocation>
+    public sealed class EnumOrigin : BaseEnumExt<Origin, Substrate.Bajun.NET.NetApiExt.Generated.Model.staging_xcm.v4.location.Location, Substrate.Bajun.NET.NetApiExt.Generated.Model.staging_xcm.v4.location.Location>
     {
     }
 }

@@ -18,7 +18,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types
     
     
     /// <summary>
-    /// >> 319 - Composite[pallet_nfts.types.CancelAttributesApprovalWitness]
+    /// >> 399 - Composite[pallet_nfts.types.CancelAttributesApprovalWitness]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class CancelAttributesApprovalWitness : BaseType

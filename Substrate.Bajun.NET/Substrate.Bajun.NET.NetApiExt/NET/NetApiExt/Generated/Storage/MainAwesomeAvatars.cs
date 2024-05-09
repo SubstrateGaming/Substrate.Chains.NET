@@ -49,7 +49,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
                             Substrate.NetApi.Model.Meta.Storage.Hasher.Identity}, typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256), typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.avatar.Avatar>)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("AwesomeAvatars", "Owners"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.Identity,
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.Identity}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U16>), typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT35)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.Identity}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U16>), typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT49)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("AwesomeAvatars", "LockedAvatars"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.Identity}, typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256), typeof(Substrate.NetApi.Model.Types.Base.BaseTuple)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("AwesomeAvatars", "CollectionId"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Primitive.U32)));
@@ -66,7 +66,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
                             Substrate.NetApi.Model.Meta.Storage.Hasher.Identity}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U16, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256>), typeof(Substrate.NetApi.Model.Types.Primitive.U128)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("AwesomeAvatars", "ServiceAccount"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("AwesomeAvatars", "Preparation"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.Identity}, typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256), typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.Identity}, typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256), typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10)));
         }
         
         /// <summary>
@@ -290,10 +290,10 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         /// <summary>
         /// >> Owners
         /// </summary>
-        public async Task<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT35> Owners(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U16> key, string blockhash, CancellationToken token)
+        public async Task<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT49> Owners(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U16> key, string blockhash, CancellationToken token)
         {
             string parameters = AwesomeAvatarsStorage.OwnersParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT35>(parameters, blockhash, token);
+            var result = await _client.GetStorageAsync<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT49>(parameters, blockhash, token);
             return result;
         }
         
@@ -518,10 +518,10 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         /// <summary>
         /// >> Preparation
         /// </summary>
-        public async Task<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9> Preparation(Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 key, string blockhash, CancellationToken token)
+        public async Task<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10> Preparation(Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 key, string blockhash, CancellationToken token)
         {
             string parameters = AwesomeAvatarsStorage.PreparationParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9>(parameters, blockhash, token);
+            var result = await _client.GetStorageAsync<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10>(parameters, blockhash, token);
             return result;
         }
     }
@@ -534,7 +534,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> mint
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method Mint(Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.MintOption mint_option)
         {
@@ -545,7 +545,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> forge
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method Forge(Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 leader, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> sacrifices)
         {
@@ -557,7 +557,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> transfer_avatar
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method TransferAvatar(Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 to, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 avatar_id)
         {
@@ -569,7 +569,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> transfer_free_mints
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method TransferFreeMints(Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 to, Substrate.NetApi.Model.Types.Primitive.U16 how_many)
         {
@@ -581,7 +581,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> set_price
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method SetPrice(Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 avatar_id, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128> price)
         {
@@ -593,7 +593,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> remove_price
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method RemovePrice(Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 avatar_id)
         {
@@ -604,7 +604,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> buy
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method Buy(Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 avatar_id)
         {
@@ -615,7 +615,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> upgrade_storage
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method UpgradeStorage(Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> beneficiary, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U16> in_season)
         {
@@ -627,7 +627,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> set_organizer
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method SetOrganizer(Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 organizer)
         {
@@ -638,7 +638,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> set_treasurer
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method SetTreasurer(Substrate.NetApi.Model.Types.Primitive.U16 season_id, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 treasurer)
         {
@@ -650,7 +650,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> claim_treasury
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method ClaimTreasury(Substrate.NetApi.Model.Types.Primitive.U16 season_id)
         {
@@ -661,7 +661,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> set_season
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method SetSeason(Substrate.NetApi.Model.Types.Primitive.U16 season_id, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.season.Season season)
         {
@@ -673,7 +673,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> update_global_config
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method UpdateGlobalConfig(Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.GlobalConfig new_global_config)
         {
@@ -684,7 +684,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> set_free_mints
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method SetFreeMints(Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 target, Substrate.NetApi.Model.Types.Primitive.U16 how_many)
         {
@@ -696,7 +696,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> set_collection_id
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method SetCollectionId(Substrate.NetApi.Model.Types.Primitive.U32 collection_id)
         {
@@ -707,7 +707,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> lock_avatar
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method LockAvatar(Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 avatar_id)
         {
@@ -718,7 +718,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> unlock_avatar
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method UnlockAvatar(Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 avatar_id)
         {
@@ -729,7 +729,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> set_service_account
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method SetServiceAccount(Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 service_account)
         {
@@ -740,7 +740,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> prepare_avatar
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method PrepareAvatar(Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 avatar_id)
         {
@@ -751,7 +751,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> unprepare_avatar
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method UnprepareAvatar(Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 avatar_id)
         {
@@ -762,9 +762,9 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> prepare_ipfs
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method PrepareIpfs(Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 avatar_id, Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9 url)
+        public static Method PrepareIpfs(Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 avatar_id, Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10 url)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(avatar_id.Encode());

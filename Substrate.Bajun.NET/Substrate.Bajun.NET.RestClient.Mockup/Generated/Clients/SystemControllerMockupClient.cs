@@ -35,6 +35,10 @@ namespace Substrate.Bajun.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "System/ExtrinsicCount", value.Encode(), Substrate.Bajun.NET.NetApiExt.Generated.Storage.SystemStorage.ExtrinsicCountParams());
       }
+      public async Task<bool> SetInherentsApplied(Bool value)
+      {
+         return await SendMockupRequestAsync(_httpClient, "System/InherentsApplied", value.Encode(), Substrate.Bajun.NET.NetApiExt.Generated.Storage.SystemStorage.InherentsAppliedParams());
+      }
       public async Task<bool> SetBlockWeight(PerDispatchClassT1 value)
       {
          return await SendMockupRequestAsync(_httpClient, "System/BlockWeight", value.Encode(), Substrate.Bajun.NET.NetApiExt.Generated.Storage.SystemStorage.BlockWeightParams());
@@ -90,6 +94,10 @@ namespace Substrate.Bajun.NET.RestClient.Mockup.Generated.Clients
       public async Task<bool> SetExecutionPhase(EnumPhase value)
       {
          return await SendMockupRequestAsync(_httpClient, "System/ExecutionPhase", value.Encode(), Substrate.Bajun.NET.NetApiExt.Generated.Storage.SystemStorage.ExecutionPhaseParams());
+      }
+      public async Task<bool> SetAuthorizedUpgrade(CodeUpgradeAuthorization value)
+      {
+         return await SendMockupRequestAsync(_httpClient, "System/AuthorizedUpgrade", value.Encode(), Substrate.Bajun.NET.NetApiExt.Generated.Storage.SystemStorage.AuthorizedUpgradeParams());
       }
    }
 }

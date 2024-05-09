@@ -18,7 +18,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
     
     
     /// <summary>
-    /// >> 131 - Composite[pallet_ajuna_awesome_avatars.types.config.GlobalConfig]
+    /// >> 162 - Composite[pallet_ajuna_awesome_avatars.types.config.GlobalConfig]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class GlobalConfig : BaseType

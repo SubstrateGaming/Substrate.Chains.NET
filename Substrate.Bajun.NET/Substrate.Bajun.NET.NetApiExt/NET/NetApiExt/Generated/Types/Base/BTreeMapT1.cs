@@ -18,7 +18,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Types.Base
     
     
     /// <summary>
-    /// >> 185 - Composite[BTreeMapT1]
+    /// >> 208 - Composite[BTreeMapT1]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class BTreeMapT1 : BaseType
@@ -27,7 +27,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Types.Base
         /// <summary>
         /// >> value
         /// </summary>
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.Bajun.NET.NetApiExt.Generated.Model.cumulus_primitives_parachain_inherent.MessageQueueChain>> Value { get; set; }
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.Bajun.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.unincluded_segment.HrmpChannelUpdate>> Value { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
@@ -47,7 +47,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Types.Base
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.Bajun.NET.NetApiExt.Generated.Model.cumulus_primitives_parachain_inherent.MessageQueueChain>>();
+            Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.Bajun.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.unincluded_segment.HrmpChannelUpdate>>();
             Value.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

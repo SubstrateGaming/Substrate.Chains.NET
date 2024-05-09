@@ -17,7 +17,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain
     
     /// <summary>
     /// >> Call
-    /// Contains one variant per dispatchable that can be called by an extrinsic.
+    /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
     public enum Call
     {
@@ -70,8 +70,8 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain
     }
     
     /// <summary>
-    /// >> 191 - Variant[cumulus_pallet_parachain_system.pallet.Call]
-    /// Contains one variant per dispatchable that can be called by an extrinsic.
+    /// >> 235 - Variant[cumulus_pallet_parachain_system.pallet.Call]
+    /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
     public sealed class EnumCall : BaseEnumExt<Call, Substrate.Bajun.NET.NetApiExt.Generated.Model.cumulus_primitives_parachain_inherent.ParachainInherentData, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>, BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Primitive.Bool>, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>
     {

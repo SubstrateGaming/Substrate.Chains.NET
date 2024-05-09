@@ -18,7 +18,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types
     
     
     /// <summary>
-    /// >> 479 - Composite[pallet_nfts.types.ItemMetadataDeposit]
+    /// >> 586 - Composite[pallet_nfts.types.ItemMetadataDeposit]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class ItemMetadataDeposit : BaseType

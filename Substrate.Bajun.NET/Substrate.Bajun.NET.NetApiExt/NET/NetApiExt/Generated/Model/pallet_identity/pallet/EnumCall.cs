@@ -31,9 +31,6 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_identity.pallet
         /// - `account`: the account of the registrar.
         /// 
         /// Emits `RegistrarAdded` if successful.
-        /// 
-        /// ## Complexity
-        /// - `O(R)` where `R` registrar-count (governance-bounded and code-bounded).
         /// </summary>
         add_registrar = 0,
         
@@ -49,11 +46,6 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_identity.pallet
         /// - `info`: The identity information.
         /// 
         /// Emits `IdentitySet` if successful.
-        /// 
-        /// ## Complexity
-        /// - `O(X + X' + R)`
-        ///   - where `X` additional-field-count (deposit-bounded and code-bounded)
-        ///   - where `R` judgements-count (registrar-count-bounded)
         /// </summary>
         set_identity = 1,
         
@@ -68,11 +60,6 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_identity.pallet
         /// identity.
         /// 
         /// - `subs`: The identity's (new) sub-accounts.
-        /// 
-        /// ## Complexity
-        /// - `O(P + S)`
-        ///   - where `P` old-subs-count (hard- and deposit-bounded).
-        ///   - where `S` subs-count (hard- and deposit-bounded).
         /// </summary>
         set_subs = 2,
         
@@ -86,12 +73,6 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_identity.pallet
         /// identity.
         /// 
         /// Emits `IdentityCleared` if successful.
-        /// 
-        /// ## Complexity
-        /// - `O(R + S + X)`
-        ///   - where `R` registrar-count (governance-bounded).
-        ///   - where `S` subs-count (hard- and deposit-bounded).
-        ///   - where `X` additional-field-count (deposit-bounded and code-bounded).
         /// </summary>
         clear_identity = 3,
         
@@ -113,11 +94,6 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_identity.pallet
         /// ```
         /// 
         /// Emits `JudgementRequested` if successful.
-        /// 
-        /// ## Complexity
-        /// - `O(R + X)`.
-        ///   - where `R` registrar-count (governance-bounded).
-        ///   - where `X` additional-field-count (deposit-bounded and code-bounded).
         /// </summary>
         request_judgement = 4,
         
@@ -133,11 +109,6 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_identity.pallet
         /// - `reg_index`: The index of the registrar whose judgement is no longer requested.
         /// 
         /// Emits `JudgementUnrequested` if successful.
-        /// 
-        /// ## Complexity
-        /// - `O(R + X)`.
-        ///   - where `R` registrar-count (governance-bounded).
-        ///   - where `X` additional-field-count (deposit-bounded and code-bounded).
         /// </summary>
         cancel_request = 5,
         
@@ -150,10 +121,6 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_identity.pallet
         /// 
         /// - `index`: the index of the registrar whose fee is to be set.
         /// - `fee`: the new fee.
-        /// 
-        /// ## Complexity
-        /// - `O(R)`.
-        ///   - where `R` registrar-count (governance-bounded).
         /// </summary>
         set_fee = 6,
         
@@ -166,10 +133,6 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_identity.pallet
         /// 
         /// - `index`: the index of the registrar whose fee is to be set.
         /// - `new`: the new account ID.
-        /// 
-        /// ## Complexity
-        /// - `O(R)`.
-        ///   - where `R` registrar-count (governance-bounded).
         /// </summary>
         set_account_id = 7,
         
@@ -182,10 +145,6 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_identity.pallet
         /// 
         /// - `index`: the index of the registrar whose fee is to be set.
         /// - `fields`: the fields that the registrar concerns themselves with.
-        /// 
-        /// ## Complexity
-        /// - `O(R)`.
-        ///   - where `R` registrar-count (governance-bounded).
         /// </summary>
         set_fields = 8,
         
@@ -200,14 +159,12 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_identity.pallet
         /// - `target`: the account whose identity the judgement is upon. This must be an account
         ///   with a registered identity.
         /// - `judgement`: the judgement of the registrar of index `reg_index` about `target`.
-        /// - `identity`: The hash of the [`IdentityInfo`] for that the judgement is provided.
+        /// - `identity`: The hash of the [`IdentityInformationProvider`] for that the judgement is
+        ///   provided.
+        /// 
+        /// Note: Judgements do not apply to a username.
         /// 
         /// Emits `JudgementGiven` if successful.
-        /// 
-        /// ## Complexity
-        /// - `O(R + X)`.
-        ///   - where `R` registrar-count (governance-bounded).
-        ///   - where `X` additional-field-count (deposit-bounded and code-bounded).
         /// </summary>
         provide_judgement = 9,
         
@@ -225,12 +182,6 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_identity.pallet
         ///   with a registered identity.
         /// 
         /// Emits `IdentityKilled` if successful.
-        /// 
-        /// ## Complexity
-        /// - `O(R + S + X)`
-        ///   - where `R` registrar-count (governance-bounded).
-        ///   - where `S` subs-count (hard- and deposit-bounded).
-        ///   - where `X` additional-field-count (deposit-bounded and code-bounded).
         /// </summary>
         kill_identity = 10,
         
@@ -281,13 +232,70 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_identity.pallet
         /// controller of an account is maliciously registered as a sub-account.
         /// </summary>
         quit_sub = 14,
+        
+        /// <summary>
+        /// >> add_username_authority
+        /// Add an `AccountId` with permission to grant usernames with a given `suffix` appended.
+        /// 
+        /// The authority can grant up to `allocation` usernames. To top up their allocation, they
+        /// should just issue (or request via governance) a new `add_username_authority` call.
+        /// </summary>
+        add_username_authority = 15,
+        
+        /// <summary>
+        /// >> remove_username_authority
+        /// Remove `authority` from the username authorities.
+        /// </summary>
+        remove_username_authority = 16,
+        
+        /// <summary>
+        /// >> set_username_for
+        /// Set the username for `who`. Must be called by a username authority.
+        /// 
+        /// The authority must have an `allocation`. Users can either pre-sign their usernames or
+        /// accept them later.
+        /// 
+        /// Usernames must:
+        ///   - Only contain lowercase ASCII characters or digits.
+        ///   - When combined with the suffix of the issuing authority be _less than_ the
+        ///     `MaxUsernameLength`.
+        /// </summary>
+        set_username_for = 17,
+        
+        /// <summary>
+        /// >> accept_username
+        /// Accept a given username that an `authority` granted. The call must include the full
+        /// username, as in `username.suffix`.
+        /// </summary>
+        accept_username = 18,
+        
+        /// <summary>
+        /// >> remove_expired_approval
+        /// Remove an expired username approval. The username was approved by an authority but never
+        /// accepted by the user and must now be beyond its expiration. The call must include the
+        /// full username, as in `username.suffix`.
+        /// </summary>
+        remove_expired_approval = 19,
+        
+        /// <summary>
+        /// >> set_primary_username
+        /// Set a given username as the primary. The username should include the suffix.
+        /// </summary>
+        set_primary_username = 20,
+        
+        /// <summary>
+        /// >> remove_dangling_username
+        /// Remove a username that corresponds to an account with no identity. Exists when a user
+        /// gets a username but then calls `clear_identity`.
+        /// </summary>
+        remove_dangling_username = 21,
     }
     
     /// <summary>
-    /// >> 216 - Variant[pallet_identity.pallet.Call]
+    /// >> 261 - Variant[pallet_identity.pallet.Call]
     /// Identity pallet declaration.
     /// </summary>
-    public sealed class EnumCall : BaseEnumExt<Call, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_identity.types.IdentityInfo, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData>>, BaseVoid, BaseTuple<Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128>>, Substrate.NetApi.Model.Types.Primitive.U32, BaseTuple<Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128>>, BaseTuple<Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress>, BaseTuple<Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_identity.types.BitFlags>, BaseTuple<Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumJudgement, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256>, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData>, BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData>, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, BaseVoid>
+    public sealed class EnumCall : BaseEnumExt<Call, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_identity.legacy.IdentityInfo, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData>>, BaseVoid, BaseTuple<Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128>>, Substrate.NetApi.Model.Types.Primitive.U32, BaseTuple<Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128>>, BaseTuple<Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress>, BaseTuple<Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.NetApi.Model.Types.Primitive.U64>, BaseTuple<Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumJudgement, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256>, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData>, BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData>, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, BaseVoid, BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>, Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_runtime.EnumMultiSignature>>, Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT1, Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT1, Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT1, Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT1>
     {
     }
 }

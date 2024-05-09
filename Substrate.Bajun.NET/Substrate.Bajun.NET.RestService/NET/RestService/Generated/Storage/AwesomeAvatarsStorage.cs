@@ -63,7 +63,7 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
         /// <summary>
         /// >> Owners
         /// </summary>
-        Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT35 GetOwners(string key);
+        Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT49 GetOwners(string key);
         
         /// <summary>
         /// >> LockedAvatars
@@ -103,7 +103,7 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
         /// <summary>
         /// >> Preparation
         /// </summary>
-        Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9 GetPreparation(string key);
+        Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10 GetPreparation(string key);
     }
     
     /// <summary>
@@ -150,7 +150,7 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
         /// <summary>
         /// _ownersTypedStorage typed storage field
         /// </summary>
-        private TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT35> _ownersTypedStorage;
+        private TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT49> _ownersTypedStorage;
         
         /// <summary>
         /// _lockedAvatarsTypedStorage typed storage field
@@ -190,7 +190,7 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
         /// <summary>
         /// _preparationTypedStorage typed storage field
         /// </summary>
-        private TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9> _preparationTypedStorage;
+        private TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10> _preparationTypedStorage;
         
         /// <summary>
         /// AwesomeAvatarsStorage constructor.
@@ -204,7 +204,7 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
             this.TreasuryTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Primitive.U128>("AwesomeAvatars.Treasury", storageDataProvider, storageChangeDelegates);
             this.GlobalConfigsTypedStorage = new TypedStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.GlobalConfig>("AwesomeAvatars.GlobalConfigs", storageDataProvider, storageChangeDelegates);
             this.AvatarsTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.avatar.Avatar>>("AwesomeAvatars.Avatars", storageDataProvider, storageChangeDelegates);
-            this.OwnersTypedStorage = new TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT35>("AwesomeAvatars.Owners", storageDataProvider, storageChangeDelegates);
+            this.OwnersTypedStorage = new TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT49>("AwesomeAvatars.Owners", storageDataProvider, storageChangeDelegates);
             this.LockedAvatarsTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseTuple>("AwesomeAvatars.LockedAvatars", storageDataProvider, storageChangeDelegates);
             this.CollectionIdTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32>("AwesomeAvatars.CollectionId", storageDataProvider, storageChangeDelegates);
             this.PlayerConfigsTypedStorage = new TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.PlayerConfig>("AwesomeAvatars.PlayerConfigs", storageDataProvider, storageChangeDelegates);
@@ -212,7 +212,7 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
             this.SeasonStatsTypedStorage = new TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.SeasonInfo>("AwesomeAvatars.SeasonStats", storageDataProvider, storageChangeDelegates);
             this.TradeTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Primitive.U128>("AwesomeAvatars.Trade", storageDataProvider, storageChangeDelegates);
             this.ServiceAccountTypedStorage = new TypedStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>("AwesomeAvatars.ServiceAccount", storageDataProvider, storageChangeDelegates);
-            this.PreparationTypedStorage = new TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9>("AwesomeAvatars.Preparation", storageDataProvider, storageChangeDelegates);
+            this.PreparationTypedStorage = new TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10>("AwesomeAvatars.Preparation", storageDataProvider, storageChangeDelegates);
         }
         
         /// <summary>
@@ -323,7 +323,7 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
         /// <summary>
         /// _ownersTypedStorage property
         /// </summary>
-        public TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT35> OwnersTypedStorage
+        public TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT49> OwnersTypedStorage
         {
             get
             {
@@ -443,7 +443,7 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
         /// <summary>
         /// _preparationTypedStorage property
         /// </summary>
-        public TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9> PreparationTypedStorage
+        public TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10> PreparationTypedStorage
         {
             get
             {
@@ -654,13 +654,13 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
         /// <summary>
         /// >> Owners
         /// </summary>
-        public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT35 GetOwners(string key)
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT49 GetOwners(string key)
         {
             if ((key == null))
             {
                 return null;
             }
-            if (OwnersTypedStorage.Dictionary.TryGetValue(key, out Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT35 result))
+            if (OwnersTypedStorage.Dictionary.TryGetValue(key, out Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT49 result))
             {
                 return result;
             }
@@ -856,13 +856,13 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
         /// <summary>
         /// >> Preparation
         /// </summary>
-        public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9 GetPreparation(string key)
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10 GetPreparation(string key)
         {
             if ((key == null))
             {
                 return null;
             }
-            if (PreparationTypedStorage.Dictionary.TryGetValue(key, out Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9 result))
+            if (PreparationTypedStorage.Dictionary.TryGetValue(key, out Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10 result))
             {
                 return result;
             }

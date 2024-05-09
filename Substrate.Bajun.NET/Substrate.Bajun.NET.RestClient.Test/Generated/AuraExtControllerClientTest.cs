@@ -16,6 +16,9 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
    using Substrate.Bajun.NET.RestClient.Mockup.Generated.Clients;
    using Substrate.Bajun.NET.RestClient.Generated.Clients;
    using Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
+   using Substrate.NetApi.Model.Types.Base;
+   using Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_consensus_slots;
+   using Substrate.NetApi.Model.Types.Primitive;
    
    public class AuraExtControllerClientTest : ClientTestBase
    {
@@ -25,10 +28,10 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
       {
          _httpClient = CreateHttpClient();
       }
-      public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT29 GetTestValue2()
+      public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT37 GetTestValue2()
       {
-         Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT29 result;
-         result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT29();
+         Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT37 result;
+         result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT37();
          result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_consensus_aura.sr25519.app_sr25519.Public>();
          result.Value.Create(new Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_consensus_aura.sr25519.app_sr25519.Public[] {
                   this.GetTestValue3()});
@@ -38,14 +41,6 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
       {
          Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_consensus_aura.sr25519.app_sr25519.Public result;
          result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_consensus_aura.sr25519.app_sr25519.Public();
-         result.Value = new Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.sr25519.Public();
-         result.Value = this.GetTestValue4();
-         return result;
-      }
-      public Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.sr25519.Public GetTestValue4()
-      {
-         Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.sr25519.Public result;
-         result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.sr25519.Public();
          result.Value = new Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.Arr32U8();
          result.Value.Create(new Substrate.NetApi.Model.Types.Primitive.U8[] {
                   this.GetTestValueU8(),
@@ -93,7 +88,7 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          AuraExtControllerClient rpcClient = new AuraExtControllerClient(_httpClient, subscriptionClient);
-         Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT29 mockupValue = this.GetTestValue2();
+         Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT37 mockupValue = this.GetTestValue2();
 
 
          Assert.IsTrue(await rpcClient.SubscribeAuthorities());
@@ -106,7 +101,50 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT29 rpcResult = await rpcClient.GetAuthorities();
+         Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT37 rpcResult = await rpcClient.GetAuthorities();
+
+         // Test that the expected mockup value matches the actual result from RPC service.
+         Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
+      }
+      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_consensus_slots.Slot, Substrate.NetApi.Model.Types.Primitive.U32> GetTestValue5()
+      {
+         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_consensus_slots.Slot, Substrate.NetApi.Model.Types.Primitive.U32> result;
+         result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_consensus_slots.Slot, Substrate.NetApi.Model.Types.Primitive.U32>();
+         result.Create(this.GetTestValue6(), this.GetTestValueU32());
+         return result;
+      }
+      public Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_consensus_slots.Slot GetTestValue6()
+      {
+         Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_consensus_slots.Slot result;
+         result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_consensus_slots.Slot();
+         result.Value = this.GetTestValueU64();
+         return result;
+      }
+      [Test()]
+      public async System.Threading.Tasks.Task TestSlotInfo()
+      {
+         // Construct new Mockup client to test with.
+         AuraExtControllerMockupClient mockupClient = new AuraExtControllerMockupClient(_httpClient);
+
+         // Construct new subscription client to test with.
+         var subscriptionClient = CreateSubscriptionClient();
+
+         // Construct new RPC client to test with.
+         AuraExtControllerClient rpcClient = new AuraExtControllerClient(_httpClient, subscriptionClient);
+         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_consensus_slots.Slot, Substrate.NetApi.Model.Types.Primitive.U32> mockupValue = this.GetTestValue5();
+
+
+         Assert.IsTrue(await rpcClient.SubscribeSlotInfo());
+
+         // Save the previously generated mockup value in RPC service storage.
+         bool mockupSetResult = await mockupClient.SetSlotInfo(mockupValue);
+
+         // Test that the expected mockup value was handled successfully from RPC service.
+         Assert.IsTrue(mockupSetResult);
+         var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
+         Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
+
+         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_consensus_slots.Slot, Substrate.NetApi.Model.Types.Primitive.U32> rpcResult = await rpcClient.GetSlotInfo();
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());

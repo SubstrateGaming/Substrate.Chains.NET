@@ -25,21 +25,21 @@ namespace Substrate.Bajun.NET.RestClient.Generated.Clients
          _httpClient = httpClient;
          _subscriptionClient = subscriptionClient;
       }
-      public async Task<BoundedVecT27> GetInvulnerables()
+      public async Task<BoundedVecT35> GetInvulnerables()
       {
-         return await SendRequestAsync<BoundedVecT27>(_httpClient, "collatorselection/invulnerables");
+         return await SendRequestAsync<BoundedVecT35>(_httpClient, "collatorselection/invulnerables");
       }
       public async Task<bool> SubscribeInvulnerables()
       {
          return await _subscriptionClient.SubscribeAsync("CollatorSelection.Invulnerables");
       }
-      public async Task<BoundedVecT28> GetCandidates()
+      public async Task<BoundedVecT36> GetCandidateList()
       {
-         return await SendRequestAsync<BoundedVecT28>(_httpClient, "collatorselection/candidates");
+         return await SendRequestAsync<BoundedVecT36>(_httpClient, "collatorselection/candidatelist");
       }
-      public async Task<bool> SubscribeCandidates()
+      public async Task<bool> SubscribeCandidateList()
       {
-         return await _subscriptionClient.SubscribeAsync("CollatorSelection.Candidates");
+         return await _subscriptionClient.SubscribeAsync("CollatorSelection.CandidateList");
       }
       public async Task<U32> GetLastAuthoredBlock(Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {

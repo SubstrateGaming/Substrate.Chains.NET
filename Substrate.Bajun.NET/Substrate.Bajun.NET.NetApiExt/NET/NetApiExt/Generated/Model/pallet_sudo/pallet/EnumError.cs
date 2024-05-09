@@ -17,21 +17,21 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_sudo.pallet
     
     /// <summary>
     /// >> Error
-    /// Error for the Sudo pallet
+    /// Error for the Sudo pallet.
     /// </summary>
     public enum Error
     {
         
         /// <summary>
         /// >> RequireSudo
-        /// Sender must be the Sudo account
+        /// Sender must be the Sudo account.
         /// </summary>
         RequireSudo = 0,
     }
     
     /// <summary>
-    /// >> 434 - Variant[pallet_sudo.pallet.Error]
-    /// Error for the Sudo pallet
+    /// >> 520 - Variant[pallet_sudo.pallet.Error]
+    /// Error for the Sudo pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>
     {

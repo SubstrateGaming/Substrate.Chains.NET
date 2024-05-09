@@ -17,7 +17,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_sudo.pallet
     
     /// <summary>
     /// >> Call
-    /// Contains one variant per dispatchable that can be called by an extrinsic.
+    /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
     public enum Call
     {
@@ -25,11 +25,6 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_sudo.pallet
         /// <summary>
         /// >> sudo
         /// Authenticates the sudo key and dispatches a function call with `Root` origin.
-        /// 
-        /// The dispatch origin for this call must be _Signed_.
-        /// 
-        /// ## Complexity
-        /// - O(1).
         /// </summary>
         sudo = 0,
         
@@ -40,9 +35,6 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_sudo.pallet
         /// Sudo user to specify the weight of the call.
         /// 
         /// The dispatch origin for this call must be _Signed_.
-        /// 
-        /// ## Complexity
-        /// - O(1).
         /// </summary>
         sudo_unchecked_weight = 1,
         
@@ -50,11 +42,6 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_sudo.pallet
         /// >> set_key
         /// Authenticates the current sudo key and sets the given AccountId (`new`) as the new sudo
         /// key.
-        /// 
-        /// The dispatch origin for this call must be _Signed_.
-        /// 
-        /// ## Complexity
-        /// - O(1).
         /// </summary>
         set_key = 2,
         
@@ -64,18 +51,23 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_sudo.pallet
         /// a given account.
         /// 
         /// The dispatch origin for this call must be _Signed_.
-        /// 
-        /// ## Complexity
-        /// - O(1).
         /// </summary>
         sudo_as = 3,
+        
+        /// <summary>
+        /// >> remove_key
+        /// Permanently removes the sudo key.
+        /// 
+        /// **This cannot be un-done.**
+        /// </summary>
+        remove_key = 4,
     }
     
     /// <summary>
-    /// >> 295 - Variant[pallet_sudo.pallet.Call]
-    /// Contains one variant per dispatchable that can be called by an extrinsic.
+    /// >> 368 - Variant[pallet_sudo.pallet.Call]
+    /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
-    public sealed class EnumCall : BaseEnumExt<Call, Substrate.Bajun.NET.NetApiExt.Generated.Model.bajun_runtime.EnumRuntimeCall, BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.bajun_runtime.EnumRuntimeCall, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.Bajun.NET.NetApiExt.Generated.Model.bajun_runtime.EnumRuntimeCall>>
+    public sealed class EnumCall : BaseEnumExt<Call, Substrate.Bajun.NET.NetApiExt.Generated.Model.bajun_runtime.EnumRuntimeCall, BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.bajun_runtime.EnumRuntimeCall, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.Bajun.NET.NetApiExt.Generated.Model.bajun_runtime.EnumRuntimeCall>, BaseVoid>
     {
     }
 }

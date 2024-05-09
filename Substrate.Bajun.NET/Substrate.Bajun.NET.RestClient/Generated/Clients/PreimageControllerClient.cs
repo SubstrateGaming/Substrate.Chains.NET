@@ -25,17 +25,25 @@ namespace Substrate.Bajun.NET.RestClient.Generated.Clients
          _httpClient = httpClient;
          _subscriptionClient = subscriptionClient;
       }
-      public async Task<EnumRequestStatus> GetStatusFor(Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 key)
+      public async Task<EnumOldRequestStatus> GetStatusFor(Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 key)
       {
-         return await SendRequestAsync<EnumRequestStatus>(_httpClient, "preimage/statusfor", Substrate.Bajun.NET.NetApiExt.Generated.Storage.PreimageStorage.StatusForParams(key));
+         return await SendRequestAsync<EnumOldRequestStatus>(_httpClient, "preimage/statusfor", Substrate.Bajun.NET.NetApiExt.Generated.Storage.PreimageStorage.StatusForParams(key));
       }
       public async Task<bool> SubscribeStatusFor(Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 key)
       {
          return await _subscriptionClient.SubscribeAsync("Preimage.StatusFor", Substrate.Bajun.NET.NetApiExt.Generated.Storage.PreimageStorage.StatusForParams(key));
       }
-      public async Task<BoundedVecT23> GetPreimageFor(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Primitive.U32> key)
+      public async Task<EnumRequestStatus> GetRequestStatusFor(Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 key)
       {
-         return await SendRequestAsync<BoundedVecT23>(_httpClient, "preimage/preimagefor", Substrate.Bajun.NET.NetApiExt.Generated.Storage.PreimageStorage.PreimageForParams(key));
+         return await SendRequestAsync<EnumRequestStatus>(_httpClient, "preimage/requeststatusfor", Substrate.Bajun.NET.NetApiExt.Generated.Storage.PreimageStorage.RequestStatusForParams(key));
+      }
+      public async Task<bool> SubscribeRequestStatusFor(Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 key)
+      {
+         return await _subscriptionClient.SubscribeAsync("Preimage.RequestStatusFor", Substrate.Bajun.NET.NetApiExt.Generated.Storage.PreimageStorage.RequestStatusForParams(key));
+      }
+      public async Task<BoundedVecT30> GetPreimageFor(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Primitive.U32> key)
+      {
+         return await SendRequestAsync<BoundedVecT30>(_httpClient, "preimage/preimagefor", Substrate.Bajun.NET.NetApiExt.Generated.Storage.PreimageStorage.PreimageForParams(key));
       }
       public async Task<bool> SubscribePreimageFor(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Primitive.U32> key)
       {

@@ -30,7 +30,7 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
         ///  is arranged as a ring buffer with `block_number % 81` being the index into the `Vec` of
         ///  the oldest hash.
         /// </summary>
-        Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT34 GetRandomMaterial();
+        Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT48 GetRandomMaterial();
     }
     
     /// <summary>
@@ -42,20 +42,20 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
         /// <summary>
         /// _randomMaterialTypedStorage typed storage field
         /// </summary>
-        private TypedStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT34> _randomMaterialTypedStorage;
+        private TypedStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT48> _randomMaterialTypedStorage;
         
         /// <summary>
         /// RandomnessStorage constructor.
         /// </summary>
         public RandomnessStorage(IStorageDataProvider storageDataProvider, List<IStorageChangeDelegate> storageChangeDelegates)
         {
-            this.RandomMaterialTypedStorage = new TypedStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT34>("Randomness.RandomMaterial", storageDataProvider, storageChangeDelegates);
+            this.RandomMaterialTypedStorage = new TypedStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT48>("Randomness.RandomMaterial", storageDataProvider, storageChangeDelegates);
         }
         
         /// <summary>
         /// _randomMaterialTypedStorage property
         /// </summary>
-        public TypedStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT34> RandomMaterialTypedStorage
+        public TypedStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT48> RandomMaterialTypedStorage
         {
             get
             {
@@ -90,7 +90,7 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
         ///  is arranged as a ring buffer with `block_number % 81` being the index into the `Vec` of
         ///  the oldest hash.
         /// </summary>
-        public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT34 GetRandomMaterial()
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT48 GetRandomMaterial()
         {
             return RandomMaterialTypedStorage.Get();
         }

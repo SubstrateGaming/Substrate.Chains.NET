@@ -18,7 +18,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.v3.multiasset
     
     
     /// <summary>
-    /// >> 72 - Composite[xcm.v3.multiasset.MultiAsset]
+    /// >> 122 - Composite[xcm.v3.multiasset.MultiAsset]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class MultiAsset : BaseType

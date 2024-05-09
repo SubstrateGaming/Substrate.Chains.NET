@@ -17,10 +17,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_nft_transfe
     
     /// <summary>
     /// >> Error
-    /// 
-    ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
-    ///			of this pallet.
-    ///			
+    /// The `Error` enum of this pallet.
     /// </summary>
     public enum Error
     {
@@ -70,11 +67,8 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_nft_transfe
     }
     
     /// <summary>
-    /// >> 491 - Variant[pallet_ajuna_nft_transfer.pallet.Error]
-    /// 
-    ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
-    ///			of this pallet.
-    ///			
+    /// >> 598 - Variant[pallet_ajuna_nft_transfer.pallet.Error]
+    /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>
     {

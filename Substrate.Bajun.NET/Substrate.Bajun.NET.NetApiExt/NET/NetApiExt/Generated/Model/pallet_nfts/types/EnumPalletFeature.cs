@@ -43,7 +43,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types
     }
     
     /// <summary>
-    /// >> 488 - Variant[pallet_nfts.types.PalletFeature]
+    /// >> 595 - Variant[pallet_nfts.types.PalletFeature]
     /// </summary>
     public sealed class EnumPalletFeature : BaseEnum<PalletFeature>
     {

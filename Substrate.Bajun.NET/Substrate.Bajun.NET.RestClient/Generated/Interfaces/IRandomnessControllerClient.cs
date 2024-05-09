@@ -15,7 +15,7 @@ namespace Substrate.Bajun.NET.RestClient.Generated.Interfaces
    
    public interface IRandomnessControllerClient
    {
-      Task<BoundedVecT34> GetRandomMaterial();
+      Task<BoundedVecT48> GetRandomMaterial();
       Task<bool> SubscribeRandomMaterial();
    }
 }

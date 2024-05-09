@@ -39,10 +39,10 @@ namespace Substrate.Bajun.NET.RestService.Generated.Controller
         
         /// <summary>
         /// >> Invulnerables
-        ///  The invulnerable, fixed collators.
+        ///  The invulnerable, permissioned collators. This list must be sorted.
         /// </summary>
         [HttpGet("Invulnerables")]
-        [ProducesResponseType(typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT27), 200)]
+        [ProducesResponseType(typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT35), 200)]
         [StorageKeyBuilder(typeof(Substrate.Bajun.NET.NetApiExt.Generated.Storage.CollatorSelectionStorage), "InvulnerablesParams")]
         public IActionResult GetInvulnerables()
         {
@@ -50,15 +50,19 @@ namespace Substrate.Bajun.NET.RestService.Generated.Controller
         }
         
         /// <summary>
-        /// >> Candidates
-        ///  The (community, limited) collation candidates.
+        /// >> CandidateList
+        ///  The (community, limited) collation candidates. `Candidates` and `Invulnerables` should be
+        ///  mutually exclusive.
+        /// 
+        ///  This list is sorted in ascending order by deposit and when the deposits are equal, the least
+        ///  recently updated is considered greater.
         /// </summary>
-        [HttpGet("Candidates")]
-        [ProducesResponseType(typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT28), 200)]
-        [StorageKeyBuilder(typeof(Substrate.Bajun.NET.NetApiExt.Generated.Storage.CollatorSelectionStorage), "CandidatesParams")]
-        public IActionResult GetCandidates()
+        [HttpGet("CandidateList")]
+        [ProducesResponseType(typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT36), 200)]
+        [StorageKeyBuilder(typeof(Substrate.Bajun.NET.NetApiExt.Generated.Storage.CollatorSelectionStorage), "CandidateListParams")]
+        public IActionResult GetCandidateList()
         {
-            return this.Ok(_collatorSelectionStorage.GetCandidates());
+            return this.Ok(_collatorSelectionStorage.GetCandidateList());
         }
         
         /// <summary>

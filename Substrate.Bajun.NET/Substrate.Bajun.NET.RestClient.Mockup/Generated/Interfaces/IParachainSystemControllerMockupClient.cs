@@ -12,38 +12,42 @@ namespace Substrate.Bajun.NET.RestClient.Mockup.Generated.Interfaces
    using System;
    using System.Threading.Tasks;
    using Substrate.NetApi.Model.Types.Base;
+   using Substrate.Bajun.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.unincluded_segment;
    using Substrate.NetApi.Model.Types.Primitive;
-   using Substrate.Bajun.NET.NetApiExt.Generated.Model.polkadot_primitives.v4;
+   using Substrate.Bajun.NET.NetApiExt.Generated.Model.polkadot_primitives.v7;
    using Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_trie.storage_proof;
    using Substrate.Bajun.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.relay_state_snapshot;
    using Substrate.Bajun.NET.NetApiExt.Generated.Model.cumulus_primitives_parachain_inherent;
    using Substrate.Bajun.NET.NetApiExt.Generated.Types.Base;
    using Substrate.Bajun.NET.NetApiExt.Generated.Model.polkadot_core_primitives;
+   using Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point;
    using Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_weights.weight_v2;
-   using Substrate.Bajun.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system;
    
    public interface IParachainSystemControllerMockupClient
    {
+      Task<bool> SetUnincludedSegment(BaseVec<Ancestor> value);
+      Task<bool> SetAggregatedUnincludedSegment(SegmentTracker value);
       Task<bool> SetPendingValidationCode(BaseVec<U8> value);
       Task<bool> SetNewValidationCode(BaseVec<U8> value);
       Task<bool> SetValidationData(PersistedValidationData value);
       Task<bool> SetDidSetValidationCode(Bool value);
       Task<bool> SetLastRelayChainBlockNumber(U32 value);
       Task<bool> SetUpgradeRestrictionSignal(BaseOpt<EnumUpgradeRestriction> value);
+      Task<bool> SetUpgradeGoAhead(BaseOpt<EnumUpgradeGoAhead> value);
       Task<bool> SetRelayStateProof(StorageProof value);
       Task<bool> SetRelevantMessagingState(MessagingStateSnapshot value);
       Task<bool> SetHostConfiguration(AbridgedHostConfiguration value);
       Task<bool> SetLastDmqMqcHead(MessageQueueChain value);
-      Task<bool> SetLastHrmpMqcHeads(BTreeMapT1 value);
+      Task<bool> SetLastHrmpMqcHeads(BTreeMapT2 value);
       Task<bool> SetProcessedDownwardMessages(U32 value);
       Task<bool> SetHrmpWatermark(U32 value);
       Task<bool> SetHrmpOutboundMessages(BaseVec<OutboundHrmpMessage> value);
       Task<bool> SetUpwardMessages(BaseVec<BaseVec<U8>> value);
       Task<bool> SetPendingUpwardMessages(BaseVec<BaseVec<U8>> value);
+      Task<bool> SetUpwardDeliveryFeeFactor(FixedU128 value);
       Task<bool> SetAnnouncedHrmpMessagesPerCandidate(U32 value);
       Task<bool> SetReservedXcmpWeightOverride(Weight value);
       Task<bool> SetReservedDmpWeightOverride(Weight value);
-      Task<bool> SetAuthorizedUpgrade(CodeUpgradeAuthorization value);
       Task<bool> SetCustomValidationHeadData(BaseVec<U8> value);
    }
 }

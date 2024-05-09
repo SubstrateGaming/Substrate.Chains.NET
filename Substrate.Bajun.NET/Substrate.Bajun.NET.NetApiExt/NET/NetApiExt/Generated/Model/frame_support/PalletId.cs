@@ -18,7 +18,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.frame_support
     
     
     /// <summary>
-    /// >> 437 - Composite[frame_support.PalletId]
+    /// >> 525 - Composite[frame_support.PalletId]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class PalletId : BaseType

@@ -17,10 +17,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_collective.pallet
     
     /// <summary>
     /// >> Error
-    /// 
-    ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
-    ///			of this pallet.
-    ///			
+    /// The `Error` enum of this pallet.
     /// </summary>
     public enum Error
     {
@@ -84,14 +81,17 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_collective.pallet
         /// The given length bound for the proposal was too low.
         /// </summary>
         WrongProposalLength = 9,
+        
+        /// <summary>
+        /// >> PrimeAccountNotMember
+        /// Prime account is not a member
+        /// </summary>
+        PrimeAccountNotMember = 10,
     }
     
     /// <summary>
-    /// >> 441 - Variant[pallet_collective.pallet.Error]
-    /// 
-    ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
-    ///			of this pallet.
-    ///			
+    /// >> 532 - Variant[pallet_collective.pallet.Error]
+    /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>
     {

@@ -13,6 +13,9 @@ namespace Substrate.Bajun.NET.RestClient.Mockup.Generated.Clients
    using System.Threading.Tasks;
    using System.Net.Http;
    using Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
+   using Substrate.NetApi.Model.Types.Base;
+   using Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_consensus_slots;
+   using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.Bajun.NET.RestClient.Mockup.Generated.Interfaces;
    
    public sealed class AuraExtControllerMockupClient : MockupBaseClient, IAuraExtControllerMockupClient
@@ -22,9 +25,13 @@ namespace Substrate.Bajun.NET.RestClient.Mockup.Generated.Clients
       {
          _httpClient = httpClient;
       }
-      public async Task<bool> SetAuthorities(BoundedVecT29 value)
+      public async Task<bool> SetAuthorities(BoundedVecT37 value)
       {
          return await SendMockupRequestAsync(_httpClient, "AuraExt/Authorities", value.Encode(), Substrate.Bajun.NET.NetApiExt.Generated.Storage.AuraExtStorage.AuthoritiesParams());
+      }
+      public async Task<bool> SetSlotInfo(BaseTuple<Slot, U32> value)
+      {
+         return await SendMockupRequestAsync(_httpClient, "AuraExt/SlotInfo", value.Encode(), Substrate.Bajun.NET.NetApiExt.Generated.Storage.AuraExtStorage.SlotInfoParams());
       }
    }
 }

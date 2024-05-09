@@ -18,7 +18,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types
     
     
     /// <summary>
-    /// >> 323 - Composite[pallet_nfts.types.PreSignedMint]
+    /// >> 403 - Composite[pallet_nfts.types.PreSignedMint]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class PreSignedMint : BaseType
@@ -48,6 +48,10 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types
         /// >> deadline
         /// </summary>
         public Substrate.NetApi.Model.Types.Primitive.U32 Deadline { get; set; }
+        /// <summary>
+        /// >> mint_price
+        /// </summary>
+        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U128> MintPrice { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
@@ -65,6 +69,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types
             result.AddRange(Metadata.Encode());
             result.AddRange(OnlyAccount.Encode());
             result.AddRange(Deadline.Encode());
+            result.AddRange(MintPrice.Encode());
             return result.ToArray();
         }
         
@@ -84,6 +89,8 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types
             OnlyAccount.Decode(byteArray, ref p);
             Deadline = new Substrate.NetApi.Model.Types.Primitive.U32();
             Deadline.Decode(byteArray, ref p);
+            MintPrice = new Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U128>();
+            MintPrice.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];

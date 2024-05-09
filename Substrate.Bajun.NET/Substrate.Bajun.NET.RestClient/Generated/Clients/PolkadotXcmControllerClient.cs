@@ -60,33 +60,33 @@ namespace Substrate.Bajun.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("PolkadotXcm.SafeXcmVersion");
       }
-      public async Task<U32> GetSupportedVersion(BaseTuple<U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation> key)
+      public async Task<U32> GetSupportedVersion(BaseTuple<U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation> key)
       {
          return await SendRequestAsync<U32>(_httpClient, "polkadotxcm/supportedversion", Substrate.Bajun.NET.NetApiExt.Generated.Storage.PolkadotXcmStorage.SupportedVersionParams(key));
       }
-      public async Task<bool> SubscribeSupportedVersion(BaseTuple<U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation> key)
+      public async Task<bool> SubscribeSupportedVersion(BaseTuple<U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation> key)
       {
          return await _subscriptionClient.SubscribeAsync("PolkadotXcm.SupportedVersion", Substrate.Bajun.NET.NetApiExt.Generated.Storage.PolkadotXcmStorage.SupportedVersionParams(key));
       }
-      public async Task<U64> GetVersionNotifiers(BaseTuple<U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation> key)
+      public async Task<U64> GetVersionNotifiers(BaseTuple<U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation> key)
       {
          return await SendRequestAsync<U64>(_httpClient, "polkadotxcm/versionnotifiers", Substrate.Bajun.NET.NetApiExt.Generated.Storage.PolkadotXcmStorage.VersionNotifiersParams(key));
       }
-      public async Task<bool> SubscribeVersionNotifiers(BaseTuple<U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation> key)
+      public async Task<bool> SubscribeVersionNotifiers(BaseTuple<U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation> key)
       {
          return await _subscriptionClient.SubscribeAsync("PolkadotXcm.VersionNotifiers", Substrate.Bajun.NET.NetApiExt.Generated.Storage.PolkadotXcmStorage.VersionNotifiersParams(key));
       }
-      public async Task<BaseTuple<U64, Weight, U32>> GetVersionNotifyTargets(BaseTuple<U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation> key)
+      public async Task<BaseTuple<U64, Weight, U32>> GetVersionNotifyTargets(BaseTuple<U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation> key)
       {
          return await SendRequestAsync<BaseTuple<U64, Weight, U32>>(_httpClient, "polkadotxcm/versionnotifytargets", Substrate.Bajun.NET.NetApiExt.Generated.Storage.PolkadotXcmStorage.VersionNotifyTargetsParams(key));
       }
-      public async Task<bool> SubscribeVersionNotifyTargets(BaseTuple<U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation> key)
+      public async Task<bool> SubscribeVersionNotifyTargets(BaseTuple<U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation> key)
       {
          return await _subscriptionClient.SubscribeAsync("PolkadotXcm.VersionNotifyTargets", Substrate.Bajun.NET.NetApiExt.Generated.Storage.PolkadotXcmStorage.VersionNotifyTargetsParams(key));
       }
-      public async Task<BoundedVecT30> GetVersionDiscoveryQueue()
+      public async Task<BoundedVecT38> GetVersionDiscoveryQueue()
       {
-         return await SendRequestAsync<BoundedVecT30>(_httpClient, "polkadotxcm/versiondiscoveryqueue");
+         return await SendRequestAsync<BoundedVecT38>(_httpClient, "polkadotxcm/versiondiscoveryqueue");
       }
       public async Task<bool> SubscribeVersionDiscoveryQueue()
       {
@@ -108,9 +108,9 @@ namespace Substrate.Bajun.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("PolkadotXcm.RemoteLockedFungibles", Substrate.Bajun.NET.NetApiExt.Generated.Storage.PolkadotXcmStorage.RemoteLockedFungiblesParams(key));
       }
-      public async Task<BoundedVecT31> GetLockedFungibles(Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+      public async Task<BoundedVecT40> GetLockedFungibles(Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {
-         return await SendRequestAsync<BoundedVecT31>(_httpClient, "polkadotxcm/lockedfungibles", Substrate.Bajun.NET.NetApiExt.Generated.Storage.PolkadotXcmStorage.LockedFungiblesParams(key));
+         return await SendRequestAsync<BoundedVecT40>(_httpClient, "polkadotxcm/lockedfungibles", Substrate.Bajun.NET.NetApiExt.Generated.Storage.PolkadotXcmStorage.LockedFungiblesParams(key));
       }
       public async Task<bool> SubscribeLockedFungibles(Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {

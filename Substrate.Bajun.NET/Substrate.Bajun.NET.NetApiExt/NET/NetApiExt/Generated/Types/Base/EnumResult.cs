@@ -33,7 +33,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Types.Base
     }
     
     /// <summary>
-    /// >> 34 - Variant[Result]
+    /// >> 35 - Variant[Result]
     /// </summary>
     public sealed class EnumResult : BaseEnumExt<Result, Substrate.NetApi.Model.Types.Base.BaseTuple, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_runtime.EnumDispatchError>
     {

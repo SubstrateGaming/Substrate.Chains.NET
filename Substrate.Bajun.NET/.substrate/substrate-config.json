@@ -1,6 +1,7 @@
 {
   "projects": {
     "net_api": "Substrate.Bajun.NET.NetApiExt",
+    "net_integration": "Substrate.Bajun.NET.Integration",
     "rest_service": "Substrate.Bajun.NET.RestService",
     "rest_client": "Substrate.Bajun.NET.RestClient"
   },
