@@ -106,6 +106,12 @@
 ![Nuget](https://img.shields.io/nuget/dt/Substrate.Enjin.NET.Extension)  
 ![Build](https://github.com/SubstrateGaming/Substrate.Chains.NET/actions/workflows/publish_enjin.yml/badge.svg)
 
+### Test networks
+- Opal Network .NET SDK ([Link](https://github.com/SubstrateGaming/Substrate.Chains.NET/tree/main/Substrate.Opal.NET))  
+  - Substrate Opal Network .NET API Extension  
+[![Nuget](https://img.shields.io/nuget/v/Substrate.Opal.NET.Extension)](https://www.nuget.org/packages/Substrate.Opal.NET.Extension/)
+![Nuget](https://img.shields.io/nuget/dt/Substrate.Opal.NET.Extension)  
+![Build](https://github.com/SubstrateGaming/Substrate.Chains.NET/actions/workflows/publish_opal.yml/badge.svg)  
 
 ## Add or update Package
 
