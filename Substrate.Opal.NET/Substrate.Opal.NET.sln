@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Substrate.Opal.NET.RestService", "Substrate.Opal.NET.RestService\Substrate.Opal.NET.RestService.csproj", "{99060AF3-EF30-4C75-8D6D-CCB92F36A93A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Substrate.Opal.NET.NetApiExt", "Substrate.Opal.NET.NetApiExt\Substrate.Opal.NET.NetApiExt.csproj", "{F49C5BD5-1C94-4929-8EEA-961B356AF937}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Substrate.Opal.NET.Integration", "Substrate.Opal.NET.Integration\Substrate.Opal.NET.Integration.csproj", "{33EE46DA-1192-45A6-984E-8FAB999F63DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Substrate.Opal.NET.RestClient", "Substrate.Opal.NET.RestClient\Substrate.Opal.NET.RestClient.csproj", "{D30049F4-7407-46DB-89B0-7A05FC92FCD3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Substrate.Opal.NET.RestClient.Mockup", "Substrate.Opal.NET.RestClient.Mockup\Substrate.Opal.NET.RestClient.Mockup.csproj", "{9C3BB818-9C18-4639-8274-CCB77CABC110}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Substrate.Opal.NET.RestClient.Test", "Substrate.Opal.NET.RestClient.Test\Substrate.Opal.NET.RestClient.Test.csproj", "{99FB1539-DEE7-420B-A54A-84DEAB720CA4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{99060AF3-EF30-4C75-8D6D-CCB92F36A93A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99060AF3-EF30-4C75-8D6D-CCB92F36A93A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99060AF3-EF30-4C75-8D6D-CCB92F36A93A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99060AF3-EF30-4C75-8D6D-CCB92F36A93A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F49C5BD5-1C94-4929-8EEA-961B356AF937}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F49C5BD5-1C94-4929-8EEA-961B356AF937}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F49C5BD5-1C94-4929-8EEA-961B356AF937}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F49C5BD5-1C94-4929-8EEA-961B356AF937}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33EE46DA-1192-45A6-984E-8FAB999F63DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33EE46DA-1192-45A6-984E-8FAB999F63DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33EE46DA-1192-45A6-984E-8FAB999F63DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33EE46DA-1192-45A6-984E-8FAB999F63DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D30049F4-7407-46DB-89B0-7A05FC92FCD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D30049F4-7407-46DB-89B0-7A05FC92FCD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D30049F4-7407-46DB-89B0-7A05FC92FCD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D30049F4-7407-46DB-89B0-7A05FC92FCD3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C3BB818-9C18-4639-8274-CCB77CABC110}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C3BB818-9C18-4639-8274-CCB77CABC110}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C3BB818-9C18-4639-8274-CCB77CABC110}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C3BB818-9C18-4639-8274-CCB77CABC110}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99FB1539-DEE7-420B-A54A-84DEAB720CA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99FB1539-DEE7-420B-A54A-84DEAB720CA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99FB1539-DEE7-420B-A54A-84DEAB720CA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99FB1539-DEE7-420B-A54A-84DEAB720CA4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
