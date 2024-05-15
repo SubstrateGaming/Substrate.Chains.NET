@@ -18,7 +18,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_identity.types
     
     
     /// <summary>
-    /// >> 270 - Composite[pallet_identity.types.Registration]
+    /// >> 340 - Composite[pallet_identity.types.Registration]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Registration : BaseType
@@ -27,7 +27,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_identity.types
         /// <summary>
         /// >> judgements
         /// </summary>
-        public Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT6 Judgements { get; set; }
+        public Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT11 Judgements { get; set; }
         /// <summary>
         /// >> deposit
         /// </summary>
@@ -35,7 +35,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_identity.types
         /// <summary>
         /// >> info
         /// </summary>
-        public Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_identity.types.IdentityInfo Info { get; set; }
+        public Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_identity.legacy.IdentityInfo Info { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
@@ -57,11 +57,11 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_identity.types
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Judgements = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT6();
+            Judgements = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT11();
             Judgements.Decode(byteArray, ref p);
             Deposit = new Substrate.NetApi.Model.Types.Primitive.U128();
             Deposit.Decode(byteArray, ref p);
-            Info = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_identity.types.IdentityInfo();
+            Info = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_identity.legacy.IdentityInfo();
             Info.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

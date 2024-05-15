@@ -14,6 +14,7 @@ namespace Substrate.Ajuna.NET.RestClient.Generated.Clients
    using System.Net.Http;
    using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
+   using Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_scheduler;
    using Substrate.NetApi.Model.Types.Base;
    using Substrate.Ajuna.NET.RestClient.Generated.Interfaces;
    
@@ -34,13 +35,21 @@ namespace Substrate.Ajuna.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("Scheduler.IncompleteSince");
       }
-      public async Task<BoundedVecT11> GetAgenda(U32 key)
+      public async Task<BoundedVecT17> GetAgenda(U32 key)
       {
-         return await SendRequestAsync<BoundedVecT11>(_httpClient, "scheduler/agenda", Substrate.Ajuna.NET.NetApiExt.Generated.Storage.SchedulerStorage.AgendaParams(key));
+         return await SendRequestAsync<BoundedVecT17>(_httpClient, "scheduler/agenda", Substrate.Ajuna.NET.NetApiExt.Generated.Storage.SchedulerStorage.AgendaParams(key));
       }
       public async Task<bool> SubscribeAgenda(U32 key)
       {
          return await _subscriptionClient.SubscribeAsync("Scheduler.Agenda", Substrate.Ajuna.NET.NetApiExt.Generated.Storage.SchedulerStorage.AgendaParams(key));
+      }
+      public async Task<RetryConfig> GetRetries(BaseTuple<U32, U32> key)
+      {
+         return await SendRequestAsync<RetryConfig>(_httpClient, "scheduler/retries", Substrate.Ajuna.NET.NetApiExt.Generated.Storage.SchedulerStorage.RetriesParams(key));
+      }
+      public async Task<bool> SubscribeRetries(BaseTuple<U32, U32> key)
+      {
+         return await _subscriptionClient.SubscribeAsync("Scheduler.Retries", Substrate.Ajuna.NET.NetApiExt.Generated.Storage.SchedulerStorage.RetriesParams(key));
       }
       public async Task<BaseTuple<U32, U32>> GetLookup(Substrate.Ajuna.NET.NetApiExt.Generated.Types.Base.Arr32U8 key)
       {

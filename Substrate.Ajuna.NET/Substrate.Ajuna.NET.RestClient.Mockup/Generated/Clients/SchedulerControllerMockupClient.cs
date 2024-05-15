@@ -14,6 +14,7 @@ namespace Substrate.Ajuna.NET.RestClient.Mockup.Generated.Clients
    using System.Net.Http;
    using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
+   using Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_scheduler;
    using Substrate.NetApi.Model.Types.Base;
    using Substrate.Ajuna.NET.RestClient.Mockup.Generated.Interfaces;
    
@@ -28,9 +29,13 @@ namespace Substrate.Ajuna.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "Scheduler/IncompleteSince", value.Encode(), Substrate.Ajuna.NET.NetApiExt.Generated.Storage.SchedulerStorage.IncompleteSinceParams());
       }
-      public async Task<bool> SetAgenda(BoundedVecT11 value, U32 key)
+      public async Task<bool> SetAgenda(BoundedVecT17 value, U32 key)
       {
          return await SendMockupRequestAsync(_httpClient, "Scheduler/Agenda", value.Encode(), Substrate.Ajuna.NET.NetApiExt.Generated.Storage.SchedulerStorage.AgendaParams(key));
+      }
+      public async Task<bool> SetRetries(RetryConfig value, BaseTuple<U32, U32> key)
+      {
+         return await SendMockupRequestAsync(_httpClient, "Scheduler/Retries", value.Encode(), Substrate.Ajuna.NET.NetApiExt.Generated.Storage.SchedulerStorage.RetriesParams(key));
       }
       public async Task<bool> SetLookup(BaseTuple<U32, U32> value, Substrate.Ajuna.NET.NetApiExt.Generated.Types.Base.Arr32U8 key)
       {

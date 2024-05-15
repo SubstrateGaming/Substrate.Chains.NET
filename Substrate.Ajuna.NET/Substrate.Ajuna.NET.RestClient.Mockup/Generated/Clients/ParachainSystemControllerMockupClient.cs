@@ -13,15 +13,16 @@ namespace Substrate.Ajuna.NET.RestClient.Mockup.Generated.Clients
    using System.Threading.Tasks;
    using System.Net.Http;
    using Substrate.NetApi.Model.Types.Base;
+   using Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.unincluded_segment;
    using Substrate.NetApi.Model.Types.Primitive;
-   using Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v4;
+   using Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v7;
    using Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_trie.storage_proof;
    using Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.relay_state_snapshot;
    using Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_primitives_parachain_inherent;
    using Substrate.Ajuna.NET.NetApiExt.Generated.Types.Base;
    using Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_core_primitives;
+   using Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point;
    using Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_weights.weight_v2;
-   using Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system;
    using Substrate.Ajuna.NET.RestClient.Mockup.Generated.Interfaces;
    
    public sealed class ParachainSystemControllerMockupClient : MockupBaseClient, IParachainSystemControllerMockupClient
@@ -30,6 +31,14 @@ namespace Substrate.Ajuna.NET.RestClient.Mockup.Generated.Clients
       public ParachainSystemControllerMockupClient(HttpClient httpClient)
       {
          _httpClient = httpClient;
+      }
+      public async Task<bool> SetUnincludedSegment(BaseVec<Ancestor> value)
+      {
+         return await SendMockupRequestAsync(_httpClient, "ParachainSystem/UnincludedSegment", value.Encode(), Substrate.Ajuna.NET.NetApiExt.Generated.Storage.ParachainSystemStorage.UnincludedSegmentParams());
+      }
+      public async Task<bool> SetAggregatedUnincludedSegment(SegmentTracker value)
+      {
+         return await SendMockupRequestAsync(_httpClient, "ParachainSystem/AggregatedUnincludedSegment", value.Encode(), Substrate.Ajuna.NET.NetApiExt.Generated.Storage.ParachainSystemStorage.AggregatedUnincludedSegmentParams());
       }
       public async Task<bool> SetPendingValidationCode(BaseVec<U8> value)
       {
@@ -55,6 +64,10 @@ namespace Substrate.Ajuna.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "ParachainSystem/UpgradeRestrictionSignal", value.Encode(), Substrate.Ajuna.NET.NetApiExt.Generated.Storage.ParachainSystemStorage.UpgradeRestrictionSignalParams());
       }
+      public async Task<bool> SetUpgradeGoAhead(BaseOpt<EnumUpgradeGoAhead> value)
+      {
+         return await SendMockupRequestAsync(_httpClient, "ParachainSystem/UpgradeGoAhead", value.Encode(), Substrate.Ajuna.NET.NetApiExt.Generated.Storage.ParachainSystemStorage.UpgradeGoAheadParams());
+      }
       public async Task<bool> SetRelayStateProof(StorageProof value)
       {
          return await SendMockupRequestAsync(_httpClient, "ParachainSystem/RelayStateProof", value.Encode(), Substrate.Ajuna.NET.NetApiExt.Generated.Storage.ParachainSystemStorage.RelayStateProofParams());
@@ -71,7 +84,7 @@ namespace Substrate.Ajuna.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "ParachainSystem/LastDmqMqcHead", value.Encode(), Substrate.Ajuna.NET.NetApiExt.Generated.Storage.ParachainSystemStorage.LastDmqMqcHeadParams());
       }
-      public async Task<bool> SetLastHrmpMqcHeads(BTreeMapT1 value)
+      public async Task<bool> SetLastHrmpMqcHeads(BTreeMapT2 value)
       {
          return await SendMockupRequestAsync(_httpClient, "ParachainSystem/LastHrmpMqcHeads", value.Encode(), Substrate.Ajuna.NET.NetApiExt.Generated.Storage.ParachainSystemStorage.LastHrmpMqcHeadsParams());
       }
@@ -95,6 +108,10 @@ namespace Substrate.Ajuna.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "ParachainSystem/PendingUpwardMessages", value.Encode(), Substrate.Ajuna.NET.NetApiExt.Generated.Storage.ParachainSystemStorage.PendingUpwardMessagesParams());
       }
+      public async Task<bool> SetUpwardDeliveryFeeFactor(FixedU128 value)
+      {
+         return await SendMockupRequestAsync(_httpClient, "ParachainSystem/UpwardDeliveryFeeFactor", value.Encode(), Substrate.Ajuna.NET.NetApiExt.Generated.Storage.ParachainSystemStorage.UpwardDeliveryFeeFactorParams());
+      }
       public async Task<bool> SetAnnouncedHrmpMessagesPerCandidate(U32 value)
       {
          return await SendMockupRequestAsync(_httpClient, "ParachainSystem/AnnouncedHrmpMessagesPerCandidate", value.Encode(), Substrate.Ajuna.NET.NetApiExt.Generated.Storage.ParachainSystemStorage.AnnouncedHrmpMessagesPerCandidateParams());
@@ -106,10 +123,6 @@ namespace Substrate.Ajuna.NET.RestClient.Mockup.Generated.Clients
       public async Task<bool> SetReservedDmpWeightOverride(Weight value)
       {
          return await SendMockupRequestAsync(_httpClient, "ParachainSystem/ReservedDmpWeightOverride", value.Encode(), Substrate.Ajuna.NET.NetApiExt.Generated.Storage.ParachainSystemStorage.ReservedDmpWeightOverrideParams());
-      }
-      public async Task<bool> SetAuthorizedUpgrade(CodeUpgradeAuthorization value)
-      {
-         return await SendMockupRequestAsync(_httpClient, "ParachainSystem/AuthorizedUpgrade", value.Encode(), Substrate.Ajuna.NET.NetApiExt.Generated.Storage.ParachainSystemStorage.AuthorizedUpgradeParams());
       }
       public async Task<bool> SetCustomValidationHeadData(BaseVec<U8> value)
       {

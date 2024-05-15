@@ -62,6 +62,18 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Controller
         }
         
         /// <summary>
+        /// >> InherentsApplied
+        ///  Whether all inherents have been applied.
+        /// </summary>
+        [HttpGet("InherentsApplied")]
+        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Primitive.Bool), 200)]
+        [StorageKeyBuilder(typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Storage.SystemStorage), "InherentsAppliedParams")]
+        public IActionResult GetInherentsApplied()
+        {
+            return this.Ok(_systemStorage.GetInherentsApplied());
+        }
+        
+        /// <summary>
         /// >> BlockWeight
         ///  The current weight for the block.
         /// </summary>
@@ -184,7 +196,7 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Controller
         ///  allows light-clients to leverage the changes trie storage tracking mechanism and
         ///  in case of changes fetch the list of events of interest.
         /// 
-        ///  The value has the type `(T::BlockNumber, EventIndex)` because if we used only just
+        ///  The value has the type `(BlockNumberFor<T>, EventIndex)` because if we used only just
         ///  the `EventIndex` then in case if the topic has the same contents on the next block
         ///  no notification will be triggered thus the event might be lost.
         /// </summary>
@@ -243,6 +255,18 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Controller
         public IActionResult GetExecutionPhase()
         {
             return this.Ok(_systemStorage.GetExecutionPhase());
+        }
+        
+        /// <summary>
+        /// >> AuthorizedUpgrade
+        ///  `Some` if a code upgrade has been authorized.
+        /// </summary>
+        [HttpGet("AuthorizedUpgrade")]
+        [ProducesResponseType(typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_system.CodeUpgradeAuthorization), 200)]
+        [StorageKeyBuilder(typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Storage.SystemStorage), "AuthorizedUpgradeParams")]
+        public IActionResult GetAuthorizedUpgrade()
+        {
+            return this.Ok(_systemStorage.GetAuthorizedUpgrade());
         }
     }
 }

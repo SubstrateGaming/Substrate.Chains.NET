@@ -17,7 +17,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_balances.pallet
     
     /// <summary>
     /// >> Call
-    /// Contains one variant per dispatchable that can be called by an extrinsic.
+    /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
     public enum Call
     {
@@ -33,17 +33,6 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_balances.pallet
         /// The dispatch origin for this call must be `Signed` by the transactor.
         /// </summary>
         transfer_allow_death = 0,
-        
-        /// <summary>
-        /// >> set_balance_deprecated
-        /// Set the regular balance of a given account; it also takes a reserved balance but this
-        /// must be the same as the account's current reserved balance.
-        /// 
-        /// The dispatch origin for this call is `root`.
-        /// 
-        /// WARNING: This call is DEPRECATED! Use `force_set_balance` instead.
-        /// </summary>
-        set_balance_deprecated = 1,
         
         /// <summary>
         /// >> force_transfer
@@ -100,17 +89,9 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_balances.pallet
         /// 
         /// This will waive the transaction fee if at least all but 10% of the accounts needed to
         /// be upgraded. (We let some not have to be upgraded just in order to allow for the
-        /// possibililty of churn).
+        /// possibility of churn).
         /// </summary>
         upgrade_accounts = 6,
-        
-        /// <summary>
-        /// >> transfer
-        /// Alias for `transfer_allow_death`, provided only for name-wise compatibility.
-        /// 
-        /// WARNING: DEPRECATED! Will be released in approximately 3 months.
-        /// </summary>
-        transfer = 7,
         
         /// <summary>
         /// >> force_set_balance
@@ -119,13 +100,23 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_balances.pallet
         /// The dispatch origin for this call is `root`.
         /// </summary>
         force_set_balance = 8,
+        
+        /// <summary>
+        /// >> force_adjust_total_issuance
+        /// Adjust the total issuance in a saturating way.
+        /// 
+        /// Can only be called by root and always needs a positive `delta`.
+        /// 
+        /// # Example
+        /// </summary>
+        force_adjust_total_issuance = 9,
     }
     
     /// <summary>
-    /// >> 230 - Variant[pallet_balances.pallet.Call]
-    /// Contains one variant per dispatchable that can be called by an extrinsic.
+    /// >> 276 - Variant[pallet_balances.pallet.Call]
+    /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
-    public sealed class EnumCall : BaseEnumExt<Call, BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128>>, BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128>, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128>>, BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128>>, BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128>>, BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.NetApi.Model.Types.Primitive.Bool>, BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.NetApi.Model.Types.Primitive.U128>, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>, BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128>>, BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128>>>
+    public sealed class EnumCall : BaseEnumExt<Call, BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128>>, BaseVoid, BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128>>, BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128>>, BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.NetApi.Model.Types.Primitive.Bool>, BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.NetApi.Model.Types.Primitive.U128>, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>, BaseVoid, BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128>>, BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_balances.types.EnumAdjustmentDirection, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128>>>
     {
     }
 }

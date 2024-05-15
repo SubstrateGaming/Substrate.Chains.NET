@@ -58,7 +58,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.v2.multiasset
     }
     
     /// <summary>
-    /// >> 109 - Variant[xcm.v2.multiasset.AssetInstance]
+    /// >> 117 - Variant[xcm.v2.multiasset.AssetInstance]
     /// </summary>
     public sealed class EnumAssetInstance : BaseEnumExt<AssetInstance, BaseVoid, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128>, Substrate.Ajuna.NET.NetApiExt.Generated.Types.Base.Arr4U8, Substrate.Ajuna.NET.NetApiExt.Generated.Types.Base.Arr8U8, Substrate.Ajuna.NET.NetApiExt.Generated.Types.Base.Arr16U8, Substrate.Ajuna.NET.NetApiExt.Generated.Types.Base.Arr32U8, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>
     {

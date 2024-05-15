@@ -44,7 +44,7 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Controller
         ///  VestingSchedules: map AccountId => Vec<VestingSchedule>
         /// </summary>
         [HttpGet("VestingSchedules")]
-        [ProducesResponseType(typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT16), 200)]
+        [ProducesResponseType(typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT22), 200)]
         [StorageKeyBuilder(typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Storage.VestingStorage), "VestingSchedulesParams", typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32))]
         public IActionResult GetVestingSchedules(string key)
         {

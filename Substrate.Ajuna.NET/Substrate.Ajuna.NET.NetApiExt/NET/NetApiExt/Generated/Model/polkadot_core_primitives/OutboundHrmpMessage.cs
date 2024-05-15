@@ -18,7 +18,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_core_primitives
     
     
     /// <summary>
-    /// >> 156 - Composite[polkadot_core_primitives.OutboundHrmpMessage]
+    /// >> 199 - Composite[polkadot_core_primitives.OutboundHrmpMessage]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class OutboundHrmpMessage : BaseType
@@ -27,7 +27,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_core_primitives
         /// <summary>
         /// >> recipient
         /// </summary>
-        public Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id Recipient { get; set; }
+        public Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id Recipient { get; set; }
         /// <summary>
         /// >> data
         /// </summary>
@@ -52,7 +52,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_core_primitives
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Recipient = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id();
+            Recipient = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id();
             Recipient.Decode(byteArray, ref p);
             Data = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>();
             Data.Decode(byteArray, ref p);

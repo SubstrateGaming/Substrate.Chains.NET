@@ -36,7 +36,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         public CouncilMembershipStorage(SubstrateClientExt client)
         {
             this._client = client;
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("CouncilMembership", "Members"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT24)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("CouncilMembership", "Members"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT32)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("CouncilMembership", "Prime"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32)));
         }
         
@@ -62,10 +62,10 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         /// >> Members
         ///  The current membership, stored as an ordered Vec.
         /// </summary>
-        public async Task<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT24> Members(string blockhash, CancellationToken token)
+        public async Task<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT32> Members(string blockhash, CancellationToken token)
         {
             string parameters = CouncilMembershipStorage.MembersParams();
-            var result = await _client.GetStorageAsync<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT24>(parameters, blockhash, token);
+            var result = await _client.GetStorageAsync<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT32>(parameters, blockhash, token);
             return result;
         }
         
@@ -107,7 +107,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> add_member
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method AddMember(Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress who)
         {
@@ -118,7 +118,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> remove_member
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method RemoveMember(Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress who)
         {
@@ -129,7 +129,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> swap_member
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method SwapMember(Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress remove, Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress add)
         {
@@ -141,7 +141,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> reset_members
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method ResetMembers(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> members)
         {
@@ -152,7 +152,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> change_key
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method ChangeKey(Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress @new)
         {
@@ -163,7 +163,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> set_prime
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method SetPrime(Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress who)
         {
@@ -174,7 +174,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> clear_prime
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method ClearPrime()
         {

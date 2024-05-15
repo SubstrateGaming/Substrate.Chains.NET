@@ -73,7 +73,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.v3.junction
     }
     
     /// <summary>
-    /// >> 60 - Variant[xcm.v3.junction.Junction]
+    /// >> 124 - Variant[xcm.v3.junction.Junction]
     /// </summary>
     public sealed class EnumJunction : BaseEnumExt<Junction, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>, BaseTuple<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumNetworkId>, Substrate.Ajuna.NET.NetApiExt.Generated.Types.Base.Arr32U8>, BaseTuple<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumNetworkId>, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U64>>, BaseTuple<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumNetworkId>, Substrate.Ajuna.NET.NetApiExt.Generated.Types.Base.Arr20U8>, Substrate.NetApi.Model.Types.Primitive.U8, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128>, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U8, Substrate.Ajuna.NET.NetApiExt.Generated.Types.Base.Arr32U8>, BaseVoid, BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumBodyId, Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumBodyPart>, Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumNetworkId>
     {

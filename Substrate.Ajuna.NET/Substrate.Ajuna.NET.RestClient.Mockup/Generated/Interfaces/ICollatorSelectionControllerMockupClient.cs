@@ -16,8 +16,8 @@ namespace Substrate.Ajuna.NET.RestClient.Mockup.Generated.Interfaces
    
    public interface ICollatorSelectionControllerMockupClient
    {
-      Task<bool> SetInvulnerables(BoundedVecT17 value);
-      Task<bool> SetCandidates(BoundedVecT18 value);
+      Task<bool> SetInvulnerables(BoundedVecT23 value);
+      Task<bool> SetCandidateList(BoundedVecT24 value);
       Task<bool> SetLastAuthoredBlock(U32 value, Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
       Task<bool> SetDesiredCandidates(U32 value);
       Task<bool> SetCandidacyBond(U128 value);

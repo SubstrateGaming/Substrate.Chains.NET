@@ -42,15 +42,20 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.ajuna_runtime
         Council = 42,
         
         /// <summary>
+        /// >> TechnicalCommittee
+        /// </summary>
+        TechnicalCommittee = 44,
+        
+        /// <summary>
         /// >> Void
         /// </summary>
-        Void = 4,
+        Void = 5,
     }
     
     /// <summary>
-    /// >> 177 - Variant[ajuna_runtime.OriginCaller]
+    /// >> 220 - Variant[ajuna_runtime.OriginCaller]
     /// </summary>
-    public sealed class EnumOriginCaller : BaseEnumExt<OriginCaller, Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.dispatch.EnumRawOrigin, BaseVoid, BaseVoid, BaseVoid, Substrate.NetApi.Model.Types.Base.BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_xcm.pallet.EnumOrigin, Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_pallet_xcm.pallet.EnumOrigin, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_collective.EnumRawOrigin>
+    public sealed class EnumOriginCaller : BaseEnumExt<OriginCaller, Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.dispatch.EnumRawOrigin, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.NetApi.Model.Types.Base.BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_xcm.pallet.EnumOrigin, Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_pallet_xcm.pallet.EnumOrigin, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_collective.EnumRawOrigin, BaseVoid, Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_collective.EnumRawOrigin>
     {
     }
 }

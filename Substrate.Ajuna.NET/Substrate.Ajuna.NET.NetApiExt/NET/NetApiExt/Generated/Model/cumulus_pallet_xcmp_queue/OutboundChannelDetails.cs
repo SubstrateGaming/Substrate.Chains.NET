@@ -18,7 +18,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queu
     
     
     /// <summary>
-    /// >> 340 - Composite[cumulus_pallet_xcmp_queue.OutboundChannelDetails]
+    /// >> 418 - Composite[cumulus_pallet_xcmp_queue.OutboundChannelDetails]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class OutboundChannelDetails : BaseType
@@ -27,7 +27,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queu
         /// <summary>
         /// >> recipient
         /// </summary>
-        public Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id Recipient { get; set; }
+        public Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id Recipient { get; set; }
         /// <summary>
         /// >> state
         /// </summary>
@@ -67,7 +67,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queu
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Recipient = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id();
+            Recipient = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id();
             Recipient.Decode(byteArray, ref p);
             State = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue.EnumOutboundState();
             State.Decode(byteArray, ref p);

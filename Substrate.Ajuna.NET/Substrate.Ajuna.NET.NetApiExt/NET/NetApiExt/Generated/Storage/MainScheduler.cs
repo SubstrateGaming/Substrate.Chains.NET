@@ -38,7 +38,9 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
             this._client = client;
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Scheduler", "IncompleteSince"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Primitive.U32)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Scheduler", "Agenda"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.NetApi.Model.Types.Primitive.U32), typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT11)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.NetApi.Model.Types.Primitive.U32), typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("Scheduler", "Retries"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>), typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_scheduler.RetryConfig)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Scheduler", "Lookup"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Types.Base.Arr32U8), typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>)));
         }
@@ -94,10 +96,41 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         /// >> Agenda
         ///  Items to be executed, indexed by the block number that they should be executed on.
         /// </summary>
-        public async Task<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT11> Agenda(Substrate.NetApi.Model.Types.Primitive.U32 key, string blockhash, CancellationToken token)
+        public async Task<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17> Agenda(Substrate.NetApi.Model.Types.Primitive.U32 key, string blockhash, CancellationToken token)
         {
             string parameters = SchedulerStorage.AgendaParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT11>(parameters, blockhash, token);
+            var result = await _client.GetStorageAsync<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17>(parameters, blockhash, token);
+            return result;
+        }
+        
+        /// <summary>
+        /// >> RetriesParams
+        ///  Retry configurations for items to be executed, indexed by task address.
+        /// </summary>
+        public static string RetriesParams(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32> key)
+        {
+            return RequestGenerator.GetStorage("Scheduler", "Retries", Substrate.NetApi.Model.Meta.Storage.Type.Map, new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
+                        Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, new Substrate.NetApi.Model.Types.IType[] {
+                        key});
+        }
+        
+        /// <summary>
+        /// >> RetriesDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string RetriesDefault()
+        {
+            return "0x00";
+        }
+        
+        /// <summary>
+        /// >> Retries
+        ///  Retry configurations for items to be executed, indexed by task address.
+        /// </summary>
+        public async Task<Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_scheduler.RetryConfig> Retries(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32> key, string blockhash, CancellationToken token)
+        {
+            string parameters = SchedulerStorage.RetriesParams(key);
+            var result = await _client.GetStorageAsync<Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_scheduler.RetryConfig>(parameters, blockhash, token);
             return result;
         }
         
@@ -147,7 +180,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> schedule
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method Schedule(Substrate.NetApi.Model.Types.Primitive.U32 when, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>> maybe_periodic, Substrate.NetApi.Model.Types.Primitive.U8 priority, Substrate.Ajuna.NET.NetApiExt.Generated.Model.ajuna_runtime.EnumRuntimeCall call)
         {
@@ -161,7 +194,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> cancel
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method Cancel(Substrate.NetApi.Model.Types.Primitive.U32 when, Substrate.NetApi.Model.Types.Primitive.U32 index)
         {
@@ -173,7 +206,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> schedule_named
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method ScheduleNamed(Substrate.Ajuna.NET.NetApiExt.Generated.Types.Base.Arr32U8 id, Substrate.NetApi.Model.Types.Primitive.U32 when, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>> maybe_periodic, Substrate.NetApi.Model.Types.Primitive.U8 priority, Substrate.Ajuna.NET.NetApiExt.Generated.Model.ajuna_runtime.EnumRuntimeCall call)
         {
@@ -188,7 +221,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> cancel_named
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method CancelNamed(Substrate.Ajuna.NET.NetApiExt.Generated.Types.Base.Arr32U8 id)
         {
@@ -199,7 +232,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> schedule_after
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method ScheduleAfter(Substrate.NetApi.Model.Types.Primitive.U32 after, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>> maybe_periodic, Substrate.NetApi.Model.Types.Primitive.U8 priority, Substrate.Ajuna.NET.NetApiExt.Generated.Model.ajuna_runtime.EnumRuntimeCall call)
         {
@@ -213,7 +246,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> schedule_named_after
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method ScheduleNamedAfter(Substrate.Ajuna.NET.NetApiExt.Generated.Types.Base.Arr32U8 id, Substrate.NetApi.Model.Types.Primitive.U32 after, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>> maybe_periodic, Substrate.NetApi.Model.Types.Primitive.U8 priority, Substrate.Ajuna.NET.NetApiExt.Generated.Model.ajuna_runtime.EnumRuntimeCall call)
         {
@@ -224,6 +257,54 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
             byteArray.AddRange(priority.Encode());
             byteArray.AddRange(call.Encode());
             return new Method(8, "Scheduler", 5, "schedule_named_after", byteArray.ToArray());
+        }
+        
+        /// <summary>
+        /// >> set_retry
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
+        /// </summary>
+        public static Method SetRetry(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32> task, Substrate.NetApi.Model.Types.Primitive.U8 retries, Substrate.NetApi.Model.Types.Primitive.U32 period)
+        {
+            System.Collections.Generic.List<byte> byteArray = new List<byte>();
+            byteArray.AddRange(task.Encode());
+            byteArray.AddRange(retries.Encode());
+            byteArray.AddRange(period.Encode());
+            return new Method(8, "Scheduler", 6, "set_retry", byteArray.ToArray());
+        }
+        
+        /// <summary>
+        /// >> set_retry_named
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
+        /// </summary>
+        public static Method SetRetryNamed(Substrate.Ajuna.NET.NetApiExt.Generated.Types.Base.Arr32U8 id, Substrate.NetApi.Model.Types.Primitive.U8 retries, Substrate.NetApi.Model.Types.Primitive.U32 period)
+        {
+            System.Collections.Generic.List<byte> byteArray = new List<byte>();
+            byteArray.AddRange(id.Encode());
+            byteArray.AddRange(retries.Encode());
+            byteArray.AddRange(period.Encode());
+            return new Method(8, "Scheduler", 7, "set_retry_named", byteArray.ToArray());
+        }
+        
+        /// <summary>
+        /// >> cancel_retry
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
+        /// </summary>
+        public static Method CancelRetry(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32> task)
+        {
+            System.Collections.Generic.List<byte> byteArray = new List<byte>();
+            byteArray.AddRange(task.Encode());
+            return new Method(8, "Scheduler", 8, "cancel_retry", byteArray.ToArray());
+        }
+        
+        /// <summary>
+        /// >> cancel_retry_named
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
+        /// </summary>
+        public static Method CancelRetryNamed(Substrate.Ajuna.NET.NetApiExt.Generated.Types.Base.Arr32U8 id)
+        {
+            System.Collections.Generic.List<byte> byteArray = new List<byte>();
+            byteArray.AddRange(id.Encode());
+            return new Method(8, "Scheduler", 9, "cancel_retry_named", byteArray.ToArray());
         }
     }
     

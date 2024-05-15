@@ -30,7 +30,7 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Storage
         /// 
         ///  VestingSchedules: map AccountId => Vec<VestingSchedule>
         /// </summary>
-        Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT16 GetVestingSchedules(string key);
+        Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT22 GetVestingSchedules(string key);
     }
     
     /// <summary>
@@ -42,20 +42,20 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Storage
         /// <summary>
         /// _vestingSchedulesTypedStorage typed storage field
         /// </summary>
-        private TypedMapStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT16> _vestingSchedulesTypedStorage;
+        private TypedMapStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT22> _vestingSchedulesTypedStorage;
         
         /// <summary>
         /// VestingStorage constructor.
         /// </summary>
         public VestingStorage(IStorageDataProvider storageDataProvider, List<IStorageChangeDelegate> storageChangeDelegates)
         {
-            this.VestingSchedulesTypedStorage = new TypedMapStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT16>("Vesting.VestingSchedules", storageDataProvider, storageChangeDelegates);
+            this.VestingSchedulesTypedStorage = new TypedMapStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT22>("Vesting.VestingSchedules", storageDataProvider, storageChangeDelegates);
         }
         
         /// <summary>
         /// _vestingSchedulesTypedStorage property
         /// </summary>
-        public TypedMapStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT16> VestingSchedulesTypedStorage
+        public TypedMapStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT22> VestingSchedulesTypedStorage
         {
             get
             {
@@ -90,13 +90,13 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Storage
         /// 
         ///  VestingSchedules: map AccountId => Vec<VestingSchedule>
         /// </summary>
-        public Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT16 GetVestingSchedules(string key)
+        public Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT22 GetVestingSchedules(string key)
         {
             if ((key == null))
             {
                 return null;
             }
-            if (VestingSchedulesTypedStorage.Dictionary.TryGetValue(key, out Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT16 result))
+            if (VestingSchedulesTypedStorage.Dictionary.TryGetValue(key, out Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT22 result))
             {
                 return result;
             }

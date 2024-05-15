@@ -135,9 +135,9 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated
         public CumulusXcmStorage CumulusXcmStorage;
         
         /// <summary>
-        /// DmpQueueStorage storage calls.
+        /// MessageQueueStorage storage calls.
         /// </summary>
-        public DmpQueueStorage DmpQueueStorage;
+        public MessageQueueStorage MessageQueueStorage;
         
         /// <summary>
         /// SudoStorage storage calls.
@@ -158,6 +158,21 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated
         /// CouncilMembershipStorage storage calls.
         /// </summary>
         public CouncilMembershipStorage CouncilMembershipStorage;
+        
+        /// <summary>
+        /// TechnicalCommitteeStorage storage calls.
+        /// </summary>
+        public TechnicalCommitteeStorage TechnicalCommitteeStorage;
+        
+        /// <summary>
+        /// TechnicalCommitteeMembershipStorage storage calls.
+        /// </summary>
+        public TechnicalCommitteeMembershipStorage TechnicalCommitteeMembershipStorage;
+        
+        /// <summary>
+        /// DemocracyStorage storage calls.
+        /// </summary>
+        public DemocracyStorage DemocracyStorage;
         
         public SubstrateClientExt(System.Uri uri, Substrate.NetApi.Model.Extrinsics.ChargeType chargeType) : 
                 base(uri, chargeType)
@@ -184,11 +199,14 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated
             this.XcmpQueueStorage = new XcmpQueueStorage(this);
             this.PolkadotXcmStorage = new PolkadotXcmStorage(this);
             this.CumulusXcmStorage = new CumulusXcmStorage(this);
-            this.DmpQueueStorage = new DmpQueueStorage(this);
+            this.MessageQueueStorage = new MessageQueueStorage(this);
             this.SudoStorage = new SudoStorage(this);
             this.TreasuryStorage = new TreasuryStorage(this);
             this.CouncilStorage = new CouncilStorage(this);
             this.CouncilMembershipStorage = new CouncilMembershipStorage(this);
+            this.TechnicalCommitteeStorage = new TechnicalCommitteeStorage(this);
+            this.TechnicalCommitteeMembershipStorage = new TechnicalCommitteeMembershipStorage(this);
+            this.DemocracyStorage = new DemocracyStorage(this);
         }
     }
 }

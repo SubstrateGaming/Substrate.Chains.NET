@@ -28,7 +28,7 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Storage
         /// >> Authorities
         ///  The current authority set.
         /// </summary>
-        Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT19 GetAuthorities();
+        Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT25 GetAuthorities();
         
         /// <summary>
         /// >> CurrentSlot
@@ -48,7 +48,7 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Storage
         /// <summary>
         /// _authoritiesTypedStorage typed storage field
         /// </summary>
-        private TypedStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT19> _authoritiesTypedStorage;
+        private TypedStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT25> _authoritiesTypedStorage;
         
         /// <summary>
         /// _currentSlotTypedStorage typed storage field
@@ -60,14 +60,14 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Storage
         /// </summary>
         public AuraStorage(IStorageDataProvider storageDataProvider, List<IStorageChangeDelegate> storageChangeDelegates)
         {
-            this.AuthoritiesTypedStorage = new TypedStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT19>("Aura.Authorities", storageDataProvider, storageChangeDelegates);
+            this.AuthoritiesTypedStorage = new TypedStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT25>("Aura.Authorities", storageDataProvider, storageChangeDelegates);
             this.CurrentSlotTypedStorage = new TypedStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_consensus_slots.Slot>("Aura.CurrentSlot", storageDataProvider, storageChangeDelegates);
         }
         
         /// <summary>
         /// _authoritiesTypedStorage property
         /// </summary>
-        public TypedStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT19> AuthoritiesTypedStorage
+        public TypedStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT25> AuthoritiesTypedStorage
         {
             get
             {
@@ -116,7 +116,7 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Storage
         /// >> Authorities
         ///  The current authority set.
         /// </summary>
-        public Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT19 GetAuthorities()
+        public Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT25 GetAuthorities()
         {
             return AuthoritiesTypedStorage.Get();
         }

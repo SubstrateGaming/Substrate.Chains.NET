@@ -33,7 +33,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.v3.multiasset
     }
     
     /// <summary>
-    /// >> 74 - Variant[xcm.v3.multiasset.Fungibility]
+    /// >> 127 - Variant[xcm.v3.multiasset.Fungibility]
     /// </summary>
     public sealed class EnumFungibility : BaseEnumExt<Fungibility, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128>, Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.v3.multiasset.EnumAssetInstance>
     {

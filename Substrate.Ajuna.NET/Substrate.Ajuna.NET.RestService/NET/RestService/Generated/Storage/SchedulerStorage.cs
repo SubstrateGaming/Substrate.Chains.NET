@@ -33,7 +33,13 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Storage
         /// >> Agenda
         ///  Items to be executed, indexed by the block number that they should be executed on.
         /// </summary>
-        Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT11 GetAgenda(string key);
+        Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17 GetAgenda(string key);
+        
+        /// <summary>
+        /// >> Retries
+        ///  Retry configurations for items to be executed, indexed by task address.
+        /// </summary>
+        Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_scheduler.RetryConfig GetRetries(string key);
         
         /// <summary>
         /// >> Lookup
@@ -59,7 +65,12 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Storage
         /// <summary>
         /// _agendaTypedStorage typed storage field
         /// </summary>
-        private TypedMapStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT11> _agendaTypedStorage;
+        private TypedMapStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17> _agendaTypedStorage;
+        
+        /// <summary>
+        /// _retriesTypedStorage typed storage field
+        /// </summary>
+        private TypedMapStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_scheduler.RetryConfig> _retriesTypedStorage;
         
         /// <summary>
         /// _lookupTypedStorage typed storage field
@@ -72,7 +83,8 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Storage
         public SchedulerStorage(IStorageDataProvider storageDataProvider, List<IStorageChangeDelegate> storageChangeDelegates)
         {
             this.IncompleteSinceTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32>("Scheduler.IncompleteSince", storageDataProvider, storageChangeDelegates);
-            this.AgendaTypedStorage = new TypedMapStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT11>("Scheduler.Agenda", storageDataProvider, storageChangeDelegates);
+            this.AgendaTypedStorage = new TypedMapStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17>("Scheduler.Agenda", storageDataProvider, storageChangeDelegates);
+            this.RetriesTypedStorage = new TypedMapStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_scheduler.RetryConfig>("Scheduler.Retries", storageDataProvider, storageChangeDelegates);
             this.LookupTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>>("Scheduler.Lookup", storageDataProvider, storageChangeDelegates);
         }
         
@@ -94,7 +106,7 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Storage
         /// <summary>
         /// _agendaTypedStorage property
         /// </summary>
-        public TypedMapStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT11> AgendaTypedStorage
+        public TypedMapStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17> AgendaTypedStorage
         {
             get
             {
@@ -103,6 +115,21 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Storage
             set
             {
                 _agendaTypedStorage = value;
+            }
+        }
+        
+        /// <summary>
+        /// _retriesTypedStorage property
+        /// </summary>
+        public TypedMapStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_scheduler.RetryConfig> RetriesTypedStorage
+        {
+            get
+            {
+                return _retriesTypedStorage;
+            }
+            set
+            {
+                _retriesTypedStorage = value;
             }
         }
         
@@ -128,6 +155,7 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Storage
         {
             await IncompleteSinceTypedStorage.InitializeAsync("Scheduler", "IncompleteSince");
             await AgendaTypedStorage.InitializeAsync("Scheduler", "Agenda");
+            await RetriesTypedStorage.InitializeAsync("Scheduler", "Retries");
             await LookupTypedStorage.InitializeAsync("Scheduler", "Lookup");
         }
         
@@ -161,13 +189,42 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Storage
         /// >> Agenda
         ///  Items to be executed, indexed by the block number that they should be executed on.
         /// </summary>
-        public Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT11 GetAgenda(string key)
+        public Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17 GetAgenda(string key)
         {
             if ((key == null))
             {
                 return null;
             }
-            if (AgendaTypedStorage.Dictionary.TryGetValue(key, out Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT11 result))
+            if (AgendaTypedStorage.Dictionary.TryGetValue(key, out Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17 result))
+            {
+                return result;
+            }
+            else
+            {
+                return null;
+            }
+        }
+        
+        /// <summary>
+        /// Implements any storage change for Scheduler.Retries
+        /// </summary>
+        [StorageChange("Scheduler", "Retries")]
+        public void OnUpdateRetries(string key, string data)
+        {
+            RetriesTypedStorage.Update(key, data);
+        }
+        
+        /// <summary>
+        /// >> Retries
+        ///  Retry configurations for items to be executed, indexed by task address.
+        /// </summary>
+        public Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_scheduler.RetryConfig GetRetries(string key)
+        {
+            if ((key == null))
+            {
+                return null;
+            }
+            if (RetriesTypedStorage.Dictionary.TryGetValue(key, out Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_scheduler.RetryConfig result))
             {
                 return result;
             }

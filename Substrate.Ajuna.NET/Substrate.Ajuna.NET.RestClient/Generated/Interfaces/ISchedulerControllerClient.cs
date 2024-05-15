@@ -13,14 +13,17 @@ namespace Substrate.Ajuna.NET.RestClient.Generated.Interfaces
    using System.Threading.Tasks;
    using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
+   using Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_scheduler;
    using Substrate.NetApi.Model.Types.Base;
    
    public interface ISchedulerControllerClient
    {
       Task<U32> GetIncompleteSince();
       Task<bool> SubscribeIncompleteSince();
-      Task<BoundedVecT11> GetAgenda(U32 key);
+      Task<BoundedVecT17> GetAgenda(U32 key);
       Task<bool> SubscribeAgenda(U32 key);
+      Task<RetryConfig> GetRetries(BaseTuple<U32, U32> key);
+      Task<bool> SubscribeRetries(BaseTuple<U32, U32> key);
       Task<BaseTuple<U32, U32>> GetLookup(Substrate.Ajuna.NET.NetApiExt.Generated.Types.Base.Arr32U8 key);
       Task<bool> SubscribeLookup(Substrate.Ajuna.NET.NetApiExt.Generated.Types.Base.Arr32U8 key);
    }

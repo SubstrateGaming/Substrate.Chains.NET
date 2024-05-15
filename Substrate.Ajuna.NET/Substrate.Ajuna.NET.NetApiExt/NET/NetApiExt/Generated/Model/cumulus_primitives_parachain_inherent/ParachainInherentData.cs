@@ -18,7 +18,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_primitives_parac
     
     
     /// <summary>
-    /// >> 159 - Composite[cumulus_primitives_parachain_inherent.ParachainInherentData]
+    /// >> 202 - Composite[cumulus_primitives_parachain_inherent.ParachainInherentData]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class ParachainInherentData : BaseType
@@ -27,7 +27,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_primitives_parac
         /// <summary>
         /// >> validation_data
         /// </summary>
-        public Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.PersistedValidationData ValidationData { get; set; }
+        public Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.PersistedValidationData ValidationData { get; set; }
         /// <summary>
         /// >> relay_chain_state
         /// </summary>
@@ -39,7 +39,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_primitives_parac
         /// <summary>
         /// >> horizontal_messages
         /// </summary>
-        public Substrate.Ajuna.NET.NetApiExt.Generated.Types.Base.BTreeMapT2 HorizontalMessages { get; set; }
+        public Substrate.Ajuna.NET.NetApiExt.Generated.Types.Base.BTreeMapT3 HorizontalMessages { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
@@ -62,13 +62,13 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_primitives_parac
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            ValidationData = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.PersistedValidationData();
+            ValidationData = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.PersistedValidationData();
             ValidationData.Decode(byteArray, ref p);
             RelayChainState = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_trie.storage_proof.StorageProof();
             RelayChainState.Decode(byteArray, ref p);
             DownwardMessages = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_core_primitives.InboundDownwardMessage>();
             DownwardMessages.Decode(byteArray, ref p);
-            HorizontalMessages = new Substrate.Ajuna.NET.NetApiExt.Generated.Types.Base.BTreeMapT2();
+            HorizontalMessages = new Substrate.Ajuna.NET.NetApiExt.Generated.Types.Base.BTreeMapT3();
             HorizontalMessages.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

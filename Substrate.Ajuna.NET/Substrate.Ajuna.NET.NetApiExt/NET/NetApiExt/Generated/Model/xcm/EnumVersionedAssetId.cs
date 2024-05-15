@@ -25,12 +25,17 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm
         /// >> V3
         /// </summary>
         V3 = 3,
+        
+        /// <summary>
+        /// >> V4
+        /// </summary>
+        V4 = 4,
     }
     
     /// <summary>
-    /// >> 359 - Variant[xcm.VersionedAssetId]
+    /// >> 436 - Variant[xcm.VersionedAssetId]
     /// </summary>
-    public sealed class EnumVersionedAssetId : BaseEnumExt<VersionedAssetId, BaseVoid, BaseVoid, BaseVoid, Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.v3.multiasset.EnumAssetId>
+    public sealed class EnumVersionedAssetId : BaseEnumExt<VersionedAssetId, BaseVoid, BaseVoid, BaseVoid, Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.v3.multiasset.EnumAssetId, Substrate.Ajuna.NET.NetApiExt.Generated.Model.staging_xcm.v4.asset.AssetId>
     {
     }
 }

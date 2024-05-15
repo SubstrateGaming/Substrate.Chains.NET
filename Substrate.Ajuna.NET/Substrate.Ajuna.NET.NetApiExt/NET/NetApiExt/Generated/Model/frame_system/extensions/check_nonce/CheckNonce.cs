@@ -18,7 +18,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_system.extensions.
     
     
     /// <summary>
-    /// >> 397 - Composite[frame_system.extensions.check_nonce.CheckNonce]
+    /// >> 494 - Composite[frame_system.extensions.check_nonce.CheckNonce]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class CheckNonce : BaseType

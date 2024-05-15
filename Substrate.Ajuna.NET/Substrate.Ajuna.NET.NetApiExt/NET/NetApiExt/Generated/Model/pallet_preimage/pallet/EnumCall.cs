@@ -17,7 +17,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_preimage.pallet
     
     /// <summary>
     /// >> Call
-    /// Contains one variant per dispatchable that can be called by an extrinsic.
+    /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
     public enum Call
     {
@@ -58,13 +58,21 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_preimage.pallet
         /// NOTE: THIS MUST NOT BE CALLED ON `hash` MORE TIMES THAN `request_preimage`.
         /// </summary>
         unrequest_preimage = 3,
+        
+        /// <summary>
+        /// >> ensure_updated
+        /// Ensure that the a bulk of pre-images is upgraded.
+        /// 
+        /// The caller pays no fee if at least 90% of pre-images were successfully updated.
+        /// </summary>
+        ensure_updated = 4,
     }
     
     /// <summary>
-    /// >> 229 - Variant[pallet_preimage.pallet.Call]
-    /// Contains one variant per dispatchable that can be called by an extrinsic.
+    /// >> 275 - Variant[pallet_preimage.pallet.Call]
+    /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
-    public sealed class EnumCall : BaseEnumExt<Call, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>, Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256>
+    public sealed class EnumCall : BaseEnumExt<Call, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>, Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256>>
     {
     }
 }

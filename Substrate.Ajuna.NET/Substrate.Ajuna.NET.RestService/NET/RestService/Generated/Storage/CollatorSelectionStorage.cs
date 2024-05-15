@@ -26,15 +26,19 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Storage
         
         /// <summary>
         /// >> Invulnerables
-        ///  The invulnerable, fixed collators.
+        ///  The invulnerable, permissioned collators. This list must be sorted.
         /// </summary>
-        Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17 GetInvulnerables();
+        Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT23 GetInvulnerables();
         
         /// <summary>
-        /// >> Candidates
-        ///  The (community, limited) collation candidates.
+        /// >> CandidateList
+        ///  The (community, limited) collation candidates. `Candidates` and `Invulnerables` should be
+        ///  mutually exclusive.
+        /// 
+        ///  This list is sorted in ascending order by deposit and when the deposits are equal, the least
+        ///  recently updated is considered greater.
         /// </summary>
-        Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18 GetCandidates();
+        Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT24 GetCandidateList();
         
         /// <summary>
         /// >> LastAuthoredBlock
@@ -68,12 +72,12 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Storage
         /// <summary>
         /// _invulnerablesTypedStorage typed storage field
         /// </summary>
-        private TypedStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17> _invulnerablesTypedStorage;
+        private TypedStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT23> _invulnerablesTypedStorage;
         
         /// <summary>
-        /// _candidatesTypedStorage typed storage field
+        /// _candidateListTypedStorage typed storage field
         /// </summary>
-        private TypedStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18> _candidatesTypedStorage;
+        private TypedStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT24> _candidateListTypedStorage;
         
         /// <summary>
         /// _lastAuthoredBlockTypedStorage typed storage field
@@ -95,8 +99,8 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Storage
         /// </summary>
         public CollatorSelectionStorage(IStorageDataProvider storageDataProvider, List<IStorageChangeDelegate> storageChangeDelegates)
         {
-            this.InvulnerablesTypedStorage = new TypedStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17>("CollatorSelection.Invulnerables", storageDataProvider, storageChangeDelegates);
-            this.CandidatesTypedStorage = new TypedStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18>("CollatorSelection.Candidates", storageDataProvider, storageChangeDelegates);
+            this.InvulnerablesTypedStorage = new TypedStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT23>("CollatorSelection.Invulnerables", storageDataProvider, storageChangeDelegates);
+            this.CandidateListTypedStorage = new TypedStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT24>("CollatorSelection.CandidateList", storageDataProvider, storageChangeDelegates);
             this.LastAuthoredBlockTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Primitive.U32>("CollatorSelection.LastAuthoredBlock", storageDataProvider, storageChangeDelegates);
             this.DesiredCandidatesTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32>("CollatorSelection.DesiredCandidates", storageDataProvider, storageChangeDelegates);
             this.CandidacyBondTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U128>("CollatorSelection.CandidacyBond", storageDataProvider, storageChangeDelegates);
@@ -105,7 +109,7 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Storage
         /// <summary>
         /// _invulnerablesTypedStorage property
         /// </summary>
-        public TypedStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17> InvulnerablesTypedStorage
+        public TypedStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT23> InvulnerablesTypedStorage
         {
             get
             {
@@ -118,17 +122,17 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Storage
         }
         
         /// <summary>
-        /// _candidatesTypedStorage property
+        /// _candidateListTypedStorage property
         /// </summary>
-        public TypedStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18> CandidatesTypedStorage
+        public TypedStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT24> CandidateListTypedStorage
         {
             get
             {
-                return _candidatesTypedStorage;
+                return _candidateListTypedStorage;
             }
             set
             {
-                _candidatesTypedStorage = value;
+                _candidateListTypedStorage = value;
             }
         }
         
@@ -183,7 +187,7 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Storage
         public async Task InitializeAsync(Substrate.ServiceLayer.Storage.IStorageDataProvider dataProvider)
         {
             await InvulnerablesTypedStorage.InitializeAsync("CollatorSelection", "Invulnerables");
-            await CandidatesTypedStorage.InitializeAsync("CollatorSelection", "Candidates");
+            await CandidateListTypedStorage.InitializeAsync("CollatorSelection", "CandidateList");
             await LastAuthoredBlockTypedStorage.InitializeAsync("CollatorSelection", "LastAuthoredBlock");
             await DesiredCandidatesTypedStorage.InitializeAsync("CollatorSelection", "DesiredCandidates");
             await CandidacyBondTypedStorage.InitializeAsync("CollatorSelection", "CandidacyBond");
@@ -200,29 +204,33 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Storage
         
         /// <summary>
         /// >> Invulnerables
-        ///  The invulnerable, fixed collators.
+        ///  The invulnerable, permissioned collators. This list must be sorted.
         /// </summary>
-        public Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17 GetInvulnerables()
+        public Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT23 GetInvulnerables()
         {
             return InvulnerablesTypedStorage.Get();
         }
         
         /// <summary>
-        /// Implements any storage change for CollatorSelection.Candidates
+        /// Implements any storage change for CollatorSelection.CandidateList
         /// </summary>
-        [StorageChange("CollatorSelection", "Candidates")]
-        public void OnUpdateCandidates(string data)
+        [StorageChange("CollatorSelection", "CandidateList")]
+        public void OnUpdateCandidateList(string data)
         {
-            CandidatesTypedStorage.Update(data);
+            CandidateListTypedStorage.Update(data);
         }
         
         /// <summary>
-        /// >> Candidates
-        ///  The (community, limited) collation candidates.
+        /// >> CandidateList
+        ///  The (community, limited) collation candidates. `Candidates` and `Invulnerables` should be
+        ///  mutually exclusive.
+        /// 
+        ///  This list is sorted in ascending order by deposit and when the deposits are equal, the least
+        ///  recently updated is considered greater.
         /// </summary>
-        public Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18 GetCandidates()
+        public Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT24 GetCandidateList()
         {
-            return CandidatesTypedStorage.Get();
+            return CandidateListTypedStorage.Get();
         }
         
         /// <summary>

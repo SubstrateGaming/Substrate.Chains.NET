@@ -25,8 +25,9 @@ namespace Substrate.Ajuna.NET.RestClient.Mockup
       public ICollatorSelectionControllerMockupClient CollatorSelectionControllerClient;
       public ICouncilControllerMockupClient CouncilControllerClient;
       public ICouncilMembershipControllerMockupClient CouncilMembershipControllerClient;
-      public IDmpQueueControllerMockupClient DmpQueueControllerClient;
+      public IDemocracyControllerMockupClient DemocracyControllerClient;
       public IIdentityControllerMockupClient IdentityControllerClient;
+      public IMessageQueueControllerMockupClient MessageQueueControllerClient;
       public IMultisigControllerMockupClient MultisigControllerClient;
       public IParachainInfoControllerMockupClient ParachainInfoControllerClient;
       public IParachainSystemControllerMockupClient ParachainSystemControllerClient;
@@ -37,6 +38,8 @@ namespace Substrate.Ajuna.NET.RestClient.Mockup
       public ISessionControllerMockupClient SessionControllerClient;
       public ISudoControllerMockupClient SudoControllerClient;
       public ISystemControllerMockupClient SystemControllerClient;
+      public ITechnicalCommitteeControllerMockupClient TechnicalCommitteeControllerClient;
+      public ITechnicalCommitteeMembershipControllerMockupClient TechnicalCommitteeMembershipControllerClient;
       public ITimestampControllerMockupClient TimestampControllerClient;
       public ITransactionPaymentControllerMockupClient TransactionPaymentControllerClient;
       public ITreasuryControllerMockupClient TreasuryControllerClient;
@@ -52,8 +55,9 @@ namespace Substrate.Ajuna.NET.RestClient.Mockup
          CollatorSelectionControllerClient = new CollatorSelectionControllerMockupClient(_httpClient);
          CouncilControllerClient = new CouncilControllerMockupClient(_httpClient);
          CouncilMembershipControllerClient = new CouncilMembershipControllerMockupClient(_httpClient);
-         DmpQueueControllerClient = new DmpQueueControllerMockupClient(_httpClient);
+         DemocracyControllerClient = new DemocracyControllerMockupClient(_httpClient);
          IdentityControllerClient = new IdentityControllerMockupClient(_httpClient);
+         MessageQueueControllerClient = new MessageQueueControllerMockupClient(_httpClient);
          MultisigControllerClient = new MultisigControllerMockupClient(_httpClient);
          ParachainInfoControllerClient = new ParachainInfoControllerMockupClient(_httpClient);
          ParachainSystemControllerClient = new ParachainSystemControllerMockupClient(_httpClient);
@@ -64,6 +68,8 @@ namespace Substrate.Ajuna.NET.RestClient.Mockup
          SessionControllerClient = new SessionControllerMockupClient(_httpClient);
          SudoControllerClient = new SudoControllerMockupClient(_httpClient);
          SystemControllerClient = new SystemControllerMockupClient(_httpClient);
+         TechnicalCommitteeControllerClient = new TechnicalCommitteeControllerMockupClient(_httpClient);
+         TechnicalCommitteeMembershipControllerClient = new TechnicalCommitteeMembershipControllerMockupClient(_httpClient);
          TimestampControllerClient = new TimestampControllerMockupClient(_httpClient);
          TransactionPaymentControllerClient = new TransactionPaymentControllerMockupClient(_httpClient);
          TreasuryControllerClient = new TreasuryControllerMockupClient(_httpClient);

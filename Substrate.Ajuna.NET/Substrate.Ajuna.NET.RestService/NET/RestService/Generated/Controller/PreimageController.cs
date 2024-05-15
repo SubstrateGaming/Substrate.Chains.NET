@@ -42,7 +42,7 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Controller
         ///  The request status of a given hash.
         /// </summary>
         [HttpGet("StatusFor")]
-        [ProducesResponseType(typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_preimage.EnumRequestStatus), 200)]
+        [ProducesResponseType(typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_preimage.EnumOldRequestStatus), 200)]
         [StorageKeyBuilder(typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Storage.PreimageStorage), "StatusForParams", typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256))]
         public IActionResult GetStatusFor(string key)
         {
@@ -50,10 +50,22 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Controller
         }
         
         /// <summary>
+        /// >> RequestStatusFor
+        ///  The request status of a given hash.
+        /// </summary>
+        [HttpGet("RequestStatusFor")]
+        [ProducesResponseType(typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_preimage.EnumRequestStatus), 200)]
+        [StorageKeyBuilder(typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Storage.PreimageStorage), "RequestStatusForParams", typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256))]
+        public IActionResult GetRequestStatusFor(string key)
+        {
+            return this.Ok(_preimageStorage.GetRequestStatusFor(key));
+        }
+        
+        /// <summary>
         /// >> PreimageFor
         /// </summary>
         [HttpGet("PreimageFor")]
-        [ProducesResponseType(typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT13), 200)]
+        [ProducesResponseType(typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18), 200)]
         [StorageKeyBuilder(typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Storage.PreimageStorage), "PreimageForParams", typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Primitive.U32>))]
         public IActionResult GetPreimageFor(string key)
         {

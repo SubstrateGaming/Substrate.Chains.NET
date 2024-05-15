@@ -11,32 +11,27 @@ namespace Substrate.Ajuna.NET.RestClient.Generated.Interfaces
 {
    using System;
    using System.Threading.Tasks;
+   using Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set;
    using Substrate.NetApi.Model.Types.Base;
    using Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue;
    using Substrate.NetApi.Model.Types.Primitive;
-   using Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives;
+   using Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point;
    
    public interface IXcmpQueueControllerClient
    {
-      Task<BaseVec<InboundChannelDetails>> GetInboundXcmpStatus();
-      Task<bool> SubscribeInboundXcmpStatus();
-      Task<BaseVec<U8>> GetInboundXcmpMessages(BaseTuple<Id, U32> key);
-      Task<bool> SubscribeInboundXcmpMessages(BaseTuple<Id, U32> key);
+      Task<BoundedBTreeSet> GetInboundXcmpSuspended();
+      Task<bool> SubscribeInboundXcmpSuspended();
       Task<BaseVec<OutboundChannelDetails>> GetOutboundXcmpStatus();
       Task<bool> SubscribeOutboundXcmpStatus();
-      Task<BaseVec<U8>> GetOutboundXcmpMessages(BaseTuple<Id, U16> key);
-      Task<bool> SubscribeOutboundXcmpMessages(BaseTuple<Id, U16> key);
-      Task<BaseVec<U8>> GetSignalMessages(Id key);
-      Task<bool> SubscribeSignalMessages(Id key);
+      Task<BaseVec<U8>> GetOutboundXcmpMessages(BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, U16> key);
+      Task<bool> SubscribeOutboundXcmpMessages(BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, U16> key);
+      Task<BaseVec<U8>> GetSignalMessages(Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key);
+      Task<bool> SubscribeSignalMessages(Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key);
       Task<QueueConfigData> GetQueueConfig();
       Task<bool> SubscribeQueueConfig();
-      Task<BaseTuple<Id, U32, BaseVec<U8>>> GetOverweight(U64 key);
-      Task<bool> SubscribeOverweight(U64 key);
-      Task<U32> GetCounterForOverweight();
-      Task<bool> SubscribeCounterForOverweight();
-      Task<U64> GetOverweightCount();
-      Task<bool> SubscribeOverweightCount();
       Task<Bool> GetQueueSuspended();
       Task<bool> SubscribeQueueSuspended();
+      Task<FixedU128> GetDeliveryFeeFactor(Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key);
+      Task<bool> SubscribeDeliveryFeeFactor(Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key);
    }
 }

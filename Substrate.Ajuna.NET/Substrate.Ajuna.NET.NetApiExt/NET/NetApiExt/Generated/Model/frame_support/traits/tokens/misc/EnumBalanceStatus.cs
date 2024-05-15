@@ -33,7 +33,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.traits.tok
     }
     
     /// <summary>
-    /// >> 45 - Variant[frame_support.traits.tokens.misc.BalanceStatus]
+    /// >> 47 - Variant[frame_support.traits.tokens.misc.BalanceStatus]
     /// </summary>
     public sealed class EnumBalanceStatus : BaseEnum<BalanceStatus>
     {

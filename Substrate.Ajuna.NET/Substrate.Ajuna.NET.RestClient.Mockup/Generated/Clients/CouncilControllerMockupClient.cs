@@ -27,7 +27,7 @@ namespace Substrate.Ajuna.NET.RestClient.Mockup.Generated.Clients
       {
          _httpClient = httpClient;
       }
-      public async Task<bool> SetProposals(BoundedVecT23 value)
+      public async Task<bool> SetProposals(BoundedVecT31 value)
       {
          return await SendMockupRequestAsync(_httpClient, "Council/Proposals", value.Encode(), Substrate.Ajuna.NET.NetApiExt.Generated.Storage.CouncilStorage.ProposalsParams());
       }

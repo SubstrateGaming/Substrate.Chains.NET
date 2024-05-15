@@ -65,10 +65,15 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_runtime
         /// >> NotExpendable
         /// </summary>
         NotExpendable = 8,
+        
+        /// <summary>
+        /// >> Blocked
+        /// </summary>
+        Blocked = 9,
     }
     
     /// <summary>
-    /// >> 27 - Variant[sp_runtime.TokenError]
+    /// >> 28 - Variant[sp_runtime.TokenError]
     /// </summary>
     public sealed class EnumTokenError : BaseEnum<TokenError>
     {

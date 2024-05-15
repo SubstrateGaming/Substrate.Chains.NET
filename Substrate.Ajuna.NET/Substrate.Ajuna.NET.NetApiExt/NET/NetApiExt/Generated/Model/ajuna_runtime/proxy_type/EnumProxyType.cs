@@ -53,7 +53,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.ajuna_runtime.proxy_type
     }
     
     /// <summary>
-    /// >> 39 - Variant[ajuna_runtime.proxy_type.ProxyType]
+    /// >> 41 - Variant[ajuna_runtime.proxy_type.ProxyType]
     /// </summary>
     public sealed class EnumProxyType : BaseEnum<ProxyType>
     {

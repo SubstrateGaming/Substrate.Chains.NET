@@ -18,7 +18,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_consensus_aura.sr2551
     
     
     /// <summary>
-    /// >> 236 - Composite[sp_consensus_aura.sr25519.app_sr25519.Public]
+    /// >> 283 - Composite[sp_consensus_aura.sr25519.app_sr25519.Public]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Public : BaseType
@@ -27,7 +27,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_consensus_aura.sr2551
         /// <summary>
         /// >> value
         /// </summary>
-        public Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.sr25519.Public Value { get; set; }
+        public Substrate.Ajuna.NET.NetApiExt.Generated.Types.Base.Arr32U8 Value { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
@@ -47,7 +47,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_consensus_aura.sr2551
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Value = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.sr25519.Public();
+            Value = new Substrate.Ajuna.NET.NetApiExt.Generated.Types.Base.Arr32U8();
             Value.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

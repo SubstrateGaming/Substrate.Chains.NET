@@ -18,7 +18,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_identity.types
     
     
     /// <summary>
-    /// >> 278 - Composite[pallet_identity.types.RegistrarInfo]
+    /// >> 349 - Composite[pallet_identity.types.RegistrarInfo]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class RegistrarInfo : BaseType
@@ -35,7 +35,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_identity.types
         /// <summary>
         /// >> fields
         /// </summary>
-        public Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_identity.types.BitFlags Fields { get; set; }
+        public Substrate.NetApi.Model.Types.Primitive.U64 Fields { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
@@ -61,7 +61,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_identity.types
             Account.Decode(byteArray, ref p);
             Fee = new Substrate.NetApi.Model.Types.Primitive.U128();
             Fee.Decode(byteArray, ref p);
-            Fields = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_identity.types.BitFlags();
+            Fields = new Substrate.NetApi.Model.Types.Primitive.U64();
             Fields.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;
