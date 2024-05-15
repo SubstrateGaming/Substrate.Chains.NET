@@ -107,9 +107,9 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.ajuna_runtime
         CumulusXcm = 32,
         
         /// <summary>
-        /// >> DmpQueue
+        /// >> MessageQueue
         /// </summary>
-        DmpQueue = 33,
+        MessageQueue = 34,
         
         /// <summary>
         /// >> Sudo
@@ -130,12 +130,27 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.ajuna_runtime
         /// >> CouncilMembership
         /// </summary>
         CouncilMembership = 43,
+        
+        /// <summary>
+        /// >> TechnicalCommittee
+        /// </summary>
+        TechnicalCommittee = 44,
+        
+        /// <summary>
+        /// >> TechnicalCommitteeMembership
+        /// </summary>
+        TechnicalCommitteeMembership = 45,
+        
+        /// <summary>
+        /// >> Democracy
+        /// </summary>
+        Democracy = 46,
     }
     
     /// <summary>
-    /// >> 174 - Variant[ajuna_runtime.RuntimeCall]
+    /// >> 217 - Variant[ajuna_runtime.RuntimeCall]
     /// </summary>
-    public sealed class EnumRuntimeCall : BaseEnumExt<RuntimeCall, Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_system.pallet.EnumCall, Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.pallet.EnumCall, Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_timestamp.pallet.EnumCall, Substrate.Ajuna.NET.NetApiExt.Generated.Model.parachain_info.pallet.EnumCall, Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_multisig.pallet.EnumCall, Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_utility.pallet.EnumCall, Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_identity.pallet.EnumCall, Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_proxy.pallet.EnumCall, Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_scheduler.pallet.EnumCall, Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_preimage.pallet.EnumCall, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_balances.pallet.EnumCall, BaseVoid, Substrate.Ajuna.NET.NetApiExt.Generated.Model.orml_vesting.module.EnumCall, BaseVoid, BaseVoid, BaseVoid, Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_collator_selection.pallet.EnumCall, Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_session.pallet.EnumCall, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue.pallet.EnumCall, Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_xcm.pallet.EnumCall, Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_pallet_xcm.pallet.EnumCall, Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_pallet_dmp_queue.pallet.EnumCall, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_sudo.pallet.EnumCall, Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_treasury.pallet.EnumCall, Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_collective.pallet.EnumCall, Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_membership.pallet.EnumCall>
+    public sealed class EnumRuntimeCall : BaseEnumExt<RuntimeCall, Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_system.pallet.EnumCall, Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.pallet.EnumCall, Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_timestamp.pallet.EnumCall, Substrate.Ajuna.NET.NetApiExt.Generated.Model.staging_parachain_info.pallet.EnumCall, Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_multisig.pallet.EnumCall, Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_utility.pallet.EnumCall, Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_identity.pallet.EnumCall, Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_proxy.pallet.EnumCall, Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_scheduler.pallet.EnumCall, Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_preimage.pallet.EnumCall, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_balances.pallet.EnumCall, BaseVoid, Substrate.Ajuna.NET.NetApiExt.Generated.Model.orml_vesting.module.EnumCall, BaseVoid, BaseVoid, BaseVoid, Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_collator_selection.pallet.EnumCall, Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_session.pallet.EnumCall, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue.pallet.EnumCall, Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_xcm.pallet.EnumCall, Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_pallet_xcm.pallet.EnumCall, BaseVoid, Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_message_queue.pallet.EnumCall, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_sudo.pallet.EnumCall, Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_treasury.pallet.EnumCall, Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_collective.pallet.EnumCall, Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_membership.pallet.EnumCall, Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_collective.pallet.EnumCall, Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_membership.pallet.EnumCall, Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_democracy.pallet.EnumCall>
     {
     }
 }

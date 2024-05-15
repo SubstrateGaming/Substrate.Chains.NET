@@ -11,7 +11,7 @@ namespace Substrate.Ajuna.NET.RestClient.Generated.Interfaces
 {
    using System;
    using System.Threading.Tasks;
-   using Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives;
+   using Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives;
    
    public interface IParachainInfoControllerClient
    {

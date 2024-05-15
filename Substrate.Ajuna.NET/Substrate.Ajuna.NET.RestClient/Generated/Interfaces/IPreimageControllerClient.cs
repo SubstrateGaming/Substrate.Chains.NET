@@ -16,9 +16,11 @@ namespace Substrate.Ajuna.NET.RestClient.Generated.Interfaces
    
    public interface IPreimageControllerClient
    {
-      Task<EnumRequestStatus> GetStatusFor(Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256 key);
+      Task<EnumOldRequestStatus> GetStatusFor(Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256 key);
       Task<bool> SubscribeStatusFor(Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256 key);
-      Task<BoundedVecT13> GetPreimageFor(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Primitive.U32> key);
+      Task<EnumRequestStatus> GetRequestStatusFor(Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256 key);
+      Task<bool> SubscribeRequestStatusFor(Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256 key);
+      Task<BoundedVecT18> GetPreimageFor(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Primitive.U32> key);
       Task<bool> SubscribePreimageFor(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Primitive.U32> key);
    }
 }

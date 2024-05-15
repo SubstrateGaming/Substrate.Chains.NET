@@ -17,48 +17,78 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_collator_selectio
     
     /// <summary>
     /// >> Event
-    /// 
-    ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
-    ///			by this pallet.
-    ///			
+    /// The `Event` enum of this pallet
     /// </summary>
     public enum Event
     {
         
         /// <summary>
         /// >> NewInvulnerables
+        /// New Invulnerables were set.
         /// </summary>
         NewInvulnerables = 0,
         
         /// <summary>
-        /// >> NewDesiredCandidates
+        /// >> InvulnerableAdded
+        /// A new Invulnerable was added.
         /// </summary>
-        NewDesiredCandidates = 1,
+        InvulnerableAdded = 1,
+        
+        /// <summary>
+        /// >> InvulnerableRemoved
+        /// An Invulnerable was removed.
+        /// </summary>
+        InvulnerableRemoved = 2,
+        
+        /// <summary>
+        /// >> NewDesiredCandidates
+        /// The number of desired candidates was set.
+        /// </summary>
+        NewDesiredCandidates = 3,
         
         /// <summary>
         /// >> NewCandidacyBond
+        /// The candidacy bond was set.
         /// </summary>
-        NewCandidacyBond = 2,
+        NewCandidacyBond = 4,
         
         /// <summary>
         /// >> CandidateAdded
+        /// A new candidate joined.
         /// </summary>
-        CandidateAdded = 3,
+        CandidateAdded = 5,
+        
+        /// <summary>
+        /// >> CandidateBondUpdated
+        /// Bond of a candidate updated.
+        /// </summary>
+        CandidateBondUpdated = 6,
         
         /// <summary>
         /// >> CandidateRemoved
+        /// A candidate was removed.
         /// </summary>
-        CandidateRemoved = 4,
+        CandidateRemoved = 7,
+        
+        /// <summary>
+        /// >> CandidateReplaced
+        /// An account was replaced in the candidate list by another one.
+        /// </summary>
+        CandidateReplaced = 8,
+        
+        /// <summary>
+        /// >> InvalidInvulnerableSkipped
+        /// An account was unable to be added to the Invulnerables because they did not have keys
+        /// registered. Other Invulnerables may have been set.
+        /// </summary>
+        InvalidInvulnerableSkipped = 9,
     }
     
     /// <summary>
-    /// >> 50 - Variant[pallet_collator_selection.pallet.Event]
-    /// 
-    ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
-    ///			by this pallet.
-    ///			
+    /// >> 52 - Variant[pallet_collator_selection.pallet.Event]
+    /// The `Event` enum of this pallet
     /// </summary>
-    public sealed class EnumEvent : BaseEnumExt<Event, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U128, BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U128>, Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>
+    public sealed class EnumEvent : BaseEnumExt<Event, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>, Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U128, BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U128>, BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U128>, Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U128>, Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>
     {
     }
 }

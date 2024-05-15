@@ -12,9 +12,13 @@ namespace Substrate.Ajuna.NET.RestClient.Mockup.Generated.Interfaces
    using System;
    using System.Threading.Tasks;
    using Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
+   using Substrate.NetApi.Model.Types.Base;
+   using Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_consensus_slots;
+   using Substrate.NetApi.Model.Types.Primitive;
    
    public interface IAuraExtControllerMockupClient
    {
-      Task<bool> SetAuthorities(BoundedVecT19 value);
+      Task<bool> SetAuthorities(BoundedVecT25 value);
+      Task<bool> SetSlotInfo(BaseTuple<Slot, U32> value);
    }
 }

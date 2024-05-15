@@ -18,7 +18,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain
     
     
     /// <summary>
-    /// >> 145 - Composite[cumulus_pallet_parachain_system.relay_state_snapshot.MessagingStateSnapshot]
+    /// >> 187 - Composite[cumulus_pallet_parachain_system.relay_state_snapshot.MessagingStateSnapshot]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class MessagingStateSnapshot : BaseType
@@ -29,17 +29,17 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain
         /// </summary>
         public Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256 DmqMqcHead { get; set; }
         /// <summary>
-        /// >> relay_dispatch_queue_size
+        /// >> relay_dispatch_queue_remaining_capacity
         /// </summary>
-        public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32> RelayDispatchQueueSize { get; set; }
+        public Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.relay_state_snapshot.RelayDispatchQueueRemainingCapacity RelayDispatchQueueRemainingCapacity { get; set; }
         /// <summary>
         /// >> ingress_channels
         /// </summary>
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.AbridgedHrmpChannel>> IngressChannels { get; set; }
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.AbridgedHrmpChannel>> IngressChannels { get; set; }
         /// <summary>
         /// >> egress_channels
         /// </summary>
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.AbridgedHrmpChannel>> EgressChannels { get; set; }
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.AbridgedHrmpChannel>> EgressChannels { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
@@ -52,7 +52,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain
         {
             var result = new List<byte>();
             result.AddRange(DmqMqcHead.Encode());
-            result.AddRange(RelayDispatchQueueSize.Encode());
+            result.AddRange(RelayDispatchQueueRemainingCapacity.Encode());
             result.AddRange(IngressChannels.Encode());
             result.AddRange(EgressChannels.Encode());
             return result.ToArray();
@@ -64,11 +64,11 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain
             var start = p;
             DmqMqcHead = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256();
             DmqMqcHead.Decode(byteArray, ref p);
-            RelayDispatchQueueSize = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>();
-            RelayDispatchQueueSize.Decode(byteArray, ref p);
-            IngressChannels = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.AbridgedHrmpChannel>>();
+            RelayDispatchQueueRemainingCapacity = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.relay_state_snapshot.RelayDispatchQueueRemainingCapacity();
+            RelayDispatchQueueRemainingCapacity.Decode(byteArray, ref p);
+            IngressChannels = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.AbridgedHrmpChannel>>();
             IngressChannels.Decode(byteArray, ref p);
-            EgressChannels = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.AbridgedHrmpChannel>>();
+            EgressChannels = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.AbridgedHrmpChannel>>();
             EgressChannels.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

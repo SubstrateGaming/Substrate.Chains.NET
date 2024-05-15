@@ -47,7 +47,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> batch
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method Batch(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Ajuna.NET.NetApiExt.Generated.Model.ajuna_runtime.EnumRuntimeCall> calls)
         {
@@ -58,7 +58,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> as_derivative
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method AsDerivative(Substrate.NetApi.Model.Types.Primitive.U16 index, Substrate.Ajuna.NET.NetApiExt.Generated.Model.ajuna_runtime.EnumRuntimeCall call)
         {
@@ -70,7 +70,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> batch_all
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method BatchAll(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Ajuna.NET.NetApiExt.Generated.Model.ajuna_runtime.EnumRuntimeCall> calls)
         {
@@ -81,7 +81,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> dispatch_as
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method DispatchAs(Substrate.Ajuna.NET.NetApiExt.Generated.Model.ajuna_runtime.EnumOriginCaller as_origin, Substrate.Ajuna.NET.NetApiExt.Generated.Model.ajuna_runtime.EnumRuntimeCall call)
         {
@@ -93,7 +93,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> force_batch
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method ForceBatch(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Ajuna.NET.NetApiExt.Generated.Model.ajuna_runtime.EnumRuntimeCall> calls)
         {
@@ -104,7 +104,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> with_weight
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method WithWeight(Substrate.Ajuna.NET.NetApiExt.Generated.Model.ajuna_runtime.EnumRuntimeCall call, Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight weight)
         {

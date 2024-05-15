@@ -38,9 +38,9 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.traits.pre
     }
     
     /// <summary>
-    /// >> 293 - Variant[frame_support.traits.preimages.Bounded]
+    /// >> 332 - Variant[frame_support.traits.preimages.Bounded]
     /// </summary>
-    public sealed class EnumBounded : BaseEnumExt<Bounded, Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT12, BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Primitive.U32>>
+    public sealed class EnumBounded : BaseEnumExt<Bounded, Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10, BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Primitive.U32>>
     {
     }
 }

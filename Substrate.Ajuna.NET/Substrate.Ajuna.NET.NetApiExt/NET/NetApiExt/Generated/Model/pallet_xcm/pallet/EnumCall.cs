@@ -17,13 +17,14 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_xcm.pallet
     
     /// <summary>
     /// >> Call
-    /// Contains one variant per dispatchable that can be called by an extrinsic.
+    /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
     public enum Call
     {
         
         /// <summary>
         /// >> send
+        /// WARNING: DEPRECATED. `send` will be removed after June 2024. Use `send_blob` instead.
         /// </summary>
         send = 0,
         
@@ -31,17 +32,20 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_xcm.pallet
         /// >> teleport_assets
         /// Teleport some assets from the local chain to some destination chain.
         /// 
+        /// **This function is deprecated: Use `limited_teleport_assets` instead.**
+        /// 
         /// Fee payment on the destination side is made from the asset in the `assets` vector of
         /// index `fee_asset_item`. The weight limit for fees is not provided and thus is unlimited,
         /// with all fees taken as needed from the asset.
         /// 
         /// - `origin`: Must be capable of withdrawing the `assets` and executing XCM.
-        /// - `dest`: Destination context for the assets. Will typically be `X2(Parent, Parachain(..))` to send
-        ///   from parachain to parachain, or `X1(Parachain(..))` to send from relay to parachain.
-        /// - `beneficiary`: A beneficiary location for the assets in the context of `dest`. Will generally be
-        ///   an `AccountId32` value.
-        /// - `assets`: The assets to be withdrawn. The first item should be the currency used to to pay the fee on the
-        ///   `dest` side. May not be empty.
+        /// - `dest`: Destination context for the assets. Will typically be `[Parent,
+        ///   Parachain(..)]` to send from parachain to parachain, or `[Parachain(..)]` to send from
+        ///   relay to parachain.
+        /// - `beneficiary`: A beneficiary location for the assets in the context of `dest`. Will
+        ///   generally be an `AccountId32` value.
+        /// - `assets`: The assets to be withdrawn. This should include the assets used to pay the
+        ///   fee on the `dest` chain.
         /// - `fee_asset_item`: The index into `assets` of the item which should be used to pay
         ///   fees.
         /// </summary>
@@ -49,20 +53,34 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_xcm.pallet
         
         /// <summary>
         /// >> reserve_transfer_assets
-        /// Transfer some assets from the local chain to the sovereign account of a destination
-        /// chain and forward a notification XCM.
+        /// Transfer some assets from the local chain to the destination chain through their local,
+        /// destination or remote reserve.
+        /// 
+        /// `assets` must have same reserve location and may not be teleportable to `dest`.
+        ///  - `assets` have local reserve: transfer assets to sovereign account of destination
+        ///    chain and forward a notification XCM to `dest` to mint and deposit reserve-based
+        ///    assets to `beneficiary`.
+        ///  - `assets` have destination reserve: burn local assets and forward a notification to
+        ///    `dest` chain to withdraw the reserve assets from this chain's sovereign account and
+        ///    deposit them to `beneficiary`.
+        ///  - `assets` have remote reserve: burn local assets, forward XCM to reserve chain to move
+        ///    reserves from this chain's SA to `dest` chain's SA, and forward another XCM to `dest`
+        ///    to mint and deposit reserve-based assets to `beneficiary`.
+        /// 
+        /// **This function is deprecated: Use `limited_reserve_transfer_assets` instead.**
         /// 
         /// Fee payment on the destination side is made from the asset in the `assets` vector of
         /// index `fee_asset_item`. The weight limit for fees is not provided and thus is unlimited,
         /// with all fees taken as needed from the asset.
         /// 
         /// - `origin`: Must be capable of withdrawing the `assets` and executing XCM.
-        /// - `dest`: Destination context for the assets. Will typically be `X2(Parent, Parachain(..))` to send
-        ///   from parachain to parachain, or `X1(Parachain(..))` to send from relay to parachain.
-        /// - `beneficiary`: A beneficiary location for the assets in the context of `dest`. Will generally be
-        ///   an `AccountId32` value.
-        /// - `assets`: The assets to be withdrawn. This should include the assets used to pay the fee on the
-        ///   `dest` side.
+        /// - `dest`: Destination context for the assets. Will typically be `[Parent,
+        ///   Parachain(..)]` to send from parachain to parachain, or `[Parachain(..)]` to send from
+        ///   relay to parachain.
+        /// - `beneficiary`: A beneficiary location for the assets in the context of `dest`. Will
+        ///   generally be an `AccountId32` value.
+        /// - `assets`: The assets to be withdrawn. This should include the assets used to pay the
+        ///   fee on the `dest` (and possibly reserve) chains.
         /// - `fee_asset_item`: The index into `assets` of the item which should be used to pay
         ///   fees.
         /// </summary>
@@ -75,12 +93,12 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_xcm.pallet
         /// An event is deposited indicating whether `msg` could be executed completely or only
         /// partially.
         /// 
-        /// No more than `max_weight` will be used in its attempted execution. If this is less than the
-        /// maximum amount of weight that the message could take to be executed, then no execution
-        /// attempt will be made.
+        /// No more than `max_weight` will be used in its attempted execution. If this is less than
+        /// the maximum amount of weight that the message could take to be executed, then no
+        /// execution attempt will be made.
         /// 
-        /// NOTE: A successful return to this does *not* imply that the `msg` was executed successfully
-        /// to completion; only that *some* of it was executed.
+        /// WARNING: DEPRECATED. `execute` will be removed after June 2024. Use `execute_blob`
+        /// instead.
         /// </summary>
         execute = 3,
         
@@ -127,21 +145,33 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_xcm.pallet
         
         /// <summary>
         /// >> limited_reserve_transfer_assets
-        /// Transfer some assets from the local chain to the sovereign account of a destination
-        /// chain and forward a notification XCM.
+        /// Transfer some assets from the local chain to the destination chain through their local,
+        /// destination or remote reserve.
+        /// 
+        /// `assets` must have same reserve location and may not be teleportable to `dest`.
+        ///  - `assets` have local reserve: transfer assets to sovereign account of destination
+        ///    chain and forward a notification XCM to `dest` to mint and deposit reserve-based
+        ///    assets to `beneficiary`.
+        ///  - `assets` have destination reserve: burn local assets and forward a notification to
+        ///    `dest` chain to withdraw the reserve assets from this chain's sovereign account and
+        ///    deposit them to `beneficiary`.
+        ///  - `assets` have remote reserve: burn local assets, forward XCM to reserve chain to move
+        ///    reserves from this chain's SA to `dest` chain's SA, and forward another XCM to `dest`
+        ///    to mint and deposit reserve-based assets to `beneficiary`.
         /// 
         /// Fee payment on the destination side is made from the asset in the `assets` vector of
         /// index `fee_asset_item`, up to enough to pay for `weight_limit` of weight. If more weight
-        /// is needed than `weight_limit`, then the operation will fail and the assets send may be
+        /// is needed than `weight_limit`, then the operation will fail and the sent assets may be
         /// at risk.
         /// 
         /// - `origin`: Must be capable of withdrawing the `assets` and executing XCM.
-        /// - `dest`: Destination context for the assets. Will typically be `X2(Parent, Parachain(..))` to send
-        ///   from parachain to parachain, or `X1(Parachain(..))` to send from relay to parachain.
-        /// - `beneficiary`: A beneficiary location for the assets in the context of `dest`. Will generally be
-        ///   an `AccountId32` value.
-        /// - `assets`: The assets to be withdrawn. This should include the assets used to pay the fee on the
-        ///   `dest` side.
+        /// - `dest`: Destination context for the assets. Will typically be `[Parent,
+        ///   Parachain(..)]` to send from parachain to parachain, or `[Parachain(..)]` to send from
+        ///   relay to parachain.
+        /// - `beneficiary`: A beneficiary location for the assets in the context of `dest`. Will
+        ///   generally be an `AccountId32` value.
+        /// - `assets`: The assets to be withdrawn. This should include the assets used to pay the
+        ///   fee on the `dest` (and possibly reserve) chains.
         /// - `fee_asset_item`: The index into `assets` of the item which should be used to pay
         ///   fees.
         /// - `weight_limit`: The remote-side weight limit, if any, for the XCM fee purchase.
@@ -154,16 +184,17 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_xcm.pallet
         /// 
         /// Fee payment on the destination side is made from the asset in the `assets` vector of
         /// index `fee_asset_item`, up to enough to pay for `weight_limit` of weight. If more weight
-        /// is needed than `weight_limit`, then the operation will fail and the assets send may be
+        /// is needed than `weight_limit`, then the operation will fail and the sent assets may be
         /// at risk.
         /// 
         /// - `origin`: Must be capable of withdrawing the `assets` and executing XCM.
-        /// - `dest`: Destination context for the assets. Will typically be `X2(Parent, Parachain(..))` to send
-        ///   from parachain to parachain, or `X1(Parachain(..))` to send from relay to parachain.
-        /// - `beneficiary`: A beneficiary location for the assets in the context of `dest`. Will generally be
-        ///   an `AccountId32` value.
-        /// - `assets`: The assets to be withdrawn. The first item should be the currency used to to pay the fee on the
-        ///   `dest` side. May not be empty.
+        /// - `dest`: Destination context for the assets. Will typically be `[Parent,
+        ///   Parachain(..)]` to send from parachain to parachain, or `[Parachain(..)]` to send from
+        ///   relay to parachain.
+        /// - `beneficiary`: A beneficiary location for the assets in the context of `dest`. Will
+        ///   generally be an `AccountId32` value.
+        /// - `assets`: The assets to be withdrawn. This should include the assets used to pay the
+        ///   fee on the `dest` chain.
         /// - `fee_asset_item`: The index into `assets` of the item which should be used to pay
         ///   fees.
         /// - `weight_limit`: The remote-side weight limit, if any, for the XCM fee purchase.
@@ -178,13 +209,88 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_xcm.pallet
         /// - `suspended`: `true` to suspend, `false` to resume.
         /// </summary>
         force_suspension = 10,
+        
+        /// <summary>
+        /// >> transfer_assets
+        /// Transfer some assets from the local chain to the destination chain through their local,
+        /// destination or remote reserve, or through teleports.
+        /// 
+        /// Fee payment on the destination side is made from the asset in the `assets` vector of
+        /// index `fee_asset_item` (hence referred to as `fees`), up to enough to pay for
+        /// `weight_limit` of weight. If more weight is needed than `weight_limit`, then the
+        /// operation will fail and the sent assets may be at risk.
+        /// 
+        /// `assets` (excluding `fees`) must have same reserve location or otherwise be teleportable
+        /// to `dest`, no limitations imposed on `fees`.
+        ///  - for local reserve: transfer assets to sovereign account of destination chain and
+        ///    forward a notification XCM to `dest` to mint and deposit reserve-based assets to
+        ///    `beneficiary`.
+        ///  - for destination reserve: burn local assets and forward a notification to `dest` chain
+        ///    to withdraw the reserve assets from this chain's sovereign account and deposit them
+        ///    to `beneficiary`.
+        ///  - for remote reserve: burn local assets, forward XCM to reserve chain to move reserves
+        ///    from this chain's SA to `dest` chain's SA, and forward another XCM to `dest` to mint
+        ///    and deposit reserve-based assets to `beneficiary`.
+        ///  - for teleports: burn local assets and forward XCM to `dest` chain to mint/teleport
+        ///    assets and deposit them to `beneficiary`.
+        /// 
+        /// - `origin`: Must be capable of withdrawing the `assets` and executing XCM.
+        /// - `dest`: Destination context for the assets. Will typically be `X2(Parent,
+        ///   Parachain(..))` to send from parachain to parachain, or `X1(Parachain(..))` to send
+        ///   from relay to parachain.
+        /// - `beneficiary`: A beneficiary location for the assets in the context of `dest`. Will
+        ///   generally be an `AccountId32` value.
+        /// - `assets`: The assets to be withdrawn. This should include the assets used to pay the
+        ///   fee on the `dest` (and possibly reserve) chains.
+        /// - `fee_asset_item`: The index into `assets` of the item which should be used to pay
+        ///   fees.
+        /// - `weight_limit`: The remote-side weight limit, if any, for the XCM fee purchase.
+        /// </summary>
+        transfer_assets = 11,
+        
+        /// <summary>
+        /// >> claim_assets
+        /// Claims assets trapped on this pallet because of leftover assets during XCM execution.
+        /// 
+        /// - `origin`: Anyone can call this extrinsic.
+        /// - `assets`: The exact assets that were trapped. Use the version to specify what version
+        /// was the latest when they were trapped.
+        /// - `beneficiary`: The location/account where the claimed assets will be deposited.
+        /// </summary>
+        claim_assets = 12,
+        
+        /// <summary>
+        /// >> execute_blob
+        /// Execute an XCM from a local, signed, origin.
+        /// 
+        /// An event is deposited indicating whether the message could be executed completely
+        /// or only partially.
+        /// 
+        /// No more than `max_weight` will be used in its attempted execution. If this is less than
+        /// the maximum amount of weight that the message could take to be executed, then no
+        /// execution attempt will be made.
+        /// 
+        /// The message is passed in encoded. It needs to be decodable as a [`VersionedXcm`].
+        /// </summary>
+        execute_blob = 13,
+        
+        /// <summary>
+        /// >> send_blob
+        /// Send an XCM from a local, signed, origin.
+        /// 
+        /// The destination, `dest`, will receive this message with a `DescendOrigin` instruction
+        /// that makes the origin of the message be the origin on this system.
+        /// 
+        /// The message is passed in encoded. It needs to be decodable as a [`VersionedXcm`].
+        /// </summary>
+        send_blob = 14,
     }
     
     /// <summary>
-    /// >> 239 - Variant[pallet_xcm.pallet.Call]
-    /// Contains one variant per dispatchable that can be called by an extrinsic.
+    /// >> 285 - Variant[pallet_xcm.pallet.Call]
+    /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
-    public sealed class EnumCall : BaseEnumExt<Call, BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation, Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedXcm>, BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation, Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation, Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiAssets, Substrate.NetApi.Model.Types.Primitive.U32>, BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation, Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation, Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiAssets, Substrate.NetApi.Model.Types.Primitive.U32>, BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedXcm, Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>, BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.v3.multilocation.MultiLocation, Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation, Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation, BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation, Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation, Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiAssets, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.v3.EnumWeightLimit>, BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation, Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation, Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiAssets, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.v3.EnumWeightLimit>, Substrate.NetApi.Model.Types.Primitive.Bool>
+    public sealed class EnumCall : BaseEnumExt<Call, BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation, Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedXcm>, BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation, Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation, Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAssets, Substrate.NetApi.Model.Types.Primitive.U32>, BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation, Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation, Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAssets, Substrate.NetApi.Model.Types.Primitive.U32>, BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedXcm, Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>, BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.staging_xcm.v4.location.Location, Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation, Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation, BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation, Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation, Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAssets, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.v3.EnumWeightLimit>, BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation, Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation, Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAssets, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.v3.EnumWeightLimit>, Substrate.NetApi.Model.Types.Primitive.Bool, BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation, Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation, Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAssets, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.v3.EnumWeightLimit>, BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAssets, Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation>, BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9, Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>, BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation, Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9>>
     {
     }
 }

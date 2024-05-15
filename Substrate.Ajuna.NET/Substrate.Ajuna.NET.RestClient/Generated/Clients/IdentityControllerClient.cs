@@ -12,8 +12,8 @@ namespace Substrate.Ajuna.NET.RestClient.Generated.Clients
    using System;
    using System.Threading.Tasks;
    using System.Net.Http;
-   using Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_identity.types;
    using Substrate.NetApi.Model.Types.Base;
+   using Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_identity.types;
    using Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto;
    using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
@@ -28,9 +28,9 @@ namespace Substrate.Ajuna.NET.RestClient.Generated.Clients
          _httpClient = httpClient;
          _subscriptionClient = subscriptionClient;
       }
-      public async Task<Registration> GetIdentityOf(AccountId32 key)
+      public async Task<BaseTuple<Registration, BaseOpt<BoundedVecT1>>> GetIdentityOf(AccountId32 key)
       {
-         return await SendRequestAsync<Registration>(_httpClient, "identity/identityof", Substrate.Ajuna.NET.NetApiExt.Generated.Storage.IdentityStorage.IdentityOfParams(key));
+         return await SendRequestAsync<BaseTuple<Registration, BaseOpt<BoundedVecT1>>>(_httpClient, "identity/identityof", Substrate.Ajuna.NET.NetApiExt.Generated.Storage.IdentityStorage.IdentityOfParams(key));
       }
       public async Task<bool> SubscribeIdentityOf(AccountId32 key)
       {
@@ -44,21 +44,45 @@ namespace Substrate.Ajuna.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("Identity.SuperOf", Substrate.Ajuna.NET.NetApiExt.Generated.Storage.IdentityStorage.SuperOfParams(key));
       }
-      public async Task<BaseTuple<U128, BoundedVecT7>> GetSubsOf(AccountId32 key)
+      public async Task<BaseTuple<U128, BoundedVecT12>> GetSubsOf(AccountId32 key)
       {
-         return await SendRequestAsync<BaseTuple<U128, BoundedVecT7>>(_httpClient, "identity/subsof", Substrate.Ajuna.NET.NetApiExt.Generated.Storage.IdentityStorage.SubsOfParams(key));
+         return await SendRequestAsync<BaseTuple<U128, BoundedVecT12>>(_httpClient, "identity/subsof", Substrate.Ajuna.NET.NetApiExt.Generated.Storage.IdentityStorage.SubsOfParams(key));
       }
       public async Task<bool> SubscribeSubsOf(AccountId32 key)
       {
          return await _subscriptionClient.SubscribeAsync("Identity.SubsOf", Substrate.Ajuna.NET.NetApiExt.Generated.Storage.IdentityStorage.SubsOfParams(key));
       }
-      public async Task<BoundedVecT8> GetRegistrars()
+      public async Task<BoundedVecT13> GetRegistrars()
       {
-         return await SendRequestAsync<BoundedVecT8>(_httpClient, "identity/registrars");
+         return await SendRequestAsync<BoundedVecT13>(_httpClient, "identity/registrars");
       }
       public async Task<bool> SubscribeRegistrars()
       {
          return await _subscriptionClient.SubscribeAsync("Identity.Registrars");
+      }
+      public async Task<AuthorityProperties> GetUsernameAuthorities(AccountId32 key)
+      {
+         return await SendRequestAsync<AuthorityProperties>(_httpClient, "identity/usernameauthorities", Substrate.Ajuna.NET.NetApiExt.Generated.Storage.IdentityStorage.UsernameAuthoritiesParams(key));
+      }
+      public async Task<bool> SubscribeUsernameAuthorities(AccountId32 key)
+      {
+         return await _subscriptionClient.SubscribeAsync("Identity.UsernameAuthorities", Substrate.Ajuna.NET.NetApiExt.Generated.Storage.IdentityStorage.UsernameAuthoritiesParams(key));
+      }
+      public async Task<AccountId32> GetAccountOfUsername(BoundedVecT1 key)
+      {
+         return await SendRequestAsync<AccountId32>(_httpClient, "identity/accountofusername", Substrate.Ajuna.NET.NetApiExt.Generated.Storage.IdentityStorage.AccountOfUsernameParams(key));
+      }
+      public async Task<bool> SubscribeAccountOfUsername(BoundedVecT1 key)
+      {
+         return await _subscriptionClient.SubscribeAsync("Identity.AccountOfUsername", Substrate.Ajuna.NET.NetApiExt.Generated.Storage.IdentityStorage.AccountOfUsernameParams(key));
+      }
+      public async Task<BaseTuple<AccountId32, U32>> GetPendingUsernames(BoundedVecT1 key)
+      {
+         return await SendRequestAsync<BaseTuple<AccountId32, U32>>(_httpClient, "identity/pendingusernames", Substrate.Ajuna.NET.NetApiExt.Generated.Storage.IdentityStorage.PendingUsernamesParams(key));
+      }
+      public async Task<bool> SubscribePendingUsernames(BoundedVecT1 key)
+      {
+         return await _subscriptionClient.SubscribeAsync("Identity.PendingUsernames", Substrate.Ajuna.NET.NetApiExt.Generated.Storage.IdentityStorage.PendingUsernamesParams(key));
       }
    }
 }

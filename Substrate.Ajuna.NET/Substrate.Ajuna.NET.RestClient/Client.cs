@@ -26,8 +26,9 @@ namespace Substrate.Ajuna.NET.RestClient
       public ICollatorSelectionControllerClient CollatorSelectionControllerClient;
       public ICouncilControllerClient CouncilControllerClient;
       public ICouncilMembershipControllerClient CouncilMembershipControllerClient;
-      public IDmpQueueControllerClient DmpQueueControllerClient;
+      public IDemocracyControllerClient DemocracyControllerClient;
       public IIdentityControllerClient IdentityControllerClient;
+      public IMessageQueueControllerClient MessageQueueControllerClient;
       public IMultisigControllerClient MultisigControllerClient;
       public IParachainInfoControllerClient ParachainInfoControllerClient;
       public IParachainSystemControllerClient ParachainSystemControllerClient;
@@ -38,6 +39,8 @@ namespace Substrate.Ajuna.NET.RestClient
       public ISessionControllerClient SessionControllerClient;
       public ISudoControllerClient SudoControllerClient;
       public ISystemControllerClient SystemControllerClient;
+      public ITechnicalCommitteeControllerClient TechnicalCommitteeControllerClient;
+      public ITechnicalCommitteeMembershipControllerClient TechnicalCommitteeMembershipControllerClient;
       public ITimestampControllerClient TimestampControllerClient;
       public ITransactionPaymentControllerClient TransactionPaymentControllerClient;
       public ITreasuryControllerClient TreasuryControllerClient;
@@ -54,8 +57,9 @@ namespace Substrate.Ajuna.NET.RestClient
          CollatorSelectionControllerClient = new CollatorSelectionControllerClient(_httpClient, _subscriptionClient);
          CouncilControllerClient = new CouncilControllerClient(_httpClient, _subscriptionClient);
          CouncilMembershipControllerClient = new CouncilMembershipControllerClient(_httpClient, _subscriptionClient);
-         DmpQueueControllerClient = new DmpQueueControllerClient(_httpClient, _subscriptionClient);
+         DemocracyControllerClient = new DemocracyControllerClient(_httpClient, _subscriptionClient);
          IdentityControllerClient = new IdentityControllerClient(_httpClient, _subscriptionClient);
+         MessageQueueControllerClient = new MessageQueueControllerClient(_httpClient, _subscriptionClient);
          MultisigControllerClient = new MultisigControllerClient(_httpClient, _subscriptionClient);
          ParachainInfoControllerClient = new ParachainInfoControllerClient(_httpClient, _subscriptionClient);
          ParachainSystemControllerClient = new ParachainSystemControllerClient(_httpClient, _subscriptionClient);
@@ -66,6 +70,8 @@ namespace Substrate.Ajuna.NET.RestClient
          SessionControllerClient = new SessionControllerClient(_httpClient, _subscriptionClient);
          SudoControllerClient = new SudoControllerClient(_httpClient, _subscriptionClient);
          SystemControllerClient = new SystemControllerClient(_httpClient, _subscriptionClient);
+         TechnicalCommitteeControllerClient = new TechnicalCommitteeControllerClient(_httpClient, _subscriptionClient);
+         TechnicalCommitteeMembershipControllerClient = new TechnicalCommitteeMembershipControllerClient(_httpClient, _subscriptionClient);
          TimestampControllerClient = new TimestampControllerClient(_httpClient, _subscriptionClient);
          TransactionPaymentControllerClient = new TransactionPaymentControllerClient(_httpClient, _subscriptionClient);
          TreasuryControllerClient = new TreasuryControllerClient(_httpClient, _subscriptionClient);

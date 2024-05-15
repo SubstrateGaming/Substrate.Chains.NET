@@ -15,7 +15,7 @@ namespace Substrate.Ajuna.NET.RestClient.Generated.Interfaces
    
    public interface IVestingControllerClient
    {
-      Task<BoundedVecT16> GetVestingSchedules(Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
+      Task<BoundedVecT22> GetVestingSchedules(Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
       Task<bool> SubscribeVestingSchedules(Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
    }
 }

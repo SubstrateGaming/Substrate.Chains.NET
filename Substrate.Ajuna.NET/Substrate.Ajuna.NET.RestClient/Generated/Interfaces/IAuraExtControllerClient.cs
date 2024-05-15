@@ -12,10 +12,15 @@ namespace Substrate.Ajuna.NET.RestClient.Generated.Interfaces
    using System;
    using System.Threading.Tasks;
    using Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
+   using Substrate.NetApi.Model.Types.Base;
+   using Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_consensus_slots;
+   using Substrate.NetApi.Model.Types.Primitive;
    
    public interface IAuraExtControllerClient
    {
-      Task<BoundedVecT19> GetAuthorities();
+      Task<BoundedVecT25> GetAuthorities();
       Task<bool> SubscribeAuthorities();
+      Task<BaseTuple<Slot, U32>> GetSlotInfo();
+      Task<bool> SubscribeSlotInfo();
    }
 }

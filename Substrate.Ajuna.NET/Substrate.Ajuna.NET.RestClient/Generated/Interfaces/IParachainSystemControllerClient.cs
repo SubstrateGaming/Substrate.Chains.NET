@@ -12,18 +12,23 @@ namespace Substrate.Ajuna.NET.RestClient.Generated.Interfaces
    using System;
    using System.Threading.Tasks;
    using Substrate.NetApi.Model.Types.Base;
+   using Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.unincluded_segment;
    using Substrate.NetApi.Model.Types.Primitive;
-   using Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v4;
+   using Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v7;
    using Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_trie.storage_proof;
    using Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.relay_state_snapshot;
    using Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_primitives_parachain_inherent;
    using Substrate.Ajuna.NET.NetApiExt.Generated.Types.Base;
    using Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_core_primitives;
+   using Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point;
    using Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_weights.weight_v2;
-   using Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system;
    
    public interface IParachainSystemControllerClient
    {
+      Task<BaseVec<Ancestor>> GetUnincludedSegment();
+      Task<bool> SubscribeUnincludedSegment();
+      Task<SegmentTracker> GetAggregatedUnincludedSegment();
+      Task<bool> SubscribeAggregatedUnincludedSegment();
       Task<BaseVec<U8>> GetPendingValidationCode();
       Task<bool> SubscribePendingValidationCode();
       Task<BaseVec<U8>> GetNewValidationCode();
@@ -36,6 +41,8 @@ namespace Substrate.Ajuna.NET.RestClient.Generated.Interfaces
       Task<bool> SubscribeLastRelayChainBlockNumber();
       Task<BaseOpt<EnumUpgradeRestriction>> GetUpgradeRestrictionSignal();
       Task<bool> SubscribeUpgradeRestrictionSignal();
+      Task<BaseOpt<EnumUpgradeGoAhead>> GetUpgradeGoAhead();
+      Task<bool> SubscribeUpgradeGoAhead();
       Task<StorageProof> GetRelayStateProof();
       Task<bool> SubscribeRelayStateProof();
       Task<MessagingStateSnapshot> GetRelevantMessagingState();
@@ -44,7 +51,7 @@ namespace Substrate.Ajuna.NET.RestClient.Generated.Interfaces
       Task<bool> SubscribeHostConfiguration();
       Task<MessageQueueChain> GetLastDmqMqcHead();
       Task<bool> SubscribeLastDmqMqcHead();
-      Task<BTreeMapT1> GetLastHrmpMqcHeads();
+      Task<BTreeMapT2> GetLastHrmpMqcHeads();
       Task<bool> SubscribeLastHrmpMqcHeads();
       Task<U32> GetProcessedDownwardMessages();
       Task<bool> SubscribeProcessedDownwardMessages();
@@ -56,14 +63,14 @@ namespace Substrate.Ajuna.NET.RestClient.Generated.Interfaces
       Task<bool> SubscribeUpwardMessages();
       Task<BaseVec<BaseVec<U8>>> GetPendingUpwardMessages();
       Task<bool> SubscribePendingUpwardMessages();
+      Task<FixedU128> GetUpwardDeliveryFeeFactor();
+      Task<bool> SubscribeUpwardDeliveryFeeFactor();
       Task<U32> GetAnnouncedHrmpMessagesPerCandidate();
       Task<bool> SubscribeAnnouncedHrmpMessagesPerCandidate();
       Task<Weight> GetReservedXcmpWeightOverride();
       Task<bool> SubscribeReservedXcmpWeightOverride();
       Task<Weight> GetReservedDmpWeightOverride();
       Task<bool> SubscribeReservedDmpWeightOverride();
-      Task<CodeUpgradeAuthorization> GetAuthorizedUpgrade();
-      Task<bool> SubscribeAuthorizedUpgrade();
       Task<BaseVec<U8>> GetCustomValidationHeadData();
       Task<bool> SubscribeCustomValidationHeadData();
    }

@@ -26,10 +26,10 @@ namespace Substrate.Ajuna.NET.RestClient.Test.Generated
       {
          _httpClient = CreateHttpClient();
       }
-      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT19 GetTestValue2()
+      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT25 GetTestValue2()
       {
-         Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT19 result;
-         result = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT19();
+         Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT25 result;
+         result = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT25();
          result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_consensus_aura.sr25519.app_sr25519.Public>();
          result.Value.Create(new Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_consensus_aura.sr25519.app_sr25519.Public[] {
                   this.GetTestValue3()});
@@ -39,14 +39,6 @@ namespace Substrate.Ajuna.NET.RestClient.Test.Generated
       {
          Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_consensus_aura.sr25519.app_sr25519.Public result;
          result = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_consensus_aura.sr25519.app_sr25519.Public();
-         result.Value = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.sr25519.Public();
-         result.Value = this.GetTestValue4();
-         return result;
-      }
-      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.sr25519.Public GetTestValue4()
-      {
-         Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.sr25519.Public result;
-         result = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.sr25519.Public();
          result.Value = new Substrate.Ajuna.NET.NetApiExt.Generated.Types.Base.Arr32U8();
          result.Value.Create(new Substrate.NetApi.Model.Types.Primitive.U8[] {
                   this.GetTestValueU8(),
@@ -94,7 +86,7 @@ namespace Substrate.Ajuna.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          AuraControllerClient rpcClient = new AuraControllerClient(_httpClient, subscriptionClient);
-         Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT19 mockupValue = this.GetTestValue2();
+         Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT25 mockupValue = this.GetTestValue2();
 
 
          Assert.IsTrue(await rpcClient.SubscribeAuthorities());
@@ -107,12 +99,12 @@ namespace Substrate.Ajuna.NET.RestClient.Test.Generated
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT19 rpcResult = await rpcClient.GetAuthorities();
+         Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT25 rpcResult = await rpcClient.GetAuthorities();
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_consensus_slots.Slot GetTestValue6()
+      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_consensus_slots.Slot GetTestValue5()
       {
          Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_consensus_slots.Slot result;
          result = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_consensus_slots.Slot();
@@ -130,7 +122,7 @@ namespace Substrate.Ajuna.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          AuraControllerClient rpcClient = new AuraControllerClient(_httpClient, subscriptionClient);
-         Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_consensus_slots.Slot mockupValue = this.GetTestValue6();
+         Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_consensus_slots.Slot mockupValue = this.GetTestValue5();
 
 
          Assert.IsTrue(await rpcClient.SubscribeCurrentSlot());

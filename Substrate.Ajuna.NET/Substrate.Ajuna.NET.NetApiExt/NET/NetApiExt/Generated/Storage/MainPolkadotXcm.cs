@@ -44,21 +44,21 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("PolkadotXcm", "SafeXcmVersion"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Primitive.U32)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("PolkadotXcm", "SupportedVersion"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat,
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation>), typeof(Substrate.NetApi.Model.Types.Primitive.U32)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation>), typeof(Substrate.NetApi.Model.Types.Primitive.U32)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("PolkadotXcm", "VersionNotifiers"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat,
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation>), typeof(Substrate.NetApi.Model.Types.Primitive.U64)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation>), typeof(Substrate.NetApi.Model.Types.Primitive.U64)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("PolkadotXcm", "VersionNotifyTargets"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat,
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation>), typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U64, Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight, Substrate.NetApi.Model.Types.Primitive.U32>)));
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("PolkadotXcm", "VersionDiscoveryQueue"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT20)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation>), typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U64, Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight, Substrate.NetApi.Model.Types.Primitive.U32>)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("PolkadotXcm", "VersionDiscoveryQueue"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT26)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("PolkadotXcm", "CurrentMigration"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_xcm.pallet.EnumVersionMigrationStage)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("PolkadotXcm", "RemoteLockedFungibles"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat,
                             Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat,
                             Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAssetId>), typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_xcm.pallet.RemoteLockedFungibleRecord)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("PolkadotXcm", "LockedFungibles"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32), typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT21)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32), typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT28)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("PolkadotXcm", "XcmExecutionSuspended"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Primitive.Bool)));
         }
         
@@ -126,7 +126,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         /// >> AssetTrapsParams
         ///  The existing asset traps.
         /// 
-        ///  Key is the blake2 256 hash of (origin, versioned `MultiAssets`) pair. Value is the number of
+        ///  Key is the blake2 256 hash of (origin, versioned `Assets`) pair. Value is the number of
         ///  times this pair has been trapped (usually just 1 if it exists at all).
         /// </summary>
         public static string AssetTrapsParams(Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256 key)
@@ -149,7 +149,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         /// >> AssetTraps
         ///  The existing asset traps.
         /// 
-        ///  Key is the blake2 256 hash of (origin, versioned `MultiAssets`) pair. Value is the number of
+        ///  Key is the blake2 256 hash of (origin, versioned `Assets`) pair. Value is the number of
         ///  times this pair has been trapped (usually just 1 if it exists at all).
         /// </summary>
         public async Task<Substrate.NetApi.Model.Types.Primitive.U32> AssetTraps(Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256 key, string blockhash, CancellationToken token)
@@ -194,7 +194,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         /// >> SupportedVersionParams
         ///  The Latest versions that we know various locations support.
         /// </summary>
-        public static string SupportedVersionParams(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation> key)
+        public static string SupportedVersionParams(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation> key)
         {
             return RequestGenerator.GetStorage("PolkadotXcm", "SupportedVersion", Substrate.NetApi.Model.Meta.Storage.Type.Map, new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                         Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat,
@@ -214,7 +214,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         /// >> SupportedVersion
         ///  The Latest versions that we know various locations support.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> SupportedVersion(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation> key, string blockhash, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> SupportedVersion(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation> key, string blockhash, CancellationToken token)
         {
             string parameters = PolkadotXcmStorage.SupportedVersionParams(key);
             var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, blockhash, token);
@@ -225,7 +225,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         /// >> VersionNotifiersParams
         ///  All locations that we have requested version notifications from.
         /// </summary>
-        public static string VersionNotifiersParams(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation> key)
+        public static string VersionNotifiersParams(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation> key)
         {
             return RequestGenerator.GetStorage("PolkadotXcm", "VersionNotifiers", Substrate.NetApi.Model.Meta.Storage.Type.Map, new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                         Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat,
@@ -245,7 +245,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         /// >> VersionNotifiers
         ///  All locations that we have requested version notifications from.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U64> VersionNotifiers(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation> key, string blockhash, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U64> VersionNotifiers(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation> key, string blockhash, CancellationToken token)
         {
             string parameters = PolkadotXcmStorage.VersionNotifiersParams(key);
             var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U64>(parameters, blockhash, token);
@@ -257,7 +257,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         ///  The target locations that are subscribed to our version changes, as well as the most recent
         ///  of our versions we informed them of.
         /// </summary>
-        public static string VersionNotifyTargetsParams(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation> key)
+        public static string VersionNotifyTargetsParams(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation> key)
         {
             return RequestGenerator.GetStorage("PolkadotXcm", "VersionNotifyTargets", Substrate.NetApi.Model.Meta.Storage.Type.Map, new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                         Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat,
@@ -278,7 +278,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         ///  The target locations that are subscribed to our version changes, as well as the most recent
         ///  of our versions we informed them of.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U64, Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight, Substrate.NetApi.Model.Types.Primitive.U32>> VersionNotifyTargets(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation> key, string blockhash, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U64, Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight, Substrate.NetApi.Model.Types.Primitive.U32>> VersionNotifyTargets(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation> key, string blockhash, CancellationToken token)
         {
             string parameters = PolkadotXcmStorage.VersionNotifyTargetsParams(key);
             var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U64, Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight, Substrate.NetApi.Model.Types.Primitive.U32>>(parameters, blockhash, token);
@@ -311,10 +311,10 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         ///  the `u32` counter is the number of times that a send to the destination has been attempted,
         ///  which is used as a prioritization.
         /// </summary>
-        public async Task<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT20> VersionDiscoveryQueue(string blockhash, CancellationToken token)
+        public async Task<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT26> VersionDiscoveryQueue(string blockhash, CancellationToken token)
         {
             string parameters = PolkadotXcmStorage.VersionDiscoveryQueueParams();
-            var result = await _client.GetStorageAsync<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT20>(parameters, blockhash, token);
+            var result = await _client.GetStorageAsync<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT26>(parameters, blockhash, token);
             return result;
         }
         
@@ -403,10 +403,10 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         /// >> LockedFungibles
         ///  Fungible assets which we know are locked on this chain.
         /// </summary>
-        public async Task<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT21> LockedFungibles(Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, string blockhash, CancellationToken token)
+        public async Task<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT28> LockedFungibles(Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, string blockhash, CancellationToken token)
         {
             string parameters = PolkadotXcmStorage.LockedFungiblesParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT21>(parameters, blockhash, token);
+            var result = await _client.GetStorageAsync<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT28>(parameters, blockhash, token);
             return result;
         }
         
@@ -448,9 +448,9 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> send
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method Send(Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation dest, Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedXcm message)
+        public static Method Send(Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation dest, Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedXcm message)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(dest.Encode());
@@ -460,9 +460,9 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> teleport_assets
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method TeleportAssets(Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation dest, Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation beneficiary, Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiAssets assets, Substrate.NetApi.Model.Types.Primitive.U32 fee_asset_item)
+        public static Method TeleportAssets(Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation dest, Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation beneficiary, Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAssets assets, Substrate.NetApi.Model.Types.Primitive.U32 fee_asset_item)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(dest.Encode());
@@ -474,9 +474,9 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> reserve_transfer_assets
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method ReserveTransferAssets(Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation dest, Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation beneficiary, Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiAssets assets, Substrate.NetApi.Model.Types.Primitive.U32 fee_asset_item)
+        public static Method ReserveTransferAssets(Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation dest, Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation beneficiary, Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAssets assets, Substrate.NetApi.Model.Types.Primitive.U32 fee_asset_item)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(dest.Encode());
@@ -488,7 +488,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> execute
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method Execute(Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedXcm message, Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight max_weight)
         {
@@ -500,19 +500,19 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> force_xcm_version
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method ForceXcmVersion(Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.v3.multilocation.MultiLocation location, Substrate.NetApi.Model.Types.Primitive.U32 xcm_version)
+        public static Method ForceXcmVersion(Substrate.Ajuna.NET.NetApiExt.Generated.Model.staging_xcm.v4.location.Location location, Substrate.NetApi.Model.Types.Primitive.U32 version)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(location.Encode());
-            byteArray.AddRange(xcm_version.Encode());
+            byteArray.AddRange(version.Encode());
             return new Method(31, "PolkadotXcm", 4, "force_xcm_version", byteArray.ToArray());
         }
         
         /// <summary>
         /// >> force_default_xcm_version
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method ForceDefaultXcmVersion(Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32> maybe_xcm_version)
         {
@@ -523,9 +523,9 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> force_subscribe_version_notify
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method ForceSubscribeVersionNotify(Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation location)
+        public static Method ForceSubscribeVersionNotify(Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation location)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(location.Encode());
@@ -534,9 +534,9 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> force_unsubscribe_version_notify
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method ForceUnsubscribeVersionNotify(Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation location)
+        public static Method ForceUnsubscribeVersionNotify(Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation location)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(location.Encode());
@@ -545,9 +545,9 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> limited_reserve_transfer_assets
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method LimitedReserveTransferAssets(Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation dest, Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation beneficiary, Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiAssets assets, Substrate.NetApi.Model.Types.Primitive.U32 fee_asset_item, Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.v3.EnumWeightLimit weight_limit)
+        public static Method LimitedReserveTransferAssets(Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation dest, Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation beneficiary, Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAssets assets, Substrate.NetApi.Model.Types.Primitive.U32 fee_asset_item, Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.v3.EnumWeightLimit weight_limit)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(dest.Encode());
@@ -560,9 +560,9 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> limited_teleport_assets
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method LimitedTeleportAssets(Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation dest, Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation beneficiary, Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiAssets assets, Substrate.NetApi.Model.Types.Primitive.U32 fee_asset_item, Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.v3.EnumWeightLimit weight_limit)
+        public static Method LimitedTeleportAssets(Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation dest, Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation beneficiary, Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAssets assets, Substrate.NetApi.Model.Types.Primitive.U32 fee_asset_item, Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.v3.EnumWeightLimit weight_limit)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(dest.Encode());
@@ -575,13 +575,64 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> force_suspension
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method ForceSuspension(Substrate.NetApi.Model.Types.Primitive.Bool suspended)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(suspended.Encode());
             return new Method(31, "PolkadotXcm", 10, "force_suspension", byteArray.ToArray());
+        }
+        
+        /// <summary>
+        /// >> transfer_assets
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
+        /// </summary>
+        public static Method TransferAssets(Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation dest, Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation beneficiary, Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAssets assets, Substrate.NetApi.Model.Types.Primitive.U32 fee_asset_item, Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.v3.EnumWeightLimit weight_limit)
+        {
+            System.Collections.Generic.List<byte> byteArray = new List<byte>();
+            byteArray.AddRange(dest.Encode());
+            byteArray.AddRange(beneficiary.Encode());
+            byteArray.AddRange(assets.Encode());
+            byteArray.AddRange(fee_asset_item.Encode());
+            byteArray.AddRange(weight_limit.Encode());
+            return new Method(31, "PolkadotXcm", 11, "transfer_assets", byteArray.ToArray());
+        }
+        
+        /// <summary>
+        /// >> claim_assets
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
+        /// </summary>
+        public static Method ClaimAssets(Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAssets assets, Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation beneficiary)
+        {
+            System.Collections.Generic.List<byte> byteArray = new List<byte>();
+            byteArray.AddRange(assets.Encode());
+            byteArray.AddRange(beneficiary.Encode());
+            return new Method(31, "PolkadotXcm", 12, "claim_assets", byteArray.ToArray());
+        }
+        
+        /// <summary>
+        /// >> execute_blob
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
+        /// </summary>
+        public static Method ExecuteBlob(Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9 encoded_message, Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight max_weight)
+        {
+            System.Collections.Generic.List<byte> byteArray = new List<byte>();
+            byteArray.AddRange(encoded_message.Encode());
+            byteArray.AddRange(max_weight.Encode());
+            return new Method(31, "PolkadotXcm", 13, "execute_blob", byteArray.ToArray());
+        }
+        
+        /// <summary>
+        /// >> send_blob
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
+        /// </summary>
+        public static Method SendBlob(Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation dest, Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9 encoded_message)
+        {
+            System.Collections.Generic.List<byte> byteArray = new List<byte>();
+            byteArray.AddRange(dest.Encode());
+            byteArray.AddRange(encoded_message.Encode());
+            return new Method(31, "PolkadotXcm", 14, "send_blob", byteArray.ToArray());
         }
     }
     
@@ -607,8 +658,8 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> SendFailure
-        /// There was some other issue (i.e. not to do with routing) in sending the message. Perhaps
-        /// a lack of space for buffering the message.
+        /// There was some other issue (i.e. not to do with routing) in sending the message.
+        /// Perhaps a lack of space for buffering the message.
         /// </summary>
         SendFailure,
         
@@ -626,7 +677,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> DestinationNotInvertible
-        /// The destination `MultiLocation` provided cannot be inverted.
+        /// The destination `Location` provided cannot be inverted.
         /// </summary>
         DestinationNotInvertible,
         
@@ -680,10 +731,10 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         AlreadySubscribed,
         
         /// <summary>
-        /// >> InvalidAsset
-        /// Invalid asset for the operation.
+        /// >> CannotCheckOutTeleport
+        /// Could not check-out the assets for teleportation to the destination chain.
         /// </summary>
-        InvalidAsset,
+        CannotCheckOutTeleport,
         
         /// <summary>
         /// >> LowBalance
@@ -717,8 +768,51 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> InUse
-        /// The unlock operation cannot succeed because there are still users of the lock.
+        /// The unlock operation cannot succeed because there are still consumers of the lock.
         /// </summary>
         InUse,
+        
+        /// <summary>
+        /// >> InvalidAssetNotConcrete
+        /// Invalid non-concrete asset.
+        /// </summary>
+        InvalidAssetNotConcrete,
+        
+        /// <summary>
+        /// >> InvalidAssetUnknownReserve
+        /// Invalid asset, reserve chain could not be determined for it.
+        /// </summary>
+        InvalidAssetUnknownReserve,
+        
+        /// <summary>
+        /// >> InvalidAssetUnsupportedReserve
+        /// Invalid asset, do not support remote asset reserves with different fees reserves.
+        /// </summary>
+        InvalidAssetUnsupportedReserve,
+        
+        /// <summary>
+        /// >> TooManyReserves
+        /// Too many assets with different reserve locations have been attempted for transfer.
+        /// </summary>
+        TooManyReserves,
+        
+        /// <summary>
+        /// >> LocalExecutionIncomplete
+        /// Local XCM execution incomplete.
+        /// </summary>
+        LocalExecutionIncomplete,
+        
+        /// <summary>
+        /// >> UnableToDecode
+        /// Could not decode XCM.
+        /// </summary>
+        UnableToDecode,
+        
+        /// <summary>
+        /// >> XcmTooLarge
+        /// XCM encoded length is too large.
+        /// Returned when an XCM encoded length is larger than `MaxXcmEncodedSize`.
+        /// </summary>
+        XcmTooLarge,
     }
 }

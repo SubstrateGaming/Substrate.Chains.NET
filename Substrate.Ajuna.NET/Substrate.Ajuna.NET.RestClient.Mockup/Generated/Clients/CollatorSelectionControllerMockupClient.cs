@@ -23,13 +23,13 @@ namespace Substrate.Ajuna.NET.RestClient.Mockup.Generated.Clients
       {
          _httpClient = httpClient;
       }
-      public async Task<bool> SetInvulnerables(BoundedVecT17 value)
+      public async Task<bool> SetInvulnerables(BoundedVecT23 value)
       {
          return await SendMockupRequestAsync(_httpClient, "CollatorSelection/Invulnerables", value.Encode(), Substrate.Ajuna.NET.NetApiExt.Generated.Storage.CollatorSelectionStorage.InvulnerablesParams());
       }
-      public async Task<bool> SetCandidates(BoundedVecT18 value)
+      public async Task<bool> SetCandidateList(BoundedVecT24 value)
       {
-         return await SendMockupRequestAsync(_httpClient, "CollatorSelection/Candidates", value.Encode(), Substrate.Ajuna.NET.NetApiExt.Generated.Storage.CollatorSelectionStorage.CandidatesParams());
+         return await SendMockupRequestAsync(_httpClient, "CollatorSelection/CandidateList", value.Encode(), Substrate.Ajuna.NET.NetApiExt.Generated.Storage.CollatorSelectionStorage.CandidateListParams());
       }
       public async Task<bool> SetLastAuthoredBlock(U32 value, Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {

@@ -22,7 +22,7 @@ namespace Substrate.Ajuna.NET.RestClient.Mockup.Generated.Clients
       {
          _httpClient = httpClient;
       }
-      public async Task<bool> SetVestingSchedules(BoundedVecT16 value, Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+      public async Task<bool> SetVestingSchedules(BoundedVecT22 value, Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {
          return await SendMockupRequestAsync(_httpClient, "Vesting/VestingSchedules", value.Encode(), Substrate.Ajuna.NET.NetApiExt.Generated.Storage.VestingStorage.VestingSchedulesParams(key));
       }
