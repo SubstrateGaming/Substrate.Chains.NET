@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_fast_unstake.t
     
     
     /// <summary>
-    /// >> 659 - Composite[pallet_fast_unstake.types.UnstakeRequest]
+    /// >> 736 - Composite[pallet_fast_unstake.types.UnstakeRequest]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class UnstakeRequest : BaseType
@@ -27,11 +27,11 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_fast_unstake.t
         /// <summary>
         /// >> stashes
         /// </summary>
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT33 Stashes { get; set; }
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT39 Stashes { get; set; }
         /// <summary>
         /// >> checked
         /// </summary>
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT34 Checked { get; set; }
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT40 Checked { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
@@ -52,14 +52,14 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_fast_unstake.t
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Stashes = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT33();
+            Stashes = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT39();
             Stashes.Decode(byteArray, ref p);
-            Checked = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT34();
+            Checked = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT40();
             Checked.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];
-            System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
+            global::System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
         }
     }
 }

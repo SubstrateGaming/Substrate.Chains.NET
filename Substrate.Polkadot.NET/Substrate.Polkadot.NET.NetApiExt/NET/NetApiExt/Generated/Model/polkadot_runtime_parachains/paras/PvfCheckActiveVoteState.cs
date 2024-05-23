@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_para
     
     
     /// <summary>
-    /// >> 691 - Composite[polkadot_runtime_parachains.paras.PvfCheckActiveVoteState]
+    /// >> 767 - Composite[polkadot_runtime_parachains.paras.PvfCheckActiveVoteState]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class PvfCheckActiveVoteState : BaseType
@@ -80,7 +80,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_para
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];
-            System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
+            global::System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
         }
     }
 }

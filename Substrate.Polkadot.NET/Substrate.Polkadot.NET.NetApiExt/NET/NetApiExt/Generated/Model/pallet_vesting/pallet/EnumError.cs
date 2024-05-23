@@ -55,7 +55,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_vesting.pallet
     }
     
     /// <summary>
-    /// >> 593 - Variant[pallet_vesting.pallet.Error]
+    /// >> 666 - Variant[pallet_vesting.pallet.Error]
     /// Error for the vesting pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>

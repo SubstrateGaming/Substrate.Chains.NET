@@ -20,7 +20,7 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup.Generated.Interfaces
    {
       Task<bool> SetReferendumCount(U32 value);
       Task<bool> SetReferendumInfoFor(EnumReferendumInfo value, U32 key);
-      Task<bool> SetTrackQueue(BoundedVecT21 value, U16 key);
+      Task<bool> SetTrackQueue(BoundedVecT26 value, U16 key);
       Task<bool> SetDecidingCount(U32 value, U16 key);
       Task<bool> SetMetadataOf(H256 value, U32 key);
    }

@@ -43,7 +43,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// 
         ///  This should be empty if `DecidingCount` is less than `TrackInfo::max_deciding`.
         /// </summary>
-        Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT21 GetTrackQueue(string key);
+        Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT26 GetTrackQueue(string key);
         
         /// <summary>
         /// >> DecidingCount
@@ -54,7 +54,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// <summary>
         /// >> MetadataOf
         ///  The metadata is a general information concerning the referendum.
-        ///  The `PreimageHash` refers to the preimage of the `Preimages` provider which can be a JSON
+        ///  The `Hash` refers to the preimage of the `Preimages` provider which can be a JSON
         ///  dump or IPFS hash of a JSON file.
         /// 
         ///  Consider a garbage collection for a metadata of finished referendums to `unrequest` (remove)
@@ -82,7 +82,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// <summary>
         /// _trackQueueTypedStorage typed storage field
         /// </summary>
-        private TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT21> _trackQueueTypedStorage;
+        private TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT26> _trackQueueTypedStorage;
         
         /// <summary>
         /// _decidingCountTypedStorage typed storage field
@@ -101,7 +101,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         {
             this.ReferendumCountTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32>("Referenda.ReferendumCount", storageDataProvider, storageChangeDelegates);
             this.ReferendumInfoForTypedStorage = new TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_referenda.types.EnumReferendumInfo>("Referenda.ReferendumInfoFor", storageDataProvider, storageChangeDelegates);
-            this.TrackQueueTypedStorage = new TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT21>("Referenda.TrackQueue", storageDataProvider, storageChangeDelegates);
+            this.TrackQueueTypedStorage = new TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT26>("Referenda.TrackQueue", storageDataProvider, storageChangeDelegates);
             this.DecidingCountTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Primitive.U32>("Referenda.DecidingCount", storageDataProvider, storageChangeDelegates);
             this.MetadataOfTypedStorage = new TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256>("Referenda.MetadataOf", storageDataProvider, storageChangeDelegates);
         }
@@ -139,7 +139,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// <summary>
         /// _trackQueueTypedStorage property
         /// </summary>
-        public TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT21> TrackQueueTypedStorage
+        public TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT26> TrackQueueTypedStorage
         {
             get
             {
@@ -256,13 +256,13 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// 
         ///  This should be empty if `DecidingCount` is less than `TrackInfo::max_deciding`.
         /// </summary>
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT21 GetTrackQueue(string key)
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT26 GetTrackQueue(string key)
         {
             if ((key == null))
             {
                 return null;
             }
-            if (TrackQueueTypedStorage.Dictionary.TryGetValue(key, out Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT21 result))
+            if (TrackQueueTypedStorage.Dictionary.TryGetValue(key, out Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT26 result))
             {
                 return result;
             }
@@ -313,7 +313,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// <summary>
         /// >> MetadataOf
         ///  The metadata is a general information concerning the referendum.
-        ///  The `PreimageHash` refers to the preimage of the `Preimages` provider which can be a JSON
+        ///  The `Hash` refers to the preimage of the `Preimages` provider which can be a JSON
         ///  dump or IPFS hash of a JSON file.
         /// 
         ///  Consider a garbage collection for a metadata of finished referendums to `unrequest` (remove)

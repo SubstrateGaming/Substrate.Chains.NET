@@ -33,7 +33,7 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "Referenda/ReferendumInfoFor", value.Encode(), Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ReferendaStorage.ReferendumInfoForParams(key));
       }
-      public async Task<bool> SetTrackQueue(BoundedVecT21 value, U16 key)
+      public async Task<bool> SetTrackQueue(BoundedVecT26 value, U16 key)
       {
          return await SendMockupRequestAsync(_httpClient, "Referenda/TrackQueue", value.Encode(), Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ReferendaStorage.TrackQueueParams(key));
       }

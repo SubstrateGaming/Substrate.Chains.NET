@@ -32,7 +32,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_offences.palle
     }
     
     /// <summary>
-    /// >> 46 - Variant[pallet_offences.pallet.Event]
+    /// >> 47 - Variant[pallet_offences.pallet.Event]
     /// Events type.
     /// </summary>
     public sealed class EnumEvent : BaseEnumExt<Event, BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base.Arr16U8, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>>

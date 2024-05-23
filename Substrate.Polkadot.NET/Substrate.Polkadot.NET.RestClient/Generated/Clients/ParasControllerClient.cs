@@ -16,7 +16,7 @@ namespace Substrate.Polkadot.NET.RestClient.Generated.Clients
    using Substrate.NetApi.Model.Types.Base;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives;
    using Substrate.NetApi.Model.Types.Primitive;
-   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6;
    using Substrate.Polkadot.NET.RestClient.Generated.Interfaces;
    
    public sealed class ParasControllerClient : BaseClient, IParasControllerClient

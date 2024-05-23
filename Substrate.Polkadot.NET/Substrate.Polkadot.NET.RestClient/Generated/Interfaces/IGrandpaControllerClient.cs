@@ -14,6 +14,7 @@ namespace Substrate.Polkadot.NET.RestClient.Generated.Interfaces
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_grandpa;
    using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.NetApi.Model.Types.Base;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec;
    
    public interface IGrandpaControllerClient
    {
@@ -29,5 +30,7 @@ namespace Substrate.Polkadot.NET.RestClient.Generated.Interfaces
       Task<bool> SubscribeCurrentSetId();
       Task<U32> GetSetIdSession(U64 key);
       Task<bool> SubscribeSetIdSession(U64 key);
+      Task<WeakBoundedVecT4> GetAuthorities();
+      Task<bool> SubscribeAuthorities();
    }
 }

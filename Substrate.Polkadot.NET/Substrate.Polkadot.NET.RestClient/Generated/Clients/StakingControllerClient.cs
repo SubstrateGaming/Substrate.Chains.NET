@@ -17,6 +17,7 @@ namespace Substrate.Polkadot.NET.RestClient.Generated.Clients
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_staking;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_staking;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_staking.slashing;
    using Substrate.Polkadot.NET.RestClient.Generated.Interfaces;
    
@@ -189,6 +190,14 @@ namespace Substrate.Polkadot.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("Staking.ErasStakers", Substrate.Polkadot.NET.NetApiExt.Generated.Storage.StakingStorage.ErasStakersParams(key));
       }
+      public async Task<PagedExposureMetadata> GetErasStakersOverview(BaseTuple<U32, AccountId32> key)
+      {
+         return await SendRequestAsync<PagedExposureMetadata>(_httpClient, "staking/erasstakersoverview", Substrate.Polkadot.NET.NetApiExt.Generated.Storage.StakingStorage.ErasStakersOverviewParams(key));
+      }
+      public async Task<bool> SubscribeErasStakersOverview(BaseTuple<U32, AccountId32> key)
+      {
+         return await _subscriptionClient.SubscribeAsync("Staking.ErasStakersOverview", Substrate.Polkadot.NET.NetApiExt.Generated.Storage.StakingStorage.ErasStakersOverviewParams(key));
+      }
       public async Task<Exposure> GetErasStakersClipped(BaseTuple<U32, AccountId32> key)
       {
          return await SendRequestAsync<Exposure>(_httpClient, "staking/erasstakersclipped", Substrate.Polkadot.NET.NetApiExt.Generated.Storage.StakingStorage.ErasStakersClippedParams(key));
@@ -196,6 +205,22 @@ namespace Substrate.Polkadot.NET.RestClient.Generated.Clients
       public async Task<bool> SubscribeErasStakersClipped(BaseTuple<U32, AccountId32> key)
       {
          return await _subscriptionClient.SubscribeAsync("Staking.ErasStakersClipped", Substrate.Polkadot.NET.NetApiExt.Generated.Storage.StakingStorage.ErasStakersClippedParams(key));
+      }
+      public async Task<ExposurePage> GetErasStakersPaged(BaseTuple<U32, AccountId32, U32> key)
+      {
+         return await SendRequestAsync<ExposurePage>(_httpClient, "staking/erasstakerspaged", Substrate.Polkadot.NET.NetApiExt.Generated.Storage.StakingStorage.ErasStakersPagedParams(key));
+      }
+      public async Task<bool> SubscribeErasStakersPaged(BaseTuple<U32, AccountId32, U32> key)
+      {
+         return await _subscriptionClient.SubscribeAsync("Staking.ErasStakersPaged", Substrate.Polkadot.NET.NetApiExt.Generated.Storage.StakingStorage.ErasStakersPagedParams(key));
+      }
+      public async Task<BaseVec<U32>> GetClaimedRewards(BaseTuple<U32, AccountId32> key)
+      {
+         return await SendRequestAsync<BaseVec<U32>>(_httpClient, "staking/claimedrewards", Substrate.Polkadot.NET.NetApiExt.Generated.Storage.StakingStorage.ClaimedRewardsParams(key));
+      }
+      public async Task<bool> SubscribeClaimedRewards(BaseTuple<U32, AccountId32> key)
+      {
+         return await _subscriptionClient.SubscribeAsync("Staking.ClaimedRewards", Substrate.Polkadot.NET.NetApiExt.Generated.Storage.StakingStorage.ClaimedRewardsParams(key));
       }
       public async Task<ValidatorPrefs> GetErasValidatorPrefs(BaseTuple<U32, AccountId32> key)
       {

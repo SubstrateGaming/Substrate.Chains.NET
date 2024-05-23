@@ -56,17 +56,17 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         /// </summary>
         public static string ActiveConfigDefault()
         {
-            return @"0x0000000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001027000080B2E60E80C3C9018096980000000000000000000000000005000000010000000100000001000000000006000000640000000100000000000000000000000000000000000000020000000200000002000000";
+            return @"0x0000000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001027000080B2E60E80C3C90180969800000000000000000000000000050000000100000001000000010000000000060000006400000001000000000000000000000000000000000000000200000002000000020000000001000000";
         }
         
         /// <summary>
         /// >> ActiveConfig
         ///  The active configuration for the current session.
         /// </summary>
-        public async Task<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.configuration.HostConfiguration> ActiveConfig(CancellationToken token)
+        public async Task<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.configuration.HostConfiguration> ActiveConfig(string blockhash, CancellationToken token)
         {
             string parameters = ConfigurationStorage.ActiveConfigParams();
-            var result = await _client.GetStorageAsync<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.configuration.HostConfiguration>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.configuration.HostConfiguration>(parameters, blockhash, token);
             return result;
         }
         
@@ -104,10 +104,10 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         ///  The list is sorted ascending by session index. Also, this list can only contain at most
         ///  2 items: for the next session and for the `scheduled_session`.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.configuration.HostConfiguration>>> PendingConfigs(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.configuration.HostConfiguration>>> PendingConfigs(string blockhash, CancellationToken token)
         {
             string parameters = ConfigurationStorage.PendingConfigsParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.configuration.HostConfiguration>>>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.configuration.HostConfiguration>>>(parameters, blockhash, token);
             return result;
         }
         
@@ -135,10 +135,10 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         ///  If this is set, then the configuration setters will bypass the consistency checks. This
         ///  is meant to be used only as the last resort.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.Bool> BypassConsistencyCheck(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.Bool> BypassConsistencyCheck(string blockhash, CancellationToken token)
         {
             string parameters = ConfigurationStorage.BypassConsistencyCheckParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.Bool>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.Bool>(parameters, blockhash, token);
             return result;
         }
     }
@@ -216,14 +216,14 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         }
         
         /// <summary>
-        /// >> set_on_demand_cores
+        /// >> set_coretime_cores
         /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method SetOnDemandCores(Substrate.NetApi.Model.Types.Primitive.U32 @new)
+        public static Method SetCoretimeCores(Substrate.NetApi.Model.Types.Primitive.U32 @new)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(@new.Encode());
-            return new Method(51, "Configuration", 6, "set_on_demand_cores", byteArray.ToArray());
+            return new Method(51, "Configuration", 6, "set_coretime_cores", byteArray.ToArray());
         }
         
         /// <summary>
@@ -560,7 +560,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         /// >> set_async_backing_params
         /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method SetAsyncBackingParams(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.vstaging.AsyncBackingParams @new)
+        public static Method SetAsyncBackingParams(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.async_backing.AsyncBackingParams @new)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(@new.Encode());
@@ -571,7 +571,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         /// >> set_executor_params
         /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method SetExecutorParams(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.executor_params.ExecutorParams @new)
+        public static Method SetExecutorParams(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.executor_params.ExecutorParams @new)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(@new.Encode());
@@ -642,6 +642,29 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(@new.Encode());
             return new Method(51, "Configuration", 52, "set_minimum_backing_votes", byteArray.ToArray());
+        }
+        
+        /// <summary>
+        /// >> set_node_feature
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
+        /// </summary>
+        public static Method SetNodeFeature(Substrate.NetApi.Model.Types.Primitive.U8 index, Substrate.NetApi.Model.Types.Primitive.Bool value)
+        {
+            System.Collections.Generic.List<byte> byteArray = new List<byte>();
+            byteArray.AddRange(index.Encode());
+            byteArray.AddRange(value.Encode());
+            return new Method(51, "Configuration", 53, "set_node_feature", byteArray.ToArray());
+        }
+        
+        /// <summary>
+        /// >> set_approval_voting_params
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
+        /// </summary>
+        public static Method SetApprovalVotingParams(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.vstaging.ApprovalVotingParams @new)
+        {
+            System.Collections.Generic.List<byte> byteArray = new List<byte>();
+            byteArray.AddRange(@new.Encode());
+            return new Method(51, "Configuration", 54, "set_approval_voting_params", byteArray.ToArray());
         }
     }
     

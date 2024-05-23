@@ -15,6 +15,7 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup.Generated.Clients
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_grandpa;
    using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.NetApi.Model.Types.Base;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec;
    using Substrate.Polkadot.NET.RestClient.Mockup.Generated.Interfaces;
    
    public sealed class GrandpaControllerMockupClient : MockupBaseClient, IGrandpaControllerMockupClient
@@ -47,6 +48,10 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup.Generated.Clients
       public async Task<bool> SetSetIdSession(U32 value, U64 key)
       {
          return await SendMockupRequestAsync(_httpClient, "Grandpa/SetIdSession", value.Encode(), Substrate.Polkadot.NET.NetApiExt.Generated.Storage.GrandpaStorage.SetIdSessionParams(key));
+      }
+      public async Task<bool> SetAuthorities(WeakBoundedVecT4 value)
+      {
+         return await SendMockupRequestAsync(_httpClient, "Grandpa/Authorities", value.Encode(), Substrate.Polkadot.NET.NetApiExt.Generated.Storage.GrandpaStorage.AuthoritiesParams());
       }
    }
 }

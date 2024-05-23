@@ -203,7 +203,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_para
     }
     
     /// <summary>
-    /// >> 674 - Variant[polkadot_runtime_parachains.inclusion.pallet.Error]
+    /// >> 751 - Variant[polkadot_runtime_parachains.inclusion.pallet.Error]
     /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>

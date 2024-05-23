@@ -32,11 +32,11 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "Bounties/Bounties", value.Encode(), Substrate.Polkadot.NET.NetApiExt.Generated.Storage.BountiesStorage.BountiesParams(key));
       }
-      public async Task<bool> SetBountyDescriptions(BoundedVecT29 value, U32 key)
+      public async Task<bool> SetBountyDescriptions(BoundedVecT35 value, U32 key)
       {
          return await SendMockupRequestAsync(_httpClient, "Bounties/BountyDescriptions", value.Encode(), Substrate.Polkadot.NET.NetApiExt.Generated.Storage.BountiesStorage.BountyDescriptionsParams(key));
       }
-      public async Task<bool> SetBountyApprovals(BoundedVecT18 value)
+      public async Task<bool> SetBountyApprovals(BoundedVecT23 value)
       {
          return await SendMockupRequestAsync(_httpClient, "Bounties/BountyApprovals", value.Encode(), Substrate.Polkadot.NET.NetApiExt.Generated.Storage.BountiesStorage.BountyApprovalsParams());
       }

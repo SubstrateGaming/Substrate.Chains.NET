@@ -16,6 +16,7 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup.Generated.Interfaces
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_staking;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_staking;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_staking.slashing;
    
    public interface IStakingControllerMockupClient
@@ -40,7 +41,10 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup.Generated.Interfaces
       Task<bool> SetActiveEra(ActiveEraInfo value);
       Task<bool> SetErasStartSessionIndex(U32 value, U32 key);
       Task<bool> SetErasStakers(Exposure value, BaseTuple<U32, AccountId32> key);
+      Task<bool> SetErasStakersOverview(PagedExposureMetadata value, BaseTuple<U32, AccountId32> key);
       Task<bool> SetErasStakersClipped(Exposure value, BaseTuple<U32, AccountId32> key);
+      Task<bool> SetErasStakersPaged(ExposurePage value, BaseTuple<U32, AccountId32, U32> key);
+      Task<bool> SetClaimedRewards(BaseVec<U32> value, BaseTuple<U32, AccountId32> key);
       Task<bool> SetErasValidatorPrefs(ValidatorPrefs value, BaseTuple<U32, AccountId32> key);
       Task<bool> SetErasValidatorReward(U128 value, U32 key);
       Task<bool> SetErasRewardPoints(EraRewardPoints value, U32 key);

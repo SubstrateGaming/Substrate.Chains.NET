@@ -16,9 +16,11 @@ namespace Substrate.Polkadot.NET.RestClient.Generated.Interfaces
    
    public interface IPreimageControllerClient
    {
-      Task<EnumRequestStatus> GetStatusFor(Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256 key);
+      Task<EnumOldRequestStatus> GetStatusFor(Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256 key);
       Task<bool> SubscribeStatusFor(Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256 key);
-      Task<BoundedVecT9> GetPreimageFor(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Primitive.U32> key);
+      Task<EnumRequestStatus> GetRequestStatusFor(Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256 key);
+      Task<bool> SubscribeRequestStatusFor(Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256 key);
+      Task<BoundedVecT15> GetPreimageFor(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Primitive.U32> key);
       Task<bool> SubscribePreimageFor(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Primitive.U32> key);
    }
 }

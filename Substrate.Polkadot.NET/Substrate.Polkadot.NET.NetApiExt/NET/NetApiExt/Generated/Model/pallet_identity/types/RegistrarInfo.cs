@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types
     
     
     /// <summary>
-    /// >> 603 - Composite[pallet_identity.types.RegistrarInfo]
+    /// >> 678 - Composite[pallet_identity.types.RegistrarInfo]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class RegistrarInfo : BaseType
@@ -35,7 +35,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types
         /// <summary>
         /// >> fields
         /// </summary>
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types.BitFlags Fields { get; set; }
+        public Substrate.NetApi.Model.Types.Primitive.U64 Fields { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
@@ -61,12 +61,12 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types
             Account.Decode(byteArray, ref p);
             Fee = new Substrate.NetApi.Model.Types.Primitive.U128();
             Fee.Decode(byteArray, ref p);
-            Fields = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types.BitFlags();
+            Fields = new Substrate.NetApi.Model.Types.Primitive.U64();
             Fields.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];
-            System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
+            global::System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
         }
     }
 }

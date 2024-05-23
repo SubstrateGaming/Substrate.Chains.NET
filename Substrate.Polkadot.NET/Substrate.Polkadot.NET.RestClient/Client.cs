@@ -19,10 +19,14 @@ namespace Substrate.Polkadot.NET.RestClient
    {
       private HttpClient _httpClient;
       private BaseSubscriptionClient _subscriptionClient;
+      public IAssetRateControllerClient AssetRateControllerClient;
       public IAuctionsControllerClient AuctionsControllerClient;
+      public IAuthorityDiscoveryControllerClient AuthorityDiscoveryControllerClient;
       public IAuthorshipControllerClient AuthorshipControllerClient;
       public IBabeControllerClient BabeControllerClient;
       public IBalancesControllerClient BalancesControllerClient;
+      public IBeefyControllerClient BeefyControllerClient;
+      public IBeefyMmrLeafControllerClient BeefyMmrLeafControllerClient;
       public IBountiesControllerClient BountiesControllerClient;
       public IChildBountiesControllerClient ChildBountiesControllerClient;
       public IClaimsControllerClient ClaimsControllerClient;
@@ -33,12 +37,13 @@ namespace Substrate.Polkadot.NET.RestClient
       public IElectionProviderMultiPhaseControllerClient ElectionProviderMultiPhaseControllerClient;
       public IFastUnstakeControllerClient FastUnstakeControllerClient;
       public IGrandpaControllerClient GrandpaControllerClient;
+      public IHistoricalControllerClient HistoricalControllerClient;
       public IHrmpControllerClient HrmpControllerClient;
       public IIdentityControllerClient IdentityControllerClient;
-      public IImOnlineControllerClient ImOnlineControllerClient;
       public IIndicesControllerClient IndicesControllerClient;
       public IInitializerControllerClient InitializerControllerClient;
       public IMessageQueueControllerClient MessageQueueControllerClient;
+      public IMmrControllerClient MmrControllerClient;
       public IMultisigControllerClient MultisigControllerClient;
       public INominationPoolsControllerClient NominationPoolsControllerClient;
       public IOffencesControllerClient OffencesControllerClient;
@@ -58,6 +63,7 @@ namespace Substrate.Polkadot.NET.RestClient
       public ISessionControllerClient SessionControllerClient;
       public ISlotsControllerClient SlotsControllerClient;
       public IStakingControllerClient StakingControllerClient;
+      public IStateTrieMigrationControllerClient StateTrieMigrationControllerClient;
       public ISystemControllerClient SystemControllerClient;
       public ITimestampControllerClient TimestampControllerClient;
       public ITransactionPaymentControllerClient TransactionPaymentControllerClient;
@@ -70,10 +76,14 @@ namespace Substrate.Polkadot.NET.RestClient
       {
          _httpClient = httpClient;
          _subscriptionClient = subscriptionClient;
+         AssetRateControllerClient = new AssetRateControllerClient(_httpClient, _subscriptionClient);
          AuctionsControllerClient = new AuctionsControllerClient(_httpClient, _subscriptionClient);
+         AuthorityDiscoveryControllerClient = new AuthorityDiscoveryControllerClient(_httpClient, _subscriptionClient);
          AuthorshipControllerClient = new AuthorshipControllerClient(_httpClient, _subscriptionClient);
          BabeControllerClient = new BabeControllerClient(_httpClient, _subscriptionClient);
          BalancesControllerClient = new BalancesControllerClient(_httpClient, _subscriptionClient);
+         BeefyControllerClient = new BeefyControllerClient(_httpClient, _subscriptionClient);
+         BeefyMmrLeafControllerClient = new BeefyMmrLeafControllerClient(_httpClient, _subscriptionClient);
          BountiesControllerClient = new BountiesControllerClient(_httpClient, _subscriptionClient);
          ChildBountiesControllerClient = new ChildBountiesControllerClient(_httpClient, _subscriptionClient);
          ClaimsControllerClient = new ClaimsControllerClient(_httpClient, _subscriptionClient);
@@ -84,12 +94,13 @@ namespace Substrate.Polkadot.NET.RestClient
          ElectionProviderMultiPhaseControllerClient = new ElectionProviderMultiPhaseControllerClient(_httpClient, _subscriptionClient);
          FastUnstakeControllerClient = new FastUnstakeControllerClient(_httpClient, _subscriptionClient);
          GrandpaControllerClient = new GrandpaControllerClient(_httpClient, _subscriptionClient);
+         HistoricalControllerClient = new HistoricalControllerClient(_httpClient, _subscriptionClient);
          HrmpControllerClient = new HrmpControllerClient(_httpClient, _subscriptionClient);
          IdentityControllerClient = new IdentityControllerClient(_httpClient, _subscriptionClient);
-         ImOnlineControllerClient = new ImOnlineControllerClient(_httpClient, _subscriptionClient);
          IndicesControllerClient = new IndicesControllerClient(_httpClient, _subscriptionClient);
          InitializerControllerClient = new InitializerControllerClient(_httpClient, _subscriptionClient);
          MessageQueueControllerClient = new MessageQueueControllerClient(_httpClient, _subscriptionClient);
+         MmrControllerClient = new MmrControllerClient(_httpClient, _subscriptionClient);
          MultisigControllerClient = new MultisigControllerClient(_httpClient, _subscriptionClient);
          NominationPoolsControllerClient = new NominationPoolsControllerClient(_httpClient, _subscriptionClient);
          OffencesControllerClient = new OffencesControllerClient(_httpClient, _subscriptionClient);
@@ -109,6 +120,7 @@ namespace Substrate.Polkadot.NET.RestClient
          SessionControllerClient = new SessionControllerClient(_httpClient, _subscriptionClient);
          SlotsControllerClient = new SlotsControllerClient(_httpClient, _subscriptionClient);
          StakingControllerClient = new StakingControllerClient(_httpClient, _subscriptionClient);
+         StateTrieMigrationControllerClient = new StateTrieMigrationControllerClient(_httpClient, _subscriptionClient);
          SystemControllerClient = new SystemControllerClient(_httpClient, _subscriptionClient);
          TimestampControllerClient = new TimestampControllerClient(_httpClient, _subscriptionClient);
          TransactionPaymentControllerClient = new TransactionPaymentControllerClient(_httpClient, _subscriptionClient);

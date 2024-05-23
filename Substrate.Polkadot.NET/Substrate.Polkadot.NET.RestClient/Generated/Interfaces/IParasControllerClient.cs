@@ -15,7 +15,7 @@ namespace Substrate.Polkadot.NET.RestClient.Generated.Interfaces
    using Substrate.NetApi.Model.Types.Base;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives;
    using Substrate.NetApi.Model.Types.Primitive;
-   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6;
    
    public interface IParasControllerClient
    {

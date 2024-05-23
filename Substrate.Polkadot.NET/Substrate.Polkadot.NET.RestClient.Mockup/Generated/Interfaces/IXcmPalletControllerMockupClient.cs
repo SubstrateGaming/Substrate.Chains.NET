@@ -23,13 +23,13 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup.Generated.Interfaces
       Task<bool> SetQueries(EnumQueryStatus value, U64 key);
       Task<bool> SetAssetTraps(U32 value, Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256 key);
       Task<bool> SetSafeXcmVersion(U32 value);
-      Task<bool> SetSupportedVersion(U32 value, BaseTuple<U32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation> key);
-      Task<bool> SetVersionNotifiers(U64 value, BaseTuple<U32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation> key);
-      Task<bool> SetVersionNotifyTargets(BaseTuple<U64, Weight, U32> value, BaseTuple<U32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation> key);
-      Task<bool> SetVersionDiscoveryQueue(BoundedVecT35 value);
+      Task<bool> SetSupportedVersion(U32 value, BaseTuple<U32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation> key);
+      Task<bool> SetVersionNotifiers(U64 value, BaseTuple<U32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation> key);
+      Task<bool> SetVersionNotifyTargets(BaseTuple<U64, Weight, U32> value, BaseTuple<U32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation> key);
+      Task<bool> SetVersionDiscoveryQueue(BoundedVecT41 value);
       Task<bool> SetCurrentMigration(EnumVersionMigrationStage value);
       Task<bool> SetRemoteLockedFungibles(RemoteLockedFungibleRecord value, BaseTuple<U32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAssetId> key);
-      Task<bool> SetLockedFungibles(BoundedVecT37 value, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
+      Task<bool> SetLockedFungibles(BoundedVecT43 value, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
       Task<bool> SetXcmExecutionSuspended(Bool value);
    }
 }

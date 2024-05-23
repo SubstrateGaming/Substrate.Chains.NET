@@ -25,9 +25,9 @@ namespace Substrate.Polkadot.NET.RestClient.Generated.Clients
          _httpClient = httpClient;
          _subscriptionClient = subscriptionClient;
       }
-      public async Task<BoundedVecT22> GetVesting(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+      public async Task<BoundedVecT27> GetVesting(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {
-         return await SendRequestAsync<BoundedVecT22>(_httpClient, "vesting/vesting", Substrate.Polkadot.NET.NetApiExt.Generated.Storage.VestingStorage.VestingParams(key));
+         return await SendRequestAsync<BoundedVecT27>(_httpClient, "vesting/vesting", Substrate.Polkadot.NET.NetApiExt.Generated.Storage.VestingStorage.VestingParams(key));
       }
       public async Task<bool> SubscribeVesting(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {

@@ -33,9 +33,9 @@ namespace Substrate.Polkadot.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("ConvictionVoting.VotingFor", Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ConvictionVotingStorage.VotingForParams(key));
       }
-      public async Task<BoundedVecT20> GetClassLocksFor(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+      public async Task<BoundedVecT25> GetClassLocksFor(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {
-         return await SendRequestAsync<BoundedVecT20>(_httpClient, "convictionvoting/classlocksfor", Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ConvictionVotingStorage.ClassLocksForParams(key));
+         return await SendRequestAsync<BoundedVecT25>(_httpClient, "convictionvoting/classlocksfor", Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ConvictionVotingStorage.ClassLocksForParams(key));
       }
       public async Task<bool> SubscribeClassLocksFor(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {

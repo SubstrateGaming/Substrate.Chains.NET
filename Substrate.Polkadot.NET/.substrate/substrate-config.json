@@ -1,6 +1,7 @@
 {
   "projects": {
     "net_api": "Substrate.Polkadot.NET.NetApiExt",
+    "net_integration": "Substrate.Polkadot.NET.Integration",
     "rest_service": "Substrate.Polkadot.NET.RestService",
     "rest_client": "Substrate.Polkadot.NET.RestClient"
   },

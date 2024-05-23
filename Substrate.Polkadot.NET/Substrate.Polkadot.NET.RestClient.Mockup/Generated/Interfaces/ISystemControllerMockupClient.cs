@@ -36,5 +36,6 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup.Generated.Interfaces
       Task<bool> SetUpgradedToU32RefCount(Bool value);
       Task<bool> SetUpgradedToTripleRefCount(Bool value);
       Task<bool> SetExecutionPhase(EnumPhase value);
+      Task<bool> SetAuthorizedUpgrade(CodeUpgradeAuthorization value);
    }
 }

@@ -58,9 +58,9 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Paras", "FutureCodeHash"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id), typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Paras", "UpgradeGoAheadSignal"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id), typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.EnumUpgradeGoAhead)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id), typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumUpgradeGoAhead)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Paras", "UpgradeRestrictionSignal"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id), typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.EnumUpgradeRestriction)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id), typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumUpgradeRestriction)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Paras", "UpgradeCooldowns"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32>>)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Paras", "UpcomingUpgrades"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32>>)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Paras", "ActionsQueue"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
@@ -103,10 +103,10 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         ///  Invariant:
         ///  - There are no PVF pre-checking votes that exists in list but not in the set and vice versa.
         /// </summary>
-        public async Task<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.paras.PvfCheckActiveVoteState> PvfActiveVoteMap(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash key, CancellationToken token)
+        public async Task<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.paras.PvfCheckActiveVoteState> PvfActiveVoteMap(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash key, string blockhash, CancellationToken token)
         {
             string parameters = ParasStorage.PvfActiveVoteMapParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.paras.PvfCheckActiveVoteState>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.paras.PvfCheckActiveVoteState>(parameters, blockhash, token);
             return result;
         }
         
@@ -132,10 +132,10 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         /// >> PvfActiveVoteList
         ///  The list of all currently active PVF votes. Auxiliary to `PvfActiveVoteMap`.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash>> PvfActiveVoteList(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash>> PvfActiveVoteList(string blockhash, CancellationToken token)
         {
             string parameters = ParasStorage.PvfActiveVoteListParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash>>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash>>(parameters, blockhash, token);
             return result;
         }
         
@@ -167,10 +167,10 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         /// 
         ///  Consider using the [`ParachainsCache`] type of modifying.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id>> Parachains(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id>> Parachains(string blockhash, CancellationToken token)
         {
             string parameters = ParasStorage.ParachainsParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id>>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id>>(parameters, blockhash, token);
             return result;
         }
         
@@ -198,10 +198,10 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         /// >> ParaLifecycles
         ///  The current lifecycle of a all known Para IDs.
         /// </summary>
-        public async Task<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.paras.EnumParaLifecycle> ParaLifecycles(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key, CancellationToken token)
+        public async Task<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.paras.EnumParaLifecycle> ParaLifecycles(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key, string blockhash, CancellationToken token)
         {
             string parameters = ParasStorage.ParaLifecyclesParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.paras.EnumParaLifecycle>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.paras.EnumParaLifecycle>(parameters, blockhash, token);
             return result;
         }
         
@@ -229,10 +229,10 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         /// >> Heads
         ///  The head-data of every registered para.
         /// </summary>
-        public async Task<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.HeadData> Heads(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key, CancellationToken token)
+        public async Task<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.HeadData> Heads(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key, string blockhash, CancellationToken token)
         {
             string parameters = ParasStorage.HeadsParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.HeadData>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.HeadData>(parameters, blockhash, token);
             return result;
         }
         
@@ -260,10 +260,10 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         /// >> MostRecentContext
         ///  The context (relay-chain block number) of the most recent parachain head.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> MostRecentContext(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> MostRecentContext(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key, string blockhash, CancellationToken token)
         {
             string parameters = ParasStorage.MostRecentContextParams(key);
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, blockhash, token);
             return result;
         }
         
@@ -295,10 +295,10 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         /// 
         ///  Corresponding code can be retrieved with [`CodeByHash`].
         /// </summary>
-        public async Task<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash> CurrentCodeHash(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key, CancellationToken token)
+        public async Task<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash> CurrentCodeHash(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key, string blockhash, CancellationToken token)
         {
             string parameters = ParasStorage.CurrentCodeHashParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash>(parameters, blockhash, token);
             return result;
         }
         
@@ -332,10 +332,10 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         /// 
         ///  Corresponding code can be retrieved with [`CodeByHash`].
         /// </summary>
-        public async Task<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash> PastCodeHash(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32> key, CancellationToken token)
+        public async Task<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash> PastCodeHash(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32> key, string blockhash, CancellationToken token)
         {
             string parameters = ParasStorage.PastCodeHashParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash>(parameters, blockhash, token);
             return result;
         }
         
@@ -367,10 +367,10 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         ///  but we also keep their code on-chain for the same amount of time as outdated code
         ///  to keep it available for approval checkers.
         /// </summary>
-        public async Task<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.paras.ParaPastCodeMeta> PastCodeMeta(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key, CancellationToken token)
+        public async Task<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.paras.ParaPastCodeMeta> PastCodeMeta(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key, string blockhash, CancellationToken token)
         {
             string parameters = ParasStorage.PastCodeMetaParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.paras.ParaPastCodeMeta>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.paras.ParaPastCodeMeta>(parameters, blockhash, token);
             return result;
         }
         
@@ -406,10 +406,10 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         ///  starting from the time at which the parachain perceives a code upgrade as having occurred.
         ///  Multiple entries for a single para are permitted. Ordered ascending by block number.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32>>> PastCodePruning(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32>>> PastCodePruning(string blockhash, CancellationToken token)
         {
             string parameters = ParasStorage.PastCodePruningParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32>>>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32>>>(parameters, blockhash, token);
             return result;
         }
         
@@ -441,10 +441,10 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         ///  The change will be applied after the first parablock for this ID included which executes
         ///  in the context of a relay chain block with a number >= `expected_at`.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> FutureCodeUpgrades(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> FutureCodeUpgrades(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key, string blockhash, CancellationToken token)
         {
             string parameters = ParasStorage.FutureCodeUpgradesParams(key);
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, blockhash, token);
             return result;
         }
         
@@ -476,10 +476,10 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         /// 
         ///  Corresponding code can be retrieved with [`CodeByHash`].
         /// </summary>
-        public async Task<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash> FutureCodeHash(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key, CancellationToken token)
+        public async Task<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash> FutureCodeHash(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key, string blockhash, CancellationToken token)
         {
             string parameters = ParasStorage.FutureCodeHashParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash>(parameters, blockhash, token);
             return result;
         }
         
@@ -525,10 +525,10 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         ///  NOTE that this field is used by parachains via merkle storage proofs, therefore changing
         ///  the format will require migration of parachains.
         /// </summary>
-        public async Task<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.EnumUpgradeGoAhead> UpgradeGoAheadSignal(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key, CancellationToken token)
+        public async Task<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumUpgradeGoAhead> UpgradeGoAheadSignal(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key, string blockhash, CancellationToken token)
         {
             string parameters = ParasStorage.UpgradeGoAheadSignalParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.EnumUpgradeGoAhead>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumUpgradeGoAhead>(parameters, blockhash, token);
             return result;
         }
         
@@ -572,10 +572,10 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         ///  NOTE that this field is used by parachains via merkle storage proofs, therefore changing
         ///  the format will require migration of parachains.
         /// </summary>
-        public async Task<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.EnumUpgradeRestriction> UpgradeRestrictionSignal(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key, CancellationToken token)
+        public async Task<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumUpgradeRestriction> UpgradeRestrictionSignal(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key, string blockhash, CancellationToken token)
         {
             string parameters = ParasStorage.UpgradeRestrictionSignalParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.EnumUpgradeRestriction>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumUpgradeRestriction>(parameters, blockhash, token);
             return result;
         }
         
@@ -605,10 +605,10 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         /// 
         ///  Ordered ascending by block number.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32>>> UpgradeCooldowns(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32>>> UpgradeCooldowns(string blockhash, CancellationToken token)
         {
             string parameters = ParasStorage.UpgradeCooldownsParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32>>>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32>>>(parameters, blockhash, token);
             return result;
         }
         
@@ -640,10 +640,10 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         /// 
         ///  Ordered ascending by block number.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32>>> UpcomingUpgrades(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32>>> UpcomingUpgrades(string blockhash, CancellationToken token)
         {
             string parameters = ParasStorage.UpcomingUpgradesParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32>>>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32>>>(parameters, blockhash, token);
             return result;
         }
         
@@ -671,10 +671,10 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         /// >> ActionsQueue
         ///  The actions to perform during the start of a specific session index.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id>> ActionsQueue(Substrate.NetApi.Model.Types.Primitive.U32 key, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id>> ActionsQueue(Substrate.NetApi.Model.Types.Primitive.U32 key, string blockhash, CancellationToken token)
         {
             string parameters = ParasStorage.ActionsQueueParams(key);
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id>>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id>>(parameters, blockhash, token);
             return result;
         }
         
@@ -708,10 +708,10 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         ///  NOTE that after PVF pre-checking is enabled the para genesis arg will have it's code set
         ///  to empty. Instead, the code will be saved into the storage right away via `CodeByHash`.
         /// </summary>
-        public async Task<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.paras.ParaGenesisArgs> UpcomingParasGenesis(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key, CancellationToken token)
+        public async Task<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.paras.ParaGenesisArgs> UpcomingParasGenesis(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key, string blockhash, CancellationToken token)
         {
             string parameters = ParasStorage.UpcomingParasGenesisParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.paras.ParaGenesisArgs>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.paras.ParaGenesisArgs>(parameters, blockhash, token);
             return result;
         }
         
@@ -739,10 +739,10 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         /// >> CodeByHashRefs
         ///  The number of reference on the validation code in [`CodeByHash`] storage.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> CodeByHashRefs(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash key, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> CodeByHashRefs(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash key, string blockhash, CancellationToken token)
         {
             string parameters = ParasStorage.CodeByHashRefsParams(key);
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, blockhash, token);
             return result;
         }
         
@@ -776,10 +776,10 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         ///  This storage is consistent with [`FutureCodeHash`], [`CurrentCodeHash`] and
         ///  [`PastCodeHash`].
         /// </summary>
-        public async Task<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCode> CodeByHash(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash key, CancellationToken token)
+        public async Task<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCode> CodeByHash(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash key, string blockhash, CancellationToken token)
         {
             string parameters = ParasStorage.CodeByHashParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCode>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCode>(parameters, blockhash, token);
             return result;
         }
     }
@@ -876,7 +876,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         /// >> include_pvf_check_statement
         /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method IncludePvfCheckStatement(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.PvfCheckStatement stmt, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.validator_app.Signature signature)
+        public static Method IncludePvfCheckStatement(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.PvfCheckStatement stmt, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.validator_app.Signature signature)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(stmt.Encode());

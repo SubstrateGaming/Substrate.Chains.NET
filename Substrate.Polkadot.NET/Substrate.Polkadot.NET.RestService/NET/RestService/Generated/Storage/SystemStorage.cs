@@ -135,6 +135,12 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         ///  The execution phase of the block.
         /// </summary>
         Substrate.Polkadot.NET.NetApiExt.Generated.Model.frame_system.EnumPhase GetExecutionPhase();
+        
+        /// <summary>
+        /// >> AuthorizedUpgrade
+        ///  `Some` if a code upgrade has been authorized.
+        /// </summary>
+        Substrate.Polkadot.NET.NetApiExt.Generated.Model.frame_system.CodeUpgradeAuthorization GetAuthorizedUpgrade();
     }
     
     /// <summary>
@@ -224,6 +230,11 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         private TypedStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.frame_system.EnumPhase> _executionPhaseTypedStorage;
         
         /// <summary>
+        /// _authorizedUpgradeTypedStorage typed storage field
+        /// </summary>
+        private TypedStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.frame_system.CodeUpgradeAuthorization> _authorizedUpgradeTypedStorage;
+        
+        /// <summary>
         /// SystemStorage constructor.
         /// </summary>
         public SystemStorage(IStorageDataProvider storageDataProvider, List<IStorageChangeDelegate> storageChangeDelegates)
@@ -244,6 +255,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
             this.UpgradedToU32RefCountTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.Bool>("System.UpgradedToU32RefCount", storageDataProvider, storageChangeDelegates);
             this.UpgradedToTripleRefCountTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.Bool>("System.UpgradedToTripleRefCount", storageDataProvider, storageChangeDelegates);
             this.ExecutionPhaseTypedStorage = new TypedStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.frame_system.EnumPhase>("System.ExecutionPhase", storageDataProvider, storageChangeDelegates);
+            this.AuthorizedUpgradeTypedStorage = new TypedStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.frame_system.CodeUpgradeAuthorization>("System.AuthorizedUpgrade", storageDataProvider, storageChangeDelegates);
         }
         
         /// <summary>
@@ -487,6 +499,21 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         }
         
         /// <summary>
+        /// _authorizedUpgradeTypedStorage property
+        /// </summary>
+        public TypedStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.frame_system.CodeUpgradeAuthorization> AuthorizedUpgradeTypedStorage
+        {
+            get
+            {
+                return _authorizedUpgradeTypedStorage;
+            }
+            set
+            {
+                _authorizedUpgradeTypedStorage = value;
+            }
+        }
+        
+        /// <summary>
         /// Connects to all storages and initializes the change subscription handling.
         /// </summary>
         public async Task InitializeAsync(Substrate.ServiceLayer.Storage.IStorageDataProvider dataProvider)
@@ -507,6 +534,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
             await UpgradedToU32RefCountTypedStorage.InitializeAsync("System", "UpgradedToU32RefCount");
             await UpgradedToTripleRefCountTypedStorage.InitializeAsync("System", "UpgradedToTripleRefCount");
             await ExecutionPhaseTypedStorage.InitializeAsync("System", "ExecutionPhase");
+            await AuthorizedUpgradeTypedStorage.InitializeAsync("System", "AuthorizedUpgrade");
         }
         
         /// <summary>
@@ -855,6 +883,24 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         public Substrate.Polkadot.NET.NetApiExt.Generated.Model.frame_system.EnumPhase GetExecutionPhase()
         {
             return ExecutionPhaseTypedStorage.Get();
+        }
+        
+        /// <summary>
+        /// Implements any storage change for System.AuthorizedUpgrade
+        /// </summary>
+        [StorageChange("System", "AuthorizedUpgrade")]
+        public void OnUpdateAuthorizedUpgrade(string data)
+        {
+            AuthorizedUpgradeTypedStorage.Update(data);
+        }
+        
+        /// <summary>
+        /// >> AuthorizedUpgrade
+        ///  `Some` if a code upgrade has been authorized.
+        /// </summary>
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.frame_system.CodeUpgradeAuthorization GetAuthorizedUpgrade()
+        {
+            return AuthorizedUpgradeTypedStorage.Get();
         }
     }
 }

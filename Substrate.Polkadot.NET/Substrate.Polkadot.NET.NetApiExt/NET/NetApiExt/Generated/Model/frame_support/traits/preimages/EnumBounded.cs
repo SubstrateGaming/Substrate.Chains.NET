@@ -38,9 +38,9 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.frame_support.traits.
     }
     
     /// <summary>
-    /// >> 67 - Variant[frame_support.traits.preimages.Bounded]
+    /// >> 101 - Variant[frame_support.traits.preimages.Bounded]
     /// </summary>
-    public sealed class EnumBounded : BaseEnumExt<Bounded, Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT7, BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Primitive.U32>>
+    public sealed class EnumBounded : BaseEnumExt<Bounded, Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT13, BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Primitive.U32>>
     {
     }
 }

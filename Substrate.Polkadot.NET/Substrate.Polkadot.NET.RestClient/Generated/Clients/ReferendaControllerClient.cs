@@ -43,9 +43,9 @@ namespace Substrate.Polkadot.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("Referenda.ReferendumInfoFor", Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ReferendaStorage.ReferendumInfoForParams(key));
       }
-      public async Task<BoundedVecT21> GetTrackQueue(U16 key)
+      public async Task<BoundedVecT26> GetTrackQueue(U16 key)
       {
-         return await SendRequestAsync<BoundedVecT21>(_httpClient, "referenda/trackqueue", Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ReferendaStorage.TrackQueueParams(key));
+         return await SendRequestAsync<BoundedVecT26>(_httpClient, "referenda/trackqueue", Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ReferendaStorage.TrackQueueParams(key));
       }
       public async Task<bool> SubscribeTrackQueue(U16 key)
       {

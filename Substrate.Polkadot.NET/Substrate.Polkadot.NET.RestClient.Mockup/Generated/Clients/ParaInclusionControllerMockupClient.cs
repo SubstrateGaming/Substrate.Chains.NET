@@ -13,7 +13,7 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup.Generated.Clients
    using System.Threading.Tasks;
    using System.Net.Http;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.inclusion;
-   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6;
    using Substrate.Polkadot.NET.RestClient.Mockup.Generated.Interfaces;
    
    public sealed class ParaInclusionControllerMockupClient : MockupBaseClient, IParaInclusionControllerMockupClient

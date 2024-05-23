@@ -84,9 +84,9 @@ namespace Substrate.Polkadot.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("ElectionProviderMultiPhase.SignedSubmissionNextIndex");
       }
-      public async Task<BoundedVecT31> GetSignedSubmissionIndices()
+      public async Task<BoundedVecT37> GetSignedSubmissionIndices()
       {
-         return await SendRequestAsync<BoundedVecT31>(_httpClient, "electionprovidermultiphase/signedsubmissionindices");
+         return await SendRequestAsync<BoundedVecT37>(_httpClient, "electionprovidermultiphase/signedsubmissionindices");
       }
       public async Task<bool> SubscribeSignedSubmissionIndices()
       {

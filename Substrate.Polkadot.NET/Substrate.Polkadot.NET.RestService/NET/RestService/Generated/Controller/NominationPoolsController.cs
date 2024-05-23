@@ -38,6 +38,22 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Controller
         }
         
         /// <summary>
+        /// >> TotalValueLocked
+        ///  The sum of funds across all pools.
+        /// 
+        ///  This might be lower but never higher than the sum of `total_balance` of all [`PoolMembers`]
+        ///  because calling `pool_withdraw_unbonded` might decrease the total stake of the pool's
+        ///  `bonded_account` without adjusting the pallet-internal `UnbondingPool`'s.
+        /// </summary>
+        [HttpGet("TotalValueLocked")]
+        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Primitive.U128), 200)]
+        [StorageKeyBuilder(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Storage.NominationPoolsStorage), "TotalValueLockedParams")]
+        public IActionResult GetTotalValueLocked()
+        {
+            return this.Ok(_nominationPoolsStorage.GetTotalValueLocked());
+        }
+        
+        /// <summary>
         /// >> MinJoinBond
         ///  Minimum amount to bond to join a pool.
         /// </summary>
@@ -225,7 +241,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Controller
         ///  Metadata for the pool.
         /// </summary>
         [HttpGet("Metadata")]
-        [ProducesResponseType(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT32), 200)]
+        [ProducesResponseType(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT38), 200)]
         [StorageKeyBuilder(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Storage.NominationPoolsStorage), "MetadataParams", typeof(Substrate.NetApi.Model.Types.Primitive.U32))]
         public IActionResult GetMetadata(string key)
         {

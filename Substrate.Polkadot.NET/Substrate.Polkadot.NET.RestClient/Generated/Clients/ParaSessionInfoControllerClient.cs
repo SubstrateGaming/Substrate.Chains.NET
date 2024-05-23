@@ -13,11 +13,11 @@ namespace Substrate.Polkadot.NET.RestClient.Generated.Clients
    using System.Threading.Tasks;
    using System.Net.Http;
    using Substrate.NetApi.Model.Types.Base;
-   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.assignment_app;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.assignment_app;
    using Substrate.NetApi.Model.Types.Primitive;
-   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto;
-   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.executor_params;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.executor_params;
    using Substrate.Polkadot.NET.RestClient.Generated.Interfaces;
    
    public sealed class ParaSessionInfoControllerClient : BaseClient, IParaSessionInfoControllerClient

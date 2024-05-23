@@ -58,10 +58,28 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_para
         /// A dispute statement was invalid.
         /// </summary>
         DisputeInvalid = 5,
+        
+        /// <summary>
+        /// >> BackedByDisabled
+        /// A candidate was backed by a disabled validator
+        /// </summary>
+        BackedByDisabled = 6,
+        
+        /// <summary>
+        /// >> BackedOnUnscheduledCore
+        /// A candidate was backed even though the paraid was not scheduled.
+        /// </summary>
+        BackedOnUnscheduledCore = 7,
+        
+        /// <summary>
+        /// >> UnscheduledCandidate
+        /// Too many candidates supplied.
+        /// </summary>
+        UnscheduledCandidate = 8,
     }
     
     /// <summary>
-    /// >> 680 - Variant[polkadot_runtime_parachains.paras_inherent.pallet.Error]
+    /// >> 757 - Variant[polkadot_runtime_parachains.paras_inherent.pallet.Error]
     /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>

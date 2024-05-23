@@ -67,10 +67,10 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         /// >> Funds
         ///  Info on all of the funds.
         /// </summary>
-        public async Task<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_common.crowdloan.FundInfo> Funds(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key, CancellationToken token)
+        public async Task<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_common.crowdloan.FundInfo> Funds(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key, string blockhash, CancellationToken token)
         {
             string parameters = CrowdloanStorage.FundsParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_common.crowdloan.FundInfo>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_common.crowdloan.FundInfo>(parameters, blockhash, token);
             return result;
         }
         
@@ -98,10 +98,10 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         ///  The funds that have had additional contributions during the last block. This is used
         ///  in order to determine which funds should submit new or updated bids.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id>> NewRaise(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id>> NewRaise(string blockhash, CancellationToken token)
         {
             string parameters = CrowdloanStorage.NewRaiseParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id>>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id>>(parameters, blockhash, token);
             return result;
         }
         
@@ -127,10 +127,10 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         /// >> EndingsCount
         ///  The number of auctions that have entered into their ending period so far.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> EndingsCount(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> EndingsCount(string blockhash, CancellationToken token)
         {
             string parameters = CrowdloanStorage.EndingsCountParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, blockhash, token);
             return result;
         }
         
@@ -156,10 +156,10 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         /// >> NextFundIndex
         ///  Tracker for the next available fund index
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> NextFundIndex(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> NextFundIndex(string blockhash, CancellationToken token)
         {
             string parameters = CrowdloanStorage.NextFundIndexParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, blockhash, token);
             return result;
         }
     }

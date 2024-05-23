@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_comm
     
     
     /// <summary>
-    /// >> 150 - Composite[polkadot_runtime_common.claims.EthereumAddress]
+    /// >> 183 - Composite[polkadot_runtime_common.claims.EthereumAddress]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class EthereumAddress : BaseType
@@ -52,7 +52,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_comm
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];
-            System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
+            global::System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
         }
     }
 }

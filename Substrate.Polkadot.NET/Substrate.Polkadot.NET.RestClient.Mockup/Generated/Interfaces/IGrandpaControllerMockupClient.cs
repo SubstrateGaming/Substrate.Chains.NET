@@ -14,6 +14,7 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup.Generated.Interfaces
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_grandpa;
    using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.NetApi.Model.Types.Base;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec;
    
    public interface IGrandpaControllerMockupClient
    {
@@ -23,5 +24,6 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup.Generated.Interfaces
       Task<bool> SetStalled(BaseTuple<U32, U32> value);
       Task<bool> SetCurrentSetId(U64 value);
       Task<bool> SetSetIdSession(U32 value, U64 key);
+      Task<bool> SetAuthorities(WeakBoundedVecT4 value);
    }
 }

@@ -65,10 +65,10 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         /// >> Multisigs
         ///  The set of open multisig operations.
         /// </summary>
-        public async Task<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_multisig.Multisig> Multisigs(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base.Arr32U8> key, CancellationToken token)
+        public async Task<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_multisig.Multisig> Multisigs(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base.Arr32U8> key, string blockhash, CancellationToken token)
         {
             string parameters = MultisigStorage.MultisigsParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_multisig.Multisig>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_multisig.Multisig>(parameters, blockhash, token);
             return result;
         }
     }

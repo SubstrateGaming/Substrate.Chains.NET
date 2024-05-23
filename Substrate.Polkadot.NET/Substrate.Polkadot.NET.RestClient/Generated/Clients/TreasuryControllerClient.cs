@@ -50,13 +50,29 @@ namespace Substrate.Polkadot.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("Treasury.Deactivated");
       }
-      public async Task<BoundedVecT18> GetApprovals()
+      public async Task<BoundedVecT23> GetApprovals()
       {
-         return await SendRequestAsync<BoundedVecT18>(_httpClient, "treasury/approvals");
+         return await SendRequestAsync<BoundedVecT23>(_httpClient, "treasury/approvals");
       }
       public async Task<bool> SubscribeApprovals()
       {
          return await _subscriptionClient.SubscribeAsync("Treasury.Approvals");
+      }
+      public async Task<U32> GetSpendCount()
+      {
+         return await SendRequestAsync<U32>(_httpClient, "treasury/spendcount");
+      }
+      public async Task<bool> SubscribeSpendCount()
+      {
+         return await _subscriptionClient.SubscribeAsync("Treasury.SpendCount");
+      }
+      public async Task<SpendStatus> GetSpends(U32 key)
+      {
+         return await SendRequestAsync<SpendStatus>(_httpClient, "treasury/spends", Substrate.Polkadot.NET.NetApiExt.Generated.Storage.TreasuryStorage.SpendsParams(key));
+      }
+      public async Task<bool> SubscribeSpends(U32 key)
+      {
+         return await _subscriptionClient.SubscribeAsync("Treasury.Spends", Substrate.Polkadot.NET.NetApiExt.Generated.Storage.TreasuryStorage.SpendsParams(key));
       }
    }
 }

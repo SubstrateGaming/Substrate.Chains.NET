@@ -33,7 +33,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_para
     }
     
     /// <summary>
-    /// >> 445 - Variant[polkadot_runtime_parachains.disputes.DisputeResult]
+    /// >> 507 - Variant[polkadot_runtime_parachains.disputes.DisputeResult]
     /// </summary>
     public sealed class EnumDisputeResult : BaseEnum<DisputeResult>
     {

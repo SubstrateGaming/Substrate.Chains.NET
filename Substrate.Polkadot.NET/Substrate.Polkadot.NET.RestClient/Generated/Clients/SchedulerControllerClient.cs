@@ -34,9 +34,9 @@ namespace Substrate.Polkadot.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("Scheduler.IncompleteSince");
       }
-      public async Task<BoundedVecT8> GetAgenda(U32 key)
+      public async Task<BoundedVecT14> GetAgenda(U32 key)
       {
-         return await SendRequestAsync<BoundedVecT8>(_httpClient, "scheduler/agenda", Substrate.Polkadot.NET.NetApiExt.Generated.Storage.SchedulerStorage.AgendaParams(key));
+         return await SendRequestAsync<BoundedVecT14>(_httpClient, "scheduler/agenda", Substrate.Polkadot.NET.NetApiExt.Generated.Storage.SchedulerStorage.AgendaParams(key));
       }
       public async Task<bool> SubscribeAgenda(U32 key)
       {

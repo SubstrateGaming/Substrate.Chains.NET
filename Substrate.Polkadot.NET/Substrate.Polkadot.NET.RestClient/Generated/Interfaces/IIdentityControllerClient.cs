@@ -11,21 +11,27 @@ namespace Substrate.Polkadot.NET.RestClient.Generated.Interfaces
 {
    using System;
    using System.Threading.Tasks;
-   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types;
    using Substrate.NetApi.Model.Types.Base;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto;
    using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    
    public interface IIdentityControllerClient
    {
-      Task<Registration> GetIdentityOf(AccountId32 key);
+      Task<BaseTuple<Registration, BaseOpt<BoundedVecT4>>> GetIdentityOf(AccountId32 key);
       Task<bool> SubscribeIdentityOf(AccountId32 key);
       Task<BaseTuple<AccountId32, EnumData>> GetSuperOf(AccountId32 key);
       Task<bool> SubscribeSuperOf(AccountId32 key);
-      Task<BaseTuple<U128, BoundedVecT24>> GetSubsOf(AccountId32 key);
+      Task<BaseTuple<U128, BoundedVecT29>> GetSubsOf(AccountId32 key);
       Task<bool> SubscribeSubsOf(AccountId32 key);
-      Task<BoundedVecT25> GetRegistrars();
+      Task<BoundedVecT30> GetRegistrars();
       Task<bool> SubscribeRegistrars();
+      Task<AuthorityProperties> GetUsernameAuthorities(AccountId32 key);
+      Task<bool> SubscribeUsernameAuthorities(AccountId32 key);
+      Task<AccountId32> GetAccountOfUsername(BoundedVecT4 key);
+      Task<bool> SubscribeAccountOfUsername(BoundedVecT4 key);
+      Task<BaseTuple<AccountId32, U32>> GetPendingUsernames(BoundedVecT4 key);
+      Task<bool> SubscribePendingUsernames(BoundedVecT4 key);
    }
 }

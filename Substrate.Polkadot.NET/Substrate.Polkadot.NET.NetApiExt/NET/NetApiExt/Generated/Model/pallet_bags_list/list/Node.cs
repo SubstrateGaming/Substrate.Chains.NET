@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_bags_list.list
     
     
     /// <summary>
-    /// >> 636 - Composite[pallet_bags_list.list.Node]
+    /// >> 713 - Composite[pallet_bags_list.list.Node]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Node : BaseType
@@ -80,7 +80,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_bags_list.list
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];
-            System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
+            global::System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
         }
     }
 }

@@ -27,6 +27,14 @@ namespace Substrate.Polkadot.NET.RestClient.Generated.Clients
          _httpClient = httpClient;
          _subscriptionClient = subscriptionClient;
       }
+      public async Task<U128> GetTotalValueLocked()
+      {
+         return await SendRequestAsync<U128>(_httpClient, "nominationpools/totalvaluelocked");
+      }
+      public async Task<bool> SubscribeTotalValueLocked()
+      {
+         return await _subscriptionClient.SubscribeAsync("NominationPools.TotalValueLocked");
+      }
       public async Task<U128> GetMinJoinBond()
       {
          return await SendRequestAsync<U128>(_httpClient, "nominationpools/minjoinbond");
@@ -139,9 +147,9 @@ namespace Substrate.Polkadot.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("NominationPools.CounterForSubPoolsStorage");
       }
-      public async Task<BoundedVecT32> GetMetadata(U32 key)
+      public async Task<BoundedVecT38> GetMetadata(U32 key)
       {
-         return await SendRequestAsync<BoundedVecT32>(_httpClient, "nominationpools/metadata", Substrate.Polkadot.NET.NetApiExt.Generated.Storage.NominationPoolsStorage.MetadataParams(key));
+         return await SendRequestAsync<BoundedVecT38>(_httpClient, "nominationpools/metadata", Substrate.Polkadot.NET.NetApiExt.Generated.Storage.NominationPoolsStorage.MetadataParams(key));
       }
       public async Task<bool> SubscribeMetadata(U32 key)
       {

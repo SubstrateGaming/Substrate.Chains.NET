@@ -57,7 +57,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Controller
         ///  this list.
         /// </summary>
         [HttpGet("ClassLocksFor")]
-        [ProducesResponseType(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT20), 200)]
+        [ProducesResponseType(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT25), 200)]
         [StorageKeyBuilder(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ConvictionVotingStorage), "ClassLocksForParams", typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32))]
         public IActionResult GetClassLocksFor(string key)
         {

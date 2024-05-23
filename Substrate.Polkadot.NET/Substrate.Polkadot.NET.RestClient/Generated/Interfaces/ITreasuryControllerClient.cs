@@ -23,7 +23,11 @@ namespace Substrate.Polkadot.NET.RestClient.Generated.Interfaces
       Task<bool> SubscribeProposals(U32 key);
       Task<U128> GetDeactivated();
       Task<bool> SubscribeDeactivated();
-      Task<BoundedVecT18> GetApprovals();
+      Task<BoundedVecT23> GetApprovals();
       Task<bool> SubscribeApprovals();
+      Task<U32> GetSpendCount();
+      Task<bool> SubscribeSpendCount();
+      Task<SpendStatus> GetSpends(U32 key);
+      Task<bool> SubscribeSpends(U32 key);
    }
 }

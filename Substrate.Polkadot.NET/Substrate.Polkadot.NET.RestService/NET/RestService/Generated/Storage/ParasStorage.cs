@@ -131,7 +131,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         ///  NOTE that this field is used by parachains via merkle storage proofs, therefore changing
         ///  the format will require migration of parachains.
         /// </summary>
-        Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.EnumUpgradeGoAhead GetUpgradeGoAheadSignal(string key);
+        Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumUpgradeGoAhead GetUpgradeGoAheadSignal(string key);
         
         /// <summary>
         /// >> UpgradeRestrictionSignal
@@ -145,7 +145,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         ///  NOTE that this field is used by parachains via merkle storage proofs, therefore changing
         ///  the format will require migration of parachains.
         /// </summary>
-        Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.EnumUpgradeRestriction GetUpgradeRestrictionSignal(string key);
+        Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumUpgradeRestriction GetUpgradeRestrictionSignal(string key);
         
         /// <summary>
         /// >> UpgradeCooldowns
@@ -264,12 +264,12 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// <summary>
         /// _upgradeGoAheadSignalTypedStorage typed storage field
         /// </summary>
-        private TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.EnumUpgradeGoAhead> _upgradeGoAheadSignalTypedStorage;
+        private TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumUpgradeGoAhead> _upgradeGoAheadSignalTypedStorage;
         
         /// <summary>
         /// _upgradeRestrictionSignalTypedStorage typed storage field
         /// </summary>
-        private TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.EnumUpgradeRestriction> _upgradeRestrictionSignalTypedStorage;
+        private TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumUpgradeRestriction> _upgradeRestrictionSignalTypedStorage;
         
         /// <summary>
         /// _upgradeCooldownsTypedStorage typed storage field
@@ -318,8 +318,8 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
             this.PastCodePruningTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32>>>("Paras.PastCodePruning", storageDataProvider, storageChangeDelegates);
             this.FutureCodeUpgradesTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Primitive.U32>("Paras.FutureCodeUpgrades", storageDataProvider, storageChangeDelegates);
             this.FutureCodeHashTypedStorage = new TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash>("Paras.FutureCodeHash", storageDataProvider, storageChangeDelegates);
-            this.UpgradeGoAheadSignalTypedStorage = new TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.EnumUpgradeGoAhead>("Paras.UpgradeGoAheadSignal", storageDataProvider, storageChangeDelegates);
-            this.UpgradeRestrictionSignalTypedStorage = new TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.EnumUpgradeRestriction>("Paras.UpgradeRestrictionSignal", storageDataProvider, storageChangeDelegates);
+            this.UpgradeGoAheadSignalTypedStorage = new TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumUpgradeGoAhead>("Paras.UpgradeGoAheadSignal", storageDataProvider, storageChangeDelegates);
+            this.UpgradeRestrictionSignalTypedStorage = new TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumUpgradeRestriction>("Paras.UpgradeRestrictionSignal", storageDataProvider, storageChangeDelegates);
             this.UpgradeCooldownsTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32>>>("Paras.UpgradeCooldowns", storageDataProvider, storageChangeDelegates);
             this.UpcomingUpgradesTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32>>>("Paras.UpcomingUpgrades", storageDataProvider, storageChangeDelegates);
             this.ActionsQueueTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id>>("Paras.ActionsQueue", storageDataProvider, storageChangeDelegates);
@@ -511,7 +511,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// <summary>
         /// _upgradeGoAheadSignalTypedStorage property
         /// </summary>
-        public TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.EnumUpgradeGoAhead> UpgradeGoAheadSignalTypedStorage
+        public TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumUpgradeGoAhead> UpgradeGoAheadSignalTypedStorage
         {
             get
             {
@@ -526,7 +526,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// <summary>
         /// _upgradeRestrictionSignalTypedStorage property
         /// </summary>
-        public TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.EnumUpgradeRestriction> UpgradeRestrictionSignalTypedStorage
+        public TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumUpgradeRestriction> UpgradeRestrictionSignalTypedStorage
         {
             get
             {
@@ -1014,13 +1014,13 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         ///  NOTE that this field is used by parachains via merkle storage proofs, therefore changing
         ///  the format will require migration of parachains.
         /// </summary>
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.EnumUpgradeGoAhead GetUpgradeGoAheadSignal(string key)
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumUpgradeGoAhead GetUpgradeGoAheadSignal(string key)
         {
             if ((key == null))
             {
                 return null;
             }
-            if (UpgradeGoAheadSignalTypedStorage.Dictionary.TryGetValue(key, out Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.EnumUpgradeGoAhead result))
+            if (UpgradeGoAheadSignalTypedStorage.Dictionary.TryGetValue(key, out Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumUpgradeGoAhead result))
             {
                 return result;
             }
@@ -1051,13 +1051,13 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         ///  NOTE that this field is used by parachains via merkle storage proofs, therefore changing
         ///  the format will require migration of parachains.
         /// </summary>
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.EnumUpgradeRestriction GetUpgradeRestrictionSignal(string key)
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumUpgradeRestriction GetUpgradeRestrictionSignal(string key)
         {
             if ((key == null))
             {
                 return null;
             }
-            if (UpgradeRestrictionSignalTypedStorage.Dictionary.TryGetValue(key, out Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.EnumUpgradeRestriction result))
+            if (UpgradeRestrictionSignalTypedStorage.Dictionary.TryGetValue(key, out Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumUpgradeRestriction result))
             {
                 return result;
             }

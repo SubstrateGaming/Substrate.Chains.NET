@@ -17,6 +17,7 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup.Generated.Clients
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_staking;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_staking;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_staking.slashing;
    using Substrate.Polkadot.NET.RestClient.Mockup.Generated.Interfaces;
    
@@ -107,9 +108,21 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "Staking/ErasStakers", value.Encode(), Substrate.Polkadot.NET.NetApiExt.Generated.Storage.StakingStorage.ErasStakersParams(key));
       }
+      public async Task<bool> SetErasStakersOverview(PagedExposureMetadata value, BaseTuple<U32, AccountId32> key)
+      {
+         return await SendMockupRequestAsync(_httpClient, "Staking/ErasStakersOverview", value.Encode(), Substrate.Polkadot.NET.NetApiExt.Generated.Storage.StakingStorage.ErasStakersOverviewParams(key));
+      }
       public async Task<bool> SetErasStakersClipped(Exposure value, BaseTuple<U32, AccountId32> key)
       {
          return await SendMockupRequestAsync(_httpClient, "Staking/ErasStakersClipped", value.Encode(), Substrate.Polkadot.NET.NetApiExt.Generated.Storage.StakingStorage.ErasStakersClippedParams(key));
+      }
+      public async Task<bool> SetErasStakersPaged(ExposurePage value, BaseTuple<U32, AccountId32, U32> key)
+      {
+         return await SendMockupRequestAsync(_httpClient, "Staking/ErasStakersPaged", value.Encode(), Substrate.Polkadot.NET.NetApiExt.Generated.Storage.StakingStorage.ErasStakersPagedParams(key));
+      }
+      public async Task<bool> SetClaimedRewards(BaseVec<U32> value, BaseTuple<U32, AccountId32> key)
+      {
+         return await SendMockupRequestAsync(_httpClient, "Staking/ClaimedRewards", value.Encode(), Substrate.Polkadot.NET.NetApiExt.Generated.Storage.StakingStorage.ClaimedRewardsParams(key));
       }
       public async Task<bool> SetErasValidatorPrefs(ValidatorPrefs value, BaseTuple<U32, AccountId32> key)
       {

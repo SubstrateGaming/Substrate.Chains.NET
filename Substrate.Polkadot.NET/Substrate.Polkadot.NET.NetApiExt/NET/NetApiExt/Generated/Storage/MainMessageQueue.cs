@@ -68,10 +68,10 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         /// >> BookStateFor
         ///  The index of the first and last (non-empty) pages.
         /// </summary>
-        public async Task<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_message_queue.BookState> BookStateFor(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.inclusion.EnumAggregateMessageOrigin key, CancellationToken token)
+        public async Task<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_message_queue.BookState> BookStateFor(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.inclusion.EnumAggregateMessageOrigin key, string blockhash, CancellationToken token)
         {
             string parameters = MessageQueueStorage.BookStateForParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_message_queue.BookState>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_message_queue.BookState>(parameters, blockhash, token);
             return result;
         }
         
@@ -97,10 +97,10 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         /// >> ServiceHead
         ///  The origin at which we should begin servicing.
         /// </summary>
-        public async Task<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.inclusion.EnumAggregateMessageOrigin> ServiceHead(CancellationToken token)
+        public async Task<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.inclusion.EnumAggregateMessageOrigin> ServiceHead(string blockhash, CancellationToken token)
         {
             string parameters = MessageQueueStorage.ServiceHeadParams();
-            var result = await _client.GetStorageAsync<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.inclusion.EnumAggregateMessageOrigin>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.inclusion.EnumAggregateMessageOrigin>(parameters, blockhash, token);
             return result;
         }
         
@@ -128,10 +128,10 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         /// >> Pages
         ///  The map of page indices to pages.
         /// </summary>
-        public async Task<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_message_queue.Page> Pages(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.inclusion.EnumAggregateMessageOrigin, Substrate.NetApi.Model.Types.Primitive.U32> key, CancellationToken token)
+        public async Task<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_message_queue.Page> Pages(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.inclusion.EnumAggregateMessageOrigin, Substrate.NetApi.Model.Types.Primitive.U32> key, string blockhash, CancellationToken token)
         {
             string parameters = MessageQueueStorage.PagesParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_message_queue.Page>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_message_queue.Page>(parameters, blockhash, token);
             return result;
         }
     }
@@ -278,5 +278,11 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         /// This can change at any time and may resolve in the future by re-trying.
         /// </summary>
         QueuePaused,
+        
+        /// <summary>
+        /// >> RecursiveDisallowed
+        /// Another call is in progress and needs to finish before this call can happen.
+        /// </summary>
+        RecursiveDisallowed,
     }
 }

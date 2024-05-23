@@ -78,11 +78,35 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Controller
         ///  Proposal indices that have been approved but not yet awarded.
         /// </summary>
         [HttpGet("Approvals")]
-        [ProducesResponseType(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18), 200)]
+        [ProducesResponseType(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT23), 200)]
         [StorageKeyBuilder(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Storage.TreasuryStorage), "ApprovalsParams")]
         public IActionResult GetApprovals()
         {
             return this.Ok(_treasuryStorage.GetApprovals());
+        }
+        
+        /// <summary>
+        /// >> SpendCount
+        ///  The count of spends that have been made.
+        /// </summary>
+        [HttpGet("SpendCount")]
+        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Primitive.U32), 200)]
+        [StorageKeyBuilder(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Storage.TreasuryStorage), "SpendCountParams")]
+        public IActionResult GetSpendCount()
+        {
+            return this.Ok(_treasuryStorage.GetSpendCount());
+        }
+        
+        /// <summary>
+        /// >> Spends
+        ///  Spends that have been approved and being processed.
+        /// </summary>
+        [HttpGet("Spends")]
+        [ProducesResponseType(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_treasury.SpendStatus), 200)]
+        [StorageKeyBuilder(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Storage.TreasuryStorage), "SpendsParams", typeof(Substrate.NetApi.Model.Types.Primitive.U32))]
+        public IActionResult GetSpends(string key)
+        {
+            return this.Ok(_treasuryStorage.GetSpends(key));
         }
     }
 }

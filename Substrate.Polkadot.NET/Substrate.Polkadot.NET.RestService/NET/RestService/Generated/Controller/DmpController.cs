@@ -69,7 +69,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Controller
         
         /// <summary>
         /// >> DeliveryFeeFactor
-        ///  The number to multiply the base delivery fee by.
+        ///  The factor to multiply the base delivery fee by.
         /// </summary>
         [HttpGet("DeliveryFeeFactor")]
         [ProducesResponseType(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedU128), 200)]

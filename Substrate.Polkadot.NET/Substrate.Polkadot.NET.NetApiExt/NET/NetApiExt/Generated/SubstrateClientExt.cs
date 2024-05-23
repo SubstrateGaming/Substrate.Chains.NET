@@ -100,11 +100,6 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated
         public GrandpaStorage GrandpaStorage;
         
         /// <summary>
-        /// ImOnlineStorage storage calls.
-        /// </summary>
-        public ImOnlineStorage ImOnlineStorage;
-        
-        /// <summary>
         /// AuthorityDiscoveryStorage storage calls.
         /// </summary>
         public AuthorityDiscoveryStorage AuthorityDiscoveryStorage;
@@ -123,6 +118,11 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated
         /// ReferendaStorage storage calls.
         /// </summary>
         public ReferendaStorage ReferendaStorage;
+        
+        /// <summary>
+        /// OriginsStorage storage calls.
+        /// </summary>
+        public OriginsStorage OriginsStorage;
         
         /// <summary>
         /// WhitelistStorage storage calls.
@@ -280,6 +280,11 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated
         public CrowdloanStorage CrowdloanStorage;
         
         /// <summary>
+        /// StateTrieMigrationStorage storage calls.
+        /// </summary>
+        public StateTrieMigrationStorage StateTrieMigrationStorage;
+        
+        /// <summary>
         /// XcmPalletStorage storage calls.
         /// </summary>
         public XcmPalletStorage XcmPalletStorage;
@@ -288,6 +293,26 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated
         /// MessageQueueStorage storage calls.
         /// </summary>
         public MessageQueueStorage MessageQueueStorage;
+        
+        /// <summary>
+        /// AssetRateStorage storage calls.
+        /// </summary>
+        public AssetRateStorage AssetRateStorage;
+        
+        /// <summary>
+        /// BeefyStorage storage calls.
+        /// </summary>
+        public BeefyStorage BeefyStorage;
+        
+        /// <summary>
+        /// MmrStorage storage calls.
+        /// </summary>
+        public MmrStorage MmrStorage;
+        
+        /// <summary>
+        /// BeefyMmrLeafStorage storage calls.
+        /// </summary>
+        public BeefyMmrLeafStorage BeefyMmrLeafStorage;
         
         public SubstrateClientExt(System.Uri uri, Substrate.NetApi.Model.Extrinsics.ChargeType chargeType) : 
                 base(uri, chargeType)
@@ -307,11 +332,11 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated
             this.HistoricalStorage = new HistoricalStorage(this);
             this.SessionStorage = new SessionStorage(this);
             this.GrandpaStorage = new GrandpaStorage(this);
-            this.ImOnlineStorage = new ImOnlineStorage(this);
             this.AuthorityDiscoveryStorage = new AuthorityDiscoveryStorage(this);
             this.TreasuryStorage = new TreasuryStorage(this);
             this.ConvictionVotingStorage = new ConvictionVotingStorage(this);
             this.ReferendaStorage = new ReferendaStorage(this);
+            this.OriginsStorage = new OriginsStorage(this);
             this.WhitelistStorage = new WhitelistStorage(this);
             this.ClaimsStorage = new ClaimsStorage(this);
             this.VestingStorage = new VestingStorage(this);
@@ -343,8 +368,13 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated
             this.SlotsStorage = new SlotsStorage(this);
             this.AuctionsStorage = new AuctionsStorage(this);
             this.CrowdloanStorage = new CrowdloanStorage(this);
+            this.StateTrieMigrationStorage = new StateTrieMigrationStorage(this);
             this.XcmPalletStorage = new XcmPalletStorage(this);
             this.MessageQueueStorage = new MessageQueueStorage(this);
+            this.AssetRateStorage = new AssetRateStorage(this);
+            this.BeefyStorage = new BeefyStorage(this);
+            this.MmrStorage = new MmrStorage(this);
+            this.BeefyMmrLeafStorage = new BeefyMmrLeafStorage(this);
         }
     }
 }

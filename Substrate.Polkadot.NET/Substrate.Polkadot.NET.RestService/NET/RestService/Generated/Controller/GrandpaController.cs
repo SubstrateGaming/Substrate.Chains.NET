@@ -118,5 +118,17 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Controller
         {
             return this.Ok(_grandpaStorage.GetSetIdSession(key));
         }
+        
+        /// <summary>
+        /// >> Authorities
+        ///  The current list of authorities.
+        /// </summary>
+        [HttpGet("Authorities")]
+        [ProducesResponseType(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT4), 200)]
+        [StorageKeyBuilder(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Storage.GrandpaStorage), "AuthoritiesParams")]
+        public IActionResult GetAuthorities()
+        {
+            return this.Ok(_grandpaStorage.GetAuthorities());
+        }
     }
 }

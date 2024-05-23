@@ -18,6 +18,7 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup.Generated.Interfaces
    
    public interface INominationPoolsControllerMockupClient
    {
+      Task<bool> SetTotalValueLocked(U128 value);
       Task<bool> SetMinJoinBond(U128 value);
       Task<bool> SetMinCreateBond(U128 value);
       Task<bool> SetMaxPools(U32 value);
@@ -32,7 +33,7 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup.Generated.Interfaces
       Task<bool> SetCounterForRewardPools(U32 value);
       Task<bool> SetSubPoolsStorage(SubPools value, U32 key);
       Task<bool> SetCounterForSubPoolsStorage(U32 value);
-      Task<bool> SetMetadata(BoundedVecT32 value, U32 key);
+      Task<bool> SetMetadata(BoundedVecT38 value, U32 key);
       Task<bool> SetCounterForMetadata(U32 value);
       Task<bool> SetLastPoolId(U32 value);
       Task<bool> SetReversePoolIdLookup(U32 value, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);

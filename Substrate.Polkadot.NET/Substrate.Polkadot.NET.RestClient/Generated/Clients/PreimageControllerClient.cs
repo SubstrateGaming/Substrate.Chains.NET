@@ -25,17 +25,25 @@ namespace Substrate.Polkadot.NET.RestClient.Generated.Clients
          _httpClient = httpClient;
          _subscriptionClient = subscriptionClient;
       }
-      public async Task<EnumRequestStatus> GetStatusFor(Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256 key)
+      public async Task<EnumOldRequestStatus> GetStatusFor(Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256 key)
       {
-         return await SendRequestAsync<EnumRequestStatus>(_httpClient, "preimage/statusfor", Substrate.Polkadot.NET.NetApiExt.Generated.Storage.PreimageStorage.StatusForParams(key));
+         return await SendRequestAsync<EnumOldRequestStatus>(_httpClient, "preimage/statusfor", Substrate.Polkadot.NET.NetApiExt.Generated.Storage.PreimageStorage.StatusForParams(key));
       }
       public async Task<bool> SubscribeStatusFor(Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256 key)
       {
          return await _subscriptionClient.SubscribeAsync("Preimage.StatusFor", Substrate.Polkadot.NET.NetApiExt.Generated.Storage.PreimageStorage.StatusForParams(key));
       }
-      public async Task<BoundedVecT9> GetPreimageFor(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Primitive.U32> key)
+      public async Task<EnumRequestStatus> GetRequestStatusFor(Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256 key)
       {
-         return await SendRequestAsync<BoundedVecT9>(_httpClient, "preimage/preimagefor", Substrate.Polkadot.NET.NetApiExt.Generated.Storage.PreimageStorage.PreimageForParams(key));
+         return await SendRequestAsync<EnumRequestStatus>(_httpClient, "preimage/requeststatusfor", Substrate.Polkadot.NET.NetApiExt.Generated.Storage.PreimageStorage.RequestStatusForParams(key));
+      }
+      public async Task<bool> SubscribeRequestStatusFor(Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256 key)
+      {
+         return await _subscriptionClient.SubscribeAsync("Preimage.RequestStatusFor", Substrate.Polkadot.NET.NetApiExt.Generated.Storage.PreimageStorage.RequestStatusForParams(key));
+      }
+      public async Task<BoundedVecT15> GetPreimageFor(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Primitive.U32> key)
+      {
+         return await SendRequestAsync<BoundedVecT15>(_httpClient, "preimage/preimagefor", Substrate.Polkadot.NET.NetApiExt.Generated.Storage.PreimageStorage.PreimageForParams(key));
       }
       public async Task<bool> SubscribePreimageFor(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Primitive.U32> key)
       {

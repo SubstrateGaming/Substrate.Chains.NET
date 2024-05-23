@@ -75,10 +75,16 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_message_queue.
         /// This can change at any time and may resolve in the future by re-trying.
         /// </summary>
         QueuePaused = 7,
+        
+        /// <summary>
+        /// >> RecursiveDisallowed
+        /// Another call is in progress and needs to finish before this call can happen.
+        /// </summary>
+        RecursiveDisallowed = 8,
     }
     
     /// <summary>
-    /// >> 773 - Variant[pallet_message_queue.pallet.Error]
+    /// >> 849 - Variant[pallet_message_queue.pallet.Error]
     /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>
