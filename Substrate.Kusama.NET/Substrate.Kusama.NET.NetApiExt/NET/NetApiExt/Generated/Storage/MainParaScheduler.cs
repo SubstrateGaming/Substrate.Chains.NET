@@ -36,8 +36,8 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         public ParaSchedulerStorage(SubstrateClientExt client)
         {
             this._client = client;
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("ParaScheduler", "ValidatorGroups"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.ValidatorIndex>>)));
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("ParaScheduler", "AvailabilityCores"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.EnumCoreOccupied>)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("ParaScheduler", "ValidatorGroups"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.ValidatorIndex>>)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("ParaScheduler", "AvailabilityCores"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.scheduler.pallet.EnumCoreOccupied>)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("ParaScheduler", "SessionStartBlock"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Primitive.U32)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("ParaScheduler", "ClaimQueue"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.BTreeMapT4)));
         }
@@ -76,10 +76,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         ///  multiplexers. Reasonably, 100-1000. The dominant factor is the number of validators: safe
         ///  upper bound at 10k.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.ValidatorIndex>>> ValidatorGroups(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.ValidatorIndex>>> ValidatorGroups(string blockhash, CancellationToken token)
         {
             string parameters = ParaSchedulerStorage.ValidatorGroupsParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.ValidatorIndex>>>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.ValidatorIndex>>>(parameters, blockhash, token);
             return result;
         }
         
@@ -119,10 +119,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         ///    * The number of parachains and parathread multiplexers
         ///    * The number of validators divided by `configuration.max_validators_per_core`.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.EnumCoreOccupied>> AvailabilityCores(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.scheduler.pallet.EnumCoreOccupied>> AvailabilityCores(string blockhash, CancellationToken token)
         {
             string parameters = ParaSchedulerStorage.AvailabilityCoresParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.EnumCoreOccupied>>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.scheduler.pallet.EnumCoreOccupied>>(parameters, blockhash, token);
             return result;
         }
         
@@ -160,10 +160,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         ///  Thus for all intents and purposes the effect of the session change is observed at the
         ///  block following the session change, block number of which we save in this storage value.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> SessionStartBlock(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> SessionStartBlock(string blockhash, CancellationToken token)
         {
             string parameters = ParaSchedulerStorage.SessionStartBlockParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, blockhash, token);
             return result;
         }
         
@@ -197,10 +197,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         ///  `CoreState` in the runtime API. The value contained here will not be valid after the end of
         ///  a block. Runtime APIs should be used to determine scheduled cores/ for the upcoming block.
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.BTreeMapT4> ClaimQueue(CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.BTreeMapT4> ClaimQueue(string blockhash, CancellationToken token)
         {
             string parameters = ParaSchedulerStorage.ClaimQueueParams();
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.BTreeMapT4>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.BTreeMapT4>(parameters, blockhash, token);
             return result;
         }
     }

@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society
     
     
     /// <summary>
-    /// >> 677 - Composite[pallet_society.Vote]
+    /// >> 729 - Composite[pallet_society.Vote]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Vote : BaseType
@@ -59,7 +59,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];
-            System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
+            global::System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
         }
     }
 }

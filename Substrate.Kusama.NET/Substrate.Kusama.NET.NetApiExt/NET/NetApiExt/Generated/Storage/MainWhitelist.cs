@@ -62,10 +62,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// <summary>
         /// >> WhitelistedCall
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Base.BaseTuple> WhitelistedCall(Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256 key, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Base.BaseTuple> WhitelistedCall(Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256 key, string blockhash, CancellationToken token)
         {
             string parameters = WhitelistStorage.WhitelistedCallParams(key);
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseTuple>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseTuple>(parameters, blockhash, token);
             return result;
         }
     }

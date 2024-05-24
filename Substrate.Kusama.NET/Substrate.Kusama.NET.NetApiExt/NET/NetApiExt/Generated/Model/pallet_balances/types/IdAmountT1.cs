@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_balances.types
     
     
     /// <summary>
-    /// >> 555 - Composite[pallet_balances.types.IdAmountT1]
+    /// >> 604 - Composite[pallet_balances.types.IdAmountT1]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class IdAmountT1 : BaseType
@@ -59,7 +59,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_balances.types
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];
-            System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
+            global::System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
         }
     }
 }

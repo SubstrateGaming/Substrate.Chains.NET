@@ -63,10 +63,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> BeefyAuthorities
         ///  Details of current BEEFY authority set.
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_beefy.mmr.BeefyAuthoritySet> BeefyAuthorities(CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_beefy.mmr.BeefyAuthoritySet> BeefyAuthorities(string blockhash, CancellationToken token)
         {
             string parameters = BeefyMmrLeafStorage.BeefyAuthoritiesParams();
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_beefy.mmr.BeefyAuthoritySet>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_beefy.mmr.BeefyAuthoritySet>(parameters, blockhash, token);
             return result;
         }
         
@@ -97,10 +97,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// 
         ///  This storage entry is used as cache for calls to `update_beefy_next_authority_set`.
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_beefy.mmr.BeefyAuthoritySet> BeefyNextAuthorities(CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_beefy.mmr.BeefyAuthoritySet> BeefyNextAuthorities(string blockhash, CancellationToken token)
         {
             string parameters = BeefyMmrLeafStorage.BeefyNextAuthoritiesParams();
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_beefy.mmr.BeefyAuthoritySet>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_beefy.mmr.BeefyAuthoritySet>(parameters, blockhash, token);
             return result;
         }
     }

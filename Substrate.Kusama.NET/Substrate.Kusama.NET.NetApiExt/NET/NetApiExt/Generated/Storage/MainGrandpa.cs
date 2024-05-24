@@ -43,6 +43,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Grandpa", "CurrentSetId"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Primitive.U64)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Grandpa", "SetIdSession"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.NetApi.Model.Types.Primitive.U64), typeof(Substrate.NetApi.Model.Types.Primitive.U32)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("Grandpa", "Authorities"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT4)));
         }
         
         /// <summary>
@@ -67,10 +68,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> State
         ///  State of the current authority set.
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_grandpa.EnumStoredState> State(CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_grandpa.EnumStoredState> State(string blockhash, CancellationToken token)
         {
             string parameters = GrandpaStorage.StateParams();
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_grandpa.EnumStoredState>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_grandpa.EnumStoredState>(parameters, blockhash, token);
             return result;
         }
         
@@ -96,10 +97,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> PendingChange
         ///  Pending change: (signaled at, scheduled change).
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_grandpa.StoredPendingChange> PendingChange(CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_grandpa.StoredPendingChange> PendingChange(string blockhash, CancellationToken token)
         {
             string parameters = GrandpaStorage.PendingChangeParams();
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_grandpa.StoredPendingChange>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_grandpa.StoredPendingChange>(parameters, blockhash, token);
             return result;
         }
         
@@ -125,10 +126,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> NextForced
         ///  next block number where we can force a change.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> NextForced(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> NextForced(string blockhash, CancellationToken token)
         {
             string parameters = GrandpaStorage.NextForcedParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, blockhash, token);
             return result;
         }
         
@@ -154,10 +155,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> Stalled
         ///  `true` if we are currently stalled.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>> Stalled(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>> Stalled(string blockhash, CancellationToken token)
         {
             string parameters = GrandpaStorage.StalledParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>>(parameters, blockhash, token);
             return result;
         }
         
@@ -185,10 +186,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         ///  The number of changes (both in terms of keys and underlying economic responsibilities)
         ///  in the "set" of Grandpa validators from genesis.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U64> CurrentSetId(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U64> CurrentSetId(string blockhash, CancellationToken token)
         {
             string parameters = GrandpaStorage.CurrentSetIdParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U64>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U64>(parameters, blockhash, token);
             return result;
         }
         
@@ -234,10 +235,39 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// 
         ///  TWOX-NOTE: `SetId` is not under user control.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> SetIdSession(Substrate.NetApi.Model.Types.Primitive.U64 key, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> SetIdSession(Substrate.NetApi.Model.Types.Primitive.U64 key, string blockhash, CancellationToken token)
         {
             string parameters = GrandpaStorage.SetIdSessionParams(key);
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, blockhash, token);
+            return result;
+        }
+        
+        /// <summary>
+        /// >> AuthoritiesParams
+        ///  The current list of authorities.
+        /// </summary>
+        public static string AuthoritiesParams()
+        {
+            return RequestGenerator.GetStorage("Grandpa", "Authorities", Substrate.NetApi.Model.Meta.Storage.Type.Plain);
+        }
+        
+        /// <summary>
+        /// >> AuthoritiesDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string AuthoritiesDefault()
+        {
+            return "0x00";
+        }
+        
+        /// <summary>
+        /// >> Authorities
+        ///  The current list of authorities.
+        /// </summary>
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT4> Authorities(string blockhash, CancellationToken token)
+        {
+            string parameters = GrandpaStorage.AuthoritiesParams();
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT4>(parameters, blockhash, token);
             return result;
         }
     }

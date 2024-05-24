@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.finality_grandpa
     
     
     /// <summary>
-    /// >> 116 - Composite[finality_grandpa.EquivocationT1]
+    /// >> 144 - Composite[finality_grandpa.EquivocationT1]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class EquivocationT1 : BaseType
@@ -73,7 +73,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.finality_grandpa
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];
-            System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
+            global::System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
         }
     }
 }

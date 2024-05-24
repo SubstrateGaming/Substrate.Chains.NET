@@ -69,13 +69,25 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parach
         /// See [`Pallet::force_open_hrmp_channel`].
         /// </summary>
         force_open_hrmp_channel = 7,
+        
+        /// <summary>
+        /// >> establish_system_channel
+        /// See [`Pallet::establish_system_channel`].
+        /// </summary>
+        establish_system_channel = 8,
+        
+        /// <summary>
+        /// >> poke_channel_deposits
+        /// See [`Pallet::poke_channel_deposits`].
+        /// </summary>
+        poke_channel_deposits = 9,
     }
     
     /// <summary>
-    /// >> 370 - Variant[polkadot_runtime_parachains.hrmp.pallet.Call]
+    /// >> 396 - Variant[polkadot_runtime_parachains.hrmp.pallet.Call]
     /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
-    public sealed class EnumCall : BaseEnumExt<Call, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.HrmpChannelId, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.HrmpChannelId, Substrate.NetApi.Model.Types.Primitive.U32>, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>>
+    public sealed class EnumCall : BaseEnumExt<Call, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.HrmpChannelId, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.HrmpChannelId, Substrate.NetApi.Model.Types.Primitive.U32>, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id>, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id>>
     {
     }
 }

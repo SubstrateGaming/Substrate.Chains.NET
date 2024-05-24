@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Types.Base
     
     
     /// <summary>
-    /// >> 845 - Array
+    /// >> 915 - Array
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Array)]
     public sealed class Arr36BaseOpt : BaseType

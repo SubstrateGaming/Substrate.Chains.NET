@@ -66,7 +66,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nis.pallet
     }
     
     /// <summary>
-    /// >> 488 - Variant[pallet_nis.pallet.Event]
+    /// >> 536 - Variant[pallet_nis.pallet.Event]
     /// The `Event` enum of this pallet
     /// </summary>
     public sealed class EnumEvent : BaseEnumExt<Event, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U128, Substrate.NetApi.Model.Types.Primitive.U32>, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U128, Substrate.NetApi.Model.Types.Primitive.U32>, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U128, Substrate.NetApi.Model.Types.Primitive.U32>, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perquintill, Substrate.NetApi.Model.Types.Primitive.U128>, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perquintill, Substrate.NetApi.Model.Types.Primitive.U128, Substrate.NetApi.Model.Types.Primitive.Bool>, Substrate.NetApi.Model.Types.Primitive.U128, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U32>>

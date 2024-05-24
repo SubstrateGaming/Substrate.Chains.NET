@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_balances.types
     
     
     /// <summary>
-    /// >> 560 - Composite[pallet_balances.types.IdAmountT2]
+    /// >> 610 - Composite[pallet_balances.types.IdAmountT2]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class IdAmountT2 : BaseType
@@ -27,7 +27,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_balances.types
         /// <summary>
         /// >> id
         /// </summary>
-        public Substrate.NetApi.Model.Types.Base.BaseTuple Id { get; set; }
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_kusama_runtime.EnumRuntimeFreezeReason Id { get; set; }
         /// <summary>
         /// >> amount
         /// </summary>
@@ -52,14 +52,14 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_balances.types
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Id = new Substrate.NetApi.Model.Types.Base.BaseTuple();
+            Id = new Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_kusama_runtime.EnumRuntimeFreezeReason();
             Id.Decode(byteArray, ref p);
             Amount = new Substrate.NetApi.Model.Types.Primitive.U128();
             Amount.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];
-            System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
+            global::System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
         }
     }
 }

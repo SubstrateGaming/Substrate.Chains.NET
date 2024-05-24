@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_recovery
     
     
     /// <summary>
-    /// >> 684 - Composite[pallet_recovery.ActiveRecovery]
+    /// >> 736 - Composite[pallet_recovery.ActiveRecovery]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class ActiveRecovery : BaseType
@@ -35,7 +35,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_recovery
         /// <summary>
         /// >> friends
         /// </summary>
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT30 Friends { get; set; }
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT33 Friends { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
@@ -61,12 +61,12 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_recovery
             Created.Decode(byteArray, ref p);
             Deposit = new Substrate.NetApi.Model.Types.Primitive.U128();
             Deposit.Decode(byteArray, ref p);
-            Friends = new Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT30();
+            Friends = new Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT33();
             Friends.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];
-            System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
+            global::System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
         }
     }
 }

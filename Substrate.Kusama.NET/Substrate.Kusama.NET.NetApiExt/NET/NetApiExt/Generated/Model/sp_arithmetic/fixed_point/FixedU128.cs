@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_poi
     
     
     /// <summary>
-    /// >> 563 - Composite[sp_arithmetic.fixed_point.FixedU128]
+    /// >> 495 - Composite[sp_arithmetic.fixed_point.FixedU128]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class FixedU128 : BaseType
@@ -52,7 +52,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_poi
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];
-            System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
+            global::System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
         }
     }
 }

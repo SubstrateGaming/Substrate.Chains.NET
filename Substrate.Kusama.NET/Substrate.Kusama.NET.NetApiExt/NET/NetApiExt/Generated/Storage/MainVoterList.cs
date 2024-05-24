@@ -71,10 +71,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// 
         ///  Nodes store links forward and back within their respective bags.
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_bags_list.list.Node> ListNodes(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_bags_list.list.Node> ListNodes(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, string blockhash, CancellationToken token)
         {
             string parameters = VoterListStorage.ListNodesParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_bags_list.list.Node>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_bags_list.list.Node>(parameters, blockhash, token);
             return result;
         }
         
@@ -100,10 +100,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> CounterForListNodes
         /// Counter for the related counted storage map
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> CounterForListNodes(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> CounterForListNodes(string blockhash, CancellationToken token)
         {
             string parameters = VoterListStorage.CounterForListNodesParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, blockhash, token);
             return result;
         }
         
@@ -135,10 +135,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// 
         ///  Stores a `Bag` struct, which stores head and tail pointers to itself.
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_bags_list.list.Bag> ListBags(Substrate.NetApi.Model.Types.Primitive.U64 key, CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_bags_list.list.Bag> ListBags(Substrate.NetApi.Model.Types.Primitive.U64 key, string blockhash, CancellationToken token)
         {
             string parameters = VoterListStorage.ListBagsParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_bags_list.list.Bag>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_bags_list.list.Bag>(parameters, blockhash, token);
             return result;
         }
     }

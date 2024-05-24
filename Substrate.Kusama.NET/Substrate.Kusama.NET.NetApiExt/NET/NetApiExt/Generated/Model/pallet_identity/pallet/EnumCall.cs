@@ -111,13 +111,55 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_identity.pallet
         /// See [`Pallet::quit_sub`].
         /// </summary>
         quit_sub = 14,
+        
+        /// <summary>
+        /// >> add_username_authority
+        /// See [`Pallet::add_username_authority`].
+        /// </summary>
+        add_username_authority = 15,
+        
+        /// <summary>
+        /// >> remove_username_authority
+        /// See [`Pallet::remove_username_authority`].
+        /// </summary>
+        remove_username_authority = 16,
+        
+        /// <summary>
+        /// >> set_username_for
+        /// See [`Pallet::set_username_for`].
+        /// </summary>
+        set_username_for = 17,
+        
+        /// <summary>
+        /// >> accept_username
+        /// See [`Pallet::accept_username`].
+        /// </summary>
+        accept_username = 18,
+        
+        /// <summary>
+        /// >> remove_expired_approval
+        /// See [`Pallet::remove_expired_approval`].
+        /// </summary>
+        remove_expired_approval = 19,
+        
+        /// <summary>
+        /// >> set_primary_username
+        /// See [`Pallet::set_primary_username`].
+        /// </summary>
+        set_primary_username = 20,
+        
+        /// <summary>
+        /// >> remove_dangling_username
+        /// See [`Pallet::remove_dangling_username`].
+        /// </summary>
+        remove_dangling_username = 21,
     }
     
     /// <summary>
-    /// >> 165 - Variant[pallet_identity.pallet.Call]
+    /// >> 183 - Variant[pallet_identity.pallet.Call]
     /// Identity pallet declaration.
     /// </summary>
-    public sealed class EnumCall : BaseEnumExt<Call, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_identity.types.IdentityInfo, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData>>, BaseVoid, BaseTuple<Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128>>, Substrate.NetApi.Model.Types.Primitive.U32, BaseTuple<Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128>>, BaseTuple<Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress>, BaseTuple<Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_identity.types.BitFlags>, BaseTuple<Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumJudgement, Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256>, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData>, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData>, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, BaseVoid>
+    public sealed class EnumCall : BaseEnumExt<Call, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_identity.legacy.IdentityInfo, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData>>, BaseVoid, BaseTuple<Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128>>, Substrate.NetApi.Model.Types.Primitive.U32, BaseTuple<Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128>>, BaseTuple<Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress>, BaseTuple<Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.NetApi.Model.Types.Primitive.U64>, BaseTuple<Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumJudgement, Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256>, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData>, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData>, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, BaseVoid, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>, Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.EnumMultiSignature>>, Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT4, Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT4, Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT4, Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT4>
     {
     }
 }

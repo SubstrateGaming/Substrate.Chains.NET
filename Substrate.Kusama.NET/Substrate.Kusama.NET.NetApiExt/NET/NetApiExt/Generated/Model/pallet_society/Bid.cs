@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society
     
     
     /// <summary>
-    /// >> 671 - Composite[pallet_society.Bid]
+    /// >> 723 - Composite[pallet_society.Bid]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Bid : BaseType
@@ -66,7 +66,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];
-            System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
+            global::System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
         }
     }
 }

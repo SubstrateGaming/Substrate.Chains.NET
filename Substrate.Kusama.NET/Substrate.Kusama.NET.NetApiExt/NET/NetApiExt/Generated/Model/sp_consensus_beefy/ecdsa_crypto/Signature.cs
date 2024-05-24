@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_beefy.ecds
     
     
     /// <summary>
-    /// >> 99 - Composite[sp_consensus_beefy.ecdsa_crypto.Signature]
+    /// >> 498 - Composite[sp_consensus_beefy.ecdsa_crypto.Signature]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Signature : BaseType
@@ -52,7 +52,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_beefy.ecds
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];
-            System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
+            global::System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
         }
     }
 }

@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools
     
     
     /// <summary>
-    /// >> 748 - Composite[pallet_nomination_pools.PoolMember]
+    /// >> 804 - Composite[pallet_nomination_pools.PoolMember]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class PoolMember : BaseType
@@ -73,7 +73,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];
-            System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
+            global::System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
         }
     }
 }

@@ -76,9 +76,9 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools
         /// >> MinimumBondNotMet
         /// The amount does not meet the minimum bond to either join or create a pool.
         /// 
-        /// The depositor can never unbond to a value less than
-        /// `Pallet::depositor_min_bond`. The caller does not have nominating
-        /// permissions for the pool. Members can never unbond to a value below `MinJoinBond`.
+        /// The depositor can never unbond to a value less than `Pallet::depositor_min_bond`. The
+        /// caller does not have nominating permissions for the pool. Members can never unbond to a
+        /// value below `MinJoinBond`.
         /// </summary>
         MinimumBondNotMet = 8,
         
@@ -215,13 +215,19 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools
         /// Bonding extra is restricted to the exact pending reward amount.
         /// </summary>
         BondExtraRestricted = 30,
+        
+        /// <summary>
+        /// >> NothingToAdjust
+        /// No imbalance in the ED deposit for the pool.
+        /// </summary>
+        NothingToAdjust = 31,
     }
     
     /// <summary>
-    /// >> 764 - Variant[pallet_nomination_pools.pallet.Error]
+    /// >> 820 - Variant[pallet_nomination_pools.pallet.Error]
     /// The `Error` enum of this pallet.
     /// </summary>
-    public sealed class EnumError : BaseEnumExt<Error, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools.pallet.EnumDefensiveError, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid>
+    public sealed class EnumError : BaseEnumExt<Error, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools.pallet.EnumDefensiveError, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid>
     {
     }
 }

@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_beefy.comm
     
     
     /// <summary>
-    /// >> 103 - Composite[sp_consensus_beefy.commitment.Commitment]
+    /// >> 500 - Composite[sp_consensus_beefy.commitment.Commitment]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Commitment : BaseType
@@ -66,7 +66,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_beefy.comm
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];
-            System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
+            global::System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
         }
     }
 }

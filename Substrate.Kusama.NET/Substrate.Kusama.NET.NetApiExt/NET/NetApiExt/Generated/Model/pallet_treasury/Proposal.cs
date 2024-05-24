@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_treasury
     
     
     /// <summary>
-    /// >> 605 - Composite[pallet_treasury.Proposal]
+    /// >> 652 - Composite[pallet_treasury.Proposal]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Proposal : BaseType
@@ -73,7 +73,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_treasury
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];
-            System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
+            global::System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
         }
     }
 }

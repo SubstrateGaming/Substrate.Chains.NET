@@ -28,7 +28,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nis.pallet
     }
     
     /// <summary>
-    /// >> 557 - Variant[pallet_nis.pallet.HoldReason]
+    /// >> 607 - Variant[pallet_nis.pallet.HoldReason]
     /// </summary>
     public sealed class EnumHoldReason : BaseEnum<HoldReason>
     {

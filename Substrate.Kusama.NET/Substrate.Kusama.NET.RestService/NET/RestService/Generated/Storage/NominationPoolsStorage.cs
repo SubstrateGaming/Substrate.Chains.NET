@@ -25,6 +25,16 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
     {
         
         /// <summary>
+        /// >> TotalValueLocked
+        ///  The sum of funds across all pools.
+        /// 
+        ///  This might be lower but never higher than the sum of `total_balance` of all [`PoolMembers`]
+        ///  because calling `pool_withdraw_unbonded` might decrease the total stake of the pool's
+        ///  `bonded_account` without adjusting the pallet-internal `UnbondingPool`'s.
+        /// </summary>
+        Substrate.NetApi.Model.Types.Primitive.U128 GetTotalValueLocked();
+        
+        /// <summary>
         /// >> MinJoinBond
         ///  Minimum amount to bond to join a pool.
         /// </summary>
@@ -127,7 +137,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// >> Metadata
         ///  Metadata for the pool.
         /// </summary>
-        Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT45 GetMetadata(string key);
+        Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT47 GetMetadata(string key);
         
         /// <summary>
         /// >> CounterForMetadata
@@ -168,6 +178,11 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
     /// </summary>
     public sealed class NominationPoolsStorage : INominationPoolsStorage
     {
+        
+        /// <summary>
+        /// _totalValueLockedTypedStorage typed storage field
+        /// </summary>
+        private TypedStorage<Substrate.NetApi.Model.Types.Primitive.U128> _totalValueLockedTypedStorage;
         
         /// <summary>
         /// _minJoinBondTypedStorage typed storage field
@@ -242,7 +257,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// <summary>
         /// _metadataTypedStorage typed storage field
         /// </summary>
-        private TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT45> _metadataTypedStorage;
+        private TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT47> _metadataTypedStorage;
         
         /// <summary>
         /// _counterForMetadataTypedStorage typed storage field
@@ -274,6 +289,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// </summary>
         public NominationPoolsStorage(IStorageDataProvider storageDataProvider, List<IStorageChangeDelegate> storageChangeDelegates)
         {
+            this.TotalValueLockedTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U128>("NominationPools.TotalValueLocked", storageDataProvider, storageChangeDelegates);
             this.MinJoinBondTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U128>("NominationPools.MinJoinBond", storageDataProvider, storageChangeDelegates);
             this.MinCreateBondTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U128>("NominationPools.MinCreateBond", storageDataProvider, storageChangeDelegates);
             this.MaxPoolsTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32>("NominationPools.MaxPools", storageDataProvider, storageChangeDelegates);
@@ -288,12 +304,27 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
             this.CounterForRewardPoolsTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32>("NominationPools.CounterForRewardPools", storageDataProvider, storageChangeDelegates);
             this.SubPoolsStorageTypedStorage = new TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools.SubPools>("NominationPools.SubPoolsStorage", storageDataProvider, storageChangeDelegates);
             this.CounterForSubPoolsStorageTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32>("NominationPools.CounterForSubPoolsStorage", storageDataProvider, storageChangeDelegates);
-            this.MetadataTypedStorage = new TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT45>("NominationPools.Metadata", storageDataProvider, storageChangeDelegates);
+            this.MetadataTypedStorage = new TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT47>("NominationPools.Metadata", storageDataProvider, storageChangeDelegates);
             this.CounterForMetadataTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32>("NominationPools.CounterForMetadata", storageDataProvider, storageChangeDelegates);
             this.LastPoolIdTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32>("NominationPools.LastPoolId", storageDataProvider, storageChangeDelegates);
             this.ReversePoolIdLookupTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Primitive.U32>("NominationPools.ReversePoolIdLookup", storageDataProvider, storageChangeDelegates);
             this.CounterForReversePoolIdLookupTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32>("NominationPools.CounterForReversePoolIdLookup", storageDataProvider, storageChangeDelegates);
             this.ClaimPermissionsTypedStorage = new TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools.EnumClaimPermission>("NominationPools.ClaimPermissions", storageDataProvider, storageChangeDelegates);
+        }
+        
+        /// <summary>
+        /// _totalValueLockedTypedStorage property
+        /// </summary>
+        public TypedStorage<Substrate.NetApi.Model.Types.Primitive.U128> TotalValueLockedTypedStorage
+        {
+            get
+            {
+                return _totalValueLockedTypedStorage;
+            }
+            set
+            {
+                _totalValueLockedTypedStorage = value;
+            }
         }
         
         /// <summary>
@@ -509,7 +540,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// <summary>
         /// _metadataTypedStorage property
         /// </summary>
-        public TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT45> MetadataTypedStorage
+        public TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT47> MetadataTypedStorage
         {
             get
             {
@@ -601,6 +632,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// </summary>
         public async Task InitializeAsync(Substrate.ServiceLayer.Storage.IStorageDataProvider dataProvider)
         {
+            await TotalValueLockedTypedStorage.InitializeAsync("NominationPools", "TotalValueLocked");
             await MinJoinBondTypedStorage.InitializeAsync("NominationPools", "MinJoinBond");
             await MinCreateBondTypedStorage.InitializeAsync("NominationPools", "MinCreateBond");
             await MaxPoolsTypedStorage.InitializeAsync("NominationPools", "MaxPools");
@@ -621,6 +653,28 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
             await ReversePoolIdLookupTypedStorage.InitializeAsync("NominationPools", "ReversePoolIdLookup");
             await CounterForReversePoolIdLookupTypedStorage.InitializeAsync("NominationPools", "CounterForReversePoolIdLookup");
             await ClaimPermissionsTypedStorage.InitializeAsync("NominationPools", "ClaimPermissions");
+        }
+        
+        /// <summary>
+        /// Implements any storage change for NominationPools.TotalValueLocked
+        /// </summary>
+        [StorageChange("NominationPools", "TotalValueLocked")]
+        public void OnUpdateTotalValueLocked(string data)
+        {
+            TotalValueLockedTypedStorage.Update(data);
+        }
+        
+        /// <summary>
+        /// >> TotalValueLocked
+        ///  The sum of funds across all pools.
+        /// 
+        ///  This might be lower but never higher than the sum of `total_balance` of all [`PoolMembers`]
+        ///  because calling `pool_withdraw_unbonded` might decrease the total stake of the pool's
+        ///  `bonded_account` without adjusting the pallet-internal `UnbondingPool`'s.
+        /// </summary>
+        public Substrate.NetApi.Model.Types.Primitive.U128 GetTotalValueLocked()
+        {
+            return TotalValueLockedTypedStorage.Get();
         }
         
         /// <summary>
@@ -947,13 +1001,13 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// >> Metadata
         ///  Metadata for the pool.
         /// </summary>
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT45 GetMetadata(string key)
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT47 GetMetadata(string key)
         {
             if ((key == null))
             {
                 return null;
             }
-            if (MetadataTypedStorage.Dictionary.TryGetValue(key, out Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT45 result))
+            if (MetadataTypedStorage.Dictionary.TryGetValue(key, out Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT47 result))
             {
                 return result;
             }

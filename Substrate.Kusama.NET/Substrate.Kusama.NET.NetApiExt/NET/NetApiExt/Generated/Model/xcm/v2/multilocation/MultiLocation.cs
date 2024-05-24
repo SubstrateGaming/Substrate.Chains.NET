@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.v2.multilocation
     
     
     /// <summary>
-    /// >> 394 - Composite[xcm.v2.multilocation.MultiLocation]
+    /// >> 85 - Composite[xcm.v2.multilocation.MultiLocation]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class MultiLocation : BaseType
@@ -59,7 +59,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.v2.multilocation
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];
-            System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
+            global::System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
         }
     }
 }

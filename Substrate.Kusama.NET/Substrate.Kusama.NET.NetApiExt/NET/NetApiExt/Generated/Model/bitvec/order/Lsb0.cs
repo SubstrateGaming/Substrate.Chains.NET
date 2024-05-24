@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.bitvec.order
     
     
     /// <summary>
-    /// >> 339 - Composite[bitvec.order.Lsb0]
+    /// >> 364 - Composite[bitvec.order.Lsb0]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Lsb0 : BaseType
@@ -44,7 +44,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.bitvec.order
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];
-            System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
+            global::System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
         }
     }
 }

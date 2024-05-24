@@ -43,7 +43,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("ElectionProviderMultiPhase", "DesiredTargets"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Primitive.U32)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("ElectionProviderMultiPhase", "SnapshotMetadata"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_election_provider_multi_phase.SolutionOrSnapshotSize)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("ElectionProviderMultiPhase", "SignedSubmissionNextIndex"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Primitive.U32)));
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("ElectionProviderMultiPhase", "SignedSubmissionIndices"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT39)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("ElectionProviderMultiPhase", "SignedSubmissionIndices"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT42)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("ElectionProviderMultiPhase", "SignedSubmissionsMap"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.NetApi.Model.Types.Primitive.U32), typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_election_provider_multi_phase.signed.SignedSubmission)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("ElectionProviderMultiPhase", "MinimumUntrustedScore"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_npos_elections.ElectionScore)));
@@ -81,10 +81,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// 
         ///  This is merely incremented once per every time that an upstream `elect` is called.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> Round(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> Round(string blockhash, CancellationToken token)
         {
             string parameters = ElectionProviderMultiPhaseStorage.RoundParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, blockhash, token);
             return result;
         }
         
@@ -110,10 +110,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> CurrentPhase
         ///  Current phase.
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_election_provider_multi_phase.EnumPhase> CurrentPhase(CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_election_provider_multi_phase.EnumPhase> CurrentPhase(string blockhash, CancellationToken token)
         {
             string parameters = ElectionProviderMultiPhaseStorage.CurrentPhaseParams();
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_election_provider_multi_phase.EnumPhase>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_election_provider_multi_phase.EnumPhase>(parameters, blockhash, token);
             return result;
         }
         
@@ -143,10 +143,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// 
         ///  Always sorted by score.
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_election_provider_multi_phase.ReadySolution> QueuedSolution(CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_election_provider_multi_phase.ReadySolution> QueuedSolution(string blockhash, CancellationToken token)
         {
             string parameters = ElectionProviderMultiPhaseStorage.QueuedSolutionParams();
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_election_provider_multi_phase.ReadySolution>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_election_provider_multi_phase.ReadySolution>(parameters, blockhash, token);
             return result;
         }
         
@@ -155,6 +155,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         ///  Snapshot data of the round.
         /// 
         ///  This is created at the beginning of the signed phase and cleared upon calling `elect`.
+        ///  Note: This storage type must only be mutated through [`SnapshotWrapper`].
         /// </summary>
         public static string SnapshotParams()
         {
@@ -175,11 +176,12 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         ///  Snapshot data of the round.
         /// 
         ///  This is created at the beginning of the signed phase and cleared upon calling `elect`.
+        ///  Note: This storage type must only be mutated through [`SnapshotWrapper`].
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_election_provider_multi_phase.RoundSnapshot> Snapshot(CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_election_provider_multi_phase.RoundSnapshot> Snapshot(string blockhash, CancellationToken token)
         {
             string parameters = ElectionProviderMultiPhaseStorage.SnapshotParams();
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_election_provider_multi_phase.RoundSnapshot>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_election_provider_multi_phase.RoundSnapshot>(parameters, blockhash, token);
             return result;
         }
         
@@ -188,6 +190,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         ///  Desired number of targets to elect for this round.
         /// 
         ///  Only exists when [`Snapshot`] is present.
+        ///  Note: This storage type must only be mutated through [`SnapshotWrapper`].
         /// </summary>
         public static string DesiredTargetsParams()
         {
@@ -208,11 +211,12 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         ///  Desired number of targets to elect for this round.
         /// 
         ///  Only exists when [`Snapshot`] is present.
+        ///  Note: This storage type must only be mutated through [`SnapshotWrapper`].
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> DesiredTargets(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> DesiredTargets(string blockhash, CancellationToken token)
         {
             string parameters = ElectionProviderMultiPhaseStorage.DesiredTargetsParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, blockhash, token);
             return result;
         }
         
@@ -221,6 +225,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         ///  The metadata of the [`RoundSnapshot`]
         /// 
         ///  Only exists when [`Snapshot`] is present.
+        ///  Note: This storage type must only be mutated through [`SnapshotWrapper`].
         /// </summary>
         public static string SnapshotMetadataParams()
         {
@@ -241,11 +246,12 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         ///  The metadata of the [`RoundSnapshot`]
         /// 
         ///  Only exists when [`Snapshot`] is present.
+        ///  Note: This storage type must only be mutated through [`SnapshotWrapper`].
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_election_provider_multi_phase.SolutionOrSnapshotSize> SnapshotMetadata(CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_election_provider_multi_phase.SolutionOrSnapshotSize> SnapshotMetadata(string blockhash, CancellationToken token)
         {
             string parameters = ElectionProviderMultiPhaseStorage.SnapshotMetadataParams();
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_election_provider_multi_phase.SolutionOrSnapshotSize>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_election_provider_multi_phase.SolutionOrSnapshotSize>(parameters, blockhash, token);
             return result;
         }
         
@@ -287,10 +293,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         ///  capacity, it will simply saturate. We can't just iterate over `SignedSubmissionsMap`,
         ///  because iteration is slow. Instead, we store the value here.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> SignedSubmissionNextIndex(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> SignedSubmissionNextIndex(string blockhash, CancellationToken token)
         {
             string parameters = ElectionProviderMultiPhaseStorage.SignedSubmissionNextIndexParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, blockhash, token);
             return result;
         }
         
@@ -326,10 +332,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         ///  can be quite large, so we're willing to pay the cost of multiple database accesses to access
         ///  them one at a time instead of reading and decoding all of them at once.
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT39> SignedSubmissionIndices(CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT42> SignedSubmissionIndices(string blockhash, CancellationToken token)
         {
             string parameters = ElectionProviderMultiPhaseStorage.SignedSubmissionIndicesParams();
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT39>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT42>(parameters, blockhash, token);
             return result;
         }
         
@@ -369,10 +375,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         ///  Twox note: the key of the map is an auto-incrementing index which users cannot inspect or
         ///  affect; we shouldn't need a cryptographically secure hasher.
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_election_provider_multi_phase.signed.SignedSubmission> SignedSubmissionsMap(Substrate.NetApi.Model.Types.Primitive.U32 key, CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_election_provider_multi_phase.signed.SignedSubmission> SignedSubmissionsMap(Substrate.NetApi.Model.Types.Primitive.U32 key, string blockhash, CancellationToken token)
         {
             string parameters = ElectionProviderMultiPhaseStorage.SignedSubmissionsMapParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_election_provider_multi_phase.signed.SignedSubmission>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_election_provider_multi_phase.signed.SignedSubmission>(parameters, blockhash, token);
             return result;
         }
         
@@ -404,10 +410,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// 
         ///  Can be set via `set_minimum_untrusted_score`.
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_npos_elections.ElectionScore> MinimumUntrustedScore(CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_npos_elections.ElectionScore> MinimumUntrustedScore(string blockhash, CancellationToken token)
         {
             string parameters = ElectionProviderMultiPhaseStorage.MinimumUntrustedScoreParams();
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_npos_elections.ElectionScore>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_npos_elections.ElectionScore>(parameters, blockhash, token);
             return result;
         }
     }
@@ -517,18 +523,6 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         }
         
         /// <summary>
-        /// >> BetterUnsignedThreshold
-        ///  The minimum amount of improvement to the solution score that defines a solution as
-        ///  "better" in the Unsigned phase.
-        /// </summary>
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill BetterUnsignedThreshold()
-        {
-            var result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill();
-            result.Create("0x20A10700");
-            return result;
-        }
-        
-        /// <summary>
         /// >> OffchainRepeat
         ///  The repeat threshold of the offchain worker.
         /// 
@@ -604,17 +598,6 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         {
             var result = new Substrate.NetApi.Model.Types.Primitive.U128();
             result.Create("0x00E87648170000000000000000000000");
-            return result;
-        }
-        
-        /// <summary>
-        /// >> SignedDepositBase
-        ///  Base deposit for a signed solution.
-        /// </summary>
-        public Substrate.NetApi.Model.Types.Primitive.U128 SignedDepositBase()
-        {
-            var result = new Substrate.NetApi.Model.Types.Primitive.U128();
-            result.Create("0x2010DC70360100000000000000000000");
             return result;
         }
         
@@ -784,5 +767,11 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// Submitted solution has too many winners
         /// </summary>
         TooManyWinners,
+        
+        /// <summary>
+        /// >> PreDispatchDifferentRound
+        /// Sumission was prepared for a different round.
+        /// </summary>
+        PreDispatchDifferentRound,
     }
 }

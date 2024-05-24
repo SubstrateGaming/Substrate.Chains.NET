@@ -81,6 +81,9 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// <summary>
         /// >> Ledger
         ///  Map from all (unlocked) "controller" accounts to the info regarding the staking.
+        /// 
+        ///  Note: All the reads and mutations to this storage *MUST* be done through the methods exposed
+        ///  by [`StakingLedger`] to ensure data and lock consistency.
         /// </summary>
         Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.StakingLedger GetLedger(string key);
         
@@ -172,7 +175,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         
         /// <summary>
         /// >> ErasStartSessionIndex
-        ///  The session index at which the era start for the last `HISTORY_DEPTH` eras.
+        ///  The session index at which the era start for the last [`Config::HistoryDepth`] eras.
         /// 
         ///  Note: This tracks the starting session (i.e. session index when era start being active)
         ///  for the eras in `[CurrentEra - HISTORY_DEPTH, CurrentEra]`.
@@ -185,26 +188,72 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// 
         ///  This is keyed first by the era index to allow bulk deletion and then the stash account.
         /// 
-        ///  Is it removed after `HISTORY_DEPTH` eras.
+        ///  Is it removed after [`Config::HistoryDepth`] eras.
         ///  If stakers hasn't been set or has been removed then empty exposure is returned.
+        /// 
+        ///  Note: Deprecated since v14. Use `EraInfo` instead to work with exposures.
         /// </summary>
-        Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.Exposure GetErasStakers(string key);
+        Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_staking.Exposure GetErasStakers(string key);
+        
+        /// <summary>
+        /// >> ErasStakersOverview
+        ///  Summary of validator exposure at a given era.
+        /// 
+        ///  This contains the total stake in support of the validator and their own stake. In addition,
+        ///  it can also be used to get the number of nominators backing this validator and the number of
+        ///  exposure pages they are divided into. The page count is useful to determine the number of
+        ///  pages of rewards that needs to be claimed.
+        /// 
+        ///  This is keyed first by the era index to allow bulk deletion and then the stash account.
+        ///  Should only be accessed through `EraInfo`.
+        /// 
+        ///  Is it removed after [`Config::HistoryDepth`] eras.
+        ///  If stakers hasn't been set or has been removed then empty overview is returned.
+        /// </summary>
+        Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_staking.PagedExposureMetadata GetErasStakersOverview(string key);
         
         /// <summary>
         /// >> ErasStakersClipped
         ///  Clipped Exposure of validator at era.
         /// 
+        ///  Note: This is deprecated, should be used as read-only and will be removed in the future.
+        ///  New `Exposure`s are stored in a paged manner in `ErasStakersPaged` instead.
+        /// 
         ///  This is similar to [`ErasStakers`] but number of nominators exposed is reduced to the
-        ///  `T::MaxNominatorRewardedPerValidator` biggest stakers.
+        ///  `T::MaxExposurePageSize` biggest stakers.
         ///  (Note: the field `total` and `own` of the exposure remains unchanged).
         ///  This is used to limit the i/o cost for the nominator payout.
         /// 
         ///  This is keyed fist by the era index to allow bulk deletion and then the stash account.
         /// 
-        ///  Is it removed after `HISTORY_DEPTH` eras.
+        ///  It is removed after [`Config::HistoryDepth`] eras.
         ///  If stakers hasn't been set or has been removed then empty exposure is returned.
+        /// 
+        ///  Note: Deprecated since v14. Use `EraInfo` instead to work with exposures.
         /// </summary>
-        Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.Exposure GetErasStakersClipped(string key);
+        Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_staking.Exposure GetErasStakersClipped(string key);
+        
+        /// <summary>
+        /// >> ErasStakersPaged
+        ///  Paginated exposure of a validator at given era.
+        /// 
+        ///  This is keyed first by the era index to allow bulk deletion, then stash account and finally
+        ///  the page. Should only be accessed through `EraInfo`.
+        /// 
+        ///  This is cleared after [`Config::HistoryDepth`] eras.
+        /// </summary>
+        Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_staking.ExposurePage GetErasStakersPaged(string key);
+        
+        /// <summary>
+        /// >> ClaimedRewards
+        ///  History of claimed paged rewards by era and validator.
+        /// 
+        ///  This is keyed by era and validator stash which maps to the set of page indexes which have
+        ///  been claimed.
+        /// 
+        ///  It is removed after [`Config::HistoryDepth`] eras.
+        /// </summary>
+        Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U32> GetClaimedRewards(string key);
         
         /// <summary>
         /// >> ErasValidatorPrefs
@@ -212,13 +261,13 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// 
         ///  This is keyed first by the era index to allow bulk deletion and then the stash account.
         /// 
-        ///  Is it removed after `HISTORY_DEPTH` eras.
+        ///  Is it removed after [`Config::HistoryDepth`] eras.
         /// </summary>
         Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.ValidatorPrefs GetErasValidatorPrefs(string key);
         
         /// <summary>
         /// >> ErasValidatorReward
-        ///  The total validator era payout for the last `HISTORY_DEPTH` eras.
+        ///  The total validator era payout for the last [`Config::HistoryDepth`] eras.
         /// 
         ///  Eras that haven't finished yet or has been removed doesn't have reward.
         /// </summary>
@@ -226,14 +275,14 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         
         /// <summary>
         /// >> ErasRewardPoints
-        ///  Rewards for the last `HISTORY_DEPTH` eras.
+        ///  Rewards for the last [`Config::HistoryDepth`] eras.
         ///  If reward hasn't been set or has been removed then 0 reward is returned.
         /// </summary>
         Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.EraRewardPoints GetErasRewardPoints(string key);
         
         /// <summary>
         /// >> ErasTotalStake
-        ///  The total amount staked for the last `HISTORY_DEPTH` eras.
+        ///  The total amount staked for the last [`Config::HistoryDepth`] eras.
         ///  If total hasn't been set or has been removed then 0 stake is returned.
         /// </summary>
         Substrate.NetApi.Model.Types.Primitive.U128 GetErasTotalStake(string key);
@@ -435,12 +484,27 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// <summary>
         /// _erasStakersTypedStorage typed storage field
         /// </summary>
-        private TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.Exposure> _erasStakersTypedStorage;
+        private TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_staking.Exposure> _erasStakersTypedStorage;
+        
+        /// <summary>
+        /// _erasStakersOverviewTypedStorage typed storage field
+        /// </summary>
+        private TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_staking.PagedExposureMetadata> _erasStakersOverviewTypedStorage;
         
         /// <summary>
         /// _erasStakersClippedTypedStorage typed storage field
         /// </summary>
-        private TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.Exposure> _erasStakersClippedTypedStorage;
+        private TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_staking.Exposure> _erasStakersClippedTypedStorage;
+        
+        /// <summary>
+        /// _erasStakersPagedTypedStorage typed storage field
+        /// </summary>
+        private TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_staking.ExposurePage> _erasStakersPagedTypedStorage;
+        
+        /// <summary>
+        /// _claimedRewardsTypedStorage typed storage field
+        /// </summary>
+        private TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U32>> _claimedRewardsTypedStorage;
         
         /// <summary>
         /// _erasValidatorPrefsTypedStorage typed storage field
@@ -546,8 +610,11 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
             this.CurrentEraTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32>("Staking.CurrentEra", storageDataProvider, storageChangeDelegates);
             this.ActiveEraTypedStorage = new TypedStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.ActiveEraInfo>("Staking.ActiveEra", storageDataProvider, storageChangeDelegates);
             this.ErasStartSessionIndexTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Primitive.U32>("Staking.ErasStartSessionIndex", storageDataProvider, storageChangeDelegates);
-            this.ErasStakersTypedStorage = new TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.Exposure>("Staking.ErasStakers", storageDataProvider, storageChangeDelegates);
-            this.ErasStakersClippedTypedStorage = new TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.Exposure>("Staking.ErasStakersClipped", storageDataProvider, storageChangeDelegates);
+            this.ErasStakersTypedStorage = new TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_staking.Exposure>("Staking.ErasStakers", storageDataProvider, storageChangeDelegates);
+            this.ErasStakersOverviewTypedStorage = new TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_staking.PagedExposureMetadata>("Staking.ErasStakersOverview", storageDataProvider, storageChangeDelegates);
+            this.ErasStakersClippedTypedStorage = new TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_staking.Exposure>("Staking.ErasStakersClipped", storageDataProvider, storageChangeDelegates);
+            this.ErasStakersPagedTypedStorage = new TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_staking.ExposurePage>("Staking.ErasStakersPaged", storageDataProvider, storageChangeDelegates);
+            this.ClaimedRewardsTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U32>>("Staking.ClaimedRewards", storageDataProvider, storageChangeDelegates);
             this.ErasValidatorPrefsTypedStorage = new TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.ValidatorPrefs>("Staking.ErasValidatorPrefs", storageDataProvider, storageChangeDelegates);
             this.ErasValidatorRewardTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Primitive.U128>("Staking.ErasValidatorReward", storageDataProvider, storageChangeDelegates);
             this.ErasRewardPointsTypedStorage = new TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.EraRewardPoints>("Staking.ErasRewardPoints", storageDataProvider, storageChangeDelegates);
@@ -854,7 +921,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// <summary>
         /// _erasStakersTypedStorage property
         /// </summary>
-        public TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.Exposure> ErasStakersTypedStorage
+        public TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_staking.Exposure> ErasStakersTypedStorage
         {
             get
             {
@@ -867,9 +934,24 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         }
         
         /// <summary>
+        /// _erasStakersOverviewTypedStorage property
+        /// </summary>
+        public TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_staking.PagedExposureMetadata> ErasStakersOverviewTypedStorage
+        {
+            get
+            {
+                return _erasStakersOverviewTypedStorage;
+            }
+            set
+            {
+                _erasStakersOverviewTypedStorage = value;
+            }
+        }
+        
+        /// <summary>
         /// _erasStakersClippedTypedStorage property
         /// </summary>
-        public TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.Exposure> ErasStakersClippedTypedStorage
+        public TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_staking.Exposure> ErasStakersClippedTypedStorage
         {
             get
             {
@@ -878,6 +960,36 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
             set
             {
                 _erasStakersClippedTypedStorage = value;
+            }
+        }
+        
+        /// <summary>
+        /// _erasStakersPagedTypedStorage property
+        /// </summary>
+        public TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_staking.ExposurePage> ErasStakersPagedTypedStorage
+        {
+            get
+            {
+                return _erasStakersPagedTypedStorage;
+            }
+            set
+            {
+                _erasStakersPagedTypedStorage = value;
+            }
+        }
+        
+        /// <summary>
+        /// _claimedRewardsTypedStorage property
+        /// </summary>
+        public TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U32>> ClaimedRewardsTypedStorage
+        {
+            get
+            {
+                return _claimedRewardsTypedStorage;
+            }
+            set
+            {
+                _claimedRewardsTypedStorage = value;
             }
         }
         
@@ -1146,7 +1258,10 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
             await ActiveEraTypedStorage.InitializeAsync("Staking", "ActiveEra");
             await ErasStartSessionIndexTypedStorage.InitializeAsync("Staking", "ErasStartSessionIndex");
             await ErasStakersTypedStorage.InitializeAsync("Staking", "ErasStakers");
+            await ErasStakersOverviewTypedStorage.InitializeAsync("Staking", "ErasStakersOverview");
             await ErasStakersClippedTypedStorage.InitializeAsync("Staking", "ErasStakersClipped");
+            await ErasStakersPagedTypedStorage.InitializeAsync("Staking", "ErasStakersPaged");
+            await ClaimedRewardsTypedStorage.InitializeAsync("Staking", "ClaimedRewards");
             await ErasValidatorPrefsTypedStorage.InitializeAsync("Staking", "ErasValidatorPrefs");
             await ErasValidatorRewardTypedStorage.InitializeAsync("Staking", "ErasValidatorReward");
             await ErasRewardPointsTypedStorage.InitializeAsync("Staking", "ErasRewardPoints");
@@ -1338,6 +1453,9 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// <summary>
         /// >> Ledger
         ///  Map from all (unlocked) "controller" accounts to the info regarding the staking.
+        /// 
+        ///  Note: All the reads and mutations to this storage *MUST* be done through the methods exposed
+        ///  by [`StakingLedger`] to ensure data and lock consistency.
         /// </summary>
         public Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.StakingLedger GetLedger(string key)
         {
@@ -1593,7 +1711,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         
         /// <summary>
         /// >> ErasStartSessionIndex
-        ///  The session index at which the era start for the last `HISTORY_DEPTH` eras.
+        ///  The session index at which the era start for the last [`Config::HistoryDepth`] eras.
         /// 
         ///  Note: This tracks the starting session (i.e. session index when era start being active)
         ///  for the eras in `[CurrentEra - HISTORY_DEPTH, CurrentEra]`.
@@ -1629,16 +1747,58 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// 
         ///  This is keyed first by the era index to allow bulk deletion and then the stash account.
         /// 
-        ///  Is it removed after `HISTORY_DEPTH` eras.
+        ///  Is it removed after [`Config::HistoryDepth`] eras.
         ///  If stakers hasn't been set or has been removed then empty exposure is returned.
+        /// 
+        ///  Note: Deprecated since v14. Use `EraInfo` instead to work with exposures.
         /// </summary>
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.Exposure GetErasStakers(string key)
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_staking.Exposure GetErasStakers(string key)
         {
             if ((key == null))
             {
                 return null;
             }
-            if (ErasStakersTypedStorage.Dictionary.TryGetValue(key, out Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.Exposure result))
+            if (ErasStakersTypedStorage.Dictionary.TryGetValue(key, out Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_staking.Exposure result))
+            {
+                return result;
+            }
+            else
+            {
+                return null;
+            }
+        }
+        
+        /// <summary>
+        /// Implements any storage change for Staking.ErasStakersOverview
+        /// </summary>
+        [StorageChange("Staking", "ErasStakersOverview")]
+        public void OnUpdateErasStakersOverview(string key, string data)
+        {
+            ErasStakersOverviewTypedStorage.Update(key, data);
+        }
+        
+        /// <summary>
+        /// >> ErasStakersOverview
+        ///  Summary of validator exposure at a given era.
+        /// 
+        ///  This contains the total stake in support of the validator and their own stake. In addition,
+        ///  it can also be used to get the number of nominators backing this validator and the number of
+        ///  exposure pages they are divided into. The page count is useful to determine the number of
+        ///  pages of rewards that needs to be claimed.
+        /// 
+        ///  This is keyed first by the era index to allow bulk deletion and then the stash account.
+        ///  Should only be accessed through `EraInfo`.
+        /// 
+        ///  Is it removed after [`Config::HistoryDepth`] eras.
+        ///  If stakers hasn't been set or has been removed then empty overview is returned.
+        /// </summary>
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_staking.PagedExposureMetadata GetErasStakersOverview(string key)
+        {
+            if ((key == null))
+            {
+                return null;
+            }
+            if (ErasStakersOverviewTypedStorage.Dictionary.TryGetValue(key, out Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_staking.PagedExposureMetadata result))
             {
                 return result;
             }
@@ -1661,23 +1821,96 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// >> ErasStakersClipped
         ///  Clipped Exposure of validator at era.
         /// 
+        ///  Note: This is deprecated, should be used as read-only and will be removed in the future.
+        ///  New `Exposure`s are stored in a paged manner in `ErasStakersPaged` instead.
+        /// 
         ///  This is similar to [`ErasStakers`] but number of nominators exposed is reduced to the
-        ///  `T::MaxNominatorRewardedPerValidator` biggest stakers.
+        ///  `T::MaxExposurePageSize` biggest stakers.
         ///  (Note: the field `total` and `own` of the exposure remains unchanged).
         ///  This is used to limit the i/o cost for the nominator payout.
         /// 
         ///  This is keyed fist by the era index to allow bulk deletion and then the stash account.
         /// 
-        ///  Is it removed after `HISTORY_DEPTH` eras.
+        ///  It is removed after [`Config::HistoryDepth`] eras.
         ///  If stakers hasn't been set or has been removed then empty exposure is returned.
+        /// 
+        ///  Note: Deprecated since v14. Use `EraInfo` instead to work with exposures.
         /// </summary>
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.Exposure GetErasStakersClipped(string key)
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_staking.Exposure GetErasStakersClipped(string key)
         {
             if ((key == null))
             {
                 return null;
             }
-            if (ErasStakersClippedTypedStorage.Dictionary.TryGetValue(key, out Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.Exposure result))
+            if (ErasStakersClippedTypedStorage.Dictionary.TryGetValue(key, out Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_staking.Exposure result))
+            {
+                return result;
+            }
+            else
+            {
+                return null;
+            }
+        }
+        
+        /// <summary>
+        /// Implements any storage change for Staking.ErasStakersPaged
+        /// </summary>
+        [StorageChange("Staking", "ErasStakersPaged")]
+        public void OnUpdateErasStakersPaged(string key, string data)
+        {
+            ErasStakersPagedTypedStorage.Update(key, data);
+        }
+        
+        /// <summary>
+        /// >> ErasStakersPaged
+        ///  Paginated exposure of a validator at given era.
+        /// 
+        ///  This is keyed first by the era index to allow bulk deletion, then stash account and finally
+        ///  the page. Should only be accessed through `EraInfo`.
+        /// 
+        ///  This is cleared after [`Config::HistoryDepth`] eras.
+        /// </summary>
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_staking.ExposurePage GetErasStakersPaged(string key)
+        {
+            if ((key == null))
+            {
+                return null;
+            }
+            if (ErasStakersPagedTypedStorage.Dictionary.TryGetValue(key, out Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_staking.ExposurePage result))
+            {
+                return result;
+            }
+            else
+            {
+                return null;
+            }
+        }
+        
+        /// <summary>
+        /// Implements any storage change for Staking.ClaimedRewards
+        /// </summary>
+        [StorageChange("Staking", "ClaimedRewards")]
+        public void OnUpdateClaimedRewards(string key, string data)
+        {
+            ClaimedRewardsTypedStorage.Update(key, data);
+        }
+        
+        /// <summary>
+        /// >> ClaimedRewards
+        ///  History of claimed paged rewards by era and validator.
+        /// 
+        ///  This is keyed by era and validator stash which maps to the set of page indexes which have
+        ///  been claimed.
+        /// 
+        ///  It is removed after [`Config::HistoryDepth`] eras.
+        /// </summary>
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U32> GetClaimedRewards(string key)
+        {
+            if ((key == null))
+            {
+                return null;
+            }
+            if (ClaimedRewardsTypedStorage.Dictionary.TryGetValue(key, out Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U32> result))
             {
                 return result;
             }
@@ -1702,7 +1935,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// 
         ///  This is keyed first by the era index to allow bulk deletion and then the stash account.
         /// 
-        ///  Is it removed after `HISTORY_DEPTH` eras.
+        ///  Is it removed after [`Config::HistoryDepth`] eras.
         /// </summary>
         public Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.ValidatorPrefs GetErasValidatorPrefs(string key)
         {
@@ -1731,7 +1964,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         
         /// <summary>
         /// >> ErasValidatorReward
-        ///  The total validator era payout for the last `HISTORY_DEPTH` eras.
+        ///  The total validator era payout for the last [`Config::HistoryDepth`] eras.
         /// 
         ///  Eras that haven't finished yet or has been removed doesn't have reward.
         /// </summary>
@@ -1762,7 +1995,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         
         /// <summary>
         /// >> ErasRewardPoints
-        ///  Rewards for the last `HISTORY_DEPTH` eras.
+        ///  Rewards for the last [`Config::HistoryDepth`] eras.
         ///  If reward hasn't been set or has been removed then 0 reward is returned.
         /// </summary>
         public Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.EraRewardPoints GetErasRewardPoints(string key)
@@ -1792,7 +2025,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         
         /// <summary>
         /// >> ErasTotalStake
-        ///  The total amount staked for the last `HISTORY_DEPTH` eras.
+        ///  The total amount staked for the last [`Config::HistoryDepth`] eras.
         ///  If total hasn't been set or has been removed then 0 stake is returned.
         /// </summary>
         public Substrate.NetApi.Model.Types.Primitive.U128 GetErasTotalStake(string key)

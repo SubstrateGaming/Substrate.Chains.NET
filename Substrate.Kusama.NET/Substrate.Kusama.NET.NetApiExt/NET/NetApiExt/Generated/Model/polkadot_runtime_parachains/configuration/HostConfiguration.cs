@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parach
     
     
     /// <summary>
-    /// >> 770 - Composite[polkadot_runtime_parachains.configuration.HostConfiguration]
+    /// >> 826 - Composite[polkadot_runtime_parachains.configuration.HostConfiguration]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class HostConfiguration : BaseType
@@ -63,7 +63,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parach
         /// <summary>
         /// >> async_backing_params
         /// </summary>
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.vstaging.AsyncBackingParams AsyncBackingParams { get; set; }
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.async_backing.AsyncBackingParams AsyncBackingParams { get; set; }
         /// <summary>
         /// >> max_pov_size
         /// </summary>
@@ -103,15 +103,15 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parach
         /// <summary>
         /// >> executor_params
         /// </summary>
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.executor_params.ExecutorParams ExecutorParams { get; set; }
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.executor_params.ExecutorParams ExecutorParams { get; set; }
         /// <summary>
         /// >> code_retention_period
         /// </summary>
         public Substrate.NetApi.Model.Types.Primitive.U32 CodeRetentionPeriod { get; set; }
         /// <summary>
-        /// >> on_demand_cores
+        /// >> coretime_cores
         /// </summary>
-        public Substrate.NetApi.Model.Types.Primitive.U32 OnDemandCores { get; set; }
+        public Substrate.NetApi.Model.Types.Primitive.U32 CoretimeCores { get; set; }
         /// <summary>
         /// >> on_demand_retries
         /// </summary>
@@ -196,6 +196,14 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parach
         /// >> minimum_backing_votes
         /// </summary>
         public Substrate.NetApi.Model.Types.Primitive.U32 MinimumBackingVotes { get; set; }
+        /// <summary>
+        /// >> node_features
+        /// </summary>
+        public Substrate.NetApi.Model.Types.Base.BaseBitSeq<Substrate.NetApi.Model.Types.Primitive.U8, Substrate.Kusama.NET.NetApiExt.Generated.Model.bitvec.order.Lsb0> NodeFeatures { get; set; }
+        /// <summary>
+        /// >> approval_voting_params
+        /// </summary>
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.vstaging.ApprovalVotingParams ApprovalVotingParams { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
@@ -228,7 +236,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parach
             result.AddRange(HrmpChannelMaxMessageSize.Encode());
             result.AddRange(ExecutorParams.Encode());
             result.AddRange(CodeRetentionPeriod.Encode());
-            result.AddRange(OnDemandCores.Encode());
+            result.AddRange(CoretimeCores.Encode());
             result.AddRange(OnDemandRetries.Encode());
             result.AddRange(OnDemandQueueMaxSize.Encode());
             result.AddRange(OnDemandTargetQueueUtilization.Encode());
@@ -250,6 +258,8 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parach
             result.AddRange(PvfVotingTtl.Encode());
             result.AddRange(MinimumValidationUpgradeDelay.Encode());
             result.AddRange(MinimumBackingVotes.Encode());
+            result.AddRange(NodeFeatures.Encode());
+            result.AddRange(ApprovalVotingParams.Encode());
             return result.ToArray();
         }
         
@@ -275,7 +285,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parach
             ValidationUpgradeCooldown.Decode(byteArray, ref p);
             ValidationUpgradeDelay = new Substrate.NetApi.Model.Types.Primitive.U32();
             ValidationUpgradeDelay.Decode(byteArray, ref p);
-            AsyncBackingParams = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.vstaging.AsyncBackingParams();
+            AsyncBackingParams = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.async_backing.AsyncBackingParams();
             AsyncBackingParams.Decode(byteArray, ref p);
             MaxPovSize = new Substrate.NetApi.Model.Types.Primitive.U32();
             MaxPovSize.Decode(byteArray, ref p);
@@ -295,12 +305,12 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parach
             HrmpMaxParachainInboundChannels.Decode(byteArray, ref p);
             HrmpChannelMaxMessageSize = new Substrate.NetApi.Model.Types.Primitive.U32();
             HrmpChannelMaxMessageSize.Decode(byteArray, ref p);
-            ExecutorParams = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.executor_params.ExecutorParams();
+            ExecutorParams = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.executor_params.ExecutorParams();
             ExecutorParams.Decode(byteArray, ref p);
             CodeRetentionPeriod = new Substrate.NetApi.Model.Types.Primitive.U32();
             CodeRetentionPeriod.Decode(byteArray, ref p);
-            OnDemandCores = new Substrate.NetApi.Model.Types.Primitive.U32();
-            OnDemandCores.Decode(byteArray, ref p);
+            CoretimeCores = new Substrate.NetApi.Model.Types.Primitive.U32();
+            CoretimeCores.Decode(byteArray, ref p);
             OnDemandRetries = new Substrate.NetApi.Model.Types.Primitive.U32();
             OnDemandRetries.Decode(byteArray, ref p);
             OnDemandQueueMaxSize = new Substrate.NetApi.Model.Types.Primitive.U32();
@@ -343,10 +353,14 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parach
             MinimumValidationUpgradeDelay.Decode(byteArray, ref p);
             MinimumBackingVotes = new Substrate.NetApi.Model.Types.Primitive.U32();
             MinimumBackingVotes.Decode(byteArray, ref p);
+            NodeFeatures = new Substrate.NetApi.Model.Types.Base.BaseBitSeq<Substrate.NetApi.Model.Types.Primitive.U8, Substrate.Kusama.NET.NetApiExt.Generated.Model.bitvec.order.Lsb0>();
+            NodeFeatures.Decode(byteArray, ref p);
+            ApprovalVotingParams = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.vstaging.ApprovalVotingParams();
+            ApprovalVotingParams.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];
-            System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
+            global::System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
         }
     }
 }

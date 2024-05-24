@@ -39,7 +39,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("ParasDisputes", "LastPrunedSession"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Primitive.U32)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("ParasDisputes", "Disputes"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat,
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_core_primitives.CandidateHash>), typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.DisputeState)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_core_primitives.CandidateHash>), typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.DisputeState)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("ParasDisputes", "BackersOnDisputes"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat,
                             Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_core_primitives.CandidateHash>), typeof(Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.BTreeSet)));
@@ -73,10 +73,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         ///  The last pruned session, if any. All data stored by this module
         ///  references sessions.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> LastPrunedSession(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> LastPrunedSession(string blockhash, CancellationToken token)
         {
             string parameters = ParasDisputesStorage.LastPrunedSessionParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, blockhash, token);
             return result;
         }
         
@@ -104,10 +104,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> Disputes
         ///  All ongoing or concluded disputes for the last several sessions.
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.DisputeState> Disputes(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_core_primitives.CandidateHash> key, CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.DisputeState> Disputes(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_core_primitives.CandidateHash> key, string blockhash, CancellationToken token)
         {
             string parameters = ParasDisputesStorage.DisputesParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.DisputeState>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.DisputeState>(parameters, blockhash, token);
             return result;
         }
         
@@ -137,10 +137,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         ///  Backing votes stored for each dispute.
         ///  This storage is used for slashing.
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.BTreeSet> BackersOnDisputes(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_core_primitives.CandidateHash> key, CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.BTreeSet> BackersOnDisputes(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_core_primitives.CandidateHash> key, string blockhash, CancellationToken token)
         {
             string parameters = ParasDisputesStorage.BackersOnDisputesParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.BTreeSet>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.BTreeSet>(parameters, blockhash, token);
             return result;
         }
         
@@ -170,10 +170,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         ///  All included blocks on the chain, as well as the block number in this chain that
         ///  should be reverted back to if the candidate is disputed and determined to be invalid.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> Included(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_core_primitives.CandidateHash> key, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> Included(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_core_primitives.CandidateHash> key, string blockhash, CancellationToken token)
         {
             string parameters = ParasDisputesStorage.IncludedParams(key);
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, blockhash, token);
             return result;
         }
         
@@ -205,10 +205,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         ///  and its value indicates the last valid block number in the chain.
         ///  It can only be set back to `None` by governance intervention.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32>> Frozen(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32>> Frozen(string blockhash, CancellationToken token)
         {
             string parameters = ParasDisputesStorage.FrozenParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32>>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32>>(parameters, blockhash, token);
             return result;
         }
     }

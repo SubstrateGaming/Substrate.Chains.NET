@@ -33,7 +33,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.v2.multiasset
     }
     
     /// <summary>
-    /// >> 418 - Variant[xcm.v2.multiasset.WildMultiAsset]
+    /// >> 434 - Variant[xcm.v2.multiasset.WildMultiAsset]
     /// </summary>
     public sealed class EnumWildMultiAsset : BaseEnumExt<WildMultiAsset, BaseVoid, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.v2.multiasset.EnumAssetId, Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.v2.multiasset.EnumWildFungibility>>
     {

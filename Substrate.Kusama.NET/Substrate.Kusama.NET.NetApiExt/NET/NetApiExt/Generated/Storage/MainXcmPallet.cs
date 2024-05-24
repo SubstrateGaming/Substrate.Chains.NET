@@ -44,21 +44,21 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("XcmPallet", "SafeXcmVersion"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Primitive.U32)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("XcmPallet", "SupportedVersion"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat,
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation>), typeof(Substrate.NetApi.Model.Types.Primitive.U32)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation>), typeof(Substrate.NetApi.Model.Types.Primitive.U32)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("XcmPallet", "VersionNotifiers"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat,
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation>), typeof(Substrate.NetApi.Model.Types.Primitive.U64)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation>), typeof(Substrate.NetApi.Model.Types.Primitive.U64)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("XcmPallet", "VersionNotifyTargets"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat,
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation>), typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U64, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight, Substrate.NetApi.Model.Types.Primitive.U32>)));
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("XcmPallet", "VersionDiscoveryQueue"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT48)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation>), typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U64, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight, Substrate.NetApi.Model.Types.Primitive.U32>)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("XcmPallet", "VersionDiscoveryQueue"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT50)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("XcmPallet", "CurrentMigration"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_xcm.pallet.EnumVersionMigrationStage)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("XcmPallet", "RemoteLockedFungibles"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat,
                             Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat,
                             Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAssetId>), typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_xcm.pallet.RemoteLockedFungibleRecord)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("XcmPallet", "LockedFungibles"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32), typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT50)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32), typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT52)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("XcmPallet", "XcmExecutionSuspended"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Primitive.Bool)));
         }
         
@@ -84,10 +84,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> QueryCounter
         ///  The latest available query index.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U64> QueryCounter(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U64> QueryCounter(string blockhash, CancellationToken token)
         {
             string parameters = XcmPalletStorage.QueryCounterParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U64>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U64>(parameters, blockhash, token);
             return result;
         }
         
@@ -115,10 +115,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> Queries
         ///  The ongoing queries.
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_xcm.pallet.EnumQueryStatus> Queries(Substrate.NetApi.Model.Types.Primitive.U64 key, CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_xcm.pallet.EnumQueryStatus> Queries(Substrate.NetApi.Model.Types.Primitive.U64 key, string blockhash, CancellationToken token)
         {
             string parameters = XcmPalletStorage.QueriesParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_xcm.pallet.EnumQueryStatus>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_xcm.pallet.EnumQueryStatus>(parameters, blockhash, token);
             return result;
         }
         
@@ -126,7 +126,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> AssetTrapsParams
         ///  The existing asset traps.
         /// 
-        ///  Key is the blake2 256 hash of (origin, versioned `MultiAssets`) pair. Value is the number of
+        ///  Key is the blake2 256 hash of (origin, versioned `Assets`) pair. Value is the number of
         ///  times this pair has been trapped (usually just 1 if it exists at all).
         /// </summary>
         public static string AssetTrapsParams(Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256 key)
@@ -149,13 +149,13 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> AssetTraps
         ///  The existing asset traps.
         /// 
-        ///  Key is the blake2 256 hash of (origin, versioned `MultiAssets`) pair. Value is the number of
+        ///  Key is the blake2 256 hash of (origin, versioned `Assets`) pair. Value is the number of
         ///  times this pair has been trapped (usually just 1 if it exists at all).
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> AssetTraps(Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256 key, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> AssetTraps(Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256 key, string blockhash, CancellationToken token)
         {
             string parameters = XcmPalletStorage.AssetTrapsParams(key);
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, blockhash, token);
             return result;
         }
         
@@ -183,10 +183,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         ///  Default version to encode XCM when latest version of destination is unknown. If `None`,
         ///  then the destinations whose XCM version is unknown are considered unreachable.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> SafeXcmVersion(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> SafeXcmVersion(string blockhash, CancellationToken token)
         {
             string parameters = XcmPalletStorage.SafeXcmVersionParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, blockhash, token);
             return result;
         }
         
@@ -194,7 +194,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> SupportedVersionParams
         ///  The Latest versions that we know various locations support.
         /// </summary>
-        public static string SupportedVersionParams(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation> key)
+        public static string SupportedVersionParams(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation> key)
         {
             return RequestGenerator.GetStorage("XcmPallet", "SupportedVersion", Substrate.NetApi.Model.Meta.Storage.Type.Map, new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                         Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat,
@@ -214,10 +214,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> SupportedVersion
         ///  The Latest versions that we know various locations support.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> SupportedVersion(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation> key, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> SupportedVersion(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation> key, string blockhash, CancellationToken token)
         {
             string parameters = XcmPalletStorage.SupportedVersionParams(key);
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, blockhash, token);
             return result;
         }
         
@@ -225,7 +225,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> VersionNotifiersParams
         ///  All locations that we have requested version notifications from.
         /// </summary>
-        public static string VersionNotifiersParams(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation> key)
+        public static string VersionNotifiersParams(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation> key)
         {
             return RequestGenerator.GetStorage("XcmPallet", "VersionNotifiers", Substrate.NetApi.Model.Meta.Storage.Type.Map, new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                         Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat,
@@ -245,10 +245,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> VersionNotifiers
         ///  All locations that we have requested version notifications from.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U64> VersionNotifiers(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation> key, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U64> VersionNotifiers(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation> key, string blockhash, CancellationToken token)
         {
             string parameters = XcmPalletStorage.VersionNotifiersParams(key);
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U64>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U64>(parameters, blockhash, token);
             return result;
         }
         
@@ -257,7 +257,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         ///  The target locations that are subscribed to our version changes, as well as the most recent
         ///  of our versions we informed them of.
         /// </summary>
-        public static string VersionNotifyTargetsParams(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation> key)
+        public static string VersionNotifyTargetsParams(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation> key)
         {
             return RequestGenerator.GetStorage("XcmPallet", "VersionNotifyTargets", Substrate.NetApi.Model.Meta.Storage.Type.Map, new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                         Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat,
@@ -278,10 +278,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         ///  The target locations that are subscribed to our version changes, as well as the most recent
         ///  of our versions we informed them of.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U64, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight, Substrate.NetApi.Model.Types.Primitive.U32>> VersionNotifyTargets(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation> key, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U64, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight, Substrate.NetApi.Model.Types.Primitive.U32>> VersionNotifyTargets(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation> key, string blockhash, CancellationToken token)
         {
             string parameters = XcmPalletStorage.VersionNotifyTargetsParams(key);
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U64, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight, Substrate.NetApi.Model.Types.Primitive.U32>>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U64, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight, Substrate.NetApi.Model.Types.Primitive.U32>>(parameters, blockhash, token);
             return result;
         }
         
@@ -311,10 +311,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         ///  the `u32` counter is the number of times that a send to the destination has been attempted,
         ///  which is used as a prioritization.
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT48> VersionDiscoveryQueue(CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT50> VersionDiscoveryQueue(string blockhash, CancellationToken token)
         {
             string parameters = XcmPalletStorage.VersionDiscoveryQueueParams();
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT48>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT50>(parameters, blockhash, token);
             return result;
         }
         
@@ -340,10 +340,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> CurrentMigration
         ///  The current migration's stage, if any.
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_xcm.pallet.EnumVersionMigrationStage> CurrentMigration(CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_xcm.pallet.EnumVersionMigrationStage> CurrentMigration(string blockhash, CancellationToken token)
         {
             string parameters = XcmPalletStorage.CurrentMigrationParams();
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_xcm.pallet.EnumVersionMigrationStage>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_xcm.pallet.EnumVersionMigrationStage>(parameters, blockhash, token);
             return result;
         }
         
@@ -372,10 +372,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> RemoteLockedFungibles
         ///  Fungible assets which we know are locked on a remote chain.
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_xcm.pallet.RemoteLockedFungibleRecord> RemoteLockedFungibles(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAssetId> key, CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_xcm.pallet.RemoteLockedFungibleRecord> RemoteLockedFungibles(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAssetId> key, string blockhash, CancellationToken token)
         {
             string parameters = XcmPalletStorage.RemoteLockedFungiblesParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_xcm.pallet.RemoteLockedFungibleRecord>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_xcm.pallet.RemoteLockedFungibleRecord>(parameters, blockhash, token);
             return result;
         }
         
@@ -403,10 +403,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> LockedFungibles
         ///  Fungible assets which we know are locked on this chain.
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT50> LockedFungibles(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT52> LockedFungibles(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, string blockhash, CancellationToken token)
         {
             string parameters = XcmPalletStorage.LockedFungiblesParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT50>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT52>(parameters, blockhash, token);
             return result;
         }
         
@@ -432,10 +432,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> XcmExecutionSuspended
         ///  Global suspension state of the XCM executor.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.Bool> XcmExecutionSuspended(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.Bool> XcmExecutionSuspended(string blockhash, CancellationToken token)
         {
             string parameters = XcmPalletStorage.XcmExecutionSuspendedParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.Bool>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.Bool>(parameters, blockhash, token);
             return result;
         }
     }
@@ -450,7 +450,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> send
         /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method Send(Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation dest, Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.EnumVersionedXcm message)
+        public static Method Send(Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation dest, Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.EnumVersionedXcm message)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(dest.Encode());
@@ -462,7 +462,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> teleport_assets
         /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method TeleportAssets(Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation dest, Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation beneficiary, Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiAssets assets, Substrate.NetApi.Model.Types.Primitive.U32 fee_asset_item)
+        public static Method TeleportAssets(Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation dest, Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation beneficiary, Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAssets assets, Substrate.NetApi.Model.Types.Primitive.U32 fee_asset_item)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(dest.Encode());
@@ -476,7 +476,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> reserve_transfer_assets
         /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method ReserveTransferAssets(Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation dest, Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation beneficiary, Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiAssets assets, Substrate.NetApi.Model.Types.Primitive.U32 fee_asset_item)
+        public static Method ReserveTransferAssets(Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation dest, Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation beneficiary, Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAssets assets, Substrate.NetApi.Model.Types.Primitive.U32 fee_asset_item)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(dest.Encode());
@@ -502,7 +502,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> force_xcm_version
         /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method ForceXcmVersion(Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation location, Substrate.NetApi.Model.Types.Primitive.U32 version)
+        public static Method ForceXcmVersion(Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_xcm.v4.location.Location location, Substrate.NetApi.Model.Types.Primitive.U32 version)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(location.Encode());
@@ -525,7 +525,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> force_subscribe_version_notify
         /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method ForceSubscribeVersionNotify(Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation location)
+        public static Method ForceSubscribeVersionNotify(Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation location)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(location.Encode());
@@ -536,7 +536,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> force_unsubscribe_version_notify
         /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method ForceUnsubscribeVersionNotify(Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation location)
+        public static Method ForceUnsubscribeVersionNotify(Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation location)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(location.Encode());
@@ -547,7 +547,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> limited_reserve_transfer_assets
         /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method LimitedReserveTransferAssets(Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation dest, Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation beneficiary, Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiAssets assets, Substrate.NetApi.Model.Types.Primitive.U32 fee_asset_item, Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.v3.EnumWeightLimit weight_limit)
+        public static Method LimitedReserveTransferAssets(Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation dest, Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation beneficiary, Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAssets assets, Substrate.NetApi.Model.Types.Primitive.U32 fee_asset_item, Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.v3.EnumWeightLimit weight_limit)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(dest.Encode());
@@ -562,7 +562,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> limited_teleport_assets
         /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method LimitedTeleportAssets(Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation dest, Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation beneficiary, Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiAssets assets, Substrate.NetApi.Model.Types.Primitive.U32 fee_asset_item, Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.v3.EnumWeightLimit weight_limit)
+        public static Method LimitedTeleportAssets(Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation dest, Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation beneficiary, Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAssets assets, Substrate.NetApi.Model.Types.Primitive.U32 fee_asset_item, Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.v3.EnumWeightLimit weight_limit)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(dest.Encode());
@@ -582,6 +582,33 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(suspended.Encode());
             return new Method(99, "XcmPallet", 10, "force_suspension", byteArray.ToArray());
+        }
+        
+        /// <summary>
+        /// >> transfer_assets
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
+        /// </summary>
+        public static Method TransferAssets(Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation dest, Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation beneficiary, Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAssets assets, Substrate.NetApi.Model.Types.Primitive.U32 fee_asset_item, Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.v3.EnumWeightLimit weight_limit)
+        {
+            System.Collections.Generic.List<byte> byteArray = new List<byte>();
+            byteArray.AddRange(dest.Encode());
+            byteArray.AddRange(beneficiary.Encode());
+            byteArray.AddRange(assets.Encode());
+            byteArray.AddRange(fee_asset_item.Encode());
+            byteArray.AddRange(weight_limit.Encode());
+            return new Method(99, "XcmPallet", 11, "transfer_assets", byteArray.ToArray());
+        }
+        
+        /// <summary>
+        /// >> claim_assets
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
+        /// </summary>
+        public static Method ClaimAssets(Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAssets assets, Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation beneficiary)
+        {
+            System.Collections.Generic.List<byte> byteArray = new List<byte>();
+            byteArray.AddRange(assets.Encode());
+            byteArray.AddRange(beneficiary.Encode());
+            return new Method(99, "XcmPallet", 12, "claim_assets", byteArray.ToArray());
         }
     }
     
@@ -626,7 +653,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> DestinationNotInvertible
-        /// The destination `MultiLocation` provided cannot be inverted.
+        /// The destination `Location` provided cannot be inverted.
         /// </summary>
         DestinationNotInvertible,
         
@@ -680,10 +707,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         AlreadySubscribed,
         
         /// <summary>
-        /// >> InvalidAsset
-        /// Invalid asset for the operation.
+        /// >> CannotCheckOutTeleport
+        /// Could not check-out the assets for teleportation to the destination chain.
         /// </summary>
-        InvalidAsset,
+        CannotCheckOutTeleport,
         
         /// <summary>
         /// >> LowBalance
@@ -720,5 +747,35 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// The unlock operation cannot succeed because there are still consumers of the lock.
         /// </summary>
         InUse,
+        
+        /// <summary>
+        /// >> InvalidAssetNotConcrete
+        /// Invalid non-concrete asset.
+        /// </summary>
+        InvalidAssetNotConcrete,
+        
+        /// <summary>
+        /// >> InvalidAssetUnknownReserve
+        /// Invalid asset, reserve chain could not be determined for it.
+        /// </summary>
+        InvalidAssetUnknownReserve,
+        
+        /// <summary>
+        /// >> InvalidAssetUnsupportedReserve
+        /// Invalid asset, do not support remote asset reserves with different fees reserves.
+        /// </summary>
+        InvalidAssetUnsupportedReserve,
+        
+        /// <summary>
+        /// >> TooManyReserves
+        /// Too many assets with different reserve locations have been attempted for transfer.
+        /// </summary>
+        TooManyReserves,
+        
+        /// <summary>
+        /// >> LocalExecutionIncomplete
+        /// Local XCM execution incomplete.
+        /// </summary>
+        LocalExecutionIncomplete,
     }
 }

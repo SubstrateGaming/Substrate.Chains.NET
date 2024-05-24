@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_transaction_paym
     
     
     /// <summary>
-    /// >> 891 - Composite[pallet_transaction_payment.ChargeTransactionPayment]
+    /// >> 967 - Composite[pallet_transaction_payment.ChargeTransactionPayment]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class ChargeTransactionPayment : BaseType
@@ -52,7 +52,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_transaction_paym
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];
-            System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
+            global::System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
         }
     }
 }

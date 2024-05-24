@@ -51,13 +51,19 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_vesting.pallet
         /// See [`Pallet::merge_schedules`].
         /// </summary>
         merge_schedules = 4,
+        
+        /// <summary>
+        /// >> force_remove_vesting_schedule
+        /// See [`Pallet::force_remove_vesting_schedule`].
+        /// </summary>
+        force_remove_vesting_schedule = 5,
     }
     
     /// <summary>
-    /// >> 207 - Variant[pallet_vesting.pallet.Call]
+    /// >> 229 - Variant[pallet_vesting.pallet.Call]
     /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
-    public sealed class EnumCall : BaseEnumExt<Call, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_vesting.vesting_info.VestingInfo>, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_vesting.vesting_info.VestingInfo>, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>>
+    public sealed class EnumCall : BaseEnumExt<Call, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_vesting.vesting_info.VestingInfo>, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_vesting.vesting_info.VestingInfo>, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.NetApi.Model.Types.Primitive.U32>>
     {
     }
 }

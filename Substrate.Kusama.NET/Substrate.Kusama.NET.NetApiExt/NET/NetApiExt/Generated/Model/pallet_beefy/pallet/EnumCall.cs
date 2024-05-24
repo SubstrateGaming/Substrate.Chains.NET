@@ -33,13 +33,19 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_beefy.pallet
         /// See [`Pallet::report_equivocation_unsigned`].
         /// </summary>
         report_equivocation_unsigned = 1,
+        
+        /// <summary>
+        /// >> set_new_genesis
+        /// See [`Pallet::set_new_genesis`].
+        /// </summary>
+        set_new_genesis = 2,
     }
     
     /// <summary>
-    /// >> 94 - Variant[pallet_beefy.pallet.Call]
+    /// >> 496 - Variant[pallet_beefy.pallet.Call]
     /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
-    public sealed class EnumCall : BaseEnumExt<Call, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_beefy.EquivocationProof, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_session.MembershipProof>, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_beefy.EquivocationProof, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_session.MembershipProof>>
+    public sealed class EnumCall : BaseEnumExt<Call, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_beefy.EquivocationProof, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_session.MembershipProof>, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_beefy.EquivocationProof, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_session.MembershipProof>, Substrate.NetApi.Model.Types.Primitive.U32>
     {
     }
 }

@@ -69,10 +69,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// <summary>
         /// >> Claims
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U128> Claims(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_common.claims.EthereumAddress key, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U128> Claims(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_common.claims.EthereumAddress key, string blockhash, CancellationToken token)
         {
             string parameters = ClaimsStorage.ClaimsParams(key);
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U128>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U128>(parameters, blockhash, token);
             return result;
         }
         
@@ -96,10 +96,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// <summary>
         /// >> Total
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U128> Total(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U128> Total(string blockhash, CancellationToken token)
         {
             string parameters = ClaimsStorage.TotalParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U128>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U128>(parameters, blockhash, token);
             return result;
         }
         
@@ -133,10 +133,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         ///  Second balance is how much should be unlocked per block.
         ///  The block number is when the vesting should start.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.NetApi.Model.Types.Primitive.U128, Substrate.NetApi.Model.Types.Primitive.U32>> Vesting(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_common.claims.EthereumAddress key, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.NetApi.Model.Types.Primitive.U128, Substrate.NetApi.Model.Types.Primitive.U32>> Vesting(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_common.claims.EthereumAddress key, string blockhash, CancellationToken token)
         {
             string parameters = ClaimsStorage.VestingParams(key);
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.NetApi.Model.Types.Primitive.U128, Substrate.NetApi.Model.Types.Primitive.U32>>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.NetApi.Model.Types.Primitive.U128, Substrate.NetApi.Model.Types.Primitive.U32>>(parameters, blockhash, token);
             return result;
         }
         
@@ -164,10 +164,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> Signing
         ///  The statement kind that must be signed, if any.
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_common.claims.EnumStatementKind> Signing(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_common.claims.EthereumAddress key, CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_common.claims.EnumStatementKind> Signing(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_common.claims.EthereumAddress key, string blockhash, CancellationToken token)
         {
             string parameters = ClaimsStorage.SigningParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_common.claims.EnumStatementKind>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_common.claims.EnumStatementKind>(parameters, blockhash, token);
             return result;
         }
         
@@ -195,10 +195,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> Preclaims
         ///  Pre-claimed Ethereum accounts, by the Account ID that they are claimed to.
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_common.claims.EthereumAddress> Preclaims(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_common.claims.EthereumAddress> Preclaims(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, string blockhash, CancellationToken token)
         {
             string parameters = ClaimsStorage.PreclaimsParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_common.claims.EthereumAddress>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_common.claims.EthereumAddress>(parameters, blockhash, token);
             return result;
         }
     }

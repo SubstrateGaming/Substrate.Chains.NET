@@ -76,10 +76,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         ///  of them writes to the trie and one does not. This confusion makes `Option<()>` more suitable
         ///  for the semantics of this variable.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Base.BaseTuple> HasInitialized(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Base.BaseTuple> HasInitialized(string blockhash, CancellationToken token)
         {
             string parameters = InitializerStorage.HasInitializedParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseTuple>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseTuple>(parameters, blockhash, token);
             return result;
         }
         
@@ -117,10 +117,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         ///  However this is a `Vec` regardless to handle various edge cases that may occur at runtime
         ///  upgrade boundaries or if governance intervenes.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.initializer.BufferedSessionChange>> BufferedSessionChanges(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.initializer.BufferedSessionChange>> BufferedSessionChanges(string blockhash, CancellationToken token)
         {
             string parameters = InitializerStorage.BufferedSessionChangesParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.initializer.BufferedSessionChange>>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.initializer.BufferedSessionChange>>(parameters, blockhash, token);
             return result;
         }
     }

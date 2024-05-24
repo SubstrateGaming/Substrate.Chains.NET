@@ -38,7 +38,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_conviction_votin
     }
     
     /// <summary>
-    /// >> 131 - Variant[pallet_conviction_voting.vote.AccountVote]
+    /// >> 156 - Variant[pallet_conviction_voting.vote.AccountVote]
     /// </summary>
     public sealed class EnumAccountVote : BaseEnumExt<AccountVote, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_conviction_voting.vote.Vote, Substrate.NetApi.Model.Types.Primitive.U128>, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.NetApi.Model.Types.Primitive.U128>, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.NetApi.Model.Types.Primitive.U128, Substrate.NetApi.Model.Types.Primitive.U128>>
     {

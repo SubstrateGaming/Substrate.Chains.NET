@@ -52,11 +52,6 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_kusama_runtime
         Staking = 6,
         
         /// <summary>
-        /// >> Beefy
-        /// </summary>
-        Beefy = 200,
-        
-        /// <summary>
         /// >> Session
         /// </summary>
         Session = 8,
@@ -65,11 +60,6 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_kusama_runtime
         /// >> Grandpa
         /// </summary>
         Grandpa = 10,
-        
-        /// <summary>
-        /// >> ImOnline
-        /// </summary>
-        ImOnline = 11,
         
         /// <summary>
         /// >> Treasury
@@ -237,6 +227,11 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_kusama_runtime
         ParasSlashing = 63,
         
         /// <summary>
+        /// >> OnDemandAssignmentProvider
+        /// </summary>
+        OnDemandAssignmentProvider = 64,
+        
+        /// <summary>
         /// >> Registrar
         /// </summary>
         Registrar = 70,
@@ -257,9 +252,9 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_kusama_runtime
         Crowdloan = 73,
         
         /// <summary>
-        /// >> StateTrieMigration
+        /// >> Coretime
         /// </summary>
-        StateTrieMigration = 98,
+        Coretime = 74,
         
         /// <summary>
         /// >> XcmPallet
@@ -270,12 +265,27 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_kusama_runtime
         /// >> MessageQueue
         /// </summary>
         MessageQueue = 100,
+        
+        /// <summary>
+        /// >> AssetRate
+        /// </summary>
+        AssetRate = 101,
+        
+        /// <summary>
+        /// >> Beefy
+        /// </summary>
+        Beefy = 200,
+        
+        /// <summary>
+        /// >> IdentityMigrator
+        /// </summary>
+        IdentityMigrator = 248,
     }
     
     /// <summary>
-    /// >> 62 - Variant[staging_kusama_runtime.RuntimeCall]
+    /// >> 96 - Variant[staging_kusama_runtime.RuntimeCall]
     /// </summary>
-    public sealed class EnumRuntimeCall : BaseEnumExt<RuntimeCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_system.pallet.EnumCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_babe.pallet.EnumCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_timestamp.pallet.EnumCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_indices.pallet.EnumCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_balances.pallet.EnumCall, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.pallet.pallet.EnumCall, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_session.pallet.EnumCall, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_grandpa.pallet.EnumCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_im_online.pallet.EnumCall, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_treasury.pallet.EnumCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_common.claims.pallet.EnumCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_conviction_voting.pallet.EnumCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_referenda.pallet.EnumCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_ranked_collective.pallet.EnumCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_referenda.pallet.EnumCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_utility.pallet.EnumCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_identity.pallet.EnumCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.pallet.EnumCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_recovery.pallet.EnumCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_vesting.pallet.EnumCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_scheduler.pallet.EnumCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_proxy.pallet.EnumCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_multisig.pallet.EnumCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_preimage.pallet.EnumCall, BaseVoid, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_bounties.pallet.EnumCall, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_election_provider_multi_phase.pallet.EnumCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nis.pallet.EnumCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_bags_list.pallet.EnumCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_child_bounties.pallet.EnumCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools.pallet.EnumCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_fast_unstake.pallet.EnumCall, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_whitelist.pallet.EnumCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_balances.pallet.EnumCall, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.configuration.pallet.EnumCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.shared.pallet.EnumCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.inclusion.pallet.EnumCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.paras_inherent.pallet.EnumCall, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.paras.pallet.EnumCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.initializer.pallet.EnumCall, BaseVoid, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.hrmp.pallet.EnumCall, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.disputes.pallet.EnumCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.disputes.slashing.pallet.EnumCall, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_common.paras_registrar.pallet.EnumCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_common.slots.pallet.EnumCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_common.auctions.pallet.EnumCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_common.crowdloan.pallet.EnumCall, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.EnumCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_xcm.pallet.EnumCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_message_queue.pallet.EnumCall, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_beefy.pallet.EnumCall>
+    public sealed class EnumRuntimeCall : BaseEnumExt<RuntimeCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_system.pallet.EnumCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_babe.pallet.EnumCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_timestamp.pallet.EnumCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_indices.pallet.EnumCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_balances.pallet.EnumCall, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.pallet.pallet.EnumCall, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_session.pallet.EnumCall, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_grandpa.pallet.EnumCall, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_treasury.pallet.EnumCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_common.claims.pallet.EnumCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_conviction_voting.pallet.EnumCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_referenda.pallet.EnumCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_ranked_collective.pallet.EnumCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_referenda.pallet.EnumCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_utility.pallet.EnumCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_identity.pallet.EnumCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.pallet.EnumCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_recovery.pallet.EnumCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_vesting.pallet.EnumCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_scheduler.pallet.EnumCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_proxy.pallet.EnumCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_multisig.pallet.EnumCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_preimage.pallet.EnumCall, BaseVoid, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_bounties.pallet.EnumCall, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_election_provider_multi_phase.pallet.EnumCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nis.pallet.EnumCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_bags_list.pallet.EnumCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_child_bounties.pallet.EnumCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools.pallet.EnumCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_fast_unstake.pallet.EnumCall, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_whitelist.pallet.EnumCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_balances.pallet.EnumCall, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.configuration.pallet.EnumCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.shared.pallet.EnumCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.inclusion.pallet.EnumCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.paras_inherent.pallet.EnumCall, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.paras.pallet.EnumCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.initializer.pallet.EnumCall, BaseVoid, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.hrmp.pallet.EnumCall, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.disputes.pallet.EnumCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.disputes.slashing.pallet.EnumCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.assigner_on_demand.pallet.EnumCall, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_common.paras_registrar.pallet.EnumCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_common.slots.pallet.EnumCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_common.auctions.pallet.EnumCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_common.crowdloan.pallet.EnumCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.coretime.pallet.EnumCall, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_xcm.pallet.EnumCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_message_queue.pallet.EnumCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_asset_rate.pallet.EnumCall, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_beefy.pallet.EnumCall, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_common.identity_migrator.pallet.EnumCall>
     {
     }
 }

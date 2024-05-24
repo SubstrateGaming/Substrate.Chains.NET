@@ -38,7 +38,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_referenda.types
     }
     
     /// <summary>
-    /// >> 638 - Variant[pallet_referenda.types.Curve]
+    /// >> 686 - Variant[pallet_referenda.types.Curve]
     /// </summary>
     public sealed class EnumCurve : BaseEnumExt<Curve, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill>, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill>, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedI64, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedI64, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedI64>>
     {

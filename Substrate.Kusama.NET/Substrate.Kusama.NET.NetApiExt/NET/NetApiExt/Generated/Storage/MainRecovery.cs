@@ -69,10 +69,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> Recoverable
         ///  The set of recoverable accounts and their recovery configuration.
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_recovery.RecoveryConfig> Recoverable(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_recovery.RecoveryConfig> Recoverable(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, string blockhash, CancellationToken token)
         {
             string parameters = RecoveryStorage.RecoverableParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_recovery.RecoveryConfig>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_recovery.RecoveryConfig>(parameters, blockhash, token);
             return result;
         }
         
@@ -106,10 +106,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         ///  First account is the account to be recovered, and the second account
         ///  is the user trying to recover the account.
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_recovery.ActiveRecovery> ActiveRecoveries(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> key, CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_recovery.ActiveRecovery> ActiveRecoveries(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> key, string blockhash, CancellationToken token)
         {
             string parameters = RecoveryStorage.ActiveRecoveriesParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_recovery.ActiveRecovery>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_recovery.ActiveRecovery>(parameters, blockhash, token);
             return result;
         }
         
@@ -141,10 +141,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// 
         ///  Map from the user who can access it to the recovered account.
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> Proxy(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> Proxy(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, string blockhash, CancellationToken token)
         {
             string parameters = RecoveryStorage.ProxyParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>(parameters, blockhash, token);
             return result;
         }
     }

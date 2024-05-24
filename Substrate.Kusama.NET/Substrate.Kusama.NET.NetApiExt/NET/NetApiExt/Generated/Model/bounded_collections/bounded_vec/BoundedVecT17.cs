@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bou
     
     
     /// <summary>
-    /// >> 589 - Composite[bounded_collections.bounded_vec.BoundedVecT17]
+    /// >> 609 - Composite[bounded_collections.bounded_vec.BoundedVecT17]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class BoundedVecT17 : BaseType
@@ -27,7 +27,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bou
         /// <summary>
         /// >> value
         /// </summary>
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_beefy.ecdsa_crypto.Public> Value { get; set; }
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_balances.types.IdAmountT2> Value { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
@@ -47,12 +47,12 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bou
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_beefy.ecdsa_crypto.Public>();
+            Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_balances.types.IdAmountT2>();
             Value.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];
-            System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
+            global::System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
         }
     }
 }

@@ -64,10 +64,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> RootHash
         ///  Latest MMR Root hash.
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256> RootHash(CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256> RootHash(string blockhash, CancellationToken token)
         {
             string parameters = MmrStorage.RootHashParams();
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256>(parameters, blockhash, token);
             return result;
         }
         
@@ -93,10 +93,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> NumberOfLeaves
         ///  Current size of the MMR (number of leaves).
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U64> NumberOfLeaves(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U64> NumberOfLeaves(string blockhash, CancellationToken token)
         {
             string parameters = MmrStorage.NumberOfLeavesParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U64>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U64>(parameters, blockhash, token);
             return result;
         }
         
@@ -130,10 +130,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         ///  Note this collection only contains MMR peaks, the inner nodes (and leaves)
         ///  are pruned and only stored in the Offchain DB.
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256> Nodes(Substrate.NetApi.Model.Types.Primitive.U64 key, CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256> Nodes(Substrate.NetApi.Model.Types.Primitive.U64 key, string blockhash, CancellationToken token)
         {
             string parameters = MmrStorage.NodesParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256>(parameters, blockhash, token);
             return result;
         }
     }

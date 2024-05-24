@@ -48,7 +48,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_election_provide
     }
     
     /// <summary>
-    /// >> 485 - Variant[pallet_election_provider_multi_phase.ElectionCompute]
+    /// >> 533 - Variant[pallet_election_provider_multi_phase.ElectionCompute]
     /// </summary>
     public sealed class EnumElectionCompute : BaseEnum<ElectionCompute>
     {

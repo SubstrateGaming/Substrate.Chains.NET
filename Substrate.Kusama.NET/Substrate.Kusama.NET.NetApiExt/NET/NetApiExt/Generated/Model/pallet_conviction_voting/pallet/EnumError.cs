@@ -97,7 +97,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_conviction_votin
     }
     
     /// <summary>
-    /// >> 623 - Variant[pallet_conviction_voting.pallet.Error]
+    /// >> 671 - Variant[pallet_conviction_voting.pallet.Error]
     /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>

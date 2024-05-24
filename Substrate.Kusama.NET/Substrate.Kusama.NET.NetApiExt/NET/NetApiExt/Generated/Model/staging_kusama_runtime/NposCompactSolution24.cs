@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_kusama_runtime
     
     
     /// <summary>
-    /// >> 223 - Composite[staging_kusama_runtime.NposCompactSolution24]
+    /// >> 246 - Composite[staging_kusama_runtime.NposCompactSolution24]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class NposCompactSolution24 : BaseType
@@ -213,7 +213,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_kusama_runtime
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];
-            System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
+            global::System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
         }
     }
 }

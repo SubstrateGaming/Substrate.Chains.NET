@@ -42,7 +42,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Controller
         ///  The current authorities set
         /// </summary>
         [HttpGet("Authorities")]
-        [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17), 200)]
+        [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT54), 200)]
         [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.BeefyStorage), "AuthoritiesParams")]
         public IActionResult GetAuthorities()
         {
@@ -66,7 +66,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Controller
         ///  Authorities set scheduled to be used with the next session
         /// </summary>
         [HttpGet("NextAuthorities")]
-        [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17), 200)]
+        [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT54), 200)]
         [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.BeefyStorage), "NextAuthoritiesParams")]
         public IActionResult GetNextAuthorities()
         {
@@ -97,8 +97,8 @@ namespace Substrate.Kusama.NET.RestService.Generated.Controller
         /// <summary>
         /// >> GenesisBlock
         ///  Block number where BEEFY consensus is enabled/started.
-        ///  By changing this (through governance or sudo), BEEFY consensus is effectively
-        ///  restarted from the new block number.
+        ///  By changing this (through privileged `set_new_genesis()`), BEEFY consensus is effectively
+        ///  restarted from the newly set block number.
         /// </summary>
         [HttpGet("GenesisBlock")]
         [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32>), 200)]

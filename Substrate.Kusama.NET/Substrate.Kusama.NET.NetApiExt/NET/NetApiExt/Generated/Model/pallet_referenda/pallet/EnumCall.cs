@@ -78,7 +78,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_referenda.pallet
     }
     
     /// <summary>
-    /// >> 153 - Variant[pallet_referenda.pallet.Call]
+    /// >> 171 - Variant[pallet_referenda.pallet.Call]
     /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
     public sealed class EnumCall : BaseEnumExt<Call, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_kusama_runtime.EnumOriginCaller, Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_support.traits.preimages.EnumBounded, Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_support.traits.schedule.EnumDispatchTime>, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U16, Substrate.NetApi.Model.Types.Primitive.U32, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256>>>

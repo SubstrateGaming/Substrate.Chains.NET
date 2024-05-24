@@ -38,7 +38,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools
     }
     
     /// <summary>
-    /// >> 318 - Variant[pallet_nomination_pools.ConfigOp]
+    /// >> 340 - Variant[pallet_nomination_pools.ConfigOp]
     /// </summary>
     public sealed class EnumConfigOp : BaseEnumExt<ConfigOp, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, BaseVoid>
     {

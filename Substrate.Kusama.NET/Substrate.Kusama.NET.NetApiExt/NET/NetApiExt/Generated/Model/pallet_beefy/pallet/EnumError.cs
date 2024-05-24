@@ -39,10 +39,16 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_beefy.pallet
         /// A given equivocation report is valid but already previously reported.
         /// </summary>
         DuplicateOffenceReport = 2,
+        
+        /// <summary>
+        /// >> InvalidConfiguration
+        /// Submitted configuration is invalid.
+        /// </summary>
+        InvalidConfiguration = 3,
     }
     
     /// <summary>
-    /// >> 591 - Variant[pallet_beefy.pallet.Error]
+    /// >> 955 - Variant[pallet_beefy.pallet.Error]
     /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>

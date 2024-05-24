@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parach
     
     
     /// <summary>
-    /// >> 811 - Composite[polkadot_runtime_parachains.paras.ParaGenesisArgs]
+    /// >> 867 - Composite[polkadot_runtime_parachains.paras.ParaGenesisArgs]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class ParaGenesisArgs : BaseType
@@ -66,7 +66,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parach
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];
-            System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
+            global::System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
         }
     }
 }

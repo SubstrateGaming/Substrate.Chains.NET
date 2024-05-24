@@ -43,7 +43,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.v2
     }
     
     /// <summary>
-    /// >> 411 - Variant[xcm.v2.Response]
+    /// >> 427 - Variant[xcm.v2.Response]
     /// </summary>
     public sealed class EnumResponse : BaseEnumExt<Response, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.v2.multiasset.MultiAssets, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.v2.traits.EnumError>>, Substrate.NetApi.Model.Types.Primitive.U32>
     {

@@ -43,7 +43,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Controller
         /// </summary>
         [HttpGet("AvailabilityBitfields")]
         [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.inclusion.AvailabilityBitfieldRecord), 200)]
-        [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.ParaInclusionStorage), "AvailabilityBitfieldsParams", typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.ValidatorIndex))]
+        [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.ParaInclusionStorage), "AvailabilityBitfieldsParams", typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.ValidatorIndex))]
         public IActionResult GetAvailabilityBitfields(string key)
         {
             return this.Ok(_paraInclusionStorage.GetAvailabilityBitfields(key));
@@ -66,7 +66,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Controller
         ///  The commitments of candidates pending availability, by `ParaId`.
         /// </summary>
         [HttpGet("PendingAvailabilityCommitments")]
-        [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.CandidateCommitments), 200)]
+        [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.CandidateCommitments), 200)]
         [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.ParaInclusionStorage), "PendingAvailabilityCommitmentsParams", typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id))]
         public IActionResult GetPendingAvailabilityCommitments(string key)
         {

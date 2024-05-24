@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society
     
     
     /// <summary>
-    /// >> 675 - Composite[pallet_society.Tally]
+    /// >> 727 - Composite[pallet_society.Tally]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Tally : BaseType
@@ -59,7 +59,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];
-            System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
+            global::System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
         }
     }
 }

@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_conviction_votin
     
     
     /// <summary>
-    /// >> 459 - Composite[pallet_conviction_voting.types.Tally]
+    /// >> 507 - Composite[pallet_conviction_voting.types.Tally]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Tally : BaseType
@@ -66,7 +66,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_conviction_votin
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];
-            System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
+            global::System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
         }
     }
 }

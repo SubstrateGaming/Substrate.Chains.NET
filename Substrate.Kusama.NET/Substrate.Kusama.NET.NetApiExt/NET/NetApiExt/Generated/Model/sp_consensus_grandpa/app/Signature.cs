@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_grandpa.ap
     
     
     /// <summary>
-    /// >> 118 - Composite[sp_consensus_grandpa.app.Signature]
+    /// >> 146 - Composite[sp_consensus_grandpa.app.Signature]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Signature : BaseType
@@ -52,7 +52,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_grandpa.ap
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];
-            System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
+            global::System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
         }
     }
 }

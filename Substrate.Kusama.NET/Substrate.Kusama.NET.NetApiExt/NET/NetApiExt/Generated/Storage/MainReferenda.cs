@@ -40,7 +40,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Referenda", "ReferendumInfoFor"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.NetApi.Model.Types.Primitive.U32), typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_referenda.types.EnumReferendumInfo)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Referenda", "TrackQueue"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.NetApi.Model.Types.Primitive.U16), typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT21)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.NetApi.Model.Types.Primitive.U16), typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT23)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Referenda", "DecidingCount"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.NetApi.Model.Types.Primitive.U16), typeof(Substrate.NetApi.Model.Types.Primitive.U32)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Referenda", "MetadataOf"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
@@ -69,10 +69,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> ReferendumCount
         ///  The next free referendum index, aka the number of referenda started so far.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> ReferendumCount(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> ReferendumCount(string blockhash, CancellationToken token)
         {
             string parameters = ReferendaStorage.ReferendumCountParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, blockhash, token);
             return result;
         }
         
@@ -100,10 +100,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> ReferendumInfoFor
         ///  Information concerning any given referendum.
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_referenda.types.EnumReferendumInfo> ReferendumInfoFor(Substrate.NetApi.Model.Types.Primitive.U32 key, CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_referenda.types.EnumReferendumInfo> ReferendumInfoFor(Substrate.NetApi.Model.Types.Primitive.U32 key, string blockhash, CancellationToken token)
         {
             string parameters = ReferendaStorage.ReferendumInfoForParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_referenda.types.EnumReferendumInfo>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_referenda.types.EnumReferendumInfo>(parameters, blockhash, token);
             return result;
         }
         
@@ -137,10 +137,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// 
         ///  This should be empty if `DecidingCount` is less than `TrackInfo::max_deciding`.
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT21> TrackQueue(Substrate.NetApi.Model.Types.Primitive.U16 key, CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT23> TrackQueue(Substrate.NetApi.Model.Types.Primitive.U16 key, string blockhash, CancellationToken token)
         {
             string parameters = ReferendaStorage.TrackQueueParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT21>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT23>(parameters, blockhash, token);
             return result;
         }
         
@@ -168,17 +168,17 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> DecidingCount
         ///  The number of referenda being decided currently.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> DecidingCount(Substrate.NetApi.Model.Types.Primitive.U16 key, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> DecidingCount(Substrate.NetApi.Model.Types.Primitive.U16 key, string blockhash, CancellationToken token)
         {
             string parameters = ReferendaStorage.DecidingCountParams(key);
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, blockhash, token);
             return result;
         }
         
         /// <summary>
         /// >> MetadataOfParams
         ///  The metadata is a general information concerning the referendum.
-        ///  The `PreimageHash` refers to the preimage of the `Preimages` provider which can be a JSON
+        ///  The `Hash` refers to the preimage of the `Preimages` provider which can be a JSON
         ///  dump or IPFS hash of a JSON file.
         /// 
         ///  Consider a garbage collection for a metadata of finished referendums to `unrequest` (remove)
@@ -203,16 +203,16 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// <summary>
         /// >> MetadataOf
         ///  The metadata is a general information concerning the referendum.
-        ///  The `PreimageHash` refers to the preimage of the `Preimages` provider which can be a JSON
+        ///  The `Hash` refers to the preimage of the `Preimages` provider which can be a JSON
         ///  dump or IPFS hash of a JSON file.
         /// 
         ///  Consider a garbage collection for a metadata of finished referendums to `unrequest` (remove)
         ///  large preimages.
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256> MetadataOf(Substrate.NetApi.Model.Types.Primitive.U32 key, CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256> MetadataOf(Substrate.NetApi.Model.Types.Primitive.U32 key, string blockhash, CancellationToken token)
         {
             string parameters = ReferendaStorage.MetadataOfParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256>(parameters, blockhash, token);
             return result;
         }
     }
@@ -386,41 +386,43 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U16, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_referenda.types.TrackInfo>> Tracks()
         {
             var result = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U16, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_referenda.types.TrackInfo>>();
-            result.Create("0x3C000010726F6F740100000020D33F25A6D70B000000000000000000B0040000801303004038000" +
+            result.Create("0x40000010726F6F740100000020D33F25A6D70B000000000000000000B0040000801303004038000" +
                     "0403800000290D73E0D000000005743DE13000000005443DE13000000000000CA9A3B00000000006" +
                     "5CD1D01004877686974656C69737465645F63616C6C65726400000050C8EC362A2F0100000000000" +
                     "00000002C01000080130300640000006400000002EC972510000000007B573C170000000042392F1" +
-                    "200000000020E00840000000000D6E61F010000000039627902000000000A00347374616B696E675" +
-                    "F61646D696E0A0000002864761B959700000000000000000000B0040000801303000807000064000" +
-                    "00000C94330240065CD1D00CA9A3B025D6F780000000000E82EED00000000008C6889FFFFFFFFFF0" +
-                    "B00247472656173757265720A00000008147E05511E00000000000000000000B0040000801303000" +
-                    "8070000403800000290D73E0D000000005743DE13000000005443DE13000000000000CA9A3B00000" +
-                    "0000065CD1D0C002C6C656173655F61646D696E0A0000002864761B959700000000000000000000B" +
-                    "004000080130300080700006400000000C94330240065CD1D00CA9A3B025D6F780000000000E82EE" +
-                    "D00000000008C6889FFFFFFFFFF0D004066656C6C6F77736869705F61646D696E0A0000002864761" +
-                    "B959700000000000000000000B004000080130300080700006400000000C94330240065CD1D00CA9" +
-                    "A3B025D6F780000000000E82EED00000000008C6889FFFFFFFFFF0E003467656E6572616C5F61646" +
-                    "D696E0A0000002864761B959700000000000000000000B0040000801303000807000064000000029" +
-                    "0D73E0D000000005743DE13000000005443DE13000000000259A2F40200000000A3296B050000000" +
-                    "02E6B4AFDFFFFFFFF0F003461756374696F6E5F61646D696E0A0000002864761B959700000000000" +
-                    "000000000B00400008013030008070000640000000290D73E0D000000005743DE13000000005443D" +
-                    "E13000000000259A2F40200000000A3296B05000000002E6B4AFDFFFFFFFF1400507265666572656" +
-                    "E64756D5F63616E63656C6C6572E803000050C8EC362A2F01000000000000000000B0040000C0890" +
-                    "100080700006400000000C94330240065CD1D00CA9A3B025D6F780000000000E82EED00000000008" +
-                    "C6889FFFFFFFFFF1500447265666572656E64756D5F6B696C6C6572E803000090E99F12D3EB05000" +
-                    "000000000000000B004000080130300080700006400000000C94330240065CD1D00CA9A3B025D6F7" +
-                    "80000000000E82EED00000000008C6889FFFFFFFFFF1E0030736D616C6C5F746970706572C800000" +
-                    "0554DD2C20700000000000000000000000A000000C0890100640000000A00000000499149150065C" +
-                    "D1D00CA9A3B02F9BA1800000000002A4D3100000000006B59E7FFFFFFFFFF1F00286269675F74697" +
-                    "0706572640000005205379C4D000000000000000000000064000000C089010058020000640000000" +
-                    "0499149150065CD1D00CA9A3B02694F3F000000000035967D0000000000E534C1FFFFFFFFFF20003" +
-                    "4736D616C6C5F7370656E646572320000003435261A0803000000000000000000006009000080130" +
-                    "300201C00004038000000C94330240065CD1D00CA9A3B025D6F780000000000E82EED00000000008" +
-                    "C6889FFFFFFFFFF2100386D656469756D5F7370656E64657232000000686A4C34100600000000000" +
-                    "00000000060090000801303004038000040380000005B01F6300065CD1D00CA9A3B021161DB00000" +
-                    "00000BFD1AA010000000020972AFFFFFFFFFF22002C6269675F7370656E64657232000000D0D4986" +
-                    "8200C00000000000000000000600900008013030080700000403800000000CA9A3B0065CD1D00CA9" +
-                    "A3B02413CB00100000000755D34030000000045D165FEFFFFFFFF");
+                    "200000000020E00840000000000D6E61F0100000000396279020000000002003C776973685F666F7" +
+                    "25F6368616E67650A000000A090D96D545E02000000000000000000B004000080130300403800006" +
+                    "40000000290D73E0D000000005743DE13000000005443DE13000000000000CA9A3B000000000065C" +
+                    "D1D0A00347374616B696E675F61646D696E0A0000002864761B959700000000000000000000B0040" +
+                    "00080130300080700006400000000C94330240065CD1D00CA9A3B025D6F780000000000E82EED000" +
+                    "00000008C6889FFFFFFFFFF0B00247472656173757265720A00000008147E05511E0000000000000" +
+                    "0000000B00400008013030080700000403800000290D73E0D000000005743DE13000000005443DE1" +
+                    "3000000000000CA9A3B000000000065CD1D0C002C6C656173655F61646D696E0A0000002864761B9" +
+                    "59700000000000000000000B004000080130300080700006400000000C94330240065CD1D00CA9A3" +
+                    "B025D6F780000000000E82EED00000000008C6889FFFFFFFFFF0D004066656C6C6F77736869705F6" +
+                    "1646D696E0A0000002864761B959700000000000000000000B004000080130300080700006400000" +
+                    "000C94330240065CD1D00CA9A3B025D6F780000000000E82EED00000000008C6889FFFFFFFFFF0E0" +
+                    "03467656E6572616C5F61646D696E0A0000002864761B959700000000000000000000B0040000801" +
+                    "3030008070000640000000290D73E0D000000005743DE13000000005443DE13000000000259A2F40" +
+                    "200000000A3296B05000000002E6B4AFDFFFFFFFF0F003461756374696F6E5F61646D696E0A00000" +
+                    "02864761B959700000000000000000000B00400008013030008070000640000000290D73E0D00000" +
+                    "0005743DE13000000005443DE13000000000259A2F40200000000A3296B05000000002E6B4AFDFFF" +
+                    "FFFFF1400507265666572656E64756D5F63616E63656C6C6572E803000050C8EC362A2F010000000" +
+                    "00000000000B0040000C0890100080700006400000000C94330240065CD1D00CA9A3B025D6F78000" +
+                    "0000000E82EED00000000008C6889FFFFFFFFFF1500447265666572656E64756D5F6B696C6C6572E" +
+                    "803000090E99F12D3EB05000000000000000000B004000080130300080700006400000000C943302" +
+                    "40065CD1D00CA9A3B025D6F780000000000E82EED00000000008C6889FFFFFFFFFF1E0030736D616" +
+                    "C6C5F746970706572C8000000554DD2C20700000000000000000000000A000000C08901006400000" +
+                    "00A00000000499149150065CD1D00CA9A3B02F9BA1800000000002A4D3100000000006B59E7FFFFF" +
+                    "FFFFF1F00286269675F746970706572640000005205379C4D000000000000000000000064000000C" +
+                    "0890100580200006400000000499149150065CD1D00CA9A3B02694F3F000000000035967D0000000" +
+                    "000E534C1FFFFFFFFFF200034736D616C6C5F7370656E646572320000003435261A0803000000000" +
+                    "000000000006009000080130300201C00004038000000C94330240065CD1D00CA9A3B025D6F78000" +
+                    "0000000E82EED00000000008C6889FFFFFFFFFF2100386D656469756D5F7370656E6465723200000" +
+                    "0686A4C3410060000000000000000000060090000801303004038000040380000005B01F6300065C" +
+                    "D1D00CA9A3B021161DB0000000000BFD1AA010000000020972AFFFFFFFFFF22002C6269675F73706" +
+                    "56E64657232000000D0D49868200C000000000000000000006009000080130300807000004038000" +
+                    "00000CA9A3B0065CD1D00CA9A3B02413CB00100000000755D34030000000045D165FEFFFFFFFF");
             return result;
         }
     }

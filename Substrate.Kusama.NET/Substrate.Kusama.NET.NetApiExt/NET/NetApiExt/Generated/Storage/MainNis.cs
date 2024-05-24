@@ -36,9 +36,9 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         public NisStorage(SubstrateClientExt client)
         {
             this._client = client;
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("Nis", "QueueTotals"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT40)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("Nis", "QueueTotals"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT43)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Nis", "Queues"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.NetApi.Model.Types.Primitive.U32), typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT41)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.NetApi.Model.Types.Primitive.U32), typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT44)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Nis", "Summary"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nis.pallet.SummaryRecord)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Nis", "Receipts"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.NetApi.Model.Types.Primitive.U32), typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nis.pallet.ReceiptRecord)));
@@ -324,10 +324,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         ///  The vector is indexed by duration in `Period`s, offset by one, so information on the queue
         ///  whose duration is one `Period` would be storage `0`.
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT40> QueueTotals(CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT43> QueueTotals(string blockhash, CancellationToken token)
         {
             string parameters = NisStorage.QueueTotalsParams();
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT40>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT43>(parameters, blockhash, token);
             return result;
         }
         
@@ -355,10 +355,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> Queues
         ///  The queues of bids. Indexed by duration (in `Period`s).
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT41> Queues(Substrate.NetApi.Model.Types.Primitive.U32 key, CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT44> Queues(Substrate.NetApi.Model.Types.Primitive.U32 key, string blockhash, CancellationToken token)
         {
             string parameters = NisStorage.QueuesParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT41>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT44>(parameters, blockhash, token);
             return result;
         }
         
@@ -385,10 +385,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> Summary
         ///  Summary information over the general state.
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nis.pallet.SummaryRecord> Summary(CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nis.pallet.SummaryRecord> Summary(string blockhash, CancellationToken token)
         {
             string parameters = NisStorage.SummaryParams();
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nis.pallet.SummaryRecord>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nis.pallet.SummaryRecord>(parameters, blockhash, token);
             return result;
         }
         
@@ -416,10 +416,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> Receipts
         ///  The currently outstanding receipts, indexed according to the order of creation.
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nis.pallet.ReceiptRecord> Receipts(Substrate.NetApi.Model.Types.Primitive.U32 key, CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nis.pallet.ReceiptRecord> Receipts(Substrate.NetApi.Model.Types.Primitive.U32 key, string blockhash, CancellationToken token)
         {
             string parameters = NisStorage.ReceiptsParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nis.pallet.ReceiptRecord>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nis.pallet.ReceiptRecord>(parameters, blockhash, token);
             return result;
         }
     }

@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_conviction_votin
     
     
     /// <summary>
-    /// >> 132 - Composite[pallet_conviction_voting.vote.Vote]
+    /// >> 157 - Composite[pallet_conviction_voting.vote.Vote]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Vote : BaseType
@@ -52,7 +52,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_conviction_votin
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];
-            System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
+            global::System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
         }
     }
 }

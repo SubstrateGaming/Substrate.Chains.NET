@@ -37,7 +37,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         {
             this._client = client;
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("ParaInherent", "Included"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple)));
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("ParaInherent", "OnChainVotes"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.ScrapedOnChainVotes)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("ParaInherent", "OnChainVotes"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.ScrapedOnChainVotes)));
         }
         
         /// <summary>
@@ -72,10 +72,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// 
         ///  If this is `None` at the end of the block, we panic and render the block invalid.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Base.BaseTuple> Included(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Base.BaseTuple> Included(string blockhash, CancellationToken token)
         {
             string parameters = ParaInherentStorage.IncludedParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseTuple>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseTuple>(parameters, blockhash, token);
             return result;
         }
         
@@ -101,10 +101,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> OnChainVotes
         ///  Scraped on chain data for extracting resolved disputes as well as backing votes.
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.ScrapedOnChainVotes> OnChainVotes(CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.ScrapedOnChainVotes> OnChainVotes(string blockhash, CancellationToken token)
         {
             string parameters = ParaInherentStorage.OnChainVotesParams();
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.ScrapedOnChainVotes>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.ScrapedOnChainVotes>(parameters, blockhash, token);
             return result;
         }
     }
@@ -119,7 +119,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> enter
         /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method Enter(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.InherentData data)
+        public static Method Enter(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.InherentData data)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(data.Encode());
@@ -176,5 +176,23 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// A dispute statement was invalid.
         /// </summary>
         DisputeInvalid,
+        
+        /// <summary>
+        /// >> BackedByDisabled
+        /// A candidate was backed by a disabled validator
+        /// </summary>
+        BackedByDisabled,
+        
+        /// <summary>
+        /// >> BackedOnUnscheduledCore
+        /// A candidate was backed even though the paraid was not scheduled.
+        /// </summary>
+        BackedOnUnscheduledCore,
+        
+        /// <summary>
+        /// >> UnscheduledCandidate
+        /// Too many candidates supplied.
+        /// </summary>
+        UnscheduledCandidate,
     }
 }

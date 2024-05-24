@@ -1,11 +1,12 @@
 {
   "projects": {
     "net_api": "Substrate.Kusama.NET.NetApiExt",
+    "net_integration": "Substrate.Kusama.NET.Integration",
     "rest_service": "Substrate.Kusama.NET.RestService",
     "rest_client": "Substrate.Kusama.NET.RestClient"
   },
    "metadata": {
-      "websocket": "wss://1rpc.io/ksm"
+      "websocket": "wss://kusama-rpc.publicnode.com"
    },
   "rest_client_settings": {
     "service_assembly": "Substrate.Kusama.NET.RestService.dll"

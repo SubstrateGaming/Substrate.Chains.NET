@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Types.Base
     
     
     /// <summary>
-    /// >> 835 - Composite[BTreeMapT5]
+    /// >> 890 - Composite[BTreeMapT5]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class BTreeMapT5 : BaseType
@@ -27,7 +27,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Types.Base
         /// <summary>
         /// >> value
         /// </summary>
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.ValidatorIndex, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.validator_app.Public>> Value { get; set; }
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.ValidatorIndex, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.validator_app.Public>> Value { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
@@ -47,12 +47,12 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Types.Base
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.ValidatorIndex, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.validator_app.Public>>();
+            Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.ValidatorIndex, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.validator_app.Public>>();
             Value.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];
-            System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
+            global::System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
         }
     }
 }

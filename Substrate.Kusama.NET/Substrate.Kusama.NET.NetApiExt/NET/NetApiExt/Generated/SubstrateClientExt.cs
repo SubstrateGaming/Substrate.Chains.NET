@@ -80,21 +80,6 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated
         public HistoricalStorage HistoricalStorage;
         
         /// <summary>
-        /// BeefyStorage storage calls.
-        /// </summary>
-        public BeefyStorage BeefyStorage;
-        
-        /// <summary>
-        /// MmrStorage storage calls.
-        /// </summary>
-        public MmrStorage MmrStorage;
-        
-        /// <summary>
-        /// BeefyMmrLeafStorage storage calls.
-        /// </summary>
-        public BeefyMmrLeafStorage BeefyMmrLeafStorage;
-        
-        /// <summary>
         /// SessionStorage storage calls.
         /// </summary>
         public SessionStorage SessionStorage;
@@ -103,11 +88,6 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated
         /// GrandpaStorage storage calls.
         /// </summary>
         public GrandpaStorage GrandpaStorage;
-        
-        /// <summary>
-        /// ImOnlineStorage storage calls.
-        /// </summary>
-        public ImOnlineStorage ImOnlineStorage;
         
         /// <summary>
         /// AuthorityDiscoveryStorage storage calls.
@@ -138,6 +118,11 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated
         /// FellowshipReferendaStorage storage calls.
         /// </summary>
         public FellowshipReferendaStorage FellowshipReferendaStorage;
+        
+        /// <summary>
+        /// OriginsStorage storage calls.
+        /// </summary>
+        public OriginsStorage OriginsStorage;
         
         /// <summary>
         /// WhitelistStorage storage calls.
@@ -300,9 +285,14 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated
         public ParasSlashingStorage ParasSlashingStorage;
         
         /// <summary>
-        /// ParaAssignmentProviderStorage storage calls.
+        /// OnDemandAssignmentProviderStorage storage calls.
         /// </summary>
-        public ParaAssignmentProviderStorage ParaAssignmentProviderStorage;
+        public OnDemandAssignmentProviderStorage OnDemandAssignmentProviderStorage;
+        
+        /// <summary>
+        /// CoretimeAssignmentProviderStorage storage calls.
+        /// </summary>
+        public CoretimeAssignmentProviderStorage CoretimeAssignmentProviderStorage;
         
         /// <summary>
         /// RegistrarStorage storage calls.
@@ -325,9 +315,9 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated
         public CrowdloanStorage CrowdloanStorage;
         
         /// <summary>
-        /// StateTrieMigrationStorage storage calls.
+        /// CoretimeStorage storage calls.
         /// </summary>
-        public StateTrieMigrationStorage StateTrieMigrationStorage;
+        public CoretimeStorage CoretimeStorage;
         
         /// <summary>
         /// XcmPalletStorage storage calls.
@@ -338,6 +328,31 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated
         /// MessageQueueStorage storage calls.
         /// </summary>
         public MessageQueueStorage MessageQueueStorage;
+        
+        /// <summary>
+        /// AssetRateStorage storage calls.
+        /// </summary>
+        public AssetRateStorage AssetRateStorage;
+        
+        /// <summary>
+        /// BeefyStorage storage calls.
+        /// </summary>
+        public BeefyStorage BeefyStorage;
+        
+        /// <summary>
+        /// MmrStorage storage calls.
+        /// </summary>
+        public MmrStorage MmrStorage;
+        
+        /// <summary>
+        /// BeefyMmrLeafStorage storage calls.
+        /// </summary>
+        public BeefyMmrLeafStorage BeefyMmrLeafStorage;
+        
+        /// <summary>
+        /// IdentityMigratorStorage storage calls.
+        /// </summary>
+        public IdentityMigratorStorage IdentityMigratorStorage;
         
         public SubstrateClientExt(System.Uri uri, Substrate.NetApi.Model.Extrinsics.ChargeType chargeType) : 
                 base(uri, chargeType)
@@ -353,18 +368,15 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated
             this.StakingStorage = new StakingStorage(this);
             this.OffencesStorage = new OffencesStorage(this);
             this.HistoricalStorage = new HistoricalStorage(this);
-            this.BeefyStorage = new BeefyStorage(this);
-            this.MmrStorage = new MmrStorage(this);
-            this.BeefyMmrLeafStorage = new BeefyMmrLeafStorage(this);
             this.SessionStorage = new SessionStorage(this);
             this.GrandpaStorage = new GrandpaStorage(this);
-            this.ImOnlineStorage = new ImOnlineStorage(this);
             this.AuthorityDiscoveryStorage = new AuthorityDiscoveryStorage(this);
             this.TreasuryStorage = new TreasuryStorage(this);
             this.ConvictionVotingStorage = new ConvictionVotingStorage(this);
             this.ReferendaStorage = new ReferendaStorage(this);
             this.FellowshipCollectiveStorage = new FellowshipCollectiveStorage(this);
             this.FellowshipReferendaStorage = new FellowshipReferendaStorage(this);
+            this.OriginsStorage = new OriginsStorage(this);
             this.WhitelistStorage = new WhitelistStorage(this);
             this.ClaimsStorage = new ClaimsStorage(this);
             this.UtilityStorage = new UtilityStorage(this);
@@ -397,14 +409,20 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated
             this.ParaSessionInfoStorage = new ParaSessionInfoStorage(this);
             this.ParasDisputesStorage = new ParasDisputesStorage(this);
             this.ParasSlashingStorage = new ParasSlashingStorage(this);
-            this.ParaAssignmentProviderStorage = new ParaAssignmentProviderStorage(this);
+            this.OnDemandAssignmentProviderStorage = new OnDemandAssignmentProviderStorage(this);
+            this.CoretimeAssignmentProviderStorage = new CoretimeAssignmentProviderStorage(this);
             this.RegistrarStorage = new RegistrarStorage(this);
             this.SlotsStorage = new SlotsStorage(this);
             this.AuctionsStorage = new AuctionsStorage(this);
             this.CrowdloanStorage = new CrowdloanStorage(this);
-            this.StateTrieMigrationStorage = new StateTrieMigrationStorage(this);
+            this.CoretimeStorage = new CoretimeStorage(this);
             this.XcmPalletStorage = new XcmPalletStorage(this);
             this.MessageQueueStorage = new MessageQueueStorage(this);
+            this.AssetRateStorage = new AssetRateStorage(this);
+            this.BeefyStorage = new BeefyStorage(this);
+            this.MmrStorage = new MmrStorage(this);
+            this.BeefyMmrLeafStorage = new BeefyMmrLeafStorage(this);
+            this.IdentityMigratorStorage = new IdentityMigratorStorage(this);
         }
     }
 }

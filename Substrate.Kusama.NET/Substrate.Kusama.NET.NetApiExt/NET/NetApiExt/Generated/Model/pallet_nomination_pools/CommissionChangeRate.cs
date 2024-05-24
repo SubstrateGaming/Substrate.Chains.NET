@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools
     
     
     /// <summary>
-    /// >> 322 - Composite[pallet_nomination_pools.CommissionChangeRate]
+    /// >> 344 - Composite[pallet_nomination_pools.CommissionChangeRate]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class CommissionChangeRate : BaseType
@@ -59,7 +59,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];
-            System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
+            global::System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
         }
     }
 }

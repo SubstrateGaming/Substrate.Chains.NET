@@ -67,10 +67,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> Reports
         ///  The primary structure that holds all offence records keyed by report identifiers.
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_staking.offence.OffenceDetails> Reports(Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256 key, CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_staking.offence.OffenceDetails> Reports(Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256 key, string blockhash, CancellationToken token)
         {
             string parameters = OffencesStorage.ReportsParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_staking.offence.OffenceDetails>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_staking.offence.OffenceDetails>(parameters, blockhash, token);
             return result;
         }
         
@@ -98,10 +98,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> ConcurrentReportsIndex
         ///  A vector of reports of the same kind that happened at the same time slot.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256>> ConcurrentReportsIndex(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr16U8, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>> key, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256>> ConcurrentReportsIndex(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr16U8, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>> key, string blockhash, CancellationToken token)
         {
             string parameters = OffencesStorage.ConcurrentReportsIndexParams(key);
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256>>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256>>(parameters, blockhash, token);
             return result;
         }
     }

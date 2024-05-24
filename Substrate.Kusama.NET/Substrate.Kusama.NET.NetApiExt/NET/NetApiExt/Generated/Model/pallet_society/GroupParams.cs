@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society
     
     
     /// <summary>
-    /// >> 474 - Composite[pallet_society.GroupParams]
+    /// >> 522 - Composite[pallet_society.GroupParams]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class GroupParams : BaseType
@@ -73,7 +73,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];
-            System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
+            global::System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
         }
     }
 }

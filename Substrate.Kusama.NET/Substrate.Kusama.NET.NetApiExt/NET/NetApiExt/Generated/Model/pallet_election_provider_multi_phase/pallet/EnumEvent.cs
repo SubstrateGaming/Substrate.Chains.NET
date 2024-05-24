@@ -68,7 +68,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_election_provide
     }
     
     /// <summary>
-    /// >> 484 - Variant[pallet_election_provider_multi_phase.pallet.Event]
+    /// >> 532 - Variant[pallet_election_provider_multi_phase.pallet.Event]
     /// The `Event` enum of this pallet
     /// </summary>
     public sealed class EnumEvent : BaseEnumExt<Event, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_election_provider_multi_phase.EnumElectionCompute, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>, Substrate.NetApi.Model.Types.Primitive.Bool>, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_election_provider_multi_phase.EnumElectionCompute, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_npos_elections.ElectionScore>, BaseVoid, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U128>, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U128>, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_election_provider_multi_phase.EnumPhase, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_election_provider_multi_phase.EnumPhase, Substrate.NetApi.Model.Types.Primitive.U32>>

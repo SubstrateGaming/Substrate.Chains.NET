@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_fast_unstake.typ
     
     
     /// <summary>
-    /// >> 766 - Composite[pallet_fast_unstake.types.UnstakeRequest]
+    /// >> 822 - Composite[pallet_fast_unstake.types.UnstakeRequest]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class UnstakeRequest : BaseType
@@ -27,11 +27,11 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_fast_unstake.typ
         /// <summary>
         /// >> stashes
         /// </summary>
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT46 Stashes { get; set; }
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT48 Stashes { get; set; }
         /// <summary>
         /// >> checked
         /// </summary>
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT47 Checked { get; set; }
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT49 Checked { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
@@ -52,14 +52,14 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_fast_unstake.typ
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Stashes = new Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT46();
+            Stashes = new Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT48();
             Stashes.Decode(byteArray, ref p);
-            Checked = new Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT47();
+            Checked = new Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT49();
             Checked.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];
-            System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
+            global::System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
         }
     }
 }

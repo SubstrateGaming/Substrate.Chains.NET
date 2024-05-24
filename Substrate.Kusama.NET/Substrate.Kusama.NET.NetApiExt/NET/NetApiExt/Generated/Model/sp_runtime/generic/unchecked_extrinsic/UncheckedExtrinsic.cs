@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.generic.unch
     
     
     /// <summary>
-    /// >> 881 - Composite[sp_runtime.generic.unchecked_extrinsic.UncheckedExtrinsic]
+    /// >> 957 - Composite[sp_runtime.generic.unchecked_extrinsic.UncheckedExtrinsic]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class UncheckedExtrinsic : BaseType
@@ -52,7 +52,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.generic.unch
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];
-            System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
+            global::System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
         }
     }
 }

@@ -54,7 +54,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_scheduler.pallet
     }
     
     /// <summary>
-    /// >> 694 - Variant[pallet_scheduler.pallet.Error]
+    /// >> 746 - Variant[pallet_scheduler.pallet.Error]
     /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>

@@ -155,10 +155,15 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_kusama_runtime.
         /// >> Fellowship9Dan
         /// </summary>
         Fellowship9Dan = 26,
+        
+        /// <summary>
+        /// >> WishForChange
+        /// </summary>
+        WishForChange = 27,
     }
     
     /// <summary>
-    /// >> 138 - Variant[staging_kusama_runtime.governance.origins.pallet_custom_origins.Origin]
+    /// >> 163 - Variant[staging_kusama_runtime.governance.origins.pallet_custom_origins.Origin]
     /// </summary>
     public sealed class EnumOrigin : BaseEnum<Origin>
     {

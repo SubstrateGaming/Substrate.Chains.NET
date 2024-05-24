@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_beefy
     
     
     /// <summary>
-    /// >> 95 - Composite[sp_consensus_beefy.EquivocationProof]
+    /// >> 497 - Composite[sp_consensus_beefy.EquivocationProof]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class EquivocationProof : BaseType
@@ -59,7 +59,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_beefy
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];
-            System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
+            global::System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
         }
     }
 }

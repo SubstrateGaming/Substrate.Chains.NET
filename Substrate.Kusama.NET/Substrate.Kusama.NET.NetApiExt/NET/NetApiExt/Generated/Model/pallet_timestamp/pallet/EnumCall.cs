@@ -30,7 +30,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_timestamp.pallet
     }
     
     /// <summary>
-    /// >> 77 - Variant[pallet_timestamp.pallet.Call]
+    /// >> 110 - Variant[pallet_timestamp.pallet.Call]
     /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
     public sealed class EnumCall : BaseEnumExt<Call, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U64>>

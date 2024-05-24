@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_thing
     
     
     /// <summary>
-    /// >> 309 - Composite[sp_arithmetic.per_things.Perquintill]
+    /// >> 331 - Composite[sp_arithmetic.per_things.Perquintill]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Perquintill : BaseType
@@ -52,7 +52,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_thing
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];
-            System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
+            global::System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
         }
     }
 }

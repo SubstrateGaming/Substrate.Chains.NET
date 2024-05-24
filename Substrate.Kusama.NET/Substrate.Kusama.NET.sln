@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Substrate.Kusama.NET.RestCl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Substrate.Kusama.NET.RestClient.Test", "Substrate.Kusama.NET.RestClient.Test\Substrate.Kusama.NET.RestClient.Test.csproj", "{CEFA8B64-81CC-4BC7-B051-4E505A2CB8ED}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Substrate.Kusama.NET.Integration", "Substrate.Kusama.NET.Integration\Substrate.Kusama.NET.Integration.csproj", "{24B67397-A5E8-43F7-8101-1E49275E9368}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -42,5 +44,9 @@ Global
 		{CEFA8B64-81CC-4BC7-B051-4E505A2CB8ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CEFA8B64-81CC-4BC7-B051-4E505A2CB8ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CEFA8B64-81CC-4BC7-B051-4E505A2CB8ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24B67397-A5E8-43F7-8101-1E49275E9368}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24B67397-A5E8-43F7-8101-1E49275E9368}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24B67397-A5E8-43F7-8101-1E49275E9368}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24B67397-A5E8-43F7-8101-1E49275E9368}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

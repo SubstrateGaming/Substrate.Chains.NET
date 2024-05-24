@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_referenda.types
     
     
     /// <summary>
-    /// >> 637 - Composite[pallet_referenda.types.TrackInfo]
+    /// >> 685 - Composite[pallet_referenda.types.TrackInfo]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class TrackInfo : BaseType
@@ -108,7 +108,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_referenda.types
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];
-            System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
+            global::System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
         }
     }
 }

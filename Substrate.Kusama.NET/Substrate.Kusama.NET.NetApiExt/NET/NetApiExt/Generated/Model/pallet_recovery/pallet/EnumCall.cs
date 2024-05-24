@@ -78,7 +78,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_recovery.pallet
     }
     
     /// <summary>
-    /// >> 206 - Variant[pallet_recovery.pallet.Call]
+    /// >> 228 - Variant[pallet_recovery.pallet.Call]
     /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
     public sealed class EnumCall : BaseEnumExt<Call, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_kusama_runtime.EnumRuntimeCall>, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress>, BaseTuple<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>, Substrate.NetApi.Model.Types.Primitive.U16, Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress>, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress>

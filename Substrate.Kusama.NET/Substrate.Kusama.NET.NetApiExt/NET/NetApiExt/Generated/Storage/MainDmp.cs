@@ -68,10 +68,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> DownwardMessageQueues
         ///  The downward messages addressed for a certain para.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_core_primitives.InboundDownwardMessage>> DownwardMessageQueues(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_core_primitives.InboundDownwardMessage>> DownwardMessageQueues(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key, string blockhash, CancellationToken token)
         {
             string parameters = DmpStorage.DownwardMessageQueuesParams(key);
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_core_primitives.InboundDownwardMessage>>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_core_primitives.InboundDownwardMessage>>(parameters, blockhash, token);
             return result;
         }
         
@@ -111,16 +111,16 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         ///  - `B`: is the relay-chain block number in which a message was appended.
         ///  - `H(M)`: is the hash of the message being appended.
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256> DownwardMessageQueueHeads(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key, CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256> DownwardMessageQueueHeads(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key, string blockhash, CancellationToken token)
         {
             string parameters = DmpStorage.DownwardMessageQueueHeadsParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256>(parameters, blockhash, token);
             return result;
         }
         
         /// <summary>
         /// >> DeliveryFeeFactorParams
-        ///  The number to multiply the base delivery fee by.
+        ///  The factor to multiply the base delivery fee by.
         /// </summary>
         public static string DeliveryFeeFactorParams(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key)
         {
@@ -140,12 +140,12 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> DeliveryFeeFactor
-        ///  The number to multiply the base delivery fee by.
+        ///  The factor to multiply the base delivery fee by.
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedU128> DeliveryFeeFactor(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key, CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedU128> DeliveryFeeFactor(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key, string blockhash, CancellationToken token)
         {
             string parameters = DmpStorage.DeliveryFeeFactorParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedU128>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedU128>(parameters, blockhash, token);
             return result;
         }
     }

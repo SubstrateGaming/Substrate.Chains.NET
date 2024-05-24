@@ -39,12 +39,13 @@ namespace Substrate.Kusama.NET.RestService.Generated.Controller
         
         /// <summary>
         /// >> IdentityOf
-        ///  Information that is pertinent to identify the entity behind an account.
+        ///  Information that is pertinent to identify the entity behind an account. First item is the
+        ///  registration, second is the account's primary username.
         /// 
         ///  TWOX-NOTE: OK ��� `AccountId` is a secure hash.
         /// </summary>
         [HttpGet("IdentityOf")]
-        [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_identity.types.Registration), 200)]
+        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_identity.types.Registration, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT4>>), 200)]
         [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.IdentityStorage), "IdentityOfParams", typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32))]
         public IActionResult GetIdentityOf(string key)
         {
@@ -73,7 +74,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Controller
         ///  TWOX-NOTE: OK ��� `AccountId` is a secure hash.
         /// </summary>
         [HttpGet("SubsOf")]
-        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT25>), 200)]
+        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT27>), 200)]
         [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.IdentityStorage), "SubsOfParams", typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32))]
         public IActionResult GetSubsOf(string key)
         {
@@ -88,11 +89,56 @@ namespace Substrate.Kusama.NET.RestService.Generated.Controller
         ///  The index into this can be cast to `RegistrarIndex` to get a valid value.
         /// </summary>
         [HttpGet("Registrars")]
-        [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT26), 200)]
+        [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT28), 200)]
         [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.IdentityStorage), "RegistrarsParams")]
         public IActionResult GetRegistrars()
         {
             return this.Ok(_identityStorage.GetRegistrars());
+        }
+        
+        /// <summary>
+        /// >> UsernameAuthorities
+        ///  A map of the accounts who are authorized to grant usernames.
+        /// </summary>
+        [HttpGet("UsernameAuthorities")]
+        [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_identity.types.AuthorityProperties), 200)]
+        [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.IdentityStorage), "UsernameAuthoritiesParams", typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32))]
+        public IActionResult GetUsernameAuthorities(string key)
+        {
+            return this.Ok(_identityStorage.GetUsernameAuthorities(key));
+        }
+        
+        /// <summary>
+        /// >> AccountOfUsername
+        ///  Reverse lookup from `username` to the `AccountId` that has registered it. The value should
+        ///  be a key in the `IdentityOf` map, but it may not if the user has cleared their identity.
+        /// 
+        ///  Multiple usernames may map to the same `AccountId`, but `IdentityOf` will only map to one
+        ///  primary username.
+        /// </summary>
+        [HttpGet("AccountOfUsername")]
+        [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32), 200)]
+        [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.IdentityStorage), "AccountOfUsernameParams", typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT4))]
+        public IActionResult GetAccountOfUsername(string key)
+        {
+            return this.Ok(_identityStorage.GetAccountOfUsername(key));
+        }
+        
+        /// <summary>
+        /// >> PendingUsernames
+        ///  Usernames that an authority has granted, but that the account controller has not confirmed
+        ///  that they want it. Used primarily in cases where the `AccountId` cannot provide a signature
+        ///  because they are a pure proxy, multisig, etc. In order to confirm it, they should call
+        ///  [`Call::accept_username`].
+        /// 
+        ///  First tuple item is the account and second is the acceptance deadline.
+        /// </summary>
+        [HttpGet("PendingUsernames")]
+        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U32>), 200)]
+        [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.IdentityStorage), "PendingUsernamesParams", typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT4))]
+        public IActionResult GetPendingUsernames(string key)
+        {
+            return this.Ok(_identityStorage.GetPendingUsernames(key));
         }
     }
 }

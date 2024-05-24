@@ -36,7 +36,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_session.pallet
     }
     
     /// <summary>
-    /// >> 108 - Variant[pallet_session.pallet.Call]
+    /// >> 133 - Variant[pallet_session.pallet.Call]
     /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
     public sealed class EnumCall : BaseEnumExt<Call, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_kusama_runtime.SessionKeys, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>, BaseVoid>

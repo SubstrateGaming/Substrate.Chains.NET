@@ -69,10 +69,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// 
         ///  The head in itself can be a batch of up to [`Config::BatchSize`] stakers.
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_fast_unstake.types.UnstakeRequest> Head(CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_fast_unstake.types.UnstakeRequest> Head(string blockhash, CancellationToken token)
         {
             string parameters = FastUnstakeStorage.HeadParams();
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_fast_unstake.types.UnstakeRequest>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_fast_unstake.types.UnstakeRequest>(parameters, blockhash, token);
             return result;
         }
         
@@ -104,10 +104,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// 
         ///  Keeps track of `AccountId` wishing to unstake and it's corresponding deposit.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U128> Queue(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U128> Queue(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, string blockhash, CancellationToken token)
         {
             string parameters = FastUnstakeStorage.QueueParams(key);
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U128>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U128>(parameters, blockhash, token);
             return result;
         }
         
@@ -133,10 +133,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> CounterForQueue
         /// Counter for the related counted storage map
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> CounterForQueue(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> CounterForQueue(string blockhash, CancellationToken token)
         {
             string parameters = FastUnstakeStorage.CounterForQueueParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, blockhash, token);
             return result;
         }
         
@@ -176,10 +176,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         ///  checked. The checking is represented by updating [`UnstakeRequest::checked`], which is
         ///  stored in [`Head`].
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> ErasToCheckPerBlock(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> ErasToCheckPerBlock(string blockhash, CancellationToken token)
         {
             string parameters = FastUnstakeStorage.ErasToCheckPerBlockParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, blockhash, token);
             return result;
         }
     }

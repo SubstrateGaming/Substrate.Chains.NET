@@ -62,7 +62,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_fast_unstake.pal
     }
     
     /// <summary>
-    /// >> 769 - Variant[pallet_fast_unstake.pallet.Error]
+    /// >> 825 - Variant[pallet_fast_unstake.pallet.Error]
     /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>

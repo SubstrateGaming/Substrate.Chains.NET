@@ -75,10 +75,16 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_ranked_collectiv
         /// The origin is not sufficiently privileged to do the operation.
         /// </summary>
         NoPermission = 8,
+        
+        /// <summary>
+        /// >> SameMember
+        /// The new member to exchange is the same as the old member
+        /// </summary>
+        SameMember = 9,
     }
     
     /// <summary>
-    /// >> 646 - Variant[pallet_ranked_collective.pallet.Error]
+    /// >> 694 - Variant[pallet_ranked_collective.pallet.Error]
     /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>

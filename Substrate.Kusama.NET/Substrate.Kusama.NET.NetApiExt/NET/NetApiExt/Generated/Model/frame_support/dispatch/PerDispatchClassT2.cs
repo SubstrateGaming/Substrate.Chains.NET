@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_support.dispatch
     
     
     /// <summary>
-    /// >> 519 - Composite[frame_support.dispatch.PerDispatchClassT2]
+    /// >> 568 - Composite[frame_support.dispatch.PerDispatchClassT2]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class PerDispatchClassT2 : BaseType
@@ -66,7 +66,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_support.dispatch
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];
-            System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
+            global::System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
         }
     }
 }

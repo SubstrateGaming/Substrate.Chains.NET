@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.finality_grandpa
     
     
     /// <summary>
-    /// >> 117 - Composite[finality_grandpa.Prevote]
+    /// >> 145 - Composite[finality_grandpa.Prevote]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Prevote : BaseType
@@ -59,7 +59,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.finality_grandpa
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];
-            System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
+            global::System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
         }
     }
 }

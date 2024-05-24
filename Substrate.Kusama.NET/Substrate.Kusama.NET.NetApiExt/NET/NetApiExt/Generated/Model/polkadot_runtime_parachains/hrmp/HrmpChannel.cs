@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parach
     
     
     /// <summary>
-    /// >> 819 - Composite[polkadot_runtime_parachains.hrmp.HrmpChannel]
+    /// >> 875 - Composite[polkadot_runtime_parachains.hrmp.HrmpChannel]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class HrmpChannel : BaseType
@@ -101,7 +101,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parach
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];
-            System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
+            global::System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
         }
     }
 }

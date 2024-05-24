@@ -102,7 +102,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_referenda.pallet
     }
     
     /// <summary>
-    /// >> 650 - Variant[pallet_referenda.pallet.Error]
+    /// >> 698 - Variant[pallet_referenda.pallet.Error]
     /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>
