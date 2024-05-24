@@ -12,8 +12,8 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup.Generated.Clients
    using System;
    using System.Threading.Tasks;
    using System.Net.Http;
-   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types;
    using Substrate.NetApi.Model.Types.Base;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto;
    using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
@@ -26,7 +26,7 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup.Generated.Clients
       {
          _httpClient = httpClient;
       }
-      public async Task<bool> SetIdentityOf(Registration value, AccountId32 key)
+      public async Task<bool> SetIdentityOf(BaseTuple<Registration, BaseOpt<BoundedVecT4>> value, AccountId32 key)
       {
          return await SendMockupRequestAsync(_httpClient, "Identity/IdentityOf", value.Encode(), Substrate.Polkadot.NET.NetApiExt.Generated.Storage.IdentityStorage.IdentityOfParams(key));
       }
@@ -34,13 +34,25 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "Identity/SuperOf", value.Encode(), Substrate.Polkadot.NET.NetApiExt.Generated.Storage.IdentityStorage.SuperOfParams(key));
       }
-      public async Task<bool> SetSubsOf(BaseTuple<U128, BoundedVecT24> value, AccountId32 key)
+      public async Task<bool> SetSubsOf(BaseTuple<U128, BoundedVecT29> value, AccountId32 key)
       {
          return await SendMockupRequestAsync(_httpClient, "Identity/SubsOf", value.Encode(), Substrate.Polkadot.NET.NetApiExt.Generated.Storage.IdentityStorage.SubsOfParams(key));
       }
-      public async Task<bool> SetRegistrars(BoundedVecT25 value)
+      public async Task<bool> SetRegistrars(BoundedVecT30 value)
       {
          return await SendMockupRequestAsync(_httpClient, "Identity/Registrars", value.Encode(), Substrate.Polkadot.NET.NetApiExt.Generated.Storage.IdentityStorage.RegistrarsParams());
+      }
+      public async Task<bool> SetUsernameAuthorities(AuthorityProperties value, AccountId32 key)
+      {
+         return await SendMockupRequestAsync(_httpClient, "Identity/UsernameAuthorities", value.Encode(), Substrate.Polkadot.NET.NetApiExt.Generated.Storage.IdentityStorage.UsernameAuthoritiesParams(key));
+      }
+      public async Task<bool> SetAccountOfUsername(AccountId32 value, BoundedVecT4 key)
+      {
+         return await SendMockupRequestAsync(_httpClient, "Identity/AccountOfUsername", value.Encode(), Substrate.Polkadot.NET.NetApiExt.Generated.Storage.IdentityStorage.AccountOfUsernameParams(key));
+      }
+      public async Task<bool> SetPendingUsernames(BaseTuple<AccountId32, U32> value, BoundedVecT4 key)
+      {
+         return await SendMockupRequestAsync(_httpClient, "Identity/PendingUsernames", value.Encode(), Substrate.Polkadot.NET.NetApiExt.Generated.Storage.IdentityStorage.PendingUsernamesParams(key));
       }
    }
 }

@@ -33,7 +33,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_nomination_poo
     }
     
     /// <summary>
-    /// >> 273 - Variant[pallet_nomination_pools.BondExtra]
+    /// >> 307 - Variant[pallet_nomination_pools.BondExtra]
     /// </summary>
     public sealed class EnumBondExtra : BaseEnumExt<BondExtra, Substrate.NetApi.Model.Types.Primitive.U128, BaseVoid>
     {

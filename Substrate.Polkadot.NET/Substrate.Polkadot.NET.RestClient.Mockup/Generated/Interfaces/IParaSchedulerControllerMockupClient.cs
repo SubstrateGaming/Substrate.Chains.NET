@@ -12,13 +12,13 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup.Generated.Interfaces
    using System;
    using System.Threading.Tasks;
    using Substrate.NetApi.Model.Types.Base;
-   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.scheduler.pallet;
    using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base;
    
    public interface IParaSchedulerControllerMockupClient
    {
-      Task<bool> SetValidatorGroups(BaseVec<BaseVec<ValidatorIndex>> value);
+      Task<bool> SetValidatorGroups(BaseVec<BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.ValidatorIndex>> value);
       Task<bool> SetAvailabilityCores(BaseVec<EnumCoreOccupied> value);
       Task<bool> SetSessionStartBlock(U32 value);
       Task<bool> SetClaimQueue(BTreeMapT4 value);

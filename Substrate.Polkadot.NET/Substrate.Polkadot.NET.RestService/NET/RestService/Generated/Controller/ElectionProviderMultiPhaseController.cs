@@ -85,6 +85,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Controller
         ///  Snapshot data of the round.
         /// 
         ///  This is created at the beginning of the signed phase and cleared upon calling `elect`.
+        ///  Note: This storage type must only be mutated through [`SnapshotWrapper`].
         /// </summary>
         [HttpGet("Snapshot")]
         [ProducesResponseType(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_election_provider_multi_phase.RoundSnapshot), 200)]
@@ -99,6 +100,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Controller
         ///  Desired number of targets to elect for this round.
         /// 
         ///  Only exists when [`Snapshot`] is present.
+        ///  Note: This storage type must only be mutated through [`SnapshotWrapper`].
         /// </summary>
         [HttpGet("DesiredTargets")]
         [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Primitive.U32), 200)]
@@ -113,6 +115,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Controller
         ///  The metadata of the [`RoundSnapshot`]
         /// 
         ///  Only exists when [`Snapshot`] is present.
+        ///  Note: This storage type must only be mutated through [`SnapshotWrapper`].
         /// </summary>
         [HttpGet("SnapshotMetadata")]
         [ProducesResponseType(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_election_provider_multi_phase.SolutionOrSnapshotSize), 200)]
@@ -152,7 +155,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Controller
         ///  them one at a time instead of reading and decoding all of them at once.
         /// </summary>
         [HttpGet("SignedSubmissionIndices")]
-        [ProducesResponseType(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT31), 200)]
+        [ProducesResponseType(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT37), 200)]
         [StorageKeyBuilder(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ElectionProviderMultiPhaseStorage), "SignedSubmissionIndicesParams")]
         public IActionResult GetSignedSubmissionIndices()
         {

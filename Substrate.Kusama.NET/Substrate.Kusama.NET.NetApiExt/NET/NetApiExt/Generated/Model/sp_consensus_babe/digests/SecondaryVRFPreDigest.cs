@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_babe.diges
     
     
     /// <summary>
-    /// >> 539 - Composite[sp_consensus_babe.digests.SecondaryVRFPreDigest]
+    /// >> 588 - Composite[sp_consensus_babe.digests.SecondaryVRFPreDigest]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class SecondaryVRFPreDigest : BaseType
@@ -66,7 +66,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_babe.diges
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];
-            System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
+            global::System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
         }
     }
 }

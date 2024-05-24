@@ -33,7 +33,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.v2.multiasset
     }
     
     /// <summary>
-    /// >> 365 - Variant[xcm.v2.multiasset.AssetId]
+    /// >> 396 - Variant[xcm.v2.multiasset.AssetId]
     /// </summary>
     public sealed class EnumAssetId : BaseEnumExt<AssetId, Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.v2.multilocation.MultiLocation, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>
     {

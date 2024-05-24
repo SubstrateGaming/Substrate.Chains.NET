@@ -67,10 +67,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> PendingSwap
         ///  Pending swap operations.
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id> PendingSwap(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key, CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id> PendingSwap(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key, string blockhash, CancellationToken token)
         {
             string parameters = RegistrarStorage.PendingSwapParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id>(parameters, blockhash, token);
             return result;
         }
         
@@ -104,10 +104,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         ///  The given account ID is responsible for registering the code and initial head data, but may
         ///  only do so if it isn't yet registered. (After that, it's up to governance to do so.)
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_common.paras_registrar.ParaInfo> Paras(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key, CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_common.paras_registrar.ParaInfo> Paras(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key, string blockhash, CancellationToken token)
         {
             string parameters = RegistrarStorage.ParasParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_common.paras_registrar.ParaInfo>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_common.paras_registrar.ParaInfo>(parameters, blockhash, token);
             return result;
         }
         
@@ -133,10 +133,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> NextFreeParaId
         ///  The next free `ParaId`.
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id> NextFreeParaId(CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id> NextFreeParaId(string blockhash, CancellationToken token)
         {
             string parameters = RegistrarStorage.NextFreeParaIdParams();
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id>(parameters, blockhash, token);
             return result;
         }
     }

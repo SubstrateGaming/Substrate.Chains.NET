@@ -44,7 +44,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         
         /// <summary>
         /// >> DeliveryFeeFactor
-        ///  The number to multiply the base delivery fee by.
+        ///  The factor to multiply the base delivery fee by.
         /// </summary>
         Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedU128 GetDeliveryFeeFactor(string key);
     }
@@ -210,7 +210,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         
         /// <summary>
         /// >> DeliveryFeeFactor
-        ///  The number to multiply the base delivery fee by.
+        ///  The factor to multiply the base delivery fee by.
         /// </summary>
         public Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedU128 GetDeliveryFeeFactor(string key)
         {

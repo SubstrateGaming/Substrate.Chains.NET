@@ -37,9 +37,11 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         {
             this._client = client;
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Preimage", "StatusFor"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.Identity}, typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256), typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_preimage.EnumOldRequestStatus)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("Preimage", "RequestStatusFor"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.Identity}, typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256), typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_preimage.EnumRequestStatus)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Preimage", "PreimageFor"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.Identity}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Primitive.U32>), typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT36)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.Identity}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Primitive.U32>), typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT39)));
         }
         
         /// <summary>
@@ -66,10 +68,41 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> StatusFor
         ///  The request status of a given hash.
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_preimage.EnumRequestStatus> StatusFor(Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256 key, CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_preimage.EnumOldRequestStatus> StatusFor(Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256 key, string blockhash, CancellationToken token)
         {
             string parameters = PreimageStorage.StatusForParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_preimage.EnumRequestStatus>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_preimage.EnumOldRequestStatus>(parameters, blockhash, token);
+            return result;
+        }
+        
+        /// <summary>
+        /// >> RequestStatusForParams
+        ///  The request status of a given hash.
+        /// </summary>
+        public static string RequestStatusForParams(Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256 key)
+        {
+            return RequestGenerator.GetStorage("Preimage", "RequestStatusFor", Substrate.NetApi.Model.Meta.Storage.Type.Map, new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
+                        Substrate.NetApi.Model.Meta.Storage.Hasher.Identity}, new Substrate.NetApi.Model.Types.IType[] {
+                        key});
+        }
+        
+        /// <summary>
+        /// >> RequestStatusForDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string RequestStatusForDefault()
+        {
+            return "0x00";
+        }
+        
+        /// <summary>
+        /// >> RequestStatusFor
+        ///  The request status of a given hash.
+        /// </summary>
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_preimage.EnumRequestStatus> RequestStatusFor(Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256 key, string blockhash, CancellationToken token)
+        {
+            string parameters = PreimageStorage.RequestStatusForParams(key);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_preimage.EnumRequestStatus>(parameters, blockhash, token);
             return result;
         }
         
@@ -95,10 +128,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// <summary>
         /// >> PreimageFor
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT36> PreimageFor(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Primitive.U32> key, CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT39> PreimageFor(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Primitive.U32> key, string blockhash, CancellationToken token)
         {
             string parameters = PreimageStorage.PreimageForParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT36>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT39>(parameters, blockhash, token);
             return result;
         }
     }
@@ -152,6 +185,17 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
             byteArray.AddRange(hash.Encode());
             return new Method(32, "Preimage", 3, "unrequest_preimage", byteArray.ToArray());
         }
+        
+        /// <summary>
+        /// >> ensure_updated
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
+        /// </summary>
+        public static Method EnsureUpdated(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256> hashes)
+        {
+            System.Collections.Generic.List<byte> byteArray = new List<byte>();
+            byteArray.AddRange(hashes.Encode());
+            return new Method(32, "Preimage", 4, "ensure_updated", byteArray.ToArray());
+        }
     }
     
     /// <summary>
@@ -202,5 +246,17 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// The preimage request cannot be removed since no outstanding requests exist.
         /// </summary>
         NotRequested,
+        
+        /// <summary>
+        /// >> TooMany
+        /// More than `MAX_HASH_UPGRADE_BULK_COUNT` hashes were requested to be upgraded at once.
+        /// </summary>
+        TooMany,
+        
+        /// <summary>
+        /// >> TooFew
+        /// Too few hashes were requested to be upgraded (i.e. zero).
+        /// </summary>
+        TooFew,
     }
 }

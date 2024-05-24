@@ -58,7 +58,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_conviction_votin
     }
     
     /// <summary>
-    /// >> 133 - Variant[pallet_conviction_voting.conviction.Conviction]
+    /// >> 158 - Variant[pallet_conviction_voting.conviction.Conviction]
     /// </summary>
     public sealed class EnumConviction : BaseEnum<Conviction>
     {

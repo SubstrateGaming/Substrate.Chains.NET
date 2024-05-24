@@ -103,9 +103,9 @@ namespace Substrate.Polkadot.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("Babe.SegmentIndex");
       }
-      public async Task<BoundedVecT10> GetUnderConstruction(U32 key)
+      public async Task<BoundedVecT16> GetUnderConstruction(U32 key)
       {
-         return await SendRequestAsync<BoundedVecT10>(_httpClient, "babe/underconstruction", Substrate.Polkadot.NET.NetApiExt.Generated.Storage.BabeStorage.UnderConstructionParams(key));
+         return await SendRequestAsync<BoundedVecT16>(_httpClient, "babe/underconstruction", Substrate.Polkadot.NET.NetApiExt.Generated.Storage.BabeStorage.UnderConstructionParams(key));
       }
       public async Task<bool> SubscribeUnderConstruction(U32 key)
       {
@@ -159,9 +159,9 @@ namespace Substrate.Polkadot.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("Babe.NextEpochConfig");
       }
-      public async Task<BoundedVecT11> GetSkippedEpochs()
+      public async Task<BoundedVecT17> GetSkippedEpochs()
       {
-         return await SendRequestAsync<BoundedVecT11>(_httpClient, "babe/skippedepochs");
+         return await SendRequestAsync<BoundedVecT17>(_httpClient, "babe/skippedepochs");
       }
       public async Task<bool> SubscribeSkippedEpochs()
       {

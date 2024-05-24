@@ -168,7 +168,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Controller
         ///  TWOX-NOTE: `SegmentIndex` is an increasing integer, so this is okay.
         /// </summary>
         [HttpGet("UnderConstruction")]
-        [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9), 200)]
+        [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT13), 200)]
         [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.BabeStorage), "UnderConstructionParams", typeof(Substrate.NetApi.Model.Types.Primitive.U32))]
         public IActionResult GetUnderConstruction(string key)
         {
@@ -273,7 +273,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Controller
         ///  active epoch index was during that session.
         /// </summary>
         [HttpGet("SkippedEpochs")]
-        [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10), 200)]
+        [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT14), 200)]
         [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.BabeStorage), "SkippedEpochsParams")]
         public IActionResult GetSkippedEpochs()
         {

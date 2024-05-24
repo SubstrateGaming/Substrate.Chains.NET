@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_kusama_runtime
     
     
     /// <summary>
-    /// >> 109 - Composite[staging_kusama_runtime.SessionKeys]
+    /// >> 134 - Composite[staging_kusama_runtime.SessionKeys]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class SessionKeys : BaseType
@@ -33,17 +33,13 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_kusama_runtime
         /// </summary>
         public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_babe.app.Public Babe { get; set; }
         /// <summary>
-        /// >> im_online
-        /// </summary>
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_im_online.sr25519.app_sr25519.Public ImOnline { get; set; }
-        /// <summary>
         /// >> para_validator
         /// </summary>
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.validator_app.Public ParaValidator { get; set; }
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.validator_app.Public ParaValidator { get; set; }
         /// <summary>
         /// >> para_assignment
         /// </summary>
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.assignment_app.Public ParaAssignment { get; set; }
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.assignment_app.Public ParaAssignment { get; set; }
         /// <summary>
         /// >> authority_discovery
         /// </summary>
@@ -65,7 +61,6 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_kusama_runtime
             var result = new List<byte>();
             result.AddRange(Grandpa.Encode());
             result.AddRange(Babe.Encode());
-            result.AddRange(ImOnline.Encode());
             result.AddRange(ParaValidator.Encode());
             result.AddRange(ParaAssignment.Encode());
             result.AddRange(AuthorityDiscovery.Encode());
@@ -81,11 +76,9 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_kusama_runtime
             Grandpa.Decode(byteArray, ref p);
             Babe = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_babe.app.Public();
             Babe.Decode(byteArray, ref p);
-            ImOnline = new Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_im_online.sr25519.app_sr25519.Public();
-            ImOnline.Decode(byteArray, ref p);
-            ParaValidator = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.validator_app.Public();
+            ParaValidator = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.validator_app.Public();
             ParaValidator.Decode(byteArray, ref p);
-            ParaAssignment = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.assignment_app.Public();
+            ParaAssignment = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.assignment_app.Public();
             ParaAssignment.Decode(byteArray, ref p);
             AuthorityDiscovery = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_authority_discovery.app.Public();
             AuthorityDiscovery.Decode(byteArray, ref p);
@@ -94,7 +87,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_kusama_runtime
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];
-            System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
+            global::System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
         }
     }
 }

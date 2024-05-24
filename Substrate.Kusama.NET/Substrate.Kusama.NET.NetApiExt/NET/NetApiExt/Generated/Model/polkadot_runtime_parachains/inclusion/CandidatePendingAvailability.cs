@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parach
     
     
     /// <summary>
-    /// >> 780 - Composite[polkadot_runtime_parachains.inclusion.CandidatePendingAvailability]
+    /// >> 836 - Composite[polkadot_runtime_parachains.inclusion.CandidatePendingAvailability]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class CandidatePendingAvailability : BaseType
@@ -27,7 +27,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parach
         /// <summary>
         /// >> core
         /// </summary>
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.CoreIndex Core { get; set; }
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.CoreIndex Core { get; set; }
         /// <summary>
         /// >> hash
         /// </summary>
@@ -35,7 +35,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parach
         /// <summary>
         /// >> descriptor
         /// </summary>
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.CandidateDescriptor Descriptor { get; set; }
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.CandidateDescriptor Descriptor { get; set; }
         /// <summary>
         /// >> availability_votes
         /// </summary>
@@ -55,7 +55,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parach
         /// <summary>
         /// >> backing_group
         /// </summary>
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.GroupIndex BackingGroup { get; set; }
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.GroupIndex BackingGroup { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
@@ -82,11 +82,11 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parach
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Core = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.CoreIndex();
+            Core = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.CoreIndex();
             Core.Decode(byteArray, ref p);
             Hash = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_core_primitives.CandidateHash();
             Hash.Decode(byteArray, ref p);
-            Descriptor = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.CandidateDescriptor();
+            Descriptor = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.CandidateDescriptor();
             Descriptor.Decode(byteArray, ref p);
             AvailabilityVotes = new Substrate.NetApi.Model.Types.Base.BaseBitSeq<Substrate.NetApi.Model.Types.Primitive.U8, Substrate.Kusama.NET.NetApiExt.Generated.Model.bitvec.order.Lsb0>();
             AvailabilityVotes.Decode(byteArray, ref p);
@@ -96,12 +96,12 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parach
             RelayParentNumber.Decode(byteArray, ref p);
             BackedInNumber = new Substrate.NetApi.Model.Types.Primitive.U32();
             BackedInNumber.Decode(byteArray, ref p);
-            BackingGroup = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.GroupIndex();
+            BackingGroup = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.GroupIndex();
             BackingGroup.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];
-            System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
+            global::System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
         }
     }
 }

@@ -38,7 +38,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_staking.pallet
     }
     
     /// <summary>
-    /// >> 101 - Variant[pallet_staking.pallet.pallet.ConfigOp]
+    /// >> 134 - Variant[pallet_staking.pallet.pallet.ConfigOp]
     /// </summary>
     public sealed class EnumConfigOp : BaseEnumExt<ConfigOp, BaseVoid, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill, BaseVoid>
     {

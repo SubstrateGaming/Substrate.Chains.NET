@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_bags_list.list
     
     
     /// <summary>
-    /// >> 743 - Composite[pallet_bags_list.list.Node]
+    /// >> 799 - Composite[pallet_bags_list.list.Node]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Node : BaseType
@@ -80,7 +80,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_bags_list.list
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];
-            System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
+            global::System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
         }
     }
 }

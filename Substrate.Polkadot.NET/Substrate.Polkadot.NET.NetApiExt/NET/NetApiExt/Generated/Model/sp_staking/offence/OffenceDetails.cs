@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_staking.offence
     
     
     /// <summary>
-    /// >> 537 - Composite[sp_staking.offence.OffenceDetails]
+    /// >> 610 - Composite[sp_staking.offence.OffenceDetails]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class OffenceDetails : BaseType
@@ -27,7 +27,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_staking.offence
         /// <summary>
         /// >> offender
         /// </summary>
-        public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_staking.Exposure> Offender { get; set; }
+        public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_staking.Exposure> Offender { get; set; }
         /// <summary>
         /// >> reporters
         /// </summary>
@@ -52,14 +52,14 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_staking.offence
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Offender = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_staking.Exposure>();
+            Offender = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_staking.Exposure>();
             Offender.Decode(byteArray, ref p);
             Reporters = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>();
             Reporters.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];
-            System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
+            global::System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
         }
     }
 }

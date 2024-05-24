@@ -36,9 +36,9 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         public BeefyStorage(SubstrateClientExt client)
         {
             this._client = client;
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("Beefy", "Authorities"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("Beefy", "Authorities"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT54)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Beefy", "ValidatorSetId"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Primitive.U64)));
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("Beefy", "NextAuthorities"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("Beefy", "NextAuthorities"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT54)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Beefy", "SetIdSession"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.NetApi.Model.Types.Primitive.U64), typeof(Substrate.NetApi.Model.Types.Primitive.U32)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Beefy", "GenesisBlock"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32>)));
@@ -66,10 +66,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> Authorities
         ///  The current authorities set
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17> Authorities(CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT54> Authorities(string blockhash, CancellationToken token)
         {
             string parameters = BeefyStorage.AuthoritiesParams();
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT54>(parameters, blockhash, token);
             return result;
         }
         
@@ -95,10 +95,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> ValidatorSetId
         ///  The current validator set id
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U64> ValidatorSetId(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U64> ValidatorSetId(string blockhash, CancellationToken token)
         {
             string parameters = BeefyStorage.ValidatorSetIdParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U64>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U64>(parameters, blockhash, token);
             return result;
         }
         
@@ -124,10 +124,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> NextAuthorities
         ///  Authorities set scheduled to be used with the next session
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17> NextAuthorities(CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT54> NextAuthorities(string blockhash, CancellationToken token)
         {
             string parameters = BeefyStorage.NextAuthoritiesParams();
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT54>(parameters, blockhash, token);
             return result;
         }
         
@@ -173,18 +173,18 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// 
         ///  TWOX-NOTE: `ValidatorSetId` is not under user control.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> SetIdSession(Substrate.NetApi.Model.Types.Primitive.U64 key, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> SetIdSession(Substrate.NetApi.Model.Types.Primitive.U64 key, string blockhash, CancellationToken token)
         {
             string parameters = BeefyStorage.SetIdSessionParams(key);
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, blockhash, token);
             return result;
         }
         
         /// <summary>
         /// >> GenesisBlockParams
         ///  Block number where BEEFY consensus is enabled/started.
-        ///  By changing this (through governance or sudo), BEEFY consensus is effectively
-        ///  restarted from the new block number.
+        ///  By changing this (through privileged `set_new_genesis()`), BEEFY consensus is effectively
+        ///  restarted from the newly set block number.
         /// </summary>
         public static string GenesisBlockParams()
         {
@@ -203,13 +203,13 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// <summary>
         /// >> GenesisBlock
         ///  Block number where BEEFY consensus is enabled/started.
-        ///  By changing this (through governance or sudo), BEEFY consensus is effectively
-        ///  restarted from the new block number.
+        ///  By changing this (through privileged `set_new_genesis()`), BEEFY consensus is effectively
+        ///  restarted from the newly set block number.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32>> GenesisBlock(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32>> GenesisBlock(string blockhash, CancellationToken token)
         {
             string parameters = BeefyStorage.GenesisBlockParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32>>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32>>(parameters, blockhash, token);
             return result;
         }
     }
@@ -242,6 +242,17 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
             byteArray.AddRange(equivocation_proof.Encode());
             byteArray.AddRange(key_owner_proof.Encode());
             return new Method(200, "Beefy", 1, "report_equivocation_unsigned", byteArray.ToArray());
+        }
+        
+        /// <summary>
+        /// >> set_new_genesis
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
+        /// </summary>
+        public static Method SetNewGenesis(Substrate.NetApi.Model.Types.Primitive.U32 delay_in_blocks)
+        {
+            System.Collections.Generic.List<byte> byteArray = new List<byte>();
+            byteArray.AddRange(delay_in_blocks.Encode());
+            return new Method(200, "Beefy", 2, "set_new_genesis", byteArray.ToArray());
         }
     }
     
@@ -313,5 +324,11 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// A given equivocation report is valid but already previously reported.
         /// </summary>
         DuplicateOffenceReport,
+        
+        /// <summary>
+        /// >> InvalidConfiguration
+        /// Submitted configuration is invalid.
+        /// </summary>
+        InvalidConfiguration,
     }
 }

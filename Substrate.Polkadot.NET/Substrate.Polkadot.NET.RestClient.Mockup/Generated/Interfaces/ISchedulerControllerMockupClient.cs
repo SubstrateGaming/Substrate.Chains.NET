@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup.Generated.Interfaces
    public interface ISchedulerControllerMockupClient
    {
       Task<bool> SetIncompleteSince(U32 value);
-      Task<bool> SetAgenda(BoundedVecT8 value, U32 key);
+      Task<bool> SetAgenda(BoundedVecT14 value, U32 key);
       Task<bool> SetLookup(BaseTuple<U32, U32> value, Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base.Arr32U8 key);
    }
 }

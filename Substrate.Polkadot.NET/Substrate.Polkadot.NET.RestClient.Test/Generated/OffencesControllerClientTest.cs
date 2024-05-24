@@ -31,7 +31,7 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
       {
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_staking.offence.OffenceDetails result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_staking.offence.OffenceDetails();
-         result.Offender = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_staking.Exposure>();
+         result.Offender = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_staking.Exposure>();
          result.Offender.Create(this.GetTestValue3(), this.GetTestValue4());
          result.Reporters = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>();
          result.Reporters.Create(new Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32[] {
@@ -43,26 +43,58 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32();
          result.Value = new Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base.Arr32U8();
-         throw new System.InvalidOperationException("Generator could not deduct array initializer element type!");
+         result.Value.Create(new Substrate.NetApi.Model.Types.Primitive.U8[] {
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8()});
          return result;
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_staking.Exposure GetTestValue4()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_staking.Exposure GetTestValue4()
       {
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_staking.Exposure result;
-         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_staking.Exposure();
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_staking.Exposure result;
+         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_staking.Exposure();
          result.Total = new Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128>();
          result.Total.Create(new Substrate.NetApi.CompactInteger(this.GetTestValueU128().Value));
          result.Own = new Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128>();
          result.Own.Create(new Substrate.NetApi.CompactInteger(this.GetTestValueU128().Value));
-         result.Others = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_staking.IndividualExposure>();
-         result.Others.Create(new Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_staking.IndividualExposure[] {
+         result.Others = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_staking.IndividualExposure>();
+         result.Others.Create(new Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_staking.IndividualExposure[] {
                   this.GetTestValue5()});
          return result;
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_staking.IndividualExposure GetTestValue5()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_staking.IndividualExposure GetTestValue5()
       {
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_staking.IndividualExposure result;
-         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_staking.IndividualExposure();
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_staking.IndividualExposure result;
+         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_staking.IndividualExposure();
          result.Who = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32();
          result.Who = this.GetTestValue6();
          result.Value = new Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128>();
@@ -74,7 +106,39 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32();
          result.Value = new Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base.Arr32U8();
-         throw new System.InvalidOperationException("Generator could not deduct array initializer element type!");
+         result.Value.Create(new Substrate.NetApi.Model.Types.Primitive.U8[] {
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8()});
          return result;
       }
       public Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue7()
@@ -82,7 +146,39 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32();
          result.Value = new Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base.Arr32U8();
-         throw new System.InvalidOperationException("Generator could not deduct array initializer element type!");
+         result.Value.Create(new Substrate.NetApi.Model.Types.Primitive.U8[] {
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8()});
          return result;
       }
       public Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256 GetTestValue8()
@@ -90,7 +186,39 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256 result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256();
          result.Value = new Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base.Arr32U8();
-         throw new System.InvalidOperationException("Generator could not deduct array initializer element type!");
+         result.Value.Create(new Substrate.NetApi.Model.Types.Primitive.U8[] {
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8()});
          return result;
       }
       [Test()]
@@ -135,7 +263,39 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256 result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256();
          result.Value = new Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base.Arr32U8();
-         throw new System.InvalidOperationException("Generator could not deduct array initializer element type!");
+         result.Value.Create(new Substrate.NetApi.Model.Types.Primitive.U8[] {
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8()});
          return result;
       }
       public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base.Arr16U8, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>> GetTestValue12()
@@ -149,7 +309,23 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
       {
          Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base.Arr16U8 result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base.Arr16U8();
-         throw new System.InvalidOperationException("Generator could not deduct array initializer element type!");
+         result.Create(new Substrate.NetApi.Model.Types.Primitive.U8[] {
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8()});
          return result;
       }
       public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> GetTestValue14()

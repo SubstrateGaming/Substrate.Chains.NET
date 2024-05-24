@@ -43,7 +43,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_staking
     }
     
     /// <summary>
-    /// >> 45 - Variant[pallet_staking.Forcing]
+    /// >> 46 - Variant[pallet_staking.Forcing]
     /// </summary>
     public sealed class EnumForcing : BaseEnum<Forcing>
     {

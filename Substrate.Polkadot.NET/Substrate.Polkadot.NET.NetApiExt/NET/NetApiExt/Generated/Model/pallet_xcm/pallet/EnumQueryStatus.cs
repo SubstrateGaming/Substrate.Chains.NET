@@ -38,9 +38,9 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_xcm.pallet
     }
     
     /// <summary>
-    /// >> 745 - Variant[pallet_xcm.pallet.QueryStatus]
+    /// >> 821 - Variant[pallet_xcm.pallet.QueryStatus]
     /// </summary>
-    public sealed class EnumQueryStatus : BaseEnumExt<QueryStatus, BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation>, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U8, Substrate.NetApi.Model.Types.Primitive.U8>>, Substrate.NetApi.Model.Types.Primitive.U32>, BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation, Substrate.NetApi.Model.Types.Primitive.Bool>, BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.EnumVersionedResponse, Substrate.NetApi.Model.Types.Primitive.U32>>
+    public sealed class EnumQueryStatus : BaseEnumExt<QueryStatus, BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation>, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U8, Substrate.NetApi.Model.Types.Primitive.U8>>, Substrate.NetApi.Model.Types.Primitive.U32>, BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation, Substrate.NetApi.Model.Types.Primitive.Bool>, BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.EnumVersionedResponse, Substrate.NetApi.Model.Types.Primitive.U32>>
     {
     }
 }

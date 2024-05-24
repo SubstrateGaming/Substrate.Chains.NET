@@ -66,10 +66,10 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         /// >> AuctionCounter
         ///  Number of auctions started so far.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> AuctionCounter(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> AuctionCounter(string blockhash, CancellationToken token)
         {
             string parameters = AuctionsStorage.AuctionCounterParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, blockhash, token);
             return result;
         }
         
@@ -103,10 +103,10 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         ///  contiguous lease periods on auction is for. The second is the block number when the
         ///  auction will "begin to end", i.e. the first block of the Ending Period of the auction.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>> AuctionInfo(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>> AuctionInfo(string blockhash, CancellationToken token)
         {
             string parameters = AuctionsStorage.AuctionInfoParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>>(parameters, blockhash, token);
             return result;
         }
         
@@ -136,10 +136,10 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         ///  Amounts currently reserved in the accounts of the bidders currently winning
         ///  (sub-)ranges.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U128> ReservedAmounts(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id> key, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U128> ReservedAmounts(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id> key, string blockhash, CancellationToken token)
         {
             string parameters = AuctionsStorage.ReservedAmountsParams(key);
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U128>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U128>(parameters, blockhash, token);
             return result;
         }
         
@@ -171,10 +171,10 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         ///  the current auction. The map's key is the 0-based index into the Sample Size. The
         ///  first sample of the ending period is 0; the last is `Sample Size - 1`.
         /// </summary>
-        public async Task<Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base.Arr36BaseOpt> Winning(Substrate.NetApi.Model.Types.Primitive.U32 key, CancellationToken token)
+        public async Task<Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base.Arr36BaseOpt> Winning(Substrate.NetApi.Model.Types.Primitive.U32 key, string blockhash, CancellationToken token)
         {
             string parameters = AuctionsStorage.WinningParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base.Arr36BaseOpt>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base.Arr36BaseOpt>(parameters, blockhash, token);
             return result;
         }
     }

@@ -142,6 +142,9 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Controller
         /// <summary>
         /// >> Ledger
         ///  Map from all (unlocked) "controller" accounts to the info regarding the staking.
+        /// 
+        ///  Note: All the reads and mutations to this storage *MUST* be done through the methods exposed
+        ///  by [`StakingLedger`] to ensure data and lock consistency.
         /// </summary>
         [HttpGet("Ledger")]
         [ProducesResponseType(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_staking.StakingLedger), 200)]
@@ -293,7 +296,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Controller
         
         /// <summary>
         /// >> ErasStartSessionIndex
-        ///  The session index at which the era start for the last `HISTORY_DEPTH` eras.
+        ///  The session index at which the era start for the last [`Config::HistoryDepth`] eras.
         /// 
         ///  Note: This tracks the starting session (i.e. session index when era start being active)
         ///  for the eras in `[CurrentEra - HISTORY_DEPTH, CurrentEra]`.
@@ -312,11 +315,13 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Controller
         /// 
         ///  This is keyed first by the era index to allow bulk deletion and then the stash account.
         /// 
-        ///  Is it removed after `HISTORY_DEPTH` eras.
+        ///  Is it removed after [`Config::HistoryDepth`] eras.
         ///  If stakers hasn't been set or has been removed then empty exposure is returned.
+        /// 
+        ///  Note: Deprecated since v14. Use `EraInfo` instead to work with exposures.
         /// </summary>
         [HttpGet("ErasStakers")]
-        [ProducesResponseType(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_staking.Exposure), 200)]
+        [ProducesResponseType(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_staking.Exposure), 200)]
         [StorageKeyBuilder(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Storage.StakingStorage), "ErasStakersParams", typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>))]
         public IActionResult GetErasStakers(string key)
         {
@@ -324,25 +329,87 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Controller
         }
         
         /// <summary>
+        /// >> ErasStakersOverview
+        ///  Summary of validator exposure at a given era.
+        /// 
+        ///  This contains the total stake in support of the validator and their own stake. In addition,
+        ///  it can also be used to get the number of nominators backing this validator and the number of
+        ///  exposure pages they are divided into. The page count is useful to determine the number of
+        ///  pages of rewards that needs to be claimed.
+        /// 
+        ///  This is keyed first by the era index to allow bulk deletion and then the stash account.
+        ///  Should only be accessed through `EraInfo`.
+        /// 
+        ///  Is it removed after [`Config::HistoryDepth`] eras.
+        ///  If stakers hasn't been set or has been removed then empty overview is returned.
+        /// </summary>
+        [HttpGet("ErasStakersOverview")]
+        [ProducesResponseType(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_staking.PagedExposureMetadata), 200)]
+        [StorageKeyBuilder(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Storage.StakingStorage), "ErasStakersOverviewParams", typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>))]
+        public IActionResult GetErasStakersOverview(string key)
+        {
+            return this.Ok(_stakingStorage.GetErasStakersOverview(key));
+        }
+        
+        /// <summary>
         /// >> ErasStakersClipped
         ///  Clipped Exposure of validator at era.
         /// 
+        ///  Note: This is deprecated, should be used as read-only and will be removed in the future.
+        ///  New `Exposure`s are stored in a paged manner in `ErasStakersPaged` instead.
+        /// 
         ///  This is similar to [`ErasStakers`] but number of nominators exposed is reduced to the
-        ///  `T::MaxNominatorRewardedPerValidator` biggest stakers.
+        ///  `T::MaxExposurePageSize` biggest stakers.
         ///  (Note: the field `total` and `own` of the exposure remains unchanged).
         ///  This is used to limit the i/o cost for the nominator payout.
         /// 
         ///  This is keyed fist by the era index to allow bulk deletion and then the stash account.
         /// 
-        ///  Is it removed after `HISTORY_DEPTH` eras.
+        ///  It is removed after [`Config::HistoryDepth`] eras.
         ///  If stakers hasn't been set or has been removed then empty exposure is returned.
+        /// 
+        ///  Note: Deprecated since v14. Use `EraInfo` instead to work with exposures.
         /// </summary>
         [HttpGet("ErasStakersClipped")]
-        [ProducesResponseType(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_staking.Exposure), 200)]
+        [ProducesResponseType(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_staking.Exposure), 200)]
         [StorageKeyBuilder(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Storage.StakingStorage), "ErasStakersClippedParams", typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>))]
         public IActionResult GetErasStakersClipped(string key)
         {
             return this.Ok(_stakingStorage.GetErasStakersClipped(key));
+        }
+        
+        /// <summary>
+        /// >> ErasStakersPaged
+        ///  Paginated exposure of a validator at given era.
+        /// 
+        ///  This is keyed first by the era index to allow bulk deletion, then stash account and finally
+        ///  the page. Should only be accessed through `EraInfo`.
+        /// 
+        ///  This is cleared after [`Config::HistoryDepth`] eras.
+        /// </summary>
+        [HttpGet("ErasStakersPaged")]
+        [ProducesResponseType(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_staking.ExposurePage), 200)]
+        [StorageKeyBuilder(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Storage.StakingStorage), "ErasStakersPagedParams", typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U32>))]
+        public IActionResult GetErasStakersPaged(string key)
+        {
+            return this.Ok(_stakingStorage.GetErasStakersPaged(key));
+        }
+        
+        /// <summary>
+        /// >> ClaimedRewards
+        ///  History of claimed paged rewards by era and validator.
+        /// 
+        ///  This is keyed by era and validator stash which maps to the set of page indexes which have
+        ///  been claimed.
+        /// 
+        ///  It is removed after [`Config::HistoryDepth`] eras.
+        /// </summary>
+        [HttpGet("ClaimedRewards")]
+        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U32>), 200)]
+        [StorageKeyBuilder(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Storage.StakingStorage), "ClaimedRewardsParams", typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>))]
+        public IActionResult GetClaimedRewards(string key)
+        {
+            return this.Ok(_stakingStorage.GetClaimedRewards(key));
         }
         
         /// <summary>
@@ -351,7 +418,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Controller
         /// 
         ///  This is keyed first by the era index to allow bulk deletion and then the stash account.
         /// 
-        ///  Is it removed after `HISTORY_DEPTH` eras.
+        ///  Is it removed after [`Config::HistoryDepth`] eras.
         /// </summary>
         [HttpGet("ErasValidatorPrefs")]
         [ProducesResponseType(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_staking.ValidatorPrefs), 200)]
@@ -363,7 +430,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Controller
         
         /// <summary>
         /// >> ErasValidatorReward
-        ///  The total validator era payout for the last `HISTORY_DEPTH` eras.
+        ///  The total validator era payout for the last [`Config::HistoryDepth`] eras.
         /// 
         ///  Eras that haven't finished yet or has been removed doesn't have reward.
         /// </summary>
@@ -377,7 +444,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Controller
         
         /// <summary>
         /// >> ErasRewardPoints
-        ///  Rewards for the last `HISTORY_DEPTH` eras.
+        ///  Rewards for the last [`Config::HistoryDepth`] eras.
         ///  If reward hasn't been set or has been removed then 0 reward is returned.
         /// </summary>
         [HttpGet("ErasRewardPoints")]
@@ -390,7 +457,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Controller
         
         /// <summary>
         /// >> ErasTotalStake
-        ///  The total amount staked for the last `HISTORY_DEPTH` eras.
+        ///  The total amount staked for the last [`Config::HistoryDepth`] eras.
         ///  If total hasn't been set or has been removed then 0 stake is returned.
         /// </summary>
         [HttpGet("ErasTotalStake")]

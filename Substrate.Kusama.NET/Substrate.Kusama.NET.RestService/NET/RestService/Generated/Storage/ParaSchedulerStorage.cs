@@ -34,7 +34,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         ///  multiplexers. Reasonably, 100-1000. The dominant factor is the number of validators: safe
         ///  upper bound at 10k.
         /// </summary>
-        Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.ValidatorIndex>> GetValidatorGroups();
+        Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.ValidatorIndex>> GetValidatorGroups();
         
         /// <summary>
         /// >> AvailabilityCores
@@ -47,7 +47,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         ///    * The number of parachains and parathread multiplexers
         ///    * The number of validators divided by `configuration.max_validators_per_core`.
         /// </summary>
-        Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.EnumCoreOccupied> GetAvailabilityCores();
+        Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.scheduler.pallet.EnumCoreOccupied> GetAvailabilityCores();
         
         /// <summary>
         /// >> SessionStartBlock
@@ -81,12 +81,12 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// <summary>
         /// _validatorGroupsTypedStorage typed storage field
         /// </summary>
-        private TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.ValidatorIndex>>> _validatorGroupsTypedStorage;
+        private TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.ValidatorIndex>>> _validatorGroupsTypedStorage;
         
         /// <summary>
         /// _availabilityCoresTypedStorage typed storage field
         /// </summary>
-        private TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.EnumCoreOccupied>> _availabilityCoresTypedStorage;
+        private TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.scheduler.pallet.EnumCoreOccupied>> _availabilityCoresTypedStorage;
         
         /// <summary>
         /// _sessionStartBlockTypedStorage typed storage field
@@ -103,8 +103,8 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// </summary>
         public ParaSchedulerStorage(IStorageDataProvider storageDataProvider, List<IStorageChangeDelegate> storageChangeDelegates)
         {
-            this.ValidatorGroupsTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.ValidatorIndex>>>("ParaScheduler.ValidatorGroups", storageDataProvider, storageChangeDelegates);
-            this.AvailabilityCoresTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.EnumCoreOccupied>>("ParaScheduler.AvailabilityCores", storageDataProvider, storageChangeDelegates);
+            this.ValidatorGroupsTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.ValidatorIndex>>>("ParaScheduler.ValidatorGroups", storageDataProvider, storageChangeDelegates);
+            this.AvailabilityCoresTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.scheduler.pallet.EnumCoreOccupied>>("ParaScheduler.AvailabilityCores", storageDataProvider, storageChangeDelegates);
             this.SessionStartBlockTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32>("ParaScheduler.SessionStartBlock", storageDataProvider, storageChangeDelegates);
             this.ClaimQueueTypedStorage = new TypedStorage<Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.BTreeMapT4>("ParaScheduler.ClaimQueue", storageDataProvider, storageChangeDelegates);
         }
@@ -112,7 +112,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// <summary>
         /// _validatorGroupsTypedStorage property
         /// </summary>
-        public TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.ValidatorIndex>>> ValidatorGroupsTypedStorage
+        public TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.ValidatorIndex>>> ValidatorGroupsTypedStorage
         {
             get
             {
@@ -127,7 +127,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// <summary>
         /// _availabilityCoresTypedStorage property
         /// </summary>
-        public TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.EnumCoreOccupied>> AvailabilityCoresTypedStorage
+        public TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.scheduler.pallet.EnumCoreOccupied>> AvailabilityCoresTypedStorage
         {
             get
             {
@@ -199,7 +199,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         ///  multiplexers. Reasonably, 100-1000. The dominant factor is the number of validators: safe
         ///  upper bound at 10k.
         /// </summary>
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.ValidatorIndex>> GetValidatorGroups()
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.ValidatorIndex>> GetValidatorGroups()
         {
             return ValidatorGroupsTypedStorage.Get();
         }
@@ -224,7 +224,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         ///    * The number of parachains and parathread multiplexers
         ///    * The number of validators divided by `configuration.max_validators_per_core`.
         /// </summary>
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.EnumCoreOccupied> GetAvailabilityCores()
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.scheduler.pallet.EnumCoreOccupied> GetAvailabilityCores()
         {
             return AvailabilityCoresTypedStorage.Get();
         }

@@ -33,7 +33,7 @@ namespace Substrate.Polkadot.NET.RestClient.Generated.Interfaces
       Task<bool> SubscribeSnapshotMetadata();
       Task<U32> GetSignedSubmissionNextIndex();
       Task<bool> SubscribeSignedSubmissionNextIndex();
-      Task<BoundedVecT31> GetSignedSubmissionIndices();
+      Task<BoundedVecT37> GetSignedSubmissionIndices();
       Task<bool> SubscribeSignedSubmissionIndices();
       Task<SignedSubmission> GetSignedSubmissionsMap(U32 key);
       Task<bool> SubscribeSignedSubmissionsMap(U32 key);

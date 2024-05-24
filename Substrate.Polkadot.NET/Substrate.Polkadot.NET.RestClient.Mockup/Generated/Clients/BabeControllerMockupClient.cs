@@ -65,7 +65,7 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "Babe/SegmentIndex", value.Encode(), Substrate.Polkadot.NET.NetApiExt.Generated.Storage.BabeStorage.SegmentIndexParams());
       }
-      public async Task<bool> SetUnderConstruction(BoundedVecT10 value, U32 key)
+      public async Task<bool> SetUnderConstruction(BoundedVecT16 value, U32 key)
       {
          return await SendMockupRequestAsync(_httpClient, "Babe/UnderConstruction", value.Encode(), Substrate.Polkadot.NET.NetApiExt.Generated.Storage.BabeStorage.UnderConstructionParams(key));
       }
@@ -93,7 +93,7 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "Babe/NextEpochConfig", value.Encode(), Substrate.Polkadot.NET.NetApiExt.Generated.Storage.BabeStorage.NextEpochConfigParams());
       }
-      public async Task<bool> SetSkippedEpochs(BoundedVecT11 value)
+      public async Task<bool> SetSkippedEpochs(BoundedVecT17 value)
       {
          return await SendMockupRequestAsync(_httpClient, "Babe/SkippedEpochs", value.Encode(), Substrate.Polkadot.NET.NetApiExt.Generated.Storage.BabeStorage.SkippedEpochsParams());
       }

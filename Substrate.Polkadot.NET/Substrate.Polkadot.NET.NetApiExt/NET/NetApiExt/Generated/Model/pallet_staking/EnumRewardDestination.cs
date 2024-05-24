@@ -48,7 +48,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_staking
     }
     
     /// <summary>
-    /// >> 94 - Variant[pallet_staking.RewardDestination]
+    /// >> 42 - Variant[pallet_staking.RewardDestination]
     /// </summary>
     public sealed class EnumRewardDestination : BaseEnumExt<RewardDestination, BaseVoid, BaseVoid, BaseVoid, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, BaseVoid>
     {

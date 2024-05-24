@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.v3
     
     
     /// <summary>
-    /// >> 392 - Composite[xcm.v3.PalletInfo]
+    /// >> 422 - Composite[xcm.v3.PalletInfo]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class PalletInfo : BaseType
@@ -31,11 +31,11 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.v3
         /// <summary>
         /// >> name
         /// </summary>
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT5 Name { get; set; }
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9 Name { get; set; }
         /// <summary>
         /// >> module_name
         /// </summary>
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT5 ModuleName { get; set; }
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9 ModuleName { get; set; }
         /// <summary>
         /// >> major
         /// </summary>
@@ -74,9 +74,9 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.v3
             var start = p;
             Index = new Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>();
             Index.Decode(byteArray, ref p);
-            Name = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT5();
+            Name = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9();
             Name.Decode(byteArray, ref p);
-            ModuleName = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT5();
+            ModuleName = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9();
             ModuleName.Decode(byteArray, ref p);
             Major = new Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>();
             Major.Decode(byteArray, ref p);
@@ -87,7 +87,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.v3
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];
-            System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
+            global::System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
         }
     }
 }

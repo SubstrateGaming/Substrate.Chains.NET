@@ -28,7 +28,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// >> Vesting
         ///  Information regarding the vesting of a given account.
         /// </summary>
-        Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT22 GetVesting(string key);
+        Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT27 GetVesting(string key);
         
         /// <summary>
         /// >> StorageVersion
@@ -48,7 +48,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// <summary>
         /// _vestingTypedStorage typed storage field
         /// </summary>
-        private TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT22> _vestingTypedStorage;
+        private TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT27> _vestingTypedStorage;
         
         /// <summary>
         /// _storageVersionTypedStorage typed storage field
@@ -60,14 +60,14 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// </summary>
         public VestingStorage(IStorageDataProvider storageDataProvider, List<IStorageChangeDelegate> storageChangeDelegates)
         {
-            this.VestingTypedStorage = new TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT22>("Vesting.Vesting", storageDataProvider, storageChangeDelegates);
+            this.VestingTypedStorage = new TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT27>("Vesting.Vesting", storageDataProvider, storageChangeDelegates);
             this.StorageVersionTypedStorage = new TypedStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_vesting.EnumReleases>("Vesting.StorageVersion", storageDataProvider, storageChangeDelegates);
         }
         
         /// <summary>
         /// _vestingTypedStorage property
         /// </summary>
-        public TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT22> VestingTypedStorage
+        public TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT27> VestingTypedStorage
         {
             get
             {
@@ -116,13 +116,13 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// >> Vesting
         ///  Information regarding the vesting of a given account.
         /// </summary>
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT22 GetVesting(string key)
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT27 GetVesting(string key)
         {
             if ((key == null))
             {
                 return null;
             }
-            if (VestingTypedStorage.Dictionary.TryGetValue(key, out Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT22 result))
+            if (VestingTypedStorage.Dictionary.TryGetValue(key, out Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT27 result))
             {
                 return result;
             }

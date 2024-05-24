@@ -30,7 +30,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_bags_list.pall
     }
     
     /// <summary>
-    /// >> 639 - Variant[pallet_bags_list.pallet.Error]
+    /// >> 716 - Variant[pallet_bags_list.pallet.Error]
     /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnumExt<Error, Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_bags_list.list.EnumListError>

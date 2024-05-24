@@ -54,6 +54,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         ///  Snapshot data of the round.
         /// 
         ///  This is created at the beginning of the signed phase and cleared upon calling `elect`.
+        ///  Note: This storage type must only be mutated through [`SnapshotWrapper`].
         /// </summary>
         Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_election_provider_multi_phase.RoundSnapshot GetSnapshot();
         
@@ -62,6 +63,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         ///  Desired number of targets to elect for this round.
         /// 
         ///  Only exists when [`Snapshot`] is present.
+        ///  Note: This storage type must only be mutated through [`SnapshotWrapper`].
         /// </summary>
         Substrate.NetApi.Model.Types.Primitive.U32 GetDesiredTargets();
         
@@ -70,6 +72,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         ///  The metadata of the [`RoundSnapshot`]
         /// 
         ///  Only exists when [`Snapshot`] is present.
+        ///  Note: This storage type must only be mutated through [`SnapshotWrapper`].
         /// </summary>
         Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_election_provider_multi_phase.SolutionOrSnapshotSize GetSnapshotMetadata();
         
@@ -96,7 +99,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         ///  can be quite large, so we're willing to pay the cost of multiple database accesses to access
         ///  them one at a time instead of reading and decoding all of them at once.
         /// </summary>
-        Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT31 GetSignedSubmissionIndices();
+        Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT37 GetSignedSubmissionIndices();
         
         /// <summary>
         /// >> SignedSubmissionsMap
@@ -164,7 +167,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// <summary>
         /// _signedSubmissionIndicesTypedStorage typed storage field
         /// </summary>
-        private TypedStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT31> _signedSubmissionIndicesTypedStorage;
+        private TypedStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT37> _signedSubmissionIndicesTypedStorage;
         
         /// <summary>
         /// _signedSubmissionsMapTypedStorage typed storage field
@@ -188,7 +191,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
             this.DesiredTargetsTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32>("ElectionProviderMultiPhase.DesiredTargets", storageDataProvider, storageChangeDelegates);
             this.SnapshotMetadataTypedStorage = new TypedStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_election_provider_multi_phase.SolutionOrSnapshotSize>("ElectionProviderMultiPhase.SnapshotMetadata", storageDataProvider, storageChangeDelegates);
             this.SignedSubmissionNextIndexTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32>("ElectionProviderMultiPhase.SignedSubmissionNextIndex", storageDataProvider, storageChangeDelegates);
-            this.SignedSubmissionIndicesTypedStorage = new TypedStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT31>("ElectionProviderMultiPhase.SignedSubmissionIndices", storageDataProvider, storageChangeDelegates);
+            this.SignedSubmissionIndicesTypedStorage = new TypedStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT37>("ElectionProviderMultiPhase.SignedSubmissionIndices", storageDataProvider, storageChangeDelegates);
             this.SignedSubmissionsMapTypedStorage = new TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_election_provider_multi_phase.signed.SignedSubmission>("ElectionProviderMultiPhase.SignedSubmissionsMap", storageDataProvider, storageChangeDelegates);
             this.MinimumUntrustedScoreTypedStorage = new TypedStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_npos_elections.ElectionScore>("ElectionProviderMultiPhase.MinimumUntrustedScore", storageDataProvider, storageChangeDelegates);
         }
@@ -301,7 +304,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// <summary>
         /// _signedSubmissionIndicesTypedStorage property
         /// </summary>
-        public TypedStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT31> SignedSubmissionIndicesTypedStorage
+        public TypedStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT37> SignedSubmissionIndicesTypedStorage
         {
             get
             {
@@ -435,6 +438,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         ///  Snapshot data of the round.
         /// 
         ///  This is created at the beginning of the signed phase and cleared upon calling `elect`.
+        ///  Note: This storage type must only be mutated through [`SnapshotWrapper`].
         /// </summary>
         public Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_election_provider_multi_phase.RoundSnapshot GetSnapshot()
         {
@@ -455,6 +459,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         ///  Desired number of targets to elect for this round.
         /// 
         ///  Only exists when [`Snapshot`] is present.
+        ///  Note: This storage type must only be mutated through [`SnapshotWrapper`].
         /// </summary>
         public Substrate.NetApi.Model.Types.Primitive.U32 GetDesiredTargets()
         {
@@ -475,6 +480,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         ///  The metadata of the [`RoundSnapshot`]
         /// 
         ///  Only exists when [`Snapshot`] is present.
+        ///  Note: This storage type must only be mutated through [`SnapshotWrapper`].
         /// </summary>
         public Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_election_provider_multi_phase.SolutionOrSnapshotSize GetSnapshotMetadata()
         {
@@ -525,7 +531,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         ///  can be quite large, so we're willing to pay the cost of multiple database accesses to access
         ///  them one at a time instead of reading and decoding all of them at once.
         /// </summary>
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT31 GetSignedSubmissionIndices()
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT37 GetSignedSubmissionIndices()
         {
             return SignedSubmissionIndicesTypedStorage.Get();
         }

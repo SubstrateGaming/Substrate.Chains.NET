@@ -23,11 +23,15 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup.Generated.Clients
       {
          _httpClient = httpClient;
       }
-      public async Task<bool> SetStatusFor(EnumRequestStatus value, Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256 key)
+      public async Task<bool> SetStatusFor(EnumOldRequestStatus value, Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256 key)
       {
          return await SendMockupRequestAsync(_httpClient, "Preimage/StatusFor", value.Encode(), Substrate.Polkadot.NET.NetApiExt.Generated.Storage.PreimageStorage.StatusForParams(key));
       }
-      public async Task<bool> SetPreimageFor(BoundedVecT9 value, Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Primitive.U32> key)
+      public async Task<bool> SetRequestStatusFor(EnumRequestStatus value, Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256 key)
+      {
+         return await SendMockupRequestAsync(_httpClient, "Preimage/RequestStatusFor", value.Encode(), Substrate.Polkadot.NET.NetApiExt.Generated.Storage.PreimageStorage.RequestStatusForParams(key));
+      }
+      public async Task<bool> SetPreimageFor(BoundedVecT15 value, Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Primitive.U32> key)
       {
          return await SendMockupRequestAsync(_httpClient, "Preimage/PreimageFor", value.Encode(), Substrate.Polkadot.NET.NetApiExt.Generated.Storage.PreimageStorage.PreimageForParams(key));
       }

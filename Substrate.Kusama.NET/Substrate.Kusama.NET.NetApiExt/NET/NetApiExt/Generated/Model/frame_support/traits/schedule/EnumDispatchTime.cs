@@ -33,7 +33,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_support.traits.sc
     }
     
     /// <summary>
-    /// >> 150 - Variant[frame_support.traits.schedule.DispatchTime]
+    /// >> 168 - Variant[frame_support.traits.schedule.DispatchTime]
     /// </summary>
     public sealed class EnumDispatchTime : BaseEnumExt<DispatchTime, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>
     {

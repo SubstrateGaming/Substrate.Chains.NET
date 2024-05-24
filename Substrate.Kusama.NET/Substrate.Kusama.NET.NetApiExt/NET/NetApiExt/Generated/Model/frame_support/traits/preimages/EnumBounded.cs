@@ -38,9 +38,9 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_support.traits.pr
     }
     
     /// <summary>
-    /// >> 61 - Variant[frame_support.traits.preimages.Bounded]
+    /// >> 95 - Variant[frame_support.traits.preimages.Bounded]
     /// </summary>
-    public sealed class EnumBounded : BaseEnumExt<Bounded, Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT8, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Primitive.U32>>
+    public sealed class EnumBounded : BaseEnumExt<Bounded, Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT12, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Primitive.U32>>
     {
     }
 }

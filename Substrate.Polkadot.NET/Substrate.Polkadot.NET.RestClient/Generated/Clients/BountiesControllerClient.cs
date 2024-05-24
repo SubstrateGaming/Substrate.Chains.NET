@@ -42,17 +42,17 @@ namespace Substrate.Polkadot.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("Bounties.Bounties", Substrate.Polkadot.NET.NetApiExt.Generated.Storage.BountiesStorage.BountiesParams(key));
       }
-      public async Task<BoundedVecT29> GetBountyDescriptions(U32 key)
+      public async Task<BoundedVecT35> GetBountyDescriptions(U32 key)
       {
-         return await SendRequestAsync<BoundedVecT29>(_httpClient, "bounties/bountydescriptions", Substrate.Polkadot.NET.NetApiExt.Generated.Storage.BountiesStorage.BountyDescriptionsParams(key));
+         return await SendRequestAsync<BoundedVecT35>(_httpClient, "bounties/bountydescriptions", Substrate.Polkadot.NET.NetApiExt.Generated.Storage.BountiesStorage.BountyDescriptionsParams(key));
       }
       public async Task<bool> SubscribeBountyDescriptions(U32 key)
       {
          return await _subscriptionClient.SubscribeAsync("Bounties.BountyDescriptions", Substrate.Polkadot.NET.NetApiExt.Generated.Storage.BountiesStorage.BountyDescriptionsParams(key));
       }
-      public async Task<BoundedVecT18> GetBountyApprovals()
+      public async Task<BoundedVecT23> GetBountyApprovals()
       {
-         return await SendRequestAsync<BoundedVecT18>(_httpClient, "bounties/bountyapprovals");
+         return await SendRequestAsync<BoundedVecT23>(_httpClient, "bounties/bountyapprovals");
       }
       public async Task<bool> SubscribeBountyApprovals()
       {

@@ -53,7 +53,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Controller
         ///  Items to be executed, indexed by the block number that they should be executed on.
         /// </summary>
         [HttpGet("Agenda")]
-        [ProducesResponseType(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT8), 200)]
+        [ProducesResponseType(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT14), 200)]
         [StorageKeyBuilder(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Storage.SchedulerStorage), "AgendaParams", typeof(Substrate.NetApi.Model.Types.Primitive.U32))]
         public IActionResult GetAgenda(string key)
         {

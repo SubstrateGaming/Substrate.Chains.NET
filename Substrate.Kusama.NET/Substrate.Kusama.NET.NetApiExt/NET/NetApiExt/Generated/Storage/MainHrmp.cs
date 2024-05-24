@@ -94,10 +94,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         ///  Invariant:
         ///  - There are no channels that exists in list but not in the set and vice versa.
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.hrmp.HrmpOpenChannelRequest> HrmpOpenChannelRequests(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.HrmpChannelId key, CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.hrmp.HrmpOpenChannelRequest> HrmpOpenChannelRequests(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.HrmpChannelId key, string blockhash, CancellationToken token)
         {
             string parameters = HrmpStorage.HrmpOpenChannelRequestsParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.hrmp.HrmpOpenChannelRequest>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.hrmp.HrmpOpenChannelRequest>(parameters, blockhash, token);
             return result;
         }
         
@@ -121,10 +121,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// <summary>
         /// >> HrmpOpenChannelRequestsList
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.HrmpChannelId>> HrmpOpenChannelRequestsList(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.HrmpChannelId>> HrmpOpenChannelRequestsList(string blockhash, CancellationToken token)
         {
             string parameters = HrmpStorage.HrmpOpenChannelRequestsListParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.HrmpChannelId>>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.HrmpChannelId>>(parameters, blockhash, token);
             return result;
         }
         
@@ -156,10 +156,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         ///  Invariant: `HrmpOpenChannelRequests` should contain the same number of items that has
         ///  `(X, _)` as the number of `HrmpOpenChannelRequestCount` for `X`.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> HrmpOpenChannelRequestCount(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> HrmpOpenChannelRequestCount(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key, string blockhash, CancellationToken token)
         {
             string parameters = HrmpStorage.HrmpOpenChannelRequestCountParams(key);
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, blockhash, token);
             return result;
         }
         
@@ -191,10 +191,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         ///  Invariant: `HrmpOpenChannelRequests` should contain the same number of items `(_, X)` with
         ///  `confirmed` set to true, as the number of `HrmpAcceptedChannelRequestCount` for `X`.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> HrmpAcceptedChannelRequestCount(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> HrmpAcceptedChannelRequestCount(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key, string blockhash, CancellationToken token)
         {
             string parameters = HrmpStorage.HrmpAcceptedChannelRequestCountParams(key);
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, blockhash, token);
             return result;
         }
         
@@ -234,10 +234,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         ///  Invariant:
         ///  - There are no channels that exists in list but not in the set and vice versa.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Base.BaseTuple> HrmpCloseChannelRequests(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.HrmpChannelId key, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Base.BaseTuple> HrmpCloseChannelRequests(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.HrmpChannelId key, string blockhash, CancellationToken token)
         {
             string parameters = HrmpStorage.HrmpCloseChannelRequestsParams(key);
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseTuple>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseTuple>(parameters, blockhash, token);
             return result;
         }
         
@@ -261,10 +261,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// <summary>
         /// >> HrmpCloseChannelRequestsList
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.HrmpChannelId>> HrmpCloseChannelRequestsList(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.HrmpChannelId>> HrmpCloseChannelRequestsList(string blockhash, CancellationToken token)
         {
             string parameters = HrmpStorage.HrmpCloseChannelRequestsListParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.HrmpChannelId>>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.HrmpChannelId>>(parameters, blockhash, token);
             return result;
         }
         
@@ -298,10 +298,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         ///  - each para `P` used here as a key should satisfy `Paras::is_valid_para(P)` within a
         ///    session.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> HrmpWatermarks(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> HrmpWatermarks(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key, string blockhash, CancellationToken token)
         {
             string parameters = HrmpStorage.HrmpWatermarksParams(key);
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, blockhash, token);
             return result;
         }
         
@@ -333,10 +333,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         ///  Invariant:
         ///  - each participant in the channel should satisfy `Paras::is_valid_para(P)` within a session.
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.hrmp.HrmpChannel> HrmpChannels(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.HrmpChannelId key, CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.hrmp.HrmpChannel> HrmpChannels(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.HrmpChannelId key, string blockhash, CancellationToken token)
         {
             string parameters = HrmpStorage.HrmpChannelsParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.hrmp.HrmpChannel>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.hrmp.HrmpChannel>(parameters, blockhash, token);
             return result;
         }
         
@@ -388,10 +388,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         ///  - there should be no other dangling channels in `HrmpChannels`.
         ///  - the vectors are sorted.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id>> HrmpIngressChannelsIndex(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id>> HrmpIngressChannelsIndex(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key, string blockhash, CancellationToken token)
         {
             string parameters = HrmpStorage.HrmpIngressChannelsIndexParams(key);
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id>>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id>>(parameters, blockhash, token);
             return result;
         }
         
@@ -417,10 +417,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// <summary>
         /// >> HrmpEgressChannelsIndex
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id>> HrmpEgressChannelsIndex(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id>> HrmpEgressChannelsIndex(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key, string blockhash, CancellationToken token)
         {
             string parameters = HrmpStorage.HrmpEgressChannelsIndexParams(key);
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id>>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id>>(parameters, blockhash, token);
             return result;
         }
         
@@ -450,10 +450,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         ///  Storage for the messages for each channel.
         ///  Invariant: cannot be non-empty if the corresponding channel in `HrmpChannels` is `None`.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_core_primitives.InboundHrmpMessage>> HrmpChannelContents(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.HrmpChannelId key, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_core_primitives.InboundHrmpMessage>> HrmpChannelContents(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.HrmpChannelId key, string blockhash, CancellationToken token)
         {
             string parameters = HrmpStorage.HrmpChannelContentsParams(key);
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_core_primitives.InboundHrmpMessage>>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_core_primitives.InboundHrmpMessage>>(parameters, blockhash, token);
             return result;
         }
         
@@ -491,10 +491,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         ///  - The outer vector is sorted ascending by block number and cannot store two items with the
         ///    same block number.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id>>>> HrmpChannelDigests(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id>>>> HrmpChannelDigests(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key, string blockhash, CancellationToken token)
         {
             string parameters = HrmpStorage.HrmpChannelDigestsParams(key);
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id>>>>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id>>>>(parameters, blockhash, token);
             return result;
         }
     }
@@ -544,12 +544,12 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> force_clean_hrmp
         /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method ForceCleanHrmp(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id para, Substrate.NetApi.Model.Types.Primitive.U32 inbound, Substrate.NetApi.Model.Types.Primitive.U32 outbound)
+        public static Method ForceCleanHrmp(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id para, Substrate.NetApi.Model.Types.Primitive.U32 num_inbound, Substrate.NetApi.Model.Types.Primitive.U32 num_outbound)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(para.Encode());
-            byteArray.AddRange(inbound.Encode());
-            byteArray.AddRange(outbound.Encode());
+            byteArray.AddRange(num_inbound.Encode());
+            byteArray.AddRange(num_outbound.Encode());
             return new Method(60, "Hrmp", 3, "force_clean_hrmp", byteArray.ToArray());
         }
         
@@ -599,6 +599,30 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
             byteArray.AddRange(max_capacity.Encode());
             byteArray.AddRange(max_message_size.Encode());
             return new Method(60, "Hrmp", 7, "force_open_hrmp_channel", byteArray.ToArray());
+        }
+        
+        /// <summary>
+        /// >> establish_system_channel
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
+        /// </summary>
+        public static Method EstablishSystemChannel(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id sender, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id recipient)
+        {
+            System.Collections.Generic.List<byte> byteArray = new List<byte>();
+            byteArray.AddRange(sender.Encode());
+            byteArray.AddRange(recipient.Encode());
+            return new Method(60, "Hrmp", 8, "establish_system_channel", byteArray.ToArray());
+        }
+        
+        /// <summary>
+        /// >> poke_channel_deposits
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
+        /// </summary>
+        public static Method PokeChannelDeposits(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id sender, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id recipient)
+        {
+            System.Collections.Generic.List<byte> byteArray = new List<byte>();
+            byteArray.AddRange(sender.Encode());
+            byteArray.AddRange(recipient.Encode());
+            return new Method(60, "Hrmp", 9, "poke_channel_deposits", byteArray.ToArray());
         }
     }
     
@@ -728,5 +752,11 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// The provided witness data is wrong.
         /// </summary>
         WrongWitness,
+        
+        /// <summary>
+        /// >> ChannelCreationNotAuthorized
+        /// The channel between these two chains cannot be authorized.
+        /// </summary>
+        ChannelCreationNotAuthorized,
     }
 }

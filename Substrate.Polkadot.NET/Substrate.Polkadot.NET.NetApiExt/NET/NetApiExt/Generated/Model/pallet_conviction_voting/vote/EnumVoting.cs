@@ -33,7 +33,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_conviction_vot
     }
     
     /// <summary>
-    /// >> 558 - Variant[pallet_conviction_voting.vote.Voting]
+    /// >> 631 - Variant[pallet_conviction_voting.vote.Voting]
     /// </summary>
     public sealed class EnumVoting : BaseEnumExt<Voting, Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_conviction_voting.vote.Casting, Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_conviction_voting.vote.Delegating>
     {

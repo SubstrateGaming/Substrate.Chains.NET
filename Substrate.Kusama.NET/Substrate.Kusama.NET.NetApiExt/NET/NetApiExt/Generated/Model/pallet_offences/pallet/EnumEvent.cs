@@ -32,7 +32,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_offences.pallet
     }
     
     /// <summary>
-    /// >> 40 - Variant[pallet_offences.pallet.Event]
+    /// >> 41 - Variant[pallet_offences.pallet.Event]
     /// Events type.
     /// </summary>
     public sealed class EnumEvent : BaseEnumExt<Event, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr16U8, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>>

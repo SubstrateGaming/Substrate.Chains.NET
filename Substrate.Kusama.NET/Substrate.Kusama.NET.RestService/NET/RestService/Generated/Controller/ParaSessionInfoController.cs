@@ -44,7 +44,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Controller
         ///  When in doubt, use `Sessions` API instead.
         /// </summary>
         [HttpGet("AssignmentKeysUnsafe")]
-        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.assignment_app.Public>), 200)]
+        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.assignment_app.Public>), 200)]
         [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.ParaSessionInfoStorage), "AssignmentKeysUnsafeParams")]
         public IActionResult GetAssignmentKeysUnsafe()
         {
@@ -70,7 +70,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Controller
         ///  Does not have any entries before the session index in the first session change notification.
         /// </summary>
         [HttpGet("Sessions")]
-        [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.SessionInfo), 200)]
+        [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.SessionInfo), 200)]
         [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.ParaSessionInfoStorage), "SessionsParams", typeof(Substrate.NetApi.Model.Types.Primitive.U32))]
         public IActionResult GetSessions(string key)
         {
@@ -94,7 +94,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Controller
         ///  Executor parameter set for a given session index
         /// </summary>
         [HttpGet("SessionExecutorParams")]
-        [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.executor_params.ExecutorParams), 200)]
+        [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.executor_params.ExecutorParams), 200)]
         [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.ParaSessionInfoStorage), "SessionExecutorParamsParams", typeof(Substrate.NetApi.Model.Types.Primitive.U32))]
         public IActionResult GetSessionExecutorParams(string key)
         {

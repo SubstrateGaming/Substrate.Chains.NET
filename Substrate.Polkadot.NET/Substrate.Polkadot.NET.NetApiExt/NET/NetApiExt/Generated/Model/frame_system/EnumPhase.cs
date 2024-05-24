@@ -38,7 +38,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.frame_system
     }
     
     /// <summary>
-    /// >> 454 - Variant[frame_system.Phase]
+    /// >> 520 - Variant[frame_system.Phase]
     /// </summary>
     public sealed class EnumPhase : BaseEnumExt<Phase, Substrate.NetApi.Model.Types.Primitive.U32, BaseVoid, BaseVoid>
     {

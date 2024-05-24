@@ -21,9 +21,9 @@ namespace Substrate.Polkadot.NET.RestClient.Generated.Interfaces
       Task<bool> SubscribeBountyCount();
       Task<Bounty> GetBounties(U32 key);
       Task<bool> SubscribeBounties(U32 key);
-      Task<BoundedVecT29> GetBountyDescriptions(U32 key);
+      Task<BoundedVecT35> GetBountyDescriptions(U32 key);
       Task<bool> SubscribeBountyDescriptions(U32 key);
-      Task<BoundedVecT18> GetBountyApprovals();
+      Task<BoundedVecT23> GetBountyApprovals();
       Task<bool> SubscribeBountyApprovals();
    }
 }

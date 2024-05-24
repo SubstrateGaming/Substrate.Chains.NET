@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parach
     
     
     /// <summary>
-    /// >> 779 - Composite[polkadot_runtime_parachains.inclusion.AvailabilityBitfieldRecord]
+    /// >> 835 - Composite[polkadot_runtime_parachains.inclusion.AvailabilityBitfieldRecord]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class AvailabilityBitfieldRecord : BaseType
@@ -27,7 +27,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parach
         /// <summary>
         /// >> bitfield
         /// </summary>
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.AvailabilityBitfield Bitfield { get; set; }
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.AvailabilityBitfield Bitfield { get; set; }
         /// <summary>
         /// >> submitted_at
         /// </summary>
@@ -52,14 +52,14 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parach
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Bitfield = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.AvailabilityBitfield();
+            Bitfield = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.AvailabilityBitfield();
             Bitfield.Decode(byteArray, ref p);
             SubmittedAt = new Substrate.NetApi.Model.Types.Primitive.U32();
             SubmittedAt.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];
-            System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
+            global::System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
         }
     }
 }

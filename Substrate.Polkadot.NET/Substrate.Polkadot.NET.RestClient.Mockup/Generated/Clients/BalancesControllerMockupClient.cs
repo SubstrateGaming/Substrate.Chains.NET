@@ -41,15 +41,15 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "Balances/Locks", value.Encode(), Substrate.Polkadot.NET.NetApiExt.Generated.Storage.BalancesStorage.LocksParams(key));
       }
-      public async Task<bool> SetReserves(BoundedVecT12 value, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+      public async Task<bool> SetReserves(BoundedVecT18 value, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {
          return await SendMockupRequestAsync(_httpClient, "Balances/Reserves", value.Encode(), Substrate.Polkadot.NET.NetApiExt.Generated.Storage.BalancesStorage.ReservesParams(key));
       }
-      public async Task<bool> SetHolds(BoundedVecT13 value, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+      public async Task<bool> SetHolds(BoundedVecT19 value, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {
          return await SendMockupRequestAsync(_httpClient, "Balances/Holds", value.Encode(), Substrate.Polkadot.NET.NetApiExt.Generated.Storage.BalancesStorage.HoldsParams(key));
       }
-      public async Task<bool> SetFreezes(BoundedVecT14 value, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+      public async Task<bool> SetFreezes(BoundedVecT20 value, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {
          return await SendMockupRequestAsync(_httpClient, "Balances/Freezes", value.Encode(), Substrate.Polkadot.NET.NetApiExt.Generated.Storage.BalancesStorage.FreezesParams(key));
       }

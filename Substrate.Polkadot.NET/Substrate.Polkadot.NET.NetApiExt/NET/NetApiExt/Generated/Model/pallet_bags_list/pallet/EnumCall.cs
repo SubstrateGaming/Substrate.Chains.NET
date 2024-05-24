@@ -42,7 +42,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_bags_list.pall
     }
     
     /// <summary>
-    /// >> 271 - Variant[pallet_bags_list.pallet.Call]
+    /// >> 305 - Variant[pallet_bags_list.pallet.Call]
     /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
     public sealed class EnumCall : BaseEnumExt<Call, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress>>

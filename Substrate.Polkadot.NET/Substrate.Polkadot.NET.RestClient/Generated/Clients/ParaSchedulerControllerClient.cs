@@ -13,7 +13,7 @@ namespace Substrate.Polkadot.NET.RestClient.Generated.Clients
    using System.Threading.Tasks;
    using System.Net.Http;
    using Substrate.NetApi.Model.Types.Base;
-   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.scheduler.pallet;
    using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base;
    using Substrate.Polkadot.NET.RestClient.Generated.Interfaces;
@@ -27,9 +27,9 @@ namespace Substrate.Polkadot.NET.RestClient.Generated.Clients
          _httpClient = httpClient;
          _subscriptionClient = subscriptionClient;
       }
-      public async Task<BaseVec<BaseVec<ValidatorIndex>>> GetValidatorGroups()
+      public async Task<BaseVec<BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.ValidatorIndex>>> GetValidatorGroups()
       {
-         return await SendRequestAsync<BaseVec<BaseVec<ValidatorIndex>>>(_httpClient, "parascheduler/validatorgroups");
+         return await SendRequestAsync<BaseVec<BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.ValidatorIndex>>>(_httpClient, "parascheduler/validatorgroups");
       }
       public async Task<bool> SubscribeValidatorGroups()
       {

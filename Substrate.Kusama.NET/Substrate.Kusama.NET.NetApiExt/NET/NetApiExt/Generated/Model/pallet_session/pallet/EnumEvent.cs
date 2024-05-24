@@ -31,7 +31,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_session.pallet
     }
     
     /// <summary>
-    /// >> 42 - Variant[pallet_session.pallet.Event]
+    /// >> 43 - Variant[pallet_session.pallet.Event]
     /// The `Event` enum of this pallet
     /// </summary>
     public sealed class EnumEvent : BaseEnumExt<Event, Substrate.NetApi.Model.Types.Primitive.U32>

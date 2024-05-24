@@ -31,13 +31,13 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup.Generated.Interfaces
       Task<bool> SetNextRandomness(Arr32U8 value);
       Task<bool> SetNextAuthorities(WeakBoundedVecT2 value);
       Task<bool> SetSegmentIndex(U32 value);
-      Task<bool> SetUnderConstruction(BoundedVecT10 value, U32 key);
+      Task<bool> SetUnderConstruction(BoundedVecT16 value, U32 key);
       Task<bool> SetInitialized(BaseOpt<EnumPreDigest> value);
       Task<bool> SetAuthorVrfRandomness(BaseOpt<Arr32U8> value);
       Task<bool> SetEpochStart(BaseTuple<U32, U32> value);
       Task<bool> SetLateness(U32 value);
       Task<bool> SetEpochConfig(BabeEpochConfiguration value);
       Task<bool> SetNextEpochConfig(BabeEpochConfiguration value);
-      Task<bool> SetSkippedEpochs(BoundedVecT11 value);
+      Task<bool> SetSkippedEpochs(BoundedVecT17 value);
    }
 }

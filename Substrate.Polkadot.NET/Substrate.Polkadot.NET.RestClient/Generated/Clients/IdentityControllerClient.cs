@@ -12,8 +12,8 @@ namespace Substrate.Polkadot.NET.RestClient.Generated.Clients
    using System;
    using System.Threading.Tasks;
    using System.Net.Http;
-   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types;
    using Substrate.NetApi.Model.Types.Base;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto;
    using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
@@ -28,9 +28,9 @@ namespace Substrate.Polkadot.NET.RestClient.Generated.Clients
          _httpClient = httpClient;
          _subscriptionClient = subscriptionClient;
       }
-      public async Task<Registration> GetIdentityOf(AccountId32 key)
+      public async Task<BaseTuple<Registration, BaseOpt<BoundedVecT4>>> GetIdentityOf(AccountId32 key)
       {
-         return await SendRequestAsync<Registration>(_httpClient, "identity/identityof", Substrate.Polkadot.NET.NetApiExt.Generated.Storage.IdentityStorage.IdentityOfParams(key));
+         return await SendRequestAsync<BaseTuple<Registration, BaseOpt<BoundedVecT4>>>(_httpClient, "identity/identityof", Substrate.Polkadot.NET.NetApiExt.Generated.Storage.IdentityStorage.IdentityOfParams(key));
       }
       public async Task<bool> SubscribeIdentityOf(AccountId32 key)
       {
@@ -44,21 +44,45 @@ namespace Substrate.Polkadot.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("Identity.SuperOf", Substrate.Polkadot.NET.NetApiExt.Generated.Storage.IdentityStorage.SuperOfParams(key));
       }
-      public async Task<BaseTuple<U128, BoundedVecT24>> GetSubsOf(AccountId32 key)
+      public async Task<BaseTuple<U128, BoundedVecT29>> GetSubsOf(AccountId32 key)
       {
-         return await SendRequestAsync<BaseTuple<U128, BoundedVecT24>>(_httpClient, "identity/subsof", Substrate.Polkadot.NET.NetApiExt.Generated.Storage.IdentityStorage.SubsOfParams(key));
+         return await SendRequestAsync<BaseTuple<U128, BoundedVecT29>>(_httpClient, "identity/subsof", Substrate.Polkadot.NET.NetApiExt.Generated.Storage.IdentityStorage.SubsOfParams(key));
       }
       public async Task<bool> SubscribeSubsOf(AccountId32 key)
       {
          return await _subscriptionClient.SubscribeAsync("Identity.SubsOf", Substrate.Polkadot.NET.NetApiExt.Generated.Storage.IdentityStorage.SubsOfParams(key));
       }
-      public async Task<BoundedVecT25> GetRegistrars()
+      public async Task<BoundedVecT30> GetRegistrars()
       {
-         return await SendRequestAsync<BoundedVecT25>(_httpClient, "identity/registrars");
+         return await SendRequestAsync<BoundedVecT30>(_httpClient, "identity/registrars");
       }
       public async Task<bool> SubscribeRegistrars()
       {
          return await _subscriptionClient.SubscribeAsync("Identity.Registrars");
+      }
+      public async Task<AuthorityProperties> GetUsernameAuthorities(AccountId32 key)
+      {
+         return await SendRequestAsync<AuthorityProperties>(_httpClient, "identity/usernameauthorities", Substrate.Polkadot.NET.NetApiExt.Generated.Storage.IdentityStorage.UsernameAuthoritiesParams(key));
+      }
+      public async Task<bool> SubscribeUsernameAuthorities(AccountId32 key)
+      {
+         return await _subscriptionClient.SubscribeAsync("Identity.UsernameAuthorities", Substrate.Polkadot.NET.NetApiExt.Generated.Storage.IdentityStorage.UsernameAuthoritiesParams(key));
+      }
+      public async Task<AccountId32> GetAccountOfUsername(BoundedVecT4 key)
+      {
+         return await SendRequestAsync<AccountId32>(_httpClient, "identity/accountofusername", Substrate.Polkadot.NET.NetApiExt.Generated.Storage.IdentityStorage.AccountOfUsernameParams(key));
+      }
+      public async Task<bool> SubscribeAccountOfUsername(BoundedVecT4 key)
+      {
+         return await _subscriptionClient.SubscribeAsync("Identity.AccountOfUsername", Substrate.Polkadot.NET.NetApiExt.Generated.Storage.IdentityStorage.AccountOfUsernameParams(key));
+      }
+      public async Task<BaseTuple<AccountId32, U32>> GetPendingUsernames(BoundedVecT4 key)
+      {
+         return await SendRequestAsync<BaseTuple<AccountId32, U32>>(_httpClient, "identity/pendingusernames", Substrate.Polkadot.NET.NetApiExt.Generated.Storage.IdentityStorage.PendingUsernamesParams(key));
+      }
+      public async Task<bool> SubscribePendingUsernames(BoundedVecT4 key)
+      {
+         return await _subscriptionClient.SubscribeAsync("Identity.PendingUsernames", Substrate.Polkadot.NET.NetApiExt.Generated.Storage.IdentityStorage.PendingUsernamesParams(key));
       }
    }
 }

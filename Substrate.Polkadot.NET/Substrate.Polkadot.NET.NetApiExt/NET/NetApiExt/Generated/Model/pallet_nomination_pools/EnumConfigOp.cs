@@ -38,7 +38,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_nomination_poo
     }
     
     /// <summary>
-    /// >> 278 - Variant[pallet_nomination_pools.ConfigOp]
+    /// >> 312 - Variant[pallet_nomination_pools.ConfigOp]
     /// </summary>
     public sealed class EnumConfigOp : BaseEnumExt<ConfigOp, BaseVoid, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, BaseVoid>
     {

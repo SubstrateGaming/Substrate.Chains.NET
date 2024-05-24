@@ -90,10 +90,15 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime.gove
         /// >> WhitelistedCaller
         /// </summary>
         WhitelistedCaller = 13,
+        
+        /// <summary>
+        /// >> WishForChange
+        /// </summary>
+        WishForChange = 14,
     }
     
     /// <summary>
-    /// >> 132 - Variant[polkadot_runtime.governance.origins.pallet_custom_origins.Origin]
+    /// >> 172 - Variant[polkadot_runtime.governance.origins.pallet_custom_origins.Origin]
     /// </summary>
     public sealed class EnumOrigin : BaseEnum<Origin>
     {

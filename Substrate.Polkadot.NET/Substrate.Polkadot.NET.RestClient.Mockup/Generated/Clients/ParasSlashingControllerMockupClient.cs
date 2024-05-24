@@ -12,7 +12,7 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup.Generated.Clients
    using System;
    using System.Threading.Tasks;
    using System.Net.Http;
-   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.slashing;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.slashing;
    using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.Polkadot.NET.RestClient.Mockup.Generated.Interfaces;
    

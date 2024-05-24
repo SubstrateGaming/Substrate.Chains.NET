@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_election_provide
     
     
     /// <summary>
-    /// >> 728 - Composite[pallet_election_provider_multi_phase.signed.SignedSubmission]
+    /// >> 783 - Composite[pallet_election_provider_multi_phase.signed.SignedSubmission]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class SignedSubmission : BaseType
@@ -73,7 +73,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_election_provide
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];
-            System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
+            global::System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
         }
     }
 }

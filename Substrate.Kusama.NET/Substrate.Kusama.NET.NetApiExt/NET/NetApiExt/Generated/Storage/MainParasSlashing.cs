@@ -38,7 +38,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
             this._client = client;
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("ParasSlashing", "UnappliedSlashes"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat,
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_core_primitives.CandidateHash>), typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.slashing.PendingSlashes)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_core_primitives.CandidateHash>), typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.slashing.PendingSlashes)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("ParasSlashing", "ValidatorSetCounts"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.NetApi.Model.Types.Primitive.U32), typeof(Substrate.NetApi.Model.Types.Primitive.U32)));
         }
@@ -67,10 +67,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> UnappliedSlashes
         ///  Validators pending dispute slashes.
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.slashing.PendingSlashes> UnappliedSlashes(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_core_primitives.CandidateHash> key, CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.slashing.PendingSlashes> UnappliedSlashes(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_core_primitives.CandidateHash> key, string blockhash, CancellationToken token)
         {
             string parameters = ParasSlashingStorage.UnappliedSlashesParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.slashing.PendingSlashes>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.slashing.PendingSlashes>(parameters, blockhash, token);
             return result;
         }
         
@@ -98,10 +98,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> ValidatorSetCounts
         ///  `ValidatorSetCount` per session.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> ValidatorSetCounts(Substrate.NetApi.Model.Types.Primitive.U32 key, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> ValidatorSetCounts(Substrate.NetApi.Model.Types.Primitive.U32 key, string blockhash, CancellationToken token)
         {
             string parameters = ParasSlashingStorage.ValidatorSetCountsParams(key);
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, blockhash, token);
             return result;
         }
     }
@@ -116,7 +116,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> report_dispute_lost_unsigned
         /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method ReportDisputeLostUnsigned(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.slashing.DisputeProof dispute_proof, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_session.MembershipProof key_owner_proof)
+        public static Method ReportDisputeLostUnsigned(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.slashing.DisputeProof dispute_proof, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_session.MembershipProof key_owner_proof)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(dispute_proof.Encode());

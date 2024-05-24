@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_staking
     
     
     /// <summary>
-    /// >> 525 - Composite[pallet_staking.EraRewardPoints]
+    /// >> 598 - Composite[pallet_staking.EraRewardPoints]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class EraRewardPoints : BaseType
@@ -59,7 +59,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_staking
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];
-            System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
+            global::System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
         }
     }
 }

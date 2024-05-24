@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_core_primiti
     
     
     /// <summary>
-    /// >> 321 - Composite[polkadot_core_primitives.CandidateHash]
+    /// >> 358 - Composite[polkadot_core_primitives.CandidateHash]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class CandidateHash : BaseType
@@ -52,7 +52,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_core_primiti
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];
-            System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
+            global::System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
         }
     }
 }

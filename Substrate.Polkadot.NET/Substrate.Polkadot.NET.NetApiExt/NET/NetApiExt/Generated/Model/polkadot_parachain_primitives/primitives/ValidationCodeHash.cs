@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_pr
     
     
     /// <summary>
-    /// >> 308 - Composite[polkadot_parachain_primitives.primitives.ValidationCodeHash]
+    /// >> 345 - Composite[polkadot_parachain_primitives.primitives.ValidationCodeHash]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class ValidationCodeHash : BaseType
@@ -52,7 +52,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_pr
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];
-            System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
+            global::System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
         }
     }
 }

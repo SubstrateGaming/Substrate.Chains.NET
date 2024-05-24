@@ -31,7 +31,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_transaction_pa
     }
     
     /// <summary>
-    /// >> 39 - Variant[pallet_transaction_payment.pallet.Event]
+    /// >> 40 - Variant[pallet_transaction_payment.pallet.Event]
     /// The `Event` enum of this pallet
     /// </summary>
     public sealed class EnumEvent : BaseEnumExt<Event, BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U128, Substrate.NetApi.Model.Types.Primitive.U128>>

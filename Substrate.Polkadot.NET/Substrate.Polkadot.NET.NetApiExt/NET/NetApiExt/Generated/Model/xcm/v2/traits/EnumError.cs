@@ -153,7 +153,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.v2.traits
     }
     
     /// <summary>
-    /// >> 371 - Variant[xcm.v2.traits.Error]
+    /// >> 402 - Variant[xcm.v2.traits.Error]
     /// </summary>
     public sealed class EnumError : BaseEnumExt<Error, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.NetApi.Model.Types.Primitive.U64, BaseVoid, Substrate.NetApi.Model.Types.Primitive.U64, BaseVoid, BaseVoid>
     {

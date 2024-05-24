@@ -68,7 +68,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_kusama_runtime
     }
     
     /// <summary>
-    /// >> 214 - Variant[staging_kusama_runtime.ProxyType]
+    /// >> 236 - Variant[staging_kusama_runtime.ProxyType]
     /// </summary>
     public sealed class EnumProxyType : BaseEnum<ProxyType>
     {

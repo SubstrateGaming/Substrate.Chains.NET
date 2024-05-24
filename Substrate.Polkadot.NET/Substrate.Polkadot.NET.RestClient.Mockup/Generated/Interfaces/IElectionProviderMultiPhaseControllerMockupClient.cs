@@ -26,7 +26,7 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup.Generated.Interfaces
       Task<bool> SetDesiredTargets(U32 value);
       Task<bool> SetSnapshotMetadata(SolutionOrSnapshotSize value);
       Task<bool> SetSignedSubmissionNextIndex(U32 value);
-      Task<bool> SetSignedSubmissionIndices(BoundedVecT31 value);
+      Task<bool> SetSignedSubmissionIndices(BoundedVecT37 value);
       Task<bool> SetSignedSubmissionsMap(SignedSubmission value, U32 key);
       Task<bool> SetMinimumUntrustedScore(ElectionScore value);
    }

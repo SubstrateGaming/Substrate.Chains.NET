@@ -18,16 +18,16 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.sr25519.vrf
     
     
     /// <summary>
-    /// >> 488 - Composite[sp_core.sr25519.vrf.VrfSignature]
+    /// >> 558 - Composite[sp_core.sr25519.vrf.VrfSignature]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class VrfSignature : BaseType
     {
         
         /// <summary>
-        /// >> output
+        /// >> pre_output
         /// </summary>
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base.Arr32U8 Output { get; set; }
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base.Arr32U8 PreOutput { get; set; }
         /// <summary>
         /// >> proof
         /// </summary>
@@ -43,7 +43,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.sr25519.vrf
         public override byte[] Encode()
         {
             var result = new List<byte>();
-            result.AddRange(Output.Encode());
+            result.AddRange(PreOutput.Encode());
             result.AddRange(Proof.Encode());
             return result.ToArray();
         }
@@ -52,14 +52,14 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.sr25519.vrf
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Output = new Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base.Arr32U8();
-            Output.Decode(byteArray, ref p);
+            PreOutput = new Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base.Arr32U8();
+            PreOutput.Decode(byteArray, ref p);
             Proof = new Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base.Arr64U8();
             Proof.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];
-            System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
+            global::System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
         }
     }
 }

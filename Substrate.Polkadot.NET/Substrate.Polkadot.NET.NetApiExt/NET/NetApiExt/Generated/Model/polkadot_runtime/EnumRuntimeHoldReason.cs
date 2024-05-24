@@ -20,12 +20,22 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime
     /// </summary>
     public enum RuntimeHoldReason
     {
+        
+        /// <summary>
+        /// >> Preimage
+        /// </summary>
+        Preimage = 10,
+        
+        /// <summary>
+        /// >> StateTrieMigration
+        /// </summary>
+        StateTrieMigration = 98,
     }
     
     /// <summary>
-    /// >> 507 - Variant[polkadot_runtime.RuntimeHoldReason]
+    /// >> 577 - Variant[polkadot_runtime.RuntimeHoldReason]
     /// </summary>
-    public sealed class EnumRuntimeHoldReason : BaseEnum<RuntimeHoldReason>
+    public sealed class EnumRuntimeHoldReason : BaseEnumExt<RuntimeHoldReason, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_preimage.pallet.EnumHoldReason, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.EnumHoldReason>
     {
     }
 }

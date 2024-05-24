@@ -50,9 +50,9 @@ namespace Substrate.Polkadot.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("ChildBounties.ChildBounties", Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ChildBountiesStorage.ChildBountiesParams(key));
       }
-      public async Task<BoundedVecT29> GetChildBountyDescriptions(U32 key)
+      public async Task<BoundedVecT35> GetChildBountyDescriptions(U32 key)
       {
-         return await SendRequestAsync<BoundedVecT29>(_httpClient, "childbounties/childbountydescriptions", Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ChildBountiesStorage.ChildBountyDescriptionsParams(key));
+         return await SendRequestAsync<BoundedVecT35>(_httpClient, "childbounties/childbountydescriptions", Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ChildBountiesStorage.ChildBountyDescriptionsParams(key));
       }
       public async Task<bool> SubscribeChildBountyDescriptions(U32 key)
       {

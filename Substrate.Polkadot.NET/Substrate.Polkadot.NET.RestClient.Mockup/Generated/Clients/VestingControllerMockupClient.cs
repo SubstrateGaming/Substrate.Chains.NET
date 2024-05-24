@@ -23,7 +23,7 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup.Generated.Clients
       {
          _httpClient = httpClient;
       }
-      public async Task<bool> SetVesting(BoundedVecT22 value, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+      public async Task<bool> SetVesting(BoundedVecT27 value, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {
          return await SendMockupRequestAsync(_httpClient, "Vesting/Vesting", value.Encode(), Substrate.Polkadot.NET.NetApiExt.Generated.Storage.VestingStorage.VestingParams(key));
       }

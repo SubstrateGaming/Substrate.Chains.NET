@@ -43,7 +43,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_grandpa
     }
     
     /// <summary>
-    /// >> 598 - Variant[pallet_grandpa.StoredState]
+    /// >> 646 - Variant[pallet_grandpa.StoredState]
     /// </summary>
     public sealed class EnumStoredState : BaseEnumExt<StoredState, BaseVoid, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>, BaseVoid, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>>
     {

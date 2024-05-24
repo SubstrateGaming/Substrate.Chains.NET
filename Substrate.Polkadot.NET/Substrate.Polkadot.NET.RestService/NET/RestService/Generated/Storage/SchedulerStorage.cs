@@ -33,7 +33,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// >> Agenda
         ///  Items to be executed, indexed by the block number that they should be executed on.
         /// </summary>
-        Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT8 GetAgenda(string key);
+        Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT14 GetAgenda(string key);
         
         /// <summary>
         /// >> Lookup
@@ -59,7 +59,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// <summary>
         /// _agendaTypedStorage typed storage field
         /// </summary>
-        private TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT8> _agendaTypedStorage;
+        private TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT14> _agendaTypedStorage;
         
         /// <summary>
         /// _lookupTypedStorage typed storage field
@@ -72,7 +72,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         public SchedulerStorage(IStorageDataProvider storageDataProvider, List<IStorageChangeDelegate> storageChangeDelegates)
         {
             this.IncompleteSinceTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32>("Scheduler.IncompleteSince", storageDataProvider, storageChangeDelegates);
-            this.AgendaTypedStorage = new TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT8>("Scheduler.Agenda", storageDataProvider, storageChangeDelegates);
+            this.AgendaTypedStorage = new TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT14>("Scheduler.Agenda", storageDataProvider, storageChangeDelegates);
             this.LookupTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>>("Scheduler.Lookup", storageDataProvider, storageChangeDelegates);
         }
         
@@ -94,7 +94,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// <summary>
         /// _agendaTypedStorage property
         /// </summary>
-        public TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT8> AgendaTypedStorage
+        public TypedMapStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT14> AgendaTypedStorage
         {
             get
             {
@@ -161,13 +161,13 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         /// >> Agenda
         ///  Items to be executed, indexed by the block number that they should be executed on.
         /// </summary>
-        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT8 GetAgenda(string key)
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT14 GetAgenda(string key)
         {
             if ((key == null))
             {
                 return null;
             }
-            if (AgendaTypedStorage.Dictionary.TryGetValue(key, out Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT8 result))
+            if (AgendaTypedStorage.Dictionary.TryGetValue(key, out Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT14 result))
             {
                 return result;
             }

@@ -57,7 +57,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Controller
         ///  this list.
         /// </summary>
         [HttpGet("ClassLocksFor")]
-        [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT20), 200)]
+        [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT22), 200)]
         [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.ConvictionVotingStorage), "ClassLocksForParams", typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32))]
         public IActionResult GetClassLocksFor(string key)
         {

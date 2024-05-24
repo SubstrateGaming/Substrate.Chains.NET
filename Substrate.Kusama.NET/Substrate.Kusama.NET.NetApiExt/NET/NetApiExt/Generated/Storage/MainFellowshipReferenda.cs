@@ -40,7 +40,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("FellowshipReferenda", "ReferendumInfoFor"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.NetApi.Model.Types.Primitive.U32), typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_referenda.types.EnumReferendumInfo)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("FellowshipReferenda", "TrackQueue"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.NetApi.Model.Types.Primitive.U16), typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT23)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.NetApi.Model.Types.Primitive.U16), typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT25)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("FellowshipReferenda", "DecidingCount"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.NetApi.Model.Types.Primitive.U16), typeof(Substrate.NetApi.Model.Types.Primitive.U32)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("FellowshipReferenda", "MetadataOf"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
@@ -69,10 +69,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> ReferendumCount
         ///  The next free referendum index, aka the number of referenda started so far.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> ReferendumCount(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> ReferendumCount(string blockhash, CancellationToken token)
         {
             string parameters = FellowshipReferendaStorage.ReferendumCountParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, blockhash, token);
             return result;
         }
         
@@ -100,10 +100,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> ReferendumInfoFor
         ///  Information concerning any given referendum.
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_referenda.types.EnumReferendumInfo> ReferendumInfoFor(Substrate.NetApi.Model.Types.Primitive.U32 key, CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_referenda.types.EnumReferendumInfo> ReferendumInfoFor(Substrate.NetApi.Model.Types.Primitive.U32 key, string blockhash, CancellationToken token)
         {
             string parameters = FellowshipReferendaStorage.ReferendumInfoForParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_referenda.types.EnumReferendumInfo>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_referenda.types.EnumReferendumInfo>(parameters, blockhash, token);
             return result;
         }
         
@@ -137,10 +137,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// 
         ///  This should be empty if `DecidingCount` is less than `TrackInfo::max_deciding`.
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT23> TrackQueue(Substrate.NetApi.Model.Types.Primitive.U16 key, CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT25> TrackQueue(Substrate.NetApi.Model.Types.Primitive.U16 key, string blockhash, CancellationToken token)
         {
             string parameters = FellowshipReferendaStorage.TrackQueueParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT23>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT25>(parameters, blockhash, token);
             return result;
         }
         
@@ -168,17 +168,17 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> DecidingCount
         ///  The number of referenda being decided currently.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> DecidingCount(Substrate.NetApi.Model.Types.Primitive.U16 key, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> DecidingCount(Substrate.NetApi.Model.Types.Primitive.U16 key, string blockhash, CancellationToken token)
         {
             string parameters = FellowshipReferendaStorage.DecidingCountParams(key);
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, blockhash, token);
             return result;
         }
         
         /// <summary>
         /// >> MetadataOfParams
         ///  The metadata is a general information concerning the referendum.
-        ///  The `PreimageHash` refers to the preimage of the `Preimages` provider which can be a JSON
+        ///  The `Hash` refers to the preimage of the `Preimages` provider which can be a JSON
         ///  dump or IPFS hash of a JSON file.
         /// 
         ///  Consider a garbage collection for a metadata of finished referendums to `unrequest` (remove)
@@ -203,16 +203,16 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// <summary>
         /// >> MetadataOf
         ///  The metadata is a general information concerning the referendum.
-        ///  The `PreimageHash` refers to the preimage of the `Preimages` provider which can be a JSON
+        ///  The `Hash` refers to the preimage of the `Preimages` provider which can be a JSON
         ///  dump or IPFS hash of a JSON file.
         /// 
         ///  Consider a garbage collection for a metadata of finished referendums to `unrequest` (remove)
         ///  large preimages.
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256> MetadataOf(Substrate.NetApi.Model.Types.Primitive.U32 key, CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256> MetadataOf(Substrate.NetApi.Model.Types.Primitive.U32 key, string blockhash, CancellationToken token)
         {
             string parameters = FellowshipReferendaStorage.MetadataOfParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256>(parameters, blockhash, token);
             return result;
         }
     }

@@ -43,7 +43,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_bags_list.list
     }
     
     /// <summary>
-    /// >> 640 - Variant[pallet_bags_list.list.ListError]
+    /// >> 717 - Variant[pallet_bags_list.list.ListError]
     /// </summary>
     public sealed class EnumListError : BaseEnum<ListError>
     {

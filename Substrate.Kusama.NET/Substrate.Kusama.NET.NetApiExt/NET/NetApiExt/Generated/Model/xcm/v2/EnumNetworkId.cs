@@ -43,7 +43,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.v2
     }
     
     /// <summary>
-    /// >> 397 - Variant[xcm.v2.NetworkId]
+    /// >> 88 - Variant[xcm.v2.NetworkId]
     /// </summary>
     public sealed class EnumNetworkId : BaseEnumExt<NetworkId, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT1, BaseVoid, BaseVoid>
     {

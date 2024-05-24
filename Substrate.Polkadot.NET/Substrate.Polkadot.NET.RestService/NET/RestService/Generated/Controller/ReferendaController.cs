@@ -69,7 +69,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Controller
         ///  This should be empty if `DecidingCount` is less than `TrackInfo::max_deciding`.
         /// </summary>
         [HttpGet("TrackQueue")]
-        [ProducesResponseType(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT21), 200)]
+        [ProducesResponseType(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT26), 200)]
         [StorageKeyBuilder(typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ReferendaStorage), "TrackQueueParams", typeof(Substrate.NetApi.Model.Types.Primitive.U16))]
         public IActionResult GetTrackQueue(string key)
         {
@@ -91,7 +91,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Controller
         /// <summary>
         /// >> MetadataOf
         ///  The metadata is a general information concerning the referendum.
-        ///  The `PreimageHash` refers to the preimage of the `Preimages` provider which can be a JSON
+        ///  The `Hash` refers to the preimage of the `Preimages` provider which can be a JSON
         ///  dump or IPFS hash of a JSON file.
         /// 
         ///  Consider a garbage collection for a metadata of finished referendums to `unrequest` (remove)

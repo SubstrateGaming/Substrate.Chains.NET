@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_runtime.generic.he
     
     
     /// <summary>
-    /// >> 78 - Composite[sp_runtime.generic.header.Header]
+    /// >> 113 - Composite[sp_runtime.generic.header.Header]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Header : BaseType
@@ -80,7 +80,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_runtime.generic.he
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];
-            System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
+            global::System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
         }
     }
 }

@@ -135,10 +135,16 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parach
         /// The provided witness data is wrong.
         /// </summary>
         WrongWitness = 18,
+        
+        /// <summary>
+        /// >> ChannelCreationNotAuthorized
+        /// The channel between these two chains cannot be authorized.
+        /// </summary>
+        ChannelCreationNotAuthorized = 19,
     }
     
     /// <summary>
-    /// >> 824 - Variant[polkadot_runtime_parachains.hrmp.pallet.Error]
+    /// >> 880 - Variant[polkadot_runtime_parachains.hrmp.pallet.Error]
     /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>

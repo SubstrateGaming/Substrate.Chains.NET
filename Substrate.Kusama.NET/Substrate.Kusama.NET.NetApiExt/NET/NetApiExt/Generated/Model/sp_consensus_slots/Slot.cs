@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_slots
     
     
     /// <summary>
-    /// >> 72 - Composite[sp_consensus_slots.Slot]
+    /// >> 105 - Composite[sp_consensus_slots.Slot]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Slot : BaseType
@@ -52,7 +52,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_slots
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];
-            System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
+            global::System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
         }
     }
 }

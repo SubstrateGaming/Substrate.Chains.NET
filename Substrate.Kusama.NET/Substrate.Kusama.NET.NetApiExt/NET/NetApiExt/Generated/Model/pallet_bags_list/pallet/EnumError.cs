@@ -30,7 +30,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_bags_list.pallet
     }
     
     /// <summary>
-    /// >> 746 - Variant[pallet_bags_list.pallet.Error]
+    /// >> 802 - Variant[pallet_bags_list.pallet.Error]
     /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnumExt<Error, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_bags_list.list.EnumListError>

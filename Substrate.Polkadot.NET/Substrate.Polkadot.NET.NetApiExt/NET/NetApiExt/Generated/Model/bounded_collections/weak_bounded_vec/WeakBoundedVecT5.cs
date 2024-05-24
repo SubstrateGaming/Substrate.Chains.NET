@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.w
     
     
     /// <summary>
-    /// >> 548 - Composite[bounded_collections.weak_bounded_vec.WeakBoundedVecT5]
+    /// >> 621 - Composite[bounded_collections.weak_bounded_vec.WeakBoundedVecT5]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class WeakBoundedVecT5 : BaseType
@@ -27,7 +27,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.w
         /// <summary>
         /// >> value
         /// </summary>
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_im_online.sr25519.app_sr25519.Public> Value { get; set; }
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_authority_discovery.app.Public> Value { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
@@ -47,12 +47,12 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.w
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_im_online.sr25519.app_sr25519.Public>();
+            Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_authority_discovery.app.Public>();
             Value.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];
-            System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
+            global::System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
         }
     }
 }

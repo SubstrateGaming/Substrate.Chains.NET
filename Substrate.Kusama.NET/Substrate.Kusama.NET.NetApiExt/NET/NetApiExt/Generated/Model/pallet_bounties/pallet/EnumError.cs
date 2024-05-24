@@ -91,7 +91,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_bounties.pallet
     }
     
     /// <summary>
-    /// >> 716 - Variant[pallet_bounties.pallet.Error]
+    /// >> 771 - Variant[pallet_bounties.pallet.Error]
     /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>

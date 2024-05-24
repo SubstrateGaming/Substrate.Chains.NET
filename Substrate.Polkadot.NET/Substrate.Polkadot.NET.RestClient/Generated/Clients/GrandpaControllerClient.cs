@@ -15,6 +15,7 @@ namespace Substrate.Polkadot.NET.RestClient.Generated.Clients
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_grandpa;
    using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.NetApi.Model.Types.Base;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec;
    using Substrate.Polkadot.NET.RestClient.Generated.Interfaces;
    
    public sealed class GrandpaControllerClient : BaseClient, IGrandpaControllerClient
@@ -73,6 +74,14 @@ namespace Substrate.Polkadot.NET.RestClient.Generated.Clients
       public async Task<bool> SubscribeSetIdSession(U64 key)
       {
          return await _subscriptionClient.SubscribeAsync("Grandpa.SetIdSession", Substrate.Polkadot.NET.NetApiExt.Generated.Storage.GrandpaStorage.SetIdSessionParams(key));
+      }
+      public async Task<WeakBoundedVecT4> GetAuthorities()
+      {
+         return await SendRequestAsync<WeakBoundedVecT4>(_httpClient, "grandpa/authorities");
+      }
+      public async Task<bool> SubscribeAuthorities()
+      {
+         return await _subscriptionClient.SubscribeAsync("Grandpa.Authorities");
       }
    }
 }

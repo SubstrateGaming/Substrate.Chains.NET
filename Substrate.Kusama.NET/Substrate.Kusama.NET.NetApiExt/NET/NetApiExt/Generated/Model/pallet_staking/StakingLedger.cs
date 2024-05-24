@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking
     
     
     /// <summary>
-    /// >> 565 - Composite[pallet_staking.StakingLedger]
+    /// >> 616 - Composite[pallet_staking.StakingLedger]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class StakingLedger : BaseType
@@ -39,11 +39,11 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking
         /// <summary>
         /// >> unlocking
         /// </summary>
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT14 Unlocking { get; set; }
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT2 Unlocking { get; set; }
         /// <summary>
-        /// >> claimed_rewards
+        /// >> legacy_claimed_rewards
         /// </summary>
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT15 ClaimedRewards { get; set; }
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18 LegacyClaimedRewards { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
@@ -59,7 +59,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking
             result.AddRange(Total.Encode());
             result.AddRange(Active.Encode());
             result.AddRange(Unlocking.Encode());
-            result.AddRange(ClaimedRewards.Encode());
+            result.AddRange(LegacyClaimedRewards.Encode());
             return result.ToArray();
         }
         
@@ -73,14 +73,14 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking
             Total.Decode(byteArray, ref p);
             Active = new Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128>();
             Active.Decode(byteArray, ref p);
-            Unlocking = new Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT14();
+            Unlocking = new Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT2();
             Unlocking.Decode(byteArray, ref p);
-            ClaimedRewards = new Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT15();
-            ClaimedRewards.Decode(byteArray, ref p);
+            LegacyClaimedRewards = new Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18();
+            LegacyClaimedRewards.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];
-            System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
+            global::System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
         }
     }
 }

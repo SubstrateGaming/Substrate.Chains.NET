@@ -40,7 +40,7 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
          result.HrmpMaxMessageNumPerCandidate = this.GetTestValueU32();
          result.ValidationUpgradeCooldown = this.GetTestValueU32();
          result.ValidationUpgradeDelay = this.GetTestValueU32();
-         result.AsyncBackingParams = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.vstaging.AsyncBackingParams();
+         result.AsyncBackingParams = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.async_backing.AsyncBackingParams();
          result.AsyncBackingParams = this.GetTestValue3();
          result.MaxPovSize = this.GetTestValueU32();
          result.MaxDownwardMessageSize = this.GetTestValueU32();
@@ -51,10 +51,10 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
          result.HrmpChannelMaxTotalSize = this.GetTestValueU32();
          result.HrmpMaxParachainInboundChannels = this.GetTestValueU32();
          result.HrmpChannelMaxMessageSize = this.GetTestValueU32();
-         result.ExecutorParams = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.executor_params.ExecutorParams();
+         result.ExecutorParams = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.executor_params.ExecutorParams();
          result.ExecutorParams = this.GetTestValue4();
          result.CodeRetentionPeriod = this.GetTestValueU32();
-         result.OnDemandCores = this.GetTestValueU32();
+         result.CoretimeCores = this.GetTestValueU32();
          result.OnDemandRetries = this.GetTestValueU32();
          result.OnDemandQueueMaxSize = this.GetTestValueU32();
          result.OnDemandTargetQueueUtilization = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill();
@@ -80,30 +80,34 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
          result.PvfVotingTtl = this.GetTestValueU32();
          result.MinimumValidationUpgradeDelay = this.GetTestValueU32();
          result.MinimumBackingVotes = this.GetTestValueU32();
+         result.NodeFeatures = new Substrate.NetApi.Model.Types.Base.BaseBitSeq<Substrate.NetApi.Model.Types.Primitive.U8, Substrate.Polkadot.NET.NetApiExt.Generated.Model.bitvec.order.Lsb0>();
+         result.NodeFeatures = this.GetTestValue8();
+         result.ApprovalVotingParams = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.vstaging.ApprovalVotingParams();
+         result.ApprovalVotingParams = this.GetTestValue9();
          return result;
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.vstaging.AsyncBackingParams GetTestValue3()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.async_backing.AsyncBackingParams GetTestValue3()
       {
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.vstaging.AsyncBackingParams result;
-         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.vstaging.AsyncBackingParams();
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.async_backing.AsyncBackingParams result;
+         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.async_backing.AsyncBackingParams();
          result.MaxCandidateDepth = this.GetTestValueU32();
          result.AllowedAncestryLen = this.GetTestValueU32();
          return result;
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.executor_params.ExecutorParams GetTestValue4()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.executor_params.ExecutorParams GetTestValue4()
       {
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.executor_params.ExecutorParams result;
-         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.executor_params.ExecutorParams();
-         result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.executor_params.EnumExecutorParam>();
-         result.Value.Create(new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.executor_params.EnumExecutorParam[] {
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.executor_params.ExecutorParams result;
+         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.executor_params.ExecutorParams();
+         result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.executor_params.EnumExecutorParam>();
+         result.Value.Create(new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.executor_params.EnumExecutorParam[] {
                   this.GetTestValue5()});
          return result;
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.executor_params.EnumExecutorParam GetTestValue5()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.executor_params.EnumExecutorParam GetTestValue5()
       {
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.executor_params.EnumExecutorParam result;
-         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.executor_params.EnumExecutorParam();
-         result.Create(this.GetTestValueEnum<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.executor_params.ExecutorParam>(), this.GetTestValueBaseVoid());
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.executor_params.EnumExecutorParam result;
+         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.executor_params.EnumExecutorParam();
+         result.Create(this.GetTestValueEnum<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.executor_params.ExecutorParam>(), this.GetTestValueBaseVoid());
          return result;
       }
       public Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill GetTestValue6()
@@ -118,6 +122,20 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill();
          result.Value = this.GetTestValueU32();
+         return result;
+      }
+      public Substrate.NetApi.Model.Types.Base.BaseBitSeq<Substrate.NetApi.Model.Types.Primitive.U8, Substrate.Polkadot.NET.NetApiExt.Generated.Model.bitvec.order.Lsb0> GetTestValue8()
+      {
+         Substrate.NetApi.Model.Types.Base.BaseBitSeq<Substrate.NetApi.Model.Types.Primitive.U8, Substrate.Polkadot.NET.NetApiExt.Generated.Model.bitvec.order.Lsb0> result;
+         result = new Substrate.NetApi.Model.Types.Base.BaseBitSeq<Substrate.NetApi.Model.Types.Primitive.U8, Substrate.Polkadot.NET.NetApiExt.Generated.Model.bitvec.order.Lsb0>();
+         // NOT IMPLEMENTED >> Initialize Substrate.NetApi.Model.Types.Base.BaseBitSeq`2[[Substrate.NetApi.Model.Types.Primitive.U8, Substrate.NetApi, Version=0.9.20.0, Culture=neutral, PublicKeyToken=null],[Substrate.Polkadot.NET.NetApiExt.Generated.Model.bitvec.order.Lsb0, Substrate.Polkadot.NET.NetApiExt, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+         return result;
+      }
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.vstaging.ApprovalVotingParams GetTestValue9()
+      {
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.vstaging.ApprovalVotingParams result;
+         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.vstaging.ApprovalVotingParams();
+         result.MaxApprovalCoalesceCount = this.GetTestValueU32();
          return result;
       }
       [Test()]
@@ -149,22 +167,22 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.configuration.HostConfiguration>> GetTestValue9()
+      public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.configuration.HostConfiguration>> GetTestValue11()
       {
          Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.configuration.HostConfiguration>> result;
          result = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.configuration.HostConfiguration>>();
          result.Create(new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.configuration.HostConfiguration>[] {
-                  this.GetTestValue10()});
+                  this.GetTestValue12()});
          return result;
       }
-      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.configuration.HostConfiguration> GetTestValue10()
+      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.configuration.HostConfiguration> GetTestValue12()
       {
          Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.configuration.HostConfiguration> result;
          result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.configuration.HostConfiguration>();
-         result.Create(this.GetTestValueU32(), this.GetTestValue11());
+         result.Create(this.GetTestValueU32(), this.GetTestValue13());
          return result;
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.configuration.HostConfiguration GetTestValue11()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.configuration.HostConfiguration GetTestValue13()
       {
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.configuration.HostConfiguration result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.configuration.HostConfiguration();
@@ -177,8 +195,8 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
          result.HrmpMaxMessageNumPerCandidate = this.GetTestValueU32();
          result.ValidationUpgradeCooldown = this.GetTestValueU32();
          result.ValidationUpgradeDelay = this.GetTestValueU32();
-         result.AsyncBackingParams = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.vstaging.AsyncBackingParams();
-         result.AsyncBackingParams = this.GetTestValue12();
+         result.AsyncBackingParams = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.async_backing.AsyncBackingParams();
+         result.AsyncBackingParams = this.GetTestValue14();
          result.MaxPovSize = this.GetTestValueU32();
          result.MaxDownwardMessageSize = this.GetTestValueU32();
          result.HrmpMaxParachainOutboundChannels = this.GetTestValueU32();
@@ -188,16 +206,16 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
          result.HrmpChannelMaxTotalSize = this.GetTestValueU32();
          result.HrmpMaxParachainInboundChannels = this.GetTestValueU32();
          result.HrmpChannelMaxMessageSize = this.GetTestValueU32();
-         result.ExecutorParams = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.executor_params.ExecutorParams();
-         result.ExecutorParams = this.GetTestValue13();
+         result.ExecutorParams = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.executor_params.ExecutorParams();
+         result.ExecutorParams = this.GetTestValue15();
          result.CodeRetentionPeriod = this.GetTestValueU32();
-         result.OnDemandCores = this.GetTestValueU32();
+         result.CoretimeCores = this.GetTestValueU32();
          result.OnDemandRetries = this.GetTestValueU32();
          result.OnDemandQueueMaxSize = this.GetTestValueU32();
          result.OnDemandTargetQueueUtilization = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill();
-         result.OnDemandTargetQueueUtilization = this.GetTestValue15();
+         result.OnDemandTargetQueueUtilization = this.GetTestValue17();
          result.OnDemandFeeVariability = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill();
-         result.OnDemandFeeVariability = this.GetTestValue16();
+         result.OnDemandFeeVariability = this.GetTestValue18();
          result.OnDemandBaseFee = this.GetTestValueU128();
          result.OnDemandTtl = this.GetTestValueU32();
          result.GroupRotationFrequency = this.GetTestValueU32();
@@ -217,44 +235,62 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
          result.PvfVotingTtl = this.GetTestValueU32();
          result.MinimumValidationUpgradeDelay = this.GetTestValueU32();
          result.MinimumBackingVotes = this.GetTestValueU32();
+         result.NodeFeatures = new Substrate.NetApi.Model.Types.Base.BaseBitSeq<Substrate.NetApi.Model.Types.Primitive.U8, Substrate.Polkadot.NET.NetApiExt.Generated.Model.bitvec.order.Lsb0>();
+         result.NodeFeatures = this.GetTestValue19();
+         result.ApprovalVotingParams = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.vstaging.ApprovalVotingParams();
+         result.ApprovalVotingParams = this.GetTestValue20();
          return result;
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.vstaging.AsyncBackingParams GetTestValue12()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.async_backing.AsyncBackingParams GetTestValue14()
       {
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.vstaging.AsyncBackingParams result;
-         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.vstaging.AsyncBackingParams();
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.async_backing.AsyncBackingParams result;
+         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.async_backing.AsyncBackingParams();
          result.MaxCandidateDepth = this.GetTestValueU32();
          result.AllowedAncestryLen = this.GetTestValueU32();
          return result;
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.executor_params.ExecutorParams GetTestValue13()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.executor_params.ExecutorParams GetTestValue15()
       {
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.executor_params.ExecutorParams result;
-         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.executor_params.ExecutorParams();
-         result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.executor_params.EnumExecutorParam>();
-         result.Value.Create(new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.executor_params.EnumExecutorParam[] {
-                  this.GetTestValue14()});
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.executor_params.ExecutorParams result;
+         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.executor_params.ExecutorParams();
+         result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.executor_params.EnumExecutorParam>();
+         result.Value.Create(new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.executor_params.EnumExecutorParam[] {
+                  this.GetTestValue16()});
          return result;
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.executor_params.EnumExecutorParam GetTestValue14()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.executor_params.EnumExecutorParam GetTestValue16()
       {
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.executor_params.EnumExecutorParam result;
-         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.executor_params.EnumExecutorParam();
-         result.Create(this.GetTestValueEnum<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.executor_params.ExecutorParam>(), this.GetTestValueBaseVoid());
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.executor_params.EnumExecutorParam result;
+         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.executor_params.EnumExecutorParam();
+         result.Create(this.GetTestValueEnum<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.executor_params.ExecutorParam>(), this.GetTestValueBaseVoid());
          return result;
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill GetTestValue15()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill GetTestValue17()
       {
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill();
          result.Value = this.GetTestValueU32();
          return result;
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill GetTestValue16()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill GetTestValue18()
       {
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill();
          result.Value = this.GetTestValueU32();
+         return result;
+      }
+      public Substrate.NetApi.Model.Types.Base.BaseBitSeq<Substrate.NetApi.Model.Types.Primitive.U8, Substrate.Polkadot.NET.NetApiExt.Generated.Model.bitvec.order.Lsb0> GetTestValue19()
+      {
+         Substrate.NetApi.Model.Types.Base.BaseBitSeq<Substrate.NetApi.Model.Types.Primitive.U8, Substrate.Polkadot.NET.NetApiExt.Generated.Model.bitvec.order.Lsb0> result;
+         result = new Substrate.NetApi.Model.Types.Base.BaseBitSeq<Substrate.NetApi.Model.Types.Primitive.U8, Substrate.Polkadot.NET.NetApiExt.Generated.Model.bitvec.order.Lsb0>();
+         // NOT IMPLEMENTED >> Initialize Substrate.NetApi.Model.Types.Base.BaseBitSeq`2[[Substrate.NetApi.Model.Types.Primitive.U8, Substrate.NetApi, Version=0.9.20.0, Culture=neutral, PublicKeyToken=null],[Substrate.Polkadot.NET.NetApiExt.Generated.Model.bitvec.order.Lsb0, Substrate.Polkadot.NET.NetApiExt, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+         return result;
+      }
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.vstaging.ApprovalVotingParams GetTestValue20()
+      {
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.vstaging.ApprovalVotingParams result;
+         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.vstaging.ApprovalVotingParams();
+         result.MaxApprovalCoalesceCount = this.GetTestValueU32();
          return result;
       }
       [Test()]
@@ -268,7 +304,7 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          ConfigurationControllerClient rpcClient = new ConfigurationControllerClient(_httpClient, subscriptionClient);
-         Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.configuration.HostConfiguration>> mockupValue = this.GetTestValue9();
+         Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.configuration.HostConfiguration>> mockupValue = this.GetTestValue11();
 
 
          Assert.IsTrue(await rpcClient.SubscribePendingConfigs());

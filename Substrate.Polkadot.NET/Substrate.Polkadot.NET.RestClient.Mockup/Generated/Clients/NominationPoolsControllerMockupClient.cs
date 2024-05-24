@@ -25,6 +25,10 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup.Generated.Clients
       {
          _httpClient = httpClient;
       }
+      public async Task<bool> SetTotalValueLocked(U128 value)
+      {
+         return await SendMockupRequestAsync(_httpClient, "NominationPools/TotalValueLocked", value.Encode(), Substrate.Polkadot.NET.NetApiExt.Generated.Storage.NominationPoolsStorage.TotalValueLockedParams());
+      }
       public async Task<bool> SetMinJoinBond(U128 value)
       {
          return await SendMockupRequestAsync(_httpClient, "NominationPools/MinJoinBond", value.Encode(), Substrate.Polkadot.NET.NetApiExt.Generated.Storage.NominationPoolsStorage.MinJoinBondParams());
@@ -81,7 +85,7 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "NominationPools/CounterForSubPoolsStorage", value.Encode(), Substrate.Polkadot.NET.NetApiExt.Generated.Storage.NominationPoolsStorage.CounterForSubPoolsStorageParams());
       }
-      public async Task<bool> SetMetadata(BoundedVecT32 value, U32 key)
+      public async Task<bool> SetMetadata(BoundedVecT38 value, U32 key)
       {
          return await SendMockupRequestAsync(_httpClient, "NominationPools/Metadata", value.Encode(), Substrate.Polkadot.NET.NetApiExt.Generated.Storage.NominationPoolsStorage.MetadataParams(key));
       }

@@ -63,13 +63,37 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_bounties.pallet
         /// A bounty expiry is extended.
         /// </summary>
         BountyExtended = 6,
+        
+        /// <summary>
+        /// >> BountyApproved
+        /// A bounty is approved.
+        /// </summary>
+        BountyApproved = 7,
+        
+        /// <summary>
+        /// >> CuratorProposed
+        /// A bounty curator is proposed.
+        /// </summary>
+        CuratorProposed = 8,
+        
+        /// <summary>
+        /// >> CuratorUnassigned
+        /// A bounty curator is unassigned.
+        /// </summary>
+        CuratorUnassigned = 9,
+        
+        /// <summary>
+        /// >> CuratorAccepted
+        /// A bounty curator is accepted.
+        /// </summary>
+        CuratorAccepted = 10,
     }
     
     /// <summary>
-    /// >> 482 - Variant[pallet_bounties.pallet.Event]
+    /// >> 530 - Variant[pallet_bounties.pallet.Event]
     /// The `Event` enum of this pallet
     /// </summary>
-    public sealed class EnumEvent : BaseEnumExt<Event, Substrate.NetApi.Model.Types.Primitive.U32, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U128>, Substrate.NetApi.Model.Types.Primitive.U32, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U128, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>
+    public sealed class EnumEvent : BaseEnumExt<Event, Substrate.NetApi.Model.Types.Primitive.U32, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U128>, Substrate.NetApi.Model.Types.Primitive.U32, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U128, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>, Substrate.NetApi.Model.Types.Primitive.U32, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>>
     {
     }
 }

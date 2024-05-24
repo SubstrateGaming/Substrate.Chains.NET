@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_election_provide
     
     
     /// <summary>
-    /// >> 720 - Composite[pallet_election_provider_multi_phase.ReadySolution]
+    /// >> 775 - Composite[pallet_election_provider_multi_phase.ReadySolution]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class ReadySolution : BaseType
@@ -27,7 +27,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_election_provide
         /// <summary>
         /// >> supports
         /// </summary>
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT38 Supports { get; set; }
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT41 Supports { get; set; }
         /// <summary>
         /// >> score
         /// </summary>
@@ -57,7 +57,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_election_provide
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Supports = new Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT38();
+            Supports = new Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT41();
             Supports.Decode(byteArray, ref p);
             Score = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_npos_elections.ElectionScore();
             Score.Decode(byteArray, ref p);
@@ -66,7 +66,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_election_provide
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];
-            System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
+            global::System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
         }
     }
 }

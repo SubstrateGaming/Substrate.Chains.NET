@@ -28,12 +28,18 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// >> StatusFor
         ///  The request status of a given hash.
         /// </summary>
-        Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_preimage.EnumRequestStatus GetStatusFor(string key);
+        Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_preimage.EnumOldRequestStatus GetStatusFor(string key);
+        
+        /// <summary>
+        /// >> RequestStatusFor
+        ///  The request status of a given hash.
+        /// </summary>
+        Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_preimage.EnumRequestStatus GetRequestStatusFor(string key);
         
         /// <summary>
         /// >> PreimageFor
         /// </summary>
-        Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT36 GetPreimageFor(string key);
+        Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT39 GetPreimageFor(string key);
     }
     
     /// <summary>
@@ -45,26 +51,32 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// <summary>
         /// _statusForTypedStorage typed storage field
         /// </summary>
-        private TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_preimage.EnumRequestStatus> _statusForTypedStorage;
+        private TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_preimage.EnumOldRequestStatus> _statusForTypedStorage;
+        
+        /// <summary>
+        /// _requestStatusForTypedStorage typed storage field
+        /// </summary>
+        private TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_preimage.EnumRequestStatus> _requestStatusForTypedStorage;
         
         /// <summary>
         /// _preimageForTypedStorage typed storage field
         /// </summary>
-        private TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT36> _preimageForTypedStorage;
+        private TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT39> _preimageForTypedStorage;
         
         /// <summary>
         /// PreimageStorage constructor.
         /// </summary>
         public PreimageStorage(IStorageDataProvider storageDataProvider, List<IStorageChangeDelegate> storageChangeDelegates)
         {
-            this.StatusForTypedStorage = new TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_preimage.EnumRequestStatus>("Preimage.StatusFor", storageDataProvider, storageChangeDelegates);
-            this.PreimageForTypedStorage = new TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT36>("Preimage.PreimageFor", storageDataProvider, storageChangeDelegates);
+            this.StatusForTypedStorage = new TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_preimage.EnumOldRequestStatus>("Preimage.StatusFor", storageDataProvider, storageChangeDelegates);
+            this.RequestStatusForTypedStorage = new TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_preimage.EnumRequestStatus>("Preimage.RequestStatusFor", storageDataProvider, storageChangeDelegates);
+            this.PreimageForTypedStorage = new TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT39>("Preimage.PreimageFor", storageDataProvider, storageChangeDelegates);
         }
         
         /// <summary>
         /// _statusForTypedStorage property
         /// </summary>
-        public TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_preimage.EnumRequestStatus> StatusForTypedStorage
+        public TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_preimage.EnumOldRequestStatus> StatusForTypedStorage
         {
             get
             {
@@ -77,9 +89,24 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         }
         
         /// <summary>
+        /// _requestStatusForTypedStorage property
+        /// </summary>
+        public TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_preimage.EnumRequestStatus> RequestStatusForTypedStorage
+        {
+            get
+            {
+                return _requestStatusForTypedStorage;
+            }
+            set
+            {
+                _requestStatusForTypedStorage = value;
+            }
+        }
+        
+        /// <summary>
         /// _preimageForTypedStorage property
         /// </summary>
-        public TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT36> PreimageForTypedStorage
+        public TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT39> PreimageForTypedStorage
         {
             get
             {
@@ -97,6 +124,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         public async Task InitializeAsync(Substrate.ServiceLayer.Storage.IStorageDataProvider dataProvider)
         {
             await StatusForTypedStorage.InitializeAsync("Preimage", "StatusFor");
+            await RequestStatusForTypedStorage.InitializeAsync("Preimage", "RequestStatusFor");
             await PreimageForTypedStorage.InitializeAsync("Preimage", "PreimageFor");
         }
         
@@ -113,13 +141,42 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// >> StatusFor
         ///  The request status of a given hash.
         /// </summary>
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_preimage.EnumRequestStatus GetStatusFor(string key)
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_preimage.EnumOldRequestStatus GetStatusFor(string key)
         {
             if ((key == null))
             {
                 return null;
             }
-            if (StatusForTypedStorage.Dictionary.TryGetValue(key, out Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_preimage.EnumRequestStatus result))
+            if (StatusForTypedStorage.Dictionary.TryGetValue(key, out Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_preimage.EnumOldRequestStatus result))
+            {
+                return result;
+            }
+            else
+            {
+                return null;
+            }
+        }
+        
+        /// <summary>
+        /// Implements any storage change for Preimage.RequestStatusFor
+        /// </summary>
+        [StorageChange("Preimage", "RequestStatusFor")]
+        public void OnUpdateRequestStatusFor(string key, string data)
+        {
+            RequestStatusForTypedStorage.Update(key, data);
+        }
+        
+        /// <summary>
+        /// >> RequestStatusFor
+        ///  The request status of a given hash.
+        /// </summary>
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_preimage.EnumRequestStatus GetRequestStatusFor(string key)
+        {
+            if ((key == null))
+            {
+                return null;
+            }
+            if (RequestStatusForTypedStorage.Dictionary.TryGetValue(key, out Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_preimage.EnumRequestStatus result))
             {
                 return result;
             }
@@ -141,13 +198,13 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// <summary>
         /// >> PreimageFor
         /// </summary>
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT36 GetPreimageFor(string key)
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT39 GetPreimageFor(string key)
         {
             if ((key == null))
             {
                 return null;
             }
-            if (PreimageForTypedStorage.Dictionary.TryGetValue(key, out Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT36 result))
+            if (PreimageForTypedStorage.Dictionary.TryGetValue(key, out Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT39 result))
             {
                 return result;
             }

@@ -36,6 +36,66 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
         public AuthorityDiscoveryStorage(SubstrateClientExt client)
         {
             this._client = client;
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("AuthorityDiscovery", "Keys"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT5)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("AuthorityDiscovery", "NextKeys"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT5)));
+        }
+        
+        /// <summary>
+        /// >> KeysParams
+        ///  Keys of the current authority set.
+        /// </summary>
+        public static string KeysParams()
+        {
+            return RequestGenerator.GetStorage("AuthorityDiscovery", "Keys", Substrate.NetApi.Model.Meta.Storage.Type.Plain);
+        }
+        
+        /// <summary>
+        /// >> KeysDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string KeysDefault()
+        {
+            return "0x00";
+        }
+        
+        /// <summary>
+        /// >> Keys
+        ///  Keys of the current authority set.
+        /// </summary>
+        public async Task<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT5> Keys(string blockhash, CancellationToken token)
+        {
+            string parameters = AuthorityDiscoveryStorage.KeysParams();
+            var result = await _client.GetStorageAsync<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT5>(parameters, blockhash, token);
+            return result;
+        }
+        
+        /// <summary>
+        /// >> NextKeysParams
+        ///  Keys of the next authority set.
+        /// </summary>
+        public static string NextKeysParams()
+        {
+            return RequestGenerator.GetStorage("AuthorityDiscovery", "NextKeys", Substrate.NetApi.Model.Meta.Storage.Type.Plain);
+        }
+        
+        /// <summary>
+        /// >> NextKeysDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string NextKeysDefault()
+        {
+            return "0x00";
+        }
+        
+        /// <summary>
+        /// >> NextKeys
+        ///  Keys of the next authority set.
+        /// </summary>
+        public async Task<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT5> NextKeys(string blockhash, CancellationToken token)
+        {
+            string parameters = AuthorityDiscoveryStorage.NextKeysParams();
+            var result = await _client.GetStorageAsync<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT5>(parameters, blockhash, token);
+            return result;
         }
     }
     

@@ -33,7 +33,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_transaction_paym
     }
     
     /// <summary>
-    /// >> 564 - Variant[pallet_transaction_payment.Releases]
+    /// >> 615 - Variant[pallet_transaction_payment.Releases]
     /// </summary>
     public sealed class EnumReleases : BaseEnum<Releases>
     {

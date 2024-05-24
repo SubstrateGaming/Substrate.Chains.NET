@@ -13,7 +13,7 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup.Generated.Clients
    using System.Threading.Tasks;
    using System.Net.Http;
    using Substrate.NetApi.Model.Types.Base;
-   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.scheduler.pallet;
    using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base;
    using Substrate.Polkadot.NET.RestClient.Mockup.Generated.Interfaces;
@@ -25,7 +25,7 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup.Generated.Clients
       {
          _httpClient = httpClient;
       }
-      public async Task<bool> SetValidatorGroups(BaseVec<BaseVec<ValidatorIndex>> value)
+      public async Task<bool> SetValidatorGroups(BaseVec<BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.ValidatorIndex>> value)
       {
          return await SendMockupRequestAsync(_httpClient, "ParaScheduler/ValidatorGroups", value.Encode(), Substrate.Polkadot.NET.NetApiExt.Generated.Storage.ParaSchedulerStorage.ValidatorGroupsParams());
       }

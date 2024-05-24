@@ -25,42 +25,51 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_para
         /// <summary>
         /// >> OpenChannelRequested
         /// Open HRMP channel requested.
-        /// `[sender, recipient, proposed_max_capacity, proposed_max_message_size]`
         /// </summary>
         OpenChannelRequested = 0,
         
         /// <summary>
         /// >> OpenChannelCanceled
         /// An HRMP channel request sent by the receiver was canceled by either party.
-        /// `[by_parachain, channel_id]`
         /// </summary>
         OpenChannelCanceled = 1,
         
         /// <summary>
         /// >> OpenChannelAccepted
-        /// Open HRMP channel accepted. `[sender, recipient]`
+        /// Open HRMP channel accepted.
         /// </summary>
         OpenChannelAccepted = 2,
         
         /// <summary>
         /// >> ChannelClosed
-        /// HRMP channel closed. `[by_parachain, channel_id]`
+        /// HRMP channel closed.
         /// </summary>
         ChannelClosed = 3,
         
         /// <summary>
         /// >> HrmpChannelForceOpened
         /// An HRMP channel was opened via Root origin.
-        /// `[sender, recipient, proposed_max_capacity, proposed_max_message_size]`
         /// </summary>
         HrmpChannelForceOpened = 4,
+        
+        /// <summary>
+        /// >> HrmpSystemChannelOpened
+        /// An HRMP channel was opened between two system chains.
+        /// </summary>
+        HrmpSystemChannelOpened = 5,
+        
+        /// <summary>
+        /// >> OpenChannelDepositsUpdated
+        /// An HRMP channel's deposits were updated.
+        /// </summary>
+        OpenChannelDepositsUpdated = 6,
     }
     
     /// <summary>
-    /// >> 442 - Variant[polkadot_runtime_parachains.hrmp.pallet.Event]
+    /// >> 504 - Variant[polkadot_runtime_parachains.hrmp.pallet.Event]
     /// The `Event` enum of this pallet
     /// </summary>
-    public sealed class EnumEvent : BaseEnumExt<Event, BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>, BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.HrmpChannelId>, BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id>, BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.HrmpChannelId>, BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>>
+    public sealed class EnumEvent : BaseEnumExt<Event, BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>, BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.HrmpChannelId>, BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id>, BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.HrmpChannelId>, BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>, BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>, BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id>>
     {
     }
 }

@@ -31,7 +31,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_transaction_paym
     }
     
     /// <summary>
-    /// >> 33 - Variant[pallet_transaction_payment.pallet.Event]
+    /// >> 34 - Variant[pallet_transaction_payment.pallet.Event]
     /// The `Event` enum of this pallet
     /// </summary>
     public sealed class EnumEvent : BaseEnumExt<Event, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U128, Substrate.NetApi.Model.Types.Primitive.U128>>

@@ -176,7 +176,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Controller
         ///  The current bids, stored ordered by the value of the bid.
         /// </summary>
         [HttpGet("Bids")]
-        [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT28), 200)]
+        [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT31), 200)]
         [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.SocietyStorage), "BidsParams")]
         public IActionResult GetBids()
         {
@@ -223,7 +223,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Controller
         ///  Clear-cursor for Vote, map from Candidate -> (Maybe) Cursor.
         /// </summary>
         [HttpGet("VoteClearCursor")]
-        [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT29), 200)]
+        [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT32), 200)]
         [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.SocietyStorage), "VoteClearCursorParams", typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32))]
         public IActionResult GetVoteClearCursor(string key)
         {

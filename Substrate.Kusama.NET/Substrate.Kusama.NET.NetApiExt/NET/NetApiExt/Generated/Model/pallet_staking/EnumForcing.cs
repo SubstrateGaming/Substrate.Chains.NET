@@ -43,7 +43,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking
     }
     
     /// <summary>
-    /// >> 39 - Variant[pallet_staking.Forcing]
+    /// >> 40 - Variant[pallet_staking.Forcing]
     /// </summary>
     public sealed class EnumForcing : BaseEnum<Forcing>
     {

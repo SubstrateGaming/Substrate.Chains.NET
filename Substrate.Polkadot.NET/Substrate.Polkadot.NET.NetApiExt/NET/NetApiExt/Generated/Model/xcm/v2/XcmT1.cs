@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.v2
     
     
     /// <summary>
-    /// >> 359 - Composite[xcm.v2.XcmT1]
+    /// >> 390 - Composite[xcm.v2.XcmT1]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class XcmT1 : BaseType
@@ -52,7 +52,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.v2
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];
-            System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
+            global::System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
         }
     }
 }

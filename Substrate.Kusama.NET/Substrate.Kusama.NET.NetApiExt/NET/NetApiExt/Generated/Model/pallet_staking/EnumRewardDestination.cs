@@ -48,7 +48,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking
     }
     
     /// <summary>
-    /// >> 86 - Variant[pallet_staking.RewardDestination]
+    /// >> 36 - Variant[pallet_staking.RewardDestination]
     /// </summary>
     public sealed class EnumRewardDestination : BaseEnumExt<RewardDestination, BaseVoid, BaseVoid, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, BaseVoid>
     {

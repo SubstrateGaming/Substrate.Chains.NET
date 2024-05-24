@@ -31,7 +31,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_session.pallet
     }
     
     /// <summary>
-    /// >> 48 - Variant[pallet_session.pallet.Event]
+    /// >> 49 - Variant[pallet_session.pallet.Event]
     /// The `Event` enum of this pallet
     /// </summary>
     public sealed class EnumEvent : BaseEnumExt<Event, Substrate.NetApi.Model.Types.Primitive.U32>

@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_runtime
     
     
     /// <summary>
-    /// >> 421 - Composite[sp_runtime.DispatchErrorWithPostInfo]
+    /// >> 483 - Composite[sp_runtime.DispatchErrorWithPostInfo]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class DispatchErrorWithPostInfo : BaseType
@@ -59,7 +59,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_runtime
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];
-            System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
+            global::System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
         }
     }
 }

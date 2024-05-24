@@ -51,7 +51,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Society", "SuspendedMembers"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32), typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.MemberRecord)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Society", "RoundCount"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Primitive.U32)));
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("Society", "Bids"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT28)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("Society", "Bids"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT31)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Society", "Candidates"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32), typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.Candidacy)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Society", "Skeptic"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32)));
@@ -59,7 +59,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
                             Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat,
                             Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>), typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.Vote)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Society", "VoteClearCursor"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32), typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT29)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32), typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT32)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Society", "NextHead"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.IntakeRecord)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Society", "ChallengeRoundCount"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Primitive.U32)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Society", "Defending"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.Tally>)));
@@ -90,10 +90,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> Parameters
         ///  The max number of members for the society at one time.
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.GroupParams> Parameters(CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.GroupParams> Parameters(string blockhash, CancellationToken token)
         {
             string parameters = SocietyStorage.ParametersParams();
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.GroupParams>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.GroupParams>(parameters, blockhash, token);
             return result;
         }
         
@@ -119,10 +119,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> Pot
         ///  Amount of our account balance that is specifically for the next round's bid(s).
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U128> Pot(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U128> Pot(string blockhash, CancellationToken token)
         {
             string parameters = SocietyStorage.PotParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U128>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U128>(parameters, blockhash, token);
             return result;
         }
         
@@ -148,10 +148,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> Founder
         ///  The first member.
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> Founder(CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> Founder(string blockhash, CancellationToken token)
         {
             string parameters = SocietyStorage.FounderParams();
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>(parameters, blockhash, token);
             return result;
         }
         
@@ -177,10 +177,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> Head
         ///  The most primary from the most recently approved rank 0 members in the society.
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> Head(CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> Head(string blockhash, CancellationToken token)
         {
             string parameters = SocietyStorage.HeadParams();
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>(parameters, blockhash, token);
             return result;
         }
         
@@ -208,10 +208,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         ///  A hash of the rules of this society concerning membership. Can only be set once and
         ///  only by the founder.
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256> Rules(CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256> Rules(string blockhash, CancellationToken token)
         {
             string parameters = SocietyStorage.RulesParams();
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256>(parameters, blockhash, token);
             return result;
         }
         
@@ -239,10 +239,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> Members
         ///  The current members and their rank. Doesn't include `SuspendedMembers`.
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.MemberRecord> Members(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.MemberRecord> Members(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, string blockhash, CancellationToken token)
         {
             string parameters = SocietyStorage.MembersParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.MemberRecord>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.MemberRecord>(parameters, blockhash, token);
             return result;
         }
         
@@ -270,10 +270,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> Payouts
         ///  Information regarding rank-0 payouts, past and future.
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.PayoutRecord> Payouts(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.PayoutRecord> Payouts(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, string blockhash, CancellationToken token)
         {
             string parameters = SocietyStorage.PayoutsParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.PayoutRecord>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.PayoutRecord>(parameters, blockhash, token);
             return result;
         }
         
@@ -299,10 +299,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> MemberCount
         ///  The number of items in `Members` currently. (Doesn't include `SuspendedMembers`.)
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> MemberCount(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> MemberCount(string blockhash, CancellationToken token)
         {
             string parameters = SocietyStorage.MemberCountParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, blockhash, token);
             return result;
         }
         
@@ -332,10 +332,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         ///  The current items in `Members` keyed by their unique index. Keys are densely populated
         ///  `0..MemberCount` (does not include `MemberCount`).
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> MemberByIndex(Substrate.NetApi.Model.Types.Primitive.U32 key, CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> MemberByIndex(Substrate.NetApi.Model.Types.Primitive.U32 key, string blockhash, CancellationToken token)
         {
             string parameters = SocietyStorage.MemberByIndexParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>(parameters, blockhash, token);
             return result;
         }
         
@@ -363,10 +363,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> SuspendedMembers
         ///  The set of suspended members, with their old membership record.
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.MemberRecord> SuspendedMembers(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.MemberRecord> SuspendedMembers(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, string blockhash, CancellationToken token)
         {
             string parameters = SocietyStorage.SuspendedMembersParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.MemberRecord>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.MemberRecord>(parameters, blockhash, token);
             return result;
         }
         
@@ -392,10 +392,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> RoundCount
         ///  The number of rounds which have passed.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> RoundCount(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> RoundCount(string blockhash, CancellationToken token)
         {
             string parameters = SocietyStorage.RoundCountParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, blockhash, token);
             return result;
         }
         
@@ -421,10 +421,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> Bids
         ///  The current bids, stored ordered by the value of the bid.
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT28> Bids(CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT31> Bids(string blockhash, CancellationToken token)
         {
             string parameters = SocietyStorage.BidsParams();
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT28>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT31>(parameters, blockhash, token);
             return result;
         }
         
@@ -450,10 +450,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// <summary>
         /// >> Candidates
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.Candidacy> Candidates(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.Candidacy> Candidates(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, string blockhash, CancellationToken token)
         {
             string parameters = SocietyStorage.CandidatesParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.Candidacy>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.Candidacy>(parameters, blockhash, token);
             return result;
         }
         
@@ -479,10 +479,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> Skeptic
         ///  The current skeptic.
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> Skeptic(CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> Skeptic(string blockhash, CancellationToken token)
         {
             string parameters = SocietyStorage.SkepticParams();
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>(parameters, blockhash, token);
             return result;
         }
         
@@ -510,10 +510,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> Votes
         ///  Double map from Candidate -> Voter -> (Maybe) Vote.
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.Vote> Votes(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> key, CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.Vote> Votes(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> key, string blockhash, CancellationToken token)
         {
             string parameters = SocietyStorage.VotesParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.Vote>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.Vote>(parameters, blockhash, token);
             return result;
         }
         
@@ -541,10 +541,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> VoteClearCursor
         ///  Clear-cursor for Vote, map from Candidate -> (Maybe) Cursor.
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT29> VoteClearCursor(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT32> VoteClearCursor(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, string blockhash, CancellationToken token)
         {
             string parameters = SocietyStorage.VoteClearCursorParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT29>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT32>(parameters, blockhash, token);
             return result;
         }
         
@@ -574,10 +574,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         ///  their bid and round ID) who is from the most recent round with the lowest bid. They will
         ///  become the new `Head`.
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.IntakeRecord> NextHead(CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.IntakeRecord> NextHead(string blockhash, CancellationToken token)
         {
             string parameters = SocietyStorage.NextHeadParams();
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.IntakeRecord>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.IntakeRecord>(parameters, blockhash, token);
             return result;
         }
         
@@ -603,10 +603,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> ChallengeRoundCount
         ///  The number of challenge rounds there have been. Used to identify stale DefenderVotes.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> ChallengeRoundCount(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> ChallengeRoundCount(string blockhash, CancellationToken token)
         {
             string parameters = SocietyStorage.ChallengeRoundCountParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, blockhash, token);
             return result;
         }
         
@@ -632,10 +632,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> Defending
         ///  The defending member currently being challenged, along with a running tally of votes.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.Tally>> Defending(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.Tally>> Defending(string blockhash, CancellationToken token)
         {
             string parameters = SocietyStorage.DefendingParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.Tally>>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.Tally>>(parameters, blockhash, token);
             return result;
         }
         
@@ -663,10 +663,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> DefenderVotes
         ///  Votes for the defender, keyed by challenge round.
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.Vote> DefenderVotes(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> key, CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.Vote> DefenderVotes(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> key, string blockhash, CancellationToken token)
         {
             string parameters = SocietyStorage.DefenderVotesParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.Vote>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.Vote>(parameters, blockhash, token);
             return result;
         }
     }

@@ -42,7 +42,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_child_bounties.p
     }
     
     /// <summary>
-    /// >> 719 - Variant[pallet_child_bounties.pallet.Error]
+    /// >> 774 - Variant[pallet_child_bounties.pallet.Error]
     /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>

@@ -28,7 +28,7 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "Scheduler/IncompleteSince", value.Encode(), Substrate.Polkadot.NET.NetApiExt.Generated.Storage.SchedulerStorage.IncompleteSinceParams());
       }
-      public async Task<bool> SetAgenda(BoundedVecT8 value, U32 key)
+      public async Task<bool> SetAgenda(BoundedVecT14 value, U32 key)
       {
          return await SendMockupRequestAsync(_httpClient, "Scheduler/Agenda", value.Encode(), Substrate.Polkadot.NET.NetApiExt.Generated.Storage.SchedulerStorage.AgendaParams(key));
       }

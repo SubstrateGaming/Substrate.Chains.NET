@@ -41,23 +41,47 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_treasury.palle
         approve_proposal = 2,
         
         /// <summary>
-        /// >> spend
-        /// See [`Pallet::spend`].
+        /// >> spend_local
+        /// See [`Pallet::spend_local`].
         /// </summary>
-        spend = 3,
+        spend_local = 3,
         
         /// <summary>
         /// >> remove_approval
         /// See [`Pallet::remove_approval`].
         /// </summary>
         remove_approval = 4,
+        
+        /// <summary>
+        /// >> spend
+        /// See [`Pallet::spend`].
+        /// </summary>
+        spend = 5,
+        
+        /// <summary>
+        /// >> payout
+        /// See [`Pallet::payout`].
+        /// </summary>
+        payout = 6,
+        
+        /// <summary>
+        /// >> check_status
+        /// See [`Pallet::check_status`].
+        /// </summary>
+        check_status = 7,
+        
+        /// <summary>
+        /// >> void_spend
+        /// See [`Pallet::void_spend`].
+        /// </summary>
+        void_spend = 8,
     }
     
     /// <summary>
-    /// >> 123 - Variant[pallet_treasury.pallet.Call]
+    /// >> 162 - Variant[pallet_treasury.pallet.Call]
     /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
-    public sealed class EnumCall : BaseEnumExt<Call, BaseTuple<Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128>, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress>, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>, BaseTuple<Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128>, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress>, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>>
+    public sealed class EnumCall : BaseEnumExt<Call, BaseTuple<Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128>, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress>, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>, BaseTuple<Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128>, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress>, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>, BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_common.impls.EnumVersionedLocatableAsset, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128>, Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32>>, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>
     {
     }
 }

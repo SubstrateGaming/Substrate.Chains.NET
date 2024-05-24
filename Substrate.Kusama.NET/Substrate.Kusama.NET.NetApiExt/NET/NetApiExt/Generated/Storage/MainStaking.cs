@@ -63,10 +63,20 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
                             Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.NetApi.Model.Types.Primitive.U32), typeof(Substrate.NetApi.Model.Types.Primitive.U32)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Staking", "ErasStakers"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat,
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>), typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.Exposure)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>), typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_staking.Exposure)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("Staking", "ErasStakersOverview"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat,
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>), typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_staking.PagedExposureMetadata)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Staking", "ErasStakersClipped"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat,
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>), typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.Exposure)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>), typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_staking.Exposure)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("Staking", "ErasStakersPaged"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat,
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat,
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U32>), typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_staking.ExposurePage)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("Staking", "ClaimedRewards"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat,
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>), typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U32>)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Staking", "ErasValidatorPrefs"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat,
                             Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>), typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.ValidatorPrefs)));
@@ -119,10 +129,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> ValidatorCount
         ///  The ideal number of active validators.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> ValidatorCount(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> ValidatorCount(string blockhash, CancellationToken token)
         {
             string parameters = StakingStorage.ValidatorCountParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, blockhash, token);
             return result;
         }
         
@@ -148,10 +158,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> MinimumValidatorCount
         ///  Minimum number of staking participants before emergency conditions are imposed.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> MinimumValidatorCount(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> MinimumValidatorCount(string blockhash, CancellationToken token)
         {
             string parameters = StakingStorage.MinimumValidatorCountParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, blockhash, token);
             return result;
         }
         
@@ -181,10 +191,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         ///  easy to initialize and the performance hit is minimal (we expect no more than four
         ///  invulnerables) and restricted to testnets.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>> Invulnerables(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>> Invulnerables(string blockhash, CancellationToken token)
         {
             string parameters = StakingStorage.InvulnerablesParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>>(parameters, blockhash, token);
             return result;
         }
         
@@ -216,10 +226,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// 
         ///  TWOX-NOTE: SAFE since `AccountId` is a secure hash.
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> Bonded(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> Bonded(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, string blockhash, CancellationToken token)
         {
             string parameters = StakingStorage.BondedParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>(parameters, blockhash, token);
             return result;
         }
         
@@ -245,10 +255,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> MinNominatorBond
         ///  The minimum active bond to become and maintain the role of a nominator.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U128> MinNominatorBond(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U128> MinNominatorBond(string blockhash, CancellationToken token)
         {
             string parameters = StakingStorage.MinNominatorBondParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U128>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U128>(parameters, blockhash, token);
             return result;
         }
         
@@ -274,10 +284,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> MinValidatorBond
         ///  The minimum active bond to become and maintain the role of a validator.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U128> MinValidatorBond(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U128> MinValidatorBond(string blockhash, CancellationToken token)
         {
             string parameters = StakingStorage.MinValidatorBondParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U128>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U128>(parameters, blockhash, token);
             return result;
         }
         
@@ -303,10 +313,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> MinimumActiveStake
         ///  The minimum active nominator stake of the last successful election.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U128> MinimumActiveStake(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U128> MinimumActiveStake(string blockhash, CancellationToken token)
         {
             string parameters = StakingStorage.MinimumActiveStakeParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U128>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U128>(parameters, blockhash, token);
             return result;
         }
         
@@ -336,16 +346,19 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// 
         ///  If set to `0`, no limit exists.
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill> MinCommission(CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill> MinCommission(string blockhash, CancellationToken token)
         {
             string parameters = StakingStorage.MinCommissionParams();
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill>(parameters, blockhash, token);
             return result;
         }
         
         /// <summary>
         /// >> LedgerParams
         ///  Map from all (unlocked) "controller" accounts to the info regarding the staking.
+        /// 
+        ///  Note: All the reads and mutations to this storage *MUST* be done through the methods exposed
+        ///  by [`StakingLedger`] to ensure data and lock consistency.
         /// </summary>
         public static string LedgerParams(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
         {
@@ -366,11 +379,14 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// <summary>
         /// >> Ledger
         ///  Map from all (unlocked) "controller" accounts to the info regarding the staking.
+        /// 
+        ///  Note: All the reads and mutations to this storage *MUST* be done through the methods exposed
+        ///  by [`StakingLedger`] to ensure data and lock consistency.
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.StakingLedger> Ledger(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.StakingLedger> Ledger(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, string blockhash, CancellationToken token)
         {
             string parameters = StakingStorage.LedgerParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.StakingLedger>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.StakingLedger>(parameters, blockhash, token);
             return result;
         }
         
@@ -402,10 +418,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// 
         ///  TWOX-NOTE: SAFE since `AccountId` is a secure hash.
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.EnumRewardDestination> Payee(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.EnumRewardDestination> Payee(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, string blockhash, CancellationToken token)
         {
             string parameters = StakingStorage.PayeeParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.EnumRewardDestination>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.EnumRewardDestination>(parameters, blockhash, token);
             return result;
         }
         
@@ -437,10 +453,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// 
         ///  TWOX-NOTE: SAFE since `AccountId` is a secure hash.
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.ValidatorPrefs> Validators(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.ValidatorPrefs> Validators(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, string blockhash, CancellationToken token)
         {
             string parameters = StakingStorage.ValidatorsParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.ValidatorPrefs>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.ValidatorPrefs>(parameters, blockhash, token);
             return result;
         }
         
@@ -466,10 +482,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> CounterForValidators
         /// Counter for the related counted storage map
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> CounterForValidators(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> CounterForValidators(string blockhash, CancellationToken token)
         {
             string parameters = StakingStorage.CounterForValidatorsParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, blockhash, token);
             return result;
         }
         
@@ -499,10 +515,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// 
         ///  When this value is not set, no limits are enforced.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> MaxValidatorsCount(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> MaxValidatorsCount(string blockhash, CancellationToken token)
         {
             string parameters = StakingStorage.MaxValidatorsCountParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, blockhash, token);
             return result;
         }
         
@@ -566,10 +582,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// 
         ///  TWOX-NOTE: SAFE since `AccountId` is a secure hash.
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.Nominations> Nominators(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.Nominations> Nominators(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, string blockhash, CancellationToken token)
         {
             string parameters = StakingStorage.NominatorsParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.Nominations>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.Nominations>(parameters, blockhash, token);
             return result;
         }
         
@@ -595,10 +611,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> CounterForNominators
         /// Counter for the related counted storage map
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> CounterForNominators(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> CounterForNominators(string blockhash, CancellationToken token)
         {
             string parameters = StakingStorage.CounterForNominatorsParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, blockhash, token);
             return result;
         }
         
@@ -628,10 +644,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// 
         ///  When this value is not set, no limits are enforced.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> MaxNominatorsCount(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> MaxNominatorsCount(string blockhash, CancellationToken token)
         {
             string parameters = StakingStorage.MaxNominatorsCountParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, blockhash, token);
             return result;
         }
         
@@ -663,10 +679,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         ///  This is the latest planned era, depending on how the Session pallet queues the validator
         ///  set, it might be active or not.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> CurrentEra(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> CurrentEra(string blockhash, CancellationToken token)
         {
             string parameters = StakingStorage.CurrentEraParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, blockhash, token);
             return result;
         }
         
@@ -698,16 +714,16 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         ///  The active era is the era being currently rewarded. Validator set of this era must be
         ///  equal to [`SessionInterface::validators`].
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.ActiveEraInfo> ActiveEra(CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.ActiveEraInfo> ActiveEra(string blockhash, CancellationToken token)
         {
             string parameters = StakingStorage.ActiveEraParams();
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.ActiveEraInfo>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.ActiveEraInfo>(parameters, blockhash, token);
             return result;
         }
         
         /// <summary>
         /// >> ErasStartSessionIndexParams
-        ///  The session index at which the era start for the last `HISTORY_DEPTH` eras.
+        ///  The session index at which the era start for the last [`Config::HistoryDepth`] eras.
         /// 
         ///  Note: This tracks the starting session (i.e. session index when era start being active)
         ///  for the eras in `[CurrentEra - HISTORY_DEPTH, CurrentEra]`.
@@ -730,15 +746,15 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> ErasStartSessionIndex
-        ///  The session index at which the era start for the last `HISTORY_DEPTH` eras.
+        ///  The session index at which the era start for the last [`Config::HistoryDepth`] eras.
         /// 
         ///  Note: This tracks the starting session (i.e. session index when era start being active)
         ///  for the eras in `[CurrentEra - HISTORY_DEPTH, CurrentEra]`.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> ErasStartSessionIndex(Substrate.NetApi.Model.Types.Primitive.U32 key, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> ErasStartSessionIndex(Substrate.NetApi.Model.Types.Primitive.U32 key, string blockhash, CancellationToken token)
         {
             string parameters = StakingStorage.ErasStartSessionIndexParams(key);
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, blockhash, token);
             return result;
         }
         
@@ -748,8 +764,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// 
         ///  This is keyed first by the era index to allow bulk deletion and then the stash account.
         /// 
-        ///  Is it removed after `HISTORY_DEPTH` eras.
+        ///  Is it removed after [`Config::HistoryDepth`] eras.
         ///  If stakers hasn't been set or has been removed then empty exposure is returned.
+        /// 
+        ///  Note: Deprecated since v14. Use `EraInfo` instead to work with exposures.
         /// </summary>
         public static string ErasStakersParams(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> key)
         {
@@ -773,13 +791,68 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// 
         ///  This is keyed first by the era index to allow bulk deletion and then the stash account.
         /// 
-        ///  Is it removed after `HISTORY_DEPTH` eras.
+        ///  Is it removed after [`Config::HistoryDepth`] eras.
         ///  If stakers hasn't been set or has been removed then empty exposure is returned.
+        /// 
+        ///  Note: Deprecated since v14. Use `EraInfo` instead to work with exposures.
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.Exposure> ErasStakers(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> key, CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_staking.Exposure> ErasStakers(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> key, string blockhash, CancellationToken token)
         {
             string parameters = StakingStorage.ErasStakersParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.Exposure>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_staking.Exposure>(parameters, blockhash, token);
+            return result;
+        }
+        
+        /// <summary>
+        /// >> ErasStakersOverviewParams
+        ///  Summary of validator exposure at a given era.
+        /// 
+        ///  This contains the total stake in support of the validator and their own stake. In addition,
+        ///  it can also be used to get the number of nominators backing this validator and the number of
+        ///  exposure pages they are divided into. The page count is useful to determine the number of
+        ///  pages of rewards that needs to be claimed.
+        /// 
+        ///  This is keyed first by the era index to allow bulk deletion and then the stash account.
+        ///  Should only be accessed through `EraInfo`.
+        /// 
+        ///  Is it removed after [`Config::HistoryDepth`] eras.
+        ///  If stakers hasn't been set or has been removed then empty overview is returned.
+        /// </summary>
+        public static string ErasStakersOverviewParams(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> key)
+        {
+            return RequestGenerator.GetStorage("Staking", "ErasStakersOverview", Substrate.NetApi.Model.Meta.Storage.Type.Map, new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
+                        Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat,
+                        Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, key.Value);
+        }
+        
+        /// <summary>
+        /// >> ErasStakersOverviewDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string ErasStakersOverviewDefault()
+        {
+            return "0x00";
+        }
+        
+        /// <summary>
+        /// >> ErasStakersOverview
+        ///  Summary of validator exposure at a given era.
+        /// 
+        ///  This contains the total stake in support of the validator and their own stake. In addition,
+        ///  it can also be used to get the number of nominators backing this validator and the number of
+        ///  exposure pages they are divided into. The page count is useful to determine the number of
+        ///  pages of rewards that needs to be claimed.
+        /// 
+        ///  This is keyed first by the era index to allow bulk deletion and then the stash account.
+        ///  Should only be accessed through `EraInfo`.
+        /// 
+        ///  Is it removed after [`Config::HistoryDepth`] eras.
+        ///  If stakers hasn't been set or has been removed then empty overview is returned.
+        /// </summary>
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_staking.PagedExposureMetadata> ErasStakersOverview(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> key, string blockhash, CancellationToken token)
+        {
+            string parameters = StakingStorage.ErasStakersOverviewParams(key);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_staking.PagedExposureMetadata>(parameters, blockhash, token);
             return result;
         }
         
@@ -787,15 +860,20 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> ErasStakersClippedParams
         ///  Clipped Exposure of validator at era.
         /// 
+        ///  Note: This is deprecated, should be used as read-only and will be removed in the future.
+        ///  New `Exposure`s are stored in a paged manner in `ErasStakersPaged` instead.
+        /// 
         ///  This is similar to [`ErasStakers`] but number of nominators exposed is reduced to the
-        ///  `T::MaxNominatorRewardedPerValidator` biggest stakers.
+        ///  `T::MaxExposurePageSize` biggest stakers.
         ///  (Note: the field `total` and `own` of the exposure remains unchanged).
         ///  This is used to limit the i/o cost for the nominator payout.
         /// 
         ///  This is keyed fist by the era index to allow bulk deletion and then the stash account.
         /// 
-        ///  Is it removed after `HISTORY_DEPTH` eras.
+        ///  It is removed after [`Config::HistoryDepth`] eras.
         ///  If stakers hasn't been set or has been removed then empty exposure is returned.
+        /// 
+        ///  Note: Deprecated since v14. Use `EraInfo` instead to work with exposures.
         /// </summary>
         public static string ErasStakersClippedParams(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> key)
         {
@@ -817,20 +895,108 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> ErasStakersClipped
         ///  Clipped Exposure of validator at era.
         /// 
+        ///  Note: This is deprecated, should be used as read-only and will be removed in the future.
+        ///  New `Exposure`s are stored in a paged manner in `ErasStakersPaged` instead.
+        /// 
         ///  This is similar to [`ErasStakers`] but number of nominators exposed is reduced to the
-        ///  `T::MaxNominatorRewardedPerValidator` biggest stakers.
+        ///  `T::MaxExposurePageSize` biggest stakers.
         ///  (Note: the field `total` and `own` of the exposure remains unchanged).
         ///  This is used to limit the i/o cost for the nominator payout.
         /// 
         ///  This is keyed fist by the era index to allow bulk deletion and then the stash account.
         /// 
-        ///  Is it removed after `HISTORY_DEPTH` eras.
+        ///  It is removed after [`Config::HistoryDepth`] eras.
         ///  If stakers hasn't been set or has been removed then empty exposure is returned.
+        /// 
+        ///  Note: Deprecated since v14. Use `EraInfo` instead to work with exposures.
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.Exposure> ErasStakersClipped(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> key, CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_staking.Exposure> ErasStakersClipped(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> key, string blockhash, CancellationToken token)
         {
             string parameters = StakingStorage.ErasStakersClippedParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.Exposure>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_staking.Exposure>(parameters, blockhash, token);
+            return result;
+        }
+        
+        /// <summary>
+        /// >> ErasStakersPagedParams
+        ///  Paginated exposure of a validator at given era.
+        /// 
+        ///  This is keyed first by the era index to allow bulk deletion, then stash account and finally
+        ///  the page. Should only be accessed through `EraInfo`.
+        /// 
+        ///  This is cleared after [`Config::HistoryDepth`] eras.
+        /// </summary>
+        public static string ErasStakersPagedParams(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U32> key)
+        {
+            return RequestGenerator.GetStorage("Staking", "ErasStakersPaged", Substrate.NetApi.Model.Meta.Storage.Type.Map, new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
+                        Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat,
+                        Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat,
+                        Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, key.Value);
+        }
+        
+        /// <summary>
+        /// >> ErasStakersPagedDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string ErasStakersPagedDefault()
+        {
+            return "0x00";
+        }
+        
+        /// <summary>
+        /// >> ErasStakersPaged
+        ///  Paginated exposure of a validator at given era.
+        /// 
+        ///  This is keyed first by the era index to allow bulk deletion, then stash account and finally
+        ///  the page. Should only be accessed through `EraInfo`.
+        /// 
+        ///  This is cleared after [`Config::HistoryDepth`] eras.
+        /// </summary>
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_staking.ExposurePage> ErasStakersPaged(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U32> key, string blockhash, CancellationToken token)
+        {
+            string parameters = StakingStorage.ErasStakersPagedParams(key);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_staking.ExposurePage>(parameters, blockhash, token);
+            return result;
+        }
+        
+        /// <summary>
+        /// >> ClaimedRewardsParams
+        ///  History of claimed paged rewards by era and validator.
+        /// 
+        ///  This is keyed by era and validator stash which maps to the set of page indexes which have
+        ///  been claimed.
+        /// 
+        ///  It is removed after [`Config::HistoryDepth`] eras.
+        /// </summary>
+        public static string ClaimedRewardsParams(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> key)
+        {
+            return RequestGenerator.GetStorage("Staking", "ClaimedRewards", Substrate.NetApi.Model.Meta.Storage.Type.Map, new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
+                        Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat,
+                        Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, key.Value);
+        }
+        
+        /// <summary>
+        /// >> ClaimedRewardsDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string ClaimedRewardsDefault()
+        {
+            return "0x00";
+        }
+        
+        /// <summary>
+        /// >> ClaimedRewards
+        ///  History of claimed paged rewards by era and validator.
+        /// 
+        ///  This is keyed by era and validator stash which maps to the set of page indexes which have
+        ///  been claimed.
+        /// 
+        ///  It is removed after [`Config::HistoryDepth`] eras.
+        /// </summary>
+        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U32>> ClaimedRewards(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> key, string blockhash, CancellationToken token)
+        {
+            string parameters = StakingStorage.ClaimedRewardsParams(key);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U32>>(parameters, blockhash, token);
             return result;
         }
         
@@ -840,7 +1006,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// 
         ///  This is keyed first by the era index to allow bulk deletion and then the stash account.
         /// 
-        ///  Is it removed after `HISTORY_DEPTH` eras.
+        ///  Is it removed after [`Config::HistoryDepth`] eras.
         /// </summary>
         public static string ErasValidatorPrefsParams(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> key)
         {
@@ -864,18 +1030,18 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// 
         ///  This is keyed first by the era index to allow bulk deletion and then the stash account.
         /// 
-        ///  Is it removed after `HISTORY_DEPTH` eras.
+        ///  Is it removed after [`Config::HistoryDepth`] eras.
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.ValidatorPrefs> ErasValidatorPrefs(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> key, CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.ValidatorPrefs> ErasValidatorPrefs(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> key, string blockhash, CancellationToken token)
         {
             string parameters = StakingStorage.ErasValidatorPrefsParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.ValidatorPrefs>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.ValidatorPrefs>(parameters, blockhash, token);
             return result;
         }
         
         /// <summary>
         /// >> ErasValidatorRewardParams
-        ///  The total validator era payout for the last `HISTORY_DEPTH` eras.
+        ///  The total validator era payout for the last [`Config::HistoryDepth`] eras.
         /// 
         ///  Eras that haven't finished yet or has been removed doesn't have reward.
         /// </summary>
@@ -897,20 +1063,20 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> ErasValidatorReward
-        ///  The total validator era payout for the last `HISTORY_DEPTH` eras.
+        ///  The total validator era payout for the last [`Config::HistoryDepth`] eras.
         /// 
         ///  Eras that haven't finished yet or has been removed doesn't have reward.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U128> ErasValidatorReward(Substrate.NetApi.Model.Types.Primitive.U32 key, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U128> ErasValidatorReward(Substrate.NetApi.Model.Types.Primitive.U32 key, string blockhash, CancellationToken token)
         {
             string parameters = StakingStorage.ErasValidatorRewardParams(key);
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U128>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U128>(parameters, blockhash, token);
             return result;
         }
         
         /// <summary>
         /// >> ErasRewardPointsParams
-        ///  Rewards for the last `HISTORY_DEPTH` eras.
+        ///  Rewards for the last [`Config::HistoryDepth`] eras.
         ///  If reward hasn't been set or has been removed then 0 reward is returned.
         /// </summary>
         public static string ErasRewardPointsParams(Substrate.NetApi.Model.Types.Primitive.U32 key)
@@ -931,19 +1097,19 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> ErasRewardPoints
-        ///  Rewards for the last `HISTORY_DEPTH` eras.
+        ///  Rewards for the last [`Config::HistoryDepth`] eras.
         ///  If reward hasn't been set or has been removed then 0 reward is returned.
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.EraRewardPoints> ErasRewardPoints(Substrate.NetApi.Model.Types.Primitive.U32 key, CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.EraRewardPoints> ErasRewardPoints(Substrate.NetApi.Model.Types.Primitive.U32 key, string blockhash, CancellationToken token)
         {
             string parameters = StakingStorage.ErasRewardPointsParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.EraRewardPoints>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.EraRewardPoints>(parameters, blockhash, token);
             return result;
         }
         
         /// <summary>
         /// >> ErasTotalStakeParams
-        ///  The total amount staked for the last `HISTORY_DEPTH` eras.
+        ///  The total amount staked for the last [`Config::HistoryDepth`] eras.
         ///  If total hasn't been set or has been removed then 0 stake is returned.
         /// </summary>
         public static string ErasTotalStakeParams(Substrate.NetApi.Model.Types.Primitive.U32 key)
@@ -964,13 +1130,13 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> ErasTotalStake
-        ///  The total amount staked for the last `HISTORY_DEPTH` eras.
+        ///  The total amount staked for the last [`Config::HistoryDepth`] eras.
         ///  If total hasn't been set or has been removed then 0 stake is returned.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U128> ErasTotalStake(Substrate.NetApi.Model.Types.Primitive.U32 key, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U128> ErasTotalStake(Substrate.NetApi.Model.Types.Primitive.U32 key, string blockhash, CancellationToken token)
         {
             string parameters = StakingStorage.ErasTotalStakeParams(key);
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U128>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U128>(parameters, blockhash, token);
             return result;
         }
         
@@ -996,10 +1162,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> ForceEra
         ///  Mode of era forcing.
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.EnumForcing> ForceEra(CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.EnumForcing> ForceEra(string blockhash, CancellationToken token)
         {
             string parameters = StakingStorage.ForceEraParams();
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.EnumForcing>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.EnumForcing>(parameters, blockhash, token);
             return result;
         }
         
@@ -1029,10 +1195,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// 
         ///  The rest of the slashed value is handled by the `Slash`.
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill> SlashRewardFraction(CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill> SlashRewardFraction(string blockhash, CancellationToken token)
         {
             string parameters = StakingStorage.SlashRewardFractionParams();
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill>(parameters, blockhash, token);
             return result;
         }
         
@@ -1060,10 +1226,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         ///  The amount of currency given to reporters of a slash event which was
         ///  canceled by extraordinary circumstances (e.g. governance).
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U128> CanceledSlashPayout(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U128> CanceledSlashPayout(string blockhash, CancellationToken token)
         {
             string parameters = StakingStorage.CanceledSlashPayoutParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U128>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U128>(parameters, blockhash, token);
             return result;
         }
         
@@ -1091,10 +1257,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> UnappliedSlashes
         ///  All unapplied slashes that are queued for later.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.UnappliedSlash>> UnappliedSlashes(Substrate.NetApi.Model.Types.Primitive.U32 key, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.UnappliedSlash>> UnappliedSlashes(Substrate.NetApi.Model.Types.Primitive.U32 key, string blockhash, CancellationToken token)
         {
             string parameters = StakingStorage.UnappliedSlashesParams(key);
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.UnappliedSlash>>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.UnappliedSlash>>(parameters, blockhash, token);
             return result;
         }
         
@@ -1126,10 +1292,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         ///  Must contains information for eras for the range:
         ///  `[active_era - bounding_duration; active_era]`
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>>> BondedEras(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>>> BondedEras(string blockhash, CancellationToken token)
         {
             string parameters = StakingStorage.BondedErasParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>>>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>>>(parameters, blockhash, token);
             return result;
         }
         
@@ -1159,10 +1325,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         ///  All slashing events on validators, mapped by era to the highest slash proportion
         ///  and slash value of the era.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill, Substrate.NetApi.Model.Types.Primitive.U128>> ValidatorSlashInEra(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> key, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill, Substrate.NetApi.Model.Types.Primitive.U128>> ValidatorSlashInEra(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> key, string blockhash, CancellationToken token)
         {
             string parameters = StakingStorage.ValidatorSlashInEraParams(key);
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill, Substrate.NetApi.Model.Types.Primitive.U128>>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill, Substrate.NetApi.Model.Types.Primitive.U128>>(parameters, blockhash, token);
             return result;
         }
         
@@ -1190,10 +1356,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> NominatorSlashInEra
         ///  All slashing events on nominators, mapped by era to the highest slash value of the era.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U128> NominatorSlashInEra(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> key, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U128> NominatorSlashInEra(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> key, string blockhash, CancellationToken token)
         {
             string parameters = StakingStorage.NominatorSlashInEraParams(key);
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U128>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U128>(parameters, blockhash, token);
             return result;
         }
         
@@ -1221,10 +1387,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> SlashingSpans
         ///  Slashing spans for stash accounts.
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.slashing.SlashingSpans> SlashingSpans(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.slashing.SlashingSpans> SlashingSpans(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, string blockhash, CancellationToken token)
         {
             string parameters = StakingStorage.SlashingSpansParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.slashing.SlashingSpans>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.slashing.SlashingSpans>(parameters, blockhash, token);
             return result;
         }
         
@@ -1254,10 +1420,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         ///  Records information about the maximum slash of a stash within a slashing span,
         ///  as well as how much reward has been paid out.
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.slashing.SpanRecord> SpanSlash(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U32> key, CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.slashing.SpanRecord> SpanSlash(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U32> key, string blockhash, CancellationToken token)
         {
             string parameters = StakingStorage.SpanSlashParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.slashing.SpanRecord>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.slashing.SpanRecord>(parameters, blockhash, token);
             return result;
         }
         
@@ -1287,10 +1453,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// 
         ///  This is basically in sync with the call to [`pallet_session::SessionManager::new_session`].
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> CurrentPlannedSession(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> CurrentPlannedSession(string blockhash, CancellationToken token)
         {
             string parameters = StakingStorage.CurrentPlannedSessionParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, blockhash, token);
             return result;
         }
         
@@ -1332,10 +1498,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         ///  whether a given validator has previously offended using binary search. It gets cleared when
         ///  the era ends.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.Bool>>> OffendingValidators(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.Bool>>> OffendingValidators(string blockhash, CancellationToken token)
         {
             string parameters = StakingStorage.OffendingValidatorsParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.Bool>>>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.Bool>>>(parameters, blockhash, token);
             return result;
         }
         
@@ -1365,10 +1531,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         ///  nominators. The threshold is compared to the actual number of validators / nominators
         ///  (`CountFor*`) in the system compared to the configured max (`Max*Count`).
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Percent> ChillThreshold(CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Percent> ChillThreshold(string blockhash, CancellationToken token)
         {
             string parameters = StakingStorage.ChillThresholdParams();
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Percent>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Percent>(parameters, blockhash, token);
             return result;
         }
     }
@@ -1641,10 +1807,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> chill_other
         /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method ChillOther(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 controller)
+        public static Method ChillOther(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 stash)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
-            byteArray.AddRange(controller.Encode());
+            byteArray.AddRange(stash.Encode());
             return new Method(6, "Staking", 23, "chill_other", byteArray.ToArray());
         }
         
@@ -1669,6 +1835,55 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
             byteArray.AddRange(@new.Encode());
             return new Method(6, "Staking", 25, "set_min_commission", byteArray.ToArray());
         }
+        
+        /// <summary>
+        /// >> payout_stakers_by_page
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
+        /// </summary>
+        public static Method PayoutStakersByPage(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 validator_stash, Substrate.NetApi.Model.Types.Primitive.U32 era, Substrate.NetApi.Model.Types.Primitive.U32 page)
+        {
+            System.Collections.Generic.List<byte> byteArray = new List<byte>();
+            byteArray.AddRange(validator_stash.Encode());
+            byteArray.AddRange(era.Encode());
+            byteArray.AddRange(page.Encode());
+            return new Method(6, "Staking", 26, "payout_stakers_by_page", byteArray.ToArray());
+        }
+        
+        /// <summary>
+        /// >> update_payee
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
+        /// </summary>
+        public static Method UpdatePayee(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 controller)
+        {
+            System.Collections.Generic.List<byte> byteArray = new List<byte>();
+            byteArray.AddRange(controller.Encode());
+            return new Method(6, "Staking", 27, "update_payee", byteArray.ToArray());
+        }
+        
+        /// <summary>
+        /// >> deprecate_controller_batch
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
+        /// </summary>
+        public static Method DeprecateControllerBatch(Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT1 controllers)
+        {
+            System.Collections.Generic.List<byte> byteArray = new List<byte>();
+            byteArray.AddRange(controllers.Encode());
+            return new Method(6, "Staking", 28, "deprecate_controller_batch", byteArray.ToArray());
+        }
+        
+        /// <summary>
+        /// >> restore_ledger
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
+        /// </summary>
+        public static Method RestoreLedger(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 stash, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> maybe_controller, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U128> maybe_total, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT2> maybe_unlocking)
+        {
+            System.Collections.Generic.List<byte> byteArray = new List<byte>();
+            byteArray.AddRange(stash.Encode());
+            byteArray.AddRange(maybe_controller.Encode());
+            byteArray.AddRange(maybe_total.Encode());
+            byteArray.AddRange(maybe_unlocking.Encode());
+            return new Method(6, "Staking", 29, "restore_ledger", byteArray.ToArray());
+        }
     }
     
     /// <summary>
@@ -1684,8 +1899,8 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         ///  Following information is kept for eras in `[current_era -
         ///  HistoryDepth, current_era]`: `ErasStakers`, `ErasStakersClipped`,
         ///  `ErasValidatorPrefs`, `ErasValidatorReward`, `ErasRewardPoints`,
-        ///  `ErasTotalStake`, `ErasStartSessionIndex`,
-        ///  `StakingLedger.claimed_rewards`.
+        ///  `ErasTotalStake`, `ErasStartSessionIndex`, `ClaimedRewards`, `ErasStakersPaged`,
+        ///  `ErasStakersOverview`.
         /// 
         ///  Must be more than the number of eras delayed by session.
         ///  I.e. active era must always be in history. I.e. `active_era >
@@ -1695,7 +1910,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         ///  this should be set to same value or greater as in storage.
         /// 
         ///  Note: `HistoryDepth` is used as the upper bound for the `BoundedVec`
-        ///  item `StakingLedger.claimed_rewards`. Setting this value lower than
+        ///  item `StakingLedger.legacy_claimed_rewards`. Setting this value lower than
         ///  the existing value can lead to inconsistencies in the
         ///  `StakingLedger` and will need to be handled properly in a migration.
         ///  The test `reducing_history_depth_abrupt` shows this effect.
@@ -1744,13 +1959,20 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         }
         
         /// <summary>
-        /// >> MaxNominatorRewardedPerValidator
-        ///  The maximum number of nominators rewarded for each validator.
+        /// >> MaxExposurePageSize
+        ///  The maximum size of each `T::ExposurePage`.
         /// 
-        ///  For each validator only the `$MaxNominatorRewardedPerValidator` biggest stakers can
-        ///  claim their reward. This used to limit the i/o cost for the nominator payout.
+        ///  An `ExposurePage` is weakly bounded to a maximum of `MaxExposurePageSize`
+        ///  nominators.
+        /// 
+        ///  For older non-paged exposure, a reward payout was restricted to the top
+        ///  `MaxExposurePageSize` nominators. This is to limit the i/o cost for the
+        ///  nominator payout.
+        /// 
+        ///  Note: `MaxExposurePageSize` is used to bound `ClaimedRewards` and is unsafe to reduce
+        ///  without handling it in a migration.
         /// </summary>
-        public Substrate.NetApi.Model.Types.Primitive.U32 MaxNominatorRewardedPerValidator()
+        public Substrate.NetApi.Model.Types.Primitive.U32 MaxExposurePageSize()
         {
             var result = new Substrate.NetApi.Model.Types.Primitive.U32();
             result.Create("0x00020000");
@@ -1877,6 +2099,12 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         AlreadyClaimed,
         
         /// <summary>
+        /// >> InvalidPage
+        /// No nominators exist on this page.
+        /// </summary>
+        InvalidPage,
+        
+        /// <summary>
         /// >> IncorrectHistoryDepth
         /// Incorrect previous history depth input provided.
         /// </summary>
@@ -1937,5 +2165,17 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// Some bound is not met.
         /// </summary>
         BoundNotMet,
+        
+        /// <summary>
+        /// >> ControllerDeprecated
+        /// Used when attempting to use deprecated controller account logic.
+        /// </summary>
+        ControllerDeprecated,
+        
+        /// <summary>
+        /// >> CannotRestoreLedger
+        /// Cannot reset a ledger.
+        /// </summary>
+        CannotRestoreLedger,
     }
 }

@@ -61,7 +61,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_para
     }
     
     /// <summary>
-    /// >> 731 - Variant[polkadot_runtime_parachains.disputes.slashing.pallet.Error]
+    /// >> 807 - Variant[polkadot_runtime_parachains.disputes.slashing.pallet.Error]
     /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>

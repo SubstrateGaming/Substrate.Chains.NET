@@ -56,6 +56,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("System", "UpgradedToU32RefCount"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Primitive.Bool)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("System", "UpgradedToTripleRefCount"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Primitive.Bool)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("System", "ExecutionPhase"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_system.EnumPhase)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("System", "AuthorizedUpgrade"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_system.CodeUpgradeAuthorization)));
         }
         
         /// <summary>
@@ -84,10 +85,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> Account
         ///  The full account information for a particular account ID.
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_system.AccountInfo> Account(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_system.AccountInfo> Account(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, string blockhash, CancellationToken token)
         {
             string parameters = SystemStorage.AccountParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_system.AccountInfo>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_system.AccountInfo>(parameters, blockhash, token);
             return result;
         }
         
@@ -113,10 +114,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> ExtrinsicCount
         ///  Total extrinsics count for the current block.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> ExtrinsicCount(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> ExtrinsicCount(string blockhash, CancellationToken token)
         {
             string parameters = SystemStorage.ExtrinsicCountParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, blockhash, token);
             return result;
         }
         
@@ -142,10 +143,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> BlockWeight
         ///  The current weight for the block.
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_support.dispatch.PerDispatchClassT1> BlockWeight(CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_support.dispatch.PerDispatchClassT1> BlockWeight(string blockhash, CancellationToken token)
         {
             string parameters = SystemStorage.BlockWeightParams();
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_support.dispatch.PerDispatchClassT1>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_support.dispatch.PerDispatchClassT1>(parameters, blockhash, token);
             return result;
         }
         
@@ -171,10 +172,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> AllExtrinsicsLen
         ///  Total length (in bytes) for all extrinsics put together, for the current block.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> AllExtrinsicsLen(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> AllExtrinsicsLen(string blockhash, CancellationToken token)
         {
             string parameters = SystemStorage.AllExtrinsicsLenParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, blockhash, token);
             return result;
         }
         
@@ -202,10 +203,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> BlockHash
         ///  Map of block numbers to block hashes.
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256> BlockHash(Substrate.NetApi.Model.Types.Primitive.U32 key, CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256> BlockHash(Substrate.NetApi.Model.Types.Primitive.U32 key, string blockhash, CancellationToken token)
         {
             string parameters = SystemStorage.BlockHashParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256>(parameters, blockhash, token);
             return result;
         }
         
@@ -233,10 +234,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> ExtrinsicData
         ///  Extrinsics data for the current block (maps an extrinsic's index to its data).
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>> ExtrinsicData(Substrate.NetApi.Model.Types.Primitive.U32 key, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>> ExtrinsicData(Substrate.NetApi.Model.Types.Primitive.U32 key, string blockhash, CancellationToken token)
         {
             string parameters = SystemStorage.ExtrinsicDataParams(key);
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>(parameters, blockhash, token);
             return result;
         }
         
@@ -262,10 +263,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> Number
         ///  The current block number being processed. Set by `execute_block`.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> Number(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> Number(string blockhash, CancellationToken token)
         {
             string parameters = SystemStorage.NumberParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, blockhash, token);
             return result;
         }
         
@@ -291,10 +292,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> ParentHash
         ///  Hash of the previous block.
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256> ParentHash(CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256> ParentHash(string blockhash, CancellationToken token)
         {
             string parameters = SystemStorage.ParentHashParams();
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256>(parameters, blockhash, token);
             return result;
         }
         
@@ -320,10 +321,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> Digest
         ///  Digest of the current block, also part of the block header.
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.generic.digest.Digest> Digest(CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.generic.digest.Digest> Digest(string blockhash, CancellationToken token)
         {
             string parameters = SystemStorage.DigestParams();
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.generic.digest.Digest>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.generic.digest.Digest>(parameters, blockhash, token);
             return result;
         }
         
@@ -361,10 +362,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         ///  Events have a large in-memory size. Box the events to not go out-of-memory
         ///  just in case someone still reads them from within the runtime.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_system.EventRecord>> Events(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_system.EventRecord>> Events(string blockhash, CancellationToken token)
         {
             string parameters = SystemStorage.EventsParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_system.EventRecord>>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_system.EventRecord>>(parameters, blockhash, token);
             return result;
         }
         
@@ -390,10 +391,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> EventCount
         ///  The number of events in the `Events<T>` list.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> EventCount(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> EventCount(string blockhash, CancellationToken token)
         {
             string parameters = SystemStorage.EventCountParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, blockhash, token);
             return result;
         }
         
@@ -439,10 +440,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         ///  the `EventIndex` then in case if the topic has the same contents on the next block
         ///  no notification will be triggered thus the event might be lost.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>>> EventTopics(Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256 key, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>>> EventTopics(Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256 key, string blockhash, CancellationToken token)
         {
             string parameters = SystemStorage.EventTopicsParams(key);
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>>>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>>>(parameters, blockhash, token);
             return result;
         }
         
@@ -468,10 +469,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> LastRuntimeUpgrade
         ///  Stores the `spec_version` and `spec_name` of when the last runtime upgrade happened.
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_system.LastRuntimeUpgradeInfo> LastRuntimeUpgrade(CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_system.LastRuntimeUpgradeInfo> LastRuntimeUpgrade(string blockhash, CancellationToken token)
         {
             string parameters = SystemStorage.LastRuntimeUpgradeParams();
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_system.LastRuntimeUpgradeInfo>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_system.LastRuntimeUpgradeInfo>(parameters, blockhash, token);
             return result;
         }
         
@@ -497,10 +498,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> UpgradedToU32RefCount
         ///  True if we have upgraded so that `type RefCount` is `u32`. False (default) if not.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.Bool> UpgradedToU32RefCount(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.Bool> UpgradedToU32RefCount(string blockhash, CancellationToken token)
         {
             string parameters = SystemStorage.UpgradedToU32RefCountParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.Bool>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.Bool>(parameters, blockhash, token);
             return result;
         }
         
@@ -528,10 +529,10 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         ///  True if we have upgraded so that AccountInfo contains three types of `RefCount`. False
         ///  (default) if not.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.Bool> UpgradedToTripleRefCount(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.Bool> UpgradedToTripleRefCount(string blockhash, CancellationToken token)
         {
             string parameters = SystemStorage.UpgradedToTripleRefCountParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.Bool>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.Bool>(parameters, blockhash, token);
             return result;
         }
         
@@ -557,10 +558,39 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// >> ExecutionPhase
         ///  The execution phase of the block.
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_system.EnumPhase> ExecutionPhase(CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_system.EnumPhase> ExecutionPhase(string blockhash, CancellationToken token)
         {
             string parameters = SystemStorage.ExecutionPhaseParams();
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_system.EnumPhase>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_system.EnumPhase>(parameters, blockhash, token);
+            return result;
+        }
+        
+        /// <summary>
+        /// >> AuthorizedUpgradeParams
+        ///  `Some` if a code upgrade has been authorized.
+        /// </summary>
+        public static string AuthorizedUpgradeParams()
+        {
+            return RequestGenerator.GetStorage("System", "AuthorizedUpgrade", Substrate.NetApi.Model.Meta.Storage.Type.Plain);
+        }
+        
+        /// <summary>
+        /// >> AuthorizedUpgradeDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string AuthorizedUpgradeDefault()
+        {
+            return "0x00";
+        }
+        
+        /// <summary>
+        /// >> AuthorizedUpgrade
+        ///  `Some` if a code upgrade has been authorized.
+        /// </summary>
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_system.CodeUpgradeAuthorization> AuthorizedUpgrade(string blockhash, CancellationToken token)
+        {
+            string parameters = SystemStorage.AuthorizedUpgradeParams();
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_system.CodeUpgradeAuthorization>(parameters, blockhash, token);
             return result;
         }
     }
@@ -659,6 +689,39 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
             byteArray.AddRange(remark.Encode());
             return new Method(0, "System", 7, "remark_with_event", byteArray.ToArray());
         }
+        
+        /// <summary>
+        /// >> authorize_upgrade
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
+        /// </summary>
+        public static Method AuthorizeUpgrade(Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256 code_hash)
+        {
+            System.Collections.Generic.List<byte> byteArray = new List<byte>();
+            byteArray.AddRange(code_hash.Encode());
+            return new Method(0, "System", 9, "authorize_upgrade", byteArray.ToArray());
+        }
+        
+        /// <summary>
+        /// >> authorize_upgrade_without_checks
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
+        /// </summary>
+        public static Method AuthorizeUpgradeWithoutChecks(Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256 code_hash)
+        {
+            System.Collections.Generic.List<byte> byteArray = new List<byte>();
+            byteArray.AddRange(code_hash.Encode());
+            return new Method(0, "System", 10, "authorize_upgrade_without_checks", byteArray.ToArray());
+        }
+        
+        /// <summary>
+        /// >> apply_authorized_upgrade
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
+        /// </summary>
+        public static Method ApplyAuthorizedUpgrade(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> code)
+        {
+            System.Collections.Generic.List<byte> byteArray = new List<byte>();
+            byteArray.AddRange(code.Encode());
+            return new Method(0, "System", 11, "apply_authorized_upgrade", byteArray.ToArray());
+        }
     }
     
     /// <summary>
@@ -718,7 +781,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_version.RuntimeVersion Version()
         {
             var result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_version.RuntimeVersion();
-            result.Create(@"0x186B7573616D61347061726974792D6B7573616D610200000040420F000000000048DF6ACB689907609B0400000037E397FC7C91F5E40200000040FE3AD401F8959A06000000D2BC9897EED08F1503000000F78B278BE53F454C02000000AF2C0297A23E6D3D0500000049EAAF1B548A0CB00300000091D5DF18B0D2CF58020000002A5E924655399E6001000000ED99C5ACB25EEDF503000000CBCA25E39F14238702000000687AD44AD37F03C201000000AB3C0572291FEB8B01000000BC9D89904F5B923F0100000037C8BB1350A9A2A804000000F3FF14D5AB5270590300000017A6BC0D0062AEB30100000018EF58A3B67BA770010000001800000001");
+            result.Create(@"0x186B7573616D61347061726974792D6B7573616D6102000000114A0F00000000004CDF6ACB689907609B0400000037E397FC7C91F5E40200000040FE3AD401F8959A06000000D2BC9897EED08F1503000000F78B278BE53F454C02000000AF2C0297A23E6D3D0A00000049EAAF1B548A0CB00300000091D5DF18B0D2CF58020000002A5E924655399E6001000000ED99C5ACB25EEDF503000000CBCA25E39F14238702000000687AD44AD37F03C201000000AB3C0572291FEB8B01000000BC9D89904F5B923F0100000037C8BB1350A9A2A804000000F3FF14D5AB5270590300000017A6BC0D0062AEB30100000018EF58A3B67BA77001000000FBC577B9D747EFD6010000001900000001");
             return result;
         }
         
@@ -783,5 +846,17 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// The origin filter prevent the call to be dispatched.
         /// </summary>
         CallFiltered,
+        
+        /// <summary>
+        /// >> NothingAuthorized
+        /// No upgrade authorized.
+        /// </summary>
+        NothingAuthorized,
+        
+        /// <summary>
+        /// >> Unauthorized
+        /// The submitted code is not authorized.
+        /// </summary>
+        Unauthorized,
     }
 }

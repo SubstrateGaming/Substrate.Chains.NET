@@ -87,13 +87,25 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_xcm.pallet
         /// See [`Pallet::force_suspension`].
         /// </summary>
         force_suspension = 10,
+        
+        /// <summary>
+        /// >> transfer_assets
+        /// See [`Pallet::transfer_assets`].
+        /// </summary>
+        transfer_assets = 11,
+        
+        /// <summary>
+        /// >> claim_assets
+        /// See [`Pallet::claim_assets`].
+        /// </summary>
+        claim_assets = 12,
     }
     
     /// <summary>
-    /// >> 349 - Variant[pallet_xcm.pallet.Call]
+    /// >> 388 - Variant[pallet_xcm.pallet.Call]
     /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
-    public sealed class EnumCall : BaseEnumExt<Call, BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation, Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.EnumVersionedXcm>, BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation, Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation, Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiAssets, Substrate.NetApi.Model.Types.Primitive.U32>, BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation, Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation, Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiAssets, Substrate.NetApi.Model.Types.Primitive.U32>, BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.EnumVersionedXcm, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>, BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation, Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation, Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation, BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation, Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation, Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiAssets, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.v3.EnumWeightLimit>, BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation, Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation, Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiAssets, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.v3.EnumWeightLimit>, Substrate.NetApi.Model.Types.Primitive.Bool>
+    public sealed class EnumCall : BaseEnumExt<Call, BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation, Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.EnumVersionedXcm>, BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation, Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation, Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAssets, Substrate.NetApi.Model.Types.Primitive.U32>, BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation, Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation, Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAssets, Substrate.NetApi.Model.Types.Primitive.U32>, BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.EnumVersionedXcm, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>, BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.staging_xcm.v4.location.Location, Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation, Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation, BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation, Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation, Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAssets, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.v3.EnumWeightLimit>, BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation, Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation, Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAssets, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.v3.EnumWeightLimit>, Substrate.NetApi.Model.Types.Primitive.Bool, BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation, Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation, Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAssets, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.v3.EnumWeightLimit>, BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAssets, Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation>>
     {
     }
 }

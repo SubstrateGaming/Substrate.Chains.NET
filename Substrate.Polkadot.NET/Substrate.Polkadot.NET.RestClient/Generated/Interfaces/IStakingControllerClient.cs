@@ -16,6 +16,7 @@ namespace Substrate.Polkadot.NET.RestClient.Generated.Interfaces
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_staking;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_staking;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_staking.slashing;
    
    public interface IStakingControllerClient
@@ -60,8 +61,14 @@ namespace Substrate.Polkadot.NET.RestClient.Generated.Interfaces
       Task<bool> SubscribeErasStartSessionIndex(U32 key);
       Task<Exposure> GetErasStakers(BaseTuple<U32, AccountId32> key);
       Task<bool> SubscribeErasStakers(BaseTuple<U32, AccountId32> key);
+      Task<PagedExposureMetadata> GetErasStakersOverview(BaseTuple<U32, AccountId32> key);
+      Task<bool> SubscribeErasStakersOverview(BaseTuple<U32, AccountId32> key);
       Task<Exposure> GetErasStakersClipped(BaseTuple<U32, AccountId32> key);
       Task<bool> SubscribeErasStakersClipped(BaseTuple<U32, AccountId32> key);
+      Task<ExposurePage> GetErasStakersPaged(BaseTuple<U32, AccountId32, U32> key);
+      Task<bool> SubscribeErasStakersPaged(BaseTuple<U32, AccountId32, U32> key);
+      Task<BaseVec<U32>> GetClaimedRewards(BaseTuple<U32, AccountId32> key);
+      Task<bool> SubscribeClaimedRewards(BaseTuple<U32, AccountId32> key);
       Task<ValidatorPrefs> GetErasValidatorPrefs(BaseTuple<U32, AccountId32> key);
       Task<bool> SubscribeErasValidatorPrefs(BaseTuple<U32, AccountId32> key);
       Task<U128> GetErasValidatorReward(U32 key);

@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_staking.slashi
     
     
     /// <summary>
-    /// >> 532 - Composite[pallet_staking.slashing.SlashingSpans]
+    /// >> 605 - Composite[pallet_staking.slashing.SlashingSpans]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class SlashingSpans : BaseType
@@ -73,7 +73,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_staking.slashi
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];
-            System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
+            global::System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
         }
     }
 }

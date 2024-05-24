@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_npos_elections
     
     
     /// <summary>
-    /// >> 303 - Composite[sp_npos_elections.Support]
+    /// >> 326 - Composite[sp_npos_elections.Support]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Support : BaseType
@@ -59,7 +59,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_npos_elections
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];
-            System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
+            global::System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
         }
     }
 }

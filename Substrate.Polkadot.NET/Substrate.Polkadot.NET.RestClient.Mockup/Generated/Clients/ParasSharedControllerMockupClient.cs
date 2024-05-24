@@ -14,8 +14,8 @@ namespace Substrate.Polkadot.NET.RestClient.Mockup.Generated.Clients
    using System.Net.Http;
    using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.NetApi.Model.Types.Base;
-   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5;
-   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.validator_app;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6;
+   using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.validator_app;
    using Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.shared;
    using Substrate.Polkadot.NET.RestClient.Mockup.Generated.Interfaces;
    

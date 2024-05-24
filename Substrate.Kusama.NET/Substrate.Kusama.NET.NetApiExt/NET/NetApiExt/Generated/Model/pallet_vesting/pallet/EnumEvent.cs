@@ -37,7 +37,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_vesting.pallet
     }
     
     /// <summary>
-    /// >> 476 - Variant[pallet_vesting.pallet.Event]
+    /// >> 524 - Variant[pallet_vesting.pallet.Event]
     /// The `Event` enum of this pallet
     /// </summary>
     public sealed class EnumEvent : BaseEnumExt<Event, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U128>, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>

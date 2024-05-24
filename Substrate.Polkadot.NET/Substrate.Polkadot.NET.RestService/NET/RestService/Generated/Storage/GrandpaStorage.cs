@@ -69,6 +69,12 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         ///  TWOX-NOTE: `SetId` is not under user control.
         /// </summary>
         Substrate.NetApi.Model.Types.Primitive.U32 GetSetIdSession(string key);
+        
+        /// <summary>
+        /// >> Authorities
+        ///  The current list of authorities.
+        /// </summary>
+        Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT4 GetAuthorities();
     }
     
     /// <summary>
@@ -108,6 +114,11 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         private TypedMapStorage<Substrate.NetApi.Model.Types.Primitive.U32> _setIdSessionTypedStorage;
         
         /// <summary>
+        /// _authoritiesTypedStorage typed storage field
+        /// </summary>
+        private TypedStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT4> _authoritiesTypedStorage;
+        
+        /// <summary>
         /// GrandpaStorage constructor.
         /// </summary>
         public GrandpaStorage(IStorageDataProvider storageDataProvider, List<IStorageChangeDelegate> storageChangeDelegates)
@@ -118,6 +129,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
             this.StalledTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>>("Grandpa.Stalled", storageDataProvider, storageChangeDelegates);
             this.CurrentSetIdTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U64>("Grandpa.CurrentSetId", storageDataProvider, storageChangeDelegates);
             this.SetIdSessionTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Primitive.U32>("Grandpa.SetIdSession", storageDataProvider, storageChangeDelegates);
+            this.AuthoritiesTypedStorage = new TypedStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT4>("Grandpa.Authorities", storageDataProvider, storageChangeDelegates);
         }
         
         /// <summary>
@@ -211,6 +223,21 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
         }
         
         /// <summary>
+        /// _authoritiesTypedStorage property
+        /// </summary>
+        public TypedStorage<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT4> AuthoritiesTypedStorage
+        {
+            get
+            {
+                return _authoritiesTypedStorage;
+            }
+            set
+            {
+                _authoritiesTypedStorage = value;
+            }
+        }
+        
+        /// <summary>
         /// Connects to all storages and initializes the change subscription handling.
         /// </summary>
         public async Task InitializeAsync(Substrate.ServiceLayer.Storage.IStorageDataProvider dataProvider)
@@ -221,6 +248,7 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
             await StalledTypedStorage.InitializeAsync("Grandpa", "Stalled");
             await CurrentSetIdTypedStorage.InitializeAsync("Grandpa", "CurrentSetId");
             await SetIdSessionTypedStorage.InitializeAsync("Grandpa", "SetIdSession");
+            await AuthoritiesTypedStorage.InitializeAsync("Grandpa", "Authorities");
         }
         
         /// <summary>
@@ -350,6 +378,24 @@ namespace Substrate.Polkadot.NET.RestService.Generated.Storage
             {
                 return null;
             }
+        }
+        
+        /// <summary>
+        /// Implements any storage change for Grandpa.Authorities
+        /// </summary>
+        [StorageChange("Grandpa", "Authorities")]
+        public void OnUpdateAuthorities(string data)
+        {
+            AuthoritiesTypedStorage.Update(data);
+        }
+        
+        /// <summary>
+        /// >> Authorities
+        ///  The current list of authorities.
+        /// </summary>
+        public Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT4 GetAuthorities()
+        {
+            return AuthoritiesTypedStorage.Get();
         }
     }
 }
