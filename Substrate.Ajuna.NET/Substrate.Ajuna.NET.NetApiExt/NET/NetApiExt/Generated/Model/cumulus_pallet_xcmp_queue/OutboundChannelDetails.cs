@@ -80,7 +80,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queu
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];
-            System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
+            global::System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
         }
     }
 }
