@@ -108,7 +108,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_identity.legacy
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];
-            System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
+            global::System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
         }
     }
 }
