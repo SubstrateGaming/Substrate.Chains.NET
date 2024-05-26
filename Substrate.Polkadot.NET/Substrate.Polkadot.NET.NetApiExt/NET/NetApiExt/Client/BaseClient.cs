@@ -8,7 +8,7 @@ using StreamJsonRpc;
 using Substrate.Polkadot.NET.NetApiExt.Generated;
 using Substrate.Polkadot.NET.NetApiExt.Generated.Model.frame_system;
 using Substrate.Polkadot.NET.NetApiExt.Generated.Storage;
-using Substrate.Polkadot.NET.Integration.Helper;
+using Substrate.Polkadot.NET.NetApiExt.Helper;
 using Substrate.NET.Schnorrkel.Keys;
 using Substrate.NetApi;
 using Substrate.NetApi.Model.Extrinsics;
@@ -17,7 +17,7 @@ using Substrate.NetApi.Model.Types;
 using Substrate.NetApi.Model.Types.Base;
 using Substrate.NetApi.Model.Types.Primitive;
 
-namespace Substrate.Polkadot.NET.Integration.Client
+namespace Substrate.Polkadot.NET.NetApiExt.Client
 {
     /// <summary>
     /// Base client
@@ -175,7 +175,7 @@ namespace Substrate.Polkadot.NET.Integration.Client
             string subscription = null;
             try
             {
-                subscription = await SubstrateClient.Unstable.TransactionUnstableSubmitAndWatchAsync(ActionExtrinsicUpdate, extrinsicMethod, account, _chargeTypeDefault, 64, token);
+                subscription = await SubstrateClient.TransactionWatchCalls.TransactionWatchV1SubmitAndWatchAsync(ActionExtrinsicUpdate, extrinsicMethod, account, _chargeTypeDefault, 64, token);
             }
             catch (RemoteInvocationException e)
             {
