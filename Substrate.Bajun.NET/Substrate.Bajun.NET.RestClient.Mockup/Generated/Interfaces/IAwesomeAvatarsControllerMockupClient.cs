@@ -12,31 +12,39 @@ namespace Substrate.Bajun.NET.RestClient.Mockup.Generated.Interfaces
    using System;
    using System.Threading.Tasks;
    using Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto;
+   using Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    using Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.season;
-   using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config;
+   using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.NetApi.Model.Types.Base;
    using Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.avatar;
-   using Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    using Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account;
+   using Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.avatar.tournament;
    
    public interface IAwesomeAvatarsControllerMockupClient
    {
       Task<bool> SetOrganizer(AccountId32 value);
       Task<bool> SetTreasurer(AccountId32 value, U16 key);
+      Task<bool> SetWhitelistedAccounts(BoundedVecT51 value);
       Task<bool> SetCurrentSeasonStatus(SeasonStatus value);
       Task<bool> SetSeasons(Season value, U16 key);
+      Task<bool> SetSeasonMetas(SeasonMeta value, U16 key);
+      Task<bool> SetSeasonSchedules(SeasonSchedule value, U16 key);
+      Task<bool> SetSeasonTradeFilters(TradeFilters value, U16 key);
+      Task<bool> SetSeasonUnlocks(UnlockConfigs value, U16 key);
       Task<bool> SetTreasury(U128 value, U16 key);
       Task<bool> SetGlobalConfigs(GlobalConfig value);
       Task<bool> SetAvatars(BaseTuple<AccountId32, Avatar> value, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 key);
-      Task<bool> SetOwners(BoundedVecT49 value, BaseTuple<AccountId32, U16> key);
+      Task<bool> SetOwners(BoundedVecT52 value, BaseTuple<AccountId32, U16> key);
       Task<bool> SetLockedAvatars(BaseTuple value, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 key);
       Task<bool> SetCollectionId(U32 value);
       Task<bool> SetPlayerConfigs(PlayerConfig value, AccountId32 key);
       Task<bool> SetPlayerSeasonConfigs(PlayerSeasonConfig value, BaseTuple<AccountId32, U16> key);
+      Task<bool> SetTradeStatsMap(BaseTuple<U32, U32> value, BaseTuple<U16, AccountId32> key);
       Task<bool> SetSeasonStats(SeasonInfo value, BaseTuple<U16, AccountId32> key);
       Task<bool> SetTrade(U128 value, BaseTuple<U16, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> key);
       Task<bool> SetServiceAccount(AccountId32 value);
       Task<bool> SetPreparation(BoundedVecT10 value, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 key);
+      Task<bool> SetTournamentRankers(AvatarRanker value, BaseTuple<U16, U32> key);
    }
 }

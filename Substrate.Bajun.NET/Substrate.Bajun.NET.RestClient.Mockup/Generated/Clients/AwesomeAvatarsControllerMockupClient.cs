@@ -13,13 +13,14 @@ namespace Substrate.Bajun.NET.RestClient.Mockup.Generated.Clients
    using System.Threading.Tasks;
    using System.Net.Http;
    using Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto;
+   using Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    using Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.season;
-   using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config;
+   using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.NetApi.Model.Types.Base;
    using Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.avatar;
-   using Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    using Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account;
+   using Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.avatar.tournament;
    using Substrate.Bajun.NET.RestClient.Mockup.Generated.Interfaces;
    
    public sealed class AwesomeAvatarsControllerMockupClient : MockupBaseClient, IAwesomeAvatarsControllerMockupClient
@@ -37,6 +38,10 @@ namespace Substrate.Bajun.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "AwesomeAvatars/Treasurer", value.Encode(), Substrate.Bajun.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage.TreasurerParams(key));
       }
+      public async Task<bool> SetWhitelistedAccounts(BoundedVecT51 value)
+      {
+         return await SendMockupRequestAsync(_httpClient, "AwesomeAvatars/WhitelistedAccounts", value.Encode(), Substrate.Bajun.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage.WhitelistedAccountsParams());
+      }
       public async Task<bool> SetCurrentSeasonStatus(SeasonStatus value)
       {
          return await SendMockupRequestAsync(_httpClient, "AwesomeAvatars/CurrentSeasonStatus", value.Encode(), Substrate.Bajun.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage.CurrentSeasonStatusParams());
@@ -44,6 +49,22 @@ namespace Substrate.Bajun.NET.RestClient.Mockup.Generated.Clients
       public async Task<bool> SetSeasons(Season value, U16 key)
       {
          return await SendMockupRequestAsync(_httpClient, "AwesomeAvatars/Seasons", value.Encode(), Substrate.Bajun.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage.SeasonsParams(key));
+      }
+      public async Task<bool> SetSeasonMetas(SeasonMeta value, U16 key)
+      {
+         return await SendMockupRequestAsync(_httpClient, "AwesomeAvatars/SeasonMetas", value.Encode(), Substrate.Bajun.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage.SeasonMetasParams(key));
+      }
+      public async Task<bool> SetSeasonSchedules(SeasonSchedule value, U16 key)
+      {
+         return await SendMockupRequestAsync(_httpClient, "AwesomeAvatars/SeasonSchedules", value.Encode(), Substrate.Bajun.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage.SeasonSchedulesParams(key));
+      }
+      public async Task<bool> SetSeasonTradeFilters(TradeFilters value, U16 key)
+      {
+         return await SendMockupRequestAsync(_httpClient, "AwesomeAvatars/SeasonTradeFilters", value.Encode(), Substrate.Bajun.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage.SeasonTradeFiltersParams(key));
+      }
+      public async Task<bool> SetSeasonUnlocks(UnlockConfigs value, U16 key)
+      {
+         return await SendMockupRequestAsync(_httpClient, "AwesomeAvatars/SeasonUnlocks", value.Encode(), Substrate.Bajun.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage.SeasonUnlocksParams(key));
       }
       public async Task<bool> SetTreasury(U128 value, U16 key)
       {
@@ -57,7 +78,7 @@ namespace Substrate.Bajun.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "AwesomeAvatars/Avatars", value.Encode(), Substrate.Bajun.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage.AvatarsParams(key));
       }
-      public async Task<bool> SetOwners(BoundedVecT49 value, BaseTuple<AccountId32, U16> key)
+      public async Task<bool> SetOwners(BoundedVecT52 value, BaseTuple<AccountId32, U16> key)
       {
          return await SendMockupRequestAsync(_httpClient, "AwesomeAvatars/Owners", value.Encode(), Substrate.Bajun.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage.OwnersParams(key));
       }
@@ -77,6 +98,10 @@ namespace Substrate.Bajun.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "AwesomeAvatars/PlayerSeasonConfigs", value.Encode(), Substrate.Bajun.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage.PlayerSeasonConfigsParams(key));
       }
+      public async Task<bool> SetTradeStatsMap(BaseTuple<U32, U32> value, BaseTuple<U16, AccountId32> key)
+      {
+         return await SendMockupRequestAsync(_httpClient, "AwesomeAvatars/TradeStatsMap", value.Encode(), Substrate.Bajun.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage.TradeStatsMapParams(key));
+      }
       public async Task<bool> SetSeasonStats(SeasonInfo value, BaseTuple<U16, AccountId32> key)
       {
          return await SendMockupRequestAsync(_httpClient, "AwesomeAvatars/SeasonStats", value.Encode(), Substrate.Bajun.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage.SeasonStatsParams(key));
@@ -92,6 +117,10 @@ namespace Substrate.Bajun.NET.RestClient.Mockup.Generated.Clients
       public async Task<bool> SetPreparation(BoundedVecT10 value, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 key)
       {
          return await SendMockupRequestAsync(_httpClient, "AwesomeAvatars/Preparation", value.Encode(), Substrate.Bajun.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage.PreparationParams(key));
+      }
+      public async Task<bool> SetTournamentRankers(AvatarRanker value, BaseTuple<U16, U32> key)
+      {
+         return await SendMockupRequestAsync(_httpClient, "AwesomeAvatars/TournamentRankers", value.Encode(), Substrate.Bajun.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage.TournamentRankersParams(key));
       }
    }
 }

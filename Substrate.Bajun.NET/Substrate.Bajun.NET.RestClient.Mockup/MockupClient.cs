@@ -18,6 +18,7 @@ namespace Substrate.Bajun.NET.RestClient.Mockup
    public sealed class MockupClient
    {
       private HttpClient _httpClient;
+      public IAffiliatesAAAControllerMockupClient AffiliatesAAAControllerClient;
       public IAuraControllerMockupClient AuraControllerClient;
       public IAuraExtControllerMockupClient AuraExtControllerClient;
       public IAuthorshipControllerMockupClient AuthorshipControllerClient;
@@ -46,6 +47,7 @@ namespace Substrate.Bajun.NET.RestClient.Mockup
       public ITechnicalCommitteeControllerMockupClient TechnicalCommitteeControllerClient;
       public ITechnicalCommitteeMembershipControllerMockupClient TechnicalCommitteeMembershipControllerClient;
       public ITimestampControllerMockupClient TimestampControllerClient;
+      public ITournamentAAAControllerMockupClient TournamentAAAControllerClient;
       public ITransactionPaymentControllerMockupClient TransactionPaymentControllerClient;
       public ITreasuryControllerMockupClient TreasuryControllerClient;
       public IVestingControllerMockupClient VestingControllerClient;
@@ -53,6 +55,7 @@ namespace Substrate.Bajun.NET.RestClient.Mockup
       public MockupClient(HttpClient httpClient)
       {
          _httpClient = httpClient;
+         AffiliatesAAAControllerClient = new AffiliatesAAAControllerMockupClient(_httpClient);
          AuraControllerClient = new AuraControllerMockupClient(_httpClient);
          AuraExtControllerClient = new AuraExtControllerMockupClient(_httpClient);
          AuthorshipControllerClient = new AuthorshipControllerMockupClient(_httpClient);
@@ -81,6 +84,7 @@ namespace Substrate.Bajun.NET.RestClient.Mockup
          TechnicalCommitteeControllerClient = new TechnicalCommitteeControllerMockupClient(_httpClient);
          TechnicalCommitteeMembershipControllerClient = new TechnicalCommitteeMembershipControllerMockupClient(_httpClient);
          TimestampControllerClient = new TimestampControllerMockupClient(_httpClient);
+         TournamentAAAControllerClient = new TournamentAAAControllerMockupClient(_httpClient);
          TransactionPaymentControllerClient = new TransactionPaymentControllerMockupClient(_httpClient);
          TreasuryControllerClient = new TreasuryControllerMockupClient(_httpClient);
          VestingControllerClient = new VestingControllerMockupClient(_httpClient);

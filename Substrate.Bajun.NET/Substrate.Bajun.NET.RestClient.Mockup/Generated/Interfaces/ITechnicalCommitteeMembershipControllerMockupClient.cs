@@ -16,7 +16,7 @@ namespace Substrate.Bajun.NET.RestClient.Mockup.Generated.Interfaces
    
    public interface ITechnicalCommitteeMembershipControllerMockupClient
    {
-      Task<bool> SetMembers(BoundedVecT44 value);
+      Task<bool> SetMembers(BoundedVecT46 value);
       Task<bool> SetPrime(AccountId32 value);
    }
 }

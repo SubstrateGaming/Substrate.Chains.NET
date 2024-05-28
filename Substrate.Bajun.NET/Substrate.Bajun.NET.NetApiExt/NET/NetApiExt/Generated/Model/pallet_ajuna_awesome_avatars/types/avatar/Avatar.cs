@@ -18,7 +18,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
     
     
     /// <summary>
-    /// >> 555 - Composite[pallet_ajuna_awesome_avatars.types.avatar.Avatar]
+    /// >> 583 - Composite[pallet_ajuna_awesome_avatars.types.avatar.Avatar]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Avatar : BaseType
@@ -35,11 +35,15 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
         /// <summary>
         /// >> dna
         /// </summary>
-        public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT5 Dna { get; set; }
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT7 Dna { get; set; }
         /// <summary>
         /// >> souls
         /// </summary>
         public Substrate.NetApi.Model.Types.Primitive.U32 Souls { get; set; }
+        /// <summary>
+        /// >> minted_at
+        /// </summary>
+        public Substrate.NetApi.Model.Types.Primitive.U32 MintedAt { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
@@ -55,6 +59,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
             result.AddRange(Encoding.Encode());
             result.AddRange(Dna.Encode());
             result.AddRange(Souls.Encode());
+            result.AddRange(MintedAt.Encode());
             return result.ToArray();
         }
         
@@ -66,10 +71,12 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
             SeasonId.Decode(byteArray, ref p);
             Encoding = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.avatar.EnumDnaEncoding();
             Encoding.Decode(byteArray, ref p);
-            Dna = new Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT5();
+            Dna = new Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT7();
             Dna.Decode(byteArray, ref p);
             Souls = new Substrate.NetApi.Model.Types.Primitive.U32();
             Souls.Decode(byteArray, ref p);
+            MintedAt = new Substrate.NetApi.Model.Types.Primitive.U32();
+            MintedAt.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];

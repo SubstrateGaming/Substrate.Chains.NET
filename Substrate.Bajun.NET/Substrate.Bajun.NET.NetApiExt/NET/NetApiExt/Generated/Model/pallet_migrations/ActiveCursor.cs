@@ -18,7 +18,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_migrations
     
     
     /// <summary>
-    /// >> 314 - Composite[pallet_migrations.ActiveCursor]
+    /// >> 330 - Composite[pallet_migrations.ActiveCursor]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class ActiveCursor : BaseType

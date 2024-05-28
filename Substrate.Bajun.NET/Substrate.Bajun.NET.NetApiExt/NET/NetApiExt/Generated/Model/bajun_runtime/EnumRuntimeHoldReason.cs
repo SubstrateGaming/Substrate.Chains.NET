@@ -28,7 +28,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.bajun_runtime
     }
     
     /// <summary>
-    /// >> 459 - Variant[bajun_runtime.RuntimeHoldReason]
+    /// >> 486 - Variant[bajun_runtime.RuntimeHoldReason]
     /// </summary>
     public sealed class EnumRuntimeHoldReason : BaseEnumExt<RuntimeHoldReason, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_preimage.pallet.EnumHoldReason>
     {

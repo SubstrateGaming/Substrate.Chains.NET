@@ -18,7 +18,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
     
     
     /// <summary>
-    /// >> 162 - Composite[pallet_ajuna_awesome_avatars.types.config.GlobalConfig]
+    /// >> 169 - Composite[pallet_ajuna_awesome_avatars.types.config.GlobalConfig]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class GlobalConfig : BaseType
@@ -33,9 +33,13 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
         /// </summary>
         public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.ForgeConfig Forge { get; set; }
         /// <summary>
-        /// >> transfer
+        /// >> avatar_transfer
         /// </summary>
-        public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.TransferConfig Transfer { get; set; }
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.AvatarTransferConfig AvatarTransfer { get; set; }
+        /// <summary>
+        /// >> freemint_transfer
+        /// </summary>
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.FreemintTransferConfig FreemintTransfer { get; set; }
         /// <summary>
         /// >> trade
         /// </summary>
@@ -44,6 +48,10 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
         /// >> nft_transfer
         /// </summary>
         public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.NftTransferConfig NftTransfer { get; set; }
+        /// <summary>
+        /// >> affiliate_config
+        /// </summary>
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.AffiliateConfig AffiliateConfig { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
@@ -57,9 +65,11 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
             var result = new List<byte>();
             result.AddRange(Mint.Encode());
             result.AddRange(Forge.Encode());
-            result.AddRange(Transfer.Encode());
+            result.AddRange(AvatarTransfer.Encode());
+            result.AddRange(FreemintTransfer.Encode());
             result.AddRange(Trade.Encode());
             result.AddRange(NftTransfer.Encode());
+            result.AddRange(AffiliateConfig.Encode());
             return result.ToArray();
         }
         
@@ -71,12 +81,16 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
             Mint.Decode(byteArray, ref p);
             Forge = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.ForgeConfig();
             Forge.Decode(byteArray, ref p);
-            Transfer = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.TransferConfig();
-            Transfer.Decode(byteArray, ref p);
+            AvatarTransfer = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.AvatarTransferConfig();
+            AvatarTransfer.Decode(byteArray, ref p);
+            FreemintTransfer = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.FreemintTransferConfig();
+            FreemintTransfer.Decode(byteArray, ref p);
             Trade = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.TradeConfig();
             Trade.Decode(byteArray, ref p);
             NftTransfer = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.NftTransferConfig();
             NftTransfer.Decode(byteArray, ref p);
+            AffiliateConfig = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.AffiliateConfig();
+            AffiliateConfig.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];

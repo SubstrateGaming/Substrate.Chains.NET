@@ -23,11 +23,11 @@ namespace Substrate.Bajun.NET.RestClient.Mockup.Generated.Clients
       {
          _httpClient = httpClient;
       }
-      public async Task<bool> SetInvulnerables(BoundedVecT35 value)
+      public async Task<bool> SetInvulnerables(BoundedVecT37 value)
       {
          return await SendMockupRequestAsync(_httpClient, "CollatorSelection/Invulnerables", value.Encode(), Substrate.Bajun.NET.NetApiExt.Generated.Storage.CollatorSelectionStorage.InvulnerablesParams());
       }
-      public async Task<bool> SetCandidateList(BoundedVecT36 value)
+      public async Task<bool> SetCandidateList(BoundedVecT38 value)
       {
          return await SendMockupRequestAsync(_httpClient, "CollatorSelection/CandidateList", value.Encode(), Substrate.Bajun.NET.NetApiExt.Generated.Storage.CollatorSelectionStorage.CandidateListParams());
       }

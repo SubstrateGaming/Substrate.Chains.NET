@@ -12,13 +12,14 @@ namespace Substrate.Bajun.NET.RestClient.Generated.Interfaces
    using System;
    using System.Threading.Tasks;
    using Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto;
+   using Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    using Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.season;
-   using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config;
+   using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.NetApi.Model.Types.Base;
    using Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.avatar;
-   using Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    using Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account;
+   using Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.avatar.tournament;
    
    public interface IAwesomeAvatarsControllerClient
    {
@@ -26,17 +27,27 @@ namespace Substrate.Bajun.NET.RestClient.Generated.Interfaces
       Task<bool> SubscribeOrganizer();
       Task<AccountId32> GetTreasurer(U16 key);
       Task<bool> SubscribeTreasurer(U16 key);
+      Task<BoundedVecT51> GetWhitelistedAccounts();
+      Task<bool> SubscribeWhitelistedAccounts();
       Task<SeasonStatus> GetCurrentSeasonStatus();
       Task<bool> SubscribeCurrentSeasonStatus();
       Task<Season> GetSeasons(U16 key);
       Task<bool> SubscribeSeasons(U16 key);
+      Task<SeasonMeta> GetSeasonMetas(U16 key);
+      Task<bool> SubscribeSeasonMetas(U16 key);
+      Task<SeasonSchedule> GetSeasonSchedules(U16 key);
+      Task<bool> SubscribeSeasonSchedules(U16 key);
+      Task<TradeFilters> GetSeasonTradeFilters(U16 key);
+      Task<bool> SubscribeSeasonTradeFilters(U16 key);
+      Task<UnlockConfigs> GetSeasonUnlocks(U16 key);
+      Task<bool> SubscribeSeasonUnlocks(U16 key);
       Task<U128> GetTreasury(U16 key);
       Task<bool> SubscribeTreasury(U16 key);
       Task<GlobalConfig> GetGlobalConfigs();
       Task<bool> SubscribeGlobalConfigs();
       Task<BaseTuple<AccountId32, Avatar>> GetAvatars(Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 key);
       Task<bool> SubscribeAvatars(Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 key);
-      Task<BoundedVecT49> GetOwners(BaseTuple<AccountId32, U16> key);
+      Task<BoundedVecT52> GetOwners(BaseTuple<AccountId32, U16> key);
       Task<bool> SubscribeOwners(BaseTuple<AccountId32, U16> key);
       Task<BaseTuple> GetLockedAvatars(Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 key);
       Task<bool> SubscribeLockedAvatars(Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 key);
@@ -46,6 +57,8 @@ namespace Substrate.Bajun.NET.RestClient.Generated.Interfaces
       Task<bool> SubscribePlayerConfigs(AccountId32 key);
       Task<PlayerSeasonConfig> GetPlayerSeasonConfigs(BaseTuple<AccountId32, U16> key);
       Task<bool> SubscribePlayerSeasonConfigs(BaseTuple<AccountId32, U16> key);
+      Task<BaseTuple<U32, U32>> GetTradeStatsMap(BaseTuple<U16, AccountId32> key);
+      Task<bool> SubscribeTradeStatsMap(BaseTuple<U16, AccountId32> key);
       Task<SeasonInfo> GetSeasonStats(BaseTuple<U16, AccountId32> key);
       Task<bool> SubscribeSeasonStats(BaseTuple<U16, AccountId32> key);
       Task<U128> GetTrade(BaseTuple<U16, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> key);
@@ -54,5 +67,7 @@ namespace Substrate.Bajun.NET.RestClient.Generated.Interfaces
       Task<bool> SubscribeServiceAccount();
       Task<BoundedVecT10> GetPreparation(Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 key);
       Task<bool> SubscribePreparation(Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 key);
+      Task<AvatarRanker> GetTournamentRankers(BaseTuple<U16, U32> key);
+      Task<bool> SubscribeTournamentRankers(BaseTuple<U16, U32> key);
    }
 }

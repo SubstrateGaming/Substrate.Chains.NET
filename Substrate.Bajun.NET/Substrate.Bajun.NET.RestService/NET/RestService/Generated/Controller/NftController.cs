@@ -165,7 +165,7 @@ namespace Substrate.Bajun.NET.RestService.Generated.Controller
         ///  Item attribute approvals.
         /// </summary>
         [HttpGet("ItemAttributesApprovalsOf")]
-        [ProducesResponseType(typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSetT3), 200)]
+        [ProducesResponseType(typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSetT2), 200)]
         [StorageKeyBuilder(typeof(Substrate.Bajun.NET.NetApiExt.Generated.Storage.NftStorage), "ItemAttributesApprovalsOfParams", typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256>))]
         public IActionResult GetItemAttributesApprovalsOf(string key)
         {

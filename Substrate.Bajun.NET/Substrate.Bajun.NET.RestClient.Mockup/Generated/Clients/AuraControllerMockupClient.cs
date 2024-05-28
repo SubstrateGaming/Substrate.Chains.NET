@@ -23,7 +23,7 @@ namespace Substrate.Bajun.NET.RestClient.Mockup.Generated.Clients
       {
          _httpClient = httpClient;
       }
-      public async Task<bool> SetAuthorities(BoundedVecT37 value)
+      public async Task<bool> SetAuthorities(BoundedVecT39 value)
       {
          return await SendMockupRequestAsync(_httpClient, "Aura/Authorities", value.Encode(), Substrate.Bajun.NET.NetApiExt.Generated.Storage.AuraStorage.AuthoritiesParams());
       }

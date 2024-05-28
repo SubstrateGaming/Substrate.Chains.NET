@@ -15,6 +15,6 @@ namespace Substrate.Bajun.NET.RestClient.Mockup.Generated.Interfaces
    
    public interface IRandomnessControllerMockupClient
    {
-      Task<bool> SetRandomMaterial(BoundedVecT48 value);
+      Task<bool> SetRandomMaterial(BoundedVecT50 value);
    }
 }

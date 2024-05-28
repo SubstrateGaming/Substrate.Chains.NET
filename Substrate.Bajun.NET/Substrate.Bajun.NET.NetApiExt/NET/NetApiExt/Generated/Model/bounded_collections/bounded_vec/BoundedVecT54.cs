@@ -13,43 +13,33 @@ using Substrate.NetApi.Model.Types.Metadata.V14;
 using System.Collections.Generic;
 
 
-namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config
+namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec
 {
     
     
     /// <summary>
-    /// >> 165 - Composite[pallet_ajuna_awesome_avatars.types.config.TransferConfig]
+    /// >> 631 - Composite[bounded_collections.bounded_vec.BoundedVecT54]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
-    public sealed class TransferConfig : BaseType
+    public sealed class BoundedVecT54 : BaseType
     {
         
         /// <summary>
-        /// >> open
+        /// >> value
         /// </summary>
-        public Substrate.NetApi.Model.Types.Primitive.Bool Open { get; set; }
-        /// <summary>
-        /// >> free_mint_transfer_fee
-        /// </summary>
-        public Substrate.NetApi.Model.Types.Primitive.U16 FreeMintTransferFee { get; set; }
-        /// <summary>
-        /// >> min_free_mint_transfer
-        /// </summary>
-        public Substrate.NetApi.Model.Types.Primitive.U16 MinFreeMintTransfer { get; set; }
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.avatar.Avatar>> Value { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
         {
-            return "TransferConfig";
+            return "BoundedVecT54";
         }
         
         /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
-            result.AddRange(Open.Encode());
-            result.AddRange(FreeMintTransferFee.Encode());
-            result.AddRange(MinFreeMintTransfer.Encode());
+            result.AddRange(Value.Encode());
             return result.ToArray();
         }
         
@@ -57,12 +47,8 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Open = new Substrate.NetApi.Model.Types.Primitive.Bool();
-            Open.Decode(byteArray, ref p);
-            FreeMintTransferFee = new Substrate.NetApi.Model.Types.Primitive.U16();
-            FreeMintTransferFee.Decode(byteArray, ref p);
-            MinFreeMintTransfer = new Substrate.NetApi.Model.Types.Primitive.U16();
-            MinFreeMintTransfer.Decode(byteArray, ref p);
+            Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.avatar.Avatar>>();
+            Value.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];

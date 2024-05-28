@@ -27,9 +27,9 @@ namespace Substrate.Bajun.NET.RestClient.Generated.Clients
          _httpClient = httpClient;
          _subscriptionClient = subscriptionClient;
       }
-      public async Task<BoundedVecT37> GetAuthorities()
+      public async Task<BoundedVecT39> GetAuthorities()
       {
-         return await SendRequestAsync<BoundedVecT37>(_httpClient, "auraext/authorities");
+         return await SendRequestAsync<BoundedVecT39>(_httpClient, "auraext/authorities");
       }
       public async Task<bool> SubscribeAuthorities()
       {
