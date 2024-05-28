@@ -13,26 +13,26 @@ using Substrate.NetApi.Model.Types.Metadata.V14;
 using System.Collections.Generic;
 
 
-namespace Substrate.Bajun.NET.NetApiExt.Generated.Types.Base
+namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.season
 {
     
     
     /// <summary>
-    /// >> 592 - Composite[BTreeSetT4]
+    /// >> 166 - Composite[pallet_ajuna_awesome_avatars.types.season.TradeFilters]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
-    public sealed class BTreeSetT4 : BaseType
+    public sealed class TradeFilters : BaseType
     {
         
         /// <summary>
         /// >> value
         /// </summary>
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> Value { get; set; }
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9 Value { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
         {
-            return "BTreeSetT4";
+            return "TradeFilters";
         }
         
         /// <inheritdoc/>
@@ -47,7 +47,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Types.Base
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>();
+            Value = new Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9();
             Value.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

@@ -66,7 +66,7 @@ namespace Substrate.Bajun.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "Nft/ItemPriceOf", value.Encode(), Substrate.Bajun.NET.NetApiExt.Generated.Storage.NftStorage.ItemPriceOfParams(key));
       }
-      public async Task<bool> SetItemAttributesApprovalsOf(BoundedBTreeSetT3 value, BaseTuple<U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> key)
+      public async Task<bool> SetItemAttributesApprovalsOf(BoundedBTreeSetT2 value, BaseTuple<U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> key)
       {
          return await SendMockupRequestAsync(_httpClient, "Nft/ItemAttributesApprovalsOf", value.Encode(), Substrate.Bajun.NET.NetApiExt.Generated.Storage.NftStorage.ItemAttributesApprovalsOfParams(key));
       }

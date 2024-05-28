@@ -82,7 +82,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.frame_system.pallet
     }
     
     /// <summary>
-    /// >> 204 - Variant[frame_system.pallet.Error]
+    /// >> 220 - Variant[frame_system.pallet.Error]
     /// Error for the System pallet
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>

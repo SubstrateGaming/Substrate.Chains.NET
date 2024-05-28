@@ -19,6 +19,7 @@ namespace Substrate.Bajun.NET.RestClient
    {
       private HttpClient _httpClient;
       private BaseSubscriptionClient _subscriptionClient;
+      public IAffiliatesAAAControllerClient AffiliatesAAAControllerClient;
       public IAuraControllerClient AuraControllerClient;
       public IAuraExtControllerClient AuraExtControllerClient;
       public IAuthorshipControllerClient AuthorshipControllerClient;
@@ -47,6 +48,7 @@ namespace Substrate.Bajun.NET.RestClient
       public ITechnicalCommitteeControllerClient TechnicalCommitteeControllerClient;
       public ITechnicalCommitteeMembershipControllerClient TechnicalCommitteeMembershipControllerClient;
       public ITimestampControllerClient TimestampControllerClient;
+      public ITournamentAAAControllerClient TournamentAAAControllerClient;
       public ITransactionPaymentControllerClient TransactionPaymentControllerClient;
       public ITreasuryControllerClient TreasuryControllerClient;
       public IVestingControllerClient VestingControllerClient;
@@ -55,6 +57,7 @@ namespace Substrate.Bajun.NET.RestClient
       {
          _httpClient = httpClient;
          _subscriptionClient = subscriptionClient;
+         AffiliatesAAAControllerClient = new AffiliatesAAAControllerClient(_httpClient, _subscriptionClient);
          AuraControllerClient = new AuraControllerClient(_httpClient, _subscriptionClient);
          AuraExtControllerClient = new AuraExtControllerClient(_httpClient, _subscriptionClient);
          AuthorshipControllerClient = new AuthorshipControllerClient(_httpClient, _subscriptionClient);
@@ -83,6 +86,7 @@ namespace Substrate.Bajun.NET.RestClient
          TechnicalCommitteeControllerClient = new TechnicalCommitteeControllerClient(_httpClient, _subscriptionClient);
          TechnicalCommitteeMembershipControllerClient = new TechnicalCommitteeMembershipControllerClient(_httpClient, _subscriptionClient);
          TimestampControllerClient = new TimestampControllerClient(_httpClient, _subscriptionClient);
+         TournamentAAAControllerClient = new TournamentAAAControllerClient(_httpClient, _subscriptionClient);
          TransactionPaymentControllerClient = new TransactionPaymentControllerClient(_httpClient, _subscriptionClient);
          TreasuryControllerClient = new TreasuryControllerClient(_httpClient, _subscriptionClient);
          VestingControllerClient = new VestingControllerClient(_httpClient, _subscriptionClient);

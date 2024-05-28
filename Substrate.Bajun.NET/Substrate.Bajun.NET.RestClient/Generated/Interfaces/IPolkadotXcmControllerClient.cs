@@ -33,13 +33,13 @@ namespace Substrate.Bajun.NET.RestClient.Generated.Interfaces
       Task<bool> SubscribeVersionNotifiers(BaseTuple<U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation> key);
       Task<BaseTuple<U64, Weight, U32>> GetVersionNotifyTargets(BaseTuple<U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation> key);
       Task<bool> SubscribeVersionNotifyTargets(BaseTuple<U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation> key);
-      Task<BoundedVecT38> GetVersionDiscoveryQueue();
+      Task<BoundedVecT40> GetVersionDiscoveryQueue();
       Task<bool> SubscribeVersionDiscoveryQueue();
       Task<EnumVersionMigrationStage> GetCurrentMigration();
       Task<bool> SubscribeCurrentMigration();
       Task<RemoteLockedFungibleRecord> GetRemoteLockedFungibles(BaseTuple<U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAssetId> key);
       Task<bool> SubscribeRemoteLockedFungibles(BaseTuple<U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAssetId> key);
-      Task<BoundedVecT40> GetLockedFungibles(Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
+      Task<BoundedVecT42> GetLockedFungibles(Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
       Task<bool> SubscribeLockedFungibles(Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
       Task<Bool> GetXcmExecutionSuspended();
       Task<bool> SubscribeXcmExecutionSuspended();

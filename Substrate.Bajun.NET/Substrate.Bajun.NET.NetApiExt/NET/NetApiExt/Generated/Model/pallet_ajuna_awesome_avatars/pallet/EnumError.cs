@@ -180,248 +180,309 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
         NftTransferClosed = 25,
         
         /// <summary>
+        /// >> FreeMintTransferClosed
+        /// Free mint transfer is not available at the moment.
+        /// </summary>
+        FreeMintTransferClosed = 26,
+        
+        /// <summary>
         /// >> SeasonClosed
         /// Attempt to mint or forge outside of an active season.
         /// </summary>
-        SeasonClosed = 26,
+        SeasonClosed = 27,
         
         /// <summary>
         /// >> PrematureSeasonEnd
         /// Attempt to mint when the season has ended prematurely.
         /// </summary>
-        PrematureSeasonEnd = 27,
+        PrematureSeasonEnd = 28,
         
         /// <summary>
         /// >> MaxOwnershipReached
         /// Max ownership reached.
         /// </summary>
-        MaxOwnershipReached = 28,
+        MaxOwnershipReached = 29,
         
         /// <summary>
         /// >> MaxStorageTierReached
         /// Max storage tier reached.
         /// </summary>
-        MaxStorageTierReached = 29,
+        MaxStorageTierReached = 30,
         
         /// <summary>
         /// >> Ownership
         /// Avatar belongs to someone else.
         /// </summary>
-        Ownership = 30,
+        Ownership = 31,
         
         /// <summary>
         /// >> AlreadyOwned
         /// Attempt to buy his or her own avatar.
         /// </summary>
-        AlreadyOwned = 31,
+        AlreadyOwned = 32,
         
         /// <summary>
         /// >> IncorrectDna
         /// Incorrect DNA.
         /// </summary>
-        IncorrectDna = 32,
+        IncorrectDna = 33,
         
         /// <summary>
         /// >> IncorrectData
         /// Incorrect data.
         /// </summary>
-        IncorrectData = 33,
+        IncorrectData = 34,
         
         /// <summary>
         /// >> IncorrectAvatarId
         /// Incorrect Avatar ID.
         /// </summary>
-        IncorrectAvatarId = 34,
+        IncorrectAvatarId = 35,
         
         /// <summary>
         /// >> IncorrectSeasonId
         /// Incorrect season ID.
         /// </summary>
-        IncorrectSeasonId = 35,
+        IncorrectSeasonId = 36,
         
         /// <summary>
         /// >> MintCooldown
         /// The player must wait cooldown period.
         /// </summary>
-        MintCooldown = 36,
+        MintCooldown = 37,
         
         /// <summary>
         /// >> MaxComponentsTooLow
         /// The season's max components value is less than the minimum allowed (1).
         /// </summary>
-        MaxComponentsTooLow = 37,
+        MaxComponentsTooLow = 38,
         
         /// <summary>
         /// >> MaxComponentsTooHigh
         /// The season's max components value is more than the maximum allowed (random byte: 32).
         /// </summary>
-        MaxComponentsTooHigh = 38,
+        MaxComponentsTooHigh = 39,
         
         /// <summary>
         /// >> MaxVariationsTooLow
         /// The season's max variations value is less than the minimum allowed (1).
         /// </summary>
-        MaxVariationsTooLow = 39,
+        MaxVariationsTooLow = 40,
         
         /// <summary>
         /// >> MaxVariationsTooHigh
         /// The season's max variations value is more than the maximum allowed (15).
         /// </summary>
-        MaxVariationsTooHigh = 40,
+        MaxVariationsTooHigh = 41,
         
         /// <summary>
         /// >> InsufficientFreeMints
         /// The player has not enough free mints available.
         /// </summary>
-        InsufficientFreeMints = 41,
+        InsufficientFreeMints = 42,
         
         /// <summary>
         /// >> InsufficientBalance
         /// The player has not enough balance available.
         /// </summary>
-        InsufficientBalance = 42,
+        InsufficientBalance = 43,
         
         /// <summary>
         /// >> TooLowFreeMints
         /// Attempt to transfer, issue or withdraw free mints lower than the minimum allowed.
         /// </summary>
-        TooLowFreeMints = 43,
+        TooLowFreeMints = 44,
         
         /// <summary>
         /// >> TooFewSacrifices
         /// Less than minimum allowed sacrifices are used for forging.
         /// </summary>
-        TooFewSacrifices = 44,
+        TooFewSacrifices = 45,
         
         /// <summary>
         /// >> TooManySacrifices
         /// More than maximum allowed sacrifices are used for forging.
         /// </summary>
-        TooManySacrifices = 45,
+        TooManySacrifices = 46,
         
         /// <summary>
         /// >> LeaderSacrificed
         /// Leader is being sacrificed.
         /// </summary>
-        LeaderSacrificed = 46,
+        LeaderSacrificed = 47,
         
         /// <summary>
         /// >> AvatarCannotBeTraded
         /// This avatar cannot be used in trades.
         /// </summary>
-        AvatarCannotBeTraded = 47,
+        AvatarCannotBeTraded = 48,
         
         /// <summary>
         /// >> AvatarInTrade
         /// An avatar listed for trade is used to forge.
         /// </summary>
-        AvatarInTrade = 48,
+        AvatarInTrade = 49,
         
         /// <summary>
         /// >> AvatarLocked
         /// The avatar is currently locked and cannot be used.
         /// </summary>
-        AvatarLocked = 49,
+        AvatarLocked = 50,
+        
+        /// <summary>
+        /// >> AvatarNotLocked
+        /// The avatar is not currently locked and cannot be unlocked.
+        /// </summary>
+        AvatarNotLocked = 51,
         
         /// <summary>
         /// >> AvatarUnlocked
         /// The avatar is currently unlocked and cannot be locked again.
         /// </summary>
-        AvatarUnlocked = 50,
+        AvatarUnlocked = 52,
         
         /// <summary>
         /// >> IncorrectAvatarSeason
         /// Tried to forge avatars from different seasons.
         /// </summary>
-        IncorrectAvatarSeason = 51,
+        IncorrectAvatarSeason = 53,
         
         /// <summary>
         /// >> IncompatibleAvatarVersions
         /// Tried to forge avatars with different DNA versions.
         /// </summary>
-        IncompatibleAvatarVersions = 52,
+        IncompatibleAvatarVersions = 54,
         
         /// <summary>
         /// >> InsufficientStorageForForging
         /// There's not enough space to hold the forging results
         /// </summary>
-        InsufficientStorageForForging = 53,
+        InsufficientStorageForForging = 55,
         
         /// <summary>
         /// >> CannotTransferToSelf
         /// Tried transferring to his or her own account.
         /// </summary>
-        CannotTransferToSelf = 54,
+        CannotTransferToSelf = 56,
         
         /// <summary>
         /// >> CannotTransferFromInactiveAccount
         /// Tried transferring while the account still hasn't minted and forged anything.
         /// </summary>
-        CannotTransferFromInactiveAccount = 55,
+        CannotTransferFromInactiveAccount = 57,
         
         /// <summary>
         /// >> CannotClaimDuringSeason
         /// Tried claiming treasury during a season.
         /// </summary>
-        CannotClaimDuringSeason = 56,
+        CannotClaimDuringSeason = 58,
         
         /// <summary>
         /// >> CannotClaimZero
         /// Tried claiming treasury which is zero.
         /// </summary>
-        CannotClaimZero = 57,
+        CannotClaimZero = 59,
         
         /// <summary>
         /// >> IncompatibleMintComponents
         /// The components tried to mint were not compatible.
         /// </summary>
-        IncompatibleMintComponents = 58,
+        IncompatibleMintComponents = 60,
         
         /// <summary>
         /// >> IncompatibleForgeComponents
         /// The components tried to forge were not compatible.
         /// </summary>
-        IncompatibleForgeComponents = 59,
+        IncompatibleForgeComponents = 61,
         
         /// <summary>
         /// >> InsufficientSacrifices
         /// The amount of sacrifices is not sufficient for forging.
         /// </summary>
-        InsufficientSacrifices = 60,
+        InsufficientSacrifices = 62,
         
         /// <summary>
         /// >> ExcessiveSacrifices
         /// The amount of sacrifices is too much for forging.
         /// </summary>
-        ExcessiveSacrifices = 61,
+        ExcessiveSacrifices = 63,
         
         /// <summary>
         /// >> AlreadyPrepared
         /// Tried to prepare an already prepared avatar.
         /// </summary>
-        AlreadyPrepared = 62,
+        AlreadyPrepared = 64,
         
         /// <summary>
         /// >> NotPrepared
         /// Tried to prepare an IPFS URL for an avatar, that is not yet prepared.
         /// </summary>
-        NotPrepared = 63,
+        NotPrepared = 65,
         
         /// <summary>
         /// >> NoServiceAccount
         /// No service account has been set.
         /// </summary>
-        NoServiceAccount = 64,
+        NoServiceAccount = 66,
         
         /// <summary>
         /// >> EmptyIpfsUrl
         /// Tried to prepare an IPFS URL for an avatar with an empty URL.
         /// </summary>
-        EmptyIpfsUrl = 65,
+        EmptyIpfsUrl = 67,
+        
+        /// <summary>
+        /// >> AccountAlreadyInWhitelist
+        /// The account trying to be whitelisted is already in the whitelist
+        /// </summary>
+        AccountAlreadyInWhitelist = 68,
+        
+        /// <summary>
+        /// >> WhitelistedAccountsLimitReached
+        /// Cannot add more accounts to the whitelist.
+        /// </summary>
+        WhitelistedAccountsLimitReached = 69,
+        
+        /// <summary>
+        /// >> AffiliatorNotFound
+        /// No account matches the provided affiliator identifier
+        /// </summary>
+        AffiliatorNotFound = 70,
+        
+        /// <summary>
+        /// >> FeatureLocked
+        /// The feature is locked for the current player
+        /// </summary>
+        FeatureLocked = 71,
+        
+        /// <summary>
+        /// >> FeatureUnlockableInSeason
+        /// The feature trying to be unlocked is not available for the selected season
+        /// </summary>
+        FeatureUnlockableInSeason = 72,
+        
+        /// <summary>
+        /// >> UnlockCriteriaNotFulfilled
+        /// The feature trying to be unlocked has missing requirements to be fulfilled by
+        /// the account trying to unlock it
+        /// </summary>
+        UnlockCriteriaNotFulfilled = 73,
+        
+        /// <summary>
+        /// >> TournamentRankerNotFound
+        /// Couldn't find a tournament ranker for the active tournament; qed
+        /// </summary>
+        TournamentRankerNotFound = 74,
+        
+        /// <summary>
+        /// >> AffiliateOthersOnlyWhiteListed
+        /// Only whitelisted accounts can affiliate for others
+        /// </summary>
+        AffiliateOthersOnlyWhiteListed = 75,
     }
     
     /// <summary>
-    /// >> 571 - Variant[pallet_ajuna_awesome_avatars.pallet.Error]
+    /// >> 597 - Variant[pallet_ajuna_awesome_avatars.pallet.Error]
     /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>

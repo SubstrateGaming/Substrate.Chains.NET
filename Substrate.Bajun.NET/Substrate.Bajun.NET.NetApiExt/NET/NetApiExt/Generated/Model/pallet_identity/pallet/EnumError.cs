@@ -180,7 +180,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_identity.pallet
     }
     
     /// <summary>
-    /// >> 423 - Variant[pallet_identity.pallet.Error]
+    /// >> 450 - Variant[pallet_identity.pallet.Error]
     /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>

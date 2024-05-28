@@ -18,7 +18,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
     
     
     /// <summary>
-    /// >> 562 - Composite[pallet_ajuna_awesome_avatars.types.account.Stats]
+    /// >> 590 - Composite[pallet_ajuna_awesome_avatars.types.account.Stats]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Stats : BaseType
@@ -32,10 +32,6 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
         /// >> forge
         /// </summary>
         public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.PlayStats Forge { get; set; }
-        /// <summary>
-        /// >> trade
-        /// </summary>
-        public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.TradeStats Trade { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
@@ -49,7 +45,6 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
             var result = new List<byte>();
             result.AddRange(Mint.Encode());
             result.AddRange(Forge.Encode());
-            result.AddRange(Trade.Encode());
             return result.ToArray();
         }
         
@@ -61,8 +56,6 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
             Mint.Decode(byteArray, ref p);
             Forge = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.PlayStats();
             Forge.Decode(byteArray, ref p);
-            Trade = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.TradeStats();
-            Trade.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];

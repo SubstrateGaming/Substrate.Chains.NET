@@ -35,6 +35,13 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
         Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTreasurer(string key);
         
         /// <summary>
+        /// >> WhitelistedAccounts
+        ///  List of accounts allowed to transfer free mints.
+        ///  A maximum of 3 different accounts can be on the list.
+        /// </summary>
+        Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT51 GetWhitelistedAccounts();
+        
+        /// <summary>
         /// >> CurrentSeasonStatus
         /// </summary>
         Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.season.SeasonStatus GetCurrentSeasonStatus();
@@ -44,6 +51,30 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
         ///  Storage for the seasons.
         /// </summary>
         Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.season.Season GetSeasons(string key);
+        
+        /// <summary>
+        /// >> SeasonMetas
+        ///  Storage for the season's metadata.
+        /// </summary>
+        Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.season.SeasonMeta GetSeasonMetas(string key);
+        
+        /// <summary>
+        /// >> SeasonSchedules
+        ///  Storage for the season's schedules.
+        /// </summary>
+        Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.season.SeasonSchedule GetSeasonSchedules(string key);
+        
+        /// <summary>
+        /// >> SeasonTradeFilters
+        ///  Storage for the season's trade filters.
+        /// </summary>
+        Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.season.TradeFilters GetSeasonTradeFilters(string key);
+        
+        /// <summary>
+        /// >> SeasonUnlocks
+        ///  Storage for the season's different unlock-ables.
+        /// </summary>
+        Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.UnlockConfigs GetSeasonUnlocks(string key);
         
         /// <summary>
         /// >> Treasury
@@ -63,7 +94,7 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
         /// <summary>
         /// >> Owners
         /// </summary>
-        Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT49 GetOwners(string key);
+        Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT52 GetOwners(string key);
         
         /// <summary>
         /// >> LockedAvatars
@@ -86,6 +117,13 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
         Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.PlayerSeasonConfig GetPlayerSeasonConfigs(string key);
         
         /// <summary>
+        /// >> TradeStatsMap
+        ///  This is only an intermediate storage that is being used during the multiblock runtime
+        ///  migration of v5 to v6. It should be removed afterward.
+        /// </summary>
+        Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32> GetTradeStatsMap(string key);
+        
+        /// <summary>
         /// >> SeasonStats
         /// </summary>
         Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.SeasonInfo GetSeasonStats(string key);
@@ -104,6 +142,11 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
         /// >> Preparation
         /// </summary>
         Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10 GetPreparation(string key);
+        
+        /// <summary>
+        /// >> TournamentRankers
+        /// </summary>
+        Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.avatar.tournament.AvatarRanker GetTournamentRankers(string key);
     }
     
     /// <summary>
@@ -123,6 +166,11 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
         private TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> _treasurerTypedStorage;
         
         /// <summary>
+        /// _whitelistedAccountsTypedStorage typed storage field
+        /// </summary>
+        private TypedStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT51> _whitelistedAccountsTypedStorage;
+        
+        /// <summary>
         /// _currentSeasonStatusTypedStorage typed storage field
         /// </summary>
         private TypedStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.season.SeasonStatus> _currentSeasonStatusTypedStorage;
@@ -131,6 +179,26 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
         /// _seasonsTypedStorage typed storage field
         /// </summary>
         private TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.season.Season> _seasonsTypedStorage;
+        
+        /// <summary>
+        /// _seasonMetasTypedStorage typed storage field
+        /// </summary>
+        private TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.season.SeasonMeta> _seasonMetasTypedStorage;
+        
+        /// <summary>
+        /// _seasonSchedulesTypedStorage typed storage field
+        /// </summary>
+        private TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.season.SeasonSchedule> _seasonSchedulesTypedStorage;
+        
+        /// <summary>
+        /// _seasonTradeFiltersTypedStorage typed storage field
+        /// </summary>
+        private TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.season.TradeFilters> _seasonTradeFiltersTypedStorage;
+        
+        /// <summary>
+        /// _seasonUnlocksTypedStorage typed storage field
+        /// </summary>
+        private TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.UnlockConfigs> _seasonUnlocksTypedStorage;
         
         /// <summary>
         /// _treasuryTypedStorage typed storage field
@@ -150,7 +218,7 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
         /// <summary>
         /// _ownersTypedStorage typed storage field
         /// </summary>
-        private TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT49> _ownersTypedStorage;
+        private TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT52> _ownersTypedStorage;
         
         /// <summary>
         /// _lockedAvatarsTypedStorage typed storage field
@@ -173,6 +241,11 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
         private TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.PlayerSeasonConfig> _playerSeasonConfigsTypedStorage;
         
         /// <summary>
+        /// _tradeStatsMapTypedStorage typed storage field
+        /// </summary>
+        private TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>> _tradeStatsMapTypedStorage;
+        
+        /// <summary>
         /// _seasonStatsTypedStorage typed storage field
         /// </summary>
         private TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.SeasonInfo> _seasonStatsTypedStorage;
@@ -193,26 +266,38 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
         private TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10> _preparationTypedStorage;
         
         /// <summary>
+        /// _tournamentRankersTypedStorage typed storage field
+        /// </summary>
+        private TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.avatar.tournament.AvatarRanker> _tournamentRankersTypedStorage;
+        
+        /// <summary>
         /// AwesomeAvatarsStorage constructor.
         /// </summary>
         public AwesomeAvatarsStorage(IStorageDataProvider storageDataProvider, List<IStorageChangeDelegate> storageChangeDelegates)
         {
             this.OrganizerTypedStorage = new TypedStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>("AwesomeAvatars.Organizer", storageDataProvider, storageChangeDelegates);
             this.TreasurerTypedStorage = new TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>("AwesomeAvatars.Treasurer", storageDataProvider, storageChangeDelegates);
+            this.WhitelistedAccountsTypedStorage = new TypedStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT51>("AwesomeAvatars.WhitelistedAccounts", storageDataProvider, storageChangeDelegates);
             this.CurrentSeasonStatusTypedStorage = new TypedStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.season.SeasonStatus>("AwesomeAvatars.CurrentSeasonStatus", storageDataProvider, storageChangeDelegates);
             this.SeasonsTypedStorage = new TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.season.Season>("AwesomeAvatars.Seasons", storageDataProvider, storageChangeDelegates);
+            this.SeasonMetasTypedStorage = new TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.season.SeasonMeta>("AwesomeAvatars.SeasonMetas", storageDataProvider, storageChangeDelegates);
+            this.SeasonSchedulesTypedStorage = new TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.season.SeasonSchedule>("AwesomeAvatars.SeasonSchedules", storageDataProvider, storageChangeDelegates);
+            this.SeasonTradeFiltersTypedStorage = new TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.season.TradeFilters>("AwesomeAvatars.SeasonTradeFilters", storageDataProvider, storageChangeDelegates);
+            this.SeasonUnlocksTypedStorage = new TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.UnlockConfigs>("AwesomeAvatars.SeasonUnlocks", storageDataProvider, storageChangeDelegates);
             this.TreasuryTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Primitive.U128>("AwesomeAvatars.Treasury", storageDataProvider, storageChangeDelegates);
             this.GlobalConfigsTypedStorage = new TypedStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.GlobalConfig>("AwesomeAvatars.GlobalConfigs", storageDataProvider, storageChangeDelegates);
             this.AvatarsTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.avatar.Avatar>>("AwesomeAvatars.Avatars", storageDataProvider, storageChangeDelegates);
-            this.OwnersTypedStorage = new TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT49>("AwesomeAvatars.Owners", storageDataProvider, storageChangeDelegates);
+            this.OwnersTypedStorage = new TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT52>("AwesomeAvatars.Owners", storageDataProvider, storageChangeDelegates);
             this.LockedAvatarsTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseTuple>("AwesomeAvatars.LockedAvatars", storageDataProvider, storageChangeDelegates);
             this.CollectionIdTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32>("AwesomeAvatars.CollectionId", storageDataProvider, storageChangeDelegates);
             this.PlayerConfigsTypedStorage = new TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.PlayerConfig>("AwesomeAvatars.PlayerConfigs", storageDataProvider, storageChangeDelegates);
             this.PlayerSeasonConfigsTypedStorage = new TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.PlayerSeasonConfig>("AwesomeAvatars.PlayerSeasonConfigs", storageDataProvider, storageChangeDelegates);
+            this.TradeStatsMapTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>>("AwesomeAvatars.TradeStatsMap", storageDataProvider, storageChangeDelegates);
             this.SeasonStatsTypedStorage = new TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.SeasonInfo>("AwesomeAvatars.SeasonStats", storageDataProvider, storageChangeDelegates);
             this.TradeTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Primitive.U128>("AwesomeAvatars.Trade", storageDataProvider, storageChangeDelegates);
             this.ServiceAccountTypedStorage = new TypedStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>("AwesomeAvatars.ServiceAccount", storageDataProvider, storageChangeDelegates);
             this.PreparationTypedStorage = new TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10>("AwesomeAvatars.Preparation", storageDataProvider, storageChangeDelegates);
+            this.TournamentRankersTypedStorage = new TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.avatar.tournament.AvatarRanker>("AwesomeAvatars.TournamentRankers", storageDataProvider, storageChangeDelegates);
         }
         
         /// <summary>
@@ -246,6 +331,21 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
         }
         
         /// <summary>
+        /// _whitelistedAccountsTypedStorage property
+        /// </summary>
+        public TypedStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT51> WhitelistedAccountsTypedStorage
+        {
+            get
+            {
+                return _whitelistedAccountsTypedStorage;
+            }
+            set
+            {
+                _whitelistedAccountsTypedStorage = value;
+            }
+        }
+        
+        /// <summary>
         /// _currentSeasonStatusTypedStorage property
         /// </summary>
         public TypedStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.season.SeasonStatus> CurrentSeasonStatusTypedStorage
@@ -272,6 +372,66 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
             set
             {
                 _seasonsTypedStorage = value;
+            }
+        }
+        
+        /// <summary>
+        /// _seasonMetasTypedStorage property
+        /// </summary>
+        public TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.season.SeasonMeta> SeasonMetasTypedStorage
+        {
+            get
+            {
+                return _seasonMetasTypedStorage;
+            }
+            set
+            {
+                _seasonMetasTypedStorage = value;
+            }
+        }
+        
+        /// <summary>
+        /// _seasonSchedulesTypedStorage property
+        /// </summary>
+        public TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.season.SeasonSchedule> SeasonSchedulesTypedStorage
+        {
+            get
+            {
+                return _seasonSchedulesTypedStorage;
+            }
+            set
+            {
+                _seasonSchedulesTypedStorage = value;
+            }
+        }
+        
+        /// <summary>
+        /// _seasonTradeFiltersTypedStorage property
+        /// </summary>
+        public TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.season.TradeFilters> SeasonTradeFiltersTypedStorage
+        {
+            get
+            {
+                return _seasonTradeFiltersTypedStorage;
+            }
+            set
+            {
+                _seasonTradeFiltersTypedStorage = value;
+            }
+        }
+        
+        /// <summary>
+        /// _seasonUnlocksTypedStorage property
+        /// </summary>
+        public TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.UnlockConfigs> SeasonUnlocksTypedStorage
+        {
+            get
+            {
+                return _seasonUnlocksTypedStorage;
+            }
+            set
+            {
+                _seasonUnlocksTypedStorage = value;
             }
         }
         
@@ -323,7 +483,7 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
         /// <summary>
         /// _ownersTypedStorage property
         /// </summary>
-        public TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT49> OwnersTypedStorage
+        public TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT52> OwnersTypedStorage
         {
             get
             {
@@ -396,6 +556,21 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
         }
         
         /// <summary>
+        /// _tradeStatsMapTypedStorage property
+        /// </summary>
+        public TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>> TradeStatsMapTypedStorage
+        {
+            get
+            {
+                return _tradeStatsMapTypedStorage;
+            }
+            set
+            {
+                _tradeStatsMapTypedStorage = value;
+            }
+        }
+        
+        /// <summary>
         /// _seasonStatsTypedStorage property
         /// </summary>
         public TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.SeasonInfo> SeasonStatsTypedStorage
@@ -456,14 +631,34 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
         }
         
         /// <summary>
+        /// _tournamentRankersTypedStorage property
+        /// </summary>
+        public TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.avatar.tournament.AvatarRanker> TournamentRankersTypedStorage
+        {
+            get
+            {
+                return _tournamentRankersTypedStorage;
+            }
+            set
+            {
+                _tournamentRankersTypedStorage = value;
+            }
+        }
+        
+        /// <summary>
         /// Connects to all storages and initializes the change subscription handling.
         /// </summary>
         public async Task InitializeAsync(Substrate.ServiceLayer.Storage.IStorageDataProvider dataProvider)
         {
             await OrganizerTypedStorage.InitializeAsync("AwesomeAvatars", "Organizer");
             await TreasurerTypedStorage.InitializeAsync("AwesomeAvatars", "Treasurer");
+            await WhitelistedAccountsTypedStorage.InitializeAsync("AwesomeAvatars", "WhitelistedAccounts");
             await CurrentSeasonStatusTypedStorage.InitializeAsync("AwesomeAvatars", "CurrentSeasonStatus");
             await SeasonsTypedStorage.InitializeAsync("AwesomeAvatars", "Seasons");
+            await SeasonMetasTypedStorage.InitializeAsync("AwesomeAvatars", "SeasonMetas");
+            await SeasonSchedulesTypedStorage.InitializeAsync("AwesomeAvatars", "SeasonSchedules");
+            await SeasonTradeFiltersTypedStorage.InitializeAsync("AwesomeAvatars", "SeasonTradeFilters");
+            await SeasonUnlocksTypedStorage.InitializeAsync("AwesomeAvatars", "SeasonUnlocks");
             await TreasuryTypedStorage.InitializeAsync("AwesomeAvatars", "Treasury");
             await GlobalConfigsTypedStorage.InitializeAsync("AwesomeAvatars", "GlobalConfigs");
             await AvatarsTypedStorage.InitializeAsync("AwesomeAvatars", "Avatars");
@@ -472,10 +667,12 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
             await CollectionIdTypedStorage.InitializeAsync("AwesomeAvatars", "CollectionId");
             await PlayerConfigsTypedStorage.InitializeAsync("AwesomeAvatars", "PlayerConfigs");
             await PlayerSeasonConfigsTypedStorage.InitializeAsync("AwesomeAvatars", "PlayerSeasonConfigs");
+            await TradeStatsMapTypedStorage.InitializeAsync("AwesomeAvatars", "TradeStatsMap");
             await SeasonStatsTypedStorage.InitializeAsync("AwesomeAvatars", "SeasonStats");
             await TradeTypedStorage.InitializeAsync("AwesomeAvatars", "Trade");
             await ServiceAccountTypedStorage.InitializeAsync("AwesomeAvatars", "ServiceAccount");
             await PreparationTypedStorage.InitializeAsync("AwesomeAvatars", "Preparation");
+            await TournamentRankersTypedStorage.InitializeAsync("AwesomeAvatars", "TournamentRankers");
         }
         
         /// <summary>
@@ -524,6 +721,25 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
         }
         
         /// <summary>
+        /// Implements any storage change for AwesomeAvatars.WhitelistedAccounts
+        /// </summary>
+        [StorageChange("AwesomeAvatars", "WhitelistedAccounts")]
+        public void OnUpdateWhitelistedAccounts(string data)
+        {
+            WhitelistedAccountsTypedStorage.Update(data);
+        }
+        
+        /// <summary>
+        /// >> WhitelistedAccounts
+        ///  List of accounts allowed to transfer free mints.
+        ///  A maximum of 3 different accounts can be on the list.
+        /// </summary>
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT51 GetWhitelistedAccounts()
+        {
+            return WhitelistedAccountsTypedStorage.Get();
+        }
+        
+        /// <summary>
         /// Implements any storage change for AwesomeAvatars.CurrentSeasonStatus
         /// </summary>
         [StorageChange("AwesomeAvatars", "CurrentSeasonStatus")]
@@ -560,6 +776,122 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
                 return null;
             }
             if (SeasonsTypedStorage.Dictionary.TryGetValue(key, out Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.season.Season result))
+            {
+                return result;
+            }
+            else
+            {
+                return null;
+            }
+        }
+        
+        /// <summary>
+        /// Implements any storage change for AwesomeAvatars.SeasonMetas
+        /// </summary>
+        [StorageChange("AwesomeAvatars", "SeasonMetas")]
+        public void OnUpdateSeasonMetas(string key, string data)
+        {
+            SeasonMetasTypedStorage.Update(key, data);
+        }
+        
+        /// <summary>
+        /// >> SeasonMetas
+        ///  Storage for the season's metadata.
+        /// </summary>
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.season.SeasonMeta GetSeasonMetas(string key)
+        {
+            if ((key == null))
+            {
+                return null;
+            }
+            if (SeasonMetasTypedStorage.Dictionary.TryGetValue(key, out Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.season.SeasonMeta result))
+            {
+                return result;
+            }
+            else
+            {
+                return null;
+            }
+        }
+        
+        /// <summary>
+        /// Implements any storage change for AwesomeAvatars.SeasonSchedules
+        /// </summary>
+        [StorageChange("AwesomeAvatars", "SeasonSchedules")]
+        public void OnUpdateSeasonSchedules(string key, string data)
+        {
+            SeasonSchedulesTypedStorage.Update(key, data);
+        }
+        
+        /// <summary>
+        /// >> SeasonSchedules
+        ///  Storage for the season's schedules.
+        /// </summary>
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.season.SeasonSchedule GetSeasonSchedules(string key)
+        {
+            if ((key == null))
+            {
+                return null;
+            }
+            if (SeasonSchedulesTypedStorage.Dictionary.TryGetValue(key, out Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.season.SeasonSchedule result))
+            {
+                return result;
+            }
+            else
+            {
+                return null;
+            }
+        }
+        
+        /// <summary>
+        /// Implements any storage change for AwesomeAvatars.SeasonTradeFilters
+        /// </summary>
+        [StorageChange("AwesomeAvatars", "SeasonTradeFilters")]
+        public void OnUpdateSeasonTradeFilters(string key, string data)
+        {
+            SeasonTradeFiltersTypedStorage.Update(key, data);
+        }
+        
+        /// <summary>
+        /// >> SeasonTradeFilters
+        ///  Storage for the season's trade filters.
+        /// </summary>
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.season.TradeFilters GetSeasonTradeFilters(string key)
+        {
+            if ((key == null))
+            {
+                return null;
+            }
+            if (SeasonTradeFiltersTypedStorage.Dictionary.TryGetValue(key, out Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.season.TradeFilters result))
+            {
+                return result;
+            }
+            else
+            {
+                return null;
+            }
+        }
+        
+        /// <summary>
+        /// Implements any storage change for AwesomeAvatars.SeasonUnlocks
+        /// </summary>
+        [StorageChange("AwesomeAvatars", "SeasonUnlocks")]
+        public void OnUpdateSeasonUnlocks(string key, string data)
+        {
+            SeasonUnlocksTypedStorage.Update(key, data);
+        }
+        
+        /// <summary>
+        /// >> SeasonUnlocks
+        ///  Storage for the season's different unlock-ables.
+        /// </summary>
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.UnlockConfigs GetSeasonUnlocks(string key)
+        {
+            if ((key == null))
+            {
+                return null;
+            }
+            if (SeasonUnlocksTypedStorage.Dictionary.TryGetValue(key, out Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.UnlockConfigs result))
             {
                 return result;
             }
@@ -654,13 +986,13 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
         /// <summary>
         /// >> Owners
         /// </summary>
-        public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT49 GetOwners(string key)
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT52 GetOwners(string key)
         {
             if ((key == null))
             {
                 return null;
             }
-            if (OwnersTypedStorage.Dictionary.TryGetValue(key, out Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT49 result))
+            if (OwnersTypedStorage.Dictionary.TryGetValue(key, out Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT52 result))
             {
                 return result;
             }
@@ -772,6 +1104,36 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
         }
         
         /// <summary>
+        /// Implements any storage change for AwesomeAvatars.TradeStatsMap
+        /// </summary>
+        [StorageChange("AwesomeAvatars", "TradeStatsMap")]
+        public void OnUpdateTradeStatsMap(string key, string data)
+        {
+            TradeStatsMapTypedStorage.Update(key, data);
+        }
+        
+        /// <summary>
+        /// >> TradeStatsMap
+        ///  This is only an intermediate storage that is being used during the multiblock runtime
+        ///  migration of v5 to v6. It should be removed afterward.
+        /// </summary>
+        public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32> GetTradeStatsMap(string key)
+        {
+            if ((key == null))
+            {
+                return null;
+            }
+            if (TradeStatsMapTypedStorage.Dictionary.TryGetValue(key, out Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32> result))
+            {
+                return result;
+            }
+            else
+            {
+                return null;
+            }
+        }
+        
+        /// <summary>
         /// Implements any storage change for AwesomeAvatars.SeasonStats
         /// </summary>
         [StorageChange("AwesomeAvatars", "SeasonStats")]
@@ -863,6 +1225,34 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
                 return null;
             }
             if (PreparationTypedStorage.Dictionary.TryGetValue(key, out Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10 result))
+            {
+                return result;
+            }
+            else
+            {
+                return null;
+            }
+        }
+        
+        /// <summary>
+        /// Implements any storage change for AwesomeAvatars.TournamentRankers
+        /// </summary>
+        [StorageChange("AwesomeAvatars", "TournamentRankers")]
+        public void OnUpdateTournamentRankers(string key, string data)
+        {
+            TournamentRankersTypedStorage.Update(key, data);
+        }
+        
+        /// <summary>
+        /// >> TournamentRankers
+        /// </summary>
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.avatar.tournament.AvatarRanker GetTournamentRankers(string key)
+        {
+            if ((key == null))
+            {
+                return null;
+            }
+            if (TournamentRankersTypedStorage.Dictionary.TryGetValue(key, out Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.avatar.tournament.AvatarRanker result))
             {
                 return result;
             }

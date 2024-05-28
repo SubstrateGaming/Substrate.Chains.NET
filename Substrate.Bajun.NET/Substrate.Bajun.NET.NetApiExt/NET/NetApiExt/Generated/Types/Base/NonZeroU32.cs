@@ -13,38 +13,33 @@ using Substrate.NetApi.Model.Types.Metadata.V14;
 using System.Collections.Generic;
 
 
-namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account
+namespace Substrate.Bajun.NET.NetApiExt.Generated.Types.Base
 {
     
     
     /// <summary>
-    /// >> 567 - Composite[pallet_ajuna_awesome_avatars.types.account.TradeStats]
+    /// >> 412 - Composite[NonZeroU32]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
-    public sealed class TradeStats : BaseType
+    public sealed class NonZeroU32 : BaseType
     {
         
         /// <summary>
-        /// >> bought
+        /// >> value
         /// </summary>
-        public Substrate.NetApi.Model.Types.Primitive.U32 Bought { get; set; }
-        /// <summary>
-        /// >> sold
-        /// </summary>
-        public Substrate.NetApi.Model.Types.Primitive.U32 Sold { get; set; }
+        public Substrate.NetApi.Model.Types.Primitive.U32 Value { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
         {
-            return "TradeStats";
+            return "NonZeroU32";
         }
         
         /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
-            result.AddRange(Bought.Encode());
-            result.AddRange(Sold.Encode());
+            result.AddRange(Value.Encode());
             return result.ToArray();
         }
         
@@ -52,10 +47,8 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Bought = new Substrate.NetApi.Model.Types.Primitive.U32();
-            Bought.Decode(byteArray, ref p);
-            Sold = new Substrate.NetApi.Model.Types.Primitive.U32();
-            Sold.Decode(byteArray, ref p);
+            Value = new Substrate.NetApi.Model.Types.Primitive.U32();
+            Value.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];

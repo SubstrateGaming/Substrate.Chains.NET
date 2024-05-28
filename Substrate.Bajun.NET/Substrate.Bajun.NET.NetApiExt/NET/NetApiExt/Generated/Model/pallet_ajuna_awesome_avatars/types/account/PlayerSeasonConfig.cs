@@ -18,7 +18,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
     
     
     /// <summary>
-    /// >> 560 - Composite[pallet_ajuna_awesome_avatars.types.account.PlayerSeasonConfig]
+    /// >> 588 - Composite[pallet_ajuna_awesome_avatars.types.account.PlayerSeasonConfig]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class PlayerSeasonConfig : BaseType
@@ -32,6 +32,10 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
         /// >> stats
         /// </summary>
         public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.Stats Stats { get; set; }
+        /// <summary>
+        /// >> locks
+        /// </summary>
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.Locks Locks { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
@@ -45,6 +49,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
             var result = new List<byte>();
             result.AddRange(StorageTier.Encode());
             result.AddRange(Stats.Encode());
+            result.AddRange(Locks.Encode());
             return result.ToArray();
         }
         
@@ -56,6 +61,8 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
             StorageTier.Decode(byteArray, ref p);
             Stats = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.Stats();
             Stats.Decode(byteArray, ref p);
+            Locks = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.Locks();
+            Locks.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];

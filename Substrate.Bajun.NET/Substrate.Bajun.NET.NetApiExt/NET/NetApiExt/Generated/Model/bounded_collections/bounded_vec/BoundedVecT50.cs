@@ -13,26 +13,26 @@ using Substrate.NetApi.Model.Types.Metadata.V14;
 using System.Collections.Generic;
 
 
-namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set
+namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec
 {
     
     
     /// <summary>
-    /// >> 591 - Composite[bounded_collections.bounded_btree_set.BoundedBTreeSetT3]
+    /// >> 579 - Composite[bounded_collections.bounded_vec.BoundedVecT50]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
-    public sealed class BoundedBTreeSetT3 : BaseType
+    public sealed class BoundedVecT50 : BaseType
     {
         
         /// <summary>
         /// >> value
         /// </summary>
-        public Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.BTreeSetT4 Value { get; set; }
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> Value { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
         {
-            return "BoundedBTreeSetT3";
+            return "BoundedVecT50";
         }
         
         /// <inheritdoc/>
@@ -47,7 +47,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.boun
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Value = new Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.BTreeSetT4();
+            Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256>();
             Value.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

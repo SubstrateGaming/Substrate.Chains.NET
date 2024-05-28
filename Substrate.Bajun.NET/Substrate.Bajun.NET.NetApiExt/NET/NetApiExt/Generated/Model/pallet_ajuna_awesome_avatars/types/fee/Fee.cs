@@ -18,7 +18,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
     
     
     /// <summary>
-    /// >> 159 - Composite[pallet_ajuna_awesome_avatars.types.fee.Fee]
+    /// >> 156 - Composite[pallet_ajuna_awesome_avatars.types.fee.Fee]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Fee : BaseType
@@ -48,6 +48,14 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
         /// >> prepare_avatar
         /// </summary>
         public Substrate.NetApi.Model.Types.Primitive.U128 PrepareAvatar { get; set; }
+        /// <summary>
+        /// >> set_price_unlock
+        /// </summary>
+        public Substrate.NetApi.Model.Types.Primitive.U128 SetPriceUnlock { get; set; }
+        /// <summary>
+        /// >> avatar_transfer_unlock
+        /// </summary>
+        public Substrate.NetApi.Model.Types.Primitive.U128 AvatarTransferUnlock { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
@@ -65,6 +73,8 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
             result.AddRange(BuyPercent.Encode());
             result.AddRange(UpgradeStorage.Encode());
             result.AddRange(PrepareAvatar.Encode());
+            result.AddRange(SetPriceUnlock.Encode());
+            result.AddRange(AvatarTransferUnlock.Encode());
             return result.ToArray();
         }
         
@@ -84,6 +94,10 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
             UpgradeStorage.Decode(byteArray, ref p);
             PrepareAvatar = new Substrate.NetApi.Model.Types.Primitive.U128();
             PrepareAvatar.Decode(byteArray, ref p);
+            SetPriceUnlock = new Substrate.NetApi.Model.Types.Primitive.U128();
+            SetPriceUnlock.Decode(byteArray, ref p);
+            AvatarTransferUnlock = new Substrate.NetApi.Model.Types.Primitive.U128();
+            AvatarTransferUnlock.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];

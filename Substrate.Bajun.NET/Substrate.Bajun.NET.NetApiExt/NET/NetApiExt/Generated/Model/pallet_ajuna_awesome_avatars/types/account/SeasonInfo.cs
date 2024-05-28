@@ -18,7 +18,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
     
     
     /// <summary>
-    /// >> 569 - Composite[pallet_ajuna_awesome_avatars.types.account.SeasonInfo]
+    /// >> 594 - Composite[pallet_ajuna_awesome_avatars.types.account.SeasonInfo]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class SeasonInfo : BaseType
@@ -29,9 +29,21 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
         /// </summary>
         public Substrate.NetApi.Model.Types.Primitive.U32 Minted { get; set; }
         /// <summary>
+        /// >> free_minted
+        /// </summary>
+        public Substrate.NetApi.Model.Types.Primitive.U32 FreeMinted { get; set; }
+        /// <summary>
         /// >> forged
         /// </summary>
         public Substrate.NetApi.Model.Types.Primitive.U32 Forged { get; set; }
+        /// <summary>
+        /// >> bought
+        /// </summary>
+        public Substrate.NetApi.Model.Types.Primitive.U32 Bought { get; set; }
+        /// <summary>
+        /// >> sold
+        /// </summary>
+        public Substrate.NetApi.Model.Types.Primitive.U32 Sold { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
@@ -44,7 +56,10 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
         {
             var result = new List<byte>();
             result.AddRange(Minted.Encode());
+            result.AddRange(FreeMinted.Encode());
             result.AddRange(Forged.Encode());
+            result.AddRange(Bought.Encode());
+            result.AddRange(Sold.Encode());
             return result.ToArray();
         }
         
@@ -54,8 +69,14 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
             var start = p;
             Minted = new Substrate.NetApi.Model.Types.Primitive.U32();
             Minted.Decode(byteArray, ref p);
+            FreeMinted = new Substrate.NetApi.Model.Types.Primitive.U32();
+            FreeMinted.Decode(byteArray, ref p);
             Forged = new Substrate.NetApi.Model.Types.Primitive.U32();
             Forged.Decode(byteArray, ref p);
+            Bought = new Substrate.NetApi.Model.Types.Primitive.U32();
+            Bought.Decode(byteArray, ref p);
+            Sold = new Substrate.NetApi.Model.Types.Primitive.U32();
+            Sold.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];

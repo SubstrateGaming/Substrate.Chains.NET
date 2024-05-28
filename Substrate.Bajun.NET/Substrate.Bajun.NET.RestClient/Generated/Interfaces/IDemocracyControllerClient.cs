@@ -24,9 +24,9 @@ namespace Substrate.Bajun.NET.RestClient.Generated.Interfaces
    {
       Task<U32> GetPublicPropCount();
       Task<bool> SubscribePublicPropCount();
-      Task<BoundedVecT45> GetPublicProps();
+      Task<BoundedVecT47> GetPublicProps();
       Task<bool> SubscribePublicProps();
-      Task<BaseTuple<BoundedVecT46, U128>> GetDepositOf(U32 key);
+      Task<BaseTuple<BoundedVecT48, U128>> GetDepositOf(U32 key);
       Task<bool> SubscribeDepositOf(U32 key);
       Task<U32> GetReferendumCount();
       Task<bool> SubscribeReferendumCount();
@@ -40,7 +40,7 @@ namespace Substrate.Bajun.NET.RestClient.Generated.Interfaces
       Task<bool> SubscribeLastTabledWasExternal();
       Task<BaseTuple<EnumBounded, EnumVoteThreshold>> GetNextExternal();
       Task<bool> SubscribeNextExternal();
-      Task<BaseTuple<U32, BoundedVecT46>> GetBlacklist(H256 key);
+      Task<BaseTuple<U32, BoundedVecT48>> GetBlacklist(H256 key);
       Task<bool> SubscribeBlacklist(H256 key);
       Task<Bool> GetCancellations(H256 key);
       Task<bool> SubscribeCancellations(H256 key);

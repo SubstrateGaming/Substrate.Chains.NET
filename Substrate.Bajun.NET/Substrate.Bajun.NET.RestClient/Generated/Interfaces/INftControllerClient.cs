@@ -39,7 +39,7 @@ namespace Substrate.Bajun.NET.RestClient.Generated.Interfaces
       Task<bool> SubscribeAttribute(BaseTuple<U32, BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256>, EnumAttributeNamespace, BoundedVecT12> key);
       Task<BaseTuple<U128, BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>>> GetItemPriceOf(BaseTuple<U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> key);
       Task<bool> SubscribeItemPriceOf(BaseTuple<U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> key);
-      Task<BoundedBTreeSetT3> GetItemAttributesApprovalsOf(BaseTuple<U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> key);
+      Task<BoundedBTreeSetT2> GetItemAttributesApprovalsOf(BaseTuple<U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> key);
       Task<bool> SubscribeItemAttributesApprovalsOf(BaseTuple<U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256> key);
       Task<U32> GetNextCollectionId();
       Task<bool> SubscribeNextCollectionId();

@@ -20,7 +20,7 @@ namespace Substrate.Bajun.NET.RestClient.Mockup.Generated.Interfaces
    
    public interface ICouncilControllerMockupClient
    {
-      Task<bool> SetProposals(BoundedVecT42 value);
+      Task<bool> SetProposals(BoundedVecT44 value);
       Task<bool> SetProposalOf(EnumRuntimeCall value, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 key);
       Task<bool> SetVoting(Votes value, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 key);
       Task<bool> SetProposalCount(U32 value);

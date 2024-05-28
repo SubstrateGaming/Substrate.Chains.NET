@@ -39,9 +39,18 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("AwesomeAvatars", "Organizer"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("AwesomeAvatars", "Treasurer"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.Identity}, typeof(Substrate.NetApi.Model.Types.Primitive.U16), typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("AwesomeAvatars", "WhitelistedAccounts"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT51)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("AwesomeAvatars", "CurrentSeasonStatus"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.season.SeasonStatus)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("AwesomeAvatars", "Seasons"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.Identity}, typeof(Substrate.NetApi.Model.Types.Primitive.U16), typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.season.Season)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("AwesomeAvatars", "SeasonMetas"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.Identity}, typeof(Substrate.NetApi.Model.Types.Primitive.U16), typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.season.SeasonMeta)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("AwesomeAvatars", "SeasonSchedules"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.Identity}, typeof(Substrate.NetApi.Model.Types.Primitive.U16), typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.season.SeasonSchedule)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("AwesomeAvatars", "SeasonTradeFilters"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.Identity}, typeof(Substrate.NetApi.Model.Types.Primitive.U16), typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.season.TradeFilters)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("AwesomeAvatars", "SeasonUnlocks"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.Identity}, typeof(Substrate.NetApi.Model.Types.Primitive.U16), typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.UnlockConfigs)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("AwesomeAvatars", "Treasury"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.Identity}, typeof(Substrate.NetApi.Model.Types.Primitive.U16), typeof(Substrate.NetApi.Model.Types.Primitive.U128)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("AwesomeAvatars", "GlobalConfigs"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.GlobalConfig)));
@@ -49,7 +58,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
                             Substrate.NetApi.Model.Meta.Storage.Hasher.Identity}, typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256), typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.avatar.Avatar>)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("AwesomeAvatars", "Owners"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.Identity,
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.Identity}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U16>), typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT49)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.Identity}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U16>), typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT52)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("AwesomeAvatars", "LockedAvatars"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.Identity}, typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256), typeof(Substrate.NetApi.Model.Types.Base.BaseTuple)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("AwesomeAvatars", "CollectionId"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Primitive.U32)));
@@ -58,6 +67,9 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("AwesomeAvatars", "PlayerSeasonConfigs"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.Identity,
                             Substrate.NetApi.Model.Meta.Storage.Hasher.Identity}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U16>), typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.PlayerSeasonConfig)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("AwesomeAvatars", "TradeStatsMap"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.Identity,
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.Identity}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U16, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>), typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("AwesomeAvatars", "SeasonStats"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.Identity,
                             Substrate.NetApi.Model.Meta.Storage.Hasher.Identity}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U16, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>), typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.SeasonInfo)));
@@ -67,6 +79,9 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("AwesomeAvatars", "ServiceAccount"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("AwesomeAvatars", "Preparation"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.Identity}, typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256), typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("AwesomeAvatars", "TournamentRankers"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.Identity,
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.Identity}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U16, Substrate.NetApi.Model.Types.Primitive.U32>), typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.avatar.tournament.AvatarRanker)));
         }
         
         /// <summary>
@@ -122,6 +137,37 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         {
             string parameters = AwesomeAvatarsStorage.TreasurerParams(key);
             var result = await _client.GetStorageAsync<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>(parameters, blockhash, token);
+            return result;
+        }
+        
+        /// <summary>
+        /// >> WhitelistedAccountsParams
+        ///  List of accounts allowed to transfer free mints.
+        ///  A maximum of 3 different accounts can be on the list.
+        /// </summary>
+        public static string WhitelistedAccountsParams()
+        {
+            return RequestGenerator.GetStorage("AwesomeAvatars", "WhitelistedAccounts", Substrate.NetApi.Model.Meta.Storage.Type.Plain);
+        }
+        
+        /// <summary>
+        /// >> WhitelistedAccountsDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string WhitelistedAccountsDefault()
+        {
+            return "0x00";
+        }
+        
+        /// <summary>
+        /// >> WhitelistedAccounts
+        ///  List of accounts allowed to transfer free mints.
+        ///  A maximum of 3 different accounts can be on the list.
+        /// </summary>
+        public async Task<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT51> WhitelistedAccounts(string blockhash, CancellationToken token)
+        {
+            string parameters = AwesomeAvatarsStorage.WhitelistedAccountsParams();
+            var result = await _client.GetStorageAsync<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT51>(parameters, blockhash, token);
             return result;
         }
         
@@ -184,6 +230,130 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         }
         
         /// <summary>
+        /// >> SeasonMetasParams
+        ///  Storage for the season's metadata.
+        /// </summary>
+        public static string SeasonMetasParams(Substrate.NetApi.Model.Types.Primitive.U16 key)
+        {
+            return RequestGenerator.GetStorage("AwesomeAvatars", "SeasonMetas", Substrate.NetApi.Model.Meta.Storage.Type.Map, new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
+                        Substrate.NetApi.Model.Meta.Storage.Hasher.Identity}, new Substrate.NetApi.Model.Types.IType[] {
+                        key});
+        }
+        
+        /// <summary>
+        /// >> SeasonMetasDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string SeasonMetasDefault()
+        {
+            return "0x00";
+        }
+        
+        /// <summary>
+        /// >> SeasonMetas
+        ///  Storage for the season's metadata.
+        /// </summary>
+        public async Task<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.season.SeasonMeta> SeasonMetas(Substrate.NetApi.Model.Types.Primitive.U16 key, string blockhash, CancellationToken token)
+        {
+            string parameters = AwesomeAvatarsStorage.SeasonMetasParams(key);
+            var result = await _client.GetStorageAsync<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.season.SeasonMeta>(parameters, blockhash, token);
+            return result;
+        }
+        
+        /// <summary>
+        /// >> SeasonSchedulesParams
+        ///  Storage for the season's schedules.
+        /// </summary>
+        public static string SeasonSchedulesParams(Substrate.NetApi.Model.Types.Primitive.U16 key)
+        {
+            return RequestGenerator.GetStorage("AwesomeAvatars", "SeasonSchedules", Substrate.NetApi.Model.Meta.Storage.Type.Map, new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
+                        Substrate.NetApi.Model.Meta.Storage.Hasher.Identity}, new Substrate.NetApi.Model.Types.IType[] {
+                        key});
+        }
+        
+        /// <summary>
+        /// >> SeasonSchedulesDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string SeasonSchedulesDefault()
+        {
+            return "0x00";
+        }
+        
+        /// <summary>
+        /// >> SeasonSchedules
+        ///  Storage for the season's schedules.
+        /// </summary>
+        public async Task<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.season.SeasonSchedule> SeasonSchedules(Substrate.NetApi.Model.Types.Primitive.U16 key, string blockhash, CancellationToken token)
+        {
+            string parameters = AwesomeAvatarsStorage.SeasonSchedulesParams(key);
+            var result = await _client.GetStorageAsync<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.season.SeasonSchedule>(parameters, blockhash, token);
+            return result;
+        }
+        
+        /// <summary>
+        /// >> SeasonTradeFiltersParams
+        ///  Storage for the season's trade filters.
+        /// </summary>
+        public static string SeasonTradeFiltersParams(Substrate.NetApi.Model.Types.Primitive.U16 key)
+        {
+            return RequestGenerator.GetStorage("AwesomeAvatars", "SeasonTradeFilters", Substrate.NetApi.Model.Meta.Storage.Type.Map, new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
+                        Substrate.NetApi.Model.Meta.Storage.Hasher.Identity}, new Substrate.NetApi.Model.Types.IType[] {
+                        key});
+        }
+        
+        /// <summary>
+        /// >> SeasonTradeFiltersDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string SeasonTradeFiltersDefault()
+        {
+            return "0x00";
+        }
+        
+        /// <summary>
+        /// >> SeasonTradeFilters
+        ///  Storage for the season's trade filters.
+        /// </summary>
+        public async Task<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.season.TradeFilters> SeasonTradeFilters(Substrate.NetApi.Model.Types.Primitive.U16 key, string blockhash, CancellationToken token)
+        {
+            string parameters = AwesomeAvatarsStorage.SeasonTradeFiltersParams(key);
+            var result = await _client.GetStorageAsync<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.season.TradeFilters>(parameters, blockhash, token);
+            return result;
+        }
+        
+        /// <summary>
+        /// >> SeasonUnlocksParams
+        ///  Storage for the season's different unlock-ables.
+        /// </summary>
+        public static string SeasonUnlocksParams(Substrate.NetApi.Model.Types.Primitive.U16 key)
+        {
+            return RequestGenerator.GetStorage("AwesomeAvatars", "SeasonUnlocks", Substrate.NetApi.Model.Meta.Storage.Type.Map, new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
+                        Substrate.NetApi.Model.Meta.Storage.Hasher.Identity}, new Substrate.NetApi.Model.Types.IType[] {
+                        key});
+        }
+        
+        /// <summary>
+        /// >> SeasonUnlocksDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string SeasonUnlocksDefault()
+        {
+            return "0x00";
+        }
+        
+        /// <summary>
+        /// >> SeasonUnlocks
+        ///  Storage for the season's different unlock-ables.
+        /// </summary>
+        public async Task<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.UnlockConfigs> SeasonUnlocks(Substrate.NetApi.Model.Types.Primitive.U16 key, string blockhash, CancellationToken token)
+        {
+            string parameters = AwesomeAvatarsStorage.SeasonUnlocksParams(key);
+            var result = await _client.GetStorageAsync<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.UnlockConfigs>(parameters, blockhash, token);
+            return result;
+        }
+        
+        /// <summary>
         /// >> TreasuryParams
         /// </summary>
         public static string TreasuryParams(Substrate.NetApi.Model.Types.Primitive.U16 key)
@@ -226,7 +396,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         /// </summary>
         public static string GlobalConfigsDefault()
         {
-            return "0x000000000000000000000000000000";
+            return "0x000000000000000000000000000000000000000000000000000000000000000000000000";
         }
         
         /// <summary>
@@ -290,10 +460,10 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         /// <summary>
         /// >> Owners
         /// </summary>
-        public async Task<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT49> Owners(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U16> key, string blockhash, CancellationToken token)
+        public async Task<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT52> Owners(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U16> key, string blockhash, CancellationToken token)
         {
             string parameters = AwesomeAvatarsStorage.OwnersParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT49>(parameters, blockhash, token);
+            var result = await _client.GetStorageAsync<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT52>(parameters, blockhash, token);
             return result;
         }
         
@@ -398,7 +568,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         /// </summary>
         public static string PlayerSeasonConfigsDefault()
         {
-            return "0x190000000000000000000000000000000000000000000000000000";
+            return "0x1900000000000000000000000000000000000000";
         }
         
         /// <summary>
@@ -408,6 +578,39 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         {
             string parameters = AwesomeAvatarsStorage.PlayerSeasonConfigsParams(key);
             var result = await _client.GetStorageAsync<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.PlayerSeasonConfig>(parameters, blockhash, token);
+            return result;
+        }
+        
+        /// <summary>
+        /// >> TradeStatsMapParams
+        ///  This is only an intermediate storage that is being used during the multiblock runtime
+        ///  migration of v5 to v6. It should be removed afterward.
+        /// </summary>
+        public static string TradeStatsMapParams(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U16, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> key)
+        {
+            return RequestGenerator.GetStorage("AwesomeAvatars", "TradeStatsMap", Substrate.NetApi.Model.Meta.Storage.Type.Map, new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
+                        Substrate.NetApi.Model.Meta.Storage.Hasher.Identity,
+                        Substrate.NetApi.Model.Meta.Storage.Hasher.Identity}, key.Value);
+        }
+        
+        /// <summary>
+        /// >> TradeStatsMapDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string TradeStatsMapDefault()
+        {
+            return "0x00";
+        }
+        
+        /// <summary>
+        /// >> TradeStatsMap
+        ///  This is only an intermediate storage that is being used during the multiblock runtime
+        ///  migration of v5 to v6. It should be removed afterward.
+        /// </summary>
+        public async Task<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>> TradeStatsMap(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U16, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> key, string blockhash, CancellationToken token)
+        {
+            string parameters = AwesomeAvatarsStorage.TradeStatsMapParams(key);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>>(parameters, blockhash, token);
             return result;
         }
         
@@ -427,7 +630,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         /// </summary>
         public static string SeasonStatsDefault()
         {
-            return "0x0000000000000000";
+            return "0x0000000000000000000000000000000000000000";
         }
         
         /// <summary>
@@ -522,6 +725,35 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         {
             string parameters = AwesomeAvatarsStorage.PreparationParams(key);
             var result = await _client.GetStorageAsync<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10>(parameters, blockhash, token);
+            return result;
+        }
+        
+        /// <summary>
+        /// >> TournamentRankersParams
+        /// </summary>
+        public static string TournamentRankersParams(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U16, Substrate.NetApi.Model.Types.Primitive.U32> key)
+        {
+            return RequestGenerator.GetStorage("AwesomeAvatars", "TournamentRankers", Substrate.NetApi.Model.Meta.Storage.Type.Map, new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
+                        Substrate.NetApi.Model.Meta.Storage.Hasher.Identity,
+                        Substrate.NetApi.Model.Meta.Storage.Hasher.Identity}, key.Value);
+        }
+        
+        /// <summary>
+        /// >> TournamentRankersDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string TournamentRankersDefault()
+        {
+            return "0x00";
+        }
+        
+        /// <summary>
+        /// >> TournamentRankers
+        /// </summary>
+        public async Task<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.avatar.tournament.AvatarRanker> TournamentRankers(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U16, Substrate.NetApi.Model.Types.Primitive.U32> key, string blockhash, CancellationToken token)
+        {
+            string parameters = AwesomeAvatarsStorage.TournamentRankersParams(key);
+            var result = await _client.GetStorageAsync<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.avatar.tournament.AvatarRanker>(parameters, blockhash, token);
             return result;
         }
     }
@@ -663,11 +895,14 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         /// >> set_season
         /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method SetSeason(Substrate.NetApi.Model.Types.Primitive.U16 season_id, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.season.Season season)
+        public static Method SetSeason(Substrate.NetApi.Model.Types.Primitive.U16 season_id, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.season.Season> season, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.season.SeasonMeta> season_meta, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.season.SeasonSchedule> season_schedule, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.season.TradeFilters> trade_filters)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(season_id.Encode());
             byteArray.AddRange(season.Encode());
+            byteArray.AddRange(season_meta.Encode());
+            byteArray.AddRange(season_schedule.Encode());
+            byteArray.AddRange(trade_filters.Encode());
             return new Method(51, "AwesomeAvatars", 11, "set_season", byteArray.ToArray());
         }
         
@@ -771,6 +1006,160 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
             byteArray.AddRange(url.Encode());
             return new Method(51, "AwesomeAvatars", 20, "prepare_ipfs", byteArray.ToArray());
         }
+        
+        /// <summary>
+        /// >> modify_freemint_whitelist
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
+        /// </summary>
+        public static Method ModifyFreemintWhitelist(Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 account, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.pallet.EnumWhitelistOperation operation)
+        {
+            System.Collections.Generic.List<byte> byteArray = new List<byte>();
+            byteArray.AddRange(account.Encode());
+            byteArray.AddRange(operation.Encode());
+            return new Method(51, "AwesomeAvatars", 21, "modify_freemint_whitelist", byteArray.ToArray());
+        }
+        
+        /// <summary>
+        /// >> add_affiliation
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
+        /// </summary>
+        public static Method AddAffiliation(Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> target_affiliatee, Substrate.NetApi.Model.Types.Primitive.U32 affiliate_id)
+        {
+            System.Collections.Generic.List<byte> byteArray = new List<byte>();
+            byteArray.AddRange(target_affiliatee.Encode());
+            byteArray.AddRange(affiliate_id.Encode());
+            return new Method(51, "AwesomeAvatars", 22, "add_affiliation", byteArray.ToArray());
+        }
+        
+        /// <summary>
+        /// >> enable_affiliator
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
+        /// </summary>
+        public static Method EnableAffiliator(Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.EnumUnlockTarget target, Substrate.NetApi.Model.Types.Primitive.U16 season_id)
+        {
+            System.Collections.Generic.List<byte> byteArray = new List<byte>();
+            byteArray.AddRange(target.Encode());
+            byteArray.AddRange(season_id.Encode());
+            return new Method(51, "AwesomeAvatars", 23, "enable_affiliator", byteArray.ToArray());
+        }
+        
+        /// <summary>
+        /// >> remove_affiliation
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
+        /// </summary>
+        public static Method RemoveAffiliation(Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 account)
+        {
+            System.Collections.Generic.List<byte> byteArray = new List<byte>();
+            byteArray.AddRange(account.Encode());
+            return new Method(51, "AwesomeAvatars", 24, "remove_affiliation", byteArray.ToArray());
+        }
+        
+        /// <summary>
+        /// >> set_rule_for
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
+        /// </summary>
+        public static Method SetRuleFor(Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.affiliates.EnumAffiliateMethods rule_id, Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT22 rule)
+        {
+            System.Collections.Generic.List<byte> byteArray = new List<byte>();
+            byteArray.AddRange(rule_id.Encode());
+            byteArray.AddRange(rule.Encode());
+            return new Method(51, "AwesomeAvatars", 25, "set_rule_for", byteArray.ToArray());
+        }
+        
+        /// <summary>
+        /// >> clear_rule_for
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
+        /// </summary>
+        public static Method ClearRuleFor(Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.affiliates.EnumAffiliateMethods rule_id)
+        {
+            System.Collections.Generic.List<byte> byteArray = new List<byte>();
+            byteArray.AddRange(rule_id.Encode());
+            return new Method(51, "AwesomeAvatars", 26, "clear_rule_for", byteArray.ToArray());
+        }
+        
+        /// <summary>
+        /// >> enable_set_avatar_price
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
+        /// </summary>
+        public static Method EnableSetAvatarPrice(Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.EnumUnlockTarget target, Substrate.NetApi.Model.Types.Primitive.U16 season_id)
+        {
+            System.Collections.Generic.List<byte> byteArray = new List<byte>();
+            byteArray.AddRange(target.Encode());
+            byteArray.AddRange(season_id.Encode());
+            return new Method(51, "AwesomeAvatars", 27, "enable_set_avatar_price", byteArray.ToArray());
+        }
+        
+        /// <summary>
+        /// >> enable_avatar_transfer
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
+        /// </summary>
+        public static Method EnableAvatarTransfer(Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.EnumUnlockTarget target, Substrate.NetApi.Model.Types.Primitive.U16 season_id)
+        {
+            System.Collections.Generic.List<byte> byteArray = new List<byte>();
+            byteArray.AddRange(target.Encode());
+            byteArray.AddRange(season_id.Encode());
+            return new Method(51, "AwesomeAvatars", 28, "enable_avatar_transfer", byteArray.ToArray());
+        }
+        
+        /// <summary>
+        /// >> set_unlock_config
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
+        /// </summary>
+        public static Method SetUnlockConfig(Substrate.NetApi.Model.Types.Primitive.U16 season_id, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.config.UnlockConfigs unlock_configs)
+        {
+            System.Collections.Generic.List<byte> byteArray = new List<byte>();
+            byteArray.AddRange(season_id.Encode());
+            byteArray.AddRange(unlock_configs.Encode());
+            return new Method(51, "AwesomeAvatars", 29, "set_unlock_config", byteArray.ToArray());
+        }
+        
+        /// <summary>
+        /// >> create_tournament
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
+        /// </summary>
+        public static Method CreateTournament(Substrate.NetApi.Model.Types.Primitive.U16 season_id, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_tournament.config.TournamentConfig config, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.avatar.tournament.AvatarRanker with_ranker)
+        {
+            System.Collections.Generic.List<byte> byteArray = new List<byte>();
+            byteArray.AddRange(season_id.Encode());
+            byteArray.AddRange(config.Encode());
+            byteArray.AddRange(with_ranker.Encode());
+            return new Method(51, "AwesomeAvatars", 30, "create_tournament", byteArray.ToArray());
+        }
+        
+        /// <summary>
+        /// >> remove_latest_tournament
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
+        /// </summary>
+        public static Method RemoveLatestTournament(Substrate.NetApi.Model.Types.Primitive.U16 season_id)
+        {
+            System.Collections.Generic.List<byte> byteArray = new List<byte>();
+            byteArray.AddRange(season_id.Encode());
+            return new Method(51, "AwesomeAvatars", 31, "remove_latest_tournament", byteArray.ToArray());
+        }
+        
+        /// <summary>
+        /// >> claim_tournament_reward_for
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
+        /// </summary>
+        public static Method ClaimTournamentRewardFor(Substrate.NetApi.Model.Types.Primitive.U16 season_id, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 avatar_id)
+        {
+            System.Collections.Generic.List<byte> byteArray = new List<byte>();
+            byteArray.AddRange(season_id.Encode());
+            byteArray.AddRange(avatar_id.Encode());
+            return new Method(51, "AwesomeAvatars", 32, "claim_tournament_reward_for", byteArray.ToArray());
+        }
+        
+        /// <summary>
+        /// >> claim_golden_duck_for
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
+        /// </summary>
+        public static Method ClaimGoldenDuckFor(Substrate.NetApi.Model.Types.Primitive.U16 season_id, Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 avatar_id)
+        {
+            System.Collections.Generic.List<byte> byteArray = new List<byte>();
+            byteArray.AddRange(season_id.Encode());
+            byteArray.AddRange(avatar_id.Encode());
+            return new Method(51, "AwesomeAvatars", 33, "claim_golden_duck_for", byteArray.ToArray());
+        }
     }
     
     /// <summary>
@@ -808,6 +1197,17 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         {
             var result = new Substrate.NetApi.Model.Types.Primitive.U32();
             result.Create("0x40000000");
+            return result;
+        }
+        
+        /// <summary>
+        /// >> FeeChainMaxLength
+        ///  The maximum depth of the propagation fee chain,
+        /// </summary>
+        public Substrate.NetApi.Model.Types.Primitive.U32 FeeChainMaxLength()
+        {
+            var result = new Substrate.NetApi.Model.Types.Primitive.U32();
+            result.Create("0x02000000");
             return result;
         }
     }
@@ -976,6 +1376,12 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         NftTransferClosed,
         
         /// <summary>
+        /// >> FreeMintTransferClosed
+        /// Free mint transfer is not available at the moment.
+        /// </summary>
+        FreeMintTransferClosed,
+        
+        /// <summary>
         /// >> SeasonClosed
         /// Attempt to mint or forge outside of an active season.
         /// </summary>
@@ -1120,6 +1526,12 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         AvatarLocked,
         
         /// <summary>
+        /// >> AvatarNotLocked
+        /// The avatar is not currently locked and cannot be unlocked.
+        /// </summary>
+        AvatarNotLocked,
+        
+        /// <summary>
         /// >> AvatarUnlocked
         /// The avatar is currently unlocked and cannot be locked again.
         /// </summary>
@@ -1214,5 +1626,54 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         /// Tried to prepare an IPFS URL for an avatar with an empty URL.
         /// </summary>
         EmptyIpfsUrl,
+        
+        /// <summary>
+        /// >> AccountAlreadyInWhitelist
+        /// The account trying to be whitelisted is already in the whitelist
+        /// </summary>
+        AccountAlreadyInWhitelist,
+        
+        /// <summary>
+        /// >> WhitelistedAccountsLimitReached
+        /// Cannot add more accounts to the whitelist.
+        /// </summary>
+        WhitelistedAccountsLimitReached,
+        
+        /// <summary>
+        /// >> AffiliatorNotFound
+        /// No account matches the provided affiliator identifier
+        /// </summary>
+        AffiliatorNotFound,
+        
+        /// <summary>
+        /// >> FeatureLocked
+        /// The feature is locked for the current player
+        /// </summary>
+        FeatureLocked,
+        
+        /// <summary>
+        /// >> FeatureUnlockableInSeason
+        /// The feature trying to be unlocked is not available for the selected season
+        /// </summary>
+        FeatureUnlockableInSeason,
+        
+        /// <summary>
+        /// >> UnlockCriteriaNotFulfilled
+        /// The feature trying to be unlocked has missing requirements to be fulfilled by
+        /// the account trying to unlock it
+        /// </summary>
+        UnlockCriteriaNotFulfilled,
+        
+        /// <summary>
+        /// >> TournamentRankerNotFound
+        /// Couldn't find a tournament ranker for the active tournament; qed
+        /// </summary>
+        TournamentRankerNotFound,
+        
+        /// <summary>
+        /// >> AffiliateOthersOnlyWhiteListed
+        /// Only whitelisted accounts can affiliate for others
+        /// </summary>
+        AffiliateOthersOnlyWhiteListed,
     }
 }
