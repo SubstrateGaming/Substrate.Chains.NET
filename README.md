@@ -93,6 +93,11 @@
 [![Nuget](https://img.shields.io/nuget/v/Substrate.Bajun.NET.Extension)](https://www.nuget.org/packages/Substrate.Bajun.NET.Extension/)
 ![Nuget](https://img.shields.io/nuget/dt/Substrate.Bajun.NET.Extension)  
 ![Build](https://github.com/SubstrateGaming/Substrate.Chains.NET/actions/workflows/publish_bajun.yml/badge.svg)  
+- GameDAO Network .NET SDK ([Link](https://github.com/SubstrateGaming/Substrate.Chains.NET/tree/main/Substrate.GameDAO.NET))  
+  - Substrate GameDAO .NET API Extension  
+[![Nuget](https://img.shields.io/nuget/v/Substrate.GameDAO.NET.Extension)](https://www.nuget.org/packages/Substrate.GameDAO.NET.Extension/)
+![Nuget](https://img.shields.io/nuget/dt/Substrate.GameDAO.NET.Extension)  
+![Build](https://github.com/SubstrateGaming/Substrate.Chains.NET/actions/workflows/publish_gamedao.yml/badge.svg)
 
 ### Other Ecosystem
 - Vara Network .NET SDK ([Link](https://github.com/SubstrateGaming/Substrate.Chains.NET/tree/main/Substrate.Vara.NET))  
