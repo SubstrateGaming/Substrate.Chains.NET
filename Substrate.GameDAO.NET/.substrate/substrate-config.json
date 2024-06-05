@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "net_api": "Substrate.GameDAO.NET.NetApiExt",
+    "net_integration": "Substrate.GameDAO.NET.Integration",
+    "rest_service": "Substrate.GameDAO.NET.RestService",
+    "rest_client": "Substrate.GameDAO.NET.RestClient"
+  },
+   "metadata": {
+      "websocket": "wss://rpc.dev.gamedao.net"
+   },
+  "rest_client_settings": {
+    "service_assembly": "Substrate.GameDAO.NET.RestService.dll"
+  }
+}
