@@ -169,7 +169,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_democracy.pallet
     }
     
     /// <summary>
-    /// >> 485 - Variant[pallet_democracy.pallet.Error]
+    /// >> 499 - Variant[pallet_democracy.pallet.Error]
     /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>

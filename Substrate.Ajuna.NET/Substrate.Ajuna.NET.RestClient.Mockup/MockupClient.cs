@@ -18,6 +18,8 @@ namespace Substrate.Ajuna.NET.RestClient.Mockup
    public sealed class MockupClient
    {
       private HttpClient _httpClient;
+      public IAssetRegistryControllerMockupClient AssetRegistryControllerClient;
+      public IAssetsControllerMockupClient AssetsControllerClient;
       public IAuraControllerMockupClient AuraControllerClient;
       public IAuraExtControllerMockupClient AuraExtControllerClient;
       public IAuthorshipControllerMockupClient AuthorshipControllerClient;
@@ -48,6 +50,8 @@ namespace Substrate.Ajuna.NET.RestClient.Mockup
       public MockupClient(HttpClient httpClient)
       {
          _httpClient = httpClient;
+         AssetRegistryControllerClient = new AssetRegistryControllerMockupClient(_httpClient);
+         AssetsControllerClient = new AssetsControllerMockupClient(_httpClient);
          AuraControllerClient = new AuraControllerMockupClient(_httpClient);
          AuraExtControllerClient = new AuraExtControllerMockupClient(_httpClient);
          AuthorshipControllerClient = new AuthorshipControllerMockupClient(_httpClient);

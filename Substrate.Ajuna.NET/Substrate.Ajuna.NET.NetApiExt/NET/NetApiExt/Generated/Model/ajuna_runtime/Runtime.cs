@@ -18,7 +18,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.ajuna_runtime
     
     
     /// <summary>
-    /// >> 497 - Composite[ajuna_runtime.Runtime]
+    /// >> 523 - Composite[ajuna_runtime.Runtime]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Runtime : BaseType

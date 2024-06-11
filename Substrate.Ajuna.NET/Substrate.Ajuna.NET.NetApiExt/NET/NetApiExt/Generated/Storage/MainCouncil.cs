@@ -36,7 +36,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         public CouncilStorage(SubstrateClientExt client)
         {
             this._client = client;
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("Council", "Proposals"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT31)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("Council", "Proposals"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT30)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Council", "ProposalOf"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.Identity}, typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256), typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Model.ajuna_runtime.EnumRuntimeCall)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Council", "Voting"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
@@ -68,10 +68,10 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         /// >> Proposals
         ///  The hashes of the active proposals.
         /// </summary>
-        public async Task<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT31> Proposals(string blockhash, CancellationToken token)
+        public async Task<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT30> Proposals(string blockhash, CancellationToken token)
         {
             string parameters = CouncilStorage.ProposalsParams();
-            var result = await _client.GetStorageAsync<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT31>(parameters, blockhash, token);
+            var result = await _client.GetStorageAsync<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT30>(parameters, blockhash, token);
             return result;
         }
         

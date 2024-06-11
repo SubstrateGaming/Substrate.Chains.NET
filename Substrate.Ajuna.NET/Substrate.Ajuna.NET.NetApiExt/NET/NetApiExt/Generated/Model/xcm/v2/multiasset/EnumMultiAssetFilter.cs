@@ -33,7 +33,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.v2.multiasset
     }
     
     /// <summary>
-    /// >> 294 - Variant[xcm.v2.multiasset.MultiAssetFilter]
+    /// >> 298 - Variant[xcm.v2.multiasset.MultiAssetFilter]
     /// </summary>
     public sealed class EnumMultiAssetFilter : BaseEnumExt<MultiAssetFilter, Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.v2.multiasset.MultiAssets, Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.v2.multiasset.EnumWildMultiAsset>
     {

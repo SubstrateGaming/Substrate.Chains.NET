@@ -20,7 +20,7 @@ namespace Substrate.Ajuna.NET.RestClient.Generated.Interfaces
       Task<bool> SubscribeStatusFor(Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256 key);
       Task<EnumRequestStatus> GetRequestStatusFor(Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256 key);
       Task<bool> SubscribeRequestStatusFor(Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256 key);
-      Task<BoundedVecT18> GetPreimageFor(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Primitive.U32> key);
+      Task<BoundedVecT17> GetPreimageFor(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Primitive.U32> key);
       Task<bool> SubscribePreimageFor(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Primitive.U32> key);
    }
 }

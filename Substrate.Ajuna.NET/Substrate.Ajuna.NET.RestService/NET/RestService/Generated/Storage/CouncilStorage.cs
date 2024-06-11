@@ -28,7 +28,7 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Storage
         /// >> Proposals
         ///  The hashes of the active proposals.
         /// </summary>
-        Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT31 GetProposals();
+        Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT30 GetProposals();
         
         /// <summary>
         /// >> ProposalOf
@@ -70,7 +70,7 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Storage
         /// <summary>
         /// _proposalsTypedStorage typed storage field
         /// </summary>
-        private TypedStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT31> _proposalsTypedStorage;
+        private TypedStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT30> _proposalsTypedStorage;
         
         /// <summary>
         /// _proposalOfTypedStorage typed storage field
@@ -102,7 +102,7 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Storage
         /// </summary>
         public CouncilStorage(IStorageDataProvider storageDataProvider, List<IStorageChangeDelegate> storageChangeDelegates)
         {
-            this.ProposalsTypedStorage = new TypedStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT31>("Council.Proposals", storageDataProvider, storageChangeDelegates);
+            this.ProposalsTypedStorage = new TypedStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT30>("Council.Proposals", storageDataProvider, storageChangeDelegates);
             this.ProposalOfTypedStorage = new TypedMapStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.ajuna_runtime.EnumRuntimeCall>("Council.ProposalOf", storageDataProvider, storageChangeDelegates);
             this.VotingTypedStorage = new TypedMapStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_collective.Votes>("Council.Voting", storageDataProvider, storageChangeDelegates);
             this.ProposalCountTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32>("Council.ProposalCount", storageDataProvider, storageChangeDelegates);
@@ -113,7 +113,7 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Storage
         /// <summary>
         /// _proposalsTypedStorage property
         /// </summary>
-        public TypedStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT31> ProposalsTypedStorage
+        public TypedStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT30> ProposalsTypedStorage
         {
             get
             {
@@ -226,7 +226,7 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Storage
         /// >> Proposals
         ///  The hashes of the active proposals.
         /// </summary>
-        public Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT31 GetProposals()
+        public Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT30 GetProposals()
         {
             return ProposalsTypedStorage.Get();
         }

@@ -42,7 +42,7 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Controller
         ///  The current authority set.
         /// </summary>
         [HttpGet("Authorities")]
-        [ProducesResponseType(typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT25), 200)]
+        [ProducesResponseType(typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT24), 200)]
         [StorageKeyBuilder(typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Storage.AuraStorage), "AuthoritiesParams")]
         public IActionResult GetAuthorities()
         {

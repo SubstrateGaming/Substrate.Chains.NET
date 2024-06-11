@@ -28,7 +28,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v7
     }
     
     /// <summary>
-    /// >> 184 - Variant[polkadot_primitives.v7.UpgradeRestriction]
+    /// >> 188 - Variant[polkadot_primitives.v7.UpgradeRestriction]
     /// </summary>
     public sealed class EnumUpgradeRestriction : BaseEnum<UpgradeRestriction>
     {

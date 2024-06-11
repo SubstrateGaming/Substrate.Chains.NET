@@ -22,8 +22,8 @@ namespace Substrate.Ajuna.NET.RestClient.Mockup.Generated.Interfaces
       Task<bool> SetInactiveIssuance(U128 value);
       Task<bool> SetAccount(AccountData value, Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
       Task<bool> SetLocks(WeakBoundedVecT2 value, Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
-      Task<bool> SetReserves(BoundedVecT19 value, Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
-      Task<bool> SetHolds(BoundedVecT20 value, Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
-      Task<bool> SetFreezes(BoundedVecT21 value, Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
+      Task<bool> SetReserves(BoundedVecT18 value, Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
+      Task<bool> SetHolds(BoundedVecT19 value, Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
+      Task<bool> SetFreezes(BoundedVecT20 value, Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
    }
 }

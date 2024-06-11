@@ -23,7 +23,7 @@ namespace Substrate.Ajuna.NET.RestClient.Generated.Interfaces
       Task<bool> SubscribeProposals(U32 key);
       Task<U128> GetDeactivated();
       Task<bool> SubscribeDeactivated();
-      Task<BoundedVecT30> GetApprovals();
+      Task<BoundedVecT29> GetApprovals();
       Task<bool> SubscribeApprovals();
       Task<U32> GetSpendCount();
       Task<bool> SubscribeSpendCount();

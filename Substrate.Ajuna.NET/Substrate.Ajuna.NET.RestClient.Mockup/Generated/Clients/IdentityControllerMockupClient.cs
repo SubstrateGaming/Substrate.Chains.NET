@@ -34,11 +34,11 @@ namespace Substrate.Ajuna.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "Identity/SuperOf", value.Encode(), Substrate.Ajuna.NET.NetApiExt.Generated.Storage.IdentityStorage.SuperOfParams(key));
       }
-      public async Task<bool> SetSubsOf(BaseTuple<U128, BoundedVecT12> value, AccountId32 key)
+      public async Task<bool> SetSubsOf(BaseTuple<U128, BoundedVecT11> value, AccountId32 key)
       {
          return await SendMockupRequestAsync(_httpClient, "Identity/SubsOf", value.Encode(), Substrate.Ajuna.NET.NetApiExt.Generated.Storage.IdentityStorage.SubsOfParams(key));
       }
-      public async Task<bool> SetRegistrars(BoundedVecT13 value)
+      public async Task<bool> SetRegistrars(BoundedVecT12 value)
       {
          return await SendMockupRequestAsync(_httpClient, "Identity/Registrars", value.Encode(), Substrate.Ajuna.NET.NetApiExt.Generated.Storage.IdentityStorage.RegistrarsParams());
       }

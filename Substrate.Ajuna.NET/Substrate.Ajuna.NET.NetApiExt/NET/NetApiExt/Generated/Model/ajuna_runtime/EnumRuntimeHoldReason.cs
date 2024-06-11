@@ -28,7 +28,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.ajuna_runtime
     }
     
     /// <summary>
-    /// >> 389 - Variant[ajuna_runtime.RuntimeHoldReason]
+    /// >> 402 - Variant[ajuna_runtime.RuntimeHoldReason]
     /// </summary>
     public sealed class EnumRuntimeHoldReason : BaseEnumExt<RuntimeHoldReason, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_preimage.pallet.EnumHoldReason>
     {

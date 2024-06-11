@@ -33,7 +33,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_democracy.vote
     }
     
     /// <summary>
-    /// >> 144 - Variant[pallet_democracy.vote.AccountVote]
+    /// >> 146 - Variant[pallet_democracy.vote.AccountVote]
     /// </summary>
     public sealed class EnumAccountVote : BaseEnumExt<AccountVote, BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_democracy.vote.Vote, Substrate.NetApi.Model.Types.Primitive.U128>, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.NetApi.Model.Types.Primitive.U128>>
     {

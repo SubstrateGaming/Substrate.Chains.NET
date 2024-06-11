@@ -38,7 +38,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.dispatch
     }
     
     /// <summary>
-    /// >> 221 - Variant[frame_support.dispatch.RawOrigin]
+    /// >> 225 - Variant[frame_support.dispatch.RawOrigin]
     /// </summary>
     public sealed class EnumRawOrigin : BaseEnumExt<RawOrigin, BaseVoid, Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, BaseVoid>
     {

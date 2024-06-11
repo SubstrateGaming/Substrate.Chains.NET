@@ -32,7 +32,7 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Storage
         ///  but we require the old authorities to verify the seal when validating a PoV. This will
         ///  always be updated to the latest AuRa authorities in `on_finalize`.
         /// </summary>
-        Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT25 GetAuthorities();
+        Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT24 GetAuthorities();
         
         /// <summary>
         /// >> SlotInfo
@@ -52,7 +52,7 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Storage
         /// <summary>
         /// _authoritiesTypedStorage typed storage field
         /// </summary>
-        private TypedStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT25> _authoritiesTypedStorage;
+        private TypedStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT24> _authoritiesTypedStorage;
         
         /// <summary>
         /// _slotInfoTypedStorage typed storage field
@@ -64,14 +64,14 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Storage
         /// </summary>
         public AuraExtStorage(IStorageDataProvider storageDataProvider, List<IStorageChangeDelegate> storageChangeDelegates)
         {
-            this.AuthoritiesTypedStorage = new TypedStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT25>("AuraExt.Authorities", storageDataProvider, storageChangeDelegates);
+            this.AuthoritiesTypedStorage = new TypedStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT24>("AuraExt.Authorities", storageDataProvider, storageChangeDelegates);
             this.SlotInfoTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_consensus_slots.Slot, Substrate.NetApi.Model.Types.Primitive.U32>>("AuraExt.SlotInfo", storageDataProvider, storageChangeDelegates);
         }
         
         /// <summary>
         /// _authoritiesTypedStorage property
         /// </summary>
-        public TypedStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT25> AuthoritiesTypedStorage
+        public TypedStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT24> AuthoritiesTypedStorage
         {
             get
             {
@@ -124,7 +124,7 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Storage
         ///  but we require the old authorities to verify the seal when validating a PoV. This will
         ///  always be updated to the latest AuRa authorities in `on_finalize`.
         /// </summary>
-        public Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT25 GetAuthorities()
+        public Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT24 GetAuthorities()
         {
             return AuthoritiesTypedStorage.Get();
         }

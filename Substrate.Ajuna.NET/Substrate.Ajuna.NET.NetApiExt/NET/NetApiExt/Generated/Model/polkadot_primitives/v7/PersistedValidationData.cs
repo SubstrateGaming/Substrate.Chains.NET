@@ -18,7 +18,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v7
     
     
     /// <summary>
-    /// >> 181 - Composite[polkadot_primitives.v7.PersistedValidationData]
+    /// >> 185 - Composite[polkadot_primitives.v7.PersistedValidationData]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class PersistedValidationData : BaseType
