@@ -24,9 +24,9 @@ namespace Substrate.Ajuna.NET.RestClient.Generated.Clients
          _httpClient = httpClient;
          _subscriptionClient = subscriptionClient;
       }
-      public async Task<BoundedVecT22> GetVestingSchedules(Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+      public async Task<BoundedVecT21> GetVestingSchedules(Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {
-         return await SendRequestAsync<BoundedVecT22>(_httpClient, "vesting/vestingschedules", Substrate.Ajuna.NET.NetApiExt.Generated.Storage.VestingStorage.VestingSchedulesParams(key));
+         return await SendRequestAsync<BoundedVecT21>(_httpClient, "vesting/vestingschedules", Substrate.Ajuna.NET.NetApiExt.Generated.Storage.VestingStorage.VestingSchedulesParams(key));
       }
       public async Task<bool> SubscribeVestingSchedules(Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {

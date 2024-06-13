@@ -38,7 +38,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_democracy.types
     }
     
     /// <summary>
-    /// >> 148 - Variant[pallet_democracy.types.MetadataOwner]
+    /// >> 150 - Variant[pallet_democracy.types.MetadataOwner]
     /// </summary>
     public sealed class EnumMetadataOwner : BaseEnumExt<MetadataOwner, BaseVoid, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>
     {

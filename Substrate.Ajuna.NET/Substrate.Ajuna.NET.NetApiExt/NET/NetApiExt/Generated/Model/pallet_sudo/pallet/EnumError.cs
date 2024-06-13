@@ -30,7 +30,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_sudo.pallet
     }
     
     /// <summary>
-    /// >> 452 - Variant[pallet_sudo.pallet.Error]
+    /// >> 466 - Variant[pallet_sudo.pallet.Error]
     /// Error for the Sudo pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>

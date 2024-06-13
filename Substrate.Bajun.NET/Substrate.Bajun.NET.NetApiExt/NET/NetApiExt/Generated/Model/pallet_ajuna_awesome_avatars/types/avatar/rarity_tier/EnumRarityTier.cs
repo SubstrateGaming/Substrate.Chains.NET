@@ -58,7 +58,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
     }
     
     /// <summary>
-    /// >> 153 - Variant[pallet_ajuna_awesome_avatars.types.avatar.rarity_tier.RarityTier]
+    /// >> 155 - Variant[pallet_ajuna_awesome_avatars.types.avatar.rarity_tier.RarityTier]
     /// </summary>
     public sealed class EnumRarityTier : BaseEnum<RarityTier>
     {

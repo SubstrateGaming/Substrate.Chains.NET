@@ -33,7 +33,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_tournament.
     }
     
     /// <summary>
-    /// >> 635 - Variant[pallet_ajuna_tournament.config.RewardClaimState]
+    /// >> 649 - Variant[pallet_ajuna_tournament.config.RewardClaimState]
     /// </summary>
     public sealed class EnumRewardClaimState : BaseEnumExt<RewardClaimState, BaseVoid, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>
     {

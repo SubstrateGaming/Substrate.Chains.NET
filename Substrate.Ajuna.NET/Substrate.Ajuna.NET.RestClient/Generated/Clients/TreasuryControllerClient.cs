@@ -50,9 +50,9 @@ namespace Substrate.Ajuna.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("Treasury.Deactivated");
       }
-      public async Task<BoundedVecT30> GetApprovals()
+      public async Task<BoundedVecT29> GetApprovals()
       {
-         return await SendRequestAsync<BoundedVecT30>(_httpClient, "treasury/approvals");
+         return await SendRequestAsync<BoundedVecT29>(_httpClient, "treasury/approvals");
       }
       public async Task<bool> SubscribeApprovals()
       {

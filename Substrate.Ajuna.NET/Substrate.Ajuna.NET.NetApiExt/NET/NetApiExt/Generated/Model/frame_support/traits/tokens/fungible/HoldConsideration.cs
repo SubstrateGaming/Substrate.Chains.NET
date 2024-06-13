@@ -18,7 +18,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.traits.tok
     
     
     /// <summary>
-    /// >> 374 - Composite[frame_support.traits.tokens.fungible.HoldConsideration]
+    /// >> 387 - Composite[frame_support.traits.tokens.fungible.HoldConsideration]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class HoldConsideration : BaseType

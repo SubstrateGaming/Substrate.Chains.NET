@@ -43,7 +43,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
     }
     
     /// <summary>
-    /// >> 584 - Variant[pallet_ajuna_awesome_avatars.types.avatar.DnaEncoding]
+    /// >> 598 - Variant[pallet_ajuna_awesome_avatars.types.avatar.DnaEncoding]
     /// </summary>
     public sealed class EnumDnaEncoding : BaseEnum<DnaEncoding>
     {

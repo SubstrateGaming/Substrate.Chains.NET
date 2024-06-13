@@ -20,7 +20,7 @@ namespace Substrate.Ajuna.NET.RestClient.Generated.Interfaces
    {
       Task<U32> GetIncompleteSince();
       Task<bool> SubscribeIncompleteSince();
-      Task<BoundedVecT17> GetAgenda(U32 key);
+      Task<BoundedVecT16> GetAgenda(U32 key);
       Task<bool> SubscribeAgenda(U32 key);
       Task<RetryConfig> GetRetries(BaseTuple<U32, U32> key);
       Task<bool> SubscribeRetries(BaseTuple<U32, U32> key);

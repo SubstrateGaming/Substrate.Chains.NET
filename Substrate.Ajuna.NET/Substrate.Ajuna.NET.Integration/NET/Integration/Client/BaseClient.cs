@@ -175,7 +175,7 @@ namespace Substrate.Ajuna.NET.Integration.Client
             string subscription = null;
             try
             {
-                subscription = await SubstrateClient.Unstable.TransactionUnstableSubmitAndWatchAsync(ActionExtrinsicUpdate, extrinsicMethod, account, _chargeTypeDefault, 64, token);
+                subscription = await SubstrateClient.TransactionWatchCalls.TransactionWatchV1SubmitAndWatchAsync(ActionExtrinsicUpdate, extrinsicMethod, account, _chargeTypeDefault, 64, token);
             }
             catch (RemoteInvocationException e)
             {

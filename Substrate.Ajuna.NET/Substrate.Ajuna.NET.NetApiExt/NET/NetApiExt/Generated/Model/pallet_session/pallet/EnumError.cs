@@ -54,7 +54,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_session.pallet
     }
     
     /// <summary>
-    /// >> 409 - Variant[pallet_session.pallet.Error]
+    /// >> 422 - Variant[pallet_session.pallet.Error]
     /// Error for the session pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>

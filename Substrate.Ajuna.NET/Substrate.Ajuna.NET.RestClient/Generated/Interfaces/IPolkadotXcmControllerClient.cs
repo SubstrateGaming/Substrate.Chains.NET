@@ -16,6 +16,7 @@ namespace Substrate.Ajuna.NET.RestClient.Generated.Interfaces
    using Substrate.NetApi.Model.Types.Base;
    using Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_weights.weight_v2;
    using Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
+   using Substrate.Ajuna.NET.NetApiExt.Generated.Model.staging_xcm.v4;
    
    public interface IPolkadotXcmControllerClient
    {
@@ -33,15 +34,19 @@ namespace Substrate.Ajuna.NET.RestClient.Generated.Interfaces
       Task<bool> SubscribeVersionNotifiers(BaseTuple<U32, Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation> key);
       Task<BaseTuple<U64, Weight, U32>> GetVersionNotifyTargets(BaseTuple<U32, Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation> key);
       Task<bool> SubscribeVersionNotifyTargets(BaseTuple<U32, Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation> key);
-      Task<BoundedVecT26> GetVersionDiscoveryQueue();
+      Task<BoundedVecT25> GetVersionDiscoveryQueue();
       Task<bool> SubscribeVersionDiscoveryQueue();
       Task<EnumVersionMigrationStage> GetCurrentMigration();
       Task<bool> SubscribeCurrentMigration();
       Task<RemoteLockedFungibleRecord> GetRemoteLockedFungibles(BaseTuple<U32, Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAssetId> key);
       Task<bool> SubscribeRemoteLockedFungibles(BaseTuple<U32, Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAssetId> key);
-      Task<BoundedVecT28> GetLockedFungibles(Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
+      Task<BoundedVecT27> GetLockedFungibles(Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
       Task<bool> SubscribeLockedFungibles(Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
       Task<Bool> GetXcmExecutionSuspended();
       Task<bool> SubscribeXcmExecutionSuspended();
+      Task<Bool> GetShouldRecordXcm();
+      Task<bool> SubscribeShouldRecordXcm();
+      Task<XcmT1> GetRecordedXcm();
+      Task<bool> SubscribeRecordedXcm();
    }
 }

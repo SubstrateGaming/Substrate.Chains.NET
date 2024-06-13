@@ -20,6 +20,7 @@ namespace Substrate.Ajuna.NET.RestClient.Test.Generated
    using Substrate.NetApi.Model.Types.Base;
    using Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_weights.weight_v2;
    using Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
+   using Substrate.Ajuna.NET.NetApiExt.Generated.Model.staging_xcm.v4;
    
    public class PolkadotXcmControllerClientTest : ClientTestBase
    {
@@ -380,10 +381,10 @@ namespace Substrate.Ajuna.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT26 GetTestValue25()
+      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT25 GetTestValue25()
       {
-         Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT26 result;
-         result = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT26();
+         Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT25 result;
+         result = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT25();
          result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation, Substrate.NetApi.Model.Types.Primitive.U32>>();
          result.Value.Create(new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation, Substrate.NetApi.Model.Types.Primitive.U32>[] {
                   this.GetTestValue26()});
@@ -414,7 +415,7 @@ namespace Substrate.Ajuna.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          PolkadotXcmControllerClient rpcClient = new PolkadotXcmControllerClient(_httpClient, subscriptionClient);
-         Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT26 mockupValue = this.GetTestValue25();
+         Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT25 mockupValue = this.GetTestValue25();
 
 
          Assert.IsTrue(await rpcClient.SubscribeVersionDiscoveryQueue());
@@ -427,7 +428,7 @@ namespace Substrate.Ajuna.NET.RestClient.Test.Generated
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT26 rpcResult = await rpcClient.GetVersionDiscoveryQueue();
+         Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT25 rpcResult = await rpcClient.GetVersionDiscoveryQueue();
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
@@ -477,14 +478,14 @@ namespace Substrate.Ajuna.NET.RestClient.Test.Generated
          result.Owner.Create(this.GetTestValueEnum<Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.VersionedLocation>(), this.GetTestValueBaseVoid());
          result.Locker = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation();
          result.Locker.Create(this.GetTestValueEnum<Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.VersionedLocation>(), this.GetTestValueBaseVoid());
-         result.Consumers = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT27();
+         result.Consumers = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT26();
          result.Consumers = this.GetTestValue32();
          return result;
       }
-      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT27 GetTestValue32()
+      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT26 GetTestValue32()
       {
-         Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT27 result;
-         result = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT27();
+         Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT26 result;
+         result = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT26();
          result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Base.BaseTuple, Substrate.NetApi.Model.Types.Primitive.U128>>();
          result.Value.Create(new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Base.BaseTuple, Substrate.NetApi.Model.Types.Primitive.U128>[] {
                   this.GetTestValue33()});
@@ -586,10 +587,10 @@ namespace Substrate.Ajuna.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT28 GetTestValue39()
+      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT27 GetTestValue39()
       {
-         Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT28 result;
-         result = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT28();
+         Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT27 result;
+         result = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT27();
          result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation>>();
          result.Value.Create(new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation>[] {
                   this.GetTestValue40()});
@@ -660,7 +661,7 @@ namespace Substrate.Ajuna.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          PolkadotXcmControllerClient rpcClient = new PolkadotXcmControllerClient(_httpClient, subscriptionClient);
-         Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT28 mockupValue = this.GetTestValue39();
+         Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT27 mockupValue = this.GetTestValue39();
          Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 mockupKey = this.GetTestValue42();
 
          Assert.IsTrue(await rpcClient.SubscribeLockedFungibles(mockupKey));
@@ -673,7 +674,7 @@ namespace Substrate.Ajuna.NET.RestClient.Test.Generated
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT28 rpcResult = await rpcClient.GetLockedFungibles(mockupKey);
+         Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT27 rpcResult = await rpcClient.GetLockedFungibles(mockupKey);
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
@@ -703,6 +704,123 @@ namespace Substrate.Ajuna.NET.RestClient.Test.Generated
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
          Substrate.NetApi.Model.Types.Primitive.Bool rpcResult = await rpcClient.GetXcmExecutionSuspended();
+
+         // Test that the expected mockup value matches the actual result from RPC service.
+         Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
+      }
+      [Test()]
+      public async System.Threading.Tasks.Task TestShouldRecordXcm()
+      {
+         // Construct new Mockup client to test with.
+         PolkadotXcmControllerMockupClient mockupClient = new PolkadotXcmControllerMockupClient(_httpClient);
+
+         // Construct new subscription client to test with.
+         var subscriptionClient = CreateSubscriptionClient();
+
+         // Construct new RPC client to test with.
+         PolkadotXcmControllerClient rpcClient = new PolkadotXcmControllerClient(_httpClient, subscriptionClient);
+         Substrate.NetApi.Model.Types.Primitive.Bool mockupValue = this.GetTestValueBool();
+
+
+         Assert.IsTrue(await rpcClient.SubscribeShouldRecordXcm());
+
+         // Save the previously generated mockup value in RPC service storage.
+         bool mockupSetResult = await mockupClient.SetShouldRecordXcm(mockupValue);
+
+         // Test that the expected mockup value was handled successfully from RPC service.
+         Assert.IsTrue(mockupSetResult);
+         var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
+         Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
+
+         Substrate.NetApi.Model.Types.Primitive.Bool rpcResult = await rpcClient.GetShouldRecordXcm();
+
+         // Test that the expected mockup value matches the actual result from RPC service.
+         Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
+      }
+      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.staging_xcm.v4.XcmT1 GetTestValue46()
+      {
+         Substrate.Ajuna.NET.NetApiExt.Generated.Model.staging_xcm.v4.XcmT1 result;
+         result = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.staging_xcm.v4.XcmT1();
+         result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Ajuna.NET.NetApiExt.Generated.Model.staging_xcm.v4.EnumInstruction>();
+         result.Value.Create(new Substrate.Ajuna.NET.NetApiExt.Generated.Model.staging_xcm.v4.EnumInstruction[] {
+                  this.GetTestValue47()});
+         return result;
+      }
+      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.staging_xcm.v4.EnumInstruction GetTestValue47()
+      {
+         Substrate.Ajuna.NET.NetApiExt.Generated.Model.staging_xcm.v4.EnumInstruction result;
+         result = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.staging_xcm.v4.EnumInstruction();
+         result.Create(this.GetTestValueEnum<Substrate.Ajuna.NET.NetApiExt.Generated.Model.staging_xcm.v4.Instruction>(), this.GetTestValue48());
+         return result;
+      }
+      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.staging_xcm.v4.asset.Assets GetTestValue48()
+      {
+         Substrate.Ajuna.NET.NetApiExt.Generated.Model.staging_xcm.v4.asset.Assets result;
+         result = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.staging_xcm.v4.asset.Assets();
+         result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Ajuna.NET.NetApiExt.Generated.Model.staging_xcm.v4.asset.Asset>();
+         result.Value.Create(new Substrate.Ajuna.NET.NetApiExt.Generated.Model.staging_xcm.v4.asset.Asset[] {
+                  this.GetTestValue49()});
+         return result;
+      }
+      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.staging_xcm.v4.asset.Asset GetTestValue49()
+      {
+         Substrate.Ajuna.NET.NetApiExt.Generated.Model.staging_xcm.v4.asset.Asset result;
+         result = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.staging_xcm.v4.asset.Asset();
+         result.Id = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.staging_xcm.v4.asset.AssetId();
+         result.Id = this.GetTestValue50();
+         result.Fun = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.staging_xcm.v4.asset.EnumFungibility();
+         result.Fun.Create(this.GetTestValueEnum<Substrate.Ajuna.NET.NetApiExt.Generated.Model.staging_xcm.v4.asset.Fungibility>(), this.GetTestValue52());
+         return result;
+      }
+      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.staging_xcm.v4.asset.AssetId GetTestValue50()
+      {
+         Substrate.Ajuna.NET.NetApiExt.Generated.Model.staging_xcm.v4.asset.AssetId result;
+         result = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.staging_xcm.v4.asset.AssetId();
+         result.Value = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.staging_xcm.v4.location.Location();
+         result.Value = this.GetTestValue51();
+         return result;
+      }
+      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.staging_xcm.v4.location.Location GetTestValue51()
+      {
+         Substrate.Ajuna.NET.NetApiExt.Generated.Model.staging_xcm.v4.location.Location result;
+         result = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.staging_xcm.v4.location.Location();
+         result.Parents = this.GetTestValueU8();
+         result.Interior = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.staging_xcm.v4.junctions.EnumJunctions();
+         result.Interior.Create(this.GetTestValueEnum<Substrate.Ajuna.NET.NetApiExt.Generated.Model.staging_xcm.v4.junctions.Junctions>(), this.GetTestValueBaseVoid());
+         return result;
+      }
+      public Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128> GetTestValue52()
+      {
+         Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128> result;
+         result = new Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128>();
+         result.Create(new Substrate.NetApi.CompactInteger(this.GetTestValueU128().Value));
+         return result;
+      }
+      [Test()]
+      public async System.Threading.Tasks.Task TestRecordedXcm()
+      {
+         // Construct new Mockup client to test with.
+         PolkadotXcmControllerMockupClient mockupClient = new PolkadotXcmControllerMockupClient(_httpClient);
+
+         // Construct new subscription client to test with.
+         var subscriptionClient = CreateSubscriptionClient();
+
+         // Construct new RPC client to test with.
+         PolkadotXcmControllerClient rpcClient = new PolkadotXcmControllerClient(_httpClient, subscriptionClient);
+         Substrate.Ajuna.NET.NetApiExt.Generated.Model.staging_xcm.v4.XcmT1 mockupValue = this.GetTestValue46();
+
+
+         Assert.IsTrue(await rpcClient.SubscribeRecordedXcm());
+
+         // Save the previously generated mockup value in RPC service storage.
+         bool mockupSetResult = await mockupClient.SetRecordedXcm(mockupValue);
+
+         // Test that the expected mockup value was handled successfully from RPC service.
+         Assert.IsTrue(mockupSetResult);
+         var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
+         Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
+
+         Substrate.Ajuna.NET.NetApiExt.Generated.Model.staging_xcm.v4.XcmT1 rpcResult = await rpcClient.GetRecordedXcm();
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());

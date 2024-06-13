@@ -20,6 +20,8 @@ namespace Substrate.Bajun.NET.RestClient
       private HttpClient _httpClient;
       private BaseSubscriptionClient _subscriptionClient;
       public IAffiliatesAAAControllerClient AffiliatesAAAControllerClient;
+      public IAssetRegistryControllerClient AssetRegistryControllerClient;
+      public IAssetsControllerClient AssetsControllerClient;
       public IAuraControllerClient AuraControllerClient;
       public IAuraExtControllerClient AuraExtControllerClient;
       public IAuthorshipControllerClient AuthorshipControllerClient;
@@ -58,6 +60,8 @@ namespace Substrate.Bajun.NET.RestClient
          _httpClient = httpClient;
          _subscriptionClient = subscriptionClient;
          AffiliatesAAAControllerClient = new AffiliatesAAAControllerClient(_httpClient, _subscriptionClient);
+         AssetRegistryControllerClient = new AssetRegistryControllerClient(_httpClient, _subscriptionClient);
+         AssetsControllerClient = new AssetsControllerClient(_httpClient, _subscriptionClient);
          AuraControllerClient = new AuraControllerClient(_httpClient, _subscriptionClient);
          AuraExtControllerClient = new AuraExtControllerClient(_httpClient, _subscriptionClient);
          AuthorshipControllerClient = new AuthorshipControllerClient(_httpClient, _subscriptionClient);

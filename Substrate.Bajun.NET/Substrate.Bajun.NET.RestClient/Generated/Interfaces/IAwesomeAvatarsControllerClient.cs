@@ -27,7 +27,7 @@ namespace Substrate.Bajun.NET.RestClient.Generated.Interfaces
       Task<bool> SubscribeOrganizer();
       Task<AccountId32> GetTreasurer(U16 key);
       Task<bool> SubscribeTreasurer(U16 key);
-      Task<BoundedVecT51> GetWhitelistedAccounts();
+      Task<BoundedVecT50> GetWhitelistedAccounts();
       Task<bool> SubscribeWhitelistedAccounts();
       Task<SeasonStatus> GetCurrentSeasonStatus();
       Task<bool> SubscribeCurrentSeasonStatus();
@@ -47,7 +47,7 @@ namespace Substrate.Bajun.NET.RestClient.Generated.Interfaces
       Task<bool> SubscribeGlobalConfigs();
       Task<BaseTuple<AccountId32, Avatar>> GetAvatars(Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 key);
       Task<bool> SubscribeAvatars(Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 key);
-      Task<BoundedVecT52> GetOwners(BaseTuple<AccountId32, U16> key);
+      Task<BoundedVecT51> GetOwners(BaseTuple<AccountId32, U16> key);
       Task<bool> SubscribeOwners(BaseTuple<AccountId32, U16> key);
       Task<BaseTuple> GetLockedAvatars(Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 key);
       Task<bool> SubscribeLockedAvatars(Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 key);

@@ -38,7 +38,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
     }
     
     /// <summary>
-    /// >> 174 - Variant[pallet_ajuna_awesome_avatars.types.config.FreeMintTransferMode]
+    /// >> 176 - Variant[pallet_ajuna_awesome_avatars.types.config.FreeMintTransferMode]
     /// </summary>
     public sealed class EnumFreeMintTransferMode : BaseEnum<FreeMintTransferMode>
     {

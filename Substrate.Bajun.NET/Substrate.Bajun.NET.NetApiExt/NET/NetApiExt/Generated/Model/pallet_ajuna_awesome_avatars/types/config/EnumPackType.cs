@@ -38,7 +38,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
     }
     
     /// <summary>
-    /// >> 398 - Variant[pallet_ajuna_awesome_avatars.types.config.PackType]
+    /// >> 409 - Variant[pallet_ajuna_awesome_avatars.types.config.PackType]
     /// </summary>
     public sealed class EnumPackType : BaseEnum<PackType>
     {

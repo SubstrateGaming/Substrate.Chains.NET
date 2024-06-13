@@ -29,7 +29,7 @@ namespace Substrate.Bajun.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "Scheduler/IncompleteSince", value.Encode(), Substrate.Bajun.NET.NetApiExt.Generated.Storage.SchedulerStorage.IncompleteSinceParams());
       }
-      public async Task<bool> SetAgenda(BoundedVecT31 value, U32 key)
+      public async Task<bool> SetAgenda(BoundedVecT30 value, U32 key)
       {
          return await SendMockupRequestAsync(_httpClient, "Scheduler/Agenda", value.Encode(), Substrate.Bajun.NET.NetApiExt.Generated.Storage.SchedulerStorage.AgendaParams(key));
       }

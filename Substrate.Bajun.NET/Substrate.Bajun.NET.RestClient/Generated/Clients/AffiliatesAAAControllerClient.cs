@@ -27,9 +27,9 @@ namespace Substrate.Bajun.NET.RestClient.Generated.Clients
          _httpClient = httpClient;
          _subscriptionClient = subscriptionClient;
       }
-      public async Task<BoundedVecT53> GetAffiliatees(AccountId32 key)
+      public async Task<BoundedVecT52> GetAffiliatees(AccountId32 key)
       {
-         return await SendRequestAsync<BoundedVecT53>(_httpClient, "affiliatesaaa/affiliatees", Substrate.Bajun.NET.NetApiExt.Generated.Storage.AffiliatesAAAStorage.AffiliateesParams(key));
+         return await SendRequestAsync<BoundedVecT52>(_httpClient, "affiliatesaaa/affiliatees", Substrate.Bajun.NET.NetApiExt.Generated.Storage.AffiliatesAAAStorage.AffiliateesParams(key));
       }
       public async Task<bool> SubscribeAffiliatees(AccountId32 key)
       {
@@ -43,9 +43,9 @@ namespace Substrate.Bajun.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("AffiliatesAAA.Affiliators", Substrate.Bajun.NET.NetApiExt.Generated.Storage.AffiliatesAAAStorage.AffiliatorsParams(key));
       }
-      public async Task<BoundedVecT22> GetAffiliateRules(Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.affiliates.EnumAffiliateMethods key)
+      public async Task<BoundedVecT21> GetAffiliateRules(Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.affiliates.EnumAffiliateMethods key)
       {
-         return await SendRequestAsync<BoundedVecT22>(_httpClient, "affiliatesaaa/affiliaterules", Substrate.Bajun.NET.NetApiExt.Generated.Storage.AffiliatesAAAStorage.AffiliateRulesParams(key));
+         return await SendRequestAsync<BoundedVecT21>(_httpClient, "affiliatesaaa/affiliaterules", Substrate.Bajun.NET.NetApiExt.Generated.Storage.AffiliatesAAAStorage.AffiliateRulesParams(key));
       }
       public async Task<bool> SubscribeAffiliateRules(Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.affiliates.EnumAffiliateMethods key)
       {

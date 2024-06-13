@@ -19,6 +19,8 @@ namespace Substrate.Ajuna.NET.RestClient
    {
       private HttpClient _httpClient;
       private BaseSubscriptionClient _subscriptionClient;
+      public IAssetRegistryControllerClient AssetRegistryControllerClient;
+      public IAssetsControllerClient AssetsControllerClient;
       public IAuraControllerClient AuraControllerClient;
       public IAuraExtControllerClient AuraExtControllerClient;
       public IAuthorshipControllerClient AuthorshipControllerClient;
@@ -50,6 +52,8 @@ namespace Substrate.Ajuna.NET.RestClient
       {
          _httpClient = httpClient;
          _subscriptionClient = subscriptionClient;
+         AssetRegistryControllerClient = new AssetRegistryControllerClient(_httpClient, _subscriptionClient);
+         AssetsControllerClient = new AssetsControllerClient(_httpClient, _subscriptionClient);
          AuraControllerClient = new AuraControllerClient(_httpClient, _subscriptionClient);
          AuraExtControllerClient = new AuraExtControllerClient(_httpClient, _subscriptionClient);
          AuthorshipControllerClient = new AuthorshipControllerClient(_httpClient, _subscriptionClient);

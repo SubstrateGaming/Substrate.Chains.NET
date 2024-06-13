@@ -21,8 +21,8 @@ namespace Substrate.Ajuna.NET.RestClient.Mockup.Generated.Interfaces
    {
       Task<bool> SetIdentityOf(BaseTuple<Registration, BaseOpt<BoundedVecT1>> value, AccountId32 key);
       Task<bool> SetSuperOf(BaseTuple<AccountId32, EnumData> value, AccountId32 key);
-      Task<bool> SetSubsOf(BaseTuple<U128, BoundedVecT12> value, AccountId32 key);
-      Task<bool> SetRegistrars(BoundedVecT13 value);
+      Task<bool> SetSubsOf(BaseTuple<U128, BoundedVecT11> value, AccountId32 key);
+      Task<bool> SetRegistrars(BoundedVecT12 value);
       Task<bool> SetUsernameAuthorities(AuthorityProperties value, AccountId32 key);
       Task<bool> SetAccountOfUsername(AccountId32 value, BoundedVecT1 key);
       Task<bool> SetPendingUsernames(BaseTuple<AccountId32, U32> value, BoundedVecT1 key);

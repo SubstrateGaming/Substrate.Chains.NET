@@ -19,7 +19,7 @@ namespace Substrate.Ajuna.NET.RestClient.Mockup.Generated.Interfaces
    public interface ISchedulerControllerMockupClient
    {
       Task<bool> SetIncompleteSince(U32 value);
-      Task<bool> SetAgenda(BoundedVecT17 value, U32 key);
+      Task<bool> SetAgenda(BoundedVecT16 value, U32 key);
       Task<bool> SetRetries(RetryConfig value, BaseTuple<U32, U32> key);
       Task<bool> SetLookup(BaseTuple<U32, U32> value, Substrate.Ajuna.NET.NetApiExt.Generated.Types.Base.Arr32U8 key);
    }

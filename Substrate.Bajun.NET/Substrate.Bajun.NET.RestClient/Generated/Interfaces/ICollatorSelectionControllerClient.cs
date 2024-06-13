@@ -16,9 +16,9 @@ namespace Substrate.Bajun.NET.RestClient.Generated.Interfaces
    
    public interface ICollatorSelectionControllerClient
    {
-      Task<BoundedVecT37> GetInvulnerables();
+      Task<BoundedVecT36> GetInvulnerables();
       Task<bool> SubscribeInvulnerables();
-      Task<BoundedVecT38> GetCandidateList();
+      Task<BoundedVecT37> GetCandidateList();
       Task<bool> SubscribeCandidateList();
       Task<U32> GetLastAuthoredBlock(Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
       Task<bool> SubscribeLastAuthoredBlock(Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);

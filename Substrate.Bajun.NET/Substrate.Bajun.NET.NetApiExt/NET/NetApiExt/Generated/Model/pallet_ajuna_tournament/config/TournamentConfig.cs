@@ -18,7 +18,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_tournament.
     
     
     /// <summary>
-    /// >> 404 - Composite[pallet_ajuna_tournament.config.TournamentConfig]
+    /// >> 415 - Composite[pallet_ajuna_tournament.config.TournamentConfig]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class TournamentConfig : BaseType
@@ -51,7 +51,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_tournament.
         /// <summary>
         /// >> reward_distribution
         /// </summary>
-        public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT23 RewardDistribution { get; set; }
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT22 RewardDistribution { get; set; }
         /// <summary>
         /// >> golden_duck_config
         /// </summary>
@@ -99,7 +99,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_tournament.
             MaxReward.Decode(byteArray, ref p);
             TakeFeePercentage = new Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U8>();
             TakeFeePercentage.Decode(byteArray, ref p);
-            RewardDistribution = new Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT23();
+            RewardDistribution = new Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT22();
             RewardDistribution.Decode(byteArray, ref p);
             GoldenDuckConfig = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_tournament.config.EnumGoldenDuckConfig();
             GoldenDuckConfig.Decode(byteArray, ref p);

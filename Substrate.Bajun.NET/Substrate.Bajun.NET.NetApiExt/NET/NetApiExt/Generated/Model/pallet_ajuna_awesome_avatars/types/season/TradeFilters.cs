@@ -18,7 +18,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
     
     
     /// <summary>
-    /// >> 166 - Composite[pallet_ajuna_awesome_avatars.types.season.TradeFilters]
+    /// >> 168 - Composite[pallet_ajuna_awesome_avatars.types.season.TradeFilters]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class TradeFilters : BaseType

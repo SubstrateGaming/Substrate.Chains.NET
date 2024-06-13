@@ -31,7 +31,7 @@ namespace Substrate.Ajuna.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "Preimage/RequestStatusFor", value.Encode(), Substrate.Ajuna.NET.NetApiExt.Generated.Storage.PreimageStorage.RequestStatusForParams(key));
       }
-      public async Task<bool> SetPreimageFor(BoundedVecT18 value, Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Primitive.U32> key)
+      public async Task<bool> SetPreimageFor(BoundedVecT17 value, Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Primitive.U32> key)
       {
          return await SendMockupRequestAsync(_httpClient, "Preimage/PreimageFor", value.Encode(), Substrate.Ajuna.NET.NetApiExt.Generated.Storage.PreimageStorage.PreimageForParams(key));
       }

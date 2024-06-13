@@ -18,9 +18,9 @@ namespace Substrate.Bajun.NET.RestClient.Mockup.Generated.Interfaces
    
    public interface IAffiliatesAAAControllerMockupClient
    {
-      Task<bool> SetAffiliatees(BoundedVecT53 value, AccountId32 key);
+      Task<bool> SetAffiliatees(BoundedVecT52 value, AccountId32 key);
       Task<bool> SetAffiliators(AffiliatorState value, AccountId32 key);
-      Task<bool> SetAffiliateRules(BoundedVecT22 value, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.affiliates.EnumAffiliateMethods key);
+      Task<bool> SetAffiliateRules(BoundedVecT21 value, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.affiliates.EnumAffiliateMethods key);
       Task<bool> SetNextAffiliateId(U32 value);
       Task<bool> SetAffiliateIdMapping(AccountId32 value, U32 key);
    }

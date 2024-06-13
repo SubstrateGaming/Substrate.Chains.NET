@@ -19,6 +19,8 @@ namespace Substrate.Bajun.NET.RestClient.Mockup
    {
       private HttpClient _httpClient;
       public IAffiliatesAAAControllerMockupClient AffiliatesAAAControllerClient;
+      public IAssetRegistryControllerMockupClient AssetRegistryControllerClient;
+      public IAssetsControllerMockupClient AssetsControllerClient;
       public IAuraControllerMockupClient AuraControllerClient;
       public IAuraExtControllerMockupClient AuraExtControllerClient;
       public IAuthorshipControllerMockupClient AuthorshipControllerClient;
@@ -56,6 +58,8 @@ namespace Substrate.Bajun.NET.RestClient.Mockup
       {
          _httpClient = httpClient;
          AffiliatesAAAControllerClient = new AffiliatesAAAControllerMockupClient(_httpClient);
+         AssetRegistryControllerClient = new AssetRegistryControllerMockupClient(_httpClient);
+         AssetsControllerClient = new AssetsControllerMockupClient(_httpClient);
          AuraControllerClient = new AuraControllerMockupClient(_httpClient);
          AuraExtControllerClient = new AuraExtControllerMockupClient(_httpClient);
          AuthorshipControllerClient = new AuthorshipControllerMockupClient(_httpClient);

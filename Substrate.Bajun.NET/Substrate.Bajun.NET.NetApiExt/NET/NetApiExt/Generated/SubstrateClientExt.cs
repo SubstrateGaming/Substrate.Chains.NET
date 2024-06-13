@@ -145,6 +145,16 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated
         public MessageQueueStorage MessageQueueStorage;
         
         /// <summary>
+        /// XTokensStorage storage calls.
+        /// </summary>
+        public XTokensStorage XTokensStorage;
+        
+        /// <summary>
+        /// OrmlXcmStorage storage calls.
+        /// </summary>
+        public OrmlXcmStorage OrmlXcmStorage;
+        
+        /// <summary>
         /// SudoStorage storage calls.
         /// </summary>
         public SudoStorage SudoStorage;
@@ -209,6 +219,16 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated
         /// </summary>
         public TournamentAAAStorage TournamentAAAStorage;
         
+        /// <summary>
+        /// AssetsStorage storage calls.
+        /// </summary>
+        public AssetsStorage AssetsStorage;
+        
+        /// <summary>
+        /// AssetRegistryStorage storage calls.
+        /// </summary>
+        public AssetRegistryStorage AssetRegistryStorage;
+        
         public SubstrateClientExt(System.Uri uri, Substrate.NetApi.Model.Extrinsics.ChargeType chargeType) : 
                 base(uri, chargeType)
         {
@@ -236,6 +256,8 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated
             this.PolkadotXcmStorage = new PolkadotXcmStorage(this);
             this.CumulusXcmStorage = new CumulusXcmStorage(this);
             this.MessageQueueStorage = new MessageQueueStorage(this);
+            this.XTokensStorage = new XTokensStorage(this);
+            this.OrmlXcmStorage = new OrmlXcmStorage(this);
             this.SudoStorage = new SudoStorage(this);
             this.TreasuryStorage = new TreasuryStorage(this);
             this.CouncilStorage = new CouncilStorage(this);
@@ -249,6 +271,8 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated
             this.NftTransferStorage = new NftTransferStorage(this);
             this.AffiliatesAAAStorage = new AffiliatesAAAStorage(this);
             this.TournamentAAAStorage = new TournamentAAAStorage(this);
+            this.AssetsStorage = new AssetsStorage(this);
+            this.AssetRegistryStorage = new AssetRegistryStorage(this);
         }
     }
 }

@@ -72,7 +72,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_affiliates.
     }
     
     /// <summary>
-    /// >> 628 - Variant[pallet_ajuna_affiliates.pallet.Error]
+    /// >> 642 - Variant[pallet_ajuna_affiliates.pallet.Error]
     /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>

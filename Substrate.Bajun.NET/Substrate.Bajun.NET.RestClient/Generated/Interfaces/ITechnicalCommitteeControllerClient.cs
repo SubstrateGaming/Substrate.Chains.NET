@@ -20,7 +20,7 @@ namespace Substrate.Bajun.NET.RestClient.Generated.Interfaces
    
    public interface ITechnicalCommitteeControllerClient
    {
-      Task<BoundedVecT44> GetProposals();
+      Task<BoundedVecT43> GetProposals();
       Task<bool> SubscribeProposals();
       Task<EnumRuntimeCall> GetProposalOf(Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 key);
       Task<bool> SubscribeProposalOf(Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 key);

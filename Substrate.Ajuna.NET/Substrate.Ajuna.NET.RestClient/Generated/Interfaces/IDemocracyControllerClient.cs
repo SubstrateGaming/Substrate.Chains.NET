@@ -24,9 +24,9 @@ namespace Substrate.Ajuna.NET.RestClient.Generated.Interfaces
    {
       Task<U32> GetPublicPropCount();
       Task<bool> SubscribePublicPropCount();
-      Task<BoundedVecT34> GetPublicProps();
+      Task<BoundedVecT33> GetPublicProps();
       Task<bool> SubscribePublicProps();
-      Task<BaseTuple<BoundedVecT35, U128>> GetDepositOf(U32 key);
+      Task<BaseTuple<BoundedVecT34, U128>> GetDepositOf(U32 key);
       Task<bool> SubscribeDepositOf(U32 key);
       Task<U32> GetReferendumCount();
       Task<bool> SubscribeReferendumCount();
@@ -40,7 +40,7 @@ namespace Substrate.Ajuna.NET.RestClient.Generated.Interfaces
       Task<bool> SubscribeLastTabledWasExternal();
       Task<BaseTuple<EnumBounded, EnumVoteThreshold>> GetNextExternal();
       Task<bool> SubscribeNextExternal();
-      Task<BaseTuple<U32, BoundedVecT35>> GetBlacklist(H256 key);
+      Task<BaseTuple<U32, BoundedVecT34>> GetBlacklist(H256 key);
       Task<bool> SubscribeBlacklist(H256 key);
       Task<Bool> GetCancellations(H256 key);
       Task<bool> SubscribeCancellations(H256 key);

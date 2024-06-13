@@ -38,7 +38,7 @@ namespace Substrate.Bajun.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "AwesomeAvatars/Treasurer", value.Encode(), Substrate.Bajun.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage.TreasurerParams(key));
       }
-      public async Task<bool> SetWhitelistedAccounts(BoundedVecT51 value)
+      public async Task<bool> SetWhitelistedAccounts(BoundedVecT50 value)
       {
          return await SendMockupRequestAsync(_httpClient, "AwesomeAvatars/WhitelistedAccounts", value.Encode(), Substrate.Bajun.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage.WhitelistedAccountsParams());
       }
@@ -78,7 +78,7 @@ namespace Substrate.Bajun.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "AwesomeAvatars/Avatars", value.Encode(), Substrate.Bajun.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage.AvatarsParams(key));
       }
-      public async Task<bool> SetOwners(BoundedVecT52 value, BaseTuple<AccountId32, U16> key)
+      public async Task<bool> SetOwners(BoundedVecT51 value, BaseTuple<AccountId32, U16> key)
       {
          return await SendMockupRequestAsync(_httpClient, "AwesomeAvatars/Owners", value.Encode(), Substrate.Bajun.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage.OwnersParams(key));
       }

@@ -23,7 +23,7 @@ namespace Substrate.Bajun.NET.RestClient.Mockup.Generated.Interfaces
       Task<bool> SetNextTournamentIds(U32 value, U16 key);
       Task<bool> SetTournaments(TournamentConfig value, Substrate.NetApi.Model.Types.Base.BaseTuple<U16, U32> key);
       Task<bool> SetActiveTournaments(EnumTournamentState value, U16 key);
-      Task<bool> SetTournamentRankings(BoundedVecT54 value, Substrate.NetApi.Model.Types.Base.BaseTuple<U16, U32> key);
+      Task<bool> SetTournamentRankings(BoundedVecT53 value, Substrate.NetApi.Model.Types.Base.BaseTuple<U16, U32> key);
       Task<bool> SetTournamentRewardClaims(EnumRewardClaimState value, Substrate.NetApi.Model.Types.Base.BaseTuple<U16, U32, U32> key);
       Task<bool> SetGoldenDucks(EnumGoldenDuckState value, Substrate.NetApi.Model.Types.Base.BaseTuple<U16, U32> key);
       Task<bool> SetGoldenDuckRewardClaims(EnumRewardClaimState value, Substrate.NetApi.Model.Types.Base.BaseTuple<U16, U32> key);

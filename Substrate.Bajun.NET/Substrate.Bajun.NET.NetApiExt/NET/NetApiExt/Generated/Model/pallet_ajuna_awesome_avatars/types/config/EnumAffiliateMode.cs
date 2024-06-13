@@ -33,7 +33,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
     }
     
     /// <summary>
-    /// >> 178 - Variant[pallet_ajuna_awesome_avatars.types.config.AffiliateMode]
+    /// >> 180 - Variant[pallet_ajuna_awesome_avatars.types.config.AffiliateMode]
     /// </summary>
     public sealed class EnumAffiliateMode : BaseEnum<AffiliateMode>
     {

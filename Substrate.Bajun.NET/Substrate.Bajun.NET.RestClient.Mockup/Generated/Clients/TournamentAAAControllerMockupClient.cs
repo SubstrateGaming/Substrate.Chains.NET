@@ -45,7 +45,7 @@ namespace Substrate.Bajun.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "TournamentAAA/ActiveTournaments", value.Encode(), Substrate.Bajun.NET.NetApiExt.Generated.Storage.TournamentAAAStorage.ActiveTournamentsParams(key));
       }
-      public async Task<bool> SetTournamentRankings(BoundedVecT54 value, Substrate.NetApi.Model.Types.Base.BaseTuple<U16, U32> key)
+      public async Task<bool> SetTournamentRankings(BoundedVecT53 value, Substrate.NetApi.Model.Types.Base.BaseTuple<U16, U32> key)
       {
          return await SendMockupRequestAsync(_httpClient, "TournamentAAA/TournamentRankings", value.Encode(), Substrate.Bajun.NET.NetApiExt.Generated.Storage.TournamentAAAStorage.TournamentRankingsParams(key));
       }

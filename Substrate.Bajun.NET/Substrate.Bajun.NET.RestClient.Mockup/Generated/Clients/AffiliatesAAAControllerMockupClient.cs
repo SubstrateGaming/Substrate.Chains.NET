@@ -25,7 +25,7 @@ namespace Substrate.Bajun.NET.RestClient.Mockup.Generated.Clients
       {
          _httpClient = httpClient;
       }
-      public async Task<bool> SetAffiliatees(BoundedVecT53 value, AccountId32 key)
+      public async Task<bool> SetAffiliatees(BoundedVecT52 value, AccountId32 key)
       {
          return await SendMockupRequestAsync(_httpClient, "AffiliatesAAA/Affiliatees", value.Encode(), Substrate.Bajun.NET.NetApiExt.Generated.Storage.AffiliatesAAAStorage.AffiliateesParams(key));
       }
@@ -33,7 +33,7 @@ namespace Substrate.Bajun.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "AffiliatesAAA/Affiliators", value.Encode(), Substrate.Bajun.NET.NetApiExt.Generated.Storage.AffiliatesAAAStorage.AffiliatorsParams(key));
       }
-      public async Task<bool> SetAffiliateRules(BoundedVecT22 value, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.affiliates.EnumAffiliateMethods key)
+      public async Task<bool> SetAffiliateRules(BoundedVecT21 value, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.affiliates.EnumAffiliateMethods key)
       {
          return await SendMockupRequestAsync(_httpClient, "AffiliatesAAA/AffiliateRules", value.Encode(), Substrate.Bajun.NET.NetApiExt.Generated.Storage.AffiliatesAAAStorage.AffiliateRulesParams(key));
       }

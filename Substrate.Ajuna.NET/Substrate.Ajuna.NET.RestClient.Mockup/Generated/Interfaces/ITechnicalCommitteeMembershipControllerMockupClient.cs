@@ -16,7 +16,7 @@ namespace Substrate.Ajuna.NET.RestClient.Mockup.Generated.Interfaces
    
    public interface ITechnicalCommitteeMembershipControllerMockupClient
    {
-      Task<bool> SetMembers(BoundedVecT33 value);
+      Task<bool> SetMembers(BoundedVecT32 value);
       Task<bool> SetPrime(AccountId32 value);
    }
 }
