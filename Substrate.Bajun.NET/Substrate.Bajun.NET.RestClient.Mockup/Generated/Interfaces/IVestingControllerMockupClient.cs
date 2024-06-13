@@ -15,6 +15,6 @@ namespace Substrate.Bajun.NET.RestClient.Mockup.Generated.Interfaces
    
    public interface IVestingControllerMockupClient
    {
-      Task<bool> SetVestingSchedules(BoundedVecT36 value, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
+      Task<bool> SetVestingSchedules(BoundedVecT35 value, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
    }
 }

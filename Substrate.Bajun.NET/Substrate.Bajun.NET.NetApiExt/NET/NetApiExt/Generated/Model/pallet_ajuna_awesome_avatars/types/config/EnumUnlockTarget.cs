@@ -38,7 +38,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
     }
     
     /// <summary>
-    /// >> 402 - Variant[pallet_ajuna_awesome_avatars.types.config.UnlockTarget]
+    /// >> 413 - Variant[pallet_ajuna_awesome_avatars.types.config.UnlockTarget]
     /// </summary>
     public sealed class EnumUnlockTarget : BaseEnumExt<UnlockTarget, BaseVoid, BaseVoid, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>
     {

@@ -33,7 +33,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_migrations
     }
     
     /// <summary>
-    /// >> 328 - Variant[pallet_migrations.MigrationCursor]
+    /// >> 332 - Variant[pallet_migrations.MigrationCursor]
     /// </summary>
     public sealed class EnumMigrationCursor : BaseEnumExt<MigrationCursor, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_migrations.ActiveCursor, BaseVoid>
     {

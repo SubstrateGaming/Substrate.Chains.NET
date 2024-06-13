@@ -64,7 +64,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_migrations.pallet
     }
     
     /// <summary>
-    /// >> 326 - Variant[pallet_migrations.pallet.Call]
+    /// >> 330 - Variant[pallet_migrations.pallet.Call]
     /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
     public sealed class EnumCall : BaseEnumExt<Call, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_migrations.EnumMigrationCursor>, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT16>, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32>>, BaseVoid, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_migrations.EnumHistoricCleanupSelector>

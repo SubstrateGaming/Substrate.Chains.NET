@@ -58,7 +58,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
     }
     
     /// <summary>
-    /// >> 411 - Variant[pallet_ajuna_awesome_avatars.types.avatar.force.Force]
+    /// >> 422 - Variant[pallet_ajuna_awesome_avatars.types.avatar.force.Force]
     /// </summary>
     public sealed class EnumForce : BaseEnum<Force>
     {

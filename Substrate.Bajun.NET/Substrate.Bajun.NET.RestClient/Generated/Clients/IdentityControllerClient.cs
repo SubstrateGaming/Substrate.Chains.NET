@@ -44,17 +44,17 @@ namespace Substrate.Bajun.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("Identity.SuperOf", Substrate.Bajun.NET.NetApiExt.Generated.Storage.IdentityStorage.SuperOfParams(key));
       }
-      public async Task<BaseTuple<U128, BoundedVecT26>> GetSubsOf(AccountId32 key)
+      public async Task<BaseTuple<U128, BoundedVecT25>> GetSubsOf(AccountId32 key)
       {
-         return await SendRequestAsync<BaseTuple<U128, BoundedVecT26>>(_httpClient, "identity/subsof", Substrate.Bajun.NET.NetApiExt.Generated.Storage.IdentityStorage.SubsOfParams(key));
+         return await SendRequestAsync<BaseTuple<U128, BoundedVecT25>>(_httpClient, "identity/subsof", Substrate.Bajun.NET.NetApiExt.Generated.Storage.IdentityStorage.SubsOfParams(key));
       }
       public async Task<bool> SubscribeSubsOf(AccountId32 key)
       {
          return await _subscriptionClient.SubscribeAsync("Identity.SubsOf", Substrate.Bajun.NET.NetApiExt.Generated.Storage.IdentityStorage.SubsOfParams(key));
       }
-      public async Task<BoundedVecT27> GetRegistrars()
+      public async Task<BoundedVecT26> GetRegistrars()
       {
-         return await SendRequestAsync<BoundedVecT27>(_httpClient, "identity/registrars");
+         return await SendRequestAsync<BoundedVecT26>(_httpClient, "identity/registrars");
       }
       public async Task<bool> SubscribeRegistrars()
       {

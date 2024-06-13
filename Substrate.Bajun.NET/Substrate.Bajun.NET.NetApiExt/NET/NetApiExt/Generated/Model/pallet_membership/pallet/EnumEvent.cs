@@ -60,7 +60,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_membership.pallet
     }
     
     /// <summary>
-    /// >> 143 - Variant[pallet_membership.pallet.Event]
+    /// >> 145 - Variant[pallet_membership.pallet.Event]
     /// The `Event` enum of this pallet
     /// </summary>
     public sealed class EnumEvent : BaseEnum<Event>

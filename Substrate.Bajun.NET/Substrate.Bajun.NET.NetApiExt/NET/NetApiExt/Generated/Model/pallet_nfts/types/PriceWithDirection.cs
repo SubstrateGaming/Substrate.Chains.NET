@@ -18,7 +18,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types
     
     
     /// <summary>
-    /// >> 193 - Composite[pallet_nfts.types.PriceWithDirection]
+    /// >> 195 - Composite[pallet_nfts.types.PriceWithDirection]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class PriceWithDirection : BaseType

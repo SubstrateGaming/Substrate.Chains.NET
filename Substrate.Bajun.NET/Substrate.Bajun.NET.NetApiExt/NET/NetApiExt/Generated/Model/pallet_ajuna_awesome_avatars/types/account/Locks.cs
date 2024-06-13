@@ -18,7 +18,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
     
     
     /// <summary>
-    /// >> 592 - Composite[pallet_ajuna_awesome_avatars.types.account.Locks]
+    /// >> 606 - Composite[pallet_ajuna_awesome_avatars.types.account.Locks]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Locks : BaseType

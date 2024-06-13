@@ -33,7 +33,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_xcm.pallet
     }
     
     /// <summary>
-    /// >> 272 - Variant[pallet_xcm.pallet.Origin]
+    /// >> 276 - Variant[pallet_xcm.pallet.Origin]
     /// </summary>
     public sealed class EnumOrigin : BaseEnumExt<Origin, Substrate.Bajun.NET.NetApiExt.Generated.Model.staging_xcm.v4.location.Location, Substrate.Bajun.NET.NetApiExt.Generated.Model.staging_xcm.v4.location.Location>
     {

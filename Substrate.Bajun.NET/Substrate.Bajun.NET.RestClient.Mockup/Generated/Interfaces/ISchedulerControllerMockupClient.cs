@@ -19,7 +19,7 @@ namespace Substrate.Bajun.NET.RestClient.Mockup.Generated.Interfaces
    public interface ISchedulerControllerMockupClient
    {
       Task<bool> SetIncompleteSince(U32 value);
-      Task<bool> SetAgenda(BoundedVecT31 value, U32 key);
+      Task<bool> SetAgenda(BoundedVecT30 value, U32 key);
       Task<bool> SetRetries(RetryConfig value, BaseTuple<U32, U32> key);
       Task<bool> SetLookup(BaseTuple<U32, U32> value, Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.Arr32U8 key);
    }

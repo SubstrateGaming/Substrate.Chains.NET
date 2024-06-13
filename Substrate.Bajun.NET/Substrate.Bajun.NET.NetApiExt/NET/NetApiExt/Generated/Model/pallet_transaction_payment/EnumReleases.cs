@@ -33,7 +33,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_transaction_payme
     }
     
     /// <summary>
-    /// >> 493 - Variant[pallet_transaction_payment.Releases]
+    /// >> 506 - Variant[pallet_transaction_payment.Releases]
     /// </summary>
     public sealed class EnumReleases : BaseEnum<Releases>
     {

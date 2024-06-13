@@ -30,7 +30,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_migrations.pallet
     }
     
     /// <summary>
-    /// >> 476 - Variant[pallet_migrations.pallet.Error]
+    /// >> 489 - Variant[pallet_migrations.pallet.Error]
     /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>

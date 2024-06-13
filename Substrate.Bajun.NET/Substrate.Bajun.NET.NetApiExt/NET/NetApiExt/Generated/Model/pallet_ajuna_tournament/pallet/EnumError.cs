@@ -103,7 +103,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_tournament.
     }
     
     /// <summary>
-    /// >> 637 - Variant[pallet_ajuna_tournament.pallet.Error]
+    /// >> 651 - Variant[pallet_ajuna_tournament.pallet.Error]
     /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>

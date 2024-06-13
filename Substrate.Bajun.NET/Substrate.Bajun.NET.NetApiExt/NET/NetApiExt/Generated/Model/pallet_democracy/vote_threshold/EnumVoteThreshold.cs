@@ -38,7 +38,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_democracy.vote_th
     }
     
     /// <summary>
-    /// >> 145 - Variant[pallet_democracy.vote_threshold.VoteThreshold]
+    /// >> 147 - Variant[pallet_democracy.vote_threshold.VoteThreshold]
     /// </summary>
     public sealed class EnumVoteThreshold : BaseEnum<VoteThreshold>
     {

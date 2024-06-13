@@ -126,7 +126,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_collator_selectio
     }
     
     /// <summary>
-    /// >> 500 - Variant[pallet_collator_selection.pallet.Error]
+    /// >> 513 - Variant[pallet_collator_selection.pallet.Error]
     /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>

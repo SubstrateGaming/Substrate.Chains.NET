@@ -35,9 +35,9 @@ namespace Substrate.Bajun.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("Scheduler.IncompleteSince");
       }
-      public async Task<BoundedVecT31> GetAgenda(U32 key)
+      public async Task<BoundedVecT30> GetAgenda(U32 key)
       {
-         return await SendRequestAsync<BoundedVecT31>(_httpClient, "scheduler/agenda", Substrate.Bajun.NET.NetApiExt.Generated.Storage.SchedulerStorage.AgendaParams(key));
+         return await SendRequestAsync<BoundedVecT30>(_httpClient, "scheduler/agenda", Substrate.Bajun.NET.NetApiExt.Generated.Storage.SchedulerStorage.AgendaParams(key));
       }
       public async Task<bool> SubscribeAgenda(U32 key)
       {

@@ -42,7 +42,7 @@ namespace Substrate.Bajun.NET.RestService.Generated.Controller
         ///  The invulnerable, permissioned collators. This list must be sorted.
         /// </summary>
         [HttpGet("Invulnerables")]
-        [ProducesResponseType(typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT37), 200)]
+        [ProducesResponseType(typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT36), 200)]
         [StorageKeyBuilder(typeof(Substrate.Bajun.NET.NetApiExt.Generated.Storage.CollatorSelectionStorage), "InvulnerablesParams")]
         public IActionResult GetInvulnerables()
         {
@@ -58,7 +58,7 @@ namespace Substrate.Bajun.NET.RestService.Generated.Controller
         ///  recently updated is considered greater.
         /// </summary>
         [HttpGet("CandidateList")]
-        [ProducesResponseType(typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT38), 200)]
+        [ProducesResponseType(typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT37), 200)]
         [StorageKeyBuilder(typeof(Substrate.Bajun.NET.NetApiExt.Generated.Storage.CollatorSelectionStorage), "CandidateListParams")]
         public IActionResult GetCandidateList()
         {

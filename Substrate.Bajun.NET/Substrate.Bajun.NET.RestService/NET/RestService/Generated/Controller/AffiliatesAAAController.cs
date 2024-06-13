@@ -42,7 +42,7 @@ namespace Substrate.Bajun.NET.RestService.Generated.Controller
         ///  Stores the affiliated accounts from the perspectives of the affiliatee
         /// </summary>
         [HttpGet("Affiliatees")]
-        [ProducesResponseType(typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT53), 200)]
+        [ProducesResponseType(typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT52), 200)]
         [StorageKeyBuilder(typeof(Substrate.Bajun.NET.NetApiExt.Generated.Storage.AffiliatesAAAStorage), "AffiliateesParams", typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32))]
         public IActionResult GetAffiliatees(string key)
         {
@@ -67,7 +67,7 @@ namespace Substrate.Bajun.NET.RestService.Generated.Controller
         ///  Stores the affiliate logic rules
         /// </summary>
         [HttpGet("AffiliateRules")]
-        [ProducesResponseType(typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT22), 200)]
+        [ProducesResponseType(typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT21), 200)]
         [StorageKeyBuilder(typeof(Substrate.Bajun.NET.NetApiExt.Generated.Storage.AffiliatesAAAStorage), "AffiliateRulesParams", typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.affiliates.EnumAffiliateMethods))]
         public IActionResult GetAffiliateRules(string key)
         {

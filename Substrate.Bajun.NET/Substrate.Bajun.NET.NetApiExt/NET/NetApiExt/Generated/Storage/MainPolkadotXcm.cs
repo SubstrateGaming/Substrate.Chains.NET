@@ -51,15 +51,17 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("PolkadotXcm", "VersionNotifyTargets"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat,
                             Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation>), typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U64, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight, Substrate.NetApi.Model.Types.Primitive.U32>)));
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("PolkadotXcm", "VersionDiscoveryQueue"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT40)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("PolkadotXcm", "VersionDiscoveryQueue"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT39)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("PolkadotXcm", "CurrentMigration"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_xcm.pallet.EnumVersionMigrationStage)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("PolkadotXcm", "RemoteLockedFungibles"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat,
                             Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat,
                             Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAssetId>), typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_xcm.pallet.RemoteLockedFungibleRecord)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("PolkadotXcm", "LockedFungibles"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32), typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT42)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32), typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT41)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("PolkadotXcm", "XcmExecutionSuspended"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Primitive.Bool)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("PolkadotXcm", "ShouldRecordXcm"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Primitive.Bool)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("PolkadotXcm", "RecordedXcm"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.staging_xcm.v4.XcmT1)));
         }
         
         /// <summary>
@@ -311,10 +313,10 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         ///  the `u32` counter is the number of times that a send to the destination has been attempted,
         ///  which is used as a prioritization.
         /// </summary>
-        public async Task<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT40> VersionDiscoveryQueue(string blockhash, CancellationToken token)
+        public async Task<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT39> VersionDiscoveryQueue(string blockhash, CancellationToken token)
         {
             string parameters = PolkadotXcmStorage.VersionDiscoveryQueueParams();
-            var result = await _client.GetStorageAsync<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT40>(parameters, blockhash, token);
+            var result = await _client.GetStorageAsync<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT39>(parameters, blockhash, token);
             return result;
         }
         
@@ -403,10 +405,10 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         /// >> LockedFungibles
         ///  Fungible assets which we know are locked on this chain.
         /// </summary>
-        public async Task<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT42> LockedFungibles(Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, string blockhash, CancellationToken token)
+        public async Task<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT41> LockedFungibles(Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, string blockhash, CancellationToken token)
         {
             string parameters = PolkadotXcmStorage.LockedFungiblesParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT42>(parameters, blockhash, token);
+            var result = await _client.GetStorageAsync<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT41>(parameters, blockhash, token);
             return result;
         }
         
@@ -436,6 +438,86 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         {
             string parameters = PolkadotXcmStorage.XcmExecutionSuspendedParams();
             var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.Bool>(parameters, blockhash, token);
+            return result;
+        }
+        
+        /// <summary>
+        /// >> ShouldRecordXcmParams
+        ///  Whether or not incoming XCMs (both executed locally and received) should be recorded.
+        ///  Only one XCM program will be recorded at a time.
+        ///  This is meant to be used in runtime APIs, and it's advised it stays false
+        ///  for all other use cases, so as to not degrade regular performance.
+        /// 
+        ///  Only relevant if this pallet is being used as the [`xcm_executor::traits::RecordXcm`]
+        ///  implementation in the XCM executor configuration.
+        /// </summary>
+        public static string ShouldRecordXcmParams()
+        {
+            return RequestGenerator.GetStorage("PolkadotXcm", "ShouldRecordXcm", Substrate.NetApi.Model.Meta.Storage.Type.Plain);
+        }
+        
+        /// <summary>
+        /// >> ShouldRecordXcmDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string ShouldRecordXcmDefault()
+        {
+            return "0x00";
+        }
+        
+        /// <summary>
+        /// >> ShouldRecordXcm
+        ///  Whether or not incoming XCMs (both executed locally and received) should be recorded.
+        ///  Only one XCM program will be recorded at a time.
+        ///  This is meant to be used in runtime APIs, and it's advised it stays false
+        ///  for all other use cases, so as to not degrade regular performance.
+        /// 
+        ///  Only relevant if this pallet is being used as the [`xcm_executor::traits::RecordXcm`]
+        ///  implementation in the XCM executor configuration.
+        /// </summary>
+        public async Task<Substrate.NetApi.Model.Types.Primitive.Bool> ShouldRecordXcm(string blockhash, CancellationToken token)
+        {
+            string parameters = PolkadotXcmStorage.ShouldRecordXcmParams();
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.Bool>(parameters, blockhash, token);
+            return result;
+        }
+        
+        /// <summary>
+        /// >> RecordedXcmParams
+        ///  If [`ShouldRecordXcm`] is set to true, then the last XCM program executed locally
+        ///  will be stored here.
+        ///  Runtime APIs can fetch the XCM that was executed by accessing this value.
+        /// 
+        ///  Only relevant if this pallet is being used as the [`xcm_executor::traits::RecordXcm`]
+        ///  implementation in the XCM executor configuration.
+        /// </summary>
+        public static string RecordedXcmParams()
+        {
+            return RequestGenerator.GetStorage("PolkadotXcm", "RecordedXcm", Substrate.NetApi.Model.Meta.Storage.Type.Plain);
+        }
+        
+        /// <summary>
+        /// >> RecordedXcmDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string RecordedXcmDefault()
+        {
+            return "0x00";
+        }
+        
+        /// <summary>
+        /// >> RecordedXcm
+        ///  If [`ShouldRecordXcm`] is set to true, then the last XCM program executed locally
+        ///  will be stored here.
+        ///  Runtime APIs can fetch the XCM that was executed by accessing this value.
+        /// 
+        ///  Only relevant if this pallet is being used as the [`xcm_executor::traits::RecordXcm`]
+        ///  implementation in the XCM executor configuration.
+        /// </summary>
+        public async Task<Substrate.Bajun.NET.NetApiExt.Generated.Model.staging_xcm.v4.XcmT1> RecordedXcm(string blockhash, CancellationToken token)
+        {
+            string parameters = PolkadotXcmStorage.RecordedXcmParams();
+            var result = await _client.GetStorageAsync<Substrate.Bajun.NET.NetApiExt.Generated.Model.staging_xcm.v4.XcmT1>(parameters, blockhash, token);
             return result;
         }
     }
@@ -612,27 +694,20 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         }
         
         /// <summary>
-        /// >> execute_blob
+        /// >> transfer_assets_using_type_and_then
         /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method ExecuteBlob(Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT20 encoded_message, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight max_weight)
-        {
-            System.Collections.Generic.List<byte> byteArray = new List<byte>();
-            byteArray.AddRange(encoded_message.Encode());
-            byteArray.AddRange(max_weight.Encode());
-            return new Method(31, "PolkadotXcm", 13, "execute_blob", byteArray.ToArray());
-        }
-        
-        /// <summary>
-        /// >> send_blob
-        /// Contains a variant per dispatchable extrinsic that this pallet has.
-        /// </summary>
-        public static Method SendBlob(Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation dest, Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT20 encoded_message)
+        public static Method TransferAssetsUsingTypeAndThen(Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation dest, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAssets assets, Substrate.Bajun.NET.NetApiExt.Generated.Model.staging_xcm_executor.traits.asset_transfer.EnumTransferType assets_transfer_type, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAssetId remote_fees_id, Substrate.Bajun.NET.NetApiExt.Generated.Model.staging_xcm_executor.traits.asset_transfer.EnumTransferType fees_transfer_type, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedXcm custom_xcm_on_dest, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.v3.EnumWeightLimit weight_limit)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(dest.Encode());
-            byteArray.AddRange(encoded_message.Encode());
-            return new Method(31, "PolkadotXcm", 14, "send_blob", byteArray.ToArray());
+            byteArray.AddRange(assets.Encode());
+            byteArray.AddRange(assets_transfer_type.Encode());
+            byteArray.AddRange(remote_fees_id.Encode());
+            byteArray.AddRange(fees_transfer_type.Encode());
+            byteArray.AddRange(custom_xcm_on_dest.Encode());
+            byteArray.AddRange(weight_limit.Encode());
+            return new Method(31, "PolkadotXcm", 13, "transfer_assets_using_type_and_then", byteArray.ToArray());
         }
     }
     
@@ -773,12 +848,6 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         InUse,
         
         /// <summary>
-        /// >> InvalidAssetNotConcrete
-        /// Invalid non-concrete asset.
-        /// </summary>
-        InvalidAssetNotConcrete,
-        
-        /// <summary>
         /// >> InvalidAssetUnknownReserve
         /// Invalid asset, reserve chain could not be determined for it.
         /// </summary>
@@ -801,18 +870,5 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         /// Local XCM execution incomplete.
         /// </summary>
         LocalExecutionIncomplete,
-        
-        /// <summary>
-        /// >> UnableToDecode
-        /// Could not decode XCM.
-        /// </summary>
-        UnableToDecode,
-        
-        /// <summary>
-        /// >> XcmTooLarge
-        /// XCM encoded length is too large.
-        /// Returned when an XCM encoded length is larger than `MaxXcmEncodedSize`.
-        /// </summary>
-        XcmTooLarge,
     }
 }

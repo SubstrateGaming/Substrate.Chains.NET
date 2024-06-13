@@ -18,7 +18,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
     
     
     /// <summary>
-    /// >> 156 - Composite[pallet_ajuna_awesome_avatars.types.fee.Fee]
+    /// >> 158 - Composite[pallet_ajuna_awesome_avatars.types.fee.Fee]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Fee : BaseType

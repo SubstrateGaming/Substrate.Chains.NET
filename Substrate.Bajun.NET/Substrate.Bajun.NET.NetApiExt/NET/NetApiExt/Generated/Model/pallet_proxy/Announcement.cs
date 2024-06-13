@@ -18,7 +18,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_proxy
     
     
     /// <summary>
-    /// >> 457 - Composite[pallet_proxy.Announcement]
+    /// >> 470 - Composite[pallet_proxy.Announcement]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Announcement : BaseType

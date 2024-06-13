@@ -18,7 +18,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_democracy.vote
     
     
     /// <summary>
-    /// >> 147 - Composite[pallet_democracy.vote.Vote]
+    /// >> 149 - Composite[pallet_democracy.vote.Vote]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Vote : BaseType

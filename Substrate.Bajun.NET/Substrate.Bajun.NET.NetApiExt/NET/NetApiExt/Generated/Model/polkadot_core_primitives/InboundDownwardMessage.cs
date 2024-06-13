@@ -18,7 +18,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.polkadot_core_primitives
     
     
     /// <summary>
-    /// >> 254 - Composite[polkadot_core_primitives.InboundDownwardMessage]
+    /// >> 258 - Composite[polkadot_core_primitives.InboundDownwardMessage]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class InboundDownwardMessage : BaseType

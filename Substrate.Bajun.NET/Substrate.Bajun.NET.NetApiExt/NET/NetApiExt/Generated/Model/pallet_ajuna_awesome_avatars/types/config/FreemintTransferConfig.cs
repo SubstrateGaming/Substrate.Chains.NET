@@ -18,7 +18,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
     
     
     /// <summary>
-    /// >> 173 - Composite[pallet_ajuna_awesome_avatars.types.config.FreemintTransferConfig]
+    /// >> 175 - Composite[pallet_ajuna_awesome_avatars.types.config.FreemintTransferConfig]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class FreemintTransferConfig : BaseType

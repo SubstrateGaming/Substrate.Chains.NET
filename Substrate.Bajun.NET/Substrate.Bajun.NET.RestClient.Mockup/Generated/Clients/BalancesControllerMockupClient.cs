@@ -41,15 +41,15 @@ namespace Substrate.Bajun.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "Balances/Locks", value.Encode(), Substrate.Bajun.NET.NetApiExt.Generated.Storage.BalancesStorage.LocksParams(key));
       }
-      public async Task<bool> SetReserves(BoundedVecT33 value, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+      public async Task<bool> SetReserves(BoundedVecT32 value, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {
          return await SendMockupRequestAsync(_httpClient, "Balances/Reserves", value.Encode(), Substrate.Bajun.NET.NetApiExt.Generated.Storage.BalancesStorage.ReservesParams(key));
       }
-      public async Task<bool> SetHolds(BoundedVecT34 value, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+      public async Task<bool> SetHolds(BoundedVecT33 value, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {
          return await SendMockupRequestAsync(_httpClient, "Balances/Holds", value.Encode(), Substrate.Bajun.NET.NetApiExt.Generated.Storage.BalancesStorage.HoldsParams(key));
       }
-      public async Task<bool> SetFreezes(BoundedVecT35 value, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+      public async Task<bool> SetFreezes(BoundedVecT34 value, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {
          return await SendMockupRequestAsync(_httpClient, "Balances/Freezes", value.Encode(), Substrate.Bajun.NET.NetApiExt.Generated.Storage.BalancesStorage.FreezesParams(key));
       }

@@ -18,11 +18,11 @@ namespace Substrate.Bajun.NET.RestClient.Generated.Interfaces
    
    public interface IAffiliatesAAAControllerClient
    {
-      Task<BoundedVecT53> GetAffiliatees(AccountId32 key);
+      Task<BoundedVecT52> GetAffiliatees(AccountId32 key);
       Task<bool> SubscribeAffiliatees(AccountId32 key);
       Task<AffiliatorState> GetAffiliators(AccountId32 key);
       Task<bool> SubscribeAffiliators(AccountId32 key);
-      Task<BoundedVecT22> GetAffiliateRules(Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.affiliates.EnumAffiliateMethods key);
+      Task<BoundedVecT21> GetAffiliateRules(Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.affiliates.EnumAffiliateMethods key);
       Task<bool> SubscribeAffiliateRules(Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.affiliates.EnumAffiliateMethods key);
       Task<U32> GetNextAffiliateId();
       Task<bool> SubscribeNextAffiliateId();

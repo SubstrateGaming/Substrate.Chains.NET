@@ -22,8 +22,8 @@ namespace Substrate.Bajun.NET.RestClient.Mockup.Generated.Interfaces
       Task<bool> SetInactiveIssuance(U128 value);
       Task<bool> SetAccount(AccountData value, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
       Task<bool> SetLocks(WeakBoundedVecT2 value, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
-      Task<bool> SetReserves(BoundedVecT33 value, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
-      Task<bool> SetHolds(BoundedVecT34 value, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
-      Task<bool> SetFreezes(BoundedVecT35 value, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
+      Task<bool> SetReserves(BoundedVecT32 value, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
+      Task<bool> SetHolds(BoundedVecT33 value, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
+      Task<bool> SetFreezes(BoundedVecT34 value, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
    }
 }

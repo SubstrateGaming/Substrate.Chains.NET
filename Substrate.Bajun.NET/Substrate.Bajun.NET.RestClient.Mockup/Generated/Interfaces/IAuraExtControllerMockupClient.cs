@@ -18,7 +18,7 @@ namespace Substrate.Bajun.NET.RestClient.Mockup.Generated.Interfaces
    
    public interface IAuraExtControllerMockupClient
    {
-      Task<bool> SetAuthorities(BoundedVecT39 value);
+      Task<bool> SetAuthorities(BoundedVecT38 value);
       Task<bool> SetSlotInfo(BaseTuple<Slot, U32> value);
    }
 }
