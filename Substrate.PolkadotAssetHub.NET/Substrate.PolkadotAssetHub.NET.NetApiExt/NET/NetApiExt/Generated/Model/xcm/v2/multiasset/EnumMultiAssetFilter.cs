@@ -15,16 +15,25 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v2.multia
 {
     
     
+    /// <summary>
+    /// >> MultiAssetFilter
+    /// </summary>
     public enum MultiAssetFilter
     {
         
+        /// <summary>
+        /// >> Definite
+        /// </summary>
         Definite = 0,
         
+        /// <summary>
+        /// >> Wild
+        /// </summary>
         Wild = 1,
     }
     
     /// <summary>
-    /// >> 272 - Variant[xcm.v2.multiasset.MultiAssetFilter]
+    /// >> 308 - Variant[xcm.v2.multiasset.MultiAssetFilter]
     /// </summary>
     public sealed class EnumMultiAssetFilter : BaseEnumExt<MultiAssetFilter, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v2.multiasset.MultiAssets, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v2.multiasset.EnumWildMultiAsset>
     {

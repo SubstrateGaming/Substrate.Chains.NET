@@ -21,16 +21,22 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> AuraExtStorage
+    /// </summary>
     public sealed class AuraExtStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> AuraExtStorage Constructor
+        /// </summary>
         public AuraExtStorage(SubstrateClientExt client)
         {
             this._client = client;
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("AuraExt", "Authorities"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT13)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("AuraExt", "Authorities"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT14)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("AuraExt", "SlotInfo"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_consensus_slots.Slot, Substrate.NetApi.Model.Types.Primitive.U32>)));
         }
         
@@ -64,10 +70,10 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
         ///  but we require the old authorities to verify the seal when validating a PoV. This will
         ///  always be updated to the latest AuRa authorities in `on_finalize`.
         /// </summary>
-        public async Task<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT13> Authorities(CancellationToken token)
+        public async Task<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT14> Authorities(string blockhash, CancellationToken token)
         {
             string parameters = AuraExtStorage.AuthoritiesParams();
-            var result = await _client.GetStorageAsync<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT13>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT14>(parameters, blockhash, token);
             return result;
         }
         
@@ -97,18 +103,24 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
         /// 
         ///  Updated on each block initialization.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_consensus_slots.Slot, Substrate.NetApi.Model.Types.Primitive.U32>> SlotInfo(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_consensus_slots.Slot, Substrate.NetApi.Model.Types.Primitive.U32>> SlotInfo(string blockhash, CancellationToken token)
         {
             string parameters = AuraExtStorage.SlotInfoParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_consensus_slots.Slot, Substrate.NetApi.Model.Types.Primitive.U32>>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_consensus_slots.Slot, Substrate.NetApi.Model.Types.Primitive.U32>>(parameters, blockhash, token);
             return result;
         }
     }
     
+    /// <summary>
+    /// >> AuraExtCalls
+    /// </summary>
     public sealed class AuraExtCalls
     {
     }
     
+    /// <summary>
+    /// >> AuraExtConstants
+    /// </summary>
     public sealed class AuraExtConstants
     {
     }

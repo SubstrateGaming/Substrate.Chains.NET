@@ -15,29 +15,55 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_palle
 {
     
     
+    /// <summary>
+    /// >> Event
+    /// The `Event` enum of this pallet
+    /// </summary>
     public enum Event
     {
         
+        /// <summary>
+        /// >> ValidationFunctionStored
+        /// The validation function has been scheduled to apply.
+        /// </summary>
         ValidationFunctionStored = 0,
         
+        /// <summary>
+        /// >> ValidationFunctionApplied
+        /// The validation function was applied as of the contained relay chain block number.
+        /// </summary>
         ValidationFunctionApplied = 1,
         
+        /// <summary>
+        /// >> ValidationFunctionDiscarded
+        /// The relay-chain aborted the upgrade process.
+        /// </summary>
         ValidationFunctionDiscarded = 2,
         
-        UpgradeAuthorized = 3,
+        /// <summary>
+        /// >> DownwardMessagesReceived
+        /// Some downward messages have been received and will be processed.
+        /// </summary>
+        DownwardMessagesReceived = 3,
         
-        DownwardMessagesReceived = 4,
+        /// <summary>
+        /// >> DownwardMessagesProcessed
+        /// Downward messages were processed using the given weight.
+        /// </summary>
+        DownwardMessagesProcessed = 4,
         
-        DownwardMessagesProcessed = 5,
-        
-        UpwardMessageSent = 6,
+        /// <summary>
+        /// >> UpwardMessageSent
+        /// An upward message was sent to the relay chain.
+        /// </summary>
+        UpwardMessageSent = 5,
     }
     
     /// <summary>
-    /// >> 30 - Variant[cumulus_pallet_parachain_system.pallet.Event]
+    /// >> 31 - Variant[cumulus_pallet_parachain_system.pallet.Event]
     /// The `Event` enum of this pallet
     /// </summary>
-    public sealed class EnumEvent : BaseEnumExt<Event, BaseVoid, Substrate.NetApi.Model.Types.Primitive.U32, BaseVoid, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Primitive.U32, BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.primitive_types.H256>, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.Arr32U8>>
+    public sealed class EnumEvent : BaseEnumExt<Event, BaseVoid, Substrate.NetApi.Model.Types.Primitive.U32, BaseVoid, Substrate.NetApi.Model.Types.Primitive.U32, BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.primitive_types.H256>, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.Arr32U8>>
     {
     }
 }

@@ -18,7 +18,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_palle
     
     
     /// <summary>
-    /// >> 235 - Composite[cumulus_pallet_xcmp_queue.OutboundChannelDetails]
+    /// >> 267 - Composite[cumulus_pallet_xcmp_queue.OutboundChannelDetails]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class OutboundChannelDetails : BaseType
@@ -27,93 +27,31 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_palle
         /// <summary>
         /// >> recipient
         /// </summary>
-        private Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id _recipient;
-        
+        public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id Recipient { get; set; }
         /// <summary>
         /// >> state
         /// </summary>
-        private Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue.EnumOutboundState _state;
-        
+        public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue.EnumOutboundState State { get; set; }
         /// <summary>
         /// >> signals_exist
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.Bool _signalsExist;
-        
+        public Substrate.NetApi.Model.Types.Primitive.Bool SignalsExist { get; set; }
         /// <summary>
         /// >> first_index
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U16 _firstIndex;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U16 FirstIndex { get; set; }
         /// <summary>
         /// >> last_index
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U16 _lastIndex;
+        public Substrate.NetApi.Model.Types.Primitive.U16 LastIndex { get; set; }
         
-        public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id Recipient
-        {
-            get
-            {
-                return this._recipient;
-            }
-            set
-            {
-                this._recipient = value;
-            }
-        }
-        
-        public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue.EnumOutboundState State
-        {
-            get
-            {
-                return this._state;
-            }
-            set
-            {
-                this._state = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.Bool SignalsExist
-        {
-            get
-            {
-                return this._signalsExist;
-            }
-            set
-            {
-                this._signalsExist = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U16 FirstIndex
-        {
-            get
-            {
-                return this._firstIndex;
-            }
-            set
-            {
-                this._firstIndex = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U16 LastIndex
-        {
-            get
-            {
-                return this._lastIndex;
-            }
-            set
-            {
-                this._lastIndex = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "OutboundChannelDetails";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -125,6 +63,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_palle
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
@@ -141,7 +80,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_palle
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];
-            System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
+            global::System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
         }
     }
 }

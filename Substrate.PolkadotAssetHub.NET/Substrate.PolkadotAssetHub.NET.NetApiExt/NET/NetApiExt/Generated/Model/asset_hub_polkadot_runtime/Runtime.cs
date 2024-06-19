@@ -18,30 +18,33 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.asset_hub_pol
     
     
     /// <summary>
-    /// >> 406 - Composite[asset_hub_polkadot_runtime.Runtime]
+    /// >> 467 - Composite[asset_hub_polkadot_runtime.Runtime]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Runtime : BaseType
     {
         
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "Runtime";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];
-            System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
+            global::System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
         }
     }
 }

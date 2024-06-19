@@ -165,7 +165,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestService.Generated.Controller
         ///  Item attribute approvals.
         /// </summary>
         [HttpGet("ItemAttributesApprovalsOf")]
-        [ProducesResponseType(typeof(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSet), 200)]
+        [ProducesResponseType(typeof(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSetT2), 200)]
         [StorageKeyBuilder(typeof(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage.NftsStorage), "ItemAttributesApprovalsOfParams", typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>))]
         public IActionResult GetItemAttributesApprovalsOf(string key)
         {

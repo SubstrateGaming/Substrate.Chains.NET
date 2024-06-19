@@ -15,14 +15,22 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_utilit
 {
     
     
+    /// <summary>
+    /// >> Error
+    /// The `Error` enum of this pallet.
+    /// </summary>
     public enum Error
     {
         
+        /// <summary>
+        /// >> TooManyCalls
+        /// Too many calls batched.
+        /// </summary>
         TooManyCalls = 0,
     }
     
     /// <summary>
-    /// >> 334 - Variant[pallet_utility.pallet.Error]
+    /// >> 389 - Variant[pallet_utility.pallet.Error]
     /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>

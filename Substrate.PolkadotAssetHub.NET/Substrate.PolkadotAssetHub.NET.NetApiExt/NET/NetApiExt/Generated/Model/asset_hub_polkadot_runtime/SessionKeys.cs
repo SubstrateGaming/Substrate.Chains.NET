@@ -18,7 +18,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.asset_hub_pol
     
     
     /// <summary>
-    /// >> 216 - Composite[asset_hub_polkadot_runtime.SessionKeys]
+    /// >> 252 - Composite[asset_hub_polkadot_runtime.SessionKeys]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class SessionKeys : BaseType
@@ -27,25 +27,15 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.asset_hub_pol
         /// <summary>
         /// >> aura
         /// </summary>
-        private Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_consensus_aura.ed25519.app_ed25519.Public _aura;
+        public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_consensus_aura.ed25519.app_ed25519.Public Aura { get; set; }
         
-        public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_consensus_aura.ed25519.app_ed25519.Public Aura
-        {
-            get
-            {
-                return this._aura;
-            }
-            set
-            {
-                this._aura = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "SessionKeys";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -53,6 +43,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.asset_hub_pol
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
@@ -61,7 +52,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.asset_hub_pol
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];
-            System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
+            global::System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
         }
     }
 }

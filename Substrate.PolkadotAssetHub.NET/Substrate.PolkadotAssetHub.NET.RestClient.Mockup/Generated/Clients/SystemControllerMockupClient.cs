@@ -91,5 +91,9 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "System/ExecutionPhase", value.Encode(), Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage.SystemStorage.ExecutionPhaseParams());
       }
+      public async Task<bool> SetAuthorizedUpgrade(CodeUpgradeAuthorization value)
+      {
+         return await SendMockupRequestAsync(_httpClient, "System/AuthorizedUpgrade", value.Encode(), Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage.SystemStorage.AuthorizedUpgradeParams());
+      }
    }
 }

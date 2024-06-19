@@ -15,18 +15,30 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_nfts.t
 {
     
     
+    /// <summary>
+    /// >> ItemSetting
+    /// </summary>
     public enum ItemSetting
     {
         
+        /// <summary>
+        /// >> Transferable
+        /// </summary>
         Transferable = 1,
         
+        /// <summary>
+        /// >> UnlockedMetadata
+        /// </summary>
         UnlockedMetadata = 2,
         
+        /// <summary>
+        /// >> UnlockedAttributes
+        /// </summary>
         UnlockedAttributes = 4,
     }
     
     /// <summary>
-    /// >> 311 - Variant[pallet_nfts.types.ItemSetting]
+    /// >> 363 - Variant[pallet_nfts.types.ItemSetting]
     /// </summary>
     public sealed class EnumItemSetting : BaseEnum<ItemSetting>
     {

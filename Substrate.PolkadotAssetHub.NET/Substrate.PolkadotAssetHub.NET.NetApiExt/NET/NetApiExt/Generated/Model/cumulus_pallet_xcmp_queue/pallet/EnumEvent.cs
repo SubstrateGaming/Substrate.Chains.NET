@@ -15,29 +15,25 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_palle
 {
     
     
+    /// <summary>
+    /// >> Event
+    /// The `Event` enum of this pallet
+    /// </summary>
     public enum Event
     {
         
-        Success = 0,
-        
-        Fail = 1,
-        
-        BadVersion = 2,
-        
-        BadFormat = 3,
-        
-        XcmpMessageSent = 4,
-        
-        OverweightEnqueued = 5,
-        
-        OverweightServiced = 6,
+        /// <summary>
+        /// >> XcmpMessageSent
+        /// An HRMP message was sent to a sibling parachain.
+        /// </summary>
+        XcmpMessageSent = 0,
     }
     
     /// <summary>
-    /// >> 40 - Variant[cumulus_pallet_xcmp_queue.pallet.Event]
+    /// >> 51 - Variant[cumulus_pallet_xcmp_queue.pallet.Event]
     /// The `Event` enum of this pallet
     /// </summary>
-    public sealed class EnumEvent : BaseEnumExt<Event, BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.Arr32U8, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.Arr32U8, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>, BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.Arr32U8, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.Arr32U8, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v3.traits.EnumError, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.Arr32U8, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.Arr32U8, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.Arr32U8, BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U64, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U64, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>>
+    public sealed class EnumEvent : BaseEnumExt<Event, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.Arr32U8>
     {
     }
 }

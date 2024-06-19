@@ -15,14 +15,14 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Generated.Clients
    using Substrate.NetApi.Model.Types.Base;
    using Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.unincluded_segment;
    using Substrate.NetApi.Model.Types.Primitive;
-   using Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v5;
+   using Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v6;
    using Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_trie.storage_proof;
    using Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.relay_state_snapshot;
    using Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_primitives_parachain_inherent;
    using Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base;
    using Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_core_primitives;
+   using Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point;
    using Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_weights.weight_v2;
-   using Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system;
    using Substrate.PolkadotAssetHub.NET.RestClient.Generated.Interfaces;
    
    public sealed class ParachainSystemControllerClient : BaseClient, IParachainSystemControllerClient
@@ -186,6 +186,14 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("ParachainSystem.PendingUpwardMessages");
       }
+      public async Task<FixedU128> GetUpwardDeliveryFeeFactor()
+      {
+         return await SendRequestAsync<FixedU128>(_httpClient, "parachainsystem/upwarddeliveryfeefactor");
+      }
+      public async Task<bool> SubscribeUpwardDeliveryFeeFactor()
+      {
+         return await _subscriptionClient.SubscribeAsync("ParachainSystem.UpwardDeliveryFeeFactor");
+      }
       public async Task<U32> GetAnnouncedHrmpMessagesPerCandidate()
       {
          return await SendRequestAsync<U32>(_httpClient, "parachainsystem/announcedhrmpmessagespercandidate");
@@ -209,14 +217,6 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Generated.Clients
       public async Task<bool> SubscribeReservedDmpWeightOverride()
       {
          return await _subscriptionClient.SubscribeAsync("ParachainSystem.ReservedDmpWeightOverride");
-      }
-      public async Task<CodeUpgradeAuthorization> GetAuthorizedUpgrade()
-      {
-         return await SendRequestAsync<CodeUpgradeAuthorization>(_httpClient, "parachainsystem/authorizedupgrade");
-      }
-      public async Task<bool> SubscribeAuthorizedUpgrade()
-      {
-         return await _subscriptionClient.SubscribeAsync("ParachainSystem.AuthorizedUpgrade");
       }
       public async Task<BaseVec<U8>> GetCustomValidationHeadData()
       {

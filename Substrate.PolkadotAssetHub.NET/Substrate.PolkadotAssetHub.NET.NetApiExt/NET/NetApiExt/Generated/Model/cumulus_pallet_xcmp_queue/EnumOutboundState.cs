@@ -15,16 +15,25 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_palle
 {
     
     
+    /// <summary>
+    /// >> OutboundState
+    /// </summary>
     public enum OutboundState
     {
         
+        /// <summary>
+        /// >> Ok
+        /// </summary>
         Ok = 0,
         
+        /// <summary>
+        /// >> Suspended
+        /// </summary>
         Suspended = 1,
     }
     
     /// <summary>
-    /// >> 236 - Variant[cumulus_pallet_xcmp_queue.OutboundState]
+    /// >> 268 - Variant[cumulus_pallet_xcmp_queue.OutboundState]
     /// </summary>
     public sealed class EnumOutboundState : BaseEnum<OutboundState>
     {

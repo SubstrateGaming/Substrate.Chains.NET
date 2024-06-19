@@ -18,7 +18,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_palle
     
     
     /// <summary>
-    /// >> 147 - Composite[cumulus_pallet_parachain_system.unincluded_segment.Ancestor]
+    /// >> 176 - Composite[cumulus_pallet_parachain_system.unincluded_segment.Ancestor]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Ancestor : BaseType
@@ -27,59 +27,23 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_palle
         /// <summary>
         /// >> used_bandwidth
         /// </summary>
-        private Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.unincluded_segment.UsedBandwidth _usedBandwidth;
-        
+        public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.unincluded_segment.UsedBandwidth UsedBandwidth { get; set; }
         /// <summary>
         /// >> para_head_hash
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.primitive_types.H256> _paraHeadHash;
-        
+        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.primitive_types.H256> ParaHeadHash { get; set; }
         /// <summary>
         /// >> consumed_go_ahead_signal
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.EnumUpgradeGoAhead> _consumedGoAheadSignal;
+        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumUpgradeGoAhead> ConsumedGoAheadSignal { get; set; }
         
-        public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.unincluded_segment.UsedBandwidth UsedBandwidth
-        {
-            get
-            {
-                return this._usedBandwidth;
-            }
-            set
-            {
-                this._usedBandwidth = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.primitive_types.H256> ParaHeadHash
-        {
-            get
-            {
-                return this._paraHeadHash;
-            }
-            set
-            {
-                this._paraHeadHash = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.EnumUpgradeGoAhead> ConsumedGoAheadSignal
-        {
-            get
-            {
-                return this._consumedGoAheadSignal;
-            }
-            set
-            {
-                this._consumedGoAheadSignal = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "Ancestor";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -89,6 +53,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_palle
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
@@ -96,12 +61,12 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_palle
             UsedBandwidth.Decode(byteArray, ref p);
             ParaHeadHash = new Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.primitive_types.H256>();
             ParaHeadHash.Decode(byteArray, ref p);
-            ConsumedGoAheadSignal = new Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.EnumUpgradeGoAhead>();
+            ConsumedGoAheadSignal = new Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumUpgradeGoAhead>();
             ConsumedGoAheadSignal.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];
-            System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
+            global::System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
         }
     }
 }

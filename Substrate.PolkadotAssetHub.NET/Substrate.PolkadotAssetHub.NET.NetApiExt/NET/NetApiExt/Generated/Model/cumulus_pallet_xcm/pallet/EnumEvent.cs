@@ -15,21 +15,40 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_palle
 {
     
     
+    /// <summary>
+    /// >> Event
+    /// The `Event` enum of this pallet
+    /// </summary>
     public enum Event
     {
         
+        /// <summary>
+        /// >> InvalidFormat
+        /// Downward message is invalid XCM.
+        /// \[ id \]
+        /// </summary>
         InvalidFormat = 0,
         
+        /// <summary>
+        /// >> UnsupportedVersion
+        /// Downward message is unsupported version of XCM.
+        /// \[ id \]
+        /// </summary>
         UnsupportedVersion = 1,
         
+        /// <summary>
+        /// >> ExecutedDownward
+        /// Downward message executed with the given outcome.
+        /// \[ id, outcome \]
+        /// </summary>
         ExecutedDownward = 2,
     }
     
     /// <summary>
-    /// >> 99 - Variant[cumulus_pallet_xcm.pallet.Event]
+    /// >> 117 - Variant[cumulus_pallet_xcm.pallet.Event]
     /// The `Event` enum of this pallet
     /// </summary>
-    public sealed class EnumEvent : BaseEnumExt<Event, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.Arr32U8, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.Arr32U8, BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.Arr32U8, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v3.traits.EnumOutcome>>
+    public sealed class EnumEvent : BaseEnumExt<Event, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.Arr32U8, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.Arr32U8, BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.Arr32U8, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v4.traits.EnumOutcome>>
     {
     }
 }

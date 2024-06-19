@@ -18,7 +18,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_palle
     
     
     /// <summary>
-    /// >> 148 - Composite[cumulus_pallet_parachain_system.unincluded_segment.UsedBandwidth]
+    /// >> 177 - Composite[cumulus_pallet_parachain_system.unincluded_segment.UsedBandwidth]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class UsedBandwidth : BaseType
@@ -27,59 +27,23 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_palle
         /// <summary>
         /// >> ump_msg_count
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _umpMsgCount;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 UmpMsgCount { get; set; }
         /// <summary>
         /// >> ump_total_bytes
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _umpTotalBytes;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 UmpTotalBytes { get; set; }
         /// <summary>
         /// >> hrmp_outgoing
         /// </summary>
-        private Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.BTreeMapT1 _hrmpOutgoing;
+        public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.BTreeMapT1 HrmpOutgoing { get; set; }
         
-        public Substrate.NetApi.Model.Types.Primitive.U32 UmpMsgCount
-        {
-            get
-            {
-                return this._umpMsgCount;
-            }
-            set
-            {
-                this._umpMsgCount = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 UmpTotalBytes
-        {
-            get
-            {
-                return this._umpTotalBytes;
-            }
-            set
-            {
-                this._umpTotalBytes = value;
-            }
-        }
-        
-        public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.BTreeMapT1 HrmpOutgoing
-        {
-            get
-            {
-                return this._hrmpOutgoing;
-            }
-            set
-            {
-                this._hrmpOutgoing = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "UsedBandwidth";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -89,6 +53,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_palle
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
@@ -101,7 +66,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_palle
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];
-            System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
+            global::System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
         }
     }
 }

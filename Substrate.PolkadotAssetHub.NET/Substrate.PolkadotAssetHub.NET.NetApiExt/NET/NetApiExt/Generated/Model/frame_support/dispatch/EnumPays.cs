@@ -15,11 +15,20 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.frame_support
 {
     
     
+    /// <summary>
+    /// >> Pays
+    /// </summary>
     public enum Pays
     {
         
+        /// <summary>
+        /// >> Yes
+        /// </summary>
         Yes = 0,
         
+        /// <summary>
+        /// >> No
+        /// </summary>
         No = 1,
     }
     

@@ -15,18 +15,30 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_assets
 {
     
     
+    /// <summary>
+    /// >> AssetStatus
+    /// </summary>
     public enum AssetStatus
     {
         
+        /// <summary>
+        /// >> Live
+        /// </summary>
         Live = 0,
         
+        /// <summary>
+        /// >> Frozen
+        /// </summary>
         Frozen = 1,
         
+        /// <summary>
+        /// >> Destroying
+        /// </summary>
         Destroying = 2,
     }
     
     /// <summary>
-    /// >> 349 - Variant[pallet_assets.types.AssetStatus]
+    /// >> 404 - Variant[pallet_assets.types.AssetStatus]
     /// </summary>
     public sealed class EnumAssetStatus : BaseEnum<AssetStatus>
     {

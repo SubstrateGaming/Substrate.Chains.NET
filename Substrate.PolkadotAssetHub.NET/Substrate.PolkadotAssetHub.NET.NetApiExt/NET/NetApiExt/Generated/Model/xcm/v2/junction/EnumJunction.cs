@@ -15,30 +15,60 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v2.juncti
 {
     
     
+    /// <summary>
+    /// >> Junction
+    /// </summary>
     public enum Junction
     {
         
+        /// <summary>
+        /// >> Parachain
+        /// </summary>
         Parachain = 0,
         
+        /// <summary>
+        /// >> AccountId32
+        /// </summary>
         AccountId32 = 1,
         
+        /// <summary>
+        /// >> AccountIndex64
+        /// </summary>
         AccountIndex64 = 2,
         
+        /// <summary>
+        /// >> AccountKey20
+        /// </summary>
         AccountKey20 = 3,
         
+        /// <summary>
+        /// >> PalletInstance
+        /// </summary>
         PalletInstance = 4,
         
+        /// <summary>
+        /// >> GeneralIndex
+        /// </summary>
         GeneralIndex = 5,
         
+        /// <summary>
+        /// >> GeneralKey
+        /// </summary>
         GeneralKey = 6,
         
+        /// <summary>
+        /// >> OnlyChild
+        /// </summary>
         OnlyChild = 7,
         
+        /// <summary>
+        /// >> Plurality
+        /// </summary>
         Plurality = 8,
     }
     
     /// <summary>
-    /// >> 91 - Variant[xcm.v2.junction.Junction]
+    /// >> 103 - Variant[xcm.v2.junction.Junction]
     /// </summary>
     public sealed class EnumJunction : BaseEnumExt<Junction, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>, BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v2.EnumNetworkId, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.Arr32U8>, BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v2.EnumNetworkId, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U64>>, BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v2.EnumNetworkId, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.Arr20U8>, Substrate.NetApi.Model.Types.Primitive.U8, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128>, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT1, BaseVoid, BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v2.EnumBodyId, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v2.EnumBodyPart>>
     {

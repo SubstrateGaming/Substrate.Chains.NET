@@ -15,18 +15,30 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_runtime
 {
     
     
+    /// <summary>
+    /// >> MultiSignature
+    /// </summary>
     public enum MultiSignature
     {
         
+        /// <summary>
+        /// >> Ed25519
+        /// </summary>
         Ed25519 = 0,
         
+        /// <summary>
+        /// >> Sr25519
+        /// </summary>
         Sr25519 = 1,
         
+        /// <summary>
+        /// >> Ecdsa
+        /// </summary>
         Ecdsa = 2,
     }
     
     /// <summary>
-    /// >> 321 - Variant[sp_runtime.MultiSignature]
+    /// >> 373 - Variant[sp_runtime.MultiSignature]
     /// </summary>
     public sealed class EnumMultiSignature : BaseEnumExt<MultiSignature, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.ed25519.Signature, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.sr25519.Signature, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.ecdsa.Signature>
     {

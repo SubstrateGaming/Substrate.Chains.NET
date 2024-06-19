@@ -15,20 +15,35 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.asset_hub_pol
 {
     
     
+    /// <summary>
+    /// >> OriginCaller
+    /// </summary>
     public enum OriginCaller
     {
         
+        /// <summary>
+        /// >> system
+        /// </summary>
         system = 0,
         
+        /// <summary>
+        /// >> PolkadotXcm
+        /// </summary>
         PolkadotXcm = 31,
         
+        /// <summary>
+        /// >> CumulusXcm
+        /// </summary>
         CumulusXcm = 32,
         
+        /// <summary>
+        /// >> Void
+        /// </summary>
         Void = 3,
     }
     
     /// <summary>
-    /// >> 329 - Variant[asset_hub_polkadot_runtime.OriginCaller]
+    /// >> 384 - Variant[asset_hub_polkadot_runtime.OriginCaller]
     /// </summary>
     public sealed class EnumOriginCaller : BaseEnumExt<OriginCaller, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.frame_support.dispatch.EnumRawOrigin, BaseVoid, BaseVoid, Substrate.NetApi.Model.Types.Base.BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_xcm.pallet.EnumOrigin, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_pallet_xcm.pallet.EnumOrigin>
     {

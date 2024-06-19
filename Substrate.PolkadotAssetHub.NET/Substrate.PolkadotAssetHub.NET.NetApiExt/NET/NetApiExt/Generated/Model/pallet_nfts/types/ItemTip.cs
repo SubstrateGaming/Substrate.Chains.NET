@@ -18,7 +18,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_nfts.t
     
     
     /// <summary>
-    /// >> 318 - Composite[pallet_nfts.types.ItemTip]
+    /// >> 370 - Composite[pallet_nfts.types.ItemTip]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class ItemTip : BaseType
@@ -27,76 +27,27 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_nfts.t
         /// <summary>
         /// >> collection
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _collection;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 Collection { get; set; }
         /// <summary>
         /// >> item
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _item;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 Item { get; set; }
         /// <summary>
         /// >> receiver
         /// </summary>
-        private Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 _receiver;
-        
+        public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 Receiver { get; set; }
         /// <summary>
         /// >> amount
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U128 _amount;
+        public Substrate.NetApi.Model.Types.Primitive.U128 Amount { get; set; }
         
-        public Substrate.NetApi.Model.Types.Primitive.U32 Collection
-        {
-            get
-            {
-                return this._collection;
-            }
-            set
-            {
-                this._collection = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 Item
-        {
-            get
-            {
-                return this._item;
-            }
-            set
-            {
-                this._item = value;
-            }
-        }
-        
-        public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 Receiver
-        {
-            get
-            {
-                return this._receiver;
-            }
-            set
-            {
-                this._receiver = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U128 Amount
-        {
-            get
-            {
-                return this._amount;
-            }
-            set
-            {
-                this._amount = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "ItemTip";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -107,6 +58,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_nfts.t
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
@@ -121,7 +73,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_nfts.t
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];
-            System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
+            global::System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
         }
     }
 }

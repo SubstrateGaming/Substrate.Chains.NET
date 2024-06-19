@@ -21,22 +21,34 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> AssetTxPaymentStorage
+    /// </summary>
     public sealed class AssetTxPaymentStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> AssetTxPaymentStorage Constructor
+        /// </summary>
         public AssetTxPaymentStorage(SubstrateClientExt client)
         {
             this._client = client;
         }
     }
     
+    /// <summary>
+    /// >> AssetTxPaymentCalls
+    /// </summary>
     public sealed class AssetTxPaymentCalls
     {
     }
     
+    /// <summary>
+    /// >> AssetTxPaymentConstants
+    /// </summary>
     public sealed class AssetTxPaymentConstants
     {
     }

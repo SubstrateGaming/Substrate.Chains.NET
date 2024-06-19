@@ -15,16 +15,25 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v2.multia
 {
     
     
+    /// <summary>
+    /// >> Fungibility
+    /// </summary>
     public enum Fungibility
     {
         
+        /// <summary>
+        /// >> Fungible
+        /// </summary>
         Fungible = 0,
         
+        /// <summary>
+        /// >> NonFungible
+        /// </summary>
         NonFungible = 1,
     }
     
     /// <summary>
-    /// >> 96 - Variant[xcm.v2.multiasset.Fungibility]
+    /// >> 108 - Variant[xcm.v2.multiasset.Fungibility]
     /// </summary>
     public sealed class EnumFungibility : BaseEnumExt<Fungibility, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128>, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v2.multiasset.EnumAssetInstance>
     {

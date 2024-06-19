@@ -18,30 +18,33 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.frame_system.
     
     
     /// <summary>
-    /// >> 397 - Composite[frame_system.extensions.check_non_zero_sender.CheckNonZeroSender]
+    /// >> 458 - Composite[frame_system.extensions.check_non_zero_sender.CheckNonZeroSender]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class CheckNonZeroSender : BaseType
     {
         
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "CheckNonZeroSender";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];
-            System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
+            global::System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
         }
     }
 }

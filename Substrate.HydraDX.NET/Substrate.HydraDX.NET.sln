@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Substrate.HydraDX.NET.RestService", "Substrate.HydraDX.NET.RestService\Substrate.HydraDX.NET.RestService.csproj", "{F93F71A8-50BA-481C-B2A2-9705D51EBDAA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Substrate.HydraDX.NET.Integration", "Substrate.HydraDX.NET.Integration\Substrate.HydraDX.NET.Integration.csproj", "{5053037A-AA26-4931-8354-EBD4FE678F18}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Substrate.HydraDX.NET.RestClient", "Substrate.HydraDX.NET.RestClient\Substrate.HydraDX.NET.RestClient.csproj", "{117FCC29-BA10-4883-9C54-898AB4EC85C6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Substrate.HydraDX.NET.RestClient.Mockup", "Substrate.HydraDX.NET.RestClient.Mockup\Substrate.HydraDX.NET.RestClient.Mockup.csproj", "{3E5A0387-5754-4C14-AF67-43D67BF9965A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Substrate.HydraDX.NET.RestClient.Test", "Substrate.HydraDX.NET.RestClient.Test\Substrate.HydraDX.NET.RestClient.Test.csproj", "{1CFB54CC-1721-4D34-A8FE-38F5C1199025}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Substrate.HydraDX.NET.NetApiExt", "Substrate.HydraDX.NET.NetApiExt\Substrate.HydraDX.NET.NetApiExt.csproj", "{556064E2-E68B-46E3-AB0D-8EECDC80BA37}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F93F71A8-50BA-481C-B2A2-9705D51EBDAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F93F71A8-50BA-481C-B2A2-9705D51EBDAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F93F71A8-50BA-481C-B2A2-9705D51EBDAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F93F71A8-50BA-481C-B2A2-9705D51EBDAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5053037A-AA26-4931-8354-EBD4FE678F18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5053037A-AA26-4931-8354-EBD4FE678F18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5053037A-AA26-4931-8354-EBD4FE678F18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5053037A-AA26-4931-8354-EBD4FE678F18}.Release|Any CPU.Build.0 = Release|Any CPU
+		{117FCC29-BA10-4883-9C54-898AB4EC85C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{117FCC29-BA10-4883-9C54-898AB4EC85C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{117FCC29-BA10-4883-9C54-898AB4EC85C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{117FCC29-BA10-4883-9C54-898AB4EC85C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E5A0387-5754-4C14-AF67-43D67BF9965A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E5A0387-5754-4C14-AF67-43D67BF9965A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E5A0387-5754-4C14-AF67-43D67BF9965A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E5A0387-5754-4C14-AF67-43D67BF9965A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1CFB54CC-1721-4D34-A8FE-38F5C1199025}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CFB54CC-1721-4D34-A8FE-38F5C1199025}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CFB54CC-1721-4D34-A8FE-38F5C1199025}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CFB54CC-1721-4D34-A8FE-38F5C1199025}.Release|Any CPU.Build.0 = Release|Any CPU
+		{556064E2-E68B-46E3-AB0D-8EECDC80BA37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{556064E2-E68B-46E3-AB0D-8EECDC80BA37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{556064E2-E68B-46E3-AB0D-8EECDC80BA37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{556064E2-E68B-46E3-AB0D-8EECDC80BA37}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

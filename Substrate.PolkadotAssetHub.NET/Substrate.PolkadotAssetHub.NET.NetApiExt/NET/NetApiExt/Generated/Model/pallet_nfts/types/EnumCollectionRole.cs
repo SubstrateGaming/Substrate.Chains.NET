@@ -15,18 +15,30 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_nfts.t
 {
     
     
+    /// <summary>
+    /// >> CollectionRole
+    /// </summary>
     public enum CollectionRole
     {
         
+        /// <summary>
+        /// >> Issuer
+        /// </summary>
         Issuer = 1,
         
+        /// <summary>
+        /// >> Freezer
+        /// </summary>
         Freezer = 2,
         
+        /// <summary>
+        /// >> Admin
+        /// </summary>
         Admin = 4,
     }
     
     /// <summary>
-    /// >> 371 - Variant[pallet_nfts.types.CollectionRole]
+    /// >> 426 - Variant[pallet_nfts.types.CollectionRole]
     /// </summary>
     public sealed class EnumCollectionRole : BaseEnum<CollectionRole>
     {

@@ -15,14 +15,23 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_sessio
 {
     
     
+    /// <summary>
+    /// >> Event
+    /// The `Event` enum of this pallet
+    /// </summary>
     public enum Event
     {
         
+        /// <summary>
+        /// >> NewSession
+        /// New session has happened. Note that the argument is the session index, not the
+        /// block number as the type might suggest.
+        /// </summary>
         NewSession = 0,
     }
     
     /// <summary>
-    /// >> 39 - Variant[pallet_session.pallet.Event]
+    /// >> 50 - Variant[pallet_session.pallet.Event]
     /// The `Event` enum of this pallet
     /// </summary>
     public sealed class EnumEvent : BaseEnumExt<Event, Substrate.NetApi.Model.Types.Primitive.U32>

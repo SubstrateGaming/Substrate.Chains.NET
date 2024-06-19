@@ -1,11 +1,12 @@
 {
   "projects": {
     "net_api": "Substrate.PolkadotAssetHub.NET.NetApiExt",
+    "net_integration": "Substrate.PolkadotAssetHub.NET.Integration",
     "rest_service": "Substrate.PolkadotAssetHub.NET.RestService",
     "rest_client": "Substrate.PolkadotAssetHub.NET.RestClient"
   },
    "metadata": {
-      "websocket": "wss://polkadot-asset-hub-rpc.polkadot.io"
+      "websocket": "wss://asset-hub-polkadot-rpc.dwellir.com"
    },
   "rest_client_settings": {
     "service_assembly": "Substrate.PolkadotAssetHub.NET.RestService.dll"

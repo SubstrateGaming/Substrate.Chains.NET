@@ -108,9 +108,9 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("Nfts.ItemPriceOf", Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage.NftsStorage.ItemPriceOfParams(key));
       }
-      public async Task<BoundedBTreeSet> GetItemAttributesApprovalsOf(BaseTuple<U32, U32> key)
+      public async Task<BoundedBTreeSetT2> GetItemAttributesApprovalsOf(BaseTuple<U32, U32> key)
       {
-         return await SendRequestAsync<BoundedBTreeSet>(_httpClient, "nfts/itemattributesapprovalsof", Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage.NftsStorage.ItemAttributesApprovalsOfParams(key));
+         return await SendRequestAsync<BoundedBTreeSetT2>(_httpClient, "nfts/itemattributesapprovalsof", Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage.NftsStorage.ItemAttributesApprovalsOfParams(key));
       }
       public async Task<bool> SubscribeItemAttributesApprovalsOf(BaseTuple<U32, U32> key)
       {

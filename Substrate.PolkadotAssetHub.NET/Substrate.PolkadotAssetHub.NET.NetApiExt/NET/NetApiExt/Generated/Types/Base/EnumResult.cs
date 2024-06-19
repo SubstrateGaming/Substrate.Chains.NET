@@ -15,16 +15,25 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base
 {
     
     
+    /// <summary>
+    /// >> Result
+    /// </summary>
     public enum Result
     {
         
+        /// <summary>
+        /// >> Ok
+        /// </summary>
         Ok = 0,
         
+        /// <summary>
+        /// >> Err
+        /// </summary>
         Err = 1,
     }
     
     /// <summary>
-    /// >> 102 - Variant[Result]
+    /// >> 123 - Variant[Result]
     /// </summary>
     public sealed class EnumResult : BaseEnumExt<Result, Substrate.NetApi.Model.Types.Base.BaseTuple, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_runtime.EnumDispatchError>
     {

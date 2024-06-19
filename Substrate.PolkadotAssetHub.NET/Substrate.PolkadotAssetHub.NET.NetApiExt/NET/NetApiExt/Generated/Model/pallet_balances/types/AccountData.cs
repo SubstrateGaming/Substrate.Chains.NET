@@ -27,76 +27,27 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_balanc
         /// <summary>
         /// >> free
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U128 _free;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U128 Free { get; set; }
         /// <summary>
         /// >> reserved
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U128 _reserved;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U128 Reserved { get; set; }
         /// <summary>
         /// >> frozen
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U128 _frozen;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U128 Frozen { get; set; }
         /// <summary>
         /// >> flags
         /// </summary>
-        private Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_balances.types.ExtraFlags _flags;
+        public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_balances.types.ExtraFlags Flags { get; set; }
         
-        public Substrate.NetApi.Model.Types.Primitive.U128 Free
-        {
-            get
-            {
-                return this._free;
-            }
-            set
-            {
-                this._free = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U128 Reserved
-        {
-            get
-            {
-                return this._reserved;
-            }
-            set
-            {
-                this._reserved = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U128 Frozen
-        {
-            get
-            {
-                return this._frozen;
-            }
-            set
-            {
-                this._frozen = value;
-            }
-        }
-        
-        public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_balances.types.ExtraFlags Flags
-        {
-            get
-            {
-                return this._flags;
-            }
-            set
-            {
-                this._flags = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "AccountData";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -107,6 +58,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_balanc
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
@@ -121,7 +73,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_balanc
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];
-            System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
+            global::System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
         }
     }
 }

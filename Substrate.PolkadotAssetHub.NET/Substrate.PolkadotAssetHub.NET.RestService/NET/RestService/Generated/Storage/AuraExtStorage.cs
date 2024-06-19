@@ -32,7 +32,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestService.Generated.Storage
         ///  but we require the old authorities to verify the seal when validating a PoV. This will
         ///  always be updated to the latest AuRa authorities in `on_finalize`.
         /// </summary>
-        Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT13 GetAuthorities();
+        Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT14 GetAuthorities();
         
         /// <summary>
         /// >> SlotInfo
@@ -52,7 +52,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestService.Generated.Storage
         /// <summary>
         /// _authoritiesTypedStorage typed storage field
         /// </summary>
-        private TypedStorage<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT13> _authoritiesTypedStorage;
+        private TypedStorage<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT14> _authoritiesTypedStorage;
         
         /// <summary>
         /// _slotInfoTypedStorage typed storage field
@@ -64,14 +64,14 @@ namespace Substrate.PolkadotAssetHub.NET.RestService.Generated.Storage
         /// </summary>
         public AuraExtStorage(IStorageDataProvider storageDataProvider, List<IStorageChangeDelegate> storageChangeDelegates)
         {
-            this.AuthoritiesTypedStorage = new TypedStorage<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT13>("AuraExt.Authorities", storageDataProvider, storageChangeDelegates);
+            this.AuthoritiesTypedStorage = new TypedStorage<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT14>("AuraExt.Authorities", storageDataProvider, storageChangeDelegates);
             this.SlotInfoTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_consensus_slots.Slot, Substrate.NetApi.Model.Types.Primitive.U32>>("AuraExt.SlotInfo", storageDataProvider, storageChangeDelegates);
         }
         
         /// <summary>
         /// _authoritiesTypedStorage property
         /// </summary>
-        public TypedStorage<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT13> AuthoritiesTypedStorage
+        public TypedStorage<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT14> AuthoritiesTypedStorage
         {
             get
             {
@@ -124,7 +124,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestService.Generated.Storage
         ///  but we require the old authorities to verify the seal when validating a PoV. This will
         ///  always be updated to the latest AuRa authorities in `on_finalize`.
         /// </summary>
-        public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT13 GetAuthorities()
+        public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT14 GetAuthorities()
         {
             return AuthoritiesTypedStorage.Get();
         }

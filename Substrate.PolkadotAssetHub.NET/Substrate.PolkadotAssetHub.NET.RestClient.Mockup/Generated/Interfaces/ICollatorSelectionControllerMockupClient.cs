@@ -16,8 +16,8 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Mockup.Generated.Interfaces
    
    public interface ICollatorSelectionControllerMockupClient
    {
-      Task<bool> SetInvulnerables(BoundedVecT11 value);
-      Task<bool> SetCandidates(BoundedVecT12 value);
+      Task<bool> SetInvulnerables(BoundedVecT12 value);
+      Task<bool> SetCandidateList(BoundedVecT13 value);
       Task<bool> SetLastAuthoredBlock(U32 value, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
       Task<bool> SetDesiredCandidates(U32 value);
       Task<bool> SetCandidacyBond(U128 value);

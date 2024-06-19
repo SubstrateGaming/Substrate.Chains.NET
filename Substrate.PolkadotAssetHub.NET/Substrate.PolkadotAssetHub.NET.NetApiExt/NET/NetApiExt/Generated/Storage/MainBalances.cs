@@ -21,12 +21,18 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> BalancesStorage
+    /// </summary>
     public sealed class BalancesStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> BalancesStorage Constructor
+        /// </summary>
         public BalancesStorage(SubstrateClientExt client)
         {
             this._client = client;
@@ -66,10 +72,10 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
         /// >> TotalIssuance
         ///  The total units issued in the system.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U128> TotalIssuance(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U128> TotalIssuance(string blockhash, CancellationToken token)
         {
             string parameters = BalancesStorage.TotalIssuanceParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U128>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U128>(parameters, blockhash, token);
             return result;
         }
         
@@ -95,10 +101,10 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
         /// >> InactiveIssuance
         ///  The total units of outstanding deactivated balance in the system.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U128> InactiveIssuance(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U128> InactiveIssuance(string blockhash, CancellationToken token)
         {
             string parameters = BalancesStorage.InactiveIssuanceParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U128>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U128>(parameters, blockhash, token);
             return result;
         }
         
@@ -173,10 +179,10 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
         ///  `Balances` pallet, which uses a `StorageMap` to store balances data only.
         ///  NOTE: This is only used in the case that this pallet is used to store balances.
         /// </summary>
-        public async Task<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_balances.types.AccountData> Account(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, CancellationToken token)
+        public async Task<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_balances.types.AccountData> Account(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, string blockhash, CancellationToken token)
         {
             string parameters = BalancesStorage.AccountParams(key);
-            var result = await _client.GetStorageAsync<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_balances.types.AccountData>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_balances.types.AccountData>(parameters, blockhash, token);
             return result;
         }
         
@@ -206,10 +212,10 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
         ///  Any liquidity locks on some account balances.
         ///  NOTE: Should only be accessed when setting, changing and freeing a lock.
         /// </summary>
-        public async Task<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT2> Locks(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, CancellationToken token)
+        public async Task<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT2> Locks(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, string blockhash, CancellationToken token)
         {
             string parameters = BalancesStorage.LocksParams(key);
-            var result = await _client.GetStorageAsync<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT2>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT2>(parameters, blockhash, token);
             return result;
         }
         
@@ -237,10 +243,10 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
         /// >> Reserves
         ///  Named reserves on some account balances.
         /// </summary>
-        public async Task<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT8> Reserves(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, CancellationToken token)
+        public async Task<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT8> Reserves(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, string blockhash, CancellationToken token)
         {
             string parameters = BalancesStorage.ReservesParams(key);
-            var result = await _client.GetStorageAsync<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT8>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT8>(parameters, blockhash, token);
             return result;
         }
         
@@ -268,10 +274,10 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
         /// >> Holds
         ///  Holds on account balances.
         /// </summary>
-        public async Task<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9> Holds(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, CancellationToken token)
+        public async Task<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9> Holds(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, string blockhash, CancellationToken token)
         {
             string parameters = BalancesStorage.HoldsParams(key);
-            var result = await _client.GetStorageAsync<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9>(parameters, blockhash, token);
             return result;
         }
         
@@ -299,14 +305,17 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
         /// >> Freezes
         ///  Freeze locks on account balances.
         /// </summary>
-        public async Task<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10> Freezes(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, CancellationToken token)
+        public async Task<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10> Freezes(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, string blockhash, CancellationToken token)
         {
             string parameters = BalancesStorage.FreezesParams(key);
-            var result = await _client.GetStorageAsync<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10>(parameters, blockhash, token);
             return result;
         }
     }
     
+    /// <summary>
+    /// >> BalancesCalls
+    /// </summary>
     public sealed class BalancesCalls
     {
         
@@ -320,19 +329,6 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
             byteArray.AddRange(dest.Encode());
             byteArray.AddRange(value.Encode());
             return new Method(10, "Balances", 0, "transfer_allow_death", byteArray.ToArray());
-        }
-        
-        /// <summary>
-        /// >> set_balance_deprecated
-        /// Contains a variant per dispatchable extrinsic that this pallet has.
-        /// </summary>
-        public static Method SetBalanceDeprecated(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress who, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128> new_free, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128> old_reserved)
-        {
-            System.Collections.Generic.List<byte> byteArray = new List<byte>();
-            byteArray.AddRange(who.Encode());
-            byteArray.AddRange(new_free.Encode());
-            byteArray.AddRange(old_reserved.Encode());
-            return new Method(10, "Balances", 1, "set_balance_deprecated", byteArray.ToArray());
         }
         
         /// <summary>
@@ -396,18 +392,6 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
         }
         
         /// <summary>
-        /// >> transfer
-        /// Contains a variant per dispatchable extrinsic that this pallet has.
-        /// </summary>
-        public static Method Transfer(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress dest, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128> value)
-        {
-            System.Collections.Generic.List<byte> byteArray = new List<byte>();
-            byteArray.AddRange(dest.Encode());
-            byteArray.AddRange(value.Encode());
-            return new Method(10, "Balances", 7, "transfer", byteArray.ToArray());
-        }
-        
-        /// <summary>
         /// >> force_set_balance
         /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
@@ -418,8 +402,23 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
             byteArray.AddRange(new_free.Encode());
             return new Method(10, "Balances", 8, "force_set_balance", byteArray.ToArray());
         }
+        
+        /// <summary>
+        /// >> force_adjust_total_issuance
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
+        /// </summary>
+        public static Method ForceAdjustTotalIssuance(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_balances.types.EnumAdjustmentDirection direction, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128> delta)
+        {
+            System.Collections.Generic.List<byte> byteArray = new List<byte>();
+            byteArray.AddRange(direction.Encode());
+            byteArray.AddRange(delta.Encode());
+            return new Method(10, "Balances", 9, "force_adjust_total_issuance", byteArray.ToArray());
+        }
     }
     
+    /// <summary>
+    /// >> BalancesConstants
+    /// </summary>
     public sealed class BalancesConstants
     {
         
@@ -437,7 +436,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
         public Substrate.NetApi.Model.Types.Primitive.U128 ExistentialDeposit()
         {
             var result = new Substrate.NetApi.Model.Types.Primitive.U128();
-            result.Create("0x00CA9A3B000000000000000000000000");
+            result.Create("0x00E1F505000000000000000000000000");
             return result;
         }
         
@@ -465,17 +464,6 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
         }
         
         /// <summary>
-        /// >> MaxHolds
-        ///  The maximum number of holds that can exist on an account at any time.
-        /// </summary>
-        public Substrate.NetApi.Model.Types.Primitive.U32 MaxHolds()
-        {
-            var result = new Substrate.NetApi.Model.Types.Primitive.U32();
-            result.Create("0x00000000");
-            return result;
-        }
-        
-        /// <summary>
         /// >> MaxFreezes
         ///  The maximum number of individual freeze locks that can exist on an account at any time.
         /// </summary>
@@ -487,6 +475,9 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> BalancesErrors
+    /// </summary>
     public enum BalancesErrors
     {
         
@@ -540,7 +531,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> TooManyHolds
-        /// Number of holds exceed `MaxHolds`.
+        /// Number of holds exceed `VariantCountOf<T::RuntimeHoldReason>`.
         /// </summary>
         TooManyHolds,
         
@@ -549,5 +540,17 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
         /// Number of freezes exceed `MaxFreezes`.
         /// </summary>
         TooManyFreezes,
+        
+        /// <summary>
+        /// >> IssuanceDeactivated
+        /// The issuance cannot be modified since it is already deactivated.
+        /// </summary>
+        IssuanceDeactivated,
+        
+        /// <summary>
+        /// >> DeltaZero
+        /// The delta cannot be zero.
+        /// </summary>
+        DeltaZero,
     }
 }

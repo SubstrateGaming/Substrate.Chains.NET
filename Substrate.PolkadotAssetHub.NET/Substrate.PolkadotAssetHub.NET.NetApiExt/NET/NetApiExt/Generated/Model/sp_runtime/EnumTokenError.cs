@@ -15,27 +15,60 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_runtime
 {
     
     
+    /// <summary>
+    /// >> TokenError
+    /// </summary>
     public enum TokenError
     {
         
+        /// <summary>
+        /// >> FundsUnavailable
+        /// </summary>
         FundsUnavailable = 0,
         
+        /// <summary>
+        /// >> OnlyProvider
+        /// </summary>
         OnlyProvider = 1,
         
+        /// <summary>
+        /// >> BelowMinimum
+        /// </summary>
         BelowMinimum = 2,
         
+        /// <summary>
+        /// >> CannotCreate
+        /// </summary>
         CannotCreate = 3,
         
+        /// <summary>
+        /// >> UnknownAsset
+        /// </summary>
         UnknownAsset = 4,
         
+        /// <summary>
+        /// >> Frozen
+        /// </summary>
         Frozen = 5,
         
+        /// <summary>
+        /// >> Unsupported
+        /// </summary>
         Unsupported = 6,
         
+        /// <summary>
+        /// >> CannotCreateHold
+        /// </summary>
         CannotCreateHold = 7,
         
+        /// <summary>
+        /// >> NotExpendable
+        /// </summary>
         NotExpendable = 8,
         
+        /// <summary>
+        /// >> Blocked
+        /// </summary>
         Blocked = 9,
     }
     

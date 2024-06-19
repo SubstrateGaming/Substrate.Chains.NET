@@ -18,7 +18,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_multis
     
     
     /// <summary>
-    /// >> 105 - Composite[pallet_multisig.Timepoint]
+    /// >> 126 - Composite[pallet_multisig.Timepoint]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Timepoint : BaseType
@@ -27,42 +27,19 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_multis
         /// <summary>
         /// >> height
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _height;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 Height { get; set; }
         /// <summary>
         /// >> index
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _index;
+        public Substrate.NetApi.Model.Types.Primitive.U32 Index { get; set; }
         
-        public Substrate.NetApi.Model.Types.Primitive.U32 Height
-        {
-            get
-            {
-                return this._height;
-            }
-            set
-            {
-                this._height = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 Index
-        {
-            get
-            {
-                return this._index;
-            }
-            set
-            {
-                this._index = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "Timepoint";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -71,6 +48,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_multis
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
@@ -81,7 +59,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_multis
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];
-            System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
+            global::System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
         }
     }
 }

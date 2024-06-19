@@ -91,7 +91,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestService.Generated.Storage
         /// >> ItemAttributesApprovalsOf
         ///  Item attribute approvals.
         /// </summary>
-        Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSet GetItemAttributesApprovalsOf(string key);
+        Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSetT2 GetItemAttributesApprovalsOf(string key);
         
         /// <summary>
         /// >> NextCollectionId
@@ -178,7 +178,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestService.Generated.Storage
         /// <summary>
         /// _itemAttributesApprovalsOfTypedStorage typed storage field
         /// </summary>
-        private TypedMapStorage<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSet> _itemAttributesApprovalsOfTypedStorage;
+        private TypedMapStorage<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSetT2> _itemAttributesApprovalsOfTypedStorage;
         
         /// <summary>
         /// _nextCollectionIdTypedStorage typed storage field
@@ -215,7 +215,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestService.Generated.Storage
             this.ItemMetadataOfTypedStorage = new TypedMapStorage<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_nfts.types.ItemMetadata>("Nfts.ItemMetadataOf", storageDataProvider, storageChangeDelegates);
             this.AttributeTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT7, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_nfts.types.AttributeDeposit>>("Nfts.Attribute", storageDataProvider, storageChangeDelegates);
             this.ItemPriceOfTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>>>("Nfts.ItemPriceOf", storageDataProvider, storageChangeDelegates);
-            this.ItemAttributesApprovalsOfTypedStorage = new TypedMapStorage<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSet>("Nfts.ItemAttributesApprovalsOf", storageDataProvider, storageChangeDelegates);
+            this.ItemAttributesApprovalsOfTypedStorage = new TypedMapStorage<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSetT2>("Nfts.ItemAttributesApprovalsOf", storageDataProvider, storageChangeDelegates);
             this.NextCollectionIdTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32>("Nfts.NextCollectionId", storageDataProvider, storageChangeDelegates);
             this.PendingSwapOfTypedStorage = new TypedMapStorage<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_nfts.types.PendingSwap>("Nfts.PendingSwapOf", storageDataProvider, storageChangeDelegates);
             this.CollectionConfigOfTypedStorage = new TypedMapStorage<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_nfts.types.CollectionConfig>("Nfts.CollectionConfigOf", storageDataProvider, storageChangeDelegates);
@@ -375,7 +375,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestService.Generated.Storage
         /// <summary>
         /// _itemAttributesApprovalsOfTypedStorage property
         /// </summary>
-        public TypedMapStorage<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSet> ItemAttributesApprovalsOfTypedStorage
+        public TypedMapStorage<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSetT2> ItemAttributesApprovalsOfTypedStorage
         {
             get
             {
@@ -775,13 +775,13 @@ namespace Substrate.PolkadotAssetHub.NET.RestService.Generated.Storage
         /// >> ItemAttributesApprovalsOf
         ///  Item attribute approvals.
         /// </summary>
-        public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSet GetItemAttributesApprovalsOf(string key)
+        public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSetT2 GetItemAttributesApprovalsOf(string key)
         {
             if ((key == null))
             {
                 return null;
             }
-            if (ItemAttributesApprovalsOfTypedStorage.Dictionary.TryGetValue(key, out Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSet result))
+            if (ItemAttributesApprovalsOfTypedStorage.Dictionary.TryGetValue(key, out Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSetT2 result))
             {
                 return result;
             }

@@ -14,14 +14,14 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Mockup.Generated.Interfaces
    using Substrate.NetApi.Model.Types.Base;
    using Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.unincluded_segment;
    using Substrate.NetApi.Model.Types.Primitive;
-   using Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v5;
+   using Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v6;
    using Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_trie.storage_proof;
    using Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.relay_state_snapshot;
    using Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_primitives_parachain_inherent;
    using Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base;
    using Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_core_primitives;
+   using Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point;
    using Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_weights.weight_v2;
-   using Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system;
    
    public interface IParachainSystemControllerMockupClient
    {
@@ -44,10 +44,10 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Mockup.Generated.Interfaces
       Task<bool> SetHrmpOutboundMessages(BaseVec<OutboundHrmpMessage> value);
       Task<bool> SetUpwardMessages(BaseVec<BaseVec<U8>> value);
       Task<bool> SetPendingUpwardMessages(BaseVec<BaseVec<U8>> value);
+      Task<bool> SetUpwardDeliveryFeeFactor(FixedU128 value);
       Task<bool> SetAnnouncedHrmpMessagesPerCandidate(U32 value);
       Task<bool> SetReservedXcmpWeightOverride(Weight value);
       Task<bool> SetReservedDmpWeightOverride(Weight value);
-      Task<bool> SetAuthorizedUpgrade(CodeUpgradeAuthorization value);
       Task<bool> SetCustomValidationHeadData(BaseVec<U8> value);
    }
 }

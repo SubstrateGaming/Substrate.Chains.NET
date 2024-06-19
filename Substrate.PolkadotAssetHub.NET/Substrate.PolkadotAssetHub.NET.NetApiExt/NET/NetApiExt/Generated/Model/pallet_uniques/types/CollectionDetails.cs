@@ -18,7 +18,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_unique
     
     
     /// <summary>
-    /// >> 359 - Composite[pallet_uniques.types.CollectionDetails]
+    /// >> 414 - Composite[pallet_uniques.types.CollectionDetails]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class CollectionDetails : BaseType
@@ -27,178 +27,51 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_unique
         /// <summary>
         /// >> owner
         /// </summary>
-        private Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 _owner;
-        
+        public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 Owner { get; set; }
         /// <summary>
         /// >> issuer
         /// </summary>
-        private Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 _issuer;
-        
+        public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 Issuer { get; set; }
         /// <summary>
         /// >> admin
         /// </summary>
-        private Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 _admin;
-        
+        public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 Admin { get; set; }
         /// <summary>
         /// >> freezer
         /// </summary>
-        private Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 _freezer;
-        
+        public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 Freezer { get; set; }
         /// <summary>
         /// >> total_deposit
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U128 _totalDeposit;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U128 TotalDeposit { get; set; }
         /// <summary>
         /// >> free_holding
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.Bool _freeHolding;
-        
+        public Substrate.NetApi.Model.Types.Primitive.Bool FreeHolding { get; set; }
         /// <summary>
         /// >> items
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _items;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 Items { get; set; }
         /// <summary>
         /// >> item_metadatas
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _itemMetadatas;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 ItemMetadatas { get; set; }
         /// <summary>
         /// >> attributes
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _attributes;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 Attributes { get; set; }
         /// <summary>
         /// >> is_frozen
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.Bool _isFrozen;
+        public Substrate.NetApi.Model.Types.Primitive.Bool IsFrozen { get; set; }
         
-        public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 Owner
-        {
-            get
-            {
-                return this._owner;
-            }
-            set
-            {
-                this._owner = value;
-            }
-        }
-        
-        public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 Issuer
-        {
-            get
-            {
-                return this._issuer;
-            }
-            set
-            {
-                this._issuer = value;
-            }
-        }
-        
-        public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 Admin
-        {
-            get
-            {
-                return this._admin;
-            }
-            set
-            {
-                this._admin = value;
-            }
-        }
-        
-        public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 Freezer
-        {
-            get
-            {
-                return this._freezer;
-            }
-            set
-            {
-                this._freezer = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U128 TotalDeposit
-        {
-            get
-            {
-                return this._totalDeposit;
-            }
-            set
-            {
-                this._totalDeposit = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.Bool FreeHolding
-        {
-            get
-            {
-                return this._freeHolding;
-            }
-            set
-            {
-                this._freeHolding = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 Items
-        {
-            get
-            {
-                return this._items;
-            }
-            set
-            {
-                this._items = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 ItemMetadatas
-        {
-            get
-            {
-                return this._itemMetadatas;
-            }
-            set
-            {
-                this._itemMetadatas = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 Attributes
-        {
-            get
-            {
-                return this._attributes;
-            }
-            set
-            {
-                this._attributes = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.Bool IsFrozen
-        {
-            get
-            {
-                return this._isFrozen;
-            }
-            set
-            {
-                this._isFrozen = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "CollectionDetails";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -215,6 +88,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_unique
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
@@ -241,7 +115,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_unique
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];
-            System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
+            global::System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
         }
     }
 }

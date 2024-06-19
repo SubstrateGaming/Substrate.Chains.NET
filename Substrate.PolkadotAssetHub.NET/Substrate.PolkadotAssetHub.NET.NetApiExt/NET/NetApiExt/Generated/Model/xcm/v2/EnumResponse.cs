@@ -15,20 +15,35 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v2
 {
     
     
+    /// <summary>
+    /// >> Response
+    /// </summary>
     public enum Response
     {
         
+        /// <summary>
+        /// >> Null
+        /// </summary>
         Null = 0,
         
+        /// <summary>
+        /// >> Assets
+        /// </summary>
         Assets = 1,
         
+        /// <summary>
+        /// >> ExecutionResult
+        /// </summary>
         ExecutionResult = 2,
         
+        /// <summary>
+        /// >> Version
+        /// </summary>
         Version = 3,
     }
     
     /// <summary>
-    /// >> 247 - Variant[xcm.v2.Response]
+    /// >> 278 - Variant[xcm.v2.Response]
     /// </summary>
     public sealed class EnumResponse : BaseEnumExt<Response, BaseVoid, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v2.multiasset.MultiAssets, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v2.traits.EnumError>>, Substrate.NetApi.Model.Types.Primitive.U32>
     {

@@ -66,7 +66,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "Nfts/ItemPriceOf", value.Encode(), Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage.NftsStorage.ItemPriceOfParams(key));
       }
-      public async Task<bool> SetItemAttributesApprovalsOf(BoundedBTreeSet value, BaseTuple<U32, U32> key)
+      public async Task<bool> SetItemAttributesApprovalsOf(BoundedBTreeSetT2 value, BaseTuple<U32, U32> key)
       {
          return await SendMockupRequestAsync(_httpClient, "Nfts/ItemAttributesApprovalsOf", value.Encode(), Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage.NftsStorage.ItemAttributesApprovalsOfParams(key));
       }

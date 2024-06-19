@@ -15,27 +15,61 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.frame_system.
 {
     
     
+    /// <summary>
+    /// >> Event
+    /// Event for the System pallet.
+    /// </summary>
     public enum Event
     {
         
+        /// <summary>
+        /// >> ExtrinsicSuccess
+        /// An extrinsic completed successfully.
+        /// </summary>
         ExtrinsicSuccess = 0,
         
+        /// <summary>
+        /// >> ExtrinsicFailed
+        /// An extrinsic failed.
+        /// </summary>
         ExtrinsicFailed = 1,
         
+        /// <summary>
+        /// >> CodeUpdated
+        /// `:code` was updated.
+        /// </summary>
         CodeUpdated = 2,
         
+        /// <summary>
+        /// >> NewAccount
+        /// A new account was created.
+        /// </summary>
         NewAccount = 3,
         
+        /// <summary>
+        /// >> KilledAccount
+        /// An account was reaped.
+        /// </summary>
         KilledAccount = 4,
         
+        /// <summary>
+        /// >> Remarked
+        /// On on-chain remark happened.
+        /// </summary>
         Remarked = 5,
+        
+        /// <summary>
+        /// >> UpgradeAuthorized
+        /// An upgrade was authorized.
+        /// </summary>
+        UpgradeAuthorized = 6,
     }
     
     /// <summary>
     /// >> 21 - Variant[frame_system.pallet.Event]
     /// Event for the System pallet.
     /// </summary>
-    public sealed class EnumEvent : BaseEnumExt<Event, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.frame_support.dispatch.DispatchInfo, BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_runtime.EnumDispatchError, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.frame_support.dispatch.DispatchInfo>, BaseVoid, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.primitive_types.H256>>
+    public sealed class EnumEvent : BaseEnumExt<Event, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.frame_support.dispatch.DispatchInfo, BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_runtime.EnumDispatchError, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.frame_support.dispatch.DispatchInfo>, BaseVoid, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.primitive_types.H256>, BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Primitive.Bool>>
     {
     }
 }

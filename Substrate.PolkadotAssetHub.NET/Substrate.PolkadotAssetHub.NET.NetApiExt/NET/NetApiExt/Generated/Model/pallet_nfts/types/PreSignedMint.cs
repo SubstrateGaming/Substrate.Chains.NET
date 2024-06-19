@@ -18,7 +18,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_nfts.t
     
     
     /// <summary>
-    /// >> 320 - Composite[pallet_nfts.types.PreSignedMint]
+    /// >> 372 - Composite[pallet_nfts.types.PreSignedMint]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class PreSignedMint : BaseType
@@ -27,127 +27,39 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_nfts.t
         /// <summary>
         /// >> collection
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _collection;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 Collection { get; set; }
         /// <summary>
         /// >> item
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _item;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 Item { get; set; }
         /// <summary>
         /// >> attributes
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>> _attributes;
-        
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>> Attributes { get; set; }
         /// <summary>
         /// >> metadata
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> _metadata;
-        
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> Metadata { get; set; }
         /// <summary>
         /// >> only_account
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> _onlyAccount;
-        
+        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> OnlyAccount { get; set; }
         /// <summary>
         /// >> deadline
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _deadline;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 Deadline { get; set; }
         /// <summary>
         /// >> mint_price
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U128> _mintPrice;
+        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U128> MintPrice { get; set; }
         
-        public Substrate.NetApi.Model.Types.Primitive.U32 Collection
-        {
-            get
-            {
-                return this._collection;
-            }
-            set
-            {
-                this._collection = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 Item
-        {
-            get
-            {
-                return this._item;
-            }
-            set
-            {
-                this._item = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>> Attributes
-        {
-            get
-            {
-                return this._attributes;
-            }
-            set
-            {
-                this._attributes = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> Metadata
-        {
-            get
-            {
-                return this._metadata;
-            }
-            set
-            {
-                this._metadata = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> OnlyAccount
-        {
-            get
-            {
-                return this._onlyAccount;
-            }
-            set
-            {
-                this._onlyAccount = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 Deadline
-        {
-            get
-            {
-                return this._deadline;
-            }
-            set
-            {
-                this._deadline = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U128> MintPrice
-        {
-            get
-            {
-                return this._mintPrice;
-            }
-            set
-            {
-                this._mintPrice = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "PreSignedMint";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -161,6 +73,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_nfts.t
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
@@ -181,7 +94,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_nfts.t
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];
-            System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
+            global::System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
         }
     }
 }

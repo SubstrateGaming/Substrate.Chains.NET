@@ -15,18 +15,30 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.frame_system
 {
     
     
+    /// <summary>
+    /// >> Phase
+    /// </summary>
     public enum Phase
     {
         
+        /// <summary>
+        /// >> ApplyExtrinsic
+        /// </summary>
         ApplyExtrinsic = 0,
         
+        /// <summary>
+        /// >> Finalization
+        /// </summary>
         Finalization = 1,
         
+        /// <summary>
+        /// >> Initialization
+        /// </summary>
         Initialization = 2,
     }
     
     /// <summary>
-    /// >> 124 - Variant[frame_system.Phase]
+    /// >> 152 - Variant[frame_system.Phase]
     /// </summary>
     public sealed class EnumPhase : BaseEnumExt<Phase, Substrate.NetApi.Model.Types.Primitive.U32, BaseVoid, BaseVoid>
     {

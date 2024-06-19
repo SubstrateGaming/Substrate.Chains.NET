@@ -15,16 +15,25 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_nfts.t
 {
     
     
+    /// <summary>
+    /// >> PalletAttributes
+    /// </summary>
     public enum PalletAttributes
     {
         
+        /// <summary>
+        /// >> UsedToClaim
+        /// </summary>
         UsedToClaim = 0,
         
+        /// <summary>
+        /// >> TransferDisabled
+        /// </summary>
         TransferDisabled = 1,
     }
     
     /// <summary>
-    /// >> 122 - Variant[pallet_nfts.types.PalletAttributes]
+    /// >> 144 - Variant[pallet_nfts.types.PalletAttributes]
     /// </summary>
     public sealed class EnumPalletAttributes : BaseEnumExt<PalletAttributes, Substrate.NetApi.Model.Types.Primitive.U32, BaseVoid>
     {

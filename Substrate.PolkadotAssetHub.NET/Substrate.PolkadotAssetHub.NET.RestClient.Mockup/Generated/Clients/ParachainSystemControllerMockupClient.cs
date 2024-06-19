@@ -15,14 +15,14 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Mockup.Generated.Clients
    using Substrate.NetApi.Model.Types.Base;
    using Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.unincluded_segment;
    using Substrate.NetApi.Model.Types.Primitive;
-   using Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v5;
+   using Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v6;
    using Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_trie.storage_proof;
    using Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.relay_state_snapshot;
    using Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_primitives_parachain_inherent;
    using Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base;
    using Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_core_primitives;
+   using Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point;
    using Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_weights.weight_v2;
-   using Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system;
    using Substrate.PolkadotAssetHub.NET.RestClient.Mockup.Generated.Interfaces;
    
    public sealed class ParachainSystemControllerMockupClient : MockupBaseClient, IParachainSystemControllerMockupClient
@@ -108,6 +108,10 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "ParachainSystem/PendingUpwardMessages", value.Encode(), Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage.ParachainSystemStorage.PendingUpwardMessagesParams());
       }
+      public async Task<bool> SetUpwardDeliveryFeeFactor(FixedU128 value)
+      {
+         return await SendMockupRequestAsync(_httpClient, "ParachainSystem/UpwardDeliveryFeeFactor", value.Encode(), Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage.ParachainSystemStorage.UpwardDeliveryFeeFactorParams());
+      }
       public async Task<bool> SetAnnouncedHrmpMessagesPerCandidate(U32 value)
       {
          return await SendMockupRequestAsync(_httpClient, "ParachainSystem/AnnouncedHrmpMessagesPerCandidate", value.Encode(), Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage.ParachainSystemStorage.AnnouncedHrmpMessagesPerCandidateParams());
@@ -119,10 +123,6 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Mockup.Generated.Clients
       public async Task<bool> SetReservedDmpWeightOverride(Weight value)
       {
          return await SendMockupRequestAsync(_httpClient, "ParachainSystem/ReservedDmpWeightOverride", value.Encode(), Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage.ParachainSystemStorage.ReservedDmpWeightOverrideParams());
-      }
-      public async Task<bool> SetAuthorizedUpgrade(CodeUpgradeAuthorization value)
-      {
-         return await SendMockupRequestAsync(_httpClient, "ParachainSystem/AuthorizedUpgrade", value.Encode(), Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage.ParachainSystemStorage.AuthorizedUpgradeParams());
       }
       public async Task<bool> SetCustomValidationHeadData(BaseVec<U8> value)
       {

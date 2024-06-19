@@ -14,14 +14,14 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Generated.Interfaces
    using Substrate.NetApi.Model.Types.Base;
    using Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.unincluded_segment;
    using Substrate.NetApi.Model.Types.Primitive;
-   using Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v5;
+   using Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v6;
    using Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_trie.storage_proof;
    using Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.relay_state_snapshot;
    using Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_primitives_parachain_inherent;
    using Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base;
    using Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_core_primitives;
+   using Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point;
    using Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_weights.weight_v2;
-   using Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system;
    
    public interface IParachainSystemControllerClient
    {
@@ -63,14 +63,14 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Generated.Interfaces
       Task<bool> SubscribeUpwardMessages();
       Task<BaseVec<BaseVec<U8>>> GetPendingUpwardMessages();
       Task<bool> SubscribePendingUpwardMessages();
+      Task<FixedU128> GetUpwardDeliveryFeeFactor();
+      Task<bool> SubscribeUpwardDeliveryFeeFactor();
       Task<U32> GetAnnouncedHrmpMessagesPerCandidate();
       Task<bool> SubscribeAnnouncedHrmpMessagesPerCandidate();
       Task<Weight> GetReservedXcmpWeightOverride();
       Task<bool> SubscribeReservedXcmpWeightOverride();
       Task<Weight> GetReservedDmpWeightOverride();
       Task<bool> SubscribeReservedDmpWeightOverride();
-      Task<CodeUpgradeAuthorization> GetAuthorizedUpgrade();
-      Task<bool> SubscribeAuthorizedUpgrade();
       Task<BaseVec<U8>> GetCustomValidationHeadData();
       Task<bool> SubscribeCustomValidationHeadData();
    }

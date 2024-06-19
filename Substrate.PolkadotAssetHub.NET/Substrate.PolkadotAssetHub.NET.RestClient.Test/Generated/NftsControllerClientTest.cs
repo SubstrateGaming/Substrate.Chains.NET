@@ -1000,18 +1000,18 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSet GetTestValue53()
+      public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSetT2 GetTestValue53()
       {
-         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSet result;
-         result = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSet();
-         result.Value = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.BTreeSetT2();
+         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSetT2 result;
+         result = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSetT2();
+         result.Value = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.BTreeSetT3();
          result.Value = this.GetTestValue54();
          return result;
       }
-      public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.BTreeSetT2 GetTestValue54()
+      public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.BTreeSetT3 GetTestValue54()
       {
-         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.BTreeSetT2 result;
-         result = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.BTreeSetT2();
+         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.BTreeSetT3 result;
+         result = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.BTreeSetT3();
          result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>();
          result.Value.Create(new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32[] {
                   this.GetTestValue55()});
@@ -1075,7 +1075,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          NftsControllerClient rpcClient = new NftsControllerClient(_httpClient, subscriptionClient);
-         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSet mockupValue = this.GetTestValue53();
+         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSetT2 mockupValue = this.GetTestValue53();
          Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32> mockupKey = this.GetTestValue56();
 
          Assert.IsTrue(await rpcClient.SubscribeItemAttributesApprovalsOf(mockupKey));
@@ -1088,7 +1088,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Test.Generated
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSet rpcResult = await rpcClient.GetItemAttributesApprovalsOf(mockupKey);
+         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSetT2 rpcResult = await rpcClient.GetItemAttributesApprovalsOf(mockupKey);
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());

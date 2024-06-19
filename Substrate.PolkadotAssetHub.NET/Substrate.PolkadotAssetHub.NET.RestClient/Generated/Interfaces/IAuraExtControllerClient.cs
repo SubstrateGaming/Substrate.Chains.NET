@@ -18,7 +18,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Generated.Interfaces
    
    public interface IAuraExtControllerClient
    {
-      Task<BoundedVecT13> GetAuthorities();
+      Task<BoundedVecT14> GetAuthorities();
       Task<bool> SubscribeAuthorities();
       Task<BaseTuple<Slot, U32>> GetSlotInfo();
       Task<bool> SubscribeSlotInfo();

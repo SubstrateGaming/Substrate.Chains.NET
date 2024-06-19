@@ -244,5 +244,17 @@ namespace Substrate.PolkadotAssetHub.NET.RestService.Generated.Controller
         {
             return this.Ok(_systemStorage.GetExecutionPhase());
         }
+        
+        /// <summary>
+        /// >> AuthorizedUpgrade
+        ///  `Some` if a code upgrade has been authorized.
+        /// </summary>
+        [HttpGet("AuthorizedUpgrade")]
+        [ProducesResponseType(typeof(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.frame_system.CodeUpgradeAuthorization), 200)]
+        [StorageKeyBuilder(typeof(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage.SystemStorage), "AuthorizedUpgradeParams")]
+        public IActionResult GetAuthorizedUpgrade()
+        {
+            return this.Ok(_systemStorage.GetAuthorizedUpgrade());
+        }
     }
 }

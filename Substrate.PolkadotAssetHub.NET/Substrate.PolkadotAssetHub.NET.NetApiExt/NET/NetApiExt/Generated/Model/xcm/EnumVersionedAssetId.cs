@@ -15,16 +15,27 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm
 {
     
     
+    /// <summary>
+    /// >> VersionedAssetId
+    /// </summary>
     public enum VersionedAssetId
     {
         
+        /// <summary>
+        /// >> V3
+        /// </summary>
         V3 = 3,
+        
+        /// <summary>
+        /// >> V4
+        /// </summary>
+        V4 = 4,
     }
     
     /// <summary>
-    /// >> 259 - Variant[xcm.VersionedAssetId]
+    /// >> 295 - Variant[xcm.VersionedAssetId]
     /// </summary>
-    public sealed class EnumVersionedAssetId : BaseEnumExt<VersionedAssetId, BaseVoid, BaseVoid, BaseVoid, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v3.multiasset.EnumAssetId>
+    public sealed class EnumVersionedAssetId : BaseEnumExt<VersionedAssetId, BaseVoid, BaseVoid, BaseVoid, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v3.multiasset.EnumAssetId, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v4.asset.AssetId>
     {
     }
 }

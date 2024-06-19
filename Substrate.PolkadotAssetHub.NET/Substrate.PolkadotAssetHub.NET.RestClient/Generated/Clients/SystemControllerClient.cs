@@ -157,5 +157,13 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("System.ExecutionPhase");
       }
+      public async Task<CodeUpgradeAuthorization> GetAuthorizedUpgrade()
+      {
+         return await SendRequestAsync<CodeUpgradeAuthorization>(_httpClient, "system/authorizedupgrade");
+      }
+      public async Task<bool> SubscribeAuthorizedUpgrade()
+      {
+         return await _subscriptionClient.SubscribeAsync("System.AuthorizedUpgrade");
+      }
    }
 }

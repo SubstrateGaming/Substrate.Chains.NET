@@ -15,50 +15,122 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.asset_hub_pol
 {
     
     
+    /// <summary>
+    /// >> RuntimeEvent
+    /// </summary>
     public enum RuntimeEvent
     {
         
+        /// <summary>
+        /// >> System
+        /// </summary>
         System = 0,
         
+        /// <summary>
+        /// >> ParachainSystem
+        /// </summary>
         ParachainSystem = 1,
         
+        /// <summary>
+        /// >> Balances
+        /// </summary>
         Balances = 10,
         
+        /// <summary>
+        /// >> TransactionPayment
+        /// </summary>
         TransactionPayment = 11,
         
-        AssetTxPayment = 12,
+        /// <summary>
+        /// >> AssetTxPayment
+        /// </summary>
+        AssetTxPayment = 13,
         
+        /// <summary>
+        /// >> Vesting
+        /// </summary>
+        Vesting = 14,
+        
+        /// <summary>
+        /// >> CollatorSelection
+        /// </summary>
         CollatorSelection = 21,
         
+        /// <summary>
+        /// >> Session
+        /// </summary>
         Session = 22,
         
+        /// <summary>
+        /// >> XcmpQueue
+        /// </summary>
         XcmpQueue = 30,
         
+        /// <summary>
+        /// >> PolkadotXcm
+        /// </summary>
         PolkadotXcm = 31,
         
+        /// <summary>
+        /// >> CumulusXcm
+        /// </summary>
         CumulusXcm = 32,
         
-        DmpQueue = 33,
+        /// <summary>
+        /// >> MessageQueue
+        /// </summary>
+        MessageQueue = 35,
         
+        /// <summary>
+        /// >> Utility
+        /// </summary>
         Utility = 40,
         
+        /// <summary>
+        /// >> Multisig
+        /// </summary>
         Multisig = 41,
         
+        /// <summary>
+        /// >> Proxy
+        /// </summary>
         Proxy = 42,
         
+        /// <summary>
+        /// >> Assets
+        /// </summary>
         Assets = 50,
         
+        /// <summary>
+        /// >> Uniques
+        /// </summary>
         Uniques = 51,
         
+        /// <summary>
+        /// >> Nfts
+        /// </summary>
         Nfts = 52,
         
+        /// <summary>
+        /// >> ForeignAssets
+        /// </summary>
         ForeignAssets = 53,
+        
+        /// <summary>
+        /// >> PoolAssets
+        /// </summary>
+        PoolAssets = 54,
+        
+        /// <summary>
+        /// >> AssetConversion
+        /// </summary>
+        AssetConversion = 55,
     }
     
     /// <summary>
     /// >> 20 - Variant[asset_hub_polkadot_runtime.RuntimeEvent]
     /// </summary>
-    public sealed class EnumRuntimeEvent : BaseEnumExt<RuntimeEvent, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.frame_system.pallet.EnumEvent, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.pallet.EnumEvent, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_balances.pallet.EnumEvent, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_transaction_payment.pallet.EnumEvent, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_asset_tx_payment.pallet.EnumEvent, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_collator_selection.pallet.EnumEvent, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_session.pallet.EnumEvent, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue.pallet.EnumEvent, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_xcm.pallet.EnumEvent, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_pallet_xcm.pallet.EnumEvent, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_pallet_dmp_queue.pallet.EnumEvent, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_utility.pallet.EnumEvent, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_multisig.pallet.EnumEvent, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_proxy.pallet.EnumEvent, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_assets.pallet.EnumEvent, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_uniques.pallet.EnumEvent, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_nfts.pallet.EnumEvent, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_assets.pallet.EnumEvent>
+    public sealed class EnumRuntimeEvent : BaseEnumExt<RuntimeEvent, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.frame_system.pallet.EnumEvent, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.pallet.EnumEvent, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_balances.pallet.EnumEvent, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_transaction_payment.pallet.EnumEvent, BaseVoid, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_asset_conversion_tx_payment.pallet.EnumEvent, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_vesting.pallet.EnumEvent, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_collator_selection.pallet.EnumEvent, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_session.pallet.EnumEvent, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue.pallet.EnumEvent, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_xcm.pallet.EnumEvent, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_pallet_xcm.pallet.EnumEvent, BaseVoid, BaseVoid, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_message_queue.pallet.EnumEvent, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_utility.pallet.EnumEvent, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_multisig.pallet.EnumEvent, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_proxy.pallet.EnumEvent, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_assets.pallet.EnumEvent, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_uniques.pallet.EnumEvent, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_nfts.pallet.EnumEvent, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_assets.pallet.EnumEvent, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_assets.pallet.EnumEvent, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_asset_conversion.pallet.EnumEvent>
     {
     }
 }

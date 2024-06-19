@@ -15,12 +15,15 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.asset_hub_pol
 {
     
     
+    /// <summary>
+    /// >> RuntimeHoldReason
+    /// </summary>
     public enum RuntimeHoldReason
     {
     }
     
     /// <summary>
-    /// >> 197 - Variant[asset_hub_polkadot_runtime.RuntimeHoldReason]
+    /// >> 227 - Variant[asset_hub_polkadot_runtime.RuntimeHoldReason]
     /// </summary>
     public sealed class EnumRuntimeHoldReason : BaseEnum<RuntimeHoldReason>
     {

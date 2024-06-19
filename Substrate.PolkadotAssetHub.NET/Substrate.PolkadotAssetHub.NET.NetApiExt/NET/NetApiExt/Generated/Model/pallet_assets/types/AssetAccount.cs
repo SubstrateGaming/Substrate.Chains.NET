@@ -18,7 +18,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_assets
     
     
     /// <summary>
-    /// >> 351 - Composite[pallet_assets.types.AssetAccount]
+    /// >> 406 - Composite[pallet_assets.types.AssetAccount]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class AssetAccount : BaseType
@@ -27,76 +27,27 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_assets
         /// <summary>
         /// >> balance
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U128 _balance;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U128 Balance { get; set; }
         /// <summary>
         /// >> status
         /// </summary>
-        private Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_assets.types.EnumAccountStatus _status;
-        
+        public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_assets.types.EnumAccountStatus Status { get; set; }
         /// <summary>
         /// >> reason
         /// </summary>
-        private Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_assets.types.EnumExistenceReason _reason;
-        
+        public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_assets.types.EnumExistenceReason Reason { get; set; }
         /// <summary>
         /// >> extra
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseTuple _extra;
+        public Substrate.NetApi.Model.Types.Base.BaseTuple Extra { get; set; }
         
-        public Substrate.NetApi.Model.Types.Primitive.U128 Balance
-        {
-            get
-            {
-                return this._balance;
-            }
-            set
-            {
-                this._balance = value;
-            }
-        }
-        
-        public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_assets.types.EnumAccountStatus Status
-        {
-            get
-            {
-                return this._status;
-            }
-            set
-            {
-                this._status = value;
-            }
-        }
-        
-        public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_assets.types.EnumExistenceReason Reason
-        {
-            get
-            {
-                return this._reason;
-            }
-            set
-            {
-                this._reason = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseTuple Extra
-        {
-            get
-            {
-                return this._extra;
-            }
-            set
-            {
-                this._extra = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "AssetAccount";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -107,6 +58,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_assets
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
@@ -121,7 +73,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_assets
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];
-            System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
+            global::System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
         }
     }
 }

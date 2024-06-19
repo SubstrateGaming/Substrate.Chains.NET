@@ -18,48 +18,56 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Mockup
    public sealed class MockupClient
    {
       private HttpClient _httpClient;
+      public IAssetConversionControllerMockupClient AssetConversionControllerClient;
       public IAssetsControllerMockupClient AssetsControllerClient;
       public IAuraControllerMockupClient AuraControllerClient;
       public IAuraExtControllerMockupClient AuraExtControllerClient;
       public IAuthorshipControllerMockupClient AuthorshipControllerClient;
       public IBalancesControllerMockupClient BalancesControllerClient;
       public ICollatorSelectionControllerMockupClient CollatorSelectionControllerClient;
-      public IDmpQueueControllerMockupClient DmpQueueControllerClient;
       public IForeignAssetsControllerMockupClient ForeignAssetsControllerClient;
+      public IMessageQueueControllerMockupClient MessageQueueControllerClient;
       public IMultisigControllerMockupClient MultisigControllerClient;
       public INftsControllerMockupClient NftsControllerClient;
       public IParachainInfoControllerMockupClient ParachainInfoControllerClient;
       public IParachainSystemControllerMockupClient ParachainSystemControllerClient;
       public IPolkadotXcmControllerMockupClient PolkadotXcmControllerClient;
+      public IPoolAssetsControllerMockupClient PoolAssetsControllerClient;
       public IProxyControllerMockupClient ProxyControllerClient;
       public ISessionControllerMockupClient SessionControllerClient;
       public ISystemControllerMockupClient SystemControllerClient;
       public ITimestampControllerMockupClient TimestampControllerClient;
+      public IToKusamaXcmRouterControllerMockupClient ToKusamaXcmRouterControllerClient;
       public ITransactionPaymentControllerMockupClient TransactionPaymentControllerClient;
       public IUniquesControllerMockupClient UniquesControllerClient;
+      public IVestingControllerMockupClient VestingControllerClient;
       public IXcmpQueueControllerMockupClient XcmpQueueControllerClient;
       public MockupClient(HttpClient httpClient)
       {
          _httpClient = httpClient;
+         AssetConversionControllerClient = new AssetConversionControllerMockupClient(_httpClient);
          AssetsControllerClient = new AssetsControllerMockupClient(_httpClient);
          AuraControllerClient = new AuraControllerMockupClient(_httpClient);
          AuraExtControllerClient = new AuraExtControllerMockupClient(_httpClient);
          AuthorshipControllerClient = new AuthorshipControllerMockupClient(_httpClient);
          BalancesControllerClient = new BalancesControllerMockupClient(_httpClient);
          CollatorSelectionControllerClient = new CollatorSelectionControllerMockupClient(_httpClient);
-         DmpQueueControllerClient = new DmpQueueControllerMockupClient(_httpClient);
          ForeignAssetsControllerClient = new ForeignAssetsControllerMockupClient(_httpClient);
+         MessageQueueControllerClient = new MessageQueueControllerMockupClient(_httpClient);
          MultisigControllerClient = new MultisigControllerMockupClient(_httpClient);
          NftsControllerClient = new NftsControllerMockupClient(_httpClient);
          ParachainInfoControllerClient = new ParachainInfoControllerMockupClient(_httpClient);
          ParachainSystemControllerClient = new ParachainSystemControllerMockupClient(_httpClient);
          PolkadotXcmControllerClient = new PolkadotXcmControllerMockupClient(_httpClient);
+         PoolAssetsControllerClient = new PoolAssetsControllerMockupClient(_httpClient);
          ProxyControllerClient = new ProxyControllerMockupClient(_httpClient);
          SessionControllerClient = new SessionControllerMockupClient(_httpClient);
          SystemControllerClient = new SystemControllerMockupClient(_httpClient);
          TimestampControllerClient = new TimestampControllerMockupClient(_httpClient);
+         ToKusamaXcmRouterControllerClient = new ToKusamaXcmRouterControllerMockupClient(_httpClient);
          TransactionPaymentControllerClient = new TransactionPaymentControllerMockupClient(_httpClient);
          UniquesControllerClient = new UniquesControllerMockupClient(_httpClient);
+         VestingControllerClient = new VestingControllerMockupClient(_httpClient);
          XcmpQueueControllerClient = new XcmpQueueControllerMockupClient(_httpClient);
       }
    }

@@ -15,20 +15,40 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_multis
 {
     
     
+    /// <summary>
+    /// >> Event
+    /// The `Event` enum of this pallet
+    /// </summary>
     public enum Event
     {
         
+        /// <summary>
+        /// >> NewMultisig
+        /// A new multisig operation has begun.
+        /// </summary>
         NewMultisig = 0,
         
+        /// <summary>
+        /// >> MultisigApproval
+        /// A multisig operation has been approved by someone.
+        /// </summary>
         MultisigApproval = 1,
         
+        /// <summary>
+        /// >> MultisigExecuted
+        /// A multisig operation has been executed.
+        /// </summary>
         MultisigExecuted = 2,
         
+        /// <summary>
+        /// >> MultisigCancelled
+        /// A multisig operation has been cancelled.
+        /// </summary>
         MultisigCancelled = 3,
     }
     
     /// <summary>
-    /// >> 104 - Variant[pallet_multisig.pallet.Event]
+    /// >> 125 - Variant[pallet_multisig.pallet.Event]
     /// The `Event` enum of this pallet
     /// </summary>
     public sealed class EnumEvent : BaseEnumExt<Event, BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.Arr32U8>, BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_multisig.Timepoint, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.Arr32U8>, BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_multisig.Timepoint, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.Arr32U8, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.EnumResult>, BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_multisig.Timepoint, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.Arr32U8>>

@@ -25,7 +25,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Mockup.Generated.Clients
       {
          _httpClient = httpClient;
       }
-      public async Task<bool> SetAuthorities(BoundedVecT13 value)
+      public async Task<bool> SetAuthorities(BoundedVecT14 value)
       {
          return await SendMockupRequestAsync(_httpClient, "AuraExt/Authorities", value.Encode(), Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage.AuraExtStorage.AuthoritiesParams());
       }

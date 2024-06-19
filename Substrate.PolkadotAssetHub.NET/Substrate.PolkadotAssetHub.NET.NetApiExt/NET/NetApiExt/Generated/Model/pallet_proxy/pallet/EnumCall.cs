@@ -15,32 +15,76 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_proxy.
 {
     
     
+    /// <summary>
+    /// >> Call
+    /// Contains a variant per dispatchable extrinsic that this pallet has.
+    /// </summary>
     public enum Call
     {
         
+        /// <summary>
+        /// >> proxy
+        /// See [`Pallet::proxy`].
+        /// </summary>
         proxy = 0,
         
+        /// <summary>
+        /// >> add_proxy
+        /// See [`Pallet::add_proxy`].
+        /// </summary>
         add_proxy = 1,
         
+        /// <summary>
+        /// >> remove_proxy
+        /// See [`Pallet::remove_proxy`].
+        /// </summary>
         remove_proxy = 2,
         
+        /// <summary>
+        /// >> remove_proxies
+        /// See [`Pallet::remove_proxies`].
+        /// </summary>
         remove_proxies = 3,
         
+        /// <summary>
+        /// >> create_pure
+        /// See [`Pallet::create_pure`].
+        /// </summary>
         create_pure = 4,
         
+        /// <summary>
+        /// >> kill_pure
+        /// See [`Pallet::kill_pure`].
+        /// </summary>
         kill_pure = 5,
         
+        /// <summary>
+        /// >> announce
+        /// See [`Pallet::announce`].
+        /// </summary>
         announce = 6,
         
+        /// <summary>
+        /// >> remove_announcement
+        /// See [`Pallet::remove_announcement`].
+        /// </summary>
         remove_announcement = 7,
         
+        /// <summary>
+        /// >> reject_announcement
+        /// See [`Pallet::reject_announcement`].
+        /// </summary>
         reject_announcement = 8,
         
+        /// <summary>
+        /// >> proxy_announced
+        /// See [`Pallet::proxy_announced`].
+        /// </summary>
         proxy_announced = 9,
     }
     
     /// <summary>
-    /// >> 297 - Variant[pallet_proxy.pallet.Call]
+    /// >> 349 - Variant[pallet_proxy.pallet.Call]
     /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
     public sealed class EnumCall : BaseEnumExt<Call, BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.asset_hub_polkadot_runtime.EnumProxyType>, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.asset_hub_polkadot_runtime.EnumRuntimeCall>, BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.asset_hub_polkadot_runtime.EnumProxyType, Substrate.NetApi.Model.Types.Primitive.U32>, BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.asset_hub_polkadot_runtime.EnumProxyType, Substrate.NetApi.Model.Types.Primitive.U32>, BaseVoid, BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.asset_hub_polkadot_runtime.EnumProxyType, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U16>, BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.asset_hub_polkadot_runtime.EnumProxyType, Substrate.NetApi.Model.Types.Primitive.U16, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>>, BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.primitive_types.H256>, BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.primitive_types.H256>, BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.primitive_types.H256>, BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.asset_hub_polkadot_runtime.EnumProxyType>, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.asset_hub_polkadot_runtime.EnumRuntimeCall>>

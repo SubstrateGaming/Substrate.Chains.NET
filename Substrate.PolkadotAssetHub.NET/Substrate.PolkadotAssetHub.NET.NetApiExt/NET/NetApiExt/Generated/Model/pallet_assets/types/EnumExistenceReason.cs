@@ -15,22 +15,40 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_assets
 {
     
     
+    /// <summary>
+    /// >> ExistenceReason
+    /// </summary>
     public enum ExistenceReason
     {
         
+        /// <summary>
+        /// >> Consumer
+        /// </summary>
         Consumer = 0,
         
+        /// <summary>
+        /// >> Sufficient
+        /// </summary>
         Sufficient = 1,
         
+        /// <summary>
+        /// >> DepositHeld
+        /// </summary>
         DepositHeld = 2,
         
+        /// <summary>
+        /// >> DepositRefunded
+        /// </summary>
         DepositRefunded = 3,
         
+        /// <summary>
+        /// >> DepositFrom
+        /// </summary>
         DepositFrom = 4,
     }
     
     /// <summary>
-    /// >> 353 - Variant[pallet_assets.types.ExistenceReason]
+    /// >> 408 - Variant[pallet_assets.types.ExistenceReason]
     /// </summary>
     public sealed class EnumExistenceReason : BaseEnumExt<ExistenceReason, BaseVoid, BaseVoid, Substrate.NetApi.Model.Types.Primitive.U128, BaseVoid, BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U128>>
     {

@@ -15,20 +15,35 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_nfts.t
 {
     
     
+    /// <summary>
+    /// >> PalletFeature
+    /// </summary>
     public enum PalletFeature
     {
         
+        /// <summary>
+        /// >> Trading
+        /// </summary>
         Trading = 1,
         
+        /// <summary>
+        /// >> Attributes
+        /// </summary>
         Attributes = 2,
         
+        /// <summary>
+        /// >> Approvals
+        /// </summary>
         Approvals = 4,
         
+        /// <summary>
+        /// >> Swaps
+        /// </summary>
         Swaps = 8,
     }
     
     /// <summary>
-    /// >> 388 - Variant[pallet_nfts.types.PalletFeature]
+    /// >> 443 - Variant[pallet_nfts.types.PalletFeature]
     /// </summary>
     public sealed class EnumPalletFeature : BaseEnum<PalletFeature>
     {

@@ -15,30 +15,60 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v3.juncti
 {
     
     
+    /// <summary>
+    /// >> Junctions
+    /// </summary>
     public enum Junctions
     {
         
+        /// <summary>
+        /// >> Here
+        /// </summary>
         Here = 0,
         
+        /// <summary>
+        /// >> X1
+        /// </summary>
         X1 = 1,
         
+        /// <summary>
+        /// >> X2
+        /// </summary>
         X2 = 2,
         
+        /// <summary>
+        /// >> X3
+        /// </summary>
         X3 = 3,
         
+        /// <summary>
+        /// >> X4
+        /// </summary>
         X4 = 4,
         
+        /// <summary>
+        /// >> X5
+        /// </summary>
         X5 = 5,
         
+        /// <summary>
+        /// >> X6
+        /// </summary>
         X6 = 6,
         
+        /// <summary>
+        /// >> X7
+        /// </summary>
         X7 = 7,
         
+        /// <summary>
+        /// >> X8
+        /// </summary>
         X8 = 8,
     }
     
     /// <summary>
-    /// >> 46 - Variant[xcm.v3.junctions.Junctions]
+    /// >> 38 - Variant[xcm.v3.junctions.Junctions]
     /// </summary>
     public sealed class EnumJunctions : BaseEnumExt<Junctions, BaseVoid, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction, BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction>, BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction>, BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction>, BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction>, BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction>, BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction>, BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction>>
     {

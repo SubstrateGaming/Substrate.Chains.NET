@@ -18,7 +18,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_palle
     
     
     /// <summary>
-    /// >> 150 - Composite[cumulus_pallet_parachain_system.unincluded_segment.HrmpChannelUpdate]
+    /// >> 179 - Composite[cumulus_pallet_parachain_system.unincluded_segment.HrmpChannelUpdate]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class HrmpChannelUpdate : BaseType
@@ -27,42 +27,19 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_palle
         /// <summary>
         /// >> msg_count
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _msgCount;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 MsgCount { get; set; }
         /// <summary>
         /// >> total_bytes
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _totalBytes;
+        public Substrate.NetApi.Model.Types.Primitive.U32 TotalBytes { get; set; }
         
-        public Substrate.NetApi.Model.Types.Primitive.U32 MsgCount
-        {
-            get
-            {
-                return this._msgCount;
-            }
-            set
-            {
-                this._msgCount = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 TotalBytes
-        {
-            get
-            {
-                return this._totalBytes;
-            }
-            set
-            {
-                this._totalBytes = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "HrmpChannelUpdate";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -71,6 +48,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_palle
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
@@ -81,7 +59,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_palle
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];
-            System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
+            global::System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
         }
     }
 }

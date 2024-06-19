@@ -18,7 +18,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_nfts.t
     
     
     /// <summary>
-    /// >> 308 - Composite[pallet_nfts.types.MintSettings]
+    /// >> 360 - Composite[pallet_nfts.types.MintSettings]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class MintSettings : BaseType
@@ -27,93 +27,31 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_nfts.t
         /// <summary>
         /// >> mint_type
         /// </summary>
-        private Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_nfts.types.EnumMintType _mintType;
-        
+        public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_nfts.types.EnumMintType MintType { get; set; }
         /// <summary>
         /// >> price
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U128> _price;
-        
+        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U128> Price { get; set; }
         /// <summary>
         /// >> start_block
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32> _startBlock;
-        
+        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32> StartBlock { get; set; }
         /// <summary>
         /// >> end_block
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32> _endBlock;
-        
+        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32> EndBlock { get; set; }
         /// <summary>
         /// >> default_item_settings
         /// </summary>
-        private Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_nfts.types.BitFlagsT2 _defaultItemSettings;
+        public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_nfts.types.BitFlagsT2 DefaultItemSettings { get; set; }
         
-        public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_nfts.types.EnumMintType MintType
-        {
-            get
-            {
-                return this._mintType;
-            }
-            set
-            {
-                this._mintType = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U128> Price
-        {
-            get
-            {
-                return this._price;
-            }
-            set
-            {
-                this._price = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32> StartBlock
-        {
-            get
-            {
-                return this._startBlock;
-            }
-            set
-            {
-                this._startBlock = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32> EndBlock
-        {
-            get
-            {
-                return this._endBlock;
-            }
-            set
-            {
-                this._endBlock = value;
-            }
-        }
-        
-        public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_nfts.types.BitFlagsT2 DefaultItemSettings
-        {
-            get
-            {
-                return this._defaultItemSettings;
-            }
-            set
-            {
-                this._defaultItemSettings = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "MintSettings";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -125,6 +63,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_nfts.t
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
@@ -141,7 +80,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_nfts.t
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];
-            System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
+            global::System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
         }
     }
 }

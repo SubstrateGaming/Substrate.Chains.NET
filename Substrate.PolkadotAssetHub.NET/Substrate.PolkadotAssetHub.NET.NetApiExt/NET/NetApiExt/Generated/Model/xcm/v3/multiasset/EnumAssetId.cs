@@ -15,16 +15,25 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v3.multia
 {
     
     
+    /// <summary>
+    /// >> AssetId
+    /// </summary>
     public enum AssetId
     {
         
+        /// <summary>
+        /// >> Concrete
+        /// </summary>
         Concrete = 0,
         
+        /// <summary>
+        /// >> Abstract
+        /// </summary>
         Abstract = 1,
     }
     
     /// <summary>
-    /// >> 61 - Variant[xcm.v3.multiasset.AssetId]
+    /// >> 113 - Variant[xcm.v3.multiasset.AssetId]
     /// </summary>
     public sealed class EnumAssetId : BaseEnumExt<AssetId, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.Arr32U8>
     {

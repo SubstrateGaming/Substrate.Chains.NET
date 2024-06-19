@@ -15,16 +15,28 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_sessio
 {
     
     
+    /// <summary>
+    /// >> Call
+    /// Contains a variant per dispatchable extrinsic that this pallet has.
+    /// </summary>
     public enum Call
     {
         
+        /// <summary>
+        /// >> set_keys
+        /// See [`Pallet::set_keys`].
+        /// </summary>
         set_keys = 0,
         
+        /// <summary>
+        /// >> purge_keys
+        /// See [`Pallet::purge_keys`].
+        /// </summary>
         purge_keys = 1,
     }
     
     /// <summary>
-    /// >> 221 - Variant[pallet_session.pallet.Call]
+    /// >> 257 - Variant[pallet_session.pallet.Call]
     /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
     public sealed class EnumCall : BaseEnumExt<Call, BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.asset_hub_polkadot_runtime.SessionKeys, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>, BaseVoid>

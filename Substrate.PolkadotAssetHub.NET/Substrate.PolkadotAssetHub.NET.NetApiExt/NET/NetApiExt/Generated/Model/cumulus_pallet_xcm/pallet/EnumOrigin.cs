@@ -15,16 +15,25 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_palle
 {
     
     
+    /// <summary>
+    /// >> Origin
+    /// </summary>
     public enum Origin
     {
         
+        /// <summary>
+        /// >> Relay
+        /// </summary>
         Relay = 0,
         
+        /// <summary>
+        /// >> SiblingParachain
+        /// </summary>
         SiblingParachain = 1,
     }
     
     /// <summary>
-    /// >> 332 - Variant[cumulus_pallet_xcm.pallet.Origin]
+    /// >> 387 - Variant[cumulus_pallet_xcm.pallet.Origin]
     /// </summary>
     public sealed class EnumOrigin : BaseEnumExt<Origin, BaseVoid, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id>
     {

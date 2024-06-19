@@ -27,42 +27,19 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_runtime
         /// <summary>
         /// >> index
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U8 _index;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U8 Index { get; set; }
         /// <summary>
         /// >> error
         /// </summary>
-        private Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.Arr4U8 _error;
+        public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.Arr4U8 Error { get; set; }
         
-        public Substrate.NetApi.Model.Types.Primitive.U8 Index
-        {
-            get
-            {
-                return this._index;
-            }
-            set
-            {
-                this._index = value;
-            }
-        }
-        
-        public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.Arr4U8 Error
-        {
-            get
-            {
-                return this._error;
-            }
-            set
-            {
-                this._error = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "ModuleError";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -71,6 +48,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_runtime
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
@@ -81,7 +59,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_runtime
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];
-            System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
+            global::System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
         }
     }
 }

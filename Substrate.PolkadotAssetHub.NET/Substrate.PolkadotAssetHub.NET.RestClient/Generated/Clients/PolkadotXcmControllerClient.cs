@@ -60,33 +60,33 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("PolkadotXcm.SafeXcmVersion");
       }
-      public async Task<U32> GetSupportedVersion(BaseTuple<U32, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation> key)
+      public async Task<U32> GetSupportedVersion(BaseTuple<U32, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation> key)
       {
          return await SendRequestAsync<U32>(_httpClient, "polkadotxcm/supportedversion", Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage.PolkadotXcmStorage.SupportedVersionParams(key));
       }
-      public async Task<bool> SubscribeSupportedVersion(BaseTuple<U32, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation> key)
+      public async Task<bool> SubscribeSupportedVersion(BaseTuple<U32, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation> key)
       {
          return await _subscriptionClient.SubscribeAsync("PolkadotXcm.SupportedVersion", Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage.PolkadotXcmStorage.SupportedVersionParams(key));
       }
-      public async Task<U64> GetVersionNotifiers(BaseTuple<U32, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation> key)
+      public async Task<U64> GetVersionNotifiers(BaseTuple<U32, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation> key)
       {
          return await SendRequestAsync<U64>(_httpClient, "polkadotxcm/versionnotifiers", Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage.PolkadotXcmStorage.VersionNotifiersParams(key));
       }
-      public async Task<bool> SubscribeVersionNotifiers(BaseTuple<U32, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation> key)
+      public async Task<bool> SubscribeVersionNotifiers(BaseTuple<U32, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation> key)
       {
          return await _subscriptionClient.SubscribeAsync("PolkadotXcm.VersionNotifiers", Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage.PolkadotXcmStorage.VersionNotifiersParams(key));
       }
-      public async Task<BaseTuple<U64, Weight, U32>> GetVersionNotifyTargets(BaseTuple<U32, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation> key)
+      public async Task<BaseTuple<U64, Weight, U32>> GetVersionNotifyTargets(BaseTuple<U32, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation> key)
       {
          return await SendRequestAsync<BaseTuple<U64, Weight, U32>>(_httpClient, "polkadotxcm/versionnotifytargets", Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage.PolkadotXcmStorage.VersionNotifyTargetsParams(key));
       }
-      public async Task<bool> SubscribeVersionNotifyTargets(BaseTuple<U32, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.EnumVersionedMultiLocation> key)
+      public async Task<bool> SubscribeVersionNotifyTargets(BaseTuple<U32, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation> key)
       {
          return await _subscriptionClient.SubscribeAsync("PolkadotXcm.VersionNotifyTargets", Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage.PolkadotXcmStorage.VersionNotifyTargetsParams(key));
       }
-      public async Task<BoundedVecT14> GetVersionDiscoveryQueue()
+      public async Task<BoundedVecT17> GetVersionDiscoveryQueue()
       {
-         return await SendRequestAsync<BoundedVecT14>(_httpClient, "polkadotxcm/versiondiscoveryqueue");
+         return await SendRequestAsync<BoundedVecT17>(_httpClient, "polkadotxcm/versiondiscoveryqueue");
       }
       public async Task<bool> SubscribeVersionDiscoveryQueue()
       {
@@ -108,9 +108,9 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("PolkadotXcm.RemoteLockedFungibles", Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage.PolkadotXcmStorage.RemoteLockedFungiblesParams(key));
       }
-      public async Task<BoundedVecT16> GetLockedFungibles(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+      public async Task<BoundedVecT19> GetLockedFungibles(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {
-         return await SendRequestAsync<BoundedVecT16>(_httpClient, "polkadotxcm/lockedfungibles", Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage.PolkadotXcmStorage.LockedFungiblesParams(key));
+         return await SendRequestAsync<BoundedVecT19>(_httpClient, "polkadotxcm/lockedfungibles", Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage.PolkadotXcmStorage.LockedFungiblesParams(key));
       }
       public async Task<bool> SubscribeLockedFungibles(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {

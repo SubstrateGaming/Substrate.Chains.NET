@@ -15,16 +15,25 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_nfts.t
 {
     
     
+    /// <summary>
+    /// >> PriceDirection
+    /// </summary>
     public enum PriceDirection
     {
         
+        /// <summary>
+        /// >> Send
+        /// </summary>
         Send = 0,
         
+        /// <summary>
+        /// >> Receive
+        /// </summary>
         Receive = 1,
     }
     
     /// <summary>
-    /// >> 121 - Variant[pallet_nfts.types.PriceDirection]
+    /// >> 143 - Variant[pallet_nfts.types.PriceDirection]
     /// </summary>
     public sealed class EnumPriceDirection : BaseEnum<PriceDirection>
     {

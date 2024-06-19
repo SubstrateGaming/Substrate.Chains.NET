@@ -15,31 +15,80 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_collat
 {
     
     
+    /// <summary>
+    /// >> Event
+    /// The `Event` enum of this pallet
+    /// </summary>
     public enum Event
     {
         
+        /// <summary>
+        /// >> NewInvulnerables
+        /// New Invulnerables were set.
+        /// </summary>
         NewInvulnerables = 0,
         
+        /// <summary>
+        /// >> InvulnerableAdded
+        /// A new Invulnerable was added.
+        /// </summary>
         InvulnerableAdded = 1,
         
+        /// <summary>
+        /// >> InvulnerableRemoved
+        /// An Invulnerable was removed.
+        /// </summary>
         InvulnerableRemoved = 2,
         
+        /// <summary>
+        /// >> NewDesiredCandidates
+        /// The number of desired candidates was set.
+        /// </summary>
         NewDesiredCandidates = 3,
         
+        /// <summary>
+        /// >> NewCandidacyBond
+        /// The candidacy bond was set.
+        /// </summary>
         NewCandidacyBond = 4,
         
+        /// <summary>
+        /// >> CandidateAdded
+        /// A new candidate joined.
+        /// </summary>
         CandidateAdded = 5,
         
-        CandidateRemoved = 6,
+        /// <summary>
+        /// >> CandidateBondUpdated
+        /// Bond of a candidate updated.
+        /// </summary>
+        CandidateBondUpdated = 6,
         
-        InvalidInvulnerableSkipped = 7,
+        /// <summary>
+        /// >> CandidateRemoved
+        /// A candidate was removed.
+        /// </summary>
+        CandidateRemoved = 7,
+        
+        /// <summary>
+        /// >> CandidateReplaced
+        /// An account was replaced in the candidate list by another one.
+        /// </summary>
+        CandidateReplaced = 8,
+        
+        /// <summary>
+        /// >> InvalidInvulnerableSkipped
+        /// An account was unable to be added to the Invulnerables because they did not have keys
+        /// registered. Other Invulnerables may have been set.
+        /// </summary>
+        InvalidInvulnerableSkipped = 9,
     }
     
     /// <summary>
-    /// >> 37 - Variant[pallet_collator_selection.pallet.Event]
+    /// >> 48 - Variant[pallet_collator_selection.pallet.Event]
     /// The `Event` enum of this pallet
     /// </summary>
-    public sealed class EnumEvent : BaseEnumExt<Event, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U128, BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U128>, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>
+    public sealed class EnumEvent : BaseEnumExt<Event, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U128, BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U128>, BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U128>, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U128>, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>
     {
     }
 }

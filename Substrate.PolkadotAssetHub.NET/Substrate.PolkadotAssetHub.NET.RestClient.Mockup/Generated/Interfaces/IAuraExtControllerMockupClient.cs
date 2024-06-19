@@ -18,7 +18,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Mockup.Generated.Interfaces
    
    public interface IAuraExtControllerMockupClient
    {
-      Task<bool> SetAuthorities(BoundedVecT13 value);
+      Task<bool> SetAuthorities(BoundedVecT14 value);
       Task<bool> SetSlotInfo(BaseTuple<Slot, U32> value);
    }
 }

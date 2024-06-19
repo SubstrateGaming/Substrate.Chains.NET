@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Substrate.PolkadotAssetHub.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Substrate.PolkadotAssetHub.NET.RestClient.Test", "Substrate.PolkadotAssetHub.NET.RestClient.Test\Substrate.PolkadotAssetHub.NET.RestClient.Test.csproj", "{FBA42D5B-0C35-4F18-B853-A08385B38ADA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Substrate.PolkadotAssetHub.NET.Integration", "Substrate.PolkadotAssetHub.NET.Integration\Substrate.PolkadotAssetHub.NET.Integration.csproj", "{B40F5A78-38C3-4044-80DC-7DE69DF679ED}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -42,5 +44,9 @@ Global
 		{FBA42D5B-0C35-4F18-B853-A08385B38ADA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FBA42D5B-0C35-4F18-B853-A08385B38ADA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FBA42D5B-0C35-4F18-B853-A08385B38ADA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B40F5A78-38C3-4044-80DC-7DE69DF679ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B40F5A78-38C3-4044-80DC-7DE69DF679ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B40F5A78-38C3-4044-80DC-7DE69DF679ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B40F5A78-38C3-4044-80DC-7DE69DF679ED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

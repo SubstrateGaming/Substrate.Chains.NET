@@ -15,20 +15,40 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_multis
 {
     
     
+    /// <summary>
+    /// >> Call
+    /// Contains a variant per dispatchable extrinsic that this pallet has.
+    /// </summary>
     public enum Call
     {
         
+        /// <summary>
+        /// >> as_multi_threshold_1
+        /// See [`Pallet::as_multi_threshold_1`].
+        /// </summary>
         as_multi_threshold_1 = 0,
         
+        /// <summary>
+        /// >> as_multi
+        /// See [`Pallet::as_multi`].
+        /// </summary>
         as_multi = 1,
         
+        /// <summary>
+        /// >> approve_as_multi
+        /// See [`Pallet::approve_as_multi`].
+        /// </summary>
         approve_as_multi = 2,
         
+        /// <summary>
+        /// >> cancel_as_multi
+        /// See [`Pallet::cancel_as_multi`].
+        /// </summary>
         cancel_as_multi = 3,
     }
     
     /// <summary>
-    /// >> 295 - Variant[pallet_multisig.pallet.Call]
+    /// >> 347 - Variant[pallet_multisig.pallet.Call]
     /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
     public sealed class EnumCall : BaseEnumExt<Call, BaseTuple<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.asset_hub_polkadot_runtime.EnumRuntimeCall>, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U16, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_multisig.Timepoint>, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.asset_hub_polkadot_runtime.EnumRuntimeCall, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U16, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_multisig.Timepoint>, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.Arr32U8, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U16, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_multisig.Timepoint, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.Arr32U8>>

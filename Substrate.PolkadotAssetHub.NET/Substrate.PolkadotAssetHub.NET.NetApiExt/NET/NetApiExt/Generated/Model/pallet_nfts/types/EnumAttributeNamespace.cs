@@ -15,20 +15,35 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_nfts.t
 {
     
     
+    /// <summary>
+    /// >> AttributeNamespace
+    /// </summary>
     public enum AttributeNamespace
     {
         
+        /// <summary>
+        /// >> Pallet
+        /// </summary>
         Pallet = 0,
         
+        /// <summary>
+        /// >> CollectionOwner
+        /// </summary>
         CollectionOwner = 1,
         
+        /// <summary>
+        /// >> ItemOwner
+        /// </summary>
         ItemOwner = 2,
         
+        /// <summary>
+        /// >> Account
+        /// </summary>
         Account = 3,
     }
     
     /// <summary>
-    /// >> 118 - Variant[pallet_nfts.types.AttributeNamespace]
+    /// >> 140 - Variant[pallet_nfts.types.AttributeNamespace]
     /// </summary>
     public sealed class EnumAttributeNamespace : BaseEnumExt<AttributeNamespace, BaseVoid, BaseVoid, BaseVoid, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>
     {

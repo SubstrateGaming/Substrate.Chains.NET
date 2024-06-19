@@ -15,20 +15,35 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_xcm.pa
 {
     
     
+    /// <summary>
+    /// >> VersionMigrationStage
+    /// </summary>
     public enum VersionMigrationStage
     {
         
+        /// <summary>
+        /// >> MigrateSupportedVersion
+        /// </summary>
         MigrateSupportedVersion = 0,
         
+        /// <summary>
+        /// >> MigrateVersionNotifiers
+        /// </summary>
         MigrateVersionNotifiers = 1,
         
+        /// <summary>
+        /// >> NotifyCurrentTargets
+        /// </summary>
         NotifyCurrentTargets = 2,
         
+        /// <summary>
+        /// >> MigrateAndNotifyOldTargets
+        /// </summary>
         MigrateAndNotifyOldTargets = 3,
     }
     
     /// <summary>
-    /// >> 256 - Variant[pallet_xcm.pallet.VersionMigrationStage]
+    /// >> 292 - Variant[pallet_xcm.pallet.VersionMigrationStage]
     /// </summary>
     public sealed class EnumVersionMigrationStage : BaseEnumExt<VersionMigrationStage, BaseVoid, BaseVoid, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>, BaseVoid>
     {

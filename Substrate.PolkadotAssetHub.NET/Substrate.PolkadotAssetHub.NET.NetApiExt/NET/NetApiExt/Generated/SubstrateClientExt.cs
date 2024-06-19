@@ -18,6 +18,9 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated
 {
     
     
+    /// <summary>
+    /// >> Substrate Client Extension, including all Storage classes direct access.
+    /// </summary>
     public sealed class SubstrateClientExt : Substrate.NetApi.SubstrateClient
     {
         
@@ -62,6 +65,11 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated
         public AssetTxPaymentStorage AssetTxPaymentStorage;
         
         /// <summary>
+        /// VestingStorage storage calls.
+        /// </summary>
+        public VestingStorage VestingStorage;
+        
+        /// <summary>
         /// AuthorshipStorage storage calls.
         /// </summary>
         public AuthorshipStorage AuthorshipStorage;
@@ -102,9 +110,14 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated
         public CumulusXcmStorage CumulusXcmStorage;
         
         /// <summary>
-        /// DmpQueueStorage storage calls.
+        /// ToKusamaXcmRouterStorage storage calls.
         /// </summary>
-        public DmpQueueStorage DmpQueueStorage;
+        public ToKusamaXcmRouterStorage ToKusamaXcmRouterStorage;
+        
+        /// <summary>
+        /// MessageQueueStorage storage calls.
+        /// </summary>
+        public MessageQueueStorage MessageQueueStorage;
         
         /// <summary>
         /// UtilityStorage storage calls.
@@ -141,6 +154,16 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated
         /// </summary>
         public ForeignAssetsStorage ForeignAssetsStorage;
         
+        /// <summary>
+        /// PoolAssetsStorage storage calls.
+        /// </summary>
+        public PoolAssetsStorage PoolAssetsStorage;
+        
+        /// <summary>
+        /// AssetConversionStorage storage calls.
+        /// </summary>
+        public AssetConversionStorage AssetConversionStorage;
+        
         public SubstrateClientExt(System.Uri uri, Substrate.NetApi.Model.Extrinsics.ChargeType chargeType) : 
                 base(uri, chargeType)
         {
@@ -152,6 +175,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated
             this.BalancesStorage = new BalancesStorage(this);
             this.TransactionPaymentStorage = new TransactionPaymentStorage(this);
             this.AssetTxPaymentStorage = new AssetTxPaymentStorage(this);
+            this.VestingStorage = new VestingStorage(this);
             this.AuthorshipStorage = new AuthorshipStorage(this);
             this.CollatorSelectionStorage = new CollatorSelectionStorage(this);
             this.SessionStorage = new SessionStorage(this);
@@ -160,7 +184,8 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated
             this.XcmpQueueStorage = new XcmpQueueStorage(this);
             this.PolkadotXcmStorage = new PolkadotXcmStorage(this);
             this.CumulusXcmStorage = new CumulusXcmStorage(this);
-            this.DmpQueueStorage = new DmpQueueStorage(this);
+            this.ToKusamaXcmRouterStorage = new ToKusamaXcmRouterStorage(this);
+            this.MessageQueueStorage = new MessageQueueStorage(this);
             this.UtilityStorage = new UtilityStorage(this);
             this.MultisigStorage = new MultisigStorage(this);
             this.ProxyStorage = new ProxyStorage(this);
@@ -168,6 +193,8 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated
             this.UniquesStorage = new UniquesStorage(this);
             this.NftsStorage = new NftsStorage(this);
             this.ForeignAssetsStorage = new ForeignAssetsStorage(this);
+            this.PoolAssetsStorage = new PoolAssetsStorage(this);
+            this.AssetConversionStorage = new AssetConversionStorage(this);
         }
     }
 }

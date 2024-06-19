@@ -18,7 +18,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_assets
     
     
     /// <summary>
-    /// >> 348 - Composite[pallet_assets.types.AssetDetails]
+    /// >> 403 - Composite[pallet_assets.types.AssetDetails]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class AssetDetails : BaseType
@@ -27,212 +27,59 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_assets
         /// <summary>
         /// >> owner
         /// </summary>
-        private Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 _owner;
-        
+        public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 Owner { get; set; }
         /// <summary>
         /// >> issuer
         /// </summary>
-        private Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 _issuer;
-        
+        public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 Issuer { get; set; }
         /// <summary>
         /// >> admin
         /// </summary>
-        private Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 _admin;
-        
+        public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 Admin { get; set; }
         /// <summary>
         /// >> freezer
         /// </summary>
-        private Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 _freezer;
-        
+        public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 Freezer { get; set; }
         /// <summary>
         /// >> supply
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U128 _supply;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U128 Supply { get; set; }
         /// <summary>
         /// >> deposit
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U128 _deposit;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U128 Deposit { get; set; }
         /// <summary>
         /// >> min_balance
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U128 _minBalance;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U128 MinBalance { get; set; }
         /// <summary>
         /// >> is_sufficient
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.Bool _isSufficient;
-        
+        public Substrate.NetApi.Model.Types.Primitive.Bool IsSufficient { get; set; }
         /// <summary>
         /// >> accounts
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _accounts;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 Accounts { get; set; }
         /// <summary>
         /// >> sufficients
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _sufficients;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 Sufficients { get; set; }
         /// <summary>
         /// >> approvals
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _approvals;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 Approvals { get; set; }
         /// <summary>
         /// >> status
         /// </summary>
-        private Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_assets.types.EnumAssetStatus _status;
+        public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_assets.types.EnumAssetStatus Status { get; set; }
         
-        public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 Owner
-        {
-            get
-            {
-                return this._owner;
-            }
-            set
-            {
-                this._owner = value;
-            }
-        }
-        
-        public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 Issuer
-        {
-            get
-            {
-                return this._issuer;
-            }
-            set
-            {
-                this._issuer = value;
-            }
-        }
-        
-        public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 Admin
-        {
-            get
-            {
-                return this._admin;
-            }
-            set
-            {
-                this._admin = value;
-            }
-        }
-        
-        public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 Freezer
-        {
-            get
-            {
-                return this._freezer;
-            }
-            set
-            {
-                this._freezer = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U128 Supply
-        {
-            get
-            {
-                return this._supply;
-            }
-            set
-            {
-                this._supply = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U128 Deposit
-        {
-            get
-            {
-                return this._deposit;
-            }
-            set
-            {
-                this._deposit = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U128 MinBalance
-        {
-            get
-            {
-                return this._minBalance;
-            }
-            set
-            {
-                this._minBalance = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.Bool IsSufficient
-        {
-            get
-            {
-                return this._isSufficient;
-            }
-            set
-            {
-                this._isSufficient = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 Accounts
-        {
-            get
-            {
-                return this._accounts;
-            }
-            set
-            {
-                this._accounts = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 Sufficients
-        {
-            get
-            {
-                return this._sufficients;
-            }
-            set
-            {
-                this._sufficients = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 Approvals
-        {
-            get
-            {
-                return this._approvals;
-            }
-            set
-            {
-                this._approvals = value;
-            }
-        }
-        
-        public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_assets.types.EnumAssetStatus Status
-        {
-            get
-            {
-                return this._status;
-            }
-            set
-            {
-                this._status = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "AssetDetails";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -251,6 +98,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_assets
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
@@ -281,7 +129,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_assets
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];
-            System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
+            global::System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
         }
     }
 }

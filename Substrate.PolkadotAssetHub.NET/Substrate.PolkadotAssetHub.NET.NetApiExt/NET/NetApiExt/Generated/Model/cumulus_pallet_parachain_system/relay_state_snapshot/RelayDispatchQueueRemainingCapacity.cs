@@ -18,7 +18,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_palle
     
     
     /// <summary>
-    /// >> 164 - Composite[cumulus_pallet_parachain_system.relay_state_snapshot.RelayDispatchQueueRemainingCapacity]
+    /// >> 193 - Composite[cumulus_pallet_parachain_system.relay_state_snapshot.RelayDispatchQueueRemainingCapacity]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class RelayDispatchQueueRemainingCapacity : BaseType
@@ -27,42 +27,19 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_palle
         /// <summary>
         /// >> remaining_count
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _remainingCount;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 RemainingCount { get; set; }
         /// <summary>
         /// >> remaining_size
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _remainingSize;
+        public Substrate.NetApi.Model.Types.Primitive.U32 RemainingSize { get; set; }
         
-        public Substrate.NetApi.Model.Types.Primitive.U32 RemainingCount
-        {
-            get
-            {
-                return this._remainingCount;
-            }
-            set
-            {
-                this._remainingCount = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 RemainingSize
-        {
-            get
-            {
-                return this._remainingSize;
-            }
-            set
-            {
-                this._remainingSize = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "RelayDispatchQueueRemainingCapacity";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -71,6 +48,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_palle
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
@@ -81,7 +59,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_palle
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];
-            System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
+            global::System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
         }
     }
 }

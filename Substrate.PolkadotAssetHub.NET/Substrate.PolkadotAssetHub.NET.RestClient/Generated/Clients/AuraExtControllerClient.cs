@@ -27,9 +27,9 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Generated.Clients
          _httpClient = httpClient;
          _subscriptionClient = subscriptionClient;
       }
-      public async Task<BoundedVecT13> GetAuthorities()
+      public async Task<BoundedVecT14> GetAuthorities()
       {
-         return await SendRequestAsync<BoundedVecT13>(_httpClient, "auraext/authorities");
+         return await SendRequestAsync<BoundedVecT14>(_httpClient, "auraext/authorities");
       }
       public async Task<bool> SubscribeAuthorities()
       {

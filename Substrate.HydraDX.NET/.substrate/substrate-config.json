@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "net_api": "Substrate.HydraDX.NET.NetApiExt",
+    "net_integration": "Substrate.HydraDX.NET.Integration",
+    "rest_service": "Substrate.HydraDX.NET.RestService",
+    "rest_client": "Substrate.HydraDX.NET.RestClient"
+  },
+   "metadata": {
+      "websocket": "wss://hydradx-rpc.dwellir.com"
+   },
+  "rest_client_settings": {
+    "service_assembly": "Substrate.HydraDX.NET.RestService.dll"
+  }
+}

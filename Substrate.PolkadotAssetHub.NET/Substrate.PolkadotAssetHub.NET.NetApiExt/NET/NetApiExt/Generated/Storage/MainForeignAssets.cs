@@ -21,12 +21,18 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> ForeignAssetsStorage
+    /// </summary>
     public sealed class ForeignAssetsStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> ForeignAssetsStorage Constructor
+        /// </summary>
         public ForeignAssetsStorage(SubstrateClientExt client)
         {
             this._client = client;
@@ -67,10 +73,10 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
         /// >> Asset
         ///  Details of an asset.
         /// </summary>
-        public async Task<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_assets.types.AssetDetails> Asset(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation key, CancellationToken token)
+        public async Task<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_assets.types.AssetDetails> Asset(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation key, string blockhash, CancellationToken token)
         {
             string parameters = ForeignAssetsStorage.AssetParams(key);
-            var result = await _client.GetStorageAsync<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_assets.types.AssetDetails>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_assets.types.AssetDetails>(parameters, blockhash, token);
             return result;
         }
         
@@ -98,10 +104,10 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
         /// >> Account
         ///  The holdings of a specific account for a specific asset.
         /// </summary>
-        public async Task<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_assets.types.AssetAccount> Account(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> key, CancellationToken token)
+        public async Task<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_assets.types.AssetAccount> Account(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> key, string blockhash, CancellationToken token)
         {
             string parameters = ForeignAssetsStorage.AccountParams(key);
-            var result = await _client.GetStorageAsync<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_assets.types.AssetAccount>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_assets.types.AssetAccount>(parameters, blockhash, token);
             return result;
         }
         
@@ -134,10 +140,10 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
         ///  is the amount of `T::Currency` reserved for storing this.
         ///  First key is the asset ID, second key is the owner and third key is the delegate.
         /// </summary>
-        public async Task<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_assets.types.Approval> Approvals(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> key, CancellationToken token)
+        public async Task<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_assets.types.Approval> Approvals(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> key, string blockhash, CancellationToken token)
         {
             string parameters = ForeignAssetsStorage.ApprovalsParams(key);
-            var result = await _client.GetStorageAsync<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_assets.types.Approval>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_assets.types.Approval>(parameters, blockhash, token);
             return result;
         }
         
@@ -165,14 +171,17 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
         /// >> Metadata
         ///  Metadata of an asset.
         /// </summary>
-        public async Task<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_assets.types.AssetMetadataT2> Metadata(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation key, CancellationToken token)
+        public async Task<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_assets.types.AssetMetadataT2> Metadata(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation key, string blockhash, CancellationToken token)
         {
             string parameters = ForeignAssetsStorage.MetadataParams(key);
-            var result = await _client.GetStorageAsync<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_assets.types.AssetMetadataT2>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_assets.types.AssetMetadataT2>(parameters, blockhash, token);
             return result;
         }
     }
     
+    /// <summary>
+    /// >> ForeignAssetsCalls
+    /// </summary>
     public sealed class ForeignAssetsCalls
     {
         
@@ -578,6 +587,9 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> ForeignAssetsConstants
+    /// </summary>
     public sealed class ForeignAssetsConstants
     {
         
@@ -601,7 +613,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
         public Substrate.NetApi.Model.Types.Primitive.U128 AssetDeposit()
         {
             var result = new Substrate.NetApi.Model.Types.Primitive.U128();
-            result.Create("0x00E87648170000000000000000000000");
+            result.Create("0xC07E5778000000000000000000000000");
             return result;
         }
         
@@ -647,7 +659,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
         public Substrate.NetApi.Model.Types.Primitive.U128 ApprovalDeposit()
         {
             var result = new Substrate.NetApi.Model.Types.Primitive.U128();
-            result.Create("0x00CA9A3B000000000000000000000000");
+            result.Create("0x00E1F505000000000000000000000000");
             return result;
         }
         
@@ -663,6 +675,9 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> ForeignAssetsErrors
+    /// </summary>
     public enum ForeignAssetsErrors
     {
         

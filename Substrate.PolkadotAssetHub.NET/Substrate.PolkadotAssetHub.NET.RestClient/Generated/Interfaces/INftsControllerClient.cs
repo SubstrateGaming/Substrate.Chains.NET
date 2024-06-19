@@ -39,7 +39,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Generated.Interfaces
       Task<bool> SubscribeAttribute(BaseTuple<U32, BaseOpt<U32>, EnumAttributeNamespace, BoundedVecT6> key);
       Task<BaseTuple<U128, BaseOpt<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>>> GetItemPriceOf(BaseTuple<U32, U32> key);
       Task<bool> SubscribeItemPriceOf(BaseTuple<U32, U32> key);
-      Task<BoundedBTreeSet> GetItemAttributesApprovalsOf(BaseTuple<U32, U32> key);
+      Task<BoundedBTreeSetT2> GetItemAttributesApprovalsOf(BaseTuple<U32, U32> key);
       Task<bool> SubscribeItemAttributesApprovalsOf(BaseTuple<U32, U32> key);
       Task<U32> GetNextCollectionId();
       Task<bool> SubscribeNextCollectionId();

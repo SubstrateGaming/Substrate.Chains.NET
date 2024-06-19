@@ -23,13 +23,13 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Mockup.Generated.Clients
       {
          _httpClient = httpClient;
       }
-      public async Task<bool> SetInvulnerables(BoundedVecT11 value)
+      public async Task<bool> SetInvulnerables(BoundedVecT12 value)
       {
          return await SendMockupRequestAsync(_httpClient, "CollatorSelection/Invulnerables", value.Encode(), Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage.CollatorSelectionStorage.InvulnerablesParams());
       }
-      public async Task<bool> SetCandidates(BoundedVecT12 value)
+      public async Task<bool> SetCandidateList(BoundedVecT13 value)
       {
-         return await SendMockupRequestAsync(_httpClient, "CollatorSelection/Candidates", value.Encode(), Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage.CollatorSelectionStorage.CandidatesParams());
+         return await SendMockupRequestAsync(_httpClient, "CollatorSelection/CandidateList", value.Encode(), Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage.CollatorSelectionStorage.CandidateListParams());
       }
       public async Task<bool> SetLastAuthoredBlock(U32 value, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {

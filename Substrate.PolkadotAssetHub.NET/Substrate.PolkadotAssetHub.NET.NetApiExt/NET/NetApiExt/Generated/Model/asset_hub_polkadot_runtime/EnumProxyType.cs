@@ -15,26 +15,50 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.asset_hub_pol
 {
     
     
+    /// <summary>
+    /// >> ProxyType
+    /// </summary>
     public enum ProxyType
     {
         
+        /// <summary>
+        /// >> Any
+        /// </summary>
         Any = 0,
         
+        /// <summary>
+        /// >> NonTransfer
+        /// </summary>
         NonTransfer = 1,
         
+        /// <summary>
+        /// >> CancelProxy
+        /// </summary>
         CancelProxy = 2,
         
+        /// <summary>
+        /// >> Assets
+        /// </summary>
         Assets = 3,
         
+        /// <summary>
+        /// >> AssetOwner
+        /// </summary>
         AssetOwner = 4,
         
+        /// <summary>
+        /// >> AssetManager
+        /// </summary>
         AssetManager = 5,
         
+        /// <summary>
+        /// >> Collator
+        /// </summary>
         Collator = 6,
     }
     
     /// <summary>
-    /// >> 107 - Variant[asset_hub_polkadot_runtime.ProxyType]
+    /// >> 128 - Variant[asset_hub_polkadot_runtime.ProxyType]
     /// </summary>
     public sealed class EnumProxyType : BaseEnum<ProxyType>
     {

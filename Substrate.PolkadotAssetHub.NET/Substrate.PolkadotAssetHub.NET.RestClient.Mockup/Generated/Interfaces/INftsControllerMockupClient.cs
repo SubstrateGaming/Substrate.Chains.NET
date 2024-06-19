@@ -29,7 +29,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Mockup.Generated.Interfaces
       Task<bool> SetItemMetadataOf(ItemMetadata value, BaseTuple<U32, U32> key);
       Task<bool> SetAttribute(BaseTuple<BoundedVecT7, AttributeDeposit> value, BaseTuple<U32, BaseOpt<U32>, EnumAttributeNamespace, BoundedVecT6> key);
       Task<bool> SetItemPriceOf(BaseTuple<U128, BaseOpt<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>> value, BaseTuple<U32, U32> key);
-      Task<bool> SetItemAttributesApprovalsOf(BoundedBTreeSet value, BaseTuple<U32, U32> key);
+      Task<bool> SetItemAttributesApprovalsOf(BoundedBTreeSetT2 value, BaseTuple<U32, U32> key);
       Task<bool> SetNextCollectionId(U32 value);
       Task<bool> SetPendingSwapOf(PendingSwap value, BaseTuple<U32, U32> key);
       Task<bool> SetCollectionConfigOf(CollectionConfig value, U32 key);

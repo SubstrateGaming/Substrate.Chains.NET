@@ -15,33 +15,49 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_palle
 {
     
     
+    /// <summary>
+    /// >> Call
+    /// Contains a variant per dispatchable extrinsic that this pallet has.
+    /// </summary>
     public enum Call
     {
         
-        service_overweight = 0,
-        
+        /// <summary>
+        /// >> suspend_xcm_execution
+        /// See [`Pallet::suspend_xcm_execution`].
+        /// </summary>
         suspend_xcm_execution = 1,
         
+        /// <summary>
+        /// >> resume_xcm_execution
+        /// See [`Pallet::resume_xcm_execution`].
+        /// </summary>
         resume_xcm_execution = 2,
         
+        /// <summary>
+        /// >> update_suspend_threshold
+        /// See [`Pallet::update_suspend_threshold`].
+        /// </summary>
         update_suspend_threshold = 3,
         
+        /// <summary>
+        /// >> update_drop_threshold
+        /// See [`Pallet::update_drop_threshold`].
+        /// </summary>
         update_drop_threshold = 4,
         
+        /// <summary>
+        /// >> update_resume_threshold
+        /// See [`Pallet::update_resume_threshold`].
+        /// </summary>
         update_resume_threshold = 5,
-        
-        update_threshold_weight = 6,
-        
-        update_weight_restrict_decay = 7,
-        
-        update_xcmp_max_individual_weight = 8,
     }
     
     /// <summary>
-    /// >> 240 - Variant[cumulus_pallet_xcmp_queue.pallet.Call]
+    /// >> 271 - Variant[cumulus_pallet_xcmp_queue.pallet.Call]
     /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
-    public sealed class EnumCall : BaseEnumExt<Call, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U64, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>, BaseVoid, BaseVoid, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>
+    public sealed class EnumCall : BaseEnumExt<Call, BaseVoid, BaseVoid, BaseVoid, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>
     {
     }
 }
