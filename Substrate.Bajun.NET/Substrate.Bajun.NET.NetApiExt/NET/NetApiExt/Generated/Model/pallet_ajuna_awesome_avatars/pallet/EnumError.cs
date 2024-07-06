@@ -456,33 +456,39 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
         FeatureLocked = 71,
         
         /// <summary>
-        /// >> FeatureUnlockableInSeason
+        /// >> FeatureLockedInSeason
         /// The feature trying to be unlocked is not available for the selected season
         /// </summary>
-        FeatureUnlockableInSeason = 72,
+        FeatureLockedInSeason = 72,
+        
+        /// <summary>
+        /// >> FeatureLockedThroughPayment
+        /// The feature trying to be unlocked cannot be unlocked with payment
+        /// </summary>
+        FeatureLockedThroughPayment = 73,
         
         /// <summary>
         /// >> UnlockCriteriaNotFulfilled
         /// The feature trying to be unlocked has missing requirements to be fulfilled by
         /// the account trying to unlock it
         /// </summary>
-        UnlockCriteriaNotFulfilled = 73,
+        UnlockCriteriaNotFulfilled = 74,
         
         /// <summary>
         /// >> TournamentRankerNotFound
         /// Couldn't find a tournament ranker for the active tournament; qed
         /// </summary>
-        TournamentRankerNotFound = 74,
+        TournamentRankerNotFound = 75,
         
         /// <summary>
         /// >> AffiliateOthersOnlyWhiteListed
         /// Only whitelisted accounts can affiliate for others
         /// </summary>
-        AffiliateOthersOnlyWhiteListed = 75,
+        AffiliateOthersOnlyWhiteListed = 76,
     }
     
     /// <summary>
-    /// >> 611 - Variant[pallet_ajuna_awesome_avatars.pallet.Error]
+    /// >> 614 - Variant[pallet_ajuna_awesome_avatars.pallet.Error]
     /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>

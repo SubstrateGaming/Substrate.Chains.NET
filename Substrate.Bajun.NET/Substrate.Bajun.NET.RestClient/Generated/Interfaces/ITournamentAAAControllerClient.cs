@@ -28,7 +28,7 @@ namespace Substrate.Bajun.NET.RestClient.Generated.Interfaces
       Task<bool> SubscribeTournaments(Substrate.NetApi.Model.Types.Base.BaseTuple<U16, U32> key);
       Task<EnumTournamentState> GetActiveTournaments(U16 key);
       Task<bool> SubscribeActiveTournaments(U16 key);
-      Task<BoundedVecT53> GetTournamentRankings(Substrate.NetApi.Model.Types.Base.BaseTuple<U16, U32> key);
+      Task<BoundedVecT54> GetTournamentRankings(Substrate.NetApi.Model.Types.Base.BaseTuple<U16, U32> key);
       Task<bool> SubscribeTournamentRankings(Substrate.NetApi.Model.Types.Base.BaseTuple<U16, U32> key);
       Task<EnumRewardClaimState> GetTournamentRewardClaims(Substrate.NetApi.Model.Types.Base.BaseTuple<U16, U32, U32> key);
       Task<bool> SubscribeTournamentRewardClaims(Substrate.NetApi.Model.Types.Base.BaseTuple<U16, U32, U32> key);

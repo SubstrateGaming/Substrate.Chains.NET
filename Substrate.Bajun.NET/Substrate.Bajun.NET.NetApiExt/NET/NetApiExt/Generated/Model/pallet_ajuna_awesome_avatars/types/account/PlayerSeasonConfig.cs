@@ -18,7 +18,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
     
     
     /// <summary>
-    /// >> 602 - Composite[pallet_ajuna_awesome_avatars.types.account.PlayerSeasonConfig]
+    /// >> 605 - Composite[pallet_ajuna_awesome_avatars.types.account.PlayerSeasonConfig]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class PlayerSeasonConfig : BaseType

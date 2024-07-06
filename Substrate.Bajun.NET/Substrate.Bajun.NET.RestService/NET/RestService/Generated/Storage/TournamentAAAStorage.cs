@@ -52,7 +52,7 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
         /// <summary>
         /// >> TournamentRankings
         /// </summary>
-        Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT53 GetTournamentRankings(string key);
+        Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT54 GetTournamentRankings(string key);
         
         /// <summary>
         /// >> TournamentRewardClaims
@@ -104,7 +104,7 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
         /// <summary>
         /// _tournamentRankingsTypedStorage typed storage field
         /// </summary>
-        private TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT53> _tournamentRankingsTypedStorage;
+        private TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT54> _tournamentRankingsTypedStorage;
         
         /// <summary>
         /// _tournamentRewardClaimsTypedStorage typed storage field
@@ -131,7 +131,7 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
             this.NextTournamentIdsTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Primitive.U32>("TournamentAAA.NextTournamentIds", storageDataProvider, storageChangeDelegates);
             this.TournamentsTypedStorage = new TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_tournament.config.TournamentConfig>("TournamentAAA.Tournaments", storageDataProvider, storageChangeDelegates);
             this.ActiveTournamentsTypedStorage = new TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_tournament.config.EnumTournamentState>("TournamentAAA.ActiveTournaments", storageDataProvider, storageChangeDelegates);
-            this.TournamentRankingsTypedStorage = new TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT53>("TournamentAAA.TournamentRankings", storageDataProvider, storageChangeDelegates);
+            this.TournamentRankingsTypedStorage = new TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT54>("TournamentAAA.TournamentRankings", storageDataProvider, storageChangeDelegates);
             this.TournamentRewardClaimsTypedStorage = new TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_tournament.config.EnumRewardClaimState>("TournamentAAA.TournamentRewardClaims", storageDataProvider, storageChangeDelegates);
             this.GoldenDucksTypedStorage = new TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_tournament.config.EnumGoldenDuckState>("TournamentAAA.GoldenDucks", storageDataProvider, storageChangeDelegates);
             this.GoldenDuckRewardClaimsTypedStorage = new TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_tournament.config.EnumRewardClaimState>("TournamentAAA.GoldenDuckRewardClaims", storageDataProvider, storageChangeDelegates);
@@ -215,7 +215,7 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
         /// <summary>
         /// _tournamentRankingsTypedStorage property
         /// </summary>
-        public TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT53> TournamentRankingsTypedStorage
+        public TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT54> TournamentRankingsTypedStorage
         {
             get
             {
@@ -440,13 +440,13 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
         /// <summary>
         /// >> TournamentRankings
         /// </summary>
-        public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT53 GetTournamentRankings(string key)
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT54 GetTournamentRankings(string key)
         {
             if ((key == null))
             {
                 return null;
             }
-            if (TournamentRankingsTypedStorage.Dictionary.TryGetValue(key, out Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT53 result))
+            if (TournamentRankingsTypedStorage.Dictionary.TryGetValue(key, out Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT54 result))
             {
                 return result;
             }

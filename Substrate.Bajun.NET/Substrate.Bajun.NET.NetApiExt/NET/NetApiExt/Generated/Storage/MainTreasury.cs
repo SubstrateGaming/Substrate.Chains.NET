@@ -383,7 +383,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         public Substrate.NetApi.Model.Types.Primitive.U32 SpendPeriod()
         {
             var result = new Substrate.NetApi.Model.Types.Primitive.U32();
-            result.Create("0xE0C40000");
+            result.Create("0xC0890100");
             return result;
         }
         
@@ -429,7 +429,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         public Substrate.NetApi.Model.Types.Primitive.U32 PayoutPeriod()
         {
             var result = new Substrate.NetApi.Model.Types.Primitive.U32();
-            result.Create("0xC0A80000");
+            result.Create("0x80510100");
             return result;
         }
     }

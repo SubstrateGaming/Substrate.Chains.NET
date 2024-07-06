@@ -18,7 +18,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_tournament.
     
     
     /// <summary>
-    /// >> 415 - Composite[pallet_ajuna_tournament.config.TournamentConfig]
+    /// >> 416 - Composite[pallet_ajuna_tournament.config.TournamentConfig]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class TournamentConfig : BaseType

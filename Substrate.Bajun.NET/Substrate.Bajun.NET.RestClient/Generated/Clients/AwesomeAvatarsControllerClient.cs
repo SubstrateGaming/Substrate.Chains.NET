@@ -48,9 +48,9 @@ namespace Substrate.Bajun.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("AwesomeAvatars.Treasurer", Substrate.Bajun.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage.TreasurerParams(key));
       }
-      public async Task<BoundedVecT50> GetWhitelistedAccounts()
+      public async Task<BoundedVecT51> GetWhitelistedAccounts()
       {
-         return await SendRequestAsync<BoundedVecT50>(_httpClient, "awesomeavatars/whitelistedaccounts");
+         return await SendRequestAsync<BoundedVecT51>(_httpClient, "awesomeavatars/whitelistedaccounts");
       }
       public async Task<bool> SubscribeWhitelistedAccounts()
       {
@@ -128,9 +128,9 @@ namespace Substrate.Bajun.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("AwesomeAvatars.Avatars", Substrate.Bajun.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage.AvatarsParams(key));
       }
-      public async Task<BoundedVecT51> GetOwners(BaseTuple<AccountId32, U16> key)
+      public async Task<BoundedVecT52> GetOwners(BaseTuple<AccountId32, U16> key)
       {
-         return await SendRequestAsync<BoundedVecT51>(_httpClient, "awesomeavatars/owners", Substrate.Bajun.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage.OwnersParams(key));
+         return await SendRequestAsync<BoundedVecT52>(_httpClient, "awesomeavatars/owners", Substrate.Bajun.NET.NetApiExt.Generated.Storage.AwesomeAvatarsStorage.OwnersParams(key));
       }
       public async Task<bool> SubscribeOwners(BaseTuple<AccountId32, U16> key)
       {

@@ -28,7 +28,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.bajun_runtime.xcm_config
     }
     
     /// <summary>
-    /// >> 390 - Variant[bajun_runtime.xcm_config.CurrencyId]
+    /// >> 391 - Variant[bajun_runtime.xcm_config.CurrencyId]
     /// </summary>
     public sealed class EnumCurrencyId : BaseEnum<CurrencyId>
     {

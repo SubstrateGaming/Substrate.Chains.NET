@@ -96,7 +96,7 @@ namespace Substrate.Bajun.NET.RestService.Generated.Controller
         /// >> TournamentRankings
         /// </summary>
         [HttpGet("TournamentRankings")]
-        [ProducesResponseType(typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT53), 200)]
+        [ProducesResponseType(typeof(Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT54), 200)]
         [StorageKeyBuilder(typeof(Substrate.Bajun.NET.NetApiExt.Generated.Storage.TournamentAAAStorage), "TournamentRankingsParams", typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U16, Substrate.NetApi.Model.Types.Primitive.U32>))]
         public IActionResult GetTournamentRankings(string key)
         {

@@ -38,7 +38,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm
     }
     
     /// <summary>
-    /// >> 391 - Variant[xcm.VersionedAsset]
+    /// >> 392 - Variant[xcm.VersionedAsset]
     /// </summary>
     public sealed class EnumVersionedAsset : BaseEnumExt<VersionedAsset, BaseVoid, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.v2.multiasset.MultiAsset, BaseVoid, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.v3.multiasset.MultiAsset, Substrate.Bajun.NET.NetApiExt.Generated.Model.staging_xcm.v4.asset.Asset>
     {

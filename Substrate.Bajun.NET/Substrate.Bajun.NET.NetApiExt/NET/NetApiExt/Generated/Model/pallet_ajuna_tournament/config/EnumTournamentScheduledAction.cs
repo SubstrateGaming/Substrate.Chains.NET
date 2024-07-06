@@ -38,7 +38,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_tournament.
     }
     
     /// <summary>
-    /// >> 643 - Variant[pallet_ajuna_tournament.config.TournamentScheduledAction]
+    /// >> 646 - Variant[pallet_ajuna_tournament.config.TournamentScheduledAction]
     /// </summary>
     public sealed class EnumTournamentScheduledAction : BaseEnumExt<TournamentScheduledAction, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U16, Substrate.NetApi.Model.Types.Primitive.U32>, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U16, Substrate.NetApi.Model.Types.Primitive.U32>, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U16, Substrate.NetApi.Model.Types.Primitive.U32>>
     {

@@ -25,7 +25,7 @@ namespace Substrate.Bajun.NET.RestClient.Mockup.Generated.Clients
       {
          _httpClient = httpClient;
       }
-      public async Task<bool> SetAffiliatees(BoundedVecT52 value, AccountId32 key)
+      public async Task<bool> SetAffiliatees(BoundedVecT53 value, AccountId32 key)
       {
          return await SendMockupRequestAsync(_httpClient, "AffiliatesAAA/Affiliatees", value.Encode(), Substrate.Bajun.NET.NetApiExt.Generated.Storage.AffiliatesAAAStorage.AffiliateesParams(key));
       }

@@ -33,7 +33,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_tournament.
     }
     
     /// <summary>
-    /// >> 650 - Variant[pallet_ajuna_tournament.config.GoldenDuckState]
+    /// >> 653 - Variant[pallet_ajuna_tournament.config.GoldenDuckState]
     /// </summary>
     public sealed class EnumGoldenDuckState : BaseEnumExt<GoldenDuckState, BaseVoid, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U8, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256>>>
     {

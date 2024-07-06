@@ -30,7 +30,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.orml_xcm.module
     }
     
     /// <summary>
-    /// >> 394 - Variant[orml_xcm.module.Call]
+    /// >> 395 - Variant[orml_xcm.module.Call]
     /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
     public sealed class EnumCall : BaseEnumExt<Call, BaseTuple<Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedXcm>>

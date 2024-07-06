@@ -28,7 +28,7 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
         /// >> Affiliatees
         ///  Stores the affiliated accounts from the perspectives of the affiliatee
         /// </summary>
-        Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT52 GetAffiliatees(string key);
+        Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT53 GetAffiliatees(string key);
         
         /// <summary>
         /// >> Affiliators
@@ -63,7 +63,7 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
         /// <summary>
         /// _affiliateesTypedStorage typed storage field
         /// </summary>
-        private TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT52> _affiliateesTypedStorage;
+        private TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT53> _affiliateesTypedStorage;
         
         /// <summary>
         /// _affiliatorsTypedStorage typed storage field
@@ -90,7 +90,7 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
         /// </summary>
         public AffiliatesAAAStorage(IStorageDataProvider storageDataProvider, List<IStorageChangeDelegate> storageChangeDelegates)
         {
-            this.AffiliateesTypedStorage = new TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT52>("AffiliatesAAA.Affiliatees", storageDataProvider, storageChangeDelegates);
+            this.AffiliateesTypedStorage = new TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT53>("AffiliatesAAA.Affiliatees", storageDataProvider, storageChangeDelegates);
             this.AffiliatorsTypedStorage = new TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_affiliates.traits.AffiliatorState>("AffiliatesAAA.Affiliators", storageDataProvider, storageChangeDelegates);
             this.AffiliateRulesTypedStorage = new TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT21>("AffiliatesAAA.AffiliateRules", storageDataProvider, storageChangeDelegates);
             this.NextAffiliateIdTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32>("AffiliatesAAA.NextAffiliateId", storageDataProvider, storageChangeDelegates);
@@ -100,7 +100,7 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
         /// <summary>
         /// _affiliateesTypedStorage property
         /// </summary>
-        public TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT52> AffiliateesTypedStorage
+        public TypedMapStorage<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT53> AffiliateesTypedStorage
         {
             get
             {
@@ -197,13 +197,13 @@ namespace Substrate.Bajun.NET.RestService.Generated.Storage
         /// >> Affiliatees
         ///  Stores the affiliated accounts from the perspectives of the affiliatee
         /// </summary>
-        public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT52 GetAffiliatees(string key)
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT53 GetAffiliatees(string key)
         {
             if ((key == null))
             {
                 return null;
             }
-            if (AffiliateesTypedStorage.Dictionary.TryGetValue(key, out Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT52 result))
+            if (AffiliateesTypedStorage.Dictionary.TryGetValue(key, out Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT53 result))
             {
                 return result;
             }

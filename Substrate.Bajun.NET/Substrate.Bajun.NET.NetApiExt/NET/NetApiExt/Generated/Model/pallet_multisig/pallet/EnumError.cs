@@ -108,7 +108,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_multisig.pallet
     }
     
     /// <summary>
-    /// >> 446 - Variant[pallet_multisig.pallet.Error]
+    /// >> 447 - Variant[pallet_multisig.pallet.Error]
     /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>

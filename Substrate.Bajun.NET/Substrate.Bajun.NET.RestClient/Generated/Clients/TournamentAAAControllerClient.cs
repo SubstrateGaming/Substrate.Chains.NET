@@ -67,9 +67,9 @@ namespace Substrate.Bajun.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("TournamentAAA.ActiveTournaments", Substrate.Bajun.NET.NetApiExt.Generated.Storage.TournamentAAAStorage.ActiveTournamentsParams(key));
       }
-      public async Task<BoundedVecT53> GetTournamentRankings(Substrate.NetApi.Model.Types.Base.BaseTuple<U16, U32> key)
+      public async Task<BoundedVecT54> GetTournamentRankings(Substrate.NetApi.Model.Types.Base.BaseTuple<U16, U32> key)
       {
-         return await SendRequestAsync<BoundedVecT53>(_httpClient, "tournamentaaa/tournamentrankings", Substrate.Bajun.NET.NetApiExt.Generated.Storage.TournamentAAAStorage.TournamentRankingsParams(key));
+         return await SendRequestAsync<BoundedVecT54>(_httpClient, "tournamentaaa/tournamentrankings", Substrate.Bajun.NET.NetApiExt.Generated.Storage.TournamentAAAStorage.TournamentRankingsParams(key));
       }
       public async Task<bool> SubscribeTournamentRankings(Substrate.NetApi.Model.Types.Base.BaseTuple<U16, U32> key)
       {

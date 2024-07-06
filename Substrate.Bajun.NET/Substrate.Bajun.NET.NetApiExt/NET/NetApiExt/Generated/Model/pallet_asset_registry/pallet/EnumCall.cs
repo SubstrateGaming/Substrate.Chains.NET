@@ -34,7 +34,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_asset_registry.pa
     }
     
     /// <summary>
-    /// >> 444 - Variant[pallet_asset_registry.pallet.Call]
+    /// >> 445 - Variant[pallet_asset_registry.pallet.Call]
     /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
     public sealed class EnumCall : BaseEnumExt<Call, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Bajun.NET.NetApiExt.Generated.Model.staging_xcm.v4.location.Location>, Substrate.NetApi.Model.Types.Primitive.U32>

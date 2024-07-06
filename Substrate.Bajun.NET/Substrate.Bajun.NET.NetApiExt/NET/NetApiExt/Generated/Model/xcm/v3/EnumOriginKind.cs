@@ -11,31 +11,41 @@ using Substrate.NetApi.Model.Types.Base;
 using System.Collections.Generic;
 
 
-namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.v2.multiasset
+namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.v3
 {
     
     
     /// <summary>
-    /// >> MultiAssetFilter
+    /// >> OriginKind
     /// </summary>
-    public enum MultiAssetFilter
+    public enum OriginKind
     {
         
         /// <summary>
-        /// >> Definite
+        /// >> Native
         /// </summary>
-        Definite = 0,
+        Native = 0,
         
         /// <summary>
-        /// >> Wild
+        /// >> SovereignAccount
         /// </summary>
-        Wild = 1,
+        SovereignAccount = 1,
+        
+        /// <summary>
+        /// >> Superuser
+        /// </summary>
+        Superuser = 2,
+        
+        /// <summary>
+        /// >> Xcm
+        /// </summary>
+        Xcm = 3,
     }
     
     /// <summary>
-    /// >> 358 - Variant[xcm.v2.multiasset.MultiAssetFilter]
+    /// >> 99 - Variant[xcm.v3.OriginKind]
     /// </summary>
-    public sealed class EnumMultiAssetFilter : BaseEnumExt<MultiAssetFilter, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.v2.multiasset.MultiAssets, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.v2.multiasset.EnumWildMultiAsset>
+    public sealed class EnumOriginKind : BaseEnum<OriginKind>
     {
     }
 }

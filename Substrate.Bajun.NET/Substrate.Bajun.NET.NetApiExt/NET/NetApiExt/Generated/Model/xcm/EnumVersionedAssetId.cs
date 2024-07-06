@@ -33,7 +33,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm
     }
     
     /// <summary>
-    /// >> 386 - Variant[xcm.VersionedAssetId]
+    /// >> 387 - Variant[xcm.VersionedAssetId]
     /// </summary>
     public sealed class EnumVersionedAssetId : BaseEnumExt<VersionedAssetId, BaseVoid, BaseVoid, BaseVoid, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.v3.multiasset.EnumAssetId, Substrate.Bajun.NET.NetApiExt.Generated.Model.staging_xcm.v4.asset.AssetId>
     {

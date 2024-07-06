@@ -13,38 +13,33 @@ using Substrate.NetApi.Model.Types.Metadata.V14;
 using System.Collections.Generic;
 
 
-namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account
+namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec
 {
     
     
     /// <summary>
-    /// >> 607 - Composite[pallet_ajuna_awesome_avatars.types.account.Stats]
+    /// >> 532 - Composite[bounded_collections.weak_bounded_vec.WeakBoundedVecT3]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
-    public sealed class Stats : BaseType
+    public sealed class WeakBoundedVecT3 : BaseType
     {
         
         /// <summary>
-        /// >> mint
+        /// >> value
         /// </summary>
-        public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.PlayStats Mint { get; set; }
-        /// <summary>
-        /// >> forge
-        /// </summary>
-        public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.PlayStats Forge { get; set; }
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> Value { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
         {
-            return "Stats";
+            return "WeakBoundedVecT3";
         }
         
         /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
-            result.AddRange(Mint.Encode());
-            result.AddRange(Forge.Encode());
+            result.AddRange(Value.Encode());
             return result.ToArray();
         }
         
@@ -52,10 +47,8 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Mint = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.PlayStats();
-            Mint.Decode(byteArray, ref p);
-            Forge = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.account.PlayStats();
-            Forge.Decode(byteArray, ref p);
+            Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>();
+            Value.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];

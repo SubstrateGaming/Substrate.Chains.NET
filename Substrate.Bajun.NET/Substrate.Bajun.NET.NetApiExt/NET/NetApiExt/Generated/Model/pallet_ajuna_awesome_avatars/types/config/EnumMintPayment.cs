@@ -33,7 +33,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
     }
     
     /// <summary>
-    /// >> 408 - Variant[pallet_ajuna_awesome_avatars.types.config.MintPayment]
+    /// >> 409 - Variant[pallet_ajuna_awesome_avatars.types.config.MintPayment]
     /// </summary>
     public sealed class EnumMintPayment : BaseEnum<MintPayment>
     {

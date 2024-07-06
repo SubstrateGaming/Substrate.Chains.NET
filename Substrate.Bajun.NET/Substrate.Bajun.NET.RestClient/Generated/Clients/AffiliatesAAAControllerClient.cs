@@ -27,9 +27,9 @@ namespace Substrate.Bajun.NET.RestClient.Generated.Clients
          _httpClient = httpClient;
          _subscriptionClient = subscriptionClient;
       }
-      public async Task<BoundedVecT52> GetAffiliatees(AccountId32 key)
+      public async Task<BoundedVecT53> GetAffiliatees(AccountId32 key)
       {
-         return await SendRequestAsync<BoundedVecT52>(_httpClient, "affiliatesaaa/affiliatees", Substrate.Bajun.NET.NetApiExt.Generated.Storage.AffiliatesAAAStorage.AffiliateesParams(key));
+         return await SendRequestAsync<BoundedVecT53>(_httpClient, "affiliatesaaa/affiliatees", Substrate.Bajun.NET.NetApiExt.Generated.Storage.AffiliatesAAAStorage.AffiliateesParams(key));
       }
       public async Task<bool> SubscribeAffiliatees(AccountId32 key)
       {

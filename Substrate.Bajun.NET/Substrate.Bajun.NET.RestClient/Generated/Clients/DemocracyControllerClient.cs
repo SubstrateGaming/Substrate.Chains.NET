@@ -39,17 +39,17 @@ namespace Substrate.Bajun.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("Democracy.PublicPropCount");
       }
-      public async Task<BoundedVecT46> GetPublicProps()
+      public async Task<BoundedVecT47> GetPublicProps()
       {
-         return await SendRequestAsync<BoundedVecT46>(_httpClient, "democracy/publicprops");
+         return await SendRequestAsync<BoundedVecT47>(_httpClient, "democracy/publicprops");
       }
       public async Task<bool> SubscribePublicProps()
       {
          return await _subscriptionClient.SubscribeAsync("Democracy.PublicProps");
       }
-      public async Task<BaseTuple<BoundedVecT47, U128>> GetDepositOf(U32 key)
+      public async Task<BaseTuple<BoundedVecT48, U128>> GetDepositOf(U32 key)
       {
-         return await SendRequestAsync<BaseTuple<BoundedVecT47, U128>>(_httpClient, "democracy/depositof", Substrate.Bajun.NET.NetApiExt.Generated.Storage.DemocracyStorage.DepositOfParams(key));
+         return await SendRequestAsync<BaseTuple<BoundedVecT48, U128>>(_httpClient, "democracy/depositof", Substrate.Bajun.NET.NetApiExt.Generated.Storage.DemocracyStorage.DepositOfParams(key));
       }
       public async Task<bool> SubscribeDepositOf(U32 key)
       {
@@ -103,9 +103,9 @@ namespace Substrate.Bajun.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("Democracy.NextExternal");
       }
-      public async Task<BaseTuple<U32, BoundedVecT47>> GetBlacklist(H256 key)
+      public async Task<BaseTuple<U32, BoundedVecT48>> GetBlacklist(H256 key)
       {
-         return await SendRequestAsync<BaseTuple<U32, BoundedVecT47>>(_httpClient, "democracy/blacklist", Substrate.Bajun.NET.NetApiExt.Generated.Storage.DemocracyStorage.BlacklistParams(key));
+         return await SendRequestAsync<BaseTuple<U32, BoundedVecT48>>(_httpClient, "democracy/blacklist", Substrate.Bajun.NET.NetApiExt.Generated.Storage.DemocracyStorage.BlacklistParams(key));
       }
       public async Task<bool> SubscribeBlacklist(H256 key)
       {

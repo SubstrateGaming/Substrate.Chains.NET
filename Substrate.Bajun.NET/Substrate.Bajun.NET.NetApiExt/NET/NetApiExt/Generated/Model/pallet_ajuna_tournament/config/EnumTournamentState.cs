@@ -43,7 +43,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_tournament.
     }
     
     /// <summary>
-    /// >> 644 - Variant[pallet_ajuna_tournament.config.TournamentState]
+    /// >> 647 - Variant[pallet_ajuna_tournament.config.TournamentState]
     /// </summary>
     public sealed class EnumTournamentState : BaseEnumExt<TournamentState, BaseVoid, Substrate.NetApi.Model.Types.Primitive.U32, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U128>, Substrate.NetApi.Model.Types.Primitive.U32>
     {

@@ -321,7 +321,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         public Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight MaximumWeight()
         {
             var result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight();
-            result.Create("0x0700A0DB215D02000001");
+            result.Create("0x0B00806E87740102000001");
             return result;
         }
         

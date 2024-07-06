@@ -215,7 +215,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Storage
         public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight> ServiceWeight()
         {
             var result = new Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>();
-            result.Create("0x01070016D0BE2802007000");
+            result.Create("0x0107005840FBA202007000");
             return result;
         }
         

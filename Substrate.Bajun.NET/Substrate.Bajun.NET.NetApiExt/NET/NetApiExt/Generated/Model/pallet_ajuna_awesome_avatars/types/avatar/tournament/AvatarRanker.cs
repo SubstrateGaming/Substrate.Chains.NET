@@ -18,7 +18,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
     
     
     /// <summary>
-    /// >> 420 - Composite[pallet_ajuna_awesome_avatars.types.avatar.tournament.AvatarRanker]
+    /// >> 421 - Composite[pallet_ajuna_awesome_avatars.types.avatar.tournament.AvatarRanker]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class AvatarRanker : BaseType

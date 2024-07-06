@@ -18,7 +18,7 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Types.Base
     
     
     /// <summary>
-    /// >> 423 - Composite[NonZeroU32]
+    /// >> 424 - Composite[NonZeroU32]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class NonZeroU32 : BaseType

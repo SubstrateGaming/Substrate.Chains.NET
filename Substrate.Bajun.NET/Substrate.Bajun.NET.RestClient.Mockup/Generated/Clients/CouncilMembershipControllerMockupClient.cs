@@ -23,7 +23,7 @@ namespace Substrate.Bajun.NET.RestClient.Mockup.Generated.Clients
       {
          _httpClient = httpClient;
       }
-      public async Task<bool> SetMembers(BoundedVecT44 value)
+      public async Task<bool> SetMembers(BoundedVecT45 value)
       {
          return await SendMockupRequestAsync(_httpClient, "CouncilMembership/Members", value.Encode(), Substrate.Bajun.NET.NetApiExt.Generated.Storage.CouncilMembershipStorage.MembersParams());
       }

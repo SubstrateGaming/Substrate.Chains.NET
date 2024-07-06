@@ -18,7 +18,7 @@ namespace Substrate.Bajun.NET.RestClient.Generated.Interfaces
    
    public interface IAffiliatesAAAControllerClient
    {
-      Task<BoundedVecT52> GetAffiliatees(AccountId32 key);
+      Task<BoundedVecT53> GetAffiliatees(AccountId32 key);
       Task<bool> SubscribeAffiliatees(AccountId32 key);
       Task<AffiliatorState> GetAffiliators(AccountId32 key);
       Task<bool> SubscribeAffiliators(AccountId32 key);

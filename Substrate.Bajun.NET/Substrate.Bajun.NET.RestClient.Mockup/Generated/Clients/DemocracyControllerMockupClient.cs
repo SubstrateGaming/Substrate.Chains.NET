@@ -33,11 +33,11 @@ namespace Substrate.Bajun.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "Democracy/PublicPropCount", value.Encode(), Substrate.Bajun.NET.NetApiExt.Generated.Storage.DemocracyStorage.PublicPropCountParams());
       }
-      public async Task<bool> SetPublicProps(BoundedVecT46 value)
+      public async Task<bool> SetPublicProps(BoundedVecT47 value)
       {
          return await SendMockupRequestAsync(_httpClient, "Democracy/PublicProps", value.Encode(), Substrate.Bajun.NET.NetApiExt.Generated.Storage.DemocracyStorage.PublicPropsParams());
       }
-      public async Task<bool> SetDepositOf(BaseTuple<BoundedVecT47, U128> value, U32 key)
+      public async Task<bool> SetDepositOf(BaseTuple<BoundedVecT48, U128> value, U32 key)
       {
          return await SendMockupRequestAsync(_httpClient, "Democracy/DepositOf", value.Encode(), Substrate.Bajun.NET.NetApiExt.Generated.Storage.DemocracyStorage.DepositOfParams(key));
       }
@@ -65,7 +65,7 @@ namespace Substrate.Bajun.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "Democracy/NextExternal", value.Encode(), Substrate.Bajun.NET.NetApiExt.Generated.Storage.DemocracyStorage.NextExternalParams());
       }
-      public async Task<bool> SetBlacklist(BaseTuple<U32, BoundedVecT47> value, H256 key)
+      public async Task<bool> SetBlacklist(BaseTuple<U32, BoundedVecT48> value, H256 key)
       {
          return await SendMockupRequestAsync(_httpClient, "Democracy/Blacklist", value.Encode(), Substrate.Bajun.NET.NetApiExt.Generated.Storage.DemocracyStorage.BlacklistParams(key));
       }
