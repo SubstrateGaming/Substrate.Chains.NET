@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking
     
     
     /// <summary>
-    /// >> 626 - Composite[pallet_staking.EraRewardPoints]
+    /// >> 587 - Composite[pallet_staking.EraRewardPoints]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class EraRewardPoints : BaseType

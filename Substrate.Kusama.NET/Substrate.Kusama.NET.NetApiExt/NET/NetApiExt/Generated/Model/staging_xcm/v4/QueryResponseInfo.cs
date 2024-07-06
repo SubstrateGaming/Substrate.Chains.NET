@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_xcm.v4
     
     
     /// <summary>
-    /// >> 475 - Composite[staging_xcm.v4.QueryResponseInfo]
+    /// >> 436 - Composite[staging_xcm.v4.QueryResponseInfo]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class QueryResponseInfo : BaseType

@@ -33,7 +33,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.v3
     }
     
     /// <summary>
-    /// >> 460 - Variant[xcm.v3.WeightLimit]
+    /// >> 421 - Variant[xcm.v3.WeightLimit]
     /// </summary>
     public sealed class EnumWeightLimit : BaseEnumExt<WeightLimit, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>
     {

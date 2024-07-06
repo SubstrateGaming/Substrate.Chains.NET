@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parach
     
     
     /// <summary>
-    /// >> 899 - Composite[polkadot_runtime_parachains.assigner_coretime.Schedule]
+    /// >> 845 - Composite[polkadot_runtime_parachains.assigner_coretime.Schedule]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Schedule : BaseType

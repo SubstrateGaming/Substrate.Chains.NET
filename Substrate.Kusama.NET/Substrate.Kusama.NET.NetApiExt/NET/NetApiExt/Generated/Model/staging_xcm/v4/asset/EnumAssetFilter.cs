@@ -33,7 +33,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_xcm.v4.asset
     }
     
     /// <summary>
-    /// >> 476 - Variant[staging_xcm.v4.asset.AssetFilter]
+    /// >> 437 - Variant[staging_xcm.v4.asset.AssetFilter]
     /// </summary>
     public sealed class EnumAssetFilter : BaseEnumExt<AssetFilter, Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_xcm.v4.asset.Assets, Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_xcm.v4.asset.EnumWildAsset>
     {

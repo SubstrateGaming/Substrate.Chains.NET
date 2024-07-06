@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society
     
     
     /// <summary>
-    /// >> 522 - Composite[pallet_society.GroupParams]
+    /// >> 484 - Composite[pallet_society.GroupParams]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class GroupParams : BaseType

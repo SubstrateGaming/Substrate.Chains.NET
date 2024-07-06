@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_xcm.v4
     
     
     /// <summary>
-    /// >> 461 - Composite[staging_xcm.v4.XcmT1]
+    /// >> 422 - Composite[staging_xcm.v4.XcmT1]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class XcmT1 : BaseType

@@ -43,7 +43,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_xcm.v4.asset
     }
     
     /// <summary>
-    /// >> 477 - Variant[staging_xcm.v4.asset.WildAsset]
+    /// >> 438 - Variant[staging_xcm.v4.asset.WildAsset]
     /// </summary>
     public sealed class EnumWildAsset : BaseEnumExt<WildAsset, BaseVoid, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_xcm.v4.asset.AssetId, Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_xcm.v4.asset.EnumWildFungibility>, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_xcm.v4.asset.AssetId, Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_xcm.v4.asset.EnumWildFungibility, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>>>
     {

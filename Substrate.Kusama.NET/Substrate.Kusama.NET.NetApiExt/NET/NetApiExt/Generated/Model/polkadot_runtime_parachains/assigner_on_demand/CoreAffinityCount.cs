@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parach
     
     
     /// <summary>
-    /// >> 896 - Composite[polkadot_runtime_parachains.assigner_on_demand.CoreAffinityCount]
+    /// >> 842 - Composite[polkadot_runtime_parachains.assigner_on_demand.CoreAffinityCount]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class CoreAffinityCount : BaseType

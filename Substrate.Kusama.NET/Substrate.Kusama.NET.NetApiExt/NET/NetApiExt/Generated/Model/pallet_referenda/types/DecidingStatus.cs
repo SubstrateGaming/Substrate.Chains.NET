@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_referenda.types
     
     
     /// <summary>
-    /// >> 677 - Composite[pallet_referenda.types.DecidingStatus]
+    /// >> 638 - Composite[pallet_referenda.types.DecidingStatus]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class DecidingStatus : BaseType

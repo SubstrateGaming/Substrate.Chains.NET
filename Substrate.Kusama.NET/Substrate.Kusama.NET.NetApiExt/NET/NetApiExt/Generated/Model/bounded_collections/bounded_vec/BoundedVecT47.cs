@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bou
     
     
     /// <summary>
-    /// >> 819 - Composite[bounded_collections.bounded_vec.BoundedVecT47]
+    /// >> 895 - Composite[bounded_collections.bounded_vec.BoundedVecT47]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class BoundedVecT47 : BaseType

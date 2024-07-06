@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_bags_list.list
     
     
     /// <summary>
-    /// >> 799 - Composite[pallet_bags_list.list.Node]
+    /// >> 745 - Composite[pallet_bags_list.list.Node]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Node : BaseType

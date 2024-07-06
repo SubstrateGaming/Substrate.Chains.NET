@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking
     
     
     /// <summary>
-    /// >> 616 - Composite[pallet_staking.StakingLedger]
+    /// >> 577 - Composite[pallet_staking.StakingLedger]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class StakingLedger : BaseType
@@ -43,7 +43,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking
         /// <summary>
         /// >> legacy_claimed_rewards
         /// </summary>
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18 LegacyClaimedRewards { get; set; }
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT16 LegacyClaimedRewards { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
@@ -75,7 +75,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking
             Active.Decode(byteArray, ref p);
             Unlocking = new Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT2();
             Unlocking.Decode(byteArray, ref p);
-            LegacyClaimedRewards = new Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18();
+            LegacyClaimedRewards = new Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT16();
             LegacyClaimedRewards.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

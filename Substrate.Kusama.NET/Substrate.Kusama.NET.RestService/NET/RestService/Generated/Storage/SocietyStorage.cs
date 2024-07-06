@@ -96,7 +96,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// >> Bids
         ///  The current bids, stored ordered by the value of the bid.
         /// </summary>
-        Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT31 GetBids();
+        Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT25 GetBids();
         
         /// <summary>
         /// >> Candidates
@@ -119,7 +119,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// >> VoteClearCursor
         ///  Clear-cursor for Vote, map from Candidate -> (Maybe) Cursor.
         /// </summary>
-        Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT32 GetVoteClearCursor(string key);
+        Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT26 GetVoteClearCursor(string key);
         
         /// <summary>
         /// >> NextHead
@@ -212,7 +212,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// <summary>
         /// _bidsTypedStorage typed storage field
         /// </summary>
-        private TypedStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT31> _bidsTypedStorage;
+        private TypedStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT25> _bidsTypedStorage;
         
         /// <summary>
         /// _candidatesTypedStorage typed storage field
@@ -232,7 +232,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// <summary>
         /// _voteClearCursorTypedStorage typed storage field
         /// </summary>
-        private TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT32> _voteClearCursorTypedStorage;
+        private TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT26> _voteClearCursorTypedStorage;
         
         /// <summary>
         /// _nextHeadTypedStorage typed storage field
@@ -270,11 +270,11 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
             this.MemberByIndexTypedStorage = new TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>("Society.MemberByIndex", storageDataProvider, storageChangeDelegates);
             this.SuspendedMembersTypedStorage = new TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.MemberRecord>("Society.SuspendedMembers", storageDataProvider, storageChangeDelegates);
             this.RoundCountTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32>("Society.RoundCount", storageDataProvider, storageChangeDelegates);
-            this.BidsTypedStorage = new TypedStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT31>("Society.Bids", storageDataProvider, storageChangeDelegates);
+            this.BidsTypedStorage = new TypedStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT25>("Society.Bids", storageDataProvider, storageChangeDelegates);
             this.CandidatesTypedStorage = new TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.Candidacy>("Society.Candidates", storageDataProvider, storageChangeDelegates);
             this.SkepticTypedStorage = new TypedStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>("Society.Skeptic", storageDataProvider, storageChangeDelegates);
             this.VotesTypedStorage = new TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.Vote>("Society.Votes", storageDataProvider, storageChangeDelegates);
-            this.VoteClearCursorTypedStorage = new TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT32>("Society.VoteClearCursor", storageDataProvider, storageChangeDelegates);
+            this.VoteClearCursorTypedStorage = new TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT26>("Society.VoteClearCursor", storageDataProvider, storageChangeDelegates);
             this.NextHeadTypedStorage = new TypedStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.IntakeRecord>("Society.NextHead", storageDataProvider, storageChangeDelegates);
             this.ChallengeRoundCountTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32>("Society.ChallengeRoundCount", storageDataProvider, storageChangeDelegates);
             this.DefendingTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.Tally>>("Society.Defending", storageDataProvider, storageChangeDelegates);
@@ -449,7 +449,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// <summary>
         /// _bidsTypedStorage property
         /// </summary>
-        public TypedStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT31> BidsTypedStorage
+        public TypedStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT25> BidsTypedStorage
         {
             get
             {
@@ -509,7 +509,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// <summary>
         /// _voteClearCursorTypedStorage property
         /// </summary>
-        public TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT32> VoteClearCursorTypedStorage
+        public TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT26> VoteClearCursorTypedStorage
         {
             get
             {
@@ -865,7 +865,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// >> Bids
         ///  The current bids, stored ordered by the value of the bid.
         /// </summary>
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT31 GetBids()
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT25 GetBids()
         {
             return BidsTypedStorage.Get();
         }
@@ -958,13 +958,13 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// >> VoteClearCursor
         ///  Clear-cursor for Vote, map from Candidate -> (Maybe) Cursor.
         /// </summary>
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT32 GetVoteClearCursor(string key)
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT26 GetVoteClearCursor(string key)
         {
             if ((key == null))
             {
                 return null;
             }
-            if (VoteClearCursorTypedStorage.Dictionary.TryGetValue(key, out Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT32 result))
+            if (VoteClearCursorTypedStorage.Dictionary.TryGetValue(key, out Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT26 result))
             {
                 return result;
             }

@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_message_queue
     
     
     /// <summary>
-    /// >> 947 - Composite[pallet_message_queue.Neighbours]
+    /// >> 892 - Composite[pallet_message_queue.Neighbours]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Neighbours : BaseType

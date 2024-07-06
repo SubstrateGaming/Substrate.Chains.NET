@@ -196,7 +196,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.pallet.p
     }
     
     /// <summary>
-    /// >> 637 - Variant[pallet_staking.pallet.pallet.Error]
+    /// >> 598 - Variant[pallet_staking.pallet.pallet.Error]
     /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>

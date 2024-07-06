@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_thing
     
     
     /// <summary>
-    /// >> 331 - Composite[sp_arithmetic.per_things.Perquintill]
+    /// >> 287 - Composite[sp_arithmetic.per_things.Perquintill]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Perquintill : BaseType

@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nis.pallet
     
     
     /// <summary>
-    /// >> 790 - Composite[pallet_nis.pallet.ReceiptRecord]
+    /// >> 736 - Composite[pallet_nis.pallet.ReceiptRecord]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class ReceiptRecord : BaseType

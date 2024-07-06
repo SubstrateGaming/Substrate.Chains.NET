@@ -33,7 +33,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_xcm.v4.asset
     }
     
     /// <summary>
-    /// >> 467 - Variant[staging_xcm.v4.asset.Fungibility]
+    /// >> 428 - Variant[staging_xcm.v4.asset.Fungibility]
     /// </summary>
     public sealed class EnumFungibility : BaseEnumExt<Fungibility, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128>, Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_xcm.v4.asset.EnumAssetInstance>
     {

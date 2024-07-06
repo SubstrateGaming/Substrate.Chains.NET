@@ -137,7 +137,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// >> Metadata
         ///  Metadata for the pool.
         /// </summary>
-        Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT47 GetMetadata(string key);
+        Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT41 GetMetadata(string key);
         
         /// <summary>
         /// >> CounterForMetadata
@@ -257,7 +257,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// <summary>
         /// _metadataTypedStorage typed storage field
         /// </summary>
-        private TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT47> _metadataTypedStorage;
+        private TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT41> _metadataTypedStorage;
         
         /// <summary>
         /// _counterForMetadataTypedStorage typed storage field
@@ -304,7 +304,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
             this.CounterForRewardPoolsTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32>("NominationPools.CounterForRewardPools", storageDataProvider, storageChangeDelegates);
             this.SubPoolsStorageTypedStorage = new TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools.SubPools>("NominationPools.SubPoolsStorage", storageDataProvider, storageChangeDelegates);
             this.CounterForSubPoolsStorageTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32>("NominationPools.CounterForSubPoolsStorage", storageDataProvider, storageChangeDelegates);
-            this.MetadataTypedStorage = new TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT47>("NominationPools.Metadata", storageDataProvider, storageChangeDelegates);
+            this.MetadataTypedStorage = new TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT41>("NominationPools.Metadata", storageDataProvider, storageChangeDelegates);
             this.CounterForMetadataTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32>("NominationPools.CounterForMetadata", storageDataProvider, storageChangeDelegates);
             this.LastPoolIdTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32>("NominationPools.LastPoolId", storageDataProvider, storageChangeDelegates);
             this.ReversePoolIdLookupTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Primitive.U32>("NominationPools.ReversePoolIdLookup", storageDataProvider, storageChangeDelegates);
@@ -540,7 +540,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// <summary>
         /// _metadataTypedStorage property
         /// </summary>
-        public TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT47> MetadataTypedStorage
+        public TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT41> MetadataTypedStorage
         {
             get
             {
@@ -1001,13 +1001,13 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// >> Metadata
         ///  Metadata for the pool.
         /// </summary>
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT47 GetMetadata(string key)
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT41 GetMetadata(string key)
         {
             if ((key == null))
             {
                 return null;
             }
-            if (MetadataTypedStorage.Dictionary.TryGetValue(key, out Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT47 result))
+            if (MetadataTypedStorage.Dictionary.TryGetValue(key, out Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT41 result))
             {
                 return result;
             }

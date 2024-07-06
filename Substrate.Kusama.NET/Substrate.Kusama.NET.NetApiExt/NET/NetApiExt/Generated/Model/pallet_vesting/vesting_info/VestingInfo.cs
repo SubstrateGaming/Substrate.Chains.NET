@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_vesting.vesting_
     
     
     /// <summary>
-    /// >> 230 - Composite[pallet_vesting.vesting_info.VestingInfo]
+    /// >> 186 - Composite[pallet_vesting.vesting_info.VestingInfo]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class VestingInfo : BaseType

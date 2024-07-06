@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.wea
     
     
     /// <summary>
-    /// >> 793 - Composite[bounded_collections.weak_bounded_vec.WeakBoundedVecT6]
+    /// >> 739 - Composite[bounded_collections.weak_bounded_vec.WeakBoundedVecT6]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class WeakBoundedVecT6 : BaseType

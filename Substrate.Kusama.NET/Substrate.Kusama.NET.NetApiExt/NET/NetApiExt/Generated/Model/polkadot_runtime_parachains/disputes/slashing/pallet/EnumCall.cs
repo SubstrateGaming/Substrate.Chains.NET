@@ -30,7 +30,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parach
     }
     
     /// <summary>
-    /// >> 399 - Variant[polkadot_runtime_parachains.disputes.slashing.pallet.Call]
+    /// >> 356 - Variant[polkadot_runtime_parachains.disputes.slashing.pallet.Call]
     /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
     public sealed class EnumCall : BaseEnumExt<Call, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.slashing.DisputeProof, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_session.MembershipProof>>

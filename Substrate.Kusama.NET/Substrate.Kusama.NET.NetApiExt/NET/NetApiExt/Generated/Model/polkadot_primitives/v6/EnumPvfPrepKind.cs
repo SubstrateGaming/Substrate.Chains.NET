@@ -33,7 +33,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6
     }
     
     /// <summary>
-    /// >> 353 - Variant[polkadot_primitives.v6.PvfPrepKind]
+    /// >> 309 - Variant[polkadot_primitives.v6.PvfPrepKind]
     /// </summary>
     public sealed class EnumPvfPrepKind : BaseEnum<PvfPrepKind>
     {

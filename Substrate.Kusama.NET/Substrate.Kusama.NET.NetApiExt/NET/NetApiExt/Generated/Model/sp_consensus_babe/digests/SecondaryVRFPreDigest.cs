@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_babe.diges
     
     
     /// <summary>
-    /// >> 588 - Composite[sp_consensus_babe.digests.SecondaryVRFPreDigest]
+    /// >> 549 - Composite[sp_consensus_babe.digests.SecondaryVRFPreDigest]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class SecondaryVRFPreDigest : BaseType

@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.
     
     
     /// <summary>
-    /// >> 400 - Composite[polkadot_primitives.v6.slashing.DisputeProof]
+    /// >> 357 - Composite[polkadot_primitives.v6.slashing.DisputeProof]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class DisputeProof : BaseType

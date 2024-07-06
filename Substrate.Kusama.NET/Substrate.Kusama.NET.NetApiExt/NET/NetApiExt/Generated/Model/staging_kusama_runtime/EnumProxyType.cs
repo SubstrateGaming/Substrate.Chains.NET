@@ -42,11 +42,6 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_kusama_runtime
         Staking = 3,
         
         /// <summary>
-        /// >> IdentityJudgement
-        /// </summary>
-        IdentityJudgement = 4,
-        
-        /// <summary>
         /// >> CancelProxy
         /// </summary>
         CancelProxy = 5,
@@ -68,7 +63,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_kusama_runtime
     }
     
     /// <summary>
-    /// >> 236 - Variant[staging_kusama_runtime.ProxyType]
+    /// >> 192 - Variant[staging_kusama_runtime.ProxyType]
     /// </summary>
     public sealed class EnumProxyType : BaseEnum<ProxyType>
     {

@@ -28,7 +28,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools
     }
     
     /// <summary>
-    /// >> 612 - Variant[pallet_nomination_pools.pallet.FreezeReason]
+    /// >> 573 - Variant[pallet_nomination_pools.pallet.FreezeReason]
     /// </summary>
     public sealed class EnumFreezeReason : BaseEnum<FreezeReason>
     {

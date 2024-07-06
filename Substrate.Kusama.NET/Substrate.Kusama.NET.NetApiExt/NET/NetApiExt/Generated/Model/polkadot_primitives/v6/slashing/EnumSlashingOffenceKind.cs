@@ -33,7 +33,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.
     }
     
     /// <summary>
-    /// >> 402 - Variant[polkadot_primitives.v6.slashing.SlashingOffenceKind]
+    /// >> 359 - Variant[polkadot_primitives.v6.slashing.SlashingOffenceKind]
     /// </summary>
     public sealed class EnumSlashingOffenceKind : BaseEnum<SlashingOffenceKind>
     {

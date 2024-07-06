@@ -33,7 +33,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools
     }
     
     /// <summary>
-    /// >> 346 - Variant[pallet_nomination_pools.CommissionClaimPermission]
+    /// >> 302 - Variant[pallet_nomination_pools.CommissionClaimPermission]
     /// </summary>
     public sealed class EnumCommissionClaimPermission : BaseEnumExt<CommissionClaimPermission, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>
     {

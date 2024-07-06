@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_beefy.ecds
     
     
     /// <summary>
-    /// >> 498 - Composite[sp_consensus_beefy.ecdsa_crypto.Signature]
+    /// >> 461 - Composite[sp_consensus_beefy.ecdsa_crypto.Signature]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Signature : BaseType

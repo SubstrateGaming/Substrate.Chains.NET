@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parach
     
     
     /// <summary>
-    /// >> 904 - Composite[polkadot_runtime_parachains.assigner_coretime.WorkState]
+    /// >> 850 - Composite[polkadot_runtime_parachains.assigner_coretime.WorkState]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class WorkState : BaseType

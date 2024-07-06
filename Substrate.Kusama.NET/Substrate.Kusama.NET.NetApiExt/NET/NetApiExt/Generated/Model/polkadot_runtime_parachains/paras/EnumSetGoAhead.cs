@@ -33,7 +33,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parach
     }
     
     /// <summary>
-    /// >> 856 - Variant[polkadot_runtime_parachains.paras.SetGoAhead]
+    /// >> 802 - Variant[polkadot_runtime_parachains.paras.SetGoAhead]
     /// </summary>
     public sealed class EnumSetGoAhead : BaseEnum<SetGoAhead>
     {

@@ -44,7 +44,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parach
     }
     
     /// <summary>
-    /// >> 897 - Variant[polkadot_runtime_parachains.assigner_on_demand.pallet.Error]
+    /// >> 843 - Variant[polkadot_runtime_parachains.assigner_on_demand.pallet.Error]
     /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>

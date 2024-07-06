@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_balances.types
     
     
     /// <summary>
-    /// >> 796 - Composite[pallet_balances.types.IdAmountT3]
+    /// >> 742 - Composite[pallet_balances.types.IdAmountT3]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class IdAmountT3 : BaseType

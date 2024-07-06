@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_conviction_votin
     
     
     /// <summary>
-    /// >> 667 - Composite[pallet_conviction_voting.vote.Delegating]
+    /// >> 628 - Composite[pallet_conviction_voting.vote.Delegating]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Delegating : BaseType

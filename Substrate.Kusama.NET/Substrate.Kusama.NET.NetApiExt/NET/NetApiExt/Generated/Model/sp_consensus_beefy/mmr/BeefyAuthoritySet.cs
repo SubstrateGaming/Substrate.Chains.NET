@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_beefy.mmr
     
     
     /// <summary>
-    /// >> 956 - Composite[sp_consensus_beefy.mmr.BeefyAuthoritySet]
+    /// >> 901 - Composite[sp_consensus_beefy.mmr.BeefyAuthoritySet]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class BeefyAuthoritySet : BaseType

@@ -38,7 +38,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_treasury
     }
     
     /// <summary>
-    /// >> 655 - Variant[pallet_treasury.PaymentState]
+    /// >> 616 - Variant[pallet_treasury.PaymentState]
     /// </summary>
     public sealed class EnumPaymentState : BaseEnumExt<PaymentState, BaseVoid, Substrate.NetApi.Model.Types.Primitive.U64, BaseVoid>
     {
