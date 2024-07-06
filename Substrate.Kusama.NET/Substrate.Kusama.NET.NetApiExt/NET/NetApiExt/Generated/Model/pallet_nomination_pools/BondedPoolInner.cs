@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools
     
     
     /// <summary>
-    /// >> 807 - Composite[pallet_nomination_pools.BondedPoolInner]
+    /// >> 753 - Composite[pallet_nomination_pools.BondedPoolInner]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class BondedPoolInner : BaseType

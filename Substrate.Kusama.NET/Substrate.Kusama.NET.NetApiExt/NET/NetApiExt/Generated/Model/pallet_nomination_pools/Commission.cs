@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools
     
     
     /// <summary>
-    /// >> 808 - Composite[pallet_nomination_pools.Commission]
+    /// >> 754 - Composite[pallet_nomination_pools.Commission]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Commission : BaseType

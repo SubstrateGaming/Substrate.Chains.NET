@@ -53,7 +53,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_xcm.v4.asset
     }
     
     /// <summary>
-    /// >> 468 - Variant[staging_xcm.v4.asset.AssetInstance]
+    /// >> 429 - Variant[staging_xcm.v4.asset.AssetInstance]
     /// </summary>
     public sealed class EnumAssetInstance : BaseEnumExt<AssetInstance, BaseVoid, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128>, Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr4U8, Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr8U8, Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr16U8, Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr32U8>
     {

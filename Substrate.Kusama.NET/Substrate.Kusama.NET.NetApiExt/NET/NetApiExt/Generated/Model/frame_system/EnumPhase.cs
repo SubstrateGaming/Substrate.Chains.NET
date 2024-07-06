@@ -38,7 +38,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_system
     }
     
     /// <summary>
-    /// >> 562 - Variant[frame_system.Phase]
+    /// >> 523 - Variant[frame_system.Phase]
     /// </summary>
     public sealed class EnumPhase : BaseEnumExt<Phase, Substrate.NetApi.Model.Types.Primitive.U32, BaseVoid, BaseVoid>
     {

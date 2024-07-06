@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.traits
     
     
     /// <summary>
-    /// >> 505 - Composite[sp_runtime.traits.BlakeTwo256]
+    /// >> 468 - Composite[sp_runtime.traits.BlakeTwo256]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class BlakeTwo256 : BaseType

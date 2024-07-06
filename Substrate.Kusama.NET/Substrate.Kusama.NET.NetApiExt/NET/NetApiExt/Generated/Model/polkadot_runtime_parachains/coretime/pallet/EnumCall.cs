@@ -36,7 +36,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parach
     }
     
     /// <summary>
-    /// >> 411 - Variant[polkadot_runtime_parachains.coretime.pallet.Call]
+    /// >> 371 - Variant[polkadot_runtime_parachains.coretime.pallet.Call]
     /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
     public sealed class EnumCall : BaseEnumExt<Call, BaseVoid, Substrate.NetApi.Model.Types.Primitive.U16, BaseVoid, BaseVoid, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U16, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_broker.coretime_interface.EnumCoreAssignment, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.assigner_coretime.PartsOf57600>>, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32>>>

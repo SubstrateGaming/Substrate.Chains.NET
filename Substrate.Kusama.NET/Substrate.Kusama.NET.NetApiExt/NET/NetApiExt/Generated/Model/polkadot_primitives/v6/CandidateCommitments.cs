@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6
     
     
     /// <summary>
-    /// >> 374 - Composite[polkadot_primitives.v6.CandidateCommitments]
+    /// >> 331 - Composite[polkadot_primitives.v6.CandidateCommitments]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class CandidateCommitments : BaseType
@@ -27,11 +27,11 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6
         /// <summary>
         /// >> upward_messages
         /// </summary>
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT5 UpwardMessages { get; set; }
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT3 UpwardMessages { get; set; }
         /// <summary>
         /// >> horizontal_messages
         /// </summary>
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT6 HorizontalMessages { get; set; }
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT4 HorizontalMessages { get; set; }
         /// <summary>
         /// >> new_validation_code
         /// </summary>
@@ -72,9 +72,9 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            UpwardMessages = new Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT5();
+            UpwardMessages = new Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT3();
             UpwardMessages.Decode(byteArray, ref p);
-            HorizontalMessages = new Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT6();
+            HorizontalMessages = new Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT4();
             HorizontalMessages.Decode(byteArray, ref p);
             NewValidationCode = new Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCode>();
             NewValidationCode.Decode(byteArray, ref p);

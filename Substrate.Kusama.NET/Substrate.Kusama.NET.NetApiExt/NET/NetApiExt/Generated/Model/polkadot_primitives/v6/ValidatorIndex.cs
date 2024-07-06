@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6
     
     
     /// <summary>
-    /// >> 365 - Composite[polkadot_primitives.v6.ValidatorIndex]
+    /// >> 321 - Composite[polkadot_primitives.v6.ValidatorIndex]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class ValidatorIndex : BaseType

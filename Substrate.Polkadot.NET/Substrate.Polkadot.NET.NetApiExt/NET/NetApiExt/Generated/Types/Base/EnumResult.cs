@@ -33,7 +33,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base
     }
     
     /// <summary>
-    /// >> 480 - Variant[Result]
+    /// >> 482 - Variant[Result]
     /// </summary>
     public sealed class EnumResult : BaseEnumExt<Result, Substrate.Polkadot.NET.NetApiExt.Generated.Model.frame_support.dispatch.PostDispatchInfo, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_runtime.DispatchErrorWithPostInfo>
     {

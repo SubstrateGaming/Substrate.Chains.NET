@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_transaction_paym
     
     
     /// <summary>
-    /// >> 967 - Composite[pallet_transaction_payment.ChargeTransactionPayment]
+    /// >> 912 - Composite[pallet_transaction_payment.ChargeTransactionPayment]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class ChargeTransactionPayment : BaseType

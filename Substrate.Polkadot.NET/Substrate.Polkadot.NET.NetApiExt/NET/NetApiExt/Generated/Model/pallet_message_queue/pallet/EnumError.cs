@@ -84,7 +84,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_message_queue.
     }
     
     /// <summary>
-    /// >> 849 - Variant[pallet_message_queue.pallet.Error]
+    /// >> 850 - Variant[pallet_message_queue.pallet.Error]
     /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>

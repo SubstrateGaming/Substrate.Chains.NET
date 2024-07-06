@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_system
     
     
     /// <summary>
-    /// >> 566 - Composite[frame_system.CodeUpgradeAuthorization]
+    /// >> 527 - Composite[frame_system.CodeUpgradeAuthorization]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class CodeUpgradeAuthorization : BaseType

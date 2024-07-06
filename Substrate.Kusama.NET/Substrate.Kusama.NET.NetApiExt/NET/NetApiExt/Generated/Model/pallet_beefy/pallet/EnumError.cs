@@ -48,7 +48,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_beefy.pallet
     }
     
     /// <summary>
-    /// >> 955 - Variant[pallet_beefy.pallet.Error]
+    /// >> 900 - Variant[pallet_beefy.pallet.Error]
     /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>

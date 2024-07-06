@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_consensus_beefy.mm
     
     
     /// <summary>
-    /// >> 854 - Composite[sp_consensus_beefy.mmr.BeefyAuthoritySet]
+    /// >> 855 - Composite[sp_consensus_beefy.mmr.BeefyAuthoritySet]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class BeefyAuthoritySet : BaseType

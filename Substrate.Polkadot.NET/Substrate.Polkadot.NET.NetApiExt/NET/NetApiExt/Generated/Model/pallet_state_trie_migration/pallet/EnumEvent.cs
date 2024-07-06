@@ -49,7 +49,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_state_trie_mig
     }
     
     /// <summary>
-    /// >> 512 - Variant[pallet_state_trie_migration.pallet.Event]
+    /// >> 514 - Variant[pallet_state_trie_migration.pallet.Event]
     /// Inner events of this pallet.
     /// </summary>
     public sealed class EnumEvent : BaseEnumExt<Event, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.EnumMigrationCompute>, BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U128>, BaseVoid, Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.EnumError>

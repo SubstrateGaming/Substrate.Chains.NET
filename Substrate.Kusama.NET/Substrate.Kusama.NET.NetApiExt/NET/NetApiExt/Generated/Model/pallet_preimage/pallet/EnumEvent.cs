@@ -42,7 +42,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_preimage.pallet
     }
     
     /// <summary>
-    /// >> 529 - Variant[pallet_preimage.pallet.Event]
+    /// >> 491 - Variant[pallet_preimage.pallet.Event]
     /// The `Event` enum of this pallet
     /// </summary>
     public sealed class EnumEvent : BaseEnumExt<Event, Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256>

@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_bounties
     
     
     /// <summary>
-    /// >> 768 - Composite[pallet_bounties.Bounty]
+    /// >> 714 - Composite[pallet_bounties.Bounty]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Bounty : BaseType

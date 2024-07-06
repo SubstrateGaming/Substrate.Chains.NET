@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society
     
     
     /// <summary>
-    /// >> 717 - Composite[pallet_society.MemberRecord]
+    /// >> 663 - Composite[pallet_society.MemberRecord]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class MemberRecord : BaseType

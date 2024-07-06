@@ -46,7 +46,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Controller
         ///  whose duration is one `Period` would be storage `0`.
         /// </summary>
         [HttpGet("QueueTotals")]
-        [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT43), 200)]
+        [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT37), 200)]
         [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.NisStorage), "QueueTotalsParams")]
         public IActionResult GetQueueTotals()
         {
@@ -58,7 +58,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Controller
         ///  The queues of bids. Indexed by duration (in `Period`s).
         /// </summary>
         [HttpGet("Queues")]
-        [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT44), 200)]
+        [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT38), 200)]
         [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.NisStorage), "QueuesParams", typeof(Substrate.NetApi.Model.Types.Primitive.U32))]
         public IActionResult GetQueues(string key)
         {

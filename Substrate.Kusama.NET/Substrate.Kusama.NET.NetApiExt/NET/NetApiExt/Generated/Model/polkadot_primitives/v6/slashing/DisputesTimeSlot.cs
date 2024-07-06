@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.
     
     
     /// <summary>
-    /// >> 401 - Composite[polkadot_primitives.v6.slashing.DisputesTimeSlot]
+    /// >> 358 - Composite[polkadot_primitives.v6.slashing.DisputesTimeSlot]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class DisputesTimeSlot : BaseType

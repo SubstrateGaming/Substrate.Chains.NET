@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_nomination_poo
     
     
     /// <summary>
-    /// >> 727 - Composite[pallet_nomination_pools.SubPools]
+    /// >> 729 - Composite[pallet_nomination_pools.SubPools]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class SubPools : BaseType

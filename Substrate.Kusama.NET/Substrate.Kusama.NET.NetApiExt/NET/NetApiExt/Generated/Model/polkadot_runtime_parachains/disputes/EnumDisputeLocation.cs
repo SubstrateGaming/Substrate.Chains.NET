@@ -33,7 +33,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parach
     }
     
     /// <summary>
-    /// >> 548 - Variant[polkadot_runtime_parachains.disputes.DisputeLocation]
+    /// >> 510 - Variant[polkadot_runtime_parachains.disputes.DisputeLocation]
     /// </summary>
     public sealed class EnumDisputeLocation : BaseEnum<DisputeLocation>
     {

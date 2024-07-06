@@ -100,7 +100,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// >> UnderConstruction
         ///  TWOX-NOTE: `SegmentIndex` is an increasing integer, so this is okay.
         /// </summary>
-        Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT13 GetUnderConstruction(string key);
+        Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT11 GetUnderConstruction(string key);
         
         /// <summary>
         /// >> Initialized
@@ -163,7 +163,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         ///  a validator was the owner of a given key on a given session, and what the
         ///  active epoch index was during that session.
         /// </summary>
-        Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT14 GetSkippedEpochs();
+        Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT12 GetSkippedEpochs();
     }
     
     /// <summary>
@@ -220,7 +220,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// <summary>
         /// _underConstructionTypedStorage typed storage field
         /// </summary>
-        private TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT13> _underConstructionTypedStorage;
+        private TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT11> _underConstructionTypedStorage;
         
         /// <summary>
         /// _initializedTypedStorage typed storage field
@@ -255,7 +255,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// <summary>
         /// _skippedEpochsTypedStorage typed storage field
         /// </summary>
-        private TypedStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT14> _skippedEpochsTypedStorage;
+        private TypedStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT12> _skippedEpochsTypedStorage;
         
         /// <summary>
         /// BabeStorage constructor.
@@ -271,14 +271,14 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
             this.NextRandomnessTypedStorage = new TypedStorage<Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr32U8>("Babe.NextRandomness", storageDataProvider, storageChangeDelegates);
             this.NextAuthoritiesTypedStorage = new TypedStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT2>("Babe.NextAuthorities", storageDataProvider, storageChangeDelegates);
             this.SegmentIndexTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32>("Babe.SegmentIndex", storageDataProvider, storageChangeDelegates);
-            this.UnderConstructionTypedStorage = new TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT13>("Babe.UnderConstruction", storageDataProvider, storageChangeDelegates);
+            this.UnderConstructionTypedStorage = new TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT11>("Babe.UnderConstruction", storageDataProvider, storageChangeDelegates);
             this.InitializedTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_babe.digests.EnumPreDigest>>("Babe.Initialized", storageDataProvider, storageChangeDelegates);
             this.AuthorVrfRandomnessTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr32U8>>("Babe.AuthorVrfRandomness", storageDataProvider, storageChangeDelegates);
             this.EpochStartTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>>("Babe.EpochStart", storageDataProvider, storageChangeDelegates);
             this.LatenessTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32>("Babe.Lateness", storageDataProvider, storageChangeDelegates);
             this.EpochConfigTypedStorage = new TypedStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_babe.BabeEpochConfiguration>("Babe.EpochConfig", storageDataProvider, storageChangeDelegates);
             this.NextEpochConfigTypedStorage = new TypedStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_babe.BabeEpochConfiguration>("Babe.NextEpochConfig", storageDataProvider, storageChangeDelegates);
-            this.SkippedEpochsTypedStorage = new TypedStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT14>("Babe.SkippedEpochs", storageDataProvider, storageChangeDelegates);
+            this.SkippedEpochsTypedStorage = new TypedStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT12>("Babe.SkippedEpochs", storageDataProvider, storageChangeDelegates);
         }
         
         /// <summary>
@@ -419,7 +419,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// <summary>
         /// _underConstructionTypedStorage property
         /// </summary>
-        public TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT13> UnderConstructionTypedStorage
+        public TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT11> UnderConstructionTypedStorage
         {
             get
             {
@@ -524,7 +524,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// <summary>
         /// _skippedEpochsTypedStorage property
         /// </summary>
-        public TypedStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT14> SkippedEpochsTypedStorage
+        public TypedStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT12> SkippedEpochsTypedStorage
         {
             get
             {
@@ -753,13 +753,13 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// >> UnderConstruction
         ///  TWOX-NOTE: `SegmentIndex` is an increasing integer, so this is okay.
         /// </summary>
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT13 GetUnderConstruction(string key)
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT11 GetUnderConstruction(string key)
         {
             if ((key == null))
             {
                 return null;
             }
-            if (UnderConstructionTypedStorage.Dictionary.TryGetValue(key, out Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT13 result))
+            if (UnderConstructionTypedStorage.Dictionary.TryGetValue(key, out Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT11 result))
             {
                 return result;
             }
@@ -911,7 +911,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         ///  a validator was the owner of a given key on a given session, and what the
         ///  active epoch index was during that session.
         /// </summary>
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT14 GetSkippedEpochs()
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT12 GetSkippedEpochs()
         {
             return SkippedEpochsTypedStorage.Get();
         }

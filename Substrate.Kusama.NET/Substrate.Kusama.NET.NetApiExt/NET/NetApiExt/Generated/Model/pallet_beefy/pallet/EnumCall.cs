@@ -42,7 +42,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_beefy.pallet
     }
     
     /// <summary>
-    /// >> 496 - Variant[pallet_beefy.pallet.Call]
+    /// >> 459 - Variant[pallet_beefy.pallet.Call]
     /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
     public sealed class EnumCall : BaseEnumExt<Call, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_beefy.EquivocationProof, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_session.MembershipProof>, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_beefy.EquivocationProof, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_session.MembershipProof>, Substrate.NetApi.Model.Types.Primitive.U32>

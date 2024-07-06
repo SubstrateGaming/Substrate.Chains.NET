@@ -84,7 +84,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_message_queue.pa
     }
     
     /// <summary>
-    /// >> 951 - Variant[pallet_message_queue.pallet.Error]
+    /// >> 896 - Variant[pallet_message_queue.pallet.Error]
     /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>

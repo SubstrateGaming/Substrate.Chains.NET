@@ -115,7 +115,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nis.pallet
     }
     
     /// <summary>
-    /// >> 792 - Variant[pallet_nis.pallet.Error]
+    /// >> 738 - Variant[pallet_nis.pallet.Error]
     /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>

@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parach
     
     
     /// <summary>
-    /// >> 907 - Composite[polkadot_runtime_parachains.assigner_coretime.AssignmentState]
+    /// >> 853 - Composite[polkadot_runtime_parachains.assigner_coretime.AssignmentState]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class AssignmentState : BaseType

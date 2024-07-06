@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.frame_support.traits.
     
     
     /// <summary>
-    /// >> 544 - Composite[frame_support.traits.tokens.fungible.HoldConsideration]
+    /// >> 546 - Composite[frame_support.traits.tokens.fungible.HoldConsideration]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class HoldConsideration : BaseType

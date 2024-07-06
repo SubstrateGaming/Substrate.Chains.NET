@@ -77,7 +77,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         ///  the `u32` counter is the number of times that a send to the destination has been attempted,
         ///  which is used as a prioritization.
         /// </summary>
-        Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT50 GetVersionDiscoveryQueue();
+        Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT44 GetVersionDiscoveryQueue();
         
         /// <summary>
         /// >> CurrentMigration
@@ -95,7 +95,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// >> LockedFungibles
         ///  Fungible assets which we know are locked on this chain.
         /// </summary>
-        Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT52 GetLockedFungibles(string key);
+        Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT46 GetLockedFungibles(string key);
         
         /// <summary>
         /// >> XcmExecutionSuspended
@@ -148,7 +148,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// <summary>
         /// _versionDiscoveryQueueTypedStorage typed storage field
         /// </summary>
-        private TypedStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT50> _versionDiscoveryQueueTypedStorage;
+        private TypedStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT44> _versionDiscoveryQueueTypedStorage;
         
         /// <summary>
         /// _currentMigrationTypedStorage typed storage field
@@ -163,7 +163,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// <summary>
         /// _lockedFungiblesTypedStorage typed storage field
         /// </summary>
-        private TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT52> _lockedFungiblesTypedStorage;
+        private TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT46> _lockedFungiblesTypedStorage;
         
         /// <summary>
         /// _xcmExecutionSuspendedTypedStorage typed storage field
@@ -182,10 +182,10 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
             this.SupportedVersionTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Primitive.U32>("XcmPallet.SupportedVersion", storageDataProvider, storageChangeDelegates);
             this.VersionNotifiersTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Primitive.U64>("XcmPallet.VersionNotifiers", storageDataProvider, storageChangeDelegates);
             this.VersionNotifyTargetsTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U64, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight, Substrate.NetApi.Model.Types.Primitive.U32>>("XcmPallet.VersionNotifyTargets", storageDataProvider, storageChangeDelegates);
-            this.VersionDiscoveryQueueTypedStorage = new TypedStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT50>("XcmPallet.VersionDiscoveryQueue", storageDataProvider, storageChangeDelegates);
+            this.VersionDiscoveryQueueTypedStorage = new TypedStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT44>("XcmPallet.VersionDiscoveryQueue", storageDataProvider, storageChangeDelegates);
             this.CurrentMigrationTypedStorage = new TypedStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_xcm.pallet.EnumVersionMigrationStage>("XcmPallet.CurrentMigration", storageDataProvider, storageChangeDelegates);
             this.RemoteLockedFungiblesTypedStorage = new TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_xcm.pallet.RemoteLockedFungibleRecord>("XcmPallet.RemoteLockedFungibles", storageDataProvider, storageChangeDelegates);
-            this.LockedFungiblesTypedStorage = new TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT52>("XcmPallet.LockedFungibles", storageDataProvider, storageChangeDelegates);
+            this.LockedFungiblesTypedStorage = new TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT46>("XcmPallet.LockedFungibles", storageDataProvider, storageChangeDelegates);
             this.XcmExecutionSuspendedTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.Bool>("XcmPallet.XcmExecutionSuspended", storageDataProvider, storageChangeDelegates);
         }
         
@@ -297,7 +297,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// <summary>
         /// _versionDiscoveryQueueTypedStorage property
         /// </summary>
-        public TypedStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT50> VersionDiscoveryQueueTypedStorage
+        public TypedStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT44> VersionDiscoveryQueueTypedStorage
         {
             get
             {
@@ -342,7 +342,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// <summary>
         /// _lockedFungiblesTypedStorage property
         /// </summary>
-        public TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT52> LockedFungiblesTypedStorage
+        public TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT46> LockedFungiblesTypedStorage
         {
             get
             {
@@ -589,7 +589,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         ///  the `u32` counter is the number of times that a send to the destination has been attempted,
         ///  which is used as a prioritization.
         /// </summary>
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT50 GetVersionDiscoveryQueue()
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT44 GetVersionDiscoveryQueue()
         {
             return VersionDiscoveryQueueTypedStorage.Get();
         }
@@ -654,13 +654,13 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// >> LockedFungibles
         ///  Fungible assets which we know are locked on this chain.
         /// </summary>
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT52 GetLockedFungibles(string key)
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT46 GetLockedFungibles(string key)
         {
             if ((key == null))
             {
                 return null;
             }
-            if (LockedFungiblesTypedStorage.Dictionary.TryGetValue(key, out Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT52 result))
+            if (LockedFungiblesTypedStorage.Dictionary.TryGetValue(key, out Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT46 result))
             {
                 return result;
             }

@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_scheduler
     
     
     /// <summary>
-    /// >> 744 - Composite[pallet_scheduler.Scheduled]
+    /// >> 690 - Composite[pallet_scheduler.Scheduled]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Scheduled : BaseType

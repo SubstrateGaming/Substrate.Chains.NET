@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parach
     
     
     /// <summary>
-    /// >> 900 - Composite[polkadot_runtime_parachains.assigner_coretime.CoreDescriptor]
+    /// >> 846 - Composite[polkadot_runtime_parachains.assigner_coretime.CoreDescriptor]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class CoreDescriptor : BaseType

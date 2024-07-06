@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_prim
     
     
     /// <summary>
-    /// >> 380 - Composite[polkadot_parachain_primitives.primitives.ValidationCode]
+    /// >> 337 - Composite[polkadot_parachain_primitives.primitives.ValidationCode]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class ValidationCode : BaseType

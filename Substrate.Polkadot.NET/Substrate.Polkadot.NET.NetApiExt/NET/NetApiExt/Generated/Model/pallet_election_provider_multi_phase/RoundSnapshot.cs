@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_election_provi
     
     
     /// <summary>
-    /// >> 705 - Composite[pallet_election_provider_multi_phase.RoundSnapshot]
+    /// >> 707 - Composite[pallet_election_provider_multi_phase.RoundSnapshot]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class RoundSnapshot : BaseType

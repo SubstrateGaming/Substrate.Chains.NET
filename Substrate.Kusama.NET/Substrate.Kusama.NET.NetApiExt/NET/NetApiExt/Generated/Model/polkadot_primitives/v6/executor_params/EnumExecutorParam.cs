@@ -58,7 +58,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.
     }
     
     /// <summary>
-    /// >> 352 - Variant[polkadot_primitives.v6.executor_params.ExecutorParam]
+    /// >> 308 - Variant[polkadot_primitives.v6.executor_params.ExecutorParam]
     /// </summary>
     public sealed class EnumExecutorParam : BaseEnumExt<ExecutorParam, BaseVoid, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U64, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumPvfPrepKind, Substrate.NetApi.Model.Types.Primitive.U64>, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumPvfExecKind, Substrate.NetApi.Model.Types.Primitive.U64>, BaseVoid>
     {

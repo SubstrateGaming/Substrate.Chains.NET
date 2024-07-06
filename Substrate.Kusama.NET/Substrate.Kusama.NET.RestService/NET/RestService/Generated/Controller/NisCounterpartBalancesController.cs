@@ -114,7 +114,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Controller
         ///  Named reserves on some account balances.
         /// </summary>
         [HttpGet("Reserves")]
-        [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT45), 200)]
+        [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT39), 200)]
         [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.NisCounterpartBalancesStorage), "ReservesParams", typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32))]
         public IActionResult GetReserves(string key)
         {
@@ -126,7 +126,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Controller
         ///  Holds on account balances.
         /// </summary>
         [HttpGet("Holds")]
-        [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT16), 200)]
+        [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT14), 200)]
         [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.NisCounterpartBalancesStorage), "HoldsParams", typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32))]
         public IActionResult GetHolds(string key)
         {
@@ -138,7 +138,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Controller
         ///  Freeze locks on account balances.
         /// </summary>
         [HttpGet("Freezes")]
-        [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT46), 200)]
+        [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT40), 200)]
         [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.NisCounterpartBalancesStorage), "FreezesParams", typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32))]
         public IActionResult GetFreezes(string key)
         {

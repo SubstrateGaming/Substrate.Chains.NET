@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools
     
     
     /// <summary>
-    /// >> 814 - Composite[pallet_nomination_pools.UnbondPool]
+    /// >> 760 - Composite[pallet_nomination_pools.UnbondPool]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class UnbondPool : BaseType

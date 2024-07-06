@@ -610,6 +610,23 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
             byteArray.AddRange(beneficiary.Encode());
             return new Method(99, "XcmPallet", 12, "claim_assets", byteArray.ToArray());
         }
+        
+        /// <summary>
+        /// >> transfer_assets_using_type_and_then
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
+        /// </summary>
+        public static Method TransferAssetsUsingTypeAndThen(Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation dest, Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAssets assets, Substrate.Polkadot.NET.NetApiExt.Generated.Model.staging_xcm_executor.traits.asset_transfer.EnumTransferType assets_transfer_type, Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAssetId remote_fees_id, Substrate.Polkadot.NET.NetApiExt.Generated.Model.staging_xcm_executor.traits.asset_transfer.EnumTransferType fees_transfer_type, Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.EnumVersionedXcm custom_xcm_on_dest, Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.v3.EnumWeightLimit weight_limit)
+        {
+            System.Collections.Generic.List<byte> byteArray = new List<byte>();
+            byteArray.AddRange(dest.Encode());
+            byteArray.AddRange(assets.Encode());
+            byteArray.AddRange(assets_transfer_type.Encode());
+            byteArray.AddRange(remote_fees_id.Encode());
+            byteArray.AddRange(fees_transfer_type.Encode());
+            byteArray.AddRange(custom_xcm_on_dest.Encode());
+            byteArray.AddRange(weight_limit.Encode());
+            return new Method(99, "XcmPallet", 13, "transfer_assets_using_type_and_then", byteArray.ToArray());
+        }
     }
     
     /// <summary>

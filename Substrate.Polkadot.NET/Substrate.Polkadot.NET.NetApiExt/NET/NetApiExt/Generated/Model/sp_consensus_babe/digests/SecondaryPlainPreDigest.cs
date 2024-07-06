@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_consensus_babe.dig
     
     
     /// <summary>
-    /// >> 559 - Composite[sp_consensus_babe.digests.SecondaryPlainPreDigest]
+    /// >> 561 - Composite[sp_consensus_babe.digests.SecondaryPlainPreDigest]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class SecondaryPlainPreDigest : BaseType

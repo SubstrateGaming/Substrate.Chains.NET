@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society
     
     
     /// <summary>
-    /// >> 720 - Composite[pallet_society.PayoutRecord]
+    /// >> 666 - Composite[pallet_society.PayoutRecord]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class PayoutRecord : BaseType
@@ -31,7 +31,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society
         /// <summary>
         /// >> payouts
         /// </summary>
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT30 Payouts { get; set; }
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT24 Payouts { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
@@ -54,7 +54,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society
             var start = p;
             Paid = new Substrate.NetApi.Model.Types.Primitive.U128();
             Paid.Decode(byteArray, ref p);
-            Payouts = new Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT30();
+            Payouts = new Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT24();
             Payouts.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

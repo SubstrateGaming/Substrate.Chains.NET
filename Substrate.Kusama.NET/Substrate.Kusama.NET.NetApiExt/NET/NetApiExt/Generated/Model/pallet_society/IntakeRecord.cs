@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society
     
     
     /// <summary>
-    /// >> 731 - Composite[pallet_society.IntakeRecord]
+    /// >> 677 - Composite[pallet_society.IntakeRecord]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class IntakeRecord : BaseType

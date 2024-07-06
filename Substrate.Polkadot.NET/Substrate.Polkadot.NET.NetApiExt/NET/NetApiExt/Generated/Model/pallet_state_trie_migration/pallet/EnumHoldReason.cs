@@ -28,7 +28,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_state_trie_mig
     }
     
     /// <summary>
-    /// >> 579 - Variant[pallet_state_trie_migration.pallet.HoldReason]
+    /// >> 581 - Variant[pallet_state_trie_migration.pallet.HoldReason]
     /// </summary>
     public sealed class EnumHoldReason : BaseEnum<HoldReason>
     {

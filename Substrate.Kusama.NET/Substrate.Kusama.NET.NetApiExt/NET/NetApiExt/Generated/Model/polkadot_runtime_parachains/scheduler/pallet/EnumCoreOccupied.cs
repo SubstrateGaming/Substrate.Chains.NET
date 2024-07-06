@@ -33,7 +33,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parach
     }
     
     /// <summary>
-    /// >> 846 - Variant[polkadot_runtime_parachains.scheduler.pallet.CoreOccupied]
+    /// >> 792 - Variant[polkadot_runtime_parachains.scheduler.pallet.CoreOccupied]
     /// </summary>
     public sealed class EnumCoreOccupied : BaseEnumExt<CoreOccupied, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.scheduler.pallet.ParasEntry>
     {

@@ -42,7 +42,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_fast_unstake.pal
     }
     
     /// <summary>
-    /// >> 347 - Variant[pallet_fast_unstake.pallet.Call]
+    /// >> 303 - Variant[pallet_fast_unstake.pallet.Call]
     /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
     public sealed class EnumCall : BaseEnumExt<Call, BaseVoid, BaseVoid, Substrate.NetApi.Model.Types.Primitive.U32>

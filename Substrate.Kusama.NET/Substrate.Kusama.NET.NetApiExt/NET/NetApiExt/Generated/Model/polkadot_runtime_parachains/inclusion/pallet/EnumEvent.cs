@@ -48,7 +48,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parach
     }
     
     /// <summary>
-    /// >> 541 - Variant[polkadot_runtime_parachains.inclusion.pallet.Event]
+    /// >> 503 - Variant[polkadot_runtime_parachains.inclusion.pallet.Event]
     /// The `Event` enum of this pallet
     /// </summary>
     public sealed class EnumEvent : BaseEnumExt<Event, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.CandidateReceipt, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.HeadData, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.CoreIndex, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.GroupIndex>, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.CandidateReceipt, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.HeadData, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.CoreIndex, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.GroupIndex>, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.CandidateReceipt, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.HeadData, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.CoreIndex>, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32>>

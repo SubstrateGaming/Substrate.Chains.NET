@@ -33,7 +33,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parach
     }
     
     /// <summary>
-    /// >> 848 - Variant[polkadot_runtime_parachains.scheduler.common.Assignment]
+    /// >> 794 - Variant[polkadot_runtime_parachains.scheduler.common.Assignment]
     /// </summary>
     public sealed class EnumAssignment : BaseEnumExt<Assignment, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.CoreIndex>, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id>
     {

@@ -90,7 +90,7 @@ namespace Substrate.Kusama.NET.Integration.Client
                 }
                 catch (Exception e)
                 {
-                    Log.Error("BaseClient.ConnectAsync: 0",
+                    Log.Error("BaseClient.ConnectAsync: {0}",
                         e.ToString());
                 }
             }
@@ -162,13 +162,13 @@ namespace Substrate.Kusama.NET.Integration.Client
 
             if (HasMaxConcurentTaskRunning())
             {
-                Log.Warning("There can not be more then 0 concurrent tasks overall!", _maxConcurrentCalls);
+                Log.Warning("There can not be more then {0} concurrent tasks overall!", _maxConcurrentCalls);
                 return null;
             }
 
             if (HasToManyConcurentTaskRunning(extrinsicType, concurrentTasks))
             {
-                Log.Warning("There can not be more then 0 concurrent tasks of 1!", concurrentTasks, extrinsicType);
+                Log.Warning("There can not be more then {0} concurrent tasks of {1}!", concurrentTasks, extrinsicType);
                 return null;
             }
 
@@ -179,7 +179,7 @@ namespace Substrate.Kusama.NET.Integration.Client
             }
             catch (RemoteInvocationException e)
             {
-                Log.Error("RemoteInvocationException: 0", e.Message);
+                Log.Error("RemoteInvocationException: {0}", e.Message);
                 return subscription;
             }
 
@@ -188,15 +188,15 @@ namespace Substrate.Kusama.NET.Integration.Client
                 return null;
             }
 
-            Log.Debug("Generic extrinsic sent 0 with 1.", extrinsicMethod.ModuleName + "_" + extrinsicMethod.CallName, subscription);
+            Log.Debug("Generic extrinsic sent {0} with {1}.", extrinsicMethod.ModuleName + "_" + extrinsicMethod.CallName, subscription);
 
             if (ExtrinsicManager.TryAdd(subscription, extrinsicType))
             {
-                Log.Debug("Generic extrinsic sent 0 with 1.", extrinsicMethod.ModuleName + "_" + extrinsicMethod.CallName, subscription);
+                Log.Debug("Generic extrinsic sent {0} with {1}.", extrinsicMethod.ModuleName + "_" + extrinsicMethod.CallName, subscription);
             }
             else
             {
-                Log.Warning("ExtrinsicManager.Add failed for 0 with 1.", extrinsicMethod.ModuleName + "_" + extrinsicMethod.CallName, subscription);
+                Log.Warning("ExtrinsicManager.Add failed for {0} with {1}.", extrinsicMethod.ModuleName + "_" + extrinsicMethod.CallName, subscription);
             }
 
             return subscription;
@@ -237,7 +237,7 @@ namespace Substrate.Kusama.NET.Integration.Client
             }
             catch (Exception ex)
             {
-                Log.Warning("ActionExtrinsicUpdate: 0", ex.Message);
+                Log.Warning("ActionExtrinsicUpdate: {0}", ex.Message);
             }
         }
 
@@ -268,7 +268,7 @@ namespace Substrate.Kusama.NET.Integration.Client
 
             SubscriptionManager.IsSubscribed = true;
 
-            Log.Debug("SystemStorage.Events subscription id [0] registred.", subscription);
+            Log.Debug("SystemStorage.Events subscription id [{0}] registred.", subscription);
 
             return subscription;
          }

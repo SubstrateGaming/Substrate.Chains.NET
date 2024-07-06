@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_beefy
     
     
     /// <summary>
-    /// >> 499 - Composite[sp_consensus_beefy.VoteMessage]
+    /// >> 462 - Composite[sp_consensus_beefy.VoteMessage]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class VoteMessage : BaseType

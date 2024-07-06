@@ -33,7 +33,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_xcm.v4.asset
     }
     
     /// <summary>
-    /// >> 478 - Variant[staging_xcm.v4.asset.WildFungibility]
+    /// >> 439 - Variant[staging_xcm.v4.asset.WildFungibility]
     /// </summary>
     public sealed class EnumWildFungibility : BaseEnum<WildFungibility>
     {

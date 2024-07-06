@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parach
     
     
     /// <summary>
-    /// >> 847 - Composite[polkadot_runtime_parachains.scheduler.pallet.ParasEntry]
+    /// >> 793 - Composite[polkadot_runtime_parachains.scheduler.pallet.ParasEntry]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class ParasEntry : BaseType

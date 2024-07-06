@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_staking
     
     
     /// <summary>
-    /// >> 623 - Composite[sp_staking.PagedExposureMetadata]
+    /// >> 584 - Composite[sp_staking.PagedExposureMetadata]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class PagedExposureMetadata : BaseType

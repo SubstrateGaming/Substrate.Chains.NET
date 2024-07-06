@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6
     
     
     /// <summary>
-    /// >> 359 - Composite[polkadot_primitives.v6.InherentData]
+    /// >> 315 - Composite[polkadot_primitives.v6.InherentData]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class InherentData : BaseType

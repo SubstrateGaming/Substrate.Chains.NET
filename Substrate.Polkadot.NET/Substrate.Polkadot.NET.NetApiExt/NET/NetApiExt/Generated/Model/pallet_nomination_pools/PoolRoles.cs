@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_nomination_poo
     
     
     /// <summary>
-    /// >> 725 - Composite[pallet_nomination_pools.PoolRoles]
+    /// >> 727 - Composite[pallet_nomination_pools.PoolRoles]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class PoolRoles : BaseType

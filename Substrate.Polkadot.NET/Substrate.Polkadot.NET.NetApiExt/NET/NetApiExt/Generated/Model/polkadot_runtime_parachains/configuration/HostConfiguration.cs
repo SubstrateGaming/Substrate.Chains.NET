@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_para
     
     
     /// <summary>
-    /// >> 740 - Composite[polkadot_runtime_parachains.configuration.HostConfiguration]
+    /// >> 742 - Composite[polkadot_runtime_parachains.configuration.HostConfiguration]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class HostConfiguration : BaseType

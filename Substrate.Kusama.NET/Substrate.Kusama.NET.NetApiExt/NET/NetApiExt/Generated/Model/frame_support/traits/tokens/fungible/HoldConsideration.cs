@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_support.traits.to
     
     
     /// <summary>
-    /// >> 763 - Composite[frame_support.traits.tokens.fungible.HoldConsideration]
+    /// >> 709 - Composite[frame_support.traits.tokens.fungible.HoldConsideration]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class HoldConsideration : BaseType

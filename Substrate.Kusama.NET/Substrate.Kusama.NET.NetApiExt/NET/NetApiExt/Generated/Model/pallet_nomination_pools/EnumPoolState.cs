@@ -38,7 +38,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools
     }
     
     /// <summary>
-    /// >> 336 - Variant[pallet_nomination_pools.PoolState]
+    /// >> 292 - Variant[pallet_nomination_pools.PoolState]
     /// </summary>
     public sealed class EnumPoolState : BaseEnum<PoolState>
     {

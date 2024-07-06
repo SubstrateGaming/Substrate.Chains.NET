@@ -33,7 +33,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parach
     }
     
     /// <summary>
-    /// >> 855 - Variant[polkadot_runtime_parachains.paras.PvfCheckCause]
+    /// >> 801 - Variant[polkadot_runtime_parachains.paras.PvfCheckCause]
     /// </summary>
     public sealed class EnumPvfCheckCause : BaseEnumExt<PvfCheckCause, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.paras.EnumSetGoAhead>>
     {

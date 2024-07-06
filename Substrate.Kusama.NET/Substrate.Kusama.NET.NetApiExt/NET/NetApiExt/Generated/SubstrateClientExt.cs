@@ -140,11 +140,6 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated
         public UtilityStorage UtilityStorage;
         
         /// <summary>
-        /// IdentityStorage storage calls.
-        /// </summary>
-        public IdentityStorage IdentityStorage;
-        
-        /// <summary>
         /// SocietyStorage storage calls.
         /// </summary>
         public SocietyStorage SocietyStorage;
@@ -349,11 +344,6 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated
         /// </summary>
         public BeefyMmrLeafStorage BeefyMmrLeafStorage;
         
-        /// <summary>
-        /// IdentityMigratorStorage storage calls.
-        /// </summary>
-        public IdentityMigratorStorage IdentityMigratorStorage;
-        
         public SubstrateClientExt(System.Uri uri, Substrate.NetApi.Model.Extrinsics.ChargeType chargeType) : 
                 base(uri, chargeType)
         {
@@ -380,7 +370,6 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated
             this.WhitelistStorage = new WhitelistStorage(this);
             this.ClaimsStorage = new ClaimsStorage(this);
             this.UtilityStorage = new UtilityStorage(this);
-            this.IdentityStorage = new IdentityStorage(this);
             this.SocietyStorage = new SocietyStorage(this);
             this.RecoveryStorage = new RecoveryStorage(this);
             this.VestingStorage = new VestingStorage(this);
@@ -422,7 +411,6 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated
             this.BeefyStorage = new BeefyStorage(this);
             this.MmrStorage = new MmrStorage(this);
             this.BeefyMmrLeafStorage = new BeefyMmrLeafStorage(this);
-            this.IdentityMigratorStorage = new IdentityMigratorStorage(this);
         }
     }
 }

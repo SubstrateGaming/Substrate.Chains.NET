@@ -38,7 +38,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm
     }
     
     /// <summary>
-    /// >> 927 - Variant[xcm.VersionedResponse]
+    /// >> 873 - Variant[xcm.VersionedResponse]
     /// </summary>
     public sealed class EnumVersionedResponse : BaseEnumExt<VersionedResponse, BaseVoid, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.v2.EnumResponse, Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.v3.EnumResponse, Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_xcm.v4.EnumResponse>
     {

@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.
     
     
     /// <summary>
-    /// >> 350 - Composite[polkadot_primitives.v6.executor_params.ExecutorParams]
+    /// >> 306 - Composite[polkadot_primitives.v6.executor_params.ExecutorParams]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class ExecutorParams : BaseType

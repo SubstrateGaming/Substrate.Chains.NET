@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_para
     
     
     /// <summary>
-    /// >> 761 - Composite[polkadot_runtime_parachains.scheduler.pallet.ParasEntry]
+    /// >> 763 - Composite[polkadot_runtime_parachains.scheduler.pallet.ParasEntry]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class ParasEntry : BaseType

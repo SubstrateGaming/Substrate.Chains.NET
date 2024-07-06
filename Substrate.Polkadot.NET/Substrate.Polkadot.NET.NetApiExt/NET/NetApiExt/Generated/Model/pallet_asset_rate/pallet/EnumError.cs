@@ -36,7 +36,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_asset_rate.pal
     }
     
     /// <summary>
-    /// >> 850 - Variant[pallet_asset_rate.pallet.Error]
+    /// >> 851 - Variant[pallet_asset_rate.pallet.Error]
     /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>

@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society
     
     
     /// <summary>
-    /// >> 726 - Composite[pallet_society.Candidacy]
+    /// >> 672 - Composite[pallet_society.Candidacy]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Candidacy : BaseType

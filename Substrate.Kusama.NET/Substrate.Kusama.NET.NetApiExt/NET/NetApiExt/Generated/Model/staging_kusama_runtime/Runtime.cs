@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_kusama_runtime
     
     
     /// <summary>
-    /// >> 968 - Composite[staging_kusama_runtime.Runtime]
+    /// >> 915 - Composite[staging_kusama_runtime.Runtime]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Runtime : BaseType

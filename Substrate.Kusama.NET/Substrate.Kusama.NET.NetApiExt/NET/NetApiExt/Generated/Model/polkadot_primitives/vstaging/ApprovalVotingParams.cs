@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.vst
     
     
     /// <summary>
-    /// >> 355 - Composite[polkadot_primitives.vstaging.ApprovalVotingParams]
+    /// >> 311 - Composite[polkadot_primitives.vstaging.ApprovalVotingParams]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class ApprovalVotingParams : BaseType

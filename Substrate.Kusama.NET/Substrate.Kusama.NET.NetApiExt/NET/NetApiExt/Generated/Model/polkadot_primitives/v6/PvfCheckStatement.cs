@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6
     
     
     /// <summary>
-    /// >> 394 - Composite[polkadot_primitives.v6.PvfCheckStatement]
+    /// >> 351 - Composite[polkadot_primitives.v6.PvfCheckStatement]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class PvfCheckStatement : BaseType

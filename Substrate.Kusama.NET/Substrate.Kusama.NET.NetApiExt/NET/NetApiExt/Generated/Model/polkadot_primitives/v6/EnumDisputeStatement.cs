@@ -33,7 +33,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6
     }
     
     /// <summary>
-    /// >> 389 - Variant[polkadot_primitives.v6.DisputeStatement]
+    /// >> 346 - Variant[polkadot_primitives.v6.DisputeStatement]
     /// </summary>
     public sealed class EnumDisputeStatement : BaseEnumExt<DisputeStatement, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumValidDisputeStatementKind, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumInvalidDisputeStatementKind>
     {

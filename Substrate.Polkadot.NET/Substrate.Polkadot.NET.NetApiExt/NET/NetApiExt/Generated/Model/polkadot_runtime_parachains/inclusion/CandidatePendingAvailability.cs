@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_para
     
     
     /// <summary>
-    /// >> 750 - Composite[polkadot_runtime_parachains.inclusion.CandidatePendingAvailability]
+    /// >> 752 - Composite[polkadot_runtime_parachains.inclusion.CandidatePendingAvailability]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class CandidatePendingAvailability : BaseType

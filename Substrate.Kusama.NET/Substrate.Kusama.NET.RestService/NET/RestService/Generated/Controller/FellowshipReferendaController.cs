@@ -69,7 +69,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Controller
         ///  This should be empty if `DecidingCount` is less than `TrackInfo::max_deciding`.
         /// </summary>
         [HttpGet("TrackQueue")]
-        [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT25), 200)]
+        [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT23), 200)]
         [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.FellowshipReferendaStorage), "TrackQueueParams", typeof(Substrate.NetApi.Model.Types.Primitive.U16))]
         public IActionResult GetTrackQueue(string key)
         {

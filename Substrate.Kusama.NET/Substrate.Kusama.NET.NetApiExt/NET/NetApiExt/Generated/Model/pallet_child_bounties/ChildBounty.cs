@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_child_bounties
     
     
     /// <summary>
-    /// >> 772 - Composite[pallet_child_bounties.ChildBounty]
+    /// >> 718 - Composite[pallet_child_bounties.ChildBounty]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class ChildBounty : BaseType

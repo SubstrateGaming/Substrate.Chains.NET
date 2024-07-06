@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_runtime
     
     
     /// <summary>
-    /// >> 483 - Composite[sp_runtime.DispatchErrorWithPostInfo]
+    /// >> 485 - Composite[sp_runtime.DispatchErrorWithPostInfo]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class DispatchErrorWithPostInfo : BaseType

@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_beefy.payl
     
     
     /// <summary>
-    /// >> 501 - Composite[sp_consensus_beefy.payload.Payload]
+    /// >> 464 - Composite[sp_consensus_beefy.payload.Payload]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Payload : BaseType

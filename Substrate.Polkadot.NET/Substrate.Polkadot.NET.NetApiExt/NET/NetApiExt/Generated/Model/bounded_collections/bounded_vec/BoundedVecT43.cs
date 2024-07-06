@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.b
     
     
     /// <summary>
-    /// >> 839 - Composite[bounded_collections.bounded_vec.BoundedVecT43]
+    /// >> 840 - Composite[bounded_collections.bounded_vec.BoundedVecT43]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class BoundedVecT43 : BaseType

@@ -65,7 +65,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Controller
         /// >> PreimageFor
         /// </summary>
         [HttpGet("PreimageFor")]
-        [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT39), 200)]
+        [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT33), 200)]
         [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.PreimageStorage), "PreimageForParams", typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Primitive.U32>))]
         public IActionResult GetPreimageFor(string key)
         {

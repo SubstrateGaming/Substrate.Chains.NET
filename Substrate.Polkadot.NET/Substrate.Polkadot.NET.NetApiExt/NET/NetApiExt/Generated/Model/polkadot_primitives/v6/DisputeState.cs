@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v
     
     
     /// <summary>
-    /// >> 800 - Composite[polkadot_primitives.v6.DisputeState]
+    /// >> 802 - Composite[polkadot_primitives.v6.DisputeState]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class DisputeState : BaseType

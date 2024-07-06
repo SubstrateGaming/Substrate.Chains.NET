@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parach
     
     
     /// <summary>
-    /// >> 895 - Composite[polkadot_runtime_parachains.assigner_on_demand.EnqueuedOrder]
+    /// >> 841 - Composite[polkadot_runtime_parachains.assigner_on_demand.EnqueuedOrder]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class EnqueuedOrder : BaseType

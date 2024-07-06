@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_core_primitive
     
     
     /// <summary>
-    /// >> 877 - Composite[polkadot_core_primitives.InboundHrmpMessage]
+    /// >> 823 - Composite[polkadot_core_primitives.InboundHrmpMessage]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class InboundHrmpMessage : BaseType

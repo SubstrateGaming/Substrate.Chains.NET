@@ -624,6 +624,17 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Storage
             byteArray.AddRange(recipient.Encode());
             return new Method(60, "Hrmp", 9, "poke_channel_deposits", byteArray.ToArray());
         }
+        
+        /// <summary>
+        /// >> establish_channel_with_system
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
+        /// </summary>
+        public static Method EstablishChannelWithSystem(Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id target_system_chain)
+        {
+            System.Collections.Generic.List<byte> byteArray = new List<byte>();
+            byteArray.AddRange(target_system_chain.Encode());
+            return new Method(60, "Hrmp", 10, "establish_channel_with_system", byteArray.ToArray());
+        }
     }
     
     /// <summary>

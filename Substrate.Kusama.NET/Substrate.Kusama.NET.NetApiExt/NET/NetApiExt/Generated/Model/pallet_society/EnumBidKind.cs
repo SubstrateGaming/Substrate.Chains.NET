@@ -33,7 +33,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society
     }
     
     /// <summary>
-    /// >> 724 - Variant[pallet_society.BidKind]
+    /// >> 670 - Variant[pallet_society.BidKind]
     /// </summary>
     public sealed class EnumBidKind : BaseEnumExt<BidKind, Substrate.NetApi.Model.Types.Primitive.U128, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U128>>
     {

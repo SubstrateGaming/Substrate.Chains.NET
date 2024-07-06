@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_core_primitive
     
     
     /// <summary>
-    /// >> 872 - Composite[polkadot_core_primitives.InboundDownwardMessage]
+    /// >> 818 - Composite[polkadot_core_primitives.InboundDownwardMessage]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class InboundDownwardMessage : BaseType
