@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_runtime.generic.un
     
     
     /// <summary>
-    /// >> 855 - Composite[sp_runtime.generic.unchecked_extrinsic.UncheckedExtrinsic]
+    /// >> 856 - Composite[sp_runtime.generic.unchecked_extrinsic.UncheckedExtrinsic]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class UncheckedExtrinsic : BaseType

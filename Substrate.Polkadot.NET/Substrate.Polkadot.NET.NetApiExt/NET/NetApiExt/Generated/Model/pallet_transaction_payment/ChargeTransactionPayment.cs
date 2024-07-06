@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_transaction_pa
     
     
     /// <summary>
-    /// >> 865 - Composite[pallet_transaction_payment.ChargeTransactionPayment]
+    /// >> 866 - Composite[pallet_transaction_payment.ChargeTransactionPayment]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class ChargeTransactionPayment : BaseType

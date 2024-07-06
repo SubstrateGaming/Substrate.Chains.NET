@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_referenda.type
     
     
     /// <summary>
-    /// >> 648 - Composite[pallet_referenda.types.DecidingStatus]
+    /// >> 650 - Composite[pallet_referenda.types.DecidingStatus]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class DecidingStatus : BaseType

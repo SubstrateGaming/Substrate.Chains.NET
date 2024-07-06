@@ -61,7 +61,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_utility.pallet
     }
     
     /// <summary>
-    /// >> 486 - Variant[pallet_utility.pallet.Event]
+    /// >> 488 - Variant[pallet_utility.pallet.Event]
     /// The `Event` enum of this pallet
     /// </summary>
     public sealed class EnumEvent : BaseEnumExt<Event, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_runtime.EnumDispatchError>, BaseVoid, BaseVoid, BaseVoid, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_runtime.EnumDispatchError, Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base.EnumResult>

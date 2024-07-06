@@ -38,7 +38,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_consensus_babe.dig
     }
     
     /// <summary>
-    /// >> 556 - Variant[sp_consensus_babe.digests.PreDigest]
+    /// >> 558 - Variant[sp_consensus_babe.digests.PreDigest]
     /// </summary>
     public sealed class EnumPreDigest : BaseEnumExt<PreDigest, BaseVoid, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_consensus_babe.digests.PrimaryPreDigest, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_consensus_babe.digests.SecondaryPlainPreDigest, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_consensus_babe.digests.SecondaryVRFPreDigest>
     {

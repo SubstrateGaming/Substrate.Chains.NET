@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_consensus_babe.dig
     
     
     /// <summary>
-    /// >> 560 - Composite[sp_consensus_babe.digests.SecondaryVRFPreDigest]
+    /// >> 562 - Composite[sp_consensus_babe.digests.SecondaryVRFPreDigest]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class SecondaryVRFPreDigest : BaseType

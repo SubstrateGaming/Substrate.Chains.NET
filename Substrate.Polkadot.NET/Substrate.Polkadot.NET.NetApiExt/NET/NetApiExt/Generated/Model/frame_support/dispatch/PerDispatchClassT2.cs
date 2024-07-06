@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.frame_support.dispatc
     
     
     /// <summary>
-    /// >> 526 - Composite[frame_support.dispatch.PerDispatchClassT2]
+    /// >> 528 - Composite[frame_support.dispatch.PerDispatchClassT2]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class PerDispatchClassT2 : BaseType

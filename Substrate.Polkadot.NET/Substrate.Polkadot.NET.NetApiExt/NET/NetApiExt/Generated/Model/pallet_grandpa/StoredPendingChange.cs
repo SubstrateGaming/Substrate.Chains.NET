@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_grandpa
     
     
     /// <summary>
-    /// >> 618 - Composite[pallet_grandpa.StoredPendingChange]
+    /// >> 620 - Composite[pallet_grandpa.StoredPendingChange]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class StoredPendingChange : BaseType

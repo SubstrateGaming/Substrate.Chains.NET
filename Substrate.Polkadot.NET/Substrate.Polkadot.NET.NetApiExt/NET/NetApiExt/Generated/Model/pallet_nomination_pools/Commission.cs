@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_nomination_poo
     
     
     /// <summary>
-    /// >> 722 - Composite[pallet_nomination_pools.Commission]
+    /// >> 724 - Composite[pallet_nomination_pools.Commission]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Commission : BaseType

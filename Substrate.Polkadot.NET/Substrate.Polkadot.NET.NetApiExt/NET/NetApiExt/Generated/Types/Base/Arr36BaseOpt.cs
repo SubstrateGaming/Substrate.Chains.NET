@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base
     
     
     /// <summary>
-    /// >> 814 - Array
+    /// >> 816 - Array
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Array)]
     public sealed class Arr36BaseOpt : BaseType

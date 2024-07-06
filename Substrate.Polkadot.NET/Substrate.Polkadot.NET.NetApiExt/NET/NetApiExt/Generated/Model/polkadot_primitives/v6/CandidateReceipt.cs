@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v
     
     
     /// <summary>
-    /// >> 500 - Composite[polkadot_primitives.v6.CandidateReceipt]
+    /// >> 502 - Composite[polkadot_primitives.v6.CandidateReceipt]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class CandidateReceipt : BaseType

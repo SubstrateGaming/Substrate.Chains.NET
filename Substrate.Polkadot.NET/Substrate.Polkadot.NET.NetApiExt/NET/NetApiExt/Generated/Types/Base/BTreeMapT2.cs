@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base
     
     
     /// <summary>
-    /// >> 720 - Composite[BTreeMapT2]
+    /// >> 722 - Composite[BTreeMapT2]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class BTreeMapT2 : BaseType

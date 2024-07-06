@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_para
     
     
     /// <summary>
-    /// >> 775 - Composite[polkadot_runtime_parachains.paras.ParaPastCodeMeta]
+    /// >> 777 - Composite[polkadot_runtime_parachains.paras.ParaPastCodeMeta]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class ParaPastCodeMeta : BaseType

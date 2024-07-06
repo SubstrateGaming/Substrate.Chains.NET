@@ -44,7 +44,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_comm
     }
     
     /// <summary>
-    /// >> 508 - Variant[polkadot_runtime_common.paras_registrar.pallet.Event]
+    /// >> 510 - Variant[polkadot_runtime_common.paras_registrar.pallet.Event]
     /// The `Event` enum of this pallet
     /// </summary>
     public sealed class EnumEvent : BaseEnumExt<Event, BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>, BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id>>

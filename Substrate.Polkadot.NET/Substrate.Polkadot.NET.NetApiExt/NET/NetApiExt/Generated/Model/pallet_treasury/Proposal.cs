@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_treasury
     
     
     /// <summary>
-    /// >> 623 - Composite[pallet_treasury.Proposal]
+    /// >> 625 - Composite[pallet_treasury.Proposal]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Proposal : BaseType

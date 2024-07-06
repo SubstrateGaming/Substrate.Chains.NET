@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.w
     
     
     /// <summary>
-    /// >> 621 - Composite[bounded_collections.weak_bounded_vec.WeakBoundedVecT5]
+    /// >> 623 - Composite[bounded_collections.weak_bounded_vec.WeakBoundedVecT5]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class WeakBoundedVecT5 : BaseType

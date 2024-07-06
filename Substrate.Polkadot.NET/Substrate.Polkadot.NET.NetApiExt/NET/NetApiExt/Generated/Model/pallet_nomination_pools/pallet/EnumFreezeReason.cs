@@ -28,7 +28,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_nomination_poo
     }
     
     /// <summary>
-    /// >> 584 - Variant[pallet_nomination_pools.pallet.FreezeReason]
+    /// >> 586 - Variant[pallet_nomination_pools.pallet.FreezeReason]
     /// </summary>
     public sealed class EnumFreezeReason : BaseEnum<FreezeReason>
     {

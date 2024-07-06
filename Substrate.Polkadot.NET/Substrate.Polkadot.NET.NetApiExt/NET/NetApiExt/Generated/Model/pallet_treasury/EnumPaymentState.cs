@@ -38,7 +38,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_treasury
     }
     
     /// <summary>
-    /// >> 626 - Variant[pallet_treasury.PaymentState]
+    /// >> 628 - Variant[pallet_treasury.PaymentState]
     /// </summary>
     public sealed class EnumPaymentState : BaseEnumExt<PaymentState, BaseVoid, Substrate.NetApi.Model.Types.Primitive.U64, BaseVoid>
     {

@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_para
     
     
     /// <summary>
-    /// >> 767 - Composite[polkadot_runtime_parachains.paras.PvfCheckActiveVoteState]
+    /// >> 769 - Composite[polkadot_runtime_parachains.paras.PvfCheckActiveVoteState]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class PvfCheckActiveVoteState : BaseType

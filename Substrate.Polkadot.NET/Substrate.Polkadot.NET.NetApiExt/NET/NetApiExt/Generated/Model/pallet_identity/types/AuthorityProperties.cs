@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types
     
     
     /// <summary>
-    /// >> 680 - Composite[pallet_identity.types.AuthorityProperties]
+    /// >> 682 - Composite[pallet_identity.types.AuthorityProperties]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class AuthorityProperties : BaseType

@@ -196,7 +196,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_staking.pallet
     }
     
     /// <summary>
-    /// >> 609 - Variant[pallet_staking.pallet.pallet.Error]
+    /// >> 611 - Variant[pallet_staking.pallet.pallet.Error]
     /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>

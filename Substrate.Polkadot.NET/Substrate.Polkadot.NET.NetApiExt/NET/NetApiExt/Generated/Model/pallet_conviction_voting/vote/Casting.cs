@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_conviction_vot
     
     
     /// <summary>
-    /// >> 632 - Composite[pallet_conviction_voting.vote.Casting]
+    /// >> 634 - Composite[pallet_conviction_voting.vote.Casting]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Casting : BaseType

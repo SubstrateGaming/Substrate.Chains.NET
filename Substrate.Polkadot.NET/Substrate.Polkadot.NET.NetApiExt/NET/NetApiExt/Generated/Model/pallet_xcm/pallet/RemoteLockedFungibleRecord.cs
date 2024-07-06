@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_xcm.pallet
     
     
     /// <summary>
-    /// >> 835 - Composite[pallet_xcm.pallet.RemoteLockedFungibleRecord]
+    /// >> 836 - Composite[pallet_xcm.pallet.RemoteLockedFungibleRecord]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class RemoteLockedFungibleRecord : BaseType

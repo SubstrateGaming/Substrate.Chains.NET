@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v
     
     
     /// <summary>
-    /// >> 803 - Composite[polkadot_primitives.v6.slashing.PendingSlashes]
+    /// >> 805 - Composite[polkadot_primitives.v6.slashing.PendingSlashes]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class PendingSlashes : BaseType

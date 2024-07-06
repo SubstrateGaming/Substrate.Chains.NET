@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_staking
     
     
     /// <summary>
-    /// >> 588 - Composite[pallet_staking.StakingLedger]
+    /// >> 590 - Composite[pallet_staking.StakingLedger]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class StakingLedger : BaseType

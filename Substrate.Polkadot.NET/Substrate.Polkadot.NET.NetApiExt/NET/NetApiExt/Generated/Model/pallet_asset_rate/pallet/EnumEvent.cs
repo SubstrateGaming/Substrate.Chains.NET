@@ -39,7 +39,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_asset_rate.pal
     }
     
     /// <summary>
-    /// >> 519 - Variant[pallet_asset_rate.pallet.Event]
+    /// >> 521 - Variant[pallet_asset_rate.pallet.Event]
     /// The `Event` enum of this pallet
     /// </summary>
     public sealed class EnumEvent : BaseEnumExt<Event, BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_common.impls.EnumVersionedLocatableAsset, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedU128>, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_common.impls.EnumVersionedLocatableAsset, BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_common.impls.EnumVersionedLocatableAsset, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedU128, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedU128>>

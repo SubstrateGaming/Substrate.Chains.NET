@@ -33,7 +33,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_para
     }
     
     /// <summary>
-    /// >> 760 - Variant[polkadot_runtime_parachains.scheduler.pallet.CoreOccupied]
+    /// >> 762 - Variant[polkadot_runtime_parachains.scheduler.pallet.CoreOccupied]
     /// </summary>
     public sealed class EnumCoreOccupied : BaseEnumExt<CoreOccupied, BaseVoid, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.scheduler.pallet.ParasEntry>
     {

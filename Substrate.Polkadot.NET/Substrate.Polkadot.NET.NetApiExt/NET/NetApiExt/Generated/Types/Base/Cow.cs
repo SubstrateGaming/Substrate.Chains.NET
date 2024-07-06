@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base
     
     
     /// <summary>
-    /// >> 532 - Composite[Cow]
+    /// >> 534 - Composite[Cow]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Cow : BaseType

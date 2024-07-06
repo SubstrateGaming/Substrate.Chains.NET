@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_consensus_beefy
     
     
     /// <summary>
-    /// >> 471 - Composite[sp_consensus_beefy.VoteMessage]
+    /// >> 473 - Composite[sp_consensus_beefy.VoteMessage]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class VoteMessage : BaseType

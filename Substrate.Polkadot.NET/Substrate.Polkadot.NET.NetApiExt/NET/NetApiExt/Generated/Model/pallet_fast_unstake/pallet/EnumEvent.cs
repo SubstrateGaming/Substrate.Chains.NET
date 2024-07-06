@@ -57,7 +57,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_fast_unstake.p
     }
     
     /// <summary>
-    /// >> 498 - Variant[pallet_fast_unstake.pallet.Event]
+    /// >> 500 - Variant[pallet_fast_unstake.pallet.Event]
     /// The `Event` enum of this pallet
     /// </summary>
     public sealed class EnumEvent : BaseEnumExt<Event, BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base.EnumResult>, BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U128>, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.NetApi.Model.Types.Primitive.U32, BaseVoid>

@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_para
     
     
     /// <summary>
-    /// >> 784 - Composite[polkadot_runtime_parachains.initializer.BufferedSessionChange]
+    /// >> 786 - Composite[polkadot_runtime_parachains.initializer.BufferedSessionChange]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class BufferedSessionChange : BaseType

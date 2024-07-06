@@ -72,7 +72,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_preimage.palle
     }
     
     /// <summary>
-    /// >> 549 - Variant[pallet_preimage.pallet.Error]
+    /// >> 551 - Variant[pallet_preimage.pallet.Error]
     /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>

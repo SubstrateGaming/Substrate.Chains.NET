@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_conviction_vot
     
     
     /// <summary>
-    /// >> 478 - Composite[pallet_conviction_voting.types.Tally]
+    /// >> 480 - Composite[pallet_conviction_voting.types.Tally]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Tally : BaseType
