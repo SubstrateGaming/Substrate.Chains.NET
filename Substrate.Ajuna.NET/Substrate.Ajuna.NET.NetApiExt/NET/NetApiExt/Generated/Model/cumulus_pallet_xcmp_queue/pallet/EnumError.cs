@@ -39,10 +39,22 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queu
         /// The execution is already resumed.
         /// </summary>
         AlreadyResumed = 2,
+        
+        /// <summary>
+        /// >> TooManyActiveOutboundChannels
+        /// There are too many active outbound channels.
+        /// </summary>
+        TooManyActiveOutboundChannels = 3,
+        
+        /// <summary>
+        /// >> TooBig
+        /// The message is too big.
+        /// </summary>
+        TooBig = 4,
     }
     
     /// <summary>
-    /// >> 435 - Variant[cumulus_pallet_xcmp_queue.pallet.Error]
+    /// >> 438 - Variant[cumulus_pallet_xcmp_queue.pallet.Error]
     /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>

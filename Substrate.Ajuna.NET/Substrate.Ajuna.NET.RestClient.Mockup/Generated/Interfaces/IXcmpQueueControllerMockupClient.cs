@@ -12,7 +12,8 @@ namespace Substrate.Ajuna.NET.RestClient.Mockup.Generated.Interfaces
    using System;
    using System.Threading.Tasks;
    using Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set;
-   using Substrate.NetApi.Model.Types.Base;
+   using Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
+   using Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec;
    using Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue;
    using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point;
@@ -20,9 +21,9 @@ namespace Substrate.Ajuna.NET.RestClient.Mockup.Generated.Interfaces
    public interface IXcmpQueueControllerMockupClient
    {
       Task<bool> SetInboundXcmpSuspended(BoundedBTreeSet value);
-      Task<bool> SetOutboundXcmpStatus(BaseVec<OutboundChannelDetails> value);
-      Task<bool> SetOutboundXcmpMessages(BaseVec<U8> value, BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, U16> key);
-      Task<bool> SetSignalMessages(BaseVec<U8> value, Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key);
+      Task<bool> SetOutboundXcmpStatus(BoundedVecT25 value);
+      Task<bool> SetOutboundXcmpMessages(WeakBoundedVecT3 value, Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, U16> key);
+      Task<bool> SetSignalMessages(WeakBoundedVecT3 value, Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key);
       Task<bool> SetQueueConfig(QueueConfigData value);
       Task<bool> SetQueueSuspended(Bool value);
       Task<bool> SetDeliveryFeeFactor(FixedU128 value, Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key);

@@ -11,36 +11,41 @@ using Substrate.NetApi.Model.Types.Base;
 using System.Collections.Generic;
 
 
-namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm
+namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.v3
 {
     
     
     /// <summary>
-    /// >> VersionedAsset
+    /// >> OriginKind
     /// </summary>
-    public enum VersionedAsset
+    public enum OriginKind
     {
         
         /// <summary>
-        /// >> V2
+        /// >> Native
         /// </summary>
-        V2 = 1,
+        Native = 0,
         
         /// <summary>
-        /// >> V3
+        /// >> SovereignAccount
         /// </summary>
-        V3 = 3,
+        SovereignAccount = 1,
         
         /// <summary>
-        /// >> V4
+        /// >> Superuser
         /// </summary>
-        V4 = 4,
+        Superuser = 2,
+        
+        /// <summary>
+        /// >> Xcm
+        /// </summary>
+        Xcm = 3,
     }
     
     /// <summary>
-    /// >> 333 - Variant[xcm.VersionedAsset]
+    /// >> 97 - Variant[xcm.v3.OriginKind]
     /// </summary>
-    public sealed class EnumVersionedAsset : BaseEnumExt<VersionedAsset, BaseVoid, Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.v2.multiasset.MultiAsset, BaseVoid, Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.v3.multiasset.MultiAsset, Substrate.Ajuna.NET.NetApiExt.Generated.Model.staging_xcm.v4.asset.Asset>
+    public sealed class EnumOriginKind : BaseEnum<OriginKind>
     {
     }
 }

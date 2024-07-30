@@ -28,7 +28,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.ajuna_runtime.xcm_config
     }
     
     /// <summary>
-    /// >> 331 - Variant[ajuna_runtime.xcm_config.CurrencyId]
+    /// >> 332 - Variant[ajuna_runtime.xcm_config.CurrencyId]
     /// </summary>
     public sealed class EnumCurrencyId : BaseEnum<CurrencyId>
     {

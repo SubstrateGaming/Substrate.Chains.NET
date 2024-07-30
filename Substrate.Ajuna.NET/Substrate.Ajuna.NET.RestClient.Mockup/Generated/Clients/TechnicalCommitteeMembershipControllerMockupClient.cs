@@ -23,7 +23,7 @@ namespace Substrate.Ajuna.NET.RestClient.Mockup.Generated.Clients
       {
          _httpClient = httpClient;
       }
-      public async Task<bool> SetMembers(BoundedVecT32 value)
+      public async Task<bool> SetMembers(BoundedVecT33 value)
       {
          return await SendMockupRequestAsync(_httpClient, "TechnicalCommitteeMembership/Members", value.Encode(), Substrate.Ajuna.NET.NetApiExt.Generated.Storage.TechnicalCommitteeMembershipStorage.MembersParams());
       }

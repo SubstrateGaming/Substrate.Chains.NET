@@ -16,7 +16,7 @@ namespace Substrate.Ajuna.NET.RestClient.Generated.Interfaces
    
    public interface ICouncilMembershipControllerClient
    {
-      Task<BoundedVecT31> GetMembers();
+      Task<BoundedVecT32> GetMembers();
       Task<bool> SubscribeMembers();
       Task<AccountId32> GetPrime();
       Task<bool> SubscribePrime();

@@ -126,7 +126,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         public Substrate.NetApi.Model.Types.Primitive.U64 SlotDuration()
         {
             var result = new Substrate.NetApi.Model.Types.Primitive.U64();
-            result.Create("0xE02E000000000000");
+            result.Create("0x7017000000000000");
             return result;
         }
     }

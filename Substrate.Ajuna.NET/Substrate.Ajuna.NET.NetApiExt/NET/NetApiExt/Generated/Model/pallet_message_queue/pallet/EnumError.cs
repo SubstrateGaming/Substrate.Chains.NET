@@ -84,7 +84,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_message_queue.pal
     }
     
     /// <summary>
-    /// >> 463 - Variant[pallet_message_queue.pallet.Error]
+    /// >> 466 - Variant[pallet_message_queue.pallet.Error]
     /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>

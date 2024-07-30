@@ -18,7 +18,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_transaction_payme
     
     
     /// <summary>
-    /// >> 522 - Composite[pallet_transaction_payment.ChargeTransactionPayment]
+    /// >> 525 - Composite[pallet_transaction_payment.ChargeTransactionPayment]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class ChargeTransactionPayment : BaseType

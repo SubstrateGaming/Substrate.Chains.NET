@@ -48,7 +48,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_asset_registry.pa
     }
     
     /// <summary>
-    /// >> 511 - Variant[pallet_asset_registry.pallet.Error]
+    /// >> 514 - Variant[pallet_asset_registry.pallet.Error]
     /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>
