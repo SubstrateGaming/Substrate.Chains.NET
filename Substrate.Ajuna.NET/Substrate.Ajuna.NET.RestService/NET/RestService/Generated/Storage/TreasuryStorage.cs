@@ -46,7 +46,7 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Storage
         /// >> Approvals
         ///  Proposal indices that have been approved but not yet awarded.
         /// </summary>
-        Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT29 GetApprovals();
+        Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT30 GetApprovals();
         
         /// <summary>
         /// >> SpendCount
@@ -85,7 +85,7 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Storage
         /// <summary>
         /// _approvalsTypedStorage typed storage field
         /// </summary>
-        private TypedStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT29> _approvalsTypedStorage;
+        private TypedStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT30> _approvalsTypedStorage;
         
         /// <summary>
         /// _spendCountTypedStorage typed storage field
@@ -105,7 +105,7 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Storage
             this.ProposalCountTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32>("Treasury.ProposalCount", storageDataProvider, storageChangeDelegates);
             this.ProposalsTypedStorage = new TypedMapStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_treasury.Proposal>("Treasury.Proposals", storageDataProvider, storageChangeDelegates);
             this.DeactivatedTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U128>("Treasury.Deactivated", storageDataProvider, storageChangeDelegates);
-            this.ApprovalsTypedStorage = new TypedStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT29>("Treasury.Approvals", storageDataProvider, storageChangeDelegates);
+            this.ApprovalsTypedStorage = new TypedStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT30>("Treasury.Approvals", storageDataProvider, storageChangeDelegates);
             this.SpendCountTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32>("Treasury.SpendCount", storageDataProvider, storageChangeDelegates);
             this.SpendsTypedStorage = new TypedMapStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_treasury.SpendStatus>("Treasury.Spends", storageDataProvider, storageChangeDelegates);
         }
@@ -158,7 +158,7 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Storage
         /// <summary>
         /// _approvalsTypedStorage property
         /// </summary>
-        public TypedStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT29> ApprovalsTypedStorage
+        public TypedStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT30> ApprovalsTypedStorage
         {
             get
             {
@@ -291,7 +291,7 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Storage
         /// >> Approvals
         ///  Proposal indices that have been approved but not yet awarded.
         /// </summary>
-        public Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT29 GetApprovals()
+        public Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT30 GetApprovals()
         {
             return ApprovalsTypedStorage.Get();
         }

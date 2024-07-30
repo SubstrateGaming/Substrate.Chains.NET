@@ -13,7 +13,8 @@ namespace Substrate.Ajuna.NET.RestClient.Mockup.Generated.Clients
    using System.Threading.Tasks;
    using System.Net.Http;
    using Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set;
-   using Substrate.NetApi.Model.Types.Base;
+   using Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
+   using Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec;
    using Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue;
    using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point;
@@ -30,15 +31,15 @@ namespace Substrate.Ajuna.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "XcmpQueue/InboundXcmpSuspended", value.Encode(), Substrate.Ajuna.NET.NetApiExt.Generated.Storage.XcmpQueueStorage.InboundXcmpSuspendedParams());
       }
-      public async Task<bool> SetOutboundXcmpStatus(BaseVec<OutboundChannelDetails> value)
+      public async Task<bool> SetOutboundXcmpStatus(BoundedVecT25 value)
       {
          return await SendMockupRequestAsync(_httpClient, "XcmpQueue/OutboundXcmpStatus", value.Encode(), Substrate.Ajuna.NET.NetApiExt.Generated.Storage.XcmpQueueStorage.OutboundXcmpStatusParams());
       }
-      public async Task<bool> SetOutboundXcmpMessages(BaseVec<U8> value, BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, U16> key)
+      public async Task<bool> SetOutboundXcmpMessages(WeakBoundedVecT3 value, Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, U16> key)
       {
          return await SendMockupRequestAsync(_httpClient, "XcmpQueue/OutboundXcmpMessages", value.Encode(), Substrate.Ajuna.NET.NetApiExt.Generated.Storage.XcmpQueueStorage.OutboundXcmpMessagesParams(key));
       }
-      public async Task<bool> SetSignalMessages(BaseVec<U8> value, Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key)
+      public async Task<bool> SetSignalMessages(WeakBoundedVecT3 value, Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key)
       {
          return await SendMockupRequestAsync(_httpClient, "XcmpQueue/SignalMessages", value.Encode(), Substrate.Ajuna.NET.NetApiExt.Generated.Storage.XcmpQueueStorage.SignalMessagesParams(key));
       }

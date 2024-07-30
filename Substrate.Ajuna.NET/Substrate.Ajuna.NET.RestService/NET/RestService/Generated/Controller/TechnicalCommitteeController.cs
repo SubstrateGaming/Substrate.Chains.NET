@@ -42,7 +42,7 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Controller
         ///  The hashes of the active proposals.
         /// </summary>
         [HttpGet("Proposals")]
-        [ProducesResponseType(typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT30), 200)]
+        [ProducesResponseType(typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT31), 200)]
         [StorageKeyBuilder(typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Storage.TechnicalCommitteeStorage), "ProposalsParams")]
         public IActionResult GetProposals()
         {

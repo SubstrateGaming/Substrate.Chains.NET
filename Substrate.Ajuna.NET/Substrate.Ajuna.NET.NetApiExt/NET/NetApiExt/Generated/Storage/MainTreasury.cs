@@ -40,7 +40,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Treasury", "Proposals"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.NetApi.Model.Types.Primitive.U32), typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_treasury.Proposal)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Treasury", "Deactivated"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Primitive.U128)));
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("Treasury", "Approvals"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT29)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("Treasury", "Approvals"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT30)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Treasury", "SpendCount"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Primitive.U32)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Treasury", "Spends"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.NetApi.Model.Types.Primitive.U32), typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_treasury.SpendStatus)));
@@ -157,10 +157,10 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         /// >> Approvals
         ///  Proposal indices that have been approved but not yet awarded.
         /// </summary>
-        public async Task<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT29> Approvals(string blockhash, CancellationToken token)
+        public async Task<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT30> Approvals(string blockhash, CancellationToken token)
         {
             string parameters = TreasuryStorage.ApprovalsParams();
-            var result = await _client.GetStorageAsync<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT29>(parameters, blockhash, token);
+            var result = await _client.GetStorageAsync<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT30>(parameters, blockhash, token);
             return result;
         }
         
@@ -383,7 +383,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         public Substrate.NetApi.Model.Types.Primitive.U32 SpendPeriod()
         {
             var result = new Substrate.NetApi.Model.Types.Primitive.U32();
-            result.Create("0xE0C40000");
+            result.Create("0xC0890100");
             return result;
         }
         
@@ -429,7 +429,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         public Substrate.NetApi.Model.Types.Primitive.U32 PayoutPeriod()
         {
             var result = new Substrate.NetApi.Model.Types.Primitive.U32();
-            result.Create("0xC0A80000");
+            result.Create("0x80510100");
             return result;
         }
     }

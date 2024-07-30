@@ -13,26 +13,26 @@ using Substrate.NetApi.Model.Types.Metadata.V14;
 using System.Collections.Generic;
 
 
-namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto
+namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec
 {
     
     
     /// <summary>
-    /// >> 422 - Composite[sp_core.crypto.KeyTypeId]
+    /// >> 436 - Composite[bounded_collections.weak_bounded_vec.WeakBoundedVecT3]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
-    public sealed class KeyTypeId : BaseType
+    public sealed class WeakBoundedVecT3 : BaseType
     {
         
         /// <summary>
         /// >> value
         /// </summary>
-        public Substrate.Ajuna.NET.NetApiExt.Generated.Types.Base.Arr4U8 Value { get; set; }
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> Value { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
         {
-            return "KeyTypeId";
+            return "WeakBoundedVecT3";
         }
         
         /// <inheritdoc/>
@@ -47,7 +47,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Value = new Substrate.Ajuna.NET.NetApiExt.Generated.Types.Base.Arr4U8();
+            Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>();
             Value.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;
