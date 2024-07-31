@@ -87,9 +87,6 @@ namespace Substrate.Bajun.NET.Integration.Client
                     IsReady = true;
                     break;
 
-                case NetApi.Model.Rpc.TransactionEvent.Broadcasted:
-                    break;
-
                 case NetApi.Model.Rpc.TransactionEvent.BestChainBlockIncluded:
                     IsInBlock = true;
                     break;
