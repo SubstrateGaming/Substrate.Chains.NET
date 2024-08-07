@@ -13,38 +13,33 @@ using Substrate.NetApi.Model.Types.Metadata.Base;
 using System.Collections.Generic;
 
 
-namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_weights.weight_v2
+namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.frame_metadata_hash_extension
 {
     
     
     /// <summary>
-    /// >> 10 - Composite[sp_weights.weight_v2.Weight]
+    /// >> 677 - Composite[frame_metadata_hash_extension.CheckMetadataHash]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
-    public sealed class Weight : BaseType
+    public sealed class CheckMetadataHash : BaseType
     {
         
         /// <summary>
-        /// >> ref_time
+        /// >> mode
         /// </summary>
-        public Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U64> RefTime { get; set; }
-        /// <summary>
-        /// >> proof_size
-        /// </summary>
-        public Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U64> ProofSize { get; set; }
+        public Substrate.Bajun.NET.NetApiExt.Generated.Model.frame_metadata_hash_extension.EnumMode Mode { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
         {
-            return "Weight";
+            return "CheckMetadataHash";
         }
         
         /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
-            result.AddRange(RefTime.Encode());
-            result.AddRange(ProofSize.Encode());
+            result.AddRange(Mode.Encode());
             return result.ToArray();
         }
         
@@ -52,10 +47,8 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_weights.weight_v2
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            RefTime = new Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U64>();
-            RefTime.Decode(byteArray, ref p);
-            ProofSize = new Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U64>();
-            ProofSize.Decode(byteArray, ref p);
+            Mode = new Substrate.Bajun.NET.NetApiExt.Generated.Model.frame_metadata_hash_extension.EnumMode();
+            Mode.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];

@@ -89,7 +89,7 @@ namespace Substrate.Bajun.NET.RestService
          else
          {
             // Configure regular data provider
-            _storageDataProvider = new SubstrateDataProvider(Environment.GetEnvironmentVariable("SUBSTRATE_WEBSOCKET_ENDPOINT") ?? "wss://rpc-parachain.bajun.network");
+            _storageDataProvider = new SubstrateDataProvider(Environment.GetEnvironmentVariable("SUBSTRATE_WEBSOCKET_ENDPOINT") ?? "ws://127.0.0.1:9944");
          }
 
          // Configure web sockets to allow clients to subscribe to storage changes.

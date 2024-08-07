@@ -6,7 +6,7 @@
     "rest_client": "Substrate.Bajun.NET.RestClient"
   },
    "metadata": {
-      "websocket": "wss://rpc-parachain.bajun.network"
+      "websocket": "ws://127.0.0.1:9944"
    },
   "rest_client_settings": {
     "service_assembly": "Substrate.Bajun.NET.RestService.dll"
