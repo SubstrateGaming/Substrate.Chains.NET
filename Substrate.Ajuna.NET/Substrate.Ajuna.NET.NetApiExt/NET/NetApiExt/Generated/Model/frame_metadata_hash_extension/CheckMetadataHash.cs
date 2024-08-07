@@ -13,33 +13,33 @@ using Substrate.NetApi.Model.Types.Metadata.Base;
 using System.Collections.Generic;
 
 
-namespace Substrate.Ajuna.NET.NetApiExt.Generated.Types.Base
+namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_metadata_hash_extension
 {
     
     
     /// <summary>
-    /// >> 176 - Composite[BTreeMapT1]
+    /// >> 526 - Composite[frame_metadata_hash_extension.CheckMetadataHash]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
-    public sealed class BTreeMapT1 : BaseType
+    public sealed class CheckMetadataHash : BaseType
     {
         
         /// <summary>
-        /// >> value
+        /// >> mode
         /// </summary>
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.unincluded_segment.HrmpChannelUpdate>> Value { get; set; }
+        public Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_metadata_hash_extension.EnumMode Mode { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
         {
-            return "BTreeMapT1";
+            return "CheckMetadataHash";
         }
         
         /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
-            result.AddRange(Value.Encode());
+            result.AddRange(Mode.Encode());
             return result.ToArray();
         }
         
@@ -47,8 +47,8 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Types.Base
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.unincluded_segment.HrmpChannelUpdate>>();
-            Value.Decode(byteArray, ref p);
+            Mode = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_metadata_hash_extension.EnumMode();
+            Mode.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];
