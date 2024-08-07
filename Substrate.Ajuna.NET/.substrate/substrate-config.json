@@ -6,7 +6,7 @@
     "rest_client": "Substrate.Ajuna.NET.RestClient"
   },
    "metadata": {
-      "websocket": "wss://rpc-para.ajuna.network"
+      "websocket": "ws://127.0.0.1:9944"
    },
   "rest_client_settings": {
     "service_assembly": "Substrate.Ajuna.NET.RestService.dll"
