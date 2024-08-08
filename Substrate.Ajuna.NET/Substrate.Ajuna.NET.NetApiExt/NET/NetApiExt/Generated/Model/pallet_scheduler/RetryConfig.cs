@@ -18,7 +18,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_scheduler
     
     
     /// <summary>
-    /// >> 382 - Composite[pallet_scheduler.RetryConfig]
+    /// >> 380 - Composite[pallet_scheduler.RetryConfig]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class RetryConfig : BaseType

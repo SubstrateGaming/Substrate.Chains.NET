@@ -33,7 +33,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v7
     }
     
     /// <summary>
-    /// >> 182 - Variant[polkadot_primitives.v7.UpgradeGoAhead]
+    /// >> 180 - Variant[polkadot_primitives.v7.UpgradeGoAhead]
     /// </summary>
     public sealed class EnumUpgradeGoAhead : BaseEnum<UpgradeGoAhead>
     {

@@ -33,7 +33,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_democracy.types
     }
     
     /// <summary>
-    /// >> 491 - Variant[pallet_democracy.types.ReferendumInfo]
+    /// >> 488 - Variant[pallet_democracy.types.ReferendumInfo]
     /// </summary>
     public sealed class EnumReferendumInfo : BaseEnumExt<ReferendumInfo, Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_democracy.types.ReferendumStatus, BaseTuple<Substrate.NetApi.Model.Types.Primitive.Bool, Substrate.NetApi.Model.Types.Primitive.U32>>
     {

@@ -38,7 +38,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm
     }
     
     /// <summary>
-    /// >> 316 - Variant[xcm.VersionedXcm]
+    /// >> 314 - Variant[xcm.VersionedXcm]
     /// </summary>
     public sealed class EnumVersionedXcm : BaseEnumExt<VersionedXcm, BaseVoid, BaseVoid, Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.v2.XcmT2, Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.v3.XcmT2, Substrate.Ajuna.NET.NetApiExt.Generated.Model.staging_xcm.v4.XcmT2>
     {

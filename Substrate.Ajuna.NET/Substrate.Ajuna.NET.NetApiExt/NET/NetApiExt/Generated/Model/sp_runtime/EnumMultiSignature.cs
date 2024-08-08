@@ -38,7 +38,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_runtime
     }
     
     /// <summary>
-    /// >> 272 - Variant[sp_runtime.MultiSignature]
+    /// >> 270 - Variant[sp_runtime.MultiSignature]
     /// </summary>
     public sealed class EnumMultiSignature : BaseEnumExt<MultiSignature, Substrate.Ajuna.NET.NetApiExt.Generated.Types.Base.Arr64U8, Substrate.Ajuna.NET.NetApiExt.Generated.Types.Base.Arr64U8, Substrate.Ajuna.NET.NetApiExt.Generated.Types.Base.Arr65U8>
     {

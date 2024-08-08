@@ -18,7 +18,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.ajuna_runtime
     
     
     /// <summary>
-    /// >> 286 - Composite[ajuna_runtime.SessionKeys]
+    /// >> 284 - Composite[ajuna_runtime.SessionKeys]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class SessionKeys : BaseType

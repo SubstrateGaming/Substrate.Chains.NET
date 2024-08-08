@@ -150,11 +150,6 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated
         public OrmlXcmStorage OrmlXcmStorage;
         
         /// <summary>
-        /// SudoStorage storage calls.
-        /// </summary>
-        public SudoStorage SudoStorage;
-        
-        /// <summary>
         /// TreasuryStorage storage calls.
         /// </summary>
         public TreasuryStorage TreasuryStorage;
@@ -222,7 +217,6 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated
             this.MessageQueueStorage = new MessageQueueStorage(this);
             this.XTokensStorage = new XTokensStorage(this);
             this.OrmlXcmStorage = new OrmlXcmStorage(this);
-            this.SudoStorage = new SudoStorage(this);
             this.TreasuryStorage = new TreasuryStorage(this);
             this.CouncilStorage = new CouncilStorage(this);
             this.CouncilMembershipStorage = new CouncilMembershipStorage(this);

@@ -45,7 +45,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.orml_xcm.module
     }
     
     /// <summary>
-    /// >> 468 - Variant[orml_xcm.module.Error]
+    /// >> 466 - Variant[orml_xcm.module.Error]
     /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>
