@@ -146,7 +146,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_multisig.pallet
     }
     
     /// <summary>
-    /// >> 220 - Variant[pallet_multisig.pallet.Call]
+    /// >> 218 - Variant[pallet_multisig.pallet.Call]
     /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
     public sealed class EnumCall : BaseEnumExt<Call, BaseTuple<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>, Substrate.Ajuna.NET.NetApiExt.Generated.Model.ajuna_runtime.EnumRuntimeCall>, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U16, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_multisig.Timepoint>, Substrate.Ajuna.NET.NetApiExt.Generated.Model.ajuna_runtime.EnumRuntimeCall, Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U16, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_multisig.Timepoint>, Substrate.Ajuna.NET.NetApiExt.Generated.Types.Base.Arr32U8, Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U16, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>, Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_multisig.Timepoint, Substrate.Ajuna.NET.NetApiExt.Generated.Types.Base.Arr32U8>>

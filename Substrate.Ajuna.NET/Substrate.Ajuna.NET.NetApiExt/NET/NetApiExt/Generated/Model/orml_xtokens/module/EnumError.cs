@@ -147,7 +147,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.orml_xtokens.module
     }
     
     /// <summary>
-    /// >> 467 - Variant[orml_xtokens.module.Error]
+    /// >> 465 - Variant[orml_xtokens.module.Error]
     /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>

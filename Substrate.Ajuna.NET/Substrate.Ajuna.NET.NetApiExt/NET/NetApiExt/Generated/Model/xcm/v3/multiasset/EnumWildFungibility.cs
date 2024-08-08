@@ -33,7 +33,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.v3.multiasset
     }
     
     /// <summary>
-    /// >> 315 - Variant[xcm.v3.multiasset.WildFungibility]
+    /// >> 313 - Variant[xcm.v3.multiasset.WildFungibility]
     /// </summary>
     public sealed class EnumWildFungibility : BaseEnum<WildFungibility>
     {

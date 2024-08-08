@@ -43,7 +43,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.staging_xcm_executor.tra
     }
     
     /// <summary>
-    /// >> 327 - Variant[staging_xcm_executor.traits.asset_transfer.TransferType]
+    /// >> 325 - Variant[staging_xcm_executor.traits.asset_transfer.TransferType]
     /// </summary>
     public sealed class EnumTransferType : BaseEnumExt<TransferType, BaseVoid, BaseVoid, BaseVoid, Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation>
     {

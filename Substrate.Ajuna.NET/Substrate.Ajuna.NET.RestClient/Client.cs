@@ -39,7 +39,6 @@ namespace Substrate.Ajuna.NET.RestClient
       public IProxyControllerClient ProxyControllerClient;
       public ISchedulerControllerClient SchedulerControllerClient;
       public ISessionControllerClient SessionControllerClient;
-      public ISudoControllerClient SudoControllerClient;
       public ISystemControllerClient SystemControllerClient;
       public ITechnicalCommitteeControllerClient TechnicalCommitteeControllerClient;
       public ITechnicalCommitteeMembershipControllerClient TechnicalCommitteeMembershipControllerClient;
@@ -72,7 +71,6 @@ namespace Substrate.Ajuna.NET.RestClient
          ProxyControllerClient = new ProxyControllerClient(_httpClient, _subscriptionClient);
          SchedulerControllerClient = new SchedulerControllerClient(_httpClient, _subscriptionClient);
          SessionControllerClient = new SessionControllerClient(_httpClient, _subscriptionClient);
-         SudoControllerClient = new SudoControllerClient(_httpClient, _subscriptionClient);
          SystemControllerClient = new SystemControllerClient(_httpClient, _subscriptionClient);
          TechnicalCommitteeControllerClient = new TechnicalCommitteeControllerClient(_httpClient, _subscriptionClient);
          TechnicalCommitteeMembershipControllerClient = new TechnicalCommitteeMembershipControllerClient(_httpClient, _subscriptionClient);

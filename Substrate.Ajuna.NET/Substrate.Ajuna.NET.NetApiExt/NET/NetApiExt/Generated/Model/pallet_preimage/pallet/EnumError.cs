@@ -72,7 +72,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_preimage.pallet
     }
     
     /// <summary>
-    /// >> 393 - Variant[pallet_preimage.pallet.Error]
+    /// >> 391 - Variant[pallet_preimage.pallet.Error]
     /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>

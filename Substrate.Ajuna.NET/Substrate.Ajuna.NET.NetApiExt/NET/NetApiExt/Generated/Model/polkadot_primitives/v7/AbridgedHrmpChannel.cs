@@ -18,7 +18,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v7
     
     
     /// <summary>
-    /// >> 195 - Composite[polkadot_primitives.v7.AbridgedHrmpChannel]
+    /// >> 193 - Composite[polkadot_primitives.v7.AbridgedHrmpChannel]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class AbridgedHrmpChannel : BaseType

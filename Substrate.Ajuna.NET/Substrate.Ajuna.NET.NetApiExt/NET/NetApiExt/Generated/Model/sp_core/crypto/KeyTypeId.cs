@@ -18,7 +18,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto
     
     
     /// <summary>
-    /// >> 422 - Composite[sp_core.crypto.KeyTypeId]
+    /// >> 420 - Composite[sp_core.crypto.KeyTypeId]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class KeyTypeId : BaseType

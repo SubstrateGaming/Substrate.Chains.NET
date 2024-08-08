@@ -18,7 +18,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Types.Base
     
     
     /// <summary>
-    /// >> 169 - Composite[Cow]
+    /// >> 167 - Composite[Cow]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Cow : BaseType

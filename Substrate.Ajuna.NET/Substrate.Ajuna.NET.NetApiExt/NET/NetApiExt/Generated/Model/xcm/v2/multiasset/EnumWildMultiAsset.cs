@@ -33,7 +33,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.v2.multiasset
     }
     
     /// <summary>
-    /// >> 300 - Variant[xcm.v2.multiasset.WildMultiAsset]
+    /// >> 298 - Variant[xcm.v2.multiasset.WildMultiAsset]
     /// </summary>
     public sealed class EnumWildMultiAsset : BaseEnumExt<WildMultiAsset, BaseVoid, BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.v2.multiasset.EnumAssetId, Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.v2.multiasset.EnumWildFungibility>>
     {

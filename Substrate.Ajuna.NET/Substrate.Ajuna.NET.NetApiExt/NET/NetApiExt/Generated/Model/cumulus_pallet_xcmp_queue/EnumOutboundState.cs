@@ -33,7 +33,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queu
     }
     
     /// <summary>
-    /// >> 433 - Variant[cumulus_pallet_xcmp_queue.OutboundState]
+    /// >> 431 - Variant[cumulus_pallet_xcmp_queue.OutboundState]
     /// </summary>
     public sealed class EnumOutboundState : BaseEnum<OutboundState>
     {
