@@ -3,7 +3,7 @@
 	<PropertyGroup>
 		<PackageId>Substrate.Ajuna.NET.Extension</PackageId>
 		<TargetFrameworks>netstandard2.0;netstandard2.1;net6.0</TargetFrameworks>
-		<Version>1.705.0</Version>
+		<Version>1.706.0</Version>
 		<Company>Substrate Gaming</Company>
 		<Authors>Substrate Gaming</Authors>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
