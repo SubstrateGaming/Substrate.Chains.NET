@@ -34,7 +34,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_asset_registry.pa
     }
     
     /// <summary>
-    /// >> 150 - Variant[pallet_asset_registry.pallet.Event]
+    /// >> 148 - Variant[pallet_asset_registry.pallet.Event]
     /// The `Event` enum of this pallet
     /// </summary>
     public sealed class EnumEvent : BaseEnumExt<Event, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Ajuna.NET.NetApiExt.Generated.Model.staging_xcm.v4.location.Location>, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Ajuna.NET.NetApiExt.Generated.Model.staging_xcm.v4.location.Location>>

@@ -38,7 +38,6 @@ namespace Substrate.Ajuna.NET.RestClient.Mockup
       public IProxyControllerMockupClient ProxyControllerClient;
       public ISchedulerControllerMockupClient SchedulerControllerClient;
       public ISessionControllerMockupClient SessionControllerClient;
-      public ISudoControllerMockupClient SudoControllerClient;
       public ISystemControllerMockupClient SystemControllerClient;
       public ITechnicalCommitteeControllerMockupClient TechnicalCommitteeControllerClient;
       public ITechnicalCommitteeMembershipControllerMockupClient TechnicalCommitteeMembershipControllerClient;
@@ -70,7 +69,6 @@ namespace Substrate.Ajuna.NET.RestClient.Mockup
          ProxyControllerClient = new ProxyControllerMockupClient(_httpClient);
          SchedulerControllerClient = new SchedulerControllerMockupClient(_httpClient);
          SessionControllerClient = new SessionControllerMockupClient(_httpClient);
-         SudoControllerClient = new SudoControllerMockupClient(_httpClient);
          SystemControllerClient = new SystemControllerMockupClient(_httpClient);
          TechnicalCommitteeControllerClient = new TechnicalCommitteeControllerMockupClient(_httpClient);
          TechnicalCommitteeMembershipControllerClient = new TechnicalCommitteeMembershipControllerMockupClient(_httpClient);

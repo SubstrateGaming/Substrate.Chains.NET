@@ -18,7 +18,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain
     
     
     /// <summary>
-    /// >> 174 - Composite[cumulus_pallet_parachain_system.unincluded_segment.Ancestor]
+    /// >> 172 - Composite[cumulus_pallet_parachain_system.unincluded_segment.Ancestor]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Ancestor : BaseType
