@@ -24,121 +24,242 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.pallet
         
         /// <summary>
         /// >> bid
-        /// See [`Pallet::bid`].
+        /// A user outside of the society can make a bid for entry.
+        /// 
+        /// Payment: The group's Candidate Deposit will be reserved for making a bid. It is returned
+        /// when the bid becomes a member, or if the bid calls `unbid`.
+        /// 
+        /// The dispatch origin for this call must be _Signed_.
+        /// 
+        /// Parameters:
+        /// - `value`: A one time payment the bid would like to receive when joining the society.
         /// </summary>
         bid = 0,
         
         /// <summary>
         /// >> unbid
-        /// See [`Pallet::unbid`].
+        /// A bidder can remove their bid for entry into society.
+        /// By doing so, they will have their candidate deposit returned or
+        /// they will unvouch their voucher.
+        /// 
+        /// Payment: The bid deposit is unreserved if the user made a bid.
+        /// 
+        /// The dispatch origin for this call must be _Signed_ and a bidder.
         /// </summary>
         unbid = 1,
         
         /// <summary>
         /// >> vouch
-        /// See [`Pallet::vouch`].
+        /// As a member, vouch for someone to join society by placing a bid on their behalf.
+        /// 
+        /// There is no deposit required to vouch for a new bid, but a member can only vouch for
+        /// one bid at a time. If the bid becomes a suspended candidate and ultimately rejected by
+        /// the suspension judgement origin, the member will be banned from vouching again.
+        /// 
+        /// As a vouching member, you can claim a tip if the candidate is accepted. This tip will
+        /// be paid as a portion of the reward the member will receive for joining the society.
+        /// 
+        /// The dispatch origin for this call must be _Signed_ and a member.
+        /// 
+        /// Parameters:
+        /// - `who`: The user who you would like to vouch for.
+        /// - `value`: The total reward to be paid between you and the candidate if they become
+        /// a member in the society.
+        /// - `tip`: Your cut of the total `value` payout when the candidate is inducted into
+        /// the society. Tips larger than `value` will be saturated upon payout.
         /// </summary>
         vouch = 2,
         
         /// <summary>
         /// >> unvouch
-        /// See [`Pallet::unvouch`].
+        /// As a vouching member, unvouch a bid. This only works while vouched user is
+        /// only a bidder (and not a candidate).
+        /// 
+        /// The dispatch origin for this call must be _Signed_ and a vouching member.
+        /// 
+        /// Parameters:
+        /// - `pos`: Position in the `Bids` vector of the bid who should be unvouched.
         /// </summary>
         unvouch = 3,
         
         /// <summary>
         /// >> vote
-        /// See [`Pallet::vote`].
+        /// As a member, vote on a candidate.
+        /// 
+        /// The dispatch origin for this call must be _Signed_ and a member.
+        /// 
+        /// Parameters:
+        /// - `candidate`: The candidate that the member would like to bid on.
+        /// - `approve`: A boolean which says if the candidate should be approved (`true`) or
+        ///   rejected (`false`).
         /// </summary>
         vote = 4,
         
         /// <summary>
         /// >> defender_vote
-        /// See [`Pallet::defender_vote`].
+        /// As a member, vote on the defender.
+        /// 
+        /// The dispatch origin for this call must be _Signed_ and a member.
+        /// 
+        /// Parameters:
+        /// - `approve`: A boolean which says if the candidate should be
+        /// approved (`true`) or rejected (`false`).
         /// </summary>
         defender_vote = 5,
         
         /// <summary>
         /// >> payout
-        /// See [`Pallet::payout`].
+        /// Transfer the first matured payout for the sender and remove it from the records.
+        /// 
+        /// NOTE: This extrinsic needs to be called multiple times to claim multiple matured
+        /// payouts.
+        /// 
+        /// Payment: The member will receive a payment equal to their first matured
+        /// payout to their free balance.
+        /// 
+        /// The dispatch origin for this call must be _Signed_ and a member with
+        /// payouts remaining.
         /// </summary>
         payout = 6,
         
         /// <summary>
         /// >> waive_repay
-        /// See [`Pallet::waive_repay`].
+        /// Repay the payment previously given to the member with the signed origin, remove any
+        /// pending payments, and elevate them from rank 0 to rank 1.
         /// </summary>
         waive_repay = 7,
         
         /// <summary>
         /// >> found_society
-        /// See [`Pallet::found_society`].
+        /// Found the society.
+        /// 
+        /// This is done as a discrete action in order to allow for the
+        /// pallet to be included into a running chain and can only be done once.
+        /// 
+        /// The dispatch origin for this call must be from the _FounderSetOrigin_.
+        /// 
+        /// Parameters:
+        /// - `founder` - The first member and head of the newly founded society.
+        /// - `max_members` - The initial max number of members for the society.
+        /// - `max_intake` - The maximum number of candidates per intake period.
+        /// - `max_strikes`: The maximum number of strikes a member may get before they become
+        ///   suspended and may only be reinstated by the founder.
+        /// - `candidate_deposit`: The deposit required to make a bid for membership of the group.
+        /// - `rules` - The rules of this society concerning membership.
+        /// 
+        /// Complexity: O(1)
         /// </summary>
         found_society = 8,
         
         /// <summary>
         /// >> dissolve
-        /// See [`Pallet::dissolve`].
+        /// Dissolve the society and remove all members.
+        /// 
+        /// The dispatch origin for this call must be Signed, and the signing account must be both
+        /// the `Founder` and the `Head`. This implies that it may only be done when there is one
+        /// member.
         /// </summary>
         dissolve = 9,
         
         /// <summary>
         /// >> judge_suspended_member
-        /// See [`Pallet::judge_suspended_member`].
+        /// Allow suspension judgement origin to make judgement on a suspended member.
+        /// 
+        /// If a suspended member is forgiven, we simply add them back as a member, not affecting
+        /// any of the existing storage items for that member.
+        /// 
+        /// If a suspended member is rejected, remove all associated storage items, including
+        /// their payouts, and remove any vouched bids they currently have.
+        /// 
+        /// The dispatch origin for this call must be Signed from the Founder.
+        /// 
+        /// Parameters:
+        /// - `who` - The suspended member to be judged.
+        /// - `forgive` - A boolean representing whether the suspension judgement origin forgives
+        ///   (`true`) or rejects (`false`) a suspended member.
         /// </summary>
         judge_suspended_member = 10,
         
         /// <summary>
         /// >> set_parameters
-        /// See [`Pallet::set_parameters`].
+        /// Change the maximum number of members in society and the maximum number of new candidates
+        /// in a single intake period.
+        /// 
+        /// The dispatch origin for this call must be Signed by the Founder.
+        /// 
+        /// Parameters:
+        /// - `max_members` - The maximum number of members for the society. This must be no less
+        ///   than the current number of members.
+        /// - `max_intake` - The maximum number of candidates per intake period.
+        /// - `max_strikes`: The maximum number of strikes a member may get before they become
+        ///   suspended and may only be reinstated by the founder.
+        /// - `candidate_deposit`: The deposit required to make a bid for membership of the group.
         /// </summary>
         set_parameters = 11,
         
         /// <summary>
         /// >> punish_skeptic
-        /// See [`Pallet::punish_skeptic`].
+        /// Punish the skeptic with a strike if they did not vote on a candidate. Callable by the
+        /// candidate.
         /// </summary>
         punish_skeptic = 12,
         
         /// <summary>
         /// >> claim_membership
-        /// See [`Pallet::claim_membership`].
+        /// Transform an approved candidate into a member. Callable only by the
+        /// the candidate, and only after the period for voting has ended.
         /// </summary>
         claim_membership = 13,
         
         /// <summary>
         /// >> bestow_membership
-        /// See [`Pallet::bestow_membership`].
+        /// Transform an approved candidate into a member. Callable only by the Signed origin of the
+        /// Founder, only after the period for voting has ended and only when the candidate is not
+        /// clearly rejected.
         /// </summary>
         bestow_membership = 14,
         
         /// <summary>
         /// >> kick_candidate
-        /// See [`Pallet::kick_candidate`].
+        /// Remove the candidate's application from the society. Callable only by the Signed origin
+        /// of the Founder, only after the period for voting has ended, and only when they do not
+        /// have a clear approval.
+        /// 
+        /// Any bid deposit is lost and voucher is banned.
         /// </summary>
         kick_candidate = 15,
         
         /// <summary>
         /// >> resign_candidacy
-        /// See [`Pallet::resign_candidacy`].
+        /// Remove the candidate's application from the society. Callable only by the candidate.
+        /// 
+        /// Any bid deposit is lost and voucher is banned.
         /// </summary>
         resign_candidacy = 16,
         
         /// <summary>
         /// >> drop_candidate
-        /// See [`Pallet::drop_candidate`].
+        /// Remove a `candidate`'s failed application from the society. Callable by any
+        /// signed origin but only at the end of the subsequent round and only for
+        /// a candidate with more rejections than approvals.
+        /// 
+        /// The bid deposit is lost and the voucher is banned.
         /// </summary>
         drop_candidate = 17,
         
         /// <summary>
         /// >> cleanup_candidacy
-        /// See [`Pallet::cleanup_candidacy`].
+        /// Remove up to `max` stale votes for the given `candidate`.
+        /// 
+        /// May be called by any Signed origin, but only after the candidate's candidacy is ended.
         /// </summary>
         cleanup_candidacy = 18,
         
         /// <summary>
         /// >> cleanup_challenge
-        /// See [`Pallet::cleanup_challenge`].
+        /// Remove up to `max` stale votes for the defender in the given `challenge_round`.
+        /// 
+        /// May be called by any Signed origin, but only after the challenge round is ended.
         /// </summary>
         cleanup_challenge = 19,
     }
@@ -147,7 +268,34 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.pallet
     /// >> 183 - Variant[pallet_society.pallet.Call]
     /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
-    public sealed class EnumCall : BaseEnumExt<Call, Substrate.NetApi.Model.Types.Primitive.U128, BaseVoid, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.NetApi.Model.Types.Primitive.U128, Substrate.NetApi.Model.Types.Primitive.U128>, BaseVoid, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.NetApi.Model.Types.Primitive.Bool>, Substrate.NetApi.Model.Types.Primitive.Bool, BaseVoid, Substrate.NetApi.Model.Types.Primitive.U128, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U128, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>, BaseVoid, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.NetApi.Model.Types.Primitive.Bool>, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U128>, BaseVoid, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U32>, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>>
+    public sealed class EnumCall : BaseEnumRust<Call>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumCall()
+        {
+				AddTypeDecoder<Substrate.NetApi.Model.Types.Primitive.U128>(Call.bid);
+				AddTypeDecoder<BaseVoid>(Call.unbid);
+				AddTypeDecoder<BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.NetApi.Model.Types.Primitive.U128, Substrate.NetApi.Model.Types.Primitive.U128>>(Call.vouch);
+				AddTypeDecoder<BaseVoid>(Call.unvouch);
+				AddTypeDecoder<BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.NetApi.Model.Types.Primitive.Bool>>(Call.vote);
+				AddTypeDecoder<Substrate.NetApi.Model.Types.Primitive.Bool>(Call.defender_vote);
+				AddTypeDecoder<BaseVoid>(Call.payout);
+				AddTypeDecoder<Substrate.NetApi.Model.Types.Primitive.U128>(Call.waive_repay);
+				AddTypeDecoder<BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U128, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>>(Call.found_society);
+				AddTypeDecoder<BaseVoid>(Call.dissolve);
+				AddTypeDecoder<BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.NetApi.Model.Types.Primitive.Bool>>(Call.judge_suspended_member);
+				AddTypeDecoder<BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U128>>(Call.set_parameters);
+				AddTypeDecoder<BaseVoid>(Call.punish_skeptic);
+				AddTypeDecoder<BaseVoid>(Call.claim_membership);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>(Call.bestow_membership);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>(Call.kick_candidate);
+				AddTypeDecoder<BaseVoid>(Call.resign_candidacy);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>(Call.drop_candidate);
+				AddTypeDecoder<BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U32>>(Call.cleanup_candidacy);
+				AddTypeDecoder<BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>>(Call.cleanup_challenge);
+        }
     }
 }

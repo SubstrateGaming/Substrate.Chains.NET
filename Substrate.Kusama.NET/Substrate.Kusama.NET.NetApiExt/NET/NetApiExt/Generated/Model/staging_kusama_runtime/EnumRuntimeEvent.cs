@@ -62,11 +62,6 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_kusama_runtime
         Grandpa = 10,
         
         /// <summary>
-        /// >> ImOnline
-        /// </summary>
-        ImOnline = 11,
-        
-        /// <summary>
         /// >> Treasury
         /// </summary>
         Treasury = 18,
@@ -95,6 +90,11 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_kusama_runtime
         /// >> Whitelist
         /// </summary>
         Whitelist = 44,
+        
+        /// <summary>
+        /// >> Parameters
+        /// </summary>
+        Parameters = 46,
         
         /// <summary>
         /// >> Claims
@@ -248,9 +248,61 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_kusama_runtime
     }
     
     /// <summary>
-    /// >> 20 - Variant[staging_kusama_runtime.RuntimeEvent]
+    /// >> 21 - Variant[staging_kusama_runtime.RuntimeEvent]
     /// </summary>
-    public sealed class EnumRuntimeEvent : BaseEnumExt<RuntimeEvent, Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_system.pallet.EnumEvent, BaseVoid, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_indices.pallet.EnumEvent, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_balances.pallet.EnumEvent, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.pallet.pallet.EnumEvent, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_offences.pallet.EnumEvent, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_session.pallet.EnumEvent, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_grandpa.pallet.EnumEvent, Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_kusama_runtime.pallet_im_online.pallet.EnumEvent, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_treasury.pallet.EnumEvent, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_common.claims.pallet.EnumEvent, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_conviction_voting.pallet.EnumEvent, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_referenda.pallet.EnumEvent, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_ranked_collective.pallet.EnumEvent, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_referenda.pallet.EnumEvent, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_utility.pallet.EnumEvent, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.pallet.EnumEvent, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_recovery.pallet.EnumEvent, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_vesting.pallet.EnumEvent, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_scheduler.pallet.EnumEvent, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_proxy.pallet.EnumEvent, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_multisig.pallet.EnumEvent, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_preimage.pallet.EnumEvent, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_transaction_payment.pallet.EnumEvent, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_bounties.pallet.EnumEvent, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_election_provider_multi_phase.pallet.EnumEvent, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nis.pallet.EnumEvent, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_bags_list.pallet.EnumEvent, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_child_bounties.pallet.EnumEvent, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools.pallet.EnumEvent, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_fast_unstake.pallet.EnumEvent, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_whitelist.pallet.EnumEvent, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_balances.pallet.EnumEvent, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.inclusion.pallet.EnumEvent, BaseVoid, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.paras.pallet.EnumEvent, BaseVoid, BaseVoid, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.hrmp.pallet.EnumEvent, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.disputes.pallet.EnumEvent, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.assigner_on_demand.pallet.EnumEvent, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_common.paras_registrar.pallet.EnumEvent, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_common.slots.pallet.EnumEvent, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_common.auctions.pallet.EnumEvent, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_common.crowdloan.pallet.EnumEvent, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.coretime.pallet.EnumEvent, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_xcm.pallet.EnumEvent, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_message_queue.pallet.EnumEvent, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_asset_rate.pallet.EnumEvent>
+    public sealed class EnumRuntimeEvent : BaseEnumRust<RuntimeEvent>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumRuntimeEvent()
+        {
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_system.pallet.EnumEvent>(RuntimeEvent.System);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_indices.pallet.EnumEvent>(RuntimeEvent.Indices);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_balances.pallet.EnumEvent>(RuntimeEvent.Balances);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_transaction_payment.pallet.EnumEvent>(RuntimeEvent.TransactionPayment);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.pallet.pallet.EnumEvent>(RuntimeEvent.Staking);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_offences.pallet.EnumEvent>(RuntimeEvent.Offences);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_session.pallet.EnumEvent>(RuntimeEvent.Session);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_grandpa.pallet.EnumEvent>(RuntimeEvent.Grandpa);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_treasury.pallet.EnumEvent>(RuntimeEvent.Treasury);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_conviction_voting.pallet.EnumEvent>(RuntimeEvent.ConvictionVoting);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_referenda.pallet.EnumEvent>(RuntimeEvent.Referenda);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_ranked_collective.pallet.EnumEvent>(RuntimeEvent.FellowshipCollective);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_referenda.pallet.EnumEvent>(RuntimeEvent.FellowshipReferenda);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_whitelist.pallet.EnumEvent>(RuntimeEvent.Whitelist);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_parameters.pallet.EnumEvent>(RuntimeEvent.Parameters);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_common.claims.pallet.EnumEvent>(RuntimeEvent.Claims);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_utility.pallet.EnumEvent>(RuntimeEvent.Utility);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.pallet.EnumEvent>(RuntimeEvent.Society);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_recovery.pallet.EnumEvent>(RuntimeEvent.Recovery);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_vesting.pallet.EnumEvent>(RuntimeEvent.Vesting);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_scheduler.pallet.EnumEvent>(RuntimeEvent.Scheduler);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_proxy.pallet.EnumEvent>(RuntimeEvent.Proxy);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_multisig.pallet.EnumEvent>(RuntimeEvent.Multisig);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_preimage.pallet.EnumEvent>(RuntimeEvent.Preimage);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_bounties.pallet.EnumEvent>(RuntimeEvent.Bounties);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_child_bounties.pallet.EnumEvent>(RuntimeEvent.ChildBounties);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_election_provider_multi_phase.pallet.EnumEvent>(RuntimeEvent.ElectionProviderMultiPhase);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nis.pallet.EnumEvent>(RuntimeEvent.Nis);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_balances.pallet.EnumEvent>(RuntimeEvent.NisCounterpartBalances);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_bags_list.pallet.EnumEvent>(RuntimeEvent.VoterList);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools.pallet.EnumEvent>(RuntimeEvent.NominationPools);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_fast_unstake.pallet.EnumEvent>(RuntimeEvent.FastUnstake);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.inclusion.pallet.EnumEvent>(RuntimeEvent.ParaInclusion);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.paras.pallet.EnumEvent>(RuntimeEvent.Paras);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.hrmp.pallet.EnumEvent>(RuntimeEvent.Hrmp);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.disputes.pallet.EnumEvent>(RuntimeEvent.ParasDisputes);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.assigner_on_demand.pallet.EnumEvent>(RuntimeEvent.OnDemandAssignmentProvider);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_common.paras_registrar.pallet.EnumEvent>(RuntimeEvent.Registrar);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_common.slots.pallet.EnumEvent>(RuntimeEvent.Slots);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_common.auctions.pallet.EnumEvent>(RuntimeEvent.Auctions);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_common.crowdloan.pallet.EnumEvent>(RuntimeEvent.Crowdloan);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.coretime.pallet.EnumEvent>(RuntimeEvent.Coretime);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_xcm.pallet.EnumEvent>(RuntimeEvent.XcmPallet);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_message_queue.pallet.EnumEvent>(RuntimeEvent.MessageQueue);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_asset_rate.pallet.EnumEvent>(RuntimeEvent.AssetRate);
+        }
     }
 }

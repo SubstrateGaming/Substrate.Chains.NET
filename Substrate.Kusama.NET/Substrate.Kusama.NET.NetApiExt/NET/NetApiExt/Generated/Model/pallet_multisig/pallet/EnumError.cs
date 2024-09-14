@@ -108,7 +108,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_multisig.pallet
     }
     
     /// <summary>
-    /// >> 705 - Variant[pallet_multisig.pallet.Error]
+    /// >> 712 - Variant[pallet_multisig.pallet.Error]
     /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>

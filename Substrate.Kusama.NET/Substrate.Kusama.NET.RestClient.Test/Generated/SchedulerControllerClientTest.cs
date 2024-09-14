@@ -17,6 +17,7 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
    using Substrate.Kusama.NET.RestClient.Generated.Clients;
    using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_scheduler;
    using Substrate.NetApi.Model.Types.Base;
    
    public class SchedulerControllerClientTest : ClientTestBase
@@ -80,11 +81,11 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
          result.MaybeId.Create(this.GetTestValue6());
          result.Priority = this.GetTestValueU8();
          result.Call = new Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_support.traits.preimages.EnumBounded();
-         result.Call.Create(this.GetTestValueEnum<Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_support.traits.preimages.Bounded>(), this.GetTestValue7());
+         result.Call = this.GetTestValue7();
          result.MaybePeriodic = new Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>>();
          result.MaybePeriodic.Create(this.GetTestValue8());
          result.Origin = new Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_kusama_runtime.EnumOriginCaller();
-         result.Origin.Create(this.GetTestValueEnum<Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_kusama_runtime.OriginCaller>(), this.GetTestValue9());
+         result.Origin = this.GetTestValue9();
          return result;
       }
       public Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr32U8 GetTestValue6()
@@ -126,44 +127,11 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
                   this.GetTestValueU8()});
          return result;
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256 GetTestValue7()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_support.traits.preimages.EnumBounded GetTestValue7()
       {
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256 result;
-         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256();
-         result.Value = new Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr32U8();
-         result.Value.Create(new Substrate.NetApi.Model.Types.Primitive.U8[] {
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8()});
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_support.traits.preimages.EnumBounded result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_support.traits.preimages.EnumBounded();
+         // NOT IMPLEMENTED >> Initialize Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_support.traits.preimages.EnumBounded
          return result;
       }
       public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32> GetTestValue8()
@@ -173,11 +141,11 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
          result.Create(this.GetTestValueU32(), this.GetTestValueU32());
          return result;
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_support.dispatch.EnumRawOrigin GetTestValue9()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_kusama_runtime.EnumOriginCaller GetTestValue9()
       {
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_support.dispatch.EnumRawOrigin result;
-         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_support.dispatch.EnumRawOrigin();
-         result.Create(this.GetTestValueEnum<Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_support.dispatch.RawOrigin>(), this.GetTestValueBaseVoid());
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_kusama_runtime.EnumOriginCaller result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_kusama_runtime.EnumOriginCaller();
+         // NOT IMPLEMENTED >> Initialize Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_kusama_runtime.EnumOriginCaller
          return result;
       }
       [Test()]
@@ -209,14 +177,59 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32> GetTestValue11()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_scheduler.RetryConfig GetTestValue11()
+      {
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_scheduler.RetryConfig result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_scheduler.RetryConfig();
+         result.TotalRetries = this.GetTestValueU8();
+         result.Remaining = this.GetTestValueU8();
+         result.Period = this.GetTestValueU32();
+         return result;
+      }
+      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32> GetTestValue12()
       {
          Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32> result;
          result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>();
          result.Create(this.GetTestValueU32(), this.GetTestValueU32());
          return result;
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr32U8 GetTestValue12()
+      [Test()]
+      public async System.Threading.Tasks.Task TestRetries()
+      {
+         // Construct new Mockup client to test with.
+         SchedulerControllerMockupClient mockupClient = new SchedulerControllerMockupClient(_httpClient);
+
+         // Construct new subscription client to test with.
+         var subscriptionClient = CreateSubscriptionClient();
+
+         // Construct new RPC client to test with.
+         SchedulerControllerClient rpcClient = new SchedulerControllerClient(_httpClient, subscriptionClient);
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_scheduler.RetryConfig mockupValue = this.GetTestValue11();
+         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32> mockupKey = this.GetTestValue12();
+
+         Assert.IsTrue(await rpcClient.SubscribeRetries(mockupKey));
+
+         // Save the previously generated mockup value in RPC service storage.
+         bool mockupSetResult = await mockupClient.SetRetries(mockupValue, mockupKey);
+
+         // Test that the expected mockup value was handled successfully from RPC service.
+         Assert.IsTrue(mockupSetResult);
+         var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
+         Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
+
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_scheduler.RetryConfig rpcResult = await rpcClient.GetRetries(mockupKey);
+
+         // Test that the expected mockup value matches the actual result from RPC service.
+         Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
+      }
+      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32> GetTestValue14()
+      {
+         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32> result;
+         result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>();
+         result.Create(this.GetTestValueU32(), this.GetTestValueU32());
+         return result;
+      }
+      public Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr32U8 GetTestValue15()
       {
          Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr32U8 result;
          result = new Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr32U8();
@@ -266,8 +279,8 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          SchedulerControllerClient rpcClient = new SchedulerControllerClient(_httpClient, subscriptionClient);
-         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32> mockupValue = this.GetTestValue11();
-         Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr32U8 mockupKey = this.GetTestValue12();
+         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32> mockupValue = this.GetTestValue14();
+         Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr32U8 mockupKey = this.GetTestValue15();
 
          Assert.IsTrue(await rpcClient.SubscribeLookup(mockupKey));
 

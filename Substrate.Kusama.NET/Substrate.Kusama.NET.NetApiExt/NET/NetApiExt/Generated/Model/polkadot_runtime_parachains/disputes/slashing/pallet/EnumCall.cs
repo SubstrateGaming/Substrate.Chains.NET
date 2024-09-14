@@ -24,16 +24,23 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parach
         
         /// <summary>
         /// >> report_dispute_lost_unsigned
-        /// See [`Pallet::report_dispute_lost_unsigned`].
         /// </summary>
         report_dispute_lost_unsigned = 0,
     }
     
     /// <summary>
-    /// >> 356 - Variant[polkadot_runtime_parachains.disputes.slashing.pallet.Call]
+    /// >> 354 - Variant[polkadot_runtime_parachains.disputes.slashing.pallet.Call]
     /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
-    public sealed class EnumCall : BaseEnumExt<Call, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.slashing.DisputeProof, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_session.MembershipProof>>
+    public sealed class EnumCall : BaseEnumRust<Call>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumCall()
+        {
+				AddTypeDecoder<BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.slashing.DisputeProof, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_session.MembershipProof>>(Call.report_dispute_lost_unsigned);
+        }
     }
 }

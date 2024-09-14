@@ -81,10 +81,16 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_ranked_collectiv
         /// The new member to exchange is the same as the old member
         /// </summary>
         SameMember = 9,
+        
+        /// <summary>
+        /// >> TooManyMembers
+        /// The max member count for the rank has been reached.
+        /// </summary>
+        TooManyMembers = 10,
     }
     
     /// <summary>
-    /// >> 655 - Variant[pallet_ranked_collective.pallet.Error]
+    /// >> 661 - Variant[pallet_ranked_collective.pallet.Error]
     /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>

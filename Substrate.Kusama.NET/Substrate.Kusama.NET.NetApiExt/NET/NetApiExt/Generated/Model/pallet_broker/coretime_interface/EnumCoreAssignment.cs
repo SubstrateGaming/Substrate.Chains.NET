@@ -38,9 +38,19 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_broker.coretime_
     }
     
     /// <summary>
-    /// >> 374 - Variant[pallet_broker.coretime_interface.CoreAssignment]
+    /// >> 371 - Variant[pallet_broker.coretime_interface.CoreAssignment]
     /// </summary>
-    public sealed class EnumCoreAssignment : BaseEnumExt<CoreAssignment, BaseVoid, BaseVoid, Substrate.NetApi.Model.Types.Primitive.U32>
+    public sealed class EnumCoreAssignment : BaseEnumRust<CoreAssignment>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumCoreAssignment()
+        {
+				AddTypeDecoder<BaseVoid>(CoreAssignment.Idle);
+				AddTypeDecoder<BaseVoid>(CoreAssignment.Pool);
+				AddTypeDecoder<Substrate.NetApi.Model.Types.Primitive.U32>(CoreAssignment.Task);
+        }
     }
 }

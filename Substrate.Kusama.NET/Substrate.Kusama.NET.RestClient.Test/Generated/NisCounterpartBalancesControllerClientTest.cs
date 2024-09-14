@@ -369,21 +369,28 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
       {
          Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT14 result;
          result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT14();
-         result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_balances.types.IdAmountT1>();
-         result.Value.Create(new Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_balances.types.IdAmountT1[] {
+         result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_support.traits.tokens.misc.IdAmountT1>();
+         result.Value.Create(new Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_support.traits.tokens.misc.IdAmountT1[] {
                   this.GetTestValue17()});
          return result;
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_balances.types.IdAmountT1 GetTestValue17()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_support.traits.tokens.misc.IdAmountT1 GetTestValue17()
       {
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_balances.types.IdAmountT1 result;
-         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_balances.types.IdAmountT1();
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_support.traits.tokens.misc.IdAmountT1 result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_support.traits.tokens.misc.IdAmountT1();
          result.Id = new Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_kusama_runtime.EnumRuntimeHoldReason();
-         result.Id.Create(this.GetTestValueEnum<Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_kusama_runtime.RuntimeHoldReason>(), this.GetTestValueBaseVoid());
+         result.Id = this.GetTestValue18();
          result.Amount = this.GetTestValueU128();
          return result;
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue18()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_kusama_runtime.EnumRuntimeHoldReason GetTestValue18()
+      {
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_kusama_runtime.EnumRuntimeHoldReason result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_kusama_runtime.EnumRuntimeHoldReason();
+         // NOT IMPLEMENTED >> Initialize Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_kusama_runtime.EnumRuntimeHoldReason
+         return result;
+      }
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue19()
       {
          Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 result;
          result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32();
@@ -435,7 +442,7 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
          // Construct new RPC client to test with.
          NisCounterpartBalancesControllerClient rpcClient = new NisCounterpartBalancesControllerClient(_httpClient, subscriptionClient);
          Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT14 mockupValue = this.GetTestValue16();
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 mockupKey = this.GetTestValue18();
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 mockupKey = this.GetTestValue19();
 
          Assert.IsTrue(await rpcClient.SubscribeHolds(mockupKey));
 
@@ -452,24 +459,24 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT40 GetTestValue20()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT40 GetTestValue21()
       {
          Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT40 result;
          result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT40();
-         result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_balances.types.IdAmountT3>();
-         result.Value.Create(new Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_balances.types.IdAmountT3[] {
-                  this.GetTestValue21()});
+         result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_support.traits.tokens.misc.IdAmountT3>();
+         result.Value.Create(new Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_support.traits.tokens.misc.IdAmountT3[] {
+                  this.GetTestValue22()});
          return result;
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_balances.types.IdAmountT3 GetTestValue21()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_support.traits.tokens.misc.IdAmountT3 GetTestValue22()
       {
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_balances.types.IdAmountT3 result;
-         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_balances.types.IdAmountT3();
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_support.traits.tokens.misc.IdAmountT3 result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_support.traits.tokens.misc.IdAmountT3();
          result.Id = new Substrate.NetApi.Model.Types.Base.BaseTuple();
          result.Amount = this.GetTestValueU128();
          return result;
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue22()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue23()
       {
          Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 result;
          result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32();
@@ -520,8 +527,8 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          NisCounterpartBalancesControllerClient rpcClient = new NisCounterpartBalancesControllerClient(_httpClient, subscriptionClient);
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT40 mockupValue = this.GetTestValue20();
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 mockupKey = this.GetTestValue22();
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT40 mockupValue = this.GetTestValue21();
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 mockupKey = this.GetTestValue23();
 
          Assert.IsTrue(await rpcClient.SubscribeFreezes(mockupKey));
 

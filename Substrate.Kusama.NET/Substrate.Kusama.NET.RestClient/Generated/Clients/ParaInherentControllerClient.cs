@@ -13,7 +13,7 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Clients
    using System.Threading.Tasks;
    using System.Net.Http;
    using Substrate.NetApi.Model.Types.Base;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7;
    using Substrate.Kusama.NET.RestClient.Generated.Interfaces;
    
    public sealed class ParaInherentControllerClient : BaseClient, IParaInherentControllerClient

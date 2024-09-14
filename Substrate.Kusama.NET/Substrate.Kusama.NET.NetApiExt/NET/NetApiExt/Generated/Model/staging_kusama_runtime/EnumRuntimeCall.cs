@@ -92,6 +92,11 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_kusama_runtime
         Whitelist = 44,
         
         /// <summary>
+        /// >> Parameters
+        /// </summary>
+        Parameters = 46,
+        
+        /// <summary>
         /// >> Claims
         /// </summary>
         Claims = 19,
@@ -273,9 +278,67 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_kusama_runtime
     }
     
     /// <summary>
-    /// >> 96 - Variant[staging_kusama_runtime.RuntimeCall]
+    /// >> 87 - Variant[staging_kusama_runtime.RuntimeCall]
     /// </summary>
-    public sealed class EnumRuntimeCall : BaseEnumExt<RuntimeCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_system.pallet.EnumCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_babe.pallet.EnumCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_timestamp.pallet.EnumCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_indices.pallet.EnumCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_balances.pallet.EnumCall, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.pallet.pallet.EnumCall, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_session.pallet.EnumCall, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_grandpa.pallet.EnumCall, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_treasury.pallet.EnumCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_common.claims.pallet.EnumCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_conviction_voting.pallet.EnumCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_referenda.pallet.EnumCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_ranked_collective.pallet.EnumCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_referenda.pallet.EnumCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_utility.pallet.EnumCall, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.pallet.EnumCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_recovery.pallet.EnumCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_vesting.pallet.EnumCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_scheduler.pallet.EnumCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_proxy.pallet.EnumCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_multisig.pallet.EnumCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_preimage.pallet.EnumCall, BaseVoid, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_bounties.pallet.EnumCall, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_election_provider_multi_phase.pallet.EnumCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nis.pallet.EnumCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_bags_list.pallet.EnumCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_child_bounties.pallet.EnumCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools.pallet.EnumCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_fast_unstake.pallet.EnumCall, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_whitelist.pallet.EnumCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_balances.pallet.EnumCall, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.configuration.pallet.EnumCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.shared.pallet.EnumCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.inclusion.pallet.EnumCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.paras_inherent.pallet.EnumCall, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.paras.pallet.EnumCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.initializer.pallet.EnumCall, BaseVoid, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.hrmp.pallet.EnumCall, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.disputes.pallet.EnumCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.disputes.slashing.pallet.EnumCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.assigner_on_demand.pallet.EnumCall, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_common.paras_registrar.pallet.EnumCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_common.slots.pallet.EnumCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_common.auctions.pallet.EnumCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_common.crowdloan.pallet.EnumCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.coretime.pallet.EnumCall, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_xcm.pallet.EnumCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_message_queue.pallet.EnumCall, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_asset_rate.pallet.EnumCall, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_beefy.pallet.EnumCall>
+    public sealed class EnumRuntimeCall : BaseEnumRust<RuntimeCall>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumRuntimeCall()
+        {
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_system.pallet.EnumCall>(RuntimeCall.System);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_babe.pallet.EnumCall>(RuntimeCall.Babe);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_timestamp.pallet.EnumCall>(RuntimeCall.Timestamp);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_indices.pallet.EnumCall>(RuntimeCall.Indices);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_balances.pallet.EnumCall>(RuntimeCall.Balances);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.pallet.pallet.EnumCall>(RuntimeCall.Staking);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_session.pallet.EnumCall>(RuntimeCall.Session);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_grandpa.pallet.EnumCall>(RuntimeCall.Grandpa);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_treasury.pallet.EnumCall>(RuntimeCall.Treasury);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_conviction_voting.pallet.EnumCall>(RuntimeCall.ConvictionVoting);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_referenda.pallet.EnumCall>(RuntimeCall.Referenda);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_ranked_collective.pallet.EnumCall>(RuntimeCall.FellowshipCollective);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_referenda.pallet.EnumCall>(RuntimeCall.FellowshipReferenda);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_whitelist.pallet.EnumCall>(RuntimeCall.Whitelist);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_parameters.pallet.EnumCall>(RuntimeCall.Parameters);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_common.claims.pallet.EnumCall>(RuntimeCall.Claims);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_utility.pallet.EnumCall>(RuntimeCall.Utility);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.pallet.EnumCall>(RuntimeCall.Society);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_recovery.pallet.EnumCall>(RuntimeCall.Recovery);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_vesting.pallet.EnumCall>(RuntimeCall.Vesting);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_scheduler.pallet.EnumCall>(RuntimeCall.Scheduler);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_proxy.pallet.EnumCall>(RuntimeCall.Proxy);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_multisig.pallet.EnumCall>(RuntimeCall.Multisig);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_preimage.pallet.EnumCall>(RuntimeCall.Preimage);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_bounties.pallet.EnumCall>(RuntimeCall.Bounties);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_child_bounties.pallet.EnumCall>(RuntimeCall.ChildBounties);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_election_provider_multi_phase.pallet.EnumCall>(RuntimeCall.ElectionProviderMultiPhase);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nis.pallet.EnumCall>(RuntimeCall.Nis);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_balances.pallet.EnumCall>(RuntimeCall.NisCounterpartBalances);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_bags_list.pallet.EnumCall>(RuntimeCall.VoterList);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools.pallet.EnumCall>(RuntimeCall.NominationPools);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_fast_unstake.pallet.EnumCall>(RuntimeCall.FastUnstake);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.configuration.pallet.EnumCall>(RuntimeCall.Configuration);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.shared.pallet.EnumCall>(RuntimeCall.ParasShared);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.inclusion.pallet.EnumCall>(RuntimeCall.ParaInclusion);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.paras_inherent.pallet.EnumCall>(RuntimeCall.ParaInherent);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.paras.pallet.EnumCall>(RuntimeCall.Paras);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.initializer.pallet.EnumCall>(RuntimeCall.Initializer);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.hrmp.pallet.EnumCall>(RuntimeCall.Hrmp);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.disputes.pallet.EnumCall>(RuntimeCall.ParasDisputes);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.disputes.slashing.pallet.EnumCall>(RuntimeCall.ParasSlashing);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.assigner_on_demand.pallet.EnumCall>(RuntimeCall.OnDemandAssignmentProvider);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_common.paras_registrar.pallet.EnumCall>(RuntimeCall.Registrar);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_common.slots.pallet.EnumCall>(RuntimeCall.Slots);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_common.auctions.pallet.EnumCall>(RuntimeCall.Auctions);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_common.crowdloan.pallet.EnumCall>(RuntimeCall.Crowdloan);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.coretime.pallet.EnumCall>(RuntimeCall.Coretime);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_xcm.pallet.EnumCall>(RuntimeCall.XcmPallet);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_message_queue.pallet.EnumCall>(RuntimeCall.MessageQueue);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_asset_rate.pallet.EnumCall>(RuntimeCall.AssetRate);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_beefy.pallet.EnumCall>(RuntimeCall.Beefy);
+        }
     }
 }

@@ -38,9 +38,19 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_treasury
     }
     
     /// <summary>
-    /// >> 616 - Variant[pallet_treasury.PaymentState]
+    /// >> 622 - Variant[pallet_treasury.PaymentState]
     /// </summary>
-    public sealed class EnumPaymentState : BaseEnumExt<PaymentState, BaseVoid, Substrate.NetApi.Model.Types.Primitive.U64, BaseVoid>
+    public sealed class EnumPaymentState : BaseEnumRust<PaymentState>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumPaymentState()
+        {
+				AddTypeDecoder<BaseVoid>(PaymentState.Pending);
+				AddTypeDecoder<Substrate.NetApi.Model.Types.Primitive.U64>(PaymentState.Attempted);
+				AddTypeDecoder<BaseVoid>(PaymentState.Failed);
+        }
     }
 }

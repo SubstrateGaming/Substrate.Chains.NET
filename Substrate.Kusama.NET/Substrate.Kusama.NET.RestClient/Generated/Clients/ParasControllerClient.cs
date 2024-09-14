@@ -16,7 +16,7 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Clients
    using Substrate.NetApi.Model.Types.Base;
    using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives;
    using Substrate.NetApi.Model.Types.Primitive;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7;
    using Substrate.Kusama.NET.RestClient.Generated.Interfaces;
    
    public sealed class ParasControllerClient : BaseClient, IParasControllerClient
@@ -115,6 +115,14 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Clients
       public async Task<bool> SubscribeFutureCodeUpgrades(Id key)
       {
          return await _subscriptionClient.SubscribeAsync("Paras.FutureCodeUpgrades", Substrate.Kusama.NET.NetApiExt.Generated.Storage.ParasStorage.FutureCodeUpgradesParams(key));
+      }
+      public async Task<BaseVec<BaseTuple<Id, U32>>> GetFutureCodeUpgradesAt()
+      {
+         return await SendRequestAsync<BaseVec<BaseTuple<Id, U32>>>(_httpClient, "paras/futurecodeupgradesat");
+      }
+      public async Task<bool> SubscribeFutureCodeUpgradesAt()
+      {
+         return await _subscriptionClient.SubscribeAsync("Paras.FutureCodeUpgradesAt");
       }
       public async Task<ValidationCodeHash> GetFutureCodeHash(Id key)
       {

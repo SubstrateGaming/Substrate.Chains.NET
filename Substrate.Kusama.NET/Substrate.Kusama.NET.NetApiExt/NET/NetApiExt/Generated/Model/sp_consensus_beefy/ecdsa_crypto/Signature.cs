@@ -9,7 +9,7 @@
 
 using Substrate.NetApi.Attributes;
 using Substrate.NetApi.Model.Types.Base;
-using Substrate.NetApi.Model.Types.Metadata.V14;
+using Substrate.NetApi.Model.Types.Metadata.Base;
 using System.Collections.Generic;
 
 
@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_beefy.ecds
     
     
     /// <summary>
-    /// >> 461 - Composite[sp_consensus_beefy.ecdsa_crypto.Signature]
+    /// >> 459 - Composite[sp_consensus_beefy.ecdsa_crypto.Signature]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Signature : BaseType
@@ -27,7 +27,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_beefy.ecds
         /// <summary>
         /// >> value
         /// </summary>
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.ecdsa.Signature Value { get; set; }
+        public Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr65U8 Value { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
@@ -47,7 +47,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_beefy.ecds
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Value = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.ecdsa.Signature();
+            Value = new Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr65U8();
             Value.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

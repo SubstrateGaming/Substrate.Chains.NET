@@ -88,6 +88,14 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "Staking/CounterForNominators", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.StakingStorage.CounterForNominatorsParams());
       }
+      public async Task<bool> SetVirtualStakers(BaseTuple value, AccountId32 key)
+      {
+         return await SendMockupRequestAsync(_httpClient, "Staking/VirtualStakers", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.StakingStorage.VirtualStakersParams(key));
+      }
+      public async Task<bool> SetCounterForVirtualStakers(U32 value)
+      {
+         return await SendMockupRequestAsync(_httpClient, "Staking/CounterForVirtualStakers", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.StakingStorage.CounterForVirtualStakersParams());
+      }
       public async Task<bool> SetMaxNominatorsCount(U32 value)
       {
          return await SendMockupRequestAsync(_httpClient, "Staking/MaxNominatorsCount", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.StakingStorage.MaxNominatorsCountParams());
@@ -144,6 +152,10 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "Staking/ForceEra", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.StakingStorage.ForceEraParams());
       }
+      public async Task<bool> SetMaxStakedRewards(Percent value)
+      {
+         return await SendMockupRequestAsync(_httpClient, "Staking/MaxStakedRewards", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.StakingStorage.MaxStakedRewardsParams());
+      }
       public async Task<bool> SetSlashRewardFraction(Perbill value)
       {
          return await SendMockupRequestAsync(_httpClient, "Staking/SlashRewardFraction", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.StakingStorage.SlashRewardFractionParams());
@@ -180,9 +192,9 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "Staking/CurrentPlannedSession", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.StakingStorage.CurrentPlannedSessionParams());
       }
-      public async Task<bool> SetOffendingValidators(BaseVec<BaseTuple<U32, Bool>> value)
+      public async Task<bool> SetDisabledValidators(BaseVec<U32> value)
       {
-         return await SendMockupRequestAsync(_httpClient, "Staking/OffendingValidators", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.StakingStorage.OffendingValidatorsParams());
+         return await SendMockupRequestAsync(_httpClient, "Staking/DisabledValidators", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.StakingStorage.DisabledValidatorsParams());
       }
       public async Task<bool> SetChillThreshold(Percent value)
       {

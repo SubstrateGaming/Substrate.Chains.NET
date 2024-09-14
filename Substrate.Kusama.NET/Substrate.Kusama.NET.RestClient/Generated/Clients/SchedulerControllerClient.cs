@@ -14,6 +14,7 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Clients
    using System.Net.Http;
    using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_scheduler;
    using Substrate.NetApi.Model.Types.Base;
    using Substrate.Kusama.NET.RestClient.Generated.Interfaces;
    
@@ -41,6 +42,14 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Clients
       public async Task<bool> SubscribeAgenda(U32 key)
       {
          return await _subscriptionClient.SubscribeAsync("Scheduler.Agenda", Substrate.Kusama.NET.NetApiExt.Generated.Storage.SchedulerStorage.AgendaParams(key));
+      }
+      public async Task<RetryConfig> GetRetries(BaseTuple<U32, U32> key)
+      {
+         return await SendRequestAsync<RetryConfig>(_httpClient, "scheduler/retries", Substrate.Kusama.NET.NetApiExt.Generated.Storage.SchedulerStorage.RetriesParams(key));
+      }
+      public async Task<bool> SubscribeRetries(BaseTuple<U32, U32> key)
+      {
+         return await _subscriptionClient.SubscribeAsync("Scheduler.Retries", Substrate.Kusama.NET.NetApiExt.Generated.Storage.SchedulerStorage.RetriesParams(key));
       }
       public async Task<BaseTuple<U32, U32>> GetLookup(Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr32U8 key)
       {

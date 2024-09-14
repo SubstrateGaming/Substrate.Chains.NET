@@ -251,6 +251,35 @@ namespace Substrate.Kusama.NET.RestService.Generated.Controller
         }
         
         /// <summary>
+        /// >> VirtualStakers
+        ///  Stakers whose funds are managed by other pallets.
+        /// 
+        ///  This pallet does not apply any locks on them, therefore they are only virtually bonded. They
+        ///  are expected to be keyless accounts and hence should not be allowed to mutate their ledger
+        ///  directly via this pallet. Instead, these accounts are managed by other pallets and accessed
+        ///  via low level apis. We keep track of them to do minimal integrity checks.
+        /// </summary>
+        [HttpGet("VirtualStakers")]
+        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseTuple), 200)]
+        [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.StakingStorage), "VirtualStakersParams", typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32))]
+        public IActionResult GetVirtualStakers(string key)
+        {
+            return this.Ok(_stakingStorage.GetVirtualStakers(key));
+        }
+        
+        /// <summary>
+        /// >> CounterForVirtualStakers
+        /// Counter for the related counted storage map
+        /// </summary>
+        [HttpGet("CounterForVirtualStakers")]
+        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Primitive.U32), 200)]
+        [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.StakingStorage), "CounterForVirtualStakersParams")]
+        public IActionResult GetCounterForVirtualStakers()
+        {
+            return this.Ok(_stakingStorage.GetCounterForVirtualStakers());
+        }
+        
+        /// <summary>
         /// >> MaxNominatorsCount
         ///  The maximum nominator count before we stop allowing new validators to join.
         /// 
@@ -481,6 +510,20 @@ namespace Substrate.Kusama.NET.RestService.Generated.Controller
         }
         
         /// <summary>
+        /// >> MaxStakedRewards
+        ///  Maximum staked rewards, i.e. the percentage of the era inflation that
+        ///  is used for stake rewards.
+        ///  See [Era payout](./index.html#era-payout).
+        /// </summary>
+        [HttpGet("MaxStakedRewards")]
+        [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Percent), 200)]
+        [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.StakingStorage), "MaxStakedRewardsParams")]
+        public IActionResult GetMaxStakedRewards()
+        {
+            return this.Ok(_stakingStorage.GetMaxStakedRewards());
+        }
+        
+        /// <summary>
         /// >> SlashRewardFraction
         ///  The percentage of the slash that is distributed to reporters.
         /// 
@@ -599,23 +642,21 @@ namespace Substrate.Kusama.NET.RestService.Generated.Controller
         }
         
         /// <summary>
-        /// >> OffendingValidators
-        ///  Indices of validators that have offended in the active era and whether they are currently
-        ///  disabled.
+        /// >> DisabledValidators
+        ///  Indices of validators that have offended in the active era. The offenders are disabled for a
+        ///  whole era. For this reason they are kept here - only staking pallet knows about eras. The
+        ///  implementor of [`DisablingStrategy`] defines if a validator should be disabled which
+        ///  implicitly means that the implementor also controls the max number of disabled validators.
         /// 
-        ///  This value should be a superset of disabled validators since not all offences lead to the
-        ///  validator being disabled (if there was no slash). This is needed to track the percentage of
-        ///  validators that have offended in the current era, ensuring a new era is forced if
-        ///  `OffendingValidatorsThreshold` is reached. The vec is always kept sorted so that we can find
-        ///  whether a given validator has previously offended using binary search. It gets cleared when
-        ///  the era ends.
+        ///  The vec is always kept sorted so that we can find whether a given validator has previously
+        ///  offended using binary search.
         /// </summary>
-        [HttpGet("OffendingValidators")]
-        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.Bool>>), 200)]
-        [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.StakingStorage), "OffendingValidatorsParams")]
-        public IActionResult GetOffendingValidators()
+        [HttpGet("DisabledValidators")]
+        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U32>), 200)]
+        [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.StakingStorage), "DisabledValidatorsParams")]
+        public IActionResult GetDisabledValidators()
         {
-            return this.Ok(_stakingStorage.GetOffendingValidators());
+            return this.Ok(_stakingStorage.GetDisabledValidators());
         }
         
         /// <summary>

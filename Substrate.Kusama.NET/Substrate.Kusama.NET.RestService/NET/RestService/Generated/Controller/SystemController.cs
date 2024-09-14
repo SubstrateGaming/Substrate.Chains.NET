@@ -62,6 +62,18 @@ namespace Substrate.Kusama.NET.RestService.Generated.Controller
         }
         
         /// <summary>
+        /// >> InherentsApplied
+        ///  Whether all inherents have been applied.
+        /// </summary>
+        [HttpGet("InherentsApplied")]
+        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Primitive.Bool), 200)]
+        [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.SystemStorage), "InherentsAppliedParams")]
+        public IActionResult GetInherentsApplied()
+        {
+            return this.Ok(_systemStorage.GetInherentsApplied());
+        }
+        
+        /// <summary>
         /// >> BlockWeight
         ///  The current weight for the block.
         /// </summary>

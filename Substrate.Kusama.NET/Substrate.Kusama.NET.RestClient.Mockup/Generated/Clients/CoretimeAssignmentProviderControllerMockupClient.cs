@@ -22,11 +22,11 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Clients
       {
          _httpClient = httpClient;
       }
-      public async Task<bool> SetCoreSchedules(Schedule value, Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.CoreIndex> key)
+      public async Task<bool> SetCoreSchedules(Schedule value, Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.CoreIndex> key)
       {
          return await SendMockupRequestAsync(_httpClient, "CoretimeAssignmentProvider/CoreSchedules", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.CoretimeAssignmentProviderStorage.CoreSchedulesParams(key));
       }
-      public async Task<bool> SetCoreDescriptors(CoreDescriptor value, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.CoreIndex key)
+      public async Task<bool> SetCoreDescriptors(CoreDescriptor value, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.CoreIndex key)
       {
          return await SendMockupRequestAsync(_httpClient, "CoretimeAssignmentProvider/CoreDescriptors", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.CoretimeAssignmentProviderStorage.CoreDescriptorsParams(key));
       }

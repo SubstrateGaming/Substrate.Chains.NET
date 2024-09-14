@@ -77,7 +77,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         ///  the `u32` counter is the number of times that a send to the destination has been attempted,
         ///  which is used as a prioritization.
         /// </summary>
-        Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT44 GetVersionDiscoveryQueue();
+        Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT45 GetVersionDiscoveryQueue();
         
         /// <summary>
         /// >> CurrentMigration
@@ -95,13 +95,36 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// >> LockedFungibles
         ///  Fungible assets which we know are locked on this chain.
         /// </summary>
-        Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT46 GetLockedFungibles(string key);
+        Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT47 GetLockedFungibles(string key);
         
         /// <summary>
         /// >> XcmExecutionSuspended
         ///  Global suspension state of the XCM executor.
         /// </summary>
         Substrate.NetApi.Model.Types.Primitive.Bool GetXcmExecutionSuspended();
+        
+        /// <summary>
+        /// >> ShouldRecordXcm
+        ///  Whether or not incoming XCMs (both executed locally and received) should be recorded.
+        ///  Only one XCM program will be recorded at a time.
+        ///  This is meant to be used in runtime APIs, and it's advised it stays false
+        ///  for all other use cases, so as to not degrade regular performance.
+        /// 
+        ///  Only relevant if this pallet is being used as the [`xcm_executor::traits::RecordXcm`]
+        ///  implementation in the XCM executor configuration.
+        /// </summary>
+        Substrate.NetApi.Model.Types.Primitive.Bool GetShouldRecordXcm();
+        
+        /// <summary>
+        /// >> RecordedXcm
+        ///  If [`ShouldRecordXcm`] is set to true, then the last XCM program executed locally
+        ///  will be stored here.
+        ///  Runtime APIs can fetch the XCM that was executed by accessing this value.
+        /// 
+        ///  Only relevant if this pallet is being used as the [`xcm_executor::traits::RecordXcm`]
+        ///  implementation in the XCM executor configuration.
+        /// </summary>
+        Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_xcm.v4.XcmT1 GetRecordedXcm();
     }
     
     /// <summary>
@@ -148,7 +171,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// <summary>
         /// _versionDiscoveryQueueTypedStorage typed storage field
         /// </summary>
-        private TypedStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT44> _versionDiscoveryQueueTypedStorage;
+        private TypedStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT45> _versionDiscoveryQueueTypedStorage;
         
         /// <summary>
         /// _currentMigrationTypedStorage typed storage field
@@ -163,12 +186,22 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// <summary>
         /// _lockedFungiblesTypedStorage typed storage field
         /// </summary>
-        private TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT46> _lockedFungiblesTypedStorage;
+        private TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT47> _lockedFungiblesTypedStorage;
         
         /// <summary>
         /// _xcmExecutionSuspendedTypedStorage typed storage field
         /// </summary>
         private TypedStorage<Substrate.NetApi.Model.Types.Primitive.Bool> _xcmExecutionSuspendedTypedStorage;
+        
+        /// <summary>
+        /// _shouldRecordXcmTypedStorage typed storage field
+        /// </summary>
+        private TypedStorage<Substrate.NetApi.Model.Types.Primitive.Bool> _shouldRecordXcmTypedStorage;
+        
+        /// <summary>
+        /// _recordedXcmTypedStorage typed storage field
+        /// </summary>
+        private TypedStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_xcm.v4.XcmT1> _recordedXcmTypedStorage;
         
         /// <summary>
         /// XcmPalletStorage constructor.
@@ -182,11 +215,13 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
             this.SupportedVersionTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Primitive.U32>("XcmPallet.SupportedVersion", storageDataProvider, storageChangeDelegates);
             this.VersionNotifiersTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Primitive.U64>("XcmPallet.VersionNotifiers", storageDataProvider, storageChangeDelegates);
             this.VersionNotifyTargetsTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U64, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight, Substrate.NetApi.Model.Types.Primitive.U32>>("XcmPallet.VersionNotifyTargets", storageDataProvider, storageChangeDelegates);
-            this.VersionDiscoveryQueueTypedStorage = new TypedStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT44>("XcmPallet.VersionDiscoveryQueue", storageDataProvider, storageChangeDelegates);
+            this.VersionDiscoveryQueueTypedStorage = new TypedStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT45>("XcmPallet.VersionDiscoveryQueue", storageDataProvider, storageChangeDelegates);
             this.CurrentMigrationTypedStorage = new TypedStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_xcm.pallet.EnumVersionMigrationStage>("XcmPallet.CurrentMigration", storageDataProvider, storageChangeDelegates);
             this.RemoteLockedFungiblesTypedStorage = new TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_xcm.pallet.RemoteLockedFungibleRecord>("XcmPallet.RemoteLockedFungibles", storageDataProvider, storageChangeDelegates);
-            this.LockedFungiblesTypedStorage = new TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT46>("XcmPallet.LockedFungibles", storageDataProvider, storageChangeDelegates);
+            this.LockedFungiblesTypedStorage = new TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT47>("XcmPallet.LockedFungibles", storageDataProvider, storageChangeDelegates);
             this.XcmExecutionSuspendedTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.Bool>("XcmPallet.XcmExecutionSuspended", storageDataProvider, storageChangeDelegates);
+            this.ShouldRecordXcmTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.Bool>("XcmPallet.ShouldRecordXcm", storageDataProvider, storageChangeDelegates);
+            this.RecordedXcmTypedStorage = new TypedStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_xcm.v4.XcmT1>("XcmPallet.RecordedXcm", storageDataProvider, storageChangeDelegates);
         }
         
         /// <summary>
@@ -297,7 +332,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// <summary>
         /// _versionDiscoveryQueueTypedStorage property
         /// </summary>
-        public TypedStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT44> VersionDiscoveryQueueTypedStorage
+        public TypedStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT45> VersionDiscoveryQueueTypedStorage
         {
             get
             {
@@ -342,7 +377,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// <summary>
         /// _lockedFungiblesTypedStorage property
         /// </summary>
-        public TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT46> LockedFungiblesTypedStorage
+        public TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT47> LockedFungiblesTypedStorage
         {
             get
             {
@@ -370,6 +405,36 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         }
         
         /// <summary>
+        /// _shouldRecordXcmTypedStorage property
+        /// </summary>
+        public TypedStorage<Substrate.NetApi.Model.Types.Primitive.Bool> ShouldRecordXcmTypedStorage
+        {
+            get
+            {
+                return _shouldRecordXcmTypedStorage;
+            }
+            set
+            {
+                _shouldRecordXcmTypedStorage = value;
+            }
+        }
+        
+        /// <summary>
+        /// _recordedXcmTypedStorage property
+        /// </summary>
+        public TypedStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_xcm.v4.XcmT1> RecordedXcmTypedStorage
+        {
+            get
+            {
+                return _recordedXcmTypedStorage;
+            }
+            set
+            {
+                _recordedXcmTypedStorage = value;
+            }
+        }
+        
+        /// <summary>
         /// Connects to all storages and initializes the change subscription handling.
         /// </summary>
         public async Task InitializeAsync(Substrate.ServiceLayer.Storage.IStorageDataProvider dataProvider)
@@ -386,6 +451,8 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
             await RemoteLockedFungiblesTypedStorage.InitializeAsync("XcmPallet", "RemoteLockedFungibles");
             await LockedFungiblesTypedStorage.InitializeAsync("XcmPallet", "LockedFungibles");
             await XcmExecutionSuspendedTypedStorage.InitializeAsync("XcmPallet", "XcmExecutionSuspended");
+            await ShouldRecordXcmTypedStorage.InitializeAsync("XcmPallet", "ShouldRecordXcm");
+            await RecordedXcmTypedStorage.InitializeAsync("XcmPallet", "RecordedXcm");
         }
         
         /// <summary>
@@ -589,7 +656,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         ///  the `u32` counter is the number of times that a send to the destination has been attempted,
         ///  which is used as a prioritization.
         /// </summary>
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT44 GetVersionDiscoveryQueue()
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT45 GetVersionDiscoveryQueue()
         {
             return VersionDiscoveryQueueTypedStorage.Get();
         }
@@ -654,13 +721,13 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// >> LockedFungibles
         ///  Fungible assets which we know are locked on this chain.
         /// </summary>
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT46 GetLockedFungibles(string key)
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT47 GetLockedFungibles(string key)
         {
             if ((key == null))
             {
                 return null;
             }
-            if (LockedFungiblesTypedStorage.Dictionary.TryGetValue(key, out Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT46 result))
+            if (LockedFungiblesTypedStorage.Dictionary.TryGetValue(key, out Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT47 result))
             {
                 return result;
             }
@@ -686,6 +753,53 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         public Substrate.NetApi.Model.Types.Primitive.Bool GetXcmExecutionSuspended()
         {
             return XcmExecutionSuspendedTypedStorage.Get();
+        }
+        
+        /// <summary>
+        /// Implements any storage change for XcmPallet.ShouldRecordXcm
+        /// </summary>
+        [StorageChange("XcmPallet", "ShouldRecordXcm")]
+        public void OnUpdateShouldRecordXcm(string data)
+        {
+            ShouldRecordXcmTypedStorage.Update(data);
+        }
+        
+        /// <summary>
+        /// >> ShouldRecordXcm
+        ///  Whether or not incoming XCMs (both executed locally and received) should be recorded.
+        ///  Only one XCM program will be recorded at a time.
+        ///  This is meant to be used in runtime APIs, and it's advised it stays false
+        ///  for all other use cases, so as to not degrade regular performance.
+        /// 
+        ///  Only relevant if this pallet is being used as the [`xcm_executor::traits::RecordXcm`]
+        ///  implementation in the XCM executor configuration.
+        /// </summary>
+        public Substrate.NetApi.Model.Types.Primitive.Bool GetShouldRecordXcm()
+        {
+            return ShouldRecordXcmTypedStorage.Get();
+        }
+        
+        /// <summary>
+        /// Implements any storage change for XcmPallet.RecordedXcm
+        /// </summary>
+        [StorageChange("XcmPallet", "RecordedXcm")]
+        public void OnUpdateRecordedXcm(string data)
+        {
+            RecordedXcmTypedStorage.Update(data);
+        }
+        
+        /// <summary>
+        /// >> RecordedXcm
+        ///  If [`ShouldRecordXcm`] is set to true, then the last XCM program executed locally
+        ///  will be stored here.
+        ///  Runtime APIs can fetch the XCM that was executed by accessing this value.
+        /// 
+        ///  Only relevant if this pallet is being used as the [`xcm_executor::traits::RecordXcm`]
+        ///  implementation in the XCM executor configuration.
+        /// </summary>
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_xcm.v4.XcmT1 GetRecordedXcm()
+        {
+            return RecordedXcmTypedStorage.Get();
         }
     }
 }

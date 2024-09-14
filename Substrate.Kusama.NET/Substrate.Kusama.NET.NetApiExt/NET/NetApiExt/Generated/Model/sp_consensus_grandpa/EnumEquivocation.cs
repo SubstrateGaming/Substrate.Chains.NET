@@ -33,9 +33,18 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_grandpa
     }
     
     /// <summary>
-    /// >> 143 - Variant[sp_consensus_grandpa.Equivocation]
+    /// >> 133 - Variant[sp_consensus_grandpa.Equivocation]
     /// </summary>
-    public sealed class EnumEquivocation : BaseEnumExt<Equivocation, Substrate.Kusama.NET.NetApiExt.Generated.Model.finality_grandpa.EquivocationT1, Substrate.Kusama.NET.NetApiExt.Generated.Model.finality_grandpa.EquivocationT2>
+    public sealed class EnumEquivocation : BaseEnumRust<Equivocation>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumEquivocation()
+        {
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.finality_grandpa.EquivocationT1>(Equivocation.Prevote);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.finality_grandpa.EquivocationT2>(Equivocation.Precommit);
+        }
     }
 }

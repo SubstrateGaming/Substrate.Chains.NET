@@ -15,7 +15,7 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Interfaces
    using Substrate.NetApi.Model.Types.Base;
    using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives;
    using Substrate.NetApi.Model.Types.Primitive;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7;
    
    public interface IParasControllerClient
    {
@@ -41,6 +41,8 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Interfaces
       Task<bool> SubscribePastCodePruning();
       Task<U32> GetFutureCodeUpgrades(Id key);
       Task<bool> SubscribeFutureCodeUpgrades(Id key);
+      Task<BaseVec<BaseTuple<Id, U32>>> GetFutureCodeUpgradesAt();
+      Task<bool> SubscribeFutureCodeUpgradesAt();
       Task<ValidationCodeHash> GetFutureCodeHash(Id key);
       Task<bool> SubscribeFutureCodeHash(Id key);
       Task<EnumUpgradeGoAhead> GetUpgradeGoAheadSignal(Id key);

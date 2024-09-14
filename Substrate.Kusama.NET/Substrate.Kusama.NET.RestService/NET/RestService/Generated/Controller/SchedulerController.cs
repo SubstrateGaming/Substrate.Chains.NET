@@ -61,6 +61,18 @@ namespace Substrate.Kusama.NET.RestService.Generated.Controller
         }
         
         /// <summary>
+        /// >> Retries
+        ///  Retry configurations for items to be executed, indexed by task address.
+        /// </summary>
+        [HttpGet("Retries")]
+        [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_scheduler.RetryConfig), 200)]
+        [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.SchedulerStorage), "RetriesParams", typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>))]
+        public IActionResult GetRetries(string key)
+        {
+            return this.Ok(_schedulerStorage.GetRetries(key));
+        }
+        
+        /// <summary>
         /// >> Lookup
         ///  Lookup from a name to the block number and index of the task.
         /// 

@@ -36,72 +36,13 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         public OnDemandAssignmentProviderStorage(SubstrateClientExt client)
         {
             this._client = client;
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("OnDemandAssignmentProvider", "SpotTraffic"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedU128)));
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("OnDemandAssignmentProvider", "OnDemandQueue"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.assigner_on_demand.EnqueuedOrder>)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("OnDemandAssignmentProvider", "ParaIdAffinity"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox256}, typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id), typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.assigner_on_demand.CoreAffinityCount)));
-        }
-        
-        /// <summary>
-        /// >> SpotTrafficParams
-        ///  Keeps track of the multiplier used to calculate the current spot price for the on demand
-        ///  assigner.
-        /// </summary>
-        public static string SpotTrafficParams()
-        {
-            return RequestGenerator.GetStorage("OnDemandAssignmentProvider", "SpotTraffic", Substrate.NetApi.Model.Meta.Storage.Type.Plain);
-        }
-        
-        /// <summary>
-        /// >> SpotTrafficDefault
-        /// Default value as hex string
-        /// </summary>
-        public static string SpotTrafficDefault()
-        {
-            return "0x000064A7B3B6E00D0000000000000000";
-        }
-        
-        /// <summary>
-        /// >> SpotTraffic
-        ///  Keeps track of the multiplier used to calculate the current spot price for the on demand
-        ///  assigner.
-        /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedU128> SpotTraffic(string blockhash, CancellationToken token)
-        {
-            string parameters = OnDemandAssignmentProviderStorage.SpotTrafficParams();
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedU128>(parameters, blockhash, token);
-            return result;
-        }
-        
-        /// <summary>
-        /// >> OnDemandQueueParams
-        ///  The order storage entry. Uses a VecDeque to be able to push to the front of the
-        ///  queue from the scheduler on session boundaries.
-        /// </summary>
-        public static string OnDemandQueueParams()
-        {
-            return RequestGenerator.GetStorage("OnDemandAssignmentProvider", "OnDemandQueue", Substrate.NetApi.Model.Meta.Storage.Type.Plain);
-        }
-        
-        /// <summary>
-        /// >> OnDemandQueueDefault
-        /// Default value as hex string
-        /// </summary>
-        public static string OnDemandQueueDefault()
-        {
-            return "0x00";
-        }
-        
-        /// <summary>
-        /// >> OnDemandQueue
-        ///  The order storage entry. Uses a VecDeque to be able to push to the front of the
-        ///  queue from the scheduler on session boundaries.
-        /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.assigner_on_demand.EnqueuedOrder>> OnDemandQueue(string blockhash, CancellationToken token)
-        {
-            string parameters = OnDemandAssignmentProviderStorage.OnDemandQueueParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.assigner_on_demand.EnqueuedOrder>>(parameters, blockhash, token);
-            return result;
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id), typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.assigner_on_demand.types.CoreAffinityCount)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("OnDemandAssignmentProvider", "QueueStatus"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.assigner_on_demand.types.QueueStatusType)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("OnDemandAssignmentProvider", "FreeEntries"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.BinaryHeapT2)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("OnDemandAssignmentProvider", "AffinityEntries"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.CoreIndex), typeof(Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.BinaryHeapT2)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("OnDemandAssignmentProvider", "Revenue"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT44)));
         }
         
         /// <summary>
@@ -113,7 +54,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         public static string ParaIdAffinityParams(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key)
         {
             return RequestGenerator.GetStorage("OnDemandAssignmentProvider", "ParaIdAffinity", Substrate.NetApi.Model.Meta.Storage.Type.Map, new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                        Substrate.NetApi.Model.Meta.Storage.Hasher.Twox256}, new Substrate.NetApi.Model.Types.IType[] {
+                        Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, new Substrate.NetApi.Model.Types.IType[] {
                         key});
         }
         
@@ -132,10 +73,128 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         ///  it's lookahead. Keeping track of this affinity prevents parallel execution of the same
         ///  `ParaId` on two or more `CoreIndex`es.
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.assigner_on_demand.CoreAffinityCount> ParaIdAffinity(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key, string blockhash, CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.assigner_on_demand.types.CoreAffinityCount> ParaIdAffinity(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key, string blockhash, CancellationToken token)
         {
             string parameters = OnDemandAssignmentProviderStorage.ParaIdAffinityParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.assigner_on_demand.CoreAffinityCount>(parameters, blockhash, token);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.assigner_on_demand.types.CoreAffinityCount>(parameters, blockhash, token);
+            return result;
+        }
+        
+        /// <summary>
+        /// >> QueueStatusParams
+        ///  Overall status of queue (both free + affinity entries)
+        /// </summary>
+        public static string QueueStatusParams()
+        {
+            return RequestGenerator.GetStorage("OnDemandAssignmentProvider", "QueueStatus", Substrate.NetApi.Model.Meta.Storage.Type.Plain);
+        }
+        
+        /// <summary>
+        /// >> QueueStatusDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string QueueStatusDefault()
+        {
+            return "0x000064A7B3B6E00D0000000000000000000000000000000000";
+        }
+        
+        /// <summary>
+        /// >> QueueStatus
+        ///  Overall status of queue (both free + affinity entries)
+        /// </summary>
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.assigner_on_demand.types.QueueStatusType> QueueStatus(string blockhash, CancellationToken token)
+        {
+            string parameters = OnDemandAssignmentProviderStorage.QueueStatusParams();
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.assigner_on_demand.types.QueueStatusType>(parameters, blockhash, token);
+            return result;
+        }
+        
+        /// <summary>
+        /// >> FreeEntriesParams
+        ///  Priority queue for all orders which don't yet (or not any more) have any core affinity.
+        /// </summary>
+        public static string FreeEntriesParams()
+        {
+            return RequestGenerator.GetStorage("OnDemandAssignmentProvider", "FreeEntries", Substrate.NetApi.Model.Meta.Storage.Type.Plain);
+        }
+        
+        /// <summary>
+        /// >> FreeEntriesDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string FreeEntriesDefault()
+        {
+            return "0x00";
+        }
+        
+        /// <summary>
+        /// >> FreeEntries
+        ///  Priority queue for all orders which don't yet (or not any more) have any core affinity.
+        /// </summary>
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.BinaryHeapT2> FreeEntries(string blockhash, CancellationToken token)
+        {
+            string parameters = OnDemandAssignmentProviderStorage.FreeEntriesParams();
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.BinaryHeapT2>(parameters, blockhash, token);
+            return result;
+        }
+        
+        /// <summary>
+        /// >> AffinityEntriesParams
+        ///  Queue entries that are currently bound to a particular core due to core affinity.
+        /// </summary>
+        public static string AffinityEntriesParams(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.CoreIndex key)
+        {
+            return RequestGenerator.GetStorage("OnDemandAssignmentProvider", "AffinityEntries", Substrate.NetApi.Model.Meta.Storage.Type.Map, new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
+                        Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, new Substrate.NetApi.Model.Types.IType[] {
+                        key});
+        }
+        
+        /// <summary>
+        /// >> AffinityEntriesDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string AffinityEntriesDefault()
+        {
+            return "0x00";
+        }
+        
+        /// <summary>
+        /// >> AffinityEntries
+        ///  Queue entries that are currently bound to a particular core due to core affinity.
+        /// </summary>
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.BinaryHeapT2> AffinityEntries(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.CoreIndex key, string blockhash, CancellationToken token)
+        {
+            string parameters = OnDemandAssignmentProviderStorage.AffinityEntriesParams(key);
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.BinaryHeapT2>(parameters, blockhash, token);
+            return result;
+        }
+        
+        /// <summary>
+        /// >> RevenueParams
+        ///  Keeps track of accumulated revenue from on demand order sales.
+        /// </summary>
+        public static string RevenueParams()
+        {
+            return RequestGenerator.GetStorage("OnDemandAssignmentProvider", "Revenue", Substrate.NetApi.Model.Meta.Storage.Type.Plain);
+        }
+        
+        /// <summary>
+        /// >> RevenueDefault
+        /// Default value as hex string
+        /// </summary>
+        public static string RevenueDefault()
+        {
+            return "0x00";
+        }
+        
+        /// <summary>
+        /// >> Revenue
+        ///  Keeps track of accumulated revenue from on demand order sales.
+        /// </summary>
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT44> Revenue(string blockhash, CancellationToken token)
+        {
+            string parameters = OnDemandAssignmentProviderStorage.RevenueParams();
+            var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT44>(parameters, blockhash, token);
             return result;
         }
     }
@@ -187,6 +246,29 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
             result.Create("0x000064A7B3B6E00D0000000000000000");
             return result;
         }
+        
+        /// <summary>
+        /// >> MaxHistoricalRevenue
+        ///  The maximum number of blocks some historical revenue
+        ///  information stored for.
+        /// </summary>
+        public Substrate.NetApi.Model.Types.Primitive.U32 MaxHistoricalRevenue()
+        {
+            var result = new Substrate.NetApi.Model.Types.Primitive.U32();
+            result.Create("0xA0000000");
+            return result;
+        }
+        
+        /// <summary>
+        /// >> PalletId
+        ///  Identifier for the internal revenue balance.
+        /// </summary>
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_support.PalletId PalletId()
+        {
+            var result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_support.PalletId();
+            result.Create("0x70792F6F6E646D64");
+            return result;
+        }
     }
     
     /// <summary>
@@ -194,13 +276,6 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
     /// </summary>
     public enum OnDemandAssignmentProviderErrors
     {
-        
-        /// <summary>
-        /// >> InvalidParaId
-        /// The `ParaId` supplied to the `place_order` call is not a valid `ParaThread`, making the
-        /// call is invalid.
-        /// </summary>
-        InvalidParaId,
         
         /// <summary>
         /// >> QueueFull

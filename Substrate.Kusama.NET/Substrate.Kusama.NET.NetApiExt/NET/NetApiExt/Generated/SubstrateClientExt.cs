@@ -130,6 +130,11 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated
         public WhitelistStorage WhitelistStorage;
         
         /// <summary>
+        /// ParametersStorage storage calls.
+        /// </summary>
+        public ParametersStorage ParametersStorage;
+        
+        /// <summary>
         /// ClaimsStorage storage calls.
         /// </summary>
         public ClaimsStorage ClaimsStorage;
@@ -368,6 +373,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated
             this.FellowshipReferendaStorage = new FellowshipReferendaStorage(this);
             this.OriginsStorage = new OriginsStorage(this);
             this.WhitelistStorage = new WhitelistStorage(this);
+            this.ParametersStorage = new ParametersStorage(this);
             this.ClaimsStorage = new ClaimsStorage(this);
             this.UtilityStorage = new UtilityStorage(this);
             this.SocietyStorage = new SocietyStorage(this);

@@ -41,7 +41,7 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
          result.End = this.GetTestValueU32();
          result.Cap = this.GetTestValueU128();
          result.LastContribution = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_common.crowdloan.EnumLastContribution();
-         result.LastContribution.Create(this.GetTestValueEnum<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_common.crowdloan.LastContribution>(), this.GetTestValueBaseVoid());
+         result.LastContribution = this.GetTestValue5();
          result.FirstPeriod = this.GetTestValueU32();
          result.LastPeriod = this.GetTestValueU32();
          result.FundIndex = this.GetTestValueU32();
@@ -91,47 +91,14 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
       {
          Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.EnumMultiSigner result;
          result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.EnumMultiSigner();
-         result.Create(this.GetTestValueEnum<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.MultiSigner>(), this.GetTestValue5());
+         // NOT IMPLEMENTED >> Initialize Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime.EnumMultiSigner
          return result;
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.ed25519.Public GetTestValue5()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_common.crowdloan.EnumLastContribution GetTestValue5()
       {
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.ed25519.Public result;
-         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.ed25519.Public();
-         result.Value = new Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr32U8();
-         result.Value.Create(new Substrate.NetApi.Model.Types.Primitive.U8[] {
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8()});
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_common.crowdloan.EnumLastContribution result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_common.crowdloan.EnumLastContribution();
+         // NOT IMPLEMENTED >> Initialize Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_common.crowdloan.EnumLastContribution
          return result;
       }
       public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id GetTestValue6()

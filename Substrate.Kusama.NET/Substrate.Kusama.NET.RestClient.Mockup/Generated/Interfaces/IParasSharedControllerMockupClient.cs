@@ -13,8 +13,8 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Interfaces
    using System.Threading.Tasks;
    using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.NetApi.Model.Types.Base;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.validator_app;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.validator_app;
    using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.shared;
    
    public interface IParasSharedControllerMockupClient

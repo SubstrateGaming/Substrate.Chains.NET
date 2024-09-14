@@ -33,9 +33,18 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools
     }
     
     /// <summary>
-    /// >> 291 - Variant[pallet_nomination_pools.BondExtra]
+    /// >> 289 - Variant[pallet_nomination_pools.BondExtra]
     /// </summary>
-    public sealed class EnumBondExtra : BaseEnumExt<BondExtra, Substrate.NetApi.Model.Types.Primitive.U128, BaseVoid>
+    public sealed class EnumBondExtra : BaseEnumRust<BondExtra>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumBondExtra()
+        {
+				AddTypeDecoder<Substrate.NetApi.Model.Types.Primitive.U128>(BondExtra.FreeBalance);
+				AddTypeDecoder<BaseVoid>(BondExtra.Rewards);
+        }
     }
 }

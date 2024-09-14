@@ -30,7 +30,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         ///  Note that this API is private due to it being prone to 'off-by-one' at session boundaries.
         ///  When in doubt, use `Sessions` API instead.
         /// </summary>
-        Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.assignment_app.Public> GetAssignmentKeysUnsafe();
+        Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.assignment_app.Public> GetAssignmentKeysUnsafe();
         
         /// <summary>
         /// >> EarliestStoredSession
@@ -44,7 +44,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         ///  Should have an entry in range `EarliestStoredSession..=CurrentSessionIndex`.
         ///  Does not have any entries before the session index in the first session change notification.
         /// </summary>
-        Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.SessionInfo GetSessions(string key);
+        Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.SessionInfo GetSessions(string key);
         
         /// <summary>
         /// >> AccountKeys
@@ -56,7 +56,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// >> SessionExecutorParams
         ///  Executor parameter set for a given session index
         /// </summary>
-        Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.executor_params.ExecutorParams GetSessionExecutorParams(string key);
+        Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.executor_params.ExecutorParams GetSessionExecutorParams(string key);
     }
     
     /// <summary>
@@ -68,7 +68,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// <summary>
         /// _assignmentKeysUnsafeTypedStorage typed storage field
         /// </summary>
-        private TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.assignment_app.Public>> _assignmentKeysUnsafeTypedStorage;
+        private TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.assignment_app.Public>> _assignmentKeysUnsafeTypedStorage;
         
         /// <summary>
         /// _earliestStoredSessionTypedStorage typed storage field
@@ -78,7 +78,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// <summary>
         /// _sessionsTypedStorage typed storage field
         /// </summary>
-        private TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.SessionInfo> _sessionsTypedStorage;
+        private TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.SessionInfo> _sessionsTypedStorage;
         
         /// <summary>
         /// _accountKeysTypedStorage typed storage field
@@ -88,24 +88,24 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// <summary>
         /// _sessionExecutorParamsTypedStorage typed storage field
         /// </summary>
-        private TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.executor_params.ExecutorParams> _sessionExecutorParamsTypedStorage;
+        private TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.executor_params.ExecutorParams> _sessionExecutorParamsTypedStorage;
         
         /// <summary>
         /// ParaSessionInfoStorage constructor.
         /// </summary>
         public ParaSessionInfoStorage(IStorageDataProvider storageDataProvider, List<IStorageChangeDelegate> storageChangeDelegates)
         {
-            this.AssignmentKeysUnsafeTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.assignment_app.Public>>("ParaSessionInfo.AssignmentKeysUnsafe", storageDataProvider, storageChangeDelegates);
+            this.AssignmentKeysUnsafeTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.assignment_app.Public>>("ParaSessionInfo.AssignmentKeysUnsafe", storageDataProvider, storageChangeDelegates);
             this.EarliestStoredSessionTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32>("ParaSessionInfo.EarliestStoredSession", storageDataProvider, storageChangeDelegates);
-            this.SessionsTypedStorage = new TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.SessionInfo>("ParaSessionInfo.Sessions", storageDataProvider, storageChangeDelegates);
+            this.SessionsTypedStorage = new TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.SessionInfo>("ParaSessionInfo.Sessions", storageDataProvider, storageChangeDelegates);
             this.AccountKeysTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>>("ParaSessionInfo.AccountKeys", storageDataProvider, storageChangeDelegates);
-            this.SessionExecutorParamsTypedStorage = new TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.executor_params.ExecutorParams>("ParaSessionInfo.SessionExecutorParams", storageDataProvider, storageChangeDelegates);
+            this.SessionExecutorParamsTypedStorage = new TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.executor_params.ExecutorParams>("ParaSessionInfo.SessionExecutorParams", storageDataProvider, storageChangeDelegates);
         }
         
         /// <summary>
         /// _assignmentKeysUnsafeTypedStorage property
         /// </summary>
-        public TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.assignment_app.Public>> AssignmentKeysUnsafeTypedStorage
+        public TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.assignment_app.Public>> AssignmentKeysUnsafeTypedStorage
         {
             get
             {
@@ -135,7 +135,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// <summary>
         /// _sessionsTypedStorage property
         /// </summary>
-        public TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.SessionInfo> SessionsTypedStorage
+        public TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.SessionInfo> SessionsTypedStorage
         {
             get
             {
@@ -165,7 +165,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// <summary>
         /// _sessionExecutorParamsTypedStorage property
         /// </summary>
-        public TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.executor_params.ExecutorParams> SessionExecutorParamsTypedStorage
+        public TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.executor_params.ExecutorParams> SessionExecutorParamsTypedStorage
         {
             get
             {
@@ -204,7 +204,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         ///  Note that this API is private due to it being prone to 'off-by-one' at session boundaries.
         ///  When in doubt, use `Sessions` API instead.
         /// </summary>
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.assignment_app.Public> GetAssignmentKeysUnsafe()
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.assignment_app.Public> GetAssignmentKeysUnsafe()
         {
             return AssignmentKeysUnsafeTypedStorage.Get();
         }
@@ -242,13 +242,13 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         ///  Should have an entry in range `EarliestStoredSession..=CurrentSessionIndex`.
         ///  Does not have any entries before the session index in the first session change notification.
         /// </summary>
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.SessionInfo GetSessions(string key)
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.SessionInfo GetSessions(string key)
         {
             if ((key == null))
             {
                 return null;
             }
-            if (SessionsTypedStorage.Dictionary.TryGetValue(key, out Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.SessionInfo result))
+            if (SessionsTypedStorage.Dictionary.TryGetValue(key, out Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.SessionInfo result))
             {
                 return result;
             }
@@ -300,13 +300,13 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// >> SessionExecutorParams
         ///  Executor parameter set for a given session index
         /// </summary>
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.executor_params.ExecutorParams GetSessionExecutorParams(string key)
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.executor_params.ExecutorParams GetSessionExecutorParams(string key)
         {
             if ((key == null))
             {
                 return null;
             }
-            if (SessionExecutorParamsTypedStorage.Dictionary.TryGetValue(key, out Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.executor_params.ExecutorParams result))
+            if (SessionExecutorParamsTypedStorage.Dictionary.TryGetValue(key, out Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.executor_params.ExecutorParams result))
             {
                 return result;
             }

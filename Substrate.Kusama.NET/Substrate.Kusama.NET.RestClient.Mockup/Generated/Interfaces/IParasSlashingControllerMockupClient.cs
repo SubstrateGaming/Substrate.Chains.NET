@@ -11,7 +11,7 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Interfaces
 {
    using System;
    using System.Threading.Tasks;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.slashing;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.slashing;
    using Substrate.NetApi.Model.Types.Primitive;
    
    public interface IParasSlashingControllerMockupClient

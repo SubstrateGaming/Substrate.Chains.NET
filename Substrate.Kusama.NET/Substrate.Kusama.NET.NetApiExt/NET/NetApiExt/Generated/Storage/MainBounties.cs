@@ -300,7 +300,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         public Substrate.NetApi.Model.Types.Primitive.U32 BountyDepositPayoutDelay()
         {
             var result = new Substrate.NetApi.Model.Types.Primitive.U32();
-            result.Create("0x00E10000");
+            result.Create("0x00000000");
             return result;
         }
         

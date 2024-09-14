@@ -34,14 +34,12 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         ///  multiplexers. Reasonably, 100-1000. The dominant factor is the number of validators: safe
         ///  upper bound at 10k.
         /// </summary>
-        Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.ValidatorIndex>> GetValidatorGroups();
+        Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.ValidatorIndex>> GetValidatorGroups();
         
         /// <summary>
         /// >> AvailabilityCores
-        ///  One entry for each availability core. Entries are `None` if the core is not currently
-        ///  occupied. Can be temporarily `Some` if scheduled but not occupied.
-        ///  The i'th parachain belongs to the i'th core, with the remaining cores all being
-        ///  parathread-multiplexers.
+        ///  One entry for each availability core. The i'th parachain belongs to the i'th core, with the
+        ///  remaining cores all being on demand parachain multiplexers.
         /// 
         ///  Bounded by the maximum of either of these two values:
         ///    * The number of parachains and parathread multiplexers
@@ -64,10 +62,8 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// <summary>
         /// >> ClaimQueue
         ///  One entry for each availability core. The `VecDeque` represents the assignments to be
-        ///  scheduled on that core. `None` is used to signal to not schedule the next para of the core
-        ///  as there is one currently being scheduled. Not using `None` here would overwrite the
-        ///  `CoreState` in the runtime API. The value contained here will not be valid after the end of
-        ///  a block. Runtime APIs should be used to determine scheduled cores/ for the upcoming block.
+        ///  scheduled on that core. The value contained here will not be valid after the end of
+        ///  a block. Runtime APIs should be used to determine scheduled cores for the upcoming block.
         /// </summary>
         Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.BTreeMapT4 GetClaimQueue();
     }
@@ -81,7 +77,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// <summary>
         /// _validatorGroupsTypedStorage typed storage field
         /// </summary>
-        private TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.ValidatorIndex>>> _validatorGroupsTypedStorage;
+        private TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.ValidatorIndex>>> _validatorGroupsTypedStorage;
         
         /// <summary>
         /// _availabilityCoresTypedStorage typed storage field
@@ -103,7 +99,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// </summary>
         public ParaSchedulerStorage(IStorageDataProvider storageDataProvider, List<IStorageChangeDelegate> storageChangeDelegates)
         {
-            this.ValidatorGroupsTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.ValidatorIndex>>>("ParaScheduler.ValidatorGroups", storageDataProvider, storageChangeDelegates);
+            this.ValidatorGroupsTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.ValidatorIndex>>>("ParaScheduler.ValidatorGroups", storageDataProvider, storageChangeDelegates);
             this.AvailabilityCoresTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.scheduler.pallet.EnumCoreOccupied>>("ParaScheduler.AvailabilityCores", storageDataProvider, storageChangeDelegates);
             this.SessionStartBlockTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32>("ParaScheduler.SessionStartBlock", storageDataProvider, storageChangeDelegates);
             this.ClaimQueueTypedStorage = new TypedStorage<Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.BTreeMapT4>("ParaScheduler.ClaimQueue", storageDataProvider, storageChangeDelegates);
@@ -112,7 +108,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// <summary>
         /// _validatorGroupsTypedStorage property
         /// </summary>
-        public TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.ValidatorIndex>>> ValidatorGroupsTypedStorage
+        public TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.ValidatorIndex>>> ValidatorGroupsTypedStorage
         {
             get
             {
@@ -199,7 +195,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         ///  multiplexers. Reasonably, 100-1000. The dominant factor is the number of validators: safe
         ///  upper bound at 10k.
         /// </summary>
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.ValidatorIndex>> GetValidatorGroups()
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.ValidatorIndex>> GetValidatorGroups()
         {
             return ValidatorGroupsTypedStorage.Get();
         }
@@ -215,10 +211,8 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         
         /// <summary>
         /// >> AvailabilityCores
-        ///  One entry for each availability core. Entries are `None` if the core is not currently
-        ///  occupied. Can be temporarily `Some` if scheduled but not occupied.
-        ///  The i'th parachain belongs to the i'th core, with the remaining cores all being
-        ///  parathread-multiplexers.
+        ///  One entry for each availability core. The i'th parachain belongs to the i'th core, with the
+        ///  remaining cores all being on demand parachain multiplexers.
         /// 
         ///  Bounded by the maximum of either of these two values:
         ///    * The number of parachains and parathread multiplexers
@@ -265,10 +259,8 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// <summary>
         /// >> ClaimQueue
         ///  One entry for each availability core. The `VecDeque` represents the assignments to be
-        ///  scheduled on that core. `None` is used to signal to not schedule the next para of the core
-        ///  as there is one currently being scheduled. Not using `None` here would overwrite the
-        ///  `CoreState` in the runtime API. The value contained here will not be valid after the end of
-        ///  a block. Runtime APIs should be used to determine scheduled cores/ for the upcoming block.
+        ///  scheduled on that core. The value contained here will not be valid after the end of
+        ///  a block. Runtime APIs should be used to determine scheduled cores for the upcoming block.
         /// </summary>
         public Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.BTreeMapT4 GetClaimQueue()
         {

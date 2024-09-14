@@ -490,7 +490,7 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
       {
          Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools.EnumCommissionClaimPermission result;
          result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools.EnumCommissionClaimPermission();
-         result.Create(this.GetTestValueEnum<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools.CommissionClaimPermission>(), this.GetTestValueBaseVoid());
+         // NOT IMPLEMENTED >> Initialize Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools.EnumCommissionClaimPermission
          return result;
       }
       public Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools.PoolRoles GetTestValue27()

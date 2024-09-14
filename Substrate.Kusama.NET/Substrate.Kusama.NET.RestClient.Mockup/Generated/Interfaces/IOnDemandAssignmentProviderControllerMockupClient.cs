@@ -11,14 +11,16 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Interfaces
 {
    using System;
    using System.Threading.Tasks;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point;
-   using Substrate.NetApi.Model.Types.Base;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.assigner_on_demand;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.assigner_on_demand.types;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Types.Base;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    
    public interface IOnDemandAssignmentProviderControllerMockupClient
    {
-      Task<bool> SetSpotTraffic(FixedU128 value);
-      Task<bool> SetOnDemandQueue(BaseVec<EnqueuedOrder> value);
       Task<bool> SetParaIdAffinity(CoreAffinityCount value, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key);
+      Task<bool> SetQueueStatus(QueueStatusType value);
+      Task<bool> SetFreeEntries(BinaryHeapT2 value);
+      Task<bool> SetAffinityEntries(BinaryHeapT2 value, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.CoreIndex key);
+      Task<bool> SetRevenue(BoundedVecT44 value);
    }
 }

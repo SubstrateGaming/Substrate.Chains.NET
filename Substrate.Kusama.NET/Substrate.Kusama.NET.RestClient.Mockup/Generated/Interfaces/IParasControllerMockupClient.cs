@@ -15,7 +15,7 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Interfaces
    using Substrate.NetApi.Model.Types.Base;
    using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives;
    using Substrate.NetApi.Model.Types.Primitive;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7;
    
    public interface IParasControllerMockupClient
    {
@@ -30,6 +30,7 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Interfaces
       Task<bool> SetPastCodeMeta(ParaPastCodeMeta value, Id key);
       Task<bool> SetPastCodePruning(BaseVec<BaseTuple<Id, U32>> value);
       Task<bool> SetFutureCodeUpgrades(U32 value, Id key);
+      Task<bool> SetFutureCodeUpgradesAt(BaseVec<BaseTuple<Id, U32>> value);
       Task<bool> SetFutureCodeHash(ValidationCodeHash value, Id key);
       Task<bool> SetUpgradeGoAheadSignal(EnumUpgradeGoAhead value, Id key);
       Task<bool> SetUpgradeRestrictionSignal(EnumUpgradeRestriction value, Id key);

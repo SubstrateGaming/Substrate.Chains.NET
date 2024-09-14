@@ -25,7 +25,7 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Clients
       {
          _httpClient = httpClient;
       }
-      public async Task<bool> SetValidatorGroups(BaseVec<BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.ValidatorIndex>> value)
+      public async Task<bool> SetValidatorGroups(BaseVec<BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.ValidatorIndex>> value)
       {
          return await SendMockupRequestAsync(_httpClient, "ParaScheduler/ValidatorGroups", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.ParaSchedulerStorage.ValidatorGroupsParams());
       }

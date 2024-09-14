@@ -11,17 +11,21 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Interfaces
 {
    using System;
    using System.Threading.Tasks;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point;
-   using Substrate.NetApi.Model.Types.Base;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.assigner_on_demand;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.assigner_on_demand.types;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Types.Base;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    
    public interface IOnDemandAssignmentProviderControllerClient
    {
-      Task<FixedU128> GetSpotTraffic();
-      Task<bool> SubscribeSpotTraffic();
-      Task<BaseVec<EnqueuedOrder>> GetOnDemandQueue();
-      Task<bool> SubscribeOnDemandQueue();
       Task<CoreAffinityCount> GetParaIdAffinity(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key);
       Task<bool> SubscribeParaIdAffinity(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key);
+      Task<QueueStatusType> GetQueueStatus();
+      Task<bool> SubscribeQueueStatus();
+      Task<BinaryHeapT2> GetFreeEntries();
+      Task<bool> SubscribeFreeEntries();
+      Task<BinaryHeapT2> GetAffinityEntries(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.CoreIndex key);
+      Task<bool> SubscribeAffinityEntries(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.CoreIndex key);
+      Task<BoundedVecT44> GetRevenue();
+      Task<bool> SubscribeRevenue();
    }
 }

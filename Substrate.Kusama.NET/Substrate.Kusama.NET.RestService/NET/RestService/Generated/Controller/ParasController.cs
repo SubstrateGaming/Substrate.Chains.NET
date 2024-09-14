@@ -177,7 +177,8 @@ namespace Substrate.Kusama.NET.RestService.Generated.Controller
         
         /// <summary>
         /// >> FutureCodeUpgrades
-        ///  The block number at which the planned code change is expected for a para.
+        ///  The block number at which the planned code change is expected for a parachain.
+        /// 
         ///  The change will be applied after the first parablock for this ID included which executes
         ///  in the context of a relay chain block with a number >= `expected_at`.
         /// </summary>
@@ -187,6 +188,25 @@ namespace Substrate.Kusama.NET.RestService.Generated.Controller
         public IActionResult GetFutureCodeUpgrades(string key)
         {
             return this.Ok(_parasStorage.GetFutureCodeUpgrades(key));
+        }
+        
+        /// <summary>
+        /// >> FutureCodeUpgradesAt
+        ///  The list of upcoming future code upgrades.
+        /// 
+        ///  Each item is a pair of the parachain and the expected block at which the upgrade should be
+        ///  applied. The upgrade will be applied at the given relay chain block. In contrast to
+        ///  [`FutureCodeUpgrades`] this code upgrade will be applied regardless the parachain making any
+        ///  progress or not.
+        /// 
+        ///  Ordered ascending by block number.
+        /// </summary>
+        [HttpGet("FutureCodeUpgradesAt")]
+        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32>>), 200)]
+        [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.ParasStorage), "FutureCodeUpgradesAtParams")]
+        public IActionResult GetFutureCodeUpgradesAt()
+        {
+            return this.Ok(_parasStorage.GetFutureCodeUpgradesAt());
         }
         
         /// <summary>
@@ -217,7 +237,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Controller
         ///  the format will require migration of parachains.
         /// </summary>
         [HttpGet("UpgradeGoAheadSignal")]
-        [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumUpgradeGoAhead), 200)]
+        [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.EnumUpgradeGoAhead), 200)]
         [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.ParasStorage), "UpgradeGoAheadSignalParams", typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id))]
         public IActionResult GetUpgradeGoAheadSignal(string key)
         {
@@ -237,7 +257,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Controller
         ///  the format will require migration of parachains.
         /// </summary>
         [HttpGet("UpgradeRestrictionSignal")]
-        [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumUpgradeRestriction), 200)]
+        [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.EnumUpgradeRestriction), 200)]
         [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.ParasStorage), "UpgradeRestrictionSignalParams", typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id))]
         public IActionResult GetUpgradeRestrictionSignal(string key)
         {
@@ -260,8 +280,10 @@ namespace Substrate.Kusama.NET.RestService.Generated.Controller
         
         /// <summary>
         /// >> UpcomingUpgrades
-        ///  The list of upcoming code upgrades. Each item is a pair of which para performs a code
-        ///  upgrade and at which relay-chain block it is expected at.
+        ///  The list of upcoming code upgrades.
+        /// 
+        ///  Each item is a pair of which para performs a code upgrade and at which relay-chain block it
+        ///  is expected at.
         /// 
         ///  Ordered ascending by block number.
         /// </summary>

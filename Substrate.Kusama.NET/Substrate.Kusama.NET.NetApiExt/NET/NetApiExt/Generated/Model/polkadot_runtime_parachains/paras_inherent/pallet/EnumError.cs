@@ -36,50 +36,27 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parach
         InvalidParentHeader = 1,
         
         /// <summary>
-        /// >> CandidateConcludedInvalid
-        /// Disputed candidate that was concluded invalid.
-        /// </summary>
-        CandidateConcludedInvalid = 2,
-        
-        /// <summary>
         /// >> InherentOverweight
         /// The data given to the inherent will result in an overweight block.
         /// </summary>
-        InherentOverweight = 3,
+        InherentOverweight = 2,
         
         /// <summary>
-        /// >> DisputeStatementsUnsortedOrDuplicates
-        /// The ordering of dispute statements was invalid.
+        /// >> CandidatesFilteredDuringExecution
+        /// A candidate was filtered during inherent execution. This should have only been done
+        /// during creation.
         /// </summary>
-        DisputeStatementsUnsortedOrDuplicates = 4,
-        
-        /// <summary>
-        /// >> DisputeInvalid
-        /// A dispute statement was invalid.
-        /// </summary>
-        DisputeInvalid = 5,
-        
-        /// <summary>
-        /// >> BackedByDisabled
-        /// A candidate was backed by a disabled validator
-        /// </summary>
-        BackedByDisabled = 6,
-        
-        /// <summary>
-        /// >> BackedOnUnscheduledCore
-        /// A candidate was backed even though the paraid was not scheduled.
-        /// </summary>
-        BackedOnUnscheduledCore = 7,
+        CandidatesFilteredDuringExecution = 3,
         
         /// <summary>
         /// >> UnscheduledCandidate
         /// Too many candidates supplied.
         /// </summary>
-        UnscheduledCandidate = 8,
+        UnscheduledCandidate = 4,
     }
     
     /// <summary>
-    /// >> 789 - Variant[polkadot_runtime_parachains.paras_inherent.pallet.Error]
+    /// >> 796 - Variant[polkadot_runtime_parachains.paras_inherent.pallet.Error]
     /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>

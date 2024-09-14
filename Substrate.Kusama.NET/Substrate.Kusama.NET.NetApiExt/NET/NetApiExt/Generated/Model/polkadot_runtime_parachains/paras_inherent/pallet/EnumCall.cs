@@ -24,16 +24,24 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parach
         
         /// <summary>
         /// >> enter
-        /// See [`Pallet::enter`].
+        /// Enter the paras inherent. This will process bitfields and backed candidates.
         /// </summary>
         enter = 0,
     }
     
     /// <summary>
-    /// >> 314 - Variant[polkadot_runtime_parachains.paras_inherent.pallet.Call]
+    /// >> 313 - Variant[polkadot_runtime_parachains.paras_inherent.pallet.Call]
     /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
-    public sealed class EnumCall : BaseEnumExt<Call, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.InherentData>
+    public sealed class EnumCall : BaseEnumRust<Call>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumCall()
+        {
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.InherentData>(Call.enter);
+        }
     }
 }

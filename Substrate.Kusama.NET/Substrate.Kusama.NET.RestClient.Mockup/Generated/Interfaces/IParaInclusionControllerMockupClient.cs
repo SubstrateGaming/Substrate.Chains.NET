@@ -11,13 +11,11 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Interfaces
 {
    using System;
    using System.Threading.Tasks;
+   using Substrate.NetApi.Model.Types.Base;
    using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.inclusion;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6;
    
    public interface IParaInclusionControllerMockupClient
    {
-      Task<bool> SetAvailabilityBitfields(AvailabilityBitfieldRecord value, ValidatorIndex key);
-      Task<bool> SetPendingAvailability(CandidatePendingAvailability value, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key);
-      Task<bool> SetPendingAvailabilityCommitments(CandidateCommitments value, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key);
+      Task<bool> SetV1(BaseVec<CandidatePendingAvailability> value, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key);
    }
 }

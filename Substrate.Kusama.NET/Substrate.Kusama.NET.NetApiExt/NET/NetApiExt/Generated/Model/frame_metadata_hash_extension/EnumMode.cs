@@ -33,7 +33,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.frame_metadata_hash_ext
     }
     
     /// <summary>
-    /// >> 914 - Variant[frame_metadata_hash_extension.Mode]
+    /// >> 928 - Variant[frame_metadata_hash_extension.Mode]
     /// </summary>
     public sealed class EnumMode : BaseEnum<Mode>
     {

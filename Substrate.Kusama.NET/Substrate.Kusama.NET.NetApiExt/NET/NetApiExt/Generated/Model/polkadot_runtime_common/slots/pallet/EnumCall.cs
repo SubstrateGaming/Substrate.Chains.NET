@@ -24,28 +24,49 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_common
         
         /// <summary>
         /// >> force_lease
-        /// See [`Pallet::force_lease`].
+        /// Just a connect into the `lease_out` call, in case Root wants to force some lease to
+        /// happen independently of any other on-chain mechanism to use it.
+        /// 
+        /// The dispatch origin for this call must match `T::ForceOrigin`.
         /// </summary>
         force_lease = 0,
         
         /// <summary>
         /// >> clear_all_leases
-        /// See [`Pallet::clear_all_leases`].
+        /// Clear all leases for a Para Id, refunding any deposits back to the original owners.
+        /// 
+        /// The dispatch origin for this call must match `T::ForceOrigin`.
         /// </summary>
         clear_all_leases = 1,
         
         /// <summary>
         /// >> trigger_onboard
-        /// See [`Pallet::trigger_onboard`].
+        /// Try to onboard a parachain that has a lease for the current lease period.
+        /// 
+        /// This function can be useful if there was some state issue with a para that should
+        /// have onboarded, but was unable to. As long as they have a lease period, we can
+        /// let them onboard from here.
+        /// 
+        /// Origin must be signed, but can be called by anyone.
         /// </summary>
         trigger_onboard = 2,
     }
     
     /// <summary>
-    /// >> 362 - Variant[polkadot_runtime_common.slots.pallet.Call]
+    /// >> 360 - Variant[polkadot_runtime_common.slots.pallet.Call]
     /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
-    public sealed class EnumCall : BaseEnumExt<Call, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U128, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id>
+    public sealed class EnumCall : BaseEnumRust<Call>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumCall()
+        {
+				AddTypeDecoder<BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U128, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>>(Call.force_lease);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id>(Call.clear_all_leases);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id>(Call.trigger_onboard);
+        }
     }
 }

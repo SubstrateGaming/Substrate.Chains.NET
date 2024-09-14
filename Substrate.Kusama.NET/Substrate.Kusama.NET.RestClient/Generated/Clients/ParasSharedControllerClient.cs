@@ -14,8 +14,8 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Clients
    using System.Net.Http;
    using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.NetApi.Model.Types.Base;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.validator_app;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.validator_app;
    using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.shared;
    using Substrate.Kusama.NET.RestClient.Generated.Interfaces;
    

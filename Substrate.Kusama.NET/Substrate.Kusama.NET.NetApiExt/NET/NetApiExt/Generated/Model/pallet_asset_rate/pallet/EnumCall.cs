@@ -24,28 +24,47 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_asset_rate.palle
         
         /// <summary>
         /// >> create
-        /// See [`Pallet::create`].
+        /// Initialize a conversion rate to native balance for the given asset.
+        /// 
+        /// ## Complexity
+        /// - O(1)
         /// </summary>
         create = 0,
         
         /// <summary>
         /// >> update
-        /// See [`Pallet::update`].
+        /// Update the conversion rate to native balance for the given asset.
+        /// 
+        /// ## Complexity
+        /// - O(1)
         /// </summary>
         update = 1,
         
         /// <summary>
         /// >> remove
-        /// See [`Pallet::remove`].
+        /// Remove an existing conversion rate to native balance for the given asset.
+        /// 
+        /// ## Complexity
+        /// - O(1)
         /// </summary>
         remove = 2,
     }
     
     /// <summary>
-    /// >> 457 - Variant[pallet_asset_rate.pallet.Call]
+    /// >> 455 - Variant[pallet_asset_rate.pallet.Call]
     /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
-    public sealed class EnumCall : BaseEnumExt<Call, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_common.impls.EnumVersionedLocatableAsset, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedU128>, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_common.impls.EnumVersionedLocatableAsset, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedU128>, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_common.impls.EnumVersionedLocatableAsset>
+    public sealed class EnumCall : BaseEnumRust<Call>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumCall()
+        {
+				AddTypeDecoder<BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_common.impls.EnumVersionedLocatableAsset, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedU128>>(Call.create);
+				AddTypeDecoder<BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_common.impls.EnumVersionedLocatableAsset, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedU128>>(Call.update);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_common.impls.EnumVersionedLocatableAsset>(Call.remove);
+        }
     }
 }

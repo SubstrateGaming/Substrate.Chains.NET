@@ -72,7 +72,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_proxy.pallet
     }
     
     /// <summary>
-    /// >> 701 - Variant[pallet_proxy.pallet.Error]
+    /// >> 708 - Variant[pallet_proxy.pallet.Error]
     /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>

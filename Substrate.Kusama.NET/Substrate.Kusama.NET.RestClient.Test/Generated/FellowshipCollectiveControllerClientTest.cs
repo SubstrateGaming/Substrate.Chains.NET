@@ -289,7 +289,7 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
       {
          Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_ranked_collective.EnumVoteRecord result;
          result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_ranked_collective.EnumVoteRecord();
-         result.Create(this.GetTestValueEnum<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_ranked_collective.VoteRecord>(), this.GetTestValueU32());
+         // NOT IMPLEMENTED >> Initialize Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_ranked_collective.EnumVoteRecord
          return result;
       }
       public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> GetTestValue13()

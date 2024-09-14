@@ -38,9 +38,19 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm
     }
     
     /// <summary>
-    /// >> 441 - Variant[xcm.VersionedXcm]
+    /// >> 439 - Variant[xcm.VersionedXcm]
     /// </summary>
-    public sealed class EnumVersionedXcm : BaseEnumExt<VersionedXcm, BaseVoid, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.v2.XcmT2, Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.v3.XcmT2, Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_xcm.v4.XcmT2>
+    public sealed class EnumVersionedXcm : BaseEnumRust<VersionedXcm>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumVersionedXcm()
+        {
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.v2.XcmT2>(VersionedXcm.V2);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.v3.XcmT2>(VersionedXcm.V3);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_xcm.v4.XcmT2>(VersionedXcm.V4);
+        }
     }
 }

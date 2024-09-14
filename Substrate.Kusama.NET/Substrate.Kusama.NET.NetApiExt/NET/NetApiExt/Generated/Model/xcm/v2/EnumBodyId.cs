@@ -73,9 +73,26 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.v2
     }
     
     /// <summary>
-    /// >> 90 - Variant[xcm.v2.BodyId]
+    /// >> 81 - Variant[xcm.v2.BodyId]
     /// </summary>
-    public sealed class EnumBodyId : BaseEnumExt<BodyId, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT1, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid>
+    public sealed class EnumBodyId : BaseEnumRust<BodyId>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumBodyId()
+        {
+				AddTypeDecoder<BaseVoid>(BodyId.Unit);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT1>(BodyId.Named);
+				AddTypeDecoder<Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>>(BodyId.Index);
+				AddTypeDecoder<BaseVoid>(BodyId.Executive);
+				AddTypeDecoder<BaseVoid>(BodyId.Technical);
+				AddTypeDecoder<BaseVoid>(BodyId.Legislative);
+				AddTypeDecoder<BaseVoid>(BodyId.Judicial);
+				AddTypeDecoder<BaseVoid>(BodyId.Defense);
+				AddTypeDecoder<BaseVoid>(BodyId.Administration);
+				AddTypeDecoder<BaseVoid>(BodyId.Treasury);
+        }
     }
 }

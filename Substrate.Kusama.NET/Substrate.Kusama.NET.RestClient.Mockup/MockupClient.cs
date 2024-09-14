@@ -53,6 +53,7 @@ namespace Substrate.Kusama.NET.RestClient.Mockup
       public IOnDemandAssignmentProviderControllerMockupClient OnDemandAssignmentProviderControllerClient;
       public IParaInclusionControllerMockupClient ParaInclusionControllerClient;
       public IParaInherentControllerMockupClient ParaInherentControllerClient;
+      public IParametersControllerMockupClient ParametersControllerClient;
       public IParaSchedulerControllerMockupClient ParaSchedulerControllerClient;
       public IParasControllerMockupClient ParasControllerClient;
       public IParasDisputesControllerMockupClient ParasDisputesControllerClient;
@@ -115,6 +116,7 @@ namespace Substrate.Kusama.NET.RestClient.Mockup
          OnDemandAssignmentProviderControllerClient = new OnDemandAssignmentProviderControllerMockupClient(_httpClient);
          ParaInclusionControllerClient = new ParaInclusionControllerMockupClient(_httpClient);
          ParaInherentControllerClient = new ParaInherentControllerMockupClient(_httpClient);
+         ParametersControllerClient = new ParametersControllerMockupClient(_httpClient);
          ParaSchedulerControllerClient = new ParaSchedulerControllerMockupClient(_httpClient);
          ParasControllerClient = new ParasControllerMockupClient(_httpClient);
          ParasDisputesControllerClient = new ParasDisputesControllerMockupClient(_httpClient);

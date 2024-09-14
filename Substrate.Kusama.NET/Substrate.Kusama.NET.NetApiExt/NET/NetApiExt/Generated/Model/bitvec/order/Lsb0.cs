@@ -9,7 +9,7 @@
 
 using Substrate.NetApi.Attributes;
 using Substrate.NetApi.Model.Types.Base;
-using Substrate.NetApi.Model.Types.Metadata.V14;
+using Substrate.NetApi.Model.Types.Metadata.Base;
 using System.Collections.Generic;
 
 
@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.bitvec.order
     
     
     /// <summary>
-    /// >> 320 - Composite[bitvec.order.Lsb0]
+    /// >> 319 - Composite[bitvec.order.Lsb0]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Lsb0 : BaseType

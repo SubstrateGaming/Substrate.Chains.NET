@@ -33,10 +33,16 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_asset_rate.palle
         /// The given asset ID already has an assigned conversion rate and cannot be re-created.
         /// </summary>
         AlreadyExists = 1,
+        
+        /// <summary>
+        /// >> Overflow
+        /// Overflow ocurred when calculating the inverse rate.
+        /// </summary>
+        Overflow = 2,
     }
     
     /// <summary>
-    /// >> 897 - Variant[pallet_asset_rate.pallet.Error]
+    /// >> 911 - Variant[pallet_asset_rate.pallet.Error]
     /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>

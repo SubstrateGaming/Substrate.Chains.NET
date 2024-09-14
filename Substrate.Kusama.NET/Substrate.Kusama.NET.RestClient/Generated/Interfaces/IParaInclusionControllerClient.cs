@@ -11,16 +11,12 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Interfaces
 {
    using System;
    using System.Threading.Tasks;
+   using Substrate.NetApi.Model.Types.Base;
    using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.inclusion;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6;
    
    public interface IParaInclusionControllerClient
    {
-      Task<AvailabilityBitfieldRecord> GetAvailabilityBitfields(ValidatorIndex key);
-      Task<bool> SubscribeAvailabilityBitfields(ValidatorIndex key);
-      Task<CandidatePendingAvailability> GetPendingAvailability(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key);
-      Task<bool> SubscribePendingAvailability(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key);
-      Task<CandidateCommitments> GetPendingAvailabilityCommitments(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key);
-      Task<bool> SubscribePendingAvailabilityCommitments(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key);
+      Task<BaseVec<CandidatePendingAvailability>> GetV1(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key);
+      Task<bool> SubscribeV1(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key);
    }
 }

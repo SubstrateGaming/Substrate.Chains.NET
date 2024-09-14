@@ -48,7 +48,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Controller
         ///  upper bound at 10k.
         /// </summary>
         [HttpGet("ValidatorGroups")]
-        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.ValidatorIndex>>), 200)]
+        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.ValidatorIndex>>), 200)]
         [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.ParaSchedulerStorage), "ValidatorGroupsParams")]
         public IActionResult GetValidatorGroups()
         {
@@ -57,10 +57,8 @@ namespace Substrate.Kusama.NET.RestService.Generated.Controller
         
         /// <summary>
         /// >> AvailabilityCores
-        ///  One entry for each availability core. Entries are `None` if the core is not currently
-        ///  occupied. Can be temporarily `Some` if scheduled but not occupied.
-        ///  The i'th parachain belongs to the i'th core, with the remaining cores all being
-        ///  parathread-multiplexers.
+        ///  One entry for each availability core. The i'th parachain belongs to the i'th core, with the
+        ///  remaining cores all being on demand parachain multiplexers.
         /// 
         ///  Bounded by the maximum of either of these two values:
         ///    * The number of parachains and parathread multiplexers
@@ -95,10 +93,8 @@ namespace Substrate.Kusama.NET.RestService.Generated.Controller
         /// <summary>
         /// >> ClaimQueue
         ///  One entry for each availability core. The `VecDeque` represents the assignments to be
-        ///  scheduled on that core. `None` is used to signal to not schedule the next para of the core
-        ///  as there is one currently being scheduled. Not using `None` here would overwrite the
-        ///  `CoreState` in the runtime API. The value contained here will not be valid after the end of
-        ///  a block. Runtime APIs should be used to determine scheduled cores/ for the upcoming block.
+        ///  scheduled on that core. The value contained here will not be valid after the end of
+        ///  a block. Runtime APIs should be used to determine scheduled cores for the upcoming block.
         /// </summary>
         [HttpGet("ClaimQueue")]
         [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.BTreeMapT4), 200)]

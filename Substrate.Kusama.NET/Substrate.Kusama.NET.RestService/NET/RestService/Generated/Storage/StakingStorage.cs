@@ -148,6 +148,23 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         Substrate.NetApi.Model.Types.Primitive.U32 GetCounterForNominators();
         
         /// <summary>
+        /// >> VirtualStakers
+        ///  Stakers whose funds are managed by other pallets.
+        /// 
+        ///  This pallet does not apply any locks on them, therefore they are only virtually bonded. They
+        ///  are expected to be keyless accounts and hence should not be allowed to mutate their ledger
+        ///  directly via this pallet. Instead, these accounts are managed by other pallets and accessed
+        ///  via low level apis. We keep track of them to do minimal integrity checks.
+        /// </summary>
+        Substrate.NetApi.Model.Types.Base.BaseTuple GetVirtualStakers(string key);
+        
+        /// <summary>
+        /// >> CounterForVirtualStakers
+        /// Counter for the related counted storage map
+        /// </summary>
+        Substrate.NetApi.Model.Types.Primitive.U32 GetCounterForVirtualStakers();
+        
+        /// <summary>
         /// >> MaxNominatorsCount
         ///  The maximum nominator count before we stop allowing new validators to join.
         /// 
@@ -294,6 +311,14 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.EnumForcing GetForceEra();
         
         /// <summary>
+        /// >> MaxStakedRewards
+        ///  Maximum staked rewards, i.e. the percentage of the era inflation that
+        ///  is used for stake rewards.
+        ///  See [Era payout](./index.html#era-payout).
+        /// </summary>
+        Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Percent GetMaxStakedRewards();
+        
+        /// <summary>
         /// >> SlashRewardFraction
         ///  The percentage of the slash that is distributed to reporters.
         /// 
@@ -358,18 +383,16 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         Substrate.NetApi.Model.Types.Primitive.U32 GetCurrentPlannedSession();
         
         /// <summary>
-        /// >> OffendingValidators
-        ///  Indices of validators that have offended in the active era and whether they are currently
-        ///  disabled.
+        /// >> DisabledValidators
+        ///  Indices of validators that have offended in the active era. The offenders are disabled for a
+        ///  whole era. For this reason they are kept here - only staking pallet knows about eras. The
+        ///  implementor of [`DisablingStrategy`] defines if a validator should be disabled which
+        ///  implicitly means that the implementor also controls the max number of disabled validators.
         /// 
-        ///  This value should be a superset of disabled validators since not all offences lead to the
-        ///  validator being disabled (if there was no slash). This is needed to track the percentage of
-        ///  validators that have offended in the current era, ensuring a new era is forced if
-        ///  `OffendingValidatorsThreshold` is reached. The vec is always kept sorted so that we can find
-        ///  whether a given validator has previously offended using binary search. It gets cleared when
-        ///  the era ends.
+        ///  The vec is always kept sorted so that we can find whether a given validator has previously
+        ///  offended using binary search.
         /// </summary>
-        Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.Bool>> GetOffendingValidators();
+        Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U32> GetDisabledValidators();
         
         /// <summary>
         /// >> ChillThreshold
@@ -462,6 +485,16 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         private TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32> _counterForNominatorsTypedStorage;
         
         /// <summary>
+        /// _virtualStakersTypedStorage typed storage field
+        /// </summary>
+        private TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseTuple> _virtualStakersTypedStorage;
+        
+        /// <summary>
+        /// _counterForVirtualStakersTypedStorage typed storage field
+        /// </summary>
+        private TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32> _counterForVirtualStakersTypedStorage;
+        
+        /// <summary>
         /// _maxNominatorsCountTypedStorage typed storage field
         /// </summary>
         private TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32> _maxNominatorsCountTypedStorage;
@@ -532,6 +565,11 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         private TypedStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.EnumForcing> _forceEraTypedStorage;
         
         /// <summary>
+        /// _maxStakedRewardsTypedStorage typed storage field
+        /// </summary>
+        private TypedStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Percent> _maxStakedRewardsTypedStorage;
+        
+        /// <summary>
         /// _slashRewardFractionTypedStorage typed storage field
         /// </summary>
         private TypedStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill> _slashRewardFractionTypedStorage;
@@ -577,9 +615,9 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         private TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32> _currentPlannedSessionTypedStorage;
         
         /// <summary>
-        /// _offendingValidatorsTypedStorage typed storage field
+        /// _disabledValidatorsTypedStorage typed storage field
         /// </summary>
-        private TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.Bool>>> _offendingValidatorsTypedStorage;
+        private TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U32>> _disabledValidatorsTypedStorage;
         
         /// <summary>
         /// _chillThresholdTypedStorage typed storage field
@@ -606,6 +644,8 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
             this.MaxValidatorsCountTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32>("Staking.MaxValidatorsCount", storageDataProvider, storageChangeDelegates);
             this.NominatorsTypedStorage = new TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.Nominations>("Staking.Nominators", storageDataProvider, storageChangeDelegates);
             this.CounterForNominatorsTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32>("Staking.CounterForNominators", storageDataProvider, storageChangeDelegates);
+            this.VirtualStakersTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseTuple>("Staking.VirtualStakers", storageDataProvider, storageChangeDelegates);
+            this.CounterForVirtualStakersTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32>("Staking.CounterForVirtualStakers", storageDataProvider, storageChangeDelegates);
             this.MaxNominatorsCountTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32>("Staking.MaxNominatorsCount", storageDataProvider, storageChangeDelegates);
             this.CurrentEraTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32>("Staking.CurrentEra", storageDataProvider, storageChangeDelegates);
             this.ActiveEraTypedStorage = new TypedStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.ActiveEraInfo>("Staking.ActiveEra", storageDataProvider, storageChangeDelegates);
@@ -620,6 +660,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
             this.ErasRewardPointsTypedStorage = new TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.EraRewardPoints>("Staking.ErasRewardPoints", storageDataProvider, storageChangeDelegates);
             this.ErasTotalStakeTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Primitive.U128>("Staking.ErasTotalStake", storageDataProvider, storageChangeDelegates);
             this.ForceEraTypedStorage = new TypedStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.EnumForcing>("Staking.ForceEra", storageDataProvider, storageChangeDelegates);
+            this.MaxStakedRewardsTypedStorage = new TypedStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Percent>("Staking.MaxStakedRewards", storageDataProvider, storageChangeDelegates);
             this.SlashRewardFractionTypedStorage = new TypedStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill>("Staking.SlashRewardFraction", storageDataProvider, storageChangeDelegates);
             this.CanceledSlashPayoutTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U128>("Staking.CanceledSlashPayout", storageDataProvider, storageChangeDelegates);
             this.UnappliedSlashesTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.UnappliedSlash>>("Staking.UnappliedSlashes", storageDataProvider, storageChangeDelegates);
@@ -629,7 +670,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
             this.SlashingSpansTypedStorage = new TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.slashing.SlashingSpans>("Staking.SlashingSpans", storageDataProvider, storageChangeDelegates);
             this.SpanSlashTypedStorage = new TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.slashing.SpanRecord>("Staking.SpanSlash", storageDataProvider, storageChangeDelegates);
             this.CurrentPlannedSessionTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32>("Staking.CurrentPlannedSession", storageDataProvider, storageChangeDelegates);
-            this.OffendingValidatorsTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.Bool>>>("Staking.OffendingValidators", storageDataProvider, storageChangeDelegates);
+            this.DisabledValidatorsTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U32>>("Staking.DisabledValidators", storageDataProvider, storageChangeDelegates);
             this.ChillThresholdTypedStorage = new TypedStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Percent>("Staking.ChillThreshold", storageDataProvider, storageChangeDelegates);
         }
         
@@ -859,6 +900,36 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         }
         
         /// <summary>
+        /// _virtualStakersTypedStorage property
+        /// </summary>
+        public TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseTuple> VirtualStakersTypedStorage
+        {
+            get
+            {
+                return _virtualStakersTypedStorage;
+            }
+            set
+            {
+                _virtualStakersTypedStorage = value;
+            }
+        }
+        
+        /// <summary>
+        /// _counterForVirtualStakersTypedStorage property
+        /// </summary>
+        public TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32> CounterForVirtualStakersTypedStorage
+        {
+            get
+            {
+                return _counterForVirtualStakersTypedStorage;
+            }
+            set
+            {
+                _counterForVirtualStakersTypedStorage = value;
+            }
+        }
+        
+        /// <summary>
         /// _maxNominatorsCountTypedStorage property
         /// </summary>
         public TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32> MaxNominatorsCountTypedStorage
@@ -1069,6 +1140,21 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         }
         
         /// <summary>
+        /// _maxStakedRewardsTypedStorage property
+        /// </summary>
+        public TypedStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Percent> MaxStakedRewardsTypedStorage
+        {
+            get
+            {
+                return _maxStakedRewardsTypedStorage;
+            }
+            set
+            {
+                _maxStakedRewardsTypedStorage = value;
+            }
+        }
+        
+        /// <summary>
         /// _slashRewardFractionTypedStorage property
         /// </summary>
         public TypedStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill> SlashRewardFractionTypedStorage
@@ -1204,17 +1290,17 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         }
         
         /// <summary>
-        /// _offendingValidatorsTypedStorage property
+        /// _disabledValidatorsTypedStorage property
         /// </summary>
-        public TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.Bool>>> OffendingValidatorsTypedStorage
+        public TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U32>> DisabledValidatorsTypedStorage
         {
             get
             {
-                return _offendingValidatorsTypedStorage;
+                return _disabledValidatorsTypedStorage;
             }
             set
             {
-                _offendingValidatorsTypedStorage = value;
+                _disabledValidatorsTypedStorage = value;
             }
         }
         
@@ -1253,6 +1339,8 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
             await MaxValidatorsCountTypedStorage.InitializeAsync("Staking", "MaxValidatorsCount");
             await NominatorsTypedStorage.InitializeAsync("Staking", "Nominators");
             await CounterForNominatorsTypedStorage.InitializeAsync("Staking", "CounterForNominators");
+            await VirtualStakersTypedStorage.InitializeAsync("Staking", "VirtualStakers");
+            await CounterForVirtualStakersTypedStorage.InitializeAsync("Staking", "CounterForVirtualStakers");
             await MaxNominatorsCountTypedStorage.InitializeAsync("Staking", "MaxNominatorsCount");
             await CurrentEraTypedStorage.InitializeAsync("Staking", "CurrentEra");
             await ActiveEraTypedStorage.InitializeAsync("Staking", "ActiveEra");
@@ -1267,6 +1355,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
             await ErasRewardPointsTypedStorage.InitializeAsync("Staking", "ErasRewardPoints");
             await ErasTotalStakeTypedStorage.InitializeAsync("Staking", "ErasTotalStake");
             await ForceEraTypedStorage.InitializeAsync("Staking", "ForceEra");
+            await MaxStakedRewardsTypedStorage.InitializeAsync("Staking", "MaxStakedRewards");
             await SlashRewardFractionTypedStorage.InitializeAsync("Staking", "SlashRewardFraction");
             await CanceledSlashPayoutTypedStorage.InitializeAsync("Staking", "CanceledSlashPayout");
             await UnappliedSlashesTypedStorage.InitializeAsync("Staking", "UnappliedSlashes");
@@ -1276,7 +1365,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
             await SlashingSpansTypedStorage.InitializeAsync("Staking", "SlashingSpans");
             await SpanSlashTypedStorage.InitializeAsync("Staking", "SpanSlash");
             await CurrentPlannedSessionTypedStorage.InitializeAsync("Staking", "CurrentPlannedSession");
-            await OffendingValidatorsTypedStorage.InitializeAsync("Staking", "OffendingValidators");
+            await DisabledValidatorsTypedStorage.InitializeAsync("Staking", "DisabledValidators");
             await ChillThresholdTypedStorage.InitializeAsync("Staking", "ChillThreshold");
         }
         
@@ -1636,6 +1725,58 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         public Substrate.NetApi.Model.Types.Primitive.U32 GetCounterForNominators()
         {
             return CounterForNominatorsTypedStorage.Get();
+        }
+        
+        /// <summary>
+        /// Implements any storage change for Staking.VirtualStakers
+        /// </summary>
+        [StorageChange("Staking", "VirtualStakers")]
+        public void OnUpdateVirtualStakers(string key, string data)
+        {
+            VirtualStakersTypedStorage.Update(key, data);
+        }
+        
+        /// <summary>
+        /// >> VirtualStakers
+        ///  Stakers whose funds are managed by other pallets.
+        /// 
+        ///  This pallet does not apply any locks on them, therefore they are only virtually bonded. They
+        ///  are expected to be keyless accounts and hence should not be allowed to mutate their ledger
+        ///  directly via this pallet. Instead, these accounts are managed by other pallets and accessed
+        ///  via low level apis. We keep track of them to do minimal integrity checks.
+        /// </summary>
+        public Substrate.NetApi.Model.Types.Base.BaseTuple GetVirtualStakers(string key)
+        {
+            if ((key == null))
+            {
+                return null;
+            }
+            if (VirtualStakersTypedStorage.Dictionary.TryGetValue(key, out Substrate.NetApi.Model.Types.Base.BaseTuple result))
+            {
+                return result;
+            }
+            else
+            {
+                return null;
+            }
+        }
+        
+        /// <summary>
+        /// Implements any storage change for Staking.CounterForVirtualStakers
+        /// </summary>
+        [StorageChange("Staking", "CounterForVirtualStakers")]
+        public void OnUpdateCounterForVirtualStakers(string data)
+        {
+            CounterForVirtualStakersTypedStorage.Update(data);
+        }
+        
+        /// <summary>
+        /// >> CounterForVirtualStakers
+        /// Counter for the related counted storage map
+        /// </summary>
+        public Substrate.NetApi.Model.Types.Primitive.U32 GetCounterForVirtualStakers()
+        {
+            return CounterForVirtualStakersTypedStorage.Get();
         }
         
         /// <summary>
@@ -2063,6 +2204,26 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         }
         
         /// <summary>
+        /// Implements any storage change for Staking.MaxStakedRewards
+        /// </summary>
+        [StorageChange("Staking", "MaxStakedRewards")]
+        public void OnUpdateMaxStakedRewards(string data)
+        {
+            MaxStakedRewardsTypedStorage.Update(data);
+        }
+        
+        /// <summary>
+        /// >> MaxStakedRewards
+        ///  Maximum staked rewards, i.e. the percentage of the era inflation that
+        ///  is used for stake rewards.
+        ///  See [Era payout](./index.html#era-payout).
+        /// </summary>
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Percent GetMaxStakedRewards()
+        {
+            return MaxStakedRewardsTypedStorage.Get();
+        }
+        
+        /// <summary>
         /// Implements any storage change for Staking.SlashRewardFraction
         /// </summary>
         [StorageChange("Staking", "SlashRewardFraction")]
@@ -2290,29 +2451,27 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         }
         
         /// <summary>
-        /// Implements any storage change for Staking.OffendingValidators
+        /// Implements any storage change for Staking.DisabledValidators
         /// </summary>
-        [StorageChange("Staking", "OffendingValidators")]
-        public void OnUpdateOffendingValidators(string data)
+        [StorageChange("Staking", "DisabledValidators")]
+        public void OnUpdateDisabledValidators(string data)
         {
-            OffendingValidatorsTypedStorage.Update(data);
+            DisabledValidatorsTypedStorage.Update(data);
         }
         
         /// <summary>
-        /// >> OffendingValidators
-        ///  Indices of validators that have offended in the active era and whether they are currently
-        ///  disabled.
+        /// >> DisabledValidators
+        ///  Indices of validators that have offended in the active era. The offenders are disabled for a
+        ///  whole era. For this reason they are kept here - only staking pallet knows about eras. The
+        ///  implementor of [`DisablingStrategy`] defines if a validator should be disabled which
+        ///  implicitly means that the implementor also controls the max number of disabled validators.
         /// 
-        ///  This value should be a superset of disabled validators since not all offences lead to the
-        ///  validator being disabled (if there was no slash). This is needed to track the percentage of
-        ///  validators that have offended in the current era, ensuring a new era is forced if
-        ///  `OffendingValidatorsThreshold` is reached. The vec is always kept sorted so that we can find
-        ///  whether a given validator has previously offended using binary search. It gets cleared when
-        ///  the era ends.
+        ///  The vec is always kept sorted so that we can find whether a given validator has previously
+        ///  offended using binary search.
         /// </summary>
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.Bool>> GetOffendingValidators()
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U32> GetDisabledValidators()
         {
-            return OffendingValidatorsTypedStorage.Get();
+            return DisabledValidatorsTypedStorage.Get();
         }
         
         /// <summary>

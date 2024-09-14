@@ -42,7 +42,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Controller
         ///  The current authorities set
         /// </summary>
         [HttpGet("Authorities")]
-        [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT48), 200)]
+        [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT49), 200)]
         [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.BeefyStorage), "AuthoritiesParams")]
         public IActionResult GetAuthorities()
         {
@@ -66,7 +66,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Controller
         ///  Authorities set scheduled to be used with the next session
         /// </summary>
         [HttpGet("NextAuthorities")]
-        [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT48), 200)]
+        [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT49), 200)]
         [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.BeefyStorage), "NextAuthoritiesParams")]
         public IActionResult GetNextAuthorities()
         {

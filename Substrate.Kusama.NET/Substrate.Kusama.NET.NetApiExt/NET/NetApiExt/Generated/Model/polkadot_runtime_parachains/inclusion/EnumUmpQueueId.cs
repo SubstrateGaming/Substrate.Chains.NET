@@ -28,9 +28,17 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parach
     }
     
     /// <summary>
-    /// >> 456 - Variant[polkadot_runtime_parachains.inclusion.UmpQueueId]
+    /// >> 454 - Variant[polkadot_runtime_parachains.inclusion.UmpQueueId]
     /// </summary>
-    public sealed class EnumUmpQueueId : BaseEnumExt<UmpQueueId, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id>
+    public sealed class EnumUmpQueueId : BaseEnumRust<UmpQueueId>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumUmpQueueId()
+        {
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id>(UmpQueueId.Para);
+        }
     }
 }

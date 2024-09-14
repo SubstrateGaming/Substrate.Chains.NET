@@ -402,5 +402,11 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// The new member to exchange is the same as the old member
         /// </summary>
         SameMember,
+        
+        /// <summary>
+        /// >> TooManyMembers
+        /// The max member count for the rank has been reached.
+        /// </summary>
+        TooManyMembers,
     }
 }

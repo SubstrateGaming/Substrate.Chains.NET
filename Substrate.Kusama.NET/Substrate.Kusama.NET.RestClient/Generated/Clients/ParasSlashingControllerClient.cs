@@ -12,7 +12,7 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Clients
    using System;
    using System.Threading.Tasks;
    using System.Net.Http;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.slashing;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.slashing;
    using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.Kusama.NET.RestClient.Generated.Interfaces;
    

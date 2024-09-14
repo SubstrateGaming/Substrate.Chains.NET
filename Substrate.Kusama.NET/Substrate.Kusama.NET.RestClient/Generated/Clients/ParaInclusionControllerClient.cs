@@ -12,8 +12,8 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Clients
    using System;
    using System.Threading.Tasks;
    using System.Net.Http;
+   using Substrate.NetApi.Model.Types.Base;
    using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.inclusion;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6;
    using Substrate.Kusama.NET.RestClient.Generated.Interfaces;
    
    public sealed class ParaInclusionControllerClient : BaseClient, IParaInclusionControllerClient
@@ -25,29 +25,13 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Clients
          _httpClient = httpClient;
          _subscriptionClient = subscriptionClient;
       }
-      public async Task<AvailabilityBitfieldRecord> GetAvailabilityBitfields(ValidatorIndex key)
+      public async Task<BaseVec<CandidatePendingAvailability>> GetV1(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key)
       {
-         return await SendRequestAsync<AvailabilityBitfieldRecord>(_httpClient, "parainclusion/availabilitybitfields", Substrate.Kusama.NET.NetApiExt.Generated.Storage.ParaInclusionStorage.AvailabilityBitfieldsParams(key));
+         return await SendRequestAsync<BaseVec<CandidatePendingAvailability>>(_httpClient, "parainclusion/v1", Substrate.Kusama.NET.NetApiExt.Generated.Storage.ParaInclusionStorage.V1Params(key));
       }
-      public async Task<bool> SubscribeAvailabilityBitfields(ValidatorIndex key)
+      public async Task<bool> SubscribeV1(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key)
       {
-         return await _subscriptionClient.SubscribeAsync("ParaInclusion.AvailabilityBitfields", Substrate.Kusama.NET.NetApiExt.Generated.Storage.ParaInclusionStorage.AvailabilityBitfieldsParams(key));
-      }
-      public async Task<CandidatePendingAvailability> GetPendingAvailability(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key)
-      {
-         return await SendRequestAsync<CandidatePendingAvailability>(_httpClient, "parainclusion/pendingavailability", Substrate.Kusama.NET.NetApiExt.Generated.Storage.ParaInclusionStorage.PendingAvailabilityParams(key));
-      }
-      public async Task<bool> SubscribePendingAvailability(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key)
-      {
-         return await _subscriptionClient.SubscribeAsync("ParaInclusion.PendingAvailability", Substrate.Kusama.NET.NetApiExt.Generated.Storage.ParaInclusionStorage.PendingAvailabilityParams(key));
-      }
-      public async Task<CandidateCommitments> GetPendingAvailabilityCommitments(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key)
-      {
-         return await SendRequestAsync<CandidateCommitments>(_httpClient, "parainclusion/pendingavailabilitycommitments", Substrate.Kusama.NET.NetApiExt.Generated.Storage.ParaInclusionStorage.PendingAvailabilityCommitmentsParams(key));
-      }
-      public async Task<bool> SubscribePendingAvailabilityCommitments(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key)
-      {
-         return await _subscriptionClient.SubscribeAsync("ParaInclusion.PendingAvailabilityCommitments", Substrate.Kusama.NET.NetApiExt.Generated.Storage.ParaInclusionStorage.PendingAvailabilityCommitmentsParams(key));
+         return await _subscriptionClient.SubscribeAsync("ParaInclusion.V1", Substrate.Kusama.NET.NetApiExt.Generated.Storage.ParaInclusionStorage.V1Params(key));
       }
    }
 }

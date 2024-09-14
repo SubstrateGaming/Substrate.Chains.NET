@@ -216,7 +216,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.pallet
     }
     
     /// <summary>
-    /// >> 679 - Variant[pallet_society.pallet.Error]
+    /// >> 685 - Variant[pallet_society.pallet.Error]
     /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>

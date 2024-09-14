@@ -36,6 +36,12 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT29 GetAgenda(string key);
         
         /// <summary>
+        /// >> Retries
+        ///  Retry configurations for items to be executed, indexed by task address.
+        /// </summary>
+        Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_scheduler.RetryConfig GetRetries(string key);
+        
+        /// <summary>
         /// >> Lookup
         ///  Lookup from a name to the block number and index of the task.
         /// 
@@ -62,6 +68,11 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         private TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT29> _agendaTypedStorage;
         
         /// <summary>
+        /// _retriesTypedStorage typed storage field
+        /// </summary>
+        private TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_scheduler.RetryConfig> _retriesTypedStorage;
+        
+        /// <summary>
         /// _lookupTypedStorage typed storage field
         /// </summary>
         private TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>> _lookupTypedStorage;
@@ -73,6 +84,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         {
             this.IncompleteSinceTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32>("Scheduler.IncompleteSince", storageDataProvider, storageChangeDelegates);
             this.AgendaTypedStorage = new TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT29>("Scheduler.Agenda", storageDataProvider, storageChangeDelegates);
+            this.RetriesTypedStorage = new TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_scheduler.RetryConfig>("Scheduler.Retries", storageDataProvider, storageChangeDelegates);
             this.LookupTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>>("Scheduler.Lookup", storageDataProvider, storageChangeDelegates);
         }
         
@@ -107,6 +119,21 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         }
         
         /// <summary>
+        /// _retriesTypedStorage property
+        /// </summary>
+        public TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_scheduler.RetryConfig> RetriesTypedStorage
+        {
+            get
+            {
+                return _retriesTypedStorage;
+            }
+            set
+            {
+                _retriesTypedStorage = value;
+            }
+        }
+        
+        /// <summary>
         /// _lookupTypedStorage property
         /// </summary>
         public TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>> LookupTypedStorage
@@ -128,6 +155,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         {
             await IncompleteSinceTypedStorage.InitializeAsync("Scheduler", "IncompleteSince");
             await AgendaTypedStorage.InitializeAsync("Scheduler", "Agenda");
+            await RetriesTypedStorage.InitializeAsync("Scheduler", "Retries");
             await LookupTypedStorage.InitializeAsync("Scheduler", "Lookup");
         }
         
@@ -168,6 +196,35 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
                 return null;
             }
             if (AgendaTypedStorage.Dictionary.TryGetValue(key, out Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT29 result))
+            {
+                return result;
+            }
+            else
+            {
+                return null;
+            }
+        }
+        
+        /// <summary>
+        /// Implements any storage change for Scheduler.Retries
+        /// </summary>
+        [StorageChange("Scheduler", "Retries")]
+        public void OnUpdateRetries(string key, string data)
+        {
+            RetriesTypedStorage.Update(key, data);
+        }
+        
+        /// <summary>
+        /// >> Retries
+        ///  Retry configurations for items to be executed, indexed by task address.
+        /// </summary>
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_scheduler.RetryConfig GetRetries(string key)
+        {
+            if ((key == null))
+            {
+                return null;
+            }
+            if (RetriesTypedStorage.Dictionary.TryGetValue(key, out Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_scheduler.RetryConfig result))
             {
                 return result;
             }

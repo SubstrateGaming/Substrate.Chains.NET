@@ -38,43 +38,65 @@ namespace Substrate.Kusama.NET.RestService.Generated.Controller
         }
         
         /// <summary>
-        /// >> SpotTraffic
-        ///  Keeps track of the multiplier used to calculate the current spot price for the on demand
-        ///  assigner.
-        /// </summary>
-        [HttpGet("SpotTraffic")]
-        [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedU128), 200)]
-        [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.OnDemandAssignmentProviderStorage), "SpotTrafficParams")]
-        public IActionResult GetSpotTraffic()
-        {
-            return this.Ok(_onDemandAssignmentProviderStorage.GetSpotTraffic());
-        }
-        
-        /// <summary>
-        /// >> OnDemandQueue
-        ///  The order storage entry. Uses a VecDeque to be able to push to the front of the
-        ///  queue from the scheduler on session boundaries.
-        /// </summary>
-        [HttpGet("OnDemandQueue")]
-        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.assigner_on_demand.EnqueuedOrder>), 200)]
-        [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.OnDemandAssignmentProviderStorage), "OnDemandQueueParams")]
-        public IActionResult GetOnDemandQueue()
-        {
-            return this.Ok(_onDemandAssignmentProviderStorage.GetOnDemandQueue());
-        }
-        
-        /// <summary>
         /// >> ParaIdAffinity
         ///  Maps a `ParaId` to `CoreIndex` and keeps track of how many assignments the scheduler has in
         ///  it's lookahead. Keeping track of this affinity prevents parallel execution of the same
         ///  `ParaId` on two or more `CoreIndex`es.
         /// </summary>
         [HttpGet("ParaIdAffinity")]
-        [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.assigner_on_demand.CoreAffinityCount), 200)]
+        [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.assigner_on_demand.types.CoreAffinityCount), 200)]
         [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.OnDemandAssignmentProviderStorage), "ParaIdAffinityParams", typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id))]
         public IActionResult GetParaIdAffinity(string key)
         {
             return this.Ok(_onDemandAssignmentProviderStorage.GetParaIdAffinity(key));
+        }
+        
+        /// <summary>
+        /// >> QueueStatus
+        ///  Overall status of queue (both free + affinity entries)
+        /// </summary>
+        [HttpGet("QueueStatus")]
+        [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.assigner_on_demand.types.QueueStatusType), 200)]
+        [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.OnDemandAssignmentProviderStorage), "QueueStatusParams")]
+        public IActionResult GetQueueStatus()
+        {
+            return this.Ok(_onDemandAssignmentProviderStorage.GetQueueStatus());
+        }
+        
+        /// <summary>
+        /// >> FreeEntries
+        ///  Priority queue for all orders which don't yet (or not any more) have any core affinity.
+        /// </summary>
+        [HttpGet("FreeEntries")]
+        [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.BinaryHeapT2), 200)]
+        [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.OnDemandAssignmentProviderStorage), "FreeEntriesParams")]
+        public IActionResult GetFreeEntries()
+        {
+            return this.Ok(_onDemandAssignmentProviderStorage.GetFreeEntries());
+        }
+        
+        /// <summary>
+        /// >> AffinityEntries
+        ///  Queue entries that are currently bound to a particular core due to core affinity.
+        /// </summary>
+        [HttpGet("AffinityEntries")]
+        [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.BinaryHeapT2), 200)]
+        [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.OnDemandAssignmentProviderStorage), "AffinityEntriesParams", typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.CoreIndex))]
+        public IActionResult GetAffinityEntries(string key)
+        {
+            return this.Ok(_onDemandAssignmentProviderStorage.GetAffinityEntries(key));
+        }
+        
+        /// <summary>
+        /// >> Revenue
+        ///  Keeps track of accumulated revenue from on demand order sales.
+        /// </summary>
+        [HttpGet("Revenue")]
+        [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT44), 200)]
+        [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.OnDemandAssignmentProviderStorage), "RevenueParams")]
+        public IActionResult GetRevenue()
+        {
+            return this.Ok(_onDemandAssignmentProviderStorage.GetRevenue());
         }
     }
 }
