@@ -9,7 +9,7 @@
 
 using Substrate.NetApi.Attributes;
 using Substrate.NetApi.Model.Types.Base;
-using Substrate.NetApi.Model.Types.Metadata.V14;
+using Substrate.NetApi.Model.Types.Metadata.Base;
 using System.Collections.Generic;
 
 
@@ -18,7 +18,7 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_liquidity_minin
     
     
     /// <summary>
-    /// >> 516 - Composite[pallet_liquidity_mining.types.YieldFarmEntryT1]
+    /// >> 577 - Composite[pallet_liquidity_mining.types.YieldFarmEntryT1]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class YieldFarmEntryT1 : BaseType

@@ -33,7 +33,7 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_state_trie_migr
     }
     
     /// <summary>
-    /// >> 64 - Variant[pallet_state_trie_migration.pallet.MigrationCompute]
+    /// >> 66 - Variant[pallet_state_trie_migration.pallet.MigrationCompute]
     /// </summary>
     public sealed class EnumMigrationCompute : BaseEnum<MigrationCompute>
     {

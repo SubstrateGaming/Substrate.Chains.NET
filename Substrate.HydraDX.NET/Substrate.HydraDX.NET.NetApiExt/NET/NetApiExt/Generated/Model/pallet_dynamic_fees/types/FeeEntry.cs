@@ -9,7 +9,7 @@
 
 using Substrate.NetApi.Attributes;
 using Substrate.NetApi.Model.Types.Base;
-using Substrate.NetApi.Model.Types.Metadata.V14;
+using Substrate.NetApi.Model.Types.Metadata.Base;
 using System.Collections.Generic;
 
 
@@ -18,7 +18,7 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_dynamic_fees.ty
     
     
     /// <summary>
-    /// >> 529 - Composite[pallet_dynamic_fees.types.FeeEntry]
+    /// >> 590 - Composite[pallet_dynamic_fees.types.FeeEntry]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class FeeEntry : BaseType

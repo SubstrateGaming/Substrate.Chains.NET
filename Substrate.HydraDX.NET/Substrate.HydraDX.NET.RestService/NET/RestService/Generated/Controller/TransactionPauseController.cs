@@ -45,7 +45,7 @@ namespace Substrate.HydraDX.NET.RestService.Generated.Controller
         /// </summary>
         [HttpGet("PausedTransactions")]
         [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseTuple), 200)]
-        [StorageKeyBuilder(typeof(Substrate.HydraDX.NET.NetApiExt.Generated.Storage.TransactionPauseStorage), "PausedTransactionsParams", typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT30, Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT30>))]
+        [StorageKeyBuilder(typeof(Substrate.HydraDX.NET.NetApiExt.Generated.Storage.TransactionPauseStorage), "PausedTransactionsParams", typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT34, Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT34>))]
         public IActionResult GetPausedTransactions(string key)
         {
             return this.Ok(_transactionPauseStorage.GetPausedTransactions(key));

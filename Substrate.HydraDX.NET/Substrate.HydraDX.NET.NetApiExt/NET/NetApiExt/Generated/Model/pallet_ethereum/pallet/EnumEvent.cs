@@ -30,10 +30,18 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_ethereum.pallet
     }
     
     /// <summary>
-    /// >> 131 - Variant[pallet_ethereum.pallet.Event]
+    /// >> 133 - Variant[pallet_ethereum.pallet.Event]
     /// The `Event` enum of this pallet
     /// </summary>
-    public sealed class EnumEvent : BaseEnumExt<Event, BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.primitive_types.H160, Substrate.HydraDX.NET.NetApiExt.Generated.Model.primitive_types.H160, Substrate.HydraDX.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.HydraDX.NET.NetApiExt.Generated.Model.evm_core.error.EnumExitReason, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>>
+    public sealed class EnumEvent : BaseEnumRust<Event>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumEvent()
+        {
+				AddTypeDecoder<BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.primitive_types.H160, Substrate.HydraDX.NET.NetApiExt.Generated.Model.primitive_types.H160, Substrate.HydraDX.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.HydraDX.NET.NetApiExt.Generated.Model.evm_core.error.EnumExitReason, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>>(Event.Executed);
+        }
     }
 }

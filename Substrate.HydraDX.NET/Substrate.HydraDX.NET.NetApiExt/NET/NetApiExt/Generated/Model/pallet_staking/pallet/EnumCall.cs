@@ -54,10 +54,22 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_staking.pallet
     }
     
     /// <summary>
-    /// >> 336 - Variant[pallet_staking.pallet.Call]
+    /// >> 375 - Variant[pallet_staking.pallet.Call]
     /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
-    public sealed class EnumCall : BaseEnumExt<Call, BaseVoid, Substrate.NetApi.Model.Types.Primitive.U128, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.NetApi.Model.Types.Primitive.U128>, Substrate.NetApi.Model.Types.Primitive.U128, Substrate.NetApi.Model.Types.Primitive.U128>
+    public sealed class EnumCall : BaseEnumRust<Call>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumCall()
+        {
+				AddTypeDecoder<BaseVoid>(Call.initialize_staking);
+				AddTypeDecoder<Substrate.NetApi.Model.Types.Primitive.U128>(Call.stake);
+				AddTypeDecoder<BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.NetApi.Model.Types.Primitive.U128>>(Call.increase_stake);
+				AddTypeDecoder<Substrate.NetApi.Model.Types.Primitive.U128>(Call.claim);
+				AddTypeDecoder<Substrate.NetApi.Model.Types.Primitive.U128>(Call.unstake);
+        }
     }
 }

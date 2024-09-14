@@ -37,9 +37,9 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Storage
         {
             this._client = client;
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Referrals", "ReferralCodes"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT5), typeof(Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT6), typeof(Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Referrals", "ReferralAccounts"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32), typeof(Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT5)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32), typeof(Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT6)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Referrals", "LinkedAccounts"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32), typeof(Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Referrals", "ReferrerShares"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
@@ -62,7 +62,7 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Storage
         ///  Referral codes
         ///  Maps a referral code to an account.
         /// </summary>
-        public static string ReferralCodesParams(Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT5 key)
+        public static string ReferralCodesParams(Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT6 key)
         {
             return RequestGenerator.GetStorage("Referrals", "ReferralCodes", Substrate.NetApi.Model.Meta.Storage.Type.Map, new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                         Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, new Substrate.NetApi.Model.Types.IType[] {
@@ -83,7 +83,7 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Storage
         ///  Referral codes
         ///  Maps a referral code to an account.
         /// </summary>
-        public async Task<Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> ReferralCodes(Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT5 key, string blockhash, CancellationToken token)
+        public async Task<Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> ReferralCodes(Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT6 key, string blockhash, CancellationToken token)
         {
             string parameters = ReferralsStorage.ReferralCodesParams(key);
             var result = await _client.GetStorageAsync<Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>(parameters, blockhash, token);
@@ -116,10 +116,10 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Storage
         ///  Referral accounts
         ///  Maps an account to a referral code.
         /// </summary>
-        public async Task<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT5> ReferralAccounts(Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, string blockhash, CancellationToken token)
+        public async Task<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT6> ReferralAccounts(Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, string blockhash, CancellationToken token)
         {
             string parameters = ReferralsStorage.ReferralAccountsParams(key);
-            var result = await _client.GetStorageAsync<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT5>(parameters, blockhash, token);
+            var result = await _client.GetStorageAsync<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT6>(parameters, blockhash, token);
             return result;
         }
         
@@ -388,7 +388,7 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Storage
         /// >> register_code
         /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method RegisterCode(Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT5 code)
+        public static Method RegisterCode(Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT6 code)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(code.Encode());
@@ -399,7 +399,7 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Storage
         /// >> link_code
         /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method LinkCode(Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT5 code)
+        public static Method LinkCode(Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT6 code)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(code.Encode());

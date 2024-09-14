@@ -9,7 +9,7 @@
 
 using Substrate.NetApi.Attributes;
 using Substrate.NetApi.Model.Types.Base;
-using Substrate.NetApi.Model.Types.Metadata.V14;
+using Substrate.NetApi.Model.Types.Metadata.Base;
 using System.Collections.Generic;
 
 
@@ -18,7 +18,7 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_staking.types
     
     
     /// <summary>
-    /// >> 534 - Composite[pallet_staking.types.Voting]
+    /// >> 595 - Composite[pallet_staking.types.Voting]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Voting : BaseType
@@ -27,7 +27,7 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_staking.types
         /// <summary>
         /// >> votes
         /// </summary>
-        public Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT32 Votes { get; set; }
+        public Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT36 Votes { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
@@ -47,7 +47,7 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_staking.types
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Votes = new Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT32();
+            Votes = new Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT36();
             Votes.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

@@ -41,26 +41,32 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_tips.pallet
         UnknownTip = 2,
         
         /// <summary>
+        /// >> MaxTipAmountExceeded
+        /// The tip given was too generous.
+        /// </summary>
+        MaxTipAmountExceeded = 3,
+        
+        /// <summary>
         /// >> NotFinder
         /// The account attempting to retract the tip is not the finder of the tip.
         /// </summary>
-        NotFinder = 3,
+        NotFinder = 4,
         
         /// <summary>
         /// >> StillOpen
         /// The tip cannot be claimed/closed because there are not enough tippers yet.
         /// </summary>
-        StillOpen = 4,
+        StillOpen = 5,
         
         /// <summary>
         /// >> Premature
         /// The tip cannot be claimed/closed because it's still in the countdown period.
         /// </summary>
-        Premature = 5,
+        Premature = 6,
     }
     
     /// <summary>
-    /// >> 473 - Variant[pallet_tips.pallet.Error]
+    /// >> 534 - Variant[pallet_tips.pallet.Error]
     /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>

@@ -36,7 +36,7 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_ethereum.pallet
     }
     
     /// <summary>
-    /// >> 588 - Variant[pallet_ethereum.pallet.Error]
+    /// >> 647 - Variant[pallet_ethereum.pallet.Error]
     /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>

@@ -30,10 +30,18 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_collator_reward
     }
     
     /// <summary>
-    /// >> 84 - Variant[pallet_collator_rewards.pallet.Event]
+    /// >> 86 - Variant[pallet_collator_rewards.pallet.Event]
     /// The `Event` enum of this pallet
     /// </summary>
-    public sealed class EnumEvent : BaseEnumExt<Event, BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U128, Substrate.NetApi.Model.Types.Primitive.U32>>
+    public sealed class EnumEvent : BaseEnumRust<Event>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumEvent()
+        {
+				AddTypeDecoder<BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U128, Substrate.NetApi.Model.Types.Primitive.U32>>(Event.CollatorRewarded);
+        }
     }
 }

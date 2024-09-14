@@ -23,44 +23,26 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_qu
     {
         
         /// <summary>
-        /// >> FailedToSend
-        /// Failed to send XCM message.
+        /// >> BadQueueConfig
+        /// Setting the queue config failed since one of its values was invalid.
         /// </summary>
-        FailedToSend = 0,
+        BadQueueConfig = 0,
         
         /// <summary>
-        /// >> BadXcmOrigin
-        /// Bad XCM origin.
+        /// >> AlreadySuspended
+        /// The execution is already suspended.
         /// </summary>
-        BadXcmOrigin = 1,
+        AlreadySuspended = 1,
         
         /// <summary>
-        /// >> BadXcm
-        /// Bad XCM data.
+        /// >> AlreadyResumed
+        /// The execution is already resumed.
         /// </summary>
-        BadXcm = 2,
-        
-        /// <summary>
-        /// >> BadOverweightIndex
-        /// Bad overweight index.
-        /// </summary>
-        BadOverweightIndex = 3,
-        
-        /// <summary>
-        /// >> WeightOverLimit
-        /// Provided weight is possibly not enough to execute the message.
-        /// </summary>
-        WeightOverLimit = 4,
-        
-        /// <summary>
-        /// >> MessageNotFound
-        /// Indicated message is not present.
-        /// </summary>
-        MessageNotFound = 5,
+        AlreadyResumed = 2,
     }
     
     /// <summary>
-    /// >> 677 - Variant[cumulus_pallet_xcmp_queue.pallet.Error]
+    /// >> 722 - Variant[cumulus_pallet_xcmp_queue.pallet.Error]
     /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>

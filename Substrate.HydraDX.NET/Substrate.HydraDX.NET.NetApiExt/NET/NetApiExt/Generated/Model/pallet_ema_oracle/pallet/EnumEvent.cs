@@ -36,10 +36,19 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_ema_oracle.pall
     }
     
     /// <summary>
-    /// >> 210 - Variant[pallet_ema_oracle.pallet.Event]
+    /// >> 232 - Variant[pallet_ema_oracle.pallet.Event]
     /// The `Event` enum of this pallet
     /// </summary>
-    public sealed class EnumEvent : BaseEnumExt<Event, BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Types.Base.Arr8U8, Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>>, BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Types.Base.Arr8U8, Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>>>
+    public sealed class EnumEvent : BaseEnumRust<Event>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumEvent()
+        {
+				AddTypeDecoder<BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Types.Base.Arr8U8, Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>>>(Event.AddedToWhitelist);
+				AddTypeDecoder<BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Types.Base.Arr8U8, Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>>>(Event.RemovedFromWhitelist);
+        }
     }
 }

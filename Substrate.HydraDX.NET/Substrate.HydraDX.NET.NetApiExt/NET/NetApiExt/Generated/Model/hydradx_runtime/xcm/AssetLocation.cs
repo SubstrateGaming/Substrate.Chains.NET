@@ -9,7 +9,7 @@
 
 using Substrate.NetApi.Attributes;
 using Substrate.NetApi.Model.Types.Base;
-using Substrate.NetApi.Model.Types.Metadata.V14;
+using Substrate.NetApi.Model.Types.Metadata.Base;
 using System.Collections.Generic;
 
 
@@ -18,7 +18,7 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.hydradx_runtime.xcm
     
     
     /// <summary>
-    /// >> 71 - Composite[hydradx_runtime.xcm.AssetLocation]
+    /// >> 73 - Composite[hydradx_runtime.xcm.AssetLocation]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class AssetLocation : BaseType

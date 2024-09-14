@@ -38,7 +38,7 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_liquidity_minin
     }
     
     /// <summary>
-    /// >> 511 - Variant[pallet_liquidity_mining.types.FarmState]
+    /// >> 572 - Variant[pallet_liquidity_mining.types.FarmState]
     /// </summary>
     public sealed class EnumFarmState : BaseEnum<FarmState>
     {

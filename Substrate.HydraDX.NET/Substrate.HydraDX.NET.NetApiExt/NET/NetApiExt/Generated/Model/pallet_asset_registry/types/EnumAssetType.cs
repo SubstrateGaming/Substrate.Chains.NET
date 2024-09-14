@@ -48,7 +48,7 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_asset_registry.
     }
     
     /// <summary>
-    /// >> 69 - Variant[pallet_asset_registry.types.AssetType]
+    /// >> 71 - Variant[pallet_asset_registry.types.AssetType]
     /// </summary>
     public sealed class EnumAssetType : BaseEnum<AssetType>
     {

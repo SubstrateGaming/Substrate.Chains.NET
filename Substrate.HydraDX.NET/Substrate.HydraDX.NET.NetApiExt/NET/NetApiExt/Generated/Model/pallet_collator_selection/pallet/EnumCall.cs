@@ -63,13 +63,41 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_collator_select
         /// See [`Pallet::remove_invulnerable`].
         /// </summary>
         remove_invulnerable = 6,
+        
+        /// <summary>
+        /// >> update_bond
+        /// See [`Pallet::update_bond`].
+        /// </summary>
+        update_bond = 7,
+        
+        /// <summary>
+        /// >> take_candidate_slot
+        /// See [`Pallet::take_candidate_slot`].
+        /// </summary>
+        take_candidate_slot = 8,
     }
     
     /// <summary>
-    /// >> 412 - Variant[pallet_collator_selection.pallet.Call]
+    /// >> 466 - Variant[pallet_collator_selection.pallet.Call]
     /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
-    public sealed class EnumCall : BaseEnumExt<Call, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U128, BaseVoid, BaseVoid, Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>
+    public sealed class EnumCall : BaseEnumRust<Call>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumCall()
+        {
+				AddTypeDecoder<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>>(Call.set_invulnerables);
+				AddTypeDecoder<Substrate.NetApi.Model.Types.Primitive.U32>(Call.set_desired_candidates);
+				AddTypeDecoder<Substrate.NetApi.Model.Types.Primitive.U128>(Call.set_candidacy_bond);
+				AddTypeDecoder<BaseVoid>(Call.register_as_candidate);
+				AddTypeDecoder<BaseVoid>(Call.leave_intent);
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>(Call.add_invulnerable);
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>(Call.remove_invulnerable);
+				AddTypeDecoder<Substrate.NetApi.Model.Types.Primitive.U128>(Call.update_bond);
+				AddTypeDecoder<BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>>(Call.take_candidate_slot);
+        }
     }
 }

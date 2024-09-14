@@ -54,7 +54,7 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_scheduler.palle
     }
     
     /// <summary>
-    /// >> 630 - Variant[pallet_scheduler.pallet.Error]
+    /// >> 665 - Variant[pallet_scheduler.pallet.Error]
     /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>

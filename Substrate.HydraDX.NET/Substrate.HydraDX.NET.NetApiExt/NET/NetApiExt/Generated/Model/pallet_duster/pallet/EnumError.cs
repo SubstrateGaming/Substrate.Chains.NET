@@ -60,7 +60,7 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_duster.pallet
     }
     
     /// <summary>
-    /// >> 509 - Variant[pallet_duster.pallet.Error]
+    /// >> 570 - Variant[pallet_duster.pallet.Error]
     /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>

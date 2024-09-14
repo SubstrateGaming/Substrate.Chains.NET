@@ -49,10 +49,21 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_state_trie_migr
     }
     
     /// <summary>
-    /// >> 63 - Variant[pallet_state_trie_migration.pallet.Event]
+    /// >> 65 - Variant[pallet_state_trie_migration.pallet.Event]
     /// Inner events of this pallet.
     /// </summary>
-    public sealed class EnumEvent : BaseEnumExt<Event, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.EnumMigrationCompute>, BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U128>, BaseVoid, Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.EnumError>
+    public sealed class EnumEvent : BaseEnumRust<Event>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumEvent()
+        {
+				AddTypeDecoder<BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.EnumMigrationCompute>>(Event.Migrated);
+				AddTypeDecoder<BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U128>>(Event.Slashed);
+				AddTypeDecoder<BaseVoid>(Event.AutoMigrationFinished);
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.EnumError>(Event.Halted);
+        }
     }
 }

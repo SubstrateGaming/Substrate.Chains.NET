@@ -60,10 +60,23 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.orml_xtokens.module
     }
     
     /// <summary>
-    /// >> 409 - Variant[orml_xtokens.module.Call]
+    /// >> 463 - Variant[orml_xtokens.module.Call]
     /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
-    public sealed class EnumCall : BaseEnumExt<Call, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U128, Substrate.HydraDX.NET.NetApiExt.Generated.Model.staging_xcm.EnumVersionedMultiLocation, Substrate.HydraDX.NET.NetApiExt.Generated.Model.staging_xcm.v3.EnumWeightLimit>, BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.staging_xcm.EnumVersionedMultiAsset, Substrate.HydraDX.NET.NetApiExt.Generated.Model.staging_xcm.EnumVersionedMultiLocation, Substrate.HydraDX.NET.NetApiExt.Generated.Model.staging_xcm.v3.EnumWeightLimit>, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U128, Substrate.NetApi.Model.Types.Primitive.U128, Substrate.HydraDX.NET.NetApiExt.Generated.Model.staging_xcm.EnumVersionedMultiLocation, Substrate.HydraDX.NET.NetApiExt.Generated.Model.staging_xcm.v3.EnumWeightLimit>, BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.staging_xcm.EnumVersionedMultiAsset, Substrate.HydraDX.NET.NetApiExt.Generated.Model.staging_xcm.EnumVersionedMultiAsset, Substrate.HydraDX.NET.NetApiExt.Generated.Model.staging_xcm.EnumVersionedMultiLocation, Substrate.HydraDX.NET.NetApiExt.Generated.Model.staging_xcm.v3.EnumWeightLimit>, BaseTuple<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U128>>, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.HydraDX.NET.NetApiExt.Generated.Model.staging_xcm.EnumVersionedMultiLocation, Substrate.HydraDX.NET.NetApiExt.Generated.Model.staging_xcm.v3.EnumWeightLimit>, BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.staging_xcm.EnumVersionedMultiAssets, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.HydraDX.NET.NetApiExt.Generated.Model.staging_xcm.EnumVersionedMultiLocation, Substrate.HydraDX.NET.NetApiExt.Generated.Model.staging_xcm.v3.EnumWeightLimit>>
+    public sealed class EnumCall : BaseEnumRust<Call>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumCall()
+        {
+				AddTypeDecoder<BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U128, Substrate.HydraDX.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation, Substrate.HydraDX.NET.NetApiExt.Generated.Model.xcm.v3.EnumWeightLimit>>(Call.transfer);
+				AddTypeDecoder<BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAsset, Substrate.HydraDX.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation, Substrate.HydraDX.NET.NetApiExt.Generated.Model.xcm.v3.EnumWeightLimit>>(Call.transfer_multiasset);
+				AddTypeDecoder<BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U128, Substrate.NetApi.Model.Types.Primitive.U128, Substrate.HydraDX.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation, Substrate.HydraDX.NET.NetApiExt.Generated.Model.xcm.v3.EnumWeightLimit>>(Call.transfer_with_fee);
+				AddTypeDecoder<BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAsset, Substrate.HydraDX.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAsset, Substrate.HydraDX.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation, Substrate.HydraDX.NET.NetApiExt.Generated.Model.xcm.v3.EnumWeightLimit>>(Call.transfer_multiasset_with_fee);
+				AddTypeDecoder<BaseTuple<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U128>>, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.HydraDX.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation, Substrate.HydraDX.NET.NetApiExt.Generated.Model.xcm.v3.EnumWeightLimit>>(Call.transfer_multicurrencies);
+				AddTypeDecoder<BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAssets, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.HydraDX.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation, Substrate.HydraDX.NET.NetApiExt.Generated.Model.xcm.v3.EnumWeightLimit>>(Call.transfer_multiassets);
+        }
     }
 }

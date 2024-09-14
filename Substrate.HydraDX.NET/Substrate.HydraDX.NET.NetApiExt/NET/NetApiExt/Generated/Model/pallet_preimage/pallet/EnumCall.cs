@@ -45,13 +45,31 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_preimage.pallet
         /// See [`Pallet::unrequest_preimage`].
         /// </summary>
         unrequest_preimage = 3,
+        
+        /// <summary>
+        /// >> ensure_updated
+        /// See [`Pallet::ensure_updated`].
+        /// </summary>
+        ensure_updated = 4,
     }
     
     /// <summary>
-    /// >> 254 - Variant[pallet_preimage.pallet.Call]
+    /// >> 288 - Variant[pallet_preimage.pallet.Call]
     /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
-    public sealed class EnumCall : BaseEnumExt<Call, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>, Substrate.HydraDX.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.HydraDX.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.HydraDX.NET.NetApiExt.Generated.Model.primitive_types.H256>
+    public sealed class EnumCall : BaseEnumRust<Call>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumCall()
+        {
+				AddTypeDecoder<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>(Call.note_preimage);
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.primitive_types.H256>(Call.unnote_preimage);
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.primitive_types.H256>(Call.request_preimage);
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.primitive_types.H256>(Call.unrequest_preimage);
+				AddTypeDecoder<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.HydraDX.NET.NetApiExt.Generated.Model.primitive_types.H256>>(Call.ensure_updated);
+        }
     }
 }

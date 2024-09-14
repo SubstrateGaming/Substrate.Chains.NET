@@ -9,7 +9,7 @@
 
 using Substrate.NetApi.Attributes;
 using Substrate.NetApi.Model.Types.Base;
-using Substrate.NetApi.Model.Types.Metadata.V14;
+using Substrate.NetApi.Model.Types.Metadata.Base;
 using System.Collections.Generic;
 
 
@@ -18,7 +18,7 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.evm_core.opcode
     
     
     /// <summary>
-    /// >> 135 - Composite[evm_core.opcode.Opcode]
+    /// >> 137 - Composite[evm_core.opcode.Opcode]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Opcode : BaseType

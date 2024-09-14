@@ -43,9 +43,20 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.evm_core.error
     }
     
     /// <summary>
-    /// >> 139 - Variant[evm_core.error.ExitFatal]
+    /// >> 141 - Variant[evm_core.error.ExitFatal]
     /// </summary>
-    public sealed class EnumExitFatal : BaseEnumExt<ExitFatal, BaseVoid, BaseVoid, Substrate.HydraDX.NET.NetApiExt.Generated.Model.evm_core.error.EnumExitError, Substrate.HydraDX.NET.NetApiExt.Generated.Types.Base.CowT1>
+    public sealed class EnumExitFatal : BaseEnumRust<ExitFatal>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumExitFatal()
+        {
+				AddTypeDecoder<BaseVoid>(ExitFatal.NotSupported);
+				AddTypeDecoder<BaseVoid>(ExitFatal.UnhandledInterrupt);
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.evm_core.error.EnumExitError>(ExitFatal.CallErrorAsFatal);
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Types.Base.CowT1>(ExitFatal.Other);
+        }
     }
 }

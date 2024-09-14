@@ -57,7 +57,7 @@ namespace Substrate.HydraDX.NET.RestService.Generated.Controller
         /// <summary>
         /// >> AggregatedUnincludedSegment
         ///  Storage field that keeps track of bandwidth used by the unincluded segment along with the
-        ///  latest the latest HRMP watermark. Used for limiting the acceptance of new blocks with
+        ///  latest HRMP watermark. Used for limiting the acceptance of new blocks with
         ///  respect to relay chain constraints.
         /// </summary>
         [HttpGet("AggregatedUnincludedSegment")]
@@ -108,7 +108,7 @@ namespace Substrate.HydraDX.NET.RestService.Generated.Controller
         ///  in the trie.
         /// </summary>
         [HttpGet("ValidationData")]
-        [ProducesResponseType(typeof(Substrate.HydraDX.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.PersistedValidationData), 200)]
+        [ProducesResponseType(typeof(Substrate.HydraDX.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.PersistedValidationData), 200)]
         [StorageKeyBuilder(typeof(Substrate.HydraDX.NET.NetApiExt.Generated.Storage.ParachainSystemStorage), "ValidationDataParams")]
         public IActionResult GetValidationData()
         {
@@ -130,6 +130,8 @@ namespace Substrate.HydraDX.NET.RestService.Generated.Controller
         /// <summary>
         /// >> LastRelayChainBlockNumber
         ///  The relay chain block number associated with the last parachain block.
+        /// 
+        ///  This is updated in `on_finalize`.
         /// </summary>
         [HttpGet("LastRelayChainBlockNumber")]
         [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Primitive.U32), 200)]
@@ -150,7 +152,7 @@ namespace Substrate.HydraDX.NET.RestService.Generated.Controller
         ///  set after the inherent.
         /// </summary>
         [HttpGet("UpgradeRestrictionSignal")]
-        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.HydraDX.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.EnumUpgradeRestriction>), 200)]
+        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.HydraDX.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumUpgradeRestriction>), 200)]
         [StorageKeyBuilder(typeof(Substrate.HydraDX.NET.NetApiExt.Generated.Storage.ParachainSystemStorage), "UpgradeRestrictionSignalParams")]
         public IActionResult GetUpgradeRestrictionSignal()
         {
@@ -166,7 +168,7 @@ namespace Substrate.HydraDX.NET.RestService.Generated.Controller
         ///  set after the inherent.
         /// </summary>
         [HttpGet("UpgradeGoAhead")]
-        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.HydraDX.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.EnumUpgradeGoAhead>), 200)]
+        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.HydraDX.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumUpgradeGoAhead>), 200)]
         [StorageKeyBuilder(typeof(Substrate.HydraDX.NET.NetApiExt.Generated.Storage.ParachainSystemStorage), "UpgradeGoAheadParams")]
         public IActionResult GetUpgradeGoAhead()
         {
@@ -218,7 +220,7 @@ namespace Substrate.HydraDX.NET.RestService.Generated.Controller
         ///  This data is also absent from the genesis.
         /// </summary>
         [HttpGet("HostConfiguration")]
-        [ProducesResponseType(typeof(Substrate.HydraDX.NET.NetApiExt.Generated.Model.polkadot_primitives.v5.AbridgedHostConfiguration), 200)]
+        [ProducesResponseType(typeof(Substrate.HydraDX.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.AbridgedHostConfiguration), 200)]
         [StorageKeyBuilder(typeof(Substrate.HydraDX.NET.NetApiExt.Generated.Storage.ParachainSystemStorage), "HostConfigurationParams")]
         public IActionResult GetHostConfiguration()
         {
@@ -324,6 +326,18 @@ namespace Substrate.HydraDX.NET.RestService.Generated.Controller
         }
         
         /// <summary>
+        /// >> UpwardDeliveryFeeFactor
+        ///  The factor to multiply the base delivery fee by for UMP.
+        /// </summary>
+        [HttpGet("UpwardDeliveryFeeFactor")]
+        [ProducesResponseType(typeof(Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedU128), 200)]
+        [StorageKeyBuilder(typeof(Substrate.HydraDX.NET.NetApiExt.Generated.Storage.ParachainSystemStorage), "UpwardDeliveryFeeFactorParams")]
+        public IActionResult GetUpwardDeliveryFeeFactor()
+        {
+            return this.Ok(_parachainSystemStorage.GetUpwardDeliveryFeeFactor());
+        }
+        
+        /// <summary>
         /// >> AnnouncedHrmpMessagesPerCandidate
         ///  The number of HRMP messages we observed in `on_initialize` and thus used that number for
         ///  announcing the weight of `on_initialize` and `on_finalize`.
@@ -360,18 +374,6 @@ namespace Substrate.HydraDX.NET.RestService.Generated.Controller
         public IActionResult GetReservedDmpWeightOverride()
         {
             return this.Ok(_parachainSystemStorage.GetReservedDmpWeightOverride());
-        }
-        
-        /// <summary>
-        /// >> AuthorizedUpgrade
-        ///  The next authorized upgrade, if there is one.
-        /// </summary>
-        [HttpGet("AuthorizedUpgrade")]
-        [ProducesResponseType(typeof(Substrate.HydraDX.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.CodeUpgradeAuthorization), 200)]
-        [StorageKeyBuilder(typeof(Substrate.HydraDX.NET.NetApiExt.Generated.Storage.ParachainSystemStorage), "AuthorizedUpgradeParams")]
-        public IActionResult GetAuthorizedUpgrade()
-        {
-            return this.Ok(_parachainSystemStorage.GetAuthorizedUpgrade());
         }
         
         /// <summary>

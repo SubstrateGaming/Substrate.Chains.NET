@@ -9,7 +9,7 @@
 
 using Substrate.NetApi.Attributes;
 using Substrate.NetApi.Model.Types.Base;
-using Substrate.NetApi.Model.Types.Metadata.V14;
+using Substrate.NetApi.Model.Types.Metadata.Base;
 using System.Collections.Generic;
 
 
@@ -18,7 +18,7 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilo
     
     
     /// <summary>
-    /// >> 72 - Composite[staging_xcm.v3.multilocation.MultiLocation]
+    /// >> 74 - Composite[staging_xcm.v3.multilocation.MultiLocation]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class MultiLocation : BaseType
@@ -31,7 +31,7 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilo
         /// <summary>
         /// >> interior
         /// </summary>
-        public Substrate.HydraDX.NET.NetApiExt.Generated.Model.staging_xcm.v3.junctions.EnumJunctions Interior { get; set; }
+        public Substrate.HydraDX.NET.NetApiExt.Generated.Model.xcm.v3.junctions.EnumJunctions Interior { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
@@ -54,7 +54,7 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilo
             var start = p;
             Parents = new Substrate.NetApi.Model.Types.Primitive.U8();
             Parents.Decode(byteArray, ref p);
-            Interior = new Substrate.HydraDX.NET.NetApiExt.Generated.Model.staging_xcm.v3.junctions.EnumJunctions();
+            Interior = new Substrate.HydraDX.NET.NetApiExt.Generated.Model.xcm.v3.junctions.EnumJunctions();
             Interior.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

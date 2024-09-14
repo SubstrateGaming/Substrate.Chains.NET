@@ -9,7 +9,7 @@
 
 using Substrate.NetApi.Attributes;
 using Substrate.NetApi.Model.Types.Base;
-using Substrate.NetApi.Model.Types.Metadata.V14;
+using Substrate.NetApi.Model.Types.Metadata.Base;
 using System.Collections.Generic;
 
 
@@ -18,7 +18,7 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_circuit_breaker
     
     
     /// <summary>
-    /// >> 525 - Composite[pallet_circuit_breaker.TradeVolumeLimit]
+    /// >> 586 - Composite[pallet_circuit_breaker.TradeVolumeLimit]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class TradeVolumeLimit : BaseType

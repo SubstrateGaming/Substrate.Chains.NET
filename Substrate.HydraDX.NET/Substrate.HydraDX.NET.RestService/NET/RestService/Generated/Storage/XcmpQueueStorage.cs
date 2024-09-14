@@ -25,16 +25,17 @@ namespace Substrate.HydraDX.NET.RestService.Generated.Storage
     {
         
         /// <summary>
-        /// >> InboundXcmpStatus
-        ///  Status of the inbound XCMP channels.
+        /// >> InboundXcmpSuspended
+        ///  The suspended inbound XCMP channels. All others are not suspended.
+        /// 
+        ///  This is a `StorageValue` instead of a `StorageMap` since we expect multiple reads per block
+        ///  to different keys with a one byte payload. The access to `BoundedBTreeSet` will be cached
+        ///  within the block and therefore only included once in the proof size.
+        /// 
+        ///  NOTE: The PoV benchmarking cannot know this and will over-estimate, but the actual proof
+        ///  will be smaller.
         /// </summary>
-        Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.HydraDX.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue.InboundChannelDetails> GetInboundXcmpStatus();
-        
-        /// <summary>
-        /// >> InboundXcmpMessages
-        ///  Inbound aggregate XCMP messages. It can only be one per ParaId/block.
-        /// </summary>
-        Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> GetInboundXcmpMessages(string key);
+        Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSetT1 GetInboundXcmpSuspended();
         
         /// <summary>
         /// >> OutboundXcmpStatus
@@ -66,56 +67,16 @@ namespace Substrate.HydraDX.NET.RestService.Generated.Storage
         Substrate.HydraDX.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue.QueueConfigData GetQueueConfig();
         
         /// <summary>
-        /// >> Overweight
-        ///  The messages that exceeded max individual message weight budget.
-        /// 
-        ///  These message stay in this storage map until they are manually dispatched via
-        ///  `service_overweight`.
-        /// </summary>
-        Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>> GetOverweight(string key);
-        
-        /// <summary>
-        /// >> CounterForOverweight
-        /// Counter for the related counted storage map
-        /// </summary>
-        Substrate.NetApi.Model.Types.Primitive.U32 GetCounterForOverweight();
-        
-        /// <summary>
-        /// >> OverweightCount
-        ///  The number of overweight messages ever recorded in `Overweight`. Also doubles as the next
-        ///  available free overweight index.
-        /// </summary>
-        Substrate.NetApi.Model.Types.Primitive.U64 GetOverweightCount();
-        
-        /// <summary>
-        /// >> DeferredIndices
-        ///  Index of deferred message buckets to process.
-        /// </summary>
-        Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSetT1 GetDeferredIndices(string key);
-        
-        /// <summary>
-        /// >> DeferredMessageBuckets
-        ///  Storage for deferred messages, indexed by para id, block and counter.
-        /// </summary>
-        Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT43 GetDeferredMessageBuckets(string key);
-        
-        /// <summary>
         /// >> QueueSuspended
         ///  Whether or not the XCMP queue is suspended from executing incoming XCMs or not.
         /// </summary>
         Substrate.NetApi.Model.Types.Primitive.Bool GetQueueSuspended();
         
         /// <summary>
-        /// >> DeferredQueueSuspended
-        ///  Whether or not the Deferred queue is suspended from executing XCMs or not.
+        /// >> DeliveryFeeFactor
+        ///  The factor to multiply the base delivery fee by.
         /// </summary>
-        Substrate.NetApi.Model.Types.Primitive.Bool GetDeferredQueueSuspended();
-        
-        /// <summary>
-        /// >> DeferAllBy
-        ///  Whether or not and if so by how much to defer all incoming XCMs.
-        /// </summary>
-        Substrate.NetApi.Model.Types.Primitive.U32 GetDeferAllBy();
+        Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedU128 GetDeliveryFeeFactor(string key);
     }
     
     /// <summary>
@@ -125,14 +86,9 @@ namespace Substrate.HydraDX.NET.RestService.Generated.Storage
     {
         
         /// <summary>
-        /// _inboundXcmpStatusTypedStorage typed storage field
+        /// _inboundXcmpSuspendedTypedStorage typed storage field
         /// </summary>
-        private TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.HydraDX.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue.InboundChannelDetails>> _inboundXcmpStatusTypedStorage;
-        
-        /// <summary>
-        /// _inboundXcmpMessagesTypedStorage typed storage field
-        /// </summary>
-        private TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>> _inboundXcmpMessagesTypedStorage;
+        private TypedStorage<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSetT1> _inboundXcmpSuspendedTypedStorage;
         
         /// <summary>
         /// _outboundXcmpStatusTypedStorage typed storage field
@@ -155,93 +111,41 @@ namespace Substrate.HydraDX.NET.RestService.Generated.Storage
         private TypedStorage<Substrate.HydraDX.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue.QueueConfigData> _queueConfigTypedStorage;
         
         /// <summary>
-        /// _overweightTypedStorage typed storage field
-        /// </summary>
-        private TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>> _overweightTypedStorage;
-        
-        /// <summary>
-        /// _counterForOverweightTypedStorage typed storage field
-        /// </summary>
-        private TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32> _counterForOverweightTypedStorage;
-        
-        /// <summary>
-        /// _overweightCountTypedStorage typed storage field
-        /// </summary>
-        private TypedStorage<Substrate.NetApi.Model.Types.Primitive.U64> _overweightCountTypedStorage;
-        
-        /// <summary>
-        /// _deferredIndicesTypedStorage typed storage field
-        /// </summary>
-        private TypedMapStorage<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSetT1> _deferredIndicesTypedStorage;
-        
-        /// <summary>
-        /// _deferredMessageBucketsTypedStorage typed storage field
-        /// </summary>
-        private TypedMapStorage<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT43> _deferredMessageBucketsTypedStorage;
-        
-        /// <summary>
         /// _queueSuspendedTypedStorage typed storage field
         /// </summary>
         private TypedStorage<Substrate.NetApi.Model.Types.Primitive.Bool> _queueSuspendedTypedStorage;
         
         /// <summary>
-        /// _deferredQueueSuspendedTypedStorage typed storage field
+        /// _deliveryFeeFactorTypedStorage typed storage field
         /// </summary>
-        private TypedStorage<Substrate.NetApi.Model.Types.Primitive.Bool> _deferredQueueSuspendedTypedStorage;
-        
-        /// <summary>
-        /// _deferAllByTypedStorage typed storage field
-        /// </summary>
-        private TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32> _deferAllByTypedStorage;
+        private TypedMapStorage<Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedU128> _deliveryFeeFactorTypedStorage;
         
         /// <summary>
         /// XcmpQueueStorage constructor.
         /// </summary>
         public XcmpQueueStorage(IStorageDataProvider storageDataProvider, List<IStorageChangeDelegate> storageChangeDelegates)
         {
-            this.InboundXcmpStatusTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.HydraDX.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue.InboundChannelDetails>>("XcmpQueue.InboundXcmpStatus", storageDataProvider, storageChangeDelegates);
-            this.InboundXcmpMessagesTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>("XcmpQueue.InboundXcmpMessages", storageDataProvider, storageChangeDelegates);
+            this.InboundXcmpSuspendedTypedStorage = new TypedStorage<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSetT1>("XcmpQueue.InboundXcmpSuspended", storageDataProvider, storageChangeDelegates);
             this.OutboundXcmpStatusTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.HydraDX.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue.OutboundChannelDetails>>("XcmpQueue.OutboundXcmpStatus", storageDataProvider, storageChangeDelegates);
             this.OutboundXcmpMessagesTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>("XcmpQueue.OutboundXcmpMessages", storageDataProvider, storageChangeDelegates);
             this.SignalMessagesTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>("XcmpQueue.SignalMessages", storageDataProvider, storageChangeDelegates);
             this.QueueConfigTypedStorage = new TypedStorage<Substrate.HydraDX.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue.QueueConfigData>("XcmpQueue.QueueConfig", storageDataProvider, storageChangeDelegates);
-            this.OverweightTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>>("XcmpQueue.Overweight", storageDataProvider, storageChangeDelegates);
-            this.CounterForOverweightTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32>("XcmpQueue.CounterForOverweight", storageDataProvider, storageChangeDelegates);
-            this.OverweightCountTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U64>("XcmpQueue.OverweightCount", storageDataProvider, storageChangeDelegates);
-            this.DeferredIndicesTypedStorage = new TypedMapStorage<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSetT1>("XcmpQueue.DeferredIndices", storageDataProvider, storageChangeDelegates);
-            this.DeferredMessageBucketsTypedStorage = new TypedMapStorage<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT43>("XcmpQueue.DeferredMessageBuckets", storageDataProvider, storageChangeDelegates);
             this.QueueSuspendedTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.Bool>("XcmpQueue.QueueSuspended", storageDataProvider, storageChangeDelegates);
-            this.DeferredQueueSuspendedTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.Bool>("XcmpQueue.DeferredQueueSuspended", storageDataProvider, storageChangeDelegates);
-            this.DeferAllByTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32>("XcmpQueue.DeferAllBy", storageDataProvider, storageChangeDelegates);
+            this.DeliveryFeeFactorTypedStorage = new TypedMapStorage<Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedU128>("XcmpQueue.DeliveryFeeFactor", storageDataProvider, storageChangeDelegates);
         }
         
         /// <summary>
-        /// _inboundXcmpStatusTypedStorage property
+        /// _inboundXcmpSuspendedTypedStorage property
         /// </summary>
-        public TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.HydraDX.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue.InboundChannelDetails>> InboundXcmpStatusTypedStorage
+        public TypedStorage<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSetT1> InboundXcmpSuspendedTypedStorage
         {
             get
             {
-                return _inboundXcmpStatusTypedStorage;
+                return _inboundXcmpSuspendedTypedStorage;
             }
             set
             {
-                _inboundXcmpStatusTypedStorage = value;
-            }
-        }
-        
-        /// <summary>
-        /// _inboundXcmpMessagesTypedStorage property
-        /// </summary>
-        public TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>> InboundXcmpMessagesTypedStorage
-        {
-            get
-            {
-                return _inboundXcmpMessagesTypedStorage;
-            }
-            set
-            {
-                _inboundXcmpMessagesTypedStorage = value;
+                _inboundXcmpSuspendedTypedStorage = value;
             }
         }
         
@@ -306,81 +210,6 @@ namespace Substrate.HydraDX.NET.RestService.Generated.Storage
         }
         
         /// <summary>
-        /// _overweightTypedStorage property
-        /// </summary>
-        public TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>> OverweightTypedStorage
-        {
-            get
-            {
-                return _overweightTypedStorage;
-            }
-            set
-            {
-                _overweightTypedStorage = value;
-            }
-        }
-        
-        /// <summary>
-        /// _counterForOverweightTypedStorage property
-        /// </summary>
-        public TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32> CounterForOverweightTypedStorage
-        {
-            get
-            {
-                return _counterForOverweightTypedStorage;
-            }
-            set
-            {
-                _counterForOverweightTypedStorage = value;
-            }
-        }
-        
-        /// <summary>
-        /// _overweightCountTypedStorage property
-        /// </summary>
-        public TypedStorage<Substrate.NetApi.Model.Types.Primitive.U64> OverweightCountTypedStorage
-        {
-            get
-            {
-                return _overweightCountTypedStorage;
-            }
-            set
-            {
-                _overweightCountTypedStorage = value;
-            }
-        }
-        
-        /// <summary>
-        /// _deferredIndicesTypedStorage property
-        /// </summary>
-        public TypedMapStorage<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSetT1> DeferredIndicesTypedStorage
-        {
-            get
-            {
-                return _deferredIndicesTypedStorage;
-            }
-            set
-            {
-                _deferredIndicesTypedStorage = value;
-            }
-        }
-        
-        /// <summary>
-        /// _deferredMessageBucketsTypedStorage property
-        /// </summary>
-        public TypedMapStorage<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT43> DeferredMessageBucketsTypedStorage
-        {
-            get
-            {
-                return _deferredMessageBucketsTypedStorage;
-            }
-            set
-            {
-                _deferredMessageBucketsTypedStorage = value;
-            }
-        }
-        
-        /// <summary>
         /// _queueSuspendedTypedStorage property
         /// </summary>
         public TypedStorage<Substrate.NetApi.Model.Types.Primitive.Bool> QueueSuspendedTypedStorage
@@ -396,32 +225,17 @@ namespace Substrate.HydraDX.NET.RestService.Generated.Storage
         }
         
         /// <summary>
-        /// _deferredQueueSuspendedTypedStorage property
+        /// _deliveryFeeFactorTypedStorage property
         /// </summary>
-        public TypedStorage<Substrate.NetApi.Model.Types.Primitive.Bool> DeferredQueueSuspendedTypedStorage
+        public TypedMapStorage<Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedU128> DeliveryFeeFactorTypedStorage
         {
             get
             {
-                return _deferredQueueSuspendedTypedStorage;
+                return _deliveryFeeFactorTypedStorage;
             }
             set
             {
-                _deferredQueueSuspendedTypedStorage = value;
-            }
-        }
-        
-        /// <summary>
-        /// _deferAllByTypedStorage property
-        /// </summary>
-        public TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32> DeferAllByTypedStorage
-        {
-            get
-            {
-                return _deferAllByTypedStorage;
-            }
-            set
-            {
-                _deferAllByTypedStorage = value;
+                _deliveryFeeFactorTypedStorage = value;
             }
         }
         
@@ -430,67 +244,38 @@ namespace Substrate.HydraDX.NET.RestService.Generated.Storage
         /// </summary>
         public async Task InitializeAsync(Substrate.ServiceLayer.Storage.IStorageDataProvider dataProvider)
         {
-            await InboundXcmpStatusTypedStorage.InitializeAsync("XcmpQueue", "InboundXcmpStatus");
-            await InboundXcmpMessagesTypedStorage.InitializeAsync("XcmpQueue", "InboundXcmpMessages");
+            await InboundXcmpSuspendedTypedStorage.InitializeAsync("XcmpQueue", "InboundXcmpSuspended");
             await OutboundXcmpStatusTypedStorage.InitializeAsync("XcmpQueue", "OutboundXcmpStatus");
             await OutboundXcmpMessagesTypedStorage.InitializeAsync("XcmpQueue", "OutboundXcmpMessages");
             await SignalMessagesTypedStorage.InitializeAsync("XcmpQueue", "SignalMessages");
             await QueueConfigTypedStorage.InitializeAsync("XcmpQueue", "QueueConfig");
-            await OverweightTypedStorage.InitializeAsync("XcmpQueue", "Overweight");
-            await CounterForOverweightTypedStorage.InitializeAsync("XcmpQueue", "CounterForOverweight");
-            await OverweightCountTypedStorage.InitializeAsync("XcmpQueue", "OverweightCount");
-            await DeferredIndicesTypedStorage.InitializeAsync("XcmpQueue", "DeferredIndices");
-            await DeferredMessageBucketsTypedStorage.InitializeAsync("XcmpQueue", "DeferredMessageBuckets");
             await QueueSuspendedTypedStorage.InitializeAsync("XcmpQueue", "QueueSuspended");
-            await DeferredQueueSuspendedTypedStorage.InitializeAsync("XcmpQueue", "DeferredQueueSuspended");
-            await DeferAllByTypedStorage.InitializeAsync("XcmpQueue", "DeferAllBy");
+            await DeliveryFeeFactorTypedStorage.InitializeAsync("XcmpQueue", "DeliveryFeeFactor");
         }
         
         /// <summary>
-        /// Implements any storage change for XcmpQueue.InboundXcmpStatus
+        /// Implements any storage change for XcmpQueue.InboundXcmpSuspended
         /// </summary>
-        [StorageChange("XcmpQueue", "InboundXcmpStatus")]
-        public void OnUpdateInboundXcmpStatus(string data)
+        [StorageChange("XcmpQueue", "InboundXcmpSuspended")]
+        public void OnUpdateInboundXcmpSuspended(string data)
         {
-            InboundXcmpStatusTypedStorage.Update(data);
+            InboundXcmpSuspendedTypedStorage.Update(data);
         }
         
         /// <summary>
-        /// >> InboundXcmpStatus
-        ///  Status of the inbound XCMP channels.
+        /// >> InboundXcmpSuspended
+        ///  The suspended inbound XCMP channels. All others are not suspended.
+        /// 
+        ///  This is a `StorageValue` instead of a `StorageMap` since we expect multiple reads per block
+        ///  to different keys with a one byte payload. The access to `BoundedBTreeSet` will be cached
+        ///  within the block and therefore only included once in the proof size.
+        /// 
+        ///  NOTE: The PoV benchmarking cannot know this and will over-estimate, but the actual proof
+        ///  will be smaller.
         /// </summary>
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.HydraDX.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue.InboundChannelDetails> GetInboundXcmpStatus()
+        public Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSetT1 GetInboundXcmpSuspended()
         {
-            return InboundXcmpStatusTypedStorage.Get();
-        }
-        
-        /// <summary>
-        /// Implements any storage change for XcmpQueue.InboundXcmpMessages
-        /// </summary>
-        [StorageChange("XcmpQueue", "InboundXcmpMessages")]
-        public void OnUpdateInboundXcmpMessages(string key, string data)
-        {
-            InboundXcmpMessagesTypedStorage.Update(key, data);
-        }
-        
-        /// <summary>
-        /// >> InboundXcmpMessages
-        ///  Inbound aggregate XCMP messages. It can only be one per ParaId/block.
-        /// </summary>
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> GetInboundXcmpMessages(string key)
-        {
-            if ((key == null))
-            {
-                return null;
-            }
-            if (InboundXcmpMessagesTypedStorage.Dictionary.TryGetValue(key, out Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> result))
-            {
-                return result;
-            }
-            else
-            {
-                return null;
-            }
+            return InboundXcmpSuspendedTypedStorage.Get();
         }
         
         /// <summary>
@@ -593,133 +378,6 @@ namespace Substrate.HydraDX.NET.RestService.Generated.Storage
         }
         
         /// <summary>
-        /// Implements any storage change for XcmpQueue.Overweight
-        /// </summary>
-        [StorageChange("XcmpQueue", "Overweight")]
-        public void OnUpdateOverweight(string key, string data)
-        {
-            OverweightTypedStorage.Update(key, data);
-        }
-        
-        /// <summary>
-        /// >> Overweight
-        ///  The messages that exceeded max individual message weight budget.
-        /// 
-        ///  These message stay in this storage map until they are manually dispatched via
-        ///  `service_overweight`.
-        /// </summary>
-        public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>> GetOverweight(string key)
-        {
-            if ((key == null))
-            {
-                return null;
-            }
-            if (OverweightTypedStorage.Dictionary.TryGetValue(key, out Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>> result))
-            {
-                return result;
-            }
-            else
-            {
-                return null;
-            }
-        }
-        
-        /// <summary>
-        /// Implements any storage change for XcmpQueue.CounterForOverweight
-        /// </summary>
-        [StorageChange("XcmpQueue", "CounterForOverweight")]
-        public void OnUpdateCounterForOverweight(string data)
-        {
-            CounterForOverweightTypedStorage.Update(data);
-        }
-        
-        /// <summary>
-        /// >> CounterForOverweight
-        /// Counter for the related counted storage map
-        /// </summary>
-        public Substrate.NetApi.Model.Types.Primitive.U32 GetCounterForOverweight()
-        {
-            return CounterForOverweightTypedStorage.Get();
-        }
-        
-        /// <summary>
-        /// Implements any storage change for XcmpQueue.OverweightCount
-        /// </summary>
-        [StorageChange("XcmpQueue", "OverweightCount")]
-        public void OnUpdateOverweightCount(string data)
-        {
-            OverweightCountTypedStorage.Update(data);
-        }
-        
-        /// <summary>
-        /// >> OverweightCount
-        ///  The number of overweight messages ever recorded in `Overweight`. Also doubles as the next
-        ///  available free overweight index.
-        /// </summary>
-        public Substrate.NetApi.Model.Types.Primitive.U64 GetOverweightCount()
-        {
-            return OverweightCountTypedStorage.Get();
-        }
-        
-        /// <summary>
-        /// Implements any storage change for XcmpQueue.DeferredIndices
-        /// </summary>
-        [StorageChange("XcmpQueue", "DeferredIndices")]
-        public void OnUpdateDeferredIndices(string key, string data)
-        {
-            DeferredIndicesTypedStorage.Update(key, data);
-        }
-        
-        /// <summary>
-        /// >> DeferredIndices
-        ///  Index of deferred message buckets to process.
-        /// </summary>
-        public Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSetT1 GetDeferredIndices(string key)
-        {
-            if ((key == null))
-            {
-                return null;
-            }
-            if (DeferredIndicesTypedStorage.Dictionary.TryGetValue(key, out Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSetT1 result))
-            {
-                return result;
-            }
-            else
-            {
-                return null;
-            }
-        }
-        
-        /// <summary>
-        /// Implements any storage change for XcmpQueue.DeferredMessageBuckets
-        /// </summary>
-        [StorageChange("XcmpQueue", "DeferredMessageBuckets")]
-        public void OnUpdateDeferredMessageBuckets(string key, string data)
-        {
-            DeferredMessageBucketsTypedStorage.Update(key, data);
-        }
-        
-        /// <summary>
-        /// >> DeferredMessageBuckets
-        ///  Storage for deferred messages, indexed by para id, block and counter.
-        /// </summary>
-        public Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT43 GetDeferredMessageBuckets(string key)
-        {
-            if ((key == null))
-            {
-                return null;
-            }
-            if (DeferredMessageBucketsTypedStorage.Dictionary.TryGetValue(key, out Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT43 result))
-            {
-                return result;
-            }
-            else
-            {
-                return null;
-            }
-        }
-        
-        /// <summary>
         /// Implements any storage change for XcmpQueue.QueueSuspended
         /// </summary>
         [StorageChange("XcmpQueue", "QueueSuspended")]
@@ -738,39 +396,32 @@ namespace Substrate.HydraDX.NET.RestService.Generated.Storage
         }
         
         /// <summary>
-        /// Implements any storage change for XcmpQueue.DeferredQueueSuspended
+        /// Implements any storage change for XcmpQueue.DeliveryFeeFactor
         /// </summary>
-        [StorageChange("XcmpQueue", "DeferredQueueSuspended")]
-        public void OnUpdateDeferredQueueSuspended(string data)
+        [StorageChange("XcmpQueue", "DeliveryFeeFactor")]
+        public void OnUpdateDeliveryFeeFactor(string key, string data)
         {
-            DeferredQueueSuspendedTypedStorage.Update(data);
+            DeliveryFeeFactorTypedStorage.Update(key, data);
         }
         
         /// <summary>
-        /// >> DeferredQueueSuspended
-        ///  Whether or not the Deferred queue is suspended from executing XCMs or not.
+        /// >> DeliveryFeeFactor
+        ///  The factor to multiply the base delivery fee by.
         /// </summary>
-        public Substrate.NetApi.Model.Types.Primitive.Bool GetDeferredQueueSuspended()
+        public Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedU128 GetDeliveryFeeFactor(string key)
         {
-            return DeferredQueueSuspendedTypedStorage.Get();
-        }
-        
-        /// <summary>
-        /// Implements any storage change for XcmpQueue.DeferAllBy
-        /// </summary>
-        [StorageChange("XcmpQueue", "DeferAllBy")]
-        public void OnUpdateDeferAllBy(string data)
-        {
-            DeferAllByTypedStorage.Update(data);
-        }
-        
-        /// <summary>
-        /// >> DeferAllBy
-        ///  Whether or not and if so by how much to defer all incoming XCMs.
-        /// </summary>
-        public Substrate.NetApi.Model.Types.Primitive.U32 GetDeferAllBy()
-        {
-            return DeferAllByTypedStorage.Get();
+            if ((key == null))
+            {
+                return null;
+            }
+            if (DeliveryFeeFactorTypedStorage.Dictionary.TryGetValue(key, out Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedU128 result))
+            {
+                return result;
+            }
+            else
+            {
+                return null;
+            }
         }
     }
 }

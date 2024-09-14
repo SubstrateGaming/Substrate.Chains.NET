@@ -60,10 +60,23 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_tips.pallet
     }
     
     /// <summary>
-    /// >> 304 - Variant[pallet_tips.pallet.Call]
+    /// >> 344 - Variant[pallet_tips.pallet.Call]
     /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
-    public sealed class EnumCall : BaseEnumExt<Call, BaseTuple<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>, Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>, Substrate.HydraDX.NET.NetApiExt.Generated.Model.primitive_types.H256, BaseTuple<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>, Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128>>, BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128>>, Substrate.HydraDX.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.HydraDX.NET.NetApiExt.Generated.Model.primitive_types.H256>
+    public sealed class EnumCall : BaseEnumRust<Call>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumCall()
+        {
+				AddTypeDecoder<BaseTuple<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>, Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>>(Call.report_awesome);
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.primitive_types.H256>(Call.retract_tip);
+				AddTypeDecoder<BaseTuple<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>, Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128>>>(Call.tip_new);
+				AddTypeDecoder<BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128>>>(Call.tip);
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.primitive_types.H256>(Call.close_tip);
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.primitive_types.H256>(Call.slash_tip);
+        }
     }
 }

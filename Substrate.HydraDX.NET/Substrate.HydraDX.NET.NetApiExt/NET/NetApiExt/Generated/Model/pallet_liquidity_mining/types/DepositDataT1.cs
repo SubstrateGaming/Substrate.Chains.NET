@@ -9,7 +9,7 @@
 
 using Substrate.NetApi.Attributes;
 using Substrate.NetApi.Model.Types.Base;
-using Substrate.NetApi.Model.Types.Metadata.V14;
+using Substrate.NetApi.Model.Types.Metadata.Base;
 using System.Collections.Generic;
 
 
@@ -18,7 +18,7 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_liquidity_minin
     
     
     /// <summary>
-    /// >> 514 - Composite[pallet_liquidity_mining.types.DepositDataT1]
+    /// >> 575 - Composite[pallet_liquidity_mining.types.DepositDataT1]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class DepositDataT1 : BaseType
@@ -35,7 +35,7 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_liquidity_minin
         /// <summary>
         /// >> yield_farm_entries
         /// </summary>
-        public Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT31 YieldFarmEntries { get; set; }
+        public Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT35 YieldFarmEntries { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
@@ -61,7 +61,7 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_liquidity_minin
             Shares.Decode(byteArray, ref p);
             AmmPoolId = new Substrate.NetApi.Model.Types.Primitive.U32();
             AmmPoolId.Decode(byteArray, ref p);
-            YieldFarmEntries = new Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT31();
+            YieldFarmEntries = new Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT35();
             YieldFarmEntries.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

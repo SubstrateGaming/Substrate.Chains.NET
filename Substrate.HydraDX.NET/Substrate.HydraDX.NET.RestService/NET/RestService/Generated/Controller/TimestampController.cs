@@ -39,7 +39,7 @@ namespace Substrate.HydraDX.NET.RestService.Generated.Controller
         
         /// <summary>
         /// >> Now
-        ///  Current time for the current block.
+        ///  The current time for the current block.
         /// </summary>
         [HttpGet("Now")]
         [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Primitive.U64), 200)]
@@ -51,7 +51,10 @@ namespace Substrate.HydraDX.NET.RestService.Generated.Controller
         
         /// <summary>
         /// >> DidUpdate
-        ///  Did the timestamp get updated in this block?
+        ///  Whether the timestamp has been updated in this block.
+        /// 
+        ///  This value is updated to `true` upon successful submission of a timestamp by a node.
+        ///  It is then checked at the end of each block execution in the `on_finalize` hook.
         /// </summary>
         [HttpGet("DidUpdate")]
         [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Primitive.Bool), 200)]

@@ -54,7 +54,7 @@ namespace Substrate.HydraDX.NET.RestService.Generated.Controller
         ///  The public proposals. Unsorted. The second item is the proposal.
         /// </summary>
         [HttpGet("PublicProps")]
-        [ProducesResponseType(typeof(Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT21), 200)]
+        [ProducesResponseType(typeof(Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT25), 200)]
         [StorageKeyBuilder(typeof(Substrate.HydraDX.NET.NetApiExt.Generated.Storage.DemocracyStorage), "PublicPropsParams")]
         public IActionResult GetPublicProps()
         {
@@ -68,7 +68,7 @@ namespace Substrate.HydraDX.NET.RestService.Generated.Controller
         ///  TWOX-NOTE: Safe, as increasing integer keys are safe.
         /// </summary>
         [HttpGet("DepositOf")]
-        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT22, Substrate.NetApi.Model.Types.Primitive.U128>), 200)]
+        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT26, Substrate.NetApi.Model.Types.Primitive.U128>), 200)]
         [StorageKeyBuilder(typeof(Substrate.HydraDX.NET.NetApiExt.Generated.Storage.DemocracyStorage), "DepositOfParams", typeof(Substrate.NetApi.Model.Types.Primitive.U32))]
         public IActionResult GetDepositOf(string key)
         {
@@ -163,7 +163,7 @@ namespace Substrate.HydraDX.NET.RestService.Generated.Controller
         ///  (until when it may not be resubmitted) and who vetoed it.
         /// </summary>
         [HttpGet("Blacklist")]
-        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT22>), 200)]
+        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT26>), 200)]
         [StorageKeyBuilder(typeof(Substrate.HydraDX.NET.NetApiExt.Generated.Storage.DemocracyStorage), "BlacklistParams", typeof(Substrate.HydraDX.NET.NetApiExt.Generated.Model.primitive_types.H256))]
         public IActionResult GetBlacklist(string key)
         {
@@ -185,7 +185,7 @@ namespace Substrate.HydraDX.NET.RestService.Generated.Controller
         /// <summary>
         /// >> MetadataOf
         ///  General information concerning any proposal or referendum.
-        ///  The `PreimageHash` refers to the preimage of the `Preimages` provider which can be a JSON
+        ///  The `Hash` refers to the preimage of the `Preimages` provider which can be a JSON
         ///  dump or IPFS hash of a JSON file.
         /// 
         ///  Consider a garbage collection for a metadata of finished referendums to `unrequest` (remove)

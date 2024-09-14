@@ -102,7 +102,7 @@ namespace Substrate.HydraDX.NET.RestService.Generated.Controller
         ///  Keep tracking of the schedule ids to be executed in the block
         /// </summary>
         [HttpGet("ScheduleIdsPerBlock")]
-        [ProducesResponseType(typeof(Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT39), 200)]
+        [ProducesResponseType(typeof(Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT42), 200)]
         [StorageKeyBuilder(typeof(Substrate.HydraDX.NET.NetApiExt.Generated.Storage.DCAStorage), "ScheduleIdsPerBlockParams", typeof(Substrate.NetApi.Model.Types.Primitive.U32))]
         public IActionResult GetScheduleIdsPerBlock(string key)
         {

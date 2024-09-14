@@ -42,10 +42,20 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_evm_accounts.pa
     }
     
     /// <summary>
-    /// >> 140 - Variant[pallet_evm_accounts.pallet.Event]
+    /// >> 142 - Variant[pallet_evm_accounts.pallet.Event]
     /// The `Event` enum of this pallet
     /// </summary>
-    public sealed class EnumEvent : BaseEnumExt<Event, BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.HydraDX.NET.NetApiExt.Generated.Model.primitive_types.H160>, Substrate.HydraDX.NET.NetApiExt.Generated.Model.primitive_types.H160, Substrate.HydraDX.NET.NetApiExt.Generated.Model.primitive_types.H160>
+    public sealed class EnumEvent : BaseEnumRust<Event>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumEvent()
+        {
+				AddTypeDecoder<BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.HydraDX.NET.NetApiExt.Generated.Model.primitive_types.H160>>(Event.Bound);
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.primitive_types.H160>(Event.DeployerAdded);
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.primitive_types.H160>(Event.DeployerRemoved);
+        }
     }
 }

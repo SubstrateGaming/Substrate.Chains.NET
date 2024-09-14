@@ -108,7 +108,7 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_liquidity_minin
     }
     
     /// <summary>
-    /// >> 519 - Variant[pallet_liquidity_mining.pallet.InconsistentStateError]
+    /// >> 580 - Variant[pallet_liquidity_mining.pallet.InconsistentStateError]
     /// </summary>
     public sealed class EnumInconsistentStateError : BaseEnum<InconsistentStateError>
     {

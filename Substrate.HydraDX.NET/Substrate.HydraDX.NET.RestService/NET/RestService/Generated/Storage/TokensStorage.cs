@@ -35,7 +35,7 @@ namespace Substrate.HydraDX.NET.RestService.Generated.Storage
         ///  Any liquidity locks of a token type under an account.
         ///  NOTE: Should only be accessed when setting, changing and freeing a lock.
         /// </summary>
-        Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT34 GetLocks(string key);
+        Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT38 GetLocks(string key);
         
         /// <summary>
         /// >> Accounts
@@ -52,7 +52,7 @@ namespace Substrate.HydraDX.NET.RestService.Generated.Storage
         /// >> Reserves
         ///  Named reserves on some account balances.
         /// </summary>
-        Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT35 GetReserves(string key);
+        Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT39 GetReserves(string key);
     }
     
     /// <summary>
@@ -69,7 +69,7 @@ namespace Substrate.HydraDX.NET.RestService.Generated.Storage
         /// <summary>
         /// _locksTypedStorage typed storage field
         /// </summary>
-        private TypedMapStorage<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT34> _locksTypedStorage;
+        private TypedMapStorage<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT38> _locksTypedStorage;
         
         /// <summary>
         /// _accountsTypedStorage typed storage field
@@ -79,7 +79,7 @@ namespace Substrate.HydraDX.NET.RestService.Generated.Storage
         /// <summary>
         /// _reservesTypedStorage typed storage field
         /// </summary>
-        private TypedMapStorage<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT35> _reservesTypedStorage;
+        private TypedMapStorage<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT39> _reservesTypedStorage;
         
         /// <summary>
         /// TokensStorage constructor.
@@ -87,9 +87,9 @@ namespace Substrate.HydraDX.NET.RestService.Generated.Storage
         public TokensStorage(IStorageDataProvider storageDataProvider, List<IStorageChangeDelegate> storageChangeDelegates)
         {
             this.TotalIssuanceTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Primitive.U128>("Tokens.TotalIssuance", storageDataProvider, storageChangeDelegates);
-            this.LocksTypedStorage = new TypedMapStorage<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT34>("Tokens.Locks", storageDataProvider, storageChangeDelegates);
+            this.LocksTypedStorage = new TypedMapStorage<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT38>("Tokens.Locks", storageDataProvider, storageChangeDelegates);
             this.AccountsTypedStorage = new TypedMapStorage<Substrate.HydraDX.NET.NetApiExt.Generated.Model.orml_tokens.AccountData>("Tokens.Accounts", storageDataProvider, storageChangeDelegates);
-            this.ReservesTypedStorage = new TypedMapStorage<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT35>("Tokens.Reserves", storageDataProvider, storageChangeDelegates);
+            this.ReservesTypedStorage = new TypedMapStorage<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT39>("Tokens.Reserves", storageDataProvider, storageChangeDelegates);
         }
         
         /// <summary>
@@ -110,7 +110,7 @@ namespace Substrate.HydraDX.NET.RestService.Generated.Storage
         /// <summary>
         /// _locksTypedStorage property
         /// </summary>
-        public TypedMapStorage<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT34> LocksTypedStorage
+        public TypedMapStorage<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT38> LocksTypedStorage
         {
             get
             {
@@ -140,7 +140,7 @@ namespace Substrate.HydraDX.NET.RestService.Generated.Storage
         /// <summary>
         /// _reservesTypedStorage property
         /// </summary>
-        public TypedMapStorage<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT35> ReservesTypedStorage
+        public TypedMapStorage<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT39> ReservesTypedStorage
         {
             get
             {
@@ -206,13 +206,13 @@ namespace Substrate.HydraDX.NET.RestService.Generated.Storage
         ///  Any liquidity locks of a token type under an account.
         ///  NOTE: Should only be accessed when setting, changing and freeing a lock.
         /// </summary>
-        public Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT34 GetLocks(string key)
+        public Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT38 GetLocks(string key)
         {
             if ((key == null))
             {
                 return null;
             }
-            if (LocksTypedStorage.Dictionary.TryGetValue(key, out Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT34 result))
+            if (LocksTypedStorage.Dictionary.TryGetValue(key, out Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT38 result))
             {
                 return result;
             }
@@ -269,13 +269,13 @@ namespace Substrate.HydraDX.NET.RestService.Generated.Storage
         /// >> Reserves
         ///  Named reserves on some account balances.
         /// </summary>
-        public Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT35 GetReserves(string key)
+        public Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT39 GetReserves(string key)
         {
             if ((key == null))
             {
                 return null;
             }
-            if (ReservesTypedStorage.Dictionary.TryGetValue(key, out Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT35 result))
+            if (ReservesTypedStorage.Dictionary.TryGetValue(key, out Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT39 result))
             {
                 return result;
             }

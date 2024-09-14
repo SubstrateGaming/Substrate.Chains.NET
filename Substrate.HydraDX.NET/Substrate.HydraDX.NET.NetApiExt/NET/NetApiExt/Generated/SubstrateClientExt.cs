@@ -50,6 +50,11 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated
         public TransactionPaymentStorage TransactionPaymentStorage;
         
         /// <summary>
+        /// MultiTransactionPaymentStorage storage calls.
+        /// </summary>
+        public MultiTransactionPaymentStorage MultiTransactionPaymentStorage;
+        
+        /// <summary>
         /// TreasuryStorage storage calls.
         /// </summary>
         public TreasuryStorage TreasuryStorage;
@@ -195,6 +200,11 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated
         public BondsStorage BondsStorage;
         
         /// <summary>
+        /// OtcSettlementsStorage storage calls.
+        /// </summary>
+        public OtcSettlementsStorage OtcSettlementsStorage;
+        
+        /// <summary>
         /// LBPStorage storage calls.
         /// </summary>
         public LBPStorage LBPStorage;
@@ -208,11 +218,6 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated
         /// ReferralsStorage storage calls.
         /// </summary>
         public ReferralsStorage ReferralsStorage;
-        
-        /// <summary>
-        /// XcmRateLimiterStorage storage calls.
-        /// </summary>
-        public XcmRateLimiterStorage XcmRateLimiterStorage;
         
         /// <summary>
         /// TokensStorage storage calls.
@@ -265,6 +270,21 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated
         public XYKWarehouseLMStorage XYKWarehouseLMStorage;
         
         /// <summary>
+        /// RelayChainInfoStorage storage calls.
+        /// </summary>
+        public RelayChainInfoStorage RelayChainInfoStorage;
+        
+        /// <summary>
+        /// DCAStorage storage calls.
+        /// </summary>
+        public DCAStorage DCAStorage;
+        
+        /// <summary>
+        /// SchedulerStorage storage calls.
+        /// </summary>
+        public SchedulerStorage SchedulerStorage;
+        
+        /// <summary>
         /// ParachainSystemStorage storage calls.
         /// </summary>
         public ParachainSystemStorage ParachainSystemStorage;
@@ -273,16 +293,6 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated
         /// ParachainInfoStorage storage calls.
         /// </summary>
         public ParachainInfoStorage ParachainInfoStorage;
-        
-        /// <summary>
-        /// SchedulerStorage storage calls.
-        /// </summary>
-        public SchedulerStorage SchedulerStorage;
-        
-        /// <summary>
-        /// DCAStorage storage calls.
-        /// </summary>
-        public DCAStorage DCAStorage;
         
         /// <summary>
         /// PolkadotXcmStorage storage calls.
@@ -300,9 +310,9 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated
         public XcmpQueueStorage XcmpQueueStorage;
         
         /// <summary>
-        /// DmpQueueStorage storage calls.
+        /// MessageQueueStorage storage calls.
         /// </summary>
-        public DmpQueueStorage DmpQueueStorage;
+        public MessageQueueStorage MessageQueueStorage;
         
         /// <summary>
         /// OrmlXcmStorage storage calls.
@@ -345,19 +355,9 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated
         public AuraExtStorage AuraExtStorage;
         
         /// <summary>
-        /// RelayChainInfoStorage storage calls.
-        /// </summary>
-        public RelayChainInfoStorage RelayChainInfoStorage;
-        
-        /// <summary>
         /// EmaOracleStorage storage calls.
         /// </summary>
         public EmaOracleStorage EmaOracleStorage;
-        
-        /// <summary>
-        /// MultiTransactionPaymentStorage storage calls.
-        /// </summary>
-        public MultiTransactionPaymentStorage MultiTransactionPaymentStorage;
         
         public SubstrateClientExt(System.Uri uri, Substrate.NetApi.Model.Extrinsics.ChargeType chargeType) : 
                 base(uri, chargeType)
@@ -367,6 +367,7 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated
             this.TimestampStorage = new TimestampStorage(this);
             this.BalancesStorage = new BalancesStorage(this);
             this.TransactionPaymentStorage = new TransactionPaymentStorage(this);
+            this.MultiTransactionPaymentStorage = new MultiTransactionPaymentStorage(this);
             this.TreasuryStorage = new TreasuryStorage(this);
             this.UtilityStorage = new UtilityStorage(this);
             this.PreimageStorage = new PreimageStorage(this);
@@ -396,10 +397,10 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated
             this.StakingStorage = new StakingStorage(this);
             this.StableswapStorage = new StableswapStorage(this);
             this.BondsStorage = new BondsStorage(this);
+            this.OtcSettlementsStorage = new OtcSettlementsStorage(this);
             this.LBPStorage = new LBPStorage(this);
             this.XYKStorage = new XYKStorage(this);
             this.ReferralsStorage = new ReferralsStorage(this);
-            this.XcmRateLimiterStorage = new XcmRateLimiterStorage(this);
             this.TokensStorage = new TokensStorage(this);
             this.CurrenciesStorage = new CurrenciesStorage(this);
             this.VestingStorage = new VestingStorage(this);
@@ -410,14 +411,15 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated
             this.DynamicEvmFeeStorage = new DynamicEvmFeeStorage(this);
             this.XYKLiquidityMiningStorage = new XYKLiquidityMiningStorage(this);
             this.XYKWarehouseLMStorage = new XYKWarehouseLMStorage(this);
+            this.RelayChainInfoStorage = new RelayChainInfoStorage(this);
+            this.DCAStorage = new DCAStorage(this);
+            this.SchedulerStorage = new SchedulerStorage(this);
             this.ParachainSystemStorage = new ParachainSystemStorage(this);
             this.ParachainInfoStorage = new ParachainInfoStorage(this);
-            this.SchedulerStorage = new SchedulerStorage(this);
-            this.DCAStorage = new DCAStorage(this);
             this.PolkadotXcmStorage = new PolkadotXcmStorage(this);
             this.CumulusXcmStorage = new CumulusXcmStorage(this);
             this.XcmpQueueStorage = new XcmpQueueStorage(this);
-            this.DmpQueueStorage = new DmpQueueStorage(this);
+            this.MessageQueueStorage = new MessageQueueStorage(this);
             this.OrmlXcmStorage = new OrmlXcmStorage(this);
             this.XTokensStorage = new XTokensStorage(this);
             this.UnknownTokensStorage = new UnknownTokensStorage(this);
@@ -426,9 +428,7 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated
             this.SessionStorage = new SessionStorage(this);
             this.AuraStorage = new AuraStorage(this);
             this.AuraExtStorage = new AuraExtStorage(this);
-            this.RelayChainInfoStorage = new RelayChainInfoStorage(this);
             this.EmaOracleStorage = new EmaOracleStorage(this);
-            this.MultiTransactionPaymentStorage = new MultiTransactionPaymentStorage(this);
         }
     }
 }

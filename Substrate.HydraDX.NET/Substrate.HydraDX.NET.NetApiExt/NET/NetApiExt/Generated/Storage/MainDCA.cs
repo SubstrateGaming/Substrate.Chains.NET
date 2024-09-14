@@ -47,7 +47,7 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Storage
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("DCA", "RetriesOnError"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.NetApi.Model.Types.Primitive.U32), typeof(Substrate.NetApi.Model.Types.Primitive.U8)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("DCA", "ScheduleIdsPerBlock"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.NetApi.Model.Types.Primitive.U32), typeof(Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT39)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.NetApi.Model.Types.Primitive.U32), typeof(Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT42)));
         }
         
         /// <summary>
@@ -227,10 +227,10 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Storage
         /// >> ScheduleIdsPerBlock
         ///  Keep tracking of the schedule ids to be executed in the block
         /// </summary>
-        public async Task<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT39> ScheduleIdsPerBlock(Substrate.NetApi.Model.Types.Primitive.U32 key, string blockhash, CancellationToken token)
+        public async Task<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT42> ScheduleIdsPerBlock(Substrate.NetApi.Model.Types.Primitive.U32 key, string blockhash, CancellationToken token)
         {
             string parameters = DCAStorage.ScheduleIdsPerBlockParams(key);
-            var result = await _client.GetStorageAsync<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT39>(parameters, blockhash, token);
+            var result = await _client.GetStorageAsync<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT42>(parameters, blockhash, token);
             return result;
         }
     }
@@ -284,6 +284,17 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Storage
         }
         
         /// <summary>
+        /// >> MaxConfigurablePriceDifferenceBetweenBlocks
+        /// Max configurable price difference allowed between blocks
+        /// </summary>
+        public Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Permill MaxConfigurablePriceDifferenceBetweenBlocks()
+        {
+            var result = new Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Permill();
+            result.Create("0x50C30000");
+            return result;
+        }
+        
+        /// <summary>
         /// >> MaxSchedulePerBlock
         /// The number of max schedules to be executed per block
         /// </summary>
@@ -302,6 +313,28 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Storage
         {
             var result = new Substrate.NetApi.Model.Types.Primitive.U8();
             result.Create("0x03");
+            return result;
+        }
+        
+        /// <summary>
+        /// >> MinimalPeriod
+        /// Minimal period between executions
+        /// </summary>
+        public Substrate.NetApi.Model.Types.Primitive.U32 MinimalPeriod()
+        {
+            var result = new Substrate.NetApi.Model.Types.Primitive.U32();
+            result.Create("0x05000000");
+            return result;
+        }
+        
+        /// <summary>
+        /// >> BumpChance
+        /// Chance of the random rescheduling
+        /// </summary>
+        public Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Percent BumpChance()
+        {
+            var result = new Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Percent();
+            result.Create("0x11");
             return result;
         }
         
@@ -398,6 +431,12 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Storage
         PriceUnstable,
         
         /// <summary>
+        /// >> Bumped
+        /// Order was randomly rescheduled to next block
+        /// </summary>
+        Bumped,
+        
+        /// <summary>
         /// >> CalculatingPriceError
         /// Error occurred when calculating price
         /// </summary>
@@ -411,7 +450,7 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> BudgetTooLow
-        /// The budget is too low for executing one DCA
+        /// The budget is too low for executing at least two orders
         /// </summary>
         BudgetTooLow,
         
@@ -435,7 +474,7 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> TradeLimitReached
-        /// Absolutely trade limit reached reached, leading to retry
+        /// Absolutely trade limit reached, leading to retry
         /// </summary>
         TradeLimitReached,
         
@@ -456,5 +495,17 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Storage
         /// Error that should not really happen only in case of invalid state of the schedule storage entries
         /// </summary>
         InvalidState,
+        
+        /// <summary>
+        /// >> PeriodTooShort
+        /// Period should be longer than 5 blocks
+        /// </summary>
+        PeriodTooShort,
+        
+        /// <summary>
+        /// >> StabilityThresholdTooHigh
+        /// Stability threshold cannot be higher than `MaxConfigurablePriceDifferenceBetweenBlock`
+        /// </summary>
+        StabilityThresholdTooHigh,
     }
 }

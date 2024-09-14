@@ -59,24 +59,53 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_collator_select
         CandidateAdded = 5,
         
         /// <summary>
+        /// >> CandidateBondUpdated
+        /// Bond of a candidate updated.
+        /// </summary>
+        CandidateBondUpdated = 6,
+        
+        /// <summary>
         /// >> CandidateRemoved
         /// A candidate was removed.
         /// </summary>
-        CandidateRemoved = 6,
+        CandidateRemoved = 7,
+        
+        /// <summary>
+        /// >> CandidateReplaced
+        /// An account was replaced in the candidate list by another one.
+        /// </summary>
+        CandidateReplaced = 8,
         
         /// <summary>
         /// >> InvalidInvulnerableSkipped
         /// An account was unable to be added to the Invulnerables because they did not have keys
         /// registered. Other Invulnerables may have been set.
         /// </summary>
-        InvalidInvulnerableSkipped = 7,
+        InvalidInvulnerableSkipped = 9,
     }
     
     /// <summary>
-    /// >> 206 - Variant[pallet_collator_selection.pallet.Event]
+    /// >> 229 - Variant[pallet_collator_selection.pallet.Event]
     /// The `Event` enum of this pallet
     /// </summary>
-    public sealed class EnumEvent : BaseEnumExt<Event, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>, Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U128, BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U128>, Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>
+    public sealed class EnumEvent : BaseEnumRust<Event>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumEvent()
+        {
+				AddTypeDecoder<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>>(Event.NewInvulnerables);
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>(Event.InvulnerableAdded);
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>(Event.InvulnerableRemoved);
+				AddTypeDecoder<Substrate.NetApi.Model.Types.Primitive.U32>(Event.NewDesiredCandidates);
+				AddTypeDecoder<Substrate.NetApi.Model.Types.Primitive.U128>(Event.NewCandidacyBond);
+				AddTypeDecoder<BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U128>>(Event.CandidateAdded);
+				AddTypeDecoder<BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U128>>(Event.CandidateBondUpdated);
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>(Event.CandidateRemoved);
+				AddTypeDecoder<BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U128>>(Event.CandidateReplaced);
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>(Event.InvalidInvulnerableSkipped);
+        }
     }
 }

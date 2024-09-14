@@ -9,7 +9,7 @@
 
 using Substrate.NetApi.Attributes;
 using Substrate.NetApi.Model.Types.Base;
-using Substrate.NetApi.Model.Types.Metadata.V14;
+using Substrate.NetApi.Model.Types.Metadata.Base;
 using System.Collections.Generic;
 
 
@@ -18,7 +18,7 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_asset_registry.
     
     
     /// <summary>
-    /// >> 496 - Composite[pallet_asset_registry.types.AssetDetails]
+    /// >> 557 - Composite[pallet_asset_registry.types.AssetDetails]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class AssetDetails : BaseType
@@ -27,7 +27,7 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_asset_registry.
         /// <summary>
         /// >> name
         /// </summary>
-        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT4> Name { get; set; }
+        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT5> Name { get; set; }
         /// <summary>
         /// >> asset_type
         /// </summary>
@@ -39,7 +39,7 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_asset_registry.
         /// <summary>
         /// >> symbol
         /// </summary>
-        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT4> Symbol { get; set; }
+        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT5> Symbol { get; set; }
         /// <summary>
         /// >> decimals
         /// </summary>
@@ -77,13 +77,13 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_asset_registry.
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Name = new Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT4>();
+            Name = new Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT5>();
             Name.Decode(byteArray, ref p);
             AssetType = new Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_asset_registry.types.EnumAssetType();
             AssetType.Decode(byteArray, ref p);
             ExistentialDeposit = new Substrate.NetApi.Model.Types.Primitive.U128();
             ExistentialDeposit.Decode(byteArray, ref p);
-            Symbol = new Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT4>();
+            Symbol = new Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT5>();
             Symbol.Decode(byteArray, ref p);
             Decimals = new Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U8>();
             Decimals.Decode(byteArray, ref p);

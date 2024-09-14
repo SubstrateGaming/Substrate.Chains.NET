@@ -42,7 +42,7 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.orml_unknown_tokens.mo
     }
     
     /// <summary>
-    /// >> 687 - Variant[orml_unknown_tokens.module.Error]
+    /// >> 734 - Variant[orml_unknown_tokens.module.Error]
     /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>

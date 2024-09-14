@@ -38,9 +38,19 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.frame_support.traits.p
     }
     
     /// <summary>
-    /// >> 296 - Variant[frame_support.traits.preimages.Bounded]
+    /// >> 335 - Variant[frame_support.traits.preimages.Bounded]
     /// </summary>
-    public sealed class EnumBounded : BaseEnumExt<Bounded, Substrate.HydraDX.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT15, BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Primitive.U32>>
+    public sealed class EnumBounded : BaseEnumRust<Bounded>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumBounded()
+        {
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.primitive_types.H256>(Bounded.Legacy);
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT16>(Bounded.Inline);
+				AddTypeDecoder<BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Primitive.U32>>(Bounded.Lookup);
+        }
     }
 }

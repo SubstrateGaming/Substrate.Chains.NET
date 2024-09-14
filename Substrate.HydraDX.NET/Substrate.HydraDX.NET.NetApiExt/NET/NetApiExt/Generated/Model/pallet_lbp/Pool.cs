@@ -9,7 +9,7 @@
 
 using Substrate.NetApi.Attributes;
 using Substrate.NetApi.Model.Types.Base;
-using Substrate.NetApi.Model.Types.Metadata.V14;
+using Substrate.NetApi.Model.Types.Metadata.Base;
 using System.Collections.Generic;
 
 
@@ -18,7 +18,7 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_lbp
     
     
     /// <summary>
-    /// >> 111 - Composite[pallet_lbp.Pool]
+    /// >> 114 - Composite[pallet_lbp.Pool]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Pool : BaseType

@@ -72,7 +72,7 @@ namespace Substrate.HydraDX.NET.RestService.Generated.Storage
         /// >> Attribute
         ///  Attributes of a collection.
         /// </summary>
-        Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT3, Substrate.NetApi.Model.Types.Primitive.U128> GetAttribute(string key);
+        Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT4, Substrate.NetApi.Model.Types.Primitive.U128> GetAttribute(string key);
         
         /// <summary>
         /// >> ItemPriceOf
@@ -131,7 +131,7 @@ namespace Substrate.HydraDX.NET.RestService.Generated.Storage
         /// <summary>
         /// _attributeTypedStorage typed storage field
         /// </summary>
-        private TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT3, Substrate.NetApi.Model.Types.Primitive.U128>> _attributeTypedStorage;
+        private TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT4, Substrate.NetApi.Model.Types.Primitive.U128>> _attributeTypedStorage;
         
         /// <summary>
         /// _itemPriceOfTypedStorage typed storage field
@@ -155,7 +155,7 @@ namespace Substrate.HydraDX.NET.RestService.Generated.Storage
             this.AssetTypedStorage = new TypedMapStorage<Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_uniques.types.ItemDetails>("Uniques.Asset", storageDataProvider, storageChangeDelegates);
             this.ClassMetadataOfTypedStorage = new TypedMapStorage<Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_uniques.types.CollectionMetadata>("Uniques.ClassMetadataOf", storageDataProvider, storageChangeDelegates);
             this.InstanceMetadataOfTypedStorage = new TypedMapStorage<Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_uniques.types.ItemMetadata>("Uniques.InstanceMetadataOf", storageDataProvider, storageChangeDelegates);
-            this.AttributeTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT3, Substrate.NetApi.Model.Types.Primitive.U128>>("Uniques.Attribute", storageDataProvider, storageChangeDelegates);
+            this.AttributeTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT4, Substrate.NetApi.Model.Types.Primitive.U128>>("Uniques.Attribute", storageDataProvider, storageChangeDelegates);
             this.ItemPriceOfTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>>>("Uniques.ItemPriceOf", storageDataProvider, storageChangeDelegates);
             this.CollectionMaxSupplyTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Primitive.U32>("Uniques.CollectionMaxSupply", storageDataProvider, storageChangeDelegates);
         }
@@ -268,7 +268,7 @@ namespace Substrate.HydraDX.NET.RestService.Generated.Storage
         /// <summary>
         /// _attributeTypedStorage property
         /// </summary>
-        public TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT3, Substrate.NetApi.Model.Types.Primitive.U128>> AttributeTypedStorage
+        public TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT4, Substrate.NetApi.Model.Types.Primitive.U128>> AttributeTypedStorage
         {
             get
             {
@@ -545,13 +545,13 @@ namespace Substrate.HydraDX.NET.RestService.Generated.Storage
         /// >> Attribute
         ///  Attributes of a collection.
         /// </summary>
-        public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT3, Substrate.NetApi.Model.Types.Primitive.U128> GetAttribute(string key)
+        public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT4, Substrate.NetApi.Model.Types.Primitive.U128> GetAttribute(string key)
         {
             if ((key == null))
             {
                 return null;
             }
-            if (AttributeTypedStorage.Dictionary.TryGetValue(key, out Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT3, Substrate.NetApi.Model.Types.Primitive.U128> result))
+            if (AttributeTypedStorage.Dictionary.TryGetValue(key, out Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT4, Substrate.NetApi.Model.Types.Primitive.U128> result))
             {
                 return result;
             }

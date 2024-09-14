@@ -65,7 +65,7 @@ namespace Substrate.HydraDX.NET.RestService.Generated.Controller
         /// >> AssetTraps
         ///  The existing asset traps.
         /// 
-        ///  Key is the blake2 256 hash of (origin, versioned `MultiAssets`) pair. Value is the number of
+        ///  Key is the blake2 256 hash of (origin, versioned `Assets`) pair. Value is the number of
         ///  times this pair has been trapped (usually just 1 if it exists at all).
         /// </summary>
         [HttpGet("AssetTraps")]
@@ -95,7 +95,7 @@ namespace Substrate.HydraDX.NET.RestService.Generated.Controller
         /// </summary>
         [HttpGet("SupportedVersion")]
         [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Primitive.U32), 200)]
-        [StorageKeyBuilder(typeof(Substrate.HydraDX.NET.NetApiExt.Generated.Storage.PolkadotXcmStorage), "SupportedVersionParams", typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.HydraDX.NET.NetApiExt.Generated.Model.staging_xcm.EnumVersionedMultiLocation>))]
+        [StorageKeyBuilder(typeof(Substrate.HydraDX.NET.NetApiExt.Generated.Storage.PolkadotXcmStorage), "SupportedVersionParams", typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.HydraDX.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation>))]
         public IActionResult GetSupportedVersion(string key)
         {
             return this.Ok(_polkadotXcmStorage.GetSupportedVersion(key));
@@ -107,7 +107,7 @@ namespace Substrate.HydraDX.NET.RestService.Generated.Controller
         /// </summary>
         [HttpGet("VersionNotifiers")]
         [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Primitive.U64), 200)]
-        [StorageKeyBuilder(typeof(Substrate.HydraDX.NET.NetApiExt.Generated.Storage.PolkadotXcmStorage), "VersionNotifiersParams", typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.HydraDX.NET.NetApiExt.Generated.Model.staging_xcm.EnumVersionedMultiLocation>))]
+        [StorageKeyBuilder(typeof(Substrate.HydraDX.NET.NetApiExt.Generated.Storage.PolkadotXcmStorage), "VersionNotifiersParams", typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.HydraDX.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation>))]
         public IActionResult GetVersionNotifiers(string key)
         {
             return this.Ok(_polkadotXcmStorage.GetVersionNotifiers(key));
@@ -120,7 +120,7 @@ namespace Substrate.HydraDX.NET.RestService.Generated.Controller
         /// </summary>
         [HttpGet("VersionNotifyTargets")]
         [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U64, Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight, Substrate.NetApi.Model.Types.Primitive.U32>), 200)]
-        [StorageKeyBuilder(typeof(Substrate.HydraDX.NET.NetApiExt.Generated.Storage.PolkadotXcmStorage), "VersionNotifyTargetsParams", typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.HydraDX.NET.NetApiExt.Generated.Model.staging_xcm.EnumVersionedMultiLocation>))]
+        [StorageKeyBuilder(typeof(Substrate.HydraDX.NET.NetApiExt.Generated.Storage.PolkadotXcmStorage), "VersionNotifyTargetsParams", typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.HydraDX.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation>))]
         public IActionResult GetVersionNotifyTargets(string key)
         {
             return this.Ok(_polkadotXcmStorage.GetVersionNotifyTargets(key));
@@ -133,7 +133,7 @@ namespace Substrate.HydraDX.NET.RestService.Generated.Controller
         ///  which is used as a prioritization.
         /// </summary>
         [HttpGet("VersionDiscoveryQueue")]
-        [ProducesResponseType(typeof(Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT40), 200)]
+        [ProducesResponseType(typeof(Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT44), 200)]
         [StorageKeyBuilder(typeof(Substrate.HydraDX.NET.NetApiExt.Generated.Storage.PolkadotXcmStorage), "VersionDiscoveryQueueParams")]
         public IActionResult GetVersionDiscoveryQueue()
         {
@@ -158,7 +158,7 @@ namespace Substrate.HydraDX.NET.RestService.Generated.Controller
         /// </summary>
         [HttpGet("RemoteLockedFungibles")]
         [ProducesResponseType(typeof(Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_xcm.pallet.RemoteLockedFungibleRecord), 200)]
-        [StorageKeyBuilder(typeof(Substrate.HydraDX.NET.NetApiExt.Generated.Storage.PolkadotXcmStorage), "RemoteLockedFungiblesParams", typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.HydraDX.NET.NetApiExt.Generated.Model.staging_xcm.EnumVersionedAssetId>))]
+        [StorageKeyBuilder(typeof(Substrate.HydraDX.NET.NetApiExt.Generated.Storage.PolkadotXcmStorage), "RemoteLockedFungiblesParams", typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.HydraDX.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAssetId>))]
         public IActionResult GetRemoteLockedFungibles(string key)
         {
             return this.Ok(_polkadotXcmStorage.GetRemoteLockedFungibles(key));
@@ -169,7 +169,7 @@ namespace Substrate.HydraDX.NET.RestService.Generated.Controller
         ///  Fungible assets which we know are locked on this chain.
         /// </summary>
         [HttpGet("LockedFungibles")]
-        [ProducesResponseType(typeof(Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT42), 200)]
+        [ProducesResponseType(typeof(Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT46), 200)]
         [StorageKeyBuilder(typeof(Substrate.HydraDX.NET.NetApiExt.Generated.Storage.PolkadotXcmStorage), "LockedFungiblesParams", typeof(Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32))]
         public IActionResult GetLockedFungibles(string key)
         {

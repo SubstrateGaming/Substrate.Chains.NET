@@ -111,13 +111,84 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_identity.pallet
         /// See [`Pallet::quit_sub`].
         /// </summary>
         quit_sub = 14,
+        
+        /// <summary>
+        /// >> add_username_authority
+        /// See [`Pallet::add_username_authority`].
+        /// </summary>
+        add_username_authority = 15,
+        
+        /// <summary>
+        /// >> remove_username_authority
+        /// See [`Pallet::remove_username_authority`].
+        /// </summary>
+        remove_username_authority = 16,
+        
+        /// <summary>
+        /// >> set_username_for
+        /// See [`Pallet::set_username_for`].
+        /// </summary>
+        set_username_for = 17,
+        
+        /// <summary>
+        /// >> accept_username
+        /// See [`Pallet::accept_username`].
+        /// </summary>
+        accept_username = 18,
+        
+        /// <summary>
+        /// >> remove_expired_approval
+        /// See [`Pallet::remove_expired_approval`].
+        /// </summary>
+        remove_expired_approval = 19,
+        
+        /// <summary>
+        /// >> set_primary_username
+        /// See [`Pallet::set_primary_username`].
+        /// </summary>
+        set_primary_username = 20,
+        
+        /// <summary>
+        /// >> remove_dangling_username
+        /// See [`Pallet::remove_dangling_username`].
+        /// </summary>
+        remove_dangling_username = 21,
     }
     
     /// <summary>
-    /// >> 255 - Variant[pallet_identity.pallet.Call]
+    /// >> 289 - Variant[pallet_identity.pallet.Call]
     /// Identity pallet declaration.
     /// </summary>
-    public sealed class EnumCall : BaseEnumExt<Call, Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_identity.types.IdentityInfo, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData>>, BaseVoid, BaseTuple<Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128>>, Substrate.NetApi.Model.Types.Primitive.U32, BaseTuple<Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128>>, BaseTuple<Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>, BaseTuple<Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_identity.types.BitFlags>, BaseTuple<Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumJudgement, Substrate.HydraDX.NET.NetApiExt.Generated.Model.primitive_types.H256>, Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData>, BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData>, Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, BaseVoid>
+    public sealed class EnumCall : BaseEnumRust<Call>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumCall()
+        {
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>(Call.add_registrar);
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_identity.legacy.IdentityInfo>(Call.set_identity);
+				AddTypeDecoder<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData>>>(Call.set_subs);
+				AddTypeDecoder<BaseVoid>(Call.clear_identity);
+				AddTypeDecoder<BaseTuple<Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128>>>(Call.request_judgement);
+				AddTypeDecoder<Substrate.NetApi.Model.Types.Primitive.U32>(Call.cancel_request);
+				AddTypeDecoder<BaseTuple<Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128>>>(Call.set_fee);
+				AddTypeDecoder<BaseTuple<Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>>(Call.set_account_id);
+				AddTypeDecoder<BaseTuple<Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.NetApi.Model.Types.Primitive.U64>>(Call.set_fields);
+				AddTypeDecoder<BaseTuple<Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumJudgement, Substrate.HydraDX.NET.NetApiExt.Generated.Model.primitive_types.H256>>(Call.provide_judgement);
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>(Call.kill_identity);
+				AddTypeDecoder<BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData>>(Call.add_sub);
+				AddTypeDecoder<BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData>>(Call.rename_sub);
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>(Call.remove_sub);
+				AddTypeDecoder<BaseVoid>(Call.quit_sub);
+				AddTypeDecoder<BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>, Substrate.NetApi.Model.Types.Primitive.U32>>(Call.add_username_authority);
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>(Call.remove_username_authority);
+				AddTypeDecoder<BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_runtime.EnumMultiSignature>>>(Call.set_username_for);
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT1>(Call.accept_username);
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT1>(Call.remove_expired_approval);
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT1>(Call.set_primary_username);
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT1>(Call.remove_dangling_username);
+        }
     }
 }

@@ -58,7 +58,7 @@ namespace Substrate.HydraDX.NET.RestService.Generated.Storage
         /// >> ScheduleIdsPerBlock
         ///  Keep tracking of the schedule ids to be executed in the block
         /// </summary>
-        Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT39 GetScheduleIdsPerBlock(string key);
+        Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT42 GetScheduleIdsPerBlock(string key);
     }
     
     /// <summary>
@@ -95,7 +95,7 @@ namespace Substrate.HydraDX.NET.RestService.Generated.Storage
         /// <summary>
         /// _scheduleIdsPerBlockTypedStorage typed storage field
         /// </summary>
-        private TypedMapStorage<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT39> _scheduleIdsPerBlockTypedStorage;
+        private TypedMapStorage<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT42> _scheduleIdsPerBlockTypedStorage;
         
         /// <summary>
         /// DCAStorage constructor.
@@ -107,7 +107,7 @@ namespace Substrate.HydraDX.NET.RestService.Generated.Storage
             this.ScheduleOwnershipTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseTuple>("DCA.ScheduleOwnership", storageDataProvider, storageChangeDelegates);
             this.RemainingAmountsTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Primitive.U128>("DCA.RemainingAmounts", storageDataProvider, storageChangeDelegates);
             this.RetriesOnErrorTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Primitive.U8>("DCA.RetriesOnError", storageDataProvider, storageChangeDelegates);
-            this.ScheduleIdsPerBlockTypedStorage = new TypedMapStorage<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT39>("DCA.ScheduleIdsPerBlock", storageDataProvider, storageChangeDelegates);
+            this.ScheduleIdsPerBlockTypedStorage = new TypedMapStorage<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT42>("DCA.ScheduleIdsPerBlock", storageDataProvider, storageChangeDelegates);
         }
         
         /// <summary>
@@ -188,7 +188,7 @@ namespace Substrate.HydraDX.NET.RestService.Generated.Storage
         /// <summary>
         /// _scheduleIdsPerBlockTypedStorage property
         /// </summary>
-        public TypedMapStorage<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT39> ScheduleIdsPerBlockTypedStorage
+        public TypedMapStorage<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT42> ScheduleIdsPerBlockTypedStorage
         {
             get
             {
@@ -360,13 +360,13 @@ namespace Substrate.HydraDX.NET.RestService.Generated.Storage
         /// >> ScheduleIdsPerBlock
         ///  Keep tracking of the schedule ids to be executed in the block
         /// </summary>
-        public Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT39 GetScheduleIdsPerBlock(string key)
+        public Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT42 GetScheduleIdsPerBlock(string key)
         {
             if ((key == null))
             {
                 return null;
             }
-            if (ScheduleIdsPerBlockTypedStorage.Dictionary.TryGetValue(key, out Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT39 result))
+            if (ScheduleIdsPerBlockTypedStorage.Dictionary.TryGetValue(key, out Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT42 result))
             {
                 return result;
             }

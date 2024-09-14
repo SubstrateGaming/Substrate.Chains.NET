@@ -37,6 +37,11 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.hydradx_runtime
         Balances = 7,
         
         /// <summary>
+        /// >> MultiTransactionPayment
+        /// </summary>
+        MultiTransactionPayment = 203,
+        
+        /// <summary>
         /// >> Treasury
         /// </summary>
         Treasury = 11,
@@ -177,6 +182,11 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.hydradx_runtime
         Bonds = 71,
         
         /// <summary>
+        /// >> OtcSettlements
+        /// </summary>
+        OtcSettlements = 72,
+        
+        /// <summary>
         /// >> LBP
         /// </summary>
         LBP = 73,
@@ -190,11 +200,6 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.hydradx_runtime
         /// >> Referrals
         /// </summary>
         Referrals = 75,
-        
-        /// <summary>
-        /// >> XcmRateLimiter
-        /// </summary>
-        XcmRateLimiter = 76,
         
         /// <summary>
         /// >> Tokens
@@ -237,6 +242,21 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.hydradx_runtime
         XYKWarehouseLM = 96,
         
         /// <summary>
+        /// >> RelayChainInfo
+        /// </summary>
+        RelayChainInfo = 201,
+        
+        /// <summary>
+        /// >> DCA
+        /// </summary>
+        DCA = 66,
+        
+        /// <summary>
+        /// >> Scheduler
+        /// </summary>
+        Scheduler = 5,
+        
+        /// <summary>
         /// >> ParachainSystem
         /// </summary>
         ParachainSystem = 103,
@@ -245,16 +265,6 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.hydradx_runtime
         /// >> ParachainInfo
         /// </summary>
         ParachainInfo = 105,
-        
-        /// <summary>
-        /// >> Scheduler
-        /// </summary>
-        Scheduler = 5,
-        
-        /// <summary>
-        /// >> DCA
-        /// </summary>
-        DCA = 66,
         
         /// <summary>
         /// >> PolkadotXcm
@@ -267,9 +277,9 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.hydradx_runtime
         CumulusXcm = 109,
         
         /// <summary>
-        /// >> DmpQueue
+        /// >> MessageQueue
         /// </summary>
-        DmpQueue = 113,
+        MessageQueue = 114,
         
         /// <summary>
         /// >> OrmlXcm
@@ -292,25 +302,79 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.hydradx_runtime
         Session = 165,
         
         /// <summary>
-        /// >> RelayChainInfo
-        /// </summary>
-        RelayChainInfo = 201,
-        
-        /// <summary>
         /// >> EmaOracle
         /// </summary>
         EmaOracle = 202,
-        
-        /// <summary>
-        /// >> MultiTransactionPayment
-        /// </summary>
-        MultiTransactionPayment = 203,
     }
     
     /// <summary>
-    /// >> 253 - Variant[hydradx_runtime.RuntimeCall]
+    /// >> 287 - Variant[hydradx_runtime.RuntimeCall]
     /// </summary>
-    public sealed class EnumRuntimeCall : BaseEnumExt<RuntimeCall, BaseVoid, Substrate.HydraDX.NET.NetApiExt.Generated.Model.frame_system.pallet.EnumCall, BaseVoid, Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_timestamp.pallet.EnumCall, BaseVoid, Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_scheduler.pallet.EnumCall, BaseVoid, Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_balances.pallet.EnumCall, BaseVoid, BaseVoid, BaseVoid, Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_treasury.pallet.EnumCall, BaseVoid, Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_utility.pallet.EnumCall, BaseVoid, Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_preimage.pallet.EnumCall, BaseVoid, Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_identity.pallet.EnumCall, BaseVoid, Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_democracy.pallet.EnumCall, BaseVoid, Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_elections_phragmen.pallet.EnumCall, BaseVoid, Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_collective.pallet.EnumCall, BaseVoid, Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_collective.pallet.EnumCall, BaseVoid, Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_tips.pallet.EnumCall, BaseVoid, Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_proxy.pallet.EnumCall, BaseVoid, Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_multisig.pallet.EnumCall, Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_uniques.pallet.EnumCall, BaseVoid, BaseVoid, Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.EnumCall, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_asset_registry.pallet.EnumCall, BaseVoid, Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_claims.pallet.EnumCall, BaseVoid, Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_genesis_history.pallet.EnumCall, BaseVoid, BaseVoid, BaseVoid, Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_omnipool.pallet.EnumCall, Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_transaction_pause.pallet.EnumCall, Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_duster.pallet.EnumCall, Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_liquidity_mining.pallet.EnumCall, Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_omnipool_liquidity_mining.pallet.EnumCall, Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_otc.pallet.EnumCall, Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_circuit_breaker.pallet.EnumCall, Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_dca.pallet.EnumCall, Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_route_executor.pallet.EnumCall, Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_dynamic_fees.pallet.EnumCall, Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_staking.pallet.EnumCall, Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_stableswap.pallet.EnumCall, Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_bonds.pallet.EnumCall, BaseVoid, Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_lbp.pallet.EnumCall, Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_xyk.pallet.EnumCall, Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_referrals.pallet.EnumCall, Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_xcm_rate_limiter.pallet.EnumCall, Substrate.HydraDX.NET.NetApiExt.Generated.Model.orml_tokens.module.EnumCall, BaseVoid, Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_currencies.module.EnumCall, BaseVoid, Substrate.HydraDX.NET.NetApiExt.Generated.Model.orml_vesting.module.EnumCall, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_evm.pallet.EnumCall, BaseVoid, Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_ethereum.pallet.EnumCall, Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_evm_accounts.pallet.EnumCall, BaseVoid, Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_xyk_liquidity_mining.pallet.EnumCall, Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_liquidity_mining.pallet.EnumCall, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.HydraDX.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.pallet.EnumCall, BaseVoid, Substrate.HydraDX.NET.NetApiExt.Generated.Model.parachain_info.pallet.EnumCall, BaseVoid, Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_xcm.pallet.EnumCall, BaseVoid, Substrate.HydraDX.NET.NetApiExt.Generated.Model.cumulus_pallet_xcm.pallet.EnumCall, BaseVoid, BaseVoid, BaseVoid, Substrate.HydraDX.NET.NetApiExt.Generated.Model.cumulus_pallet_dmp_queue.pallet.EnumCall, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.HydraDX.NET.NetApiExt.Generated.Model.orml_xcm.module.EnumCall, BaseVoid, Substrate.HydraDX.NET.NetApiExt.Generated.Model.orml_xtokens.module.EnumCall, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_collator_selection.pallet.EnumCall, BaseVoid, Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_session.pallet.EnumCall, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_relaychain_info.pallet.EnumCall, Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_ema_oracle.pallet.EnumCall, Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_transaction_multi_payment.pallet.EnumCall>
+    public sealed class EnumRuntimeCall : BaseEnumRust<RuntimeCall>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumRuntimeCall()
+        {
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.frame_system.pallet.EnumCall>(RuntimeCall.System);
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_timestamp.pallet.EnumCall>(RuntimeCall.Timestamp);
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_balances.pallet.EnumCall>(RuntimeCall.Balances);
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_transaction_multi_payment.pallet.EnumCall>(RuntimeCall.MultiTransactionPayment);
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_treasury.pallet.EnumCall>(RuntimeCall.Treasury);
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_utility.pallet.EnumCall>(RuntimeCall.Utility);
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_preimage.pallet.EnumCall>(RuntimeCall.Preimage);
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_identity.pallet.EnumCall>(RuntimeCall.Identity);
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_democracy.pallet.EnumCall>(RuntimeCall.Democracy);
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_elections_phragmen.pallet.EnumCall>(RuntimeCall.Elections);
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_collective.pallet.EnumCall>(RuntimeCall.Council);
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_collective.pallet.EnumCall>(RuntimeCall.TechnicalCommittee);
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_tips.pallet.EnumCall>(RuntimeCall.Tips);
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_proxy.pallet.EnumCall>(RuntimeCall.Proxy);
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_multisig.pallet.EnumCall>(RuntimeCall.Multisig);
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_uniques.pallet.EnumCall>(RuntimeCall.Uniques);
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.EnumCall>(RuntimeCall.StateTrieMigration);
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_asset_registry.pallet.EnumCall>(RuntimeCall.AssetRegistry);
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_claims.pallet.EnumCall>(RuntimeCall.Claims);
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_genesis_history.pallet.EnumCall>(RuntimeCall.GenesisHistory);
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_omnipool.pallet.EnumCall>(RuntimeCall.Omnipool);
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_transaction_pause.pallet.EnumCall>(RuntimeCall.TransactionPause);
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_duster.pallet.EnumCall>(RuntimeCall.Duster);
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_liquidity_mining.pallet.EnumCall>(RuntimeCall.OmnipoolWarehouseLM);
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_omnipool_liquidity_mining.pallet.EnumCall>(RuntimeCall.OmnipoolLiquidityMining);
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_otc.pallet.EnumCall>(RuntimeCall.OTC);
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_circuit_breaker.pallet.EnumCall>(RuntimeCall.CircuitBreaker);
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_route_executor.pallet.EnumCall>(RuntimeCall.Router);
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_dynamic_fees.pallet.EnumCall>(RuntimeCall.DynamicFees);
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_staking.pallet.EnumCall>(RuntimeCall.Staking);
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_stableswap.pallet.EnumCall>(RuntimeCall.Stableswap);
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_bonds.pallet.EnumCall>(RuntimeCall.Bonds);
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_otc_settlements.pallet.EnumCall>(RuntimeCall.OtcSettlements);
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_lbp.pallet.EnumCall>(RuntimeCall.LBP);
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_xyk.pallet.EnumCall>(RuntimeCall.XYK);
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_referrals.pallet.EnumCall>(RuntimeCall.Referrals);
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.orml_tokens.module.EnumCall>(RuntimeCall.Tokens);
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_currencies.module.EnumCall>(RuntimeCall.Currencies);
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.orml_vesting.module.EnumCall>(RuntimeCall.Vesting);
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_evm.pallet.EnumCall>(RuntimeCall.EVM);
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_ethereum.pallet.EnumCall>(RuntimeCall.Ethereum);
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_evm_accounts.pallet.EnumCall>(RuntimeCall.EVMAccounts);
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_xyk_liquidity_mining.pallet.EnumCall>(RuntimeCall.XYKLiquidityMining);
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_liquidity_mining.pallet.EnumCall>(RuntimeCall.XYKWarehouseLM);
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_relaychain_info.pallet.EnumCall>(RuntimeCall.RelayChainInfo);
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_dca.pallet.EnumCall>(RuntimeCall.DCA);
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_scheduler.pallet.EnumCall>(RuntimeCall.Scheduler);
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.pallet.EnumCall>(RuntimeCall.ParachainSystem);
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.staging_parachain_info.pallet.EnumCall>(RuntimeCall.ParachainInfo);
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_xcm.pallet.EnumCall>(RuntimeCall.PolkadotXcm);
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.cumulus_pallet_xcm.pallet.EnumCall>(RuntimeCall.CumulusXcm);
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_message_queue.pallet.EnumCall>(RuntimeCall.MessageQueue);
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.orml_xcm.module.EnumCall>(RuntimeCall.OrmlXcm);
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.orml_xtokens.module.EnumCall>(RuntimeCall.XTokens);
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_collator_selection.pallet.EnumCall>(RuntimeCall.CollatorSelection);
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_session.pallet.EnumCall>(RuntimeCall.Session);
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_ema_oracle.pallet.EnumCall>(RuntimeCall.EmaOracle);
+        }
     }
 }

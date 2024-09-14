@@ -24,7 +24,7 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_dynamic_fees.pa
     }
     
     /// <summary>
-    /// >> 102 - Variant[pallet_dynamic_fees.pallet.Event]
+    /// >> 104 - Variant[pallet_dynamic_fees.pallet.Event]
     /// The `Event` enum of this pallet
     /// </summary>
     public sealed class EnumEvent : BaseEnum<Event>

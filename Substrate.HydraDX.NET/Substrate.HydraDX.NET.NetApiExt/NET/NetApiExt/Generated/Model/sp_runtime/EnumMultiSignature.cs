@@ -38,9 +38,19 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_runtime
     }
     
     /// <summary>
-    /// >> 719 - Variant[sp_runtime.MultiSignature]
+    /// >> 328 - Variant[sp_runtime.MultiSignature]
     /// </summary>
-    public sealed class EnumMultiSignature : BaseEnumExt<MultiSignature, Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.ed25519.Signature, Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.sr25519.Signature, Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.ecdsa.Signature>
+    public sealed class EnumMultiSignature : BaseEnumRust<MultiSignature>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumMultiSignature()
+        {
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.ed25519.Signature>(MultiSignature.Ed25519);
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.sr25519.Signature>(MultiSignature.Sr25519);
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.ecdsa.Signature>(MultiSignature.Ecdsa);
+        }
     }
 }

@@ -26,13 +26,16 @@ namespace Substrate.HydraDX.NET.RestService.Generated.Storage
         
         /// <summary>
         /// >> Now
-        ///  Current time for the current block.
+        ///  The current time for the current block.
         /// </summary>
         Substrate.NetApi.Model.Types.Primitive.U64 GetNow();
         
         /// <summary>
         /// >> DidUpdate
-        ///  Did the timestamp get updated in this block?
+        ///  Whether the timestamp has been updated in this block.
+        /// 
+        ///  This value is updated to `true` upon successful submission of a timestamp by a node.
+        ///  It is then checked at the end of each block execution in the `on_finalize` hook.
         /// </summary>
         Substrate.NetApi.Model.Types.Primitive.Bool GetDidUpdate();
     }
@@ -112,7 +115,7 @@ namespace Substrate.HydraDX.NET.RestService.Generated.Storage
         
         /// <summary>
         /// >> Now
-        ///  Current time for the current block.
+        ///  The current time for the current block.
         /// </summary>
         public Substrate.NetApi.Model.Types.Primitive.U64 GetNow()
         {
@@ -130,7 +133,10 @@ namespace Substrate.HydraDX.NET.RestService.Generated.Storage
         
         /// <summary>
         /// >> DidUpdate
-        ///  Did the timestamp get updated in this block?
+        ///  Whether the timestamp has been updated in this block.
+        /// 
+        ///  This value is updated to `true` upon successful submission of a timestamp by a node.
+        ///  It is then checked at the end of each block execution in the `on_finalize` hook.
         /// </summary>
         public Substrate.NetApi.Model.Types.Primitive.Bool GetDidUpdate()
         {

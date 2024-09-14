@@ -53,7 +53,7 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_referrals
     }
     
     /// <summary>
-    /// >> 118 - Variant[pallet_referrals.Level]
+    /// >> 121 - Variant[pallet_referrals.Level]
     /// </summary>
     public sealed class EnumLevel : BaseEnum<Level>
     {

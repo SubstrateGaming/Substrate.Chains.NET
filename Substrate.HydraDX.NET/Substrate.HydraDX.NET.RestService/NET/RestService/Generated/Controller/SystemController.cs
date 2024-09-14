@@ -244,5 +244,17 @@ namespace Substrate.HydraDX.NET.RestService.Generated.Controller
         {
             return this.Ok(_systemStorage.GetExecutionPhase());
         }
+        
+        /// <summary>
+        /// >> AuthorizedUpgrade
+        ///  `Some` if a code upgrade has been authorized.
+        /// </summary>
+        [HttpGet("AuthorizedUpgrade")]
+        [ProducesResponseType(typeof(Substrate.HydraDX.NET.NetApiExt.Generated.Model.frame_system.CodeUpgradeAuthorization), 200)]
+        [StorageKeyBuilder(typeof(Substrate.HydraDX.NET.NetApiExt.Generated.Storage.SystemStorage), "AuthorizedUpgradeParams")]
+        public IActionResult GetAuthorizedUpgrade()
+        {
+            return this.Ok(_systemStorage.GetAuthorizedUpgrade());
+        }
     }
 }

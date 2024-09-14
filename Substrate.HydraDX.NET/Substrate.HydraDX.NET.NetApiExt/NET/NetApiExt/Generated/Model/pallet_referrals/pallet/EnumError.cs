@@ -108,7 +108,7 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_referrals.palle
     }
     
     /// <summary>
-    /// >> 555 - Variant[pallet_referrals.pallet.Error]
+    /// >> 616 - Variant[pallet_referrals.pallet.Error]
     /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>

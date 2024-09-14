@@ -96,7 +96,7 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_transaction_mul
     }
     
     /// <summary>
-    /// >> 717 - Variant[pallet_transaction_multi_payment.pallet.Error]
+    /// >> 277 - Variant[pallet_transaction_multi_payment.pallet.Error]
     /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>

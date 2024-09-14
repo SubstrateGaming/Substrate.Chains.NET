@@ -9,7 +9,7 @@
 
 using Substrate.NetApi.Attributes;
 using Substrate.NetApi.Model.Types.Base;
-using Substrate.NetApi.Model.Types.Metadata.V14;
+using Substrate.NetApi.Model.Types.Metadata.Base;
 using System.Collections.Generic;
 
 
@@ -18,7 +18,7 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_state_trie_migr
     
     
     /// <summary>
-    /// >> 313 - Composite[pallet_state_trie_migration.pallet.MigrationLimits]
+    /// >> 353 - Composite[pallet_state_trie_migration.pallet.MigrationLimits]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class MigrationLimits : BaseType

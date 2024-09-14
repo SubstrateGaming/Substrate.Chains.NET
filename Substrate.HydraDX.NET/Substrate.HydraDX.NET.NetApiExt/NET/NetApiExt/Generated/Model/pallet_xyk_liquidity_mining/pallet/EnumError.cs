@@ -90,7 +90,7 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_xyk_liquidity_m
     }
     
     /// <summary>
-    /// >> 590 - Variant[pallet_xyk_liquidity_mining.pallet.Error]
+    /// >> 649 - Variant[pallet_xyk_liquidity_mining.pallet.Error]
     /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>

@@ -87,13 +87,38 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_xcm.pallet
         /// See [`Pallet::force_suspension`].
         /// </summary>
         force_suspension = 10,
+        
+        /// <summary>
+        /// >> transfer_assets
+        /// See [`Pallet::transfer_assets`].
+        /// </summary>
+        transfer_assets = 11,
     }
     
     /// <summary>
-    /// >> 385 - Variant[pallet_xcm.pallet.Call]
+    /// >> 423 - Variant[pallet_xcm.pallet.Call]
     /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
-    public sealed class EnumCall : BaseEnumExt<Call, BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.staging_xcm.EnumVersionedMultiLocation, Substrate.HydraDX.NET.NetApiExt.Generated.Model.staging_xcm.EnumVersionedXcm>, BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.staging_xcm.EnumVersionedMultiLocation, Substrate.HydraDX.NET.NetApiExt.Generated.Model.staging_xcm.EnumVersionedMultiLocation, Substrate.HydraDX.NET.NetApiExt.Generated.Model.staging_xcm.EnumVersionedMultiAssets, Substrate.NetApi.Model.Types.Primitive.U32>, BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.staging_xcm.EnumVersionedMultiLocation, Substrate.HydraDX.NET.NetApiExt.Generated.Model.staging_xcm.EnumVersionedMultiLocation, Substrate.HydraDX.NET.NetApiExt.Generated.Model.staging_xcm.EnumVersionedMultiAssets, Substrate.NetApi.Model.Types.Primitive.U32>, BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.staging_xcm.EnumVersionedXcm, Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>, BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation, Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.HydraDX.NET.NetApiExt.Generated.Model.staging_xcm.EnumVersionedMultiLocation, Substrate.HydraDX.NET.NetApiExt.Generated.Model.staging_xcm.EnumVersionedMultiLocation, BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.staging_xcm.EnumVersionedMultiLocation, Substrate.HydraDX.NET.NetApiExt.Generated.Model.staging_xcm.EnumVersionedMultiLocation, Substrate.HydraDX.NET.NetApiExt.Generated.Model.staging_xcm.EnumVersionedMultiAssets, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.HydraDX.NET.NetApiExt.Generated.Model.staging_xcm.v3.EnumWeightLimit>, BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.staging_xcm.EnumVersionedMultiLocation, Substrate.HydraDX.NET.NetApiExt.Generated.Model.staging_xcm.EnumVersionedMultiLocation, Substrate.HydraDX.NET.NetApiExt.Generated.Model.staging_xcm.EnumVersionedMultiAssets, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.HydraDX.NET.NetApiExt.Generated.Model.staging_xcm.v3.EnumWeightLimit>, Substrate.NetApi.Model.Types.Primitive.Bool>
+    public sealed class EnumCall : BaseEnumRust<Call>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumCall()
+        {
+				AddTypeDecoder<BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation, Substrate.HydraDX.NET.NetApiExt.Generated.Model.xcm.EnumVersionedXcm>>(Call.send);
+				AddTypeDecoder<BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation, Substrate.HydraDX.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation, Substrate.HydraDX.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAssets, Substrate.NetApi.Model.Types.Primitive.U32>>(Call.teleport_assets);
+				AddTypeDecoder<BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation, Substrate.HydraDX.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation, Substrate.HydraDX.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAssets, Substrate.NetApi.Model.Types.Primitive.U32>>(Call.reserve_transfer_assets);
+				AddTypeDecoder<BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.xcm.EnumVersionedXcm, Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>>(Call.execute);
+				AddTypeDecoder<BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.staging_xcm.v4.location.Location, Substrate.NetApi.Model.Types.Primitive.U32>>(Call.force_xcm_version);
+				AddTypeDecoder<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32>>(Call.force_default_xcm_version);
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation>(Call.force_subscribe_version_notify);
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation>(Call.force_unsubscribe_version_notify);
+				AddTypeDecoder<BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation, Substrate.HydraDX.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation, Substrate.HydraDX.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAssets, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.HydraDX.NET.NetApiExt.Generated.Model.xcm.v3.EnumWeightLimit>>(Call.limited_reserve_transfer_assets);
+				AddTypeDecoder<BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation, Substrate.HydraDX.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation, Substrate.HydraDX.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAssets, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.HydraDX.NET.NetApiExt.Generated.Model.xcm.v3.EnumWeightLimit>>(Call.limited_teleport_assets);
+				AddTypeDecoder<Substrate.NetApi.Model.Types.Primitive.Bool>(Call.force_suspension);
+				AddTypeDecoder<BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation, Substrate.HydraDX.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation, Substrate.HydraDX.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAssets, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.HydraDX.NET.NetApiExt.Generated.Model.xcm.v3.EnumWeightLimit>>(Call.transfer_assets);
+        }
     }
 }

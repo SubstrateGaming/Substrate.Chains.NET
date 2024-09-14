@@ -42,7 +42,7 @@ namespace Substrate.HydraDX.NET.RestService.Generated.Controller
         ///  Stores the collators per session (index).
         /// </summary>
         [HttpGet("Collators")]
-        [ProducesResponseType(typeof(Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT29), 200)]
+        [ProducesResponseType(typeof(Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT33), 200)]
         [StorageKeyBuilder(typeof(Substrate.HydraDX.NET.NetApiExt.Generated.Storage.CollatorRewardsStorage), "CollatorsParams", typeof(Substrate.NetApi.Model.Types.Primitive.U32))]
         public IActionResult GetCollators(string key)
         {

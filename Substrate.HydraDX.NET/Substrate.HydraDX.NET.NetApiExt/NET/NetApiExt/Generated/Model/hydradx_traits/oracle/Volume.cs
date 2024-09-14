@@ -9,7 +9,7 @@
 
 using Substrate.NetApi.Attributes;
 using Substrate.NetApi.Model.Types.Base;
-using Substrate.NetApi.Model.Types.Metadata.V14;
+using Substrate.NetApi.Model.Types.Metadata.Base;
 using System.Collections.Generic;
 
 
@@ -18,7 +18,7 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.hydradx_traits.oracle
     
     
     /// <summary>
-    /// >> 706 - Composite[hydradx_traits.oracle.Volume]
+    /// >> 752 - Composite[hydradx_traits.oracle.Volume]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Volume : BaseType

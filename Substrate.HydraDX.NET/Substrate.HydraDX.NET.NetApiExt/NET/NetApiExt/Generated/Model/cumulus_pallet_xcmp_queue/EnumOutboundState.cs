@@ -33,7 +33,7 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_qu
     }
     
     /// <summary>
-    /// >> 665 - Variant[cumulus_pallet_xcmp_queue.OutboundState]
+    /// >> 719 - Variant[cumulus_pallet_xcmp_queue.OutboundState]
     /// </summary>
     public sealed class EnumOutboundState : BaseEnum<OutboundState>
     {

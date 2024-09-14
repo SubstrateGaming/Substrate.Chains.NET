@@ -207,10 +207,16 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_omnipool.pallet
         /// Existential deposit of asset is not available.
         /// </summary>
         ExistentialDepositNotAvailable = 30,
+        
+        /// <summary>
+        /// >> SlippageLimit
+        /// Slippage protection
+        /// </summary>
+        SlippageLimit = 31,
     }
     
     /// <summary>
-    /// >> 505 - Variant[pallet_omnipool.pallet.Error]
+    /// >> 566 - Variant[pallet_omnipool.pallet.Error]
     /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>

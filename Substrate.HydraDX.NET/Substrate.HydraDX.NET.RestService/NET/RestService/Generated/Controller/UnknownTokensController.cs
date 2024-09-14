@@ -46,7 +46,7 @@ namespace Substrate.HydraDX.NET.RestService.Generated.Controller
         /// </summary>
         [HttpGet("ConcreteFungibleBalances")]
         [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Primitive.U128), 200)]
-        [StorageKeyBuilder(typeof(Substrate.HydraDX.NET.NetApiExt.Generated.Storage.UnknownTokensStorage), "ConcreteFungibleBalancesParams", typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation, Substrate.HydraDX.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation>))]
+        [StorageKeyBuilder(typeof(Substrate.HydraDX.NET.NetApiExt.Generated.Storage.UnknownTokensStorage), "ConcreteFungibleBalancesParams", typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.staging_xcm.v4.location.Location, Substrate.HydraDX.NET.NetApiExt.Generated.Model.staging_xcm.v4.location.Location>))]
         public IActionResult GetConcreteFungibleBalances(string key)
         {
             return this.Ok(_unknownTokensStorage.GetConcreteFungibleBalances(key));
@@ -61,7 +61,7 @@ namespace Substrate.HydraDX.NET.RestService.Generated.Controller
         /// </summary>
         [HttpGet("AbstractFungibleBalances")]
         [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Primitive.U128), 200)]
-        [StorageKeyBuilder(typeof(Substrate.HydraDX.NET.NetApiExt.Generated.Storage.UnknownTokensStorage), "AbstractFungibleBalancesParams", typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>))]
+        [StorageKeyBuilder(typeof(Substrate.HydraDX.NET.NetApiExt.Generated.Storage.UnknownTokensStorage), "AbstractFungibleBalancesParams", typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.staging_xcm.v4.location.Location, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>))]
         public IActionResult GetAbstractFungibleBalances(string key)
         {
             return this.Ok(_unknownTokensStorage.GetAbstractFungibleBalances(key));

@@ -42,7 +42,7 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_currencies.modu
     }
     
     /// <summary>
-    /// >> 566 - Variant[pallet_currencies.module.Error]
+    /// >> 625 - Variant[pallet_currencies.module.Error]
     /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>

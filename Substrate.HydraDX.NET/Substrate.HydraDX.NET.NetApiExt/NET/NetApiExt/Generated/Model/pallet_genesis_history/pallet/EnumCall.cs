@@ -24,7 +24,7 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_genesis_history
     }
     
     /// <summary>
-    /// >> 324 - Variant[pallet_genesis_history.pallet.Call]
+    /// >> 363 - Variant[pallet_genesis_history.pallet.Call]
     /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
     public sealed class EnumCall : BaseEnum<Call>

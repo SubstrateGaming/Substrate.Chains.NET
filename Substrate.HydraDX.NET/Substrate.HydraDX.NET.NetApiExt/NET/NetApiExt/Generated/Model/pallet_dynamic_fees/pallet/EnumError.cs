@@ -24,7 +24,7 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_dynamic_fees.pa
     }
     
     /// <summary>
-    /// >> 531 - Variant[pallet_dynamic_fees.pallet.Error]
+    /// >> 592 - Variant[pallet_dynamic_fees.pallet.Error]
     /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>

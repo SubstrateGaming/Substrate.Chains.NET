@@ -38,7 +38,7 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_democracy.vote_
     }
     
     /// <summary>
-    /// >> 40 - Variant[pallet_democracy.vote_threshold.VoteThreshold]
+    /// >> 43 - Variant[pallet_democracy.vote_threshold.VoteThreshold]
     /// </summary>
     public sealed class EnumVoteThreshold : BaseEnum<VoteThreshold>
     {

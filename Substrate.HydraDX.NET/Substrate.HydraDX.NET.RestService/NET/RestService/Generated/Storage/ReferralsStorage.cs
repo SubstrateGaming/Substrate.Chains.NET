@@ -36,7 +36,7 @@ namespace Substrate.HydraDX.NET.RestService.Generated.Storage
         ///  Referral accounts
         ///  Maps an account to a referral code.
         /// </summary>
-        Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT5 GetReferralAccounts(string key);
+        Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT6 GetReferralAccounts(string key);
         
         /// <summary>
         /// >> LinkedAccounts
@@ -106,7 +106,7 @@ namespace Substrate.HydraDX.NET.RestService.Generated.Storage
         /// <summary>
         /// _referralAccountsTypedStorage typed storage field
         /// </summary>
-        private TypedMapStorage<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT5> _referralAccountsTypedStorage;
+        private TypedMapStorage<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT6> _referralAccountsTypedStorage;
         
         /// <summary>
         /// _linkedAccountsTypedStorage typed storage field
@@ -154,7 +154,7 @@ namespace Substrate.HydraDX.NET.RestService.Generated.Storage
         public ReferralsStorage(IStorageDataProvider storageDataProvider, List<IStorageChangeDelegate> storageChangeDelegates)
         {
             this.ReferralCodesTypedStorage = new TypedMapStorage<Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>("Referrals.ReferralCodes", storageDataProvider, storageChangeDelegates);
-            this.ReferralAccountsTypedStorage = new TypedMapStorage<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT5>("Referrals.ReferralAccounts", storageDataProvider, storageChangeDelegates);
+            this.ReferralAccountsTypedStorage = new TypedMapStorage<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT6>("Referrals.ReferralAccounts", storageDataProvider, storageChangeDelegates);
             this.LinkedAccountsTypedStorage = new TypedMapStorage<Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>("Referrals.LinkedAccounts", storageDataProvider, storageChangeDelegates);
             this.ReferrerSharesTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Primitive.U128>("Referrals.ReferrerShares", storageDataProvider, storageChangeDelegates);
             this.TraderSharesTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Primitive.U128>("Referrals.TraderShares", storageDataProvider, storageChangeDelegates);
@@ -183,7 +183,7 @@ namespace Substrate.HydraDX.NET.RestService.Generated.Storage
         /// <summary>
         /// _referralAccountsTypedStorage property
         /// </summary>
-        public TypedMapStorage<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT5> ReferralAccountsTypedStorage
+        public TypedMapStorage<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT6> ReferralAccountsTypedStorage
         {
             get
             {
@@ -376,13 +376,13 @@ namespace Substrate.HydraDX.NET.RestService.Generated.Storage
         ///  Referral accounts
         ///  Maps an account to a referral code.
         /// </summary>
-        public Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT5 GetReferralAccounts(string key)
+        public Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT6 GetReferralAccounts(string key)
         {
             if ((key == null))
             {
                 return null;
             }
-            if (ReferralAccountsTypedStorage.Dictionary.TryGetValue(key, out Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT5 result))
+            if (ReferralAccountsTypedStorage.Dictionary.TryGetValue(key, out Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT6 result))
             {
                 return result;
             }

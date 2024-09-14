@@ -242,12 +242,23 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> TipReportDepositBase
-        ///  The amount held on deposit for placing a tip report.
+        ///  The non-zero amount held on deposit for placing a tip report.
         /// </summary>
         public Substrate.NetApi.Model.Types.Primitive.U128 TipReportDepositBase()
         {
             var result = new Substrate.NetApi.Model.Types.Primitive.U128();
             result.Create("0x0080C6A47E8D03000000000000000000");
+            return result;
+        }
+        
+        /// <summary>
+        /// >> MaxTipAmount
+        ///  The maximum amount for a single tip.
+        /// </summary>
+        public Substrate.NetApi.Model.Types.Primitive.U128 MaxTipAmount()
+        {
+            var result = new Substrate.NetApi.Model.Types.Primitive.U128();
+            result.Create("0x0000F444829163450000000000000000");
             return result;
         }
     }
@@ -275,6 +286,12 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Storage
         /// The tip hash is unknown.
         /// </summary>
         UnknownTip,
+        
+        /// <summary>
+        /// >> MaxTipAmountExceeded
+        /// The tip given was too generous.
+        /// </summary>
+        MaxTipAmountExceeded,
         
         /// <summary>
         /// >> NotFinder

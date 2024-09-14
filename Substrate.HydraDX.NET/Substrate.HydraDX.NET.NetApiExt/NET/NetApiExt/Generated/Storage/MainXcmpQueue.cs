@@ -36,10 +36,7 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Storage
         public XcmpQueueStorage(SubstrateClientExt client)
         {
             this._client = client;
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("XcmpQueue", "InboundXcmpStatus"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.HydraDX.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue.InboundChannelDetails>)));
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("XcmpQueue", "InboundXcmpMessages"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat,
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32>), typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("XcmpQueue", "InboundXcmpSuspended"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSetT1)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("XcmpQueue", "OutboundXcmpStatus"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.HydraDX.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue.OutboundChannelDetails>)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("XcmpQueue", "OutboundXcmpMessages"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat,
@@ -47,77 +44,51 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Storage
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("XcmpQueue", "SignalMessages"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.HydraDX.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id), typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("XcmpQueue", "QueueConfig"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.HydraDX.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue.QueueConfigData)));
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("XcmpQueue", "Overweight"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.NetApi.Model.Types.Primitive.U64), typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>)));
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("XcmpQueue", "CounterForOverweight"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Primitive.U32)));
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("XcmpQueue", "OverweightCount"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Primitive.U64)));
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("XcmpQueue", "DeferredIndices"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.HydraDX.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id), typeof(Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSetT1)));
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("XcmpQueue", "DeferredMessageBuckets"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat,
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U16>>), typeof(Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT43)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("XcmpQueue", "QueueSuspended"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Primitive.Bool)));
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("XcmpQueue", "DeferredQueueSuspended"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Primitive.Bool)));
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("XcmpQueue", "DeferAllBy"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Primitive.U32)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("XcmpQueue", "DeliveryFeeFactor"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.HydraDX.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id), typeof(Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedU128)));
         }
         
         /// <summary>
-        /// >> InboundXcmpStatusParams
-        ///  Status of the inbound XCMP channels.
+        /// >> InboundXcmpSuspendedParams
+        ///  The suspended inbound XCMP channels. All others are not suspended.
+        /// 
+        ///  This is a `StorageValue` instead of a `StorageMap` since we expect multiple reads per block
+        ///  to different keys with a one byte payload. The access to `BoundedBTreeSet` will be cached
+        ///  within the block and therefore only included once in the proof size.
+        /// 
+        ///  NOTE: The PoV benchmarking cannot know this and will over-estimate, but the actual proof
+        ///  will be smaller.
         /// </summary>
-        public static string InboundXcmpStatusParams()
+        public static string InboundXcmpSuspendedParams()
         {
-            return RequestGenerator.GetStorage("XcmpQueue", "InboundXcmpStatus", Substrate.NetApi.Model.Meta.Storage.Type.Plain);
+            return RequestGenerator.GetStorage("XcmpQueue", "InboundXcmpSuspended", Substrate.NetApi.Model.Meta.Storage.Type.Plain);
         }
         
         /// <summary>
-        /// >> InboundXcmpStatusDefault
+        /// >> InboundXcmpSuspendedDefault
         /// Default value as hex string
         /// </summary>
-        public static string InboundXcmpStatusDefault()
+        public static string InboundXcmpSuspendedDefault()
         {
             return "0x00";
         }
         
         /// <summary>
-        /// >> InboundXcmpStatus
-        ///  Status of the inbound XCMP channels.
+        /// >> InboundXcmpSuspended
+        ///  The suspended inbound XCMP channels. All others are not suspended.
+        /// 
+        ///  This is a `StorageValue` instead of a `StorageMap` since we expect multiple reads per block
+        ///  to different keys with a one byte payload. The access to `BoundedBTreeSet` will be cached
+        ///  within the block and therefore only included once in the proof size.
+        /// 
+        ///  NOTE: The PoV benchmarking cannot know this and will over-estimate, but the actual proof
+        ///  will be smaller.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.HydraDX.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue.InboundChannelDetails>> InboundXcmpStatus(string blockhash, CancellationToken token)
+        public async Task<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSetT1> InboundXcmpSuspended(string blockhash, CancellationToken token)
         {
-            string parameters = XcmpQueueStorage.InboundXcmpStatusParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.HydraDX.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue.InboundChannelDetails>>(parameters, blockhash, token);
-            return result;
-        }
-        
-        /// <summary>
-        /// >> InboundXcmpMessagesParams
-        ///  Inbound aggregate XCMP messages. It can only be one per ParaId/block.
-        /// </summary>
-        public static string InboundXcmpMessagesParams(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32> key)
-        {
-            return RequestGenerator.GetStorage("XcmpQueue", "InboundXcmpMessages", Substrate.NetApi.Model.Meta.Storage.Type.Map, new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                        Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat,
-                        Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, key.Value);
-        }
-        
-        /// <summary>
-        /// >> InboundXcmpMessagesDefault
-        /// Default value as hex string
-        /// </summary>
-        public static string InboundXcmpMessagesDefault()
-        {
-            return "0x00";
-        }
-        
-        /// <summary>
-        /// >> InboundXcmpMessages
-        ///  Inbound aggregate XCMP messages. It can only be one per ParaId/block.
-        /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>> InboundXcmpMessages(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32> key, string blockhash, CancellationToken token)
-        {
-            string parameters = XcmpQueueStorage.InboundXcmpMessagesParams(key);
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>(parameters, blockhash, token);
+            string parameters = XcmpQueueStorage.InboundXcmpSuspendedParams();
+            var result = await _client.GetStorageAsync<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSetT1>(parameters, blockhash, token);
             return result;
         }
         
@@ -237,7 +208,7 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Storage
         /// </summary>
         public static string QueueConfigDefault()
         {
-            return "0x020000000500000001000000821A06000008000700C817A80402000400";
+            return "0x200000003000000008000000";
         }
         
         /// <summary>
@@ -248,165 +219,6 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Storage
         {
             string parameters = XcmpQueueStorage.QueueConfigParams();
             var result = await _client.GetStorageAsync<Substrate.HydraDX.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue.QueueConfigData>(parameters, blockhash, token);
-            return result;
-        }
-        
-        /// <summary>
-        /// >> OverweightParams
-        ///  The messages that exceeded max individual message weight budget.
-        /// 
-        ///  These message stay in this storage map until they are manually dispatched via
-        ///  `service_overweight`.
-        /// </summary>
-        public static string OverweightParams(Substrate.NetApi.Model.Types.Primitive.U64 key)
-        {
-            return RequestGenerator.GetStorage("XcmpQueue", "Overweight", Substrate.NetApi.Model.Meta.Storage.Type.Map, new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                        Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, new Substrate.NetApi.Model.Types.IType[] {
-                        key});
-        }
-        
-        /// <summary>
-        /// >> OverweightDefault
-        /// Default value as hex string
-        /// </summary>
-        public static string OverweightDefault()
-        {
-            return "0x00";
-        }
-        
-        /// <summary>
-        /// >> Overweight
-        ///  The messages that exceeded max individual message weight budget.
-        /// 
-        ///  These message stay in this storage map until they are manually dispatched via
-        ///  `service_overweight`.
-        /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>> Overweight(Substrate.NetApi.Model.Types.Primitive.U64 key, string blockhash, CancellationToken token)
-        {
-            string parameters = XcmpQueueStorage.OverweightParams(key);
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>>(parameters, blockhash, token);
-            return result;
-        }
-        
-        /// <summary>
-        /// >> CounterForOverweightParams
-        /// Counter for the related counted storage map
-        /// </summary>
-        public static string CounterForOverweightParams()
-        {
-            return RequestGenerator.GetStorage("XcmpQueue", "CounterForOverweight", Substrate.NetApi.Model.Meta.Storage.Type.Plain);
-        }
-        
-        /// <summary>
-        /// >> CounterForOverweightDefault
-        /// Default value as hex string
-        /// </summary>
-        public static string CounterForOverweightDefault()
-        {
-            return "0x00000000";
-        }
-        
-        /// <summary>
-        /// >> CounterForOverweight
-        /// Counter for the related counted storage map
-        /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> CounterForOverweight(string blockhash, CancellationToken token)
-        {
-            string parameters = XcmpQueueStorage.CounterForOverweightParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, blockhash, token);
-            return result;
-        }
-        
-        /// <summary>
-        /// >> OverweightCountParams
-        ///  The number of overweight messages ever recorded in `Overweight`. Also doubles as the next
-        ///  available free overweight index.
-        /// </summary>
-        public static string OverweightCountParams()
-        {
-            return RequestGenerator.GetStorage("XcmpQueue", "OverweightCount", Substrate.NetApi.Model.Meta.Storage.Type.Plain);
-        }
-        
-        /// <summary>
-        /// >> OverweightCountDefault
-        /// Default value as hex string
-        /// </summary>
-        public static string OverweightCountDefault()
-        {
-            return "0x0000000000000000";
-        }
-        
-        /// <summary>
-        /// >> OverweightCount
-        ///  The number of overweight messages ever recorded in `Overweight`. Also doubles as the next
-        ///  available free overweight index.
-        /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U64> OverweightCount(string blockhash, CancellationToken token)
-        {
-            string parameters = XcmpQueueStorage.OverweightCountParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U64>(parameters, blockhash, token);
-            return result;
-        }
-        
-        /// <summary>
-        /// >> DeferredIndicesParams
-        ///  Index of deferred message buckets to process.
-        /// </summary>
-        public static string DeferredIndicesParams(Substrate.HydraDX.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key)
-        {
-            return RequestGenerator.GetStorage("XcmpQueue", "DeferredIndices", Substrate.NetApi.Model.Meta.Storage.Type.Map, new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                        Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, new Substrate.NetApi.Model.Types.IType[] {
-                        key});
-        }
-        
-        /// <summary>
-        /// >> DeferredIndicesDefault
-        /// Default value as hex string
-        /// </summary>
-        public static string DeferredIndicesDefault()
-        {
-            return "0x00";
-        }
-        
-        /// <summary>
-        /// >> DeferredIndices
-        ///  Index of deferred message buckets to process.
-        /// </summary>
-        public async Task<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSetT1> DeferredIndices(Substrate.HydraDX.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key, string blockhash, CancellationToken token)
-        {
-            string parameters = XcmpQueueStorage.DeferredIndicesParams(key);
-            var result = await _client.GetStorageAsync<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSetT1>(parameters, blockhash, token);
-            return result;
-        }
-        
-        /// <summary>
-        /// >> DeferredMessageBucketsParams
-        ///  Storage for deferred messages, indexed by para id, block and counter.
-        /// </summary>
-        public static string DeferredMessageBucketsParams(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U16>> key)
-        {
-            return RequestGenerator.GetStorage("XcmpQueue", "DeferredMessageBuckets", Substrate.NetApi.Model.Meta.Storage.Type.Map, new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                        Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat,
-                        Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, key.Value);
-        }
-        
-        /// <summary>
-        /// >> DeferredMessageBucketsDefault
-        /// Default value as hex string
-        /// </summary>
-        public static string DeferredMessageBucketsDefault()
-        {
-            return "0x00";
-        }
-        
-        /// <summary>
-        /// >> DeferredMessageBuckets
-        ///  Storage for deferred messages, indexed by para id, block and counter.
-        /// </summary>
-        public async Task<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT43> DeferredMessageBuckets(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U16>> key, string blockhash, CancellationToken token)
-        {
-            string parameters = XcmpQueueStorage.DeferredMessageBucketsParams(key);
-            var result = await _client.GetStorageAsync<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT43>(parameters, blockhash, token);
             return result;
         }
         
@@ -440,60 +252,33 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Storage
         }
         
         /// <summary>
-        /// >> DeferredQueueSuspendedParams
-        ///  Whether or not the Deferred queue is suspended from executing XCMs or not.
+        /// >> DeliveryFeeFactorParams
+        ///  The factor to multiply the base delivery fee by.
         /// </summary>
-        public static string DeferredQueueSuspendedParams()
+        public static string DeliveryFeeFactorParams(Substrate.HydraDX.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key)
         {
-            return RequestGenerator.GetStorage("XcmpQueue", "DeferredQueueSuspended", Substrate.NetApi.Model.Meta.Storage.Type.Plain);
+            return RequestGenerator.GetStorage("XcmpQueue", "DeliveryFeeFactor", Substrate.NetApi.Model.Meta.Storage.Type.Map, new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
+                        Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, new Substrate.NetApi.Model.Types.IType[] {
+                        key});
         }
         
         /// <summary>
-        /// >> DeferredQueueSuspendedDefault
+        /// >> DeliveryFeeFactorDefault
         /// Default value as hex string
         /// </summary>
-        public static string DeferredQueueSuspendedDefault()
+        public static string DeliveryFeeFactorDefault()
         {
-            return "0x00";
+            return "0x000064A7B3B6E00D0000000000000000";
         }
         
         /// <summary>
-        /// >> DeferredQueueSuspended
-        ///  Whether or not the Deferred queue is suspended from executing XCMs or not.
+        /// >> DeliveryFeeFactor
+        ///  The factor to multiply the base delivery fee by.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.Bool> DeferredQueueSuspended(string blockhash, CancellationToken token)
+        public async Task<Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedU128> DeliveryFeeFactor(Substrate.HydraDX.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key, string blockhash, CancellationToken token)
         {
-            string parameters = XcmpQueueStorage.DeferredQueueSuspendedParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.Bool>(parameters, blockhash, token);
-            return result;
-        }
-        
-        /// <summary>
-        /// >> DeferAllByParams
-        ///  Whether or not and if so by how much to defer all incoming XCMs.
-        /// </summary>
-        public static string DeferAllByParams()
-        {
-            return RequestGenerator.GetStorage("XcmpQueue", "DeferAllBy", Substrate.NetApi.Model.Meta.Storage.Type.Plain);
-        }
-        
-        /// <summary>
-        /// >> DeferAllByDefault
-        /// Default value as hex string
-        /// </summary>
-        public static string DeferAllByDefault()
-        {
-            return "0x00";
-        }
-        
-        /// <summary>
-        /// >> DeferAllBy
-        ///  Whether or not and if so by how much to defer all incoming XCMs.
-        /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> DeferAllBy(string blockhash, CancellationToken token)
-        {
-            string parameters = XcmpQueueStorage.DeferAllByParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, blockhash, token);
+            string parameters = XcmpQueueStorage.DeliveryFeeFactorParams(key);
+            var result = await _client.GetStorageAsync<Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedU128>(parameters, blockhash, token);
             return result;
         }
     }
@@ -510,6 +295,21 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Storage
     /// </summary>
     public sealed class XcmpQueueConstants
     {
+        
+        /// <summary>
+        /// >> MaxInboundSuspended
+        ///  The maximum number of inbound XCMP channels that can be suspended simultaneously.
+        /// 
+        ///  Any further channel suspensions will fail and messages may get dropped without further
+        ///  notice. Choosing a high value (1000) is okay; the trade-off that is described in
+        ///  [`InboundXcmpSuspended`] still applies at that scale.
+        /// </summary>
+        public Substrate.NetApi.Model.Types.Primitive.U32 MaxInboundSuspended()
+        {
+            var result = new Substrate.NetApi.Model.Types.Primitive.U32();
+            result.Create("0xE8030000");
+            return result;
+        }
     }
     
     /// <summary>
@@ -519,39 +319,21 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Storage
     {
         
         /// <summary>
-        /// >> FailedToSend
-        /// Failed to send XCM message.
+        /// >> BadQueueConfig
+        /// Setting the queue config failed since one of its values was invalid.
         /// </summary>
-        FailedToSend,
+        BadQueueConfig,
         
         /// <summary>
-        /// >> BadXcmOrigin
-        /// Bad XCM origin.
+        /// >> AlreadySuspended
+        /// The execution is already suspended.
         /// </summary>
-        BadXcmOrigin,
+        AlreadySuspended,
         
         /// <summary>
-        /// >> BadXcm
-        /// Bad XCM data.
+        /// >> AlreadyResumed
+        /// The execution is already resumed.
         /// </summary>
-        BadXcm,
-        
-        /// <summary>
-        /// >> BadOverweightIndex
-        /// Bad overweight index.
-        /// </summary>
-        BadOverweightIndex,
-        
-        /// <summary>
-        /// >> WeightOverLimit
-        /// Provided weight is possibly not enough to execute the message.
-        /// </summary>
-        WeightOverLimit,
-        
-        /// <summary>
-        /// >> MessageNotFound
-        /// Indicated message is not present.
-        /// </summary>
-        MessageNotFound,
+        AlreadyResumed,
     }
 }

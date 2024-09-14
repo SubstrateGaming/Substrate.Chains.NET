@@ -103,10 +103,30 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_staking.pallet
     }
     
     /// <summary>
-    /// >> 542 - Variant[pallet_staking.pallet.Error]
+    /// >> 602 - Variant[pallet_staking.pallet.Error]
     /// The `Error` enum of this pallet.
     /// </summary>
-    public sealed class EnumError : BaseEnumExt<Error, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_staking.pallet.EnumInconsistentStateError>
+    public sealed class EnumError : BaseEnumRust<Error>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumError()
+        {
+				AddTypeDecoder<BaseVoid>(Error.InsufficientBalance);
+				AddTypeDecoder<BaseVoid>(Error.InsufficientStake);
+				AddTypeDecoder<BaseVoid>(Error.PositionNotFound);
+				AddTypeDecoder<BaseVoid>(Error.MaxVotesReached);
+				AddTypeDecoder<BaseVoid>(Error.NotInitialized);
+				AddTypeDecoder<BaseVoid>(Error.AlreadyInitialized);
+				AddTypeDecoder<BaseVoid>(Error.Arithmetic);
+				AddTypeDecoder<BaseVoid>(Error.MissingPotBalance);
+				AddTypeDecoder<BaseVoid>(Error.PositionAlreadyExists);
+				AddTypeDecoder<BaseVoid>(Error.Forbidden);
+				AddTypeDecoder<BaseVoid>(Error.ExistingVotes);
+				AddTypeDecoder<BaseVoid>(Error.ExistingProcessedVotes);
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_staking.pallet.EnumInconsistentStateError>(Error.InconsistentState);
+        }
     }
 }

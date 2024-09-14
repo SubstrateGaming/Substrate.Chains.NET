@@ -42,7 +42,7 @@ namespace Substrate.HydraDX.NET.RestService.Generated.Controller
         ///  The current authority set.
         /// </summary>
         [HttpGet("Authorities")]
-        [ProducesResponseType(typeof(Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT45), 200)]
+        [ProducesResponseType(typeof(Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT49), 200)]
         [StorageKeyBuilder(typeof(Substrate.HydraDX.NET.NetApiExt.Generated.Storage.AuraStorage), "AuthoritiesParams")]
         public IActionResult GetAuthorities()
         {
