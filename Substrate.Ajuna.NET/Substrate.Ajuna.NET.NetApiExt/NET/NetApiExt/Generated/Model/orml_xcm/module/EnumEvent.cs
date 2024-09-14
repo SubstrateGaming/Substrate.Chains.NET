@@ -33,7 +33,15 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.orml_xcm.module
     /// >> 136 - Variant[orml_xcm.module.Event]
     /// The `Event` enum of this pallet
     /// </summary>
-    public sealed class EnumEvent : BaseEnumExt<Event, BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.staging_xcm.v4.location.Location, Substrate.Ajuna.NET.NetApiExt.Generated.Model.staging_xcm.v4.XcmT1>>
+    public sealed class EnumEvent : BaseEnumRust<Event>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumEvent()
+        {
+				AddTypeDecoder<BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.staging_xcm.v4.location.Location, Substrate.Ajuna.NET.NetApiExt.Generated.Model.staging_xcm.v4.XcmT1>>(Event.Sent);
+        }
     }
 }

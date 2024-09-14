@@ -40,7 +40,17 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm
     /// <summary>
     /// >> 441 - Variant[xcm.VersionedResponse]
     /// </summary>
-    public sealed class EnumVersionedResponse : BaseEnumExt<VersionedResponse, BaseVoid, BaseVoid, Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.v2.EnumResponse, Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.v3.EnumResponse, Substrate.Ajuna.NET.NetApiExt.Generated.Model.staging_xcm.v4.EnumResponse>
+    public sealed class EnumVersionedResponse : BaseEnumRust<VersionedResponse>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumVersionedResponse()
+        {
+				AddTypeDecoder<Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.v2.EnumResponse>(VersionedResponse.V2);
+				AddTypeDecoder<Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.v3.EnumResponse>(VersionedResponse.V3);
+				AddTypeDecoder<Substrate.Ajuna.NET.NetApiExt.Generated.Model.staging_xcm.v4.EnumResponse>(VersionedResponse.V4);
+        }
     }
 }

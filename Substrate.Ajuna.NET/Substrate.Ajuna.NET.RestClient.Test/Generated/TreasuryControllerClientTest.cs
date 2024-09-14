@@ -284,7 +284,7 @@ namespace Substrate.Ajuna.NET.RestClient.Test.Generated
          result.ValidFrom = this.GetTestValueU32();
          result.ExpireAt = this.GetTestValueU32();
          result.Status = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_treasury.EnumPaymentState();
-         result.Status.Create(this.GetTestValueEnum<Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_treasury.PaymentState>(), this.GetTestValueBaseVoid());
+         result.Status = this.GetTestValue13();
          return result;
       }
       public Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue12()
@@ -325,6 +325,13 @@ namespace Substrate.Ajuna.NET.RestClient.Test.Generated
                   this.GetTestValueU8(),
                   this.GetTestValueU8(),
                   this.GetTestValueU8()});
+         return result;
+      }
+      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_treasury.EnumPaymentState GetTestValue13()
+      {
+         Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_treasury.EnumPaymentState result;
+         result = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_treasury.EnumPaymentState();
+         // NOT IMPLEMENTED >> Initialize Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_treasury.EnumPaymentState
          return result;
       }
       [Test()]

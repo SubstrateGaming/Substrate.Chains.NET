@@ -70,7 +70,23 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.v2.junction
     /// <summary>
     /// >> 111 - Variant[xcm.v2.junction.Junction]
     /// </summary>
-    public sealed class EnumJunction : BaseEnumExt<Junction, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>, BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.v2.EnumNetworkId, Substrate.Ajuna.NET.NetApiExt.Generated.Types.Base.Arr32U8>, BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.v2.EnumNetworkId, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U64>>, BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.v2.EnumNetworkId, Substrate.Ajuna.NET.NetApiExt.Generated.Types.Base.Arr20U8>, Substrate.NetApi.Model.Types.Primitive.U8, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128>, Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT1, BaseVoid, BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.v2.EnumBodyId, Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.v2.EnumBodyPart>>
+    public sealed class EnumJunction : BaseEnumRust<Junction>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumJunction()
+        {
+				AddTypeDecoder<Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>>(Junction.Parachain);
+				AddTypeDecoder<BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.v2.EnumNetworkId, Substrate.Ajuna.NET.NetApiExt.Generated.Types.Base.Arr32U8>>(Junction.AccountId32);
+				AddTypeDecoder<BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.v2.EnumNetworkId, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U64>>>(Junction.AccountIndex64);
+				AddTypeDecoder<BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.v2.EnumNetworkId, Substrate.Ajuna.NET.NetApiExt.Generated.Types.Base.Arr20U8>>(Junction.AccountKey20);
+				AddTypeDecoder<Substrate.NetApi.Model.Types.Primitive.U8>(Junction.PalletInstance);
+				AddTypeDecoder<Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128>>(Junction.GeneralIndex);
+				AddTypeDecoder<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT1>(Junction.GeneralKey);
+				AddTypeDecoder<BaseVoid>(Junction.OnlyChild);
+				AddTypeDecoder<BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.v2.EnumBodyId, Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.v2.EnumBodyPart>>(Junction.Plurality);
+        }
     }
 }

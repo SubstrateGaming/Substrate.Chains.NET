@@ -245,18 +245,25 @@ namespace Substrate.Ajuna.NET.RestClient.Test.Generated
          result.Status = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_assets.types.EnumAccountStatus();
          result.Status.Create(this.GetTestValueEnum<Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_assets.types.AccountStatus>());
          result.Reason = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_assets.types.EnumExistenceReason();
-         result.Reason.Create(this.GetTestValueEnum<Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_assets.types.ExistenceReason>(), this.GetTestValueBaseVoid());
+         result.Reason = this.GetTestValue9();
          result.Extra = new Substrate.NetApi.Model.Types.Base.BaseTuple();
          return result;
       }
-      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> GetTestValue9()
+      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_assets.types.EnumExistenceReason GetTestValue9()
+      {
+         Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_assets.types.EnumExistenceReason result;
+         result = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_assets.types.EnumExistenceReason();
+         // NOT IMPLEMENTED >> Initialize Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_assets.types.EnumExistenceReason
+         return result;
+      }
+      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> GetTestValue10()
       {
          Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> result;
          result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>();
-         result.Create(this.GetTestValueU32(), this.GetTestValue10());
+         result.Create(this.GetTestValueU32(), this.GetTestValue11());
          return result;
       }
-      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue10()
+      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue11()
       {
          Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 result;
          result = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32();
@@ -308,7 +315,7 @@ namespace Substrate.Ajuna.NET.RestClient.Test.Generated
          // Construct new RPC client to test with.
          AssetsControllerClient rpcClient = new AssetsControllerClient(_httpClient, subscriptionClient);
          Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_assets.types.AssetAccount mockupValue = this.GetTestValue8();
-         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> mockupKey = this.GetTestValue9();
+         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> mockupKey = this.GetTestValue10();
 
          Assert.IsTrue(await rpcClient.SubscribeAccount(mockupKey));
 
@@ -325,7 +332,7 @@ namespace Substrate.Ajuna.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_assets.types.Approval GetTestValue12()
+      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_assets.types.Approval GetTestValue13()
       {
          Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_assets.types.Approval result;
          result = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_assets.types.Approval();
@@ -333,14 +340,14 @@ namespace Substrate.Ajuna.NET.RestClient.Test.Generated
          result.Deposit = this.GetTestValueU128();
          return result;
       }
-      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> GetTestValue13()
+      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> GetTestValue14()
       {
          Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> result;
          result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>();
-         result.Create(this.GetTestValueU32(), this.GetTestValue14(), this.GetTestValue15());
+         result.Create(this.GetTestValueU32(), this.GetTestValue15(), this.GetTestValue16());
          return result;
       }
-      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue14()
+      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue15()
       {
          Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 result;
          result = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32();
@@ -380,7 +387,7 @@ namespace Substrate.Ajuna.NET.RestClient.Test.Generated
                   this.GetTestValueU8()});
          return result;
       }
-      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue15()
+      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue16()
       {
          Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 result;
          result = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32();
@@ -431,8 +438,8 @@ namespace Substrate.Ajuna.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          AssetsControllerClient rpcClient = new AssetsControllerClient(_httpClient, subscriptionClient);
-         Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_assets.types.Approval mockupValue = this.GetTestValue12();
-         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> mockupKey = this.GetTestValue13();
+         Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_assets.types.Approval mockupValue = this.GetTestValue13();
+         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> mockupKey = this.GetTestValue14();
 
          Assert.IsTrue(await rpcClient.SubscribeApprovals(mockupKey));
 
@@ -449,20 +456,20 @@ namespace Substrate.Ajuna.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_assets.types.AssetMetadata GetTestValue17()
+      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_assets.types.AssetMetadata GetTestValue18()
       {
          Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_assets.types.AssetMetadata result;
          result = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_assets.types.AssetMetadata();
          result.Deposit = this.GetTestValueU128();
          result.Name = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT37();
-         result.Name = this.GetTestValue18();
+         result.Name = this.GetTestValue19();
          result.Symbol = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT37();
-         result.Symbol = this.GetTestValue19();
+         result.Symbol = this.GetTestValue20();
          result.Decimals = this.GetTestValueU8();
          result.IsFrozen = this.GetTestValueBool();
          return result;
       }
-      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT37 GetTestValue18()
+      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT37 GetTestValue19()
       {
          Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT37 result;
          result = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT37();
@@ -471,7 +478,7 @@ namespace Substrate.Ajuna.NET.RestClient.Test.Generated
                   this.GetTestValueU8()});
          return result;
       }
-      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT37 GetTestValue19()
+      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT37 GetTestValue20()
       {
          Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT37 result;
          result = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT37();
@@ -491,7 +498,7 @@ namespace Substrate.Ajuna.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          AssetsControllerClient rpcClient = new AssetsControllerClient(_httpClient, subscriptionClient);
-         Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_assets.types.AssetMetadata mockupValue = this.GetTestValue17();
+         Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_assets.types.AssetMetadata mockupValue = this.GetTestValue18();
          Substrate.NetApi.Model.Types.Primitive.U32 mockupKey = this.GetTestValueU32();
 
          Assert.IsTrue(await rpcClient.SubscribeMetadata(mockupKey));

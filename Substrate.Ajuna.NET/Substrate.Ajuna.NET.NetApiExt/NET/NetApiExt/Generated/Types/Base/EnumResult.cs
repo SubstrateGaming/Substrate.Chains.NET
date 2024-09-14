@@ -35,7 +35,16 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Types.Base
     /// <summary>
     /// >> 35 - Variant[Result]
     /// </summary>
-    public sealed class EnumResult : BaseEnumExt<Result, Substrate.NetApi.Model.Types.Base.BaseTuple, Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_runtime.EnumDispatchError>
+    public sealed class EnumResult : BaseEnumRust<Result>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumResult()
+        {
+				AddTypeDecoder<Substrate.NetApi.Model.Types.Base.BaseTuple>(Result.Ok);
+				AddTypeDecoder<Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_runtime.EnumDispatchError>(Result.Err);
+        }
     }
 }

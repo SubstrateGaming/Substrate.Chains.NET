@@ -64,7 +64,20 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_utility.pallet
     /// >> 37 - Variant[pallet_utility.pallet.Event]
     /// The `Event` enum of this pallet
     /// </summary>
-    public sealed class EnumEvent : BaseEnumExt<Event, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_runtime.EnumDispatchError>, BaseVoid, BaseVoid, BaseVoid, Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_runtime.EnumDispatchError, Substrate.Ajuna.NET.NetApiExt.Generated.Types.Base.EnumResult>
+    public sealed class EnumEvent : BaseEnumRust<Event>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumEvent()
+        {
+				AddTypeDecoder<BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_runtime.EnumDispatchError>>(Event.BatchInterrupted);
+				AddTypeDecoder<BaseVoid>(Event.BatchCompleted);
+				AddTypeDecoder<BaseVoid>(Event.BatchCompletedWithErrors);
+				AddTypeDecoder<BaseVoid>(Event.ItemCompleted);
+				AddTypeDecoder<Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_runtime.EnumDispatchError>(Event.ItemFailed);
+				AddTypeDecoder<Substrate.Ajuna.NET.NetApiExt.Generated.Types.Base.EnumResult>(Event.DispatchedAs);
+        }
     }
 }
