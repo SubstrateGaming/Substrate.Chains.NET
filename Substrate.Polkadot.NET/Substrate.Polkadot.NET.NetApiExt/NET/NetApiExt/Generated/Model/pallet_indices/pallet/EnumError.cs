@@ -54,7 +54,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_indices.pallet
     }
     
     /// <summary>
-    /// >> 569 - Variant[pallet_indices.pallet.Error]
+    /// >> 571 - Variant[pallet_indices.pallet.Error]
     /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>

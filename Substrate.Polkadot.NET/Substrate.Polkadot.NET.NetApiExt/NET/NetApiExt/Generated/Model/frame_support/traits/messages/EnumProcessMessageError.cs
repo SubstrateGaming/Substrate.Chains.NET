@@ -48,9 +48,21 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.frame_support.traits.
     }
     
     /// <summary>
-    /// >> 520 - Variant[frame_support.traits.messages.ProcessMessageError]
+    /// >> 521 - Variant[frame_support.traits.messages.ProcessMessageError]
     /// </summary>
-    public sealed class EnumProcessMessageError : BaseEnumExt<ProcessMessageError, BaseVoid, BaseVoid, BaseVoid, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight, BaseVoid>
+    public sealed class EnumProcessMessageError : BaseEnumRust<ProcessMessageError>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumProcessMessageError()
+        {
+				AddTypeDecoder<BaseVoid>(ProcessMessageError.BadFormat);
+				AddTypeDecoder<BaseVoid>(ProcessMessageError.Corrupt);
+				AddTypeDecoder<BaseVoid>(ProcessMessageError.Unsupported);
+				AddTypeDecoder<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>(ProcessMessageError.Overweight);
+				AddTypeDecoder<BaseVoid>(ProcessMessageError.Yield);
+        }
     }
 }

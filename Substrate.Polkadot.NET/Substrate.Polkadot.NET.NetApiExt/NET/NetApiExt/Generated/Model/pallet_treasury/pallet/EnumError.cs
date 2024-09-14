@@ -97,7 +97,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_treasury.palle
     }
     
     /// <summary>
-    /// >> 631 - Variant[pallet_treasury.pallet.Error]
+    /// >> 633 - Variant[pallet_treasury.pallet.Error]
     /// Error for the treasury pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>

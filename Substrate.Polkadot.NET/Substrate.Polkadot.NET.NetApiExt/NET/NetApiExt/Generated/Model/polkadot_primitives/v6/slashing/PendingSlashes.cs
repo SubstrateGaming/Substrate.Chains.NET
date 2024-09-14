@@ -9,7 +9,7 @@
 
 using Substrate.NetApi.Attributes;
 using Substrate.NetApi.Model.Types.Base;
-using Substrate.NetApi.Model.Types.Metadata.V14;
+using Substrate.NetApi.Model.Types.Metadata.Base;
 using System.Collections.Generic;
 
 
@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v
     
     
     /// <summary>
-    /// >> 805 - Composite[polkadot_primitives.v6.slashing.PendingSlashes]
+    /// >> 807 - Composite[polkadot_primitives.v6.slashing.PendingSlashes]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class PendingSlashes : BaseType

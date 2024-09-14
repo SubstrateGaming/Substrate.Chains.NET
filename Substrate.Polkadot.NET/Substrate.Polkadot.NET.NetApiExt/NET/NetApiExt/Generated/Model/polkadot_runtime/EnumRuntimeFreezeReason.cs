@@ -28,9 +28,17 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime
     }
     
     /// <summary>
-    /// >> 585 - Variant[polkadot_runtime.RuntimeFreezeReason]
+    /// >> 587 - Variant[polkadot_runtime.RuntimeFreezeReason]
     /// </summary>
-    public sealed class EnumRuntimeFreezeReason : BaseEnumExt<RuntimeFreezeReason, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_nomination_pools.pallet.EnumFreezeReason>
+    public sealed class EnumRuntimeFreezeReason : BaseEnumRust<RuntimeFreezeReason>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumRuntimeFreezeReason()
+        {
+				AddTypeDecoder<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_nomination_pools.pallet.EnumFreezeReason>(RuntimeFreezeReason.NominationPools);
+        }
     }
 }

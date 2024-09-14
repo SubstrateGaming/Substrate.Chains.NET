@@ -9,7 +9,7 @@
 
 using Substrate.NetApi.Attributes;
 using Substrate.NetApi.Model.Types.Base;
-using Substrate.NetApi.Model.Types.Metadata.V14;
+using Substrate.NetApi.Model.Types.Metadata.Base;
 using System.Collections.Generic;
 
 
@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_comm
     
     
     /// <summary>
-    /// >> 867 - Composite[polkadot_runtime_common.claims.PrevalidateAttests]
+    /// >> 869 - Composite[polkadot_runtime_common.claims.PrevalidateAttests]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class PrevalidateAttests : BaseType

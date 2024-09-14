@@ -564,7 +564,7 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
       {
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumValidityAttestation result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumValidityAttestation();
-         result.Create(this.GetTestValueEnum<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.ValidityAttestation>(), this.GetTestValueBaseVoid());
+         // NOT IMPLEMENTED >> Initialize Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumValidityAttestation
          return result;
       }
       public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.DisputeStatementSet GetTestValue25()
@@ -631,39 +631,32 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
       {
          Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumDisputeStatement, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.ValidatorIndex, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.validator_app.Signature> result;
          result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumDisputeStatement, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.ValidatorIndex, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.validator_app.Signature>();
-         result.Create(this.GetTestValue29(), this.GetTestValue31(), this.GetTestValue32());
+         result.Create(this.GetTestValue29(), this.GetTestValue30(), this.GetTestValue31());
          return result;
       }
       public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumDisputeStatement GetTestValue29()
       {
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumDisputeStatement result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumDisputeStatement();
-         result.Create(this.GetTestValueEnum<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.DisputeStatement>(), this.GetTestValue30());
+         // NOT IMPLEMENTED >> Initialize Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumDisputeStatement
          return result;
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumValidDisputeStatementKind GetTestValue30()
-      {
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumValidDisputeStatementKind result;
-         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumValidDisputeStatementKind();
-         result.Create(this.GetTestValueEnum<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.ValidDisputeStatementKind>(), this.GetTestValueBaseVoid());
-         return result;
-      }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.ValidatorIndex GetTestValue31()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.ValidatorIndex GetTestValue30()
       {
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.ValidatorIndex result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.ValidatorIndex();
          result.Value = this.GetTestValueU32();
          return result;
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.validator_app.Signature GetTestValue32()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.validator_app.Signature GetTestValue31()
       {
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.validator_app.Signature result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.validator_app.Signature();
          result.Value = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.sr25519.Signature();
-         result.Value = this.GetTestValue33();
+         result.Value = this.GetTestValue32();
          return result;
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.sr25519.Signature GetTestValue33()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.sr25519.Signature GetTestValue32()
       {
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.sr25519.Signature result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.sr25519.Signature();

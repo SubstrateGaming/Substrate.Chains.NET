@@ -30,82 +30,17 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
       {
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_conviction_voting.vote.EnumVoting result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_conviction_voting.vote.EnumVoting();
-         result.Create(this.GetTestValueEnum<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_conviction_voting.vote.Voting>(), this.GetTestValue3());
+         // NOT IMPLEMENTED >> Initialize Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_conviction_voting.vote.EnumVoting
          return result;
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_conviction_voting.vote.Casting GetTestValue3()
-      {
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_conviction_voting.vote.Casting result;
-         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_conviction_voting.vote.Casting();
-         result.Votes = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT24();
-         result.Votes = this.GetTestValue4();
-         result.Delegations = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_conviction_voting.types.Delegations();
-         result.Delegations = this.GetTestValue9();
-         result.Prior = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_conviction_voting.vote.PriorLock();
-         result.Prior = this.GetTestValue10();
-         return result;
-      }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT24 GetTestValue4()
-      {
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT24 result;
-         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT24();
-         result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_conviction_voting.vote.EnumAccountVote>>();
-         result.Value.Create(new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_conviction_voting.vote.EnumAccountVote>[] {
-                  this.GetTestValue5()});
-         return result;
-      }
-      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_conviction_voting.vote.EnumAccountVote> GetTestValue5()
-      {
-         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_conviction_voting.vote.EnumAccountVote> result;
-         result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_conviction_voting.vote.EnumAccountVote>();
-         result.Create(this.GetTestValueU32(), this.GetTestValue6());
-         return result;
-      }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_conviction_voting.vote.EnumAccountVote GetTestValue6()
-      {
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_conviction_voting.vote.EnumAccountVote result;
-         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_conviction_voting.vote.EnumAccountVote();
-         result.Create(this.GetTestValueEnum<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_conviction_voting.vote.AccountVote>(), this.GetTestValue7());
-         return result;
-      }
-      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_conviction_voting.vote.Vote, Substrate.NetApi.Model.Types.Primitive.U128> GetTestValue7()
-      {
-         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_conviction_voting.vote.Vote, Substrate.NetApi.Model.Types.Primitive.U128> result;
-         result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_conviction_voting.vote.Vote, Substrate.NetApi.Model.Types.Primitive.U128>();
-         result.Create(this.GetTestValue8(), this.GetTestValueU128());
-         return result;
-      }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_conviction_voting.vote.Vote GetTestValue8()
-      {
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_conviction_voting.vote.Vote result;
-         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_conviction_voting.vote.Vote();
-         result.Value = this.GetTestValueU8();
-         return result;
-      }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_conviction_voting.types.Delegations GetTestValue9()
-      {
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_conviction_voting.types.Delegations result;
-         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_conviction_voting.types.Delegations();
-         result.Votes = this.GetTestValueU128();
-         result.Capital = this.GetTestValueU128();
-         return result;
-      }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_conviction_voting.vote.PriorLock GetTestValue10()
-      {
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_conviction_voting.vote.PriorLock result;
-         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_conviction_voting.vote.PriorLock();
-         result.BlockNumber = this.GetTestValueU32();
-         result.Balance = this.GetTestValueU128();
-         return result;
-      }
-      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U16> GetTestValue11()
+      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U16> GetTestValue3()
       {
          Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U16> result;
          result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U16>();
-         result.Create(this.GetTestValue12(), this.GetTestValueU16());
+         result.Create(this.GetTestValue4(), this.GetTestValueU16());
          return result;
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue12()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue4()
       {
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32();
@@ -157,7 +92,7 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
          // Construct new RPC client to test with.
          ConvictionVotingControllerClient rpcClient = new ConvictionVotingControllerClient(_httpClient, subscriptionClient);
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_conviction_voting.vote.EnumVoting mockupValue = this.GetTestValue2();
-         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U16> mockupKey = this.GetTestValue11();
+         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U16> mockupKey = this.GetTestValue3();
 
          Assert.IsTrue(await rpcClient.SubscribeVotingFor(mockupKey));
 
@@ -174,23 +109,23 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT25 GetTestValue14()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT25 GetTestValue6()
       {
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT25 result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT25();
          result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U16, Substrate.NetApi.Model.Types.Primitive.U128>>();
          result.Value.Create(new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U16, Substrate.NetApi.Model.Types.Primitive.U128>[] {
-                  this.GetTestValue15()});
+                  this.GetTestValue7()});
          return result;
       }
-      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U16, Substrate.NetApi.Model.Types.Primitive.U128> GetTestValue15()
+      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U16, Substrate.NetApi.Model.Types.Primitive.U128> GetTestValue7()
       {
          Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U16, Substrate.NetApi.Model.Types.Primitive.U128> result;
          result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U16, Substrate.NetApi.Model.Types.Primitive.U128>();
          result.Create(this.GetTestValueU16(), this.GetTestValueU128());
          return result;
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue16()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue8()
       {
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32();
@@ -241,8 +176,8 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          ConvictionVotingControllerClient rpcClient = new ConvictionVotingControllerClient(_httpClient, subscriptionClient);
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT25 mockupValue = this.GetTestValue14();
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 mockupKey = this.GetTestValue16();
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT25 mockupValue = this.GetTestValue6();
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 mockupKey = this.GetTestValue8();
 
          Assert.IsTrue(await rpcClient.SubscribeClassLocksFor(mockupKey));
 

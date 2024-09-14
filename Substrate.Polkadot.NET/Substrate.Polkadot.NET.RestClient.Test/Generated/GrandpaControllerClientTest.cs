@@ -32,7 +32,7 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
       {
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_grandpa.EnumStoredState result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_grandpa.EnumStoredState();
-         result.Create(this.GetTestValueEnum<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_grandpa.StoredState>(), this.GetTestValueBaseVoid());
+         // NOT IMPLEMENTED >> Initialize Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_grandpa.EnumStoredState
          return result;
       }
       [Test()]

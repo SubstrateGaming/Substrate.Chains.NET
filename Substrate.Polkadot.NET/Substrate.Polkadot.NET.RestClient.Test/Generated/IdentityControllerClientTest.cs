@@ -33,7 +33,7 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
       {
          Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types.Registration, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT4>> result;
          result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types.Registration, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT4>>();
-         result.Create(this.GetTestValue3(), this.GetTestValue13());
+         result.Create(this.GetTestValue3(), this.GetTestValue20());
          return result;
       }
       public Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types.Registration GetTestValue3()
@@ -67,7 +67,7 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
       {
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumJudgement result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumJudgement();
-         result.Create(this.GetTestValueEnum<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types.Judgement>(), this.GetTestValueBaseVoid());
+         // NOT IMPLEMENTED >> Initialize Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumJudgement
          return result;
       }
       public Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.legacy.IdentityInfo GetTestValue7()
@@ -77,21 +77,21 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
          result.Additional = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT3();
          result.Additional = this.GetTestValue8();
          result.Display = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData();
-         result.Display.Create(this.GetTestValueEnum<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types.Data>(), this.GetTestValueBaseVoid());
+         result.Display = this.GetTestValue12();
          result.Legal = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData();
-         result.Legal.Create(this.GetTestValueEnum<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types.Data>(), this.GetTestValueBaseVoid());
+         result.Legal = this.GetTestValue13();
          result.Web = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData();
-         result.Web.Create(this.GetTestValueEnum<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types.Data>(), this.GetTestValueBaseVoid());
+         result.Web = this.GetTestValue14();
          result.Riot = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData();
-         result.Riot.Create(this.GetTestValueEnum<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types.Data>(), this.GetTestValueBaseVoid());
+         result.Riot = this.GetTestValue15();
          result.Email = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData();
-         result.Email.Create(this.GetTestValueEnum<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types.Data>(), this.GetTestValueBaseVoid());
+         result.Email = this.GetTestValue16();
          result.PgpFingerprint = new Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base.Arr20U8>();
-         result.PgpFingerprint.Create(this.GetTestValue12());
+         result.PgpFingerprint.Create(this.GetTestValue17());
          result.Image = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData();
-         result.Image.Create(this.GetTestValueEnum<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types.Data>(), this.GetTestValueBaseVoid());
+         result.Image = this.GetTestValue18();
          result.Twitter = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData();
-         result.Twitter.Create(this.GetTestValueEnum<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types.Data>(), this.GetTestValueBaseVoid());
+         result.Twitter = this.GetTestValue19();
          return result;
       }
       public Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT3 GetTestValue8()
@@ -114,17 +114,52 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
       {
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData();
-         result.Create(this.GetTestValueEnum<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types.Data>(), this.GetTestValueBaseVoid());
+         // NOT IMPLEMENTED >> Initialize Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData
          return result;
       }
       public Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData GetTestValue11()
       {
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData();
-         result.Create(this.GetTestValueEnum<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types.Data>(), this.GetTestValueBaseVoid());
+         // NOT IMPLEMENTED >> Initialize Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData
          return result;
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base.Arr20U8 GetTestValue12()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData GetTestValue12()
+      {
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData result;
+         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData();
+         // NOT IMPLEMENTED >> Initialize Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData
+         return result;
+      }
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData GetTestValue13()
+      {
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData result;
+         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData();
+         // NOT IMPLEMENTED >> Initialize Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData
+         return result;
+      }
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData GetTestValue14()
+      {
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData result;
+         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData();
+         // NOT IMPLEMENTED >> Initialize Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData
+         return result;
+      }
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData GetTestValue15()
+      {
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData result;
+         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData();
+         // NOT IMPLEMENTED >> Initialize Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData
+         return result;
+      }
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData GetTestValue16()
+      {
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData result;
+         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData();
+         // NOT IMPLEMENTED >> Initialize Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData
+         return result;
+      }
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base.Arr20U8 GetTestValue17()
       {
          Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base.Arr20U8 result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base.Arr20U8();
@@ -151,14 +186,28 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
                   this.GetTestValueU8()});
          return result;
       }
-      public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT4> GetTestValue13()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData GetTestValue18()
+      {
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData result;
+         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData();
+         // NOT IMPLEMENTED >> Initialize Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData
+         return result;
+      }
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData GetTestValue19()
+      {
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData result;
+         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData();
+         // NOT IMPLEMENTED >> Initialize Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData
+         return result;
+      }
+      public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT4> GetTestValue20()
       {
          Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT4> result;
          result = new Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT4>();
-         result.Create(this.GetTestValue14());
+         result.Create(this.GetTestValue21());
          return result;
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT4 GetTestValue14()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT4 GetTestValue21()
       {
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT4 result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT4();
@@ -167,7 +216,7 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
                   this.GetTestValueU8()});
          return result;
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue15()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue22()
       {
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32();
@@ -219,7 +268,7 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
          // Construct new RPC client to test with.
          IdentityControllerClient rpcClient = new IdentityControllerClient(_httpClient, subscriptionClient);
          Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types.Registration, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT4>> mockupValue = this.GetTestValue2();
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 mockupKey = this.GetTestValue15();
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 mockupKey = this.GetTestValue22();
 
          Assert.IsTrue(await rpcClient.SubscribeIdentityOf(mockupKey));
 
@@ -236,14 +285,14 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData> GetTestValue17()
+      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData> GetTestValue24()
       {
          Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData> result;
          result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData>();
-         result.Create(this.GetTestValue18(), this.GetTestValue19());
+         result.Create(this.GetTestValue25(), this.GetTestValue26());
          return result;
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue18()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue25()
       {
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32();
@@ -283,14 +332,14 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
                   this.GetTestValueU8()});
          return result;
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData GetTestValue19()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData GetTestValue26()
       {
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData();
-         result.Create(this.GetTestValueEnum<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types.Data>(), this.GetTestValueBaseVoid());
+         // NOT IMPLEMENTED >> Initialize Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData
          return result;
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue20()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue27()
       {
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32();
@@ -341,8 +390,8 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          IdentityControllerClient rpcClient = new IdentityControllerClient(_httpClient, subscriptionClient);
-         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData> mockupValue = this.GetTestValue17();
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 mockupKey = this.GetTestValue20();
+         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData> mockupValue = this.GetTestValue24();
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 mockupKey = this.GetTestValue27();
 
          Assert.IsTrue(await rpcClient.SubscribeSuperOf(mockupKey));
 
@@ -359,23 +408,23 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT29> GetTestValue22()
+      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT29> GetTestValue29()
       {
          Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT29> result;
          result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT29>();
-         result.Create(this.GetTestValueU128(), this.GetTestValue23());
+         result.Create(this.GetTestValueU128(), this.GetTestValue30());
          return result;
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT29 GetTestValue23()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT29 GetTestValue30()
       {
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT29 result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT29();
          result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>();
          result.Value.Create(new Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32[] {
-                  this.GetTestValue24()});
+                  this.GetTestValue31()});
          return result;
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue24()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue31()
       {
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32();
@@ -415,7 +464,7 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
                   this.GetTestValueU8()});
          return result;
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue25()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue32()
       {
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32();
@@ -466,8 +515,8 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          IdentityControllerClient rpcClient = new IdentityControllerClient(_httpClient, subscriptionClient);
-         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT29> mockupValue = this.GetTestValue22();
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 mockupKey = this.GetTestValue25();
+         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT29> mockupValue = this.GetTestValue29();
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 mockupKey = this.GetTestValue32();
 
          Assert.IsTrue(await rpcClient.SubscribeSubsOf(mockupKey));
 
@@ -484,33 +533,33 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT30 GetTestValue27()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT30 GetTestValue34()
       {
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT30 result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT30();
          result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types.RegistrarInfo>>();
          result.Value.Create(new Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types.RegistrarInfo>[] {
-                  this.GetTestValue28()});
+                  this.GetTestValue35()});
          return result;
       }
-      public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types.RegistrarInfo> GetTestValue28()
+      public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types.RegistrarInfo> GetTestValue35()
       {
          Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types.RegistrarInfo> result;
          result = new Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types.RegistrarInfo>();
-         result.Create(this.GetTestValue29());
+         result.Create(this.GetTestValue36());
          return result;
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types.RegistrarInfo GetTestValue29()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types.RegistrarInfo GetTestValue36()
       {
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types.RegistrarInfo result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types.RegistrarInfo();
          result.Account = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32();
-         result.Account = this.GetTestValue30();
+         result.Account = this.GetTestValue37();
          result.Fee = this.GetTestValueU128();
          result.Fields = this.GetTestValueU64();
          return result;
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue30()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue37()
       {
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32();
@@ -561,7 +610,7 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          IdentityControllerClient rpcClient = new IdentityControllerClient(_httpClient, subscriptionClient);
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT30 mockupValue = this.GetTestValue27();
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT30 mockupValue = this.GetTestValue34();
 
 
          Assert.IsTrue(await rpcClient.SubscribeRegistrars());
@@ -579,16 +628,16 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types.AuthorityProperties GetTestValue32()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types.AuthorityProperties GetTestValue39()
       {
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types.AuthorityProperties result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types.AuthorityProperties();
          result.Suffix = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT31();
-         result.Suffix = this.GetTestValue33();
+         result.Suffix = this.GetTestValue40();
          result.Allocation = this.GetTestValueU32();
          return result;
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT31 GetTestValue33()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT31 GetTestValue40()
       {
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT31 result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT31();
@@ -597,7 +646,7 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
                   this.GetTestValueU8()});
          return result;
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue34()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue41()
       {
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32();
@@ -648,8 +697,8 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          IdentityControllerClient rpcClient = new IdentityControllerClient(_httpClient, subscriptionClient);
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types.AuthorityProperties mockupValue = this.GetTestValue32();
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 mockupKey = this.GetTestValue34();
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.types.AuthorityProperties mockupValue = this.GetTestValue39();
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 mockupKey = this.GetTestValue41();
 
          Assert.IsTrue(await rpcClient.SubscribeUsernameAuthorities(mockupKey));
 
@@ -666,7 +715,7 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue36()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue43()
       {
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32();
@@ -706,7 +755,7 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
                   this.GetTestValueU8()});
          return result;
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT4 GetTestValue37()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT4 GetTestValue44()
       {
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT4 result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT4();
@@ -726,8 +775,8 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          IdentityControllerClient rpcClient = new IdentityControllerClient(_httpClient, subscriptionClient);
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 mockupValue = this.GetTestValue36();
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT4 mockupKey = this.GetTestValue37();
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 mockupValue = this.GetTestValue43();
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT4 mockupKey = this.GetTestValue44();
 
          Assert.IsTrue(await rpcClient.SubscribeAccountOfUsername(mockupKey));
 
@@ -744,14 +793,14 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U32> GetTestValue39()
+      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U32> GetTestValue46()
       {
          Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U32> result;
          result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U32>();
-         result.Create(this.GetTestValue40(), this.GetTestValueU32());
+         result.Create(this.GetTestValue47(), this.GetTestValueU32());
          return result;
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue40()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue47()
       {
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32();
@@ -791,7 +840,7 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
                   this.GetTestValueU8()});
          return result;
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT4 GetTestValue41()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT4 GetTestValue48()
       {
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT4 result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT4();
@@ -811,8 +860,8 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          IdentityControllerClient rpcClient = new IdentityControllerClient(_httpClient, subscriptionClient);
-         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U32> mockupValue = this.GetTestValue39();
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT4 mockupKey = this.GetTestValue41();
+         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U32> mockupValue = this.GetTestValue46();
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT4 mockupKey = this.GetTestValue48();
 
          Assert.IsTrue(await rpcClient.SubscribePendingUsernames(mockupKey));
 

@@ -9,7 +9,7 @@
 
 using Substrate.NetApi.Attributes;
 using Substrate.NetApi.Model.Types.Base;
-using Substrate.NetApi.Model.Types.Metadata.V14;
+using Substrate.NetApi.Model.Types.Metadata.Base;
 using System.Collections.Generic;
 
 
@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.frame_metadata_hash_e
     
     
     /// <summary>
-    /// >> 868 - Composite[frame_metadata_hash_extension.CheckMetadataHash]
+    /// >> 870 - Composite[frame_metadata_hash_extension.CheckMetadataHash]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class CheckMetadataHash : BaseType

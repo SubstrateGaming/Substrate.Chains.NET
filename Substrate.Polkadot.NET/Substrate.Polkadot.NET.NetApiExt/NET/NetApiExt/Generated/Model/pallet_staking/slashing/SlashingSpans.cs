@@ -9,7 +9,7 @@
 
 using Substrate.NetApi.Attributes;
 using Substrate.NetApi.Model.Types.Base;
-using Substrate.NetApi.Model.Types.Metadata.V14;
+using Substrate.NetApi.Model.Types.Metadata.Base;
 using System.Collections.Generic;
 
 
@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_staking.slashi
     
     
     /// <summary>
-    /// >> 607 - Composite[pallet_staking.slashing.SlashingSpans]
+    /// >> 609 - Composite[pallet_staking.slashing.SlashingSpans]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class SlashingSpans : BaseType

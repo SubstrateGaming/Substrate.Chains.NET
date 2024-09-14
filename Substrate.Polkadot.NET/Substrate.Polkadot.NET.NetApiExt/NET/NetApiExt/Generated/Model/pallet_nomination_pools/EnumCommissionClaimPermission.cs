@@ -35,7 +35,16 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_nomination_poo
     /// <summary>
     /// >> 318 - Variant[pallet_nomination_pools.CommissionClaimPermission]
     /// </summary>
-    public sealed class EnumCommissionClaimPermission : BaseEnumExt<CommissionClaimPermission, BaseVoid, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>
+    public sealed class EnumCommissionClaimPermission : BaseEnumRust<CommissionClaimPermission>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumCommissionClaimPermission()
+        {
+				AddTypeDecoder<BaseVoid>(CommissionClaimPermission.Permissionless);
+				AddTypeDecoder<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>(CommissionClaimPermission.Account);
+        }
     }
 }

@@ -92,7 +92,7 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
       {
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.scheduler.pallet.EnumCoreOccupied result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.scheduler.pallet.EnumCoreOccupied();
-         result.Create(this.GetTestValueEnum<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.scheduler.pallet.CoreOccupied>(), this.GetTestValueBaseVoid());
+         // NOT IMPLEMENTED >> Initialize Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.scheduler.pallet.EnumCoreOccupied
          return result;
       }
       [Test()]
@@ -189,30 +189,16 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.scheduler.pallet.ParasEntry result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.scheduler.pallet.ParasEntry();
          result.Assignment = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.scheduler.common.EnumAssignment();
-         result.Assignment.Create(this.GetTestValueEnum<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.scheduler.common.Assignment>(), this.GetTestValue15());
+         result.Assignment = this.GetTestValue15();
          result.AvailabilityTimeouts = this.GetTestValueU32();
          result.Ttl = this.GetTestValueU32();
          return result;
       }
-      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.CoreIndex> GetTestValue15()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.scheduler.common.EnumAssignment GetTestValue15()
       {
-         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.CoreIndex> result;
-         result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.CoreIndex>();
-         result.Create(this.GetTestValue16(), this.GetTestValue17());
-         return result;
-      }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id GetTestValue16()
-      {
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id result;
-         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id();
-         result.Value = this.GetTestValueU32();
-         return result;
-      }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.CoreIndex GetTestValue17()
-      {
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.CoreIndex result;
-         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.CoreIndex();
-         result.Value = this.GetTestValueU32();
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.scheduler.common.EnumAssignment result;
+         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.scheduler.common.EnumAssignment();
+         // NOT IMPLEMENTED >> Initialize Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.scheduler.common.EnumAssignment
          return result;
       }
       [Test()]

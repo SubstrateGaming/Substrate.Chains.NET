@@ -9,7 +9,7 @@
 
 using Substrate.NetApi.Attributes;
 using Substrate.NetApi.Model.Types.Base;
-using Substrate.NetApi.Model.Types.Metadata.V14;
+using Substrate.NetApi.Model.Types.Metadata.Base;
 using System.Collections.Generic;
 
 
@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_consensus_babe.dig
     
     
     /// <summary>
-    /// >> 562 - Composite[sp_consensus_babe.digests.SecondaryVRFPreDigest]
+    /// >> 564 - Composite[sp_consensus_babe.digests.SecondaryVRFPreDigest]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class SecondaryVRFPreDigest : BaseType

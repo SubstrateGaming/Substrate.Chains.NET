@@ -33,9 +33,18 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_para
     }
     
     /// <summary>
-    /// >> 764 - Variant[polkadot_runtime_parachains.scheduler.common.Assignment]
+    /// >> 766 - Variant[polkadot_runtime_parachains.scheduler.common.Assignment]
     /// </summary>
-    public sealed class EnumAssignment : BaseEnumExt<Assignment, BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.CoreIndex>, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id>
+    public sealed class EnumAssignment : BaseEnumRust<Assignment>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumAssignment()
+        {
+				AddTypeDecoder<BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.CoreIndex>>(Assignment.Pool);
+				AddTypeDecoder<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id>(Assignment.Bulk);
+        }
     }
 }

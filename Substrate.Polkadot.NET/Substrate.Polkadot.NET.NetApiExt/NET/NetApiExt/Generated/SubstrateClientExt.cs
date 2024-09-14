@@ -314,6 +314,11 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated
         /// </summary>
         public BeefyMmrLeafStorage BeefyMmrLeafStorage;
         
+        /// <summary>
+        /// IdentityMigratorStorage storage calls.
+        /// </summary>
+        public IdentityMigratorStorage IdentityMigratorStorage;
+        
         public SubstrateClientExt(System.Uri uri, Substrate.NetApi.Model.Extrinsics.ChargeType chargeType) : 
                 base(uri, chargeType)
         {
@@ -375,6 +380,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated
             this.BeefyStorage = new BeefyStorage(this);
             this.MmrStorage = new MmrStorage(this);
             this.BeefyMmrLeafStorage = new BeefyMmrLeafStorage(this);
+            this.IdentityMigratorStorage = new IdentityMigratorStorage(this);
         }
     }
 }

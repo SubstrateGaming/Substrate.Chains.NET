@@ -490,7 +490,7 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
       {
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_nomination_pools.EnumCommissionClaimPermission result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_nomination_pools.EnumCommissionClaimPermission();
-         result.Create(this.GetTestValueEnum<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_nomination_pools.CommissionClaimPermission>(), this.GetTestValueBaseVoid());
+         // NOT IMPLEMENTED >> Initialize Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_nomination_pools.EnumCommissionClaimPermission
          return result;
       }
       public Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_nomination_pools.PoolRoles GetTestValue27()

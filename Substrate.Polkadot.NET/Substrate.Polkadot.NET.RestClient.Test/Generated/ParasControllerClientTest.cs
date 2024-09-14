@@ -48,39 +48,32 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
       {
          Substrate.NetApi.Model.Types.Base.BaseBitSeq<Substrate.NetApi.Model.Types.Primitive.U8, Substrate.Polkadot.NET.NetApiExt.Generated.Model.bitvec.order.Lsb0> result;
          result = new Substrate.NetApi.Model.Types.Base.BaseBitSeq<Substrate.NetApi.Model.Types.Primitive.U8, Substrate.Polkadot.NET.NetApiExt.Generated.Model.bitvec.order.Lsb0>();
-         // NOT IMPLEMENTED >> Initialize Substrate.NetApi.Model.Types.Base.BaseBitSeq`2[[Substrate.NetApi.Model.Types.Primitive.U8, Substrate.NetApi, Version=0.9.22.0, Culture=neutral, PublicKeyToken=null],[Substrate.Polkadot.NET.NetApiExt.Generated.Model.bitvec.order.Lsb0, Substrate.Polkadot.NET.NetApiExt, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+         // NOT IMPLEMENTED >> Initialize Substrate.NetApi.Model.Types.Base.BaseBitSeq`2[[Substrate.NetApi.Model.Types.Primitive.U8, Substrate.NetApi, Version=0.9.24.0, Culture=neutral, PublicKeyToken=null],[Substrate.Polkadot.NET.NetApiExt.Generated.Model.bitvec.order.Lsb0, Substrate.Polkadot.NET.NetApiExt, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
          return result;
       }
       public Substrate.NetApi.Model.Types.Base.BaseBitSeq<Substrate.NetApi.Model.Types.Primitive.U8, Substrate.Polkadot.NET.NetApiExt.Generated.Model.bitvec.order.Lsb0> GetTestValue4()
       {
          Substrate.NetApi.Model.Types.Base.BaseBitSeq<Substrate.NetApi.Model.Types.Primitive.U8, Substrate.Polkadot.NET.NetApiExt.Generated.Model.bitvec.order.Lsb0> result;
          result = new Substrate.NetApi.Model.Types.Base.BaseBitSeq<Substrate.NetApi.Model.Types.Primitive.U8, Substrate.Polkadot.NET.NetApiExt.Generated.Model.bitvec.order.Lsb0>();
-         // NOT IMPLEMENTED >> Initialize Substrate.NetApi.Model.Types.Base.BaseBitSeq`2[[Substrate.NetApi.Model.Types.Primitive.U8, Substrate.NetApi, Version=0.9.22.0, Culture=neutral, PublicKeyToken=null],[Substrate.Polkadot.NET.NetApiExt.Generated.Model.bitvec.order.Lsb0, Substrate.Polkadot.NET.NetApiExt, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+         // NOT IMPLEMENTED >> Initialize Substrate.NetApi.Model.Types.Base.BaseBitSeq`2[[Substrate.NetApi.Model.Types.Primitive.U8, Substrate.NetApi, Version=0.9.24.0, Culture=neutral, PublicKeyToken=null],[Substrate.Polkadot.NET.NetApiExt.Generated.Model.bitvec.order.Lsb0, Substrate.Polkadot.NET.NetApiExt, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
          return result;
       }
       public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.paras.EnumPvfCheckCause GetTestValue5()
       {
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.paras.EnumPvfCheckCause result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.paras.EnumPvfCheckCause();
-         result.Create(this.GetTestValueEnum<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.paras.PvfCheckCause>(), this.GetTestValue6());
+         // NOT IMPLEMENTED >> Initialize Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.paras.EnumPvfCheckCause
          return result;
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id GetTestValue6()
-      {
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id result;
-         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id();
-         result.Value = this.GetTestValueU32();
-         return result;
-      }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash GetTestValue7()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash GetTestValue6()
       {
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash();
          result.Value = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256();
-         result.Value = this.GetTestValue8();
+         result.Value = this.GetTestValue7();
          return result;
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256 GetTestValue8()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256 GetTestValue7()
       {
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256 result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256();
@@ -132,7 +125,7 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
          // Construct new RPC client to test with.
          ParasControllerClient rpcClient = new ParasControllerClient(_httpClient, subscriptionClient);
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.paras.PvfCheckActiveVoteState mockupValue = this.GetTestValue2();
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash mockupKey = this.GetTestValue7();
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash mockupKey = this.GetTestValue6();
 
          Assert.IsTrue(await rpcClient.SubscribePvfActiveVoteMap(mockupKey));
 
@@ -149,23 +142,23 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash> GetTestValue10()
+      public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash> GetTestValue9()
       {
          Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash> result;
          result = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash>();
          result.Create(new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash[] {
-                  this.GetTestValue11()});
+                  this.GetTestValue10()});
          return result;
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash GetTestValue11()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash GetTestValue10()
       {
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash();
          result.Value = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256();
-         result.Value = this.GetTestValue12();
+         result.Value = this.GetTestValue11();
          return result;
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256 GetTestValue12()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256 GetTestValue11()
       {
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256 result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256();
@@ -216,7 +209,7 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          ParasControllerClient rpcClient = new ParasControllerClient(_httpClient, subscriptionClient);
-         Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash> mockupValue = this.GetTestValue10();
+         Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash> mockupValue = this.GetTestValue9();
 
 
          Assert.IsTrue(await rpcClient.SubscribePvfActiveVoteList());
@@ -234,15 +227,15 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id> GetTestValue14()
+      public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id> GetTestValue13()
       {
          Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id> result;
          result = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id>();
          result.Create(new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id[] {
-                  this.GetTestValue15()});
+                  this.GetTestValue14()});
          return result;
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id GetTestValue15()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id GetTestValue14()
       {
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id();
@@ -260,7 +253,7 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          ParasControllerClient rpcClient = new ParasControllerClient(_httpClient, subscriptionClient);
-         Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id> mockupValue = this.GetTestValue14();
+         Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id> mockupValue = this.GetTestValue13();
 
 
          Assert.IsTrue(await rpcClient.SubscribeParachains());
@@ -278,14 +271,14 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.paras.EnumParaLifecycle GetTestValue17()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.paras.EnumParaLifecycle GetTestValue16()
       {
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.paras.EnumParaLifecycle result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.paras.EnumParaLifecycle();
          result.Create(this.GetTestValueEnum<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.paras.ParaLifecycle>());
          return result;
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id GetTestValue18()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id GetTestValue17()
       {
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id();
@@ -303,8 +296,8 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          ParasControllerClient rpcClient = new ParasControllerClient(_httpClient, subscriptionClient);
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.paras.EnumParaLifecycle mockupValue = this.GetTestValue17();
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id mockupKey = this.GetTestValue18();
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.paras.EnumParaLifecycle mockupValue = this.GetTestValue16();
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id mockupKey = this.GetTestValue17();
 
          Assert.IsTrue(await rpcClient.SubscribeParaLifecycles(mockupKey));
 
@@ -321,7 +314,7 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.HeadData GetTestValue20()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.HeadData GetTestValue19()
       {
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.HeadData result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.HeadData();
@@ -330,7 +323,7 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
                   this.GetTestValueU8()});
          return result;
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id GetTestValue21()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id GetTestValue20()
       {
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id();
@@ -348,8 +341,8 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          ParasControllerClient rpcClient = new ParasControllerClient(_httpClient, subscriptionClient);
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.HeadData mockupValue = this.GetTestValue20();
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id mockupKey = this.GetTestValue21();
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.HeadData mockupValue = this.GetTestValue19();
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id mockupKey = this.GetTestValue20();
 
          Assert.IsTrue(await rpcClient.SubscribeHeads(mockupKey));
 
@@ -366,7 +359,7 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id GetTestValue23()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id GetTestValue22()
       {
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id();
@@ -385,7 +378,7 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
          // Construct new RPC client to test with.
          ParasControllerClient rpcClient = new ParasControllerClient(_httpClient, subscriptionClient);
          Substrate.NetApi.Model.Types.Primitive.U32 mockupValue = this.GetTestValueU32();
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id mockupKey = this.GetTestValue23();
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id mockupKey = this.GetTestValue22();
 
          Assert.IsTrue(await rpcClient.SubscribeMostRecentContext(mockupKey));
 
@@ -402,15 +395,15 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash GetTestValue25()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash GetTestValue24()
       {
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash();
          result.Value = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256();
-         result.Value = this.GetTestValue26();
+         result.Value = this.GetTestValue25();
          return result;
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256 GetTestValue26()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256 GetTestValue25()
       {
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256 result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256();
@@ -450,7 +443,7 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
                   this.GetTestValueU8()});
          return result;
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id GetTestValue27()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id GetTestValue26()
       {
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id();
@@ -468,8 +461,8 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          ParasControllerClient rpcClient = new ParasControllerClient(_httpClient, subscriptionClient);
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash mockupValue = this.GetTestValue25();
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id mockupKey = this.GetTestValue27();
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash mockupValue = this.GetTestValue24();
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id mockupKey = this.GetTestValue26();
 
          Assert.IsTrue(await rpcClient.SubscribeCurrentCodeHash(mockupKey));
 
@@ -486,15 +479,15 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash GetTestValue29()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash GetTestValue28()
       {
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash();
          result.Value = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256();
-         result.Value = this.GetTestValue30();
+         result.Value = this.GetTestValue29();
          return result;
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256 GetTestValue30()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256 GetTestValue29()
       {
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256 result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256();
@@ -534,14 +527,14 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
                   this.GetTestValueU8()});
          return result;
       }
-      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32> GetTestValue31()
+      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32> GetTestValue30()
       {
          Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32> result;
          result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32>();
-         result.Create(this.GetTestValue32(), this.GetTestValueU32());
+         result.Create(this.GetTestValue31(), this.GetTestValueU32());
          return result;
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id GetTestValue32()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id GetTestValue31()
       {
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id();
@@ -559,8 +552,8 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          ParasControllerClient rpcClient = new ParasControllerClient(_httpClient, subscriptionClient);
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash mockupValue = this.GetTestValue29();
-         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32> mockupKey = this.GetTestValue31();
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash mockupValue = this.GetTestValue28();
+         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32> mockupKey = this.GetTestValue30();
 
          Assert.IsTrue(await rpcClient.SubscribePastCodeHash(mockupKey));
 
@@ -577,18 +570,18 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.paras.ParaPastCodeMeta GetTestValue34()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.paras.ParaPastCodeMeta GetTestValue33()
       {
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.paras.ParaPastCodeMeta result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.paras.ParaPastCodeMeta();
          result.UpgradeTimes = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.paras.ReplacementTimes>();
          result.UpgradeTimes.Create(new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.paras.ReplacementTimes[] {
-                  this.GetTestValue35()});
+                  this.GetTestValue34()});
          result.LastPruned = new Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32>();
          result.LastPruned.Create(this.GetTestValueU32());
          return result;
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.paras.ReplacementTimes GetTestValue35()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.paras.ReplacementTimes GetTestValue34()
       {
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.paras.ReplacementTimes result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.paras.ReplacementTimes();
@@ -596,7 +589,7 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
          result.ActivatedAt = this.GetTestValueU32();
          return result;
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id GetTestValue36()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id GetTestValue35()
       {
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id();
@@ -614,8 +607,8 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          ParasControllerClient rpcClient = new ParasControllerClient(_httpClient, subscriptionClient);
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.paras.ParaPastCodeMeta mockupValue = this.GetTestValue34();
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id mockupKey = this.GetTestValue36();
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.paras.ParaPastCodeMeta mockupValue = this.GetTestValue33();
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id mockupKey = this.GetTestValue35();
 
          Assert.IsTrue(await rpcClient.SubscribePastCodeMeta(mockupKey));
 
@@ -632,22 +625,22 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32>> GetTestValue38()
+      public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32>> GetTestValue37()
       {
          Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32>> result;
          result = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32>>();
          result.Create(new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32>[] {
-                  this.GetTestValue39()});
+                  this.GetTestValue38()});
          return result;
       }
-      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32> GetTestValue39()
+      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32> GetTestValue38()
       {
          Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32> result;
          result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32>();
-         result.Create(this.GetTestValue40(), this.GetTestValueU32());
+         result.Create(this.GetTestValue39(), this.GetTestValueU32());
          return result;
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id GetTestValue40()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id GetTestValue39()
       {
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id();
@@ -665,7 +658,7 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          ParasControllerClient rpcClient = new ParasControllerClient(_httpClient, subscriptionClient);
-         Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32>> mockupValue = this.GetTestValue38();
+         Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32>> mockupValue = this.GetTestValue37();
 
 
          Assert.IsTrue(await rpcClient.SubscribePastCodePruning());
@@ -683,7 +676,7 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id GetTestValue42()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id GetTestValue41()
       {
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id();
@@ -702,7 +695,7 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
          // Construct new RPC client to test with.
          ParasControllerClient rpcClient = new ParasControllerClient(_httpClient, subscriptionClient);
          Substrate.NetApi.Model.Types.Primitive.U32 mockupValue = this.GetTestValueU32();
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id mockupKey = this.GetTestValue42();
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id mockupKey = this.GetTestValue41();
 
          Assert.IsTrue(await rpcClient.SubscribeFutureCodeUpgrades(mockupKey));
 
@@ -719,15 +712,15 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash GetTestValue44()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash GetTestValue43()
       {
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash();
          result.Value = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256();
-         result.Value = this.GetTestValue45();
+         result.Value = this.GetTestValue44();
          return result;
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256 GetTestValue45()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256 GetTestValue44()
       {
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256 result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256();
@@ -767,7 +760,7 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
                   this.GetTestValueU8()});
          return result;
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id GetTestValue46()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id GetTestValue45()
       {
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id();
@@ -785,8 +778,8 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          ParasControllerClient rpcClient = new ParasControllerClient(_httpClient, subscriptionClient);
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash mockupValue = this.GetTestValue44();
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id mockupKey = this.GetTestValue46();
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash mockupValue = this.GetTestValue43();
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id mockupKey = this.GetTestValue45();
 
          Assert.IsTrue(await rpcClient.SubscribeFutureCodeHash(mockupKey));
 
@@ -803,14 +796,14 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumUpgradeGoAhead GetTestValue48()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumUpgradeGoAhead GetTestValue47()
       {
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumUpgradeGoAhead result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumUpgradeGoAhead();
          result.Create(this.GetTestValueEnum<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.UpgradeGoAhead>());
          return result;
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id GetTestValue49()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id GetTestValue48()
       {
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id();
@@ -828,8 +821,8 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          ParasControllerClient rpcClient = new ParasControllerClient(_httpClient, subscriptionClient);
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumUpgradeGoAhead mockupValue = this.GetTestValue48();
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id mockupKey = this.GetTestValue49();
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumUpgradeGoAhead mockupValue = this.GetTestValue47();
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id mockupKey = this.GetTestValue48();
 
          Assert.IsTrue(await rpcClient.SubscribeUpgradeGoAheadSignal(mockupKey));
 
@@ -846,14 +839,14 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumUpgradeRestriction GetTestValue51()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumUpgradeRestriction GetTestValue50()
       {
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumUpgradeRestriction result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumUpgradeRestriction();
          result.Create(this.GetTestValueEnum<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.UpgradeRestriction>());
          return result;
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id GetTestValue52()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id GetTestValue51()
       {
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id();
@@ -871,8 +864,8 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          ParasControllerClient rpcClient = new ParasControllerClient(_httpClient, subscriptionClient);
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumUpgradeRestriction mockupValue = this.GetTestValue51();
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id mockupKey = this.GetTestValue52();
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumUpgradeRestriction mockupValue = this.GetTestValue50();
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id mockupKey = this.GetTestValue51();
 
          Assert.IsTrue(await rpcClient.SubscribeUpgradeRestrictionSignal(mockupKey));
 
@@ -889,22 +882,22 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32>> GetTestValue54()
+      public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32>> GetTestValue53()
       {
          Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32>> result;
          result = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32>>();
          result.Create(new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32>[] {
-                  this.GetTestValue55()});
+                  this.GetTestValue54()});
          return result;
       }
-      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32> GetTestValue55()
+      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32> GetTestValue54()
       {
          Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32> result;
          result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32>();
-         result.Create(this.GetTestValue56(), this.GetTestValueU32());
+         result.Create(this.GetTestValue55(), this.GetTestValueU32());
          return result;
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id GetTestValue56()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id GetTestValue55()
       {
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id();
@@ -922,7 +915,7 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          ParasControllerClient rpcClient = new ParasControllerClient(_httpClient, subscriptionClient);
-         Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32>> mockupValue = this.GetTestValue54();
+         Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32>> mockupValue = this.GetTestValue53();
 
 
          Assert.IsTrue(await rpcClient.SubscribeUpgradeCooldowns());
@@ -940,22 +933,22 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32>> GetTestValue58()
+      public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32>> GetTestValue57()
       {
          Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32>> result;
          result = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32>>();
          result.Create(new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32>[] {
-                  this.GetTestValue59()});
+                  this.GetTestValue58()});
          return result;
       }
-      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32> GetTestValue59()
+      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32> GetTestValue58()
       {
          Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32> result;
          result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32>();
-         result.Create(this.GetTestValue60(), this.GetTestValueU32());
+         result.Create(this.GetTestValue59(), this.GetTestValueU32());
          return result;
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id GetTestValue60()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id GetTestValue59()
       {
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id();
@@ -973,7 +966,7 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          ParasControllerClient rpcClient = new ParasControllerClient(_httpClient, subscriptionClient);
-         Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32>> mockupValue = this.GetTestValue58();
+         Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32>> mockupValue = this.GetTestValue57();
 
 
          Assert.IsTrue(await rpcClient.SubscribeUpcomingUpgrades());
@@ -991,15 +984,15 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id> GetTestValue62()
+      public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id> GetTestValue61()
       {
          Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id> result;
          result = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id>();
          result.Create(new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id[] {
-                  this.GetTestValue63()});
+                  this.GetTestValue62()});
          return result;
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id GetTestValue63()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id GetTestValue62()
       {
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id();
@@ -1017,7 +1010,7 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          ParasControllerClient rpcClient = new ParasControllerClient(_httpClient, subscriptionClient);
-         Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id> mockupValue = this.GetTestValue62();
+         Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id> mockupValue = this.GetTestValue61();
          Substrate.NetApi.Model.Types.Primitive.U32 mockupKey = this.GetTestValueU32();
 
          Assert.IsTrue(await rpcClient.SubscribeActionsQueue(mockupKey));
@@ -1035,18 +1028,18 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.paras.ParaGenesisArgs GetTestValue65()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.paras.ParaGenesisArgs GetTestValue64()
       {
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.paras.ParaGenesisArgs result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.paras.ParaGenesisArgs();
          result.GenesisHead = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.HeadData();
-         result.GenesisHead = this.GetTestValue66();
+         result.GenesisHead = this.GetTestValue65();
          result.ValidationCode = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCode();
-         result.ValidationCode = this.GetTestValue67();
+         result.ValidationCode = this.GetTestValue66();
          result.ParaKind = this.GetTestValueBool();
          return result;
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.HeadData GetTestValue66()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.HeadData GetTestValue65()
       {
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.HeadData result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.HeadData();
@@ -1055,7 +1048,7 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
                   this.GetTestValueU8()});
          return result;
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCode GetTestValue67()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCode GetTestValue66()
       {
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCode result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCode();
@@ -1064,7 +1057,7 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
                   this.GetTestValueU8()});
          return result;
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id GetTestValue68()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id GetTestValue67()
       {
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id();
@@ -1082,8 +1075,8 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          ParasControllerClient rpcClient = new ParasControllerClient(_httpClient, subscriptionClient);
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.paras.ParaGenesisArgs mockupValue = this.GetTestValue65();
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id mockupKey = this.GetTestValue68();
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.paras.ParaGenesisArgs mockupValue = this.GetTestValue64();
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id mockupKey = this.GetTestValue67();
 
          Assert.IsTrue(await rpcClient.SubscribeUpcomingParasGenesis(mockupKey));
 
@@ -1100,15 +1093,15 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash GetTestValue70()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash GetTestValue69()
       {
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash();
          result.Value = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256();
-         result.Value = this.GetTestValue71();
+         result.Value = this.GetTestValue70();
          return result;
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256 GetTestValue71()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256 GetTestValue70()
       {
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256 result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256();
@@ -1160,7 +1153,7 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
          // Construct new RPC client to test with.
          ParasControllerClient rpcClient = new ParasControllerClient(_httpClient, subscriptionClient);
          Substrate.NetApi.Model.Types.Primitive.U32 mockupValue = this.GetTestValueU32();
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash mockupKey = this.GetTestValue70();
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash mockupKey = this.GetTestValue69();
 
          Assert.IsTrue(await rpcClient.SubscribeCodeByHashRefs(mockupKey));
 
@@ -1177,7 +1170,7 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCode GetTestValue73()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCode GetTestValue72()
       {
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCode result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCode();
@@ -1186,15 +1179,15 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
                   this.GetTestValueU8()});
          return result;
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash GetTestValue74()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash GetTestValue73()
       {
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash();
          result.Value = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256();
-         result.Value = this.GetTestValue75();
+         result.Value = this.GetTestValue74();
          return result;
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256 GetTestValue75()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256 GetTestValue74()
       {
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256 result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256();
@@ -1245,8 +1238,8 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          ParasControllerClient rpcClient = new ParasControllerClient(_httpClient, subscriptionClient);
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCode mockupValue = this.GetTestValue73();
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash mockupKey = this.GetTestValue74();
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCode mockupValue = this.GetTestValue72();
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash mockupKey = this.GetTestValue73();
 
          Assert.IsTrue(await rpcClient.SubscribeCodeByHash(mockupKey));
 

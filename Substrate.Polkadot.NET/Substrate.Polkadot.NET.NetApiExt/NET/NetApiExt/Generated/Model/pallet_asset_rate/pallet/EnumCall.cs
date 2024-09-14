@@ -45,7 +45,17 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_asset_rate.pal
     /// >> 468 - Variant[pallet_asset_rate.pallet.Call]
     /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
-    public sealed class EnumCall : BaseEnumExt<Call, BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_common.impls.EnumVersionedLocatableAsset, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedU128>, BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_common.impls.EnumVersionedLocatableAsset, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedU128>, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_common.impls.EnumVersionedLocatableAsset>
+    public sealed class EnumCall : BaseEnumRust<Call>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumCall()
+        {
+				AddTypeDecoder<BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_common.impls.EnumVersionedLocatableAsset, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedU128>>(Call.create);
+				AddTypeDecoder<BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_common.impls.EnumVersionedLocatableAsset, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedU128>>(Call.update);
+				AddTypeDecoder<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_common.impls.EnumVersionedLocatableAsset>(Call.remove);
+        }
     }
 }

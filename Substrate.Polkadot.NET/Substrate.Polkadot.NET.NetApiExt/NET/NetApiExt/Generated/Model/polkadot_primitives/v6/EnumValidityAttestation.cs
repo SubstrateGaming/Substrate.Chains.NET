@@ -35,7 +35,16 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v
     /// <summary>
     /// >> 355 - Variant[polkadot_primitives.v6.ValidityAttestation]
     /// </summary>
-    public sealed class EnumValidityAttestation : BaseEnumExt<ValidityAttestation, BaseVoid, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.validator_app.Signature, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.validator_app.Signature>
+    public sealed class EnumValidityAttestation : BaseEnumRust<ValidityAttestation>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumValidityAttestation()
+        {
+				AddTypeDecoder<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.validator_app.Signature>(ValidityAttestation.Implicit);
+				AddTypeDecoder<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.validator_app.Signature>(ValidityAttestation.Explicit);
+        }
     }
 }

@@ -94,10 +94,17 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
          result.Fee = this.GetTestValueU128();
          result.CuratorDeposit = this.GetTestValueU128();
          result.Status = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_child_bounties.EnumChildBountyStatus();
-         result.Status.Create(this.GetTestValueEnum<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_child_bounties.ChildBountyStatus>(), this.GetTestValueBaseVoid());
+         result.Status = this.GetTestValue5();
          return result;
       }
-      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32> GetTestValue5()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_child_bounties.EnumChildBountyStatus GetTestValue5()
+      {
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_child_bounties.EnumChildBountyStatus result;
+         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_child_bounties.EnumChildBountyStatus();
+         // NOT IMPLEMENTED >> Initialize Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_child_bounties.EnumChildBountyStatus
+         return result;
+      }
+      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32> GetTestValue6()
       {
          Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32> result;
          result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>();
@@ -116,7 +123,7 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
          // Construct new RPC client to test with.
          ChildBountiesControllerClient rpcClient = new ChildBountiesControllerClient(_httpClient, subscriptionClient);
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_child_bounties.ChildBounty mockupValue = this.GetTestValue4();
-         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32> mockupKey = this.GetTestValue5();
+         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32> mockupKey = this.GetTestValue6();
 
          Assert.IsTrue(await rpcClient.SubscribeChildBounties(mockupKey));
 
@@ -133,7 +140,7 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT35 GetTestValue7()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT35 GetTestValue8()
       {
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT35 result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT35();
@@ -153,7 +160,7 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          ChildBountiesControllerClient rpcClient = new ChildBountiesControllerClient(_httpClient, subscriptionClient);
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT35 mockupValue = this.GetTestValue7();
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT35 mockupValue = this.GetTestValue8();
          Substrate.NetApi.Model.Types.Primitive.U32 mockupKey = this.GetTestValueU32();
 
          Assert.IsTrue(await rpcClient.SubscribeChildBountyDescriptions(mockupKey));

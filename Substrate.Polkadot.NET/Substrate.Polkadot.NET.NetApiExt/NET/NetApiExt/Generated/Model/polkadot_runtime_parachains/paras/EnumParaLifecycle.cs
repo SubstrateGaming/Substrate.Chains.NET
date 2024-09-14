@@ -58,7 +58,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_para
     }
     
     /// <summary>
-    /// >> 775 - Variant[polkadot_runtime_parachains.paras.ParaLifecycle]
+    /// >> 777 - Variant[polkadot_runtime_parachains.paras.ParaLifecycle]
     /// </summary>
     public sealed class EnumParaLifecycle : BaseEnum<ParaLifecycle>
     {

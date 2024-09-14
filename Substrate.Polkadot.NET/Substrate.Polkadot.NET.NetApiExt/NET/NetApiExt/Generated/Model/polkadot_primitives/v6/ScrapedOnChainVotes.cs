@@ -9,7 +9,7 @@
 
 using Substrate.NetApi.Attributes;
 using Substrate.NetApi.Model.Types.Base;
-using Substrate.NetApi.Model.Types.Metadata.V14;
+using Substrate.NetApi.Model.Types.Metadata.Base;
 using System.Collections.Generic;
 
 
@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v
     
     
     /// <summary>
-    /// >> 754 - Composite[polkadot_primitives.v6.ScrapedOnChainVotes]
+    /// >> 756 - Composite[polkadot_primitives.v6.ScrapedOnChainVotes]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class ScrapedOnChainVotes : BaseType

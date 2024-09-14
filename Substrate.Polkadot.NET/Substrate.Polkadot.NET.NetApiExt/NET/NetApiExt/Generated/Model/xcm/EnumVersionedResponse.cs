@@ -38,9 +38,19 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm
     }
     
     /// <summary>
-    /// >> 827 - Variant[xcm.VersionedResponse]
+    /// >> 829 - Variant[xcm.VersionedResponse]
     /// </summary>
-    public sealed class EnumVersionedResponse : BaseEnumExt<VersionedResponse, BaseVoid, BaseVoid, Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.v2.EnumResponse, Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.v3.EnumResponse, Substrate.Polkadot.NET.NetApiExt.Generated.Model.staging_xcm.v4.EnumResponse>
+    public sealed class EnumVersionedResponse : BaseEnumRust<VersionedResponse>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumVersionedResponse()
+        {
+				AddTypeDecoder<Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.v2.EnumResponse>(VersionedResponse.V2);
+				AddTypeDecoder<Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.v3.EnumResponse>(VersionedResponse.V3);
+				AddTypeDecoder<Substrate.Polkadot.NET.NetApiExt.Generated.Model.staging_xcm.v4.EnumResponse>(VersionedResponse.V4);
+        }
     }
 }

@@ -9,7 +9,7 @@
 
 using Substrate.NetApi.Attributes;
 using Substrate.NetApi.Model.Types.Base;
-using Substrate.NetApi.Model.Types.Metadata.V14;
+using Substrate.NetApi.Model.Types.Metadata.Base;
 using System.Collections.Generic;
 
 
@@ -18,7 +18,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_nomination_poo
     
     
     /// <summary>
-    /// >> 724 - Composite[pallet_nomination_pools.Commission]
+    /// >> 726 - Composite[pallet_nomination_pools.Commission]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Commission : BaseType

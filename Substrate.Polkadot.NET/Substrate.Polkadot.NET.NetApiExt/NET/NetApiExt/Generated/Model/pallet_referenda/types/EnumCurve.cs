@@ -38,9 +38,19 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_referenda.type
     }
     
     /// <summary>
-    /// >> 659 - Variant[pallet_referenda.types.Curve]
+    /// >> 661 - Variant[pallet_referenda.types.Curve]
     /// </summary>
-    public sealed class EnumCurve : BaseEnumExt<Curve, BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill>, BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill>, BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedI64, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedI64, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedI64>>
+    public sealed class EnumCurve : BaseEnumRust<Curve>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumCurve()
+        {
+				AddTypeDecoder<BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill>>(Curve.LinearDecreasing);
+				AddTypeDecoder<BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill>>(Curve.SteppedDecreasing);
+				AddTypeDecoder<BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedI64, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedI64, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedI64>>(Curve.Reciprocal);
+        }
     }
 }

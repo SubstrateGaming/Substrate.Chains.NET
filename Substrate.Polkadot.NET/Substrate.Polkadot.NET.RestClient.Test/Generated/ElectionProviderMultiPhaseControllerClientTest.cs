@@ -62,7 +62,7 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
       {
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_election_provider_multi_phase.EnumPhase result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_election_provider_multi_phase.EnumPhase();
-         result.Create(this.GetTestValueEnum<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_election_provider_multi_phase.Phase>(), this.GetTestValueBaseVoid());
+         // NOT IMPLEMENTED >> Initialize Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_election_provider_multi_phase.EnumPhase
          return result;
       }
       [Test()]

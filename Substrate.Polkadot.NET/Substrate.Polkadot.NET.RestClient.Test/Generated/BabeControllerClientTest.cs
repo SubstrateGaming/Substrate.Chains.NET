@@ -298,7 +298,7 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
       {
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_consensus_babe.digests.EnumNextConfigDescriptor result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_consensus_babe.digests.EnumNextConfigDescriptor();
-         result.Create(this.GetTestValueEnum<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_consensus_babe.digests.NextConfigDescriptor>(), this.GetTestValueBaseVoid());
+         // NOT IMPLEMENTED >> Initialize Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_consensus_babe.digests.EnumNextConfigDescriptor
          return result;
       }
       [Test()]
@@ -608,7 +608,7 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
       {
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_consensus_babe.digests.EnumPreDigest result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_consensus_babe.digests.EnumPreDigest();
-         result.Create(this.GetTestValueEnum<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_consensus_babe.digests.PreDigest>(), this.GetTestValueBaseVoid());
+         // NOT IMPLEMENTED >> Initialize Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_consensus_babe.digests.EnumPreDigest
          return result;
       }
       [Test()]

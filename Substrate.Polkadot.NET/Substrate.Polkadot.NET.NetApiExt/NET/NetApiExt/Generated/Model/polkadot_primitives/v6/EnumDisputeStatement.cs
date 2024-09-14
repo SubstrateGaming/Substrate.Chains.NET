@@ -35,7 +35,16 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v
     /// <summary>
     /// >> 361 - Variant[polkadot_primitives.v6.DisputeStatement]
     /// </summary>
-    public sealed class EnumDisputeStatement : BaseEnumExt<DisputeStatement, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumValidDisputeStatementKind, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumInvalidDisputeStatementKind>
+    public sealed class EnumDisputeStatement : BaseEnumRust<DisputeStatement>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumDisputeStatement()
+        {
+				AddTypeDecoder<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumValidDisputeStatementKind>(DisputeStatement.Valid);
+				AddTypeDecoder<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumInvalidDisputeStatementKind>(DisputeStatement.Invalid);
+        }
     }
 }

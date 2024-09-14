@@ -55,7 +55,20 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.v3
     /// <summary>
     /// >> 417 - Variant[xcm.v3.Response]
     /// </summary>
-    public sealed class EnumResponse : BaseEnumExt<Response, BaseVoid, Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.v3.multiasset.MultiAssets, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.v3.traits.EnumError>>, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT8, Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.v3.EnumMaybeErrorCode>
+    public sealed class EnumResponse : BaseEnumRust<Response>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumResponse()
+        {
+				AddTypeDecoder<BaseVoid>(Response.Null);
+				AddTypeDecoder<Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.v3.multiasset.MultiAssets>(Response.Assets);
+				AddTypeDecoder<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.v3.traits.EnumError>>>(Response.ExecutionResult);
+				AddTypeDecoder<Substrate.NetApi.Model.Types.Primitive.U32>(Response.Version);
+				AddTypeDecoder<Substrate.Polkadot.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT8>(Response.PalletsInfo);
+				AddTypeDecoder<Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.v3.EnumMaybeErrorCode>(Response.DispatchResult);
+        }
     }
 }

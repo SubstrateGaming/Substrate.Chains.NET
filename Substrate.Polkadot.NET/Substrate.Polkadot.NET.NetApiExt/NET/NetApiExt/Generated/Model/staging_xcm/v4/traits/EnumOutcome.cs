@@ -38,9 +38,19 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.staging_xcm.v4.traits
     }
     
     /// <summary>
-    /// >> 518 - Variant[staging_xcm.v4.traits.Outcome]
+    /// >> 519 - Variant[staging_xcm.v4.traits.Outcome]
     /// </summary>
-    public sealed class EnumOutcome : BaseEnumExt<Outcome, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight, BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight, Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.v3.traits.EnumError>, Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.v3.traits.EnumError>
+    public sealed class EnumOutcome : BaseEnumRust<Outcome>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumOutcome()
+        {
+				AddTypeDecoder<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>(Outcome.Complete);
+				AddTypeDecoder<BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight, Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.v3.traits.EnumError>>(Outcome.Incomplete);
+				AddTypeDecoder<Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.v3.traits.EnumError>(Outcome.Error);
+        }
     }
 }

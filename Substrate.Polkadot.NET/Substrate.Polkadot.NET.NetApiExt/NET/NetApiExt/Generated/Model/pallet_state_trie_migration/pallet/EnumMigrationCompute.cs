@@ -33,7 +33,7 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_state_trie_mig
     }
     
     /// <summary>
-    /// >> 515 - Variant[pallet_state_trie_migration.pallet.MigrationCompute]
+    /// >> 516 - Variant[pallet_state_trie_migration.pallet.MigrationCompute]
     /// </summary>
     public sealed class EnumMigrationCompute : BaseEnum<MigrationCompute>
     {

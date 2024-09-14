@@ -63,7 +63,20 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_utility.pallet
     /// >> 190 - Variant[pallet_utility.pallet.Call]
     /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
-    public sealed class EnumCall : BaseEnumExt<Call, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime.EnumRuntimeCall>, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U16, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime.EnumRuntimeCall>, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime.EnumRuntimeCall>, BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime.EnumOriginCaller, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime.EnumRuntimeCall>, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime.EnumRuntimeCall>, BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime.EnumRuntimeCall, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>>
+    public sealed class EnumCall : BaseEnumRust<Call>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumCall()
+        {
+				AddTypeDecoder<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime.EnumRuntimeCall>>(Call.batch);
+				AddTypeDecoder<BaseTuple<Substrate.NetApi.Model.Types.Primitive.U16, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime.EnumRuntimeCall>>(Call.as_derivative);
+				AddTypeDecoder<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime.EnumRuntimeCall>>(Call.batch_all);
+				AddTypeDecoder<BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime.EnumOriginCaller, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime.EnumRuntimeCall>>(Call.dispatch_as);
+				AddTypeDecoder<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime.EnumRuntimeCall>>(Call.force_batch);
+				AddTypeDecoder<BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime.EnumRuntimeCall, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>>(Call.with_weight);
+        }
     }
 }

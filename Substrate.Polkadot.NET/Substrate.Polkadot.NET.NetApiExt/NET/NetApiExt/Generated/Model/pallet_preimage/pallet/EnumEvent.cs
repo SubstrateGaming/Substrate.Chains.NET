@@ -45,7 +45,17 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_preimage.palle
     /// >> 36 - Variant[pallet_preimage.pallet.Event]
     /// The `Event` enum of this pallet
     /// </summary>
-    public sealed class EnumEvent : BaseEnumExt<Event, Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256>
+    public sealed class EnumEvent : BaseEnumRust<Event>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumEvent()
+        {
+				AddTypeDecoder<Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256>(Event.Noted);
+				AddTypeDecoder<Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256>(Event.Requested);
+				AddTypeDecoder<Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256>(Event.Cleared);
+        }
     }
 }
