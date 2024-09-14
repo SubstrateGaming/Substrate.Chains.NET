@@ -15,13 +15,25 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_arithmeti
 {
     
     
+    /// <summary>
+    /// >> ArithmeticError
+    /// </summary>
     public enum ArithmeticError
     {
         
+        /// <summary>
+        /// >> Underflow
+        /// </summary>
         Underflow = 0,
         
+        /// <summary>
+        /// >> Overflow
+        /// </summary>
         Overflow = 1,
         
+        /// <summary>
+        /// >> DivisionByZero
+        /// </summary>
         DivisionByZero = 2,
     }
     

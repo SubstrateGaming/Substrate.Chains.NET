@@ -9,7 +9,7 @@
 
 using Substrate.NetApi.Attributes;
 using Substrate.NetApi.Model.Types.Base;
-using Substrate.NetApi.Model.Types.Metadata.V14;
+using Substrate.NetApi.Model.Types.Metadata.Base;
 using System.Collections.Generic;
 
 
@@ -18,7 +18,7 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bridge_hub_p
     
     
     /// <summary>
-    /// >> 182 - Composite[bridge_hub_polkadot_runtime.SessionKeys]
+    /// >> 267 - Composite[bridge_hub_polkadot_runtime.SessionKeys]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class SessionKeys : BaseType
@@ -27,25 +27,15 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bridge_hub_p
         /// <summary>
         /// >> aura
         /// </summary>
-        private Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_consensus_aura.sr25519.app_sr25519.Public _aura;
+        public Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_consensus_aura.sr25519.app_sr25519.Public Aura { get; set; }
         
-        public Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_consensus_aura.sr25519.app_sr25519.Public Aura
-        {
-            get
-            {
-                return this._aura;
-            }
-            set
-            {
-                this._aura = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "SessionKeys";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -53,6 +43,7 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bridge_hub_p
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
@@ -61,7 +52,7 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bridge_hub_p
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];
-            System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
+            global::System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
         }
     }
 }

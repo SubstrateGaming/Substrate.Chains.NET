@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Substrate.PolkadotBridgeHub
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Substrate.PolkadotBridgeHub.NET.RestClient.Test", "Substrate.PolkadotBridgeHub.NET.RestClient.Test\Substrate.PolkadotBridgeHub.NET.RestClient.Test.csproj", "{FF566091-D82D-4047-997B-D1EA05C61098}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Substrate.PolkadotBridgeHub.NET.Integration", "Substrate.PolkadotBridgeHub.NET.Integration\Substrate.PolkadotBridgeHub.NET.Integration.csproj", "{25792BB6-8035-4455-BDD8-8AB453F7A565}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -42,5 +44,9 @@ Global
 		{FF566091-D82D-4047-997B-D1EA05C61098}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FF566091-D82D-4047-997B-D1EA05C61098}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FF566091-D82D-4047-997B-D1EA05C61098}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25792BB6-8035-4455-BDD8-8AB453F7A565}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25792BB6-8035-4455-BDD8-8AB453F7A565}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25792BB6-8035-4455-BDD8-8AB453F7A565}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25792BB6-8035-4455-BDD8-8AB453F7A565}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

@@ -27,7 +27,7 @@ namespace Substrate.PolkadotBridgeHub.NET.RestService.Generated.Storage
         /// <summary>
         /// >> ParachainId
         /// </summary>
-        Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id GetParachainId();
+        Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id GetParachainId();
     }
     
     /// <summary>
@@ -39,20 +39,20 @@ namespace Substrate.PolkadotBridgeHub.NET.RestService.Generated.Storage
         /// <summary>
         /// _parachainIdTypedStorage typed storage field
         /// </summary>
-        private TypedStorage<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id> _parachainIdTypedStorage;
+        private TypedStorage<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id> _parachainIdTypedStorage;
         
         /// <summary>
         /// ParachainInfoStorage constructor.
         /// </summary>
         public ParachainInfoStorage(IStorageDataProvider storageDataProvider, List<IStorageChangeDelegate> storageChangeDelegates)
         {
-            this.ParachainIdTypedStorage = new TypedStorage<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id>("ParachainInfo.ParachainId", storageDataProvider, storageChangeDelegates);
+            this.ParachainIdTypedStorage = new TypedStorage<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id>("ParachainInfo.ParachainId", storageDataProvider, storageChangeDelegates);
         }
         
         /// <summary>
         /// _parachainIdTypedStorage property
         /// </summary>
-        public TypedStorage<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id> ParachainIdTypedStorage
+        public TypedStorage<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id> ParachainIdTypedStorage
         {
             get
             {
@@ -84,7 +84,7 @@ namespace Substrate.PolkadotBridgeHub.NET.RestService.Generated.Storage
         /// <summary>
         /// >> ParachainId
         /// </summary>
-        public Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id GetParachainId()
+        public Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id GetParachainId()
         {
             return ParachainIdTypedStorage.Get();
         }

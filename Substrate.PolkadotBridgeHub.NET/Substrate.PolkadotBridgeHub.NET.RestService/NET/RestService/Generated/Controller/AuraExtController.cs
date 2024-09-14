@@ -42,15 +42,29 @@ namespace Substrate.PolkadotBridgeHub.NET.RestService.Generated.Controller
         ///  Serves as cache for the authorities.
         /// 
         ///  The authorities in AuRa are overwritten in `on_initialize` when we switch to a new session,
-        ///  but we require the old authorities to verify the seal when validating a PoV. This will always
-        ///  be updated to the latest AuRa authorities in `on_finalize`.
+        ///  but we require the old authorities to verify the seal when validating a PoV. This will
+        ///  always be updated to the latest AuRa authorities in `on_finalize`.
         /// </summary>
         [HttpGet("Authorities")]
-        [ProducesResponseType(typeof(Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT8), 200)]
+        [ProducesResponseType(typeof(Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9), 200)]
         [StorageKeyBuilder(typeof(Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Storage.AuraExtStorage), "AuthoritiesParams")]
         public IActionResult GetAuthorities()
         {
             return this.Ok(_auraExtStorage.GetAuthorities());
+        }
+        
+        /// <summary>
+        /// >> SlotInfo
+        ///  Current slot paired with a number of authored blocks.
+        /// 
+        ///  Updated on each block initialization.
+        /// </summary>
+        [HttpGet("SlotInfo")]
+        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_consensus_slots.Slot, Substrate.NetApi.Model.Types.Primitive.U32>), 200)]
+        [StorageKeyBuilder(typeof(Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Storage.AuraExtStorage), "SlotInfoParams")]
+        public IActionResult GetSlotInfo()
+        {
+            return this.Ok(_auraExtStorage.GetSlotInfo());
         }
     }
 }

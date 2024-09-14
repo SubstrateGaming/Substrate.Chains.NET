@@ -41,7 +41,7 @@ namespace Substrate.PolkadotBridgeHub.NET.RestService.Generated.Controller
         /// >> ParachainId
         /// </summary>
         [HttpGet("ParachainId")]
-        [ProducesResponseType(typeof(Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id), 200)]
+        [ProducesResponseType(typeof(Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id), 200)]
         [StorageKeyBuilder(typeof(Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Storage.ParachainInfoStorage), "ParachainIdParams")]
         public IActionResult GetParachainId()
         {

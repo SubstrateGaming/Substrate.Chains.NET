@@ -15,16 +15,25 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.xcm.v2.multi
 {
     
     
+    /// <summary>
+    /// >> WildFungibility
+    /// </summary>
     public enum WildFungibility
     {
         
+        /// <summary>
+        /// >> Fungible
+        /// </summary>
         Fungible = 0,
         
+        /// <summary>
+        /// >> NonFungible
+        /// </summary>
         NonFungible = 1,
     }
     
     /// <summary>
-    /// >> 219 - Variant[xcm.v2.multiasset.WildFungibility]
+    /// >> 326 - Variant[xcm.v2.multiasset.WildFungibility]
     /// </summary>
     public sealed class EnumWildFungibility : BaseEnum<WildFungibility>
     {

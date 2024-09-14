@@ -15,18 +15,36 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.cumulus_pall
 {
     
     
+    /// <summary>
+    /// >> Origin
+    /// </summary>
     public enum Origin
     {
         
+        /// <summary>
+        /// >> Relay
+        /// </summary>
         Relay = 0,
         
+        /// <summary>
+        /// >> SiblingParachain
+        /// </summary>
         SiblingParachain = 1,
     }
     
     /// <summary>
-    /// >> 246 - Variant[cumulus_pallet_xcm.pallet.Origin]
+    /// >> 402 - Variant[cumulus_pallet_xcm.pallet.Origin]
     /// </summary>
-    public sealed class EnumOrigin : BaseEnumExt<Origin, BaseVoid, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id>
+    public sealed class EnumOrigin : BaseEnumRust<Origin>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumOrigin()
+        {
+				AddTypeDecoder<BaseVoid>(Origin.Relay);
+				AddTypeDecoder<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id>(Origin.SiblingParachain);
+        }
     }
 }

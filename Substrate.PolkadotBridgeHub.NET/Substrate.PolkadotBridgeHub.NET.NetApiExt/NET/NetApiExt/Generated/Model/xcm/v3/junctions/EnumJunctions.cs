@@ -15,32 +15,78 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.xcm.v3.junct
 {
     
     
+    /// <summary>
+    /// >> Junctions
+    /// </summary>
     public enum Junctions
     {
         
+        /// <summary>
+        /// >> Here
+        /// </summary>
         Here = 0,
         
+        /// <summary>
+        /// >> X1
+        /// </summary>
         X1 = 1,
         
+        /// <summary>
+        /// >> X2
+        /// </summary>
         X2 = 2,
         
+        /// <summary>
+        /// >> X3
+        /// </summary>
         X3 = 3,
         
+        /// <summary>
+        /// >> X4
+        /// </summary>
         X4 = 4,
         
+        /// <summary>
+        /// >> X5
+        /// </summary>
         X5 = 5,
         
+        /// <summary>
+        /// >> X6
+        /// </summary>
         X6 = 6,
         
+        /// <summary>
+        /// >> X7
+        /// </summary>
         X7 = 7,
         
+        /// <summary>
+        /// >> X8
+        /// </summary>
         X8 = 8,
     }
     
     /// <summary>
-    /// >> 44 - Variant[xcm.v3.junctions.Junctions]
+    /// >> 108 - Variant[xcm.v3.junctions.Junctions]
     /// </summary>
-    public sealed class EnumJunctions : BaseEnumExt<Junctions, BaseVoid, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction, BaseTuple<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction>, BaseTuple<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction>, BaseTuple<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction>, BaseTuple<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction>, BaseTuple<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction>, BaseTuple<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction>, BaseTuple<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction>>
+    public sealed class EnumJunctions : BaseEnumRust<Junctions>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumJunctions()
+        {
+				AddTypeDecoder<BaseVoid>(Junctions.Here);
+				AddTypeDecoder<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction>(Junctions.X1);
+				AddTypeDecoder<BaseTuple<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction>>(Junctions.X2);
+				AddTypeDecoder<BaseTuple<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction>>(Junctions.X3);
+				AddTypeDecoder<BaseTuple<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction>>(Junctions.X4);
+				AddTypeDecoder<BaseTuple<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction>>(Junctions.X5);
+				AddTypeDecoder<BaseTuple<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction>>(Junctions.X6);
+				AddTypeDecoder<BaseTuple<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction>>(Junctions.X7);
+				AddTypeDecoder<BaseTuple<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumJunction>>(Junctions.X8);
+        }
     }
 }

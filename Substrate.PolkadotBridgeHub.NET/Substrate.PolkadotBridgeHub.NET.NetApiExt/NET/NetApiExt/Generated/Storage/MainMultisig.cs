@@ -21,12 +21,18 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> MultisigStorage
+    /// </summary>
     public sealed class MultisigStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> MultisigStorage Constructor
+        /// </summary>
         public MultisigStorage(SubstrateClientExt client)
         {
             this._client = client;
@@ -59,20 +65,23 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Storage
         /// >> Multisigs
         ///  The set of open multisig operations.
         /// </summary>
-        public async Task<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.pallet_multisig.Multisig> Multisigs(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Types.Base.Arr32U8> key, CancellationToken token)
+        public async Task<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.pallet_multisig.Multisig> Multisigs(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Types.Base.Arr32U8> key, string blockhash, CancellationToken token)
         {
             string parameters = MultisigStorage.MultisigsParams(key);
-            var result = await _client.GetStorageAsync<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.pallet_multisig.Multisig>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.pallet_multisig.Multisig>(parameters, blockhash, token);
             return result;
         }
     }
     
+    /// <summary>
+    /// >> MultisigCalls
+    /// </summary>
     public sealed class MultisigCalls
     {
         
         /// <summary>
         /// >> as_multi_threshold_1
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method AsMultiThreshold1(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> other_signatories, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bridge_hub_polkadot_runtime.EnumRuntimeCall call)
         {
@@ -84,7 +93,7 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> as_multi
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method AsMulti(Substrate.NetApi.Model.Types.Primitive.U16 threshold, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> other_signatories, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.pallet_multisig.Timepoint> maybe_timepoint, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bridge_hub_polkadot_runtime.EnumRuntimeCall call, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight max_weight)
         {
@@ -99,7 +108,7 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> approve_as_multi
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method ApproveAsMulti(Substrate.NetApi.Model.Types.Primitive.U16 threshold, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> other_signatories, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.pallet_multisig.Timepoint> maybe_timepoint, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Types.Base.Arr32U8 call_hash, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight max_weight)
         {
@@ -114,7 +123,7 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> cancel_as_multi
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method CancelAsMulti(Substrate.NetApi.Model.Types.Primitive.U16 threshold, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> other_signatories, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.pallet_multisig.Timepoint timepoint, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Types.Base.Arr32U8 call_hash)
         {
@@ -127,6 +136,9 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> MultisigConstants
+    /// </summary>
     public sealed class MultisigConstants
     {
         
@@ -171,6 +183,9 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> MultisigErrors
+    /// </summary>
     public enum MultisigErrors
     {
         

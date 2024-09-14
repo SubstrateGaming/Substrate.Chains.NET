@@ -13,6 +13,9 @@ namespace Substrate.PolkadotBridgeHub.NET.RestClient.Mockup.Generated.Clients
    using System.Threading.Tasks;
    using System.Net.Http;
    using Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
+   using Substrate.NetApi.Model.Types.Base;
+   using Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_consensus_slots;
+   using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.PolkadotBridgeHub.NET.RestClient.Mockup.Generated.Interfaces;
    
    public sealed class AuraExtControllerMockupClient : MockupBaseClient, IAuraExtControllerMockupClient
@@ -22,9 +25,13 @@ namespace Substrate.PolkadotBridgeHub.NET.RestClient.Mockup.Generated.Clients
       {
          _httpClient = httpClient;
       }
-      public async Task<bool> SetAuthorities(BoundedVecT8 value)
+      public async Task<bool> SetAuthorities(BoundedVecT9 value)
       {
          return await SendMockupRequestAsync(_httpClient, "AuraExt/Authorities", value.Encode(), Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Storage.AuraExtStorage.AuthoritiesParams());
+      }
+      public async Task<bool> SetSlotInfo(BaseTuple<Slot, U32> value)
+      {
+         return await SendMockupRequestAsync(_httpClient, "AuraExt/SlotInfo", value.Encode(), Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Storage.AuraExtStorage.SlotInfoParams());
       }
    }
 }

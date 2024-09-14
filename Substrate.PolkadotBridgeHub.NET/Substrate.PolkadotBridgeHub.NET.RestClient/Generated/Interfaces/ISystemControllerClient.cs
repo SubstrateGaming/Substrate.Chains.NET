@@ -52,5 +52,7 @@ namespace Substrate.PolkadotBridgeHub.NET.RestClient.Generated.Interfaces
       Task<bool> SubscribeUpgradedToTripleRefCount();
       Task<EnumPhase> GetExecutionPhase();
       Task<bool> SubscribeExecutionPhase();
+      Task<CodeUpgradeAuthorization> GetAuthorizedUpgrade();
+      Task<bool> SubscribeAuthorizedUpgrade();
    }
 }

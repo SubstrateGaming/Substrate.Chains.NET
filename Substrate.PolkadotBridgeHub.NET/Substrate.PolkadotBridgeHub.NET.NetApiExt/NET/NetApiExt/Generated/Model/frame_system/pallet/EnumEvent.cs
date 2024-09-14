@@ -15,27 +15,75 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.frame_system
 {
     
     
+    /// <summary>
+    /// >> Event
+    /// Event for the System pallet.
+    /// </summary>
     public enum Event
     {
         
+        /// <summary>
+        /// >> ExtrinsicSuccess
+        /// An extrinsic completed successfully.
+        /// </summary>
         ExtrinsicSuccess = 0,
         
+        /// <summary>
+        /// >> ExtrinsicFailed
+        /// An extrinsic failed.
+        /// </summary>
         ExtrinsicFailed = 1,
         
+        /// <summary>
+        /// >> CodeUpdated
+        /// `:code` was updated.
+        /// </summary>
         CodeUpdated = 2,
         
+        /// <summary>
+        /// >> NewAccount
+        /// A new account was created.
+        /// </summary>
         NewAccount = 3,
         
+        /// <summary>
+        /// >> KilledAccount
+        /// An account was reaped.
+        /// </summary>
         KilledAccount = 4,
         
+        /// <summary>
+        /// >> Remarked
+        /// On on-chain remark happened.
+        /// </summary>
         Remarked = 5,
+        
+        /// <summary>
+        /// >> UpgradeAuthorized
+        /// An upgrade was authorized.
+        /// </summary>
+        UpgradeAuthorized = 6,
     }
     
     /// <summary>
     /// >> 21 - Variant[frame_system.pallet.Event]
     /// Event for the System pallet.
     /// </summary>
-    public sealed class EnumEvent : BaseEnumExt<Event, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.frame_support.dispatch.DispatchInfo, BaseTuple<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_runtime.EnumDispatchError, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.frame_support.dispatch.DispatchInfo>, BaseVoid, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, BaseTuple<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.primitive_types.H256>>
+    public sealed class EnumEvent : BaseEnumRust<Event>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumEvent()
+        {
+				AddTypeDecoder<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.frame_support.dispatch.DispatchInfo>(Event.ExtrinsicSuccess);
+				AddTypeDecoder<BaseTuple<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_runtime.EnumDispatchError, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.frame_support.dispatch.DispatchInfo>>(Event.ExtrinsicFailed);
+				AddTypeDecoder<BaseVoid>(Event.CodeUpdated);
+				AddTypeDecoder<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>(Event.NewAccount);
+				AddTypeDecoder<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>(Event.KilledAccount);
+				AddTypeDecoder<BaseTuple<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.primitive_types.H256>>(Event.Remarked);
+				AddTypeDecoder<BaseTuple<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Primitive.Bool>>(Event.UpgradeAuthorized);
+        }
     }
 }

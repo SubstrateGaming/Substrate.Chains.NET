@@ -15,23 +15,54 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.cumulus_pall
 {
     
     
+    /// <summary>
+    /// >> Call
+    /// Contains a variant per dispatchable extrinsic that this pallet has.
+    /// </summary>
     public enum Call
     {
         
+        /// <summary>
+        /// >> set_validation_data
+        /// See [`Pallet::set_validation_data`].
+        /// </summary>
         set_validation_data = 0,
         
+        /// <summary>
+        /// >> sudo_send_upward_message
+        /// See [`Pallet::sudo_send_upward_message`].
+        /// </summary>
         sudo_send_upward_message = 1,
         
+        /// <summary>
+        /// >> authorize_upgrade
+        /// See [`Pallet::authorize_upgrade`].
+        /// </summary>
         authorize_upgrade = 2,
         
+        /// <summary>
+        /// >> enact_authorized_upgrade
+        /// See [`Pallet::enact_authorized_upgrade`].
+        /// </summary>
         enact_authorized_upgrade = 3,
     }
     
     /// <summary>
-    /// >> 147 - Variant[cumulus_pallet_parachain_system.pallet.Call]
-    /// Contains one variant per dispatchable that can be called by an extrinsic.
+    /// >> 227 - Variant[cumulus_pallet_parachain_system.pallet.Call]
+    /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
-    public sealed class EnumCall : BaseEnumExt<Call, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.cumulus_primitives_parachain_inherent.ParachainInherentData, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>, BaseTuple<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Primitive.Bool>, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>
+    public sealed class EnumCall : BaseEnumRust<Call>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumCall()
+        {
+				AddTypeDecoder<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.cumulus_primitives_parachain_inherent.ParachainInherentData>(Call.set_validation_data);
+				AddTypeDecoder<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>(Call.sudo_send_upward_message);
+				AddTypeDecoder<BaseTuple<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Primitive.Bool>>(Call.authorize_upgrade);
+				AddTypeDecoder<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>(Call.enact_authorized_upgrade);
+        }
     }
 }

@@ -1,6 +1,7 @@
 {
   "projects": {
     "net_api": "Substrate.PolkadotBridgeHub.NET.NetApiExt",
+    "net_integration": "Substrate.PolkadotBridgeHub.NET.Integration",
     "rest_service": "Substrate.PolkadotBridgeHub.NET.RestService",
     "rest_client": "Substrate.PolkadotBridgeHub.NET.RestClient"
   },

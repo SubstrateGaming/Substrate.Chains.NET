@@ -12,10 +12,11 @@ namespace Substrate.PolkadotBridgeHub.NET.RestClient.Generated.Clients
    using System;
    using System.Threading.Tasks;
    using System.Net.Http;
+   using Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set;
    using Substrate.NetApi.Model.Types.Base;
    using Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue;
    using Substrate.NetApi.Model.Types.Primitive;
-   using Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives;
+   using Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point;
    using Substrate.PolkadotBridgeHub.NET.RestClient.Generated.Interfaces;
    
    public sealed class XcmpQueueControllerClient : BaseClient, IXcmpQueueControllerClient
@@ -27,21 +28,13 @@ namespace Substrate.PolkadotBridgeHub.NET.RestClient.Generated.Clients
          _httpClient = httpClient;
          _subscriptionClient = subscriptionClient;
       }
-      public async Task<BaseVec<InboundChannelDetails>> GetInboundXcmpStatus()
+      public async Task<BoundedBTreeSet> GetInboundXcmpSuspended()
       {
-         return await SendRequestAsync<BaseVec<InboundChannelDetails>>(_httpClient, "xcmpqueue/inboundxcmpstatus");
+         return await SendRequestAsync<BoundedBTreeSet>(_httpClient, "xcmpqueue/inboundxcmpsuspended");
       }
-      public async Task<bool> SubscribeInboundXcmpStatus()
+      public async Task<bool> SubscribeInboundXcmpSuspended()
       {
-         return await _subscriptionClient.SubscribeAsync("XcmpQueue.InboundXcmpStatus");
-      }
-      public async Task<BaseVec<U8>> GetInboundXcmpMessages(BaseTuple<Id, U32> key)
-      {
-         return await SendRequestAsync<BaseVec<U8>>(_httpClient, "xcmpqueue/inboundxcmpmessages", Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Storage.XcmpQueueStorage.InboundXcmpMessagesParams(key));
-      }
-      public async Task<bool> SubscribeInboundXcmpMessages(BaseTuple<Id, U32> key)
-      {
-         return await _subscriptionClient.SubscribeAsync("XcmpQueue.InboundXcmpMessages", Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Storage.XcmpQueueStorage.InboundXcmpMessagesParams(key));
+         return await _subscriptionClient.SubscribeAsync("XcmpQueue.InboundXcmpSuspended");
       }
       public async Task<BaseVec<OutboundChannelDetails>> GetOutboundXcmpStatus()
       {
@@ -51,19 +44,19 @@ namespace Substrate.PolkadotBridgeHub.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("XcmpQueue.OutboundXcmpStatus");
       }
-      public async Task<BaseVec<U8>> GetOutboundXcmpMessages(BaseTuple<Id, U16> key)
+      public async Task<BaseVec<U8>> GetOutboundXcmpMessages(BaseTuple<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, U16> key)
       {
          return await SendRequestAsync<BaseVec<U8>>(_httpClient, "xcmpqueue/outboundxcmpmessages", Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Storage.XcmpQueueStorage.OutboundXcmpMessagesParams(key));
       }
-      public async Task<bool> SubscribeOutboundXcmpMessages(BaseTuple<Id, U16> key)
+      public async Task<bool> SubscribeOutboundXcmpMessages(BaseTuple<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, U16> key)
       {
          return await _subscriptionClient.SubscribeAsync("XcmpQueue.OutboundXcmpMessages", Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Storage.XcmpQueueStorage.OutboundXcmpMessagesParams(key));
       }
-      public async Task<BaseVec<U8>> GetSignalMessages(Id key)
+      public async Task<BaseVec<U8>> GetSignalMessages(Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key)
       {
          return await SendRequestAsync<BaseVec<U8>>(_httpClient, "xcmpqueue/signalmessages", Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Storage.XcmpQueueStorage.SignalMessagesParams(key));
       }
-      public async Task<bool> SubscribeSignalMessages(Id key)
+      public async Task<bool> SubscribeSignalMessages(Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key)
       {
          return await _subscriptionClient.SubscribeAsync("XcmpQueue.SignalMessages", Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Storage.XcmpQueueStorage.SignalMessagesParams(key));
       }
@@ -75,30 +68,6 @@ namespace Substrate.PolkadotBridgeHub.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("XcmpQueue.QueueConfig");
       }
-      public async Task<BaseTuple<Id, U32, BaseVec<U8>>> GetOverweight(U64 key)
-      {
-         return await SendRequestAsync<BaseTuple<Id, U32, BaseVec<U8>>>(_httpClient, "xcmpqueue/overweight", Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Storage.XcmpQueueStorage.OverweightParams(key));
-      }
-      public async Task<bool> SubscribeOverweight(U64 key)
-      {
-         return await _subscriptionClient.SubscribeAsync("XcmpQueue.Overweight", Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Storage.XcmpQueueStorage.OverweightParams(key));
-      }
-      public async Task<U32> GetCounterForOverweight()
-      {
-         return await SendRequestAsync<U32>(_httpClient, "xcmpqueue/counterforoverweight");
-      }
-      public async Task<bool> SubscribeCounterForOverweight()
-      {
-         return await _subscriptionClient.SubscribeAsync("XcmpQueue.CounterForOverweight");
-      }
-      public async Task<U64> GetOverweightCount()
-      {
-         return await SendRequestAsync<U64>(_httpClient, "xcmpqueue/overweightcount");
-      }
-      public async Task<bool> SubscribeOverweightCount()
-      {
-         return await _subscriptionClient.SubscribeAsync("XcmpQueue.OverweightCount");
-      }
       public async Task<Bool> GetQueueSuspended()
       {
          return await SendRequestAsync<Bool>(_httpClient, "xcmpqueue/queuesuspended");
@@ -106,6 +75,14 @@ namespace Substrate.PolkadotBridgeHub.NET.RestClient.Generated.Clients
       public async Task<bool> SubscribeQueueSuspended()
       {
          return await _subscriptionClient.SubscribeAsync("XcmpQueue.QueueSuspended");
+      }
+      public async Task<FixedU128> GetDeliveryFeeFactor(Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key)
+      {
+         return await SendRequestAsync<FixedU128>(_httpClient, "xcmpqueue/deliveryfeefactor", Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Storage.XcmpQueueStorage.DeliveryFeeFactorParams(key));
+      }
+      public async Task<bool> SubscribeDeliveryFeeFactor(Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key)
+      {
+         return await _subscriptionClient.SubscribeAsync("XcmpQueue.DeliveryFeeFactor", Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Storage.XcmpQueueStorage.DeliveryFeeFactorParams(key));
       }
    }
 }
