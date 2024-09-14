@@ -13,7 +13,7 @@
 ![Nuget](https://img.shields.io/nuget/dt/Substrate.Polkadot.NET.Extension)  
 ![Build](https://github.com/SubstrateGaming/Substrate.Chains.NET/actions/workflows/publish_polkadot.yml/badge.svg)  
 
-### Polkadot (Parachain)
+### Polkadot (Common)
 - Polkadot Asset Hub .NET SDK ([Link](https://github.com/SubstrateGaming/Substrate.Chains.NET/tree/main/Substrate.PolkadotAssetHub.NET))  
   - Substrate Polkadot AssetHub .NET API Extension  
 [![Nuget](https://img.shields.io/nuget/v/Substrate.PolkadotAssetHub.NET.Extension)](https://www.nuget.org/packages/Substrate.PolkadotAssetHub.NET.Extension/)
@@ -28,7 +28,19 @@
   - Substrate Collectives .NET API Extension  
 [![Nuget](https://img.shields.io/nuget/v/Substrate.Collectives.NET.Extension)](https://www.nuget.org/packages/Substrate.Collectives.NET.Extension/)
 ![Nuget](https://img.shields.io/nuget/dt/Substrate.Collectives.NET.Extension)  
-![Build](https://github.com/SubstrateGaming/Substrate.Chains.NET/actions/workflows/publish_collectives.yml/badge.svg) 
+![Build](https://github.com/SubstrateGaming/Substrate.Chains.NET/actions/workflows/publish_collectives.yml/badge.svg)  
+- Coretime .NET SDK ([Link](https://github.com/SubstrateGaming/Substrate.Chains.NET/tree/main/Substrate.Coretime.NET))  
+  - Substrate Coretime .NET API Extension  
+[![Nuget](https://img.shields.io/nuget/v/Substrate.Coretime.NET.Extension)](https://www.nuget.org/packages/Substrate.Coretime.NET.Extension/)
+![Nuget](https://img.shields.io/nuget/dt/Substrate.Coretime.NET.Extension)  
+![Build](https://github.com/SubstrateGaming/Substrate.Chains.NET/actions/workflows/publish_coretime.yml/badge.svg)  
+- People .NET SDK ([Link](https://github.com/SubstrateGaming/Substrate.Chains.NET/tree/main/Substrate.Coretime.NET))  
+  - Substrate People .NET API Extension  
+[![Nuget](https://img.shields.io/nuget/v/Substrate.People.NET.Extension)](https://www.nuget.org/packages/Substrate.People.NET.Extension/)
+![Nuget](https://img.shields.io/nuget/dt/Substrate.People.NET.Extension)  
+![Build](https://github.com/SubstrateGaming/Substrate.Chains.NET/actions/workflows/publish_people.yml/badge.svg)  
+
+### Polkadot (Parachain)
 - Ajuna Network .NET SDK ([Link](https://github.com/SubstrateGaming/Substrate.Chains.NET/tree/main/Substrate.Ajuna.NET))  
   - Substrate Ajuna .NET API Extension   
 [![Nuget](https://img.shields.io/nuget/v/Substrate.Ajuna.NET.Extension)](https://www.nuget.org/packages/Substrate.Ajuna.NET.Extension/)
