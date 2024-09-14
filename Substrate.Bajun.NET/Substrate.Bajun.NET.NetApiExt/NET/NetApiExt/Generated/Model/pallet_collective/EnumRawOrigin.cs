@@ -40,7 +40,17 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_collective
     /// <summary>
     /// >> 279 - Variant[pallet_collective.RawOrigin]
     /// </summary>
-    public sealed class EnumRawOrigin : BaseEnumExt<RawOrigin, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, BaseVoid>
+    public sealed class EnumRawOrigin : BaseEnumRust<RawOrigin>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumRawOrigin()
+        {
+				AddTypeDecoder<BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>>(RawOrigin.Members);
+				AddTypeDecoder<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>(RawOrigin.Member);
+				AddTypeDecoder<BaseVoid>(RawOrigin._Phantom);
+        }
     }
 }

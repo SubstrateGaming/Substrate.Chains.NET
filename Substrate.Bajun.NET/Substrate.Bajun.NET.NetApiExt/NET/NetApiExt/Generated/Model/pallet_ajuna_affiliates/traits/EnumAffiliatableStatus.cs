@@ -40,7 +40,17 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_affiliates.
     /// <summary>
     /// >> 644 - Variant[pallet_ajuna_affiliates.traits.AffiliatableStatus]
     /// </summary>
-    public sealed class EnumAffiliatableStatus : BaseEnumExt<AffiliatableStatus, BaseVoid, Substrate.NetApi.Model.Types.Primitive.U32, BaseVoid>
+    public sealed class EnumAffiliatableStatus : BaseEnumRust<AffiliatableStatus>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumAffiliatableStatus()
+        {
+				AddTypeDecoder<BaseVoid>(AffiliatableStatus.NonAffiliatable);
+				AddTypeDecoder<Substrate.NetApi.Model.Types.Primitive.U32>(AffiliatableStatus.Affiliatable);
+				AddTypeDecoder<BaseVoid>(AffiliatableStatus.Blocked);
+        }
     }
 }

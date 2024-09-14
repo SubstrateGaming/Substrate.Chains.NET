@@ -51,7 +51,18 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_sudo.pallet
     /// >> 139 - Variant[pallet_sudo.pallet.Event]
     /// The `Event` enum of this pallet
     /// </summary>
-    public sealed class EnumEvent : BaseEnumExt<Event, Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.EnumResult, BaseTuple<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>, BaseVoid, Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.EnumResult>
+    public sealed class EnumEvent : BaseEnumRust<Event>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumEvent()
+        {
+				AddTypeDecoder<Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.EnumResult>(Event.Sudid);
+				AddTypeDecoder<BaseTuple<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>>(Event.KeyChanged);
+				AddTypeDecoder<BaseVoid>(Event.KeyRemoved);
+				AddTypeDecoder<Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.EnumResult>(Event.SudoAsDone);
+        }
     }
 }

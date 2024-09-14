@@ -81,11 +81,11 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
          result.MaybeId.Create(this.GetTestValue6());
          result.Priority = this.GetTestValueU8();
          result.Call = new Substrate.Bajun.NET.NetApiExt.Generated.Model.frame_support.traits.preimages.EnumBounded();
-         result.Call.Create(this.GetTestValueEnum<Substrate.Bajun.NET.NetApiExt.Generated.Model.frame_support.traits.preimages.Bounded>(), this.GetTestValue7());
+         result.Call = this.GetTestValue7();
          result.MaybePeriodic = new Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>>();
          result.MaybePeriodic.Create(this.GetTestValue8());
          result.Origin = new Substrate.Bajun.NET.NetApiExt.Generated.Model.bajun_runtime.EnumOriginCaller();
-         result.Origin.Create(this.GetTestValueEnum<Substrate.Bajun.NET.NetApiExt.Generated.Model.bajun_runtime.OriginCaller>(), this.GetTestValue9());
+         result.Origin = this.GetTestValue9();
          return result;
       }
       public Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.Arr32U8 GetTestValue6()
@@ -127,44 +127,11 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
                   this.GetTestValueU8()});
          return result;
       }
-      public Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 GetTestValue7()
+      public Substrate.Bajun.NET.NetApiExt.Generated.Model.frame_support.traits.preimages.EnumBounded GetTestValue7()
       {
-         Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256 result;
-         result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.primitive_types.H256();
-         result.Value = new Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.Arr32U8();
-         result.Value.Create(new Substrate.NetApi.Model.Types.Primitive.U8[] {
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8()});
+         Substrate.Bajun.NET.NetApiExt.Generated.Model.frame_support.traits.preimages.EnumBounded result;
+         result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.frame_support.traits.preimages.EnumBounded();
+         // NOT IMPLEMENTED >> Initialize Substrate.Bajun.NET.NetApiExt.Generated.Model.frame_support.traits.preimages.EnumBounded
          return result;
       }
       public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32> GetTestValue8()
@@ -174,11 +141,11 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
          result.Create(this.GetTestValueU32(), this.GetTestValueU32());
          return result;
       }
-      public Substrate.Bajun.NET.NetApiExt.Generated.Model.frame_support.dispatch.EnumRawOrigin GetTestValue9()
+      public Substrate.Bajun.NET.NetApiExt.Generated.Model.bajun_runtime.EnumOriginCaller GetTestValue9()
       {
-         Substrate.Bajun.NET.NetApiExt.Generated.Model.frame_support.dispatch.EnumRawOrigin result;
-         result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.frame_support.dispatch.EnumRawOrigin();
-         result.Create(this.GetTestValueEnum<Substrate.Bajun.NET.NetApiExt.Generated.Model.frame_support.dispatch.RawOrigin>(), this.GetTestValueBaseVoid());
+         Substrate.Bajun.NET.NetApiExt.Generated.Model.bajun_runtime.EnumOriginCaller result;
+         result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.bajun_runtime.EnumOriginCaller();
+         // NOT IMPLEMENTED >> Initialize Substrate.Bajun.NET.NetApiExt.Generated.Model.bajun_runtime.EnumOriginCaller
          return result;
       }
       [Test()]

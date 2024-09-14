@@ -40,7 +40,17 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm
     /// <summary>
     /// >> 131 - Variant[xcm.VersionedLocation]
     /// </summary>
-    public sealed class EnumVersionedLocation : BaseEnumExt<VersionedLocation, BaseVoid, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.v2.multilocation.MultiLocation, BaseVoid, Substrate.Bajun.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation, Substrate.Bajun.NET.NetApiExt.Generated.Model.staging_xcm.v4.location.Location>
+    public sealed class EnumVersionedLocation : BaseEnumRust<VersionedLocation>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumVersionedLocation()
+        {
+				AddTypeDecoder<Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.v2.multilocation.MultiLocation>(VersionedLocation.V2);
+				AddTypeDecoder<Substrate.Bajun.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation>(VersionedLocation.V3);
+				AddTypeDecoder<Substrate.Bajun.NET.NetApiExt.Generated.Model.staging_xcm.v4.location.Location>(VersionedLocation.V4);
+        }
     }
 }

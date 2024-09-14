@@ -32,7 +32,14 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
          result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.staging_xcm.v4.location.Location();
          result.Parents = this.GetTestValueU8();
          result.Interior = new Substrate.Bajun.NET.NetApiExt.Generated.Model.staging_xcm.v4.junctions.EnumJunctions();
-         result.Interior.Create(this.GetTestValueEnum<Substrate.Bajun.NET.NetApiExt.Generated.Model.staging_xcm.v4.junctions.Junctions>(), this.GetTestValueBaseVoid());
+         result.Interior = this.GetTestValue3();
+         return result;
+      }
+      public Substrate.Bajun.NET.NetApiExt.Generated.Model.staging_xcm.v4.junctions.EnumJunctions GetTestValue3()
+      {
+         Substrate.Bajun.NET.NetApiExt.Generated.Model.staging_xcm.v4.junctions.EnumJunctions result;
+         result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.staging_xcm.v4.junctions.EnumJunctions();
+         // NOT IMPLEMENTED >> Initialize Substrate.Bajun.NET.NetApiExt.Generated.Model.staging_xcm.v4.junctions.EnumJunctions
          return result;
       }
       [Test()]
@@ -64,13 +71,20 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Bajun.NET.NetApiExt.Generated.Model.staging_xcm.v4.location.Location GetTestValue4()
+      public Substrate.Bajun.NET.NetApiExt.Generated.Model.staging_xcm.v4.location.Location GetTestValue5()
       {
          Substrate.Bajun.NET.NetApiExt.Generated.Model.staging_xcm.v4.location.Location result;
          result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.staging_xcm.v4.location.Location();
          result.Parents = this.GetTestValueU8();
          result.Interior = new Substrate.Bajun.NET.NetApiExt.Generated.Model.staging_xcm.v4.junctions.EnumJunctions();
-         result.Interior.Create(this.GetTestValueEnum<Substrate.Bajun.NET.NetApiExt.Generated.Model.staging_xcm.v4.junctions.Junctions>(), this.GetTestValueBaseVoid());
+         result.Interior = this.GetTestValue6();
+         return result;
+      }
+      public Substrate.Bajun.NET.NetApiExt.Generated.Model.staging_xcm.v4.junctions.EnumJunctions GetTestValue6()
+      {
+         Substrate.Bajun.NET.NetApiExt.Generated.Model.staging_xcm.v4.junctions.EnumJunctions result;
+         result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.staging_xcm.v4.junctions.EnumJunctions();
+         // NOT IMPLEMENTED >> Initialize Substrate.Bajun.NET.NetApiExt.Generated.Model.staging_xcm.v4.junctions.EnumJunctions
          return result;
       }
       [Test()]
@@ -85,7 +99,7 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
          // Construct new RPC client to test with.
          AssetRegistryControllerClient rpcClient = new AssetRegistryControllerClient(_httpClient, subscriptionClient);
          Substrate.NetApi.Model.Types.Primitive.U32 mockupValue = this.GetTestValueU32();
-         Substrate.Bajun.NET.NetApiExt.Generated.Model.staging_xcm.v4.location.Location mockupKey = this.GetTestValue4();
+         Substrate.Bajun.NET.NetApiExt.Generated.Model.staging_xcm.v4.location.Location mockupKey = this.GetTestValue5();
 
          Assert.IsTrue(await rpcClient.SubscribeAssetLocationId(mockupKey));
 

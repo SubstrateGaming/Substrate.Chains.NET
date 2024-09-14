@@ -32,14 +32,7 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
       {
          Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_tournament.config.EnumTournamentScheduledAction result;
          result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_tournament.config.EnumTournamentScheduledAction();
-         result.Create(this.GetTestValueEnum<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_tournament.config.TournamentScheduledAction>(), this.GetTestValue3());
-         return result;
-      }
-      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U16, Substrate.NetApi.Model.Types.Primitive.U32> GetTestValue3()
-      {
-         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U16, Substrate.NetApi.Model.Types.Primitive.U32> result;
-         result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U16, Substrate.NetApi.Model.Types.Primitive.U32>();
-         result.Create(this.GetTestValueU16(), this.GetTestValueU32());
+         // NOT IMPLEMENTED >> Initialize Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_tournament.config.EnumTournamentScheduledAction
          return result;
       }
       [Test()]
@@ -71,7 +64,7 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue5()
+      public Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue4()
       {
          Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 result;
          result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32();
@@ -122,7 +115,7 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          TournamentAAAControllerClient rpcClient = new TournamentAAAControllerClient(_httpClient, subscriptionClient);
-         Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 mockupValue = this.GetTestValue5();
+         Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 mockupValue = this.GetTestValue4();
          Substrate.NetApi.Model.Types.Primitive.U16 mockupKey = this.GetTestValueU16();
 
          Assert.IsTrue(await rpcClient.SubscribeTreasuryAccountsCache(mockupKey));
@@ -169,7 +162,7 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_tournament.config.TournamentConfig GetTestValue8()
+      public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_tournament.config.TournamentConfig GetTestValue7()
       {
          Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_tournament.config.TournamentConfig result;
          result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_tournament.config.TournamentConfig();
@@ -183,19 +176,26 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
          result.TakeFeePercentage = new Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U8>();
          result.TakeFeePercentage.Create(this.GetTestValueU8());
          result.RewardDistribution = new Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT22();
-         result.RewardDistribution = this.GetTestValue9();
+         result.RewardDistribution = this.GetTestValue8();
          result.GoldenDuckConfig = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_tournament.config.EnumGoldenDuckConfig();
-         result.GoldenDuckConfig.Create(this.GetTestValueEnum<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_tournament.config.GoldenDuckConfig>(), this.GetTestValueBaseVoid());
+         result.GoldenDuckConfig = this.GetTestValue9();
          result.MaxPlayers = this.GetTestValueU32();
          return result;
       }
-      public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT22 GetTestValue9()
+      public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT22 GetTestValue8()
       {
          Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT22 result;
          result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT22();
          result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>();
          result.Value.Create(new Substrate.NetApi.Model.Types.Primitive.U8[] {
                   this.GetTestValueU8()});
+         return result;
+      }
+      public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_tournament.config.EnumGoldenDuckConfig GetTestValue9()
+      {
+         Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_tournament.config.EnumGoldenDuckConfig result;
+         result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_tournament.config.EnumGoldenDuckConfig();
+         // NOT IMPLEMENTED >> Initialize Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_tournament.config.EnumGoldenDuckConfig
          return result;
       }
       public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U16, Substrate.NetApi.Model.Types.Primitive.U32> GetTestValue10()
@@ -216,7 +216,7 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          TournamentAAAControllerClient rpcClient = new TournamentAAAControllerClient(_httpClient, subscriptionClient);
-         Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_tournament.config.TournamentConfig mockupValue = this.GetTestValue8();
+         Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_tournament.config.TournamentConfig mockupValue = this.GetTestValue7();
          Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U16, Substrate.NetApi.Model.Types.Primitive.U32> mockupKey = this.GetTestValue10();
 
          Assert.IsTrue(await rpcClient.SubscribeTournaments(mockupKey));
@@ -238,7 +238,7 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
       {
          Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_tournament.config.EnumTournamentState result;
          result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_tournament.config.EnumTournamentState();
-         result.Create(this.GetTestValueEnum<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_tournament.config.TournamentState>(), this.GetTestValueBaseVoid());
+         // NOT IMPLEMENTED >> Initialize Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_tournament.config.EnumTournamentState
          return result;
       }
       [Test()]
@@ -388,7 +388,7 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
       {
          Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_tournament.config.EnumRewardClaimState result;
          result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_tournament.config.EnumRewardClaimState();
-         result.Create(this.GetTestValueEnum<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_tournament.config.RewardClaimState>(), this.GetTestValueBaseVoid());
+         // NOT IMPLEMENTED >> Initialize Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_tournament.config.EnumRewardClaimState
          return result;
       }
       public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U16, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32> GetTestValue22()
@@ -431,7 +431,7 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
       {
          Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_tournament.config.EnumGoldenDuckState result;
          result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_tournament.config.EnumGoldenDuckState();
-         result.Create(this.GetTestValueEnum<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_tournament.config.GoldenDuckState>(), this.GetTestValueBaseVoid());
+         // NOT IMPLEMENTED >> Initialize Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_tournament.config.EnumGoldenDuckState
          return result;
       }
       public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U16, Substrate.NetApi.Model.Types.Primitive.U32> GetTestValue25()
@@ -474,7 +474,7 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
       {
          Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_tournament.config.EnumRewardClaimState result;
          result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_tournament.config.EnumRewardClaimState();
-         result.Create(this.GetTestValueEnum<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_tournament.config.RewardClaimState>(), this.GetTestValueBaseVoid());
+         // NOT IMPLEMENTED >> Initialize Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_tournament.config.EnumRewardClaimState
          return result;
       }
       public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U16, Substrate.NetApi.Model.Types.Primitive.U32> GetTestValue28()

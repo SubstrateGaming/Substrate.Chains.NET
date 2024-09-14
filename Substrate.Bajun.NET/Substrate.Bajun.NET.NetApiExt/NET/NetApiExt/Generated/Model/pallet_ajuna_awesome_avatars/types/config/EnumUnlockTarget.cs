@@ -40,7 +40,17 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
     /// <summary>
     /// >> 414 - Variant[pallet_ajuna_awesome_avatars.types.config.UnlockTarget]
     /// </summary>
-    public sealed class EnumUnlockTarget : BaseEnumExt<UnlockTarget, BaseVoid, BaseVoid, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>
+    public sealed class EnumUnlockTarget : BaseEnumRust<UnlockTarget>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumUnlockTarget()
+        {
+				AddTypeDecoder<BaseVoid>(UnlockTarget.OneselfFree);
+				AddTypeDecoder<BaseVoid>(UnlockTarget.OneselfPaying);
+				AddTypeDecoder<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>(UnlockTarget.OtherPaying);
+        }
     }
 }
