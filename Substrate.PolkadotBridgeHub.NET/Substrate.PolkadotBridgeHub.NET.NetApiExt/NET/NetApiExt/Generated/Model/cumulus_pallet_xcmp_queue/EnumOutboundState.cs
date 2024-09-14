@@ -15,16 +15,25 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.cumulus_pall
 {
     
     
+    /// <summary>
+    /// >> OutboundState
+    /// </summary>
     public enum OutboundState
     {
         
+        /// <summary>
+        /// >> Ok
+        /// </summary>
         Ok = 0,
         
+        /// <summary>
+        /// >> Suspended
+        /// </summary>
         Suspended = 1,
     }
     
     /// <summary>
-    /// >> 202 - Variant[cumulus_pallet_xcmp_queue.OutboundState]
+    /// >> 284 - Variant[cumulus_pallet_xcmp_queue.OutboundState]
     /// </summary>
     public sealed class EnumOutboundState : BaseEnum<OutboundState>
     {

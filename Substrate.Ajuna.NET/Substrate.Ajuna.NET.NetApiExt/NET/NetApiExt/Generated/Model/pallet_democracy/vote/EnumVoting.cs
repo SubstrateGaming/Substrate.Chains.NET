@@ -35,7 +35,16 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_democracy.vote
     /// <summary>
     /// >> 491 - Variant[pallet_democracy.vote.Voting]
     /// </summary>
-    public sealed class EnumVoting : BaseEnumExt<Voting, BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT36, Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_democracy.types.Delegations, Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_democracy.vote.PriorLock>, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_democracy.conviction.EnumConviction, Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_democracy.types.Delegations, Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_democracy.vote.PriorLock>>
+    public sealed class EnumVoting : BaseEnumRust<Voting>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumVoting()
+        {
+				AddTypeDecoder<BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT36, Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_democracy.types.Delegations, Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_democracy.vote.PriorLock>>(Voting.Direct);
+				AddTypeDecoder<BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_democracy.conviction.EnumConviction, Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_democracy.types.Delegations, Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_democracy.vote.PriorLock>>(Voting.Delegating);
+        }
     }
 }

@@ -24,43 +24,73 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nis.pallet
         
         /// <summary>
         /// >> place_bid
-        /// See [`Pallet::place_bid`].
+        /// Place a bid.
+        /// 
+        /// Origin must be Signed, and account must have at least `amount` in free balance.
+        /// 
+        /// - `amount`: The amount of the bid; these funds will be reserved, and if/when
+        ///   consolidated, removed. Must be at least `MinBid`.
+        /// - `duration`: The number of periods before which the newly consolidated bid may be
+        ///   thawed. Must be greater than 1 and no more than `QueueCount`.
+        /// 
+        /// Complexities:
+        /// - `Queues[duration].len()` (just take max).
         /// </summary>
         place_bid = 0,
         
         /// <summary>
         /// >> retract_bid
-        /// See [`Pallet::retract_bid`].
+        /// Retract a previously placed bid.
+        /// 
+        /// Origin must be Signed, and the account should have previously issued a still-active bid
+        /// of `amount` for `duration`.
+        /// 
+        /// - `amount`: The amount of the previous bid.
+        /// - `duration`: The duration of the previous bid.
         /// </summary>
         retract_bid = 1,
         
         /// <summary>
         /// >> fund_deficit
-        /// See [`Pallet::fund_deficit`].
+        /// Ensure we have sufficient funding for all potential payouts.
+        /// 
+        /// - `origin`: Must be accepted by `FundOrigin`.
         /// </summary>
         fund_deficit = 2,
         
         /// <summary>
         /// >> thaw_private
-        /// See [`Pallet::thaw_private`].
+        /// Reduce or remove an outstanding receipt, placing the according proportion of funds into
+        /// the account of the owner.
+        /// 
+        /// - `origin`: Must be Signed and the account must be the owner of the receipt `index` as
+        ///   well as any fungible counterpart.
+        /// - `index`: The index of the receipt.
+        /// - `portion`: If `Some`, then only the given portion of the receipt should be thawed. If
+        ///   `None`, then all of it should be.
         /// </summary>
         thaw_private = 3,
         
         /// <summary>
         /// >> thaw_communal
-        /// See [`Pallet::thaw_communal`].
+        /// Reduce or remove an outstanding receipt, placing the according proportion of funds into
+        /// the account of the owner.
+        /// 
+        /// - `origin`: Must be Signed and the account must be the owner of the fungible counterpart
+        ///   for receipt `index`.
+        /// - `index`: The index of the receipt.
         /// </summary>
         thaw_communal = 4,
         
         /// <summary>
         /// >> communify
-        /// See [`Pallet::communify`].
+        /// Make a private receipt communal and create fungible counterparts for its owner.
         /// </summary>
         communify = 5,
         
         /// <summary>
         /// >> privatize
-        /// See [`Pallet::privatize`].
+        /// Make a communal receipt private and burn fungible counterparts from its owner.
         /// </summary>
         privatize = 6,
     }
@@ -69,7 +99,21 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nis.pallet
     /// >> 285 - Variant[pallet_nis.pallet.Call]
     /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
-    public sealed class EnumCall : BaseEnumExt<Call, BaseTuple<Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128>, Substrate.NetApi.Model.Types.Primitive.U32>, BaseTuple<Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128>, Substrate.NetApi.Model.Types.Primitive.U32>, BaseVoid, BaseTuple<Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perquintill>>, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>>
+    public sealed class EnumCall : BaseEnumRust<Call>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumCall()
+        {
+				AddTypeDecoder<BaseTuple<Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128>, Substrate.NetApi.Model.Types.Primitive.U32>>(Call.place_bid);
+				AddTypeDecoder<BaseTuple<Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128>, Substrate.NetApi.Model.Types.Primitive.U32>>(Call.retract_bid);
+				AddTypeDecoder<BaseVoid>(Call.fund_deficit);
+				AddTypeDecoder<BaseTuple<Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perquintill>>>(Call.thaw_private);
+				AddTypeDecoder<Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>>(Call.thaw_communal);
+				AddTypeDecoder<Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>>(Call.communify);
+				AddTypeDecoder<Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>>(Call.privatize);
+        }
     }
 }

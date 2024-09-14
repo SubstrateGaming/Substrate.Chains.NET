@@ -15,18 +15,36 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.xcm.v2.multiasset
 {
     
     
+    /// <summary>
+    /// >> AssetId
+    /// </summary>
     public enum AssetId
     {
         
+        /// <summary>
+        /// >> Concrete
+        /// </summary>
         Concrete = 0,
         
+        /// <summary>
+        /// >> Abstract
+        /// </summary>
         Abstract = 1,
     }
     
     /// <summary>
-    /// >> 86 - Variant[xcm.v2.multiasset.AssetId]
+    /// >> 93 - Variant[xcm.v2.multiasset.AssetId]
     /// </summary>
-    public sealed class EnumAssetId : BaseEnumExt<AssetId, Substrate.Collectives.NET.NetApiExt.Generated.Model.xcm.v2.multilocation.MultiLocation, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>
+    public sealed class EnumAssetId : BaseEnumRust<AssetId>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumAssetId()
+        {
+				AddTypeDecoder<Substrate.Collectives.NET.NetApiExt.Generated.Model.xcm.v2.multilocation.MultiLocation>(AssetId.Concrete);
+				AddTypeDecoder<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>(AssetId.Abstract);
+        }
     }
 }

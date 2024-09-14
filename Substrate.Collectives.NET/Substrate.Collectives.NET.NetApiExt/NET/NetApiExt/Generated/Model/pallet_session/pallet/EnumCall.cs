@@ -15,19 +15,40 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_session.pal
 {
     
     
+    /// <summary>
+    /// >> Call
+    /// Contains a variant per dispatchable extrinsic that this pallet has.
+    /// </summary>
     public enum Call
     {
         
+        /// <summary>
+        /// >> set_keys
+        /// See [`Pallet::set_keys`].
+        /// </summary>
         set_keys = 0,
         
+        /// <summary>
+        /// >> purge_keys
+        /// See [`Pallet::purge_keys`].
+        /// </summary>
         purge_keys = 1,
     }
     
     /// <summary>
-    /// >> 149 - Variant[pallet_session.pallet.Call]
-    /// Contains one variant per dispatchable that can be called by an extrinsic.
+    /// >> 175 - Variant[pallet_session.pallet.Call]
+    /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
-    public sealed class EnumCall : BaseEnumExt<Call, BaseTuple<Substrate.Collectives.NET.NetApiExt.Generated.Model.collectives_polkadot_runtime.SessionKeys, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>, BaseVoid>
+    public sealed class EnumCall : BaseEnumRust<Call>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumCall()
+        {
+				AddTypeDecoder<BaseTuple<Substrate.Collectives.NET.NetApiExt.Generated.Model.collectives_polkadot_runtime.SessionKeys, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>>(Call.set_keys);
+				AddTypeDecoder<BaseVoid>(Call.purge_keys);
+        }
     }
 }

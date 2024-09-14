@@ -49,7 +49,7 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Storage
         /// >> send_as_sovereign
         /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method SendAsSovereign(Substrate.HydraDX.NET.NetApiExt.Generated.Model.staging_xcm.EnumVersionedMultiLocation dest, Substrate.HydraDX.NET.NetApiExt.Generated.Model.staging_xcm.EnumVersionedXcm message)
+        public static Method SendAsSovereign(Substrate.HydraDX.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation dest, Substrate.HydraDX.NET.NetApiExt.Generated.Model.xcm.EnumVersionedXcm message)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(dest.Encode());

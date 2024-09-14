@@ -11,7 +11,7 @@ namespace Substrate.PolkadotBridgeHub.NET.RestClient.Mockup.Generated.Interfaces
 {
    using System;
    using System.Threading.Tasks;
-   using Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives;
+   using Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives;
    
    public interface IParachainInfoControllerMockupClient
    {

@@ -268,7 +268,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// <summary>
         /// >> AlreadyVoting
         /// The account currently has votes attached to it and the operation cannot succeed until
-        /// these are removed, either through `unvote` or `reap_vote`.
+        /// these are removed through `remove_vote`.
         /// </summary>
         AlreadyVoting,
         

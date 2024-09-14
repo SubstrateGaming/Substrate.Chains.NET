@@ -24,7 +24,7 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Clients
       {
          _httpClient = httpClient;
       }
-      public async Task<bool> SetAuthorities(BoundedVecT48 value)
+      public async Task<bool> SetAuthorities(BoundedVecT49 value)
       {
          return await SendMockupRequestAsync(_httpClient, "Beefy/Authorities", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.BeefyStorage.AuthoritiesParams());
       }
@@ -32,7 +32,7 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "Beefy/ValidatorSetId", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.BeefyStorage.ValidatorSetIdParams());
       }
-      public async Task<bool> SetNextAuthorities(BoundedVecT48 value)
+      public async Task<bool> SetNextAuthorities(BoundedVecT49 value)
       {
          return await SendMockupRequestAsync(_httpClient, "Beefy/NextAuthorities", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.BeefyStorage.NextAuthoritiesParams());
       }

@@ -725,7 +725,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> MakesDust
-        /// The operation would result in a receipt worth an insignficant value.
+        /// The operation would result in a receipt worth an insignificant value.
         /// </summary>
         MakesDust,
         

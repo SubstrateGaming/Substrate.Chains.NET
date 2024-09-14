@@ -31,12 +31,26 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.MigrationTask result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.MigrationTask();
          result.ProgressTop = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.EnumProgress();
-         result.ProgressTop.Create(this.GetTestValueEnum<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.Progress>(), this.GetTestValueBaseVoid());
+         result.ProgressTop = this.GetTestValue3();
          result.ProgressChild = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.EnumProgress();
-         result.ProgressChild.Create(this.GetTestValueEnum<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.Progress>(), this.GetTestValueBaseVoid());
+         result.ProgressChild = this.GetTestValue4();
          result.Size = this.GetTestValueU32();
          result.TopItems = this.GetTestValueU32();
          result.ChildItems = this.GetTestValueU32();
+         return result;
+      }
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.EnumProgress GetTestValue3()
+      {
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.EnumProgress result;
+         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.EnumProgress();
+         // NOT IMPLEMENTED >> Initialize Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.EnumProgress
+         return result;
+      }
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.EnumProgress GetTestValue4()
+      {
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.EnumProgress result;
+         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.EnumProgress();
+         // NOT IMPLEMENTED >> Initialize Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.EnumProgress
          return result;
       }
       [Test()]
@@ -68,14 +82,14 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.MigrationLimits> GetTestValue4()
+      public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.MigrationLimits> GetTestValue6()
       {
          Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.MigrationLimits> result;
          result = new Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.MigrationLimits>();
-         result.Create(this.GetTestValue5());
+         result.Create(this.GetTestValue7());
          return result;
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.MigrationLimits GetTestValue5()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.MigrationLimits GetTestValue7()
       {
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.MigrationLimits result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.MigrationLimits();
@@ -94,7 +108,7 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          StateTrieMigrationControllerClient rpcClient = new StateTrieMigrationControllerClient(_httpClient, subscriptionClient);
-         Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.MigrationLimits> mockupValue = this.GetTestValue4();
+         Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.MigrationLimits> mockupValue = this.GetTestValue6();
 
 
          Assert.IsTrue(await rpcClient.SubscribeAutoLimits());
@@ -112,7 +126,7 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.MigrationLimits GetTestValue7()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.MigrationLimits GetTestValue9()
       {
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.MigrationLimits result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.MigrationLimits();
@@ -131,7 +145,7 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          StateTrieMigrationControllerClient rpcClient = new StateTrieMigrationControllerClient(_httpClient, subscriptionClient);
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.MigrationLimits mockupValue = this.GetTestValue7();
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.MigrationLimits mockupValue = this.GetTestValue9();
 
 
          Assert.IsTrue(await rpcClient.SubscribeSignedMigrationMaxLimits());

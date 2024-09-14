@@ -29,10 +29,18 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_claims.pallet
     }
     
     /// <summary>
-    /// >> 82 - Variant[pallet_claims.pallet.Event]
+    /// >> 84 - Variant[pallet_claims.pallet.Event]
     /// The `Event` enum of this pallet
     /// </summary>
-    public sealed class EnumEvent : BaseEnumExt<Event, BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_claims.traits.EthereumAddress, Substrate.NetApi.Model.Types.Primitive.U128>>
+    public sealed class EnumEvent : BaseEnumRust<Event>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumEvent()
+        {
+				AddTypeDecoder<BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_claims.traits.EthereumAddress, Substrate.NetApi.Model.Types.Primitive.U128>>(Event.Claim);
+        }
     }
 }

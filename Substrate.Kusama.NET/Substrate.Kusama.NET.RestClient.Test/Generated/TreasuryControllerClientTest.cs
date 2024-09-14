@@ -278,14 +278,35 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
          Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_treasury.SpendStatus result;
          result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_treasury.SpendStatus();
          result.AssetKind = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_common.impls.EnumVersionedLocatableAsset();
-         result.AssetKind.Create(this.GetTestValueEnum<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_common.impls.VersionedLocatableAsset>(), this.GetTestValueBaseVoid());
+         result.AssetKind = this.GetTestValue12();
          result.Amount = this.GetTestValueU128();
          result.Beneficiary = new Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation();
-         result.Beneficiary.Create(this.GetTestValueEnum<Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.VersionedLocation>(), this.GetTestValueBaseVoid());
+         result.Beneficiary = this.GetTestValue13();
          result.ValidFrom = this.GetTestValueU32();
          result.ExpireAt = this.GetTestValueU32();
          result.Status = new Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_treasury.EnumPaymentState();
-         result.Status.Create(this.GetTestValueEnum<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_treasury.PaymentState>(), this.GetTestValueBaseVoid());
+         result.Status = this.GetTestValue14();
+         return result;
+      }
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_common.impls.EnumVersionedLocatableAsset GetTestValue12()
+      {
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_common.impls.EnumVersionedLocatableAsset result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_common.impls.EnumVersionedLocatableAsset();
+         // NOT IMPLEMENTED >> Initialize Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_common.impls.EnumVersionedLocatableAsset
+         return result;
+      }
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation GetTestValue13()
+      {
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation();
+         // NOT IMPLEMENTED >> Initialize Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation
+         return result;
+      }
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_treasury.EnumPaymentState GetTestValue14()
+      {
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_treasury.EnumPaymentState result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_treasury.EnumPaymentState();
+         // NOT IMPLEMENTED >> Initialize Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_treasury.EnumPaymentState
          return result;
       }
       [Test()]

@@ -15,16 +15,25 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.frame_suppor
 {
     
     
+    /// <summary>
+    /// >> BalanceStatus
+    /// </summary>
     public enum BalanceStatus
     {
         
+        /// <summary>
+        /// >> Free
+        /// </summary>
         Free = 0,
         
+        /// <summary>
+        /// >> Reserved
+        /// </summary>
         Reserved = 1,
     }
     
     /// <summary>
-    /// >> 33 - Variant[frame_support.traits.tokens.misc.BalanceStatus]
+    /// >> 34 - Variant[frame_support.traits.tokens.misc.BalanceStatus]
     /// </summary>
     public sealed class EnumBalanceStatus : BaseEnum<BalanceStatus>
     {

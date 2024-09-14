@@ -28,7 +28,7 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_lbp
     }
     
     /// <summary>
-    /// >> 113 - Variant[pallet_lbp.WeightCurveType]
+    /// >> 116 - Variant[pallet_lbp.WeightCurveType]
     /// </summary>
     public sealed class EnumWeightCurveType : BaseEnum<WeightCurveType>
     {

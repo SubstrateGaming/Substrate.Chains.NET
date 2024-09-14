@@ -9,7 +9,7 @@
 
 using Substrate.NetApi.Attributes;
 using Substrate.NetApi.Model.Types.Base;
-using Substrate.NetApi.Model.Types.Metadata.V14;
+using Substrate.NetApi.Model.Types.Metadata.Base;
 using System.Collections.Generic;
 
 
@@ -18,7 +18,7 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.ethereum.receipt
     
     
     /// <summary>
-    /// >> 580 - Composite[ethereum.receipt.EIP658ReceiptData]
+    /// >> 639 - Composite[ethereum.receipt.EIP658ReceiptData]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class EIP658ReceiptData : BaseType

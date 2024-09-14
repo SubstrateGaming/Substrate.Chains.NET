@@ -15,24 +15,47 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_preimage.pa
 {
     
     
+    /// <summary>
+    /// >> Event
+    /// The `Event` enum of this pallet
+    /// </summary>
     public enum Event
     {
         
+        /// <summary>
+        /// >> Noted
+        /// A preimage has been noted.
+        /// </summary>
         Noted = 0,
         
+        /// <summary>
+        /// >> Requested
+        /// A preimage has been requested.
+        /// </summary>
         Requested = 1,
         
+        /// <summary>
+        /// >> Cleared
+        /// A preimage has ben cleared.
+        /// </summary>
         Cleared = 2,
     }
     
     /// <summary>
-    /// >> 107 - Variant[pallet_preimage.pallet.Event]
-    /// 
-    ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
-    ///			by this pallet.
-    ///			
+    /// >> 128 - Variant[pallet_preimage.pallet.Event]
+    /// The `Event` enum of this pallet
     /// </summary>
-    public sealed class EnumEvent : BaseEnumExt<Event, Substrate.Collectives.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.Collectives.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.Collectives.NET.NetApiExt.Generated.Model.primitive_types.H256>
+    public sealed class EnumEvent : BaseEnumRust<Event>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumEvent()
+        {
+				AddTypeDecoder<Substrate.Collectives.NET.NetApiExt.Generated.Model.primitive_types.H256>(Event.Noted);
+				AddTypeDecoder<Substrate.Collectives.NET.NetApiExt.Generated.Model.primitive_types.H256>(Event.Requested);
+				AddTypeDecoder<Substrate.Collectives.NET.NetApiExt.Generated.Model.primitive_types.H256>(Event.Cleared);
+        }
     }
 }

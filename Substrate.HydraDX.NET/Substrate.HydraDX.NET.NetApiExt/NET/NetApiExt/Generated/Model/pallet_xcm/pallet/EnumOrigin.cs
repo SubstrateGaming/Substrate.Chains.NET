@@ -33,9 +33,18 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_xcm.pallet
     }
     
     /// <summary>
-    /// >> 425 - Variant[pallet_xcm.pallet.Origin]
+    /// >> 477 - Variant[pallet_xcm.pallet.Origin]
     /// </summary>
-    public sealed class EnumOrigin : BaseEnumExt<Origin, Substrate.HydraDX.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation, Substrate.HydraDX.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation>
+    public sealed class EnumOrigin : BaseEnumRust<Origin>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumOrigin()
+        {
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.staging_xcm.v4.location.Location>(Origin.Xcm);
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.staging_xcm.v4.location.Location>(Origin.Response);
+        }
     }
 }

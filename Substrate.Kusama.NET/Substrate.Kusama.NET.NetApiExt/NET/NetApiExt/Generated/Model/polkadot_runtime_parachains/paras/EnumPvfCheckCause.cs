@@ -33,9 +33,18 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parach
     }
     
     /// <summary>
-    /// >> 801 - Variant[polkadot_runtime_parachains.paras.PvfCheckCause]
+    /// >> 808 - Variant[polkadot_runtime_parachains.paras.PvfCheckCause]
     /// </summary>
-    public sealed class EnumPvfCheckCause : BaseEnumExt<PvfCheckCause, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.paras.EnumSetGoAhead>>
+    public sealed class EnumPvfCheckCause : BaseEnumRust<PvfCheckCause>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumPvfCheckCause()
+        {
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id>(PvfCheckCause.Onboarding);
+				AddTypeDecoder<BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.paras.EnumUpgradeStrategy>>(PvfCheckCause.Upgrade);
+        }
     }
 }

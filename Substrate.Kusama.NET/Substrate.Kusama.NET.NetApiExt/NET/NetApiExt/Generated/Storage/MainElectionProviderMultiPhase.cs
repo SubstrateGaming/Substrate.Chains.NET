@@ -489,28 +489,6 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
     {
         
         /// <summary>
-        /// >> UnsignedPhase
-        ///  Duration of the unsigned phase.
-        /// </summary>
-        public Substrate.NetApi.Model.Types.Primitive.U32 UnsignedPhase()
-        {
-            var result = new Substrate.NetApi.Model.Types.Primitive.U32();
-            result.Create("0x96000000");
-            return result;
-        }
-        
-        /// <summary>
-        /// >> SignedPhase
-        ///  Duration of the signed phase.
-        /// </summary>
-        public Substrate.NetApi.Model.Types.Primitive.U32 SignedPhase()
-        {
-            var result = new Substrate.NetApi.Model.Types.Primitive.U32();
-            result.Create("0x96000000");
-            return result;
-        }
-        
-        /// <summary>
         /// >> BetterSignedThreshold
         ///  The minimum amount of improvement to the solution score that defines a solution as
         ///  "better" in the Signed phase.
@@ -770,7 +748,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> PreDispatchDifferentRound
-        /// Sumission was prepared for a different round.
+        /// Submission was prepared for a different round.
         /// </summary>
         PreDispatchDifferentRound,
     }

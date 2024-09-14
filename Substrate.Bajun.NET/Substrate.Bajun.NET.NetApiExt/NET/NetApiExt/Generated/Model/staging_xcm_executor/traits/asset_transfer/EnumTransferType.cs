@@ -45,7 +45,18 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.staging_xcm_executor.tra
     /// <summary>
     /// >> 386 - Variant[staging_xcm_executor.traits.asset_transfer.TransferType]
     /// </summary>
-    public sealed class EnumTransferType : BaseEnumExt<TransferType, BaseVoid, BaseVoid, BaseVoid, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation>
+    public sealed class EnumTransferType : BaseEnumRust<TransferType>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumTransferType()
+        {
+				AddTypeDecoder<BaseVoid>(TransferType.Teleport);
+				AddTypeDecoder<BaseVoid>(TransferType.LocalReserve);
+				AddTypeDecoder<BaseVoid>(TransferType.DestinationReserve);
+				AddTypeDecoder<Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation>(TransferType.RemoteReserve);
+        }
     }
 }

@@ -38,9 +38,19 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_babe.diges
     }
     
     /// <summary>
-    /// >> 545 - Variant[sp_consensus_babe.digests.PreDigest]
+    /// >> 549 - Variant[sp_consensus_babe.digests.PreDigest]
     /// </summary>
-    public sealed class EnumPreDigest : BaseEnumExt<PreDigest, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_babe.digests.PrimaryPreDigest, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_babe.digests.SecondaryPlainPreDigest, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_babe.digests.SecondaryVRFPreDigest>
+    public sealed class EnumPreDigest : BaseEnumRust<PreDigest>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumPreDigest()
+        {
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_babe.digests.PrimaryPreDigest>(PreDigest.Primary);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_babe.digests.SecondaryPlainPreDigest>(PreDigest.SecondaryPlain);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_babe.digests.SecondaryVRFPreDigest>(PreDigest.SecondaryVRF);
+        }
     }
 }

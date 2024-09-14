@@ -45,7 +45,18 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.types
     /// <summary>
     /// >> 193 - Variant[pallet_nfts.types.AttributeNamespace]
     /// </summary>
-    public sealed class EnumAttributeNamespace : BaseEnumExt<AttributeNamespace, BaseVoid, BaseVoid, BaseVoid, Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>
+    public sealed class EnumAttributeNamespace : BaseEnumRust<AttributeNamespace>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumAttributeNamespace()
+        {
+				AddTypeDecoder<BaseVoid>(AttributeNamespace.Pallet);
+				AddTypeDecoder<BaseVoid>(AttributeNamespace.CollectionOwner);
+				AddTypeDecoder<BaseVoid>(AttributeNamespace.ItemOwner);
+				AddTypeDecoder<Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>(AttributeNamespace.Account);
+        }
     }
 }

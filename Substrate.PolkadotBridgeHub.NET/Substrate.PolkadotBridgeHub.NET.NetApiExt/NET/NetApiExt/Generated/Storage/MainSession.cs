@@ -21,12 +21,18 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> SessionStorage
+    /// </summary>
     public sealed class SessionStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> SessionStorage Constructor
+        /// </summary>
         public SessionStorage(SubstrateClientExt client)
         {
             this._client = client;
@@ -63,10 +69,10 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Storage
         /// >> Validators
         ///  The current set of validators.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>> Validators(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>> Validators(string blockhash, CancellationToken token)
         {
             string parameters = SessionStorage.ValidatorsParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>>(parameters, blockhash, token);
             return result;
         }
         
@@ -92,10 +98,10 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Storage
         /// >> CurrentIndex
         ///  Current index of the session.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> CurrentIndex(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> CurrentIndex(string blockhash, CancellationToken token)
         {
             string parameters = SessionStorage.CurrentIndexParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, blockhash, token);
             return result;
         }
         
@@ -123,10 +129,10 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Storage
         ///  True if the underlying economic identities or weighting behind the validators
         ///  has changed in the queued validator set.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.Bool> QueuedChanged(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.Bool> QueuedChanged(string blockhash, CancellationToken token)
         {
             string parameters = SessionStorage.QueuedChangedParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.Bool>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.Bool>(parameters, blockhash, token);
             return result;
         }
         
@@ -154,10 +160,10 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Storage
         ///  The queued keys for the next session. When the next session begins, these keys
         ///  will be used to determine the validator's session keys.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bridge_hub_polkadot_runtime.SessionKeys>>> QueuedKeys(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bridge_hub_polkadot_runtime.SessionKeys>>> QueuedKeys(string blockhash, CancellationToken token)
         {
             string parameters = SessionStorage.QueuedKeysParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bridge_hub_polkadot_runtime.SessionKeys>>>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bridge_hub_polkadot_runtime.SessionKeys>>>(parameters, blockhash, token);
             return result;
         }
         
@@ -191,10 +197,10 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Storage
         ///  disabled using binary search. It gets cleared when `on_session_ending` returns
         ///  a new set of identities.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U32>> DisabledValidators(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U32>> DisabledValidators(string blockhash, CancellationToken token)
         {
             string parameters = SessionStorage.DisabledValidatorsParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U32>>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U32>>(parameters, blockhash, token);
             return result;
         }
         
@@ -222,10 +228,10 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Storage
         /// >> NextKeys
         ///  The next session keys for a validator.
         /// </summary>
-        public async Task<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bridge_hub_polkadot_runtime.SessionKeys> NextKeys(Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, CancellationToken token)
+        public async Task<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bridge_hub_polkadot_runtime.SessionKeys> NextKeys(Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, string blockhash, CancellationToken token)
         {
             string parameters = SessionStorage.NextKeysParams(key);
-            var result = await _client.GetStorageAsync<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bridge_hub_polkadot_runtime.SessionKeys>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bridge_hub_polkadot_runtime.SessionKeys>(parameters, blockhash, token);
             return result;
         }
         
@@ -253,20 +259,23 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Storage
         /// >> KeyOwner
         ///  The owner of a key. The key is the `KeyTypeId` + the encoded key.
         /// </summary>
-        public async Task<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> KeyOwner(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_core.crypto.KeyTypeId, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>> key, CancellationToken token)
+        public async Task<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> KeyOwner(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_core.crypto.KeyTypeId, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>> key, string blockhash, CancellationToken token)
         {
             string parameters = SessionStorage.KeyOwnerParams(key);
-            var result = await _client.GetStorageAsync<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>(parameters, blockhash, token);
             return result;
         }
     }
     
+    /// <summary>
+    /// >> SessionCalls
+    /// </summary>
     public sealed class SessionCalls
     {
         
         /// <summary>
         /// >> set_keys
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method SetKeys(Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bridge_hub_polkadot_runtime.SessionKeys keys, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> proof)
         {
@@ -278,7 +287,7 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> purge_keys
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method PurgeKeys()
         {
@@ -287,10 +296,16 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> SessionConstants
+    /// </summary>
     public sealed class SessionConstants
     {
     }
     
+    /// <summary>
+    /// >> SessionErrors
+    /// </summary>
     public enum SessionErrors
     {
         

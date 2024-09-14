@@ -1712,10 +1712,17 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
          Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.avatar.tournament.AvatarRanker result;
          result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.avatar.tournament.AvatarRanker();
          result.Category = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.avatar.tournament.EnumAvatarRankingCategory();
-         result.Category.Create(this.GetTestValueEnum<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.avatar.tournament.AvatarRankingCategory>(), this.GetTestValueBaseVoid());
+         result.Category = this.GetTestValue86();
          return result;
       }
-      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U16, Substrate.NetApi.Model.Types.Primitive.U32> GetTestValue86()
+      public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.avatar.tournament.EnumAvatarRankingCategory GetTestValue86()
+      {
+         Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.avatar.tournament.EnumAvatarRankingCategory result;
+         result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.avatar.tournament.EnumAvatarRankingCategory();
+         // NOT IMPLEMENTED >> Initialize Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.avatar.tournament.EnumAvatarRankingCategory
+         return result;
+      }
+      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U16, Substrate.NetApi.Model.Types.Primitive.U32> GetTestValue87()
       {
          Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U16, Substrate.NetApi.Model.Types.Primitive.U32> result;
          result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U16, Substrate.NetApi.Model.Types.Primitive.U32>();
@@ -1734,7 +1741,7 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
          // Construct new RPC client to test with.
          AwesomeAvatarsControllerClient rpcClient = new AwesomeAvatarsControllerClient(_httpClient, subscriptionClient);
          Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.types.avatar.tournament.AvatarRanker mockupValue = this.GetTestValue85();
-         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U16, Substrate.NetApi.Model.Types.Primitive.U32> mockupKey = this.GetTestValue86();
+         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U16, Substrate.NetApi.Model.Types.Primitive.U32> mockupKey = this.GetTestValue87();
 
          Assert.IsTrue(await rpcClient.SubscribeTournamentRankers(mockupKey));
 

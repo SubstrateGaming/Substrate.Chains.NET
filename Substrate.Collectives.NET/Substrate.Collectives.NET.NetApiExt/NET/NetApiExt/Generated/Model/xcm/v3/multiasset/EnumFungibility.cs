@@ -15,18 +15,36 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.xcm.v3.multiasset
 {
     
     
+    /// <summary>
+    /// >> Fungibility
+    /// </summary>
     public enum Fungibility
     {
         
+        /// <summary>
+        /// >> Fungible
+        /// </summary>
         Fungible = 0,
         
+        /// <summary>
+        /// >> NonFungible
+        /// </summary>
         NonFungible = 1,
     }
     
     /// <summary>
-    /// >> 60 - Variant[xcm.v3.multiasset.Fungibility]
+    /// >> 112 - Variant[xcm.v3.multiasset.Fungibility]
     /// </summary>
-    public sealed class EnumFungibility : BaseEnumExt<Fungibility, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128>, Substrate.Collectives.NET.NetApiExt.Generated.Model.xcm.v3.multiasset.EnumAssetInstance>
+    public sealed class EnumFungibility : BaseEnumRust<Fungibility>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumFungibility()
+        {
+				AddTypeDecoder<Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128>>(Fungibility.Fungible);
+				AddTypeDecoder<Substrate.Collectives.NET.NetApiExt.Generated.Model.xcm.v3.multiasset.EnumAssetInstance>(Fungibility.NonFungible);
+        }
     }
 }

@@ -21,27 +21,35 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> CumulusXcmStorage
+    /// </summary>
     public sealed class CumulusXcmStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> CumulusXcmStorage Constructor
+        /// </summary>
         public CumulusXcmStorage(SubstrateClientExt client)
         {
             this._client = client;
         }
     }
     
+    /// <summary>
+    /// >> CumulusXcmCalls
+    /// </summary>
     public sealed class CumulusXcmCalls
     {
     }
     
+    /// <summary>
+    /// >> CumulusXcmConstants
+    /// </summary>
     public sealed class CumulusXcmConstants
-    {
-    }
-    
-    public enum CumulusXcmErrors
     {
     }
 }

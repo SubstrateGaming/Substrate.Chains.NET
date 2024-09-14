@@ -15,18 +15,36 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.xcm.v3.multi
 {
     
     
+    /// <summary>
+    /// >> AssetId
+    /// </summary>
     public enum AssetId
     {
         
+        /// <summary>
+        /// >> Concrete
+        /// </summary>
         Concrete = 0,
         
+        /// <summary>
+        /// >> Abstract
+        /// </summary>
         Abstract = 1,
     }
     
     /// <summary>
-    /// >> 59 - Variant[xcm.v3.multiasset.AssetId]
+    /// >> 106 - Variant[xcm.v3.multiasset.AssetId]
     /// </summary>
-    public sealed class EnumAssetId : BaseEnumExt<AssetId, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.xcm.v3.multilocation.MultiLocation, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Types.Base.Arr32U8>
+    public sealed class EnumAssetId : BaseEnumRust<AssetId>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumAssetId()
+        {
+				AddTypeDecoder<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation>(AssetId.Concrete);
+				AddTypeDecoder<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Types.Base.Arr32U8>(AssetId.Abstract);
+        }
     }
 }

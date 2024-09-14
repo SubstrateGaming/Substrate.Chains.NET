@@ -28,14 +28,17 @@ namespace Substrate.HydraDX.NET.RestService.Generated.Storage
         /// >> Invulnerables
         ///  The invulnerable, permissioned collators. This list must be sorted.
         /// </summary>
-        Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT29 GetInvulnerables();
+        Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT33 GetInvulnerables();
         
         /// <summary>
-        /// >> Candidates
+        /// >> CandidateList
         ///  The (community, limited) collation candidates. `Candidates` and `Invulnerables` should be
         ///  mutually exclusive.
+        /// 
+        ///  This list is sorted in ascending order by deposit and when the deposits are equal, the least
+        ///  recently updated is considered greater.
         /// </summary>
-        Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT44 GetCandidates();
+        Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT48 GetCandidateList();
         
         /// <summary>
         /// >> LastAuthoredBlock
@@ -69,12 +72,12 @@ namespace Substrate.HydraDX.NET.RestService.Generated.Storage
         /// <summary>
         /// _invulnerablesTypedStorage typed storage field
         /// </summary>
-        private TypedStorage<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT29> _invulnerablesTypedStorage;
+        private TypedStorage<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT33> _invulnerablesTypedStorage;
         
         /// <summary>
-        /// _candidatesTypedStorage typed storage field
+        /// _candidateListTypedStorage typed storage field
         /// </summary>
-        private TypedStorage<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT44> _candidatesTypedStorage;
+        private TypedStorage<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT48> _candidateListTypedStorage;
         
         /// <summary>
         /// _lastAuthoredBlockTypedStorage typed storage field
@@ -96,8 +99,8 @@ namespace Substrate.HydraDX.NET.RestService.Generated.Storage
         /// </summary>
         public CollatorSelectionStorage(IStorageDataProvider storageDataProvider, List<IStorageChangeDelegate> storageChangeDelegates)
         {
-            this.InvulnerablesTypedStorage = new TypedStorage<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT29>("CollatorSelection.Invulnerables", storageDataProvider, storageChangeDelegates);
-            this.CandidatesTypedStorage = new TypedStorage<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT44>("CollatorSelection.Candidates", storageDataProvider, storageChangeDelegates);
+            this.InvulnerablesTypedStorage = new TypedStorage<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT33>("CollatorSelection.Invulnerables", storageDataProvider, storageChangeDelegates);
+            this.CandidateListTypedStorage = new TypedStorage<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT48>("CollatorSelection.CandidateList", storageDataProvider, storageChangeDelegates);
             this.LastAuthoredBlockTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Primitive.U32>("CollatorSelection.LastAuthoredBlock", storageDataProvider, storageChangeDelegates);
             this.DesiredCandidatesTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32>("CollatorSelection.DesiredCandidates", storageDataProvider, storageChangeDelegates);
             this.CandidacyBondTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U128>("CollatorSelection.CandidacyBond", storageDataProvider, storageChangeDelegates);
@@ -106,7 +109,7 @@ namespace Substrate.HydraDX.NET.RestService.Generated.Storage
         /// <summary>
         /// _invulnerablesTypedStorage property
         /// </summary>
-        public TypedStorage<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT29> InvulnerablesTypedStorage
+        public TypedStorage<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT33> InvulnerablesTypedStorage
         {
             get
             {
@@ -119,17 +122,17 @@ namespace Substrate.HydraDX.NET.RestService.Generated.Storage
         }
         
         /// <summary>
-        /// _candidatesTypedStorage property
+        /// _candidateListTypedStorage property
         /// </summary>
-        public TypedStorage<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT44> CandidatesTypedStorage
+        public TypedStorage<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT48> CandidateListTypedStorage
         {
             get
             {
-                return _candidatesTypedStorage;
+                return _candidateListTypedStorage;
             }
             set
             {
-                _candidatesTypedStorage = value;
+                _candidateListTypedStorage = value;
             }
         }
         
@@ -184,7 +187,7 @@ namespace Substrate.HydraDX.NET.RestService.Generated.Storage
         public async Task InitializeAsync(Substrate.ServiceLayer.Storage.IStorageDataProvider dataProvider)
         {
             await InvulnerablesTypedStorage.InitializeAsync("CollatorSelection", "Invulnerables");
-            await CandidatesTypedStorage.InitializeAsync("CollatorSelection", "Candidates");
+            await CandidateListTypedStorage.InitializeAsync("CollatorSelection", "CandidateList");
             await LastAuthoredBlockTypedStorage.InitializeAsync("CollatorSelection", "LastAuthoredBlock");
             await DesiredCandidatesTypedStorage.InitializeAsync("CollatorSelection", "DesiredCandidates");
             await CandidacyBondTypedStorage.InitializeAsync("CollatorSelection", "CandidacyBond");
@@ -203,28 +206,31 @@ namespace Substrate.HydraDX.NET.RestService.Generated.Storage
         /// >> Invulnerables
         ///  The invulnerable, permissioned collators. This list must be sorted.
         /// </summary>
-        public Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT29 GetInvulnerables()
+        public Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT33 GetInvulnerables()
         {
             return InvulnerablesTypedStorage.Get();
         }
         
         /// <summary>
-        /// Implements any storage change for CollatorSelection.Candidates
+        /// Implements any storage change for CollatorSelection.CandidateList
         /// </summary>
-        [StorageChange("CollatorSelection", "Candidates")]
-        public void OnUpdateCandidates(string data)
+        [StorageChange("CollatorSelection", "CandidateList")]
+        public void OnUpdateCandidateList(string data)
         {
-            CandidatesTypedStorage.Update(data);
+            CandidateListTypedStorage.Update(data);
         }
         
         /// <summary>
-        /// >> Candidates
+        /// >> CandidateList
         ///  The (community, limited) collation candidates. `Candidates` and `Invulnerables` should be
         ///  mutually exclusive.
+        /// 
+        ///  This list is sorted in ascending order by deposit and when the deposits are equal, the least
+        ///  recently updated is considered greater.
         /// </summary>
-        public Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT44 GetCandidates()
+        public Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT48 GetCandidateList()
         {
-            return CandidatesTypedStorage.Get();
+            return CandidateListTypedStorage.Get();
         }
         
         /// <summary>

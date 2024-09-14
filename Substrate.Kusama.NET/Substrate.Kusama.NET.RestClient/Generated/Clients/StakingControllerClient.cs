@@ -150,6 +150,22 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("Staking.CounterForNominators");
       }
+      public async Task<BaseTuple> GetVirtualStakers(AccountId32 key)
+      {
+         return await SendRequestAsync<BaseTuple>(_httpClient, "staking/virtualstakers", Substrate.Kusama.NET.NetApiExt.Generated.Storage.StakingStorage.VirtualStakersParams(key));
+      }
+      public async Task<bool> SubscribeVirtualStakers(AccountId32 key)
+      {
+         return await _subscriptionClient.SubscribeAsync("Staking.VirtualStakers", Substrate.Kusama.NET.NetApiExt.Generated.Storage.StakingStorage.VirtualStakersParams(key));
+      }
+      public async Task<U32> GetCounterForVirtualStakers()
+      {
+         return await SendRequestAsync<U32>(_httpClient, "staking/counterforvirtualstakers");
+      }
+      public async Task<bool> SubscribeCounterForVirtualStakers()
+      {
+         return await _subscriptionClient.SubscribeAsync("Staking.CounterForVirtualStakers");
+      }
       public async Task<U32> GetMaxNominatorsCount()
       {
          return await SendRequestAsync<U32>(_httpClient, "staking/maxnominatorscount");
@@ -262,6 +278,14 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("Staking.ForceEra");
       }
+      public async Task<Percent> GetMaxStakedRewards()
+      {
+         return await SendRequestAsync<Percent>(_httpClient, "staking/maxstakedrewards");
+      }
+      public async Task<bool> SubscribeMaxStakedRewards()
+      {
+         return await _subscriptionClient.SubscribeAsync("Staking.MaxStakedRewards");
+      }
       public async Task<Perbill> GetSlashRewardFraction()
       {
          return await SendRequestAsync<Perbill>(_httpClient, "staking/slashrewardfraction");
@@ -334,13 +358,13 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("Staking.CurrentPlannedSession");
       }
-      public async Task<BaseVec<BaseTuple<U32, Bool>>> GetOffendingValidators()
+      public async Task<BaseVec<U32>> GetDisabledValidators()
       {
-         return await SendRequestAsync<BaseVec<BaseTuple<U32, Bool>>>(_httpClient, "staking/offendingvalidators");
+         return await SendRequestAsync<BaseVec<U32>>(_httpClient, "staking/disabledvalidators");
       }
-      public async Task<bool> SubscribeOffendingValidators()
+      public async Task<bool> SubscribeDisabledValidators()
       {
-         return await _subscriptionClient.SubscribeAsync("Staking.OffendingValidators");
+         return await _subscriptionClient.SubscribeAsync("Staking.DisabledValidators");
       }
       public async Task<Percent> GetChillThreshold()
       {

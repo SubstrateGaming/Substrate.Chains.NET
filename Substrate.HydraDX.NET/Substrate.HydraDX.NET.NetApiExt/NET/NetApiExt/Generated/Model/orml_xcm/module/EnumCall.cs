@@ -30,10 +30,18 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.orml_xcm.module
     }
     
     /// <summary>
-    /// >> 408 - Variant[orml_xcm.module.Call]
+    /// >> 462 - Variant[orml_xcm.module.Call]
     /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
-    public sealed class EnumCall : BaseEnumExt<Call, BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.staging_xcm.EnumVersionedMultiLocation, Substrate.HydraDX.NET.NetApiExt.Generated.Model.staging_xcm.EnumVersionedXcm>>
+    public sealed class EnumCall : BaseEnumRust<Call>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumCall()
+        {
+				AddTypeDecoder<BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation, Substrate.HydraDX.NET.NetApiExt.Generated.Model.xcm.EnumVersionedXcm>>(Call.send_as_sovereign);
+        }
     }
 }

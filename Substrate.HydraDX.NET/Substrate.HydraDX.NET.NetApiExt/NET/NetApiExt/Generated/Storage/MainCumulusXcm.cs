@@ -52,11 +52,4 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Storage
     public sealed class CumulusXcmConstants
     {
     }
-    
-    /// <summary>
-    /// >> CumulusXcmErrors
-    /// </summary>
-    public enum CumulusXcmErrors
-    {
-    }
 }

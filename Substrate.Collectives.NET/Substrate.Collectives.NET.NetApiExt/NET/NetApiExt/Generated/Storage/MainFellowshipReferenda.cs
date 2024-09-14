@@ -21,12 +21,18 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> FellowshipReferendaStorage
+    /// </summary>
     public sealed class FellowshipReferendaStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> FellowshipReferendaStorage Constructor
+        /// </summary>
         public FellowshipReferendaStorage(SubstrateClientExt client)
         {
             this._client = client;
@@ -34,7 +40,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("FellowshipReferenda", "ReferendumInfoFor"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.NetApi.Model.Types.Primitive.U32), typeof(Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_referenda.types.EnumReferendumInfo)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("FellowshipReferenda", "TrackQueue"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.NetApi.Model.Types.Primitive.U16), typeof(Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT23)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.NetApi.Model.Types.Primitive.U16), typeof(Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT29)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("FellowshipReferenda", "DecidingCount"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.NetApi.Model.Types.Primitive.U16), typeof(Substrate.NetApi.Model.Types.Primitive.U32)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("FellowshipReferenda", "MetadataOf"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
@@ -63,10 +69,10 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
         /// >> ReferendumCount
         ///  The next free referendum index, aka the number of referenda started so far.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> ReferendumCount(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> ReferendumCount(string blockhash, CancellationToken token)
         {
             string parameters = FellowshipReferendaStorage.ReferendumCountParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, blockhash, token);
             return result;
         }
         
@@ -94,10 +100,10 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
         /// >> ReferendumInfoFor
         ///  Information concerning any given referendum.
         /// </summary>
-        public async Task<Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_referenda.types.EnumReferendumInfo> ReferendumInfoFor(Substrate.NetApi.Model.Types.Primitive.U32 key, CancellationToken token)
+        public async Task<Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_referenda.types.EnumReferendumInfo> ReferendumInfoFor(Substrate.NetApi.Model.Types.Primitive.U32 key, string blockhash, CancellationToken token)
         {
             string parameters = FellowshipReferendaStorage.ReferendumInfoForParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_referenda.types.EnumReferendumInfo>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_referenda.types.EnumReferendumInfo>(parameters, blockhash, token);
             return result;
         }
         
@@ -131,10 +137,10 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
         /// 
         ///  This should be empty if `DecidingCount` is less than `TrackInfo::max_deciding`.
         /// </summary>
-        public async Task<Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT23> TrackQueue(Substrate.NetApi.Model.Types.Primitive.U16 key, CancellationToken token)
+        public async Task<Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT29> TrackQueue(Substrate.NetApi.Model.Types.Primitive.U16 key, string blockhash, CancellationToken token)
         {
             string parameters = FellowshipReferendaStorage.TrackQueueParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT23>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT29>(parameters, blockhash, token);
             return result;
         }
         
@@ -162,17 +168,17 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
         /// >> DecidingCount
         ///  The number of referenda being decided currently.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> DecidingCount(Substrate.NetApi.Model.Types.Primitive.U16 key, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> DecidingCount(Substrate.NetApi.Model.Types.Primitive.U16 key, string blockhash, CancellationToken token)
         {
             string parameters = FellowshipReferendaStorage.DecidingCountParams(key);
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, blockhash, token);
             return result;
         }
         
         /// <summary>
         /// >> MetadataOfParams
         ///  The metadata is a general information concerning the referendum.
-        ///  The `PreimageHash` refers to the preimage of the `Preimages` provider which can be a JSON
+        ///  The `Hash` refers to the preimage of the `Preimages` provider which can be a JSON
         ///  dump or IPFS hash of a JSON file.
         /// 
         ///  Consider a garbage collection for a metadata of finished referendums to `unrequest` (remove)
@@ -197,26 +203,29 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
         /// <summary>
         /// >> MetadataOf
         ///  The metadata is a general information concerning the referendum.
-        ///  The `PreimageHash` refers to the preimage of the `Preimages` provider which can be a JSON
+        ///  The `Hash` refers to the preimage of the `Preimages` provider which can be a JSON
         ///  dump or IPFS hash of a JSON file.
         /// 
         ///  Consider a garbage collection for a metadata of finished referendums to `unrequest` (remove)
         ///  large preimages.
         /// </summary>
-        public async Task<Substrate.Collectives.NET.NetApiExt.Generated.Model.primitive_types.H256> MetadataOf(Substrate.NetApi.Model.Types.Primitive.U32 key, CancellationToken token)
+        public async Task<Substrate.Collectives.NET.NetApiExt.Generated.Model.primitive_types.H256> MetadataOf(Substrate.NetApi.Model.Types.Primitive.U32 key, string blockhash, CancellationToken token)
         {
             string parameters = FellowshipReferendaStorage.MetadataOfParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Collectives.NET.NetApiExt.Generated.Model.primitive_types.H256>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Collectives.NET.NetApiExt.Generated.Model.primitive_types.H256>(parameters, blockhash, token);
             return result;
         }
     }
     
+    /// <summary>
+    /// >> FellowshipReferendaCalls
+    /// </summary>
     public sealed class FellowshipReferendaCalls
     {
         
         /// <summary>
         /// >> submit
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method Submit(Substrate.Collectives.NET.NetApiExt.Generated.Model.collectives_polkadot_runtime.EnumOriginCaller proposal_origin, Substrate.Collectives.NET.NetApiExt.Generated.Model.frame_support.traits.preimages.EnumBounded proposal, Substrate.Collectives.NET.NetApiExt.Generated.Model.frame_support.traits.schedule.EnumDispatchTime enactment_moment)
         {
@@ -229,7 +238,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> place_decision_deposit
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method PlaceDecisionDeposit(Substrate.NetApi.Model.Types.Primitive.U32 index)
         {
@@ -240,7 +249,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> refund_decision_deposit
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method RefundDecisionDeposit(Substrate.NetApi.Model.Types.Primitive.U32 index)
         {
@@ -251,7 +260,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> cancel
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method Cancel(Substrate.NetApi.Model.Types.Primitive.U32 index)
         {
@@ -262,7 +271,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> kill
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method Kill(Substrate.NetApi.Model.Types.Primitive.U32 index)
         {
@@ -273,7 +282,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> nudge_referendum
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method NudgeReferendum(Substrate.NetApi.Model.Types.Primitive.U32 index)
         {
@@ -284,7 +293,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> one_fewer_deciding
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method OneFewerDeciding(Substrate.NetApi.Model.Types.Primitive.U16 track)
         {
@@ -295,7 +304,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> refund_submission_deposit
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method RefundSubmissionDeposit(Substrate.NetApi.Model.Types.Primitive.U32 index)
         {
@@ -306,7 +315,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> set_metadata
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method SetMetadata(Substrate.NetApi.Model.Types.Primitive.U32 index, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Collectives.NET.NetApiExt.Generated.Model.primitive_types.H256> maybe_hash)
         {
@@ -317,6 +326,9 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> FellowshipReferendaConstants
+    /// </summary>
     public sealed class FellowshipReferendaConstants
     {
         
@@ -374,29 +386,55 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
         public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U16, Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_referenda.types.TrackInfo>> Tracks()
         {
             var result = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U16, Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_referenda.types.TrackInfo>>();
-            result.Create("0x2800002863616E646964617465730A0000000010A5D4E8000000000000000000000096000000E0C" +
-                    "4000096000000050000000000CA9A3B0065CD1D00CA9A3B0000CA9A3B000000000065CD1D01001C6" +
-                    "D656D626572730A00000000E8764817000000000000000000000096000000E0C4000096000000050" +
-                    "000000000CA9A3B0065CD1D00CA9A3B0000CA9A3B000000000065CD1D02002C70726F66696369656" +
-                    "E74730A00000000E8764817000000000000000000000096000000E0C400009600000005000000000" +
-                    "0CA9A3B0065CD1D00CA9A3B0000CA9A3B000000000065CD1D03001C66656C6C6F77730A00000000E" +
-                    "8764817000000000000000000000096000000E0C4000096000000050000000000CA9A3B0065CD1D0" +
-                    "0CA9A3B0000CA9A3B000000000065CD1D04003873656E696F722066656C6C6F77730A00000000E87" +
-                    "64817000000000000000000000096000000E0C4000096000000050000000000CA9A3B0065CD1D00C" +
-                    "A9A3B0000CA9A3B000000000065CD1D05001C657870657274730A00000000E40B540200000000000" +
-                    "0000000000096000000E0C4000096000000050000000000CA9A3B0065CD1D00CA9A3B0000CA9A3B0" +
-                    "00000000065CD1D06003873656E696F7220657870657274730A00000000E40B54020000000000000" +
-                    "00000000096000000E0C4000096000000050000000000CA9A3B0065CD1D00CA9A3B0000CA9A3B000" +
-                    "000000065CD1D07001C6D6173746572730A00000000E40B540200000000000000000000009600000" +
-                    "0E0C4000096000000050000000000CA9A3B0065CD1D00CA9A3B0000CA9A3B000000000065CD1D080" +
-                    "03873656E696F72206D6173746572730A00000000E40B5402000000000000000000000096000000E" +
-                    "0C4000096000000050000000000CA9A3B0065CD1D00CA9A3B0000CA9A3B000000000065CD1D09003" +
-                    "46772616E64206D6173746572730A00000000E40B5402000000000000000000000096000000E0C40" +
-                    "00096000000050000000000CA9A3B0065CD1D00CA9A3B0000CA9A3B000000000065CD1D");
+            result.Create("0x5401001C6D656D626572730A00000000743BA40B000000000000000000000096000000E0C400009" +
+                    "6000000190000000000CA9A3B0065CD1D00CA9A3B0000CA9A3B0000000000CA9A3B02004870726F6" +
+                    "6696369656E74206D656D626572730A00000000743BA40B000000000000000000000096000000E0C" +
+                    "4000096000000190000000000CA9A3B0065CD1D00CA9A3B0000CA9A3B0000000000CA9A3B03001C6" +
+                    "6656C6C6F77730A00000000743BA40B000000000000000000000096000000E0C4000096000000190" +
+                    "000000000CA9A3B0065CD1D00CA9A3B0000CA9A3B0000000000CA9A3B04002861726368697465637" +
+                    "4730A00000000743BA40B000000000000000000000096000000E0C4000096000000190000000000C" +
+                    "A9A3B0065CD1D00CA9A3B0000CA9A3B0000000000CA9A3B050040617263686974656374732061646" +
+                    "570740A00000000743BA40B000000000000000000000096000000E0C400009600000019000000000" +
+                    "0CA9A3B0065CD1D00CA9A3B0000CA9A3B0000000000CA9A3B0600406772616E64206172636869746" +
+                    "56374730A00000000743BA40B000000000000000000000096000000E0C4000096000000190000000" +
+                    "000CA9A3B0065CD1D00CA9A3B0000CA9A3B0000000000CA9A3B07001C6D6173746572730A0000000" +
+                    "0743BA40B000000000000000000000096000000E0C4000096000000190000000000CA9A3B0065CD1" +
+                    "D00CA9A3B0000CA9A3B0000000000CA9A3B0800406D61737465727320636F6E7374616E740A00000" +
+                    "000743BA40B000000000000000000000096000000E0C4000096000000190000000000CA9A3B0065C" +
+                    "D1D00CA9A3B0000CA9A3B0000000000CA9A3B0900346772616E64206D6173746572730A000000007" +
+                    "43BA40B000000000000000000000096000000E0C4000096000000190000000000CA9A3B0065CD1D0" +
+                    "0CA9A3B0000CA9A3B0000000000CA9A3B0B003C72657461696E20617420492044616E19000000007" +
+                    "43BA40B000000000000000000000000000000C08901002C010000000000000000CA9A3B0046C3230" +
+                    "0CA9A3B0000CA9A3B00E1F50500CA9A3B0C004072657461696E2061742049492044616E190000000" +
+                    "0743BA40B000000000000000000000000000000C08901002C010000000000000000CA9A3B0046C32" +
+                    "300CA9A3B0000CA9A3B00E1F50500CA9A3B0D004472657461696E206174204949492044616E19000" +
+                    "00000743BA40B000000000000000000000000000000C08901002C010000000000000000CA9A3B004" +
+                    "6C32300CA9A3B0000CA9A3B00E1F50500CA9A3B0E004072657461696E2061742049562044616E190" +
+                    "0000000743BA40B000000000000000000000000000000C08901002C010000000000000000CA9A3B0" +
+                    "046C32300CA9A3B0000CA9A3B00E1F50500CA9A3B0F003C72657461696E20617420562044616E190" +
+                    "0000000743BA40B000000000000000000000000000000C08901002C010000000000000000CA9A3B0" +
+                    "046C32300CA9A3B0000CA9A3B00E1F50500CA9A3B10004072657461696E2061742056492044616E1" +
+                    "900000000743BA40B000000000000000000000000000000C08901002C010000000000000000CA9A3" +
+                    "B0046C32300CA9A3B0000CA9A3B00E1F50500CA9A3B15004070726F6D6F746520746F20492044616" +
+                    "E0A00000000743BA40B000000000000000000000000000000C04B03002C010000000000000000CA9" +
+                    "A3B0046C32300CA9A3B0000CA9A3B00E1F50500CA9A3B16004470726F6D6F746520746F204949204" +
+                    "4616E0A00000000743BA40B000000000000000000000000000000C04B03002C01000000000000000" +
+                    "0CA9A3B0046C32300CA9A3B0000CA9A3B00E1F50500CA9A3B17004870726F6D6F746520746F20494" +
+                    "9492044616E0A00000000743BA40B000000000000000000000000000000C04B03002C01000000000" +
+                    "0000000CA9A3B0046C32300CA9A3B0000CA9A3B00E1F50500CA9A3B18004470726F6D6F746520746" +
+                    "F2049562044616E0A00000000743BA40B000000000000000000000000000000C04B03002C0100000" +
+                    "00000000000CA9A3B0046C32300CA9A3B0000CA9A3B00E1F50500CA9A3B19004070726F6D6F74652" +
+                    "0746F20562044616E0A00000000743BA40B000000000000000000000000000000C04B03002C01000" +
+                    "0000000000000CA9A3B0046C32300CA9A3B0000CA9A3B00E1F50500CA9A3B1A004470726F6D6F746" +
+                    "520746F2056492044616E0A00000000743BA40B000000000000000000000000000000C04B03002C0" +
+                    "10000000000000000CA9A3B0046C32300CA9A3B0000CA9A3B00E1F50500CA9A3B");
             return result;
         }
     }
     
+    /// <summary>
+    /// >> FellowshipReferendaErrors
+    /// </summary>
     public enum FellowshipReferendaErrors
     {
         

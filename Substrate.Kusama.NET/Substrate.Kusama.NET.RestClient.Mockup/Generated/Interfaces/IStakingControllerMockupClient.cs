@@ -36,6 +36,8 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Interfaces
       Task<bool> SetMaxValidatorsCount(U32 value);
       Task<bool> SetNominators(Nominations value, AccountId32 key);
       Task<bool> SetCounterForNominators(U32 value);
+      Task<bool> SetVirtualStakers(BaseTuple value, AccountId32 key);
+      Task<bool> SetCounterForVirtualStakers(U32 value);
       Task<bool> SetMaxNominatorsCount(U32 value);
       Task<bool> SetCurrentEra(U32 value);
       Task<bool> SetActiveEra(ActiveEraInfo value);
@@ -50,6 +52,7 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Interfaces
       Task<bool> SetErasRewardPoints(EraRewardPoints value, U32 key);
       Task<bool> SetErasTotalStake(U128 value, U32 key);
       Task<bool> SetForceEra(EnumForcing value);
+      Task<bool> SetMaxStakedRewards(Percent value);
       Task<bool> SetSlashRewardFraction(Perbill value);
       Task<bool> SetCanceledSlashPayout(U128 value);
       Task<bool> SetUnappliedSlashes(BaseVec<UnappliedSlash> value, U32 key);
@@ -59,7 +62,7 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Interfaces
       Task<bool> SetSlashingSpans(SlashingSpans value, AccountId32 key);
       Task<bool> SetSpanSlash(SpanRecord value, BaseTuple<AccountId32, U32> key);
       Task<bool> SetCurrentPlannedSession(U32 value);
-      Task<bool> SetOffendingValidators(BaseVec<BaseTuple<U32, Bool>> value);
+      Task<bool> SetDisabledValidators(BaseVec<U32> value);
       Task<bool> SetChillThreshold(Percent value);
    }
 }

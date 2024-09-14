@@ -15,20 +15,42 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_runtime
 {
     
     
+    /// <summary>
+    /// >> MultiSignature
+    /// </summary>
     public enum MultiSignature
     {
         
+        /// <summary>
+        /// >> Ed25519
+        /// </summary>
         Ed25519 = 0,
         
+        /// <summary>
+        /// >> Sr25519
+        /// </summary>
         Sr25519 = 1,
         
+        /// <summary>
+        /// >> Ecdsa
+        /// </summary>
         Ecdsa = 2,
     }
     
     /// <summary>
-    /// >> 253 - Variant[sp_runtime.MultiSignature]
+    /// >> 465 - Variant[sp_runtime.MultiSignature]
     /// </summary>
-    public sealed class EnumMultiSignature : BaseEnumExt<MultiSignature, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_core.ed25519.Signature, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_core.sr25519.Signature, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_core.ecdsa.Signature>
+    public sealed class EnumMultiSignature : BaseEnumRust<MultiSignature>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumMultiSignature()
+        {
+				AddTypeDecoder<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_core.ed25519.Signature>(MultiSignature.Ed25519);
+				AddTypeDecoder<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_core.sr25519.Signature>(MultiSignature.Sr25519);
+				AddTypeDecoder<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_core.ecdsa.Signature>(MultiSignature.Ecdsa);
+        }
     }
 }

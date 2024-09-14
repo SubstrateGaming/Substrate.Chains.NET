@@ -75,9 +75,9 @@ namespace Substrate.PolkadotBridgeHub.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("Balances.Holds", Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Storage.BalancesStorage.HoldsParams(key));
       }
-      public async Task<BoundedVecT5> GetFreezes(Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+      public async Task<BoundedVecT6> GetFreezes(Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {
-         return await SendRequestAsync<BoundedVecT5>(_httpClient, "balances/freezes", Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Storage.BalancesStorage.FreezesParams(key));
+         return await SendRequestAsync<BoundedVecT6>(_httpClient, "balances/freezes", Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Storage.BalancesStorage.FreezesParams(key));
       }
       public async Task<bool> SubscribeFreezes(Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {

@@ -15,16 +15,25 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.pallet_trans
 {
     
     
+    /// <summary>
+    /// >> Releases
+    /// </summary>
     public enum Releases
     {
         
+        /// <summary>
+        /// >> V1Ancient
+        /// </summary>
         V1Ancient = 0,
         
+        /// <summary>
+        /// >> V2
+        /// </summary>
         V2 = 1,
     }
     
     /// <summary>
-    /// >> 173 - Variant[pallet_transaction_payment.Releases]
+    /// >> 258 - Variant[pallet_transaction_payment.Releases]
     /// </summary>
     public sealed class EnumReleases : BaseEnum<Releases>
     {

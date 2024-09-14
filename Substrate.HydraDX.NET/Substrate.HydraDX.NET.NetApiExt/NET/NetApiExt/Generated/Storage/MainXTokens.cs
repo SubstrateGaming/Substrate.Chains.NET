@@ -49,7 +49,7 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Storage
         /// >> transfer
         /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method Transfer(Substrate.NetApi.Model.Types.Primitive.U32 currency_id, Substrate.NetApi.Model.Types.Primitive.U128 amount, Substrate.HydraDX.NET.NetApiExt.Generated.Model.staging_xcm.EnumVersionedMultiLocation dest, Substrate.HydraDX.NET.NetApiExt.Generated.Model.staging_xcm.v3.EnumWeightLimit dest_weight_limit)
+        public static Method Transfer(Substrate.NetApi.Model.Types.Primitive.U32 currency_id, Substrate.NetApi.Model.Types.Primitive.U128 amount, Substrate.HydraDX.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation dest, Substrate.HydraDX.NET.NetApiExt.Generated.Model.xcm.v3.EnumWeightLimit dest_weight_limit)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(currency_id.Encode());
@@ -63,7 +63,7 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Storage
         /// >> transfer_multiasset
         /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method TransferMultiasset(Substrate.HydraDX.NET.NetApiExt.Generated.Model.staging_xcm.EnumVersionedMultiAsset asset, Substrate.HydraDX.NET.NetApiExt.Generated.Model.staging_xcm.EnumVersionedMultiLocation dest, Substrate.HydraDX.NET.NetApiExt.Generated.Model.staging_xcm.v3.EnumWeightLimit dest_weight_limit)
+        public static Method TransferMultiasset(Substrate.HydraDX.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAsset asset, Substrate.HydraDX.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation dest, Substrate.HydraDX.NET.NetApiExt.Generated.Model.xcm.v3.EnumWeightLimit dest_weight_limit)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(asset.Encode());
@@ -76,7 +76,7 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Storage
         /// >> transfer_with_fee
         /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method TransferWithFee(Substrate.NetApi.Model.Types.Primitive.U32 currency_id, Substrate.NetApi.Model.Types.Primitive.U128 amount, Substrate.NetApi.Model.Types.Primitive.U128 fee, Substrate.HydraDX.NET.NetApiExt.Generated.Model.staging_xcm.EnumVersionedMultiLocation dest, Substrate.HydraDX.NET.NetApiExt.Generated.Model.staging_xcm.v3.EnumWeightLimit dest_weight_limit)
+        public static Method TransferWithFee(Substrate.NetApi.Model.Types.Primitive.U32 currency_id, Substrate.NetApi.Model.Types.Primitive.U128 amount, Substrate.NetApi.Model.Types.Primitive.U128 fee, Substrate.HydraDX.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation dest, Substrate.HydraDX.NET.NetApiExt.Generated.Model.xcm.v3.EnumWeightLimit dest_weight_limit)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(currency_id.Encode());
@@ -91,7 +91,7 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Storage
         /// >> transfer_multiasset_with_fee
         /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method TransferMultiassetWithFee(Substrate.HydraDX.NET.NetApiExt.Generated.Model.staging_xcm.EnumVersionedMultiAsset asset, Substrate.HydraDX.NET.NetApiExt.Generated.Model.staging_xcm.EnumVersionedMultiAsset fee, Substrate.HydraDX.NET.NetApiExt.Generated.Model.staging_xcm.EnumVersionedMultiLocation dest, Substrate.HydraDX.NET.NetApiExt.Generated.Model.staging_xcm.v3.EnumWeightLimit dest_weight_limit)
+        public static Method TransferMultiassetWithFee(Substrate.HydraDX.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAsset asset, Substrate.HydraDX.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAsset fee, Substrate.HydraDX.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation dest, Substrate.HydraDX.NET.NetApiExt.Generated.Model.xcm.v3.EnumWeightLimit dest_weight_limit)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(asset.Encode());
@@ -105,7 +105,7 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Storage
         /// >> transfer_multicurrencies
         /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method TransferMulticurrencies(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U128>> currencies, Substrate.NetApi.Model.Types.Primitive.U32 fee_item, Substrate.HydraDX.NET.NetApiExt.Generated.Model.staging_xcm.EnumVersionedMultiLocation dest, Substrate.HydraDX.NET.NetApiExt.Generated.Model.staging_xcm.v3.EnumWeightLimit dest_weight_limit)
+        public static Method TransferMulticurrencies(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U128>> currencies, Substrate.NetApi.Model.Types.Primitive.U32 fee_item, Substrate.HydraDX.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation dest, Substrate.HydraDX.NET.NetApiExt.Generated.Model.xcm.v3.EnumWeightLimit dest_weight_limit)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(currencies.Encode());
@@ -119,7 +119,7 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Storage
         /// >> transfer_multiassets
         /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method TransferMultiassets(Substrate.HydraDX.NET.NetApiExt.Generated.Model.staging_xcm.EnumVersionedMultiAssets assets, Substrate.NetApi.Model.Types.Primitive.U32 fee_item, Substrate.HydraDX.NET.NetApiExt.Generated.Model.staging_xcm.EnumVersionedMultiLocation dest, Substrate.HydraDX.NET.NetApiExt.Generated.Model.staging_xcm.v3.EnumWeightLimit dest_weight_limit)
+        public static Method TransferMultiassets(Substrate.HydraDX.NET.NetApiExt.Generated.Model.xcm.EnumVersionedAssets assets, Substrate.NetApi.Model.Types.Primitive.U32 fee_item, Substrate.HydraDX.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation dest, Substrate.HydraDX.NET.NetApiExt.Generated.Model.xcm.v3.EnumWeightLimit dest_weight_limit)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(assets.Encode());
@@ -140,9 +140,9 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Storage
         /// >> SelfLocation
         ///  Self chain location.
         /// </summary>
-        public Substrate.HydraDX.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation SelfLocation()
+        public Substrate.HydraDX.NET.NetApiExt.Generated.Model.staging_xcm.v4.location.Location SelfLocation()
         {
-            var result = new Substrate.HydraDX.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation();
+            var result = new Substrate.HydraDX.NET.NetApiExt.Generated.Model.staging_xcm.v4.location.Location();
             result.Create("0x010100C91F");
             return result;
         }
@@ -158,6 +158,17 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Storage
         {
             var result = new Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight();
             result.Create("0x0284D71700");
+            return result;
+        }
+        
+        /// <summary>
+        /// >> RateLimiterId
+        ///  The id of the RateLimiter.
+        /// </summary>
+        public Substrate.NetApi.Model.Types.Base.BaseTuple RateLimiterId()
+        {
+            var result = new Substrate.NetApi.Model.Types.Base.BaseTuple();
+            result.Create("0x");
             return result;
         }
     }
@@ -219,13 +230,13 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> InvalidAsset
-        /// The MultiAsset is invalid.
+        /// The Asset is invalid.
         /// </summary>
         InvalidAsset,
         
         /// <summary>
         /// >> DestinationNotInvertible
-        /// The destination `MultiLocation` provided cannot be inverted.
+        /// The destination `Location` provided cannot be inverted.
         /// </summary>
         DestinationNotInvertible,
         
@@ -263,7 +274,7 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> AssetIndexNonExistent
-        /// The specified index does not exist in a MultiAssets struct.
+        /// The specified index does not exist in a Assets struct.
         /// </summary>
         AssetIndexNonExistent,
         
@@ -274,15 +285,21 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Storage
         FeeNotEnough,
         
         /// <summary>
-        /// >> NotSupportedMultiLocation
-        /// Not supported MultiLocation
+        /// >> NotSupportedLocation
+        /// Not supported Location
         /// </summary>
-        NotSupportedMultiLocation,
+        NotSupportedLocation,
         
         /// <summary>
         /// >> MinXcmFeeNotDefined
         /// MinXcmFee not registered for certain reserve location
         /// </summary>
         MinXcmFeeNotDefined,
+        
+        /// <summary>
+        /// >> RateLimited
+        /// Asset transfer is limited by RateLimiter.
+        /// </summary>
+        RateLimited,
     }
 }

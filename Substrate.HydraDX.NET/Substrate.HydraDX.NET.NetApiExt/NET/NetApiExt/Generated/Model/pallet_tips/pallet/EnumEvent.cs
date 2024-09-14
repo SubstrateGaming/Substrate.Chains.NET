@@ -54,10 +54,22 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_tips.pallet
     }
     
     /// <summary>
-    /// >> 50 - Variant[pallet_tips.pallet.Event]
+    /// >> 52 - Variant[pallet_tips.pallet.Event]
     /// The `Event` enum of this pallet
     /// </summary>
-    public sealed class EnumEvent : BaseEnumExt<Event, Substrate.HydraDX.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.HydraDX.NET.NetApiExt.Generated.Model.primitive_types.H256, BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U128>, Substrate.HydraDX.NET.NetApiExt.Generated.Model.primitive_types.H256, BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U128>>
+    public sealed class EnumEvent : BaseEnumRust<Event>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumEvent()
+        {
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.primitive_types.H256>(Event.NewTip);
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.primitive_types.H256>(Event.TipClosing);
+				AddTypeDecoder<BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U128>>(Event.TipClosed);
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.primitive_types.H256>(Event.TipRetracted);
+				AddTypeDecoder<BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U128>>(Event.TipSlashed);
+        }
     }
 }

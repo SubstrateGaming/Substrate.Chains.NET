@@ -53,7 +53,7 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.hydradx_traits.oracle
     }
     
     /// <summary>
-    /// >> 520 - Variant[hydradx_traits.oracle.OraclePeriod]
+    /// >> 581 - Variant[hydradx_traits.oracle.OraclePeriod]
     /// </summary>
     public sealed class EnumOraclePeriod : BaseEnum<OraclePeriod>
     {

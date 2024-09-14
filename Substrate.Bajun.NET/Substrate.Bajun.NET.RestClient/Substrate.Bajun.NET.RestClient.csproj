@@ -11,7 +11,7 @@
    </PropertyGroup>
 	
    <ItemGroup>
-      <PackageReference Include="Substrate.ServiceLayer.Model" Version="0.6.6" />
+      <PackageReference Include="Substrate.ServiceLayer.Model" Version="0.6.8" />
    </ItemGroup>
    <ItemGroup>
       <ProjectReference Include="..\Substrate.Bajun.NET.NetApiExt\Substrate.Bajun.NET.NetApiExt.csproj" />

@@ -28,7 +28,7 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.evm_core.error
     }
     
     /// <summary>
-    /// >> 138 - Variant[evm_core.error.ExitRevert]
+    /// >> 140 - Variant[evm_core.error.ExitRevert]
     /// </summary>
     public sealed class EnumExitRevert : BaseEnum<ExitRevert>
     {

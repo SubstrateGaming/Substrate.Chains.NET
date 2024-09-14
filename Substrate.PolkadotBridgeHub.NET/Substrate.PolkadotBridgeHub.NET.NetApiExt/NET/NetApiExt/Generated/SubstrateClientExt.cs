@@ -18,6 +18,9 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated
 {
     
     
+    /// <summary>
+    /// >> Substrate Client Extension, including all Storage classes direct access.
+    /// </summary>
     public sealed class SubstrateClientExt : Substrate.NetApi.SubstrateClient
     {
         
@@ -97,11 +100,6 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated
         public CumulusXcmStorage CumulusXcmStorage;
         
         /// <summary>
-        /// DmpQueueStorage storage calls.
-        /// </summary>
-        public DmpQueueStorage DmpQueueStorage;
-        
-        /// <summary>
         /// UtilityStorage storage calls.
         /// </summary>
         public UtilityStorage UtilityStorage;
@@ -110,6 +108,56 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated
         /// MultisigStorage storage calls.
         /// </summary>
         public MultisigStorage MultisigStorage;
+        
+        /// <summary>
+        /// BridgeRelayersStorage storage calls.
+        /// </summary>
+        public BridgeRelayersStorage BridgeRelayersStorage;
+        
+        /// <summary>
+        /// BridgeKusamaGrandpaStorage storage calls.
+        /// </summary>
+        public BridgeKusamaGrandpaStorage BridgeKusamaGrandpaStorage;
+        
+        /// <summary>
+        /// BridgeKusamaParachainsStorage storage calls.
+        /// </summary>
+        public BridgeKusamaParachainsStorage BridgeKusamaParachainsStorage;
+        
+        /// <summary>
+        /// BridgeKusamaMessagesStorage storage calls.
+        /// </summary>
+        public BridgeKusamaMessagesStorage BridgeKusamaMessagesStorage;
+        
+        /// <summary>
+        /// XcmOverBridgeHubKusamaStorage storage calls.
+        /// </summary>
+        public XcmOverBridgeHubKusamaStorage XcmOverBridgeHubKusamaStorage;
+        
+        /// <summary>
+        /// EthereumInboundQueueStorage storage calls.
+        /// </summary>
+        public EthereumInboundQueueStorage EthereumInboundQueueStorage;
+        
+        /// <summary>
+        /// EthereumOutboundQueueStorage storage calls.
+        /// </summary>
+        public EthereumOutboundQueueStorage EthereumOutboundQueueStorage;
+        
+        /// <summary>
+        /// EthereumBeaconClientStorage storage calls.
+        /// </summary>
+        public EthereumBeaconClientStorage EthereumBeaconClientStorage;
+        
+        /// <summary>
+        /// EthereumSystemStorage storage calls.
+        /// </summary>
+        public EthereumSystemStorage EthereumSystemStorage;
+        
+        /// <summary>
+        /// MessageQueueStorage storage calls.
+        /// </summary>
+        public MessageQueueStorage MessageQueueStorage;
         
         public SubstrateClientExt(System.Uri uri, Substrate.NetApi.Model.Extrinsics.ChargeType chargeType) : 
                 base(uri, chargeType)
@@ -129,9 +177,18 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated
             this.XcmpQueueStorage = new XcmpQueueStorage(this);
             this.PolkadotXcmStorage = new PolkadotXcmStorage(this);
             this.CumulusXcmStorage = new CumulusXcmStorage(this);
-            this.DmpQueueStorage = new DmpQueueStorage(this);
             this.UtilityStorage = new UtilityStorage(this);
             this.MultisigStorage = new MultisigStorage(this);
+            this.BridgeRelayersStorage = new BridgeRelayersStorage(this);
+            this.BridgeKusamaGrandpaStorage = new BridgeKusamaGrandpaStorage(this);
+            this.BridgeKusamaParachainsStorage = new BridgeKusamaParachainsStorage(this);
+            this.BridgeKusamaMessagesStorage = new BridgeKusamaMessagesStorage(this);
+            this.XcmOverBridgeHubKusamaStorage = new XcmOverBridgeHubKusamaStorage(this);
+            this.EthereumInboundQueueStorage = new EthereumInboundQueueStorage(this);
+            this.EthereumOutboundQueueStorage = new EthereumOutboundQueueStorage(this);
+            this.EthereumBeaconClientStorage = new EthereumBeaconClientStorage(this);
+            this.EthereumSystemStorage = new EthereumSystemStorage(this);
+            this.MessageQueueStorage = new MessageQueueStorage(this);
         }
     }
 }

@@ -58,7 +58,7 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_democracy.convi
     }
     
     /// <summary>
-    /// >> 298 - Variant[pallet_democracy.conviction.Conviction]
+    /// >> 338 - Variant[pallet_democracy.conviction.Conviction]
     /// </summary>
     public sealed class EnumConviction : BaseEnum<Conviction>
     {

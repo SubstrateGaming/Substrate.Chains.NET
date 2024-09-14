@@ -70,7 +70,23 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.staging_xcm.v4.junctions
     /// <summary>
     /// >> 60 - Variant[staging_xcm.v4.junctions.Junctions]
     /// </summary>
-    public sealed class EnumJunctions : BaseEnumExt<Junctions, BaseVoid, Substrate.Ajuna.NET.NetApiExt.Generated.Model.staging_xcm.v4.junction.Arr1EnumJunction, Substrate.Ajuna.NET.NetApiExt.Generated.Model.staging_xcm.v4.junction.Arr2EnumJunction, Substrate.Ajuna.NET.NetApiExt.Generated.Model.staging_xcm.v4.junction.Arr3EnumJunction, Substrate.Ajuna.NET.NetApiExt.Generated.Model.staging_xcm.v4.junction.Arr4EnumJunction, Substrate.Ajuna.NET.NetApiExt.Generated.Model.staging_xcm.v4.junction.Arr5EnumJunction, Substrate.Ajuna.NET.NetApiExt.Generated.Model.staging_xcm.v4.junction.Arr6EnumJunction, Substrate.Ajuna.NET.NetApiExt.Generated.Model.staging_xcm.v4.junction.Arr7EnumJunction, Substrate.Ajuna.NET.NetApiExt.Generated.Model.staging_xcm.v4.junction.Arr8EnumJunction>
+    public sealed class EnumJunctions : BaseEnumRust<Junctions>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumJunctions()
+        {
+				AddTypeDecoder<BaseVoid>(Junctions.Here);
+				AddTypeDecoder<Substrate.Ajuna.NET.NetApiExt.Generated.Model.staging_xcm.v4.junction.Arr1EnumJunction>(Junctions.X1);
+				AddTypeDecoder<Substrate.Ajuna.NET.NetApiExt.Generated.Model.staging_xcm.v4.junction.Arr2EnumJunction>(Junctions.X2);
+				AddTypeDecoder<Substrate.Ajuna.NET.NetApiExt.Generated.Model.staging_xcm.v4.junction.Arr3EnumJunction>(Junctions.X3);
+				AddTypeDecoder<Substrate.Ajuna.NET.NetApiExt.Generated.Model.staging_xcm.v4.junction.Arr4EnumJunction>(Junctions.X4);
+				AddTypeDecoder<Substrate.Ajuna.NET.NetApiExt.Generated.Model.staging_xcm.v4.junction.Arr5EnumJunction>(Junctions.X5);
+				AddTypeDecoder<Substrate.Ajuna.NET.NetApiExt.Generated.Model.staging_xcm.v4.junction.Arr6EnumJunction>(Junctions.X6);
+				AddTypeDecoder<Substrate.Ajuna.NET.NetApiExt.Generated.Model.staging_xcm.v4.junction.Arr7EnumJunction>(Junctions.X7);
+				AddTypeDecoder<Substrate.Ajuna.NET.NetApiExt.Generated.Model.staging_xcm.v4.junction.Arr8EnumJunction>(Junctions.X8);
+        }
     }
 }

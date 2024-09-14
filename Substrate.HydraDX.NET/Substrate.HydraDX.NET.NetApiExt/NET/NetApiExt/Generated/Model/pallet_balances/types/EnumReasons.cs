@@ -38,7 +38,7 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_balances.types
     }
     
     /// <summary>
-    /// >> 234 - Variant[pallet_balances.types.Reasons]
+    /// >> 256 - Variant[pallet_balances.types.Reasons]
     /// </summary>
     public sealed class EnumReasons : BaseEnum<Reasons>
     {

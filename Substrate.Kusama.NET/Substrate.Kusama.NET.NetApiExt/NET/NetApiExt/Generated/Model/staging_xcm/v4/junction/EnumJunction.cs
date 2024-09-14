@@ -73,9 +73,26 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_xcm.v4.junction
     }
     
     /// <summary>
-    /// >> 73 - Variant[staging_xcm.v4.junction.Junction]
+    /// >> 64 - Variant[staging_xcm.v4.junction.Junction]
     /// </summary>
-    public sealed class EnumJunction : BaseEnumExt<Junction, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>, BaseTuple<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_xcm.v4.junction.EnumNetworkId>, Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr32U8>, BaseTuple<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_xcm.v4.junction.EnumNetworkId>, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U64>>, BaseTuple<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_xcm.v4.junction.EnumNetworkId>, Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr20U8>, Substrate.NetApi.Model.Types.Primitive.U8, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128>, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U8, Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr32U8>, BaseVoid, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumBodyId, Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumBodyPart>, Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_xcm.v4.junction.EnumNetworkId>
+    public sealed class EnumJunction : BaseEnumRust<Junction>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumJunction()
+        {
+				AddTypeDecoder<Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>>(Junction.Parachain);
+				AddTypeDecoder<BaseTuple<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_xcm.v4.junction.EnumNetworkId>, Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr32U8>>(Junction.AccountId32);
+				AddTypeDecoder<BaseTuple<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_xcm.v4.junction.EnumNetworkId>, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U64>>>(Junction.AccountIndex64);
+				AddTypeDecoder<BaseTuple<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_xcm.v4.junction.EnumNetworkId>, Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr20U8>>(Junction.AccountKey20);
+				AddTypeDecoder<Substrate.NetApi.Model.Types.Primitive.U8>(Junction.PalletInstance);
+				AddTypeDecoder<Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128>>(Junction.GeneralIndex);
+				AddTypeDecoder<BaseTuple<Substrate.NetApi.Model.Types.Primitive.U8, Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr32U8>>(Junction.GeneralKey);
+				AddTypeDecoder<BaseVoid>(Junction.OnlyChild);
+				AddTypeDecoder<BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumBodyId, Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.v3.junction.EnumBodyPart>>(Junction.Plurality);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_xcm.v4.junction.EnumNetworkId>(Junction.GlobalConsensus);
+        }
     }
 }

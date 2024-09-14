@@ -307,7 +307,7 @@
           {
             "Name": "phase",
             "TypeName": "Phase",
-            "TypeId": 522
+            "TypeId": 524
           },
           {
             "Name": "event",
@@ -483,7 +483,7 @@
             "TypeFields": [
               {
                 "TypeName": "pallet_whitelist::Event<Runtime>",
-                "TypeId": 481
+                "TypeId": 482
               }
             ],
             "Index": 23
@@ -493,7 +493,7 @@
             "TypeFields": [
               {
                 "TypeName": "claims::Event<Runtime>",
-                "TypeId": 486
+                "TypeId": 487
               }
             ],
             "Index": 24
@@ -503,7 +503,7 @@
             "TypeFields": [
               {
                 "TypeName": "pallet_vesting::Event<Runtime>",
-                "TypeId": 487
+                "TypeId": 488
               }
             ],
             "Index": 25
@@ -513,7 +513,7 @@
             "TypeFields": [
               {
                 "TypeName": "pallet_utility::Event",
-                "TypeId": 488
+                "TypeId": 489
               }
             ],
             "Index": 26
@@ -523,7 +523,7 @@
             "TypeFields": [
               {
                 "TypeName": "pallet_identity::Event<Runtime>",
-                "TypeId": 489
+                "TypeId": 490
               }
             ],
             "Index": 28
@@ -533,7 +533,7 @@
             "TypeFields": [
               {
                 "TypeName": "pallet_proxy::Event<Runtime>",
-                "TypeId": 490
+                "TypeId": 491
               }
             ],
             "Index": 29
@@ -543,7 +543,7 @@
             "TypeFields": [
               {
                 "TypeName": "pallet_multisig::Event<Runtime>",
-                "TypeId": 491
+                "TypeId": 492
               }
             ],
             "Index": 30
@@ -553,7 +553,7 @@
             "TypeFields": [
               {
                 "TypeName": "pallet_bounties::Event<Runtime>",
-                "TypeId": 492
+                "TypeId": 493
               }
             ],
             "Index": 34
@@ -563,7 +563,7 @@
             "TypeFields": [
               {
                 "TypeName": "pallet_child_bounties::Event<Runtime>",
-                "TypeId": 493
+                "TypeId": 494
               }
             ],
             "Index": 38
@@ -573,7 +573,7 @@
             "TypeFields": [
               {
                 "TypeName": "pallet_election_provider_multi_phase::Event<Runtime>",
-                "TypeId": 494
+                "TypeId": 495
               }
             ],
             "Index": 36
@@ -583,7 +583,7 @@
             "TypeFields": [
               {
                 "TypeName": "pallet_bags_list::Event<Runtime, pallet_bags_list::Instance1>",
-                "TypeId": 498
+                "TypeId": 499
               }
             ],
             "Index": 37
@@ -593,7 +593,7 @@
             "TypeFields": [
               {
                 "TypeName": "pallet_nomination_pools::Event<Runtime>",
-                "TypeId": 499
+                "TypeId": 500
               }
             ],
             "Index": 39
@@ -603,7 +603,7 @@
             "TypeFields": [
               {
                 "TypeName": "pallet_fast_unstake::Event<Runtime>",
-                "TypeId": 500
+                "TypeId": 501
               }
             ],
             "Index": 40
@@ -613,7 +613,7 @@
             "TypeFields": [
               {
                 "TypeName": "parachains_inclusion::Event<Runtime>",
-                "TypeId": 501
+                "TypeId": 502
               }
             ],
             "Index": 53
@@ -623,7 +623,7 @@
             "TypeFields": [
               {
                 "TypeName": "parachains_paras::Event",
-                "TypeId": 505
+                "TypeId": 506
               }
             ],
             "Index": 56
@@ -633,7 +633,7 @@
             "TypeFields": [
               {
                 "TypeName": "parachains_hrmp::Event<Runtime>",
-                "TypeId": 506
+                "TypeId": 507
               }
             ],
             "Index": 60
@@ -643,7 +643,7 @@
             "TypeFields": [
               {
                 "TypeName": "parachains_disputes::Event<Runtime>",
-                "TypeId": 507
+                "TypeId": 508
               }
             ],
             "Index": 62
@@ -653,7 +653,7 @@
             "TypeFields": [
               {
                 "TypeName": "paras_registrar::Event<Runtime>",
-                "TypeId": 510
+                "TypeId": 511
               }
             ],
             "Index": 70
@@ -663,7 +663,7 @@
             "TypeFields": [
               {
                 "TypeName": "slots::Event<Runtime>",
-                "TypeId": 511
+                "TypeId": 512
               }
             ],
             "Index": 71
@@ -673,7 +673,7 @@
             "TypeFields": [
               {
                 "TypeName": "auctions::Event<Runtime>",
-                "TypeId": 512
+                "TypeId": 513
               }
             ],
             "Index": 72
@@ -683,7 +683,7 @@
             "TypeFields": [
               {
                 "TypeName": "crowdloan::Event<Runtime>",
-                "TypeId": 513
+                "TypeId": 514
               }
             ],
             "Index": 73
@@ -693,7 +693,7 @@
             "TypeFields": [
               {
                 "TypeName": "pallet_state_trie_migration::Event<Runtime>",
-                "TypeId": 514
+                "TypeId": 515
               }
             ],
             "Index": 98
@@ -703,7 +703,7 @@
             "TypeFields": [
               {
                 "TypeName": "pallet_xcm::Event<Runtime>",
-                "TypeId": 517
+                "TypeId": 518
               }
             ],
             "Index": 99
@@ -713,7 +713,7 @@
             "TypeFields": [
               {
                 "TypeName": "pallet_message_queue::Event<Runtime>",
-                "TypeId": 519
+                "TypeId": 520
               }
             ],
             "Index": 100
@@ -723,10 +723,20 @@
             "TypeFields": [
               {
                 "TypeName": "pallet_asset_rate::Event<Runtime>",
-                "TypeId": 521
+                "TypeId": 522
               }
             ],
             "Index": 101
+          },
+          {
+            "Name": "IdentityMigrator",
+            "TypeFields": [
+              {
+                "TypeName": "identity_migrator::Event<Runtime>",
+                "TypeId": 523
+              }
+            ],
+            "Index": 248
           }
         ],
         "Path": [
@@ -4964,7 +4974,7 @@
               {
                 "Name": "tally",
                 "TypeName": "T::Tally",
-                "TypeId": 480,
+                "TypeId": 481,
                 "Docs": [
                   "The current tally of votes in this referendum."
                 ]
@@ -5017,7 +5027,7 @@
               {
                 "Name": "tally",
                 "TypeName": "T::Tally",
-                "TypeId": 480,
+                "TypeId": 481,
                 "Docs": [
                   "The final tally of votes in this referendum."
                 ]
@@ -5059,7 +5069,7 @@
               {
                 "Name": "tally",
                 "TypeName": "T::Tally",
-                "TypeId": 480,
+                "TypeId": 481,
                 "Docs": [
                   "The final tally of votes in this referendum."
                 ]
@@ -5084,7 +5094,7 @@
               {
                 "Name": "tally",
                 "TypeName": "T::Tally",
-                "TypeId": 480,
+                "TypeId": 481,
                 "Docs": [
                   "The final tally of votes in this referendum."
                 ]
@@ -5109,7 +5119,7 @@
               {
                 "Name": "tally",
                 "TypeName": "T::Tally",
-                "TypeId": 480,
+                "TypeId": 481,
                 "Docs": [
                   "The final tally of votes in this referendum."
                 ]
@@ -5134,7 +5144,7 @@
               {
                 "Name": "tally",
                 "TypeName": "T::Tally",
-                "TypeId": 480,
+                "TypeId": 481,
                 "Docs": [
                   "The final tally of votes in this referendum."
                 ]
@@ -5269,7 +5279,7 @@
             "TypeFields": [
               {
                 "TypeName": "BoundedInline",
-                "TypeId": 479
+                "TypeId": 480
               }
             ],
             "Index": 1
@@ -5304,7 +5314,7 @@
           },
           {
             "Name": "H",
-            "TypeId": 478
+            "TypeId": 479
           }
         ],
         "TypeDef": "Variant"
@@ -5750,6 +5760,16 @@
               }
             ],
             "Index": 200
+          },
+          {
+            "Name": "IdentityMigrator",
+            "TypeFields": [
+              {
+                "TypeName": "self::sp_api_hidden_includes_construct_runtime::hidden_include::dispatch\n::CallableCallFor<IdentityMigrator, Runtime>",
+                "TypeId": 478
+              }
+            ],
+            "Index": 248
           }
         ],
         "Path": [
@@ -23013,6 +23033,53 @@
         "TypeDef": "Tuple"
       },
       "478": {
+        "Variants": [
+          {
+            "Name": "reap_identity",
+            "TypeFields": [
+              {
+                "Name": "who",
+                "TypeName": "T::AccountId",
+                "TypeId": 0
+              }
+            ],
+            "Index": 0,
+            "Docs": [
+              "See [`Pallet::reap_identity`]."
+            ]
+          },
+          {
+            "Name": "poke_deposit",
+            "TypeFields": [
+              {
+                "Name": "who",
+                "TypeName": "T::AccountId",
+                "TypeId": 0
+              }
+            ],
+            "Index": 1,
+            "Docs": [
+              "See [`Pallet::poke_deposit`]."
+            ]
+          }
+        ],
+        "Path": [
+          "polkadot_runtime_common",
+          "identity_migrator",
+          "pallet",
+          "Call"
+        ],
+        "TypeParams": [
+          {
+            "Name": "T"
+          }
+        ],
+        "TypeDef": "Variant",
+        "Docs": [
+          "Contains a variant per dispatchable extrinsic that this pallet has."
+        ]
+      },
+      "479": {
         "Path": [
           "sp_runtime",
           "traits",
@@ -23020,7 +23087,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "479": {
+      "480": {
         "TypeFields": [
           {
             "TypeName": "Vec<T>",
@@ -23043,7 +23110,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "480": {
+      "481": {
         "TypeFields": [
           {
             "Name": "ayes",
@@ -23077,7 +23144,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "481": {
+      "482": {
         "Variants": [
           {
             "Name": "CallWhitelisted",
@@ -23112,7 +23179,7 @@
               {
                 "Name": "result",
                 "TypeName": "DispatchResultWithPostInfo",
-                "TypeId": 482
+                "TypeId": 483
               }
             ],
             "Index": 2
@@ -23133,13 +23200,13 @@
           "The `Event` enum of this pallet"
         ]
       },
-      "482": {
+      "483": {
         "Variants": [
           {
             "Name": "Ok",
             "TypeFields": [
               {
-                "TypeId": 483
+                "TypeId": 484
               }
             ],
             "Index": 0
@@ -23148,7 +23215,7 @@
             "Name": "Err",
             "TypeFields": [
               {
-                "TypeId": 485
+                "TypeId": 486
               }
             ],
             "Index": 1
@@ -23160,21 +23227,21 @@
         "TypeParams": [
           {
             "Name": "T",
-            "TypeId": 483
+            "TypeId": 484
           },
           {
             "Name": "E",
-            "TypeId": 485
+            "TypeId": 486
           }
         ],
         "TypeDef": "Variant"
       },
-      "483": {
+      "484": {
         "TypeFields": [
           {
             "Name": "actual_weight",
             "TypeName": "Option<Weight>",
-            "TypeId": 484
+            "TypeId": 485
           },
           {
             "Name": "pays_fee",
@@ -23189,7 +23256,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "484": {
+      "485": {
         "Variants": [
           {
             "Name": "None",
@@ -23217,12 +23284,12 @@
         ],
         "TypeDef": "Variant"
       },
-      "485": {
+      "486": {
         "TypeFields": [
           {
             "Name": "post_info",
             "TypeName": "Info",
-            "TypeId": 483
+            "TypeId": 484
           },
           {
             "Name": "error",
@@ -23237,12 +23304,12 @@
         "TypeParams": [
           {
             "Name": "Info",
-            "TypeId": 483
+            "TypeId": 484
           }
         ],
         "TypeDef": "Composite"
       },
-      "486": {
+      "487": {
         "Variants": [
           {
             "Name": "Claimed",
@@ -23285,7 +23352,7 @@
           "The `Event` enum of this pallet"
         ]
       },
-      "487": {
+      "488": {
         "Variants": [
           {
             "Name": "VestingUpdated",
@@ -23337,7 +23404,7 @@
           "The `Event` enum of this pallet"
         ]
       },
-      "488": {
+      "489": {
         "Variants": [
           {
             "Name": "BatchInterrupted",
@@ -23422,7 +23489,7 @@
           "The `Event` enum of this pallet"
         ]
       },
-      "489": {
+      "490": {
         "Variants": [
           {
             "Name": "IdentitySet",
@@ -23760,7 +23827,7 @@
           "The `Event` enum of this pallet"
         ]
       },
-      "490": {
+      "491": {
         "Variants": [
           {
             "Name": "ProxyExecuted",
@@ -23904,7 +23971,7 @@
           "The `Event` enum of this pallet"
         ]
       },
-      "491": {
+      "492": {
         "Variants": [
           {
             "Name": "NewMultisig",
@@ -24038,7 +24105,7 @@
           "The `Event` enum of this pallet"
         ]
       },
-      "492": {
+      "493": {
         "Variants": [
           {
             "Name": "BountyProposed",
@@ -24243,7 +24310,7 @@
           "The `Event` enum of this pallet"
         ]
       },
-      "493": {
+      "494": {
         "Variants": [
           {
             "Name": "Added",
@@ -24352,7 +24419,7 @@
           "The `Event` enum of this pallet"
         ]
       },
-      "494": {
+      "495": {
         "Variants": [
           {
             "Name": "SolutionStored",
@@ -24360,7 +24427,7 @@
               {
                 "Name": "compute",
                 "TypeName": "ElectionCompute",
-                "TypeId": 495
+                "TypeId": 496
               },
               {
                 "Name": "origin",
@@ -24390,7 +24457,7 @@
               {
                 "Name": "compute",
                 "TypeName": "ElectionCompute",
-                "TypeId": 495
+                "TypeId": 496
               },
               {
                 "Name": "score",
@@ -24457,12 +24524,12 @@
               {
                 "Name": "from",
                 "TypeName": "Phase<BlockNumberFor<T>>",
-                "TypeId": 496
+                "TypeId": 497
               },
               {
                 "Name": "to",
                 "TypeName": "Phase<BlockNumberFor<T>>",
-                "TypeId": 496
+                "TypeId": 497
               },
               {
                 "Name": "round",
@@ -24491,7 +24558,7 @@
           "The `Event` enum of this pallet"
         ]
       },
-      "495": {
+      "496": {
         "Variants": [
           {
             "Name": "OnChain",
@@ -24525,7 +24592,7 @@
         ],
         "TypeDef": "Variant"
       },
-      "496": {
+      "497": {
         "Variants": [
           {
             "Name": "Off",
@@ -24542,7 +24609,7 @@
             "TypeFields": [
               {
                 "TypeName": "(bool, Bn)",
-                "TypeId": 497
+                "TypeId": 498
               }
             ],
             "Index": 2
@@ -24565,14 +24632,14 @@
         ],
         "TypeDef": "Variant"
       },
-      "497": {
+      "498": {
         "TypeIds": [
           30,
           4
         ],
         "TypeDef": "Tuple"
       },
-      "498": {
+      "499": {
         "Variants": [
           {
             "Name": "Rebagged",
@@ -24636,7 +24703,7 @@
           "The `Event` enum of this pallet"
         ]
       },
-      "499": {
+      "500": {
         "Variants": [
           {
             "Name": "Created",
@@ -25059,7 +25126,7 @@
           "Events of this pallet."
         ]
       },
-      "500": {
+      "501": {
         "Variants": [
           {
             "Name": "Unstaked",
@@ -25154,14 +25221,14 @@
           "The `Event` enum of this pallet"
         ]
       },
-      "501": {
+      "502": {
         "Variants": [
           {
             "Name": "CandidateBacked",
             "TypeFields": [
               {
                 "TypeName": "CandidateReceipt<T::Hash>",
-                "TypeId": 502
+                "TypeId": 503
               },
               {
                 "TypeName": "HeadData",
@@ -25169,11 +25236,11 @@
               },
               {
                 "TypeName": "CoreIndex",
-                "TypeId": 503
+                "TypeId": 504
               },
               {
                 "TypeName": "GroupIndex",
-                "TypeId": 504
+                "TypeId": 505
               }
             ],
             "Index": 0,
@@ -25186,7 +25253,7 @@
             "TypeFields": [
               {
                 "TypeName": "CandidateReceipt<T::Hash>",
-                "TypeId": 502
+                "TypeId": 503
               },
               {
                 "TypeName": "HeadData",
@@ -25194,11 +25261,11 @@
               },
               {
                 "TypeName": "CoreIndex",
-                "TypeId": 503
+                "TypeId": 504
               },
               {
                 "TypeName": "GroupIndex",
-                "TypeId": 504
+                "TypeId": 505
               }
             ],
             "Index": 1,
@@ -25211,7 +25278,7 @@
             "TypeFields": [
               {
                 "TypeName": "CandidateReceipt<T::Hash>",
-                "TypeId": 502
+                "TypeId": 503
               },
               {
                 "TypeName": "HeadData",
@@ -25219,7 +25286,7 @@
               },
               {
                 "TypeName": "CoreIndex",
-                "TypeId": 503
+                "TypeId": 504
               }
             ],
             "Index": 2,
@@ -25263,7 +25330,7 @@
           "The `Event` enum of this pallet"
         ]
       },
-      "502": {
+      "503": {
         "TypeFields": [
           {
             "Name": "descriptor",
@@ -25289,7 +25356,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "503": {
+      "504": {
         "TypeFields": [
           {
             "TypeName": "u32",
@@ -25303,7 +25370,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "504": {
+      "505": {
         "TypeFields": [
           {
             "TypeName": "u32",
@@ -25317,7 +25384,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "505": {
+      "506": {
         "Variants": [
           {
             "Name": "CurrentCodeUpdated",
@@ -25454,7 +25521,7 @@
           "The `Event` enum of this pallet"
         ]
       },
-      "506": {
+      "507": {
         "Variants": [
           {
             "Name": "OpenChannelRequested",
@@ -25636,7 +25703,7 @@
           "The `Event` enum of this pallet"
         ]
       },
-      "507": {
+      "508": {
         "Variants": [
           {
             "Name": "DisputeInitiated",
@@ -25647,7 +25714,7 @@
               },
               {
                 "TypeName": "DisputeLocation",
-                "TypeId": 508
+                "TypeId": 509
               }
             ],
             "Index": 0,
@@ -25664,7 +25731,7 @@
               },
               {
                 "TypeName": "DisputeResult",
-                "TypeId": 509
+                "TypeId": 510
               }
             ],
             "Index": 1,
@@ -25706,7 +25773,7 @@
           "The `Event` enum of this pallet"
         ]
       },
-      "508": {
+      "509": {
         "Variants": [
           {
             "Name": "Local",
@@ -25726,7 +25793,7 @@
         ],
         "TypeDef": "Variant"
       },
-      "509": {
+      "510": {
         "Variants": [
           {
             "Name": "Valid",
@@ -25746,7 +25813,7 @@
         ],
         "TypeDef": "Variant"
       },
-      "510": {
+      "511": {
         "Variants": [
           {
             "Name": "Registered",
@@ -25824,7 +25891,7 @@
           "The `Event` enum of this pallet"
         ]
       },
-      "511": {
+      "512": {
         "Variants": [
           {
             "Name": "NewLeasePeriod",
@@ -25898,7 +25965,7 @@
           "The `Event` enum of this pallet"
         ]
       },
-      "512": {
+      "513": {
         "Variants": [
           {
             "Name": "AuctionStarted",
@@ -26079,7 +26146,7 @@
           "The `Event` enum of this pallet"
         ]
       },
-      "513": {
+      "514": {
         "Variants": [
           {
             "Name": "Created",
@@ -26274,7 +26341,7 @@
           "The `Event` enum of this pallet"
         ]
       },
-      "514": {
+      "515": {
         "Variants": [
           {
             "Name": "Migrated",
@@ -26292,7 +26359,7 @@
               {
                 "Name": "compute",
                 "TypeName": "MigrationCompute",
-                "TypeId": 515
+                "TypeId": 516
               }
             ],
             "Index": 0,
@@ -26334,7 +26401,7 @@
               {
                 "Name": "error",
                 "TypeName": "Error<T>",
-                "TypeId": 516
+                "TypeId": 517
               }
             ],
             "Index": 3,
@@ -26358,7 +26425,7 @@
           "Inner events of this pallet."
         ]
       },
-      "515": {
+      "516": {
         "Variants": [
           {
             "Name": "Signed",
@@ -26378,7 +26445,7 @@
         ],
         "TypeDef": "Variant"
       },
-      "516": {
+      "517": {
         "Variants": [
           {
             "Name": "MaxSignedLimits",
@@ -26450,7 +26517,7 @@
           "The `Error` enum of this pallet."
         ]
       },
-      "517": {
+      "518": {
         "Variants": [
           {
             "Name": "Attempted",
@@ -26458,7 +26525,7 @@
               {
                 "Name": "outcome",
                 "TypeName": "xcm::latest::Outcome",
-                "TypeId": 518
+                "TypeId": 519
               }
             ],
             "Index": 0,
@@ -27036,7 +27103,7 @@
           "The `Event` enum of this pallet"
         ]
       },
-      "518": {
+      "519": {
         "Variants": [
           {
             "Name": "Complete",
@@ -27085,7 +27152,7 @@
         ],
         "TypeDef": "Variant"
       },
-      "519": {
+      "520": {
         "Variants": [
           {
             "Name": "ProcessingFailed",
@@ -27109,7 +27176,7 @@
               {
                 "Name": "error",
                 "TypeName": "ProcessMessageError",
-                "TypeId": 520,
+                "TypeId": 521,
                 "Docs": [
                   "The error that occurred.",
                   "",
@@ -27251,7 +27318,7 @@
           "The `Event` enum of this pallet"
         ]
       },
-      "520": {
+      "521": {
         "Variants": [
           {
             "Name": "BadFormat",
@@ -27292,7 +27359,7 @@
         ],
         "TypeDef": "Variant"
       },
-      "521": {
+      "522": {
         "Variants": [
           {
             "Name": "AssetRateCreated",
@@ -27358,7 +27425,65 @@
           "The `Event` enum of this pallet"
         ]
       },
-      "522": {
+      "523": {
+        "Variants": [
+          {
+            "Name": "IdentityReaped",
+            "TypeFields": [
+              {
+                "Name": "who",
+                "TypeName": "T::AccountId",
+                "TypeId": 0
+              }
+            ],
+            "Index": 0,
+            "Docs": [
+              "The identity and all sub accounts were reaped for `who`."
+            ]
+          },
+          {
+            "Name": "DepositUpdated",
+            "TypeFields": [
+              {
+                "Name": "who",
+                "TypeName": "T::AccountId",
+                "TypeId": 0
+              },
+              {
+                "Name": "identity",
+                "TypeName": "BalanceOf<T>",
+                "TypeId": 6
+              },
+              {
+                "Name": "subs",
+                "TypeName": "BalanceOf<T>",
+                "TypeId": 6
+              }
+            ],
+            "Index": 1,
+            "Docs": [
+              "The deposits held for `who` were updated. `identity` is the new deposit held for",
+              "identity info, and `subs` is the new deposit held for the sub-accounts."
+            ]
+          }
+        ],
+        "Path": [
+          "polkadot_runtime_common",
+          "identity_migrator",
+          "pallet",
+          "Event"
+        ],
+        "TypeParams": [
+          {
+            "Name": "T"
+          }
+        ],
+        "TypeDef": "Variant",
+        "Docs": [
+          "The `Event` enum of this pallet"
+        ]
+      },
+      "524": {
         "Variants": [
           {
             "Name": "ApplyExtrinsic",
@@ -27387,11 +27512,11 @@
         ],
         "TypeDef": "Variant"
       },
-      "523": {
+      "525": {
         "TypeId": 32,
         "TypeDef": "Sequence"
       },
-      "524": {
+      "526": {
         "TypeFields": [
           {
             "Name": "spec_version",
@@ -27401,7 +27526,7 @@
           {
             "Name": "spec_name",
             "TypeName": "sp_runtime::RuntimeString",
-            "TypeId": 525
+            "TypeId": 527
           }
         ],
         "Path": [
@@ -27410,11 +27535,11 @@
         ],
         "TypeDef": "Composite"
       },
-      "525": {
+      "527": {
         "Primitive": "Str",
         "TypeDef": "Primitive"
       },
-      "526": {
+      "528": {
         "TypeFields": [
           {
             "Name": "code_hash",
@@ -27438,7 +27563,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "527": {
+      "529": {
         "TypeFields": [
           {
             "Name": "base_block",
@@ -27453,7 +27578,7 @@
           {
             "Name": "per_class",
             "TypeName": "PerDispatchClass<WeightsPerClass>",
-            "TypeId": 528
+            "TypeId": 530
           }
         ],
         "Path": [
@@ -27463,22 +27588,22 @@
         ],
         "TypeDef": "Composite"
       },
-      "528": {
+      "530": {
         "TypeFields": [
           {
             "Name": "normal",
             "TypeName": "T",
-            "TypeId": 529
+            "TypeId": 531
           },
           {
             "Name": "operational",
             "TypeName": "T",
-            "TypeId": 529
+            "TypeId": 531
           },
           {
             "Name": "mandatory",
             "TypeName": "T",
-            "TypeId": 529
+            "TypeId": 531
           }
         ],
         "Path": [
@@ -27489,12 +27614,12 @@
         "TypeParams": [
           {
             "Name": "T",
-            "TypeId": 529
+            "TypeId": 531
           }
         ],
         "TypeDef": "Composite"
       },
-      "529": {
+      "531": {
         "TypeFields": [
           {
             "Name": "base_extrinsic",
@@ -27504,17 +27629,17 @@
           {
             "Name": "max_extrinsic",
             "TypeName": "Option<Weight>",
-            "TypeId": 484
+            "TypeId": 485
           },
           {
             "Name": "max_total",
             "TypeName": "Option<Weight>",
-            "TypeId": 484
+            "TypeId": 485
           },
           {
             "Name": "reserved",
             "TypeName": "Option<Weight>",
-            "TypeId": 484
+            "TypeId": 485
           }
         ],
         "Path": [
@@ -27524,12 +27649,12 @@
         ],
         "TypeDef": "Composite"
       },
-      "530": {
+      "532": {
         "TypeFields": [
           {
             "Name": "max",
             "TypeName": "PerDispatchClass<u32>",
-            "TypeId": 531
+            "TypeId": 533
           }
         ],
         "Path": [
@@ -27539,7 +27664,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "531": {
+      "533": {
         "TypeFields": [
           {
             "Name": "normal",
@@ -27570,7 +27695,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "532": {
+      "534": {
         "TypeFields": [
           {
             "Name": "read",
@@ -27589,17 +27714,17 @@
         ],
         "TypeDef": "Composite"
       },
-      "533": {
+      "535": {
         "TypeFields": [
           {
             "Name": "spec_name",
             "TypeName": "RuntimeString",
-            "TypeId": 525
+            "TypeId": 527
           },
           {
             "Name": "impl_name",
             "TypeName": "RuntimeString",
-            "TypeId": 525
+            "TypeId": 527
           },
           {
             "Name": "authoring_version",
@@ -27619,7 +27744,7 @@
           {
             "Name": "apis",
             "TypeName": "ApisVec",
-            "TypeId": 534
+            "TypeId": 536
           },
           {
             "Name": "transaction_version",
@@ -27638,10 +27763,10 @@
         ],
         "TypeDef": "Composite"
       },
-      "534": {
+      "536": {
         "TypeFields": [
           {
-            "TypeId": 535
+            "TypeId": 537
           }
         ],
         "Path": [
@@ -27650,23 +27775,23 @@
         "TypeParams": [
           {
             "Name": "T",
-            "TypeId": 535
+            "TypeId": 537
           }
         ],
         "TypeDef": "Composite"
       },
-      "535": {
-        "TypeId": 536,
+      "537": {
+        "TypeId": 538,
         "TypeDef": "Sequence"
       },
-      "536": {
+      "538": {
         "TypeIds": [
           204,
           4
         ],
         "TypeDef": "Tuple"
       },
-      "537": {
+      "539": {
         "Variants": [
           {
             "Name": "InvalidSpecName",
@@ -27752,11 +27877,11 @@
           "Error for the System pallet"
         ]
       },
-      "538": {
+      "540": {
         "TypeFields": [
           {
             "TypeName": "Vec<T>",
-            "TypeId": 541
+            "TypeId": 543
           }
         ],
         "Path": [
@@ -27767,7 +27892,7 @@
         "TypeParams": [
           {
             "Name": "T",
-            "TypeId": 539
+            "TypeId": 541
           },
           {
             "Name": "S"
@@ -27775,7 +27900,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "539": {
+      "541": {
         "Variants": [
           {
             "Name": "None",
@@ -27786,7 +27911,7 @@
             "Name": "Some",
             "TypeFields": [
               {
-                "TypeId": 540
+                "TypeId": 542
               }
             ],
             "Index": 1
@@ -27798,12 +27923,12 @@
         "TypeParams": [
           {
             "Name": "T",
-            "TypeId": 540
+            "TypeId": 542
           }
         ],
         "TypeDef": "Variant"
       },
-      "540": {
+      "542": {
         "TypeFields": [
           {
             "Name": "maybe_id",
@@ -27859,11 +27984,11 @@
         ],
         "TypeDef": "Composite"
       },
-      "541": {
-        "TypeId": 539,
+      "543": {
+        "TypeId": 541,
         "TypeDef": "Sequence"
       },
-      "542": {
+      "544": {
         "Variants": [
           {
             "Name": "FailedToSchedule",
@@ -27921,7 +28046,7 @@
           "The `Error` enum of this pallet."
         ]
       },
-      "543": {
+      "545": {
         "Variants": [
           {
             "Name": "Unrequested",
@@ -27945,7 +28070,7 @@
               {
                 "Name": "deposit",
                 "TypeName": "Option<(AccountId, Balance)>",
-                "TypeId": 544
+                "TypeId": 546
               },
               {
                 "Name": "count",
@@ -27977,7 +28102,7 @@
         ],
         "TypeDef": "Variant"
       },
-      "544": {
+      "546": {
         "Variants": [
           {
             "Name": "None",
@@ -28005,7 +28130,7 @@
         ],
         "TypeDef": "Variant"
       },
-      "545": {
+      "547": {
         "Variants": [
           {
             "Name": "Unrequested",
@@ -28013,7 +28138,7 @@
               {
                 "Name": "ticket",
                 "TypeName": "(AccountId, Ticket)",
-                "TypeId": 547
+                "TypeId": 549
               },
               {
                 "Name": "len",
@@ -28029,7 +28154,7 @@
               {
                 "Name": "maybe_ticket",
                 "TypeName": "Option<(AccountId, Ticket)>",
-                "TypeId": 548
+                "TypeId": 550
               },
               {
                 "Name": "count",
@@ -28056,12 +28181,12 @@
           },
           {
             "Name": "Ticket",
-            "TypeId": 546
+            "TypeId": 548
           }
         ],
         "TypeDef": "Variant"
       },
-      "546": {
+      "548": {
         "TypeFields": [
           {
             "TypeName": "F::Balance",
@@ -28091,14 +28216,14 @@
         ],
         "TypeDef": "Composite"
       },
-      "547": {
+      "549": {
         "TypeIds": [
           0,
-          546
+          548
         ],
         "TypeDef": "Tuple"
       },
-      "548": {
+      "550": {
         "Variants": [
           {
             "Name": "None",
@@ -28109,7 +28234,7 @@
             "Name": "Some",
             "TypeFields": [
               {
-                "TypeId": 547
+                "TypeId": 549
               }
             ],
             "Index": 1
@@ -28121,19 +28246,19 @@
         "TypeParams": [
           {
             "Name": "T",
-            "TypeId": 547
+            "TypeId": 549
           }
         ],
         "TypeDef": "Variant"
       },
-      "549": {
+      "551": {
         "TypeIds": [
           12,
           4
         ],
         "TypeDef": "Tuple"
       },
-      "550": {
+      "552": {
         "TypeFields": [
           {
             "TypeName": "Vec<T>",
@@ -28156,7 +28281,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "551": {
+      "553": {
         "Variants": [
           {
             "Name": "TooBig",
@@ -28238,11 +28363,11 @@
           "The `Error` enum of this pallet."
         ]
       },
-      "552": {
+      "554": {
         "TypeFields": [
           {
             "TypeName": "Vec<T>",
-            "TypeId": 554
+            "TypeId": 556
           }
         ],
         "Path": [
@@ -28253,7 +28378,7 @@
         "TypeParams": [
           {
             "Name": "T",
-            "TypeId": 553
+            "TypeId": 555
           },
           {
             "Name": "S"
@@ -28261,22 +28386,22 @@
         ],
         "TypeDef": "Composite"
       },
-      "553": {
+      "555": {
         "TypeIds": [
           114,
           11
         ],
         "TypeDef": "Tuple"
       },
-      "554": {
-        "TypeId": 553,
+      "556": {
+        "TypeId": 555,
         "TypeDef": "Sequence"
       },
-      "555": {
+      "557": {
         "TypeFields": [
           {
             "TypeName": "Vec<T>",
-            "TypeId": 556
+            "TypeId": 558
           }
         ],
         "Path": [
@@ -28295,11 +28420,11 @@
         ],
         "TypeDef": "Composite"
       },
-      "556": {
+      "558": {
         "TypeId": 1,
         "TypeDef": "Sequence"
       },
-      "557": {
+      "559": {
         "Variants": [
           {
             "Name": "None",
@@ -28310,7 +28435,7 @@
             "Name": "Some",
             "TypeFields": [
               {
-                "TypeId": 558
+                "TypeId": 560
               }
             ],
             "Index": 1
@@ -28322,19 +28447,19 @@
         "TypeParams": [
           {
             "Name": "T",
-            "TypeId": 558
+            "TypeId": 560
           }
         ],
         "TypeDef": "Variant"
       },
-      "558": {
+      "560": {
         "Variants": [
           {
             "Name": "Primary",
             "TypeFields": [
               {
                 "TypeName": "PrimaryPreDigest",
-                "TypeId": 559
+                "TypeId": 561
               }
             ],
             "Index": 1
@@ -28344,7 +28469,7 @@
             "TypeFields": [
               {
                 "TypeName": "SecondaryPlainPreDigest",
-                "TypeId": 561
+                "TypeId": 563
               }
             ],
             "Index": 2
@@ -28354,7 +28479,7 @@
             "TypeFields": [
               {
                 "TypeName": "SecondaryVRFPreDigest",
-                "TypeId": 562
+                "TypeId": 564
               }
             ],
             "Index": 3
@@ -28367,7 +28492,7 @@
         ],
         "TypeDef": "Variant"
       },
-      "559": {
+      "561": {
         "TypeFields": [
           {
             "Name": "authority_index",
@@ -28382,7 +28507,7 @@
           {
             "Name": "vrf_signature",
             "TypeName": "VrfSignature",
-            "TypeId": 560
+            "TypeId": 562
           }
         ],
         "Path": [
@@ -28392,7 +28517,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "560": {
+      "562": {
         "TypeFields": [
           {
             "Name": "pre_output",
@@ -28413,7 +28538,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "561": {
+      "563": {
         "TypeFields": [
           {
             "Name": "authority_index",
@@ -28433,7 +28558,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "562": {
+      "564": {
         "TypeFields": [
           {
             "Name": "authority_index",
@@ -28448,7 +28573,7 @@
           {
             "Name": "vrf_signature",
             "TypeName": "VrfSignature",
-            "TypeId": 560
+            "TypeId": 562
           }
         ],
         "Path": [
@@ -28458,7 +28583,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "563": {
+      "565": {
         "TypeFields": [
           {
             "Name": "c",
@@ -28477,11 +28602,11 @@
         ],
         "TypeDef": "Composite"
       },
-      "564": {
+      "566": {
         "TypeFields": [
           {
             "TypeName": "Vec<T>",
-            "TypeId": 566
+            "TypeId": 568
           }
         ],
         "Path": [
@@ -28492,7 +28617,7 @@
         "TypeParams": [
           {
             "Name": "T",
-            "TypeId": 565
+            "TypeId": 567
           },
           {
             "Name": "S"
@@ -28500,18 +28625,18 @@
         ],
         "TypeDef": "Composite"
       },
-      "565": {
+      "567": {
         "TypeIds": [
           11,
           4
         ],
         "TypeDef": "Tuple"
       },
-      "566": {
-        "TypeId": 565,
+      "568": {
+        "TypeId": 567,
         "TypeDef": "Sequence"
       },
-      "567": {
+      "569": {
         "Variants": [
           {
             "Name": "InvalidEquivocationProof",
@@ -28561,7 +28686,7 @@
           "The `Error` enum of this pallet."
         ]
       },
-      "568": {
+      "570": {
         "TypeIds": [
           0,
           6,
@@ -28569,7 +28694,7 @@
         ],
         "TypeDef": "Tuple"
       },
-      "569": {
+      "571": {
         "Variants": [
           {
             "Name": "NotAssigned",
@@ -28627,11 +28752,11 @@
           "The `Error` enum of this pallet."
         ]
       },
-      "570": {
+      "572": {
         "TypeFields": [
           {
             "TypeName": "Vec<T>",
-            "TypeId": 573
+            "TypeId": 575
           }
         ],
         "Path": [
@@ -28642,7 +28767,7 @@
         "TypeParams": [
           {
             "Name": "T",
-            "TypeId": 571
+            "TypeId": 573
           },
           {
             "Name": "S"
@@ -28650,7 +28775,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "571": {
+      "573": {
         "TypeFields": [
           {
             "Name": "id",
@@ -28665,7 +28790,7 @@
           {
             "Name": "reasons",
             "TypeName": "Reasons",
-            "TypeId": 572
+            "TypeId": 574
           }
         ],
         "Path": [
@@ -28681,7 +28806,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "572": {
+      "574": {
         "Variants": [
           {
             "Name": "Fee",
@@ -28706,15 +28831,15 @@
         ],
         "TypeDef": "Variant"
       },
-      "573": {
-        "TypeId": 571,
+      "575": {
+        "TypeId": 573,
         "TypeDef": "Sequence"
       },
-      "574": {
+      "576": {
         "TypeFields": [
           {
             "TypeName": "Vec<T>",
-            "TypeId": 576
+            "TypeId": 578
           }
         ],
         "Path": [
@@ -28725,7 +28850,7 @@
         "TypeParams": [
           {
             "Name": "T",
-            "TypeId": 575
+            "TypeId": 577
           },
           {
             "Name": "S"
@@ -28733,7 +28858,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "575": {
+      "577": {
         "TypeFields": [
           {
             "Name": "id",
@@ -28763,15 +28888,15 @@
         ],
         "TypeDef": "Composite"
       },
-      "576": {
-        "TypeId": 575,
+      "578": {
+        "TypeId": 577,
         "TypeDef": "Sequence"
       },
-      "577": {
+      "579": {
         "TypeFields": [
           {
             "TypeName": "Vec<T>",
-            "TypeId": 582
+            "TypeId": 584
           }
         ],
         "Path": [
@@ -28782,7 +28907,7 @@
         "TypeParams": [
           {
             "Name": "T",
-            "TypeId": 578
+            "TypeId": 580
           },
           {
             "Name": "S"
@@ -28790,12 +28915,12 @@
         ],
         "TypeDef": "Composite"
       },
-      "578": {
+      "580": {
         "TypeFields": [
           {
             "Name": "id",
             "TypeName": "Id",
-            "TypeId": 579
+            "TypeId": 581
           },
           {
             "Name": "amount",
@@ -28811,7 +28936,7 @@
         "TypeParams": [
           {
             "Name": "Id",
-            "TypeId": 579
+            "TypeId": 581
           },
           {
             "Name": "Balance",
@@ -28820,14 +28945,14 @@
         ],
         "TypeDef": "Composite"
       },
-      "579": {
+      "581": {
         "Variants": [
           {
             "Name": "Preimage",
             "TypeFields": [
               {
                 "TypeName": "pallet_preimage::HoldReason",
-                "TypeId": 580
+                "TypeId": 582
               }
             ],
             "Index": 10
@@ -28837,7 +28962,7 @@
             "TypeFields": [
               {
                 "TypeName": "pallet_state_trie_migration::HoldReason",
-                "TypeId": 581
+                "TypeId": 583
               }
             ],
             "Index": 98
@@ -28849,7 +28974,7 @@
         ],
         "TypeDef": "Variant"
       },
-      "580": {
+      "582": {
         "Variants": [
           {
             "Name": "Preimage",
@@ -28864,7 +28989,7 @@
         ],
         "TypeDef": "Variant"
       },
-      "581": {
+      "583": {
         "Variants": [
           {
             "Name": "SlashForMigrate",
@@ -28879,15 +29004,15 @@
         ],
         "TypeDef": "Variant"
       },
-      "582": {
-        "TypeId": 578,
+      "584": {
+        "TypeId": 580,
         "TypeDef": "Sequence"
       },
-      "583": {
+      "585": {
         "TypeFields": [
           {
             "TypeName": "Vec<T>",
-            "TypeId": 587
+            "TypeId": 589
           }
         ],
         "Path": [
@@ -28898,7 +29023,7 @@
         "TypeParams": [
           {
             "Name": "T",
-            "TypeId": 584
+            "TypeId": 586
           },
           {
             "Name": "S"
@@ -28906,12 +29031,12 @@
         ],
         "TypeDef": "Composite"
       },
-      "584": {
+      "586": {
         "TypeFields": [
           {
             "Name": "id",
             "TypeName": "Id",
-            "TypeId": 585
+            "TypeId": 587
           },
           {
             "Name": "amount",
@@ -28927,7 +29052,7 @@
         "TypeParams": [
           {
             "Name": "Id",
-            "TypeId": 585
+            "TypeId": 587
           },
           {
             "Name": "Balance",
@@ -28936,14 +29061,14 @@
         ],
         "TypeDef": "Composite"
       },
-      "585": {
+      "587": {
         "Variants": [
           {
             "Name": "NominationPools",
             "TypeFields": [
               {
                 "TypeName": "pallet_nomination_pools::FreezeReason",
-                "TypeId": 586
+                "TypeId": 588
               }
             ],
             "Index": 39
@@ -28955,7 +29080,7 @@
         ],
         "TypeDef": "Variant"
       },
-      "586": {
+      "588": {
         "Variants": [
           {
             "Name": "PoolMinBalance",
@@ -28970,11 +29095,11 @@
         ],
         "TypeDef": "Variant"
       },
-      "587": {
-        "TypeId": 584,
+      "589": {
+        "TypeId": 586,
         "TypeDef": "Sequence"
       },
-      "588": {
+      "590": {
         "Variants": [
           {
             "Name": "VestingBalance",
@@ -29091,7 +29216,7 @@
           "The `Error` enum of this pallet."
         ]
       },
-      "589": {
+      "591": {
         "Variants": [
           {
             "Name": "V1Ancient",
@@ -29110,7 +29235,7 @@
         ],
         "TypeDef": "Variant"
       },
-      "590": {
+      "592": {
         "TypeFields": [
           {
             "Name": "stash",
@@ -29135,7 +29260,7 @@
           {
             "Name": "legacy_claimed_rewards",
             "TypeName": "BoundedVec<EraIndex, T::HistoryDepth>",
-            "TypeId": 591
+            "TypeId": 593
           }
         ],
         "Path": [
@@ -29149,7 +29274,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "591": {
+      "593": {
         "TypeFields": [
           {
             "TypeName": "Vec<T>",
@@ -29172,12 +29297,12 @@
         ],
         "TypeDef": "Composite"
       },
-      "592": {
+      "594": {
         "TypeFields": [
           {
             "Name": "targets",
             "TypeName": "BoundedVec<T::AccountId, MaxNominationsOf<T>>",
-            "TypeId": 593
+            "TypeId": 595
           },
           {
             "Name": "submitted_in",
@@ -29201,7 +29326,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "593": {
+      "595": {
         "TypeFields": [
           {
             "TypeName": "Vec<T>",
@@ -29224,7 +29349,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "594": {
+      "596": {
         "TypeFields": [
           {
             "Name": "index",
@@ -29234,7 +29359,7 @@
           {
             "Name": "start",
             "TypeName": "Option<u64>",
-            "TypeId": 595
+            "TypeId": 597
           }
         ],
         "Path": [
@@ -29243,7 +29368,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "595": {
+      "597": {
         "Variants": [
           {
             "Name": "None",
@@ -29271,14 +29396,14 @@
         ],
         "TypeDef": "Variant"
       },
-      "596": {
+      "598": {
         "TypeIds": [
           4,
           0
         ],
         "TypeDef": "Tuple"
       },
-      "597": {
+      "599": {
         "TypeFields": [
           {
             "Name": "total",
@@ -29313,7 +29438,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "598": {
+      "600": {
         "TypeIds": [
           4,
           0,
@@ -29321,7 +29446,7 @@
         ],
         "TypeDef": "Tuple"
       },
-      "599": {
+      "601": {
         "TypeFields": [
           {
             "Name": "page_total",
@@ -29350,7 +29475,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "600": {
+      "602": {
         "TypeFields": [
           {
             "Name": "total",
@@ -29360,7 +29485,7 @@
           {
             "Name": "individual",
             "TypeName": "BTreeMap<AccountId, RewardPoint>",
-            "TypeId": 601
+            "TypeId": 603
           }
         ],
         "Path": [
@@ -29375,10 +29500,10 @@
         ],
         "TypeDef": "Composite"
       },
-      "601": {
+      "603": {
         "TypeFields": [
           {
-            "TypeId": 602
+            "TypeId": 604
           }
         ],
         "Path": [
@@ -29396,22 +29521,22 @@
         ],
         "TypeDef": "Composite"
       },
-      "602": {
-        "TypeId": 603,
+      "604": {
+        "TypeId": 605,
         "TypeDef": "Sequence"
       },
-      "603": {
+      "605": {
         "TypeIds": [
           0,
           4
         ],
         "TypeDef": "Tuple"
       },
-      "604": {
-        "TypeId": 605,
+      "606": {
+        "TypeId": 607,
         "TypeDef": "Sequence"
       },
-      "605": {
+      "607": {
         "TypeFields": [
           {
             "Name": "validator",
@@ -29455,14 +29580,14 @@
         ],
         "TypeDef": "Composite"
       },
-      "606": {
+      "608": {
         "TypeIds": [
           43,
           6
         ],
         "TypeDef": "Tuple"
       },
-      "607": {
+      "609": {
         "TypeFields": [
           {
             "Name": "span_index",
@@ -29492,7 +29617,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "608": {
+      "610": {
         "TypeFields": [
           {
             "Name": "slashed",
@@ -29518,18 +29643,18 @@
         ],
         "TypeDef": "Composite"
       },
-      "609": {
-        "TypeId": 610,
+      "611": {
+        "TypeId": 612,
         "TypeDef": "Sequence"
       },
-      "610": {
+      "612": {
         "TypeIds": [
           4,
           30
         ],
         "TypeDef": "Tuple"
       },
-      "611": {
+      "613": {
         "Variants": [
           {
             "Name": "NotController",
@@ -29776,7 +29901,7 @@
           "The `Error` enum of this pallet."
         ]
       },
-      "612": {
+      "614": {
         "TypeFields": [
           {
             "Name": "offender",
@@ -29806,32 +29931,32 @@
         ],
         "TypeDef": "Composite"
       },
-      "613": {
+      "615": {
         "TypeIds": [
           48,
           13
         ],
         "TypeDef": "Tuple"
       },
-      "614": {
-        "TypeId": 615,
+      "616": {
+        "TypeId": 617,
         "TypeDef": "Sequence"
       },
-      "615": {
+      "617": {
         "TypeIds": [
           0,
           143
         ],
         "TypeDef": "Tuple"
       },
-      "616": {
+      "618": {
         "TypeIds": [
-          617,
+          619,
           13
         ],
         "TypeDef": "Tuple"
       },
-      "617": {
+      "619": {
         "TypeFields": [
           {
             "TypeName": "[u8; 4]",
@@ -29845,7 +29970,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "618": {
+      "620": {
         "Variants": [
           {
             "Name": "InvalidProof",
@@ -29903,7 +30028,7 @@
           "Error for the session pallet."
         ]
       },
-      "619": {
+      "621": {
         "Variants": [
           {
             "Name": "Live",
@@ -29960,7 +30085,7 @@
         ],
         "TypeDef": "Variant"
       },
-      "620": {
+      "622": {
         "TypeFields": [
           {
             "Name": "scheduled_at",
@@ -29975,7 +30100,7 @@
           {
             "Name": "next_authorities",
             "TypeName": "BoundedAuthorityList<Limit>",
-            "TypeId": 621
+            "TypeId": 623
           },
           {
             "Name": "forced",
@@ -29998,7 +30123,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "621": {
+      "623": {
         "TypeFields": [
           {
             "TypeName": "Vec<T>",
@@ -30021,7 +30146,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "622": {
+      "624": {
         "Variants": [
           {
             "Name": "PauseFailed",
@@ -30097,11 +30222,11 @@
           "The `Error` enum of this pallet."
         ]
       },
-      "623": {
+      "625": {
         "TypeFields": [
           {
             "TypeName": "Vec<T>",
-            "TypeId": 624
+            "TypeId": 626
           }
         ],
         "Path": [
@@ -30120,11 +30245,11 @@
         ],
         "TypeDef": "Composite"
       },
-      "624": {
+      "626": {
         "TypeId": 146,
         "TypeDef": "Sequence"
       },
-      "625": {
+      "627": {
         "TypeFields": [
           {
             "Name": "proposer",
@@ -30163,7 +30288,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "626": {
+      "628": {
         "TypeFields": [
           {
             "TypeName": "Vec<T>",
@@ -30186,7 +30311,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "627": {
+      "629": {
         "TypeFields": [
           {
             "Name": "asset_kind",
@@ -30216,7 +30341,7 @@
           {
             "Name": "status",
             "TypeName": "PaymentState<PaymentId>",
-            "TypeId": 628
+            "TypeId": 630
           }
         ],
         "Path": [
@@ -30247,7 +30372,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "628": {
+      "630": {
         "Variants": [
           {
             "Name": "Pending",
@@ -30283,7 +30408,7 @@
         ],
         "TypeDef": "Variant"
       },
-      "629": {
+      "631": {
         "TypeFields": [
           {
             "TypeName": "u32",
@@ -30297,7 +30422,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "630": {
+      "632": {
         "TypeFields": [
           {
             "TypeName": "[u8; 8]",
@@ -30310,7 +30435,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "631": {
+      "633": {
         "Variants": [
           {
             "Name": "InsufficientProposersBalance",
@@ -30428,21 +30553,21 @@
           "Error for the treasury pallet."
         ]
       },
-      "632": {
+      "634": {
         "TypeIds": [
           0,
           100
         ],
         "TypeDef": "Tuple"
       },
-      "633": {
+      "635": {
         "Variants": [
           {
             "Name": "Casting",
             "TypeFields": [
               {
                 "TypeName": "Casting<Balance, BlockNumber, PollIndex, MaxVotes>",
-                "TypeId": 634
+                "TypeId": 636
               }
             ],
             "Index": 0
@@ -30452,7 +30577,7 @@
             "TypeFields": [
               {
                 "TypeName": "Delegating<Balance, AccountId, BlockNumber>",
-                "TypeId": 640
+                "TypeId": 642
               }
             ],
             "Index": 1
@@ -30486,22 +30611,22 @@
         ],
         "TypeDef": "Variant"
       },
-      "634": {
+      "636": {
         "TypeFields": [
           {
             "Name": "votes",
             "TypeName": "BoundedVec<(PollIndex, AccountVote<Balance>), MaxVotes>",
-            "TypeId": 635
+            "TypeId": 637
           },
           {
             "Name": "delegations",
             "TypeName": "Delegations<Balance>",
-            "TypeId": 638
+            "TypeId": 640
           },
           {
             "Name": "prior",
             "TypeName": "PriorLock<BlockNumber, Balance>",
-            "TypeId": 639
+            "TypeId": 641
           }
         ],
         "Path": [
@@ -30528,11 +30653,11 @@
         ],
         "TypeDef": "Composite"
       },
-      "635": {
+      "637": {
         "TypeFields": [
           {
             "TypeName": "Vec<T>",
-            "TypeId": 637
+            "TypeId": 639
           }
         ],
         "Path": [
@@ -30543,7 +30668,7 @@
         "TypeParams": [
           {
             "Name": "T",
-            "TypeId": 636
+            "TypeId": 638
           },
           {
             "Name": "S"
@@ -30551,18 +30676,18 @@
         ],
         "TypeDef": "Composite"
       },
-      "636": {
+      "638": {
         "TypeIds": [
           4,
           165
         ],
         "TypeDef": "Tuple"
       },
-      "637": {
-        "TypeId": 636,
+      "639": {
+        "TypeId": 638,
         "TypeDef": "Sequence"
       },
-      "638": {
+      "640": {
         "TypeFields": [
           {
             "Name": "votes",
@@ -30588,7 +30713,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "639": {
+      "641": {
         "TypeFields": [
           {
             "TypeName": "BlockNumber",
@@ -30616,7 +30741,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "640": {
+      "642": {
         "TypeFields": [
           {
             "Name": "balance",
@@ -30636,12 +30761,12 @@
           {
             "Name": "delegations",
             "TypeName": "Delegations<Balance>",
-            "TypeId": 638
+            "TypeId": 640
           },
           {
             "Name": "prior",
             "TypeName": "PriorLock<BlockNumber, Balance>",
-            "TypeId": 639
+            "TypeId": 641
           }
         ],
         "Path": [
@@ -30665,11 +30790,11 @@
         ],
         "TypeDef": "Composite"
       },
-      "641": {
+      "643": {
         "TypeFields": [
           {
             "TypeName": "Vec<T>",
-            "TypeId": 643
+            "TypeId": 645
           }
         ],
         "Path": [
@@ -30680,7 +30805,7 @@
         "TypeParams": [
           {
             "Name": "T",
-            "TypeId": 642
+            "TypeId": 644
           },
           {
             "Name": "S"
@@ -30688,18 +30813,18 @@
         ],
         "TypeDef": "Composite"
       },
-      "642": {
+      "644": {
         "TypeIds": [
           100,
           6
         ],
         "TypeDef": "Tuple"
       },
-      "643": {
-        "TypeId": 642,
+      "645": {
+        "TypeId": 644,
         "TypeDef": "Sequence"
       },
-      "644": {
+      "646": {
         "Variants": [
           {
             "Name": "NotOngoing",
@@ -30817,14 +30942,14 @@
           "The `Error` enum of this pallet."
         ]
       },
-      "645": {
+      "647": {
         "Variants": [
           {
             "Name": "Ongoing",
             "TypeFields": [
               {
                 "TypeName": "ReferendumStatus<TrackId, RuntimeOrigin, Moment, Call, Balance, Tally,\nAccountId, ScheduleAddress,>",
-                "TypeId": 646
+                "TypeId": 648
               }
             ],
             "Index": 0
@@ -30838,11 +30963,11 @@
               },
               {
                 "TypeName": "Option<Deposit<AccountId, Balance>>",
-                "TypeId": 648
+                "TypeId": 650
               },
               {
                 "TypeName": "Option<Deposit<AccountId, Balance>>",
-                "TypeId": 648
+                "TypeId": 650
               }
             ],
             "Index": 1
@@ -30856,11 +30981,11 @@
               },
               {
                 "TypeName": "Option<Deposit<AccountId, Balance>>",
-                "TypeId": 648
+                "TypeId": 650
               },
               {
                 "TypeName": "Option<Deposit<AccountId, Balance>>",
-                "TypeId": 648
+                "TypeId": 650
               }
             ],
             "Index": 2
@@ -30874,11 +30999,11 @@
               },
               {
                 "TypeName": "Option<Deposit<AccountId, Balance>>",
-                "TypeId": 648
+                "TypeId": 650
               },
               {
                 "TypeName": "Option<Deposit<AccountId, Balance>>",
-                "TypeId": 648
+                "TypeId": 650
               }
             ],
             "Index": 3
@@ -30892,11 +31017,11 @@
               },
               {
                 "TypeName": "Option<Deposit<AccountId, Balance>>",
-                "TypeId": 648
+                "TypeId": 650
               },
               {
                 "TypeName": "Option<Deposit<AccountId, Balance>>",
-                "TypeId": 648
+                "TypeId": 650
               }
             ],
             "Index": 4
@@ -30940,7 +31065,7 @@
           },
           {
             "Name": "Tally",
-            "TypeId": 480
+            "TypeId": 481
           },
           {
             "Name": "AccountId",
@@ -30953,7 +31078,7 @@
         ],
         "TypeDef": "Variant"
       },
-      "646": {
+      "648": {
         "TypeFields": [
           {
             "Name": "track",
@@ -30983,22 +31108,22 @@
           {
             "Name": "submission_deposit",
             "TypeName": "Deposit<AccountId, Balance>",
-            "TypeId": 647
+            "TypeId": 649
           },
           {
             "Name": "decision_deposit",
             "TypeName": "Option<Deposit<AccountId, Balance>>",
-            "TypeId": 648
+            "TypeId": 650
           },
           {
             "Name": "deciding",
             "TypeName": "Option<DecidingStatus<Moment>>",
-            "TypeId": 649
+            "TypeId": 651
           },
           {
             "Name": "tally",
             "TypeName": "Tally",
-            "TypeId": 480
+            "TypeId": 481
           },
           {
             "Name": "in_queue",
@@ -31008,7 +31133,7 @@
           {
             "Name": "alarm",
             "TypeName": "Option<(Moment, ScheduleAddress)>",
-            "TypeId": 651
+            "TypeId": 653
           }
         ],
         "Path": [
@@ -31039,7 +31164,7 @@
           },
           {
             "Name": "Tally",
-            "TypeId": 480
+            "TypeId": 481
           },
           {
             "Name": "AccountId",
@@ -31052,7 +31177,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "647": {
+      "649": {
         "TypeFields": [
           {
             "Name": "who",
@@ -31082,87 +31207,33 @@
         ],
         "TypeDef": "Composite"
       },
-      "648": {
-        "Variants": [
-          {
-            "Name": "None",
-            "TypeFields": null,
-            "Index": 0
-          },
-          {
-            "Name": "Some",
-            "TypeFields": [
-              {
-                "TypeId": 647
-              }
-            ],
-            "Index": 1
-          }
-        ],
-        "Path": [
-          "Option"
-        ],
-        "TypeParams": [
-          {
-            "Name": "T",
-            "TypeId": 647
-          }
-        ],
-        "TypeDef": "Variant"
-      },
-      "649": {
-        "Variants": [
-          {
-            "Name": "None",
-            "TypeFields": null,
-            "Index": 0
-          },
-          {
-            "Name": "Some",
-            "TypeFields": [
-              {
-                "TypeId": 650
-              }
-            ],
-            "Index": 1
-          }
-        ],
-        "Path": [
-          "Option"
-        ],
-        "TypeParams": [
-          {
-            "Name": "T",
-            "TypeId": 650
-          }
-        ],
-        "TypeDef": "Variant"
-      },
       "650": {
-        "TypeFields": [
+        "Variants": [
           {
-            "Name": "since",
-            "TypeName": "BlockNumber",
-            "TypeId": 4
+            "Name": "None",
+            "TypeFields": null,
+            "Index": 0
           },
           {
-            "Name": "confirming",
-            "TypeName": "Option<BlockNumber>",
-            "TypeId": 163
+            "Name": "Some",
+            "TypeFields": [
+              {
+                "TypeId": 649
+              }
+            ],
+            "Index": 1
           }
         ],
         "Path": [
-          "pallet_referenda",
-          "types",
-          "DecidingStatus"
+          "Option"
         ],
         "TypeParams": [
           {
-            "Name": "BlockNumber",
-            "TypeId": 4
+            "Name": "T",
+            "TypeId": 649
           }
         ],
-        "TypeDef": "Composite"
+        "TypeDef": "Variant"
       },
       "651": {
         "Variants": [
@@ -31193,17 +31264,71 @@
         "TypeDef": "Variant"
       },
       "652": {
+        "TypeFields": [
+          {
+            "Name": "since",
+            "TypeName": "BlockNumber",
+            "TypeId": 4
+          },
+          {
+            "Name": "confirming",
+            "TypeName": "Option<BlockNumber>",
+            "TypeId": 163
+          }
+        ],
+        "Path": [
+          "pallet_referenda",
+          "types",
+          "DecidingStatus"
+        ],
+        "TypeParams": [
+          {
+            "Name": "BlockNumber",
+            "TypeId": 4
+          }
+        ],
+        "TypeDef": "Composite"
+      },
+      "653": {
+        "Variants": [
+          {
+            "Name": "None",
+            "TypeFields": null,
+            "Index": 0
+          },
+          {
+            "Name": "Some",
+            "TypeFields": [
+              {
+                "TypeId": 654
+              }
+            ],
+            "Index": 1
+          }
+        ],
+        "Path": [
+          "Option"
+        ],
+        "TypeParams": [
+          {
+            "Name": "T",
+            "TypeId": 654
+          }
+        ],
+        "TypeDef": "Variant"
+      },
+      "654": {
         "TypeIds": [
           4,
           32
         ],
         "TypeDef": "Tuple"
       },
-      "653": {
+      "655": {
         "TypeFields": [
           {
             "TypeName": "Vec<T>",
-            "TypeId": 655
+            "TypeId": 657
           }
         ],
         "Path": [
@@ -31214,7 +31339,7 @@
         "TypeParams": [
           {
             "Name": "T",
-            "TypeId": 654
+            "TypeId": 656
           },
           {
             "Name": "S"
@@ -31222,34 +31347,34 @@
         ],
         "TypeDef": "Composite"
       },
-      "654": {
+      "656": {
         "TypeIds": [
           4,
           6
         ],
         "TypeDef": "Tuple"
       },
-      "655": {
-        "TypeId": 654,
-        "TypeDef": "Sequence"
-      },
-      "656": {
-        "TypeId": 657,
-        "TypeDef": "Sequence"
-      },
       "657": {
+        "TypeId": 656,
+        "TypeDef": "Sequence"
+      },
+      "658": {
+        "TypeId": 659,
+        "TypeDef": "Sequence"
+      },
+      "659": {
         "TypeIds": [
           100,
-          658
+          660
         ],
         "TypeDef": "Tuple"
       },
-      "658": {
+      "660": {
         "TypeFields": [
           {
             "Name": "name",
             "TypeName": "&'static str",
-            "TypeId": 525
+            "TypeId": 527
           },
           {
             "Name": "max_deciding",
@@ -31284,12 +31409,12 @@
           {
             "Name": "min_approval",
             "TypeName": "Curve",
-            "TypeId": 659
+            "TypeId": 661
           },
           {
             "Name": "min_support",
             "TypeName": "Curve",
-            "TypeId": 659
+            "TypeId": 661
           }
         ],
         "Path": [
@@ -31309,7 +31434,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "659": {
+      "661": {
         "Variants": [
           {
             "Name": "LinearDecreasing",
@@ -31364,17 +31489,17 @@
               {
                 "Name": "factor",
                 "TypeName": "FixedI64",
-                "TypeId": 660
+                "TypeId": 662
               },
               {
                 "Name": "x_offset",
                 "TypeName": "FixedI64",
-                "TypeId": 660
+                "TypeId": 662
               },
               {
                 "Name": "y_offset",
                 "TypeName": "FixedI64",
-                "TypeId": 660
+                "TypeId": 662
               }
             ],
             "Index": 2
@@ -31387,11 +31512,11 @@
         ],
         "TypeDef": "Variant"
       },
-      "660": {
+      "662": {
         "TypeFields": [
           {
             "TypeName": "i64",
-            "TypeId": 661
+            "TypeId": 663
           }
         ],
         "Path": [
@@ -31401,11 +31526,11 @@
         ],
         "TypeDef": "Composite"
       },
-      "661": {
+      "663": {
         "Primitive": "I64",
         "TypeDef": "Primitive"
       },
-      "662": {
+      "664": {
         "Variants": [
           {
             "Name": "NotOngoing",
@@ -31530,7 +31655,7 @@
           "The `Error` enum of this pallet."
         ]
       },
-      "663": {
+      "665": {
         "Variants": [
           {
             "Name": "UnavailablePreImage",
@@ -31588,7 +31713,7 @@
           "The `Error` enum of this pallet."
         ]
       },
-      "664": {
+      "666": {
         "Variants": [
           {
             "Name": "InvalidEthereumSignature",
@@ -31656,11 +31781,11 @@
           "The `Error` enum of this pallet."
         ]
       },
-      "665": {
+      "667": {
         "TypeFields": [
           {
             "TypeName": "Vec<T>",
-            "TypeId": 666
+            "TypeId": 668
           }
         ],
         "Path": [
@@ -31679,11 +31804,11 @@
         ],
         "TypeDef": "Composite"
       },
-      "666": {
+      "668": {
         "TypeId": 189,
         "TypeDef": "Sequence"
       },
-      "667": {
+      "669": {
         "Variants": [
           {
             "Name": "V0",
@@ -31702,7 +31827,7 @@
         ],
         "TypeDef": "Variant"
       },
-      "668": {
+      "670": {
         "Variants": [
           {
             "Name": "NotVesting",
@@ -31761,7 +31886,7 @@
           "Error for the vesting pallet."
         ]
       },
-      "669": {
+      "671": {
         "Variants": [
           {
             "Name": "TooManyCalls",
@@ -31787,19 +31912,19 @@
           "The `Error` enum of this pallet."
         ]
       },
-      "670": {
+      "672": {
         "TypeIds": [
-          671,
-          675
+          673,
+          677
         ],
         "TypeDef": "Tuple"
       },
-      "671": {
+      "673": {
         "TypeFields": [
           {
             "Name": "judgements",
             "TypeName": "BoundedVec<(RegistrarIndex, Judgement<Balance>), MaxJudgements>",
-            "TypeId": 672
+            "TypeId": 674
           },
           {
             "Name": "deposit",
@@ -31832,11 +31957,11 @@
         ],
         "TypeDef": "Composite"
       },
-      "672": {
+      "674": {
         "TypeFields": [
           {
             "TypeName": "Vec<T>",
-            "TypeId": 674
+            "TypeId": 676
           }
         ],
         "Path": [
@@ -31847,7 +31972,7 @@
         "TypeParams": [
           {
             "Name": "T",
-            "TypeId": 673
+            "TypeId": 675
           },
           {
             "Name": "S"
@@ -31855,18 +31980,18 @@
         ],
         "TypeDef": "Composite"
       },
-      "673": {
+      "675": {
         "TypeIds": [
           4,
           230
         ],
         "TypeDef": "Tuple"
       },
-      "674": {
-        "TypeId": 673,
+      "676": {
+        "TypeId": 675,
         "TypeDef": "Sequence"
       },
-      "675": {
+      "677": {
         "Variants": [
           {
             "Name": "None",
@@ -31894,14 +32019,14 @@
         ],
         "TypeDef": "Variant"
       },
-      "676": {
+      "678": {
         "TypeIds": [
           6,
-          677
+          679
         ],
         "TypeDef": "Tuple"
       },
-      "677": {
+      "679": {
         "TypeFields": [
           {
             "TypeName": "Vec<T>",
@@ -31924,11 +32049,11 @@
         ],
         "TypeDef": "Composite"
       },
-      "678": {
+      "680": {
         "TypeFields": [
           {
             "TypeName": "Vec<T>",
-            "TypeId": 681
+            "TypeId": 683
           }
         ],
         "Path": [
@@ -31939,7 +32064,7 @@
         "TypeParams": [
           {
             "Name": "T",
-            "TypeId": 679
+            "TypeId": 681
           },
           {
             "Name": "S"
@@ -31947,7 +32072,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "679": {
+      "681": {
         "Variants": [
           {
             "Name": "None",
@@ -31958,7 +32083,7 @@
             "Name": "Some",
             "TypeFields": [
               {
-                "TypeId": 680
+                "TypeId": 682
               }
             ],
             "Index": 1
@@ -31970,12 +32095,12 @@
         "TypeParams": [
           {
             "Name": "T",
-            "TypeId": 680
+            "TypeId": 682
           }
         ],
         "TypeDef": "Variant"
       },
-      "680": {
+      "682": {
         "TypeFields": [
           {
             "Name": "account",
@@ -32014,16 +32139,16 @@
         ],
         "TypeDef": "Composite"
       },
-      "681": {
-        "TypeId": 679,
+      "683": {
+        "TypeId": 681,
         "TypeDef": "Sequence"
       },
-      "682": {
+      "684": {
         "TypeFields": [
           {
             "Name": "suffix",
             "TypeName": "Suffix",
-            "TypeId": 683
+            "TypeId": 685
           },
           {
             "Name": "allocation",
@@ -32039,12 +32164,12 @@
         "TypeParams": [
           {
             "Name": "Suffix",
-            "TypeId": 683
+            "TypeId": 685
           }
         ],
         "TypeDef": "Composite"
       },
-      "683": {
+      "685": {
         "TypeFields": [
           {
             "TypeName": "Vec<T>",
@@ -32067,7 +32192,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "684": {
+      "686": {
         "Variants": [
           {
             "Name": "TooManySubAccounts",
@@ -32293,18 +32418,18 @@
           "The `Error` enum of this pallet."
         ]
       },
-      "685": {
+      "687": {
         "TypeIds": [
-          686,
+          688,
           6
         ],
         "TypeDef": "Tuple"
       },
-      "686": {
+      "688": {
         "TypeFields": [
           {
             "TypeName": "Vec<T>",
-            "TypeId": 688
+            "TypeId": 690
           }
         ],
         "Path": [
@@ -32315,7 +32440,7 @@
         "TypeParams": [
           {
             "Name": "T",
-            "TypeId": 687
+            "TypeId": 689
           },
           {
             "Name": "S"
@@ -32323,7 +32448,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "687": {
+      "689": {
         "TypeFields": [
           {
             "Name": "delegate",
@@ -32361,22 +32486,22 @@
         ],
         "TypeDef": "Composite"
       },
-      "688": {
-        "TypeId": 687,
+      "690": {
+        "TypeId": 689,
         "TypeDef": "Sequence"
       },
-      "689": {
+      "691": {
         "TypeIds": [
-          690,
+          692,
           6
         ],
         "TypeDef": "Tuple"
       },
-      "690": {
+      "692": {
         "TypeFields": [
           {
             "TypeName": "Vec<T>",
-            "TypeId": 692
+            "TypeId": 694
           }
         ],
         "Path": [
@@ -32387,7 +32512,7 @@
         "TypeParams": [
           {
             "Name": "T",
-            "TypeId": 691
+            "TypeId": 693
           },
           {
             "Name": "S"
@@ -32395,7 +32520,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "691": {
+      "693": {
         "TypeFields": [
           {
             "Name": "real",
@@ -32433,11 +32558,11 @@
         ],
         "TypeDef": "Composite"
       },
-      "692": {
-        "TypeId": 691,
+      "694": {
+        "TypeId": 693,
         "TypeDef": "Sequence"
       },
-      "693": {
+      "695": {
         "Variants": [
           {
             "Name": "TooMany",
@@ -32519,14 +32644,14 @@
           "The `Error` enum of this pallet."
         ]
       },
-      "694": {
+      "696": {
         "TypeIds": [
           0,
           1
         ],
         "TypeDef": "Tuple"
       },
-      "695": {
+      "697": {
         "TypeFields": [
           {
             "Name": "when",
@@ -32546,7 +32671,7 @@
           {
             "Name": "approvals",
             "TypeName": "BoundedVec<AccountId, MaxApprovals>",
-            "TypeId": 696
+            "TypeId": 698
           }
         ],
         "Path": [
@@ -32572,7 +32697,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "696": {
+      "698": {
         "TypeFields": [
           {
             "TypeName": "Vec<T>",
@@ -32595,7 +32720,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "697": {
+      "699": {
         "Variants": [
           {
             "Name": "MinimumThreshold",
@@ -32725,7 +32850,7 @@
           "The `Error` enum of this pallet."
         ]
       },
-      "698": {
+      "700": {
         "TypeFields": [
           {
             "Name": "proposer",
@@ -32755,7 +32880,7 @@
           {
             "Name": "status",
             "TypeName": "BountyStatus<AccountId, BlockNumber>",
-            "TypeId": 699
+            "TypeId": 701
           }
         ],
         "Path": [
@@ -32778,7 +32903,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "699": {
+      "701": {
         "Variants": [
           {
             "Name": "Proposed",
@@ -32860,7 +32985,7 @@
         ],
         "TypeDef": "Variant"
       },
-      "700": {
+      "702": {
         "TypeFields": [
           {
             "TypeName": "Vec<T>",
@@ -32883,7 +33008,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "701": {
+      "703": {
         "Variants": [
           {
             "Name": "InsufficientProposersBalance",
@@ -32993,7 +33118,7 @@
           "The `Error` enum of this pallet."
         ]
       },
-      "702": {
+      "704": {
         "TypeFields": [
           {
             "Name": "parent_bounty",
@@ -33018,7 +33143,7 @@
           {
             "Name": "status",
             "TypeName": "ChildBountyStatus<AccountId, BlockNumber>",
-            "TypeId": 703
+            "TypeId": 705
           }
         ],
         "Path": [
@@ -33041,7 +33166,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "703": {
+      "705": {
         "Variants": [
           {
             "Name": "Added",
@@ -33108,7 +33233,7 @@
         ],
         "TypeDef": "Variant"
       },
-      "704": {
+      "706": {
         "Variants": [
           {
             "Name": "ParentBountyNotActive",
@@ -33150,12 +33275,12 @@
           "The `Error` enum of this pallet."
         ]
       },
-      "705": {
+      "707": {
         "TypeFields": [
           {
             "Name": "supports",
             "TypeName": "BoundedSupports<AccountId, MaxWinners>",
-            "TypeId": 706
+            "TypeId": 708
           },
           {
             "Name": "score",
@@ -33165,7 +33290,7 @@
           {
             "Name": "compute",
             "TypeName": "ElectionCompute",
-            "TypeId": 495
+            "TypeId": 496
           }
         ],
         "Path": [
@@ -33182,7 +33307,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "706": {
+      "708": {
         "TypeFields": [
           {
             "TypeName": "Vec<T>",
@@ -33205,12 +33330,12 @@
         ],
         "TypeDef": "Composite"
       },
-      "707": {
+      "709": {
         "TypeFields": [
           {
             "Name": "voters",
             "TypeName": "Vec<DataProvider>",
-            "TypeId": 709
+            "TypeId": 711
           },
           {
             "Name": "targets",
@@ -33229,28 +33354,28 @@
           },
           {
             "Name": "DataProvider",
-            "TypeId": 708
+            "TypeId": 710
           }
         ],
         "TypeDef": "Composite"
       },
-      "708": {
+      "710": {
         "TypeIds": [
           0,
           11,
-          593
+          595
         ],
         "TypeDef": "Tuple"
       },
-      "709": {
-        "TypeId": 708,
+      "711": {
+        "TypeId": 710,
         "TypeDef": "Sequence"
       },
-      "710": {
+      "712": {
         "TypeFields": [
           {
             "TypeName": "Vec<T>",
-            "TypeId": 712
+            "TypeId": 714
           }
         ],
         "Path": [
@@ -33261,7 +33386,7 @@
         "TypeParams": [
           {
             "Name": "T",
-            "TypeId": 711
+            "TypeId": 713
           },
           {
             "Name": "S"
@@ -33269,7 +33394,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "711": {
+      "713": {
         "TypeIds": [
           297,
           4,
@@ -33277,11 +33402,11 @@
         ],
         "TypeDef": "Tuple"
       },
-      "712": {
-        "TypeId": 711,
+      "714": {
+        "TypeId": 713,
         "TypeDef": "Sequence"
       },
-      "713": {
+      "715": {
         "TypeFields": [
           {
             "Name": "who",
@@ -33325,7 +33450,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "714": {
+      "716": {
         "Variants": [
           {
             "Name": "PreDispatchEarlySubmission",
@@ -33463,7 +33588,7 @@
           "Error of the pallet that can be returned in response to dispatches."
         ]
       },
-      "715": {
+      "717": {
         "TypeFields": [
           {
             "Name": "id",
@@ -33506,7 +33631,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "716": {
+      "718": {
         "TypeFields": [
           {
             "Name": "head",
@@ -33534,18 +33659,18 @@
         ],
         "TypeDef": "Composite"
       },
-      "717": {
+      "719": {
         "TypeId": 11,
         "TypeDef": "Sequence"
       },
-      "718": {
+      "720": {
         "Variants": [
           {
             "Name": "List",
             "TypeFields": [
               {
                 "TypeName": "ListError",
-                "TypeId": 719
+                "TypeId": 721
               }
             ],
             "Index": 0,
@@ -33572,7 +33697,7 @@
           "The `Error` enum of this pallet."
         ]
       },
-      "719": {
+      "721": {
         "Variants": [
           {
             "Name": "Duplicate",
@@ -33602,7 +33727,7 @@
         ],
         "TypeDef": "Variant"
       },
-      "720": {
+      "722": {
         "TypeFields": [
           {
             "Name": "pool_id",
@@ -33622,7 +33747,7 @@
           {
             "Name": "unbonding_eras",
             "TypeName": "BoundedBTreeMap<EraIndex, BalanceOf<T>, T::MaxUnbonding>",
-            "TypeId": 721
+            "TypeId": 723
           }
         ],
         "Path": [
@@ -33636,11 +33761,11 @@
         ],
         "TypeDef": "Composite"
       },
-      "721": {
+      "723": {
         "TypeFields": [
           {
             "TypeName": "BTreeMap<K, V>",
-            "TypeId": 722
+            "TypeId": 724
           }
         ],
         "Path": [
@@ -33663,10 +33788,10 @@
         ],
         "TypeDef": "Composite"
       },
-      "722": {
+      "724": {
         "TypeFields": [
           {
-            "TypeId": 655
+            "TypeId": 657
           }
         ],
         "Path": [
@@ -33684,12 +33809,12 @@
         ],
         "TypeDef": "Composite"
       },
-      "723": {
+      "725": {
         "TypeFields": [
           {
             "Name": "commission",
             "TypeName": "Commission<T>",
-            "TypeId": 724
+            "TypeId": 726
           },
           {
             "Name": "member_counter",
@@ -33704,7 +33829,7 @@
           {
             "Name": "roles",
             "TypeName": "PoolRoles<T::AccountId>",
-            "TypeId": 727
+            "TypeId": 729
           },
           {
             "Name": "state",
@@ -33723,7 +33848,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "724": {
+      "726": {
         "TypeFields": [
           {
             "Name": "current",
@@ -33733,12 +33858,12 @@
           {
             "Name": "max",
             "TypeName": "Option<Perbill>",
-            "TypeId": 725
+            "TypeId": 727
           },
           {
             "Name": "change_rate",
             "TypeName": "Option<CommissionChangeRate<BlockNumberFor<T>>>",
-            "TypeId": 726
+            "TypeId": 728
           },
           {
             "Name": "throttle_from",
@@ -33762,7 +33887,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "725": {
+      "727": {
         "Variants": [
           {
             "Name": "None",
@@ -33790,7 +33915,7 @@
         ],
         "TypeDef": "Variant"
       },
-      "726": {
+      "728": {
         "Variants": [
           {
             "Name": "None",
@@ -33818,7 +33943,7 @@
         ],
         "TypeDef": "Variant"
       },
-      "727": {
+      "729": {
         "TypeFields": [
           {
             "Name": "depositor",
@@ -33853,7 +33978,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "728": {
+      "730": {
         "TypeFields": [
           {
             "Name": "last_recorded_reward_counter",
@@ -33892,17 +34017,17 @@
         ],
         "TypeDef": "Composite"
       },
-      "729": {
+      "731": {
         "TypeFields": [
           {
             "Name": "no_era",
             "TypeName": "UnbondPool<T>",
-            "TypeId": 730
+            "TypeId": 732
           },
           {
             "Name": "with_era",
             "TypeName": "BoundedBTreeMap<EraIndex, UnbondPool<T>, TotalUnbondingPools<T>>",
-            "TypeId": 731
+            "TypeId": 733
           }
         ],
         "Path": [
@@ -33916,7 +34041,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "730": {
+      "732": {
         "TypeFields": [
           {
             "Name": "points",
@@ -33940,11 +34065,11 @@
         ],
         "TypeDef": "Composite"
       },
-      "731": {
+      "733": {
         "TypeFields": [
           {
             "TypeName": "BTreeMap<K, V>",
-            "TypeId": 732
+            "TypeId": 734
           }
         ],
         "Path": [
@@ -33959,7 +34084,7 @@
           },
           {
             "Name": "V",
-            "TypeId": 730
+            "TypeId": 732
           },
           {
             "Name": "S"
@@ -33967,10 +34092,10 @@
         ],
         "TypeDef": "Composite"
       },
-      "732": {
+      "734": {
         "TypeFields": [
           {
-            "TypeId": 733
+            "TypeId": 735
           }
         ],
         "Path": [
@@ -33983,23 +34108,23 @@
           },
           {
             "Name": "V",
-            "TypeId": 730
+            "TypeId": 732
           }
         ],
         "TypeDef": "Composite"
       },
-      "733": {
-        "TypeId": 734,
+      "735": {
+        "TypeId": 736,
         "TypeDef": "Sequence"
       },
-      "734": {
+      "736": {
         "TypeIds": [
           4,
-          730
+          732
         ],
         "TypeDef": "Tuple"
       },
-      "735": {
+      "737": {
         "TypeFields": [
           {
             "TypeName": "Vec<T>",
@@ -34022,7 +34147,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "736": {
+      "738": {
         "Variants": [
           {
             "Name": "PoolNotFound",
@@ -34188,7 +34313,7 @@
             "TypeFields": [
               {
                 "TypeName": "DefensiveError",
-                "TypeId": 737
+                "TypeId": 739
               }
             ],
             "Index": 19,
@@ -34309,7 +34434,7 @@
           "The `Error` enum of this pallet."
         ]
       },
-      "737": {
+      "739": {
         "Variants": [
           {
             "Name": "NotEnoughSpaceInUnbondPool",
@@ -34344,17 +34469,17 @@
         ],
         "TypeDef": "Variant"
       },
-      "738": {
+      "740": {
         "TypeFields": [
           {
             "Name": "stashes",
             "TypeName": "BoundedVec<(T::AccountId, BalanceOf<T>), T::BatchSize>",
-            "TypeId": 739
+            "TypeId": 741
           },
           {
             "Name": "checked",
             "TypeName": "BoundedVec<EraIndex, MaxChecking<T>>",
-            "TypeId": 740
+            "TypeId": 742
           }
         ],
         "Path": [
@@ -34369,7 +34494,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "739": {
+      "741": {
         "TypeFields": [
           {
             "TypeName": "Vec<T>",
@@ -34392,7 +34517,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "740": {
+      "742": {
         "TypeFields": [
           {
             "TypeName": "Vec<T>",
@@ -34415,7 +34540,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "741": {
+      "743": {
         "Variants": [
           {
             "Name": "NotController",
@@ -34483,7 +34608,7 @@
           "The `Error` enum of this pallet."
         ]
       },
-      "742": {
+      "744": {
         "TypeFields": [
           {
             "Name": "max_code_size",
@@ -34724,18 +34849,18 @@
         ],
         "TypeDef": "Composite"
       },
-      "743": {
-        "TypeId": 744,
+      "745": {
+        "TypeId": 746,
         "TypeDef": "Sequence"
       },
-      "744": {
+      "746": {
         "TypeIds": [
           4,
-          742
+          744
         ],
         "TypeDef": "Tuple"
       },
-      "745": {
+      "747": {
         "Variants": [
           {
             "Name": "InvalidNewValue",
@@ -34762,20 +34887,20 @@
           "The `Error` enum of this pallet."
         ]
       },
-      "746": {
+      "748": {
         "TypeId": 337,
         "TypeDef": "Sequence"
       },
-      "747": {
+      "749": {
         "TypeId": 144,
         "TypeDef": "Sequence"
       },
-      "748": {
+      "750": {
         "TypeFields": [
           {
             "Name": "buffer",
             "TypeName": "VecDeque<(Hash, Hash)>",
-            "TypeId": 749
+            "TypeId": 751
           },
           {
             "Name": "latest_number",
@@ -34800,18 +34925,18 @@
         ],
         "TypeDef": "Composite"
       },
-      "749": {
-        "TypeId": 750,
+      "751": {
+        "TypeId": 752,
         "TypeDef": "Sequence"
       },
-      "750": {
+      "752": {
         "TypeIds": [
           12,
           12
         ],
         "TypeDef": "Tuple"
       },
-      "751": {
+      "753": {
         "TypeFields": [
           {
             "Name": "bitfield",
@@ -34837,12 +34962,12 @@
         ],
         "TypeDef": "Composite"
       },
-      "752": {
+      "754": {
         "TypeFields": [
           {
             "Name": "core",
             "TypeName": "CoreIndex",
-            "TypeId": 503
+            "TypeId": 504
           },
           {
             "Name": "hash",
@@ -34877,7 +35002,7 @@
           {
             "Name": "backing_group",
             "TypeName": "GroupIndex",
-            "TypeId": 504
+            "TypeId": 505
           }
         ],
         "Path": [
@@ -34897,7 +35022,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "753": {
+      "755": {
         "Variants": [
           {
             "Name": "UnsortedOrDuplicateValidatorIndices",
@@ -35153,7 +35278,7 @@
           "The `Error` enum of this pallet."
         ]
       },
-      "754": {
+      "756": {
         "TypeFields": [
           {
             "Name": "session",
@@ -35163,7 +35288,7 @@
           {
             "Name": "backing_validators_per_candidate",
             "TypeName": "Vec<(CandidateReceipt<H>, Vec<(ValidatorIndex, ValidityAttestation)>)\n>",
-            "TypeId": 755
+            "TypeId": 757
           },
           {
             "Name": "disputes",
@@ -35184,29 +35309,29 @@
         ],
         "TypeDef": "Composite"
       },
-      "755": {
-        "TypeId": 756,
-        "TypeDef": "Sequence"
-      },
-      "756": {
-        "TypeIds": [
-          502,
-          757
-        ],
-        "TypeDef": "Tuple"
-      },
       "757": {
         "TypeId": 758,
         "TypeDef": "Sequence"
       },
       "758": {
         "TypeIds": [
+          503,
+          759
+        ],
+        "TypeDef": "Tuple"
+      },
+      "759": {
+        "TypeId": 760,
+        "TypeDef": "Sequence"
+      },
+      "760": {
+        "TypeIds": [
           337,
           355
         ],
         "TypeDef": "Tuple"
       },
-      "759": {
+      "761": {
         "Variants": [
           {
             "Name": "TooManyInclusionInherents",
@@ -35298,15 +35423,15 @@
           "The `Error` enum of this pallet."
         ]
       },
-      "760": {
-        "TypeId": 746,
-        "TypeDef": "Sequence"
-      },
-      "761": {
-        "TypeId": 762,
-        "TypeDef": "Sequence"
-      },
       "762": {
+        "TypeId": 748,
+        "TypeDef": "Sequence"
+      },
+      "763": {
+        "TypeId": 764,
+        "TypeDef": "Sequence"
+      },
+      "764": {
         "Variants": [
           {
             "Name": "Free",
@@ -35318,7 +35443,7 @@
             "TypeFields": [
               {
                 "TypeName": "ParasEntry<N>",
-                "TypeId": 763
+                "TypeId": 765
               }
             ],
             "Index": 1
@@ -35338,12 +35463,12 @@
         ],
         "TypeDef": "Variant"
       },
-      "763": {
+      "765": {
         "TypeFields": [
           {
             "Name": "assignment",
             "TypeName": "Assignment",
-            "TypeId": 764
+            "TypeId": 766
           },
           {
             "Name": "availability_timeouts",
@@ -35370,7 +35495,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "764": {
+      "766": {
         "Variants": [
           {
             "Name": "Pool",
@@ -35383,7 +35508,7 @@
               {
                 "Name": "core_index",
                 "TypeName": "CoreIndex",
-                "TypeId": 503
+                "TypeId": 504
               }
             ],
             "Index": 0
@@ -35407,10 +35532,10 @@
         ],
         "TypeDef": "Variant"
       },
-      "765": {
+      "767": {
         "TypeFields": [
           {
-            "TypeId": 767
+            "TypeId": 769
           }
         ],
         "Path": [
@@ -35419,31 +35544,31 @@
         "TypeParams": [
           {
             "Name": "K",
-            "TypeId": 503
+            "TypeId": 504
           },
           {
             "Name": "V",
-            "TypeId": 766
+            "TypeId": 768
           }
         ],
         "TypeDef": "Composite"
       },
-      "766": {
-        "TypeId": 763,
-        "TypeDef": "Sequence"
-      },
-      "767": {
-        "TypeId": 768,
-        "TypeDef": "Sequence"
-      },
       "768": {
+        "TypeId": 765,
+        "TypeDef": "Sequence"
+      },
+      "769": {
+        "TypeId": 770,
+        "TypeDef": "Sequence"
+      },
+      "770": {
         "TypeIds": [
-          503,
-          766
+          504,
+          768
         ],
         "TypeDef": "Tuple"
       },
-      "769": {
+      "771": {
         "TypeFields": [
           {
             "Name": "votes_accept",
@@ -35468,7 +35593,7 @@
           {
             "Name": "causes",
             "TypeName": "Vec<PvfCheckCause<BlockNumber>>",
-            "TypeId": 770
+            "TypeId": 772
           }
         ],
         "Path": [
@@ -35484,11 +35609,11 @@
         ],
         "TypeDef": "Composite"
       },
-      "770": {
-        "TypeId": 771,
+      "772": {
+        "TypeId": 773,
         "TypeDef": "Sequence"
       },
-      "771": {
+      "773": {
         "Variants": [
           {
             "Name": "Onboarding",
@@ -35516,7 +35641,7 @@
               {
                 "Name": "set_go_ahead",
                 "TypeName": "SetGoAhead",
-                "TypeId": 772
+                "TypeId": 774
               }
             ],
             "Index": 1
@@ -35535,7 +35660,7 @@
         ],
         "TypeDef": "Variant"
       },
-      "772": {
+      "774": {
         "Variants": [
           {
             "Name": "Yes",
@@ -35555,15 +35680,15 @@
         ],
         "TypeDef": "Variant"
       },
-      "773": {
+      "775": {
         "TypeId": 345,
         "TypeDef": "Sequence"
       },
-      "774": {
+      "776": {
         "TypeId": 174,
         "TypeDef": "Sequence"
       },
-      "775": {
+      "777": {
         "Variants": [
           {
             "Name": "Onboarding",
@@ -35608,19 +35733,19 @@
         ],
         "TypeDef": "Variant"
       },
-      "776": {
+      "778": {
         "TypeIds": [
           174,
           4
         ],
         "TypeDef": "Tuple"
       },
-      "777": {
+      "779": {
         "TypeFields": [
           {
             "Name": "upgrade_times",
             "TypeName": "Vec<ReplacementTimes<N>>",
-            "TypeId": 778
+            "TypeId": 780
           },
           {
             "Name": "last_pruned",
@@ -35641,11 +35766,11 @@
         ],
         "TypeDef": "Composite"
       },
-      "778": {
-        "TypeId": 779,
+      "780": {
+        "TypeId": 781,
         "TypeDef": "Sequence"
       },
-      "779": {
+      "781": {
         "TypeFields": [
           {
             "Name": "expected_at",
@@ -35671,11 +35796,11 @@
         ],
         "TypeDef": "Composite"
       },
-      "780": {
-        "TypeId": 776,
+      "782": {
+        "TypeId": 778,
         "TypeDef": "Sequence"
       },
-      "781": {
+      "783": {
         "Variants": [
           {
             "Name": "Abort",
@@ -35695,7 +35820,7 @@
         ],
         "TypeDef": "Variant"
       },
-      "782": {
+      "784": {
         "Variants": [
           {
             "Name": "Present",
@@ -35710,7 +35835,7 @@
         ],
         "TypeDef": "Variant"
       },
-      "783": {
+      "785": {
         "TypeFields": [
           {
             "Name": "genesis_head",
@@ -35735,7 +35860,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "784": {
+      "786": {
         "Variants": [
           {
             "Name": "NotRegistered",
@@ -35850,21 +35975,21 @@
           "The `Error` enum of this pallet."
         ]
       },
-      "785": {
-        "TypeId": 786,
+      "787": {
+        "TypeId": 788,
         "TypeDef": "Sequence"
       },
-      "786": {
+      "788": {
         "TypeFields": [
           {
             "Name": "validators",
             "TypeName": "Vec<ValidatorId>",
-            "TypeId": 747
+            "TypeId": 749
           },
           {
             "Name": "queued",
             "TypeName": "Vec<ValidatorId>",
-            "TypeId": 747
+            "TypeId": 749
           },
           {
             "Name": "session_index",
@@ -35879,11 +36004,11 @@
         ],
         "TypeDef": "Composite"
       },
-      "787": {
-        "TypeId": 788,
+      "789": {
+        "TypeId": 790,
         "TypeDef": "Sequence"
       },
-      "788": {
+      "790": {
         "TypeFields": [
           {
             "Name": "sent_at",
@@ -35908,7 +36033,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "789": {
+      "791": {
         "TypeFields": [
           {
             "Name": "confirmed",
@@ -35948,11 +36073,11 @@
         ],
         "TypeDef": "Composite"
       },
-      "790": {
+      "792": {
         "TypeId": 369,
         "TypeDef": "Sequence"
       },
-      "791": {
+      "793": {
         "TypeFields": [
           {
             "Name": "max_capacity",
@@ -36002,11 +36127,11 @@
         ],
         "TypeDef": "Composite"
       },
-      "792": {
-        "TypeId": 793,
+      "794": {
+        "TypeId": 795,
         "TypeDef": "Sequence"
       },
-      "793": {
+      "795": {
         "TypeFields": [
           {
             "Name": "sent_at",
@@ -36031,18 +36156,18 @@
         ],
         "TypeDef": "Composite"
       },
-      "794": {
-        "TypeId": 795,
+      "796": {
+        "TypeId": 797,
         "TypeDef": "Sequence"
       },
-      "795": {
+      "797": {
         "TypeIds": [
           4,
-          774
+          776
         ],
         "TypeDef": "Tuple"
       },
-      "796": {
+      "798": {
         "Variants": [
           {
             "Name": "OpenHrmpChannelToSelf",
@@ -36221,16 +36346,16 @@
           "The `Error` enum of this pallet."
         ]
       },
-      "797": {
+      "799": {
         "TypeId": 145,
         "TypeDef": "Sequence"
       },
-      "798": {
+      "800": {
         "TypeFields": [
           {
             "Name": "active_validator_indices",
             "TypeName": "Vec<ValidatorIndex>",
-            "TypeId": 746
+            "TypeId": 748
           },
           {
             "Name": "random_seed",
@@ -36245,22 +36370,22 @@
           {
             "Name": "validators",
             "TypeName": "IndexedVec<ValidatorIndex, ValidatorId>",
-            "TypeId": 799
+            "TypeId": 801
           },
           {
             "Name": "discovery_keys",
             "TypeName": "Vec<AuthorityDiscoveryId>",
-            "TypeId": 624
+            "TypeId": 626
           },
           {
             "Name": "assignment_keys",
             "TypeName": "Vec<AssignmentId>",
-            "TypeId": 797
+            "TypeId": 799
           },
           {
             "Name": "validator_groups",
             "TypeName": "IndexedVec<GroupIndex, Vec<ValidatorIndex>>",
-            "TypeId": 800
+            "TypeId": 802
           },
           {
             "Name": "n_cores",
@@ -36300,11 +36425,11 @@
         ],
         "TypeDef": "Composite"
       },
-      "799": {
+      "801": {
         "TypeFields": [
           {
             "TypeName": "Vec<V>",
-            "TypeId": 747
+            "TypeId": 749
           }
         ],
         "Path": [
@@ -36324,11 +36449,11 @@
         ],
         "TypeDef": "Composite"
       },
-      "800": {
+      "802": {
         "TypeFields": [
           {
             "TypeName": "Vec<V>",
-            "TypeId": 760
+            "TypeId": 762
           }
         ],
         "Path": [
@@ -36339,23 +36464,23 @@
         "TypeParams": [
           {
             "Name": "K",
-            "TypeId": 504
+            "TypeId": 505
           },
           {
             "Name": "V",
-            "TypeId": 746
+            "TypeId": 748
           }
         ],
         "TypeDef": "Composite"
       },
-      "801": {
+      "803": {
         "TypeIds": [
           4,
           358
         ],
         "TypeDef": "Tuple"
       },
-      "802": {
+      "804": {
         "TypeFields": [
           {
             "Name": "validators_for",
@@ -36391,10 +36516,10 @@
         ],
         "TypeDef": "Composite"
       },
-      "803": {
+      "805": {
         "TypeFields": [
           {
-            "TypeId": 746
+            "TypeId": 748
           }
         ],
         "Path": [
@@ -36408,7 +36533,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "804": {
+      "806": {
         "Variants": [
           {
             "Name": "DuplicateDisputeStatementSets",
@@ -36499,12 +36624,12 @@
           "The `Error` enum of this pallet."
         ]
       },
-      "805": {
+      "807": {
         "TypeFields": [
           {
             "Name": "keys",
             "TypeName": "BTreeMap<ValidatorIndex, ValidatorId>",
-            "TypeId": 806
+            "TypeId": 808
           },
           {
             "Name": "kind",
@@ -36520,10 +36645,10 @@
         ],
         "TypeDef": "Composite"
       },
-      "806": {
+      "808": {
         "TypeFields": [
           {
-            "TypeId": 807
+            "TypeId": 809
           }
         ],
         "Path": [
@@ -36541,18 +36666,18 @@
         ],
         "TypeDef": "Composite"
       },
-      "807": {
-        "TypeId": 808,
+      "809": {
+        "TypeId": 810,
         "TypeDef": "Sequence"
       },
-      "808": {
+      "810": {
         "TypeIds": [
           337,
           144
         ],
         "TypeDef": "Tuple"
       },
-      "809": {
+      "811": {
         "Variants": [
           {
             "Name": "InvalidKeyOwnershipProof",
@@ -36621,7 +36746,7 @@
           "The `Error` enum of this pallet."
         ]
       },
-      "810": {
+      "812": {
         "TypeFields": [
           {
             "Name": "manager",
@@ -36636,7 +36761,7 @@
           {
             "Name": "locked",
             "TypeName": "Option<bool>",
-            "TypeId": 811
+            "TypeId": 813
           }
         ],
         "Path": [
@@ -36656,7 +36781,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "811": {
+      "813": {
         "Variants": [
           {
             "Name": "None",
@@ -36684,7 +36809,7 @@
         ],
         "TypeDef": "Variant"
       },
-      "812": {
+      "814": {
         "Variants": [
           {
             "Name": "NotRegistered",
@@ -36817,11 +36942,11 @@
           "The `Error` enum of this pallet."
         ]
       },
-      "813": {
-        "TypeId": 544,
+      "815": {
+        "TypeId": 546,
         "TypeDef": "Sequence"
       },
-      "814": {
+      "816": {
         "Variants": [
           {
             "Name": "ParaNotOnboarding",
@@ -36856,19 +36981,19 @@
           "The `Error` enum of this pallet."
         ]
       },
-      "815": {
+      "817": {
         "TypeIds": [
           0,
           174
         ],
         "TypeDef": "Tuple"
       },
-      "816": {
+      "818": {
         "Length": 36,
-        "TypeId": 817,
+        "TypeId": 819,
         "TypeDef": "Array"
       },
-      "817": {
+      "819": {
         "Variants": [
           {
             "Name": "None",
@@ -36879,7 +37004,7 @@
             "Name": "Some",
             "TypeFields": [
               {
-                "TypeId": 818
+                "TypeId": 820
               }
             ],
             "Index": 1
@@ -36891,12 +37016,12 @@
         "TypeParams": [
           {
             "Name": "T",
-            "TypeId": 818
+            "TypeId": 820
           }
         ],
         "TypeDef": "Variant"
       },
-      "818": {
+      "820": {
         "TypeIds": [
           0,
           174,
@@ -36904,7 +37029,7 @@
         ],
         "TypeDef": "Tuple"
       },
-      "819": {
+      "821": {
         "Variants": [
           {
             "Name": "AuctionInProgress",
@@ -36979,7 +37104,7 @@
           "The `Error` enum of this pallet."
         ]
       },
-      "820": {
+      "822": {
         "TypeFields": [
           {
             "Name": "depositor",
@@ -37014,7 +37139,7 @@
           {
             "Name": "last_contribution",
             "TypeName": "LastContribution<BlockNumber>",
-            "TypeId": 821
+            "TypeId": 823
           },
           {
             "Name": "first_period",
@@ -37057,7 +37182,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "821": {
+      "823": {
         "Variants": [
           {
             "Name": "Never",
@@ -37098,7 +37223,7 @@
         ],
         "TypeDef": "Variant"
       },
-      "822": {
+      "824": {
         "Variants": [
           {
             "Name": "FirstPeriodInPast",
@@ -37302,7 +37427,7 @@
           "The `Error` enum of this pallet."
         ]
       },
-      "823": {
+      "825": {
         "Variants": [
           {
             "Name": "Pending",
@@ -37315,12 +37440,12 @@
               {
                 "Name": "maybe_match_querier",
                 "TypeName": "Option<VersionedLocation>",
-                "TypeId": 824
+                "TypeId": 826
               },
               {
                 "Name": "maybe_notify",
                 "TypeName": "Option<(u8, u8)>",
-                "TypeId": 825
+                "TypeId": 827
               },
               {
                 "Name": "timeout",
@@ -37352,7 +37477,7 @@
               {
                 "Name": "response",
                 "TypeName": "VersionedResponse",
-                "TypeId": 827
+                "TypeId": 829
               },
               {
                 "Name": "at",
@@ -37376,7 +37501,7 @@
         ],
         "TypeDef": "Variant"
       },
-      "824": {
+      "826": {
         "Variants": [
           {
             "Name": "None",
@@ -37404,7 +37529,7 @@
         ],
         "TypeDef": "Variant"
       },
-      "825": {
+      "827": {
         "Variants": [
           {
             "Name": "None",
@@ -37415,7 +37540,7 @@
             "Name": "Some",
             "TypeFields": [
               {
-                "TypeId": 826
+                "TypeId": 828
               }
             ],
             "Index": 1
@@ -37427,19 +37552,19 @@
         "TypeParams": [
           {
             "Name": "T",
-            "TypeId": 826
+            "TypeId": 828
           }
         ],
         "TypeDef": "Variant"
       },
-      "826": {
+      "828": {
         "TypeIds": [
           2,
           2
         ],
         "TypeDef": "Tuple"
       },
-      "827": {
+      "829": {
         "Variants": [
           {
             "Name": "V2",
@@ -37478,14 +37603,14 @@
         ],
         "TypeDef": "Variant"
       },
-      "828": {
+      "830": {
         "TypeIds": [
           4,
           90
         ],
         "TypeDef": "Tuple"
       },
-      "829": {
+      "831": {
         "TypeIds": [
           11,
           9,
@@ -37493,11 +37618,11 @@
         ],
         "TypeDef": "Tuple"
       },
-      "830": {
+      "832": {
         "TypeFields": [
           {
             "TypeName": "Vec<T>",
-            "TypeId": 832
+            "TypeId": 834
           }
         ],
         "Path": [
@@ -37508,7 +37633,7 @@
         "TypeParams": [
           {
             "Name": "T",
-            "TypeId": 831
+            "TypeId": 833
           },
           {
             "Name": "S"
@@ -37516,18 +37641,18 @@
         ],
         "TypeDef": "Composite"
       },
-      "831": {
+      "833": {
         "TypeIds": [
           90,
           4
         ],
         "TypeDef": "Tuple"
       },
-      "832": {
-        "TypeId": 831,
+      "834": {
+        "TypeId": 833,
         "TypeDef": "Sequence"
       },
-      "833": {
+      "835": {
         "Variants": [
           {
             "Name": "MigrateSupportedVersion",
@@ -37544,7 +37669,7 @@
             "TypeFields": [
               {
                 "TypeName": "Option<Vec<u8>>",
-                "TypeId": 834
+                "TypeId": 836
               }
             ],
             "Index": 2
@@ -37562,7 +37687,7 @@
         ],
         "TypeDef": "Variant"
       },
-      "834": {
+      "836": {
         "Variants": [
           {
             "Name": "None",
@@ -37590,7 +37715,7 @@
         ],
         "TypeDef": "Variant"
       },
-      "835": {
+      "837": {
         "TypeIds": [
           4,
           0,
@@ -37598,7 +37723,7 @@
         ],
         "TypeDef": "Tuple"
       },
-      "836": {
+      "838": {
         "TypeFields": [
           {
             "Name": "amount",
@@ -37618,7 +37743,7 @@
           {
             "Name": "consumers",
             "TypeName": "BoundedVec<(ConsumerIdentifier, u128), MaxConsumers>",
-            "TypeId": 837
+            "TypeId": 839
           }
         ],
         "Path": [
@@ -37637,11 +37762,11 @@
         ],
         "TypeDef": "Composite"
       },
-      "837": {
+      "839": {
         "TypeFields": [
           {
             "TypeName": "Vec<T>",
-            "TypeId": 839
+            "TypeId": 841
           }
         ],
         "Path": [
@@ -37652,7 +37777,7 @@
         "TypeParams": [
           {
             "Name": "T",
-            "TypeId": 838
+            "TypeId": 840
           },
           {
             "Name": "S"
@@ -37660,22 +37785,22 @@
         ],
         "TypeDef": "Composite"
       },
-      "838": {
+      "840": {
         "TypeIds": [
           35,
           6
         ],
         "TypeDef": "Tuple"
       },
-      "839": {
-        "TypeId": 838,
+      "841": {
+        "TypeId": 840,
         "TypeDef": "Sequence"
       },
-      "840": {
+      "842": {
         "TypeFields": [
           {
             "TypeName": "Vec<T>",
-            "TypeId": 842
+            "TypeId": 844
           }
         ],
         "Path": [
@@ -37686,7 +37811,7 @@
         "TypeParams": [
           {
             "Name": "T",
-            "TypeId": 841
+            "TypeId": 843
           },
           {
             "Name": "S"
@@ -37694,18 +37819,18 @@
         ],
         "TypeDef": "Composite"
       },
-      "841": {
+      "843": {
         "TypeIds": [
           6,
           90
         ],
         "TypeDef": "Tuple"
       },
-      "842": {
-        "TypeId": 841,
+      "844": {
+        "TypeId": 843,
         "TypeDef": "Sequence"
       },
-      "843": {
+      "845": {
         "Variants": [
           {
             "Name": "Unreachable",
@@ -37926,7 +38051,7 @@
           "The `Error` enum of this pallet."
         ]
       },
-      "844": {
+      "846": {
         "TypeFields": [
           {
             "Name": "begin",
@@ -37946,7 +38071,7 @@
           {
             "Name": "ready_neighbours",
             "TypeName": "Option<Neighbours<MessageOrigin>>",
-            "TypeId": 845
+            "TypeId": 847
           },
           {
             "Name": "message_count",
@@ -37971,7 +38096,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "845": {
+      "847": {
         "Variants": [
           {
             "Name": "None",
@@ -37982,7 +38107,7 @@
             "Name": "Some",
             "TypeFields": [
               {
-                "TypeId": 846
+                "TypeId": 848
               }
             ],
             "Index": 1
@@ -37994,12 +38119,12 @@
         "TypeParams": [
           {
             "Name": "T",
-            "TypeId": 846
+            "TypeId": 848
           }
         ],
         "TypeDef": "Variant"
       },
-      "846": {
+      "848": {
         "TypeFields": [
           {
             "Name": "prev",
@@ -38024,14 +38149,14 @@
         ],
         "TypeDef": "Composite"
       },
-      "847": {
+      "849": {
         "TypeIds": [
           466,
           4
         ],
         "TypeDef": "Tuple"
       },
-      "848": {
+      "850": {
         "TypeFields": [
           {
             "Name": "remaining",
@@ -38061,7 +38186,7 @@
           {
             "Name": "heap",
             "TypeName": "BoundedVec<u8, IntoU32<HeapSize, Size>>",
-            "TypeId": 849
+            "TypeId": 851
           }
         ],
         "Path": [
@@ -38079,7 +38204,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "849": {
+      "851": {
         "TypeFields": [
           {
             "TypeName": "Vec<T>",
@@ -38102,7 +38227,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "850": {
+      "852": {
         "Variants": [
           {
             "Name": "NotReapable",
@@ -38198,7 +38323,7 @@
           "The `Error` enum of this pallet."
         ]
       },
-      "851": {
+      "853": {
         "Variants": [
           {
             "Name": "UnknownAssetKind",
@@ -38232,11 +38357,11 @@
           "The `Error` enum of this pallet."
         ]
       },
-      "852": {
+      "854": {
         "TypeFields": [
           {
             "TypeName": "Vec<T>",
-            "TypeId": 853
+            "TypeId": 855
           }
         ],
         "Path": [
@@ -38255,11 +38380,11 @@
         ],
         "TypeDef": "Composite"
       },
-      "853": {
+      "855": {
         "TypeId": 147,
         "TypeDef": "Sequence"
       },
-      "854": {
+      "856": {
         "Variants": [
           {
             "Name": "InvalidKeyOwnershipProof",
@@ -38309,7 +38434,7 @@
           "The `Error` enum of this pallet."
         ]
       },
-      "855": {
+      "857": {
         "TypeFields": [
           {
             "Name": "id",
@@ -38340,7 +38465,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "856": {
+      "858": {
         "TypeFields": [
           {
             "TypeId": 13
@@ -38367,27 +38492,27 @@
           },
           {
             "Name": "Extra",
-            "TypeId": 857
+            "TypeId": 859
           }
         ],
         "TypeDef": "Composite"
       },
-      "857": {
+      "859": {
         "TypeIds": [
-          858,
-          859,
           860,
           861,
           862,
+          863,
           864,
-          865,
           866,
           867,
-          868
+          868,
+          869,
+          870
         ],
         "TypeDef": "Tuple"
       },
-      "858": {
+      "860": {
         "Path": [
           "frame_system",
           "extensions",
@@ -38401,7 +38526,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "859": {
+      "861": {
         "Path": [
           "frame_system",
           "extensions",
@@ -38415,7 +38540,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "860": {
+      "862": {
         "Path": [
           "frame_system",
           "extensions",
@@ -38429,7 +38554,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "861": {
+      "863": {
         "Path": [
           "frame_system",
           "extensions",
@@ -38443,11 +38568,11 @@
         ],
         "TypeDef": "Composite"
       },
-      "862": {
+      "864": {
         "TypeFields": [
           {
             "TypeName": "Era",
-            "TypeId": 863
+            "TypeId": 865
           }
         ],
         "Path": [
@@ -38463,7 +38588,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "863": {
+      "865": {
         "Variants": [
           {
             "Name": "Immortal",
@@ -40774,7 +40899,7 @@
         ],
         "TypeDef": "Variant"
       },
-      "864": {
+      "866": {
         "TypeFields": [
           {
             "TypeName": "T::Nonce",
@@ -40794,7 +40919,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "865": {
+      "867": {
         "Path": [
           "frame_system",
           "extensions",
@@ -40808,7 +40933,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "866": {
+      "868": {
         "TypeFields": [
           {
             "TypeName": "BalanceOf<T>",
@@ -40826,7 +40951,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "867": {
+      "869": {
         "Path": [
           "polkadot_runtime_common",
           "claims",
@@ -40839,12 +40964,12 @@
         ],
         "TypeDef": "Composite"
       },
-      "868": {
+      "870": {
         "TypeFields": [
           {
             "Name": "mode",
             "TypeName": "Mode",
-            "TypeId": 869
+            "TypeId": 871
           }
         ],
         "Path": [
@@ -40858,7 +40983,7 @@
         ],
         "TypeDef": "Composite"
       },
-      "869": {
+      "871": {
         "Variants": [
           {
             "Name": "Disabled",
@@ -40877,7 +41002,7 @@
         ],
         "TypeDef": "Variant"
       },
-      "870": {
+      "872": {
         "Path": [
           "polkadot_runtime",
           "Runtime"
@@ -41069,7 +41194,7 @@
                     "BlakeTwo128Concat"
                   ],
                   "Key": 12,
-                  "Value": 523
+                  "Value": 525
                 }
               },
               "Default": "AA==",
@@ -41091,7 +41216,7 @@
               "Modifier": "Optional",
               "StorageType": "Plain",
               "TypeMap": {
-                "Item1": 524,
+                "Item1": 526,
                 "Item2": null
               },
               "Default": "AA==",
@@ -41131,7 +41256,7 @@
               "Modifier": "Optional",
               "StorageType": "Plain",
               "TypeMap": {
-                "Item1": 522,
+                "Item1": 524,
                 "Item2": null
               },
               "Default": "AA==",
@@ -41144,7 +41269,7 @@
               "Modifier": "Optional",
               "StorageType": "Plain",
               "TypeMap": {
-                "Item1": 526,
+                "Item1": 528,
                 "Item2": null
               },
               "Default": "AA==",
@@ -41163,7 +41288,7 @@
         "Constants": [
           {
             "Name": "BlockWeights",
-            "TypeId": 527,
+            "TypeId": 529,
             "Value": "B7C96TYDAAsAIEqp0QET//////////8iLQ0eAAELuIRcj1gBE6NwPQrXo3C9AQsAmPc+XQET/////////78BAAAiLQ0eAAELuAyv+cwBE6NwPQrXo3D9AQsAIEqp0QET//////////8BBwCIUmp0EwAAAAAAAABAIi0NHgAAAAA=",
             "Docs": [
               " Block & extrinsics weights: base values and limits."
@@ -41171,7 +41296,7 @@
           },
           {
             "Name": "BlockLength",
-            "TypeId": 530,
+            "TypeId": 532,
             "Value": "AAA8AAAAUAAAAFAA",
             "Docs": [
               " The maximum length of a block (in bytes)."
@@ -41187,7 +41312,7 @@
           },
           {
             "Name": "DbWeight",
-            "TypeId": 532,
+            "TypeId": 534,
             "Value": "OMo4AQAAAACYqvkEAAAAAA==",
             "Docs": [
               " The weight of runtime database operations the runtime can invoke."
@@ -41195,8 +41320,8 @@
           },
           {
             "Name": "Version",
-            "TypeId": 533,
-            "Value": "IHBvbGthZG90PHBhcml0eS1wb2xrYWRvdAAAAAAVSg8AAAAAAEzfastomQdgmwQAAAA345f8fJH15AIAAABA/jrUAfiVmgYAAAAXprwNAGKuswEAAAAY71ijtnuncAEAAADSvJiX7tCPFQMAAAD3iyeL5T9FTAIAAACvLAKXoj5tPQoAAABJ6q8bVIoMsAMAAACR1d8YsNLPWAIAAAAqXpJGVTmeYAEAAADtmcWssl7t9QMAAADLyiXjnxQjhwIAAABoetRK038DwgEAAACrPAVyKR/riwEAAAC8nYmQT1uSPwEAAAA3yLsTUKmiqAQAAADz/xTVq1JwWQMAAAD7xXe510fv1gEAAAAaAAAAAQ==",
+            "TypeId": 535,
+            "Value": "IHBvbGthZG90PHBhcml0eS1wb2xrYWRvdAAAAAAXSg8AAAAAAEzfastomQdgmwQAAAA345f8fJH15AIAAABA/jrUAfiVmgYAAAAXprwNAGKuswEAAAAY71ijtnuncAEAAADSvJiX7tCPFQMAAAD3iyeL5T9FTAIAAACvLAKXoj5tPQoAAABJ6q8bVIoMsAMAAACR1d8YsNLPWAIAAAAqXpJGVTmeYAEAAADtmcWssl7t9QMAAADLyiXjnxQjhwIAAABoetRK038DwgEAAACrPAVyKR/riwEAAAC8nYmQT1uSPwEAAAA3yLsTUKmiqAQAAADz/xTVq1JwWQMAAAD7xXe510fv1gEAAAAaAAAAAQ==",
             "Docs": [
               " Get the chain's current version."
             ]
@@ -41215,7 +41340,7 @@
           }
         ],
         "Errors": {
-          "TypeId": 537
+          "TypeId": 539
         },
         "Index": 0
       },
@@ -41246,7 +41371,7 @@
                     "Twox64Concat"
                   ],
                   "Key": 4,
-                  "Value": 538
+                  "Value": 540
                 }
               },
               "Default": "AA==",
@@ -41307,7 +41432,7 @@
           }
         ],
         "Errors": {
-          "TypeId": 542
+          "TypeId": 544
         },
         "Index": 1
       },
@@ -41327,7 +41452,7 @@
                     "Identity"
                   ],
                   "Key": 12,
-                  "Value": 543
+                  "Value": 545
                 }
               },
               "Default": "AA==",
@@ -41346,7 +41471,7 @@
                     "Identity"
                   ],
                   "Key": 12,
-                  "Value": 545
+                  "Value": 547
                 }
               },
               "Default": "AA==",
@@ -41364,8 +41489,8 @@
                   "Hashers": [
                     "Identity"
                   ],
-                  "Key": 549,
-                  "Value": 550
+                  "Key": 551,
+                  "Value": 552
                 }
               },
               "Default": "AA==",
@@ -41381,7 +41506,7 @@
         },
         "Constants": [],
         "Errors": {
-          "TypeId": 551
+          "TypeId": 553
         },
         "Index": 10
       },
@@ -41408,7 +41533,7 @@
               "Modifier": "Default",
               "StorageType": "Plain",
               "TypeMap": {
-                "Item1": 552,
+                "Item1": 554,
                 "Item2": null
               },
               "Default": "AA==",
@@ -41496,7 +41621,7 @@
               "Modifier": "Default",
               "StorageType": "Plain",
               "TypeMap": {
-                "Item1": 552,
+                "Item1": 554,
                 "Item2": null
               },
               "Default": "AA==",
@@ -41536,7 +41661,7 @@
                     "Twox64Concat"
                   ],
                   "Key": 4,
-                  "Value": 555
+                  "Value": 557
                 }
               },
               "Default": "AA==",
@@ -41549,7 +41674,7 @@
               "Modifier": "Optional",
               "StorageType": "Plain",
               "TypeMap": {
-                "Item1": 557,
+                "Item1": 559,
                 "Item2": null
               },
               "Default": "AA==",
@@ -41613,7 +41738,7 @@
               "Modifier": "Optional",
               "StorageType": "Plain",
               "TypeMap": {
-                "Item1": 563,
+                "Item1": 565,
                 "Item2": null
               },
               "Default": "AA==",
@@ -41627,7 +41752,7 @@
               "Modifier": "Optional",
               "StorageType": "Plain",
               "TypeMap": {
-                "Item1": 563,
+                "Item1": 565,
                 "Item2": null
               },
               "Default": "AA==",
@@ -41641,7 +41766,7 @@
               "Modifier": "Default",
               "StorageType": "Plain",
               "TypeMap": {
-                "Item1": 564,
+                "Item1": 566,
                 "Item2": null
               },
               "Default": "AA==",
@@ -41703,7 +41828,7 @@
           }
         ],
         "Errors": {
-          "TypeId": 567
+          "TypeId": 569
         },
         "Index": 2
       },
@@ -41781,7 +41906,7 @@
                     "BlakeTwo128Concat"
                   ],
                   "Key": 4,
-                  "Value": 568
+                  "Value": 570
                 }
               },
               "Default": "AA==",
@@ -41808,7 +41933,7 @@
           }
         ],
         "Errors": {
-          "TypeId": 569
+          "TypeId": 571
         },
         "Index": 4
       },
@@ -41896,7 +42021,7 @@
                     "BlakeTwo128Concat"
                   ],
                   "Key": 0,
-                  "Value": 570
+                  "Value": 572
                 }
               },
               "Default": "AA==",
@@ -41916,7 +42041,7 @@
                     "BlakeTwo128Concat"
                   ],
                   "Key": 0,
-                  "Value": 574
+                  "Value": 576
                 }
               },
               "Default": "AA==",
@@ -41935,7 +42060,7 @@
                     "BlakeTwo128Concat"
                   ],
                   "Key": 0,
-                  "Value": 577
+                  "Value": 579
                 }
               },
               "Default": "AA==",
@@ -41954,7 +42079,7 @@
                     "BlakeTwo128Concat"
                   ],
                   "Key": 0,
-                  "Value": 583
+                  "Value": 585
                 }
               },
               "Default": "AA==",
@@ -42013,7 +42138,7 @@
           }
         ],
         "Errors": {
-          "TypeId": 588
+          "TypeId": 590
         },
         "Index": 5
       },
@@ -42038,7 +42163,7 @@
               "Modifier": "Default",
               "StorageType": "Plain",
               "TypeMap": {
-                "Item1": 589,
+                "Item1": 591,
                 "Item2": null
               },
               "Default": "AA==",
@@ -42241,7 +42366,7 @@
                     "BlakeTwo128Concat"
                   ],
                   "Key": 0,
-                  "Value": 590
+                  "Value": 592
                 }
               },
               "Default": "AA==",
@@ -42333,7 +42458,7 @@
                     "Twox64Concat"
                   ],
                   "Key": 0,
-                  "Value": 592
+                  "Value": 594
                 }
               },
               "Default": "AA==",
@@ -42408,7 +42533,7 @@
               "Modifier": "Optional",
               "StorageType": "Plain",
               "TypeMap": {
-                "Item1": 594,
+                "Item1": 596,
                 "Item2": null
               },
               "Default": "AA==",
@@ -42452,7 +42577,7 @@
                     "Twox64Concat",
                     "Twox64Concat"
                   ],
-                  "Key": 596,
+                  "Key": 598,
                   "Value": 60
                 }
               },
@@ -42479,8 +42604,8 @@
                     "Twox64Concat",
                     "Twox64Concat"
                   ],
-                  "Key": 596,
-                  "Value": 597
+                  "Key": 598,
+                  "Value": 599
                 }
               },
               "Default": "AA==",
@@ -42510,7 +42635,7 @@
                     "Twox64Concat",
                     "Twox64Concat"
                   ],
-                  "Key": 596,
+                  "Key": 598,
                   "Value": 60
                 }
               },
@@ -42546,8 +42671,8 @@
                     "Twox64Concat",
                     "Twox64Concat"
                   ],
-                  "Key": 598,
-                  "Value": 599
+                  "Key": 600,
+                  "Value": 601
                 }
               },
               "Default": "AA==",
@@ -42571,7 +42696,7 @@
                     "Twox64Concat",
                     "Twox64Concat"
                   ],
-                  "Key": 596,
+                  "Key": 598,
                   "Value": 130
                 }
               },
@@ -42596,7 +42721,7 @@
                     "Twox64Concat",
                     "Twox64Concat"
                   ],
-                  "Key": 596,
+                  "Key": 598,
                   "Value": 44
                 }
               },
@@ -42641,7 +42766,7 @@
                     "Twox64Concat"
                   ],
                   "Key": 4,
-                  "Value": 600
+                  "Value": 602
                 }
               },
               "Default": "AAAAAAA=",
@@ -42723,7 +42848,7 @@
                     "Twox64Concat"
                   ],
                   "Key": 4,
-                  "Value": 604
+                  "Value": 606
                 }
               },
               "Default": "AA==",
@@ -42736,7 +42861,7 @@
               "Modifier": "Default",
               "StorageType": "Plain",
               "TypeMap": {
-                "Item1": 523,
+                "Item1": 525,
                 "Item2": null
               },
               "Default": "AA==",
@@ -42758,8 +42883,8 @@
                     "Twox64Concat",
                     "Twox64Concat"
                   ],
-                  "Key": 596,
-                  "Value": 606
+                  "Key": 598,
+                  "Value": 608
                 }
               },
               "Default": "AA==",
@@ -42779,7 +42904,7 @@
                     "Twox64Concat",
                     "Twox64Concat"
                   ],
-                  "Key": 596,
+                  "Key": 598,
                   "Value": 6
                 }
               },
@@ -42799,7 +42924,7 @@
                     "Twox64Concat"
                   ],
                   "Key": 0,
-                  "Value": 607
+                  "Value": 609
                 }
               },
               "Default": "AA==",
@@ -42817,8 +42942,8 @@
                   "Hashers": [
                     "Twox64Concat"
                   ],
-                  "Key": 603,
-                  "Value": 608
+                  "Key": 605,
+                  "Value": 610
                 }
               },
               "Default": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=",
@@ -42847,7 +42972,7 @@
               "Modifier": "Default",
               "StorageType": "Plain",
               "TypeMap": {
-                "Item1": 609,
+                "Item1": 611,
                 "Item2": null
               },
               "Default": "AA==",
@@ -42978,7 +43103,7 @@
           }
         ],
         "Errors": {
-          "TypeId": 611
+          "TypeId": 613
         },
         "Index": 7
       },
@@ -42998,7 +43123,7 @@
                     "Twox64Concat"
                   ],
                   "Key": 12,
-                  "Value": 612
+                  "Value": 614
                 }
               },
               "Default": "AA==",
@@ -43017,7 +43142,7 @@
                     "Twox64Concat",
                     "Twox64Concat"
                   ],
-                  "Key": 613,
+                  "Key": 615,
                   "Value": 110
                 }
               },
@@ -43052,7 +43177,7 @@
                     "Twox64Concat"
                   ],
                   "Key": 4,
-                  "Value": 549
+                  "Value": 551
                 }
               },
               "Default": "AA==",
@@ -43131,7 +43256,7 @@
               "Modifier": "Default",
               "StorageType": "Plain",
               "TypeMap": {
-                "Item1": 614,
+                "Item1": 616,
                 "Item2": null
               },
               "Default": "AA==",
@@ -43186,7 +43311,7 @@
                   "Hashers": [
                     "Twox64Concat"
                   ],
-                  "Key": 616,
+                  "Key": 618,
                   "Value": 0
                 }
               },
@@ -43205,7 +43330,7 @@
         },
         "Constants": [],
         "Errors": {
-          "TypeId": 618
+          "TypeId": 620
         },
         "Index": 9
       },
@@ -43219,7 +43344,7 @@
               "Modifier": "Default",
               "StorageType": "Plain",
               "TypeMap": {
-                "Item1": 619,
+                "Item1": 621,
                 "Item2": null
               },
               "Default": "AA==",
@@ -43232,7 +43357,7 @@
               "Modifier": "Optional",
               "StorageType": "Plain",
               "TypeMap": {
-                "Item1": 620,
+                "Item1": 622,
                 "Item2": null
               },
               "Default": "AA==",
@@ -43313,7 +43438,7 @@
               "Modifier": "Default",
               "StorageType": "Plain",
               "TypeMap": {
-                "Item1": 621,
+                "Item1": 623,
                 "Item2": null
               },
               "Default": "AA==",
@@ -43361,7 +43486,7 @@
           }
         ],
         "Errors": {
-          "TypeId": 622
+          "TypeId": 624
         },
         "Index": 11
       },
@@ -43375,7 +43500,7 @@
               "Modifier": "Default",
               "StorageType": "Plain",
               "TypeMap": {
-                "Item1": 623,
+                "Item1": 625,
                 "Item2": null
               },
               "Default": "AA==",
@@ -43388,7 +43513,7 @@
               "Modifier": "Default",
               "StorageType": "Plain",
               "TypeMap": {
-                "Item1": 623,
+                "Item1": 625,
                 "Item2": null
               },
               "Default": "AA==",
@@ -43433,7 +43558,7 @@
                     "Twox64Concat"
                   ],
                   "Key": 4,
-                  "Value": 625
+                  "Value": 627
                 }
               },
               "Default": "AA==",
@@ -43459,7 +43584,7 @@
               "Modifier": "Default",
               "StorageType": "Plain",
               "TypeMap": {
-                "Item1": 626,
+                "Item1": 628,
                 "Item2": null
               },
               "Default": "AA==",
@@ -43491,7 +43616,7 @@
                     "Twox64Concat"
                   ],
                   "Key": 4,
-                  "Value": 627
+                  "Value": 629
                 }
               },
               "Default": "AA==",
@@ -43510,7 +43635,7 @@
         "Constants": [
           {
             "Name": "ProposalBond",
-            "TypeId": 629,
+            "TypeId": 631,
             "Value": "UMMAAA==",
             "Docs": [
               " Fraction of a proposal's value that should be bonded in order to place the proposal.",
@@ -43543,7 +43668,7 @@
           },
           {
             "Name": "Burn",
-            "TypeId": 629,
+            "TypeId": 631,
             "Value": "ECcAAA==",
             "Docs": [
               " Percentage of spare funds (if any) that are burnt per spend period."
@@ -43551,7 +43676,7 @@
           },
           {
             "Name": "PalletId",
-            "TypeId": 630,
+            "TypeId": 632,
             "Value": "cHkvdHJzcnk=",
             "Docs": [
               " The treasury's pallet id, used for deriving its sovereign account ID."
@@ -43577,7 +43702,7 @@
           }
         ],
         "Errors": {
-          "TypeId": 631
+          "TypeId": 633
         },
         "Index": 19
       },
@@ -43597,8 +43722,8 @@
                     "Twox64Concat",
                     "Twox64Concat"
                   ],
-                  "Key": 632,
-                  "Value": 633
+                  "Key": 634,
+                  "Value": 635
                 }
               },
               "Default": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
@@ -43618,7 +43743,7 @@
                     "Twox64Concat"
                   ],
                   "Key": 0,
-                  "Value": 641
+                  "Value": 643
                 }
               },
               "Default": "AA==",
@@ -43661,7 +43786,7 @@
           }
         ],
         "Errors": {
-          "TypeId": 644
+          "TypeId": 646
         },
         "Index": 20
       },
@@ -43694,7 +43819,7 @@
                     "BlakeTwo128Concat"
                   ],
                   "Key": 4,
-                  "Value": 645
+                  "Value": 647
                 }
               },
               "Default": "AA==",
@@ -43713,7 +43838,7 @@
                     "Twox64Concat"
                   ],
                   "Key": 100,
-                  "Value": 653
+                  "Value": 655
                 }
               },
               "Default": "AA==",
@@ -43813,7 +43938,7 @@
           },
           {
             "Name": "Tracks",
-            "TypeId": 656,
+            "TypeId": 658,
             "Value": "QAAAEHJvb3QBAAAAAIDGpH6NAwAAAAAAAAAAALAEAAAAJwYAQDgAAEA4AAACkNc+DQAAAABXQ94TAAAAAFRD3hMAAAAAAADKmjsAAAAAAGXNHQEASHdoaXRlbGlzdGVkX2NhbGxlcmQAAAAAQHoQ81oAAAAAAAAAAAAALAEAAAAnBgBkAAAAZAAAAALslyUQAAAAAHtXPBcAAAAAQjkvEgAAAAACDgCEAAAAAADW5h8BAAAAADlieQIAAAAAAgA8d2lzaF9mb3JfY2hhbmdlCgAAAACA9CDmtQAAAAAAAAAAAACwBAAAACcGAEA4AABkAAAAApDXPg0AAAAAV0PeEwAAAABUQ94TAAAAAAAAypo7AAAAAABlzR0KADRzdGFraW5nX2FkbWluCgAAAAAgPYh5LQAAAAAAAAAAAACwBAAAACcGAAgHAABkAAAAAMlDMCQAZc0dAMqaOwJdb3gAAAAAAOgu7QAAAAAAjGiJ//////8LACR0cmVhc3VyZXIKAAAAAKByThgJAAAAAAAAAAAAALAEAAAAJwYAwIkBAEA4AAACkNc+DQAAAABXQ94TAAAAAFRD3hMAAAAAAADKmjsAAAAAAGXNHQwALGxlYXNlX2FkbWluCgAAAAAgPYh5LQAAAAAAAAAAAACwBAAAACcGAAgHAABkAAAAAMlDMCQAZc0dAMqaOwJdb3gAAAAAAOgu7QAAAAAAjGiJ//////8NAEBmZWxsb3dzaGlwX2FkbWluCgAAAAAgPYh5LQAAAAAAAAAAAACwBAAAACcGAAgHAABkAAAAAMlDMCQAZc0dAMqaOwJdb3gAAAAAAOgu7QAAAAAAjGiJ//////8OADRnZW5lcmFsX2FkbWluCgAAAAAgPYh5LQAAAAAAAAAAAACwBAAAACcGAAgHAABkAAAAApDXPg0AAAAAV0PeEwAAAABUQ94TAAAAAAJZovQCAAAAAKMpawUAAAAALmtK/f////8PADRhdWN0aW9uX2FkbWluCgAAAAAgPYh5LQAAAAAAAAAAAACwBAAAACcGAAgHAABkAAAAApDXPg0AAAAAV0PeEwAAAABUQ94TAAAAAAJZovQCAAAAAKMpawUAAAAALmtK/f////8UAFByZWZlcmVuZHVtX2NhbmNlbGxlcugDAAAAQHoQ81oAAAAAAAAAAAAAsAQAAMCJAQAIBwAAZAAAAADJQzAkAGXNHQDKmjsCXW94AAAAAADoLu0AAAAAAIxoif//////FQBEcmVmZXJlbmR1bV9raWxsZXLoAwAAAEBjUr/GAQAAAAAAAAAAALAEAAAAJwYACAcAAGQAAAAAyUMwJABlzR0Aypo7Al1veAAAAAAA6C7tAAAAAACMaIn//////x4AMHNtYWxsX3RpcHBlcsgAAAAA5AtUAgAAAAAAAAAAAAAACgAAAMCJAQBkAAAACgAAAABJkUkVAGXNHQDKmjsC+boYAAAAAAAqTTEAAAAAAGtZ5///////HwAoYmlnX3RpcHBlcmQAAAAA6HZIFwAAAAAAAAAAAAAAZAAAAMCJAQBYAgAAZAAAAABJkUkVAGXNHQDKmjsCaU8/AAAAAAA1ln0AAAAAAOU0wf//////IAA0c21hbGxfc3BlbmRlcjIAAAAAEKXU6AAAAAAAAAAAAAAAYAkAAAAnBgCAcAAAQDgAAADJQzAkAGXNHQDKmjsCXW94AAAAAADoLu0AAAAAAIxoif//////IQA4bWVkaXVtX3NwZW5kZXIyAAAAACBKqdEBAAAAAAAAAAAAAGAJAAAAJwYAAOEAAEA4AAAAWwH2MABlzR0Aypo7AhFh2wAAAAAAv9GqAQAAAAAglyr//////yIALGJpZ19zcGVuZGVyMgAAAABAlFKjAwAAAAAAAAAAAABgCQAAACcGAMCJAQBAOAAAAADKmjsAZc0dAMqaOwJBPLABAAAAAHVdNAMAAAAARdFl/v////8=",
             "Docs": [
               " Information concerning the different referendum tracks."
@@ -43821,7 +43946,7 @@
           }
         ],
         "Errors": {
-          "TypeId": 662
+          "TypeId": 664
         },
         "Index": 21
       },
@@ -43862,11 +43987,11 @@
           "TypeId": 179
         },
         "Events": {
-          "TypeId": 481
+          "TypeId": 482
         },
         "Constants": [],
         "Errors": {
-          "TypeId": 663
+          "TypeId": 665
         },
         "Index": 23
       },
@@ -43969,7 +44094,7 @@
           "TypeId": 180
         },
         "Events": {
-          "TypeId": 486
+          "TypeId": 487
         },
         "Constants": [
           {
@@ -43980,7 +44105,7 @@
           }
         ],
         "Errors": {
-          "TypeId": 664
+          "TypeId": 666
         },
         "Index": 24
       },
@@ -44000,7 +44125,7 @@
                     "BlakeTwo128Concat"
                   ],
                   "Key": 0,
-                  "Value": 665
+                  "Value": 667
                 }
               },
               "Default": "AA==",
@@ -44013,7 +44138,7 @@
               "Modifier": "Default",
               "StorageType": "Plain",
               "TypeMap": {
-                "Item1": 667,
+                "Item1": 669,
                 "Item2": null
               },
               "Default": "AA==",
@@ -44029,7 +44154,7 @@
           "TypeId": 188
         },
         "Events": {
-          "TypeId": 487
+          "TypeId": 488
         },
         "Constants": [
           {
@@ -44048,7 +44173,7 @@
           }
         ],
         "Errors": {
-          "TypeId": 668
+          "TypeId": 670
         },
         "Index": 25
       },
@@ -44059,7 +44184,7 @@
           "TypeId": 190
         },
         "Events": {
-          "TypeId": 488
+          "TypeId": 489
         },
         "Constants": [
           {
@@ -44072,7 +44197,7 @@
           }
         ],
         "Errors": {
-          "TypeId": 669
+          "TypeId": 671
         },
         "Index": 26
       },
@@ -44092,7 +44217,7 @@
                     "Twox64Concat"
                   ],
                   "Key": 0,
-                  "Value": 670
+                  "Value": 672
                 }
               },
               "Default": "AA==",
@@ -44134,7 +44259,7 @@
                     "Twox64Concat"
                   ],
                   "Key": 0,
-                  "Value": 676
+                  "Value": 678
                 }
               },
               "Default": "AAAAAAAAAAAAAAAAAAAAAAA=",
@@ -44151,7 +44276,7 @@
               "Modifier": "Default",
               "StorageType": "Plain",
               "TypeMap": {
-                "Item1": 678,
+                "Item1": 680,
                 "Item2": null
               },
               "Default": "AA==",
@@ -44173,7 +44298,7 @@
                     "Twox64Concat"
                   ],
                   "Key": 0,
-                  "Value": 682
+                  "Value": 684
                 }
               },
               "Default": "AA==",
@@ -44215,7 +44340,7 @@
                     "BlakeTwo128Concat"
                   ],
                   "Key": 235,
-                  "Value": 603
+                  "Value": 605
                 }
               },
               "Default": "AA==",
@@ -44234,7 +44359,7 @@
           "TypeId": 192
         },
         "Events": {
-          "TypeId": 489
+          "TypeId": 490
         },
         "Constants": [
           {
@@ -44306,7 +44431,7 @@
           }
         ],
         "Errors": {
-          "TypeId": 684
+          "TypeId": 686
         },
         "Index": 28
       },
@@ -44326,7 +44451,7 @@
                     "Twox64Concat"
                   ],
                   "Key": 0,
-                  "Value": 685
+                  "Value": 687
                 }
               },
               "Default": "AAAAAAAAAAAAAAAAAAAAAAA=",
@@ -44346,7 +44471,7 @@
                     "Twox64Concat"
                   ],
                   "Key": 0,
-                  "Value": 689
+                  "Value": 691
                 }
               },
               "Default": "AAAAAAAAAAAAAAAAAAAAAAA=",
@@ -44360,7 +44485,7 @@
           "TypeId": 236
         },
         "Events": {
-          "TypeId": 490
+          "TypeId": 491
         },
         "Constants": [
           {
@@ -44426,7 +44551,7 @@
           }
         ],
         "Errors": {
-          "TypeId": 693
+          "TypeId": 695
         },
         "Index": 29
       },
@@ -44446,8 +44571,8 @@
                     "Twox64Concat",
                     "BlakeTwo128Concat"
                   ],
-                  "Key": 694,
-                  "Value": 695
+                  "Key": 696,
+                  "Value": 697
                 }
               },
               "Default": "AA==",
@@ -44461,7 +44586,7 @@
           "TypeId": 239
         },
         "Events": {
-          "TypeId": 491
+          "TypeId": 492
         },
         "Constants": [
           {
@@ -44497,7 +44622,7 @@
           }
         ],
         "Errors": {
-          "TypeId": 697
+          "TypeId": 699
         },
         "Index": 30
       },
@@ -44530,7 +44655,7 @@
                     "Twox64Concat"
                   ],
                   "Key": 4,
-                  "Value": 698
+                  "Value": 700
                 }
               },
               "Default": "AA==",
@@ -44549,7 +44674,7 @@
                     "Twox64Concat"
                   ],
                   "Key": 4,
-                  "Value": 700
+                  "Value": 702
                 }
               },
               "Default": "AA==",
@@ -44562,7 +44687,7 @@
               "Modifier": "Default",
               "StorageType": "Plain",
               "TypeMap": {
-                "Item1": 626,
+                "Item1": 628,
                 "Item2": null
               },
               "Default": "AA==",
@@ -44576,7 +44701,7 @@
           "TypeId": 242
         },
         "Events": {
-          "TypeId": 492
+          "TypeId": 493
         },
         "Constants": [
           {
@@ -44605,7 +44730,7 @@
           },
           {
             "Name": "CuratorDepositMultiplier",
-            "TypeId": 629,
+            "TypeId": 631,
             "Value": "IKEHAA==",
             "Docs": [
               " The curator deposit is calculated as a percentage of the curator fee.",
@@ -44658,7 +44783,7 @@
           }
         ],
         "Errors": {
-          "TypeId": 701
+          "TypeId": 703
         },
         "Index": 34
       },
@@ -44712,7 +44837,7 @@
                     "Twox64Concat"
                   ],
                   "Key": 32,
-                  "Value": 702
+                  "Value": 704
                 }
               },
               "Default": "AA==",
@@ -44731,7 +44856,7 @@
                     "Twox64Concat"
                   ],
                   "Key": 4,
-                  "Value": 700
+                  "Value": 702
                 }
               },
               "Default": "AA==",
@@ -44764,7 +44889,7 @@
           "TypeId": 243
         },
         "Events": {
-          "TypeId": 493
+          "TypeId": 494
         },
         "Constants": [
           {
@@ -44785,7 +44910,7 @@
           }
         ],
         "Errors": {
-          "TypeId": 704
+          "TypeId": 706
         },
         "Index": 38
       },
@@ -44817,7 +44942,7 @@
               "Modifier": "Default",
               "StorageType": "Plain",
               "TypeMap": {
-                "Item1": 496,
+                "Item1": 497,
                 "Item2": null
               },
               "Default": "AA==",
@@ -44830,7 +44955,7 @@
               "Modifier": "Optional",
               "StorageType": "Plain",
               "TypeMap": {
-                "Item1": 705,
+                "Item1": 707,
                 "Item2": null
               },
               "Default": "AA==",
@@ -44845,7 +44970,7 @@
               "Modifier": "Optional",
               "StorageType": "Plain",
               "TypeMap": {
-                "Item1": 707,
+                "Item1": 709,
                 "Item2": null
               },
               "Default": "AA==",
@@ -44914,7 +45039,7 @@
               "Modifier": "Default",
               "StorageType": "Plain",
               "TypeMap": {
-                "Item1": 710,
+                "Item1": 712,
                 "Item2": null
               },
               "Default": "AA==",
@@ -44938,7 +45063,7 @@
                     "Twox64Concat"
                   ],
                   "Key": 4,
-                  "Value": 713
+                  "Value": 715
                 }
               },
               "Default": "AA==",
@@ -44974,7 +45099,7 @@
           "TypeId": 244
         },
         "Events": {
-          "TypeId": 494
+          "TypeId": 495
         },
         "Constants": [
           {
@@ -45116,7 +45241,7 @@
           }
         ],
         "Errors": {
-          "TypeId": 714
+          "TypeId": 716
         },
         "Index": 36
       },
@@ -45136,7 +45261,7 @@
                     "Twox64Concat"
                   ],
                   "Key": 0,
-                  "Value": 715
+                  "Value": 717
                 }
               },
               "Default": "AA==",
@@ -45170,7 +45295,7 @@
                     "Twox64Concat"
                   ],
                   "Key": 11,
-                  "Value": 716
+                  "Value": 718
                 }
               },
               "Default": "AA==",
@@ -45186,12 +45311,12 @@
           "TypeId": 305
         },
         "Events": {
-          "TypeId": 498
+          "TypeId": 499
         },
         "Constants": [
           {
             "Name": "BagThresholds",
-            "TypeId": 717,
+            "TypeId": 719,
             "Value": "IQMA5AtUAgAAAPOegJcCAAAAqLGX4gIAAACUSS42AwAAACecOpMDAAAAA7zO+gMAAABCwBtuBAAAABtHde4EAAAAOF5VfQUAAABG3GAcBgAAAIk4bM0GAAAAtu6AkgcAAAD+fuNtCAAAAOgbGmIJAAAAsBn0cQoAAAAQNZKgCwAAAM/Jb/EMAAAAQRRtaA4AAADnm9oJEAAAAM7ohdoRAAAAKKnH3xMAAAC7cJMfFgAAAI5AiaAYAAAAgQoJahsAAAA2akiEHgAAAFvTavghAAAAgHyc0CUAAADJVTAYKgAAAL1jwdsuAAAAceBXKTQAAABokJIQOgAAAO3E1KJAAAAAaZN580cAAACP2AwYUAAAAEuviihZAAAAahamP2MAAAAJlRd7bgAAAHjF9Pt6AAAAYsgR54gAAABRv21lmAAAAASOq6SpAAAAVEaY17wAAACRysA20gAAABdfGAHqAAAAvRWyfAQBAABDNY/3IQEAALj8hMhCAQAAmWc8UGcBAAAH5E76jwEAALNBgz69AQAAAn8uou8BAACYg7y5JwIAABZNZSpmAgAAtJUTrKsCAAAtjoIL+QIAAKHmmCxPAwAAphYIDa8DAADMnTfHGQQAAKDVhJWQBAAAQufg1RQFAAACjNcNqAUAAA91Cu9LBgAA6o0uXAIHAADDy5luzQcAALHlcXyvCAAAqiuOH6sJAAC1wSA9wwoAACbQPQ77CwAAcMdZKVYNAADrrdqM2A4AAPeX26qGEAAAz/BEdmUSAAAfJmBxehQAAAmmEb7LFgAAHfvoL2AZAACUOjxgPxwAAIr+icRxHwAAztljxwAjAAADqSrk9iYAAP5y7sVfKwAANsnMaUgwAADa4zJFvzUAAAYqdHDUOwAAfJcy1plCAACEoyRoI0oAAFca1FmHUgAA5/ECYt5bAAANuHYDRGYAAK4EAd7WcQAAfZ6zCLl+AAAeBEp2EI0AADod8GQHnQAA4E+v2syuAABWefAvlcIAAJXDqqma2AAAlnwFJR7xAAAXembWZwwBACjLHx7IKgEA+igvdZhMAQDVfch0PHIBAH3Es/sinAEANlzedMfKAQCeuOFCs/4BAAwxrlR/OAIAX+EB6NV4AgBjc9p+dMACAFHRpg0uEAMAx+mkaO1oAwBhwJH3t8sDAL8nobewOQQAexSZlBu0BACFI+0iYTwFAGml1MUS1AUA7IyTTe98BgD1qpAb6DgHAIy+XdsmCggAApeM4RPzCAD64xRDXfYJAN3xLbr+FgsALrrcb0pYDAAMVRjE8r0NAPC7VDEVTA8ASY6Ga0YHEQCywVPen/QSACeKL7LOGRUAsjmfhCR9FwDhmecEqiUaALoT9aszGx0AJkeFzHhmIACIv4A/LREkAByYI/gdJigAzMQi1FCxLADwiIIFKMAxADZ8bX6JYTcAbpMp0wqmPQCMvGwTIqBEAABw8ypcZEwAtDuEaZkJVQCAtKvkUKleAKDNqXnbX2kATMJ/TMdMdQDQrA66NJOCAEg+DM89WpEAaMaOdGnNoQAoHm+lKx20AJipIyZ0f8gA8Jp0Y00w3wCAzfxLjXL4AJAUYC2akBQB8LQT2UXdMwEglzWWwbRWAVDc+66tfX0B4BGYuUeqqAEwx+4Wu7nYASBuSIaXOQ4CoPpLHXLHSQLAEXFwtRKMAoCKFkOm3tUCwPgjsaIEKAOAr1lwonaDA8BvLYf/QekDQJN/rI+SWgQAkQlxF7bYBEAP31shIGUFAEnBSURuAQYAjrym5WyvBgBZVoaFHHEHgGiqNKS3SAiAoeKeUrk4CQC9q+iA5EMKACpytCBMbQuA8cATM1y4DACgPMvc4ygOgLhimp4gww8A3laT0sqLEQBdf0yTI4gTABqH3zUEvhUAp85LhO8zGAABEPvqJPEaAIAq5dG1/R0AIqE0YJ1iIQBEIWvw2iklAAJh8YKPXikAZiDPhR4NLgCEEBlSUkMzAKDBj8qEEDkAJq0Uk8yFPwDQzSRmL7ZGAJzhmhzatk4AWMzCDF+fVwAgCnV4+4lhADC7u9bkk2wAYMun3J7deAC4O8BCW4uGALiGI2FkxZUA+PFf3JO4pgAgapHA1pa5ANjv4o/Al84AaCmb9S755f//////////",
             "Docs": [
               " The list of thresholds separating the various bags.",
@@ -45241,7 +45366,7 @@
           }
         ],
         "Errors": {
-          "TypeId": 718
+          "TypeId": 720
         },
         "Index": 37
       },
@@ -45367,7 +45492,7 @@
                     "Twox64Concat"
                   ],
                   "Key": 0,
-                  "Value": 720
+                  "Value": 722
                 }
               },
               "Default": "AA==",
@@ -45401,7 +45526,7 @@
                     "Twox64Concat"
                   ],
                   "Key": 4,
-                  "Value": 723
+                  "Value": 725
                 }
               },
               "Default": "AA==",
@@ -45433,7 +45558,7 @@
                     "Twox64Concat"
                   ],
                   "Key": 4,
-                  "Value": 728
+                  "Value": 730
                 }
               },
               "Default": "AA==",
@@ -45466,7 +45591,7 @@
                     "Twox64Concat"
                   ],
                   "Key": 4,
-                  "Value": 729
+                  "Value": 731
                 }
               },
               "Default": "AA==",
@@ -45499,7 +45624,7 @@
                     "Twox64Concat"
                   ],
                   "Key": 4,
-                  "Value": 735
+                  "Value": 737
                 }
               },
               "Default": "AA==",
@@ -45593,12 +45718,12 @@
           "TypeId": 306
         },
         "Events": {
-          "TypeId": 499
+          "TypeId": 500
         },
         "Constants": [
           {
             "Name": "PalletId",
-            "TypeId": 630,
+            "TypeId": 632,
             "Value": "cHkvbm9wbHM=",
             "Docs": [
               " The nomination pool's pallet id."
@@ -45633,7 +45758,7 @@
           }
         ],
         "Errors": {
-          "TypeId": 736
+          "TypeId": 738
         },
         "Index": 39
       },
@@ -45647,7 +45772,7 @@
               "Modifier": "Optional",
               "StorageType": "Plain",
               "TypeMap": {
-                "Item1": 738,
+                "Item1": 740,
                 "Item2": null
               },
               "Default": "AA==",
@@ -45717,7 +45842,7 @@
           "TypeId": 319
         },
         "Events": {
-          "TypeId": 500
+          "TypeId": 501
         },
         "Constants": [
           {
@@ -45731,7 +45856,7 @@
           }
         ],
         "Errors": {
-          "TypeId": 741
+          "TypeId": 743
         },
         "Index": 40
       },
@@ -45754,7 +45879,7 @@
               "Modifier": "Default",
               "StorageType": "Plain",
               "TypeMap": {
-                "Item1": 742,
+                "Item1": 744,
                 "Item2": null
               },
               "Default": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAECcAAICy5g6Aw8kBgJaYAAAAAAAAAAAAAAAAAAUAAAABAAAAAQAAAAEAAAAAAAYAAABkAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAgAAAAIAAAAAAQAAAA==",
@@ -45767,7 +45892,7 @@
               "Modifier": "Default",
               "StorageType": "Plain",
               "TypeMap": {
-                "Item1": 743,
+                "Item1": 745,
                 "Item2": null
               },
               "Default": "AA==",
@@ -45803,7 +45928,7 @@
         "Events": null,
         "Constants": [],
         "Errors": {
-          "TypeId": 745
+          "TypeId": 747
         },
         "Index": 51
       },
@@ -45830,7 +45955,7 @@
               "Modifier": "Default",
               "StorageType": "Plain",
               "TypeMap": {
-                "Item1": 746,
+                "Item1": 748,
                 "Item2": null
               },
               "Default": "AA==",
@@ -45844,7 +45969,7 @@
               "Modifier": "Default",
               "StorageType": "Plain",
               "TypeMap": {
-                "Item1": 747,
+                "Item1": 749,
                 "Item2": null
               },
               "Default": "AA==",
@@ -45858,7 +45983,7 @@
               "Modifier": "Default",
               "StorageType": "Plain",
               "TypeMap": {
-                "Item1": 748,
+                "Item1": 750,
                 "Item2": null
               },
               "Default": "AAAAAAA=",
@@ -45892,7 +46017,7 @@
                     "Twox64Concat"
                   ],
                   "Key": 337,
-                  "Value": 751
+                  "Value": 753
                 }
               },
               "Default": "AA==",
@@ -45911,7 +46036,7 @@
                     "Twox64Concat"
                   ],
                   "Key": 174,
-                  "Value": 752
+                  "Value": 754
                 }
               },
               "Default": "AA==",
@@ -45944,11 +46069,11 @@
           "TypeId": 329
         },
         "Events": {
-          "TypeId": 501
+          "TypeId": 502
         },
         "Constants": [],
         "Errors": {
-          "TypeId": 753
+          "TypeId": 755
         },
         "Index": 53
       },
@@ -45980,7 +46105,7 @@
               "Modifier": "Optional",
               "StorageType": "Plain",
               "TypeMap": {
-                "Item1": 754,
+                "Item1": 756,
                 "Item2": null
               },
               "Default": "AA==",
@@ -45996,7 +46121,7 @@
         "Events": null,
         "Constants": [],
         "Errors": {
-          "TypeId": 759
+          "TypeId": 761
         },
         "Index": 54
       },
@@ -46010,7 +46135,7 @@
               "Modifier": "Default",
               "StorageType": "Plain",
               "TypeMap": {
-                "Item1": 760,
+                "Item1": 762,
                 "Item2": null
               },
               "Default": "AA==",
@@ -46029,7 +46154,7 @@
               "Modifier": "Default",
               "StorageType": "Plain",
               "TypeMap": {
-                "Item1": 761,
+                "Item1": 763,
                 "Item2": null
               },
               "Default": "AA==",
@@ -46068,7 +46193,7 @@
               "Modifier": "Default",
               "StorageType": "Plain",
               "TypeMap": {
-                "Item1": 765,
+                "Item1": 767,
                 "Item2": null
               },
               "Default": "AA==",
@@ -46104,7 +46229,7 @@
                     "Twox64Concat"
                   ],
                   "Key": 345,
-                  "Value": 769
+                  "Value": 771
                 }
               },
               "Default": "AA==",
@@ -46120,7 +46245,7 @@
               "Modifier": "Default",
               "StorageType": "Plain",
               "TypeMap": {
-                "Item1": 773,
+                "Item1": 775,
                 "Item2": null
               },
               "Default": "AA==",
@@ -46133,7 +46258,7 @@
               "Modifier": "Default",
               "StorageType": "Plain",
               "TypeMap": {
-                "Item1": 774,
+                "Item1": 776,
                 "Item2": null
               },
               "Default": "AA==",
@@ -46155,7 +46280,7 @@
                     "Twox64Concat"
                   ],
                   "Key": 174,
-                  "Value": 775
+                  "Value": 777
                 }
               },
               "Default": "AA==",
@@ -46232,7 +46357,7 @@
                   "Hashers": [
                     "Twox64Concat"
                   ],
-                  "Key": 776,
+                  "Key": 778,
                   "Value": 345
                 }
               },
@@ -46255,7 +46380,7 @@
                     "Twox64Concat"
                   ],
                   "Key": 174,
-                  "Value": 777
+                  "Value": 779
                 }
               },
               "Default": "AAA=",
@@ -46270,7 +46395,7 @@
               "Modifier": "Default",
               "StorageType": "Plain",
               "TypeMap": {
-                "Item1": 780,
+                "Item1": 782,
                 "Item2": null
               },
               "Default": "AA==",
@@ -46336,7 +46461,7 @@
                     "Twox64Concat"
                   ],
                   "Key": 174,
-                  "Value": 781
+                  "Value": 783
                 }
               },
               "Default": "AA==",
@@ -46364,7 +46489,7 @@
                     "Twox64Concat"
                   ],
                   "Key": 174,
-                  "Value": 782
+                  "Value": 784
                 }
               },
               "Default": "AA==",
@@ -46385,7 +46510,7 @@
               "Modifier": "Default",
               "StorageType": "Plain",
               "TypeMap": {
-                "Item1": 780,
+                "Item1": 782,
                 "Item2": null
               },
               "Default": "AA==",
@@ -46400,7 +46525,7 @@
               "Modifier": "Default",
               "StorageType": "Plain",
               "TypeMap": {
-                "Item1": 780,
+                "Item1": 782,
                 "Item2": null
               },
               "Default": "AA==",
@@ -46422,7 +46547,7 @@
                     "Twox64Concat"
                   ],
                   "Key": 4,
-                  "Value": 774
+                  "Value": 776
                 }
               },
               "Default": "AA==",
@@ -46441,7 +46566,7 @@
                     "Twox64Concat"
                   ],
                   "Key": 174,
-                  "Value": 783
+                  "Value": 785
                 }
               },
               "Default": "AA==",
@@ -46499,7 +46624,7 @@
           "TypeId": 365
         },
         "Events": {
-          "TypeId": 505
+          "TypeId": 506
         },
         "Constants": [
           {
@@ -46510,7 +46635,7 @@
           }
         ],
         "Errors": {
-          "TypeId": 784
+          "TypeId": 786
         },
         "Index": 56
       },
@@ -46544,7 +46669,7 @@
               "Modifier": "Default",
               "StorageType": "Plain",
               "TypeMap": {
-                "Item1": 785,
+                "Item1": 787,
                 "Item2": null
               },
               "Default": "AA==",
@@ -46584,7 +46709,7 @@
                     "Twox64Concat"
                   ],
                   "Key": 174,
-                  "Value": 787
+                  "Value": 789
                 }
               },
               "Default": "AA==",
@@ -46660,7 +46785,7 @@
                     "Twox64Concat"
                   ],
                   "Key": 369,
-                  "Value": 789
+                  "Value": 791
                 }
               },
               "Default": "AA==",
@@ -46678,7 +46803,7 @@
               "Modifier": "Default",
               "StorageType": "Plain",
               "TypeMap": {
-                "Item1": 790,
+                "Item1": 792,
                 "Item2": null
               },
               "Default": "AA==",
@@ -46756,7 +46881,7 @@
               "Modifier": "Default",
               "StorageType": "Plain",
               "TypeMap": {
-                "Item1": 790,
+                "Item1": 792,
                 "Item2": null
               },
               "Default": "AA==",
@@ -46795,7 +46920,7 @@
                     "Twox64Concat"
                   ],
                   "Key": 369,
-                  "Value": 791
+                  "Value": 793
                 }
               },
               "Default": "AA==",
@@ -46816,7 +46941,7 @@
                     "Twox64Concat"
                   ],
                   "Key": 174,
-                  "Value": 774
+                  "Value": 776
                 }
               },
               "Default": "AA==",
@@ -46847,7 +46972,7 @@
                     "Twox64Concat"
                   ],
                   "Key": 174,
-                  "Value": 774
+                  "Value": 776
                 }
               },
               "Default": "AA==",
@@ -46864,7 +46989,7 @@
                     "Twox64Concat"
                   ],
                   "Key": 369,
-                  "Value": 792
+                  "Value": 794
                 }
               },
               "Default": "AA==",
@@ -46884,7 +47009,7 @@
                     "Twox64Concat"
                   ],
                   "Key": 174,
-                  "Value": 794
+                  "Value": 796
                 }
               },
               "Default": "AA==",
@@ -46903,11 +47028,11 @@
           "TypeId": 368
         },
         "Events": {
-          "TypeId": 506
+          "TypeId": 507
         },
         "Constants": [],
         "Errors": {
-          "TypeId": 796
+          "TypeId": 798
         },
         "Index": 60
       },
@@ -46921,7 +47046,7 @@
               "Modifier": "Default",
               "StorageType": "Plain",
               "TypeMap": {
-                "Item1": 797,
+                "Item1": 799,
                 "Item2": null
               },
               "Default": "AA==",
@@ -46955,7 +47080,7 @@
                     "Identity"
                   ],
                   "Key": 4,
-                  "Value": 798
+                  "Value": 800
                 }
               },
               "Default": "AA==",
@@ -47041,8 +47166,8 @@
                     "Twox64Concat",
                     "BlakeTwo128Concat"
                   ],
-                  "Key": 801,
-                  "Value": 802
+                  "Key": 803,
+                  "Value": 804
                 }
               },
               "Default": "AA==",
@@ -47061,8 +47186,8 @@
                     "Twox64Concat",
                     "BlakeTwo128Concat"
                   ],
-                  "Key": 801,
-                  "Value": 803
+                  "Key": 803,
+                  "Value": 805
                 }
               },
               "Default": "AA==",
@@ -47082,7 +47207,7 @@
                     "Twox64Concat",
                     "BlakeTwo128Concat"
                   ],
-                  "Key": 801,
+                  "Key": 803,
                   "Value": 4
                 }
               },
@@ -47114,11 +47239,11 @@
           "TypeId": 370
         },
         "Events": {
-          "TypeId": 507
+          "TypeId": 508
         },
         "Constants": [],
         "Errors": {
-          "TypeId": 804
+          "TypeId": 806
         },
         "Index": 62
       },
@@ -47138,8 +47263,8 @@
                     "Twox64Concat",
                     "BlakeTwo128Concat"
                   ],
-                  "Key": 801,
-                  "Value": 805
+                  "Key": 803,
+                  "Value": 807
                 }
               },
               "Default": "AA==",
@@ -47174,7 +47299,7 @@
         "Events": null,
         "Constants": [],
         "Errors": {
-          "TypeId": 809
+          "TypeId": 811
         },
         "Index": 63
       },
@@ -47222,7 +47347,7 @@
                     "Twox64Concat"
                   ],
                   "Key": 174,
-                  "Value": 810
+                  "Value": 812
                 }
               },
               "Default": "AA==",
@@ -47252,7 +47377,7 @@
           "TypeId": 375
         },
         "Events": {
-          "TypeId": 510
+          "TypeId": 511
         },
         "Constants": [
           {
@@ -47274,7 +47399,7 @@
           }
         ],
         "Errors": {
-          "TypeId": 812
+          "TypeId": 814
         },
         "Index": 70
       },
@@ -47294,7 +47419,7 @@
                     "Twox64Concat"
                   ],
                   "Key": 174,
-                  "Value": 813
+                  "Value": 815
                 }
               },
               "Default": "AA==",
@@ -47323,7 +47448,7 @@
           "TypeId": 376
         },
         "Events": {
-          "TypeId": 511
+          "TypeId": 512
         },
         "Constants": [
           {
@@ -47344,7 +47469,7 @@
           }
         ],
         "Errors": {
-          "TypeId": 814
+          "TypeId": 816
         },
         "Index": 71
       },
@@ -47393,7 +47518,7 @@
                   "Hashers": [
                     "Twox64Concat"
                   ],
-                  "Key": 815,
+                  "Key": 817,
                   "Value": 6
                 }
               },
@@ -47414,7 +47539,7 @@
                     "Twox64Concat"
                   ],
                   "Key": 4,
-                  "Value": 816
+                  "Value": 818
                 }
               },
               "Default": "AA==",
@@ -47430,7 +47555,7 @@
           "TypeId": 377
         },
         "Events": {
-          "TypeId": 512
+          "TypeId": 513
         },
         "Constants": [
           {
@@ -47465,7 +47590,7 @@
           }
         ],
         "Errors": {
-          "TypeId": 819
+          "TypeId": 821
         },
         "Index": 72
       },
@@ -47485,7 +47610,7 @@
                     "Twox64Concat"
                   ],
                   "Key": 174,
-                  "Value": 820
+                  "Value": 822
                 }
               },
               "Default": "AA==",
@@ -47498,7 +47623,7 @@
               "Modifier": "Default",
               "StorageType": "Plain",
               "TypeMap": {
-                "Item1": 774,
+                "Item1": 776,
                 "Item2": null
               },
               "Default": "AA==",
@@ -47539,12 +47664,12 @@
           "TypeId": 379
         },
         "Events": {
-          "TypeId": 513
+          "TypeId": 514
         },
         "Constants": [
           {
             "Name": "PalletId",
-            "TypeId": 630,
+            "TypeId": 632,
             "Value": "cHkvY2Z1bmQ=",
             "Docs": [
               " `PalletId` for the crowdloan pallet. An appropriate value could be",
@@ -47570,7 +47695,7 @@
           }
         ],
         "Errors": {
-          "TypeId": 822
+          "TypeId": 824
         },
         "Index": 73
       },
@@ -47631,7 +47756,7 @@
           "TypeId": 382
         },
         "Events": {
-          "TypeId": 514
+          "TypeId": 515
         },
         "Constants": [
           {
@@ -47664,7 +47789,7 @@
           }
         ],
         "Errors": {
-          "TypeId": 516
+          "TypeId": 517
         },
         "Index": 98
       },
@@ -47697,7 +47822,7 @@
                     "BlakeTwo128Concat"
                   ],
                   "Key": 11,
-                  "Value": 823
+                  "Value": 825
                 }
               },
               "Default": "AA==",
@@ -47752,7 +47877,7 @@
                     "Twox64Concat",
                     "BlakeTwo128Concat"
                   ],
-                  "Key": 828,
+                  "Key": 830,
                   "Value": 4
                 }
               },
@@ -47772,7 +47897,7 @@
                     "Twox64Concat",
                     "BlakeTwo128Concat"
                   ],
-                  "Key": 828,
+                  "Key": 830,
                   "Value": 11
                 }
               },
@@ -47792,8 +47917,8 @@
                     "Twox64Concat",
                     "BlakeTwo128Concat"
                   ],
-                  "Key": 828,
-                  "Value": 829
+                  "Key": 830,
+                  "Value": 831
                 }
               },
               "Default": "AA==",
@@ -47807,7 +47932,7 @@
               "Modifier": "Default",
               "StorageType": "Plain",
               "TypeMap": {
-                "Item1": 830,
+                "Item1": 832,
                 "Item2": null
               },
               "Default": "AA==",
@@ -47822,7 +47947,7 @@
               "Modifier": "Optional",
               "StorageType": "Plain",
               "TypeMap": {
-                "Item1": 833,
+                "Item1": 835,
                 "Item2": null
               },
               "Default": "AA==",
@@ -47842,8 +47967,8 @@
                     "BlakeTwo128Concat",
                     "BlakeTwo128Concat"
                   ],
-                  "Key": 835,
-                  "Value": 836
+                  "Key": 837,
+                  "Value": 838
                 }
               },
               "Default": "AA==",
@@ -47862,7 +47987,7 @@
                     "BlakeTwo128Concat"
                   ],
                   "Key": 0,
-                  "Value": 840
+                  "Value": 842
                 }
               },
               "Default": "AA==",
@@ -47889,11 +48014,11 @@
           "TypeId": 388
         },
         "Events": {
-          "TypeId": 517
+          "TypeId": 518
         },
         "Constants": [],
         "Errors": {
-          "TypeId": 843
+          "TypeId": 845
         },
         "Index": 99
       },
@@ -47913,7 +48038,7 @@
                     "Twox64Concat"
                   ],
                   "Key": 466,
-                  "Value": 844
+                  "Value": 846
                 }
               },
               "Default": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=",
@@ -47945,8 +48070,8 @@
                     "Twox64Concat",
                     "Twox64Concat"
                   ],
-                  "Key": 847,
-                  "Value": 848
+                  "Key": 849,
+                  "Value": 850
                 }
               },
               "Default": "AA==",
@@ -47960,7 +48085,7 @@
           "TypeId": 465
         },
         "Events": {
-          "TypeId": 519
+          "TypeId": 520
         },
         "Constants": [
           {
@@ -47987,7 +48112,7 @@
           },
           {
             "Name": "ServiceWeight",
-            "TypeId": 484,
+            "TypeId": 485,
             "Value": "AQcAoNshXRMzMzMzMzMzMw==",
             "Docs": [
               " The amount of weight (if any) which should be provided to the message queue for",
@@ -47999,7 +48124,7 @@
           }
         ],
         "Errors": {
-          "TypeId": 850
+          "TypeId": 852
         },
         "Index": 100
       },
@@ -48035,11 +48160,11 @@
           "TypeId": 468
         },
         "Events": {
-          "TypeId": 521
+          "TypeId": 522
         },
         "Constants": [],
         "Errors": {
-          "TypeId": 851
+          "TypeId": 853
         },
         "Index": 101
       },
@@ -48053,7 +48178,7 @@
               "Modifier": "Default",
               "StorageType": "Plain",
               "TypeMap": {
-                "Item1": 852,
+                "Item1": 854,
                 "Item2": null
               },
               "Default": "AA==",
@@ -48079,7 +48204,7 @@
               "Modifier": "Default",
               "StorageType": "Plain",
               "TypeMap": {
-                "Item1": 852,
+                "Item1": 854,
                 "Item2": null
               },
               "Default": "AA==",
@@ -48168,7 +48293,7 @@
           }
         ],
         "Errors": {
-          "TypeId": 854
+          "TypeId": 856
         },
         "Index": 200
       },
@@ -48243,7 +48368,7 @@
               "Modifier": "Default",
               "StorageType": "Plain",
               "TypeMap": {
-                "Item1": 855,
+                "Item1": 857,
                 "Item2": null
               },
               "Default": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=",
@@ -48256,7 +48381,7 @@
               "Modifier": "Default",
               "StorageType": "Plain",
               "TypeMap": {
-                "Item1": 855,
+                "Item1": 857,
                 "Item2": null
               },
               "Default": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=",
@@ -48273,64 +48398,77 @@
         "Constants": [],
         "Errors": null,
         "Index": 202
+      },
+      "248": {
+        "Name": "IdentityMigrator",
+        "Storage": null,
+        "Calls": {
+          "TypeId": 478
+        },
+        "Events": {
+          "TypeId": 523
+        },
+        "Constants": [],
+        "Errors": null,
+        "Index": 248
       }
     },
     "Extrinsic": {
-      "TypeId": 856,
+      "TypeId": 858,
       "Version": 4,
       "SignedExtensions": [
         {
           "SignedIdentifier": "CheckNonZeroSender",
-          "SignedExtType": 858,
+          "SignedExtType": 860,
           "AddSignedExtType": 35
         },
         {
           "SignedIdentifier": "CheckSpecVersion",
-          "SignedExtType": 859,
+          "SignedExtType": 861,
           "AddSignedExtType": 4
         },
         {
           "SignedIdentifier": "CheckTxVersion",
-          "SignedExtType": 860,
+          "SignedExtType": 862,
           "AddSignedExtType": 4
         },
         {
           "SignedIdentifier": "CheckGenesis",
-          "SignedExtType": 861,
+          "SignedExtType": 863,
           "AddSignedExtType": 12
         },
         {
           "SignedIdentifier": "CheckMortality",
-          "SignedExtType": 862,
+          "SignedExtType": 864,
           "AddSignedExtType": 12
         },
         {
           "SignedIdentifier": "CheckNonce",
-          "SignedExtType": 864,
-          "AddSignedExtType": 35
-        },
-        {
-          "SignedIdentifier": "CheckWeight",
-          "SignedExtType": 865,
-          "AddSignedExtType": 35
-        },
-        {
-          "SignedIdentifier": "ChargeTransactionPayment",
           "SignedExtType": 866,
           "AddSignedExtType": 35
         },
         {
-          "SignedIdentifier": "PrevalidateAttests",
+          "SignedIdentifier": "CheckWeight",
           "SignedExtType": 867,
           "AddSignedExtType": 35
         },
         {
-          "SignedIdentifier": "CheckMetadataHash",
+          "SignedIdentifier": "ChargeTransactionPayment",
           "SignedExtType": 868,
+          "AddSignedExtType": 35
+        },
+        {
+          "SignedIdentifier": "PrevalidateAttests",
+          "SignedExtType": 869,
+          "AddSignedExtType": 35
+        },
+        {
+          "SignedIdentifier": "CheckMetadataHash",
+          "SignedExtType": 870,
           "AddSignedExtType": 33
         }
       ]
     },
-    "TypeId": 870
+    "TypeId": 872
   }
 }

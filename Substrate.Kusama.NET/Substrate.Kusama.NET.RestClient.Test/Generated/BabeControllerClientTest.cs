@@ -81,14 +81,6 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
       {
          Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_babe.app.Public result;
          result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_babe.app.Public();
-         result.Value = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.sr25519.Public();
-         result.Value = this.GetTestValue6();
-         return result;
-      }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.sr25519.Public GetTestValue6()
-      {
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.sr25519.Public result;
-         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.sr25519.Public();
          result.Value = new Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr32U8();
          result.Value.Create(new Substrate.NetApi.Model.Types.Primitive.U8[] {
                   this.GetTestValueU8(),
@@ -154,7 +146,7 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_slots.Slot GetTestValue8()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_slots.Slot GetTestValue7()
       {
          Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_slots.Slot result;
          result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_slots.Slot();
@@ -172,7 +164,7 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          BabeControllerClient rpcClient = new BabeControllerClient(_httpClient, subscriptionClient);
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_slots.Slot mockupValue = this.GetTestValue8();
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_slots.Slot mockupValue = this.GetTestValue7();
 
 
          Assert.IsTrue(await rpcClient.SubscribeGenesisSlot());
@@ -190,7 +182,7 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_slots.Slot GetTestValue10()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_slots.Slot GetTestValue9()
       {
          Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_slots.Slot result;
          result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_slots.Slot();
@@ -208,7 +200,7 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          BabeControllerClient rpcClient = new BabeControllerClient(_httpClient, subscriptionClient);
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_slots.Slot mockupValue = this.GetTestValue10();
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_slots.Slot mockupValue = this.GetTestValue9();
 
 
          Assert.IsTrue(await rpcClient.SubscribeCurrentSlot());
@@ -226,7 +218,7 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr32U8 GetTestValue12()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr32U8 GetTestValue11()
       {
          Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr32U8 result;
          result = new Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr32U8();
@@ -276,7 +268,7 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          BabeControllerClient rpcClient = new BabeControllerClient(_httpClient, subscriptionClient);
-         Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr32U8 mockupValue = this.GetTestValue12();
+         Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr32U8 mockupValue = this.GetTestValue11();
 
 
          Assert.IsTrue(await rpcClient.SubscribeRandomness());
@@ -294,11 +286,11 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_babe.digests.EnumNextConfigDescriptor GetTestValue14()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_babe.digests.EnumNextConfigDescriptor GetTestValue13()
       {
          Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_babe.digests.EnumNextConfigDescriptor result;
          result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_babe.digests.EnumNextConfigDescriptor();
-         result.Create(this.GetTestValueEnum<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_babe.digests.NextConfigDescriptor>(), this.GetTestValueBaseVoid());
+         // NOT IMPLEMENTED >> Initialize Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_babe.digests.EnumNextConfigDescriptor
          return result;
       }
       [Test()]
@@ -312,7 +304,7 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          BabeControllerClient rpcClient = new BabeControllerClient(_httpClient, subscriptionClient);
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_babe.digests.EnumNextConfigDescriptor mockupValue = this.GetTestValue14();
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_babe.digests.EnumNextConfigDescriptor mockupValue = this.GetTestValue13();
 
 
          Assert.IsTrue(await rpcClient.SubscribePendingEpochConfigChange());
@@ -330,7 +322,7 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr32U8 GetTestValue16()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr32U8 GetTestValue15()
       {
          Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr32U8 result;
          result = new Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr32U8();
@@ -380,7 +372,7 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          BabeControllerClient rpcClient = new BabeControllerClient(_httpClient, subscriptionClient);
-         Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr32U8 mockupValue = this.GetTestValue16();
+         Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr32U8 mockupValue = this.GetTestValue15();
 
 
          Assert.IsTrue(await rpcClient.SubscribeNextRandomness());
@@ -398,34 +390,26 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT2 GetTestValue18()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT2 GetTestValue17()
       {
          Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT2 result;
          result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT2();
          result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_babe.app.Public, Substrate.NetApi.Model.Types.Primitive.U64>>();
          result.Value.Create(new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_babe.app.Public, Substrate.NetApi.Model.Types.Primitive.U64>[] {
-                  this.GetTestValue19()});
+                  this.GetTestValue18()});
          return result;
       }
-      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_babe.app.Public, Substrate.NetApi.Model.Types.Primitive.U64> GetTestValue19()
+      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_babe.app.Public, Substrate.NetApi.Model.Types.Primitive.U64> GetTestValue18()
       {
          Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_babe.app.Public, Substrate.NetApi.Model.Types.Primitive.U64> result;
          result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_babe.app.Public, Substrate.NetApi.Model.Types.Primitive.U64>();
-         result.Create(this.GetTestValue20(), this.GetTestValueU64());
+         result.Create(this.GetTestValue19(), this.GetTestValueU64());
          return result;
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_babe.app.Public GetTestValue20()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_babe.app.Public GetTestValue19()
       {
          Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_babe.app.Public result;
          result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_babe.app.Public();
-         result.Value = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.sr25519.Public();
-         result.Value = this.GetTestValue21();
-         return result;
-      }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.sr25519.Public GetTestValue21()
-      {
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.sr25519.Public result;
-         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.sr25519.Public();
          result.Value = new Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr32U8();
          result.Value.Create(new Substrate.NetApi.Model.Types.Primitive.U8[] {
                   this.GetTestValueU8(),
@@ -473,7 +457,7 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          BabeControllerClient rpcClient = new BabeControllerClient(_httpClient, subscriptionClient);
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT2 mockupValue = this.GetTestValue18();
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT2 mockupValue = this.GetTestValue17();
 
 
          Assert.IsTrue(await rpcClient.SubscribeNextAuthorities());
@@ -520,16 +504,16 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT11 GetTestValue24()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT11 GetTestValue22()
       {
          Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT11 result;
          result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT11();
          result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr32U8>();
          result.Value.Create(new Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr32U8[] {
-                  this.GetTestValue25()});
+                  this.GetTestValue23()});
          return result;
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr32U8 GetTestValue25()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr32U8 GetTestValue23()
       {
          Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr32U8 result;
          result = new Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr32U8();
@@ -579,7 +563,7 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          BabeControllerClient rpcClient = new BabeControllerClient(_httpClient, subscriptionClient);
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT11 mockupValue = this.GetTestValue24();
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT11 mockupValue = this.GetTestValue22();
          Substrate.NetApi.Model.Types.Primitive.U32 mockupKey = this.GetTestValueU32();
 
          Assert.IsTrue(await rpcClient.SubscribeUnderConstruction(mockupKey));
@@ -597,18 +581,18 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_babe.digests.EnumPreDigest> GetTestValue27()
+      public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_babe.digests.EnumPreDigest> GetTestValue25()
       {
          Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_babe.digests.EnumPreDigest> result;
          result = new Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_babe.digests.EnumPreDigest>();
-         result.Create(this.GetTestValue28());
+         result.Create(this.GetTestValue26());
          return result;
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_babe.digests.EnumPreDigest GetTestValue28()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_babe.digests.EnumPreDigest GetTestValue26()
       {
          Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_babe.digests.EnumPreDigest result;
          result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_babe.digests.EnumPreDigest();
-         result.Create(this.GetTestValueEnum<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_babe.digests.PreDigest>(), this.GetTestValueBaseVoid());
+         // NOT IMPLEMENTED >> Initialize Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_babe.digests.EnumPreDigest
          return result;
       }
       [Test()]
@@ -622,7 +606,7 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          BabeControllerClient rpcClient = new BabeControllerClient(_httpClient, subscriptionClient);
-         Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_babe.digests.EnumPreDigest> mockupValue = this.GetTestValue27();
+         Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_babe.digests.EnumPreDigest> mockupValue = this.GetTestValue25();
 
 
          Assert.IsTrue(await rpcClient.SubscribeInitialized());
@@ -640,14 +624,14 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr32U8> GetTestValue30()
+      public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr32U8> GetTestValue28()
       {
          Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr32U8> result;
          result = new Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr32U8>();
-         result.Create(this.GetTestValue31());
+         result.Create(this.GetTestValue29());
          return result;
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr32U8 GetTestValue31()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr32U8 GetTestValue29()
       {
          Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr32U8 result;
          result = new Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr32U8();
@@ -697,7 +681,7 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          BabeControllerClient rpcClient = new BabeControllerClient(_httpClient, subscriptionClient);
-         Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr32U8> mockupValue = this.GetTestValue30();
+         Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr32U8> mockupValue = this.GetTestValue28();
 
 
          Assert.IsTrue(await rpcClient.SubscribeAuthorVrfRandomness());
@@ -715,7 +699,7 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32> GetTestValue33()
+      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32> GetTestValue31()
       {
          Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32> result;
          result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>();
@@ -733,7 +717,7 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          BabeControllerClient rpcClient = new BabeControllerClient(_httpClient, subscriptionClient);
-         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32> mockupValue = this.GetTestValue33();
+         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32> mockupValue = this.GetTestValue31();
 
 
          Assert.IsTrue(await rpcClient.SubscribeEpochStart());
@@ -780,7 +764,7 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_babe.BabeEpochConfiguration GetTestValue36()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_babe.BabeEpochConfiguration GetTestValue34()
       {
          Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_babe.BabeEpochConfiguration result;
          result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_babe.BabeEpochConfiguration();
@@ -801,7 +785,7 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          BabeControllerClient rpcClient = new BabeControllerClient(_httpClient, subscriptionClient);
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_babe.BabeEpochConfiguration mockupValue = this.GetTestValue36();
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_babe.BabeEpochConfiguration mockupValue = this.GetTestValue34();
 
 
          Assert.IsTrue(await rpcClient.SubscribeEpochConfig());
@@ -819,7 +803,7 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_babe.BabeEpochConfiguration GetTestValue38()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_babe.BabeEpochConfiguration GetTestValue36()
       {
          Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_babe.BabeEpochConfiguration result;
          result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_babe.BabeEpochConfiguration();
@@ -840,7 +824,7 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          BabeControllerClient rpcClient = new BabeControllerClient(_httpClient, subscriptionClient);
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_babe.BabeEpochConfiguration mockupValue = this.GetTestValue38();
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_babe.BabeEpochConfiguration mockupValue = this.GetTestValue36();
 
 
          Assert.IsTrue(await rpcClient.SubscribeNextEpochConfig());
@@ -858,16 +842,16 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT12 GetTestValue40()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT12 GetTestValue38()
       {
          Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT12 result;
          result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT12();
          result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U64, Substrate.NetApi.Model.Types.Primitive.U32>>();
          result.Value.Create(new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U64, Substrate.NetApi.Model.Types.Primitive.U32>[] {
-                  this.GetTestValue41()});
+                  this.GetTestValue39()});
          return result;
       }
-      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U64, Substrate.NetApi.Model.Types.Primitive.U32> GetTestValue41()
+      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U64, Substrate.NetApi.Model.Types.Primitive.U32> GetTestValue39()
       {
          Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U64, Substrate.NetApi.Model.Types.Primitive.U32> result;
          result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U64, Substrate.NetApi.Model.Types.Primitive.U32>();
@@ -885,7 +869,7 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          BabeControllerClient rpcClient = new BabeControllerClient(_httpClient, subscriptionClient);
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT12 mockupValue = this.GetTestValue40();
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT12 mockupValue = this.GetTestValue38();
 
 
          Assert.IsTrue(await rpcClient.SubscribeSkippedEpochs());

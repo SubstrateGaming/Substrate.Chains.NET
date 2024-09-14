@@ -75,10 +75,24 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_elections_phrag
     }
     
     /// <summary>
-    /// >> 44 - Variant[pallet_elections_phragmen.pallet.Event]
+    /// >> 47 - Variant[pallet_elections_phragmen.pallet.Event]
     /// The `Event` enum of this pallet
     /// </summary>
-    public sealed class EnumEvent : BaseEnumExt<Event, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U128>>, BaseVoid, BaseVoid, Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U128>, BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U128>>
+    public sealed class EnumEvent : BaseEnumRust<Event>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumEvent()
+        {
+				AddTypeDecoder<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U128>>>(Event.NewTerm);
+				AddTypeDecoder<BaseVoid>(Event.EmptyTerm);
+				AddTypeDecoder<BaseVoid>(Event.ElectionError);
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>(Event.MemberKicked);
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>(Event.Renounced);
+				AddTypeDecoder<BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U128>>(Event.CandidateSlashed);
+				AddTypeDecoder<BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U128>>(Event.SeatHolderSlashed);
+        }
     }
 }

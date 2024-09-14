@@ -38,9 +38,19 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_runtime
     }
     
     /// <summary>
-    /// >> 369 - Variant[sp_runtime.MultiSignature]
+    /// >> 367 - Variant[sp_runtime.MultiSignature]
     /// </summary>
-    public sealed class EnumMultiSignature : BaseEnumExt<MultiSignature, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.ed25519.Signature, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.sr25519.Signature, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.ecdsa.Signature>
+    public sealed class EnumMultiSignature : BaseEnumRust<MultiSignature>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumMultiSignature()
+        {
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr64U8>(MultiSignature.Ed25519);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr64U8>(MultiSignature.Sr25519);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr65U8>(MultiSignature.Ecdsa);
+        }
     }
 }

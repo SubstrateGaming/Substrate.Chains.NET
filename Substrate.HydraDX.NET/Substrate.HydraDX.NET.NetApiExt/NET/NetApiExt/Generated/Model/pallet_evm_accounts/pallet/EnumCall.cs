@@ -48,10 +48,21 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_evm_accounts.pa
     }
     
     /// <summary>
-    /// >> 364 - Variant[pallet_evm_accounts.pallet.Call]
+    /// >> 401 - Variant[pallet_evm_accounts.pallet.Call]
     /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
-    public sealed class EnumCall : BaseEnumExt<Call, BaseVoid, Substrate.HydraDX.NET.NetApiExt.Generated.Model.primitive_types.H160, Substrate.HydraDX.NET.NetApiExt.Generated.Model.primitive_types.H160, BaseVoid>
+    public sealed class EnumCall : BaseEnumRust<Call>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumCall()
+        {
+				AddTypeDecoder<BaseVoid>(Call.bind_evm_address);
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.primitive_types.H160>(Call.add_contract_deployer);
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.primitive_types.H160>(Call.remove_contract_deployer);
+				AddTypeDecoder<BaseVoid>(Call.renounce_contract_deployer);
+        }
     }
 }

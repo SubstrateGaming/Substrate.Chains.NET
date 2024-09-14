@@ -24,19 +24,19 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Clients
          _httpClient = httpClient;
          _subscriptionClient = subscriptionClient;
       }
-      public async Task<Schedule> GetCoreSchedules(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.CoreIndex> key)
+      public async Task<Schedule> GetCoreSchedules(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.CoreIndex> key)
       {
          return await SendRequestAsync<Schedule>(_httpClient, "coretimeassignmentprovider/coreschedules", Substrate.Kusama.NET.NetApiExt.Generated.Storage.CoretimeAssignmentProviderStorage.CoreSchedulesParams(key));
       }
-      public async Task<bool> SubscribeCoreSchedules(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.CoreIndex> key)
+      public async Task<bool> SubscribeCoreSchedules(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.CoreIndex> key)
       {
          return await _subscriptionClient.SubscribeAsync("CoretimeAssignmentProvider.CoreSchedules", Substrate.Kusama.NET.NetApiExt.Generated.Storage.CoretimeAssignmentProviderStorage.CoreSchedulesParams(key));
       }
-      public async Task<CoreDescriptor> GetCoreDescriptors(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.CoreIndex key)
+      public async Task<CoreDescriptor> GetCoreDescriptors(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.CoreIndex key)
       {
          return await SendRequestAsync<CoreDescriptor>(_httpClient, "coretimeassignmentprovider/coredescriptors", Substrate.Kusama.NET.NetApiExt.Generated.Storage.CoretimeAssignmentProviderStorage.CoreDescriptorsParams(key));
       }
-      public async Task<bool> SubscribeCoreDescriptors(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.CoreIndex key)
+      public async Task<bool> SubscribeCoreDescriptors(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.CoreIndex key)
       {
          return await _subscriptionClient.SubscribeAsync("CoretimeAssignmentProvider.CoreDescriptors", Substrate.Kusama.NET.NetApiExt.Generated.Storage.CoretimeAssignmentProviderStorage.CoreDescriptorsParams(key));
       }

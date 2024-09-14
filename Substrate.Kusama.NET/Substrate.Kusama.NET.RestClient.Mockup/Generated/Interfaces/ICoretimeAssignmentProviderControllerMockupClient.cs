@@ -15,7 +15,7 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Interfaces
    
    public interface ICoretimeAssignmentProviderControllerMockupClient
    {
-      Task<bool> SetCoreSchedules(Schedule value, Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.CoreIndex> key);
-      Task<bool> SetCoreDescriptors(CoreDescriptor value, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.CoreIndex key);
+      Task<bool> SetCoreSchedules(Schedule value, Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.CoreIndex> key);
+      Task<bool> SetCoreDescriptors(CoreDescriptor value, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.CoreIndex key);
    }
 }

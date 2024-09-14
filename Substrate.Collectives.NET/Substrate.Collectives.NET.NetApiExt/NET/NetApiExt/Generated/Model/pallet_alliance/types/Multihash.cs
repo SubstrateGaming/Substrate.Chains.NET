@@ -9,7 +9,7 @@
 
 using Substrate.NetApi.Attributes;
 using Substrate.NetApi.Model.Types.Base;
-using Substrate.NetApi.Model.Types.Metadata.V14;
+using Substrate.NetApi.Model.Types.Metadata.Base;
 using System.Collections.Generic;
 
 
@@ -18,7 +18,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_alliance.ty
     
     
     /// <summary>
-    /// >> 113 - Composite[pallet_alliance.types.Multihash]
+    /// >> 137 - Composite[pallet_alliance.types.Multihash]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Multihash : BaseType
@@ -27,42 +27,19 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_alliance.ty
         /// <summary>
         /// >> code
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U64 _code;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U64 Code { get; set; }
         /// <summary>
         /// >> digest
         /// </summary>
-        private Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT4 _digest;
+        public Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT4 Digest { get; set; }
         
-        public Substrate.NetApi.Model.Types.Primitive.U64 Code
-        {
-            get
-            {
-                return this._code;
-            }
-            set
-            {
-                this._code = value;
-            }
-        }
-        
-        public Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT4 Digest
-        {
-            get
-            {
-                return this._digest;
-            }
-            set
-            {
-                this._digest = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "Multihash";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -71,6 +48,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_alliance.ty
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
@@ -81,7 +59,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_alliance.ty
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];
-            System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
+            global::System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
         }
     }
 }

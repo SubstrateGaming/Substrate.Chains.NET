@@ -195,7 +195,48 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.bajun_runtime
     /// <summary>
     /// >> 21 - Variant[bajun_runtime.RuntimeEvent]
     /// </summary>
-    public sealed class EnumRuntimeEvent : BaseEnumExt<RuntimeEvent, Substrate.Bajun.NET.NetApiExt.Generated.Model.frame_system.pallet.EnumEvent, Substrate.Bajun.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.pallet.EnumEvent, BaseVoid, BaseVoid, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_multisig.pallet.EnumEvent, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_utility.pallet.EnumEvent, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_identity.pallet.EnumEvent, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_proxy.pallet.EnumEvent, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_scheduler.pallet.EnumEvent, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_preimage.pallet.EnumEvent, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_migrations.pallet.EnumEvent, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_balances.pallet.EnumEvent, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_transaction_payment.pallet.EnumEvent, Substrate.Bajun.NET.NetApiExt.Generated.Model.orml_vesting.module.EnumEvent, BaseVoid, BaseVoid, BaseVoid, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_collator_selection.pallet.EnumEvent, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_session.pallet.EnumEvent, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.Bajun.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue.pallet.EnumEvent, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_xcm.pallet.EnumEvent, Substrate.Bajun.NET.NetApiExt.Generated.Model.cumulus_pallet_xcm.pallet.EnumEvent, BaseVoid, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_message_queue.pallet.EnumEvent, Substrate.Bajun.NET.NetApiExt.Generated.Model.orml_xtokens.module.EnumEvent, Substrate.Bajun.NET.NetApiExt.Generated.Model.orml_xcm.module.EnumEvent, BaseVoid, BaseVoid, BaseVoid, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_sudo.pallet.EnumEvent, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_treasury.pallet.EnumEvent, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_collective.pallet.EnumEvent, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_membership.pallet.EnumEvent, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_collective.pallet.EnumEvent, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_membership.pallet.EnumEvent, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_democracy.pallet.EnumEvent, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.pallet.EnumEvent, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.pallet.EnumEvent, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_nft_transfer.pallet.EnumEvent, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_affiliates.pallet.EnumEvent, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_tournament.pallet.EnumEvent, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_assets.pallet.EnumEvent, Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_asset_registry.pallet.EnumEvent>
+    public sealed class EnumRuntimeEvent : BaseEnumRust<RuntimeEvent>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumRuntimeEvent()
+        {
+				AddTypeDecoder<Substrate.Bajun.NET.NetApiExt.Generated.Model.frame_system.pallet.EnumEvent>(RuntimeEvent.System);
+				AddTypeDecoder<Substrate.Bajun.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.pallet.EnumEvent>(RuntimeEvent.ParachainSystem);
+				AddTypeDecoder<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_multisig.pallet.EnumEvent>(RuntimeEvent.Multisig);
+				AddTypeDecoder<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_utility.pallet.EnumEvent>(RuntimeEvent.Utility);
+				AddTypeDecoder<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_identity.pallet.EnumEvent>(RuntimeEvent.Identity);
+				AddTypeDecoder<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_proxy.pallet.EnumEvent>(RuntimeEvent.Proxy);
+				AddTypeDecoder<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_scheduler.pallet.EnumEvent>(RuntimeEvent.Scheduler);
+				AddTypeDecoder<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_preimage.pallet.EnumEvent>(RuntimeEvent.Preimage);
+				AddTypeDecoder<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_migrations.pallet.EnumEvent>(RuntimeEvent.Migrations);
+				AddTypeDecoder<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_balances.pallet.EnumEvent>(RuntimeEvent.Balances);
+				AddTypeDecoder<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_transaction_payment.pallet.EnumEvent>(RuntimeEvent.TransactionPayment);
+				AddTypeDecoder<Substrate.Bajun.NET.NetApiExt.Generated.Model.orml_vesting.module.EnumEvent>(RuntimeEvent.Vesting);
+				AddTypeDecoder<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_collator_selection.pallet.EnumEvent>(RuntimeEvent.CollatorSelection);
+				AddTypeDecoder<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_session.pallet.EnumEvent>(RuntimeEvent.Session);
+				AddTypeDecoder<Substrate.Bajun.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue.pallet.EnumEvent>(RuntimeEvent.XcmpQueue);
+				AddTypeDecoder<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_xcm.pallet.EnumEvent>(RuntimeEvent.PolkadotXcm);
+				AddTypeDecoder<Substrate.Bajun.NET.NetApiExt.Generated.Model.cumulus_pallet_xcm.pallet.EnumEvent>(RuntimeEvent.CumulusXcm);
+				AddTypeDecoder<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_message_queue.pallet.EnumEvent>(RuntimeEvent.MessageQueue);
+				AddTypeDecoder<Substrate.Bajun.NET.NetApiExt.Generated.Model.orml_xtokens.module.EnumEvent>(RuntimeEvent.XTokens);
+				AddTypeDecoder<Substrate.Bajun.NET.NetApiExt.Generated.Model.orml_xcm.module.EnumEvent>(RuntimeEvent.OrmlXcm);
+				AddTypeDecoder<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_sudo.pallet.EnumEvent>(RuntimeEvent.Sudo);
+				AddTypeDecoder<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_treasury.pallet.EnumEvent>(RuntimeEvent.Treasury);
+				AddTypeDecoder<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_collective.pallet.EnumEvent>(RuntimeEvent.Council);
+				AddTypeDecoder<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_membership.pallet.EnumEvent>(RuntimeEvent.CouncilMembership);
+				AddTypeDecoder<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_collective.pallet.EnumEvent>(RuntimeEvent.TechnicalCommittee);
+				AddTypeDecoder<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_membership.pallet.EnumEvent>(RuntimeEvent.TechnicalCommitteeMembership);
+				AddTypeDecoder<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_democracy.pallet.EnumEvent>(RuntimeEvent.Democracy);
+				AddTypeDecoder<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.pallet.EnumEvent>(RuntimeEvent.AwesomeAvatars);
+				AddTypeDecoder<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_nfts.pallet.EnumEvent>(RuntimeEvent.Nft);
+				AddTypeDecoder<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_nft_transfer.pallet.EnumEvent>(RuntimeEvent.NftTransfer);
+				AddTypeDecoder<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_affiliates.pallet.EnumEvent>(RuntimeEvent.AffiliatesAAA);
+				AddTypeDecoder<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_tournament.pallet.EnumEvent>(RuntimeEvent.TournamentAAA);
+				AddTypeDecoder<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_assets.pallet.EnumEvent>(RuntimeEvent.Assets);
+				AddTypeDecoder<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_asset_registry.pallet.EnumEvent>(RuntimeEvent.AssetRegistry);
+        }
     }
 }

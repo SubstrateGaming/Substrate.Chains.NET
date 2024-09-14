@@ -15,27 +15,68 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_utility.pal
 {
     
     
+    /// <summary>
+    /// >> Call
+    /// Contains a variant per dispatchable extrinsic that this pallet has.
+    /// </summary>
     public enum Call
     {
         
+        /// <summary>
+        /// >> batch
+        /// See [`Pallet::batch`].
+        /// </summary>
         batch = 0,
         
+        /// <summary>
+        /// >> as_derivative
+        /// See [`Pallet::as_derivative`].
+        /// </summary>
         as_derivative = 1,
         
+        /// <summary>
+        /// >> batch_all
+        /// See [`Pallet::batch_all`].
+        /// </summary>
         batch_all = 2,
         
+        /// <summary>
+        /// >> dispatch_as
+        /// See [`Pallet::dispatch_as`].
+        /// </summary>
         dispatch_as = 3,
         
+        /// <summary>
+        /// >> force_batch
+        /// See [`Pallet::force_batch`].
+        /// </summary>
         force_batch = 4,
         
+        /// <summary>
+        /// >> with_weight
+        /// See [`Pallet::with_weight`].
+        /// </summary>
         with_weight = 5,
     }
     
     /// <summary>
-    /// >> 177 - Variant[pallet_utility.pallet.Call]
-    /// Contains one variant per dispatchable that can be called by an extrinsic.
+    /// >> 222 - Variant[pallet_utility.pallet.Call]
+    /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
-    public sealed class EnumCall : BaseEnumExt<Call, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Collectives.NET.NetApiExt.Generated.Model.collectives_polkadot_runtime.EnumRuntimeCall>, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U16, Substrate.Collectives.NET.NetApiExt.Generated.Model.collectives_polkadot_runtime.EnumRuntimeCall>, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Collectives.NET.NetApiExt.Generated.Model.collectives_polkadot_runtime.EnumRuntimeCall>, BaseTuple<Substrate.Collectives.NET.NetApiExt.Generated.Model.collectives_polkadot_runtime.EnumOriginCaller, Substrate.Collectives.NET.NetApiExt.Generated.Model.collectives_polkadot_runtime.EnumRuntimeCall>, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Collectives.NET.NetApiExt.Generated.Model.collectives_polkadot_runtime.EnumRuntimeCall>, BaseTuple<Substrate.Collectives.NET.NetApiExt.Generated.Model.collectives_polkadot_runtime.EnumRuntimeCall, Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>>
+    public sealed class EnumCall : BaseEnumRust<Call>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumCall()
+        {
+				AddTypeDecoder<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Collectives.NET.NetApiExt.Generated.Model.collectives_polkadot_runtime.EnumRuntimeCall>>(Call.batch);
+				AddTypeDecoder<BaseTuple<Substrate.NetApi.Model.Types.Primitive.U16, Substrate.Collectives.NET.NetApiExt.Generated.Model.collectives_polkadot_runtime.EnumRuntimeCall>>(Call.as_derivative);
+				AddTypeDecoder<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Collectives.NET.NetApiExt.Generated.Model.collectives_polkadot_runtime.EnumRuntimeCall>>(Call.batch_all);
+				AddTypeDecoder<BaseTuple<Substrate.Collectives.NET.NetApiExt.Generated.Model.collectives_polkadot_runtime.EnumOriginCaller, Substrate.Collectives.NET.NetApiExt.Generated.Model.collectives_polkadot_runtime.EnumRuntimeCall>>(Call.dispatch_as);
+				AddTypeDecoder<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Collectives.NET.NetApiExt.Generated.Model.collectives_polkadot_runtime.EnumRuntimeCall>>(Call.force_batch);
+				AddTypeDecoder<BaseTuple<Substrate.Collectives.NET.NetApiExt.Generated.Model.collectives_polkadot_runtime.EnumRuntimeCall, Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>>(Call.with_weight);
+        }
     }
 }

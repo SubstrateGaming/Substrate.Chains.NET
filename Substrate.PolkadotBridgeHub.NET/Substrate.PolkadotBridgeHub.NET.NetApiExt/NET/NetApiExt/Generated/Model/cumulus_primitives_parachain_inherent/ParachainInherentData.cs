@@ -9,7 +9,7 @@
 
 using Substrate.NetApi.Attributes;
 using Substrate.NetApi.Model.Types.Base;
-using Substrate.NetApi.Model.Types.Metadata.V14;
+using Substrate.NetApi.Model.Types.Metadata.Base;
 using System.Collections.Generic;
 
 
@@ -18,7 +18,7 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.cumulus_prim
     
     
     /// <summary>
-    /// >> 148 - Composite[cumulus_primitives_parachain_inherent.ParachainInherentData]
+    /// >> 228 - Composite[cumulus_primitives_parachain_inherent.ParachainInherentData]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class ParachainInherentData : BaseType
@@ -27,76 +27,27 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.cumulus_prim
         /// <summary>
         /// >> validation_data
         /// </summary>
-        private Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.PersistedValidationData _validationData;
-        
+        public Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.PersistedValidationData ValidationData { get; set; }
         /// <summary>
         /// >> relay_chain_state
         /// </summary>
-        private Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_trie.storage_proof.StorageProof _relayChainState;
-        
+        public Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_trie.storage_proof.StorageProof RelayChainState { get; set; }
         /// <summary>
         /// >> downward_messages
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.polkadot_core_primitives.InboundDownwardMessage> _downwardMessages;
-        
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.polkadot_core_primitives.InboundDownwardMessage> DownwardMessages { get; set; }
         /// <summary>
         /// >> horizontal_messages
         /// </summary>
-        private Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Types.Base.BTreeMapT2 _horizontalMessages;
+        public Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Types.Base.BTreeMapT3 HorizontalMessages { get; set; }
         
-        public Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.PersistedValidationData ValidationData
-        {
-            get
-            {
-                return this._validationData;
-            }
-            set
-            {
-                this._validationData = value;
-            }
-        }
-        
-        public Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_trie.storage_proof.StorageProof RelayChainState
-        {
-            get
-            {
-                return this._relayChainState;
-            }
-            set
-            {
-                this._relayChainState = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.polkadot_core_primitives.InboundDownwardMessage> DownwardMessages
-        {
-            get
-            {
-                return this._downwardMessages;
-            }
-            set
-            {
-                this._downwardMessages = value;
-            }
-        }
-        
-        public Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Types.Base.BTreeMapT2 HorizontalMessages
-        {
-            get
-            {
-                return this._horizontalMessages;
-            }
-            set
-            {
-                this._horizontalMessages = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "ParachainInherentData";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -107,21 +58,22 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.cumulus_prim
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            ValidationData = new Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v4.PersistedValidationData();
+            ValidationData = new Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.PersistedValidationData();
             ValidationData.Decode(byteArray, ref p);
             RelayChainState = new Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_trie.storage_proof.StorageProof();
             RelayChainState.Decode(byteArray, ref p);
             DownwardMessages = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.polkadot_core_primitives.InboundDownwardMessage>();
             DownwardMessages.Decode(byteArray, ref p);
-            HorizontalMessages = new Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Types.Base.BTreeMapT2();
+            HorizontalMessages = new Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Types.Base.BTreeMapT3();
             HorizontalMessages.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];
-            System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
+            global::System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
         }
     }
 }

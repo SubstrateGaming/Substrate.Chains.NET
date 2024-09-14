@@ -15,49 +15,145 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_alliance.pa
 {
     
     
+    /// <summary>
+    /// >> Call
+    /// Contains a variant per dispatchable extrinsic that this pallet has.
+    /// </summary>
     public enum Call
     {
         
+        /// <summary>
+        /// >> propose
+        /// See [`Pallet::propose`].
+        /// </summary>
         propose = 0,
         
+        /// <summary>
+        /// >> vote
+        /// See [`Pallet::vote`].
+        /// </summary>
         vote = 1,
         
+        /// <summary>
+        /// >> init_members
+        /// See [`Pallet::init_members`].
+        /// </summary>
         init_members = 3,
         
+        /// <summary>
+        /// >> disband
+        /// See [`Pallet::disband`].
+        /// </summary>
         disband = 4,
         
+        /// <summary>
+        /// >> set_rule
+        /// See [`Pallet::set_rule`].
+        /// </summary>
         set_rule = 5,
         
+        /// <summary>
+        /// >> announce
+        /// See [`Pallet::announce`].
+        /// </summary>
         announce = 6,
         
+        /// <summary>
+        /// >> remove_announcement
+        /// See [`Pallet::remove_announcement`].
+        /// </summary>
         remove_announcement = 7,
         
+        /// <summary>
+        /// >> join_alliance
+        /// See [`Pallet::join_alliance`].
+        /// </summary>
         join_alliance = 8,
         
+        /// <summary>
+        /// >> nominate_ally
+        /// See [`Pallet::nominate_ally`].
+        /// </summary>
         nominate_ally = 9,
         
+        /// <summary>
+        /// >> elevate_ally
+        /// See [`Pallet::elevate_ally`].
+        /// </summary>
         elevate_ally = 10,
         
+        /// <summary>
+        /// >> give_retirement_notice
+        /// See [`Pallet::give_retirement_notice`].
+        /// </summary>
         give_retirement_notice = 11,
         
+        /// <summary>
+        /// >> retire
+        /// See [`Pallet::retire`].
+        /// </summary>
         retire = 12,
         
+        /// <summary>
+        /// >> kick_member
+        /// See [`Pallet::kick_member`].
+        /// </summary>
         kick_member = 13,
         
+        /// <summary>
+        /// >> add_unscrupulous_items
+        /// See [`Pallet::add_unscrupulous_items`].
+        /// </summary>
         add_unscrupulous_items = 14,
         
+        /// <summary>
+        /// >> remove_unscrupulous_items
+        /// See [`Pallet::remove_unscrupulous_items`].
+        /// </summary>
         remove_unscrupulous_items = 15,
         
+        /// <summary>
+        /// >> close
+        /// See [`Pallet::close`].
+        /// </summary>
         close = 16,
         
+        /// <summary>
+        /// >> abdicate_fellow_status
+        /// See [`Pallet::abdicate_fellow_status`].
+        /// </summary>
         abdicate_fellow_status = 17,
     }
     
     /// <summary>
-    /// >> 193 - Variant[pallet_alliance.pallet.Call]
-    /// Contains one variant per dispatchable that can be called by an extrinsic.
+    /// >> 241 - Variant[pallet_alliance.pallet.Call]
+    /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
-    public sealed class EnumCall : BaseEnumExt<Call, BaseTuple<Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.Collectives.NET.NetApiExt.Generated.Model.collectives_polkadot_runtime.EnumRuntimeCall, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>>, BaseTuple<Substrate.Collectives.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.NetApi.Model.Types.Primitive.Bool>, BaseVoid, BaseTuple<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>>, Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_alliance.types.DisbandWitness, Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_alliance.types.Cid, Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_alliance.types.Cid, Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_alliance.types.Cid, BaseVoid, Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, BaseVoid, BaseVoid, Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_alliance.EnumUnscrupulousItem>, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_alliance.EnumUnscrupulousItem>, BaseTuple<Substrate.Collectives.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>>, BaseVoid>
+    public sealed class EnumCall : BaseEnumRust<Call>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumCall()
+        {
+				AddTypeDecoder<BaseTuple<Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.Collectives.NET.NetApiExt.Generated.Model.collectives_polkadot_runtime.EnumRuntimeCall, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>>>(Call.propose);
+				AddTypeDecoder<BaseTuple<Substrate.Collectives.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.NetApi.Model.Types.Primitive.Bool>>(Call.vote);
+				AddTypeDecoder<BaseTuple<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>>>(Call.init_members);
+				AddTypeDecoder<Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_alliance.types.DisbandWitness>(Call.disband);
+				AddTypeDecoder<Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_alliance.types.Cid>(Call.set_rule);
+				AddTypeDecoder<Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_alliance.types.Cid>(Call.announce);
+				AddTypeDecoder<Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_alliance.types.Cid>(Call.remove_announcement);
+				AddTypeDecoder<BaseVoid>(Call.join_alliance);
+				AddTypeDecoder<Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress>(Call.nominate_ally);
+				AddTypeDecoder<Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress>(Call.elevate_ally);
+				AddTypeDecoder<BaseVoid>(Call.give_retirement_notice);
+				AddTypeDecoder<BaseVoid>(Call.retire);
+				AddTypeDecoder<Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress>(Call.kick_member);
+				AddTypeDecoder<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_alliance.EnumUnscrupulousItem>>(Call.add_unscrupulous_items);
+				AddTypeDecoder<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_alliance.EnumUnscrupulousItem>>(Call.remove_unscrupulous_items);
+				AddTypeDecoder<BaseTuple<Substrate.Collectives.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>>>(Call.close);
+				AddTypeDecoder<BaseVoid>(Call.abdicate_fellow_status);
+        }
     }
 }

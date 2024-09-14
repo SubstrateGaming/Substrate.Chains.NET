@@ -38,9 +38,19 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.ethereum.receipt
     }
     
     /// <summary>
-    /// >> 579 - Variant[ethereum.receipt.ReceiptV3]
+    /// >> 638 - Variant[ethereum.receipt.ReceiptV3]
     /// </summary>
-    public sealed class EnumReceiptV3 : BaseEnumExt<ReceiptV3, Substrate.HydraDX.NET.NetApiExt.Generated.Model.ethereum.receipt.EIP658ReceiptData, Substrate.HydraDX.NET.NetApiExt.Generated.Model.ethereum.receipt.EIP658ReceiptData, Substrate.HydraDX.NET.NetApiExt.Generated.Model.ethereum.receipt.EIP658ReceiptData>
+    public sealed class EnumReceiptV3 : BaseEnumRust<ReceiptV3>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumReceiptV3()
+        {
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.ethereum.receipt.EIP658ReceiptData>(ReceiptV3.Legacy);
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.ethereum.receipt.EIP658ReceiptData>(ReceiptV3.EIP2930);
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.ethereum.receipt.EIP658ReceiptData>(ReceiptV3.EIP1559);
+        }
     }
 }

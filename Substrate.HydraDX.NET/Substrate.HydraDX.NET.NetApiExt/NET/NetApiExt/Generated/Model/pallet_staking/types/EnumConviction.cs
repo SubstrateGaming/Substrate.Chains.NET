@@ -58,7 +58,7 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_staking.types
     }
     
     /// <summary>
-    /// >> 538 - Variant[pallet_staking.types.Conviction]
+    /// >> 599 - Variant[pallet_staking.types.Conviction]
     /// </summary>
     public sealed class EnumConviction : BaseEnum<Conviction>
     {

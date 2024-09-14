@@ -28,9 +28,17 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_ethereum
     }
     
     /// <summary>
-    /// >> 424 - Variant[pallet_ethereum.RawOrigin]
+    /// >> 476 - Variant[pallet_ethereum.RawOrigin]
     /// </summary>
-    public sealed class EnumRawOrigin : BaseEnumExt<RawOrigin, Substrate.HydraDX.NET.NetApiExt.Generated.Model.primitive_types.H160>
+    public sealed class EnumRawOrigin : BaseEnumRust<RawOrigin>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumRawOrigin()
+        {
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.primitive_types.H160>(RawOrigin.EthereumTransaction);
+        }
     }
 }

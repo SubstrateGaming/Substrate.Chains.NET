@@ -17,6 +17,7 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Clients
    using Substrate.NetApi.Model.Types.Base;
    using Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_weights.weight_v2;
    using Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_xcm.v4;
    using Substrate.Kusama.NET.RestClient.Mockup.Generated.Interfaces;
    
    public sealed class XcmPalletControllerMockupClient : MockupBaseClient, IXcmPalletControllerMockupClient
@@ -54,7 +55,7 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "XcmPallet/VersionNotifyTargets", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.XcmPalletStorage.VersionNotifyTargetsParams(key));
       }
-      public async Task<bool> SetVersionDiscoveryQueue(BoundedVecT44 value)
+      public async Task<bool> SetVersionDiscoveryQueue(BoundedVecT45 value)
       {
          return await SendMockupRequestAsync(_httpClient, "XcmPallet/VersionDiscoveryQueue", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.XcmPalletStorage.VersionDiscoveryQueueParams());
       }
@@ -66,13 +67,21 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "XcmPallet/RemoteLockedFungibles", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.XcmPalletStorage.RemoteLockedFungiblesParams(key));
       }
-      public async Task<bool> SetLockedFungibles(BoundedVecT46 value, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+      public async Task<bool> SetLockedFungibles(BoundedVecT47 value, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {
          return await SendMockupRequestAsync(_httpClient, "XcmPallet/LockedFungibles", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.XcmPalletStorage.LockedFungiblesParams(key));
       }
       public async Task<bool> SetXcmExecutionSuspended(Bool value)
       {
          return await SendMockupRequestAsync(_httpClient, "XcmPallet/XcmExecutionSuspended", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.XcmPalletStorage.XcmExecutionSuspendedParams());
+      }
+      public async Task<bool> SetShouldRecordXcm(Bool value)
+      {
+         return await SendMockupRequestAsync(_httpClient, "XcmPallet/ShouldRecordXcm", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.XcmPalletStorage.ShouldRecordXcmParams());
+      }
+      public async Task<bool> SetRecordedXcm(XcmT1 value)
+      {
+         return await SendMockupRequestAsync(_httpClient, "XcmPallet/RecordedXcm", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.XcmPalletStorage.RecordedXcmParams());
       }
    }
 }

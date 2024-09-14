@@ -15,9 +15,9 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Interfaces
    
    public interface ICoretimeAssignmentProviderControllerClient
    {
-      Task<Schedule> GetCoreSchedules(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.CoreIndex> key);
-      Task<bool> SubscribeCoreSchedules(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.CoreIndex> key);
-      Task<CoreDescriptor> GetCoreDescriptors(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.CoreIndex key);
-      Task<bool> SubscribeCoreDescriptors(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.CoreIndex key);
+      Task<Schedule> GetCoreSchedules(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.CoreIndex> key);
+      Task<bool> SubscribeCoreSchedules(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.CoreIndex> key);
+      Task<CoreDescriptor> GetCoreDescriptors(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.CoreIndex key);
+      Task<bool> SubscribeCoreDescriptors(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.CoreIndex key);
    }
 }

@@ -12,8 +12,8 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Clients
    using System;
    using System.Threading.Tasks;
    using System.Net.Http;
+   using Substrate.NetApi.Model.Types.Base;
    using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.inclusion;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6;
    using Substrate.Kusama.NET.RestClient.Mockup.Generated.Interfaces;
    
    public sealed class ParaInclusionControllerMockupClient : MockupBaseClient, IParaInclusionControllerMockupClient
@@ -23,17 +23,9 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Clients
       {
          _httpClient = httpClient;
       }
-      public async Task<bool> SetAvailabilityBitfields(AvailabilityBitfieldRecord value, ValidatorIndex key)
+      public async Task<bool> SetV1(BaseVec<CandidatePendingAvailability> value, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key)
       {
-         return await SendMockupRequestAsync(_httpClient, "ParaInclusion/AvailabilityBitfields", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.ParaInclusionStorage.AvailabilityBitfieldsParams(key));
-      }
-      public async Task<bool> SetPendingAvailability(CandidatePendingAvailability value, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key)
-      {
-         return await SendMockupRequestAsync(_httpClient, "ParaInclusion/PendingAvailability", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.ParaInclusionStorage.PendingAvailabilityParams(key));
-      }
-      public async Task<bool> SetPendingAvailabilityCommitments(CandidateCommitments value, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key)
-      {
-         return await SendMockupRequestAsync(_httpClient, "ParaInclusion/PendingAvailabilityCommitments", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.ParaInclusionStorage.PendingAvailabilityCommitmentsParams(key));
+         return await SendMockupRequestAsync(_httpClient, "ParaInclusion/V1", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.ParaInclusionStorage.V1Params(key));
       }
    }
 }

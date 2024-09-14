@@ -30,64 +30,10 @@ namespace Substrate.Ajuna.NET.RestClient.Test.Generated
       {
          Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_preimage.EnumOldRequestStatus result;
          result = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_preimage.EnumOldRequestStatus();
-         result.Create(this.GetTestValueEnum<Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_preimage.OldRequestStatus>(), this.GetTestValue3());
+         // NOT IMPLEMENTED >> Initialize Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_preimage.EnumOldRequestStatus
          return result;
       }
-      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U128>, Substrate.NetApi.Model.Types.Primitive.U32> GetTestValue3()
-      {
-         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U128>, Substrate.NetApi.Model.Types.Primitive.U32> result;
-         result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U128>, Substrate.NetApi.Model.Types.Primitive.U32>();
-         result.Create(this.GetTestValue4(), this.GetTestValueU32());
-         return result;
-      }
-      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U128> GetTestValue4()
-      {
-         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U128> result;
-         result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U128>();
-         result.Create(this.GetTestValue5(), this.GetTestValueU128());
-         return result;
-      }
-      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue5()
-      {
-         Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 result;
-         result = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32();
-         result.Value = new Substrate.Ajuna.NET.NetApiExt.Generated.Types.Base.Arr32U8();
-         result.Value.Create(new Substrate.NetApi.Model.Types.Primitive.U8[] {
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8()});
-         return result;
-      }
-      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256 GetTestValue6()
+      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256 GetTestValue3()
       {
          Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256 result;
          result = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256();
@@ -139,7 +85,7 @@ namespace Substrate.Ajuna.NET.RestClient.Test.Generated
          // Construct new RPC client to test with.
          PreimageControllerClient rpcClient = new PreimageControllerClient(_httpClient, subscriptionClient);
          Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_preimage.EnumOldRequestStatus mockupValue = this.GetTestValue2();
-         Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256 mockupKey = this.GetTestValue6();
+         Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256 mockupKey = this.GetTestValue3();
 
          Assert.IsTrue(await rpcClient.SubscribeStatusFor(mockupKey));
 
@@ -156,75 +102,14 @@ namespace Substrate.Ajuna.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_preimage.EnumRequestStatus GetTestValue8()
+      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_preimage.EnumRequestStatus GetTestValue5()
       {
          Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_preimage.EnumRequestStatus result;
          result = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_preimage.EnumRequestStatus();
-         result.Create(this.GetTestValueEnum<Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_preimage.RequestStatus>(), this.GetTestValue9());
+         // NOT IMPLEMENTED >> Initialize Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_preimage.EnumRequestStatus
          return result;
       }
-      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.traits.tokens.fungible.HoldConsideration>, Substrate.NetApi.Model.Types.Primitive.U32> GetTestValue9()
-      {
-         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.traits.tokens.fungible.HoldConsideration>, Substrate.NetApi.Model.Types.Primitive.U32> result;
-         result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.traits.tokens.fungible.HoldConsideration>, Substrate.NetApi.Model.Types.Primitive.U32>();
-         result.Create(this.GetTestValue10(), this.GetTestValueU32());
-         return result;
-      }
-      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.traits.tokens.fungible.HoldConsideration> GetTestValue10()
-      {
-         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.traits.tokens.fungible.HoldConsideration> result;
-         result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.traits.tokens.fungible.HoldConsideration>();
-         result.Create(this.GetTestValue11(), this.GetTestValue12());
-         return result;
-      }
-      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue11()
-      {
-         Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 result;
-         result = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32();
-         result.Value = new Substrate.Ajuna.NET.NetApiExt.Generated.Types.Base.Arr32U8();
-         result.Value.Create(new Substrate.NetApi.Model.Types.Primitive.U8[] {
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8()});
-         return result;
-      }
-      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.traits.tokens.fungible.HoldConsideration GetTestValue12()
-      {
-         Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.traits.tokens.fungible.HoldConsideration result;
-         result = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.traits.tokens.fungible.HoldConsideration();
-         result.Value = this.GetTestValueU128();
-         return result;
-      }
-      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256 GetTestValue13()
+      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256 GetTestValue6()
       {
          Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256 result;
          result = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256();
@@ -275,8 +160,8 @@ namespace Substrate.Ajuna.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          PreimageControllerClient rpcClient = new PreimageControllerClient(_httpClient, subscriptionClient);
-         Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_preimage.EnumRequestStatus mockupValue = this.GetTestValue8();
-         Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256 mockupKey = this.GetTestValue13();
+         Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_preimage.EnumRequestStatus mockupValue = this.GetTestValue5();
+         Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256 mockupKey = this.GetTestValue6();
 
          Assert.IsTrue(await rpcClient.SubscribeRequestStatusFor(mockupKey));
 
@@ -293,7 +178,7 @@ namespace Substrate.Ajuna.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17 GetTestValue15()
+      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17 GetTestValue8()
       {
          Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17 result;
          result = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17();
@@ -302,14 +187,14 @@ namespace Substrate.Ajuna.NET.RestClient.Test.Generated
                   this.GetTestValueU8()});
          return result;
       }
-      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Primitive.U32> GetTestValue16()
+      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Primitive.U32> GetTestValue9()
       {
          Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Primitive.U32> result;
          result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Primitive.U32>();
-         result.Create(this.GetTestValue17(), this.GetTestValueU32());
+         result.Create(this.GetTestValue10(), this.GetTestValueU32());
          return result;
       }
-      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256 GetTestValue17()
+      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256 GetTestValue10()
       {
          Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256 result;
          result = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256();
@@ -360,8 +245,8 @@ namespace Substrate.Ajuna.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          PreimageControllerClient rpcClient = new PreimageControllerClient(_httpClient, subscriptionClient);
-         Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17 mockupValue = this.GetTestValue15();
-         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Primitive.U32> mockupKey = this.GetTestValue16();
+         Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17 mockupValue = this.GetTestValue8();
+         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Primitive.U32> mockupKey = this.GetTestValue9();
 
          Assert.IsTrue(await rpcClient.SubscribePreimageFor(mockupKey));
 

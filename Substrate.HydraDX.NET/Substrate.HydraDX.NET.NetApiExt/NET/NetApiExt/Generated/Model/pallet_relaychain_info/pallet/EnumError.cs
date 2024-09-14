@@ -24,7 +24,7 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_relaychain_info
     }
     
     /// <summary>
-    /// >> 701 - Variant[pallet_relaychain_info.pallet.Error]
+    /// >> 658 - Variant[pallet_relaychain_info.pallet.Error]
     /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>

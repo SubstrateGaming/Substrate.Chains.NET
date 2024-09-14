@@ -133,7 +133,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Controller
         ///  which is used as a prioritization.
         /// </summary>
         [HttpGet("VersionDiscoveryQueue")]
-        [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT44), 200)]
+        [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT45), 200)]
         [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.XcmPalletStorage), "VersionDiscoveryQueueParams")]
         public IActionResult GetVersionDiscoveryQueue()
         {
@@ -169,7 +169,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Controller
         ///  Fungible assets which we know are locked on this chain.
         /// </summary>
         [HttpGet("LockedFungibles")]
-        [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT46), 200)]
+        [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT47), 200)]
         [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.XcmPalletStorage), "LockedFungiblesParams", typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32))]
         public IActionResult GetLockedFungibles(string key)
         {
@@ -186,6 +186,41 @@ namespace Substrate.Kusama.NET.RestService.Generated.Controller
         public IActionResult GetXcmExecutionSuspended()
         {
             return this.Ok(_xcmPalletStorage.GetXcmExecutionSuspended());
+        }
+        
+        /// <summary>
+        /// >> ShouldRecordXcm
+        ///  Whether or not incoming XCMs (both executed locally and received) should be recorded.
+        ///  Only one XCM program will be recorded at a time.
+        ///  This is meant to be used in runtime APIs, and it's advised it stays false
+        ///  for all other use cases, so as to not degrade regular performance.
+        /// 
+        ///  Only relevant if this pallet is being used as the [`xcm_executor::traits::RecordXcm`]
+        ///  implementation in the XCM executor configuration.
+        /// </summary>
+        [HttpGet("ShouldRecordXcm")]
+        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Primitive.Bool), 200)]
+        [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.XcmPalletStorage), "ShouldRecordXcmParams")]
+        public IActionResult GetShouldRecordXcm()
+        {
+            return this.Ok(_xcmPalletStorage.GetShouldRecordXcm());
+        }
+        
+        /// <summary>
+        /// >> RecordedXcm
+        ///  If [`ShouldRecordXcm`] is set to true, then the last XCM program executed locally
+        ///  will be stored here.
+        ///  Runtime APIs can fetch the XCM that was executed by accessing this value.
+        /// 
+        ///  Only relevant if this pallet is being used as the [`xcm_executor::traits::RecordXcm`]
+        ///  implementation in the XCM executor configuration.
+        /// </summary>
+        [HttpGet("RecordedXcm")]
+        [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_xcm.v4.XcmT1), 200)]
+        [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.XcmPalletStorage), "RecordedXcmParams")]
+        public IActionResult GetRecordedXcm()
+        {
+            return this.Ok(_xcmPalletStorage.GetRecordedXcm());
         }
     }
 }

@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "net_api": "Substrate.Coretime.NET.NetApiExt",
+    "net_integration": "Substrate.Coretime.NET.Integration",
+    "rest_service": "Substrate.Coretime.NET.RestService",
+    "rest_client": "Substrate.Coretime.NET.RestClient"
+  },
+   "metadata": {
+      "websocket": "wss://polkadot-coretime-rpc.polkadot.io"
+   },
+  "rest_client_settings": {
+    "service_assembly": "Substrate.Coretime.NET.RestService.dll"
+  }
+}

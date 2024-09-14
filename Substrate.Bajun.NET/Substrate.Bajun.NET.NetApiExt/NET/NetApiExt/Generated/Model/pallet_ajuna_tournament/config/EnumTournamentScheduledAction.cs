@@ -40,7 +40,17 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_ajuna_tournament.
     /// <summary>
     /// >> 646 - Variant[pallet_ajuna_tournament.config.TournamentScheduledAction]
     /// </summary>
-    public sealed class EnumTournamentScheduledAction : BaseEnumExt<TournamentScheduledAction, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U16, Substrate.NetApi.Model.Types.Primitive.U32>, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U16, Substrate.NetApi.Model.Types.Primitive.U32>, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U16, Substrate.NetApi.Model.Types.Primitive.U32>>
+    public sealed class EnumTournamentScheduledAction : BaseEnumRust<TournamentScheduledAction>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumTournamentScheduledAction()
+        {
+				AddTypeDecoder<BaseTuple<Substrate.NetApi.Model.Types.Primitive.U16, Substrate.NetApi.Model.Types.Primitive.U32>>(TournamentScheduledAction.StartActivePhase);
+				AddTypeDecoder<BaseTuple<Substrate.NetApi.Model.Types.Primitive.U16, Substrate.NetApi.Model.Types.Primitive.U32>>(TournamentScheduledAction.SwitchToClaimPhase);
+				AddTypeDecoder<BaseTuple<Substrate.NetApi.Model.Types.Primitive.U16, Substrate.NetApi.Model.Types.Primitive.U32>>(TournamentScheduledAction.EndClaimPhase);
+        }
     }
 }

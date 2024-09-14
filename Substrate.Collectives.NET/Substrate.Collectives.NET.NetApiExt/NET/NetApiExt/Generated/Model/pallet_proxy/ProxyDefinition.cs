@@ -9,7 +9,7 @@
 
 using Substrate.NetApi.Attributes;
 using Substrate.NetApi.Model.Types.Base;
-using Substrate.NetApi.Model.Types.Metadata.V14;
+using Substrate.NetApi.Model.Types.Metadata.Base;
 using System.Collections.Generic;
 
 
@@ -18,7 +18,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_proxy
     
     
     /// <summary>
-    /// >> 309 - Composite[pallet_proxy.ProxyDefinition]
+    /// >> 392 - Composite[pallet_proxy.ProxyDefinition]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class ProxyDefinition : BaseType
@@ -27,59 +27,23 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_proxy
         /// <summary>
         /// >> delegate
         /// </summary>
-        private Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 _delegate;
-        
+        public Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 Delegate { get; set; }
         /// <summary>
         /// >> proxy_type
         /// </summary>
-        private Substrate.Collectives.NET.NetApiExt.Generated.Model.collectives_polkadot_runtime.EnumProxyType _proxyType;
-        
+        public Substrate.Collectives.NET.NetApiExt.Generated.Model.collectives_polkadot_runtime.EnumProxyType ProxyType { get; set; }
         /// <summary>
         /// >> delay
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _delay;
+        public Substrate.NetApi.Model.Types.Primitive.U32 Delay { get; set; }
         
-        public Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 Delegate
-        {
-            get
-            {
-                return this._delegate;
-            }
-            set
-            {
-                this._delegate = value;
-            }
-        }
-        
-        public Substrate.Collectives.NET.NetApiExt.Generated.Model.collectives_polkadot_runtime.EnumProxyType ProxyType
-        {
-            get
-            {
-                return this._proxyType;
-            }
-            set
-            {
-                this._proxyType = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 Delay
-        {
-            get
-            {
-                return this._delay;
-            }
-            set
-            {
-                this._delay = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "ProxyDefinition";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -89,6 +53,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_proxy
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
@@ -101,7 +66,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_proxy
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];
-            System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
+            global::System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
         }
     }
 }

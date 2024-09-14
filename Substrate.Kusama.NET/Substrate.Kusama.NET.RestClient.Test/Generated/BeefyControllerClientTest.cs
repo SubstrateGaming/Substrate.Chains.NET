@@ -27,10 +27,10 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
       {
          _httpClient = CreateHttpClient();
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT48 GetTestValue2()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT49 GetTestValue2()
       {
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT48 result;
-         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT48();
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT49 result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT49();
          result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_beefy.ecdsa_crypto.Public>();
          result.Value.Create(new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_beefy.ecdsa_crypto.Public[] {
                   this.GetTestValue3()});
@@ -40,14 +40,6 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
       {
          Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_beefy.ecdsa_crypto.Public result;
          result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_beefy.ecdsa_crypto.Public();
-         result.Value = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.ecdsa.Public();
-         result.Value = this.GetTestValue4();
-         return result;
-      }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.ecdsa.Public GetTestValue4()
-      {
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.ecdsa.Public result;
-         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.ecdsa.Public();
          result.Value = new Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr33U8();
          result.Value.Create(new Substrate.NetApi.Model.Types.Primitive.U8[] {
                   this.GetTestValueU8(),
@@ -96,7 +88,7 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          BeefyControllerClient rpcClient = new BeefyControllerClient(_httpClient, subscriptionClient);
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT48 mockupValue = this.GetTestValue2();
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT49 mockupValue = this.GetTestValue2();
 
 
          Assert.IsTrue(await rpcClient.SubscribeAuthorities());
@@ -109,7 +101,7 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT48 rpcResult = await rpcClient.GetAuthorities();
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT49 rpcResult = await rpcClient.GetAuthorities();
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
@@ -143,27 +135,19 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT48 GetTestValue7()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT49 GetTestValue6()
       {
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT48 result;
-         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT48();
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT49 result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT49();
          result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_beefy.ecdsa_crypto.Public>();
          result.Value.Create(new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_beefy.ecdsa_crypto.Public[] {
-                  this.GetTestValue8()});
+                  this.GetTestValue7()});
          return result;
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_beefy.ecdsa_crypto.Public GetTestValue8()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_beefy.ecdsa_crypto.Public GetTestValue7()
       {
          Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_beefy.ecdsa_crypto.Public result;
          result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_beefy.ecdsa_crypto.Public();
-         result.Value = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.ecdsa.Public();
-         result.Value = this.GetTestValue9();
-         return result;
-      }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.ecdsa.Public GetTestValue9()
-      {
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.ecdsa.Public result;
-         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.ecdsa.Public();
          result.Value = new Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr33U8();
          result.Value.Create(new Substrate.NetApi.Model.Types.Primitive.U8[] {
                   this.GetTestValueU8(),
@@ -212,7 +196,7 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          BeefyControllerClient rpcClient = new BeefyControllerClient(_httpClient, subscriptionClient);
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT48 mockupValue = this.GetTestValue7();
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT49 mockupValue = this.GetTestValue6();
 
 
          Assert.IsTrue(await rpcClient.SubscribeNextAuthorities());
@@ -225,7 +209,7 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT48 rpcResult = await rpcClient.GetNextAuthorities();
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT49 rpcResult = await rpcClient.GetNextAuthorities();
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
@@ -259,7 +243,7 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32> GetTestValue12()
+      public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32> GetTestValue10()
       {
          Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32> result;
          result = new Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32>();
@@ -277,7 +261,7 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          BeefyControllerClient rpcClient = new BeefyControllerClient(_httpClient, subscriptionClient);
-         Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32> mockupValue = this.GetTestValue12();
+         Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32> mockupValue = this.GetTestValue10();
 
 
          Assert.IsTrue(await rpcClient.SubscribeGenesisBlock());

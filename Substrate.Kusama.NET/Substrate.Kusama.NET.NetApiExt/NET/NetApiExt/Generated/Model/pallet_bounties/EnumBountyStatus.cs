@@ -53,9 +53,22 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_bounties
     }
     
     /// <summary>
-    /// >> 715 - Variant[pallet_bounties.BountyStatus]
+    /// >> 722 - Variant[pallet_bounties.BountyStatus]
     /// </summary>
-    public sealed class EnumBountyStatus : BaseEnumExt<BountyStatus, BaseVoid, BaseVoid, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U32>, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U32>>
+    public sealed class EnumBountyStatus : BaseEnumRust<BountyStatus>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumBountyStatus()
+        {
+				AddTypeDecoder<BaseVoid>(BountyStatus.Proposed);
+				AddTypeDecoder<BaseVoid>(BountyStatus.Approved);
+				AddTypeDecoder<BaseVoid>(BountyStatus.Funded);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>(BountyStatus.CuratorProposed);
+				AddTypeDecoder<BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U32>>(BountyStatus.Active);
+				AddTypeDecoder<BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U32>>(BountyStatus.PendingPayout);
+        }
     }
 }

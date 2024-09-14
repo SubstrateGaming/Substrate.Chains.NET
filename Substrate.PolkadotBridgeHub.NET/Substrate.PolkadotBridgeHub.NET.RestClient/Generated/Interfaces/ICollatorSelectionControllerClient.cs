@@ -16,10 +16,10 @@ namespace Substrate.PolkadotBridgeHub.NET.RestClient.Generated.Interfaces
    
    public interface ICollatorSelectionControllerClient
    {
-      Task<BoundedVecT6> GetInvulnerables();
+      Task<BoundedVecT7> GetInvulnerables();
       Task<bool> SubscribeInvulnerables();
-      Task<BoundedVecT7> GetCandidates();
-      Task<bool> SubscribeCandidates();
+      Task<BoundedVecT8> GetCandidateList();
+      Task<bool> SubscribeCandidateList();
       Task<U32> GetLastAuthoredBlock(Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
       Task<bool> SubscribeLastAuthoredBlock(Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
       Task<U32> GetDesiredCandidates();

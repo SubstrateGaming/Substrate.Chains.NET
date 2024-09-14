@@ -36,10 +36,19 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.orml_unknown_tokens.mo
     }
     
     /// <summary>
-    /// >> 205 - Variant[orml_unknown_tokens.module.Event]
+    /// >> 228 - Variant[orml_unknown_tokens.module.Event]
     /// The `Event` enum of this pallet
     /// </summary>
-    public sealed class EnumEvent : BaseEnumExt<Event, BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.staging_xcm.v3.multiasset.MultiAsset, Substrate.HydraDX.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation>, BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.staging_xcm.v3.multiasset.MultiAsset, Substrate.HydraDX.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation>>
+    public sealed class EnumEvent : BaseEnumRust<Event>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumEvent()
+        {
+				AddTypeDecoder<BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.staging_xcm.v4.asset.Asset, Substrate.HydraDX.NET.NetApiExt.Generated.Model.staging_xcm.v4.location.Location>>(Event.Deposited);
+				AddTypeDecoder<BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.staging_xcm.v4.asset.Asset, Substrate.HydraDX.NET.NetApiExt.Generated.Model.staging_xcm.v4.location.Location>>(Event.Withdrawn);
+        }
     }
 }

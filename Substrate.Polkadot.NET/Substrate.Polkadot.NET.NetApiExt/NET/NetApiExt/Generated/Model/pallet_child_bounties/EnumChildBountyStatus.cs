@@ -43,9 +43,20 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_child_bounties
     }
     
     /// <summary>
-    /// >> 703 - Variant[pallet_child_bounties.ChildBountyStatus]
+    /// >> 705 - Variant[pallet_child_bounties.ChildBountyStatus]
     /// </summary>
-    public sealed class EnumChildBountyStatus : BaseEnumExt<ChildBountyStatus, BaseVoid, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U32>>
+    public sealed class EnumChildBountyStatus : BaseEnumRust<ChildBountyStatus>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumChildBountyStatus()
+        {
+				AddTypeDecoder<BaseVoid>(ChildBountyStatus.Added);
+				AddTypeDecoder<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>(ChildBountyStatus.CuratorProposed);
+				AddTypeDecoder<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>(ChildBountyStatus.Active);
+				AddTypeDecoder<BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U32>>(ChildBountyStatus.PendingPayout);
+        }
     }
 }

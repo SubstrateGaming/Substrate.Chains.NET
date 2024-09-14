@@ -15,18 +15,36 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.pallet_xcm.p
 {
     
     
+    /// <summary>
+    /// >> Origin
+    /// </summary>
     public enum Origin
     {
         
+        /// <summary>
+        /// >> Xcm
+        /// </summary>
         Xcm = 0,
         
+        /// <summary>
+        /// >> Response
+        /// </summary>
         Response = 1,
     }
     
     /// <summary>
-    /// >> 245 - Variant[pallet_xcm.pallet.Origin]
+    /// >> 401 - Variant[pallet_xcm.pallet.Origin]
     /// </summary>
-    public sealed class EnumOrigin : BaseEnumExt<Origin, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.xcm.v3.multilocation.MultiLocation, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.xcm.v3.multilocation.MultiLocation>
+    public sealed class EnumOrigin : BaseEnumRust<Origin>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumOrigin()
+        {
+				AddTypeDecoder<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.staging_xcm.v4.location.Location>(Origin.Xcm);
+				AddTypeDecoder<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.staging_xcm.v4.location.Location>(Origin.Response);
+        }
     }
 }

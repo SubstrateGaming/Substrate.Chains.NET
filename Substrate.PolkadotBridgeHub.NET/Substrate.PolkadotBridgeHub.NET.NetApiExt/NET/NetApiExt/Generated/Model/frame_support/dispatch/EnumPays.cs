@@ -15,11 +15,20 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.frame_suppor
 {
     
     
+    /// <summary>
+    /// >> Pays
+    /// </summary>
     public enum Pays
     {
         
+        /// <summary>
+        /// >> Yes
+        /// </summary>
         Yes = 0,
         
+        /// <summary>
+        /// >> No
+        /// </summary>
         No = 1,
     }
     

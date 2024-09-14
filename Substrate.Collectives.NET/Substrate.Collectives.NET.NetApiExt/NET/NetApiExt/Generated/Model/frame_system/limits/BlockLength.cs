@@ -9,7 +9,7 @@
 
 using Substrate.NetApi.Attributes;
 using Substrate.NetApi.Model.Types.Base;
-using Substrate.NetApi.Model.Types.Metadata.V14;
+using Substrate.NetApi.Model.Types.Metadata.Base;
 using System.Collections.Generic;
 
 
@@ -18,7 +18,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.frame_system.limit
     
     
     /// <summary>
-    /// >> 210 - Composite[frame_system.limits.BlockLength]
+    /// >> 282 - Composite[frame_system.limits.BlockLength]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class BlockLength : BaseType
@@ -27,25 +27,15 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.frame_system.limit
         /// <summary>
         /// >> max
         /// </summary>
-        private Substrate.Collectives.NET.NetApiExt.Generated.Model.frame_support.dispatch.PerDispatchClassT3 _max;
+        public Substrate.Collectives.NET.NetApiExt.Generated.Model.frame_support.dispatch.PerDispatchClassT3 Max { get; set; }
         
-        public Substrate.Collectives.NET.NetApiExt.Generated.Model.frame_support.dispatch.PerDispatchClassT3 Max
-        {
-            get
-            {
-                return this._max;
-            }
-            set
-            {
-                this._max = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "BlockLength";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -53,6 +43,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.frame_system.limit
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
@@ -61,7 +52,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.frame_system.limit
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];
-            System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
+            global::System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
         }
     }
 }

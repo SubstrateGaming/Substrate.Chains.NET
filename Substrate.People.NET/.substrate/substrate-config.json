@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "net_api": "Substrate.People.NET.NetApiExt",
+    "net_integration": "Substrate.People.NET.Integration",
+    "rest_service": "Substrate.People.NET.RestService",
+    "rest_client": "Substrate.People.NET.RestClient"
+  },
+   "metadata": {
+      "websocket": "wss://polkadot-people-rpc.polkadot.io"
+   },
+  "rest_client_settings": {
+    "service_assembly": "Substrate.People.NET.RestService.dll"
+  }
+}

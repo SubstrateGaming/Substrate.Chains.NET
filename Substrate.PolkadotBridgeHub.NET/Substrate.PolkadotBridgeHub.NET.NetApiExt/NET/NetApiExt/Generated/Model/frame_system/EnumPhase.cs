@@ -15,20 +15,42 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.frame_system
 {
     
     
+    /// <summary>
+    /// >> Phase
+    /// </summary>
     public enum Phase
     {
         
+        /// <summary>
+        /// >> ApplyExtrinsic
+        /// </summary>
         ApplyExtrinsic = 0,
         
+        /// <summary>
+        /// >> Finalization
+        /// </summary>
         Finalization = 1,
         
+        /// <summary>
+        /// >> Initialization
+        /// </summary>
         Initialization = 2,
     }
     
     /// <summary>
-    /// >> 104 - Variant[frame_system.Phase]
+    /// >> 173 - Variant[frame_system.Phase]
     /// </summary>
-    public sealed class EnumPhase : BaseEnumExt<Phase, Substrate.NetApi.Model.Types.Primitive.U32, BaseVoid, BaseVoid>
+    public sealed class EnumPhase : BaseEnumRust<Phase>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumPhase()
+        {
+				AddTypeDecoder<Substrate.NetApi.Model.Types.Primitive.U32>(Phase.ApplyExtrinsic);
+				AddTypeDecoder<BaseVoid>(Phase.Finalization);
+				AddTypeDecoder<BaseVoid>(Phase.Initialization);
+        }
     }
 }

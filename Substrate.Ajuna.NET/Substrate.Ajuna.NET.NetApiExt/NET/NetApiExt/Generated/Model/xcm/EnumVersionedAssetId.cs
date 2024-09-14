@@ -35,7 +35,16 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm
     /// <summary>
     /// >> 326 - Variant[xcm.VersionedAssetId]
     /// </summary>
-    public sealed class EnumVersionedAssetId : BaseEnumExt<VersionedAssetId, BaseVoid, BaseVoid, BaseVoid, Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.v3.multiasset.EnumAssetId, Substrate.Ajuna.NET.NetApiExt.Generated.Model.staging_xcm.v4.asset.AssetId>
+    public sealed class EnumVersionedAssetId : BaseEnumRust<VersionedAssetId>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumVersionedAssetId()
+        {
+				AddTypeDecoder<Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.v3.multiasset.EnumAssetId>(VersionedAssetId.V3);
+				AddTypeDecoder<Substrate.Ajuna.NET.NetApiExt.Generated.Model.staging_xcm.v4.asset.AssetId>(VersionedAssetId.V4);
+        }
     }
 }

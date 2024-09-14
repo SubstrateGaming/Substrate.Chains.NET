@@ -23,28 +23,21 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parach
     {
         
         /// <summary>
-        /// >> InvalidParaId
-        /// The `ParaId` supplied to the `place_order` call is not a valid `ParaThread`, making the
-        /// call is invalid.
-        /// </summary>
-        InvalidParaId = 0,
-        
-        /// <summary>
         /// >> QueueFull
         /// The order queue is full, `place_order` will not continue.
         /// </summary>
-        QueueFull = 1,
+        QueueFull = 0,
         
         /// <summary>
         /// >> SpotPriceHigherThanMaxAmount
         /// The current spot price is higher than the max amount specified in the `place_order`
         /// call, making it invalid.
         /// </summary>
-        SpotPriceHigherThanMaxAmount = 2,
+        SpotPriceHigherThanMaxAmount = 1,
     }
     
     /// <summary>
-    /// >> 843 - Variant[polkadot_runtime_parachains.assigner_on_demand.pallet.Error]
+    /// >> 858 - Variant[polkadot_runtime_parachains.assigner_on_demand.pallet.Error]
     /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>

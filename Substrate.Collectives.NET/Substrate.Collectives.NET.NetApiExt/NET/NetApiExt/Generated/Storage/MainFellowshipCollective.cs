@@ -21,12 +21,18 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> FellowshipCollectiveStorage
+    /// </summary>
     public sealed class FellowshipCollectiveStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> FellowshipCollectiveStorage Constructor
+        /// </summary>
         public FellowshipCollectiveStorage(SubstrateClientExt client)
         {
             this._client = client;
@@ -44,7 +50,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
                             Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat,
                             Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>), typeof(Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_ranked_collective.EnumVoteRecord)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("FellowshipCollective", "VotingCleanup"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.NetApi.Model.Types.Primitive.U32), typeof(Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT22)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.NetApi.Model.Types.Primitive.U32), typeof(Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT28)));
         }
         
         /// <summary>
@@ -73,10 +79,10 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
         ///  The number of members in the collective who have at least the rank according to the index
         ///  of the vec.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> MemberCount(Substrate.NetApi.Model.Types.Primitive.U16 key, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> MemberCount(Substrate.NetApi.Model.Types.Primitive.U16 key, string blockhash, CancellationToken token)
         {
             string parameters = FellowshipCollectiveStorage.MemberCountParams(key);
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, blockhash, token);
             return result;
         }
         
@@ -104,10 +110,10 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
         /// >> Members
         ///  The current members of the collective.
         /// </summary>
-        public async Task<Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_ranked_collective.MemberRecord> Members(Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, CancellationToken token)
+        public async Task<Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_ranked_collective.MemberRecord> Members(Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, string blockhash, CancellationToken token)
         {
             string parameters = FellowshipCollectiveStorage.MembersParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_ranked_collective.MemberRecord>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_ranked_collective.MemberRecord>(parameters, blockhash, token);
             return result;
         }
         
@@ -135,10 +141,10 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
         /// >> IdToIndex
         ///  The index of each ranks's member into the group of members who have at least that rank.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> IdToIndex(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U16, Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> key, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> IdToIndex(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U16, Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> key, string blockhash, CancellationToken token)
         {
             string parameters = FellowshipCollectiveStorage.IdToIndexParams(key);
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, blockhash, token);
             return result;
         }
         
@@ -168,10 +174,10 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
         ///  The members in the collective by index. All indices in the range `0..MemberCount` will
         ///  return `Some`, however a member's index is not guaranteed to remain unchanged over time.
         /// </summary>
-        public async Task<Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> IndexToId(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U16, Substrate.NetApi.Model.Types.Primitive.U32> key, CancellationToken token)
+        public async Task<Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> IndexToId(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U16, Substrate.NetApi.Model.Types.Primitive.U32> key, string blockhash, CancellationToken token)
         {
             string parameters = FellowshipCollectiveStorage.IndexToIdParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>(parameters, blockhash, token);
             return result;
         }
         
@@ -199,10 +205,10 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
         /// >> Voting
         ///  Votes on a given proposal, if it is ongoing.
         /// </summary>
-        public async Task<Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_ranked_collective.EnumVoteRecord> Voting(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> key, CancellationToken token)
+        public async Task<Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_ranked_collective.EnumVoteRecord> Voting(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> key, string blockhash, CancellationToken token)
         {
             string parameters = FellowshipCollectiveStorage.VotingParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_ranked_collective.EnumVoteRecord>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_ranked_collective.EnumVoteRecord>(parameters, blockhash, token);
             return result;
         }
         
@@ -228,20 +234,23 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
         /// <summary>
         /// >> VotingCleanup
         /// </summary>
-        public async Task<Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT22> VotingCleanup(Substrate.NetApi.Model.Types.Primitive.U32 key, CancellationToken token)
+        public async Task<Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT28> VotingCleanup(Substrate.NetApi.Model.Types.Primitive.U32 key, string blockhash, CancellationToken token)
         {
             string parameters = FellowshipCollectiveStorage.VotingCleanupParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT22>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT28>(parameters, blockhash, token);
             return result;
         }
     }
     
+    /// <summary>
+    /// >> FellowshipCollectiveCalls
+    /// </summary>
     public sealed class FellowshipCollectiveCalls
     {
         
         /// <summary>
         /// >> add_member
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method AddMember(Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress who)
         {
@@ -252,7 +261,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> promote_member
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method PromoteMember(Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress who)
         {
@@ -263,7 +272,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> demote_member
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method DemoteMember(Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress who)
         {
@@ -274,7 +283,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> remove_member
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method RemoveMember(Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress who, Substrate.NetApi.Model.Types.Primitive.U16 min_rank)
         {
@@ -286,7 +295,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> vote
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method Vote(Substrate.NetApi.Model.Types.Primitive.U32 poll, Substrate.NetApi.Model.Types.Primitive.Bool aye)
         {
@@ -298,7 +307,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> cleanup_poll
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method CleanupPoll(Substrate.NetApi.Model.Types.Primitive.U32 poll_index, Substrate.NetApi.Model.Types.Primitive.U32 max)
         {
@@ -307,12 +316,30 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
             byteArray.AddRange(max.Encode());
             return new Method(60, "FellowshipCollective", 5, "cleanup_poll", byteArray.ToArray());
         }
+        
+        /// <summary>
+        /// >> exchange_member
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
+        /// </summary>
+        public static Method ExchangeMember(Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress who, Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress new_who)
+        {
+            System.Collections.Generic.List<byte> byteArray = new List<byte>();
+            byteArray.AddRange(who.Encode());
+            byteArray.AddRange(new_who.Encode());
+            return new Method(60, "FellowshipCollective", 6, "exchange_member", byteArray.ToArray());
+        }
     }
     
+    /// <summary>
+    /// >> FellowshipCollectiveConstants
+    /// </summary>
     public sealed class FellowshipCollectiveConstants
     {
     }
     
+    /// <summary>
+    /// >> FellowshipCollectiveErrors
+    /// </summary>
     public enum FellowshipCollectiveErrors
     {
         
@@ -369,5 +396,11 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
         /// The origin is not sufficiently privileged to do the operation.
         /// </summary>
         NoPermission,
+        
+        /// <summary>
+        /// >> SameMember
+        /// The new member to exchange is the same as the old member
+        /// </summary>
+        SameMember,
     }
 }

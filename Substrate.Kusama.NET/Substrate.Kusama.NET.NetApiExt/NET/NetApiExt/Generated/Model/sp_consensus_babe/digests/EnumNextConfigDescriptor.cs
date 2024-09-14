@@ -28,9 +28,17 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_babe.diges
     }
     
     /// <summary>
-    /// >> 107 - Variant[sp_consensus_babe.digests.NextConfigDescriptor]
+    /// >> 98 - Variant[sp_consensus_babe.digests.NextConfigDescriptor]
     /// </summary>
-    public sealed class EnumNextConfigDescriptor : BaseEnumExt<NextConfigDescriptor, BaseVoid, BaseTuple<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U64, Substrate.NetApi.Model.Types.Primitive.U64>, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_babe.EnumAllowedSlots>>
+    public sealed class EnumNextConfigDescriptor : BaseEnumRust<NextConfigDescriptor>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumNextConfigDescriptor()
+        {
+				AddTypeDecoder<BaseTuple<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U64, Substrate.NetApi.Model.Types.Primitive.U64>, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_babe.EnumAllowedSlots>>(NextConfigDescriptor.V1);
+        }
     }
 }

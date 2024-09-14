@@ -43,9 +43,20 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_grandpa
     }
     
     /// <summary>
-    /// >> 619 - Variant[pallet_grandpa.StoredState]
+    /// >> 621 - Variant[pallet_grandpa.StoredState]
     /// </summary>
-    public sealed class EnumStoredState : BaseEnumExt<StoredState, BaseVoid, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>, BaseVoid, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>>
+    public sealed class EnumStoredState : BaseEnumRust<StoredState>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumStoredState()
+        {
+				AddTypeDecoder<BaseVoid>(StoredState.Live);
+				AddTypeDecoder<BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>>(StoredState.PendingPause);
+				AddTypeDecoder<BaseVoid>(StoredState.Paused);
+				AddTypeDecoder<BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>>(StoredState.PendingResume);
+        }
     }
 }

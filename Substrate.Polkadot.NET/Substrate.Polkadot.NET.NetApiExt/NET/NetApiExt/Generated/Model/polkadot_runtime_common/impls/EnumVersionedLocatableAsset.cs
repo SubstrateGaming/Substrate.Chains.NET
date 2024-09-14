@@ -35,7 +35,16 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_comm
     /// <summary>
     /// >> 65 - Variant[polkadot_runtime_common.impls.VersionedLocatableAsset]
     /// </summary>
-    public sealed class EnumVersionedLocatableAsset : BaseEnumExt<VersionedLocatableAsset, BaseVoid, BaseVoid, BaseVoid, BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation, Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.v3.multiasset.EnumAssetId>, BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.staging_xcm.v4.location.Location, Substrate.Polkadot.NET.NetApiExt.Generated.Model.staging_xcm.v4.asset.AssetId>>
+    public sealed class EnumVersionedLocatableAsset : BaseEnumRust<VersionedLocatableAsset>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumVersionedLocatableAsset()
+        {
+				AddTypeDecoder<BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation, Substrate.Polkadot.NET.NetApiExt.Generated.Model.xcm.v3.multiasset.EnumAssetId>>(VersionedLocatableAsset.V3);
+				AddTypeDecoder<BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.staging_xcm.v4.location.Location, Substrate.Polkadot.NET.NetApiExt.Generated.Model.staging_xcm.v4.asset.AssetId>>(VersionedLocatableAsset.V4);
+        }
     }
 }

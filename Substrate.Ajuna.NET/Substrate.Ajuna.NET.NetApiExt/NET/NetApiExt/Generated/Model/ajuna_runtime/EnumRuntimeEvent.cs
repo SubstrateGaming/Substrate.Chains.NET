@@ -160,7 +160,41 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.ajuna_runtime
     /// <summary>
     /// >> 21 - Variant[ajuna_runtime.RuntimeEvent]
     /// </summary>
-    public sealed class EnumRuntimeEvent : BaseEnumExt<RuntimeEvent, Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_system.pallet.EnumEvent, Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.pallet.EnumEvent, BaseVoid, BaseVoid, Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_multisig.pallet.EnumEvent, Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_utility.pallet.EnumEvent, Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_identity.pallet.EnumEvent, Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_proxy.pallet.EnumEvent, Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_scheduler.pallet.EnumEvent, Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_preimage.pallet.EnumEvent, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_balances.pallet.EnumEvent, Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_transaction_payment.pallet.EnumEvent, Substrate.Ajuna.NET.NetApiExt.Generated.Model.orml_vesting.module.EnumEvent, BaseVoid, BaseVoid, BaseVoid, Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_collator_selection.pallet.EnumEvent, Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_session.pallet.EnumEvent, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue.pallet.EnumEvent, Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_xcm.pallet.EnumEvent, Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_pallet_xcm.pallet.EnumEvent, BaseVoid, Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_message_queue.pallet.EnumEvent, Substrate.Ajuna.NET.NetApiExt.Generated.Model.orml_xtokens.module.EnumEvent, Substrate.Ajuna.NET.NetApiExt.Generated.Model.orml_xcm.module.EnumEvent, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_treasury.pallet.EnumEvent, Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_collective.pallet.EnumEvent, Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_membership.pallet.EnumEvent, Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_collective.pallet.EnumEvent, Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_membership.pallet.EnumEvent, Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_democracy.pallet.EnumEvent, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_assets.pallet.EnumEvent, Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_asset_registry.pallet.EnumEvent>
+    public sealed class EnumRuntimeEvent : BaseEnumRust<RuntimeEvent>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumRuntimeEvent()
+        {
+				AddTypeDecoder<Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_system.pallet.EnumEvent>(RuntimeEvent.System);
+				AddTypeDecoder<Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.pallet.EnumEvent>(RuntimeEvent.ParachainSystem);
+				AddTypeDecoder<Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_multisig.pallet.EnumEvent>(RuntimeEvent.Multisig);
+				AddTypeDecoder<Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_utility.pallet.EnumEvent>(RuntimeEvent.Utility);
+				AddTypeDecoder<Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_identity.pallet.EnumEvent>(RuntimeEvent.Identity);
+				AddTypeDecoder<Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_proxy.pallet.EnumEvent>(RuntimeEvent.Proxy);
+				AddTypeDecoder<Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_scheduler.pallet.EnumEvent>(RuntimeEvent.Scheduler);
+				AddTypeDecoder<Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_preimage.pallet.EnumEvent>(RuntimeEvent.Preimage);
+				AddTypeDecoder<Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_balances.pallet.EnumEvent>(RuntimeEvent.Balances);
+				AddTypeDecoder<Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_transaction_payment.pallet.EnumEvent>(RuntimeEvent.TransactionPayment);
+				AddTypeDecoder<Substrate.Ajuna.NET.NetApiExt.Generated.Model.orml_vesting.module.EnumEvent>(RuntimeEvent.Vesting);
+				AddTypeDecoder<Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_collator_selection.pallet.EnumEvent>(RuntimeEvent.CollatorSelection);
+				AddTypeDecoder<Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_session.pallet.EnumEvent>(RuntimeEvent.Session);
+				AddTypeDecoder<Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue.pallet.EnumEvent>(RuntimeEvent.XcmpQueue);
+				AddTypeDecoder<Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_xcm.pallet.EnumEvent>(RuntimeEvent.PolkadotXcm);
+				AddTypeDecoder<Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_pallet_xcm.pallet.EnumEvent>(RuntimeEvent.CumulusXcm);
+				AddTypeDecoder<Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_message_queue.pallet.EnumEvent>(RuntimeEvent.MessageQueue);
+				AddTypeDecoder<Substrate.Ajuna.NET.NetApiExt.Generated.Model.orml_xtokens.module.EnumEvent>(RuntimeEvent.XTokens);
+				AddTypeDecoder<Substrate.Ajuna.NET.NetApiExt.Generated.Model.orml_xcm.module.EnumEvent>(RuntimeEvent.OrmlXcm);
+				AddTypeDecoder<Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_treasury.pallet.EnumEvent>(RuntimeEvent.Treasury);
+				AddTypeDecoder<Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_collective.pallet.EnumEvent>(RuntimeEvent.Council);
+				AddTypeDecoder<Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_membership.pallet.EnumEvent>(RuntimeEvent.CouncilMembership);
+				AddTypeDecoder<Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_collective.pallet.EnumEvent>(RuntimeEvent.TechnicalCommittee);
+				AddTypeDecoder<Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_membership.pallet.EnumEvent>(RuntimeEvent.TechnicalCommitteeMembership);
+				AddTypeDecoder<Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_democracy.pallet.EnumEvent>(RuntimeEvent.Democracy);
+				AddTypeDecoder<Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_assets.pallet.EnumEvent>(RuntimeEvent.Assets);
+				AddTypeDecoder<Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_asset_registry.pallet.EnumEvent>(RuntimeEvent.AssetRegistry);
+        }
     }
 }

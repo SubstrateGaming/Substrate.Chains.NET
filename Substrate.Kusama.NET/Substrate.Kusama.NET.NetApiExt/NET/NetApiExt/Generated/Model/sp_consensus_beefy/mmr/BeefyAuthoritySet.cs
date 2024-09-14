@@ -9,7 +9,7 @@
 
 using Substrate.NetApi.Attributes;
 using Substrate.NetApi.Model.Types.Base;
-using Substrate.NetApi.Model.Types.Metadata.V14;
+using Substrate.NetApi.Model.Types.Metadata.Base;
 using System.Collections.Generic;
 
 
@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_beefy.mmr
     
     
     /// <summary>
-    /// >> 901 - Composite[sp_consensus_beefy.mmr.BeefyAuthoritySet]
+    /// >> 915 - Composite[sp_consensus_beefy.mmr.BeefyAuthoritySet]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class BeefyAuthoritySet : BaseType

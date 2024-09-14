@@ -60,7 +60,7 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_circuit_breaker
     }
     
     /// <summary>
-    /// >> 527 - Variant[pallet_circuit_breaker.pallet.Error]
+    /// >> 588 - Variant[pallet_circuit_breaker.pallet.Error]
     /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>

@@ -9,7 +9,7 @@
 
 using Substrate.NetApi.Attributes;
 using Substrate.NetApi.Model.Types.Base;
-using Substrate.NetApi.Model.Types.Metadata.V14;
+using Substrate.NetApi.Model.Types.Metadata.Base;
 using System.Collections.Generic;
 
 
@@ -18,7 +18,7 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.frame_suppor
     
     
     /// <summary>
-    /// >> 119 - Composite[frame_support.dispatch.PerDispatchClassT3]
+    /// >> 189 - Composite[frame_support.dispatch.PerDispatchClassT3]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class PerDispatchClassT3 : BaseType
@@ -27,59 +27,23 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.frame_suppor
         /// <summary>
         /// >> normal
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _normal;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 Normal { get; set; }
         /// <summary>
         /// >> operational
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _operational;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 Operational { get; set; }
         /// <summary>
         /// >> mandatory
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _mandatory;
+        public Substrate.NetApi.Model.Types.Primitive.U32 Mandatory { get; set; }
         
-        public Substrate.NetApi.Model.Types.Primitive.U32 Normal
-        {
-            get
-            {
-                return this._normal;
-            }
-            set
-            {
-                this._normal = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 Operational
-        {
-            get
-            {
-                return this._operational;
-            }
-            set
-            {
-                this._operational = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 Mandatory
-        {
-            get
-            {
-                return this._mandatory;
-            }
-            set
-            {
-                this._mandatory = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "PerDispatchClassT3";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -89,6 +53,7 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.frame_suppor
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
@@ -101,7 +66,7 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.frame_suppor
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];
-            System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
+            global::System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
         }
     }
 }

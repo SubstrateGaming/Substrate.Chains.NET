@@ -44,7 +44,7 @@ namespace Substrate.HydraDX.NET.RestService.Generated.Controller
         ///  VestingSchedules: map AccountId => Vec<VestingSchedule>
         /// </summary>
         [HttpGet("VestingSchedules")]
-        [ProducesResponseType(typeof(Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT36), 200)]
+        [ProducesResponseType(typeof(Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT40), 200)]
         [StorageKeyBuilder(typeof(Substrate.HydraDX.NET.NetApiExt.Generated.Storage.VestingStorage), "VestingSchedulesParams", typeof(Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32))]
         public IActionResult GetVestingSchedules(string key)
         {

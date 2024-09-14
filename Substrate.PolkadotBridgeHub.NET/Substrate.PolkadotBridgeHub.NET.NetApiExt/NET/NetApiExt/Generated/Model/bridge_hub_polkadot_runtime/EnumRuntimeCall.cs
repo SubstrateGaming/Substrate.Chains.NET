@@ -15,36 +15,150 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bridge_hub_p
 {
     
     
+    /// <summary>
+    /// >> RuntimeCall
+    /// </summary>
     public enum RuntimeCall
     {
         
+        /// <summary>
+        /// >> System
+        /// </summary>
         System = 0,
         
+        /// <summary>
+        /// >> ParachainSystem
+        /// </summary>
         ParachainSystem = 1,
         
+        /// <summary>
+        /// >> Timestamp
+        /// </summary>
         Timestamp = 2,
         
+        /// <summary>
+        /// >> ParachainInfo
+        /// </summary>
+        ParachainInfo = 3,
+        
+        /// <summary>
+        /// >> Balances
+        /// </summary>
         Balances = 10,
         
+        /// <summary>
+        /// >> CollatorSelection
+        /// </summary>
         CollatorSelection = 21,
         
+        /// <summary>
+        /// >> Session
+        /// </summary>
         Session = 22,
         
+        /// <summary>
+        /// >> XcmpQueue
+        /// </summary>
         XcmpQueue = 30,
         
+        /// <summary>
+        /// >> PolkadotXcm
+        /// </summary>
         PolkadotXcm = 31,
         
-        DmpQueue = 33,
+        /// <summary>
+        /// >> CumulusXcm
+        /// </summary>
+        CumulusXcm = 32,
         
+        /// <summary>
+        /// >> Utility
+        /// </summary>
         Utility = 40,
         
+        /// <summary>
+        /// >> Multisig
+        /// </summary>
         Multisig = 41,
+        
+        /// <summary>
+        /// >> BridgeRelayers
+        /// </summary>
+        BridgeRelayers = 50,
+        
+        /// <summary>
+        /// >> BridgeKusamaGrandpa
+        /// </summary>
+        BridgeKusamaGrandpa = 51,
+        
+        /// <summary>
+        /// >> BridgeKusamaParachains
+        /// </summary>
+        BridgeKusamaParachains = 52,
+        
+        /// <summary>
+        /// >> BridgeKusamaMessages
+        /// </summary>
+        BridgeKusamaMessages = 53,
+        
+        /// <summary>
+        /// >> EthereumInboundQueue
+        /// </summary>
+        EthereumInboundQueue = 80,
+        
+        /// <summary>
+        /// >> EthereumOutboundQueue
+        /// </summary>
+        EthereumOutboundQueue = 81,
+        
+        /// <summary>
+        /// >> EthereumBeaconClient
+        /// </summary>
+        EthereumBeaconClient = 82,
+        
+        /// <summary>
+        /// >> EthereumSystem
+        /// </summary>
+        EthereumSystem = 83,
+        
+        /// <summary>
+        /// >> MessageQueue
+        /// </summary>
+        MessageQueue = 175,
     }
     
     /// <summary>
-    /// >> 240 - Variant[bridge_hub_polkadot_runtime.RuntimeCall]
+    /// >> 352 - Variant[bridge_hub_polkadot_runtime.RuntimeCall]
     /// </summary>
-    public sealed class EnumRuntimeCall : BaseEnumExt<RuntimeCall, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.frame_system.pallet.EnumCall, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.pallet.EnumCall, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.pallet_timestamp.pallet.EnumCall, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.pallet_balances.pallet.EnumCall, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.pallet_collator_selection.pallet.EnumCall, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.pallet_session.pallet.EnumCall, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue.pallet.EnumCall, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.pallet_xcm.pallet.EnumCall, BaseVoid, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.cumulus_pallet_dmp_queue.pallet.EnumCall, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.pallet_utility.pallet.EnumCall, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.pallet_multisig.pallet.EnumCall>
+    public sealed class EnumRuntimeCall : BaseEnumRust<RuntimeCall>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumRuntimeCall()
+        {
+				AddTypeDecoder<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.frame_system.pallet.EnumCall>(RuntimeCall.System);
+				AddTypeDecoder<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.pallet.EnumCall>(RuntimeCall.ParachainSystem);
+				AddTypeDecoder<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.pallet_timestamp.pallet.EnumCall>(RuntimeCall.Timestamp);
+				AddTypeDecoder<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.staging_parachain_info.pallet.EnumCall>(RuntimeCall.ParachainInfo);
+				AddTypeDecoder<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.pallet_balances.pallet.EnumCall>(RuntimeCall.Balances);
+				AddTypeDecoder<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.pallet_collator_selection.pallet.EnumCall>(RuntimeCall.CollatorSelection);
+				AddTypeDecoder<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.pallet_session.pallet.EnumCall>(RuntimeCall.Session);
+				AddTypeDecoder<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue.pallet.EnumCall>(RuntimeCall.XcmpQueue);
+				AddTypeDecoder<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.pallet_xcm.pallet.EnumCall>(RuntimeCall.PolkadotXcm);
+				AddTypeDecoder<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.cumulus_pallet_xcm.pallet.EnumCall>(RuntimeCall.CumulusXcm);
+				AddTypeDecoder<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.pallet_utility.pallet.EnumCall>(RuntimeCall.Utility);
+				AddTypeDecoder<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.pallet_multisig.pallet.EnumCall>(RuntimeCall.Multisig);
+				AddTypeDecoder<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.pallet_bridge_relayers.pallet.EnumCall>(RuntimeCall.BridgeRelayers);
+				AddTypeDecoder<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.pallet_bridge_grandpa.pallet.EnumCall>(RuntimeCall.BridgeKusamaGrandpa);
+				AddTypeDecoder<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.pallet_bridge_parachains.pallet.EnumCall>(RuntimeCall.BridgeKusamaParachains);
+				AddTypeDecoder<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.pallet_bridge_messages.pallet.EnumCall>(RuntimeCall.BridgeKusamaMessages);
+				AddTypeDecoder<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.snowbridge_pallet_inbound_queue.pallet.EnumCall>(RuntimeCall.EthereumInboundQueue);
+				AddTypeDecoder<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.snowbridge_pallet_outbound_queue.pallet.EnumCall>(RuntimeCall.EthereumOutboundQueue);
+				AddTypeDecoder<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.snowbridge_pallet_ethereum_client.pallet.EnumCall>(RuntimeCall.EthereumBeaconClient);
+				AddTypeDecoder<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.snowbridge_pallet_system.pallet.EnumCall>(RuntimeCall.EthereumSystem);
+				AddTypeDecoder<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.pallet_message_queue.pallet.EnumCall>(RuntimeCall.MessageQueue);
+        }
     }
 }

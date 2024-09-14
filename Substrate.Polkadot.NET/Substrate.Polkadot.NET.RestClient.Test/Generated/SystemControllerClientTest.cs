@@ -475,15 +475,7 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
       {
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_runtime.generic.digest.EnumDigestItem result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_runtime.generic.digest.EnumDigestItem();
-         result.Create(this.GetTestValueEnum<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_runtime.generic.digest.DigestItem>(), this.GetTestValue23());
-         return result;
-      }
-      public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> GetTestValue23()
-      {
-         Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> result;
-         result = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>();
-         result.Create(new Substrate.NetApi.Model.Types.Primitive.U8[] {
-                  this.GetTestValueU8()});
+         // NOT IMPLEMENTED >> Initialize Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_runtime.generic.digest.EnumDigestItem
          return result;
       }
       [Test()]
@@ -515,57 +507,42 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.frame_system.EventRecord> GetTestValue25()
+      public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.frame_system.EventRecord> GetTestValue24()
       {
          Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.frame_system.EventRecord> result;
          result = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.frame_system.EventRecord>();
          result.Create(new Substrate.Polkadot.NET.NetApiExt.Generated.Model.frame_system.EventRecord[] {
-                  this.GetTestValue26()});
+                  this.GetTestValue25()});
          return result;
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.frame_system.EventRecord GetTestValue26()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.frame_system.EventRecord GetTestValue25()
       {
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.frame_system.EventRecord result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.frame_system.EventRecord();
          result.Phase = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.frame_system.EnumPhase();
-         result.Phase.Create(this.GetTestValueEnum<Substrate.Polkadot.NET.NetApiExt.Generated.Model.frame_system.Phase>(), this.GetTestValueU32());
+         result.Phase = this.GetTestValue26();
          result.Event = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime.EnumRuntimeEvent();
-         result.Event.Create(this.GetTestValueEnum<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime.RuntimeEvent>(), this.GetTestValue27());
+         result.Event = this.GetTestValue27();
          result.Topics = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256>();
          result.Topics.Create(new Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256[] {
-                  this.GetTestValue30()});
+                  this.GetTestValue28()});
          return result;
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.frame_system.pallet.EnumEvent GetTestValue27()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.frame_system.EnumPhase GetTestValue26()
       {
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.frame_system.pallet.EnumEvent result;
-         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.frame_system.pallet.EnumEvent();
-         result.Create(this.GetTestValueEnum<Substrate.Polkadot.NET.NetApiExt.Generated.Model.frame_system.pallet.Event>(), this.GetTestValue28());
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.frame_system.EnumPhase result;
+         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.frame_system.EnumPhase();
+         // NOT IMPLEMENTED >> Initialize Substrate.Polkadot.NET.NetApiExt.Generated.Model.frame_system.EnumPhase
          return result;
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.frame_support.dispatch.DispatchInfo GetTestValue28()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime.EnumRuntimeEvent GetTestValue27()
       {
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.frame_support.dispatch.DispatchInfo result;
-         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.frame_support.dispatch.DispatchInfo();
-         result.Weight = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight();
-         result.Weight = this.GetTestValue29();
-         result.Class = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.frame_support.dispatch.EnumDispatchClass();
-         result.Class.Create(this.GetTestValueEnum<Substrate.Polkadot.NET.NetApiExt.Generated.Model.frame_support.dispatch.DispatchClass>());
-         result.PaysFee = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.frame_support.dispatch.EnumPays();
-         result.PaysFee.Create(this.GetTestValueEnum<Substrate.Polkadot.NET.NetApiExt.Generated.Model.frame_support.dispatch.Pays>());
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime.EnumRuntimeEvent result;
+         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime.EnumRuntimeEvent();
+         // NOT IMPLEMENTED >> Initialize Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime.EnumRuntimeEvent
          return result;
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight GetTestValue29()
-      {
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight result;
-         result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight();
-         result.RefTime = new Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U64>();
-         result.RefTime.Create(new Substrate.NetApi.CompactInteger(this.GetTestValueU64().Value));
-         result.ProofSize = new Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U64>();
-         result.ProofSize.Create(new Substrate.NetApi.CompactInteger(this.GetTestValueU64().Value));
-         return result;
-      }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256 GetTestValue30()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256 GetTestValue28()
       {
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256 result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256();
@@ -616,7 +593,7 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          SystemControllerClient rpcClient = new SystemControllerClient(_httpClient, subscriptionClient);
-         Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.frame_system.EventRecord> mockupValue = this.GetTestValue25();
+         Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Polkadot.NET.NetApiExt.Generated.Model.frame_system.EventRecord> mockupValue = this.GetTestValue24();
 
 
          Assert.IsTrue(await rpcClient.SubscribeEvents());
@@ -663,22 +640,22 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>> GetTestValue33()
+      public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>> GetTestValue31()
       {
          Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>> result;
          result = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>>();
          result.Create(new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>[] {
-                  this.GetTestValue34()});
+                  this.GetTestValue32()});
          return result;
       }
-      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32> GetTestValue34()
+      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32> GetTestValue32()
       {
          Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32> result;
          result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>();
          result.Create(this.GetTestValueU32(), this.GetTestValueU32());
          return result;
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256 GetTestValue35()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256 GetTestValue33()
       {
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256 result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256();
@@ -729,8 +706,8 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          SystemControllerClient rpcClient = new SystemControllerClient(_httpClient, subscriptionClient);
-         Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>> mockupValue = this.GetTestValue33();
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256 mockupKey = this.GetTestValue35();
+         Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>> mockupValue = this.GetTestValue31();
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256 mockupKey = this.GetTestValue33();
 
          Assert.IsTrue(await rpcClient.SubscribeEventTopics(mockupKey));
 
@@ -747,7 +724,7 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.frame_system.LastRuntimeUpgradeInfo GetTestValue37()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.frame_system.LastRuntimeUpgradeInfo GetTestValue35()
       {
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.frame_system.LastRuntimeUpgradeInfo result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.frame_system.LastRuntimeUpgradeInfo();
@@ -767,7 +744,7 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          SystemControllerClient rpcClient = new SystemControllerClient(_httpClient, subscriptionClient);
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.frame_system.LastRuntimeUpgradeInfo mockupValue = this.GetTestValue37();
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.frame_system.LastRuntimeUpgradeInfo mockupValue = this.GetTestValue35();
 
 
          Assert.IsTrue(await rpcClient.SubscribeLastRuntimeUpgrade());
@@ -843,11 +820,11 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.frame_system.EnumPhase GetTestValue41()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.frame_system.EnumPhase GetTestValue39()
       {
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.frame_system.EnumPhase result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.frame_system.EnumPhase();
-         result.Create(this.GetTestValueEnum<Substrate.Polkadot.NET.NetApiExt.Generated.Model.frame_system.Phase>(), this.GetTestValueU32());
+         // NOT IMPLEMENTED >> Initialize Substrate.Polkadot.NET.NetApiExt.Generated.Model.frame_system.EnumPhase
          return result;
       }
       [Test()]
@@ -861,7 +838,7 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          SystemControllerClient rpcClient = new SystemControllerClient(_httpClient, subscriptionClient);
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.frame_system.EnumPhase mockupValue = this.GetTestValue41();
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.frame_system.EnumPhase mockupValue = this.GetTestValue39();
 
 
          Assert.IsTrue(await rpcClient.SubscribeExecutionPhase());
@@ -879,16 +856,16 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.frame_system.CodeUpgradeAuthorization GetTestValue43()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.frame_system.CodeUpgradeAuthorization GetTestValue41()
       {
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.frame_system.CodeUpgradeAuthorization result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.frame_system.CodeUpgradeAuthorization();
          result.CodeHash = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256();
-         result.CodeHash = this.GetTestValue44();
+         result.CodeHash = this.GetTestValue42();
          result.CheckVersion = this.GetTestValueBool();
          return result;
       }
-      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256 GetTestValue44()
+      public Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256 GetTestValue42()
       {
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256 result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256();
@@ -939,7 +916,7 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          SystemControllerClient rpcClient = new SystemControllerClient(_httpClient, subscriptionClient);
-         Substrate.Polkadot.NET.NetApiExt.Generated.Model.frame_system.CodeUpgradeAuthorization mockupValue = this.GetTestValue43();
+         Substrate.Polkadot.NET.NetApiExt.Generated.Model.frame_system.CodeUpgradeAuthorization mockupValue = this.GetTestValue41();
 
 
          Assert.IsTrue(await rpcClient.SubscribeAuthorizedUpgrade());

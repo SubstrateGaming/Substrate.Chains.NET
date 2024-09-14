@@ -37,7 +37,7 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Storage
         {
             this._client = client;
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Router", "Routes"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.HydraDX.NET.NetApiExt.Generated.Model.hydradx_traits.router.AssetPair), typeof(Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT6)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.HydraDX.NET.NetApiExt.Generated.Model.hydradx_traits.router.AssetPair), typeof(Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT7)));
         }
         
         /// <summary>
@@ -64,10 +64,10 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Storage
         /// >> Routes
         ///  Storing routes for asset pairs
         /// </summary>
-        public async Task<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT6> Routes(Substrate.HydraDX.NET.NetApiExt.Generated.Model.hydradx_traits.router.AssetPair key, string blockhash, CancellationToken token)
+        public async Task<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT7> Routes(Substrate.HydraDX.NET.NetApiExt.Generated.Model.hydradx_traits.router.AssetPair key, string blockhash, CancellationToken token)
         {
             string parameters = RouterStorage.RoutesParams(key);
-            var result = await _client.GetStorageAsync<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT6>(parameters, blockhash, token);
+            var result = await _client.GetStorageAsync<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT7>(parameters, blockhash, token);
             return result;
         }
     }

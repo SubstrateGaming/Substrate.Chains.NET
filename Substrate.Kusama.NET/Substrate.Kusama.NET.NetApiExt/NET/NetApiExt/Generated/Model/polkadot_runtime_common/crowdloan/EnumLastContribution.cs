@@ -38,9 +38,19 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_common
     }
     
     /// <summary>
-    /// >> 866 - Variant[polkadot_runtime_common.crowdloan.LastContribution]
+    /// >> 880 - Variant[polkadot_runtime_common.crowdloan.LastContribution]
     /// </summary>
-    public sealed class EnumLastContribution : BaseEnumExt<LastContribution, BaseVoid, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>
+    public sealed class EnumLastContribution : BaseEnumRust<LastContribution>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumLastContribution()
+        {
+				AddTypeDecoder<BaseVoid>(LastContribution.Never);
+				AddTypeDecoder<Substrate.NetApi.Model.Types.Primitive.U32>(LastContribution.PreEnding);
+				AddTypeDecoder<Substrate.NetApi.Model.Types.Primitive.U32>(LastContribution.Ending);
+        }
     }
 }

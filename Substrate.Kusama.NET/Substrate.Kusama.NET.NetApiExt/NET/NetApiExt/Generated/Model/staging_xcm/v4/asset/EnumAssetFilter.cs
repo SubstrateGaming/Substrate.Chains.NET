@@ -33,9 +33,18 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_xcm.v4.asset
     }
     
     /// <summary>
-    /// >> 437 - Variant[staging_xcm.v4.asset.AssetFilter]
+    /// >> 435 - Variant[staging_xcm.v4.asset.AssetFilter]
     /// </summary>
-    public sealed class EnumAssetFilter : BaseEnumExt<AssetFilter, Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_xcm.v4.asset.Assets, Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_xcm.v4.asset.EnumWildAsset>
+    public sealed class EnumAssetFilter : BaseEnumRust<AssetFilter>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumAssetFilter()
+        {
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_xcm.v4.asset.Assets>(AssetFilter.Definite);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_xcm.v4.asset.EnumWildAsset>(AssetFilter.Wild);
+        }
     }
 }

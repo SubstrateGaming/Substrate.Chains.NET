@@ -23,77 +23,25 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_qu
     {
         
         /// <summary>
-        /// >> Success
-        /// Some XCM was executed ok.
-        /// </summary>
-        Success = 0,
-        
-        /// <summary>
-        /// >> Fail
-        /// Some XCM failed.
-        /// </summary>
-        Fail = 1,
-        
-        /// <summary>
-        /// >> BadVersion
-        /// Bad XCM version used.
-        /// </summary>
-        BadVersion = 2,
-        
-        /// <summary>
-        /// >> BadFormat
-        /// Bad XCM format used.
-        /// </summary>
-        BadFormat = 3,
-        
-        /// <summary>
         /// >> XcmpMessageSent
         /// An HRMP message was sent to a sibling parachain.
         /// </summary>
-        XcmpMessageSent = 4,
-        
-        /// <summary>
-        /// >> OverweightEnqueued
-        /// An XCM exceeded the individual message weight budget.
-        /// </summary>
-        OverweightEnqueued = 5,
-        
-        /// <summary>
-        /// >> OverweightServiced
-        /// An XCM from the overweight queue was executed with the given actual weight used.
-        /// </summary>
-        OverweightServiced = 6,
-        
-        /// <summary>
-        /// >> XcmDeferred
-        /// Some XCM was deferred for later execution
-        /// </summary>
-        XcmDeferred = 7,
-        
-        /// <summary>
-        /// >> XcmDeferredQueueFull
-        /// The deferred queue is full with xcm messages
-        /// </summary>
-        XcmDeferredQueueFull = 8,
-        
-        /// <summary>
-        /// >> DeferredXcmDiscarded
-        /// The deferred message was successfully discarded.
-        /// </summary>
-        DeferredXcmDiscarded = 9,
-        
-        /// <summary>
-        /// >> DeferredBucketDiscarded
-        /// The deferred bucket was discarded.
-        /// </summary>
-        DeferredBucketDiscarded = 10,
+        XcmpMessageSent = 0,
     }
     
     /// <summary>
-    /// >> 199 - Variant[cumulus_pallet_xcmp_queue.pallet.Event]
+    /// >> 221 - Variant[cumulus_pallet_xcmp_queue.pallet.Event]
     /// The `Event` enum of this pallet
     /// </summary>
-    public sealed class EnumEvent : BaseEnumExt<Event, BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Types.Base.Arr32U8, Substrate.HydraDX.NET.NetApiExt.Generated.Types.Base.Arr32U8, Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>, BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Types.Base.Arr32U8, Substrate.HydraDX.NET.NetApiExt.Generated.Types.Base.Arr32U8, Substrate.HydraDX.NET.NetApiExt.Generated.Model.staging_xcm.v3.traits.EnumError, Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>, Substrate.HydraDX.NET.NetApiExt.Generated.Types.Base.Arr32U8, Substrate.HydraDX.NET.NetApiExt.Generated.Types.Base.Arr32U8, Substrate.HydraDX.NET.NetApiExt.Generated.Types.Base.Arr32U8, BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U64, Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U64, Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>, BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U16>, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.HydraDX.NET.NetApiExt.Generated.Types.Base.Arr32U8>>, BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.HydraDX.NET.NetApiExt.Generated.Types.Base.Arr32U8>>, BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U16>, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.HydraDX.NET.NetApiExt.Generated.Types.Base.Arr32U8>>, BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U16>>>
+    public sealed class EnumEvent : BaseEnumRust<Event>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumEvent()
+        {
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Types.Base.Arr32U8>(Event.XcmpMessageSent);
+        }
     }
 }

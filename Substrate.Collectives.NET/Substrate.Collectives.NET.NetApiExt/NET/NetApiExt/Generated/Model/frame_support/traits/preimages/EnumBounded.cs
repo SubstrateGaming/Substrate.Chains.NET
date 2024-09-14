@@ -15,20 +15,42 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.frame_support.trai
 {
     
     
+    /// <summary>
+    /// >> Bounded
+    /// </summary>
     public enum Bounded
     {
         
+        /// <summary>
+        /// >> Legacy
+        /// </summary>
         Legacy = 0,
         
+        /// <summary>
+        /// >> Inline
+        /// </summary>
         Inline = 1,
         
+        /// <summary>
+        /// >> Lookup
+        /// </summary>
         Lookup = 2,
     }
     
     /// <summary>
-    /// >> 125 - Variant[frame_support.traits.preimages.Bounded]
+    /// >> 149 - Variant[frame_support.traits.preimages.Bounded]
     /// </summary>
-    public sealed class EnumBounded : BaseEnumExt<Bounded, Substrate.Collectives.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT6, BaseTuple<Substrate.Collectives.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Primitive.U32>>
+    public sealed class EnumBounded : BaseEnumRust<Bounded>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumBounded()
+        {
+				AddTypeDecoder<Substrate.Collectives.NET.NetApiExt.Generated.Model.primitive_types.H256>(Bounded.Legacy);
+				AddTypeDecoder<Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9>(Bounded.Inline);
+				AddTypeDecoder<BaseTuple<Substrate.Collectives.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Primitive.U32>>(Bounded.Lookup);
+        }
     }
 }

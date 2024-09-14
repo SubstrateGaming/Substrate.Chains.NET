@@ -716,7 +716,7 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
          result.Who = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32();
          result.Who = this.GetTestValue30();
          result.Kind = new Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.EnumBidKind();
-         result.Kind.Create(this.GetTestValueEnum<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.BidKind>(), this.GetTestValueU128());
+         result.Kind = this.GetTestValue31();
          result.Value = this.GetTestValueU128();
          return result;
       }
@@ -760,6 +760,13 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
                   this.GetTestValueU8()});
          return result;
       }
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.EnumBidKind GetTestValue31()
+      {
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.EnumBidKind result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.EnumBidKind();
+         // NOT IMPLEMENTED >> Initialize Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.EnumBidKind
+         return result;
+      }
       [Test()]
       public async System.Threading.Tasks.Task TestBids()
       {
@@ -789,20 +796,27 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.Candidacy GetTestValue32()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.Candidacy GetTestValue33()
       {
          Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.Candidacy result;
          result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.Candidacy();
          result.Round = this.GetTestValueU32();
          result.Kind = new Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.EnumBidKind();
-         result.Kind.Create(this.GetTestValueEnum<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.BidKind>(), this.GetTestValueU128());
+         result.Kind = this.GetTestValue34();
          result.Bid = this.GetTestValueU128();
          result.Tally = new Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.Tally();
-         result.Tally = this.GetTestValue33();
+         result.Tally = this.GetTestValue35();
          result.SkepticStruck = this.GetTestValueBool();
          return result;
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.Tally GetTestValue33()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.EnumBidKind GetTestValue34()
+      {
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.EnumBidKind result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.EnumBidKind();
+         // NOT IMPLEMENTED >> Initialize Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.EnumBidKind
+         return result;
+      }
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.Tally GetTestValue35()
       {
          Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.Tally result;
          result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.Tally();
@@ -810,7 +824,7 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
          result.Rejections = this.GetTestValueU32();
          return result;
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue34()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue36()
       {
          Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 result;
          result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32();
@@ -861,8 +875,8 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          SocietyControllerClient rpcClient = new SocietyControllerClient(_httpClient, subscriptionClient);
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.Candidacy mockupValue = this.GetTestValue32();
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 mockupKey = this.GetTestValue34();
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.Candidacy mockupValue = this.GetTestValue33();
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 mockupKey = this.GetTestValue36();
 
          Assert.IsTrue(await rpcClient.SubscribeCandidates(mockupKey));
 
@@ -879,7 +893,7 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue36()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue38()
       {
          Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 result;
          result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32();
@@ -930,7 +944,7 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          SocietyControllerClient rpcClient = new SocietyControllerClient(_httpClient, subscriptionClient);
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 mockupValue = this.GetTestValue36();
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 mockupValue = this.GetTestValue38();
 
 
          Assert.IsTrue(await rpcClient.SubscribeSkeptic());
@@ -948,7 +962,7 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.Vote GetTestValue38()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.Vote GetTestValue40()
       {
          Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.Vote result;
          result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.Vote();
@@ -956,14 +970,14 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
          result.Weight = this.GetTestValueU32();
          return result;
       }
-      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> GetTestValue39()
+      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> GetTestValue41()
       {
          Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> result;
          result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>();
-         result.Create(this.GetTestValue40(), this.GetTestValue41());
+         result.Create(this.GetTestValue42(), this.GetTestValue43());
          return result;
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue40()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue42()
       {
          Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 result;
          result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32();
@@ -1003,7 +1017,7 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
                   this.GetTestValueU8()});
          return result;
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue41()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue43()
       {
          Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 result;
          result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32();
@@ -1054,8 +1068,8 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          SocietyControllerClient rpcClient = new SocietyControllerClient(_httpClient, subscriptionClient);
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.Vote mockupValue = this.GetTestValue38();
-         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> mockupKey = this.GetTestValue39();
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.Vote mockupValue = this.GetTestValue40();
+         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> mockupKey = this.GetTestValue41();
 
          Assert.IsTrue(await rpcClient.SubscribeVotes(mockupKey));
 
@@ -1072,7 +1086,7 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT26 GetTestValue43()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT26 GetTestValue45()
       {
          Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT26 result;
          result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT26();
@@ -1081,7 +1095,7 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
                   this.GetTestValueU8()});
          return result;
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue44()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue46()
       {
          Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 result;
          result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32();
@@ -1132,8 +1146,8 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          SocietyControllerClient rpcClient = new SocietyControllerClient(_httpClient, subscriptionClient);
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT26 mockupValue = this.GetTestValue43();
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 mockupKey = this.GetTestValue44();
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT26 mockupValue = this.GetTestValue45();
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 mockupKey = this.GetTestValue46();
 
          Assert.IsTrue(await rpcClient.SubscribeVoteClearCursor(mockupKey));
 
@@ -1150,17 +1164,17 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.IntakeRecord GetTestValue46()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.IntakeRecord GetTestValue48()
       {
          Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.IntakeRecord result;
          result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.IntakeRecord();
          result.Who = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32();
-         result.Who = this.GetTestValue47();
+         result.Who = this.GetTestValue49();
          result.Bid = this.GetTestValueU128();
          result.Round = this.GetTestValueU32();
          return result;
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue47()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue49()
       {
          Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 result;
          result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32();
@@ -1211,7 +1225,7 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          SocietyControllerClient rpcClient = new SocietyControllerClient(_httpClient, subscriptionClient);
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.IntakeRecord mockupValue = this.GetTestValue46();
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.IntakeRecord mockupValue = this.GetTestValue48();
 
 
          Assert.IsTrue(await rpcClient.SubscribeNextHead());
@@ -1258,14 +1272,14 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.Tally> GetTestValue50()
+      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.Tally> GetTestValue52()
       {
          Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.Tally> result;
          result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.Tally>();
-         result.Create(this.GetTestValue51(), this.GetTestValue52(), this.GetTestValue53());
+         result.Create(this.GetTestValue53(), this.GetTestValue54(), this.GetTestValue55());
          return result;
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue51()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue53()
       {
          Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 result;
          result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32();
@@ -1305,7 +1319,7 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
                   this.GetTestValueU8()});
          return result;
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue52()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue54()
       {
          Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 result;
          result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32();
@@ -1345,7 +1359,7 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
                   this.GetTestValueU8()});
          return result;
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.Tally GetTestValue53()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.Tally GetTestValue55()
       {
          Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.Tally result;
          result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.Tally();
@@ -1364,7 +1378,7 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          SocietyControllerClient rpcClient = new SocietyControllerClient(_httpClient, subscriptionClient);
-         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.Tally> mockupValue = this.GetTestValue50();
+         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.Tally> mockupValue = this.GetTestValue52();
 
 
          Assert.IsTrue(await rpcClient.SubscribeDefending());
@@ -1382,7 +1396,7 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.Vote GetTestValue55()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.Vote GetTestValue57()
       {
          Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.Vote result;
          result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.Vote();
@@ -1390,14 +1404,14 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
          result.Weight = this.GetTestValueU32();
          return result;
       }
-      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> GetTestValue56()
+      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> GetTestValue58()
       {
          Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> result;
          result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>();
-         result.Create(this.GetTestValueU32(), this.GetTestValue57());
+         result.Create(this.GetTestValueU32(), this.GetTestValue59());
          return result;
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue57()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue59()
       {
          Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 result;
          result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32();
@@ -1448,8 +1462,8 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          SocietyControllerClient rpcClient = new SocietyControllerClient(_httpClient, subscriptionClient);
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.Vote mockupValue = this.GetTestValue55();
-         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> mockupKey = this.GetTestValue56();
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society.Vote mockupValue = this.GetTestValue57();
+         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> mockupKey = this.GetTestValue58();
 
          Assert.IsTrue(await rpcClient.SubscribeDefenderVotes(mockupKey));
 

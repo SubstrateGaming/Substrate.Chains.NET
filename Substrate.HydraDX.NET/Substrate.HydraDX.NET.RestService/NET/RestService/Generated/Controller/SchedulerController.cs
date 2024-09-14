@@ -53,7 +53,7 @@ namespace Substrate.HydraDX.NET.RestService.Generated.Controller
         ///  Items to be executed, indexed by the block number that they should be executed on.
         /// </summary>
         [HttpGet("Agenda")]
-        [ProducesResponseType(typeof(Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT38), 200)]
+        [ProducesResponseType(typeof(Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT43), 200)]
         [StorageKeyBuilder(typeof(Substrate.HydraDX.NET.NetApiExt.Generated.Storage.SchedulerStorage), "AgendaParams", typeof(Substrate.NetApi.Model.Types.Primitive.U32))]
         public IActionResult GetAgenda(string key)
         {

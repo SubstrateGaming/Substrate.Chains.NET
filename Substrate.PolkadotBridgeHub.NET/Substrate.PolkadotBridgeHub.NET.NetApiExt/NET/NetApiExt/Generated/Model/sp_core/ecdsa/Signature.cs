@@ -9,7 +9,7 @@
 
 using Substrate.NetApi.Attributes;
 using Substrate.NetApi.Model.Types.Base;
-using Substrate.NetApi.Model.Types.Metadata.V14;
+using Substrate.NetApi.Model.Types.Metadata.Base;
 using System.Collections.Generic;
 
 
@@ -18,7 +18,7 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_core.ecds
     
     
     /// <summary>
-    /// >> 257 - Composite[sp_core.ecdsa.Signature]
+    /// >> 467 - Composite[sp_core.ecdsa.Signature]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Signature : BaseType
@@ -27,25 +27,15 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_core.ecds
         /// <summary>
         /// >> value
         /// </summary>
-        private Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Types.Base.Arr65U8 _value;
+        public Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Types.Base.Arr65U8 Value { get; set; }
         
-        public Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Types.Base.Arr65U8 Value
-        {
-            get
-            {
-                return this._value;
-            }
-            set
-            {
-                this._value = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "Signature";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -53,6 +43,7 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_core.ecds
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
@@ -61,7 +52,7 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_core.ecds
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];
-            System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
+            global::System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
         }
     }
 }

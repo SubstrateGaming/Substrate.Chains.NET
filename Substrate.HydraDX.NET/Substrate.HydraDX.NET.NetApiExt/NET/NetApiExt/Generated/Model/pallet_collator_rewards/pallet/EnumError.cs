@@ -24,7 +24,7 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_collator_reward
     }
     
     /// <summary>
-    /// >> 501 - Variant[pallet_collator_rewards.pallet.Error]
+    /// >> 562 - Variant[pallet_collator_rewards.pallet.Error]
     /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>

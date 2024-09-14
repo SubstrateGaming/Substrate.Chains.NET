@@ -24,16 +24,26 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parach
         
         /// <summary>
         /// >> force_approve
-        /// See [`Pallet::force_approve`].
+        /// Issue a signal to the consensus engine to forcibly act as though all parachain
+        /// blocks in all relay chain blocks up to and including the given number in the current
+        /// chain are valid and should be finalized.
         /// </summary>
         force_approve = 0,
     }
     
     /// <summary>
-    /// >> 352 - Variant[polkadot_runtime_parachains.initializer.pallet.Call]
+    /// >> 350 - Variant[polkadot_runtime_parachains.initializer.pallet.Call]
     /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
-    public sealed class EnumCall : BaseEnumExt<Call, Substrate.NetApi.Model.Types.Primitive.U32>
+    public sealed class EnumCall : BaseEnumRust<Call>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumCall()
+        {
+				AddTypeDecoder<Substrate.NetApi.Model.Types.Primitive.U32>(Call.force_approve);
+        }
     }
 }

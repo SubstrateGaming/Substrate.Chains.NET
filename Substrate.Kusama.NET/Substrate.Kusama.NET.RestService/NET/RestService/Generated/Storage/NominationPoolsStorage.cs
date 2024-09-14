@@ -110,7 +110,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// <summary>
         /// >> RewardPools
         ///  Reward pools. This is where there rewards for each pool accumulate. When a members payout is
-        ///  claimed, the balance comes out fo the reward pool. Keyed by the bonded pools account.
+        ///  claimed, the balance comes out of the reward pool. Keyed by the bonded pools account.
         /// </summary>
         Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools.RewardPool GetRewardPools(string key);
         
@@ -155,8 +155,8 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// >> ReversePoolIdLookup
         ///  A reverse lookup from the pool's account id to its id.
         /// 
-        ///  This is only used for slashing. In all other instances, the pool id is used, and the
-        ///  accounts are deterministically derived from it.
+        ///  This is only used for slashing and on automatic withdraw update. In all other instances, the
+        ///  pool id is used, and the accounts are deterministically derived from it.
         /// </summary>
         Substrate.NetApi.Model.Types.Primitive.U32 GetReversePoolIdLookup(string key);
         
@@ -904,7 +904,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// <summary>
         /// >> RewardPools
         ///  Reward pools. This is where there rewards for each pool accumulate. When a members payout is
-        ///  claimed, the balance comes out fo the reward pool. Keyed by the bonded pools account.
+        ///  claimed, the balance comes out of the reward pool. Keyed by the bonded pools account.
         /// </summary>
         public Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools.RewardPool GetRewardPools(string key)
         {
@@ -1066,8 +1066,8 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// >> ReversePoolIdLookup
         ///  A reverse lookup from the pool's account id to its id.
         /// 
-        ///  This is only used for slashing. In all other instances, the pool id is used, and the
-        ///  accounts are deterministically derived from it.
+        ///  This is only used for slashing and on automatic withdraw update. In all other instances, the
+        ///  pool id is used, and the accounts are deterministically derived from it.
         /// </summary>
         public Substrate.NetApi.Model.Types.Primitive.U32 GetReversePoolIdLookup(string key)
         {

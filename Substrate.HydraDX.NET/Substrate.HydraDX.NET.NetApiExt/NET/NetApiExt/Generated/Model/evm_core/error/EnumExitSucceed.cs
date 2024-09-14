@@ -38,7 +38,7 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.evm_core.error
     }
     
     /// <summary>
-    /// >> 133 - Variant[evm_core.error.ExitSucceed]
+    /// >> 135 - Variant[evm_core.error.ExitSucceed]
     /// </summary>
     public sealed class EnumExitSucceed : BaseEnum<ExitSucceed>
     {

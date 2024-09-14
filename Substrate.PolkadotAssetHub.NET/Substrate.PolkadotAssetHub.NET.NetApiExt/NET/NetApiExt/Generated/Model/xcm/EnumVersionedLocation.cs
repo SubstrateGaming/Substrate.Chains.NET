@@ -40,7 +40,17 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm
     /// <summary>
     /// >> 116 - Variant[xcm.VersionedLocation]
     /// </summary>
-    public sealed class EnumVersionedLocation : BaseEnumExt<VersionedLocation, BaseVoid, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v2.multilocation.MultiLocation, BaseVoid, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v4.location.Location>
+    public sealed class EnumVersionedLocation : BaseEnumRust<VersionedLocation>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumVersionedLocation()
+        {
+				AddTypeDecoder<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v2.multilocation.MultiLocation>(VersionedLocation.V2);
+				AddTypeDecoder<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation>(VersionedLocation.V3);
+				AddTypeDecoder<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v4.location.Location>(VersionedLocation.V4);
+        }
     }
 }

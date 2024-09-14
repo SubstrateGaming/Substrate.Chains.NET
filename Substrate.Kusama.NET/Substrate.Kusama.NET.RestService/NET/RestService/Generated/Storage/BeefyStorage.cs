@@ -28,7 +28,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// >> Authorities
         ///  The current authorities set
         /// </summary>
-        Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT48 GetAuthorities();
+        Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT49 GetAuthorities();
         
         /// <summary>
         /// >> ValidatorSetId
@@ -40,7 +40,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// >> NextAuthorities
         ///  Authorities set scheduled to be used with the next session
         /// </summary>
-        Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT48 GetNextAuthorities();
+        Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT49 GetNextAuthorities();
         
         /// <summary>
         /// >> SetIdSession
@@ -75,7 +75,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// <summary>
         /// _authoritiesTypedStorage typed storage field
         /// </summary>
-        private TypedStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT48> _authoritiesTypedStorage;
+        private TypedStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT49> _authoritiesTypedStorage;
         
         /// <summary>
         /// _validatorSetIdTypedStorage typed storage field
@@ -85,7 +85,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// <summary>
         /// _nextAuthoritiesTypedStorage typed storage field
         /// </summary>
-        private TypedStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT48> _nextAuthoritiesTypedStorage;
+        private TypedStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT49> _nextAuthoritiesTypedStorage;
         
         /// <summary>
         /// _setIdSessionTypedStorage typed storage field
@@ -102,9 +102,9 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// </summary>
         public BeefyStorage(IStorageDataProvider storageDataProvider, List<IStorageChangeDelegate> storageChangeDelegates)
         {
-            this.AuthoritiesTypedStorage = new TypedStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT48>("Beefy.Authorities", storageDataProvider, storageChangeDelegates);
+            this.AuthoritiesTypedStorage = new TypedStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT49>("Beefy.Authorities", storageDataProvider, storageChangeDelegates);
             this.ValidatorSetIdTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U64>("Beefy.ValidatorSetId", storageDataProvider, storageChangeDelegates);
-            this.NextAuthoritiesTypedStorage = new TypedStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT48>("Beefy.NextAuthorities", storageDataProvider, storageChangeDelegates);
+            this.NextAuthoritiesTypedStorage = new TypedStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT49>("Beefy.NextAuthorities", storageDataProvider, storageChangeDelegates);
             this.SetIdSessionTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Primitive.U32>("Beefy.SetIdSession", storageDataProvider, storageChangeDelegates);
             this.GenesisBlockTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32>>("Beefy.GenesisBlock", storageDataProvider, storageChangeDelegates);
         }
@@ -112,7 +112,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// <summary>
         /// _authoritiesTypedStorage property
         /// </summary>
-        public TypedStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT48> AuthoritiesTypedStorage
+        public TypedStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT49> AuthoritiesTypedStorage
         {
             get
             {
@@ -142,7 +142,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// <summary>
         /// _nextAuthoritiesTypedStorage property
         /// </summary>
-        public TypedStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT48> NextAuthoritiesTypedStorage
+        public TypedStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT49> NextAuthoritiesTypedStorage
         {
             get
             {
@@ -209,7 +209,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// >> Authorities
         ///  The current authorities set
         /// </summary>
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT48 GetAuthorities()
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT49 GetAuthorities()
         {
             return AuthoritiesTypedStorage.Get();
         }
@@ -245,7 +245,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// >> NextAuthorities
         ///  Authorities set scheduled to be used with the next session
         /// </summary>
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT48 GetNextAuthorities()
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT49 GetNextAuthorities()
         {
             return NextAuthoritiesTypedStorage.Get();
         }

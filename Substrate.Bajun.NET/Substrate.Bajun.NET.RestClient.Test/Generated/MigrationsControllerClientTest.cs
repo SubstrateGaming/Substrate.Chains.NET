@@ -30,26 +30,7 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
       {
          Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_migrations.EnumMigrationCursor result;
          result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_migrations.EnumMigrationCursor();
-         result.Create(this.GetTestValueEnum<Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_migrations.MigrationCursor>(), this.GetTestValue3());
-         return result;
-      }
-      public Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_migrations.ActiveCursor GetTestValue3()
-      {
-         Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_migrations.ActiveCursor result;
-         result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_migrations.ActiveCursor();
-         result.Index = this.GetTestValueU32();
-         result.InnerCursor = new Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT16>();
-         result.InnerCursor.Create(this.GetTestValue4());
-         result.StartedAt = this.GetTestValueU32();
-         return result;
-      }
-      public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT16 GetTestValue4()
-      {
-         Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT16 result;
-         result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT16();
-         result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>();
-         result.Value.Create(new Substrate.NetApi.Model.Types.Primitive.U8[] {
-                  this.GetTestValueU8()});
+         // NOT IMPLEMENTED >> Initialize Substrate.Bajun.NET.NetApiExt.Generated.Model.pallet_migrations.EnumMigrationCursor
          return result;
       }
       [Test()]
@@ -81,13 +62,13 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.NetApi.Model.Types.Base.BaseTuple GetTestValue6()
+      public Substrate.NetApi.Model.Types.Base.BaseTuple GetTestValue4()
       {
          Substrate.NetApi.Model.Types.Base.BaseTuple result;
          result = new Substrate.NetApi.Model.Types.Base.BaseTuple();
          return result;
       }
-      public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17 GetTestValue7()
+      public Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17 GetTestValue5()
       {
          Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17 result;
          result = new Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17();
@@ -107,8 +88,8 @@ namespace Substrate.Bajun.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          MigrationsControllerClient rpcClient = new MigrationsControllerClient(_httpClient, subscriptionClient);
-         Substrate.NetApi.Model.Types.Base.BaseTuple mockupValue = this.GetTestValue6();
-         Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17 mockupKey = this.GetTestValue7();
+         Substrate.NetApi.Model.Types.Base.BaseTuple mockupValue = this.GetTestValue4();
+         Substrate.Bajun.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17 mockupKey = this.GetTestValue5();
 
          Assert.IsTrue(await rpcClient.SubscribeHistoric(mockupKey));
 

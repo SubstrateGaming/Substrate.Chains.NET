@@ -9,7 +9,7 @@
 
 using Substrate.NetApi.Attributes;
 using Substrate.NetApi.Model.Types.Base;
-using Substrate.NetApi.Model.Types.Metadata.V14;
+using Substrate.NetApi.Model.Types.Metadata.Base;
 using System.Collections.Generic;
 
 
@@ -18,7 +18,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_proxy
     
     
     /// <summary>
-    /// >> 313 - Composite[pallet_proxy.Announcement]
+    /// >> 396 - Composite[pallet_proxy.Announcement]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Announcement : BaseType
@@ -27,59 +27,23 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_proxy
         /// <summary>
         /// >> real
         /// </summary>
-        private Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 _real;
-        
+        public Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 Real { get; set; }
         /// <summary>
         /// >> call_hash
         /// </summary>
-        private Substrate.Collectives.NET.NetApiExt.Generated.Model.primitive_types.H256 _callHash;
-        
+        public Substrate.Collectives.NET.NetApiExt.Generated.Model.primitive_types.H256 CallHash { get; set; }
         /// <summary>
         /// >> height
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _height;
+        public Substrate.NetApi.Model.Types.Primitive.U32 Height { get; set; }
         
-        public Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 Real
-        {
-            get
-            {
-                return this._real;
-            }
-            set
-            {
-                this._real = value;
-            }
-        }
-        
-        public Substrate.Collectives.NET.NetApiExt.Generated.Model.primitive_types.H256 CallHash
-        {
-            get
-            {
-                return this._callHash;
-            }
-            set
-            {
-                this._callHash = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 Height
-        {
-            get
-            {
-                return this._height;
-            }
-            set
-            {
-                this._height = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "Announcement";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -89,6 +53,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_proxy
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
@@ -101,7 +66,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_proxy
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];
-            System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
+            global::System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
         }
     }
 }

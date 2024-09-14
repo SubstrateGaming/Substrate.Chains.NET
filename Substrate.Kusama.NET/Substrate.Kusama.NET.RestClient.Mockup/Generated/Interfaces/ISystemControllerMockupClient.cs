@@ -22,6 +22,7 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Interfaces
    {
       Task<bool> SetAccount(AccountInfo value, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
       Task<bool> SetExtrinsicCount(U32 value);
+      Task<bool> SetInherentsApplied(Bool value);
       Task<bool> SetBlockWeight(PerDispatchClassT1 value);
       Task<bool> SetAllExtrinsicsLen(U32 value);
       Task<bool> SetBlockHash(H256 value, U32 key);

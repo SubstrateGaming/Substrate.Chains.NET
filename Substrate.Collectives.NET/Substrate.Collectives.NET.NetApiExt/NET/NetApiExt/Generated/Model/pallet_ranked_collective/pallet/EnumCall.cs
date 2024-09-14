@@ -15,27 +15,75 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_ranked_coll
 {
     
     
+    /// <summary>
+    /// >> Call
+    /// Contains a variant per dispatchable extrinsic that this pallet has.
+    /// </summary>
     public enum Call
     {
         
+        /// <summary>
+        /// >> add_member
+        /// See [`Pallet::add_member`].
+        /// </summary>
         add_member = 0,
         
+        /// <summary>
+        /// >> promote_member
+        /// See [`Pallet::promote_member`].
+        /// </summary>
         promote_member = 1,
         
+        /// <summary>
+        /// >> demote_member
+        /// See [`Pallet::demote_member`].
+        /// </summary>
         demote_member = 2,
         
+        /// <summary>
+        /// >> remove_member
+        /// See [`Pallet::remove_member`].
+        /// </summary>
         remove_member = 3,
         
+        /// <summary>
+        /// >> vote
+        /// See [`Pallet::vote`].
+        /// </summary>
         vote = 4,
         
+        /// <summary>
+        /// >> cleanup_poll
+        /// See [`Pallet::cleanup_poll`].
+        /// </summary>
         cleanup_poll = 5,
+        
+        /// <summary>
+        /// >> exchange_member
+        /// See [`Pallet::exchange_member`].
+        /// </summary>
+        exchange_member = 6,
     }
     
     /// <summary>
-    /// >> 196 - Variant[pallet_ranked_collective.pallet.Call]
-    /// Contains one variant per dispatchable that can be called by an extrinsic.
+    /// >> 256 - Variant[pallet_ranked_collective.pallet.Call]
+    /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
-    public sealed class EnumCall : BaseEnumExt<Call, Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, BaseTuple<Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.NetApi.Model.Types.Primitive.U16>, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.Bool>, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>>
+    public sealed class EnumCall : BaseEnumRust<Call>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumCall()
+        {
+				AddTypeDecoder<Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress>(Call.add_member);
+				AddTypeDecoder<Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress>(Call.promote_member);
+				AddTypeDecoder<Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress>(Call.demote_member);
+				AddTypeDecoder<BaseTuple<Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.NetApi.Model.Types.Primitive.U16>>(Call.remove_member);
+				AddTypeDecoder<BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.Bool>>(Call.vote);
+				AddTypeDecoder<BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>>(Call.cleanup_poll);
+				AddTypeDecoder<BaseTuple<Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress>>(Call.exchange_member);
+        }
     }
 }

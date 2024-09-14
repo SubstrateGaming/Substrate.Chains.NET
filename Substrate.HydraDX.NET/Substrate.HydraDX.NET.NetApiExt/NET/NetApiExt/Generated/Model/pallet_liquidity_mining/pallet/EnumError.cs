@@ -200,10 +200,46 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_liquidity_minin
     }
     
     /// <summary>
-    /// >> 598 - Variant[pallet_liquidity_mining.pallet.Error]
+    /// >> 657 - Variant[pallet_liquidity_mining.pallet.Error]
     /// The `Error` enum of this pallet.
     /// </summary>
-    public sealed class EnumError : BaseEnumExt<Error, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_liquidity_mining.pallet.EnumInconsistentStateError>
+    public sealed class EnumError : BaseEnumRust<Error>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumError()
+        {
+				AddTypeDecoder<BaseVoid>(Error.GlobalFarmNotFound);
+				AddTypeDecoder<BaseVoid>(Error.YieldFarmNotFound);
+				AddTypeDecoder<BaseVoid>(Error.DoubleClaimInPeriod);
+				AddTypeDecoder<BaseVoid>(Error.LiquidityMiningCanceled);
+				AddTypeDecoder<BaseVoid>(Error.LiquidityMiningIsActive);
+				AddTypeDecoder<BaseVoid>(Error.LiquidityMiningIsNotStopped);
+				AddTypeDecoder<BaseVoid>(Error.InvalidDepositAmount);
+				AddTypeDecoder<BaseVoid>(Error.Forbidden);
+				AddTypeDecoder<BaseVoid>(Error.InvalidMultiplier);
+				AddTypeDecoder<BaseVoid>(Error.YieldFarmAlreadyExists);
+				AddTypeDecoder<BaseVoid>(Error.InvalidInitialRewardPercentage);
+				AddTypeDecoder<BaseVoid>(Error.GlobalFarmIsNotEmpty);
+				AddTypeDecoder<BaseVoid>(Error.MissingIncentivizedAsset);
+				AddTypeDecoder<BaseVoid>(Error.InsufficientRewardCurrencyBalance);
+				AddTypeDecoder<BaseVoid>(Error.InvalidBlocksPerPeriod);
+				AddTypeDecoder<BaseVoid>(Error.InvalidYieldPerPeriod);
+				AddTypeDecoder<BaseVoid>(Error.InvalidTotalRewards);
+				AddTypeDecoder<BaseVoid>(Error.InvalidPlannedYieldingPeriods);
+				AddTypeDecoder<BaseVoid>(Error.MaxEntriesPerDeposit);
+				AddTypeDecoder<BaseVoid>(Error.DoubleLock);
+				AddTypeDecoder<BaseVoid>(Error.YieldFarmEntryNotFound);
+				AddTypeDecoder<BaseVoid>(Error.GlobalFarmIsFull);
+				AddTypeDecoder<BaseVoid>(Error.InvalidMinDeposit);
+				AddTypeDecoder<BaseVoid>(Error.InvalidPriceAdjustment);
+				AddTypeDecoder<BaseVoid>(Error.ErrorGetAccountId);
+				AddTypeDecoder<BaseVoid>(Error.IncorrectValuedShares);
+				AddTypeDecoder<BaseVoid>(Error.RewardCurrencyNotRegistered);
+				AddTypeDecoder<BaseVoid>(Error.IncentivizedAssetNotRegistered);
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_liquidity_mining.pallet.EnumInconsistentStateError>(Error.InconsistentState);
+        }
     }
 }

@@ -27,9 +27,9 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Clients
          _httpClient = httpClient;
          _subscriptionClient = subscriptionClient;
       }
-      public async Task<BaseVec<BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.ValidatorIndex>>> GetValidatorGroups()
+      public async Task<BaseVec<BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.ValidatorIndex>>> GetValidatorGroups()
       {
-         return await SendRequestAsync<BaseVec<BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.ValidatorIndex>>>(_httpClient, "parascheduler/validatorgroups");
+         return await SendRequestAsync<BaseVec<BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.ValidatorIndex>>>(_httpClient, "parascheduler/validatorgroups");
       }
       public async Task<bool> SubscribeValidatorGroups()
       {

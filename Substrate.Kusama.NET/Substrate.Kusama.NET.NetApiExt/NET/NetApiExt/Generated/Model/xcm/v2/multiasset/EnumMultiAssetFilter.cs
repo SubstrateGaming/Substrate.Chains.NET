@@ -33,9 +33,18 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.v2.multiasset
     }
     
     /// <summary>
-    /// >> 394 - Variant[xcm.v2.multiasset.MultiAssetFilter]
+    /// >> 391 - Variant[xcm.v2.multiasset.MultiAssetFilter]
     /// </summary>
-    public sealed class EnumMultiAssetFilter : BaseEnumExt<MultiAssetFilter, Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.v2.multiasset.MultiAssets, Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.v2.multiasset.EnumWildMultiAsset>
+    public sealed class EnumMultiAssetFilter : BaseEnumRust<MultiAssetFilter>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumMultiAssetFilter()
+        {
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.v2.multiasset.MultiAssets>(MultiAssetFilter.Definite);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.xcm.v2.multiasset.EnumWildMultiAsset>(MultiAssetFilter.Wild);
+        }
     }
 }

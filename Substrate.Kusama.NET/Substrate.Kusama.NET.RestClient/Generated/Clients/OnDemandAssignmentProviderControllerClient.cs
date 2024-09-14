@@ -12,9 +12,9 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Clients
    using System;
    using System.Threading.Tasks;
    using System.Net.Http;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point;
-   using Substrate.NetApi.Model.Types.Base;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.assigner_on_demand;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.assigner_on_demand.types;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Types.Base;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    using Substrate.Kusama.NET.RestClient.Generated.Interfaces;
    
    public sealed class OnDemandAssignmentProviderControllerClient : BaseClient, IOnDemandAssignmentProviderControllerClient
@@ -26,22 +26,6 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Clients
          _httpClient = httpClient;
          _subscriptionClient = subscriptionClient;
       }
-      public async Task<FixedU128> GetSpotTraffic()
-      {
-         return await SendRequestAsync<FixedU128>(_httpClient, "ondemandassignmentprovider/spottraffic");
-      }
-      public async Task<bool> SubscribeSpotTraffic()
-      {
-         return await _subscriptionClient.SubscribeAsync("OnDemandAssignmentProvider.SpotTraffic");
-      }
-      public async Task<BaseVec<EnqueuedOrder>> GetOnDemandQueue()
-      {
-         return await SendRequestAsync<BaseVec<EnqueuedOrder>>(_httpClient, "ondemandassignmentprovider/ondemandqueue");
-      }
-      public async Task<bool> SubscribeOnDemandQueue()
-      {
-         return await _subscriptionClient.SubscribeAsync("OnDemandAssignmentProvider.OnDemandQueue");
-      }
       public async Task<CoreAffinityCount> GetParaIdAffinity(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key)
       {
          return await SendRequestAsync<CoreAffinityCount>(_httpClient, "ondemandassignmentprovider/paraidaffinity", Substrate.Kusama.NET.NetApiExt.Generated.Storage.OnDemandAssignmentProviderStorage.ParaIdAffinityParams(key));
@@ -49,6 +33,38 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Clients
       public async Task<bool> SubscribeParaIdAffinity(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key)
       {
          return await _subscriptionClient.SubscribeAsync("OnDemandAssignmentProvider.ParaIdAffinity", Substrate.Kusama.NET.NetApiExt.Generated.Storage.OnDemandAssignmentProviderStorage.ParaIdAffinityParams(key));
+      }
+      public async Task<QueueStatusType> GetQueueStatus()
+      {
+         return await SendRequestAsync<QueueStatusType>(_httpClient, "ondemandassignmentprovider/queuestatus");
+      }
+      public async Task<bool> SubscribeQueueStatus()
+      {
+         return await _subscriptionClient.SubscribeAsync("OnDemandAssignmentProvider.QueueStatus");
+      }
+      public async Task<BinaryHeapT2> GetFreeEntries()
+      {
+         return await SendRequestAsync<BinaryHeapT2>(_httpClient, "ondemandassignmentprovider/freeentries");
+      }
+      public async Task<bool> SubscribeFreeEntries()
+      {
+         return await _subscriptionClient.SubscribeAsync("OnDemandAssignmentProvider.FreeEntries");
+      }
+      public async Task<BinaryHeapT2> GetAffinityEntries(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.CoreIndex key)
+      {
+         return await SendRequestAsync<BinaryHeapT2>(_httpClient, "ondemandassignmentprovider/affinityentries", Substrate.Kusama.NET.NetApiExt.Generated.Storage.OnDemandAssignmentProviderStorage.AffinityEntriesParams(key));
+      }
+      public async Task<bool> SubscribeAffinityEntries(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.CoreIndex key)
+      {
+         return await _subscriptionClient.SubscribeAsync("OnDemandAssignmentProvider.AffinityEntries", Substrate.Kusama.NET.NetApiExt.Generated.Storage.OnDemandAssignmentProviderStorage.AffinityEntriesParams(key));
+      }
+      public async Task<BoundedVecT44> GetRevenue()
+      {
+         return await SendRequestAsync<BoundedVecT44>(_httpClient, "ondemandassignmentprovider/revenue");
+      }
+      public async Task<bool> SubscribeRevenue()
+      {
+         return await _subscriptionClient.SubscribeAsync("OnDemandAssignmentProvider.Revenue");
       }
    }
 }

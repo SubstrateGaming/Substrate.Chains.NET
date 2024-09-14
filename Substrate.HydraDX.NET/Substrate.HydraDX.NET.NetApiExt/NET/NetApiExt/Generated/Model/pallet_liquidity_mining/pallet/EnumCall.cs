@@ -24,7 +24,7 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_liquidity_minin
     }
     
     /// <summary>
-    /// >> 366 - Variant[pallet_liquidity_mining.pallet.Call]
+    /// >> 403 - Variant[pallet_liquidity_mining.pallet.Call]
     /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
     public sealed class EnumCall : BaseEnum<Call>

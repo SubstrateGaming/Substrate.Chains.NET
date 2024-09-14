@@ -12,10 +12,11 @@ namespace Substrate.PolkadotBridgeHub.NET.RestClient.Mockup.Generated.Clients
    using System;
    using System.Threading.Tasks;
    using System.Net.Http;
+   using Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set;
    using Substrate.NetApi.Model.Types.Base;
    using Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue;
    using Substrate.NetApi.Model.Types.Primitive;
-   using Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives;
+   using Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point;
    using Substrate.PolkadotBridgeHub.NET.RestClient.Mockup.Generated.Interfaces;
    
    public sealed class XcmpQueueControllerMockupClient : MockupBaseClient, IXcmpQueueControllerMockupClient
@@ -25,23 +26,19 @@ namespace Substrate.PolkadotBridgeHub.NET.RestClient.Mockup.Generated.Clients
       {
          _httpClient = httpClient;
       }
-      public async Task<bool> SetInboundXcmpStatus(BaseVec<InboundChannelDetails> value)
+      public async Task<bool> SetInboundXcmpSuspended(BoundedBTreeSet value)
       {
-         return await SendMockupRequestAsync(_httpClient, "XcmpQueue/InboundXcmpStatus", value.Encode(), Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Storage.XcmpQueueStorage.InboundXcmpStatusParams());
-      }
-      public async Task<bool> SetInboundXcmpMessages(BaseVec<U8> value, BaseTuple<Id, U32> key)
-      {
-         return await SendMockupRequestAsync(_httpClient, "XcmpQueue/InboundXcmpMessages", value.Encode(), Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Storage.XcmpQueueStorage.InboundXcmpMessagesParams(key));
+         return await SendMockupRequestAsync(_httpClient, "XcmpQueue/InboundXcmpSuspended", value.Encode(), Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Storage.XcmpQueueStorage.InboundXcmpSuspendedParams());
       }
       public async Task<bool> SetOutboundXcmpStatus(BaseVec<OutboundChannelDetails> value)
       {
          return await SendMockupRequestAsync(_httpClient, "XcmpQueue/OutboundXcmpStatus", value.Encode(), Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Storage.XcmpQueueStorage.OutboundXcmpStatusParams());
       }
-      public async Task<bool> SetOutboundXcmpMessages(BaseVec<U8> value, BaseTuple<Id, U16> key)
+      public async Task<bool> SetOutboundXcmpMessages(BaseVec<U8> value, BaseTuple<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, U16> key)
       {
          return await SendMockupRequestAsync(_httpClient, "XcmpQueue/OutboundXcmpMessages", value.Encode(), Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Storage.XcmpQueueStorage.OutboundXcmpMessagesParams(key));
       }
-      public async Task<bool> SetSignalMessages(BaseVec<U8> value, Id key)
+      public async Task<bool> SetSignalMessages(BaseVec<U8> value, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key)
       {
          return await SendMockupRequestAsync(_httpClient, "XcmpQueue/SignalMessages", value.Encode(), Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Storage.XcmpQueueStorage.SignalMessagesParams(key));
       }
@@ -49,21 +46,13 @@ namespace Substrate.PolkadotBridgeHub.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "XcmpQueue/QueueConfig", value.Encode(), Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Storage.XcmpQueueStorage.QueueConfigParams());
       }
-      public async Task<bool> SetOverweight(BaseTuple<Id, U32, BaseVec<U8>> value, U64 key)
-      {
-         return await SendMockupRequestAsync(_httpClient, "XcmpQueue/Overweight", value.Encode(), Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Storage.XcmpQueueStorage.OverweightParams(key));
-      }
-      public async Task<bool> SetCounterForOverweight(U32 value)
-      {
-         return await SendMockupRequestAsync(_httpClient, "XcmpQueue/CounterForOverweight", value.Encode(), Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Storage.XcmpQueueStorage.CounterForOverweightParams());
-      }
-      public async Task<bool> SetOverweightCount(U64 value)
-      {
-         return await SendMockupRequestAsync(_httpClient, "XcmpQueue/OverweightCount", value.Encode(), Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Storage.XcmpQueueStorage.OverweightCountParams());
-      }
       public async Task<bool> SetQueueSuspended(Bool value)
       {
          return await SendMockupRequestAsync(_httpClient, "XcmpQueue/QueueSuspended", value.Encode(), Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Storage.XcmpQueueStorage.QueueSuspendedParams());
+      }
+      public async Task<bool> SetDeliveryFeeFactor(FixedU128 value, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key)
+      {
+         return await SendMockupRequestAsync(_httpClient, "XcmpQueue/DeliveryFeeFactor", value.Encode(), Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Storage.XcmpQueueStorage.DeliveryFeeFactorParams(key));
       }
    }
 }

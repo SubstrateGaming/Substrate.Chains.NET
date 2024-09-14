@@ -9,7 +9,7 @@
 
 using Substrate.NetApi.Attributes;
 using Substrate.NetApi.Model.Types.Base;
-using Substrate.NetApi.Model.Types.Metadata.V14;
+using Substrate.NetApi.Model.Types.Metadata.Base;
 using System.Collections.Generic;
 
 
@@ -18,7 +18,7 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.ethereum_types.hash
     
     
     /// <summary>
-    /// >> 583 - Composite[ethereum_types.hash.H64]
+    /// >> 642 - Composite[ethereum_types.hash.H64]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class H64 : BaseType

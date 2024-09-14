@@ -67,7 +67,7 @@ namespace Substrate.HydraDX.NET.RestService.Generated.Controller
         /// </summary>
         [HttpGet("AssetIds")]
         [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Primitive.U32), 200)]
-        [StorageKeyBuilder(typeof(Substrate.HydraDX.NET.NetApiExt.Generated.Storage.AssetRegistryStorage), "AssetIdsParams", typeof(Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT4))]
+        [StorageKeyBuilder(typeof(Substrate.HydraDX.NET.NetApiExt.Generated.Storage.AssetRegistryStorage), "AssetIdsParams", typeof(Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT5))]
         public IActionResult GetAssetIds(string key)
         {
             return this.Ok(_assetRegistryStorage.GetAssetIds(key));

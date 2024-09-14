@@ -176,7 +176,7 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_xyk.pallet
     }
     
     /// <summary>
-    /// >> 551 - Variant[pallet_xyk.pallet.Error]
+    /// >> 612 - Variant[pallet_xyk.pallet.Error]
     /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>

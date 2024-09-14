@@ -38,9 +38,19 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_consensus_babe.dig
     }
     
     /// <summary>
-    /// >> 558 - Variant[sp_consensus_babe.digests.PreDigest]
+    /// >> 560 - Variant[sp_consensus_babe.digests.PreDigest]
     /// </summary>
-    public sealed class EnumPreDigest : BaseEnumExt<PreDigest, BaseVoid, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_consensus_babe.digests.PrimaryPreDigest, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_consensus_babe.digests.SecondaryPlainPreDigest, Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_consensus_babe.digests.SecondaryVRFPreDigest>
+    public sealed class EnumPreDigest : BaseEnumRust<PreDigest>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumPreDigest()
+        {
+				AddTypeDecoder<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_consensus_babe.digests.PrimaryPreDigest>(PreDigest.Primary);
+				AddTypeDecoder<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_consensus_babe.digests.SecondaryPlainPreDigest>(PreDigest.SecondaryPlain);
+				AddTypeDecoder<Substrate.Polkadot.NET.NetApiExt.Generated.Model.sp_consensus_babe.digests.SecondaryVRFPreDigest>(PreDigest.SecondaryVRF);
+        }
     }
 }

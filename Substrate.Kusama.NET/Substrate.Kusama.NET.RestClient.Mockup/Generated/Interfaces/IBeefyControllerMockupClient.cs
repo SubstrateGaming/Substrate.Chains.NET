@@ -17,9 +17,9 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Interfaces
    
    public interface IBeefyControllerMockupClient
    {
-      Task<bool> SetAuthorities(BoundedVecT48 value);
+      Task<bool> SetAuthorities(BoundedVecT49 value);
       Task<bool> SetValidatorSetId(U64 value);
-      Task<bool> SetNextAuthorities(BoundedVecT48 value);
+      Task<bool> SetNextAuthorities(BoundedVecT49 value);
       Task<bool> SetSetIdSession(U32 value, U64 key);
       Task<bool> SetGenesisBlock(BaseOpt<U32> value);
    }

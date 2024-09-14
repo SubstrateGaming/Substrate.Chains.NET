@@ -9,7 +9,7 @@
 
 using Substrate.NetApi.Attributes;
 using Substrate.NetApi.Model.Types.Base;
-using Substrate.NetApi.Model.Types.Metadata.V14;
+using Substrate.NetApi.Model.Types.Metadata.Base;
 using System.Collections.Generic;
 
 
@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.sr25519.vrf
     
     
     /// <summary>
-    /// >> 547 - Composite[sp_core.sr25519.vrf.VrfSignature]
+    /// >> 551 - Composite[sp_core.sr25519.vrf.VrfSignature]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class VrfSignature : BaseType

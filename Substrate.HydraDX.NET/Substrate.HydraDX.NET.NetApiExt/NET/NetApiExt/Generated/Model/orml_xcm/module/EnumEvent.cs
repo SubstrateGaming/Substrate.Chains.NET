@@ -30,10 +30,18 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.orml_xcm.module
     }
     
     /// <summary>
-    /// >> 203 - Variant[orml_xcm.module.Event]
+    /// >> 226 - Variant[orml_xcm.module.Event]
     /// The `Event` enum of this pallet
     /// </summary>
-    public sealed class EnumEvent : BaseEnumExt<Event, BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation, Substrate.HydraDX.NET.NetApiExt.Generated.Model.staging_xcm.v3.XcmT1>>
+    public sealed class EnumEvent : BaseEnumRust<Event>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumEvent()
+        {
+				AddTypeDecoder<BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.staging_xcm.v4.location.Location, Substrate.HydraDX.NET.NetApiExt.Generated.Model.staging_xcm.v4.XcmT1>>(Event.Sent);
+        }
     }
 }

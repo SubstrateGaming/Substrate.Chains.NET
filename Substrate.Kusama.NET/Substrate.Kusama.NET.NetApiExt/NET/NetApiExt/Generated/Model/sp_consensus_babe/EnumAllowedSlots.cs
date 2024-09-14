@@ -38,7 +38,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_babe
     }
     
     /// <summary>
-    /// >> 109 - Variant[sp_consensus_babe.AllowedSlots]
+    /// >> 100 - Variant[sp_consensus_babe.AllowedSlots]
     /// </summary>
     public sealed class EnumAllowedSlots : BaseEnum<AllowedSlots>
     {

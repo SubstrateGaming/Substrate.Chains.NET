@@ -11,7 +11,7 @@
    </PropertyGroup>
 	
    <ItemGroup>
-      <PackageReference Include="Substrate.ServiceLayer.Model" Version="0.6.5" />
+      <PackageReference Include="Substrate.ServiceLayer.Model" Version="0.6.8" />
    </ItemGroup>
    <ItemGroup>
       <ProjectReference Include="..\Substrate.PolkadotAssetHub.NET.NetApiExt\Substrate.PolkadotAssetHub.NET.NetApiExt.csproj" />

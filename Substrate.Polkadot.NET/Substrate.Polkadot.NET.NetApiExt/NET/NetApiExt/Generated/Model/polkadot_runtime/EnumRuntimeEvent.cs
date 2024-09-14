@@ -215,12 +215,64 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime
         /// >> AssetRate
         /// </summary>
         AssetRate = 101,
+        
+        /// <summary>
+        /// >> IdentityMigrator
+        /// </summary>
+        IdentityMigrator = 248,
     }
     
     /// <summary>
     /// >> 20 - Variant[polkadot_runtime.RuntimeEvent]
     /// </summary>
-    public sealed class EnumRuntimeEvent : BaseEnumExt<RuntimeEvent, Substrate.Polkadot.NET.NetApiExt.Generated.Model.frame_system.pallet.EnumEvent, Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_scheduler.pallet.EnumEvent, BaseVoid, BaseVoid, Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_indices.pallet.EnumEvent, Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_balances.pallet.EnumEvent, BaseVoid, Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_staking.pallet.pallet.EnumEvent, Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_offences.pallet.EnumEvent, Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_session.pallet.EnumEvent, Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_preimage.pallet.EnumEvent, Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_grandpa.pallet.EnumEvent, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime.pallet_im_online.pallet.EnumEvent, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_treasury.pallet.EnumEvent, Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_conviction_voting.pallet.EnumEvent, Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_referenda.pallet.EnumEvent, BaseVoid, Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_whitelist.pallet.EnumEvent, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_common.claims.pallet.EnumEvent, Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_vesting.pallet.EnumEvent, Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_utility.pallet.EnumEvent, BaseVoid, Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.pallet.EnumEvent, Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_proxy.pallet.EnumEvent, Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_multisig.pallet.EnumEvent, BaseVoid, Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_transaction_payment.pallet.EnumEvent, BaseVoid, Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_bounties.pallet.EnumEvent, BaseVoid, Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_election_provider_multi_phase.pallet.EnumEvent, Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_bags_list.pallet.EnumEvent, Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_child_bounties.pallet.EnumEvent, Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_nomination_pools.pallet.EnumEvent, Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_fast_unstake.pallet.EnumEvent, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.inclusion.pallet.EnumEvent, BaseVoid, BaseVoid, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.paras.pallet.EnumEvent, BaseVoid, BaseVoid, BaseVoid, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.hrmp.pallet.EnumEvent, BaseVoid, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.disputes.pallet.EnumEvent, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_common.paras_registrar.pallet.EnumEvent, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_common.slots.pallet.EnumEvent, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_common.auctions.pallet.EnumEvent, Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_common.crowdloan.pallet.EnumEvent, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.EnumEvent, Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_xcm.pallet.EnumEvent, Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_message_queue.pallet.EnumEvent, Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_asset_rate.pallet.EnumEvent>
+    public sealed class EnumRuntimeEvent : BaseEnumRust<RuntimeEvent>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumRuntimeEvent()
+        {
+				AddTypeDecoder<Substrate.Polkadot.NET.NetApiExt.Generated.Model.frame_system.pallet.EnumEvent>(RuntimeEvent.System);
+				AddTypeDecoder<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_scheduler.pallet.EnumEvent>(RuntimeEvent.Scheduler);
+				AddTypeDecoder<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_preimage.pallet.EnumEvent>(RuntimeEvent.Preimage);
+				AddTypeDecoder<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_indices.pallet.EnumEvent>(RuntimeEvent.Indices);
+				AddTypeDecoder<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_balances.pallet.EnumEvent>(RuntimeEvent.Balances);
+				AddTypeDecoder<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_transaction_payment.pallet.EnumEvent>(RuntimeEvent.TransactionPayment);
+				AddTypeDecoder<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_staking.pallet.pallet.EnumEvent>(RuntimeEvent.Staking);
+				AddTypeDecoder<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_offences.pallet.EnumEvent>(RuntimeEvent.Offences);
+				AddTypeDecoder<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_session.pallet.EnumEvent>(RuntimeEvent.Session);
+				AddTypeDecoder<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_grandpa.pallet.EnumEvent>(RuntimeEvent.Grandpa);
+				AddTypeDecoder<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime.pallet_im_online.pallet.EnumEvent>(RuntimeEvent.ImOnline);
+				AddTypeDecoder<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_treasury.pallet.EnumEvent>(RuntimeEvent.Treasury);
+				AddTypeDecoder<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_conviction_voting.pallet.EnumEvent>(RuntimeEvent.ConvictionVoting);
+				AddTypeDecoder<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_referenda.pallet.EnumEvent>(RuntimeEvent.Referenda);
+				AddTypeDecoder<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_whitelist.pallet.EnumEvent>(RuntimeEvent.Whitelist);
+				AddTypeDecoder<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_common.claims.pallet.EnumEvent>(RuntimeEvent.Claims);
+				AddTypeDecoder<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_vesting.pallet.EnumEvent>(RuntimeEvent.Vesting);
+				AddTypeDecoder<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_utility.pallet.EnumEvent>(RuntimeEvent.Utility);
+				AddTypeDecoder<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_identity.pallet.EnumEvent>(RuntimeEvent.Identity);
+				AddTypeDecoder<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_proxy.pallet.EnumEvent>(RuntimeEvent.Proxy);
+				AddTypeDecoder<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_multisig.pallet.EnumEvent>(RuntimeEvent.Multisig);
+				AddTypeDecoder<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_bounties.pallet.EnumEvent>(RuntimeEvent.Bounties);
+				AddTypeDecoder<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_child_bounties.pallet.EnumEvent>(RuntimeEvent.ChildBounties);
+				AddTypeDecoder<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_election_provider_multi_phase.pallet.EnumEvent>(RuntimeEvent.ElectionProviderMultiPhase);
+				AddTypeDecoder<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_bags_list.pallet.EnumEvent>(RuntimeEvent.VoterList);
+				AddTypeDecoder<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_nomination_pools.pallet.EnumEvent>(RuntimeEvent.NominationPools);
+				AddTypeDecoder<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_fast_unstake.pallet.EnumEvent>(RuntimeEvent.FastUnstake);
+				AddTypeDecoder<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.inclusion.pallet.EnumEvent>(RuntimeEvent.ParaInclusion);
+				AddTypeDecoder<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.paras.pallet.EnumEvent>(RuntimeEvent.Paras);
+				AddTypeDecoder<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.hrmp.pallet.EnumEvent>(RuntimeEvent.Hrmp);
+				AddTypeDecoder<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.disputes.pallet.EnumEvent>(RuntimeEvent.ParasDisputes);
+				AddTypeDecoder<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_common.paras_registrar.pallet.EnumEvent>(RuntimeEvent.Registrar);
+				AddTypeDecoder<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_common.slots.pallet.EnumEvent>(RuntimeEvent.Slots);
+				AddTypeDecoder<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_common.auctions.pallet.EnumEvent>(RuntimeEvent.Auctions);
+				AddTypeDecoder<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_common.crowdloan.pallet.EnumEvent>(RuntimeEvent.Crowdloan);
+				AddTypeDecoder<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_state_trie_migration.pallet.EnumEvent>(RuntimeEvent.StateTrieMigration);
+				AddTypeDecoder<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_xcm.pallet.EnumEvent>(RuntimeEvent.XcmPallet);
+				AddTypeDecoder<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_message_queue.pallet.EnumEvent>(RuntimeEvent.MessageQueue);
+				AddTypeDecoder<Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_asset_rate.pallet.EnumEvent>(RuntimeEvent.AssetRate);
+				AddTypeDecoder<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_runtime_common.identity_migrator.pallet.EnumEvent>(RuntimeEvent.IdentityMigrator);
+        }
     }
 }

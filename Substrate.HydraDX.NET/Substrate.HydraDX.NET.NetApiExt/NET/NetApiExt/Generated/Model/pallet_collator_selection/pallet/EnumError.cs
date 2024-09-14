@@ -75,10 +75,58 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_collator_select
         /// Validator ID is not yet registered.
         /// </summary>
         ValidatorNotRegistered = 8,
+        
+        /// <summary>
+        /// >> InsertToCandidateListFailed
+        /// Could not insert in the candidate list.
+        /// </summary>
+        InsertToCandidateListFailed = 9,
+        
+        /// <summary>
+        /// >> RemoveFromCandidateListFailed
+        /// Could not remove from the candidate list.
+        /// </summary>
+        RemoveFromCandidateListFailed = 10,
+        
+        /// <summary>
+        /// >> DepositTooLow
+        /// New deposit amount would be below the minimum candidacy bond.
+        /// </summary>
+        DepositTooLow = 11,
+        
+        /// <summary>
+        /// >> UpdateCandidateListFailed
+        /// Could not update the candidate list.
+        /// </summary>
+        UpdateCandidateListFailed = 12,
+        
+        /// <summary>
+        /// >> InsufficientBond
+        /// Deposit amount is too low to take the target's slot in the candidate list.
+        /// </summary>
+        InsufficientBond = 13,
+        
+        /// <summary>
+        /// >> TargetIsNotCandidate
+        /// The target account to be replaced in the candidate list is not a candidate.
+        /// </summary>
+        TargetIsNotCandidate = 14,
+        
+        /// <summary>
+        /// >> IdenticalDeposit
+        /// The updated deposit amount is equal to the amount already reserved.
+        /// </summary>
+        IdenticalDeposit = 15,
+        
+        /// <summary>
+        /// >> InvalidUnreserve
+        /// Cannot lower candidacy bond while occupying a future collator slot in the list.
+        /// </summary>
+        InvalidUnreserve = 16,
     }
     
     /// <summary>
-    /// >> 691 - Variant[pallet_collator_selection.pallet.Error]
+    /// >> 738 - Variant[pallet_collator_selection.pallet.Error]
     /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>

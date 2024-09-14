@@ -15,50 +15,198 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.collectives_polkad
 {
     
     
+    /// <summary>
+    /// >> RuntimeCall
+    /// </summary>
     public enum RuntimeCall
     {
         
+        /// <summary>
+        /// >> System
+        /// </summary>
         System = 0,
         
+        /// <summary>
+        /// >> ParachainSystem
+        /// </summary>
         ParachainSystem = 1,
         
+        /// <summary>
+        /// >> Timestamp
+        /// </summary>
         Timestamp = 2,
         
+        /// <summary>
+        /// >> ParachainInfo
+        /// </summary>
+        ParachainInfo = 3,
+        
+        /// <summary>
+        /// >> Balances
+        /// </summary>
         Balances = 10,
         
+        /// <summary>
+        /// >> CollatorSelection
+        /// </summary>
         CollatorSelection = 21,
         
+        /// <summary>
+        /// >> Session
+        /// </summary>
         Session = 22,
         
+        /// <summary>
+        /// >> XcmpQueue
+        /// </summary>
         XcmpQueue = 30,
         
+        /// <summary>
+        /// >> PolkadotXcm
+        /// </summary>
         PolkadotXcm = 31,
         
-        DmpQueue = 33,
+        /// <summary>
+        /// >> CumulusXcm
+        /// </summary>
+        CumulusXcm = 32,
         
+        /// <summary>
+        /// >> MessageQueue
+        /// </summary>
+        MessageQueue = 34,
+        
+        /// <summary>
+        /// >> Utility
+        /// </summary>
         Utility = 40,
         
+        /// <summary>
+        /// >> Multisig
+        /// </summary>
         Multisig = 41,
         
+        /// <summary>
+        /// >> Proxy
+        /// </summary>
         Proxy = 42,
         
+        /// <summary>
+        /// >> Preimage
+        /// </summary>
         Preimage = 43,
         
+        /// <summary>
+        /// >> Scheduler
+        /// </summary>
         Scheduler = 44,
         
+        /// <summary>
+        /// >> AssetRate
+        /// </summary>
+        AssetRate = 45,
+        
+        /// <summary>
+        /// >> Alliance
+        /// </summary>
         Alliance = 50,
         
+        /// <summary>
+        /// >> AllianceMotion
+        /// </summary>
         AllianceMotion = 51,
         
+        /// <summary>
+        /// >> FellowshipCollective
+        /// </summary>
         FellowshipCollective = 60,
         
+        /// <summary>
+        /// >> FellowshipReferenda
+        /// </summary>
         FellowshipReferenda = 61,
+        
+        /// <summary>
+        /// >> FellowshipCore
+        /// </summary>
+        FellowshipCore = 63,
+        
+        /// <summary>
+        /// >> FellowshipSalary
+        /// </summary>
+        FellowshipSalary = 64,
+        
+        /// <summary>
+        /// >> FellowshipTreasury
+        /// </summary>
+        FellowshipTreasury = 65,
+        
+        /// <summary>
+        /// >> AmbassadorCollective
+        /// </summary>
+        AmbassadorCollective = 70,
+        
+        /// <summary>
+        /// >> AmbassadorReferenda
+        /// </summary>
+        AmbassadorReferenda = 71,
+        
+        /// <summary>
+        /// >> AmbassadorCore
+        /// </summary>
+        AmbassadorCore = 73,
+        
+        /// <summary>
+        /// >> AmbassadorSalary
+        /// </summary>
+        AmbassadorSalary = 74,
+        
+        /// <summary>
+        /// >> AmbassadorTreasury
+        /// </summary>
+        AmbassadorTreasury = 75,
     }
     
     /// <summary>
-    /// >> 126 - Variant[collectives_polkadot_runtime.RuntimeCall]
+    /// >> 150 - Variant[collectives_polkadot_runtime.RuntimeCall]
     /// </summary>
-    public sealed class EnumRuntimeCall : BaseEnumExt<RuntimeCall, Substrate.Collectives.NET.NetApiExt.Generated.Model.frame_system.pallet.EnumCall, Substrate.Collectives.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.pallet.EnumCall, Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_timestamp.pallet.EnumCall, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_balances.pallet.EnumCall, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_collator_selection.pallet.EnumCall, Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_session.pallet.EnumCall, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.Collectives.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue.pallet.EnumCall, Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_xcm.pallet.EnumCall, BaseVoid, Substrate.Collectives.NET.NetApiExt.Generated.Model.cumulus_pallet_dmp_queue.pallet.EnumCall, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_utility.pallet.EnumCall, Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_multisig.pallet.EnumCall, Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_proxy.pallet.EnumCall, Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_preimage.pallet.EnumCall, Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_scheduler.pallet.EnumCall, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_alliance.pallet.EnumCall, Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_collective.pallet.EnumCall, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_ranked_collective.pallet.EnumCall, Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_referenda.pallet.EnumCall>
+    public sealed class EnumRuntimeCall : BaseEnumRust<RuntimeCall>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumRuntimeCall()
+        {
+				AddTypeDecoder<Substrate.Collectives.NET.NetApiExt.Generated.Model.frame_system.pallet.EnumCall>(RuntimeCall.System);
+				AddTypeDecoder<Substrate.Collectives.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.pallet.EnumCall>(RuntimeCall.ParachainSystem);
+				AddTypeDecoder<Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_timestamp.pallet.EnumCall>(RuntimeCall.Timestamp);
+				AddTypeDecoder<Substrate.Collectives.NET.NetApiExt.Generated.Model.staging_parachain_info.pallet.EnumCall>(RuntimeCall.ParachainInfo);
+				AddTypeDecoder<Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_balances.pallet.EnumCall>(RuntimeCall.Balances);
+				AddTypeDecoder<Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_collator_selection.pallet.EnumCall>(RuntimeCall.CollatorSelection);
+				AddTypeDecoder<Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_session.pallet.EnumCall>(RuntimeCall.Session);
+				AddTypeDecoder<Substrate.Collectives.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue.pallet.EnumCall>(RuntimeCall.XcmpQueue);
+				AddTypeDecoder<Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_xcm.pallet.EnumCall>(RuntimeCall.PolkadotXcm);
+				AddTypeDecoder<Substrate.Collectives.NET.NetApiExt.Generated.Model.cumulus_pallet_xcm.pallet.EnumCall>(RuntimeCall.CumulusXcm);
+				AddTypeDecoder<Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_message_queue.pallet.EnumCall>(RuntimeCall.MessageQueue);
+				AddTypeDecoder<Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_utility.pallet.EnumCall>(RuntimeCall.Utility);
+				AddTypeDecoder<Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_multisig.pallet.EnumCall>(RuntimeCall.Multisig);
+				AddTypeDecoder<Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_proxy.pallet.EnumCall>(RuntimeCall.Proxy);
+				AddTypeDecoder<Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_preimage.pallet.EnumCall>(RuntimeCall.Preimage);
+				AddTypeDecoder<Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_scheduler.pallet.EnumCall>(RuntimeCall.Scheduler);
+				AddTypeDecoder<Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_asset_rate.pallet.EnumCall>(RuntimeCall.AssetRate);
+				AddTypeDecoder<Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_alliance.pallet.EnumCall>(RuntimeCall.Alliance);
+				AddTypeDecoder<Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_collective.pallet.EnumCall>(RuntimeCall.AllianceMotion);
+				AddTypeDecoder<Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_ranked_collective.pallet.EnumCall>(RuntimeCall.FellowshipCollective);
+				AddTypeDecoder<Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_referenda.pallet.EnumCall>(RuntimeCall.FellowshipReferenda);
+				AddTypeDecoder<Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_core_fellowship.pallet.EnumCall>(RuntimeCall.FellowshipCore);
+				AddTypeDecoder<Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_salary.pallet.EnumCall>(RuntimeCall.FellowshipSalary);
+				AddTypeDecoder<Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_treasury.pallet.EnumCall>(RuntimeCall.FellowshipTreasury);
+				AddTypeDecoder<Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_ranked_collective.pallet.EnumCall>(RuntimeCall.AmbassadorCollective);
+				AddTypeDecoder<Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_referenda.pallet.EnumCall>(RuntimeCall.AmbassadorReferenda);
+				AddTypeDecoder<Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_core_fellowship.pallet.EnumCall>(RuntimeCall.AmbassadorCore);
+				AddTypeDecoder<Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_salary.pallet.EnumCall>(RuntimeCall.AmbassadorSalary);
+				AddTypeDecoder<Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_treasury.pallet.EnumCall>(RuntimeCall.AmbassadorTreasury);
+        }
     }
 }

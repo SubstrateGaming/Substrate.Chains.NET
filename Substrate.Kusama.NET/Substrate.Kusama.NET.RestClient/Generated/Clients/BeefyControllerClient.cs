@@ -26,9 +26,9 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Clients
          _httpClient = httpClient;
          _subscriptionClient = subscriptionClient;
       }
-      public async Task<BoundedVecT48> GetAuthorities()
+      public async Task<BoundedVecT49> GetAuthorities()
       {
-         return await SendRequestAsync<BoundedVecT48>(_httpClient, "beefy/authorities");
+         return await SendRequestAsync<BoundedVecT49>(_httpClient, "beefy/authorities");
       }
       public async Task<bool> SubscribeAuthorities()
       {
@@ -42,9 +42,9 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("Beefy.ValidatorSetId");
       }
-      public async Task<BoundedVecT48> GetNextAuthorities()
+      public async Task<BoundedVecT49> GetNextAuthorities()
       {
-         return await SendRequestAsync<BoundedVecT48>(_httpClient, "beefy/nextauthorities");
+         return await SendRequestAsync<BoundedVecT49>(_httpClient, "beefy/nextauthorities");
       }
       public async Task<bool> SubscribeNextAuthorities()
       {

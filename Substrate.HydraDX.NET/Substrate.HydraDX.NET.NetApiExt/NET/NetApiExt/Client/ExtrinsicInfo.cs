@@ -1,23 +1,17 @@
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Numerics;
-using System.Text;
-using Substrate.NetApi;
-using Substrate.NetApi.Model.Types.Base;
-using Substrate.NetApi.Model.Rpc;
-using Substrate.NetApi.Model.Types;
-using Substrate.NetApi.Model.Types.Primitive;
-using Substrate.HydraDX.NET.NetApiExt.Generated.Model.primitive_types;
-using Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto;
 using Substrate.HydraDX.NET.NetApiExt.Generated.Model.frame_support.dispatch;
 using Substrate.HydraDX.NET.NetApiExt.Generated.Model.frame_system;
 using Substrate.HydraDX.NET.NetApiExt.Generated.Model.frame_system.pallet;
+using Substrate.HydraDX.NET.NetApiExt.Generated.Model.hydradx_runtime;
 using Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_arithmetic;
 using Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_runtime;
 using Substrate.HydraDX.NET.NetApiExt.Helper;
-using Substrate.HydraDX.NET.NetApiExt.Generated.Model.hydradx_runtime;
+using Substrate.NetApi;
+using Substrate.NetApi.Model.Rpc;
+using Substrate.NetApi.Model.Types.Base;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Substrate.HydraDX.NET.NetApiExt.Client
 {
@@ -84,9 +78,6 @@ namespace Substrate.HydraDX.NET.NetApiExt.Client
             {
                 case NetApi.Model.Rpc.TransactionEvent.Validated:
                     IsReady = true;
-                    break;
-
-                case NetApi.Model.Rpc.TransactionEvent.Broadcasted:
                     break;
 
                 case NetApi.Model.Rpc.TransactionEvent.BestChainBlockIncluded:

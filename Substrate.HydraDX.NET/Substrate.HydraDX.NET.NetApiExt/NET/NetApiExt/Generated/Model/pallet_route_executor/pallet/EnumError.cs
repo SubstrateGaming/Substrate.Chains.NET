@@ -84,7 +84,7 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_route_executor.
     }
     
     /// <summary>
-    /// >> 528 - Variant[pallet_route_executor.pallet.Error]
+    /// >> 589 - Variant[pallet_route_executor.pallet.Error]
     /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>

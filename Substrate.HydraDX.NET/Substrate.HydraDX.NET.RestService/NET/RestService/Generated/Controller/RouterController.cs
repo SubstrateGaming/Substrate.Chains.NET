@@ -42,7 +42,7 @@ namespace Substrate.HydraDX.NET.RestService.Generated.Controller
         ///  Storing routes for asset pairs
         /// </summary>
         [HttpGet("Routes")]
-        [ProducesResponseType(typeof(Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT6), 200)]
+        [ProducesResponseType(typeof(Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT7), 200)]
         [StorageKeyBuilder(typeof(Substrate.HydraDX.NET.NetApiExt.Generated.Storage.RouterStorage), "RoutesParams", typeof(Substrate.HydraDX.NET.NetApiExt.Generated.Model.hydradx_traits.router.AssetPair))]
         public IActionResult GetRoutes(string key)
         {

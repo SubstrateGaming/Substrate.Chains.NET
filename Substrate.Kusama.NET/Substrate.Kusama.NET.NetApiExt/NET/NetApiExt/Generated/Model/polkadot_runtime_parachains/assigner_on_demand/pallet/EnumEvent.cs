@@ -24,22 +24,31 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parach
         
         /// <summary>
         /// >> OnDemandOrderPlaced
-        /// An order was placed at some spot price amount.
+        /// An order was placed at some spot price amount by orderer ordered_by
         /// </summary>
         OnDemandOrderPlaced = 0,
         
         /// <summary>
-        /// >> SpotTrafficSet
-        /// The value of the spot traffic multiplier changed.
+        /// >> SpotPriceSet
+        /// The value of the spot price has likely changed
         /// </summary>
-        SpotTrafficSet = 1,
+        SpotPriceSet = 1,
     }
     
     /// <summary>
-    /// >> 512 - Variant[polkadot_runtime_parachains.assigner_on_demand.pallet.Event]
+    /// >> 516 - Variant[polkadot_runtime_parachains.assigner_on_demand.pallet.Event]
     /// The `Event` enum of this pallet
     /// </summary>
-    public sealed class EnumEvent : BaseEnumExt<Event, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U128>, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedU128>
+    public sealed class EnumEvent : BaseEnumRust<Event>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumEvent()
+        {
+				AddTypeDecoder<BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U128, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>>(Event.OnDemandOrderPlaced);
+				AddTypeDecoder<Substrate.NetApi.Model.Types.Primitive.U128>(Event.SpotPriceSet);
+        }
     }
 }

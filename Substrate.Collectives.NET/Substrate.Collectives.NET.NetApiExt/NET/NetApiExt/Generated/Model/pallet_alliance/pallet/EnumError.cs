@@ -15,64 +15,162 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_alliance.pa
 {
     
     
+    /// <summary>
+    /// >> Error
+    /// The `Error` enum of this pallet.
+    /// </summary>
     public enum Error
     {
         
+        /// <summary>
+        /// >> AllianceNotYetInitialized
+        /// The Alliance has not been initialized yet, therefore accounts cannot join it.
+        /// </summary>
         AllianceNotYetInitialized = 0,
         
+        /// <summary>
+        /// >> AllianceAlreadyInitialized
+        /// The Alliance has been initialized, therefore cannot be initialized again.
+        /// </summary>
         AllianceAlreadyInitialized = 1,
         
+        /// <summary>
+        /// >> AlreadyMember
+        /// Account is already a member.
+        /// </summary>
         AlreadyMember = 2,
         
+        /// <summary>
+        /// >> NotMember
+        /// Account is not a member.
+        /// </summary>
         NotMember = 3,
         
+        /// <summary>
+        /// >> NotAlly
+        /// Account is not an ally.
+        /// </summary>
         NotAlly = 4,
         
+        /// <summary>
+        /// >> NoVotingRights
+        /// Account does not have voting rights.
+        /// </summary>
         NoVotingRights = 5,
         
+        /// <summary>
+        /// >> AlreadyElevated
+        /// Account is already an elevated (fellow) member.
+        /// </summary>
         AlreadyElevated = 6,
         
+        /// <summary>
+        /// >> AlreadyUnscrupulous
+        /// Item is already listed as unscrupulous.
+        /// </summary>
         AlreadyUnscrupulous = 7,
         
+        /// <summary>
+        /// >> AccountNonGrata
+        /// Account has been deemed unscrupulous by the Alliance and is not welcome to join or be
+        /// nominated.
+        /// </summary>
         AccountNonGrata = 8,
         
+        /// <summary>
+        /// >> NotListedAsUnscrupulous
+        /// Item has not been deemed unscrupulous.
+        /// </summary>
         NotListedAsUnscrupulous = 9,
         
+        /// <summary>
+        /// >> TooManyUnscrupulousItems
+        /// The number of unscrupulous items exceeds `MaxUnscrupulousItems`.
+        /// </summary>
         TooManyUnscrupulousItems = 10,
         
+        /// <summary>
+        /// >> TooLongWebsiteUrl
+        /// Length of website URL exceeds `MaxWebsiteUrlLength`.
+        /// </summary>
         TooLongWebsiteUrl = 11,
         
+        /// <summary>
+        /// >> InsufficientFunds
+        /// Balance is insufficient for the required deposit.
+        /// </summary>
         InsufficientFunds = 12,
         
-        WithoutIdentityDisplayAndWebsite = 13,
+        /// <summary>
+        /// >> WithoutRequiredIdentityFields
+        /// The account's identity does not have display field and website field.
+        /// </summary>
+        WithoutRequiredIdentityFields = 13,
         
+        /// <summary>
+        /// >> WithoutGoodIdentityJudgement
+        /// The account's identity has no good judgement.
+        /// </summary>
         WithoutGoodIdentityJudgement = 14,
         
+        /// <summary>
+        /// >> MissingProposalHash
+        /// The proposal hash is not found.
+        /// </summary>
         MissingProposalHash = 15,
         
+        /// <summary>
+        /// >> MissingAnnouncement
+        /// The announcement is not found.
+        /// </summary>
         MissingAnnouncement = 16,
         
+        /// <summary>
+        /// >> TooManyMembers
+        /// Number of members exceeds `MaxMembersCount`.
+        /// </summary>
         TooManyMembers = 17,
         
+        /// <summary>
+        /// >> TooManyAnnouncements
+        /// Number of announcements exceeds `MaxAnnouncementsCount`.
+        /// </summary>
         TooManyAnnouncements = 18,
         
+        /// <summary>
+        /// >> BadWitness
+        /// Invalid witness data given.
+        /// </summary>
         BadWitness = 19,
         
+        /// <summary>
+        /// >> AlreadyRetiring
+        /// Account already gave retirement notice
+        /// </summary>
         AlreadyRetiring = 20,
         
+        /// <summary>
+        /// >> RetirementNoticeNotGiven
+        /// Account did not give a retirement notice required to retire.
+        /// </summary>
         RetirementNoticeNotGiven = 21,
         
+        /// <summary>
+        /// >> RetirementPeriodNotPassed
+        /// Retirement period has not passed.
+        /// </summary>
         RetirementPeriodNotPassed = 22,
         
+        /// <summary>
+        /// >> FellowsMissing
+        /// Fellows must be provided to initialize the Alliance.
+        /// </summary>
         FellowsMissing = 23,
     }
     
     /// <summary>
-    /// >> 332 - Variant[pallet_alliance.pallet.Error]
-    /// 
-    ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
-    ///			of this pallet.
-    ///			
+    /// >> 420 - Variant[pallet_alliance.pallet.Error]
+    /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>
     {

@@ -17,11 +17,11 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Interfaces
    
    public interface IBeefyControllerClient
    {
-      Task<BoundedVecT48> GetAuthorities();
+      Task<BoundedVecT49> GetAuthorities();
       Task<bool> SubscribeAuthorities();
       Task<U64> GetValidatorSetId();
       Task<bool> SubscribeValidatorSetId();
-      Task<BoundedVecT48> GetNextAuthorities();
+      Task<BoundedVecT49> GetNextAuthorities();
       Task<bool> SubscribeNextAuthorities();
       Task<U32> GetSetIdSession(U64 key);
       Task<bool> SubscribeSetIdSession(U64 key);

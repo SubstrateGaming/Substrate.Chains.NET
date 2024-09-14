@@ -126,10 +126,34 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_democracy.palle
     }
     
     /// <summary>
-    /// >> 39 - Variant[pallet_democracy.pallet.Event]
+    /// >> 42 - Variant[pallet_democracy.pallet.Event]
     /// The `Event` enum of this pallet
     /// </summary>
-    public sealed class EnumEvent : BaseEnumExt<Event, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U128>, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U128>, BaseVoid, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_democracy.vote_threshold.EnumVoteThreshold>, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32, BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>, Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.HydraDX.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.HydraDX.NET.NetApiExt.Generated.Model.primitive_types.H256, BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_democracy.vote.EnumAccountVote>, BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.NetApi.Model.Types.Primitive.U32, BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_democracy.types.EnumMetadataOwner, Substrate.HydraDX.NET.NetApiExt.Generated.Model.primitive_types.H256>, BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_democracy.types.EnumMetadataOwner, Substrate.HydraDX.NET.NetApiExt.Generated.Model.primitive_types.H256>, BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_democracy.types.EnumMetadataOwner, Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_democracy.types.EnumMetadataOwner, Substrate.HydraDX.NET.NetApiExt.Generated.Model.primitive_types.H256>>
+    public sealed class EnumEvent : BaseEnumRust<Event>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumEvent()
+        {
+				AddTypeDecoder<BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U128>>(Event.Proposed);
+				AddTypeDecoder<BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U128>>(Event.Tabled);
+				AddTypeDecoder<BaseVoid>(Event.ExternalTabled);
+				AddTypeDecoder<BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_democracy.vote_threshold.EnumVoteThreshold>>(Event.Started);
+				AddTypeDecoder<Substrate.NetApi.Model.Types.Primitive.U32>(Event.Passed);
+				AddTypeDecoder<Substrate.NetApi.Model.Types.Primitive.U32>(Event.NotPassed);
+				AddTypeDecoder<Substrate.NetApi.Model.Types.Primitive.U32>(Event.Cancelled);
+				AddTypeDecoder<BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>>(Event.Delegated);
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>(Event.Undelegated);
+				AddTypeDecoder<BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.HydraDX.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Primitive.U32>>(Event.Vetoed);
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.primitive_types.H256>(Event.Blacklisted);
+				AddTypeDecoder<BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_democracy.vote.EnumAccountVote>>(Event.Voted);
+				AddTypeDecoder<BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U32>>(Event.Seconded);
+				AddTypeDecoder<Substrate.NetApi.Model.Types.Primitive.U32>(Event.ProposalCanceled);
+				AddTypeDecoder<BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_democracy.types.EnumMetadataOwner, Substrate.HydraDX.NET.NetApiExt.Generated.Model.primitive_types.H256>>(Event.MetadataSet);
+				AddTypeDecoder<BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_democracy.types.EnumMetadataOwner, Substrate.HydraDX.NET.NetApiExt.Generated.Model.primitive_types.H256>>(Event.MetadataCleared);
+				AddTypeDecoder<BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_democracy.types.EnumMetadataOwner, Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_democracy.types.EnumMetadataOwner, Substrate.HydraDX.NET.NetApiExt.Generated.Model.primitive_types.H256>>(Event.MetadataTransferred);
+        }
     }
 }

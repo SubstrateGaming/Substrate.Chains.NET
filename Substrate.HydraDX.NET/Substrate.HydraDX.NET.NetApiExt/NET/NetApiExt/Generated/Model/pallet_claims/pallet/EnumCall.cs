@@ -30,10 +30,18 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_claims.pallet
     }
     
     /// <summary>
-    /// >> 321 - Variant[pallet_claims.pallet.Call]
+    /// >> 361 - Variant[pallet_claims.pallet.Call]
     /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
-    public sealed class EnumCall : BaseEnumExt<Call, Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_claims.traits.EcdsaSignature>
+    public sealed class EnumCall : BaseEnumRust<Call>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumCall()
+        {
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_claims.traits.EcdsaSignature>(Call.claim);
+        }
     }
 }

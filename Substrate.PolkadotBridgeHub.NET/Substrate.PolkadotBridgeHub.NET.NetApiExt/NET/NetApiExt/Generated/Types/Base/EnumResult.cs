@@ -15,18 +15,36 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Types.Base
 {
     
     
+    /// <summary>
+    /// >> Result
+    /// </summary>
     public enum Result
     {
         
+        /// <summary>
+        /// >> Ok
+        /// </summary>
         Ok = 0,
         
+        /// <summary>
+        /// >> Err
+        /// </summary>
         Err = 1,
     }
     
     /// <summary>
-    /// >> 100 - Variant[Result]
+    /// >> 117 - Variant[Result]
     /// </summary>
-    public sealed class EnumResult : BaseEnumExt<Result, Substrate.NetApi.Model.Types.Base.BaseTuple, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_runtime.EnumDispatchError>
+    public sealed class EnumResult : BaseEnumRust<Result>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumResult()
+        {
+				AddTypeDecoder<Substrate.NetApi.Model.Types.Base.BaseTuple>(Result.Ok);
+				AddTypeDecoder<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_runtime.EnumDispatchError>(Result.Err);
+        }
     }
 }

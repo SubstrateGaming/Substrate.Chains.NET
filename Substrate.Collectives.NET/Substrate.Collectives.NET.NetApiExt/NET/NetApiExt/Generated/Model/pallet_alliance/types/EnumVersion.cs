@@ -15,16 +15,25 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_alliance.ty
 {
     
     
+    /// <summary>
+    /// >> Version
+    /// </summary>
     public enum Version
     {
         
+        /// <summary>
+        /// >> V0
+        /// </summary>
         V0 = 0,
         
+        /// <summary>
+        /// >> V1
+        /// </summary>
         V1 = 1,
     }
     
     /// <summary>
-    /// >> 112 - Variant[pallet_alliance.types.Version]
+    /// >> 136 - Variant[pallet_alliance.types.Version]
     /// </summary>
     public sealed class EnumVersion : BaseEnum<Version>
     {

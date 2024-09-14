@@ -57,6 +57,17 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         }
         
         /// <summary>
+        /// >> request_revenue_at
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
+        /// </summary>
+        public static Method RequestRevenueAt(Substrate.NetApi.Model.Types.Primitive.U32 when)
+        {
+            System.Collections.Generic.List<byte> byteArray = new List<byte>();
+            byteArray.AddRange(when.Encode());
+            return new Method(74, "Coretime", 2, "request_revenue_at", byteArray.ToArray());
+        }
+        
+        /// <summary>
         /// >> assign_core
         /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
@@ -79,12 +90,23 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> BrokerId
-        ///  The ParaId of the broker system parachain.
+        ///  The ParaId of the coretime chain.
         /// </summary>
         public Substrate.NetApi.Model.Types.Primitive.U32 BrokerId()
         {
             var result = new Substrate.NetApi.Model.Types.Primitive.U32();
             result.Create("0xED030000");
+            return result;
+        }
+        
+        /// <summary>
+        /// >> BrokerPotLocation
+        ///  The coretime chain pot location.
+        /// </summary>
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_xcm.v4.junctions.EnumJunctions BrokerPotLocation()
+        {
+            var result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_xcm.v4.junctions.EnumJunctions();
+            result.Create("0x0101006D6F646C70792F62726F6B650000000000000000000000000000000000000000");
             return result;
         }
     }
@@ -100,5 +122,18 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         /// The paraid making the call is not the coretime brokerage system parachain.
         /// </summary>
         NotBroker,
+        
+        /// <summary>
+        /// >> RequestedFutureRevenue
+        /// Requested revenue information `when` parameter was in the future from the current
+        /// block height.
+        /// </summary>
+        RequestedFutureRevenue,
+        
+        /// <summary>
+        /// >> AssetTransferFailed
+        /// Failed to transfer assets to the coretime chain
+        /// </summary>
+        AssetTransferFailed,
     }
 }

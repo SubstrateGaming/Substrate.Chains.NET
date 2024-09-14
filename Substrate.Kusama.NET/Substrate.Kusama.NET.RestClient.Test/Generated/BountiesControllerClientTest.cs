@@ -67,7 +67,7 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
          result.CuratorDeposit = this.GetTestValueU128();
          result.Bond = this.GetTestValueU128();
          result.Status = new Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_bounties.EnumBountyStatus();
-         result.Status.Create(this.GetTestValueEnum<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_bounties.BountyStatus>(), this.GetTestValueBaseVoid());
+         result.Status = this.GetTestValue5();
          return result;
       }
       public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue4()
@@ -110,6 +110,13 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
                   this.GetTestValueU8()});
          return result;
       }
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_bounties.EnumBountyStatus GetTestValue5()
+      {
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_bounties.EnumBountyStatus result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_bounties.EnumBountyStatus();
+         // NOT IMPLEMENTED >> Initialize Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_bounties.EnumBountyStatus
+         return result;
+      }
       [Test()]
       public async System.Threading.Tasks.Task TestBounties()
       {
@@ -139,7 +146,7 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT34 GetTestValue6()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT34 GetTestValue7()
       {
          Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT34 result;
          result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT34();
@@ -159,7 +166,7 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          BountiesControllerClient rpcClient = new BountiesControllerClient(_httpClient, subscriptionClient);
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT34 mockupValue = this.GetTestValue6();
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT34 mockupValue = this.GetTestValue7();
          Substrate.NetApi.Model.Types.Primitive.U32 mockupKey = this.GetTestValueU32();
 
          Assert.IsTrue(await rpcClient.SubscribeBountyDescriptions(mockupKey));
@@ -177,7 +184,7 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18 GetTestValue8()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18 GetTestValue9()
       {
          Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18 result;
          result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18();
@@ -197,7 +204,7 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          BountiesControllerClient rpcClient = new BountiesControllerClient(_httpClient, subscriptionClient);
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18 mockupValue = this.GetTestValue8();
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18 mockupValue = this.GetTestValue9();
 
 
          Assert.IsTrue(await rpcClient.SubscribeBountyApprovals());

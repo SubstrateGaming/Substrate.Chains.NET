@@ -54,10 +54,22 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_evm.pallet
     }
     
     /// <summary>
-    /// >> 127 - Variant[pallet_evm.pallet.Event]
+    /// >> 129 - Variant[pallet_evm.pallet.Event]
     /// The `Event` enum of this pallet
     /// </summary>
-    public sealed class EnumEvent : BaseEnumExt<Event, Substrate.HydraDX.NET.NetApiExt.Generated.Model.ethereum.log.Log, Substrate.HydraDX.NET.NetApiExt.Generated.Model.primitive_types.H160, Substrate.HydraDX.NET.NetApiExt.Generated.Model.primitive_types.H160, Substrate.HydraDX.NET.NetApiExt.Generated.Model.primitive_types.H160, Substrate.HydraDX.NET.NetApiExt.Generated.Model.primitive_types.H160>
+    public sealed class EnumEvent : BaseEnumRust<Event>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumEvent()
+        {
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.ethereum.log.Log>(Event.Log);
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.primitive_types.H160>(Event.Created);
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.primitive_types.H160>(Event.CreatedFailed);
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.primitive_types.H160>(Event.Executed);
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.primitive_types.H160>(Event.ExecutedFailed);
+        }
     }
 }

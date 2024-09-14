@@ -35,14 +35,14 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         ///  All the validators actively participating in parachain consensus.
         ///  Indices are into the broader validator set.
         /// </summary>
-        Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.ValidatorIndex> GetActiveValidatorIndices();
+        Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.ValidatorIndex> GetActiveValidatorIndices();
         
         /// <summary>
         /// >> ActiveValidatorKeys
         ///  The parachain attestation keys of the validators actively participating in parachain
         ///  consensus. This should be the same length as `ActiveValidatorIndices`.
         /// </summary>
-        Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.validator_app.Public> GetActiveValidatorKeys();
+        Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.validator_app.Public> GetActiveValidatorKeys();
         
         /// <summary>
         /// >> AllowedRelayParents
@@ -65,12 +65,12 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// <summary>
         /// _activeValidatorIndicesTypedStorage typed storage field
         /// </summary>
-        private TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.ValidatorIndex>> _activeValidatorIndicesTypedStorage;
+        private TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.ValidatorIndex>> _activeValidatorIndicesTypedStorage;
         
         /// <summary>
         /// _activeValidatorKeysTypedStorage typed storage field
         /// </summary>
-        private TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.validator_app.Public>> _activeValidatorKeysTypedStorage;
+        private TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.validator_app.Public>> _activeValidatorKeysTypedStorage;
         
         /// <summary>
         /// _allowedRelayParentsTypedStorage typed storage field
@@ -83,8 +83,8 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         public ParasSharedStorage(IStorageDataProvider storageDataProvider, List<IStorageChangeDelegate> storageChangeDelegates)
         {
             this.CurrentSessionIndexTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32>("ParasShared.CurrentSessionIndex", storageDataProvider, storageChangeDelegates);
-            this.ActiveValidatorIndicesTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.ValidatorIndex>>("ParasShared.ActiveValidatorIndices", storageDataProvider, storageChangeDelegates);
-            this.ActiveValidatorKeysTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.validator_app.Public>>("ParasShared.ActiveValidatorKeys", storageDataProvider, storageChangeDelegates);
+            this.ActiveValidatorIndicesTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.ValidatorIndex>>("ParasShared.ActiveValidatorIndices", storageDataProvider, storageChangeDelegates);
+            this.ActiveValidatorKeysTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.validator_app.Public>>("ParasShared.ActiveValidatorKeys", storageDataProvider, storageChangeDelegates);
             this.AllowedRelayParentsTypedStorage = new TypedStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.shared.AllowedRelayParentsTracker>("ParasShared.AllowedRelayParents", storageDataProvider, storageChangeDelegates);
         }
         
@@ -106,7 +106,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// <summary>
         /// _activeValidatorIndicesTypedStorage property
         /// </summary>
-        public TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.ValidatorIndex>> ActiveValidatorIndicesTypedStorage
+        public TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.ValidatorIndex>> ActiveValidatorIndicesTypedStorage
         {
             get
             {
@@ -121,7 +121,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// <summary>
         /// _activeValidatorKeysTypedStorage property
         /// </summary>
-        public TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.validator_app.Public>> ActiveValidatorKeysTypedStorage
+        public TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.validator_app.Public>> ActiveValidatorKeysTypedStorage
         {
             get
             {
@@ -191,7 +191,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         ///  All the validators actively participating in parachain consensus.
         ///  Indices are into the broader validator set.
         /// </summary>
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.ValidatorIndex> GetActiveValidatorIndices()
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.ValidatorIndex> GetActiveValidatorIndices()
         {
             return ActiveValidatorIndicesTypedStorage.Get();
         }
@@ -210,7 +210,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         ///  The parachain attestation keys of the validators actively participating in parachain
         ///  consensus. This should be the same length as `ActiveValidatorIndices`.
         /// </summary>
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.validator_app.Public> GetActiveValidatorKeys()
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.validator_app.Public> GetActiveValidatorKeys()
         {
             return ActiveValidatorKeysTypedStorage.Get();
         }

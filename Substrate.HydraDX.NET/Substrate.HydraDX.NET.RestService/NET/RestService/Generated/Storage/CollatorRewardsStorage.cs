@@ -28,7 +28,7 @@ namespace Substrate.HydraDX.NET.RestService.Generated.Storage
         /// >> Collators
         ///  Stores the collators per session (index).
         /// </summary>
-        Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT29 GetCollators(string key);
+        Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT33 GetCollators(string key);
     }
     
     /// <summary>
@@ -40,20 +40,20 @@ namespace Substrate.HydraDX.NET.RestService.Generated.Storage
         /// <summary>
         /// _collatorsTypedStorage typed storage field
         /// </summary>
-        private TypedMapStorage<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT29> _collatorsTypedStorage;
+        private TypedMapStorage<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT33> _collatorsTypedStorage;
         
         /// <summary>
         /// CollatorRewardsStorage constructor.
         /// </summary>
         public CollatorRewardsStorage(IStorageDataProvider storageDataProvider, List<IStorageChangeDelegate> storageChangeDelegates)
         {
-            this.CollatorsTypedStorage = new TypedMapStorage<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT29>("CollatorRewards.Collators", storageDataProvider, storageChangeDelegates);
+            this.CollatorsTypedStorage = new TypedMapStorage<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT33>("CollatorRewards.Collators", storageDataProvider, storageChangeDelegates);
         }
         
         /// <summary>
         /// _collatorsTypedStorage property
         /// </summary>
-        public TypedMapStorage<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT29> CollatorsTypedStorage
+        public TypedMapStorage<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT33> CollatorsTypedStorage
         {
             get
             {
@@ -86,13 +86,13 @@ namespace Substrate.HydraDX.NET.RestService.Generated.Storage
         /// >> Collators
         ///  Stores the collators per session (index).
         /// </summary>
-        public Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT29 GetCollators(string key)
+        public Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT33 GetCollators(string key)
         {
             if ((key == null))
             {
                 return null;
             }
-            if (CollatorsTypedStorage.Dictionary.TryGetValue(key, out Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT29 result))
+            if (CollatorsTypedStorage.Dictionary.TryGetValue(key, out Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT33 result))
             {
                 return result;
             }

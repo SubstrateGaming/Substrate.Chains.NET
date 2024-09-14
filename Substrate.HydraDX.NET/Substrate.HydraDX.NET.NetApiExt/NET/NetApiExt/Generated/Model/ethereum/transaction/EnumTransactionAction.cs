@@ -33,9 +33,18 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.ethereum.transaction
     }
     
     /// <summary>
-    /// >> 357 - Variant[ethereum.transaction.TransactionAction]
+    /// >> 394 - Variant[ethereum.transaction.TransactionAction]
     /// </summary>
-    public sealed class EnumTransactionAction : BaseEnumExt<TransactionAction, Substrate.HydraDX.NET.NetApiExt.Generated.Model.primitive_types.H160, BaseVoid>
+    public sealed class EnumTransactionAction : BaseEnumRust<TransactionAction>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumTransactionAction()
+        {
+				AddTypeDecoder<Substrate.HydraDX.NET.NetApiExt.Generated.Model.primitive_types.H160>(TransactionAction.Call);
+				AddTypeDecoder<BaseVoid>(TransactionAction.Create);
+        }
     }
 }

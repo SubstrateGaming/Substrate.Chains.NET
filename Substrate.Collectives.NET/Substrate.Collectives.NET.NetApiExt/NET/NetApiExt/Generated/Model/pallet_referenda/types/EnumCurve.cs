@@ -15,20 +15,42 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_referenda.t
 {
     
     
+    /// <summary>
+    /// >> Curve
+    /// </summary>
     public enum Curve
     {
         
+        /// <summary>
+        /// >> LinearDecreasing
+        /// </summary>
         LinearDecreasing = 0,
         
+        /// <summary>
+        /// >> SteppedDecreasing
+        /// </summary>
         SteppedDecreasing = 1,
         
+        /// <summary>
+        /// >> Reciprocal
+        /// </summary>
         Reciprocal = 2,
     }
     
     /// <summary>
-    /// >> 354 - Variant[pallet_referenda.types.Curve]
+    /// >> 442 - Variant[pallet_referenda.types.Curve]
     /// </summary>
-    public sealed class EnumCurve : BaseEnumExt<Curve, BaseTuple<Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill, Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill, Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill>, BaseTuple<Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill, Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill, Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill, Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill>, BaseTuple<Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedI64, Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedI64, Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedI64>>
+    public sealed class EnumCurve : BaseEnumRust<Curve>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumCurve()
+        {
+				AddTypeDecoder<BaseTuple<Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill, Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill, Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill>>(Curve.LinearDecreasing);
+				AddTypeDecoder<BaseTuple<Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill, Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill, Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill, Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill>>(Curve.SteppedDecreasing);
+				AddTypeDecoder<BaseTuple<Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedI64, Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedI64, Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedI64>>(Curve.Reciprocal);
+        }
     }
 }

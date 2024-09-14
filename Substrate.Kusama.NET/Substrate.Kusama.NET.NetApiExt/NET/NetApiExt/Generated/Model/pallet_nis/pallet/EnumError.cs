@@ -97,7 +97,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nis.pallet
         
         /// <summary>
         /// >> MakesDust
-        /// The operation would result in a receipt worth an insignficant value.
+        /// The operation would result in a receipt worth an insignificant value.
         /// </summary>
         MakesDust = 12,
         
@@ -115,7 +115,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nis.pallet
     }
     
     /// <summary>
-    /// >> 738 - Variant[pallet_nis.pallet.Error]
+    /// >> 745 - Variant[pallet_nis.pallet.Error]
     /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>

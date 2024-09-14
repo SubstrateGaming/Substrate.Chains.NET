@@ -46,7 +46,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Controller
         /// </summary>
         [HttpGet("CoreSchedules")]
         [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.assigner_coretime.Schedule), 200)]
-        [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.CoretimeAssignmentProviderStorage), "CoreSchedulesParams", typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.CoreIndex>))]
+        [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.CoretimeAssignmentProviderStorage), "CoreSchedulesParams", typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.CoreIndex>))]
         public IActionResult GetCoreSchedules(string key)
         {
             return this.Ok(_coretimeAssignmentProviderStorage.GetCoreSchedules(key));
@@ -61,7 +61,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Controller
         /// </summary>
         [HttpGet("CoreDescriptors")]
         [ProducesResponseType(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.assigner_coretime.CoreDescriptor), 200)]
-        [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.CoretimeAssignmentProviderStorage), "CoreDescriptorsParams", typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.CoreIndex))]
+        [StorageKeyBuilder(typeof(Substrate.Kusama.NET.NetApiExt.Generated.Storage.CoretimeAssignmentProviderStorage), "CoreDescriptorsParams", typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.CoreIndex))]
         public IActionResult GetCoreDescriptors(string key)
         {
             return this.Ok(_coretimeAssignmentProviderStorage.GetCoreDescriptors(key));

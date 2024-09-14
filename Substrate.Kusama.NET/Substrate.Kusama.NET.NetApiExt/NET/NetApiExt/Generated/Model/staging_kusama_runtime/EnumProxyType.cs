@@ -60,6 +60,11 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.staging_kusama_runtime
         /// >> NominationPools
         /// </summary>
         NominationPools = 8,
+        
+        /// <summary>
+        /// >> Spokesperson
+        /// </summary>
+        Spokesperson = 9,
     }
     
     /// <summary>

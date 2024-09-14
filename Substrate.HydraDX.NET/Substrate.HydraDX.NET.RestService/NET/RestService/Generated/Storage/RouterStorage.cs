@@ -28,7 +28,7 @@ namespace Substrate.HydraDX.NET.RestService.Generated.Storage
         /// >> Routes
         ///  Storing routes for asset pairs
         /// </summary>
-        Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT6 GetRoutes(string key);
+        Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT7 GetRoutes(string key);
     }
     
     /// <summary>
@@ -40,20 +40,20 @@ namespace Substrate.HydraDX.NET.RestService.Generated.Storage
         /// <summary>
         /// _routesTypedStorage typed storage field
         /// </summary>
-        private TypedMapStorage<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT6> _routesTypedStorage;
+        private TypedMapStorage<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT7> _routesTypedStorage;
         
         /// <summary>
         /// RouterStorage constructor.
         /// </summary>
         public RouterStorage(IStorageDataProvider storageDataProvider, List<IStorageChangeDelegate> storageChangeDelegates)
         {
-            this.RoutesTypedStorage = new TypedMapStorage<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT6>("Router.Routes", storageDataProvider, storageChangeDelegates);
+            this.RoutesTypedStorage = new TypedMapStorage<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT7>("Router.Routes", storageDataProvider, storageChangeDelegates);
         }
         
         /// <summary>
         /// _routesTypedStorage property
         /// </summary>
-        public TypedMapStorage<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT6> RoutesTypedStorage
+        public TypedMapStorage<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT7> RoutesTypedStorage
         {
             get
             {
@@ -86,13 +86,13 @@ namespace Substrate.HydraDX.NET.RestService.Generated.Storage
         /// >> Routes
         ///  Storing routes for asset pairs
         /// </summary>
-        public Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT6 GetRoutes(string key)
+        public Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT7 GetRoutes(string key)
         {
             if ((key == null))
             {
                 return null;
             }
-            if (RoutesTypedStorage.Dictionary.TryGetValue(key, out Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT6 result))
+            if (RoutesTypedStorage.Dictionary.TryGetValue(key, out Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT7 result))
             {
                 return result;
             }

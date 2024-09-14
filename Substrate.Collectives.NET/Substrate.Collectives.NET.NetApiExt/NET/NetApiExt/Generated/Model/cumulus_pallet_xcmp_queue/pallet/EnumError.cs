@@ -15,26 +15,35 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.cumulus_pallet_xcm
 {
     
     
+    /// <summary>
+    /// >> Error
+    /// The `Error` enum of this pallet.
+    /// </summary>
     public enum Error
     {
         
-        FailedToSend = 0,
+        /// <summary>
+        /// >> BadQueueConfig
+        /// Setting the queue config failed since one of its values was invalid.
+        /// </summary>
+        BadQueueConfig = 0,
         
-        BadXcmOrigin = 1,
+        /// <summary>
+        /// >> AlreadySuspended
+        /// The execution is already suspended.
+        /// </summary>
+        AlreadySuspended = 1,
         
-        BadXcm = 2,
-        
-        BadOverweightIndex = 3,
-        
-        WeightOverLimit = 4,
+        /// <summary>
+        /// >> AlreadyResumed
+        /// The execution is already resumed.
+        /// </summary>
+        AlreadyResumed = 2,
     }
     
     /// <summary>
-    /// >> 274 - Variant[cumulus_pallet_xcmp_queue.pallet.Error]
-    /// 
-    ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
-    ///			of this pallet.
-    ///			
+    /// >> 356 - Variant[cumulus_pallet_xcmp_queue.pallet.Error]
+    /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>
     {

@@ -24,28 +24,51 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_babe.pallet
         
         /// <summary>
         /// >> report_equivocation
-        /// See [`Pallet::report_equivocation`].
+        /// Report authority equivocation/misbehavior. This method will verify
+        /// the equivocation proof and validate the given key ownership proof
+        /// against the extracted offender. If both are valid, the offence will
+        /// be reported.
         /// </summary>
         report_equivocation = 0,
         
         /// <summary>
         /// >> report_equivocation_unsigned
-        /// See [`Pallet::report_equivocation_unsigned`].
+        /// Report authority equivocation/misbehavior. This method will verify
+        /// the equivocation proof and validate the given key ownership proof
+        /// against the extracted offender. If both are valid, the offence will
+        /// be reported.
+        /// This extrinsic must be called unsigned and it is expected that only
+        /// block authors will call it (validated in `ValidateUnsigned`), as such
+        /// if the block author is defined it will be defined as the equivocation
+        /// reporter.
         /// </summary>
         report_equivocation_unsigned = 1,
         
         /// <summary>
         /// >> plan_config_change
-        /// See [`Pallet::plan_config_change`].
+        /// Plan an epoch config change. The epoch config change is recorded and will be enacted on
+        /// the next call to `enact_epoch_change`. The config will be activated one epoch after.
+        /// Multiple calls to this method will replace any existing planned config change that had
+        /// not been enacted yet.
         /// </summary>
         plan_config_change = 2,
     }
     
     /// <summary>
-    /// >> 101 - Variant[pallet_babe.pallet.Call]
+    /// >> 92 - Variant[pallet_babe.pallet.Call]
     /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
-    public sealed class EnumCall : BaseEnumExt<Call, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_slots.EquivocationProof, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_session.MembershipProof>, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_slots.EquivocationProof, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_session.MembershipProof>, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_babe.digests.EnumNextConfigDescriptor>
+    public sealed class EnumCall : BaseEnumRust<Call>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumCall()
+        {
+				AddTypeDecoder<BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_slots.EquivocationProof, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_session.MembershipProof>>(Call.report_equivocation);
+				AddTypeDecoder<BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_slots.EquivocationProof, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_session.MembershipProof>>(Call.report_equivocation_unsigned);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_babe.digests.EnumNextConfigDescriptor>(Call.plan_config_change);
+        }
     }
 }

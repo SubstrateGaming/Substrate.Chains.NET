@@ -45,10 +45,20 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools
         /// >> BondedStashKilledPrematurely
         /// </summary>
         BondedStashKilledPrematurely = 4,
+        
+        /// <summary>
+        /// >> DelegationUnsupported
+        /// </summary>
+        DelegationUnsupported = 5,
+        
+        /// <summary>
+        /// >> SlashNotApplied
+        /// </summary>
+        SlashNotApplied = 6,
     }
     
     /// <summary>
-    /// >> 767 - Variant[pallet_nomination_pools.pallet.DefensiveError]
+    /// >> 774 - Variant[pallet_nomination_pools.pallet.DefensiveError]
     /// </summary>
     public sealed class EnumDefensiveError : BaseEnum<DefensiveError>
     {

@@ -25,22 +25,14 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
     {
         
         /// <summary>
-        /// >> AvailabilityBitfields
-        ///  The latest bitfield for each validator, referred to by their index in the validator set.
+        /// >> V1
+        ///  Candidates pending availability by `ParaId`. They form a chain starting from the latest
+        ///  included head of the para.
+        ///  Use a different prefix post-migration to v1, since the v0 `PendingAvailability` storage
+        ///  would otherwise have the exact same prefix which could cause undefined behaviour when doing
+        ///  the migration.
         /// </summary>
-        Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.inclusion.AvailabilityBitfieldRecord GetAvailabilityBitfields(string key);
-        
-        /// <summary>
-        /// >> PendingAvailability
-        ///  Candidates pending availability by `ParaId`.
-        /// </summary>
-        Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.inclusion.CandidatePendingAvailability GetPendingAvailability(string key);
-        
-        /// <summary>
-        /// >> PendingAvailabilityCommitments
-        ///  The commitments of candidates pending availability, by `ParaId`.
-        /// </summary>
-        Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.CandidateCommitments GetPendingAvailabilityCommitments(string key);
+        Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.inclusion.CandidatePendingAvailability> GetV1(string key);
     }
     
     /// <summary>
@@ -50,72 +42,30 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
     {
         
         /// <summary>
-        /// _availabilityBitfieldsTypedStorage typed storage field
+        /// _v1TypedStorage typed storage field
         /// </summary>
-        private TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.inclusion.AvailabilityBitfieldRecord> _availabilityBitfieldsTypedStorage;
-        
-        /// <summary>
-        /// _pendingAvailabilityTypedStorage typed storage field
-        /// </summary>
-        private TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.inclusion.CandidatePendingAvailability> _pendingAvailabilityTypedStorage;
-        
-        /// <summary>
-        /// _pendingAvailabilityCommitmentsTypedStorage typed storage field
-        /// </summary>
-        private TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.CandidateCommitments> _pendingAvailabilityCommitmentsTypedStorage;
+        private TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.inclusion.CandidatePendingAvailability>> _v1TypedStorage;
         
         /// <summary>
         /// ParaInclusionStorage constructor.
         /// </summary>
         public ParaInclusionStorage(IStorageDataProvider storageDataProvider, List<IStorageChangeDelegate> storageChangeDelegates)
         {
-            this.AvailabilityBitfieldsTypedStorage = new TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.inclusion.AvailabilityBitfieldRecord>("ParaInclusion.AvailabilityBitfields", storageDataProvider, storageChangeDelegates);
-            this.PendingAvailabilityTypedStorage = new TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.inclusion.CandidatePendingAvailability>("ParaInclusion.PendingAvailability", storageDataProvider, storageChangeDelegates);
-            this.PendingAvailabilityCommitmentsTypedStorage = new TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.CandidateCommitments>("ParaInclusion.PendingAvailabilityCommitments", storageDataProvider, storageChangeDelegates);
+            this.V1TypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.inclusion.CandidatePendingAvailability>>("ParaInclusion.V1", storageDataProvider, storageChangeDelegates);
         }
         
         /// <summary>
-        /// _availabilityBitfieldsTypedStorage property
+        /// _v1TypedStorage property
         /// </summary>
-        public TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.inclusion.AvailabilityBitfieldRecord> AvailabilityBitfieldsTypedStorage
+        public TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.inclusion.CandidatePendingAvailability>> V1TypedStorage
         {
             get
             {
-                return _availabilityBitfieldsTypedStorage;
+                return _v1TypedStorage;
             }
             set
             {
-                _availabilityBitfieldsTypedStorage = value;
-            }
-        }
-        
-        /// <summary>
-        /// _pendingAvailabilityTypedStorage property
-        /// </summary>
-        public TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.inclusion.CandidatePendingAvailability> PendingAvailabilityTypedStorage
-        {
-            get
-            {
-                return _pendingAvailabilityTypedStorage;
-            }
-            set
-            {
-                _pendingAvailabilityTypedStorage = value;
-            }
-        }
-        
-        /// <summary>
-        /// _pendingAvailabilityCommitmentsTypedStorage property
-        /// </summary>
-        public TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.CandidateCommitments> PendingAvailabilityCommitmentsTypedStorage
-        {
-            get
-            {
-                return _pendingAvailabilityCommitmentsTypedStorage;
-            }
-            set
-            {
-                _pendingAvailabilityCommitmentsTypedStorage = value;
+                _v1TypedStorage = value;
             }
         }
         
@@ -124,89 +74,33 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// </summary>
         public async Task InitializeAsync(Substrate.ServiceLayer.Storage.IStorageDataProvider dataProvider)
         {
-            await AvailabilityBitfieldsTypedStorage.InitializeAsync("ParaInclusion", "AvailabilityBitfields");
-            await PendingAvailabilityTypedStorage.InitializeAsync("ParaInclusion", "PendingAvailability");
-            await PendingAvailabilityCommitmentsTypedStorage.InitializeAsync("ParaInclusion", "PendingAvailabilityCommitments");
+            await V1TypedStorage.InitializeAsync("ParaInclusion", "V1");
         }
         
         /// <summary>
-        /// Implements any storage change for ParaInclusion.AvailabilityBitfields
+        /// Implements any storage change for ParaInclusion.V1
         /// </summary>
-        [StorageChange("ParaInclusion", "AvailabilityBitfields")]
-        public void OnUpdateAvailabilityBitfields(string key, string data)
+        [StorageChange("ParaInclusion", "V1")]
+        public void OnUpdateV1(string key, string data)
         {
-            AvailabilityBitfieldsTypedStorage.Update(key, data);
+            V1TypedStorage.Update(key, data);
         }
         
         /// <summary>
-        /// >> AvailabilityBitfields
-        ///  The latest bitfield for each validator, referred to by their index in the validator set.
+        /// >> V1
+        ///  Candidates pending availability by `ParaId`. They form a chain starting from the latest
+        ///  included head of the para.
+        ///  Use a different prefix post-migration to v1, since the v0 `PendingAvailability` storage
+        ///  would otherwise have the exact same prefix which could cause undefined behaviour when doing
+        ///  the migration.
         /// </summary>
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.inclusion.AvailabilityBitfieldRecord GetAvailabilityBitfields(string key)
-        {
-            if ((key == null))
-            {
-                return null;
-            }
-            if (AvailabilityBitfieldsTypedStorage.Dictionary.TryGetValue(key, out Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.inclusion.AvailabilityBitfieldRecord result))
-            {
-                return result;
-            }
-            else
-            {
-                return null;
-            }
-        }
-        
-        /// <summary>
-        /// Implements any storage change for ParaInclusion.PendingAvailability
-        /// </summary>
-        [StorageChange("ParaInclusion", "PendingAvailability")]
-        public void OnUpdatePendingAvailability(string key, string data)
-        {
-            PendingAvailabilityTypedStorage.Update(key, data);
-        }
-        
-        /// <summary>
-        /// >> PendingAvailability
-        ///  Candidates pending availability by `ParaId`.
-        /// </summary>
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.inclusion.CandidatePendingAvailability GetPendingAvailability(string key)
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.inclusion.CandidatePendingAvailability> GetV1(string key)
         {
             if ((key == null))
             {
                 return null;
             }
-            if (PendingAvailabilityTypedStorage.Dictionary.TryGetValue(key, out Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.inclusion.CandidatePendingAvailability result))
-            {
-                return result;
-            }
-            else
-            {
-                return null;
-            }
-        }
-        
-        /// <summary>
-        /// Implements any storage change for ParaInclusion.PendingAvailabilityCommitments
-        /// </summary>
-        [StorageChange("ParaInclusion", "PendingAvailabilityCommitments")]
-        public void OnUpdatePendingAvailabilityCommitments(string key, string data)
-        {
-            PendingAvailabilityCommitmentsTypedStorage.Update(key, data);
-        }
-        
-        /// <summary>
-        /// >> PendingAvailabilityCommitments
-        ///  The commitments of candidates pending availability, by `ParaId`.
-        /// </summary>
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.CandidateCommitments GetPendingAvailabilityCommitments(string key)
-        {
-            if ((key == null))
-            {
-                return null;
-            }
-            if (PendingAvailabilityCommitmentsTypedStorage.Dictionary.TryGetValue(key, out Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.CandidateCommitments result))
+            if (V1TypedStorage.Dictionary.TryGetValue(key, out Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.inclusion.CandidatePendingAvailability> result))
             {
                 return result;
             }

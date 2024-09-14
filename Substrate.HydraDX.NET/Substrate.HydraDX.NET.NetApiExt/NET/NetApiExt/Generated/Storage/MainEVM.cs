@@ -301,10 +301,16 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Storage
         GasLimitTooHigh,
         
         /// <summary>
-        /// >> Undefined
-        /// Undefined error.
+        /// >> InvalidChainId
+        /// The chain id is invalid.
         /// </summary>
-        Undefined,
+        InvalidChainId,
+        
+        /// <summary>
+        /// >> InvalidSignature
+        /// the signature is invalid.
+        /// </summary>
+        InvalidSignature,
         
         /// <summary>
         /// >> Reentrancy
@@ -317,5 +323,17 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Storage
         /// EIP-3607,
         /// </summary>
         TransactionMustComeFromEOA,
+        
+        /// <summary>
+        /// >> InvalidTransaction
+        /// Invalid Transaction
+        /// </summary>
+        InvalidTransaction,
+        
+        /// <summary>
+        /// >> Undefined
+        /// Undefined error.
+        /// </summary>
+        Undefined,
     }
 }

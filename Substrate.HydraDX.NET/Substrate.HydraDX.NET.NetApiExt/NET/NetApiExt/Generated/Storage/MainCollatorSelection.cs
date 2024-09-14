@@ -36,8 +36,8 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Storage
         public CollatorSelectionStorage(SubstrateClientExt client)
         {
             this._client = client;
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("CollatorSelection", "Invulnerables"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT29)));
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("CollatorSelection", "Candidates"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT44)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("CollatorSelection", "Invulnerables"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT33)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("CollatorSelection", "CandidateList"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT48)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("CollatorSelection", "LastAuthoredBlock"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32), typeof(Substrate.NetApi.Model.Types.Primitive.U32)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("CollatorSelection", "DesiredCandidates"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Primitive.U32)));
@@ -66,41 +66,47 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Storage
         /// >> Invulnerables
         ///  The invulnerable, permissioned collators. This list must be sorted.
         /// </summary>
-        public async Task<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT29> Invulnerables(string blockhash, CancellationToken token)
+        public async Task<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT33> Invulnerables(string blockhash, CancellationToken token)
         {
             string parameters = CollatorSelectionStorage.InvulnerablesParams();
-            var result = await _client.GetStorageAsync<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT29>(parameters, blockhash, token);
+            var result = await _client.GetStorageAsync<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT33>(parameters, blockhash, token);
             return result;
         }
         
         /// <summary>
-        /// >> CandidatesParams
+        /// >> CandidateListParams
         ///  The (community, limited) collation candidates. `Candidates` and `Invulnerables` should be
         ///  mutually exclusive.
+        /// 
+        ///  This list is sorted in ascending order by deposit and when the deposits are equal, the least
+        ///  recently updated is considered greater.
         /// </summary>
-        public static string CandidatesParams()
+        public static string CandidateListParams()
         {
-            return RequestGenerator.GetStorage("CollatorSelection", "Candidates", Substrate.NetApi.Model.Meta.Storage.Type.Plain);
+            return RequestGenerator.GetStorage("CollatorSelection", "CandidateList", Substrate.NetApi.Model.Meta.Storage.Type.Plain);
         }
         
         /// <summary>
-        /// >> CandidatesDefault
+        /// >> CandidateListDefault
         /// Default value as hex string
         /// </summary>
-        public static string CandidatesDefault()
+        public static string CandidateListDefault()
         {
             return "0x00";
         }
         
         /// <summary>
-        /// >> Candidates
+        /// >> CandidateList
         ///  The (community, limited) collation candidates. `Candidates` and `Invulnerables` should be
         ///  mutually exclusive.
+        /// 
+        ///  This list is sorted in ascending order by deposit and when the deposits are equal, the least
+        ///  recently updated is considered greater.
         /// </summary>
-        public async Task<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT44> Candidates(string blockhash, CancellationToken token)
+        public async Task<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT48> CandidateList(string blockhash, CancellationToken token)
         {
-            string parameters = CollatorSelectionStorage.CandidatesParams();
-            var result = await _client.GetStorageAsync<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT44>(parameters, blockhash, token);
+            string parameters = CollatorSelectionStorage.CandidateListParams();
+            var result = await _client.GetStorageAsync<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT48>(parameters, blockhash, token);
             return result;
         }
         
@@ -282,6 +288,29 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Storage
             byteArray.AddRange(who.Encode());
             return new Method(163, "CollatorSelection", 6, "remove_invulnerable", byteArray.ToArray());
         }
+        
+        /// <summary>
+        /// >> update_bond
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
+        /// </summary>
+        public static Method UpdateBond(Substrate.NetApi.Model.Types.Primitive.U128 new_deposit)
+        {
+            System.Collections.Generic.List<byte> byteArray = new List<byte>();
+            byteArray.AddRange(new_deposit.Encode());
+            return new Method(163, "CollatorSelection", 7, "update_bond", byteArray.ToArray());
+        }
+        
+        /// <summary>
+        /// >> take_candidate_slot
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
+        /// </summary>
+        public static Method TakeCandidateSlot(Substrate.NetApi.Model.Types.Primitive.U128 deposit, Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 target)
+        {
+            System.Collections.Generic.List<byte> byteArray = new List<byte>();
+            byteArray.AddRange(deposit.Encode());
+            byteArray.AddRange(target.Encode());
+            return new Method(163, "CollatorSelection", 8, "take_candidate_slot", byteArray.ToArray());
+        }
     }
     
     /// <summary>
@@ -350,5 +379,53 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Storage
         /// Validator ID is not yet registered.
         /// </summary>
         ValidatorNotRegistered,
+        
+        /// <summary>
+        /// >> InsertToCandidateListFailed
+        /// Could not insert in the candidate list.
+        /// </summary>
+        InsertToCandidateListFailed,
+        
+        /// <summary>
+        /// >> RemoveFromCandidateListFailed
+        /// Could not remove from the candidate list.
+        /// </summary>
+        RemoveFromCandidateListFailed,
+        
+        /// <summary>
+        /// >> DepositTooLow
+        /// New deposit amount would be below the minimum candidacy bond.
+        /// </summary>
+        DepositTooLow,
+        
+        /// <summary>
+        /// >> UpdateCandidateListFailed
+        /// Could not update the candidate list.
+        /// </summary>
+        UpdateCandidateListFailed,
+        
+        /// <summary>
+        /// >> InsufficientBond
+        /// Deposit amount is too low to take the target's slot in the candidate list.
+        /// </summary>
+        InsufficientBond,
+        
+        /// <summary>
+        /// >> TargetIsNotCandidate
+        /// The target account to be replaced in the candidate list is not a candidate.
+        /// </summary>
+        TargetIsNotCandidate,
+        
+        /// <summary>
+        /// >> IdenticalDeposit
+        /// The updated deposit amount is equal to the amount already reserved.
+        /// </summary>
+        IdenticalDeposit,
+        
+        /// <summary>
+        /// >> InvalidUnreserve
+        /// Cannot lower candidacy bond while occupying a future collator slot in the list.
+        /// </summary>
+        InvalidUnreserve,
     }
 }

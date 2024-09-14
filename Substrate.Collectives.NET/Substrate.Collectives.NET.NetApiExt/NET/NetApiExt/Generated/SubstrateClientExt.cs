@@ -18,6 +18,9 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated
 {
     
     
+    /// <summary>
+    /// >> Substrate Client Extension, including all Storage classes direct access.
+    /// </summary>
     public sealed class SubstrateClientExt : Substrate.NetApi.SubstrateClient
     {
         
@@ -97,9 +100,9 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated
         public CumulusXcmStorage CumulusXcmStorage;
         
         /// <summary>
-        /// DmpQueueStorage storage calls.
+        /// MessageQueueStorage storage calls.
         /// </summary>
-        public DmpQueueStorage DmpQueueStorage;
+        public MessageQueueStorage MessageQueueStorage;
         
         /// <summary>
         /// UtilityStorage storage calls.
@@ -127,6 +130,11 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated
         public SchedulerStorage SchedulerStorage;
         
         /// <summary>
+        /// AssetRateStorage storage calls.
+        /// </summary>
+        public AssetRateStorage AssetRateStorage;
+        
+        /// <summary>
         /// AllianceStorage storage calls.
         /// </summary>
         public AllianceStorage AllianceStorage;
@@ -146,6 +154,56 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated
         /// </summary>
         public FellowshipReferendaStorage FellowshipReferendaStorage;
         
+        /// <summary>
+        /// FellowshipOriginsStorage storage calls.
+        /// </summary>
+        public FellowshipOriginsStorage FellowshipOriginsStorage;
+        
+        /// <summary>
+        /// FellowshipCoreStorage storage calls.
+        /// </summary>
+        public FellowshipCoreStorage FellowshipCoreStorage;
+        
+        /// <summary>
+        /// FellowshipSalaryStorage storage calls.
+        /// </summary>
+        public FellowshipSalaryStorage FellowshipSalaryStorage;
+        
+        /// <summary>
+        /// FellowshipTreasuryStorage storage calls.
+        /// </summary>
+        public FellowshipTreasuryStorage FellowshipTreasuryStorage;
+        
+        /// <summary>
+        /// AmbassadorCollectiveStorage storage calls.
+        /// </summary>
+        public AmbassadorCollectiveStorage AmbassadorCollectiveStorage;
+        
+        /// <summary>
+        /// AmbassadorReferendaStorage storage calls.
+        /// </summary>
+        public AmbassadorReferendaStorage AmbassadorReferendaStorage;
+        
+        /// <summary>
+        /// AmbassadorOriginsStorage storage calls.
+        /// </summary>
+        public AmbassadorOriginsStorage AmbassadorOriginsStorage;
+        
+        /// <summary>
+        /// AmbassadorCoreStorage storage calls.
+        /// </summary>
+        public AmbassadorCoreStorage AmbassadorCoreStorage;
+        
+        /// <summary>
+        /// AmbassadorSalaryStorage storage calls.
+        /// </summary>
+        public AmbassadorSalaryStorage AmbassadorSalaryStorage;
+        
+        /// <summary>
+        /// AmbassadorTreasuryStorage storage calls.
+        /// </summary>
+        public AmbassadorTreasuryStorage AmbassadorTreasuryStorage;
+        
         public SubstrateClientExt(System.Uri uri, Substrate.NetApi.Model.Extrinsics.ChargeType chargeType) : 
                 base(uri, chargeType)
         {
@@ -164,16 +222,27 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated
             this.XcmpQueueStorage = new XcmpQueueStorage(this);
             this.PolkadotXcmStorage = new PolkadotXcmStorage(this);
             this.CumulusXcmStorage = new CumulusXcmStorage(this);
-            this.DmpQueueStorage = new DmpQueueStorage(this);
+            this.MessageQueueStorage = new MessageQueueStorage(this);
             this.UtilityStorage = new UtilityStorage(this);
             this.MultisigStorage = new MultisigStorage(this);
             this.ProxyStorage = new ProxyStorage(this);
             this.PreimageStorage = new PreimageStorage(this);
             this.SchedulerStorage = new SchedulerStorage(this);
+            this.AssetRateStorage = new AssetRateStorage(this);
             this.AllianceStorage = new AllianceStorage(this);
             this.AllianceMotionStorage = new AllianceMotionStorage(this);
             this.FellowshipCollectiveStorage = new FellowshipCollectiveStorage(this);
             this.FellowshipReferendaStorage = new FellowshipReferendaStorage(this);
+            this.FellowshipOriginsStorage = new FellowshipOriginsStorage(this);
+            this.FellowshipCoreStorage = new FellowshipCoreStorage(this);
+            this.FellowshipSalaryStorage = new FellowshipSalaryStorage(this);
+            this.FellowshipTreasuryStorage = new FellowshipTreasuryStorage(this);
+            this.AmbassadorCollectiveStorage = new AmbassadorCollectiveStorage(this);
+            this.AmbassadorReferendaStorage = new AmbassadorReferendaStorage(this);
+            this.AmbassadorOriginsStorage = new AmbassadorOriginsStorage(this);
+            this.AmbassadorCoreStorage = new AmbassadorCoreStorage(this);
+            this.AmbassadorSalaryStorage = new AmbassadorSalaryStorage(this);
+            this.AmbassadorTreasuryStorage = new AmbassadorTreasuryStorage(this);
         }
     }
 }

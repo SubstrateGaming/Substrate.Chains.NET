@@ -40,7 +40,7 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
          result.HrmpMaxMessageNumPerCandidate = this.GetTestValueU32();
          result.ValidationUpgradeCooldown = this.GetTestValueU32();
          result.ValidationUpgradeDelay = this.GetTestValueU32();
-         result.AsyncBackingParams = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.async_backing.AsyncBackingParams();
+         result.AsyncBackingParams = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.async_backing.AsyncBackingParams();
          result.AsyncBackingParams = this.GetTestValue3();
          result.MaxPovSize = this.GetTestValueU32();
          result.MaxDownwardMessageSize = this.GetTestValueU32();
@@ -51,23 +51,9 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
          result.HrmpChannelMaxTotalSize = this.GetTestValueU32();
          result.HrmpMaxParachainInboundChannels = this.GetTestValueU32();
          result.HrmpChannelMaxMessageSize = this.GetTestValueU32();
-         result.ExecutorParams = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.executor_params.ExecutorParams();
+         result.ExecutorParams = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.executor_params.ExecutorParams();
          result.ExecutorParams = this.GetTestValue4();
          result.CodeRetentionPeriod = this.GetTestValueU32();
-         result.CoretimeCores = this.GetTestValueU32();
-         result.OnDemandRetries = this.GetTestValueU32();
-         result.OnDemandQueueMaxSize = this.GetTestValueU32();
-         result.OnDemandTargetQueueUtilization = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill();
-         result.OnDemandTargetQueueUtilization = this.GetTestValue6();
-         result.OnDemandFeeVariability = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill();
-         result.OnDemandFeeVariability = this.GetTestValue7();
-         result.OnDemandBaseFee = this.GetTestValueU128();
-         result.OnDemandTtl = this.GetTestValueU32();
-         result.GroupRotationFrequency = this.GetTestValueU32();
-         result.ParasAvailabilityPeriod = this.GetTestValueU32();
-         result.SchedulingLookahead = this.GetTestValueU32();
-         result.MaxValidatorsPerCore = new Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32>();
-         result.MaxValidatorsPerCore.Create(this.GetTestValueU32());
          result.MaxValidators = new Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32>();
          result.MaxValidators.Create(this.GetTestValueU32());
          result.DisputePeriod = this.GetTestValueU32();
@@ -81,61 +67,83 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
          result.MinimumValidationUpgradeDelay = this.GetTestValueU32();
          result.MinimumBackingVotes = this.GetTestValueU32();
          result.NodeFeatures = new Substrate.NetApi.Model.Types.Base.BaseBitSeq<Substrate.NetApi.Model.Types.Primitive.U8, Substrate.Kusama.NET.NetApiExt.Generated.Model.bitvec.order.Lsb0>();
-         result.NodeFeatures = this.GetTestValue8();
-         result.ApprovalVotingParams = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.vstaging.ApprovalVotingParams();
-         result.ApprovalVotingParams = this.GetTestValue9();
+         result.NodeFeatures = this.GetTestValue6();
+         result.ApprovalVotingParams = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.ApprovalVotingParams();
+         result.ApprovalVotingParams = this.GetTestValue7();
+         result.SchedulerParams = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.vstaging.SchedulerParams();
+         result.SchedulerParams = this.GetTestValue8();
          return result;
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.async_backing.AsyncBackingParams GetTestValue3()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.async_backing.AsyncBackingParams GetTestValue3()
       {
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.async_backing.AsyncBackingParams result;
-         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.async_backing.AsyncBackingParams();
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.async_backing.AsyncBackingParams result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.async_backing.AsyncBackingParams();
          result.MaxCandidateDepth = this.GetTestValueU32();
          result.AllowedAncestryLen = this.GetTestValueU32();
          return result;
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.executor_params.ExecutorParams GetTestValue4()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.executor_params.ExecutorParams GetTestValue4()
       {
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.executor_params.ExecutorParams result;
-         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.executor_params.ExecutorParams();
-         result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.executor_params.EnumExecutorParam>();
-         result.Value.Create(new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.executor_params.EnumExecutorParam[] {
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.executor_params.ExecutorParams result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.executor_params.ExecutorParams();
+         result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.executor_params.EnumExecutorParam>();
+         result.Value.Create(new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.executor_params.EnumExecutorParam[] {
                   this.GetTestValue5()});
          return result;
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.executor_params.EnumExecutorParam GetTestValue5()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.executor_params.EnumExecutorParam GetTestValue5()
       {
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.executor_params.EnumExecutorParam result;
-         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.executor_params.EnumExecutorParam();
-         result.Create(this.GetTestValueEnum<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.executor_params.ExecutorParam>(), this.GetTestValueBaseVoid());
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.executor_params.EnumExecutorParam result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.executor_params.EnumExecutorParam();
+         // NOT IMPLEMENTED >> Initialize Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.executor_params.EnumExecutorParam
          return result;
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill GetTestValue6()
-      {
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill result;
-         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill();
-         result.Value = this.GetTestValueU32();
-         return result;
-      }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill GetTestValue7()
-      {
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill result;
-         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill();
-         result.Value = this.GetTestValueU32();
-         return result;
-      }
-      public Substrate.NetApi.Model.Types.Base.BaseBitSeq<Substrate.NetApi.Model.Types.Primitive.U8, Substrate.Kusama.NET.NetApiExt.Generated.Model.bitvec.order.Lsb0> GetTestValue8()
+      public Substrate.NetApi.Model.Types.Base.BaseBitSeq<Substrate.NetApi.Model.Types.Primitive.U8, Substrate.Kusama.NET.NetApiExt.Generated.Model.bitvec.order.Lsb0> GetTestValue6()
       {
          Substrate.NetApi.Model.Types.Base.BaseBitSeq<Substrate.NetApi.Model.Types.Primitive.U8, Substrate.Kusama.NET.NetApiExt.Generated.Model.bitvec.order.Lsb0> result;
          result = new Substrate.NetApi.Model.Types.Base.BaseBitSeq<Substrate.NetApi.Model.Types.Primitive.U8, Substrate.Kusama.NET.NetApiExt.Generated.Model.bitvec.order.Lsb0>();
-         // NOT IMPLEMENTED >> Initialize Substrate.NetApi.Model.Types.Base.BaseBitSeq`2[[Substrate.NetApi.Model.Types.Primitive.U8, Substrate.NetApi, Version=0.9.22.0, Culture=neutral, PublicKeyToken=null],[Substrate.Kusama.NET.NetApiExt.Generated.Model.bitvec.order.Lsb0, Substrate.Kusama.NET.NetApiExt, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+         // NOT IMPLEMENTED >> Initialize Substrate.NetApi.Model.Types.Base.BaseBitSeq`2[[Substrate.NetApi.Model.Types.Primitive.U8, Substrate.NetApi, Version=0.9.24.0, Culture=neutral, PublicKeyToken=null],[Substrate.Kusama.NET.NetApiExt.Generated.Model.bitvec.order.Lsb0, Substrate.Kusama.NET.NetApiExt, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
          return result;
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.vstaging.ApprovalVotingParams GetTestValue9()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.ApprovalVotingParams GetTestValue7()
       {
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.vstaging.ApprovalVotingParams result;
-         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.vstaging.ApprovalVotingParams();
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.ApprovalVotingParams result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.ApprovalVotingParams();
          result.MaxApprovalCoalesceCount = this.GetTestValueU32();
+         return result;
+      }
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.vstaging.SchedulerParams GetTestValue8()
+      {
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.vstaging.SchedulerParams result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.vstaging.SchedulerParams();
+         result.GroupRotationFrequency = this.GetTestValueU32();
+         result.ParasAvailabilityPeriod = this.GetTestValueU32();
+         result.MaxValidatorsPerCore = new Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32>();
+         result.MaxValidatorsPerCore.Create(this.GetTestValueU32());
+         result.Lookahead = this.GetTestValueU32();
+         result.NumCores = this.GetTestValueU32();
+         result.MaxAvailabilityTimeouts = this.GetTestValueU32();
+         result.OnDemandQueueMaxSize = this.GetTestValueU32();
+         result.OnDemandTargetQueueUtilization = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill();
+         result.OnDemandTargetQueueUtilization = this.GetTestValue9();
+         result.OnDemandFeeVariability = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill();
+         result.OnDemandFeeVariability = this.GetTestValue10();
+         result.OnDemandBaseFee = this.GetTestValueU128();
+         result.Ttl = this.GetTestValueU32();
+         return result;
+      }
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill GetTestValue9()
+      {
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill();
+         result.Value = this.GetTestValueU32();
+         return result;
+      }
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill GetTestValue10()
+      {
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill();
+         result.Value = this.GetTestValueU32();
          return result;
       }
       [Test()]
@@ -167,22 +175,22 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.configuration.HostConfiguration>> GetTestValue11()
+      public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.configuration.HostConfiguration>> GetTestValue12()
       {
          Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.configuration.HostConfiguration>> result;
          result = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.configuration.HostConfiguration>>();
          result.Create(new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.configuration.HostConfiguration>[] {
-                  this.GetTestValue12()});
+                  this.GetTestValue13()});
          return result;
       }
-      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.configuration.HostConfiguration> GetTestValue12()
+      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.configuration.HostConfiguration> GetTestValue13()
       {
          Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.configuration.HostConfiguration> result;
          result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.configuration.HostConfiguration>();
-         result.Create(this.GetTestValueU32(), this.GetTestValue13());
+         result.Create(this.GetTestValueU32(), this.GetTestValue14());
          return result;
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.configuration.HostConfiguration GetTestValue13()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.configuration.HostConfiguration GetTestValue14()
       {
          Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.configuration.HostConfiguration result;
          result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.configuration.HostConfiguration();
@@ -195,8 +203,8 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
          result.HrmpMaxMessageNumPerCandidate = this.GetTestValueU32();
          result.ValidationUpgradeCooldown = this.GetTestValueU32();
          result.ValidationUpgradeDelay = this.GetTestValueU32();
-         result.AsyncBackingParams = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.async_backing.AsyncBackingParams();
-         result.AsyncBackingParams = this.GetTestValue14();
+         result.AsyncBackingParams = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.async_backing.AsyncBackingParams();
+         result.AsyncBackingParams = this.GetTestValue15();
          result.MaxPovSize = this.GetTestValueU32();
          result.MaxDownwardMessageSize = this.GetTestValueU32();
          result.HrmpMaxParachainOutboundChannels = this.GetTestValueU32();
@@ -206,23 +214,9 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
          result.HrmpChannelMaxTotalSize = this.GetTestValueU32();
          result.HrmpMaxParachainInboundChannels = this.GetTestValueU32();
          result.HrmpChannelMaxMessageSize = this.GetTestValueU32();
-         result.ExecutorParams = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.executor_params.ExecutorParams();
-         result.ExecutorParams = this.GetTestValue15();
+         result.ExecutorParams = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.executor_params.ExecutorParams();
+         result.ExecutorParams = this.GetTestValue16();
          result.CodeRetentionPeriod = this.GetTestValueU32();
-         result.CoretimeCores = this.GetTestValueU32();
-         result.OnDemandRetries = this.GetTestValueU32();
-         result.OnDemandQueueMaxSize = this.GetTestValueU32();
-         result.OnDemandTargetQueueUtilization = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill();
-         result.OnDemandTargetQueueUtilization = this.GetTestValue17();
-         result.OnDemandFeeVariability = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill();
-         result.OnDemandFeeVariability = this.GetTestValue18();
-         result.OnDemandBaseFee = this.GetTestValueU128();
-         result.OnDemandTtl = this.GetTestValueU32();
-         result.GroupRotationFrequency = this.GetTestValueU32();
-         result.ParasAvailabilityPeriod = this.GetTestValueU32();
-         result.SchedulingLookahead = this.GetTestValueU32();
-         result.MaxValidatorsPerCore = new Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32>();
-         result.MaxValidatorsPerCore.Create(this.GetTestValueU32());
          result.MaxValidators = new Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32>();
          result.MaxValidators.Create(this.GetTestValueU32());
          result.DisputePeriod = this.GetTestValueU32();
@@ -236,61 +230,83 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
          result.MinimumValidationUpgradeDelay = this.GetTestValueU32();
          result.MinimumBackingVotes = this.GetTestValueU32();
          result.NodeFeatures = new Substrate.NetApi.Model.Types.Base.BaseBitSeq<Substrate.NetApi.Model.Types.Primitive.U8, Substrate.Kusama.NET.NetApiExt.Generated.Model.bitvec.order.Lsb0>();
-         result.NodeFeatures = this.GetTestValue19();
-         result.ApprovalVotingParams = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.vstaging.ApprovalVotingParams();
-         result.ApprovalVotingParams = this.GetTestValue20();
+         result.NodeFeatures = this.GetTestValue18();
+         result.ApprovalVotingParams = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.ApprovalVotingParams();
+         result.ApprovalVotingParams = this.GetTestValue19();
+         result.SchedulerParams = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.vstaging.SchedulerParams();
+         result.SchedulerParams = this.GetTestValue20();
          return result;
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.async_backing.AsyncBackingParams GetTestValue14()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.async_backing.AsyncBackingParams GetTestValue15()
       {
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.async_backing.AsyncBackingParams result;
-         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.async_backing.AsyncBackingParams();
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.async_backing.AsyncBackingParams result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.async_backing.AsyncBackingParams();
          result.MaxCandidateDepth = this.GetTestValueU32();
          result.AllowedAncestryLen = this.GetTestValueU32();
          return result;
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.executor_params.ExecutorParams GetTestValue15()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.executor_params.ExecutorParams GetTestValue16()
       {
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.executor_params.ExecutorParams result;
-         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.executor_params.ExecutorParams();
-         result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.executor_params.EnumExecutorParam>();
-         result.Value.Create(new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.executor_params.EnumExecutorParam[] {
-                  this.GetTestValue16()});
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.executor_params.ExecutorParams result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.executor_params.ExecutorParams();
+         result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.executor_params.EnumExecutorParam>();
+         result.Value.Create(new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.executor_params.EnumExecutorParam[] {
+                  this.GetTestValue17()});
          return result;
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.executor_params.EnumExecutorParam GetTestValue16()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.executor_params.EnumExecutorParam GetTestValue17()
       {
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.executor_params.EnumExecutorParam result;
-         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.executor_params.EnumExecutorParam();
-         result.Create(this.GetTestValueEnum<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.executor_params.ExecutorParam>(), this.GetTestValueBaseVoid());
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.executor_params.EnumExecutorParam result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.executor_params.EnumExecutorParam();
+         // NOT IMPLEMENTED >> Initialize Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.executor_params.EnumExecutorParam
          return result;
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill GetTestValue17()
-      {
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill result;
-         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill();
-         result.Value = this.GetTestValueU32();
-         return result;
-      }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill GetTestValue18()
-      {
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill result;
-         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill();
-         result.Value = this.GetTestValueU32();
-         return result;
-      }
-      public Substrate.NetApi.Model.Types.Base.BaseBitSeq<Substrate.NetApi.Model.Types.Primitive.U8, Substrate.Kusama.NET.NetApiExt.Generated.Model.bitvec.order.Lsb0> GetTestValue19()
+      public Substrate.NetApi.Model.Types.Base.BaseBitSeq<Substrate.NetApi.Model.Types.Primitive.U8, Substrate.Kusama.NET.NetApiExt.Generated.Model.bitvec.order.Lsb0> GetTestValue18()
       {
          Substrate.NetApi.Model.Types.Base.BaseBitSeq<Substrate.NetApi.Model.Types.Primitive.U8, Substrate.Kusama.NET.NetApiExt.Generated.Model.bitvec.order.Lsb0> result;
          result = new Substrate.NetApi.Model.Types.Base.BaseBitSeq<Substrate.NetApi.Model.Types.Primitive.U8, Substrate.Kusama.NET.NetApiExt.Generated.Model.bitvec.order.Lsb0>();
-         // NOT IMPLEMENTED >> Initialize Substrate.NetApi.Model.Types.Base.BaseBitSeq`2[[Substrate.NetApi.Model.Types.Primitive.U8, Substrate.NetApi, Version=0.9.22.0, Culture=neutral, PublicKeyToken=null],[Substrate.Kusama.NET.NetApiExt.Generated.Model.bitvec.order.Lsb0, Substrate.Kusama.NET.NetApiExt, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+         // NOT IMPLEMENTED >> Initialize Substrate.NetApi.Model.Types.Base.BaseBitSeq`2[[Substrate.NetApi.Model.Types.Primitive.U8, Substrate.NetApi, Version=0.9.24.0, Culture=neutral, PublicKeyToken=null],[Substrate.Kusama.NET.NetApiExt.Generated.Model.bitvec.order.Lsb0, Substrate.Kusama.NET.NetApiExt, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
          return result;
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.vstaging.ApprovalVotingParams GetTestValue20()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.ApprovalVotingParams GetTestValue19()
       {
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.vstaging.ApprovalVotingParams result;
-         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.vstaging.ApprovalVotingParams();
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.ApprovalVotingParams result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.ApprovalVotingParams();
          result.MaxApprovalCoalesceCount = this.GetTestValueU32();
+         return result;
+      }
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.vstaging.SchedulerParams GetTestValue20()
+      {
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.vstaging.SchedulerParams result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.vstaging.SchedulerParams();
+         result.GroupRotationFrequency = this.GetTestValueU32();
+         result.ParasAvailabilityPeriod = this.GetTestValueU32();
+         result.MaxValidatorsPerCore = new Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32>();
+         result.MaxValidatorsPerCore.Create(this.GetTestValueU32());
+         result.Lookahead = this.GetTestValueU32();
+         result.NumCores = this.GetTestValueU32();
+         result.MaxAvailabilityTimeouts = this.GetTestValueU32();
+         result.OnDemandQueueMaxSize = this.GetTestValueU32();
+         result.OnDemandTargetQueueUtilization = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill();
+         result.OnDemandTargetQueueUtilization = this.GetTestValue21();
+         result.OnDemandFeeVariability = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill();
+         result.OnDemandFeeVariability = this.GetTestValue22();
+         result.OnDemandBaseFee = this.GetTestValueU128();
+         result.Ttl = this.GetTestValueU32();
+         return result;
+      }
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill GetTestValue21()
+      {
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill();
+         result.Value = this.GetTestValueU32();
+         return result;
+      }
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill GetTestValue22()
+      {
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill();
+         result.Value = this.GetTestValueU32();
          return result;
       }
       [Test()]
@@ -304,7 +320,7 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          ConfigurationControllerClient rpcClient = new ConfigurationControllerClient(_httpClient, subscriptionClient);
-         Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.configuration.HostConfiguration>> mockupValue = this.GetTestValue11();
+         Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.configuration.HostConfiguration>> mockupValue = this.GetTestValue12();
 
 
          Assert.IsTrue(await rpcClient.SubscribePendingConfigs());

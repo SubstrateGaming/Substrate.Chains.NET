@@ -38,9 +38,19 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_staking.pallet.p
     }
     
     /// <summary>
-    /// >> 125 - Variant[pallet_staking.pallet.pallet.ConfigOp]
+    /// >> 116 - Variant[pallet_staking.pallet.pallet.ConfigOp]
     /// </summary>
-    public sealed class EnumConfigOp : BaseEnumExt<ConfigOp, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill, BaseVoid>
+    public sealed class EnumConfigOp : BaseEnumRust<ConfigOp>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumConfigOp()
+        {
+				AddTypeDecoder<BaseVoid>(ConfigOp.Noop);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Perbill>(ConfigOp.Set);
+				AddTypeDecoder<BaseVoid>(ConfigOp.Remove);
+        }
     }
 }

@@ -26,11 +26,12 @@ namespace Substrate.HydraDX.NET.RestService.Generated.Storage
         
         /// <summary>
         /// >> IdentityOf
-        ///  Information that is pertinent to identify the entity behind an account.
+        ///  Information that is pertinent to identify the entity behind an account. First item is the
+        ///  registration, second is the account's primary username.
         /// 
         ///  TWOX-NOTE: OK ��� `AccountId` is a secure hash.
         /// </summary>
-        Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_identity.types.Registration GetIdentityOf(string key);
+        Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_identity.types.Registration, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT1>> GetIdentityOf(string key);
         
         /// <summary>
         /// >> SuperOf
@@ -47,7 +48,7 @@ namespace Substrate.HydraDX.NET.RestService.Generated.Storage
         /// 
         ///  TWOX-NOTE: OK ��� `AccountId` is a secure hash.
         /// </summary>
-        Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT19> GetSubsOf(string key);
+        Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT22> GetSubsOf(string key);
         
         /// <summary>
         /// >> Registrars
@@ -56,7 +57,34 @@ namespace Substrate.HydraDX.NET.RestService.Generated.Storage
         /// 
         ///  The index into this can be cast to `RegistrarIndex` to get a valid value.
         /// </summary>
-        Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT20 GetRegistrars();
+        Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT23 GetRegistrars();
+        
+        /// <summary>
+        /// >> UsernameAuthorities
+        ///  A map of the accounts who are authorized to grant usernames.
+        /// </summary>
+        Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_identity.types.AuthorityProperties GetUsernameAuthorities(string key);
+        
+        /// <summary>
+        /// >> AccountOfUsername
+        ///  Reverse lookup from `username` to the `AccountId` that has registered it. The value should
+        ///  be a key in the `IdentityOf` map, but it may not if the user has cleared their identity.
+        /// 
+        ///  Multiple usernames may map to the same `AccountId`, but `IdentityOf` will only map to one
+        ///  primary username.
+        /// </summary>
+        Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetAccountOfUsername(string key);
+        
+        /// <summary>
+        /// >> PendingUsernames
+        ///  Usernames that an authority has granted, but that the account controller has not confirmed
+        ///  that they want it. Used primarily in cases where the `AccountId` cannot provide a signature
+        ///  because they are a pure proxy, multisig, etc. In order to confirm it, they should call
+        ///  [`Call::accept_username`].
+        /// 
+        ///  First tuple item is the account and second is the acceptance deadline.
+        /// </summary>
+        Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U32> GetPendingUsernames(string key);
     }
     
     /// <summary>
@@ -68,7 +96,7 @@ namespace Substrate.HydraDX.NET.RestService.Generated.Storage
         /// <summary>
         /// _identityOfTypedStorage typed storage field
         /// </summary>
-        private TypedMapStorage<Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_identity.types.Registration> _identityOfTypedStorage;
+        private TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_identity.types.Registration, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT1>>> _identityOfTypedStorage;
         
         /// <summary>
         /// _superOfTypedStorage typed storage field
@@ -78,28 +106,46 @@ namespace Substrate.HydraDX.NET.RestService.Generated.Storage
         /// <summary>
         /// _subsOfTypedStorage typed storage field
         /// </summary>
-        private TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT19>> _subsOfTypedStorage;
+        private TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT22>> _subsOfTypedStorage;
         
         /// <summary>
         /// _registrarsTypedStorage typed storage field
         /// </summary>
-        private TypedStorage<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT20> _registrarsTypedStorage;
+        private TypedStorage<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT23> _registrarsTypedStorage;
+        
+        /// <summary>
+        /// _usernameAuthoritiesTypedStorage typed storage field
+        /// </summary>
+        private TypedMapStorage<Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_identity.types.AuthorityProperties> _usernameAuthoritiesTypedStorage;
+        
+        /// <summary>
+        /// _accountOfUsernameTypedStorage typed storage field
+        /// </summary>
+        private TypedMapStorage<Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> _accountOfUsernameTypedStorage;
+        
+        /// <summary>
+        /// _pendingUsernamesTypedStorage typed storage field
+        /// </summary>
+        private TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U32>> _pendingUsernamesTypedStorage;
         
         /// <summary>
         /// IdentityStorage constructor.
         /// </summary>
         public IdentityStorage(IStorageDataProvider storageDataProvider, List<IStorageChangeDelegate> storageChangeDelegates)
         {
-            this.IdentityOfTypedStorage = new TypedMapStorage<Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_identity.types.Registration>("Identity.IdentityOf", storageDataProvider, storageChangeDelegates);
+            this.IdentityOfTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_identity.types.Registration, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT1>>>("Identity.IdentityOf", storageDataProvider, storageChangeDelegates);
             this.SuperOfTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData>>("Identity.SuperOf", storageDataProvider, storageChangeDelegates);
-            this.SubsOfTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT19>>("Identity.SubsOf", storageDataProvider, storageChangeDelegates);
-            this.RegistrarsTypedStorage = new TypedStorage<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT20>("Identity.Registrars", storageDataProvider, storageChangeDelegates);
+            this.SubsOfTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT22>>("Identity.SubsOf", storageDataProvider, storageChangeDelegates);
+            this.RegistrarsTypedStorage = new TypedStorage<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT23>("Identity.Registrars", storageDataProvider, storageChangeDelegates);
+            this.UsernameAuthoritiesTypedStorage = new TypedMapStorage<Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_identity.types.AuthorityProperties>("Identity.UsernameAuthorities", storageDataProvider, storageChangeDelegates);
+            this.AccountOfUsernameTypedStorage = new TypedMapStorage<Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>("Identity.AccountOfUsername", storageDataProvider, storageChangeDelegates);
+            this.PendingUsernamesTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U32>>("Identity.PendingUsernames", storageDataProvider, storageChangeDelegates);
         }
         
         /// <summary>
         /// _identityOfTypedStorage property
         /// </summary>
-        public TypedMapStorage<Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_identity.types.Registration> IdentityOfTypedStorage
+        public TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_identity.types.Registration, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT1>>> IdentityOfTypedStorage
         {
             get
             {
@@ -129,7 +175,7 @@ namespace Substrate.HydraDX.NET.RestService.Generated.Storage
         /// <summary>
         /// _subsOfTypedStorage property
         /// </summary>
-        public TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT19>> SubsOfTypedStorage
+        public TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT22>> SubsOfTypedStorage
         {
             get
             {
@@ -144,7 +190,7 @@ namespace Substrate.HydraDX.NET.RestService.Generated.Storage
         /// <summary>
         /// _registrarsTypedStorage property
         /// </summary>
-        public TypedStorage<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT20> RegistrarsTypedStorage
+        public TypedStorage<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT23> RegistrarsTypedStorage
         {
             get
             {
@@ -157,6 +203,51 @@ namespace Substrate.HydraDX.NET.RestService.Generated.Storage
         }
         
         /// <summary>
+        /// _usernameAuthoritiesTypedStorage property
+        /// </summary>
+        public TypedMapStorage<Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_identity.types.AuthorityProperties> UsernameAuthoritiesTypedStorage
+        {
+            get
+            {
+                return _usernameAuthoritiesTypedStorage;
+            }
+            set
+            {
+                _usernameAuthoritiesTypedStorage = value;
+            }
+        }
+        
+        /// <summary>
+        /// _accountOfUsernameTypedStorage property
+        /// </summary>
+        public TypedMapStorage<Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> AccountOfUsernameTypedStorage
+        {
+            get
+            {
+                return _accountOfUsernameTypedStorage;
+            }
+            set
+            {
+                _accountOfUsernameTypedStorage = value;
+            }
+        }
+        
+        /// <summary>
+        /// _pendingUsernamesTypedStorage property
+        /// </summary>
+        public TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U32>> PendingUsernamesTypedStorage
+        {
+            get
+            {
+                return _pendingUsernamesTypedStorage;
+            }
+            set
+            {
+                _pendingUsernamesTypedStorage = value;
+            }
+        }
+        
+        /// <summary>
         /// Connects to all storages and initializes the change subscription handling.
         /// </summary>
         public async Task InitializeAsync(Substrate.ServiceLayer.Storage.IStorageDataProvider dataProvider)
@@ -165,6 +256,9 @@ namespace Substrate.HydraDX.NET.RestService.Generated.Storage
             await SuperOfTypedStorage.InitializeAsync("Identity", "SuperOf");
             await SubsOfTypedStorage.InitializeAsync("Identity", "SubsOf");
             await RegistrarsTypedStorage.InitializeAsync("Identity", "Registrars");
+            await UsernameAuthoritiesTypedStorage.InitializeAsync("Identity", "UsernameAuthorities");
+            await AccountOfUsernameTypedStorage.InitializeAsync("Identity", "AccountOfUsername");
+            await PendingUsernamesTypedStorage.InitializeAsync("Identity", "PendingUsernames");
         }
         
         /// <summary>
@@ -178,17 +272,18 @@ namespace Substrate.HydraDX.NET.RestService.Generated.Storage
         
         /// <summary>
         /// >> IdentityOf
-        ///  Information that is pertinent to identify the entity behind an account.
+        ///  Information that is pertinent to identify the entity behind an account. First item is the
+        ///  registration, second is the account's primary username.
         /// 
         ///  TWOX-NOTE: OK ��� `AccountId` is a secure hash.
         /// </summary>
-        public Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_identity.types.Registration GetIdentityOf(string key)
+        public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_identity.types.Registration, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT1>> GetIdentityOf(string key)
         {
             if ((key == null))
             {
                 return null;
             }
-            if (IdentityOfTypedStorage.Dictionary.TryGetValue(key, out Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_identity.types.Registration result))
+            if (IdentityOfTypedStorage.Dictionary.TryGetValue(key, out Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_identity.types.Registration, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT1>> result))
             {
                 return result;
             }
@@ -245,13 +340,13 @@ namespace Substrate.HydraDX.NET.RestService.Generated.Storage
         /// 
         ///  TWOX-NOTE: OK ��� `AccountId` is a secure hash.
         /// </summary>
-        public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT19> GetSubsOf(string key)
+        public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT22> GetSubsOf(string key)
         {
             if ((key == null))
             {
                 return null;
             }
-            if (SubsOfTypedStorage.Dictionary.TryGetValue(key, out Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT19> result))
+            if (SubsOfTypedStorage.Dictionary.TryGetValue(key, out Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT22> result))
             {
                 return result;
             }
@@ -277,9 +372,105 @@ namespace Substrate.HydraDX.NET.RestService.Generated.Storage
         /// 
         ///  The index into this can be cast to `RegistrarIndex` to get a valid value.
         /// </summary>
-        public Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT20 GetRegistrars()
+        public Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT23 GetRegistrars()
         {
             return RegistrarsTypedStorage.Get();
+        }
+        
+        /// <summary>
+        /// Implements any storage change for Identity.UsernameAuthorities
+        /// </summary>
+        [StorageChange("Identity", "UsernameAuthorities")]
+        public void OnUpdateUsernameAuthorities(string key, string data)
+        {
+            UsernameAuthoritiesTypedStorage.Update(key, data);
+        }
+        
+        /// <summary>
+        /// >> UsernameAuthorities
+        ///  A map of the accounts who are authorized to grant usernames.
+        /// </summary>
+        public Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_identity.types.AuthorityProperties GetUsernameAuthorities(string key)
+        {
+            if ((key == null))
+            {
+                return null;
+            }
+            if (UsernameAuthoritiesTypedStorage.Dictionary.TryGetValue(key, out Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_identity.types.AuthorityProperties result))
+            {
+                return result;
+            }
+            else
+            {
+                return null;
+            }
+        }
+        
+        /// <summary>
+        /// Implements any storage change for Identity.AccountOfUsername
+        /// </summary>
+        [StorageChange("Identity", "AccountOfUsername")]
+        public void OnUpdateAccountOfUsername(string key, string data)
+        {
+            AccountOfUsernameTypedStorage.Update(key, data);
+        }
+        
+        /// <summary>
+        /// >> AccountOfUsername
+        ///  Reverse lookup from `username` to the `AccountId` that has registered it. The value should
+        ///  be a key in the `IdentityOf` map, but it may not if the user has cleared their identity.
+        /// 
+        ///  Multiple usernames may map to the same `AccountId`, but `IdentityOf` will only map to one
+        ///  primary username.
+        /// </summary>
+        public Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetAccountOfUsername(string key)
+        {
+            if ((key == null))
+            {
+                return null;
+            }
+            if (AccountOfUsernameTypedStorage.Dictionary.TryGetValue(key, out Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 result))
+            {
+                return result;
+            }
+            else
+            {
+                return null;
+            }
+        }
+        
+        /// <summary>
+        /// Implements any storage change for Identity.PendingUsernames
+        /// </summary>
+        [StorageChange("Identity", "PendingUsernames")]
+        public void OnUpdatePendingUsernames(string key, string data)
+        {
+            PendingUsernamesTypedStorage.Update(key, data);
+        }
+        
+        /// <summary>
+        /// >> PendingUsernames
+        ///  Usernames that an authority has granted, but that the account controller has not confirmed
+        ///  that they want it. Used primarily in cases where the `AccountId` cannot provide a signature
+        ///  because they are a pure proxy, multisig, etc. In order to confirm it, they should call
+        ///  [`Call::accept_username`].
+        /// 
+        ///  First tuple item is the account and second is the acceptance deadline.
+        /// </summary>
+        public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U32> GetPendingUsernames(string key)
+        {
+            if ((key == null))
+            {
+                return null;
+            }
+            if (PendingUsernamesTypedStorage.Dictionary.TryGetValue(key, out Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U32> result))
+            {
+                return result;
+            }
+            else
+            {
+                return null;
+            }
         }
     }
 }

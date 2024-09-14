@@ -37,9 +37,9 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         {
             this._client = client;
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("CoretimeAssignmentProvider", "CoreSchedules"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox256}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.CoreIndex>), typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.assigner_coretime.Schedule)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox256}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.CoreIndex>), typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.assigner_coretime.Schedule)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("CoretimeAssignmentProvider", "CoreDescriptors"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox256}, typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.CoreIndex), typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.assigner_coretime.CoreDescriptor)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox256}, typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.CoreIndex), typeof(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.assigner_coretime.CoreDescriptor)));
         }
         
         /// <summary>
@@ -49,7 +49,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         ///  Assignments as of the given block number. They will go into state once the block number is
         ///  reached (and replace whatever was in there before).
         /// </summary>
-        public static string CoreSchedulesParams(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.CoreIndex> key)
+        public static string CoreSchedulesParams(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.CoreIndex> key)
         {
             return RequestGenerator.GetStorage("CoretimeAssignmentProvider", "CoreSchedules", Substrate.NetApi.Model.Meta.Storage.Type.Map, new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                         Substrate.NetApi.Model.Meta.Storage.Hasher.Twox256}, new Substrate.NetApi.Model.Types.IType[] {
@@ -72,7 +72,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         ///  Assignments as of the given block number. They will go into state once the block number is
         ///  reached (and replace whatever was in there before).
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.assigner_coretime.Schedule> CoreSchedules(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.CoreIndex> key, string blockhash, CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.assigner_coretime.Schedule> CoreSchedules(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.CoreIndex> key, string blockhash, CancellationToken token)
         {
             string parameters = CoretimeAssignmentProviderStorage.CoreSchedulesParams(key);
             var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.assigner_coretime.Schedule>(parameters, blockhash, token);
@@ -86,7 +86,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         ///  They will be picked from `PendingAssignments` once we reach the scheduled block number in
         ///  `PendingAssignments`.
         /// </summary>
-        public static string CoreDescriptorsParams(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.CoreIndex key)
+        public static string CoreDescriptorsParams(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.CoreIndex key)
         {
             return RequestGenerator.GetStorage("CoretimeAssignmentProvider", "CoreDescriptors", Substrate.NetApi.Model.Meta.Storage.Type.Map, new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                         Substrate.NetApi.Model.Meta.Storage.Hasher.Twox256}, new Substrate.NetApi.Model.Types.IType[] {
@@ -109,7 +109,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Storage
         ///  They will be picked from `PendingAssignments` once we reach the scheduled block number in
         ///  `PendingAssignments`.
         /// </summary>
-        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.assigner_coretime.CoreDescriptor> CoreDescriptors(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.CoreIndex key, string blockhash, CancellationToken token)
+        public async Task<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.assigner_coretime.CoreDescriptor> CoreDescriptors(Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.CoreIndex key, string blockhash, CancellationToken token)
         {
             string parameters = CoretimeAssignmentProviderStorage.CoreDescriptorsParams(key);
             var result = await _client.GetStorageAsync<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.assigner_coretime.CoreDescriptor>(parameters, blockhash, token);

@@ -44,7 +44,7 @@ namespace Substrate.HydraDX.NET.RestService.Generated.Controller
         /// </summary>
         [HttpGet("ReferralCodes")]
         [ProducesResponseType(typeof(Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32), 200)]
-        [StorageKeyBuilder(typeof(Substrate.HydraDX.NET.NetApiExt.Generated.Storage.ReferralsStorage), "ReferralCodesParams", typeof(Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT5))]
+        [StorageKeyBuilder(typeof(Substrate.HydraDX.NET.NetApiExt.Generated.Storage.ReferralsStorage), "ReferralCodesParams", typeof(Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT6))]
         public IActionResult GetReferralCodes(string key)
         {
             return this.Ok(_referralsStorage.GetReferralCodes(key));
@@ -56,7 +56,7 @@ namespace Substrate.HydraDX.NET.RestService.Generated.Controller
         ///  Maps an account to a referral code.
         /// </summary>
         [HttpGet("ReferralAccounts")]
-        [ProducesResponseType(typeof(Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT5), 200)]
+        [ProducesResponseType(typeof(Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT6), 200)]
         [StorageKeyBuilder(typeof(Substrate.HydraDX.NET.NetApiExt.Generated.Storage.ReferralsStorage), "ReferralAccountsParams", typeof(Substrate.HydraDX.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32))]
         public IActionResult GetReferralAccounts(string key)
         {

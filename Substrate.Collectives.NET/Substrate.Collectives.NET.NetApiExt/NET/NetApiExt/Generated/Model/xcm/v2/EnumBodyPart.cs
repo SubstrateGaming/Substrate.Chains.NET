@@ -15,24 +15,54 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.xcm.v2
 {
     
     
+    /// <summary>
+    /// >> BodyPart
+    /// </summary>
     public enum BodyPart
     {
         
+        /// <summary>
+        /// >> Voice
+        /// </summary>
         Voice = 0,
         
+        /// <summary>
+        /// >> Members
+        /// </summary>
         Members = 1,
         
+        /// <summary>
+        /// >> Fraction
+        /// </summary>
         Fraction = 2,
         
+        /// <summary>
+        /// >> AtLeastProportion
+        /// </summary>
         AtLeastProportion = 3,
         
+        /// <summary>
+        /// >> MoreThanProportion
+        /// </summary>
         MoreThanProportion = 4,
     }
     
     /// <summary>
-    /// >> 93 - Variant[xcm.v2.BodyPart]
+    /// >> 100 - Variant[xcm.v2.BodyPart]
     /// </summary>
-    public sealed class EnumBodyPart : BaseEnumExt<BodyPart, BaseVoid, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>, BaseTuple<Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>>, BaseTuple<Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>>, BaseTuple<Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>>>
+    public sealed class EnumBodyPart : BaseEnumRust<BodyPart>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumBodyPart()
+        {
+				AddTypeDecoder<BaseVoid>(BodyPart.Voice);
+				AddTypeDecoder<Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>>(BodyPart.Members);
+				AddTypeDecoder<BaseTuple<Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>>>(BodyPart.Fraction);
+				AddTypeDecoder<BaseTuple<Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>>>(BodyPart.AtLeastProportion);
+				AddTypeDecoder<BaseTuple<Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>>>(BodyPart.MoreThanProportion);
+        }
     }
 }

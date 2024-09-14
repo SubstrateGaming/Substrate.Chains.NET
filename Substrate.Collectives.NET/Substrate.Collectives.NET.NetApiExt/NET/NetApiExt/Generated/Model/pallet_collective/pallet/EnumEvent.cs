@@ -15,32 +15,77 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_collective.
 {
     
     
+    /// <summary>
+    /// >> Event
+    /// The `Event` enum of this pallet
+    /// </summary>
     public enum Event
     {
         
+        /// <summary>
+        /// >> Proposed
+        /// A motion (given hash) has been proposed (by given account) with a threshold (given
+        /// `MemberCount`).
+        /// </summary>
         Proposed = 0,
         
+        /// <summary>
+        /// >> Voted
+        /// A motion (given hash) has been voted on by given account, leaving
+        /// a tally (yes votes and no votes given respectively as `MemberCount`).
+        /// </summary>
         Voted = 1,
         
+        /// <summary>
+        /// >> Approved
+        /// A motion was approved by the required threshold.
+        /// </summary>
         Approved = 2,
         
+        /// <summary>
+        /// >> Disapproved
+        /// A motion was not approved by the required threshold.
+        /// </summary>
         Disapproved = 3,
         
+        /// <summary>
+        /// >> Executed
+        /// A motion was executed; result will be `Ok` if it returned without error.
+        /// </summary>
         Executed = 4,
         
+        /// <summary>
+        /// >> MemberExecuted
+        /// A single member did some action; result will be `Ok` if it returned without error.
+        /// </summary>
         MemberExecuted = 5,
         
+        /// <summary>
+        /// >> Closed
+        /// A proposal was closed because its threshold was reached or after its duration was up.
+        /// </summary>
         Closed = 6,
     }
     
     /// <summary>
-    /// >> 120 - Variant[pallet_collective.pallet.Event]
-    /// 
-    ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
-    ///			by this pallet.
-    ///			
+    /// >> 144 - Variant[pallet_collective.pallet.Event]
+    /// The `Event` enum of this pallet
     /// </summary>
-    public sealed class EnumEvent : BaseEnumExt<Event, BaseTuple<Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Collectives.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Primitive.U32>, BaseTuple<Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Collectives.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Primitive.Bool, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.Collectives.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.Collectives.NET.NetApiExt.Generated.Model.primitive_types.H256, BaseTuple<Substrate.Collectives.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.Collectives.NET.NetApiExt.Generated.Types.Base.EnumResult>, BaseTuple<Substrate.Collectives.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.Collectives.NET.NetApiExt.Generated.Types.Base.EnumResult>, BaseTuple<Substrate.Collectives.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>>
+    public sealed class EnumEvent : BaseEnumRust<Event>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumEvent()
+        {
+				AddTypeDecoder<BaseTuple<Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Collectives.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Primitive.U32>>(Event.Proposed);
+				AddTypeDecoder<BaseTuple<Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Collectives.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Primitive.Bool, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>>(Event.Voted);
+				AddTypeDecoder<Substrate.Collectives.NET.NetApiExt.Generated.Model.primitive_types.H256>(Event.Approved);
+				AddTypeDecoder<Substrate.Collectives.NET.NetApiExt.Generated.Model.primitive_types.H256>(Event.Disapproved);
+				AddTypeDecoder<BaseTuple<Substrate.Collectives.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.Collectives.NET.NetApiExt.Generated.Types.Base.EnumResult>>(Event.Executed);
+				AddTypeDecoder<BaseTuple<Substrate.Collectives.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.Collectives.NET.NetApiExt.Generated.Types.Base.EnumResult>>(Event.MemberExecuted);
+				AddTypeDecoder<BaseTuple<Substrate.Collectives.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>>(Event.Closed);
+        }
     }
 }

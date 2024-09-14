@@ -9,7 +9,7 @@
 
 using Substrate.NetApi.Attributes;
 using Substrate.NetApi.Model.Types.Base;
-using Substrate.NetApi.Model.Types.Metadata.V14;
+using Substrate.NetApi.Model.Types.Metadata.Base;
 using System.Collections.Generic;
 
 
@@ -18,7 +18,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.xcm.v2.multiasset
     
     
     /// <summary>
-    /// >> 85 - Composite[xcm.v2.multiasset.MultiAsset]
+    /// >> 92 - Composite[xcm.v2.multiasset.MultiAsset]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class MultiAsset : BaseType
@@ -27,42 +27,19 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.xcm.v2.multiasset
         /// <summary>
         /// >> id
         /// </summary>
-        private Substrate.Collectives.NET.NetApiExt.Generated.Model.xcm.v2.multiasset.EnumAssetId _id;
-        
+        public Substrate.Collectives.NET.NetApiExt.Generated.Model.xcm.v2.multiasset.EnumAssetId Id { get; set; }
         /// <summary>
         /// >> fun
         /// </summary>
-        private Substrate.Collectives.NET.NetApiExt.Generated.Model.xcm.v2.multiasset.EnumFungibility _fun;
+        public Substrate.Collectives.NET.NetApiExt.Generated.Model.xcm.v2.multiasset.EnumFungibility Fun { get; set; }
         
-        public Substrate.Collectives.NET.NetApiExt.Generated.Model.xcm.v2.multiasset.EnumAssetId Id
-        {
-            get
-            {
-                return this._id;
-            }
-            set
-            {
-                this._id = value;
-            }
-        }
-        
-        public Substrate.Collectives.NET.NetApiExt.Generated.Model.xcm.v2.multiasset.EnumFungibility Fun
-        {
-            get
-            {
-                return this._fun;
-            }
-            set
-            {
-                this._fun = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "MultiAsset";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -71,6 +48,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.xcm.v2.multiasset
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
@@ -81,7 +59,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.xcm.v2.multiasset
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];
-            System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
+            global::System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
         }
     }
 }

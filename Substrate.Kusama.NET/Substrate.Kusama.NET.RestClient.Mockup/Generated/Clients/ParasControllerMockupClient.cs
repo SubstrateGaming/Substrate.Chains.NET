@@ -16,7 +16,7 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Clients
    using Substrate.NetApi.Model.Types.Base;
    using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives;
    using Substrate.NetApi.Model.Types.Primitive;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7;
    using Substrate.Kusama.NET.RestClient.Mockup.Generated.Interfaces;
    
    public sealed class ParasControllerMockupClient : MockupBaseClient, IParasControllerMockupClient
@@ -69,6 +69,10 @@ namespace Substrate.Kusama.NET.RestClient.Mockup.Generated.Clients
       public async Task<bool> SetFutureCodeUpgrades(U32 value, Id key)
       {
          return await SendMockupRequestAsync(_httpClient, "Paras/FutureCodeUpgrades", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.ParasStorage.FutureCodeUpgradesParams(key));
+      }
+      public async Task<bool> SetFutureCodeUpgradesAt(BaseVec<BaseTuple<Id, U32>> value)
+      {
+         return await SendMockupRequestAsync(_httpClient, "Paras/FutureCodeUpgradesAt", value.Encode(), Substrate.Kusama.NET.NetApiExt.Generated.Storage.ParasStorage.FutureCodeUpgradesAtParams());
       }
       public async Task<bool> SetFutureCodeHash(ValidationCodeHash value, Id key)
       {

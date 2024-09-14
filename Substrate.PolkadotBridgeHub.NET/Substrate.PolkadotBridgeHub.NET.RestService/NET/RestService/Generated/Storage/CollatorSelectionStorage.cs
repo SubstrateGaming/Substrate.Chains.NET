@@ -26,15 +26,19 @@ namespace Substrate.PolkadotBridgeHub.NET.RestService.Generated.Storage
         
         /// <summary>
         /// >> Invulnerables
-        ///  The invulnerable, fixed collators.
+        ///  The invulnerable, permissioned collators. This list must be sorted.
         /// </summary>
-        Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT6 GetInvulnerables();
+        Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT7 GetInvulnerables();
         
         /// <summary>
-        /// >> Candidates
-        ///  The (community, limited) collation candidates.
+        /// >> CandidateList
+        ///  The (community, limited) collation candidates. `Candidates` and `Invulnerables` should be
+        ///  mutually exclusive.
+        /// 
+        ///  This list is sorted in ascending order by deposit and when the deposits are equal, the least
+        ///  recently updated is considered greater.
         /// </summary>
-        Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT7 GetCandidates();
+        Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT8 GetCandidateList();
         
         /// <summary>
         /// >> LastAuthoredBlock
@@ -68,12 +72,12 @@ namespace Substrate.PolkadotBridgeHub.NET.RestService.Generated.Storage
         /// <summary>
         /// _invulnerablesTypedStorage typed storage field
         /// </summary>
-        private TypedStorage<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT6> _invulnerablesTypedStorage;
+        private TypedStorage<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT7> _invulnerablesTypedStorage;
         
         /// <summary>
-        /// _candidatesTypedStorage typed storage field
+        /// _candidateListTypedStorage typed storage field
         /// </summary>
-        private TypedStorage<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT7> _candidatesTypedStorage;
+        private TypedStorage<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT8> _candidateListTypedStorage;
         
         /// <summary>
         /// _lastAuthoredBlockTypedStorage typed storage field
@@ -95,8 +99,8 @@ namespace Substrate.PolkadotBridgeHub.NET.RestService.Generated.Storage
         /// </summary>
         public CollatorSelectionStorage(IStorageDataProvider storageDataProvider, List<IStorageChangeDelegate> storageChangeDelegates)
         {
-            this.InvulnerablesTypedStorage = new TypedStorage<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT6>("CollatorSelection.Invulnerables", storageDataProvider, storageChangeDelegates);
-            this.CandidatesTypedStorage = new TypedStorage<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT7>("CollatorSelection.Candidates", storageDataProvider, storageChangeDelegates);
+            this.InvulnerablesTypedStorage = new TypedStorage<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT7>("CollatorSelection.Invulnerables", storageDataProvider, storageChangeDelegates);
+            this.CandidateListTypedStorage = new TypedStorage<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT8>("CollatorSelection.CandidateList", storageDataProvider, storageChangeDelegates);
             this.LastAuthoredBlockTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Primitive.U32>("CollatorSelection.LastAuthoredBlock", storageDataProvider, storageChangeDelegates);
             this.DesiredCandidatesTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32>("CollatorSelection.DesiredCandidates", storageDataProvider, storageChangeDelegates);
             this.CandidacyBondTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U128>("CollatorSelection.CandidacyBond", storageDataProvider, storageChangeDelegates);
@@ -105,7 +109,7 @@ namespace Substrate.PolkadotBridgeHub.NET.RestService.Generated.Storage
         /// <summary>
         /// _invulnerablesTypedStorage property
         /// </summary>
-        public TypedStorage<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT6> InvulnerablesTypedStorage
+        public TypedStorage<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT7> InvulnerablesTypedStorage
         {
             get
             {
@@ -118,17 +122,17 @@ namespace Substrate.PolkadotBridgeHub.NET.RestService.Generated.Storage
         }
         
         /// <summary>
-        /// _candidatesTypedStorage property
+        /// _candidateListTypedStorage property
         /// </summary>
-        public TypedStorage<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT7> CandidatesTypedStorage
+        public TypedStorage<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT8> CandidateListTypedStorage
         {
             get
             {
-                return _candidatesTypedStorage;
+                return _candidateListTypedStorage;
             }
             set
             {
-                _candidatesTypedStorage = value;
+                _candidateListTypedStorage = value;
             }
         }
         
@@ -183,7 +187,7 @@ namespace Substrate.PolkadotBridgeHub.NET.RestService.Generated.Storage
         public async Task InitializeAsync(Substrate.ServiceLayer.Storage.IStorageDataProvider dataProvider)
         {
             await InvulnerablesTypedStorage.InitializeAsync("CollatorSelection", "Invulnerables");
-            await CandidatesTypedStorage.InitializeAsync("CollatorSelection", "Candidates");
+            await CandidateListTypedStorage.InitializeAsync("CollatorSelection", "CandidateList");
             await LastAuthoredBlockTypedStorage.InitializeAsync("CollatorSelection", "LastAuthoredBlock");
             await DesiredCandidatesTypedStorage.InitializeAsync("CollatorSelection", "DesiredCandidates");
             await CandidacyBondTypedStorage.InitializeAsync("CollatorSelection", "CandidacyBond");
@@ -200,29 +204,33 @@ namespace Substrate.PolkadotBridgeHub.NET.RestService.Generated.Storage
         
         /// <summary>
         /// >> Invulnerables
-        ///  The invulnerable, fixed collators.
+        ///  The invulnerable, permissioned collators. This list must be sorted.
         /// </summary>
-        public Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT6 GetInvulnerables()
+        public Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT7 GetInvulnerables()
         {
             return InvulnerablesTypedStorage.Get();
         }
         
         /// <summary>
-        /// Implements any storage change for CollatorSelection.Candidates
+        /// Implements any storage change for CollatorSelection.CandidateList
         /// </summary>
-        [StorageChange("CollatorSelection", "Candidates")]
-        public void OnUpdateCandidates(string data)
+        [StorageChange("CollatorSelection", "CandidateList")]
+        public void OnUpdateCandidateList(string data)
         {
-            CandidatesTypedStorage.Update(data);
+            CandidateListTypedStorage.Update(data);
         }
         
         /// <summary>
-        /// >> Candidates
-        ///  The (community, limited) collation candidates.
+        /// >> CandidateList
+        ///  The (community, limited) collation candidates. `Candidates` and `Invulnerables` should be
+        ///  mutually exclusive.
+        /// 
+        ///  This list is sorted in ascending order by deposit and when the deposits are equal, the least
+        ///  recently updated is considered greater.
         /// </summary>
-        public Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT7 GetCandidates()
+        public Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT8 GetCandidateList()
         {
-            return CandidatesTypedStorage.Get();
+            return CandidateListTypedStorage.Get();
         }
         
         /// <summary>

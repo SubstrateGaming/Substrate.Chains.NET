@@ -15,26 +15,60 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.xcm.v3
 {
     
     
+    /// <summary>
+    /// >> Response
+    /// </summary>
     public enum Response
     {
         
+        /// <summary>
+        /// >> Null
+        /// </summary>
         Null = 0,
         
+        /// <summary>
+        /// >> Assets
+        /// </summary>
         Assets = 1,
         
+        /// <summary>
+        /// >> ExecutionResult
+        /// </summary>
         ExecutionResult = 2,
         
+        /// <summary>
+        /// >> Version
+        /// </summary>
         Version = 3,
         
+        /// <summary>
+        /// >> PalletsInfo
+        /// </summary>
         PalletsInfo = 4,
         
+        /// <summary>
+        /// >> DispatchResult
+        /// </summary>
         DispatchResult = 5,
     }
     
     /// <summary>
-    /// >> 64 - Variant[xcm.v3.Response]
+    /// >> 196 - Variant[xcm.v3.Response]
     /// </summary>
-    public sealed class EnumResponse : BaseEnumExt<Response, BaseVoid, Substrate.Collectives.NET.NetApiExt.Generated.Model.xcm.v3.multiasset.MultiAssets, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Collectives.NET.NetApiExt.Generated.Model.xcm.v3.traits.EnumError>>, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT1, Substrate.Collectives.NET.NetApiExt.Generated.Model.xcm.v3.EnumMaybeErrorCode>
+    public sealed class EnumResponse : BaseEnumRust<Response>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumResponse()
+        {
+				AddTypeDecoder<BaseVoid>(Response.Null);
+				AddTypeDecoder<Substrate.Collectives.NET.NetApiExt.Generated.Model.xcm.v3.multiasset.MultiAssets>(Response.Assets);
+				AddTypeDecoder<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Collectives.NET.NetApiExt.Generated.Model.xcm.v3.traits.EnumError>>>(Response.ExecutionResult);
+				AddTypeDecoder<Substrate.NetApi.Model.Types.Primitive.U32>(Response.Version);
+				AddTypeDecoder<Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT6>(Response.PalletsInfo);
+				AddTypeDecoder<Substrate.Collectives.NET.NetApiExt.Generated.Model.xcm.v3.EnumMaybeErrorCode>(Response.DispatchResult);
+        }
     }
 }

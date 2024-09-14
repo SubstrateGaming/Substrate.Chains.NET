@@ -169,7 +169,7 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_democracy.palle
     }
     
     /// <summary>
-    /// >> 461 - Variant[pallet_democracy.pallet.Error]
+    /// >> 522 - Variant[pallet_democracy.pallet.Error]
     /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>

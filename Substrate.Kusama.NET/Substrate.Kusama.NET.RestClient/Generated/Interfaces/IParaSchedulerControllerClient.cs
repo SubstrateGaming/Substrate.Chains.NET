@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Interfaces
    
    public interface IParaSchedulerControllerClient
    {
-      Task<BaseVec<BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.ValidatorIndex>>> GetValidatorGroups();
+      Task<BaseVec<BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.ValidatorIndex>>> GetValidatorGroups();
       Task<bool> SubscribeValidatorGroups();
       Task<BaseVec<EnumCoreOccupied>> GetAvailabilityCores();
       Task<bool> SubscribeAvailabilityCores();

@@ -33,9 +33,18 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parach
     }
     
     /// <summary>
-    /// >> 792 - Variant[polkadot_runtime_parachains.scheduler.pallet.CoreOccupied]
+    /// >> 799 - Variant[polkadot_runtime_parachains.scheduler.pallet.CoreOccupied]
     /// </summary>
-    public sealed class EnumCoreOccupied : BaseEnumExt<CoreOccupied, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.scheduler.pallet.ParasEntry>
+    public sealed class EnumCoreOccupied : BaseEnumRust<CoreOccupied>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumCoreOccupied()
+        {
+				AddTypeDecoder<BaseVoid>(CoreOccupied.Free);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.scheduler.pallet.ParasEntry>(CoreOccupied.Paras);
+        }
     }
 }

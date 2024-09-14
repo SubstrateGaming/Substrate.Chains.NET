@@ -44,16 +44,30 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Test.Generated
          Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_message_queue.Neighbours result;
          result = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_message_queue.Neighbours();
          result.Prev = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_primitives_core.EnumAggregateMessageOrigin();
-         result.Prev.Create(this.GetTestValueEnum<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_primitives_core.AggregateMessageOrigin>(), this.GetTestValueBaseVoid());
+         result.Prev = this.GetTestValue4();
          result.Next = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_primitives_core.EnumAggregateMessageOrigin();
-         result.Next.Create(this.GetTestValueEnum<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_primitives_core.AggregateMessageOrigin>(), this.GetTestValueBaseVoid());
+         result.Next = this.GetTestValue5();
          return result;
       }
       public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_primitives_core.EnumAggregateMessageOrigin GetTestValue4()
       {
          Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_primitives_core.EnumAggregateMessageOrigin result;
          result = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_primitives_core.EnumAggregateMessageOrigin();
-         result.Create(this.GetTestValueEnum<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_primitives_core.AggregateMessageOrigin>(), this.GetTestValueBaseVoid());
+         // NOT IMPLEMENTED >> Initialize Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_primitives_core.EnumAggregateMessageOrigin
+         return result;
+      }
+      public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_primitives_core.EnumAggregateMessageOrigin GetTestValue5()
+      {
+         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_primitives_core.EnumAggregateMessageOrigin result;
+         result = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_primitives_core.EnumAggregateMessageOrigin();
+         // NOT IMPLEMENTED >> Initialize Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_primitives_core.EnumAggregateMessageOrigin
+         return result;
+      }
+      public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_primitives_core.EnumAggregateMessageOrigin GetTestValue6()
+      {
+         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_primitives_core.EnumAggregateMessageOrigin result;
+         result = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_primitives_core.EnumAggregateMessageOrigin();
+         // NOT IMPLEMENTED >> Initialize Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_primitives_core.EnumAggregateMessageOrigin
          return result;
       }
       [Test()]
@@ -68,7 +82,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Test.Generated
          // Construct new RPC client to test with.
          MessageQueueControllerClient rpcClient = new MessageQueueControllerClient(_httpClient, subscriptionClient);
          Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_message_queue.BookState mockupValue = this.GetTestValue2();
-         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_primitives_core.EnumAggregateMessageOrigin mockupKey = this.GetTestValue4();
+         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_primitives_core.EnumAggregateMessageOrigin mockupKey = this.GetTestValue6();
 
          Assert.IsTrue(await rpcClient.SubscribeBookStateFor(mockupKey));
 
@@ -85,11 +99,11 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_primitives_core.EnumAggregateMessageOrigin GetTestValue6()
+      public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_primitives_core.EnumAggregateMessageOrigin GetTestValue8()
       {
          Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_primitives_core.EnumAggregateMessageOrigin result;
          result = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_primitives_core.EnumAggregateMessageOrigin();
-         result.Create(this.GetTestValueEnum<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_primitives_core.AggregateMessageOrigin>(), this.GetTestValueBaseVoid());
+         // NOT IMPLEMENTED >> Initialize Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_primitives_core.EnumAggregateMessageOrigin
          return result;
       }
       [Test()]
@@ -103,7 +117,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          MessageQueueControllerClient rpcClient = new MessageQueueControllerClient(_httpClient, subscriptionClient);
-         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_primitives_core.EnumAggregateMessageOrigin mockupValue = this.GetTestValue6();
+         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_primitives_core.EnumAggregateMessageOrigin mockupValue = this.GetTestValue8();
 
 
          Assert.IsTrue(await rpcClient.SubscribeServiceHead());
@@ -121,7 +135,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_message_queue.Page GetTestValue8()
+      public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_message_queue.Page GetTestValue10()
       {
          Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_message_queue.Page result;
          result = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_message_queue.Page();
@@ -131,10 +145,10 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Test.Generated
          result.First = this.GetTestValueU32();
          result.Last = this.GetTestValueU32();
          result.Heap = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT20();
-         result.Heap = this.GetTestValue9();
+         result.Heap = this.GetTestValue11();
          return result;
       }
-      public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT20 GetTestValue9()
+      public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT20 GetTestValue11()
       {
          Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT20 result;
          result = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT20();
@@ -143,18 +157,18 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Test.Generated
                   this.GetTestValueU8()});
          return result;
       }
-      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_primitives_core.EnumAggregateMessageOrigin, Substrate.NetApi.Model.Types.Primitive.U32> GetTestValue10()
+      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_primitives_core.EnumAggregateMessageOrigin, Substrate.NetApi.Model.Types.Primitive.U32> GetTestValue12()
       {
          Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_primitives_core.EnumAggregateMessageOrigin, Substrate.NetApi.Model.Types.Primitive.U32> result;
          result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_primitives_core.EnumAggregateMessageOrigin, Substrate.NetApi.Model.Types.Primitive.U32>();
-         result.Create(this.GetTestValue11(), this.GetTestValueU32());
+         result.Create(this.GetTestValue13(), this.GetTestValueU32());
          return result;
       }
-      public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_primitives_core.EnumAggregateMessageOrigin GetTestValue11()
+      public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_primitives_core.EnumAggregateMessageOrigin GetTestValue13()
       {
          Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_primitives_core.EnumAggregateMessageOrigin result;
          result = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_primitives_core.EnumAggregateMessageOrigin();
-         result.Create(this.GetTestValueEnum<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_primitives_core.AggregateMessageOrigin>(), this.GetTestValueBaseVoid());
+         // NOT IMPLEMENTED >> Initialize Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_primitives_core.EnumAggregateMessageOrigin
          return result;
       }
       [Test()]
@@ -168,8 +182,8 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          MessageQueueControllerClient rpcClient = new MessageQueueControllerClient(_httpClient, subscriptionClient);
-         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_message_queue.Page mockupValue = this.GetTestValue8();
-         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_primitives_core.EnumAggregateMessageOrigin, Substrate.NetApi.Model.Types.Primitive.U32> mockupKey = this.GetTestValue10();
+         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_message_queue.Page mockupValue = this.GetTestValue10();
+         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_primitives_core.EnumAggregateMessageOrigin, Substrate.NetApi.Model.Types.Primitive.U32> mockupKey = this.GetTestValue12();
 
          Assert.IsTrue(await rpcClient.SubscribePages(mockupKey));
 

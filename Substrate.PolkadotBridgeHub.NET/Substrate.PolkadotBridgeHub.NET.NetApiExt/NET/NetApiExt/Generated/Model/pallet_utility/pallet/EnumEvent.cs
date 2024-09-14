@@ -15,30 +15,69 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.pallet_utili
 {
     
     
+    /// <summary>
+    /// >> Event
+    /// The `Event` enum of this pallet
+    /// </summary>
     public enum Event
     {
         
+        /// <summary>
+        /// >> BatchInterrupted
+        /// Batch of dispatches did not complete fully. Index of first failing dispatch given, as
+        /// well as the error.
+        /// </summary>
         BatchInterrupted = 0,
         
+        /// <summary>
+        /// >> BatchCompleted
+        /// Batch of dispatches completed fully with no error.
+        /// </summary>
         BatchCompleted = 1,
         
+        /// <summary>
+        /// >> BatchCompletedWithErrors
+        /// Batch of dispatches completed but has errors.
+        /// </summary>
         BatchCompletedWithErrors = 2,
         
+        /// <summary>
+        /// >> ItemCompleted
+        /// A single item within a Batch of dispatches has completed with no error.
+        /// </summary>
         ItemCompleted = 3,
         
+        /// <summary>
+        /// >> ItemFailed
+        /// A single item within a Batch of dispatches has completed with error.
+        /// </summary>
         ItemFailed = 4,
         
+        /// <summary>
+        /// >> DispatchedAs
+        /// A call was dispatched.
+        /// </summary>
         DispatchedAs = 5,
     }
     
     /// <summary>
-    /// >> 99 - Variant[pallet_utility.pallet.Event]
-    /// 
-    ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
-    ///			by this pallet.
-    ///			
+    /// >> 116 - Variant[pallet_utility.pallet.Event]
+    /// The `Event` enum of this pallet
     /// </summary>
-    public sealed class EnumEvent : BaseEnumExt<Event, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_runtime.EnumDispatchError>, BaseVoid, BaseVoid, BaseVoid, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_runtime.EnumDispatchError, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Types.Base.EnumResult>
+    public sealed class EnumEvent : BaseEnumRust<Event>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumEvent()
+        {
+				AddTypeDecoder<BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_runtime.EnumDispatchError>>(Event.BatchInterrupted);
+				AddTypeDecoder<BaseVoid>(Event.BatchCompleted);
+				AddTypeDecoder<BaseVoid>(Event.BatchCompletedWithErrors);
+				AddTypeDecoder<BaseVoid>(Event.ItemCompleted);
+				AddTypeDecoder<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_runtime.EnumDispatchError>(Event.ItemFailed);
+				AddTypeDecoder<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Types.Base.EnumResult>(Event.DispatchedAs);
+        }
     }
 }

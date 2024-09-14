@@ -12,11 +12,11 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Interfaces
    using System;
    using System.Threading.Tasks;
    using Substrate.NetApi.Model.Types.Base;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.assignment_app;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.assignment_app;
    using Substrate.NetApi.Model.Types.Primitive;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7;
    using Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.executor_params;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.executor_params;
    
    public interface IParaSessionInfoControllerClient
    {

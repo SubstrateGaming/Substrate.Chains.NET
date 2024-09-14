@@ -33,7 +33,7 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_omnipool_liquid
     }
     
     /// <summary>
-    /// >> 522 - Variant[pallet_omnipool_liquidity_mining.pallet.InconsistentStateError]
+    /// >> 583 - Variant[pallet_omnipool_liquidity_mining.pallet.InconsistentStateError]
     /// </summary>
     public sealed class EnumInconsistentStateError : BaseEnum<InconsistentStateError>
     {

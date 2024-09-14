@@ -16,7 +16,7 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
    using Substrate.Kusama.NET.RestClient.Mockup.Generated.Clients;
    using Substrate.Kusama.NET.RestClient.Generated.Clients;
    using Substrate.NetApi.Model.Types.Base;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7;
    
    public class ParaInherentControllerClientTest : ClientTestBase
    {
@@ -61,58 +61,58 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.ScrapedOnChainVotes GetTestValue4()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.ScrapedOnChainVotes GetTestValue4()
       {
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.ScrapedOnChainVotes result;
-         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.ScrapedOnChainVotes();
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.ScrapedOnChainVotes result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.ScrapedOnChainVotes();
          result.Session = this.GetTestValueU32();
-         result.BackingValidatorsPerCandidate = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.CandidateReceipt, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.ValidatorIndex, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumValidityAttestation>>>>();
-         result.BackingValidatorsPerCandidate.Create(new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.CandidateReceipt, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.ValidatorIndex, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumValidityAttestation>>>[] {
+         result.BackingValidatorsPerCandidate = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.CandidateReceipt, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.ValidatorIndex, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.EnumValidityAttestation>>>>();
+         result.BackingValidatorsPerCandidate.Create(new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.CandidateReceipt, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.ValidatorIndex, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.EnumValidityAttestation>>>[] {
                   this.GetTestValue5()});
-         result.Disputes = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.DisputeStatementSet>();
-         result.Disputes.Create(new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.DisputeStatementSet[] {
-                  this.GetTestValue25()});
+         result.Disputes = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.DisputeStatementSet>();
+         result.Disputes.Create(new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.DisputeStatementSet[] {
+                  this.GetTestValue23()});
          return result;
       }
-      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.CandidateReceipt, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.ValidatorIndex, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumValidityAttestation>>> GetTestValue5()
+      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.CandidateReceipt, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.ValidatorIndex, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.EnumValidityAttestation>>> GetTestValue5()
       {
-         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.CandidateReceipt, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.ValidatorIndex, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumValidityAttestation>>> result;
-         result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.CandidateReceipt, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.ValidatorIndex, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumValidityAttestation>>>();
-         result.Create(this.GetTestValue6(), this.GetTestValue21());
+         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.CandidateReceipt, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.ValidatorIndex, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.EnumValidityAttestation>>> result;
+         result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.CandidateReceipt, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.ValidatorIndex, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.EnumValidityAttestation>>>();
+         result.Create(this.GetTestValue6(), this.GetTestValue19());
          return result;
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.CandidateReceipt GetTestValue6()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.CandidateReceipt GetTestValue6()
       {
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.CandidateReceipt result;
-         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.CandidateReceipt();
-         result.Descriptor = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.CandidateDescriptor();
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.CandidateReceipt result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.CandidateReceipt();
+         result.Descriptor = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.CandidateDescriptor();
          result.Descriptor = this.GetTestValue7();
          result.CommitmentsHash = new Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256();
-         result.CommitmentsHash = this.GetTestValue20();
+         result.CommitmentsHash = this.GetTestValue18();
          return result;
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.CandidateDescriptor GetTestValue7()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.CandidateDescriptor GetTestValue7()
       {
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.CandidateDescriptor result;
-         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.CandidateDescriptor();
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.CandidateDescriptor result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.CandidateDescriptor();
          result.ParaId = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id();
          result.ParaId = this.GetTestValue8();
          result.RelayParent = new Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256();
          result.RelayParent = this.GetTestValue9();
-         result.Collator = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.collator_app.Public();
+         result.Collator = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.collator_app.Public();
          result.Collator = this.GetTestValue10();
          result.PersistedValidationDataHash = new Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256();
-         result.PersistedValidationDataHash = this.GetTestValue12();
+         result.PersistedValidationDataHash = this.GetTestValue11();
          result.PovHash = new Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256();
-         result.PovHash = this.GetTestValue13();
+         result.PovHash = this.GetTestValue12();
          result.ErasureRoot = new Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256();
-         result.ErasureRoot = this.GetTestValue14();
-         result.Signature = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.collator_app.Signature();
-         result.Signature = this.GetTestValue15();
+         result.ErasureRoot = this.GetTestValue13();
+         result.Signature = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.collator_app.Signature();
+         result.Signature = this.GetTestValue14();
          result.ParaHead = new Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256();
-         result.ParaHead = this.GetTestValue17();
+         result.ParaHead = this.GetTestValue15();
          result.ValidationCodeHash = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash();
-         result.ValidationCodeHash = this.GetTestValue18();
+         result.ValidationCodeHash = this.GetTestValue16();
          return result;
       }
       public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id GetTestValue8()
@@ -162,18 +162,50 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
                   this.GetTestValueU8()});
          return result;
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.collator_app.Public GetTestValue10()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.collator_app.Public GetTestValue10()
       {
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.collator_app.Public result;
-         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.collator_app.Public();
-         result.Value = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.sr25519.Public();
-         result.Value = this.GetTestValue11();
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.collator_app.Public result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.collator_app.Public();
+         result.Value = new Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr32U8();
+         result.Value.Create(new Substrate.NetApi.Model.Types.Primitive.U8[] {
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8()});
          return result;
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.sr25519.Public GetTestValue11()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256 GetTestValue11()
       {
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.sr25519.Public result;
-         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.sr25519.Public();
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256 result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256();
          result.Value = new Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr32U8();
          result.Value.Create(new Substrate.NetApi.Model.Types.Primitive.U8[] {
                   this.GetTestValueU8(),
@@ -290,58 +322,10 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
                   this.GetTestValueU8()});
          return result;
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256 GetTestValue14()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.collator_app.Signature GetTestValue14()
       {
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256 result;
-         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256();
-         result.Value = new Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr32U8();
-         result.Value.Create(new Substrate.NetApi.Model.Types.Primitive.U8[] {
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8()});
-         return result;
-      }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.collator_app.Signature GetTestValue15()
-      {
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.collator_app.Signature result;
-         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.collator_app.Signature();
-         result.Value = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.sr25519.Signature();
-         result.Value = this.GetTestValue16();
-         return result;
-      }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.sr25519.Signature GetTestValue16()
-      {
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.sr25519.Signature result;
-         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.sr25519.Signature();
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.collator_app.Signature result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.collator_app.Signature();
          result.Value = new Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr64U8();
          result.Value.Create(new Substrate.NetApi.Model.Types.Primitive.U8[] {
                   this.GetTestValueU8(),
@@ -410,6 +394,54 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
                   this.GetTestValueU8()});
          return result;
       }
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256 GetTestValue15()
+      {
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256 result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256();
+         result.Value = new Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr32U8();
+         result.Value.Create(new Substrate.NetApi.Model.Types.Primitive.U8[] {
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8(),
+                  this.GetTestValueU8()});
+         return result;
+      }
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash GetTestValue16()
+      {
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash();
+         result.Value = new Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256();
+         result.Value = this.GetTestValue17();
+         return result;
+      }
       public Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256 GetTestValue17()
       {
          Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256 result;
@@ -450,15 +482,7 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
                   this.GetTestValueU8()});
          return result;
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash GetTestValue18()
-      {
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash result;
-         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash();
-         result.Value = new Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256();
-         result.Value = this.GetTestValue19();
-         return result;
-      }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256 GetTestValue19()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256 GetTestValue18()
       {
          Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256 result;
          result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256();
@@ -498,96 +522,56 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
                   this.GetTestValueU8()});
          return result;
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256 GetTestValue20()
+      public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.ValidatorIndex, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.EnumValidityAttestation>> GetTestValue19()
       {
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256 result;
-         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256();
-         result.Value = new Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr32U8();
-         result.Value.Create(new Substrate.NetApi.Model.Types.Primitive.U8[] {
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8(),
-                  this.GetTestValueU8()});
+         Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.ValidatorIndex, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.EnumValidityAttestation>> result;
+         result = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.ValidatorIndex, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.EnumValidityAttestation>>();
+         result.Create(new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.ValidatorIndex, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.EnumValidityAttestation>[] {
+                  this.GetTestValue20()});
          return result;
       }
-      public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.ValidatorIndex, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumValidityAttestation>> GetTestValue21()
+      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.ValidatorIndex, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.EnumValidityAttestation> GetTestValue20()
       {
-         Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.ValidatorIndex, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumValidityAttestation>> result;
-         result = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.ValidatorIndex, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumValidityAttestation>>();
-         result.Create(new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.ValidatorIndex, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumValidityAttestation>[] {
-                  this.GetTestValue22()});
+         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.ValidatorIndex, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.EnumValidityAttestation> result;
+         result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.ValidatorIndex, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.EnumValidityAttestation>();
+         result.Create(this.GetTestValue21(), this.GetTestValue22());
          return result;
       }
-      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.ValidatorIndex, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumValidityAttestation> GetTestValue22()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.ValidatorIndex GetTestValue21()
       {
-         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.ValidatorIndex, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumValidityAttestation> result;
-         result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.ValidatorIndex, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumValidityAttestation>();
-         result.Create(this.GetTestValue23(), this.GetTestValue24());
-         return result;
-      }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.ValidatorIndex GetTestValue23()
-      {
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.ValidatorIndex result;
-         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.ValidatorIndex();
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.ValidatorIndex result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.ValidatorIndex();
          result.Value = this.GetTestValueU32();
          return result;
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumValidityAttestation GetTestValue24()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.EnumValidityAttestation GetTestValue22()
       {
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumValidityAttestation result;
-         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumValidityAttestation();
-         result.Create(this.GetTestValueEnum<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.ValidityAttestation>(), this.GetTestValueBaseVoid());
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.EnumValidityAttestation result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.EnumValidityAttestation();
+         // NOT IMPLEMENTED >> Initialize Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.EnumValidityAttestation
          return result;
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.DisputeStatementSet GetTestValue25()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.DisputeStatementSet GetTestValue23()
       {
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.DisputeStatementSet result;
-         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.DisputeStatementSet();
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.DisputeStatementSet result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.DisputeStatementSet();
          result.CandidateHash = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_core_primitives.CandidateHash();
-         result.CandidateHash = this.GetTestValue26();
+         result.CandidateHash = this.GetTestValue24();
          result.Session = this.GetTestValueU32();
-         result.Statements = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumDisputeStatement, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.ValidatorIndex, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.validator_app.Signature>>();
-         result.Statements.Create(new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumDisputeStatement, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.ValidatorIndex, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.validator_app.Signature>[] {
-                  this.GetTestValue28()});
+         result.Statements = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.EnumDisputeStatement, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.ValidatorIndex, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.validator_app.Signature>>();
+         result.Statements.Create(new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.EnumDisputeStatement, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.ValidatorIndex, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.validator_app.Signature>[] {
+                  this.GetTestValue26()});
          return result;
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_core_primitives.CandidateHash GetTestValue26()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_core_primitives.CandidateHash GetTestValue24()
       {
          Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_core_primitives.CandidateHash result;
          result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_core_primitives.CandidateHash();
          result.Value = new Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256();
-         result.Value = this.GetTestValue27();
+         result.Value = this.GetTestValue25();
          return result;
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256 GetTestValue27()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256 GetTestValue25()
       {
          Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256 result;
          result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.primitive_types.H256();
@@ -627,46 +611,31 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
                   this.GetTestValueU8()});
          return result;
       }
-      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumDisputeStatement, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.ValidatorIndex, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.validator_app.Signature> GetTestValue28()
+      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.EnumDisputeStatement, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.ValidatorIndex, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.validator_app.Signature> GetTestValue26()
       {
-         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumDisputeStatement, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.ValidatorIndex, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.validator_app.Signature> result;
-         result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumDisputeStatement, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.ValidatorIndex, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.validator_app.Signature>();
-         result.Create(this.GetTestValue29(), this.GetTestValue31(), this.GetTestValue32());
+         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.EnumDisputeStatement, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.ValidatorIndex, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.validator_app.Signature> result;
+         result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.EnumDisputeStatement, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.ValidatorIndex, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.validator_app.Signature>();
+         result.Create(this.GetTestValue27(), this.GetTestValue28(), this.GetTestValue29());
          return result;
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumDisputeStatement GetTestValue29()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.EnumDisputeStatement GetTestValue27()
       {
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumDisputeStatement result;
-         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumDisputeStatement();
-         result.Create(this.GetTestValueEnum<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.DisputeStatement>(), this.GetTestValue30());
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.EnumDisputeStatement result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.EnumDisputeStatement();
+         // NOT IMPLEMENTED >> Initialize Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.EnumDisputeStatement
          return result;
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumValidDisputeStatementKind GetTestValue30()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.ValidatorIndex GetTestValue28()
       {
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumValidDisputeStatementKind result;
-         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumValidDisputeStatementKind();
-         result.Create(this.GetTestValueEnum<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.ValidDisputeStatementKind>(), this.GetTestValueBaseVoid());
-         return result;
-      }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.ValidatorIndex GetTestValue31()
-      {
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.ValidatorIndex result;
-         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.ValidatorIndex();
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.ValidatorIndex result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.ValidatorIndex();
          result.Value = this.GetTestValueU32();
          return result;
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.validator_app.Signature GetTestValue32()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.validator_app.Signature GetTestValue29()
       {
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.validator_app.Signature result;
-         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.validator_app.Signature();
-         result.Value = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.sr25519.Signature();
-         result.Value = this.GetTestValue33();
-         return result;
-      }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.sr25519.Signature GetTestValue33()
-      {
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.sr25519.Signature result;
-         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.sr25519.Signature();
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.validator_app.Signature result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.validator_app.Signature();
          result.Value = new Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr64U8();
          result.Value.Create(new Substrate.NetApi.Model.Types.Primitive.U8[] {
                   this.GetTestValueU8(),
@@ -746,7 +715,7 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          ParaInherentControllerClient rpcClient = new ParaInherentControllerClient(_httpClient, subscriptionClient);
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.ScrapedOnChainVotes mockupValue = this.GetTestValue4();
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.ScrapedOnChainVotes mockupValue = this.GetTestValue4();
 
 
          Assert.IsTrue(await rpcClient.SubscribeOnChainVotes());
@@ -759,7 +728,7 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.ScrapedOnChainVotes rpcResult = await rpcClient.GetOnChainVotes();
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.ScrapedOnChainVotes rpcResult = await rpcClient.GetOnChainVotes();
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());

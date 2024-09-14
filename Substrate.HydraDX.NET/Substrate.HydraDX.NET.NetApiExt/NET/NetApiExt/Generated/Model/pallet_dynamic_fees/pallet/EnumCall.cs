@@ -24,7 +24,7 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_dynamic_fees.pa
     }
     
     /// <summary>
-    /// >> 335 - Variant[pallet_dynamic_fees.pallet.Call]
+    /// >> 374 - Variant[pallet_dynamic_fees.pallet.Call]
     /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
     public sealed class EnumCall : BaseEnum<Call>

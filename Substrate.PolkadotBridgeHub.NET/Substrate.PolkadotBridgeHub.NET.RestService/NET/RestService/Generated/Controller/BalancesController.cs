@@ -138,7 +138,7 @@ namespace Substrate.PolkadotBridgeHub.NET.RestService.Generated.Controller
         ///  Freeze locks on account balances.
         /// </summary>
         [HttpGet("Freezes")]
-        [ProducesResponseType(typeof(Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT5), 200)]
+        [ProducesResponseType(typeof(Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT6), 200)]
         [StorageKeyBuilder(typeof(Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Storage.BalancesStorage), "FreezesParams", typeof(Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32))]
         public IActionResult GetFreezes(string key)
         {

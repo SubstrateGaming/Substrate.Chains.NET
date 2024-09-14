@@ -9,7 +9,7 @@
 
 using Substrate.NetApi.Attributes;
 using Substrate.NetApi.Model.Types.Base;
-using Substrate.NetApi.Model.Types.Metadata.V14;
+using Substrate.NetApi.Model.Types.Metadata.Base;
 using System.Collections.Generic;
 
 
@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_election_provide
     
     
     /// <summary>
-    /// >> 729 - Composite[pallet_election_provider_multi_phase.signed.SignedSubmission]
+    /// >> 736 - Composite[pallet_election_provider_multi_phase.signed.SignedSubmission]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class SignedSubmission : BaseType

@@ -507,7 +507,7 @@ namespace Substrate.Polkadot.NET.RestClient.Test.Generated
       {
          Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.executor_params.EnumExecutorParam result;
          result = new Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.executor_params.EnumExecutorParam();
-         result.Create(this.GetTestValueEnum<Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.executor_params.ExecutorParam>(), this.GetTestValueBaseVoid());
+         // NOT IMPLEMENTED >> Initialize Substrate.Polkadot.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.executor_params.EnumExecutorParam
          return result;
       }
       [Test()]

@@ -15,24 +15,54 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_runtime.multiad
 {
     
     
+    /// <summary>
+    /// >> MultiAddress
+    /// </summary>
     public enum MultiAddress
     {
         
+        /// <summary>
+        /// >> Id
+        /// </summary>
         Id = 0,
         
+        /// <summary>
+        /// >> Index
+        /// </summary>
         Index = 1,
         
+        /// <summary>
+        /// >> Raw
+        /// </summary>
         Raw = 2,
         
+        /// <summary>
+        /// >> Address32
+        /// </summary>
         Address32 = 3,
         
+        /// <summary>
+        /// >> Address20
+        /// </summary>
         Address20 = 4,
     }
     
     /// <summary>
-    /// >> 146 - Variant[sp_runtime.multiaddress.MultiAddress]
+    /// >> 171 - Variant[sp_runtime.multiaddress.MultiAddress]
     /// </summary>
-    public sealed class EnumMultiAddress : BaseEnumExt<MultiAddress, Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Base.BaseTuple>, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>, Substrate.Collectives.NET.NetApiExt.Generated.Types.Base.Arr32U8, Substrate.Collectives.NET.NetApiExt.Generated.Types.Base.Arr20U8>
+    public sealed class EnumMultiAddress : BaseEnumRust<MultiAddress>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumMultiAddress()
+        {
+				AddTypeDecoder<Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>(MultiAddress.Id);
+				AddTypeDecoder<Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Base.BaseTuple>>(MultiAddress.Index);
+				AddTypeDecoder<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>(MultiAddress.Raw);
+				AddTypeDecoder<Substrate.Collectives.NET.NetApiExt.Generated.Types.Base.Arr32U8>(MultiAddress.Address32);
+				AddTypeDecoder<Substrate.Collectives.NET.NetApiExt.Generated.Types.Base.Arr20U8>(MultiAddress.Address20);
+        }
     }
 }

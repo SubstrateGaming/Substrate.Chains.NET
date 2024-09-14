@@ -9,7 +9,7 @@
 
 using Substrate.NetApi.Attributes;
 using Substrate.NetApi.Model.Types.Base;
-using Substrate.NetApi.Model.Types.Metadata.V14;
+using Substrate.NetApi.Model.Types.Metadata.Base;
 using System.Collections.Generic;
 
 
@@ -18,7 +18,7 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_uniques.types
     
     
     /// <summary>
-    /// >> 491 - Composite[pallet_uniques.types.ItemMetadata]
+    /// >> 552 - Composite[pallet_uniques.types.ItemMetadata]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class ItemMetadata : BaseType
@@ -31,7 +31,7 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_uniques.types
         /// <summary>
         /// >> data
         /// </summary>
-        public Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT1 Data { get; set; }
+        public Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT2 Data { get; set; }
         /// <summary>
         /// >> is_frozen
         /// </summary>
@@ -59,7 +59,7 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_uniques.types
             var start = p;
             Deposit = new Substrate.NetApi.Model.Types.Primitive.U128();
             Deposit.Decode(byteArray, ref p);
-            Data = new Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT1();
+            Data = new Substrate.HydraDX.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT2();
             Data.Decode(byteArray, ref p);
             IsFrozen = new Substrate.NetApi.Model.Types.Primitive.Bool();
             IsFrozen.Decode(byteArray, ref p);

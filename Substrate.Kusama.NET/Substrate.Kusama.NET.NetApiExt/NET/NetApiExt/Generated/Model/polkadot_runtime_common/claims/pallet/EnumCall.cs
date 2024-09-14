@@ -24,31 +24,111 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_common
         
         /// <summary>
         /// >> claim
-        /// See [`Pallet::claim`].
+        /// Make a claim to collect your DOTs.
+        /// 
+        /// The dispatch origin for this call must be _None_.
+        /// 
+        /// Unsigned Validation:
+        /// A call to claim is deemed valid if the signature provided matches
+        /// the expected signed message of:
+        /// 
+        /// > Ethereum Signed Message:
+        /// > (configured prefix string)(address)
+        /// 
+        /// and `address` matches the `dest` account.
+        /// 
+        /// Parameters:
+        /// - `dest`: The destination account to payout the claim.
+        /// - `ethereum_signature`: The signature of an ethereum signed message matching the format
+        ///   described above.
+        /// 
+        /// <weight>
+        /// The weight of this call is invariant over the input parameters.
+        /// Weight includes logic to validate unsigned `claim` call.
+        /// 
+        /// Total Complexity: O(1)
+        /// </weight>
         /// </summary>
         claim = 0,
         
         /// <summary>
         /// >> mint_claim
-        /// See [`Pallet::mint_claim`].
+        /// Mint a new claim to collect DOTs.
+        /// 
+        /// The dispatch origin for this call must be _Root_.
+        /// 
+        /// Parameters:
+        /// - `who`: The Ethereum address allowed to collect this claim.
+        /// - `value`: The number of DOTs that will be claimed.
+        /// - `vesting_schedule`: An optional vesting schedule for these DOTs.
+        /// 
+        /// <weight>
+        /// The weight of this call is invariant over the input parameters.
+        /// We assume worst case that both vesting and statement is being inserted.
+        /// 
+        /// Total Complexity: O(1)
+        /// </weight>
         /// </summary>
         mint_claim = 1,
         
         /// <summary>
         /// >> claim_attest
-        /// See [`Pallet::claim_attest`].
+        /// Make a claim to collect your DOTs by signing a statement.
+        /// 
+        /// The dispatch origin for this call must be _None_.
+        /// 
+        /// Unsigned Validation:
+        /// A call to `claim_attest` is deemed valid if the signature provided matches
+        /// the expected signed message of:
+        /// 
+        /// > Ethereum Signed Message:
+        /// > (configured prefix string)(address)(statement)
+        /// 
+        /// and `address` matches the `dest` account; the `statement` must match that which is
+        /// expected according to your purchase arrangement.
+        /// 
+        /// Parameters:
+        /// - `dest`: The destination account to payout the claim.
+        /// - `ethereum_signature`: The signature of an ethereum signed message matching the format
+        ///   described above.
+        /// - `statement`: The identity of the statement which is being attested to in the
+        ///   signature.
+        /// 
+        /// <weight>
+        /// The weight of this call is invariant over the input parameters.
+        /// Weight includes logic to validate unsigned `claim_attest` call.
+        /// 
+        /// Total Complexity: O(1)
+        /// </weight>
         /// </summary>
         claim_attest = 2,
         
         /// <summary>
         /// >> attest
-        /// See [`Pallet::attest`].
+        /// Attest to a statement, needed to finalize the claims process.
+        /// 
+        /// WARNING: Insecure unless your chain includes `PrevalidateAttests` as a
+        /// `SignedExtension`.
+        /// 
+        /// Unsigned Validation:
+        /// A call to attest is deemed valid if the sender has a `Preclaim` registered
+        /// and provides a `statement` which is expected for the account.
+        /// 
+        /// Parameters:
+        /// - `statement`: The identity of the statement which is being attested to in the
+        ///   signature.
+        /// 
+        /// <weight>
+        /// The weight of this call is invariant over the input parameters.
+        /// Weight includes logic to do pre-validation on `attest` call.
+        /// 
+        /// Total Complexity: O(1)
+        /// </weight>
         /// </summary>
         attest = 3,
         
         /// <summary>
         /// >> move_claim
-        /// See [`Pallet::move_claim`].
         /// </summary>
         move_claim = 4,
     }
@@ -57,7 +137,19 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_common
     /// >> 173 - Variant[polkadot_runtime_common.claims.pallet.Call]
     /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
-    public sealed class EnumCall : BaseEnumExt<Call, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_common.claims.EcdsaSignature>, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_common.claims.EthereumAddress, Substrate.NetApi.Model.Types.Primitive.U128, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.NetApi.Model.Types.Primitive.U128, Substrate.NetApi.Model.Types.Primitive.U32>>, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_common.claims.EnumStatementKind>>, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_common.claims.EcdsaSignature, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>, BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_common.claims.EthereumAddress, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_common.claims.EthereumAddress, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>>>
+    public sealed class EnumCall : BaseEnumRust<Call>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumCall()
+        {
+				AddTypeDecoder<BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_common.claims.EcdsaSignature>>(Call.claim);
+				AddTypeDecoder<BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_common.claims.EthereumAddress, Substrate.NetApi.Model.Types.Primitive.U128, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.NetApi.Model.Types.Primitive.U128, Substrate.NetApi.Model.Types.Primitive.U32>>, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_common.claims.EnumStatementKind>>>(Call.mint_claim);
+				AddTypeDecoder<BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_common.claims.EcdsaSignature, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>>(Call.claim_attest);
+				AddTypeDecoder<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>(Call.attest);
+				AddTypeDecoder<BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_common.claims.EthereumAddress, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_common.claims.EthereumAddress, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>>>(Call.move_claim);
+        }
     }
 }

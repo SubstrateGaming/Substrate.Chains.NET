@@ -48,7 +48,7 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_staking.pallet
     }
     
     /// <summary>
-    /// >> 543 - Variant[pallet_staking.pallet.InconsistentStateError]
+    /// >> 603 - Variant[pallet_staking.pallet.InconsistentStateError]
     /// </summary>
     public sealed class EnumInconsistentStateError : BaseEnum<InconsistentStateError>
     {

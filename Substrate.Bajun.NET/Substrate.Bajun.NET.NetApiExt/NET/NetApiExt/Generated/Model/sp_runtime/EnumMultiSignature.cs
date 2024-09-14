@@ -40,7 +40,17 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.sp_runtime
     /// <summary>
     /// >> 322 - Variant[sp_runtime.MultiSignature]
     /// </summary>
-    public sealed class EnumMultiSignature : BaseEnumExt<MultiSignature, Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.Arr64U8, Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.Arr64U8, Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.Arr65U8>
+    public sealed class EnumMultiSignature : BaseEnumRust<MultiSignature>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumMultiSignature()
+        {
+				AddTypeDecoder<Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.Arr64U8>(MultiSignature.Ed25519);
+				AddTypeDecoder<Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.Arr64U8>(MultiSignature.Sr25519);
+				AddTypeDecoder<Substrate.Bajun.NET.NetApiExt.Generated.Types.Base.Arr65U8>(MultiSignature.Ecdsa);
+        }
     }
 }

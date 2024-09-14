@@ -38,9 +38,19 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_nomination_pools
     }
     
     /// <summary>
-    /// >> 296 - Variant[pallet_nomination_pools.ConfigOp]
+    /// >> 294 - Variant[pallet_nomination_pools.ConfigOp]
     /// </summary>
-    public sealed class EnumConfigOp : BaseEnumExt<ConfigOp, BaseVoid, Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, BaseVoid>
+    public sealed class EnumConfigOp : BaseEnumRust<ConfigOp>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumConfigOp()
+        {
+				AddTypeDecoder<BaseVoid>(ConfigOp.Noop);
+				AddTypeDecoder<Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>(ConfigOp.Set);
+				AddTypeDecoder<BaseVoid>(ConfigOp.Remove);
+        }
     }
 }

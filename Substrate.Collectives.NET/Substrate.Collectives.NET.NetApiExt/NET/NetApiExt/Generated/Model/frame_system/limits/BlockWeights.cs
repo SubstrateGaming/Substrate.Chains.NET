@@ -9,7 +9,7 @@
 
 using Substrate.NetApi.Attributes;
 using Substrate.NetApi.Model.Types.Base;
-using Substrate.NetApi.Model.Types.Metadata.V14;
+using Substrate.NetApi.Model.Types.Metadata.Base;
 using System.Collections.Generic;
 
 
@@ -18,7 +18,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.frame_system.limit
     
     
     /// <summary>
-    /// >> 206 - Composite[frame_system.limits.BlockWeights]
+    /// >> 278 - Composite[frame_system.limits.BlockWeights]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class BlockWeights : BaseType
@@ -27,59 +27,23 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.frame_system.limit
         /// <summary>
         /// >> base_block
         /// </summary>
-        private Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight _baseBlock;
-        
+        public Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight BaseBlock { get; set; }
         /// <summary>
         /// >> max_block
         /// </summary>
-        private Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight _maxBlock;
-        
+        public Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight MaxBlock { get; set; }
         /// <summary>
         /// >> per_class
         /// </summary>
-        private Substrate.Collectives.NET.NetApiExt.Generated.Model.frame_support.dispatch.PerDispatchClassT2 _perClass;
+        public Substrate.Collectives.NET.NetApiExt.Generated.Model.frame_support.dispatch.PerDispatchClassT2 PerClass { get; set; }
         
-        public Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight BaseBlock
-        {
-            get
-            {
-                return this._baseBlock;
-            }
-            set
-            {
-                this._baseBlock = value;
-            }
-        }
-        
-        public Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight MaxBlock
-        {
-            get
-            {
-                return this._maxBlock;
-            }
-            set
-            {
-                this._maxBlock = value;
-            }
-        }
-        
-        public Substrate.Collectives.NET.NetApiExt.Generated.Model.frame_support.dispatch.PerDispatchClassT2 PerClass
-        {
-            get
-            {
-                return this._perClass;
-            }
-            set
-            {
-                this._perClass = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "BlockWeights";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -89,6 +53,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.frame_system.limit
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
@@ -101,7 +66,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.frame_system.limit
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];
-            System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
+            global::System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
         }
     }
 }

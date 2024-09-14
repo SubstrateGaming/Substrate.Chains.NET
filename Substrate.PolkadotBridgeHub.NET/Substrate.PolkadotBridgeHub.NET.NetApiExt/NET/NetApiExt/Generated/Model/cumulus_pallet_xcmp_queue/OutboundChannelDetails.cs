@@ -9,7 +9,7 @@
 
 using Substrate.NetApi.Attributes;
 using Substrate.NetApi.Model.Types.Base;
-using Substrate.NetApi.Model.Types.Metadata.V14;
+using Substrate.NetApi.Model.Types.Metadata.Base;
 using System.Collections.Generic;
 
 
@@ -18,7 +18,7 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.cumulus_pall
     
     
     /// <summary>
-    /// >> 201 - Composite[cumulus_pallet_xcmp_queue.OutboundChannelDetails]
+    /// >> 283 - Composite[cumulus_pallet_xcmp_queue.OutboundChannelDetails]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class OutboundChannelDetails : BaseType
@@ -27,93 +27,31 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.cumulus_pall
         /// <summary>
         /// >> recipient
         /// </summary>
-        private Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id _recipient;
-        
+        public Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id Recipient { get; set; }
         /// <summary>
         /// >> state
         /// </summary>
-        private Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue.EnumOutboundState _state;
-        
+        public Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue.EnumOutboundState State { get; set; }
         /// <summary>
         /// >> signals_exist
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.Bool _signalsExist;
-        
+        public Substrate.NetApi.Model.Types.Primitive.Bool SignalsExist { get; set; }
         /// <summary>
         /// >> first_index
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U16 _firstIndex;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U16 FirstIndex { get; set; }
         /// <summary>
         /// >> last_index
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U16 _lastIndex;
+        public Substrate.NetApi.Model.Types.Primitive.U16 LastIndex { get; set; }
         
-        public Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id Recipient
-        {
-            get
-            {
-                return this._recipient;
-            }
-            set
-            {
-                this._recipient = value;
-            }
-        }
-        
-        public Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue.EnumOutboundState State
-        {
-            get
-            {
-                return this._state;
-            }
-            set
-            {
-                this._state = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.Bool SignalsExist
-        {
-            get
-            {
-                return this._signalsExist;
-            }
-            set
-            {
-                this._signalsExist = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U16 FirstIndex
-        {
-            get
-            {
-                return this._firstIndex;
-            }
-            set
-            {
-                this._firstIndex = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U16 LastIndex
-        {
-            get
-            {
-                return this._lastIndex;
-            }
-            set
-            {
-                this._lastIndex = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "OutboundChannelDetails";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -125,10 +63,11 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.cumulus_pall
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Recipient = new Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id();
+            Recipient = new Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id();
             Recipient.Decode(byteArray, ref p);
             State = new Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue.EnumOutboundState();
             State.Decode(byteArray, ref p);
@@ -141,7 +80,7 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.cumulus_pall
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];
-            System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
+            global::System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
         }
     }
 }

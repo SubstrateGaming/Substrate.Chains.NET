@@ -9,7 +9,7 @@
 
 using Substrate.NetApi.Attributes;
 using Substrate.NetApi.Model.Types.Base;
-using Substrate.NetApi.Model.Types.Metadata.V14;
+using Substrate.NetApi.Model.Types.Metadata.Base;
 using System.Collections.Generic;
 
 
@@ -18,7 +18,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_version
     
     
     /// <summary>
-    /// >> 213 - Composite[sp_version.RuntimeVersion]
+    /// >> 285 - Composite[sp_version.RuntimeVersion]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class RuntimeVersion : BaseType
@@ -27,144 +27,43 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_version
         /// <summary>
         /// >> spec_name
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.Str _specName;
-        
+        public Substrate.NetApi.Model.Types.Primitive.Str SpecName { get; set; }
         /// <summary>
         /// >> impl_name
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.Str _implName;
-        
+        public Substrate.NetApi.Model.Types.Primitive.Str ImplName { get; set; }
         /// <summary>
         /// >> authoring_version
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _authoringVersion;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 AuthoringVersion { get; set; }
         /// <summary>
         /// >> spec_version
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _specVersion;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 SpecVersion { get; set; }
         /// <summary>
         /// >> impl_version
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _implVersion;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 ImplVersion { get; set; }
         /// <summary>
         /// >> apis
         /// </summary>
-        private Substrate.Collectives.NET.NetApiExt.Generated.Types.Base.Cow _apis;
-        
+        public Substrate.Collectives.NET.NetApiExt.Generated.Types.Base.Cow Apis { get; set; }
         /// <summary>
         /// >> transaction_version
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _transactionVersion;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 TransactionVersion { get; set; }
         /// <summary>
         /// >> state_version
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U8 _stateVersion;
+        public Substrate.NetApi.Model.Types.Primitive.U8 StateVersion { get; set; }
         
-        public Substrate.NetApi.Model.Types.Primitive.Str SpecName
-        {
-            get
-            {
-                return this._specName;
-            }
-            set
-            {
-                this._specName = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.Str ImplName
-        {
-            get
-            {
-                return this._implName;
-            }
-            set
-            {
-                this._implName = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 AuthoringVersion
-        {
-            get
-            {
-                return this._authoringVersion;
-            }
-            set
-            {
-                this._authoringVersion = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 SpecVersion
-        {
-            get
-            {
-                return this._specVersion;
-            }
-            set
-            {
-                this._specVersion = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 ImplVersion
-        {
-            get
-            {
-                return this._implVersion;
-            }
-            set
-            {
-                this._implVersion = value;
-            }
-        }
-        
-        public Substrate.Collectives.NET.NetApiExt.Generated.Types.Base.Cow Apis
-        {
-            get
-            {
-                return this._apis;
-            }
-            set
-            {
-                this._apis = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 TransactionVersion
-        {
-            get
-            {
-                return this._transactionVersion;
-            }
-            set
-            {
-                this._transactionVersion = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U8 StateVersion
-        {
-            get
-            {
-                return this._stateVersion;
-            }
-            set
-            {
-                this._stateVersion = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "RuntimeVersion";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -179,6 +78,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_version
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
@@ -201,7 +101,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_version
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];
-            System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
+            global::System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
         }
     }
 }

@@ -27,10 +27,23 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parach
         /// The paraid making the call is not the coretime brokerage system parachain.
         /// </summary>
         NotBroker = 0,
+        
+        /// <summary>
+        /// >> RequestedFutureRevenue
+        /// Requested revenue information `when` parameter was in the future from the current
+        /// block height.
+        /// </summary>
+        RequestedFutureRevenue = 1,
+        
+        /// <summary>
+        /// >> AssetTransferFailed
+        /// Failed to transfer assets to the coretime chain
+        /// </summary>
+        AssetTransferFailed = 2,
     }
     
     /// <summary>
-    /// >> 868 - Variant[polkadot_runtime_parachains.coretime.pallet.Error]
+    /// >> 882 - Variant[polkadot_runtime_parachains.coretime.pallet.Error]
     /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>

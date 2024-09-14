@@ -35,7 +35,16 @@ namespace Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.v2.multiasset
     /// <summary>
     /// >> 110 - Variant[xcm.v2.multiasset.AssetId]
     /// </summary>
-    public sealed class EnumAssetId : BaseEnumExt<AssetId, Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.v2.multilocation.MultiLocation, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>
+    public sealed class EnumAssetId : BaseEnumRust<AssetId>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumAssetId()
+        {
+				AddTypeDecoder<Substrate.Bajun.NET.NetApiExt.Generated.Model.xcm.v2.multilocation.MultiLocation>(AssetId.Concrete);
+				AddTypeDecoder<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>(AssetId.Abstract);
+        }
     }
 }

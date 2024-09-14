@@ -33,7 +33,7 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Model.pallet_transaction_pay
     }
     
     /// <summary>
-    /// >> 245 - Variant[pallet_transaction_payment.Releases]
+    /// >> 273 - Variant[pallet_transaction_payment.Releases]
     /// </summary>
     public sealed class EnumReleases : BaseEnum<Releases>
     {

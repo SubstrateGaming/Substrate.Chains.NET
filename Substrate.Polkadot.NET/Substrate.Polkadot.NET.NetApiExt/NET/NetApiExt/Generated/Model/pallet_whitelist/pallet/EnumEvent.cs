@@ -39,10 +39,20 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_whitelist.pall
     }
     
     /// <summary>
-    /// >> 481 - Variant[pallet_whitelist.pallet.Event]
+    /// >> 482 - Variant[pallet_whitelist.pallet.Event]
     /// The `Event` enum of this pallet
     /// </summary>
-    public sealed class EnumEvent : BaseEnumExt<Event, Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256, BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base.EnumResult>>
+    public sealed class EnumEvent : BaseEnumRust<Event>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumEvent()
+        {
+				AddTypeDecoder<Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256>(Event.CallWhitelisted);
+				AddTypeDecoder<Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256>(Event.WhitelistedCallRemoved);
+				AddTypeDecoder<BaseTuple<Substrate.Polkadot.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.Polkadot.NET.NetApiExt.Generated.Types.Base.EnumResult>>(Event.WhitelistedCallDispatched);
+        }
     }
 }

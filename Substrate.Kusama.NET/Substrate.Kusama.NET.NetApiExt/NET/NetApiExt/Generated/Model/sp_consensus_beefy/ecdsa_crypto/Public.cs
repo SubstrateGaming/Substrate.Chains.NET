@@ -9,7 +9,7 @@
 
 using Substrate.NetApi.Attributes;
 using Substrate.NetApi.Model.Types.Base;
-using Substrate.NetApi.Model.Types.Metadata.V14;
+using Substrate.NetApi.Model.Types.Metadata.Base;
 using System.Collections.Generic;
 
 
@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_beefy.ecds
     
     
     /// <summary>
-    /// >> 138 - Composite[sp_consensus_beefy.ecdsa_crypto.Public]
+    /// >> 129 - Composite[sp_consensus_beefy.ecdsa_crypto.Public]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Public : BaseType
@@ -27,7 +27,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_beefy.ecds
         /// <summary>
         /// >> value
         /// </summary>
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.ecdsa.Public Value { get; set; }
+        public Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr33U8 Value { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
@@ -47,7 +47,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_consensus_beefy.ecds
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Value = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_core.ecdsa.Public();
+            Value = new Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.Arr33U8();
             Value.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

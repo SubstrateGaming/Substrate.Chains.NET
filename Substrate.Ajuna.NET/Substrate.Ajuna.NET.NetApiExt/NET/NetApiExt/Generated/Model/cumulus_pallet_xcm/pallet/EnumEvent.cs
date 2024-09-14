@@ -48,7 +48,17 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_pallet_xcm.palle
     /// >> 130 - Variant[cumulus_pallet_xcm.pallet.Event]
     /// The `Event` enum of this pallet
     /// </summary>
-    public sealed class EnumEvent : BaseEnumExt<Event, Substrate.Ajuna.NET.NetApiExt.Generated.Types.Base.Arr32U8, Substrate.Ajuna.NET.NetApiExt.Generated.Types.Base.Arr32U8, BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Types.Base.Arr32U8, Substrate.Ajuna.NET.NetApiExt.Generated.Model.staging_xcm.v4.traits.EnumOutcome>>
+    public sealed class EnumEvent : BaseEnumRust<Event>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumEvent()
+        {
+				AddTypeDecoder<Substrate.Ajuna.NET.NetApiExt.Generated.Types.Base.Arr32U8>(Event.InvalidFormat);
+				AddTypeDecoder<Substrate.Ajuna.NET.NetApiExt.Generated.Types.Base.Arr32U8>(Event.UnsupportedVersion);
+				AddTypeDecoder<BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Types.Base.Arr32U8, Substrate.Ajuna.NET.NetApiExt.Generated.Model.staging_xcm.v4.traits.EnumOutcome>>(Event.ExecutedDownward);
+        }
     }
 }

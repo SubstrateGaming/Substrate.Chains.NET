@@ -104,11 +104,25 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         
         /// <summary>
         /// >> FutureCodeUpgrades
-        ///  The block number at which the planned code change is expected for a para.
+        ///  The block number at which the planned code change is expected for a parachain.
+        /// 
         ///  The change will be applied after the first parablock for this ID included which executes
         ///  in the context of a relay chain block with a number >= `expected_at`.
         /// </summary>
         Substrate.NetApi.Model.Types.Primitive.U32 GetFutureCodeUpgrades(string key);
+        
+        /// <summary>
+        /// >> FutureCodeUpgradesAt
+        ///  The list of upcoming future code upgrades.
+        /// 
+        ///  Each item is a pair of the parachain and the expected block at which the upgrade should be
+        ///  applied. The upgrade will be applied at the given relay chain block. In contrast to
+        ///  [`FutureCodeUpgrades`] this code upgrade will be applied regardless the parachain making any
+        ///  progress or not.
+        /// 
+        ///  Ordered ascending by block number.
+        /// </summary>
+        Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32>> GetFutureCodeUpgradesAt();
         
         /// <summary>
         /// >> FutureCodeHash
@@ -131,7 +145,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         ///  NOTE that this field is used by parachains via merkle storage proofs, therefore changing
         ///  the format will require migration of parachains.
         /// </summary>
-        Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumUpgradeGoAhead GetUpgradeGoAheadSignal(string key);
+        Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.EnumUpgradeGoAhead GetUpgradeGoAheadSignal(string key);
         
         /// <summary>
         /// >> UpgradeRestrictionSignal
@@ -145,7 +159,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         ///  NOTE that this field is used by parachains via merkle storage proofs, therefore changing
         ///  the format will require migration of parachains.
         /// </summary>
-        Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumUpgradeRestriction GetUpgradeRestrictionSignal(string key);
+        Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.EnumUpgradeRestriction GetUpgradeRestrictionSignal(string key);
         
         /// <summary>
         /// >> UpgradeCooldowns
@@ -157,8 +171,10 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         
         /// <summary>
         /// >> UpcomingUpgrades
-        ///  The list of upcoming code upgrades. Each item is a pair of which para performs a code
-        ///  upgrade and at which relay-chain block it is expected at.
+        ///  The list of upcoming code upgrades.
+        /// 
+        ///  Each item is a pair of which para performs a code upgrade and at which relay-chain block it
+        ///  is expected at.
         /// 
         ///  Ordered ascending by block number.
         /// </summary>
@@ -257,6 +273,11 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         private TypedMapStorage<Substrate.NetApi.Model.Types.Primitive.U32> _futureCodeUpgradesTypedStorage;
         
         /// <summary>
+        /// _futureCodeUpgradesAtTypedStorage typed storage field
+        /// </summary>
+        private TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32>>> _futureCodeUpgradesAtTypedStorage;
+        
+        /// <summary>
         /// _futureCodeHashTypedStorage typed storage field
         /// </summary>
         private TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash> _futureCodeHashTypedStorage;
@@ -264,12 +285,12 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// <summary>
         /// _upgradeGoAheadSignalTypedStorage typed storage field
         /// </summary>
-        private TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumUpgradeGoAhead> _upgradeGoAheadSignalTypedStorage;
+        private TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.EnumUpgradeGoAhead> _upgradeGoAheadSignalTypedStorage;
         
         /// <summary>
         /// _upgradeRestrictionSignalTypedStorage typed storage field
         /// </summary>
-        private TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumUpgradeRestriction> _upgradeRestrictionSignalTypedStorage;
+        private TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.EnumUpgradeRestriction> _upgradeRestrictionSignalTypedStorage;
         
         /// <summary>
         /// _upgradeCooldownsTypedStorage typed storage field
@@ -317,9 +338,10 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
             this.PastCodeMetaTypedStorage = new TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.paras.ParaPastCodeMeta>("Paras.PastCodeMeta", storageDataProvider, storageChangeDelegates);
             this.PastCodePruningTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32>>>("Paras.PastCodePruning", storageDataProvider, storageChangeDelegates);
             this.FutureCodeUpgradesTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Primitive.U32>("Paras.FutureCodeUpgrades", storageDataProvider, storageChangeDelegates);
+            this.FutureCodeUpgradesAtTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32>>>("Paras.FutureCodeUpgradesAt", storageDataProvider, storageChangeDelegates);
             this.FutureCodeHashTypedStorage = new TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash>("Paras.FutureCodeHash", storageDataProvider, storageChangeDelegates);
-            this.UpgradeGoAheadSignalTypedStorage = new TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumUpgradeGoAhead>("Paras.UpgradeGoAheadSignal", storageDataProvider, storageChangeDelegates);
-            this.UpgradeRestrictionSignalTypedStorage = new TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumUpgradeRestriction>("Paras.UpgradeRestrictionSignal", storageDataProvider, storageChangeDelegates);
+            this.UpgradeGoAheadSignalTypedStorage = new TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.EnumUpgradeGoAhead>("Paras.UpgradeGoAheadSignal", storageDataProvider, storageChangeDelegates);
+            this.UpgradeRestrictionSignalTypedStorage = new TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.EnumUpgradeRestriction>("Paras.UpgradeRestrictionSignal", storageDataProvider, storageChangeDelegates);
             this.UpgradeCooldownsTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32>>>("Paras.UpgradeCooldowns", storageDataProvider, storageChangeDelegates);
             this.UpcomingUpgradesTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32>>>("Paras.UpcomingUpgrades", storageDataProvider, storageChangeDelegates);
             this.ActionsQueueTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id>>("Paras.ActionsQueue", storageDataProvider, storageChangeDelegates);
@@ -494,6 +516,21 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         }
         
         /// <summary>
+        /// _futureCodeUpgradesAtTypedStorage property
+        /// </summary>
+        public TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32>>> FutureCodeUpgradesAtTypedStorage
+        {
+            get
+            {
+                return _futureCodeUpgradesAtTypedStorage;
+            }
+            set
+            {
+                _futureCodeUpgradesAtTypedStorage = value;
+            }
+        }
+        
+        /// <summary>
         /// _futureCodeHashTypedStorage property
         /// </summary>
         public TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.ValidationCodeHash> FutureCodeHashTypedStorage
@@ -511,7 +548,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// <summary>
         /// _upgradeGoAheadSignalTypedStorage property
         /// </summary>
-        public TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumUpgradeGoAhead> UpgradeGoAheadSignalTypedStorage
+        public TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.EnumUpgradeGoAhead> UpgradeGoAheadSignalTypedStorage
         {
             get
             {
@@ -526,7 +563,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         /// <summary>
         /// _upgradeRestrictionSignalTypedStorage property
         /// </summary>
-        public TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumUpgradeRestriction> UpgradeRestrictionSignalTypedStorage
+        public TypedMapStorage<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.EnumUpgradeRestriction> UpgradeRestrictionSignalTypedStorage
         {
             get
             {
@@ -644,6 +681,7 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
             await PastCodeMetaTypedStorage.InitializeAsync("Paras", "PastCodeMeta");
             await PastCodePruningTypedStorage.InitializeAsync("Paras", "PastCodePruning");
             await FutureCodeUpgradesTypedStorage.InitializeAsync("Paras", "FutureCodeUpgrades");
+            await FutureCodeUpgradesAtTypedStorage.InitializeAsync("Paras", "FutureCodeUpgradesAt");
             await FutureCodeHashTypedStorage.InitializeAsync("Paras", "FutureCodeHash");
             await UpgradeGoAheadSignalTypedStorage.InitializeAsync("Paras", "UpgradeGoAheadSignal");
             await UpgradeRestrictionSignalTypedStorage.InitializeAsync("Paras", "UpgradeRestrictionSignal");
@@ -941,7 +979,8 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         
         /// <summary>
         /// >> FutureCodeUpgrades
-        ///  The block number at which the planned code change is expected for a para.
+        ///  The block number at which the planned code change is expected for a parachain.
+        /// 
         ///  The change will be applied after the first parablock for this ID included which executes
         ///  in the context of a relay chain block with a number >= `expected_at`.
         /// </summary>
@@ -959,6 +998,31 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
             {
                 return null;
             }
+        }
+        
+        /// <summary>
+        /// Implements any storage change for Paras.FutureCodeUpgradesAt
+        /// </summary>
+        [StorageChange("Paras", "FutureCodeUpgradesAt")]
+        public void OnUpdateFutureCodeUpgradesAt(string data)
+        {
+            FutureCodeUpgradesAtTypedStorage.Update(data);
+        }
+        
+        /// <summary>
+        /// >> FutureCodeUpgradesAt
+        ///  The list of upcoming future code upgrades.
+        /// 
+        ///  Each item is a pair of the parachain and the expected block at which the upgrade should be
+        ///  applied. The upgrade will be applied at the given relay chain block. In contrast to
+        ///  [`FutureCodeUpgrades`] this code upgrade will be applied regardless the parachain making any
+        ///  progress or not.
+        /// 
+        ///  Ordered ascending by block number.
+        /// </summary>
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32>> GetFutureCodeUpgradesAt()
+        {
+            return FutureCodeUpgradesAtTypedStorage.Get();
         }
         
         /// <summary>
@@ -1014,13 +1078,13 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         ///  NOTE that this field is used by parachains via merkle storage proofs, therefore changing
         ///  the format will require migration of parachains.
         /// </summary>
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumUpgradeGoAhead GetUpgradeGoAheadSignal(string key)
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.EnumUpgradeGoAhead GetUpgradeGoAheadSignal(string key)
         {
             if ((key == null))
             {
                 return null;
             }
-            if (UpgradeGoAheadSignalTypedStorage.Dictionary.TryGetValue(key, out Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumUpgradeGoAhead result))
+            if (UpgradeGoAheadSignalTypedStorage.Dictionary.TryGetValue(key, out Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.EnumUpgradeGoAhead result))
             {
                 return result;
             }
@@ -1051,13 +1115,13 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         ///  NOTE that this field is used by parachains via merkle storage proofs, therefore changing
         ///  the format will require migration of parachains.
         /// </summary>
-        public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumUpgradeRestriction GetUpgradeRestrictionSignal(string key)
+        public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.EnumUpgradeRestriction GetUpgradeRestrictionSignal(string key)
         {
             if ((key == null))
             {
                 return null;
             }
-            if (UpgradeRestrictionSignalTypedStorage.Dictionary.TryGetValue(key, out Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumUpgradeRestriction result))
+            if (UpgradeRestrictionSignalTypedStorage.Dictionary.TryGetValue(key, out Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.EnumUpgradeRestriction result))
             {
                 return result;
             }
@@ -1098,8 +1162,10 @@ namespace Substrate.Kusama.NET.RestService.Generated.Storage
         
         /// <summary>
         /// >> UpcomingUpgrades
-        ///  The list of upcoming code upgrades. Each item is a pair of which para performs a code
-        ///  upgrade and at which relay-chain block it is expected at.
+        ///  The list of upcoming code upgrades.
+        /// 
+        ///  Each item is a pair of which para performs a code upgrade and at which relay-chain block it
+        ///  is expected at.
         /// 
         ///  Ordered ascending by block number.
         /// </summary>

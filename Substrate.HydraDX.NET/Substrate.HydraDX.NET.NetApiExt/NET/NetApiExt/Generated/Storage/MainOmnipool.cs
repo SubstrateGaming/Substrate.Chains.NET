@@ -228,6 +228,19 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Storage
         }
         
         /// <summary>
+        /// >> add_liquidity_with_limit
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
+        /// </summary>
+        public static Method AddLiquidityWithLimit(Substrate.NetApi.Model.Types.Primitive.U32 asset, Substrate.NetApi.Model.Types.Primitive.U128 amount, Substrate.NetApi.Model.Types.Primitive.U128 min_shares_limit)
+        {
+            System.Collections.Generic.List<byte> byteArray = new List<byte>();
+            byteArray.AddRange(asset.Encode());
+            byteArray.AddRange(amount.Encode());
+            byteArray.AddRange(min_shares_limit.Encode());
+            return new Method(59, "Omnipool", 13, "add_liquidity_with_limit", byteArray.ToArray());
+        }
+        
+        /// <summary>
         /// >> remove_liquidity
         /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
@@ -237,6 +250,19 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Storage
             byteArray.AddRange(position_id.Encode());
             byteArray.AddRange(amount.Encode());
             return new Method(59, "Omnipool", 3, "remove_liquidity", byteArray.ToArray());
+        }
+        
+        /// <summary>
+        /// >> remove_liquidity_with_limit
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
+        /// </summary>
+        public static Method RemoveLiquidityWithLimit(Substrate.NetApi.Model.Types.Primitive.U128 position_id, Substrate.NetApi.Model.Types.Primitive.U128 amount, Substrate.NetApi.Model.Types.Primitive.U128 min_limit)
+        {
+            System.Collections.Generic.List<byte> byteArray = new List<byte>();
+            byteArray.AddRange(position_id.Encode());
+            byteArray.AddRange(amount.Encode());
+            byteArray.AddRange(min_limit.Encode());
+            return new Method(59, "Omnipool", 14, "remove_liquidity_with_limit", byteArray.ToArray());
         }
         
         /// <summary>
@@ -628,5 +654,11 @@ namespace Substrate.HydraDX.NET.NetApiExt.Generated.Storage
         /// Existential deposit of asset is not available.
         /// </summary>
         ExistentialDepositNotAvailable,
+        
+        /// <summary>
+        /// >> SlippageLimit
+        /// Slippage protection
+        /// </summary>
+        SlippageLimit,
     }
 }

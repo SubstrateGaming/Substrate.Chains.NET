@@ -9,7 +9,7 @@
 
 using Substrate.NetApi.Attributes;
 using Substrate.NetApi.Model.Types.Base;
-using Substrate.NetApi.Model.Types.Metadata.V14;
+using Substrate.NetApi.Model.Types.Metadata.Base;
 using System.Collections.Generic;
 
 
@@ -18,7 +18,7 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_society
     
     
     /// <summary>
-    /// >> 672 - Composite[pallet_society.Candidacy]
+    /// >> 678 - Composite[pallet_society.Candidacy]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Candidacy : BaseType

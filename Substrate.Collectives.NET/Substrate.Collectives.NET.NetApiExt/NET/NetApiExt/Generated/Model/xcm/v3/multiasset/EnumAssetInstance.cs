@@ -15,26 +15,60 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.xcm.v3.multiasset
 {
     
     
+    /// <summary>
+    /// >> AssetInstance
+    /// </summary>
     public enum AssetInstance
     {
         
+        /// <summary>
+        /// >> Undefined
+        /// </summary>
         Undefined = 0,
         
+        /// <summary>
+        /// >> Index
+        /// </summary>
         Index = 1,
         
+        /// <summary>
+        /// >> Array4
+        /// </summary>
         Array4 = 2,
         
+        /// <summary>
+        /// >> Array8
+        /// </summary>
         Array8 = 3,
         
+        /// <summary>
+        /// >> Array16
+        /// </summary>
         Array16 = 4,
         
+        /// <summary>
+        /// >> Array32
+        /// </summary>
         Array32 = 5,
     }
     
     /// <summary>
-    /// >> 61 - Variant[xcm.v3.multiasset.AssetInstance]
+    /// >> 113 - Variant[xcm.v3.multiasset.AssetInstance]
     /// </summary>
-    public sealed class EnumAssetInstance : BaseEnumExt<AssetInstance, BaseVoid, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128>, Substrate.Collectives.NET.NetApiExt.Generated.Types.Base.Arr4U8, Substrate.Collectives.NET.NetApiExt.Generated.Types.Base.Arr8U8, Substrate.Collectives.NET.NetApiExt.Generated.Types.Base.Arr16U8, Substrate.Collectives.NET.NetApiExt.Generated.Types.Base.Arr32U8>
+    public sealed class EnumAssetInstance : BaseEnumRust<AssetInstance>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumAssetInstance()
+        {
+				AddTypeDecoder<BaseVoid>(AssetInstance.Undefined);
+				AddTypeDecoder<Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128>>(AssetInstance.Index);
+				AddTypeDecoder<Substrate.Collectives.NET.NetApiExt.Generated.Types.Base.Arr4U8>(AssetInstance.Array4);
+				AddTypeDecoder<Substrate.Collectives.NET.NetApiExt.Generated.Types.Base.Arr8U8>(AssetInstance.Array8);
+				AddTypeDecoder<Substrate.Collectives.NET.NetApiExt.Generated.Types.Base.Arr16U8>(AssetInstance.Array16);
+				AddTypeDecoder<Substrate.Collectives.NET.NetApiExt.Generated.Types.Base.Arr32U8>(AssetInstance.Array32);
+        }
     }
 }

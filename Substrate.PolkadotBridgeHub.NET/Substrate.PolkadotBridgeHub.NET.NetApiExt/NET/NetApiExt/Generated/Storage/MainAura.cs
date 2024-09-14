@@ -21,16 +21,22 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> AuraStorage
+    /// </summary>
     public sealed class AuraStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> AuraStorage Constructor
+        /// </summary>
         public AuraStorage(SubstrateClientExt client)
         {
             this._client = client;
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("Aura", "Authorities"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT8)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("Aura", "Authorities"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Aura", "CurrentSlot"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_consensus_slots.Slot)));
         }
         
@@ -56,10 +62,10 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Storage
         /// >> Authorities
         ///  The current authority set.
         /// </summary>
-        public async Task<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT8> Authorities(CancellationToken token)
+        public async Task<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9> Authorities(string blockhash, CancellationToken token)
         {
             string parameters = AuraStorage.AuthoritiesParams();
-            var result = await _client.GetStorageAsync<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT8>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9>(parameters, blockhash, token);
             return result;
         }
         
@@ -89,18 +95,24 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Storage
         /// 
         ///  This will be set in `on_initialize`.
         /// </summary>
-        public async Task<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_consensus_slots.Slot> CurrentSlot(CancellationToken token)
+        public async Task<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_consensus_slots.Slot> CurrentSlot(string blockhash, CancellationToken token)
         {
             string parameters = AuraStorage.CurrentSlotParams();
-            var result = await _client.GetStorageAsync<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_consensus_slots.Slot>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_consensus_slots.Slot>(parameters, blockhash, token);
             return result;
         }
     }
     
+    /// <summary>
+    /// >> AuraCalls
+    /// </summary>
     public sealed class AuraCalls
     {
     }
     
+    /// <summary>
+    /// >> AuraConstants
+    /// </summary>
     public sealed class AuraConstants
     {
     }

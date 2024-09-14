@@ -21,16 +21,22 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> ParachainInfoStorage
+    /// </summary>
     public sealed class ParachainInfoStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> ParachainInfoStorage Constructor
+        /// </summary>
         public ParachainInfoStorage(SubstrateClientExt client)
         {
             this._client = client;
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("ParachainInfo", "ParachainId"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Collectives.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("ParachainInfo", "ParachainId"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Collectives.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id)));
         }
         
         /// <summary>
@@ -53,18 +59,24 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
         /// <summary>
         /// >> ParachainId
         /// </summary>
-        public async Task<Substrate.Collectives.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id> ParachainId(CancellationToken token)
+        public async Task<Substrate.Collectives.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id> ParachainId(string blockhash, CancellationToken token)
         {
             string parameters = ParachainInfoStorage.ParachainIdParams();
-            var result = await _client.GetStorageAsync<Substrate.Collectives.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Collectives.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id>(parameters, blockhash, token);
             return result;
         }
     }
     
+    /// <summary>
+    /// >> ParachainInfoCalls
+    /// </summary>
     public sealed class ParachainInfoCalls
     {
     }
     
+    /// <summary>
+    /// >> ParachainInfoConstants
+    /// </summary>
     public sealed class ParachainInfoConstants
     {
     }

@@ -15,7 +15,7 @@ namespace Substrate.PolkadotBridgeHub.NET.RestClient.Test.Generated
    using System.Net.Http;
    using Substrate.PolkadotBridgeHub.NET.RestClient.Mockup.Generated.Clients;
    using Substrate.PolkadotBridgeHub.NET.RestClient.Generated.Clients;
-   using Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives;
+   using Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives;
    
    public class ParachainInfoControllerClientTest : ClientTestBase
    {
@@ -25,10 +25,10 @@ namespace Substrate.PolkadotBridgeHub.NET.RestClient.Test.Generated
       {
          _httpClient = CreateHttpClient();
       }
-      public Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id GetTestValue2()
+      public Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id GetTestValue2()
       {
-         Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id result;
-         result = new Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id();
+         Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id result;
+         result = new Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id();
          result.Value = this.GetTestValueU32();
          return result;
       }
@@ -43,7 +43,7 @@ namespace Substrate.PolkadotBridgeHub.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          ParachainInfoControllerClient rpcClient = new ParachainInfoControllerClient(_httpClient, subscriptionClient);
-         Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id mockupValue = this.GetTestValue2();
+         Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id mockupValue = this.GetTestValue2();
 
 
          Assert.IsTrue(await rpcClient.SubscribeParachainId());
@@ -56,7 +56,7 @@ namespace Substrate.PolkadotBridgeHub.NET.RestClient.Test.Generated
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id rpcResult = await rpcClient.GetParachainId();
+         Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id rpcResult = await rpcClient.GetParachainId();
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());

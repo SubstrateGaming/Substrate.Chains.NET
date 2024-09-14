@@ -24,22 +24,54 @@ namespace Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parach
         
         /// <summary>
         /// >> request_core_count
-        /// See [`Pallet::request_core_count`].
+        /// Request the configuration to be updated with the specified number of cores. Warning:
+        /// Since this only schedules a configuration update, it takes two sessions to come into
+        /// effect.
+        /// 
+        /// - `origin`: Root or the Coretime Chain
+        /// - `count`: total number of cores
         /// </summary>
         request_core_count = 1,
         
         /// <summary>
+        /// >> request_revenue_at
+        /// Request to claim the instantaneous coretime sales revenue starting from the block it was
+        /// last claimed until and up to the block specified. The claimed amount value is sent back
+        /// to the Coretime chain in a `notify_revenue` message. At the same time, the amount is
+        /// teleported to the Coretime chain.
+        /// </summary>
+        request_revenue_at = 2,
+        
+        /// <summary>
         /// >> assign_core
-        /// See [`Pallet::assign_core`].
+        /// Receive instructions from the `ExternalBrokerOrigin`, detailing how a specific core is
+        /// to be used.
+        /// 
+        /// Parameters:
+        /// -`origin`: The `ExternalBrokerOrigin`, assumed to be the coretime chain.
+        /// -`core`: The core that should be scheduled.
+        /// -`begin`: The starting blockheight of the instruction.
+        /// -`assignment`: How the blockspace should be utilised.
+        /// -`end_hint`: An optional hint as to when this particular set of instructions will end.
         /// </summary>
         assign_core = 4,
     }
     
     /// <summary>
-    /// >> 371 - Variant[polkadot_runtime_parachains.coretime.pallet.Call]
+    /// >> 368 - Variant[polkadot_runtime_parachains.coretime.pallet.Call]
     /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
-    public sealed class EnumCall : BaseEnumExt<Call, BaseVoid, Substrate.NetApi.Model.Types.Primitive.U16, BaseVoid, BaseVoid, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U16, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_broker.coretime_interface.EnumCoreAssignment, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.assigner_coretime.PartsOf57600>>, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32>>>
+    public sealed class EnumCall : BaseEnumRust<Call>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumCall()
+        {
+				AddTypeDecoder<Substrate.NetApi.Model.Types.Primitive.U16>(Call.request_core_count);
+				AddTypeDecoder<Substrate.NetApi.Model.Types.Primitive.U32>(Call.request_revenue_at);
+				AddTypeDecoder<BaseTuple<Substrate.NetApi.Model.Types.Primitive.U16, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Kusama.NET.NetApiExt.Generated.Model.pallet_broker.coretime_interface.EnumCoreAssignment, Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.assigner_coretime.PartsOf57600>>, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32>>>(Call.assign_core);
+        }
     }
 }

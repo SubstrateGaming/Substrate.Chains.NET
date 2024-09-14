@@ -379,11 +379,18 @@ namespace Substrate.Ajuna.NET.RestClient.Test.Generated
          Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_balances.types.IdAmountT1 result;
          result = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_balances.types.IdAmountT1();
          result.Id = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.ajuna_runtime.EnumRuntimeHoldReason();
-         result.Id.Create(this.GetTestValueEnum<Substrate.Ajuna.NET.NetApiExt.Generated.Model.ajuna_runtime.RuntimeHoldReason>(), this.GetTestValueBaseVoid());
+         result.Id = this.GetTestValue18();
          result.Amount = this.GetTestValueU128();
          return result;
       }
-      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue18()
+      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.ajuna_runtime.EnumRuntimeHoldReason GetTestValue18()
+      {
+         Substrate.Ajuna.NET.NetApiExt.Generated.Model.ajuna_runtime.EnumRuntimeHoldReason result;
+         result = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.ajuna_runtime.EnumRuntimeHoldReason();
+         // NOT IMPLEMENTED >> Initialize Substrate.Ajuna.NET.NetApiExt.Generated.Model.ajuna_runtime.EnumRuntimeHoldReason
+         return result;
+      }
+      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue19()
       {
          Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 result;
          result = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32();
@@ -435,7 +442,7 @@ namespace Substrate.Ajuna.NET.RestClient.Test.Generated
          // Construct new RPC client to test with.
          BalancesControllerClient rpcClient = new BalancesControllerClient(_httpClient, subscriptionClient);
          Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT19 mockupValue = this.GetTestValue16();
-         Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 mockupKey = this.GetTestValue18();
+         Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 mockupKey = this.GetTestValue19();
 
          Assert.IsTrue(await rpcClient.SubscribeHolds(mockupKey));
 
@@ -452,16 +459,16 @@ namespace Substrate.Ajuna.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT20 GetTestValue20()
+      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT20 GetTestValue21()
       {
          Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT20 result;
          result = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT20();
          result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_balances.types.IdAmountT2>();
          result.Value.Create(new Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_balances.types.IdAmountT2[] {
-                  this.GetTestValue21()});
+                  this.GetTestValue22()});
          return result;
       }
-      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_balances.types.IdAmountT2 GetTestValue21()
+      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_balances.types.IdAmountT2 GetTestValue22()
       {
          Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_balances.types.IdAmountT2 result;
          result = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_balances.types.IdAmountT2();
@@ -469,7 +476,7 @@ namespace Substrate.Ajuna.NET.RestClient.Test.Generated
          result.Amount = this.GetTestValueU128();
          return result;
       }
-      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue22()
+      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue23()
       {
          Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 result;
          result = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32();
@@ -520,8 +527,8 @@ namespace Substrate.Ajuna.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          BalancesControllerClient rpcClient = new BalancesControllerClient(_httpClient, subscriptionClient);
-         Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT20 mockupValue = this.GetTestValue20();
-         Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 mockupKey = this.GetTestValue22();
+         Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT20 mockupValue = this.GetTestValue21();
+         Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 mockupKey = this.GetTestValue23();
 
          Assert.IsTrue(await rpcClient.SubscribeFreezes(mockupKey));
 

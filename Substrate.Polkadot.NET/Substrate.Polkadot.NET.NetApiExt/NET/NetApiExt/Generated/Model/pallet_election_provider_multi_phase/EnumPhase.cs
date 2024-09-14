@@ -43,9 +43,20 @@ namespace Substrate.Polkadot.NET.NetApiExt.Generated.Model.pallet_election_provi
     }
     
     /// <summary>
-    /// >> 496 - Variant[pallet_election_provider_multi_phase.Phase]
+    /// >> 497 - Variant[pallet_election_provider_multi_phase.Phase]
     /// </summary>
-    public sealed class EnumPhase : BaseEnumExt<Phase, BaseVoid, BaseVoid, Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.Bool, Substrate.NetApi.Model.Types.Primitive.U32>, BaseVoid>
+    public sealed class EnumPhase : BaseEnumRust<Phase>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumPhase()
+        {
+				AddTypeDecoder<BaseVoid>(Phase.Off);
+				AddTypeDecoder<BaseVoid>(Phase.Signed);
+				AddTypeDecoder<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.Bool, Substrate.NetApi.Model.Types.Primitive.U32>>(Phase.Unsigned);
+				AddTypeDecoder<BaseVoid>(Phase.Emergency);
+        }
     }
 }

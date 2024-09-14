@@ -15,9 +15,9 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
    using System.Net.Http;
    using Substrate.Kusama.NET.RestClient.Mockup.Generated.Clients;
    using Substrate.Kusama.NET.RestClient.Generated.Clients;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point;
-   using Substrate.NetApi.Model.Types.Base;
-   using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.assigner_on_demand;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.assigner_on_demand.types;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Types.Base;
+   using Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
    
    public class OnDemandAssignmentProviderControllerClientTest : ClientTestBase
    {
@@ -27,111 +27,23 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
       {
          _httpClient = CreateHttpClient();
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedU128 GetTestValue2()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.assigner_on_demand.types.CoreAffinityCount GetTestValue2()
       {
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedU128 result;
-         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedU128();
-         result.Value = this.GetTestValueU128();
-         return result;
-      }
-      [Test()]
-      public async System.Threading.Tasks.Task TestSpotTraffic()
-      {
-         // Construct new Mockup client to test with.
-         OnDemandAssignmentProviderControllerMockupClient mockupClient = new OnDemandAssignmentProviderControllerMockupClient(_httpClient);
-
-         // Construct new subscription client to test with.
-         var subscriptionClient = CreateSubscriptionClient();
-
-         // Construct new RPC client to test with.
-         OnDemandAssignmentProviderControllerClient rpcClient = new OnDemandAssignmentProviderControllerClient(_httpClient, subscriptionClient);
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedU128 mockupValue = this.GetTestValue2();
-
-
-         Assert.IsTrue(await rpcClient.SubscribeSpotTraffic());
-
-         // Save the previously generated mockup value in RPC service storage.
-         bool mockupSetResult = await mockupClient.SetSpotTraffic(mockupValue);
-
-         // Test that the expected mockup value was handled successfully from RPC service.
-         Assert.IsTrue(mockupSetResult);
-         var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
-         Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
-
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedU128 rpcResult = await rpcClient.GetSpotTraffic();
-
-         // Test that the expected mockup value matches the actual result from RPC service.
-         Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
-      }
-      public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.assigner_on_demand.EnqueuedOrder> GetTestValue4()
-      {
-         Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.assigner_on_demand.EnqueuedOrder> result;
-         result = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.assigner_on_demand.EnqueuedOrder>();
-         result.Create(new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.assigner_on_demand.EnqueuedOrder[] {
-                  this.GetTestValue5()});
-         return result;
-      }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.assigner_on_demand.EnqueuedOrder GetTestValue5()
-      {
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.assigner_on_demand.EnqueuedOrder result;
-         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.assigner_on_demand.EnqueuedOrder();
-         result.ParaId = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id();
-         result.ParaId = this.GetTestValue6();
-         return result;
-      }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id GetTestValue6()
-      {
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id result;
-         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id();
-         result.Value = this.GetTestValueU32();
-         return result;
-      }
-      [Test()]
-      public async System.Threading.Tasks.Task TestOnDemandQueue()
-      {
-         // Construct new Mockup client to test with.
-         OnDemandAssignmentProviderControllerMockupClient mockupClient = new OnDemandAssignmentProviderControllerMockupClient(_httpClient);
-
-         // Construct new subscription client to test with.
-         var subscriptionClient = CreateSubscriptionClient();
-
-         // Construct new RPC client to test with.
-         OnDemandAssignmentProviderControllerClient rpcClient = new OnDemandAssignmentProviderControllerClient(_httpClient, subscriptionClient);
-         Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.assigner_on_demand.EnqueuedOrder> mockupValue = this.GetTestValue4();
-
-
-         Assert.IsTrue(await rpcClient.SubscribeOnDemandQueue());
-
-         // Save the previously generated mockup value in RPC service storage.
-         bool mockupSetResult = await mockupClient.SetOnDemandQueue(mockupValue);
-
-         // Test that the expected mockup value was handled successfully from RPC service.
-         Assert.IsTrue(mockupSetResult);
-         var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
-         Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
-
-         Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.assigner_on_demand.EnqueuedOrder> rpcResult = await rpcClient.GetOnDemandQueue();
-
-         // Test that the expected mockup value matches the actual result from RPC service.
-         Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
-      }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.assigner_on_demand.CoreAffinityCount GetTestValue8()
-      {
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.assigner_on_demand.CoreAffinityCount result;
-         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.assigner_on_demand.CoreAffinityCount();
-         result.CoreIdx = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.CoreIndex();
-         result.CoreIdx = this.GetTestValue9();
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.assigner_on_demand.types.CoreAffinityCount result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.assigner_on_demand.types.CoreAffinityCount();
+         result.CoreIndex = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.CoreIndex();
+         result.CoreIndex = this.GetTestValue3();
          result.Count = this.GetTestValueU32();
          return result;
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.CoreIndex GetTestValue9()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.CoreIndex GetTestValue3()
       {
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.CoreIndex result;
-         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.CoreIndex();
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.CoreIndex result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.CoreIndex();
          result.Value = this.GetTestValueU32();
          return result;
       }
-      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id GetTestValue10()
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id GetTestValue4()
       {
          Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id result;
          result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id();
@@ -149,8 +61,8 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          OnDemandAssignmentProviderControllerClient rpcClient = new OnDemandAssignmentProviderControllerClient(_httpClient, subscriptionClient);
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.assigner_on_demand.CoreAffinityCount mockupValue = this.GetTestValue8();
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id mockupKey = this.GetTestValue10();
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.assigner_on_demand.types.CoreAffinityCount mockupValue = this.GetTestValue2();
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id mockupKey = this.GetTestValue4();
 
          Assert.IsTrue(await rpcClient.SubscribeParaIdAffinity(mockupKey));
 
@@ -162,7 +74,256 @@ namespace Substrate.Kusama.NET.RestClient.Test.Generated
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.assigner_on_demand.CoreAffinityCount rpcResult = await rpcClient.GetParaIdAffinity(mockupKey);
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.assigner_on_demand.types.CoreAffinityCount rpcResult = await rpcClient.GetParaIdAffinity(mockupKey);
+
+         // Test that the expected mockup value matches the actual result from RPC service.
+         Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
+      }
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.assigner_on_demand.types.QueueStatusType GetTestValue6()
+      {
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.assigner_on_demand.types.QueueStatusType result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.assigner_on_demand.types.QueueStatusType();
+         result.Traffic = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedU128();
+         result.Traffic = this.GetTestValue7();
+         result.NextIndex = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.assigner_on_demand.types.QueueIndex();
+         result.NextIndex = this.GetTestValue8();
+         result.SmallestIndex = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.assigner_on_demand.types.QueueIndex();
+         result.SmallestIndex = this.GetTestValue9();
+         result.FreedIndices = new Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.BinaryHeapT1();
+         result.FreedIndices = this.GetTestValue10();
+         return result;
+      }
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedU128 GetTestValue7()
+      {
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedU128 result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point.FixedU128();
+         result.Value = this.GetTestValueU128();
+         return result;
+      }
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.assigner_on_demand.types.QueueIndex GetTestValue8()
+      {
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.assigner_on_demand.types.QueueIndex result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.assigner_on_demand.types.QueueIndex();
+         result.Value = this.GetTestValueU32();
+         return result;
+      }
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.assigner_on_demand.types.QueueIndex GetTestValue9()
+      {
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.assigner_on_demand.types.QueueIndex result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.assigner_on_demand.types.QueueIndex();
+         result.Value = this.GetTestValueU32();
+         return result;
+      }
+      public Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.BinaryHeapT1 GetTestValue10()
+      {
+         Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.BinaryHeapT1 result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.BinaryHeapT1();
+         result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.assigner_on_demand.types.ReverseQueueIndex>();
+         result.Value.Create(new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.assigner_on_demand.types.ReverseQueueIndex[] {
+                  this.GetTestValue11()});
+         return result;
+      }
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.assigner_on_demand.types.ReverseQueueIndex GetTestValue11()
+      {
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.assigner_on_demand.types.ReverseQueueIndex result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.assigner_on_demand.types.ReverseQueueIndex();
+         result.Value = this.GetTestValueU32();
+         return result;
+      }
+      [Test()]
+      public async System.Threading.Tasks.Task TestQueueStatus()
+      {
+         // Construct new Mockup client to test with.
+         OnDemandAssignmentProviderControllerMockupClient mockupClient = new OnDemandAssignmentProviderControllerMockupClient(_httpClient);
+
+         // Construct new subscription client to test with.
+         var subscriptionClient = CreateSubscriptionClient();
+
+         // Construct new RPC client to test with.
+         OnDemandAssignmentProviderControllerClient rpcClient = new OnDemandAssignmentProviderControllerClient(_httpClient, subscriptionClient);
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.assigner_on_demand.types.QueueStatusType mockupValue = this.GetTestValue6();
+
+
+         Assert.IsTrue(await rpcClient.SubscribeQueueStatus());
+
+         // Save the previously generated mockup value in RPC service storage.
+         bool mockupSetResult = await mockupClient.SetQueueStatus(mockupValue);
+
+         // Test that the expected mockup value was handled successfully from RPC service.
+         Assert.IsTrue(mockupSetResult);
+         var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
+         Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
+
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.assigner_on_demand.types.QueueStatusType rpcResult = await rpcClient.GetQueueStatus();
+
+         // Test that the expected mockup value matches the actual result from RPC service.
+         Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
+      }
+      public Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.BinaryHeapT2 GetTestValue13()
+      {
+         Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.BinaryHeapT2 result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.BinaryHeapT2();
+         result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.assigner_on_demand.types.EnqueuedOrder>();
+         result.Value.Create(new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.assigner_on_demand.types.EnqueuedOrder[] {
+                  this.GetTestValue14()});
+         return result;
+      }
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.assigner_on_demand.types.EnqueuedOrder GetTestValue14()
+      {
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.assigner_on_demand.types.EnqueuedOrder result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.assigner_on_demand.types.EnqueuedOrder();
+         result.ParaId = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id();
+         result.ParaId = this.GetTestValue15();
+         result.Idx = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.assigner_on_demand.types.QueueIndex();
+         result.Idx = this.GetTestValue16();
+         return result;
+      }
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id GetTestValue15()
+      {
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id();
+         result.Value = this.GetTestValueU32();
+         return result;
+      }
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.assigner_on_demand.types.QueueIndex GetTestValue16()
+      {
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.assigner_on_demand.types.QueueIndex result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.assigner_on_demand.types.QueueIndex();
+         result.Value = this.GetTestValueU32();
+         return result;
+      }
+      [Test()]
+      public async System.Threading.Tasks.Task TestFreeEntries()
+      {
+         // Construct new Mockup client to test with.
+         OnDemandAssignmentProviderControllerMockupClient mockupClient = new OnDemandAssignmentProviderControllerMockupClient(_httpClient);
+
+         // Construct new subscription client to test with.
+         var subscriptionClient = CreateSubscriptionClient();
+
+         // Construct new RPC client to test with.
+         OnDemandAssignmentProviderControllerClient rpcClient = new OnDemandAssignmentProviderControllerClient(_httpClient, subscriptionClient);
+         Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.BinaryHeapT2 mockupValue = this.GetTestValue13();
+
+
+         Assert.IsTrue(await rpcClient.SubscribeFreeEntries());
+
+         // Save the previously generated mockup value in RPC service storage.
+         bool mockupSetResult = await mockupClient.SetFreeEntries(mockupValue);
+
+         // Test that the expected mockup value was handled successfully from RPC service.
+         Assert.IsTrue(mockupSetResult);
+         var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
+         Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
+
+         Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.BinaryHeapT2 rpcResult = await rpcClient.GetFreeEntries();
+
+         // Test that the expected mockup value matches the actual result from RPC service.
+         Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
+      }
+      public Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.BinaryHeapT2 GetTestValue18()
+      {
+         Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.BinaryHeapT2 result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.BinaryHeapT2();
+         result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.assigner_on_demand.types.EnqueuedOrder>();
+         result.Value.Create(new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.assigner_on_demand.types.EnqueuedOrder[] {
+                  this.GetTestValue19()});
+         return result;
+      }
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.assigner_on_demand.types.EnqueuedOrder GetTestValue19()
+      {
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.assigner_on_demand.types.EnqueuedOrder result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.assigner_on_demand.types.EnqueuedOrder();
+         result.ParaId = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id();
+         result.ParaId = this.GetTestValue20();
+         result.Idx = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.assigner_on_demand.types.QueueIndex();
+         result.Idx = this.GetTestValue21();
+         return result;
+      }
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id GetTestValue20()
+      {
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id();
+         result.Value = this.GetTestValueU32();
+         return result;
+      }
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.assigner_on_demand.types.QueueIndex GetTestValue21()
+      {
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.assigner_on_demand.types.QueueIndex result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_runtime_parachains.assigner_on_demand.types.QueueIndex();
+         result.Value = this.GetTestValueU32();
+         return result;
+      }
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.CoreIndex GetTestValue22()
+      {
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.CoreIndex result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.CoreIndex();
+         result.Value = this.GetTestValueU32();
+         return result;
+      }
+      [Test()]
+      public async System.Threading.Tasks.Task TestAffinityEntries()
+      {
+         // Construct new Mockup client to test with.
+         OnDemandAssignmentProviderControllerMockupClient mockupClient = new OnDemandAssignmentProviderControllerMockupClient(_httpClient);
+
+         // Construct new subscription client to test with.
+         var subscriptionClient = CreateSubscriptionClient();
+
+         // Construct new RPC client to test with.
+         OnDemandAssignmentProviderControllerClient rpcClient = new OnDemandAssignmentProviderControllerClient(_httpClient, subscriptionClient);
+         Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.BinaryHeapT2 mockupValue = this.GetTestValue18();
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.CoreIndex mockupKey = this.GetTestValue22();
+
+         Assert.IsTrue(await rpcClient.SubscribeAffinityEntries(mockupKey));
+
+         // Save the previously generated mockup value in RPC service storage.
+         bool mockupSetResult = await mockupClient.SetAffinityEntries(mockupValue, mockupKey);
+
+         // Test that the expected mockup value was handled successfully from RPC service.
+         Assert.IsTrue(mockupSetResult);
+         var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
+         Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
+
+         Substrate.Kusama.NET.NetApiExt.Generated.Types.Base.BinaryHeapT2 rpcResult = await rpcClient.GetAffinityEntries(mockupKey);
+
+         // Test that the expected mockup value matches the actual result from RPC service.
+         Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
+      }
+      public Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT44 GetTestValue24()
+      {
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT44 result;
+         result = new Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT44();
+         result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U128>();
+         result.Value.Create(new Substrate.NetApi.Model.Types.Primitive.U128[] {
+                  this.GetTestValueU128()});
+         return result;
+      }
+      [Test()]
+      public async System.Threading.Tasks.Task TestRevenue()
+      {
+         // Construct new Mockup client to test with.
+         OnDemandAssignmentProviderControllerMockupClient mockupClient = new OnDemandAssignmentProviderControllerMockupClient(_httpClient);
+
+         // Construct new subscription client to test with.
+         var subscriptionClient = CreateSubscriptionClient();
+
+         // Construct new RPC client to test with.
+         OnDemandAssignmentProviderControllerClient rpcClient = new OnDemandAssignmentProviderControllerClient(_httpClient, subscriptionClient);
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT44 mockupValue = this.GetTestValue24();
+
+
+         Assert.IsTrue(await rpcClient.SubscribeRevenue());
+
+         // Save the previously generated mockup value in RPC service storage.
+         bool mockupSetResult = await mockupClient.SetRevenue(mockupValue);
+
+         // Test that the expected mockup value was handled successfully from RPC service.
+         Assert.IsTrue(mockupSetResult);
+         var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
+         Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
+
+         Substrate.Kusama.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT44 rpcResult = await rpcClient.GetRevenue();
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());

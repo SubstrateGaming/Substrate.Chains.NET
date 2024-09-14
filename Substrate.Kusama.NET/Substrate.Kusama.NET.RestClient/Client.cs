@@ -54,6 +54,7 @@ namespace Substrate.Kusama.NET.RestClient
       public IOnDemandAssignmentProviderControllerClient OnDemandAssignmentProviderControllerClient;
       public IParaInclusionControllerClient ParaInclusionControllerClient;
       public IParaInherentControllerClient ParaInherentControllerClient;
+      public IParametersControllerClient ParametersControllerClient;
       public IParaSchedulerControllerClient ParaSchedulerControllerClient;
       public IParasControllerClient ParasControllerClient;
       public IParasDisputesControllerClient ParasDisputesControllerClient;
@@ -117,6 +118,7 @@ namespace Substrate.Kusama.NET.RestClient
          OnDemandAssignmentProviderControllerClient = new OnDemandAssignmentProviderControllerClient(_httpClient, _subscriptionClient);
          ParaInclusionControllerClient = new ParaInclusionControllerClient(_httpClient, _subscriptionClient);
          ParaInherentControllerClient = new ParaInherentControllerClient(_httpClient, _subscriptionClient);
+         ParametersControllerClient = new ParametersControllerClient(_httpClient, _subscriptionClient);
          ParaSchedulerControllerClient = new ParaSchedulerControllerClient(_httpClient, _subscriptionClient);
          ParasControllerClient = new ParasControllerClient(_httpClient, _subscriptionClient);
          ParasDisputesControllerClient = new ParasDisputesControllerClient(_httpClient, _subscriptionClient);

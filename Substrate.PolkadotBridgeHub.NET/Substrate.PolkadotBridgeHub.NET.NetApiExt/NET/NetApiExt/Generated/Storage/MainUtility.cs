@@ -21,24 +21,33 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> UtilityStorage
+    /// </summary>
     public sealed class UtilityStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> UtilityStorage Constructor
+        /// </summary>
         public UtilityStorage(SubstrateClientExt client)
         {
             this._client = client;
         }
     }
     
+    /// <summary>
+    /// >> UtilityCalls
+    /// </summary>
     public sealed class UtilityCalls
     {
         
         /// <summary>
         /// >> batch
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method Batch(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bridge_hub_polkadot_runtime.EnumRuntimeCall> calls)
         {
@@ -49,7 +58,7 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> as_derivative
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method AsDerivative(Substrate.NetApi.Model.Types.Primitive.U16 index, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bridge_hub_polkadot_runtime.EnumRuntimeCall call)
         {
@@ -61,7 +70,7 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> batch_all
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method BatchAll(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bridge_hub_polkadot_runtime.EnumRuntimeCall> calls)
         {
@@ -72,7 +81,7 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> dispatch_as
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method DispatchAs(Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bridge_hub_polkadot_runtime.EnumOriginCaller as_origin, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bridge_hub_polkadot_runtime.EnumRuntimeCall call)
         {
@@ -84,7 +93,7 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> force_batch
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method ForceBatch(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bridge_hub_polkadot_runtime.EnumRuntimeCall> calls)
         {
@@ -95,7 +104,7 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> with_weight
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method WithWeight(Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bridge_hub_polkadot_runtime.EnumRuntimeCall call, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight weight)
         {
@@ -106,6 +115,9 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> UtilityConstants
+    /// </summary>
     public sealed class UtilityConstants
     {
         
@@ -121,6 +133,9 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> UtilityErrors
+    /// </summary>
     public enum UtilityErrors
     {
         

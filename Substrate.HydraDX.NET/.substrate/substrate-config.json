@@ -6,7 +6,7 @@
     "rest_client": "Substrate.HydraDX.NET.RestClient"
   },
    "metadata": {
-      "websocket": "wss://hydradx-rpc.dwellir.com"
+      "websocket": "wss://rpc.hydradx.cloud"
    },
   "rest_client_settings": {
     "service_assembly": "Substrate.HydraDX.NET.RestService.dll"

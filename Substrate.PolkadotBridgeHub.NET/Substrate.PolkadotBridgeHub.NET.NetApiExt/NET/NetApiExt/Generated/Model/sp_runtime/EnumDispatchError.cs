@@ -15,42 +15,108 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_runtime
 {
     
     
+    /// <summary>
+    /// >> DispatchError
+    /// </summary>
     public enum DispatchError
     {
         
+        /// <summary>
+        /// >> Other
+        /// </summary>
         Other = 0,
         
+        /// <summary>
+        /// >> CannotLookup
+        /// </summary>
         CannotLookup = 1,
         
+        /// <summary>
+        /// >> BadOrigin
+        /// </summary>
         BadOrigin = 2,
         
+        /// <summary>
+        /// >> Module
+        /// </summary>
         Module = 3,
         
+        /// <summary>
+        /// >> ConsumerRemaining
+        /// </summary>
         ConsumerRemaining = 4,
         
+        /// <summary>
+        /// >> NoProviders
+        /// </summary>
         NoProviders = 5,
         
+        /// <summary>
+        /// >> TooManyConsumers
+        /// </summary>
         TooManyConsumers = 6,
         
+        /// <summary>
+        /// >> Token
+        /// </summary>
         Token = 7,
         
+        /// <summary>
+        /// >> Arithmetic
+        /// </summary>
         Arithmetic = 8,
         
+        /// <summary>
+        /// >> Transactional
+        /// </summary>
         Transactional = 9,
         
+        /// <summary>
+        /// >> Exhausted
+        /// </summary>
         Exhausted = 10,
         
+        /// <summary>
+        /// >> Corruption
+        /// </summary>
         Corruption = 11,
         
+        /// <summary>
+        /// >> Unavailable
+        /// </summary>
         Unavailable = 12,
         
+        /// <summary>
+        /// >> RootNotAllowed
+        /// </summary>
         RootNotAllowed = 13,
     }
     
     /// <summary>
     /// >> 25 - Variant[sp_runtime.DispatchError]
     /// </summary>
-    public sealed class EnumDispatchError : BaseEnumExt<DispatchError, BaseVoid, BaseVoid, BaseVoid, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_runtime.ModuleError, BaseVoid, BaseVoid, BaseVoid, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_runtime.EnumTokenError, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_arithmetic.EnumArithmeticError, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_runtime.EnumTransactionalError, BaseVoid, BaseVoid, BaseVoid, BaseVoid>
+    public sealed class EnumDispatchError : BaseEnumRust<DispatchError>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumDispatchError()
+        {
+				AddTypeDecoder<BaseVoid>(DispatchError.Other);
+				AddTypeDecoder<BaseVoid>(DispatchError.CannotLookup);
+				AddTypeDecoder<BaseVoid>(DispatchError.BadOrigin);
+				AddTypeDecoder<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_runtime.ModuleError>(DispatchError.Module);
+				AddTypeDecoder<BaseVoid>(DispatchError.ConsumerRemaining);
+				AddTypeDecoder<BaseVoid>(DispatchError.NoProviders);
+				AddTypeDecoder<BaseVoid>(DispatchError.TooManyConsumers);
+				AddTypeDecoder<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_runtime.EnumTokenError>(DispatchError.Token);
+				AddTypeDecoder<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_arithmetic.EnumArithmeticError>(DispatchError.Arithmetic);
+				AddTypeDecoder<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_runtime.EnumTransactionalError>(DispatchError.Transactional);
+				AddTypeDecoder<BaseVoid>(DispatchError.Exhausted);
+				AddTypeDecoder<BaseVoid>(DispatchError.Corruption);
+				AddTypeDecoder<BaseVoid>(DispatchError.Unavailable);
+				AddTypeDecoder<BaseVoid>(DispatchError.RootNotAllowed);
+        }
     }
 }

@@ -51,6 +51,10 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Interfaces
       Task<bool> SubscribeNominators(AccountId32 key);
       Task<U32> GetCounterForNominators();
       Task<bool> SubscribeCounterForNominators();
+      Task<BaseTuple> GetVirtualStakers(AccountId32 key);
+      Task<bool> SubscribeVirtualStakers(AccountId32 key);
+      Task<U32> GetCounterForVirtualStakers();
+      Task<bool> SubscribeCounterForVirtualStakers();
       Task<U32> GetMaxNominatorsCount();
       Task<bool> SubscribeMaxNominatorsCount();
       Task<U32> GetCurrentEra();
@@ -79,6 +83,8 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Interfaces
       Task<bool> SubscribeErasTotalStake(U32 key);
       Task<EnumForcing> GetForceEra();
       Task<bool> SubscribeForceEra();
+      Task<Percent> GetMaxStakedRewards();
+      Task<bool> SubscribeMaxStakedRewards();
       Task<Perbill> GetSlashRewardFraction();
       Task<bool> SubscribeSlashRewardFraction();
       Task<U128> GetCanceledSlashPayout();
@@ -97,8 +103,8 @@ namespace Substrate.Kusama.NET.RestClient.Generated.Interfaces
       Task<bool> SubscribeSpanSlash(BaseTuple<AccountId32, U32> key);
       Task<U32> GetCurrentPlannedSession();
       Task<bool> SubscribeCurrentPlannedSession();
-      Task<BaseVec<BaseTuple<U32, Bool>>> GetOffendingValidators();
-      Task<bool> SubscribeOffendingValidators();
+      Task<BaseVec<U32>> GetDisabledValidators();
+      Task<bool> SubscribeDisabledValidators();
       Task<Percent> GetChillThreshold();
       Task<bool> SubscribeChillThreshold();
    }
