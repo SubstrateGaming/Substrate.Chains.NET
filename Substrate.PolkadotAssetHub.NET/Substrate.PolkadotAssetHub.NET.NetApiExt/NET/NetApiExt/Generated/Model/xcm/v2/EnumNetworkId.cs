@@ -45,7 +45,18 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v2
     /// <summary>
     /// >> 104 - Variant[xcm.v2.NetworkId]
     /// </summary>
-    public sealed class EnumNetworkId : BaseEnumExt<NetworkId, BaseVoid, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT1, BaseVoid, BaseVoid>
+    public sealed class EnumNetworkId : BaseEnumRust<NetworkId>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumNetworkId()
+        {
+				AddTypeDecoder<BaseVoid>(NetworkId.Any);
+				AddTypeDecoder<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT1>(NetworkId.Named);
+				AddTypeDecoder<BaseVoid>(NetworkId.Polkadot);
+				AddTypeDecoder<BaseVoid>(NetworkId.Kusama);
+        }
     }
 }

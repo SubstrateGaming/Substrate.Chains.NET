@@ -11,40 +11,31 @@ using Substrate.NetApi.Model.Types.Base;
 using System.Collections.Generic;
 
 
-namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base
+namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.frame_metadata_hash_extension
 {
     
     
     /// <summary>
-    /// >> Result
+    /// >> Mode
     /// </summary>
-    public enum Result
+    public enum Mode
     {
         
         /// <summary>
-        /// >> Ok
+        /// >> Disabled
         /// </summary>
-        Ok = 0,
+        Disabled = 0,
         
         /// <summary>
-        /// >> Err
+        /// >> Enabled
         /// </summary>
-        Err = 1,
+        Enabled = 1,
     }
     
     /// <summary>
-    /// >> 123 - Variant[Result]
+    /// >> 468 - Variant[frame_metadata_hash_extension.Mode]
     /// </summary>
-    public sealed class EnumResult : BaseEnumRust<Result>
+    public sealed class EnumMode : BaseEnum<Mode>
     {
-        
-        /// <summary>
-        /// Initializes a new instance of the class.
-        /// </summary>
-        public EnumResult()
-        {
-				AddTypeDecoder<Substrate.NetApi.Model.Types.Base.BaseTuple>(Result.Ok);
-				AddTypeDecoder<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_runtime.EnumDispatchError>(Result.Err);
-        }
     }
 }

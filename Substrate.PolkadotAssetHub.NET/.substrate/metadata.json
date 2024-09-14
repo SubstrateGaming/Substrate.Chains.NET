@@ -27944,7 +27944,8 @@
           462,
           464,
           465,
-          466
+          466,
+          467
         ],
         "TypeDef": "Tuple"
       },
@@ -30394,6 +30395,44 @@
         "TypeDef": "Composite"
       },
       "467": {
+        "TypeFields": [
+          {
+            "Name": "mode",
+            "TypeName": "Mode",
+            "TypeId": 468
+          }
+        ],
+        "Path": [
+          "frame_metadata_hash_extension",
+          "CheckMetadataHash"
+        ],
+        "TypeParams": [
+          {
+            "Name": "T"
+          }
+        ],
+        "TypeDef": "Composite"
+      },
+      "468": {
+        "Variants": [
+          {
+            "Name": "Disabled",
+            "TypeFields": null,
+            "Index": 0
+          },
+          {
+            "Name": "Enabled",
+            "TypeFields": null,
+            "Index": 1
+          }
+        ],
+        "Path": [
+          "frame_metadata_hash_extension",
+          "Mode"
+        ],
+        "TypeDef": "Variant"
+      },
+      "469": {
         "Path": [
           "asset_hub_polkadot_runtime",
           "Runtime"
@@ -30712,7 +30751,7 @@
           {
             "Name": "Version",
             "TypeId": 170,
-            "Value": "JHN0YXRlbWludCRzdGF0ZW1pbnQBAAAAFEoPAAAAAAA83XGNXMUyYtQBAAAA173YonLKDWUBAAAA32rLaJkHYJsEAAAAN+OX/HyR9eQCAAAAQP461AH4lZoGAAAA0ryYl+7QjxUDAAAA94sni+U/RUwCAAAAqzwFcikf64sBAAAAvJ2JkE9bkj8BAAAAN8i7E1CpoqgEAAAA8/8U1atScFkDAAAA3pK4oEJrm/YCAAAA6pPj8W89aWICAAAA+8V3uddH79YBAAAAioBHpTqCd+wBAAAADgAAAAA=",
+            "Value": "JHN0YXRlbWludCRzdGF0ZW1pbnQBAAAAFkoPAAAAAAA83XGNXMUyYtQBAAAA173YonLKDWUBAAAA32rLaJkHYJsEAAAAN+OX/HyR9eQCAAAAQP461AH4lZoGAAAA0ryYl+7QjxUDAAAA94sni+U/RUwCAAAAqzwFcikf64sBAAAAvJ2JkE9bkj8BAAAAN8i7E1CpoqgEAAAA8/8U1atScFkDAAAA3pK4oEJrm/YCAAAA6pPj8W89aWICAAAA+8V3uddH79YBAAAAioBHpTqCd+wBAAAADwAAAAA=",
             "Docs": [
               " Get the chain's current version."
             ]
@@ -34005,9 +34044,14 @@
           "SignedIdentifier": "ChargeAssetTxPayment",
           "SignedExtType": 466,
           "AddSignedExtType": 124
+        },
+        {
+          "SignedIdentifier": "CheckMetadataHash",
+          "SignedExtType": 467,
+          "AddSignedExtType": 32
         }
       ]
     },
-    "TypeId": 467
+    "TypeId": 469
   }
 }

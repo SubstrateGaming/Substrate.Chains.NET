@@ -13,33 +13,33 @@ using Substrate.NetApi.Model.Types.Metadata.Base;
 using System.Collections.Generic;
 
 
-namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec
+namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.frame_metadata_hash_extension
 {
     
     
     /// <summary>
-    /// >> 451 - Composite[bounded_collections.bounded_vec.BoundedVecT27]
+    /// >> 467 - Composite[frame_metadata_hash_extension.CheckMetadataHash]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
-    public sealed class BoundedVecT27 : BaseType
+    public sealed class CheckMetadataHash : BaseType
     {
         
         /// <summary>
-        /// >> value
+        /// >> mode
         /// </summary>
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> Value { get; set; }
+        public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.frame_metadata_hash_extension.EnumMode Mode { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
         {
-            return "BoundedVecT27";
+            return "CheckMetadataHash";
         }
         
         /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
-            result.AddRange(Value.Encode());
+            result.AddRange(Mode.Encode());
             return result.ToArray();
         }
         
@@ -47,8 +47,8 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_colle
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>();
-            Value.Decode(byteArray, ref p);
+            Mode = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.frame_metadata_hash_extension.EnumMode();
+            Mode.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];

@@ -70,7 +70,23 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v
     /// <summary>
     /// >> 56 - Variant[staging_xcm.v4.junctions.Junctions]
     /// </summary>
-    public sealed class EnumJunctions : BaseEnumExt<Junctions, BaseVoid, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v4.junction.Arr1EnumJunction, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v4.junction.Arr2EnumJunction, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v4.junction.Arr3EnumJunction, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v4.junction.Arr4EnumJunction, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v4.junction.Arr5EnumJunction, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v4.junction.Arr6EnumJunction, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v4.junction.Arr7EnumJunction, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v4.junction.Arr8EnumJunction>
+    public sealed class EnumJunctions : BaseEnumRust<Junctions>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumJunctions()
+        {
+				AddTypeDecoder<BaseVoid>(Junctions.Here);
+				AddTypeDecoder<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v4.junction.Arr1EnumJunction>(Junctions.X1);
+				AddTypeDecoder<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v4.junction.Arr2EnumJunction>(Junctions.X2);
+				AddTypeDecoder<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v4.junction.Arr3EnumJunction>(Junctions.X3);
+				AddTypeDecoder<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v4.junction.Arr4EnumJunction>(Junctions.X4);
+				AddTypeDecoder<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v4.junction.Arr5EnumJunction>(Junctions.X5);
+				AddTypeDecoder<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v4.junction.Arr6EnumJunction>(Junctions.X6);
+				AddTypeDecoder<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v4.junction.Arr7EnumJunction>(Junctions.X7);
+				AddTypeDecoder<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v4.junction.Arr8EnumJunction>(Junctions.X8);
+        }
     }
 }

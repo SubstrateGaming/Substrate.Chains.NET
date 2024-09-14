@@ -55,7 +55,20 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v
     /// <summary>
     /// >> 76 - Variant[staging_xcm.v4.asset.AssetInstance]
     /// </summary>
-    public sealed class EnumAssetInstance : BaseEnumExt<AssetInstance, BaseVoid, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128>, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.Arr4U8, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.Arr8U8, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.Arr16U8, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.Arr32U8>
+    public sealed class EnumAssetInstance : BaseEnumRust<AssetInstance>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumAssetInstance()
+        {
+				AddTypeDecoder<BaseVoid>(AssetInstance.Undefined);
+				AddTypeDecoder<Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128>>(AssetInstance.Index);
+				AddTypeDecoder<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.Arr4U8>(AssetInstance.Array4);
+				AddTypeDecoder<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.Arr8U8>(AssetInstance.Array8);
+				AddTypeDecoder<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.Arr16U8>(AssetInstance.Array16);
+				AddTypeDecoder<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.Arr32U8>(AssetInstance.Array32);
+        }
     }
 }
