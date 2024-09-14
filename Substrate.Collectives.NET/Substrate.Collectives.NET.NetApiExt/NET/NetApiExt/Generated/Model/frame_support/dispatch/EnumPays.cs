@@ -15,11 +15,20 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.frame_support.disp
 {
     
     
+    /// <summary>
+    /// >> Pays
+    /// </summary>
     public enum Pays
     {
         
+        /// <summary>
+        /// >> Yes
+        /// </summary>
         Yes = 0,
         
+        /// <summary>
+        /// >> No
+        /// </summary>
         No = 1,
     }
     

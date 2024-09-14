@@ -15,20 +15,42 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.xcm.v3
 {
     
     
+    /// <summary>
+    /// >> MaybeErrorCode
+    /// </summary>
     public enum MaybeErrorCode
     {
         
+        /// <summary>
+        /// >> Success
+        /// </summary>
         Success = 0,
         
+        /// <summary>
+        /// >> Error
+        /// </summary>
         Error = 1,
         
+        /// <summary>
+        /// >> TruncatedError
+        /// </summary>
         TruncatedError = 2,
     }
     
     /// <summary>
-    /// >> 71 - Variant[xcm.v3.MaybeErrorCode]
+    /// >> 79 - Variant[xcm.v3.MaybeErrorCode]
     /// </summary>
-    public sealed class EnumMaybeErrorCode : BaseEnumExt<MaybeErrorCode, BaseVoid, Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT3, Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT3>
+    public sealed class EnumMaybeErrorCode : BaseEnumRust<MaybeErrorCode>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumMaybeErrorCode()
+        {
+				AddTypeDecoder<BaseVoid>(MaybeErrorCode.Success);
+				AddTypeDecoder<Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT3>(MaybeErrorCode.Error);
+				AddTypeDecoder<Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT3>(MaybeErrorCode.TruncatedError);
+        }
     }
 }

@@ -15,18 +15,23 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_utility.pal
 {
     
     
+    /// <summary>
+    /// >> Error
+    /// The `Error` enum of this pallet.
+    /// </summary>
     public enum Error
     {
         
+        /// <summary>
+        /// >> TooManyCalls
+        /// Too many calls batched.
+        /// </summary>
         TooManyCalls = 0,
     }
     
     /// <summary>
-    /// >> 303 - Variant[pallet_utility.pallet.Error]
-    /// 
-    ///			Custom [dispatch errors](https://docs.substrate.io/main-docs/build/events-errors/)
-    ///			of this pallet.
-    ///			
+    /// >> 385 - Variant[pallet_utility.pallet.Error]
+    /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>
     {

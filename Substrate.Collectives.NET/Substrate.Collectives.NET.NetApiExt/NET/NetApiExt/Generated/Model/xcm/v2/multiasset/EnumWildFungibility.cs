@@ -15,16 +15,25 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.xcm.v2.multiasset
 {
     
     
+    /// <summary>
+    /// >> WildFungibility
+    /// </summary>
     public enum WildFungibility
     {
         
+        /// <summary>
+        /// >> Fungible
+        /// </summary>
         Fungible = 0,
         
+        /// <summary>
+        /// >> NonFungible
+        /// </summary>
         NonFungible = 1,
     }
     
     /// <summary>
-    /// >> 165 - Variant[xcm.v2.multiasset.WildFungibility]
+    /// >> 191 - Variant[xcm.v2.multiasset.WildFungibility]
     /// </summary>
     public sealed class EnumWildFungibility : BaseEnum<WildFungibility>
     {

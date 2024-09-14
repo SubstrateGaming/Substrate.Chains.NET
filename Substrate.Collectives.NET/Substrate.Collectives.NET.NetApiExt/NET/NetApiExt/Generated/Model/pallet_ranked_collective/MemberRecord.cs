@@ -9,7 +9,7 @@
 
 using Substrate.NetApi.Attributes;
 using Substrate.NetApi.Model.Types.Base;
-using Substrate.NetApi.Model.Types.Metadata.V14;
+using Substrate.NetApi.Model.Types.Metadata.Base;
 using System.Collections.Generic;
 
 
@@ -18,7 +18,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_ranked_coll
     
     
     /// <summary>
-    /// >> 336 - Composite[pallet_ranked_collective.MemberRecord]
+    /// >> 424 - Composite[pallet_ranked_collective.MemberRecord]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class MemberRecord : BaseType
@@ -27,25 +27,15 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_ranked_coll
         /// <summary>
         /// >> rank
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U16 _rank;
+        public Substrate.NetApi.Model.Types.Primitive.U16 Rank { get; set; }
         
-        public Substrate.NetApi.Model.Types.Primitive.U16 Rank
-        {
-            get
-            {
-                return this._rank;
-            }
-            set
-            {
-                this._rank = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "MemberRecord";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -53,6 +43,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_ranked_coll
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
@@ -61,7 +52,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_ranked_coll
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];
-            System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
+            global::System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
         }
     }
 }

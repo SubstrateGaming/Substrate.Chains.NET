@@ -1,6 +1,7 @@
 {
   "projects": {
     "net_api": "Substrate.Collectives.NET.NetApiExt",
+    "net_integration": "Substrate.Collectives.NET.Integration",
     "rest_service": "Substrate.Collectives.NET.RestService",
     "rest_client": "Substrate.Collectives.NET.RestClient"
   },

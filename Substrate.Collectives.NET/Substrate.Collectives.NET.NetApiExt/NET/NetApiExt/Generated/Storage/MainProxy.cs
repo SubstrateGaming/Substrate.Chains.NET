@@ -21,19 +21,25 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> ProxyStorage
+    /// </summary>
     public sealed class ProxyStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> ProxyStorage Constructor
+        /// </summary>
         public ProxyStorage(SubstrateClientExt client)
         {
             this._client = client;
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Proxy", "Proxies"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32), typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT15, Substrate.NetApi.Model.Types.Primitive.U128>)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32), typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT21, Substrate.NetApi.Model.Types.Primitive.U128>)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Proxy", "Announcements"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32), typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT16, Substrate.NetApi.Model.Types.Primitive.U128>)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32), typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT22, Substrate.NetApi.Model.Types.Primitive.U128>)));
         }
         
         /// <summary>
@@ -62,10 +68,10 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
         ///  The set of account proxies. Maps the account which has delegated to the accounts
         ///  which are being delegated to, together with the amount held on deposit.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT15, Substrate.NetApi.Model.Types.Primitive.U128>> Proxies(Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT21, Substrate.NetApi.Model.Types.Primitive.U128>> Proxies(Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, string blockhash, CancellationToken token)
         {
             string parameters = ProxyStorage.ProxiesParams(key);
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT15, Substrate.NetApi.Model.Types.Primitive.U128>>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT21, Substrate.NetApi.Model.Types.Primitive.U128>>(parameters, blockhash, token);
             return result;
         }
         
@@ -93,20 +99,23 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
         /// >> Announcements
         ///  The announcements made by the proxy (key).
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT16, Substrate.NetApi.Model.Types.Primitive.U128>> Announcements(Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT22, Substrate.NetApi.Model.Types.Primitive.U128>> Announcements(Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, string blockhash, CancellationToken token)
         {
             string parameters = ProxyStorage.AnnouncementsParams(key);
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT16, Substrate.NetApi.Model.Types.Primitive.U128>>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT22, Substrate.NetApi.Model.Types.Primitive.U128>>(parameters, blockhash, token);
             return result;
         }
     }
     
+    /// <summary>
+    /// >> ProxyCalls
+    /// </summary>
     public sealed class ProxyCalls
     {
         
         /// <summary>
         /// >> proxy
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method Proxy(Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress real, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Collectives.NET.NetApiExt.Generated.Model.collectives_polkadot_runtime.EnumProxyType> force_proxy_type, Substrate.Collectives.NET.NetApiExt.Generated.Model.collectives_polkadot_runtime.EnumRuntimeCall call)
         {
@@ -119,7 +128,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> add_proxy
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method AddProxy(Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress @delegate, Substrate.Collectives.NET.NetApiExt.Generated.Model.collectives_polkadot_runtime.EnumProxyType proxy_type, Substrate.NetApi.Model.Types.Primitive.U32 delay)
         {
@@ -132,7 +141,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> remove_proxy
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method RemoveProxy(Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress @delegate, Substrate.Collectives.NET.NetApiExt.Generated.Model.collectives_polkadot_runtime.EnumProxyType proxy_type, Substrate.NetApi.Model.Types.Primitive.U32 delay)
         {
@@ -145,7 +154,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> remove_proxies
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method RemoveProxies()
         {
@@ -155,7 +164,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> create_pure
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method CreatePure(Substrate.Collectives.NET.NetApiExt.Generated.Model.collectives_polkadot_runtime.EnumProxyType proxy_type, Substrate.NetApi.Model.Types.Primitive.U32 delay, Substrate.NetApi.Model.Types.Primitive.U16 index)
         {
@@ -168,7 +177,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> kill_pure
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method KillPure(Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress spawner, Substrate.Collectives.NET.NetApiExt.Generated.Model.collectives_polkadot_runtime.EnumProxyType proxy_type, Substrate.NetApi.Model.Types.Primitive.U16 index, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32> height, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32> ext_index)
         {
@@ -183,7 +192,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> announce
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method Announce(Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress real, Substrate.Collectives.NET.NetApiExt.Generated.Model.primitive_types.H256 call_hash)
         {
@@ -195,7 +204,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> remove_announcement
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method RemoveAnnouncement(Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress real, Substrate.Collectives.NET.NetApiExt.Generated.Model.primitive_types.H256 call_hash)
         {
@@ -207,7 +216,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> reject_announcement
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method RejectAnnouncement(Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress @delegate, Substrate.Collectives.NET.NetApiExt.Generated.Model.primitive_types.H256 call_hash)
         {
@@ -219,7 +228,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> proxy_announced
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method ProxyAnnounced(Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress @delegate, Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress real, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Collectives.NET.NetApiExt.Generated.Model.collectives_polkadot_runtime.EnumProxyType> force_proxy_type, Substrate.Collectives.NET.NetApiExt.Generated.Model.collectives_polkadot_runtime.EnumRuntimeCall call)
         {
@@ -232,6 +241,9 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> ProxyConstants
+    /// </summary>
     public sealed class ProxyConstants
     {
         
@@ -315,6 +327,9 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> ProxyErrors
+    /// </summary>
     public enum ProxyErrors
     {
         

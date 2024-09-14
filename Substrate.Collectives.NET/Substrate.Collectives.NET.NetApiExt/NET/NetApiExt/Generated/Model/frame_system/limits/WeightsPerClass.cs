@@ -9,7 +9,7 @@
 
 using Substrate.NetApi.Attributes;
 using Substrate.NetApi.Model.Types.Base;
-using Substrate.NetApi.Model.Types.Metadata.V14;
+using Substrate.NetApi.Model.Types.Metadata.Base;
 using System.Collections.Generic;
 
 
@@ -18,7 +18,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.frame_system.limit
     
     
     /// <summary>
-    /// >> 208 - Composite[frame_system.limits.WeightsPerClass]
+    /// >> 280 - Composite[frame_system.limits.WeightsPerClass]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class WeightsPerClass : BaseType
@@ -27,76 +27,27 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.frame_system.limit
         /// <summary>
         /// >> base_extrinsic
         /// </summary>
-        private Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight _baseExtrinsic;
-        
+        public Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight BaseExtrinsic { get; set; }
         /// <summary>
         /// >> max_extrinsic
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight> _maxExtrinsic;
-        
+        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight> MaxExtrinsic { get; set; }
         /// <summary>
         /// >> max_total
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight> _maxTotal;
-        
+        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight> MaxTotal { get; set; }
         /// <summary>
         /// >> reserved
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight> _reserved;
+        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight> Reserved { get; set; }
         
-        public Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight BaseExtrinsic
-        {
-            get
-            {
-                return this._baseExtrinsic;
-            }
-            set
-            {
-                this._baseExtrinsic = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight> MaxExtrinsic
-        {
-            get
-            {
-                return this._maxExtrinsic;
-            }
-            set
-            {
-                this._maxExtrinsic = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight> MaxTotal
-        {
-            get
-            {
-                return this._maxTotal;
-            }
-            set
-            {
-                this._maxTotal = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight> Reserved
-        {
-            get
-            {
-                return this._reserved;
-            }
-            set
-            {
-                this._reserved = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "WeightsPerClass";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -107,6 +58,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.frame_system.limit
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
@@ -121,7 +73,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.frame_system.limit
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];
-            System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
+            global::System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
         }
     }
 }

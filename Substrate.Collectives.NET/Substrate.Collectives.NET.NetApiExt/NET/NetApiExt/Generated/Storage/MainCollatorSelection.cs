@@ -21,17 +21,23 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> CollatorSelectionStorage
+    /// </summary>
     public sealed class CollatorSelectionStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> CollatorSelectionStorage Constructor
+        /// </summary>
         public CollatorSelectionStorage(SubstrateClientExt client)
         {
             this._client = client;
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("CollatorSelection", "Invulnerables"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9)));
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("CollatorSelection", "Candidates"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("CollatorSelection", "Invulnerables"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT13)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("CollatorSelection", "CandidateList"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT14)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("CollatorSelection", "LastAuthoredBlock"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32), typeof(Substrate.NetApi.Model.Types.Primitive.U32)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("CollatorSelection", "DesiredCandidates"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Primitive.U32)));
@@ -40,7 +46,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> InvulnerablesParams
-        ///  The invulnerable, fixed collators.
+        ///  The invulnerable, permissioned collators. This list must be sorted.
         /// </summary>
         public static string InvulnerablesParams()
         {
@@ -58,41 +64,49 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> Invulnerables
-        ///  The invulnerable, fixed collators.
+        ///  The invulnerable, permissioned collators. This list must be sorted.
         /// </summary>
-        public async Task<Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9> Invulnerables(CancellationToken token)
+        public async Task<Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT13> Invulnerables(string blockhash, CancellationToken token)
         {
             string parameters = CollatorSelectionStorage.InvulnerablesParams();
-            var result = await _client.GetStorageAsync<Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT13>(parameters, blockhash, token);
             return result;
         }
         
         /// <summary>
-        /// >> CandidatesParams
-        ///  The (community, limited) collation candidates.
+        /// >> CandidateListParams
+        ///  The (community, limited) collation candidates. `Candidates` and `Invulnerables` should be
+        ///  mutually exclusive.
+        /// 
+        ///  This list is sorted in ascending order by deposit and when the deposits are equal, the least
+        ///  recently updated is considered greater.
         /// </summary>
-        public static string CandidatesParams()
+        public static string CandidateListParams()
         {
-            return RequestGenerator.GetStorage("CollatorSelection", "Candidates", Substrate.NetApi.Model.Meta.Storage.Type.Plain);
+            return RequestGenerator.GetStorage("CollatorSelection", "CandidateList", Substrate.NetApi.Model.Meta.Storage.Type.Plain);
         }
         
         /// <summary>
-        /// >> CandidatesDefault
+        /// >> CandidateListDefault
         /// Default value as hex string
         /// </summary>
-        public static string CandidatesDefault()
+        public static string CandidateListDefault()
         {
             return "0x00";
         }
         
         /// <summary>
-        /// >> Candidates
-        ///  The (community, limited) collation candidates.
+        /// >> CandidateList
+        ///  The (community, limited) collation candidates. `Candidates` and `Invulnerables` should be
+        ///  mutually exclusive.
+        /// 
+        ///  This list is sorted in ascending order by deposit and when the deposits are equal, the least
+        ///  recently updated is considered greater.
         /// </summary>
-        public async Task<Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10> Candidates(CancellationToken token)
+        public async Task<Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT14> CandidateList(string blockhash, CancellationToken token)
         {
-            string parameters = CollatorSelectionStorage.CandidatesParams();
-            var result = await _client.GetStorageAsync<Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10>(parameters, token);
+            string parameters = CollatorSelectionStorage.CandidateListParams();
+            var result = await _client.GetStorageAsync<Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT14>(parameters, blockhash, token);
             return result;
         }
         
@@ -120,10 +134,10 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
         /// >> LastAuthoredBlock
         ///  Last block authored by collator.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> LastAuthoredBlock(Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> LastAuthoredBlock(Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, string blockhash, CancellationToken token)
         {
             string parameters = CollatorSelectionStorage.LastAuthoredBlockParams(key);
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, blockhash, token);
             return result;
         }
         
@@ -153,10 +167,10 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
         /// 
         ///  This should ideally always be less than [`Config::MaxCandidates`] for weights to be correct.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> DesiredCandidates(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> DesiredCandidates(string blockhash, CancellationToken token)
         {
             string parameters = CollatorSelectionStorage.DesiredCandidatesParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, blockhash, token);
             return result;
         }
         
@@ -186,20 +200,23 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
         /// 
         ///  When a collator calls `leave_intent` they immediately receive the deposit back.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U128> CandidacyBond(CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U128> CandidacyBond(string blockhash, CancellationToken token)
         {
             string parameters = CollatorSelectionStorage.CandidacyBondParams();
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U128>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U128>(parameters, blockhash, token);
             return result;
         }
     }
     
+    /// <summary>
+    /// >> CollatorSelectionCalls
+    /// </summary>
     public sealed class CollatorSelectionCalls
     {
         
         /// <summary>
         /// >> set_invulnerables
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method SetInvulnerables(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> @new)
         {
@@ -210,7 +227,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> set_desired_candidates
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method SetDesiredCandidates(Substrate.NetApi.Model.Types.Primitive.U32 max)
         {
@@ -221,7 +238,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> set_candidacy_bond
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method SetCandidacyBond(Substrate.NetApi.Model.Types.Primitive.U128 bond)
         {
@@ -232,7 +249,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> register_as_candidate
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method RegisterAsCandidate()
         {
@@ -242,80 +259,173 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> leave_intent
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method LeaveIntent()
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             return new Method(21, "CollatorSelection", 4, "leave_intent", byteArray.ToArray());
         }
+        
+        /// <summary>
+        /// >> add_invulnerable
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
+        /// </summary>
+        public static Method AddInvulnerable(Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 who)
+        {
+            System.Collections.Generic.List<byte> byteArray = new List<byte>();
+            byteArray.AddRange(who.Encode());
+            return new Method(21, "CollatorSelection", 5, "add_invulnerable", byteArray.ToArray());
+        }
+        
+        /// <summary>
+        /// >> remove_invulnerable
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
+        /// </summary>
+        public static Method RemoveInvulnerable(Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 who)
+        {
+            System.Collections.Generic.List<byte> byteArray = new List<byte>();
+            byteArray.AddRange(who.Encode());
+            return new Method(21, "CollatorSelection", 6, "remove_invulnerable", byteArray.ToArray());
+        }
+        
+        /// <summary>
+        /// >> update_bond
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
+        /// </summary>
+        public static Method UpdateBond(Substrate.NetApi.Model.Types.Primitive.U128 new_deposit)
+        {
+            System.Collections.Generic.List<byte> byteArray = new List<byte>();
+            byteArray.AddRange(new_deposit.Encode());
+            return new Method(21, "CollatorSelection", 7, "update_bond", byteArray.ToArray());
+        }
+        
+        /// <summary>
+        /// >> take_candidate_slot
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
+        /// </summary>
+        public static Method TakeCandidateSlot(Substrate.NetApi.Model.Types.Primitive.U128 deposit, Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 target)
+        {
+            System.Collections.Generic.List<byte> byteArray = new List<byte>();
+            byteArray.AddRange(deposit.Encode());
+            byteArray.AddRange(target.Encode());
+            return new Method(21, "CollatorSelection", 8, "take_candidate_slot", byteArray.ToArray());
+        }
     }
     
+    /// <summary>
+    /// >> CollatorSelectionConstants
+    /// </summary>
     public sealed class CollatorSelectionConstants
     {
     }
     
+    /// <summary>
+    /// >> CollatorSelectionErrors
+    /// </summary>
     public enum CollatorSelectionErrors
     {
         
         /// <summary>
         /// >> TooManyCandidates
-        /// Too many candidates
+        /// The pallet has too many candidates.
         /// </summary>
         TooManyCandidates,
         
         /// <summary>
-        /// >> TooFewCandidates
-        /// Too few candidates
+        /// >> TooFewEligibleCollators
+        /// Leaving would result in too few candidates.
         /// </summary>
-        TooFewCandidates,
-        
-        /// <summary>
-        /// >> Unknown
-        /// Unknown error
-        /// </summary>
-        Unknown,
-        
-        /// <summary>
-        /// >> Permission
-        /// Permission issue
-        /// </summary>
-        Permission,
+        TooFewEligibleCollators,
         
         /// <summary>
         /// >> AlreadyCandidate
-        /// User is already a candidate
+        /// Account is already a candidate.
         /// </summary>
         AlreadyCandidate,
         
         /// <summary>
         /// >> NotCandidate
-        /// User is not a candidate
+        /// Account is not a candidate.
         /// </summary>
         NotCandidate,
         
         /// <summary>
         /// >> TooManyInvulnerables
-        /// Too many invulnerables
+        /// There are too many Invulnerables.
         /// </summary>
         TooManyInvulnerables,
         
         /// <summary>
         /// >> AlreadyInvulnerable
-        /// User is already an Invulnerable
+        /// Account is already an Invulnerable.
         /// </summary>
         AlreadyInvulnerable,
         
         /// <summary>
+        /// >> NotInvulnerable
+        /// Account is not an Invulnerable.
+        /// </summary>
+        NotInvulnerable,
+        
+        /// <summary>
         /// >> NoAssociatedValidatorId
-        /// Account has no associated validator ID
+        /// Account has no associated validator ID.
         /// </summary>
         NoAssociatedValidatorId,
         
         /// <summary>
         /// >> ValidatorNotRegistered
-        /// Validator ID is not yet registered
+        /// Validator ID is not yet registered.
         /// </summary>
         ValidatorNotRegistered,
+        
+        /// <summary>
+        /// >> InsertToCandidateListFailed
+        /// Could not insert in the candidate list.
+        /// </summary>
+        InsertToCandidateListFailed,
+        
+        /// <summary>
+        /// >> RemoveFromCandidateListFailed
+        /// Could not remove from the candidate list.
+        /// </summary>
+        RemoveFromCandidateListFailed,
+        
+        /// <summary>
+        /// >> DepositTooLow
+        /// New deposit amount would be below the minimum candidacy bond.
+        /// </summary>
+        DepositTooLow,
+        
+        /// <summary>
+        /// >> UpdateCandidateListFailed
+        /// Could not update the candidate list.
+        /// </summary>
+        UpdateCandidateListFailed,
+        
+        /// <summary>
+        /// >> InsufficientBond
+        /// Deposit amount is too low to take the target's slot in the candidate list.
+        /// </summary>
+        InsufficientBond,
+        
+        /// <summary>
+        /// >> TargetIsNotCandidate
+        /// The target account to be replaced in the candidate list is not a candidate.
+        /// </summary>
+        TargetIsNotCandidate,
+        
+        /// <summary>
+        /// >> IdenticalDeposit
+        /// The updated deposit amount is equal to the amount already reserved.
+        /// </summary>
+        IdenticalDeposit,
+        
+        /// <summary>
+        /// >> InvalidUnreserve
+        /// Cannot lower candidacy bond while occupying a future collator slot in the list.
+        /// </summary>
+        InvalidUnreserve,
     }
 }

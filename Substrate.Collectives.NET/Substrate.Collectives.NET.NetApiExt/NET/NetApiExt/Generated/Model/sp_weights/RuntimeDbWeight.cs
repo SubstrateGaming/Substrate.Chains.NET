@@ -9,7 +9,7 @@
 
 using Substrate.NetApi.Attributes;
 using Substrate.NetApi.Model.Types.Base;
-using Substrate.NetApi.Model.Types.Metadata.V14;
+using Substrate.NetApi.Model.Types.Metadata.Base;
 using System.Collections.Generic;
 
 
@@ -18,7 +18,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_weights
     
     
     /// <summary>
-    /// >> 212 - Composite[sp_weights.RuntimeDbWeight]
+    /// >> 284 - Composite[sp_weights.RuntimeDbWeight]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class RuntimeDbWeight : BaseType
@@ -27,42 +27,19 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_weights
         /// <summary>
         /// >> read
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U64 _read;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U64 Read { get; set; }
         /// <summary>
         /// >> write
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U64 _write;
+        public Substrate.NetApi.Model.Types.Primitive.U64 Write { get; set; }
         
-        public Substrate.NetApi.Model.Types.Primitive.U64 Read
-        {
-            get
-            {
-                return this._read;
-            }
-            set
-            {
-                this._read = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U64 Write
-        {
-            get
-            {
-                return this._write;
-            }
-            set
-            {
-                this._write = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "RuntimeDbWeight";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -71,6 +48,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_weights
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
@@ -81,7 +59,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_weights
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];
-            System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
+            global::System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
         }
     }
 }

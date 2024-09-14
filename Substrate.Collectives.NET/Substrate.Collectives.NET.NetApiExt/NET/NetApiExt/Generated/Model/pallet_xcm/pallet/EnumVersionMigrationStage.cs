@@ -15,22 +15,48 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_xcm.pallet
 {
     
     
+    /// <summary>
+    /// >> VersionMigrationStage
+    /// </summary>
     public enum VersionMigrationStage
     {
         
+        /// <summary>
+        /// >> MigrateSupportedVersion
+        /// </summary>
         MigrateSupportedVersion = 0,
         
+        /// <summary>
+        /// >> MigrateVersionNotifiers
+        /// </summary>
         MigrateVersionNotifiers = 1,
         
+        /// <summary>
+        /// >> NotifyCurrentTargets
+        /// </summary>
         NotifyCurrentTargets = 2,
         
+        /// <summary>
+        /// >> MigrateAndNotifyOldTargets
+        /// </summary>
         MigrateAndNotifyOldTargets = 3,
     }
     
     /// <summary>
-    /// >> 285 - Variant[pallet_xcm.pallet.VersionMigrationStage]
+    /// >> 367 - Variant[pallet_xcm.pallet.VersionMigrationStage]
     /// </summary>
-    public sealed class EnumVersionMigrationStage : BaseEnumExt<VersionMigrationStage, BaseVoid, BaseVoid, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>, BaseVoid>
+    public sealed class EnumVersionMigrationStage : BaseEnumRust<VersionMigrationStage>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumVersionMigrationStage()
+        {
+				AddTypeDecoder<BaseVoid>(VersionMigrationStage.MigrateSupportedVersion);
+				AddTypeDecoder<BaseVoid>(VersionMigrationStage.MigrateVersionNotifiers);
+				AddTypeDecoder<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>>(VersionMigrationStage.NotifyCurrentTargets);
+				AddTypeDecoder<BaseVoid>(VersionMigrationStage.MigrateAndNotifyOldTargets);
+        }
     }
 }

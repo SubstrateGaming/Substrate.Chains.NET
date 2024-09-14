@@ -9,7 +9,7 @@
 
 using Substrate.NetApi.Attributes;
 using Substrate.NetApi.Model.Types.Base;
-using Substrate.NetApi.Model.Types.Metadata.V14;
+using Substrate.NetApi.Model.Types.Metadata.Base;
 using System.Collections.Generic;
 
 
@@ -18,7 +18,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_alliance.ty
     
     
     /// <summary>
-    /// >> 194 - Composite[pallet_alliance.types.DisbandWitness]
+    /// >> 242 - Composite[pallet_alliance.types.DisbandWitness]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class DisbandWitness : BaseType
@@ -27,42 +27,19 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_alliance.ty
         /// <summary>
         /// >> fellow_members
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32> _fellowMembers;
-        
+        public Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32> FellowMembers { get; set; }
         /// <summary>
         /// >> ally_members
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32> _allyMembers;
+        public Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32> AllyMembers { get; set; }
         
-        public Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32> FellowMembers
-        {
-            get
-            {
-                return this._fellowMembers;
-            }
-            set
-            {
-                this._fellowMembers = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32> AllyMembers
-        {
-            get
-            {
-                return this._allyMembers;
-            }
-            set
-            {
-                this._allyMembers = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "DisbandWitness";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -71,6 +48,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_alliance.ty
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
@@ -81,7 +59,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_alliance.ty
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];
-            System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
+            global::System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
         }
     }
 }

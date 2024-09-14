@@ -15,32 +15,33 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.cumulus_pallet_xcm
 {
     
     
+    /// <summary>
+    /// >> Event
+    /// The `Event` enum of this pallet
+    /// </summary>
     public enum Event
     {
         
-        Success = 0,
-        
-        Fail = 1,
-        
-        BadVersion = 2,
-        
-        BadFormat = 3,
-        
-        XcmpMessageSent = 4,
-        
-        OverweightEnqueued = 5,
-        
-        OverweightServiced = 6,
+        /// <summary>
+        /// >> XcmpMessageSent
+        /// An HRMP message was sent to a sibling parachain.
+        /// </summary>
+        XcmpMessageSent = 0,
     }
     
     /// <summary>
-    /// >> 38 - Variant[cumulus_pallet_xcmp_queue.pallet.Event]
-    /// 
-    ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
-    ///			by this pallet.
-    ///			
+    /// >> 39 - Variant[cumulus_pallet_xcmp_queue.pallet.Event]
+    /// The `Event` enum of this pallet
     /// </summary>
-    public sealed class EnumEvent : BaseEnumExt<Event, BaseTuple<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Collectives.NET.NetApiExt.Generated.Types.Base.Arr32U8>, Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>, BaseTuple<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Collectives.NET.NetApiExt.Generated.Types.Base.Arr32U8>, Substrate.Collectives.NET.NetApiExt.Generated.Model.xcm.v3.traits.EnumError, Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Collectives.NET.NetApiExt.Generated.Types.Base.Arr32U8>, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Collectives.NET.NetApiExt.Generated.Types.Base.Arr32U8>, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Collectives.NET.NetApiExt.Generated.Types.Base.Arr32U8>, BaseTuple<Substrate.Collectives.NET.NetApiExt.Generated.Model.polkadot_parachain.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U64, Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U64, Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>>
+    public sealed class EnumEvent : BaseEnumRust<Event>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumEvent()
+        {
+				AddTypeDecoder<Substrate.Collectives.NET.NetApiExt.Generated.Types.Base.Arr32U8>(Event.XcmpMessageSent);
+        }
     }
 }

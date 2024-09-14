@@ -15,44 +15,117 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_alliance.pa
 {
     
     
+    /// <summary>
+    /// >> Event
+    /// The `Event` enum of this pallet
+    /// </summary>
     public enum Event
     {
         
+        /// <summary>
+        /// >> NewRuleSet
+        /// A new rule has been set.
+        /// </summary>
         NewRuleSet = 0,
         
+        /// <summary>
+        /// >> Announced
+        /// A new announcement has been proposed.
+        /// </summary>
         Announced = 1,
         
+        /// <summary>
+        /// >> AnnouncementRemoved
+        /// An on-chain announcement has been removed.
+        /// </summary>
         AnnouncementRemoved = 2,
         
+        /// <summary>
+        /// >> MembersInitialized
+        /// Some accounts have been initialized as members (fellows/allies).
+        /// </summary>
         MembersInitialized = 3,
         
+        /// <summary>
+        /// >> NewAllyJoined
+        /// An account has been added as an Ally and reserved its deposit.
+        /// </summary>
         NewAllyJoined = 4,
         
+        /// <summary>
+        /// >> AllyElevated
+        /// An ally has been elevated to Fellow.
+        /// </summary>
         AllyElevated = 5,
         
+        /// <summary>
+        /// >> MemberRetirementPeriodStarted
+        /// A member gave retirement notice and their retirement period started.
+        /// </summary>
         MemberRetirementPeriodStarted = 6,
         
+        /// <summary>
+        /// >> MemberRetired
+        /// A member has retired with its deposit unreserved.
+        /// </summary>
         MemberRetired = 7,
         
+        /// <summary>
+        /// >> MemberKicked
+        /// A member has been kicked out with its deposit slashed.
+        /// </summary>
         MemberKicked = 8,
         
+        /// <summary>
+        /// >> UnscrupulousItemAdded
+        /// Accounts or websites have been added into the list of unscrupulous items.
+        /// </summary>
         UnscrupulousItemAdded = 9,
         
+        /// <summary>
+        /// >> UnscrupulousItemRemoved
+        /// Accounts or websites have been removed from the list of unscrupulous items.
+        /// </summary>
         UnscrupulousItemRemoved = 10,
         
+        /// <summary>
+        /// >> AllianceDisbanded
+        /// Alliance disbanded. Includes number deleted members and unreserved deposits.
+        /// </summary>
         AllianceDisbanded = 11,
         
+        /// <summary>
+        /// >> FellowAbdicated
+        /// A Fellow abdicated their voting rights. They are now an Ally.
+        /// </summary>
         FellowAbdicated = 12,
     }
     
     /// <summary>
-    /// >> 110 - Variant[pallet_alliance.pallet.Event]
-    /// 
-    ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
-    ///			by this pallet.
-    ///			
+    /// >> 134 - Variant[pallet_alliance.pallet.Event]
+    /// The `Event` enum of this pallet
     /// </summary>
-    public sealed class EnumEvent : BaseEnumExt<Event, Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_alliance.types.Cid, Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_alliance.types.Cid, Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_alliance.types.Cid, BaseTuple<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>>, BaseTuple<Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U128>>, Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, BaseTuple<Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U128>>, BaseTuple<Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U128>>, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_alliance.EnumUnscrupulousItem>, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_alliance.EnumUnscrupulousItem>, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>
+    public sealed class EnumEvent : BaseEnumRust<Event>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumEvent()
+        {
+				AddTypeDecoder<Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_alliance.types.Cid>(Event.NewRuleSet);
+				AddTypeDecoder<Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_alliance.types.Cid>(Event.Announced);
+				AddTypeDecoder<Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_alliance.types.Cid>(Event.AnnouncementRemoved);
+				AddTypeDecoder<BaseTuple<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>>>(Event.MembersInitialized);
+				AddTypeDecoder<BaseTuple<Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U128>>>(Event.NewAllyJoined);
+				AddTypeDecoder<Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>(Event.AllyElevated);
+				AddTypeDecoder<Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>(Event.MemberRetirementPeriodStarted);
+				AddTypeDecoder<BaseTuple<Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U128>>>(Event.MemberRetired);
+				AddTypeDecoder<BaseTuple<Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U128>>>(Event.MemberKicked);
+				AddTypeDecoder<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_alliance.EnumUnscrupulousItem>>(Event.UnscrupulousItemAdded);
+				AddTypeDecoder<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_alliance.EnumUnscrupulousItem>>(Event.UnscrupulousItemRemoved);
+				AddTypeDecoder<BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>>(Event.AllianceDisbanded);
+				AddTypeDecoder<Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>(Event.FellowAbdicated);
+        }
     }
 }

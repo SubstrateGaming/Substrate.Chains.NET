@@ -15,20 +15,34 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_session.pal
 {
     
     
+    /// <summary>
+    /// >> Event
+    /// The `Event` enum of this pallet
+    /// </summary>
     public enum Event
     {
         
+        /// <summary>
+        /// >> NewSession
+        /// New session has happened. Note that the argument is the session index, not the
+        /// block number as the type might suggest.
+        /// </summary>
         NewSession = 0,
     }
     
     /// <summary>
-    /// >> 37 - Variant[pallet_session.pallet.Event]
-    /// 
-    ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
-    ///			by this pallet.
-    ///			
+    /// >> 38 - Variant[pallet_session.pallet.Event]
+    /// The `Event` enum of this pallet
     /// </summary>
-    public sealed class EnumEvent : BaseEnumExt<Event, Substrate.NetApi.Model.Types.Primitive.U32>
+    public sealed class EnumEvent : BaseEnumRust<Event>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumEvent()
+        {
+				AddTypeDecoder<Substrate.NetApi.Model.Types.Primitive.U32>(Event.NewSession);
+        }
     }
 }

@@ -15,26 +15,54 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_multisig.pa
 {
     
     
+    /// <summary>
+    /// >> Event
+    /// The `Event` enum of this pallet
+    /// </summary>
     public enum Event
     {
         
+        /// <summary>
+        /// >> NewMultisig
+        /// A new multisig operation has begun.
+        /// </summary>
         NewMultisig = 0,
         
+        /// <summary>
+        /// >> MultisigApproval
+        /// A multisig operation has been approved by someone.
+        /// </summary>
         MultisigApproval = 1,
         
+        /// <summary>
+        /// >> MultisigExecuted
+        /// A multisig operation has been executed.
+        /// </summary>
         MultisigExecuted = 2,
         
+        /// <summary>
+        /// >> MultisigCancelled
+        /// A multisig operation has been cancelled.
+        /// </summary>
         MultisigCancelled = 3,
     }
     
     /// <summary>
-    /// >> 102 - Variant[pallet_multisig.pallet.Event]
-    /// 
-    ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
-    ///			by this pallet.
-    ///			
+    /// >> 123 - Variant[pallet_multisig.pallet.Event]
+    /// The `Event` enum of this pallet
     /// </summary>
-    public sealed class EnumEvent : BaseEnumExt<Event, BaseTuple<Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Collectives.NET.NetApiExt.Generated.Types.Base.Arr32U8>, BaseTuple<Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_multisig.Timepoint, Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Collectives.NET.NetApiExt.Generated.Types.Base.Arr32U8>, BaseTuple<Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_multisig.Timepoint, Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Collectives.NET.NetApiExt.Generated.Types.Base.Arr32U8, Substrate.Collectives.NET.NetApiExt.Generated.Types.Base.EnumResult>, BaseTuple<Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_multisig.Timepoint, Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Collectives.NET.NetApiExt.Generated.Types.Base.Arr32U8>>
+    public sealed class EnumEvent : BaseEnumRust<Event>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumEvent()
+        {
+				AddTypeDecoder<BaseTuple<Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Collectives.NET.NetApiExt.Generated.Types.Base.Arr32U8>>(Event.NewMultisig);
+				AddTypeDecoder<BaseTuple<Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_multisig.Timepoint, Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Collectives.NET.NetApiExt.Generated.Types.Base.Arr32U8>>(Event.MultisigApproval);
+				AddTypeDecoder<BaseTuple<Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_multisig.Timepoint, Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Collectives.NET.NetApiExt.Generated.Types.Base.Arr32U8, Substrate.Collectives.NET.NetApiExt.Generated.Types.Base.EnumResult>>(Event.MultisigExecuted);
+				AddTypeDecoder<BaseTuple<Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_multisig.Timepoint, Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Collectives.NET.NetApiExt.Generated.Types.Base.Arr32U8>>(Event.MultisigCancelled);
+        }
     }
 }

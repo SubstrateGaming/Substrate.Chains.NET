@@ -9,7 +9,7 @@
 
 using Substrate.NetApi.Attributes;
 using Substrate.NetApi.Model.Types.Base;
-using Substrate.NetApi.Model.Types.Metadata.V14;
+using Substrate.NetApi.Model.Types.Metadata.Base;
 using System.Collections.Generic;
 
 
@@ -27,59 +27,23 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.frame_support.disp
         /// <summary>
         /// >> normal
         /// </summary>
-        private Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight _normal;
-        
+        public Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight Normal { get; set; }
         /// <summary>
         /// >> operational
         /// </summary>
-        private Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight _operational;
-        
+        public Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight Operational { get; set; }
         /// <summary>
         /// >> mandatory
         /// </summary>
-        private Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight _mandatory;
+        public Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight Mandatory { get; set; }
         
-        public Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight Normal
-        {
-            get
-            {
-                return this._normal;
-            }
-            set
-            {
-                this._normal = value;
-            }
-        }
-        
-        public Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight Operational
-        {
-            get
-            {
-                return this._operational;
-            }
-            set
-            {
-                this._operational = value;
-            }
-        }
-        
-        public Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight Mandatory
-        {
-            get
-            {
-                return this._mandatory;
-            }
-            set
-            {
-                this._mandatory = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "PerDispatchClassT1";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -89,6 +53,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.frame_support.disp
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
@@ -101,7 +66,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.frame_support.disp
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];
-            System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
+            global::System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
         }
     }
 }

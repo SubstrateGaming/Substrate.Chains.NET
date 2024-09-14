@@ -15,38 +15,120 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.collectives_polkad
 {
     
     
+    /// <summary>
+    /// >> Origin
+    /// </summary>
     public enum Origin
     {
         
-        FellowshipCandidates = 0,
+        /// <summary>
+        /// >> Members
+        /// </summary>
+        Members = 0,
         
-        Fellows = 1,
+        /// <summary>
+        /// >> Fellowship2Dan
+        /// </summary>
+        Fellowship2Dan = 1,
         
-        FellowshipExperts = 2,
+        /// <summary>
+        /// >> Fellows
+        /// </summary>
+        Fellows = 2,
         
-        FellowshipMasters = 3,
+        /// <summary>
+        /// >> Architects
+        /// </summary>
+        Architects = 3,
         
-        Fellowship1Dan = 4,
+        /// <summary>
+        /// >> Fellowship5Dan
+        /// </summary>
+        Fellowship5Dan = 4,
         
-        Fellowship2Dan = 5,
+        /// <summary>
+        /// >> Fellowship6Dan
+        /// </summary>
+        Fellowship6Dan = 5,
         
-        Fellowship3Dan = 6,
+        /// <summary>
+        /// >> Masters
+        /// </summary>
+        Masters = 6,
         
-        Fellowship4Dan = 7,
+        /// <summary>
+        /// >> Fellowship8Dan
+        /// </summary>
+        Fellowship8Dan = 7,
         
-        Fellowship5Dan = 8,
+        /// <summary>
+        /// >> Fellowship9Dan
+        /// </summary>
+        Fellowship9Dan = 8,
         
-        Fellowship6Dan = 9,
+        /// <summary>
+        /// >> RetainAt1Dan
+        /// </summary>
+        RetainAt1Dan = 9,
         
-        Fellowship7Dan = 10,
+        /// <summary>
+        /// >> RetainAt2Dan
+        /// </summary>
+        RetainAt2Dan = 10,
         
-        Fellowship8Dan = 11,
+        /// <summary>
+        /// >> RetainAt3Dan
+        /// </summary>
+        RetainAt3Dan = 11,
         
-        Fellowship9Dan = 12,
+        /// <summary>
+        /// >> RetainAt4Dan
+        /// </summary>
+        RetainAt4Dan = 12,
+        
+        /// <summary>
+        /// >> RetainAt5Dan
+        /// </summary>
+        RetainAt5Dan = 13,
+        
+        /// <summary>
+        /// >> RetainAt6Dan
+        /// </summary>
+        RetainAt6Dan = 14,
+        
+        /// <summary>
+        /// >> PromoteTo1Dan
+        /// </summary>
+        PromoteTo1Dan = 15,
+        
+        /// <summary>
+        /// >> PromoteTo2Dan
+        /// </summary>
+        PromoteTo2Dan = 16,
+        
+        /// <summary>
+        /// >> PromoteTo3Dan
+        /// </summary>
+        PromoteTo3Dan = 17,
+        
+        /// <summary>
+        /// >> PromoteTo4Dan
+        /// </summary>
+        PromoteTo4Dan = 18,
+        
+        /// <summary>
+        /// >> PromoteTo5Dan
+        /// </summary>
+        PromoteTo5Dan = 19,
+        
+        /// <summary>
+        /// >> PromoteTo6Dan
+        /// </summary>
+        PromoteTo6Dan = 20,
     }
     
     /// <summary>
-    /// >> 184 - Variant[collectives_polkadot_runtime.fellowship.origins.pallet_origins.Origin]
+    /// >> 229 - Variant[collectives_polkadot_runtime.fellowship.origins.pallet_origins.Origin]
     /// </summary>
     public sealed class EnumOrigin : BaseEnum<Origin>
     {

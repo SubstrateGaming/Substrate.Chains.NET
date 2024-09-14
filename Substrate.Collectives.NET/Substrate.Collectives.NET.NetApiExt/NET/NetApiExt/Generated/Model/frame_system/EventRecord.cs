@@ -9,7 +9,7 @@
 
 using Substrate.NetApi.Attributes;
 using Substrate.NetApi.Model.Types.Base;
-using Substrate.NetApi.Model.Types.Metadata.V14;
+using Substrate.NetApi.Model.Types.Metadata.Base;
 using System.Collections.Generic;
 
 
@@ -27,59 +27,23 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.frame_system
         /// <summary>
         /// >> phase
         /// </summary>
-        private Substrate.Collectives.NET.NetApiExt.Generated.Model.frame_system.EnumPhase _phase;
-        
+        public Substrate.Collectives.NET.NetApiExt.Generated.Model.frame_system.EnumPhase Phase { get; set; }
         /// <summary>
         /// >> event
         /// </summary>
-        private Substrate.Collectives.NET.NetApiExt.Generated.Model.collectives_polkadot_runtime.EnumRuntimeEvent _event;
-        
+        public Substrate.Collectives.NET.NetApiExt.Generated.Model.collectives_polkadot_runtime.EnumRuntimeEvent Event { get; set; }
         /// <summary>
         /// >> topics
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Collectives.NET.NetApiExt.Generated.Model.primitive_types.H256> _topics;
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Collectives.NET.NetApiExt.Generated.Model.primitive_types.H256> Topics { get; set; }
         
-        public Substrate.Collectives.NET.NetApiExt.Generated.Model.frame_system.EnumPhase Phase
-        {
-            get
-            {
-                return this._phase;
-            }
-            set
-            {
-                this._phase = value;
-            }
-        }
-        
-        public Substrate.Collectives.NET.NetApiExt.Generated.Model.collectives_polkadot_runtime.EnumRuntimeEvent Event
-        {
-            get
-            {
-                return this._event;
-            }
-            set
-            {
-                this._event = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Collectives.NET.NetApiExt.Generated.Model.primitive_types.H256> Topics
-        {
-            get
-            {
-                return this._topics;
-            }
-            set
-            {
-                this._topics = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "EventRecord";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -89,6 +53,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.frame_system
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
@@ -101,7 +66,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.frame_system
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];
-            System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
+            global::System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
         }
     }
 }

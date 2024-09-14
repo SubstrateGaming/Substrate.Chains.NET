@@ -21,12 +21,18 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> AuthorshipStorage
+    /// </summary>
     public sealed class AuthorshipStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> AuthorshipStorage Constructor
+        /// </summary>
         public AuthorshipStorage(SubstrateClientExt client)
         {
             this._client = client;
@@ -55,18 +61,24 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
         /// >> Author
         ///  Author of current block.
         /// </summary>
-        public async Task<Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> Author(CancellationToken token)
+        public async Task<Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> Author(string blockhash, CancellationToken token)
         {
             string parameters = AuthorshipStorage.AuthorParams();
-            var result = await _client.GetStorageAsync<Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>(parameters, blockhash, token);
             return result;
         }
     }
     
+    /// <summary>
+    /// >> AuthorshipCalls
+    /// </summary>
     public sealed class AuthorshipCalls
     {
     }
     
+    /// <summary>
+    /// >> AuthorshipConstants
+    /// </summary>
     public sealed class AuthorshipConstants
     {
     }

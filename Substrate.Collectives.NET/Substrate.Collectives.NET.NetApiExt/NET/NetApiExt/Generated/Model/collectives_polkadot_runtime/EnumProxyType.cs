@@ -15,24 +15,50 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.collectives_polkad
 {
     
     
+    /// <summary>
+    /// >> ProxyType
+    /// </summary>
     public enum ProxyType
     {
         
+        /// <summary>
+        /// >> Any
+        /// </summary>
         Any = 0,
         
+        /// <summary>
+        /// >> NonTransfer
+        /// </summary>
         NonTransfer = 1,
         
+        /// <summary>
+        /// >> CancelProxy
+        /// </summary>
         CancelProxy = 2,
         
+        /// <summary>
+        /// >> Collator
+        /// </summary>
         Collator = 3,
         
+        /// <summary>
+        /// >> Alliance
+        /// </summary>
         Alliance = 4,
         
+        /// <summary>
+        /// >> Fellowship
+        /// </summary>
         Fellowship = 5,
+        
+        /// <summary>
+        /// >> Ambassador
+        /// </summary>
+        Ambassador = 6,
     }
     
     /// <summary>
-    /// >> 105 - Variant[collectives_polkadot_runtime.ProxyType]
+    /// >> 126 - Variant[collectives_polkadot_runtime.ProxyType]
     /// </summary>
     public sealed class EnumProxyType : BaseEnum<ProxyType>
     {

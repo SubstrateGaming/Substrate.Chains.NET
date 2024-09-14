@@ -9,7 +9,7 @@
 
 using Substrate.NetApi.Attributes;
 using Substrate.NetApi.Model.Types.Base;
-using Substrate.NetApi.Model.Types.Metadata.V14;
+using Substrate.NetApi.Model.Types.Metadata.Base;
 using System.Collections.Generic;
 
 
@@ -18,7 +18,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.xcm.v3
     
     
     /// <summary>
-    /// >> 76 - Composite[xcm.v3.QueryResponseInfo]
+    /// >> 202 - Composite[xcm.v3.QueryResponseInfo]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class QueryResponseInfo : BaseType
@@ -27,59 +27,23 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.xcm.v3
         /// <summary>
         /// >> destination
         /// </summary>
-        private Substrate.Collectives.NET.NetApiExt.Generated.Model.xcm.v3.multilocation.MultiLocation _destination;
-        
+        public Substrate.Collectives.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation Destination { get; set; }
         /// <summary>
         /// >> query_id
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U64> _queryId;
-        
+        public Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U64> QueryId { get; set; }
         /// <summary>
         /// >> max_weight
         /// </summary>
-        private Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight _maxWeight;
+        public Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight MaxWeight { get; set; }
         
-        public Substrate.Collectives.NET.NetApiExt.Generated.Model.xcm.v3.multilocation.MultiLocation Destination
-        {
-            get
-            {
-                return this._destination;
-            }
-            set
-            {
-                this._destination = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U64> QueryId
-        {
-            get
-            {
-                return this._queryId;
-            }
-            set
-            {
-                this._queryId = value;
-            }
-        }
-        
-        public Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight MaxWeight
-        {
-            get
-            {
-                return this._maxWeight;
-            }
-            set
-            {
-                this._maxWeight = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "QueryResponseInfo";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -89,10 +53,11 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.xcm.v3
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Destination = new Substrate.Collectives.NET.NetApiExt.Generated.Model.xcm.v3.multilocation.MultiLocation();
+            Destination = new Substrate.Collectives.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation();
             Destination.Decode(byteArray, ref p);
             QueryId = new Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U64>();
             QueryId.Decode(byteArray, ref p);
@@ -101,7 +66,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.xcm.v3
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];
-            System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
+            global::System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
         }
     }
 }

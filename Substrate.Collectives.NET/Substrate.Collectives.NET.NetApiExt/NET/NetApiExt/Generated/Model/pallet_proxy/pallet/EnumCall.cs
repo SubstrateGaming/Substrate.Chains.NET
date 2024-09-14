@@ -15,35 +15,96 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_proxy.palle
 {
     
     
+    /// <summary>
+    /// >> Call
+    /// Contains a variant per dispatchable extrinsic that this pallet has.
+    /// </summary>
     public enum Call
     {
         
+        /// <summary>
+        /// >> proxy
+        /// See [`Pallet::proxy`].
+        /// </summary>
         proxy = 0,
         
+        /// <summary>
+        /// >> add_proxy
+        /// See [`Pallet::add_proxy`].
+        /// </summary>
         add_proxy = 1,
         
+        /// <summary>
+        /// >> remove_proxy
+        /// See [`Pallet::remove_proxy`].
+        /// </summary>
         remove_proxy = 2,
         
+        /// <summary>
+        /// >> remove_proxies
+        /// See [`Pallet::remove_proxies`].
+        /// </summary>
         remove_proxies = 3,
         
+        /// <summary>
+        /// >> create_pure
+        /// See [`Pallet::create_pure`].
+        /// </summary>
         create_pure = 4,
         
+        /// <summary>
+        /// >> kill_pure
+        /// See [`Pallet::kill_pure`].
+        /// </summary>
         kill_pure = 5,
         
+        /// <summary>
+        /// >> announce
+        /// See [`Pallet::announce`].
+        /// </summary>
         announce = 6,
         
+        /// <summary>
+        /// >> remove_announcement
+        /// See [`Pallet::remove_announcement`].
+        /// </summary>
         remove_announcement = 7,
         
+        /// <summary>
+        /// >> reject_announcement
+        /// See [`Pallet::reject_announcement`].
+        /// </summary>
         reject_announcement = 8,
         
+        /// <summary>
+        /// >> proxy_announced
+        /// See [`Pallet::proxy_announced`].
+        /// </summary>
         proxy_announced = 9,
     }
     
     /// <summary>
-    /// >> 188 - Variant[pallet_proxy.pallet.Call]
-    /// Contains one variant per dispatchable that can be called by an extrinsic.
+    /// >> 234 - Variant[pallet_proxy.pallet.Call]
+    /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
-    public sealed class EnumCall : BaseEnumExt<Call, BaseTuple<Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Collectives.NET.NetApiExt.Generated.Model.collectives_polkadot_runtime.EnumProxyType>, Substrate.Collectives.NET.NetApiExt.Generated.Model.collectives_polkadot_runtime.EnumRuntimeCall>, BaseTuple<Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.Collectives.NET.NetApiExt.Generated.Model.collectives_polkadot_runtime.EnumProxyType, Substrate.NetApi.Model.Types.Primitive.U32>, BaseTuple<Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.Collectives.NET.NetApiExt.Generated.Model.collectives_polkadot_runtime.EnumProxyType, Substrate.NetApi.Model.Types.Primitive.U32>, BaseVoid, BaseTuple<Substrate.Collectives.NET.NetApiExt.Generated.Model.collectives_polkadot_runtime.EnumProxyType, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U16>, BaseTuple<Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.Collectives.NET.NetApiExt.Generated.Model.collectives_polkadot_runtime.EnumProxyType, Substrate.NetApi.Model.Types.Primitive.U16, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>>, BaseTuple<Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.Collectives.NET.NetApiExt.Generated.Model.primitive_types.H256>, BaseTuple<Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.Collectives.NET.NetApiExt.Generated.Model.primitive_types.H256>, BaseTuple<Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.Collectives.NET.NetApiExt.Generated.Model.primitive_types.H256>, BaseTuple<Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Collectives.NET.NetApiExt.Generated.Model.collectives_polkadot_runtime.EnumProxyType>, Substrate.Collectives.NET.NetApiExt.Generated.Model.collectives_polkadot_runtime.EnumRuntimeCall>>
+    public sealed class EnumCall : BaseEnumRust<Call>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumCall()
+        {
+				AddTypeDecoder<BaseTuple<Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Collectives.NET.NetApiExt.Generated.Model.collectives_polkadot_runtime.EnumProxyType>, Substrate.Collectives.NET.NetApiExt.Generated.Model.collectives_polkadot_runtime.EnumRuntimeCall>>(Call.proxy);
+				AddTypeDecoder<BaseTuple<Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.Collectives.NET.NetApiExt.Generated.Model.collectives_polkadot_runtime.EnumProxyType, Substrate.NetApi.Model.Types.Primitive.U32>>(Call.add_proxy);
+				AddTypeDecoder<BaseTuple<Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.Collectives.NET.NetApiExt.Generated.Model.collectives_polkadot_runtime.EnumProxyType, Substrate.NetApi.Model.Types.Primitive.U32>>(Call.remove_proxy);
+				AddTypeDecoder<BaseVoid>(Call.remove_proxies);
+				AddTypeDecoder<BaseTuple<Substrate.Collectives.NET.NetApiExt.Generated.Model.collectives_polkadot_runtime.EnumProxyType, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U16>>(Call.create_pure);
+				AddTypeDecoder<BaseTuple<Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.Collectives.NET.NetApiExt.Generated.Model.collectives_polkadot_runtime.EnumProxyType, Substrate.NetApi.Model.Types.Primitive.U16, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32>>>(Call.kill_pure);
+				AddTypeDecoder<BaseTuple<Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.Collectives.NET.NetApiExt.Generated.Model.primitive_types.H256>>(Call.announce);
+				AddTypeDecoder<BaseTuple<Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.Collectives.NET.NetApiExt.Generated.Model.primitive_types.H256>>(Call.remove_announcement);
+				AddTypeDecoder<BaseTuple<Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.Collectives.NET.NetApiExt.Generated.Model.primitive_types.H256>>(Call.reject_announcement);
+				AddTypeDecoder<BaseTuple<Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Collectives.NET.NetApiExt.Generated.Model.collectives_polkadot_runtime.EnumProxyType>, Substrate.Collectives.NET.NetApiExt.Generated.Model.collectives_polkadot_runtime.EnumRuntimeCall>>(Call.proxy_announced);
+        }
     }
 }

@@ -9,7 +9,7 @@
 
 using Substrate.NetApi.Attributes;
 using Substrate.NetApi.Model.Types.Base;
-using Substrate.NetApi.Model.Types.Metadata.V14;
+using Substrate.NetApi.Model.Types.Metadata.Base;
 using System.Collections.Generic;
 
 
@@ -27,59 +27,23 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.frame_support.disp
         /// <summary>
         /// >> weight
         /// </summary>
-        private Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight _weight;
-        
+        public Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight Weight { get; set; }
         /// <summary>
         /// >> class
         /// </summary>
-        private Substrate.Collectives.NET.NetApiExt.Generated.Model.frame_support.dispatch.EnumDispatchClass _class;
-        
+        public Substrate.Collectives.NET.NetApiExt.Generated.Model.frame_support.dispatch.EnumDispatchClass Class { get; set; }
         /// <summary>
         /// >> pays_fee
         /// </summary>
-        private Substrate.Collectives.NET.NetApiExt.Generated.Model.frame_support.dispatch.EnumPays _paysFee;
+        public Substrate.Collectives.NET.NetApiExt.Generated.Model.frame_support.dispatch.EnumPays PaysFee { get; set; }
         
-        public Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight Weight
-        {
-            get
-            {
-                return this._weight;
-            }
-            set
-            {
-                this._weight = value;
-            }
-        }
-        
-        public Substrate.Collectives.NET.NetApiExt.Generated.Model.frame_support.dispatch.EnumDispatchClass Class
-        {
-            get
-            {
-                return this._class;
-            }
-            set
-            {
-                this._class = value;
-            }
-        }
-        
-        public Substrate.Collectives.NET.NetApiExt.Generated.Model.frame_support.dispatch.EnumPays PaysFee
-        {
-            get
-            {
-                return this._paysFee;
-            }
-            set
-            {
-                this._paysFee = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "DispatchInfo";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -89,6 +53,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.frame_support.disp
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
@@ -101,7 +66,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.frame_support.disp
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];
-            System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
+            global::System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
         }
     }
 }

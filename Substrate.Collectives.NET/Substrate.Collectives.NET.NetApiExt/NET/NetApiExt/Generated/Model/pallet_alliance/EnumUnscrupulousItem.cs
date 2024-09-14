@@ -15,18 +15,36 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_alliance
 {
     
     
+    /// <summary>
+    /// >> UnscrupulousItem
+    /// </summary>
     public enum UnscrupulousItem
     {
         
+        /// <summary>
+        /// >> AccountId
+        /// </summary>
         AccountId = 0,
         
+        /// <summary>
+        /// >> Website
+        /// </summary>
         Website = 1,
     }
     
     /// <summary>
-    /// >> 118 - Variant[pallet_alliance.UnscrupulousItem]
+    /// >> 142 - Variant[pallet_alliance.UnscrupulousItem]
     /// </summary>
-    public sealed class EnumUnscrupulousItem : BaseEnumExt<UnscrupulousItem, Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT5>
+    public sealed class EnumUnscrupulousItem : BaseEnumRust<UnscrupulousItem>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumUnscrupulousItem()
+        {
+				AddTypeDecoder<Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>(UnscrupulousItem.AccountId);
+				AddTypeDecoder<Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT5>(UnscrupulousItem.Website);
+        }
     }
 }

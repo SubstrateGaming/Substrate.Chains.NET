@@ -15,27 +15,68 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_scheduler.p
 {
     
     
+    /// <summary>
+    /// >> Event
+    /// Events type.
+    /// </summary>
     public enum Event
     {
         
+        /// <summary>
+        /// >> Scheduled
+        /// Scheduled some task.
+        /// </summary>
         Scheduled = 0,
         
+        /// <summary>
+        /// >> Canceled
+        /// Canceled some task.
+        /// </summary>
         Canceled = 1,
         
+        /// <summary>
+        /// >> Dispatched
+        /// Dispatched some task.
+        /// </summary>
         Dispatched = 2,
         
+        /// <summary>
+        /// >> CallUnavailable
+        /// The call for the provided hash was not found so the task has been aborted.
+        /// </summary>
         CallUnavailable = 3,
         
+        /// <summary>
+        /// >> PeriodicFailed
+        /// The given task was unable to be renewed since the agenda is full at that block.
+        /// </summary>
         PeriodicFailed = 4,
         
+        /// <summary>
+        /// >> PermanentlyOverweight
+        /// The given task can never be executed since it is overweight.
+        /// </summary>
         PermanentlyOverweight = 5,
     }
     
     /// <summary>
-    /// >> 108 - Variant[pallet_scheduler.pallet.Event]
+    /// >> 129 - Variant[pallet_scheduler.pallet.Event]
     /// Events type.
     /// </summary>
-    public sealed class EnumEvent : BaseEnumExt<Event, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>, BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>, BaseTuple<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Collectives.NET.NetApiExt.Generated.Types.Base.Arr32U8>, Substrate.Collectives.NET.NetApiExt.Generated.Types.Base.EnumResult>, BaseTuple<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Collectives.NET.NetApiExt.Generated.Types.Base.Arr32U8>>, BaseTuple<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Collectives.NET.NetApiExt.Generated.Types.Base.Arr32U8>>, BaseTuple<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Collectives.NET.NetApiExt.Generated.Types.Base.Arr32U8>>>
+    public sealed class EnumEvent : BaseEnumRust<Event>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumEvent()
+        {
+				AddTypeDecoder<BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>>(Event.Scheduled);
+				AddTypeDecoder<BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>>(Event.Canceled);
+				AddTypeDecoder<BaseTuple<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Collectives.NET.NetApiExt.Generated.Types.Base.Arr32U8>, Substrate.Collectives.NET.NetApiExt.Generated.Types.Base.EnumResult>>(Event.Dispatched);
+				AddTypeDecoder<BaseTuple<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Collectives.NET.NetApiExt.Generated.Types.Base.Arr32U8>>>(Event.CallUnavailable);
+				AddTypeDecoder<BaseTuple<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Collectives.NET.NetApiExt.Generated.Types.Base.Arr32U8>>>(Event.PeriodicFailed);
+				AddTypeDecoder<BaseTuple<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Collectives.NET.NetApiExt.Generated.Types.Base.Arr32U8>>>(Event.PermanentlyOverweight);
+        }
     }
 }

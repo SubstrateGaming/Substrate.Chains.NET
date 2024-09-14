@@ -9,7 +9,7 @@
 
 using Substrate.NetApi.Attributes;
 using Substrate.NetApi.Model.Types.Base;
-using Substrate.NetApi.Model.Types.Metadata.V14;
+using Substrate.NetApi.Model.Types.Metadata.Base;
 using System.Collections.Generic;
 
 
@@ -18,7 +18,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_referenda.t
     
     
     /// <summary>
-    /// >> 353 - Composite[pallet_referenda.types.TrackInfo]
+    /// >> 441 - Composite[pallet_referenda.types.TrackInfo]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class TrackInfo : BaseType
@@ -27,161 +27,47 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_referenda.t
         /// <summary>
         /// >> name
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.Str _name;
-        
+        public Substrate.NetApi.Model.Types.Primitive.Str Name { get; set; }
         /// <summary>
         /// >> max_deciding
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _maxDeciding;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 MaxDeciding { get; set; }
         /// <summary>
         /// >> decision_deposit
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U128 _decisionDeposit;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U128 DecisionDeposit { get; set; }
         /// <summary>
         /// >> prepare_period
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _preparePeriod;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 PreparePeriod { get; set; }
         /// <summary>
         /// >> decision_period
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _decisionPeriod;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 DecisionPeriod { get; set; }
         /// <summary>
         /// >> confirm_period
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _confirmPeriod;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 ConfirmPeriod { get; set; }
         /// <summary>
         /// >> min_enactment_period
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U32 _minEnactmentPeriod;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U32 MinEnactmentPeriod { get; set; }
         /// <summary>
         /// >> min_approval
         /// </summary>
-        private Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_referenda.types.EnumCurve _minApproval;
-        
+        public Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_referenda.types.EnumCurve MinApproval { get; set; }
         /// <summary>
         /// >> min_support
         /// </summary>
-        private Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_referenda.types.EnumCurve _minSupport;
+        public Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_referenda.types.EnumCurve MinSupport { get; set; }
         
-        public Substrate.NetApi.Model.Types.Primitive.Str Name
-        {
-            get
-            {
-                return this._name;
-            }
-            set
-            {
-                this._name = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 MaxDeciding
-        {
-            get
-            {
-                return this._maxDeciding;
-            }
-            set
-            {
-                this._maxDeciding = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U128 DecisionDeposit
-        {
-            get
-            {
-                return this._decisionDeposit;
-            }
-            set
-            {
-                this._decisionDeposit = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 PreparePeriod
-        {
-            get
-            {
-                return this._preparePeriod;
-            }
-            set
-            {
-                this._preparePeriod = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 DecisionPeriod
-        {
-            get
-            {
-                return this._decisionPeriod;
-            }
-            set
-            {
-                this._decisionPeriod = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 ConfirmPeriod
-        {
-            get
-            {
-                return this._confirmPeriod;
-            }
-            set
-            {
-                this._confirmPeriod = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U32 MinEnactmentPeriod
-        {
-            get
-            {
-                return this._minEnactmentPeriod;
-            }
-            set
-            {
-                this._minEnactmentPeriod = value;
-            }
-        }
-        
-        public Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_referenda.types.EnumCurve MinApproval
-        {
-            get
-            {
-                return this._minApproval;
-            }
-            set
-            {
-                this._minApproval = value;
-            }
-        }
-        
-        public Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_referenda.types.EnumCurve MinSupport
-        {
-            get
-            {
-                return this._minSupport;
-            }
-            set
-            {
-                this._minSupport = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "TrackInfo";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -197,6 +83,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_referenda.t
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
@@ -221,7 +108,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_referenda.t
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];
-            System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
+            global::System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
         }
     }
 }

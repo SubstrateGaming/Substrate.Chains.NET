@@ -15,18 +15,36 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_ranked_coll
 {
     
     
+    /// <summary>
+    /// >> VoteRecord
+    /// </summary>
     public enum VoteRecord
     {
         
+        /// <summary>
+        /// >> Aye
+        /// </summary>
         Aye = 0,
         
+        /// <summary>
+        /// >> Nay
+        /// </summary>
         Nay = 1,
     }
     
     /// <summary>
-    /// >> 122 - Variant[pallet_ranked_collective.VoteRecord]
+    /// >> 146 - Variant[pallet_ranked_collective.VoteRecord]
     /// </summary>
-    public sealed class EnumVoteRecord : BaseEnumExt<VoteRecord, Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>
+    public sealed class EnumVoteRecord : BaseEnumRust<VoteRecord>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumVoteRecord()
+        {
+				AddTypeDecoder<Substrate.NetApi.Model.Types.Primitive.U32>(VoteRecord.Aye);
+				AddTypeDecoder<Substrate.NetApi.Model.Types.Primitive.U32>(VoteRecord.Nay);
+        }
     }
 }

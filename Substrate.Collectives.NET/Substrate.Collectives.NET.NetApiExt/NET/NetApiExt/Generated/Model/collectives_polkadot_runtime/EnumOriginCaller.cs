@@ -15,26 +15,66 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.collectives_polkad
 {
     
     
+    /// <summary>
+    /// >> OriginCaller
+    /// </summary>
     public enum OriginCaller
     {
         
+        /// <summary>
+        /// >> system
+        /// </summary>
         system = 0,
         
+        /// <summary>
+        /// >> PolkadotXcm
+        /// </summary>
         PolkadotXcm = 31,
         
+        /// <summary>
+        /// >> CumulusXcm
+        /// </summary>
         CumulusXcm = 32,
         
+        /// <summary>
+        /// >> AllianceMotion
+        /// </summary>
         AllianceMotion = 51,
         
+        /// <summary>
+        /// >> FellowshipOrigins
+        /// </summary>
         FellowshipOrigins = 62,
         
-        Void = 5,
+        /// <summary>
+        /// >> AmbassadorOrigins
+        /// </summary>
+        AmbassadorOrigins = 72,
+        
+        /// <summary>
+        /// >> Void
+        /// </summary>
+        Void = 6,
     }
     
     /// <summary>
-    /// >> 179 - Variant[collectives_polkadot_runtime.OriginCaller]
+    /// >> 224 - Variant[collectives_polkadot_runtime.OriginCaller]
     /// </summary>
-    public sealed class EnumOriginCaller : BaseEnumExt<OriginCaller, Substrate.Collectives.NET.NetApiExt.Generated.Model.frame_support.dispatch.EnumRawOrigin, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.NetApi.Model.Types.Base.BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_xcm.pallet.EnumOrigin, Substrate.Collectives.NET.NetApiExt.Generated.Model.cumulus_pallet_xcm.pallet.EnumOrigin, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_collective.EnumRawOrigin, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, BaseVoid, Substrate.Collectives.NET.NetApiExt.Generated.Model.collectives_polkadot_runtime.fellowship.origins.pallet_origins.EnumOrigin>
+    public sealed class EnumOriginCaller : BaseEnumRust<OriginCaller>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumOriginCaller()
+        {
+				AddTypeDecoder<Substrate.Collectives.NET.NetApiExt.Generated.Model.frame_support.dispatch.EnumRawOrigin>(OriginCaller.system);
+				AddTypeDecoder<Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_xcm.pallet.EnumOrigin>(OriginCaller.PolkadotXcm);
+				AddTypeDecoder<Substrate.Collectives.NET.NetApiExt.Generated.Model.cumulus_pallet_xcm.pallet.EnumOrigin>(OriginCaller.CumulusXcm);
+				AddTypeDecoder<Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_collective.EnumRawOrigin>(OriginCaller.AllianceMotion);
+				AddTypeDecoder<Substrate.Collectives.NET.NetApiExt.Generated.Model.collectives_polkadot_runtime.fellowship.origins.pallet_origins.EnumOrigin>(OriginCaller.FellowshipOrigins);
+				AddTypeDecoder<Substrate.Collectives.NET.NetApiExt.Generated.Model.collectives_polkadot_runtime.ambassador.origins.pallet_origins.EnumOrigin>(OriginCaller.AmbassadorOrigins);
+				AddTypeDecoder<Substrate.NetApi.Model.Types.Base.BaseVoid>(OriginCaller.Void);
+        }
     }
 }

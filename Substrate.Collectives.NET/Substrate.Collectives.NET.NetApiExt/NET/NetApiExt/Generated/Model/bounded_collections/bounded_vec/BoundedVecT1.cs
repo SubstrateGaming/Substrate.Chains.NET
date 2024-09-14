@@ -9,7 +9,7 @@
 
 using Substrate.NetApi.Attributes;
 using Substrate.NetApi.Model.Types.Base;
-using Substrate.NetApi.Model.Types.Metadata.V14;
+using Substrate.NetApi.Model.Types.Metadata.Base;
 using System.Collections.Generic;
 
 
@@ -18,7 +18,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collection
     
     
     /// <summary>
-    /// >> 67 - Composite[bounded_collections.bounded_vec.BoundedVecT1]
+    /// >> 75 - Composite[bounded_collections.bounded_vec.BoundedVecT1]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class BoundedVecT1 : BaseType
@@ -27,25 +27,15 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collection
         /// <summary>
         /// >> value
         /// </summary>
-        private Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Collectives.NET.NetApiExt.Generated.Model.xcm.v3.PalletInfo> _value;
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Collectives.NET.NetApiExt.Generated.Model.staging_xcm.v4.PalletInfo> Value { get; set; }
         
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Collectives.NET.NetApiExt.Generated.Model.xcm.v3.PalletInfo> Value
-        {
-            get
-            {
-                return this._value;
-            }
-            set
-            {
-                this._value = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "BoundedVecT1";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -53,15 +43,16 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collection
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Collectives.NET.NetApiExt.Generated.Model.xcm.v3.PalletInfo>();
+            Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Collectives.NET.NetApiExt.Generated.Model.staging_xcm.v4.PalletInfo>();
             Value.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];
-            System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
+            global::System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
         }
     }
 }

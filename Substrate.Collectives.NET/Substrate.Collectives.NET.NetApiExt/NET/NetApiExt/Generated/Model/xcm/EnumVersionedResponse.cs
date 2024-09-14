@@ -15,18 +15,42 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.xcm
 {
     
     
+    /// <summary>
+    /// >> VersionedResponse
+    /// </summary>
     public enum VersionedResponse
     {
         
+        /// <summary>
+        /// >> V2
+        /// </summary>
         V2 = 2,
         
+        /// <summary>
+        /// >> V3
+        /// </summary>
         V3 = 3,
+        
+        /// <summary>
+        /// >> V4
+        /// </summary>
+        V4 = 4,
     }
     
     /// <summary>
-    /// >> 279 - Variant[xcm.VersionedResponse]
+    /// >> 361 - Variant[xcm.VersionedResponse]
     /// </summary>
-    public sealed class EnumVersionedResponse : BaseEnumExt<VersionedResponse, BaseVoid, BaseVoid, Substrate.Collectives.NET.NetApiExt.Generated.Model.xcm.v2.EnumResponse, Substrate.Collectives.NET.NetApiExt.Generated.Model.xcm.v3.EnumResponse>
+    public sealed class EnumVersionedResponse : BaseEnumRust<VersionedResponse>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumVersionedResponse()
+        {
+				AddTypeDecoder<Substrate.Collectives.NET.NetApiExt.Generated.Model.xcm.v2.EnumResponse>(VersionedResponse.V2);
+				AddTypeDecoder<Substrate.Collectives.NET.NetApiExt.Generated.Model.xcm.v3.EnumResponse>(VersionedResponse.V3);
+				AddTypeDecoder<Substrate.Collectives.NET.NetApiExt.Generated.Model.staging_xcm.v4.EnumResponse>(VersionedResponse.V4);
+        }
     }
 }

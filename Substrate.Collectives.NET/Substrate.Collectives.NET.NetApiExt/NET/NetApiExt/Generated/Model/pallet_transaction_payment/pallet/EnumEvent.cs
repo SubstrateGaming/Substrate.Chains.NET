@@ -15,20 +15,34 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_transaction
 {
     
     
+    /// <summary>
+    /// >> Event
+    /// The `Event` enum of this pallet
+    /// </summary>
     public enum Event
     {
         
+        /// <summary>
+        /// >> TransactionFeePaid
+        /// A transaction fee `actual_fee`, of which `tip` was added to the minimum inclusion fee,
+        /// has been paid by `who`.
+        /// </summary>
         TransactionFeePaid = 0,
     }
     
     /// <summary>
-    /// >> 34 - Variant[pallet_transaction_payment.pallet.Event]
-    /// 
-    ///			The [event](https://docs.substrate.io/main-docs/build/events-errors/) emitted
-    ///			by this pallet.
-    ///			
+    /// >> 35 - Variant[pallet_transaction_payment.pallet.Event]
+    /// The `Event` enum of this pallet
     /// </summary>
-    public sealed class EnumEvent : BaseEnumExt<Event, BaseTuple<Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U128, Substrate.NetApi.Model.Types.Primitive.U128>>
+    public sealed class EnumEvent : BaseEnumRust<Event>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumEvent()
+        {
+				AddTypeDecoder<BaseTuple<Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U128, Substrate.NetApi.Model.Types.Primitive.U128>>(Event.TransactionFeePaid);
+        }
     }
 }

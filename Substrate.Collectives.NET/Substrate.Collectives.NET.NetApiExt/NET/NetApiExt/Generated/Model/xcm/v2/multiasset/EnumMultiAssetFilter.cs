@@ -15,18 +15,36 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.xcm.v2.multiasset
 {
     
     
+    /// <summary>
+    /// >> MultiAssetFilter
+    /// </summary>
     public enum MultiAssetFilter
     {
         
+        /// <summary>
+        /// >> Definite
+        /// </summary>
         Definite = 0,
         
+        /// <summary>
+        /// >> Wild
+        /// </summary>
         Wild = 1,
     }
     
     /// <summary>
-    /// >> 163 - Variant[xcm.v2.multiasset.MultiAssetFilter]
+    /// >> 189 - Variant[xcm.v2.multiasset.MultiAssetFilter]
     /// </summary>
-    public sealed class EnumMultiAssetFilter : BaseEnumExt<MultiAssetFilter, Substrate.Collectives.NET.NetApiExt.Generated.Model.xcm.v2.multiasset.MultiAssets, Substrate.Collectives.NET.NetApiExt.Generated.Model.xcm.v2.multiasset.EnumWildMultiAsset>
+    public sealed class EnumMultiAssetFilter : BaseEnumRust<MultiAssetFilter>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumMultiAssetFilter()
+        {
+				AddTypeDecoder<Substrate.Collectives.NET.NetApiExt.Generated.Model.xcm.v2.multiasset.MultiAssets>(MultiAssetFilter.Definite);
+				AddTypeDecoder<Substrate.Collectives.NET.NetApiExt.Generated.Model.xcm.v2.multiasset.EnumWildMultiAsset>(MultiAssetFilter.Wild);
+        }
     }
 }

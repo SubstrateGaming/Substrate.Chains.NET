@@ -15,18 +15,36 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.xcm.v2.multiasset
 {
     
     
+    /// <summary>
+    /// >> WildMultiAsset
+    /// </summary>
     public enum WildMultiAsset
     {
         
+        /// <summary>
+        /// >> All
+        /// </summary>
         All = 0,
         
+        /// <summary>
+        /// >> AllOf
+        /// </summary>
         AllOf = 1,
     }
     
     /// <summary>
-    /// >> 164 - Variant[xcm.v2.multiasset.WildMultiAsset]
+    /// >> 190 - Variant[xcm.v2.multiasset.WildMultiAsset]
     /// </summary>
-    public sealed class EnumWildMultiAsset : BaseEnumExt<WildMultiAsset, BaseVoid, BaseTuple<Substrate.Collectives.NET.NetApiExt.Generated.Model.xcm.v2.multiasset.EnumAssetId, Substrate.Collectives.NET.NetApiExt.Generated.Model.xcm.v2.multiasset.EnumWildFungibility>>
+    public sealed class EnumWildMultiAsset : BaseEnumRust<WildMultiAsset>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumWildMultiAsset()
+        {
+				AddTypeDecoder<BaseVoid>(WildMultiAsset.All);
+				AddTypeDecoder<BaseTuple<Substrate.Collectives.NET.NetApiExt.Generated.Model.xcm.v2.multiasset.EnumAssetId, Substrate.Collectives.NET.NetApiExt.Generated.Model.xcm.v2.multiasset.EnumWildFungibility>>(WildMultiAsset.AllOf);
+        }
     }
 }

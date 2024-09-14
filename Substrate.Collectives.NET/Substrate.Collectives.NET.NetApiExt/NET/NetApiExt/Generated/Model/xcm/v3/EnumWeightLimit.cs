@@ -15,18 +15,36 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.xcm.v3
 {
     
     
+    /// <summary>
+    /// >> WeightLimit
+    /// </summary>
     public enum WeightLimit
     {
         
+        /// <summary>
+        /// >> Unlimited
+        /// </summary>
         Unlimited = 0,
         
+        /// <summary>
+        /// >> Limited
+        /// </summary>
         Limited = 1,
     }
     
     /// <summary>
-    /// >> 81 - Variant[xcm.v3.WeightLimit]
+    /// >> 88 - Variant[xcm.v3.WeightLimit]
     /// </summary>
-    public sealed class EnumWeightLimit : BaseEnumExt<WeightLimit, BaseVoid, Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>
+    public sealed class EnumWeightLimit : BaseEnumRust<WeightLimit>
     {
+        
+        /// <summary>
+        /// Initializes a new instance of the class.
+        /// </summary>
+        public EnumWeightLimit()
+        {
+				AddTypeDecoder<BaseVoid>(WeightLimit.Unlimited);
+				AddTypeDecoder<Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>(WeightLimit.Limited);
+        }
     }
 }

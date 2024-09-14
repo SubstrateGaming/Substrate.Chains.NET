@@ -9,7 +9,7 @@
 
 using Substrate.NetApi.Attributes;
 using Substrate.NetApi.Model.Types.Base;
-using Substrate.NetApi.Model.Types.Metadata.V14;
+using Substrate.NetApi.Model.Types.Metadata.Base;
 using System.Collections.Generic;
 
 
@@ -18,7 +18,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_alliance.ty
     
     
     /// <summary>
-    /// >> 111 - Composite[pallet_alliance.types.Cid]
+    /// >> 135 - Composite[pallet_alliance.types.Cid]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Cid : BaseType
@@ -27,59 +27,23 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_alliance.ty
         /// <summary>
         /// >> version
         /// </summary>
-        private Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_alliance.types.EnumVersion _version;
-        
+        public Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_alliance.types.EnumVersion Version { get; set; }
         /// <summary>
         /// >> codec
         /// </summary>
-        private Substrate.NetApi.Model.Types.Primitive.U64 _codec;
-        
+        public Substrate.NetApi.Model.Types.Primitive.U64 Codec { get; set; }
         /// <summary>
         /// >> hash
         /// </summary>
-        private Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_alliance.types.Multihash _hash;
+        public Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_alliance.types.Multihash Hash { get; set; }
         
-        public Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_alliance.types.EnumVersion Version
-        {
-            get
-            {
-                return this._version;
-            }
-            set
-            {
-                this._version = value;
-            }
-        }
-        
-        public Substrate.NetApi.Model.Types.Primitive.U64 Codec
-        {
-            get
-            {
-                return this._codec;
-            }
-            set
-            {
-                this._codec = value;
-            }
-        }
-        
-        public Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_alliance.types.Multihash Hash
-        {
-            get
-            {
-                return this._hash;
-            }
-            set
-            {
-                this._hash = value;
-            }
-        }
-        
+        /// <inheritdoc/>
         public override string TypeName()
         {
             return "Cid";
         }
         
+        /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
@@ -89,6 +53,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_alliance.ty
             return result.ToArray();
         }
         
+        /// <inheritdoc/>
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
@@ -101,7 +66,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_alliance.ty
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];
-            System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
+            global::System.Array.Copy(byteArray, start, Bytes, 0, bytesLength);
         }
     }
 }

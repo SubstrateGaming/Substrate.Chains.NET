@@ -21,25 +21,31 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
 {
     
     
+    /// <summary>
+    /// >> AllianceStorage
+    /// </summary>
     public sealed class AllianceStorage
     {
         
         // Substrate client for the storage calls.
         private SubstrateClientExt _client;
         
+        /// <summary>
+        /// >> AllianceStorage Constructor
+        /// </summary>
         public AllianceStorage(SubstrateClientExt client)
         {
             this._client = client;
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Alliance", "Rule"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_alliance.types.Cid)));
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("Alliance", "Announcements"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT19)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("Alliance", "Announcements"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT25)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Alliance", "DepositOf"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32), typeof(Substrate.NetApi.Model.Types.Primitive.U128)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Alliance", "Members"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_alliance.EnumMemberRole), typeof(Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_alliance.EnumMemberRole), typeof(Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT20)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Alliance", "RetiringMembers"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32), typeof(Substrate.NetApi.Model.Types.Primitive.U32)));
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("Alliance", "UnscrupulousAccounts"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9)));
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("Alliance", "UnscrupulousWebsites"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT20)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("Alliance", "UnscrupulousAccounts"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT20)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("Alliance", "UnscrupulousWebsites"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT26)));
         }
         
         /// <summary>
@@ -66,10 +72,10 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
         ///  The IPFS CID of the alliance rule.
         ///  Fellows can propose a new rule with a super-majority.
         /// </summary>
-        public async Task<Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_alliance.types.Cid> Rule(CancellationToken token)
+        public async Task<Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_alliance.types.Cid> Rule(string blockhash, CancellationToken token)
         {
             string parameters = AllianceStorage.RuleParams();
-            var result = await _client.GetStorageAsync<Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_alliance.types.Cid>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_alliance.types.Cid>(parameters, blockhash, token);
             return result;
         }
         
@@ -95,10 +101,10 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
         /// >> Announcements
         ///  The current IPFS CIDs of any announcements.
         /// </summary>
-        public async Task<Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT19> Announcements(CancellationToken token)
+        public async Task<Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT25> Announcements(string blockhash, CancellationToken token)
         {
             string parameters = AllianceStorage.AnnouncementsParams();
-            var result = await _client.GetStorageAsync<Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT19>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT25>(parameters, blockhash, token);
             return result;
         }
         
@@ -126,10 +132,10 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
         /// >> DepositOf
         ///  Maps members to their candidacy deposit.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U128> DepositOf(Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U128> DepositOf(Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, string blockhash, CancellationToken token)
         {
             string parameters = AllianceStorage.DepositOfParams(key);
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U128>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U128>(parameters, blockhash, token);
             return result;
         }
         
@@ -157,10 +163,10 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
         /// >> Members
         ///  Maps member type to members of each type.
         /// </summary>
-        public async Task<Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9> Members(Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_alliance.EnumMemberRole key, CancellationToken token)
+        public async Task<Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT20> Members(Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_alliance.EnumMemberRole key, string blockhash, CancellationToken token)
         {
             string parameters = AllianceStorage.MembersParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT20>(parameters, blockhash, token);
             return result;
         }
         
@@ -190,10 +196,10 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
         ///  A set of members who gave a retirement notice. They can retire after the end of retirement
         ///  period stored as a future block number.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> RetiringMembers(Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> RetiringMembers(Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, string blockhash, CancellationToken token)
         {
             string parameters = AllianceStorage.RetiringMembersParams(key);
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, blockhash, token);
             return result;
         }
         
@@ -221,10 +227,10 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
         ///  The current list of accounts deemed unscrupulous. These accounts non grata cannot submit
         ///  candidacy.
         /// </summary>
-        public async Task<Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9> UnscrupulousAccounts(CancellationToken token)
+        public async Task<Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT20> UnscrupulousAccounts(string blockhash, CancellationToken token)
         {
             string parameters = AllianceStorage.UnscrupulousAccountsParams();
-            var result = await _client.GetStorageAsync<Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT20>(parameters, blockhash, token);
             return result;
         }
         
@@ -250,20 +256,23 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
         /// >> UnscrupulousWebsites
         ///  The current list of websites deemed unscrupulous.
         /// </summary>
-        public async Task<Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT20> UnscrupulousWebsites(CancellationToken token)
+        public async Task<Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT26> UnscrupulousWebsites(string blockhash, CancellationToken token)
         {
             string parameters = AllianceStorage.UnscrupulousWebsitesParams();
-            var result = await _client.GetStorageAsync<Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT20>(parameters, token);
+            var result = await _client.GetStorageAsync<Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT26>(parameters, blockhash, token);
             return result;
         }
     }
     
+    /// <summary>
+    /// >> AllianceCalls
+    /// </summary>
     public sealed class AllianceCalls
     {
         
         /// <summary>
         /// >> propose
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method Propose(Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32> threshold, Substrate.Collectives.NET.NetApiExt.Generated.Model.collectives_polkadot_runtime.EnumRuntimeCall proposal, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32> length_bound)
         {
@@ -276,7 +285,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> vote
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method Vote(Substrate.Collectives.NET.NetApiExt.Generated.Model.primitive_types.H256 proposal, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32> index, Substrate.NetApi.Model.Types.Primitive.Bool approve)
         {
@@ -289,7 +298,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> init_members
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method InitMembers(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> fellows, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> allies)
         {
@@ -301,7 +310,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> disband
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method Disband(Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_alliance.types.DisbandWitness witness)
         {
@@ -312,7 +321,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> set_rule
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method SetRule(Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_alliance.types.Cid rule)
         {
@@ -323,7 +332,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> announce
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method Announce(Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_alliance.types.Cid announcement)
         {
@@ -334,7 +343,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> remove_announcement
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method RemoveAnnouncement(Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_alliance.types.Cid announcement)
         {
@@ -345,7 +354,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> join_alliance
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method JoinAlliance()
         {
@@ -355,7 +364,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> nominate_ally
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method NominateAlly(Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress who)
         {
@@ -366,7 +375,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> elevate_ally
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method ElevateAlly(Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress ally)
         {
@@ -377,7 +386,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> give_retirement_notice
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method GiveRetirementNotice()
         {
@@ -387,7 +396,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> retire
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method Retire()
         {
@@ -397,7 +406,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> kick_member
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method KickMember(Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress who)
         {
@@ -408,7 +417,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> add_unscrupulous_items
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method AddUnscrupulousItems(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_alliance.EnumUnscrupulousItem> items)
         {
@@ -419,7 +428,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> remove_unscrupulous_items
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method RemoveUnscrupulousItems(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_alliance.EnumUnscrupulousItem> items)
         {
@@ -430,7 +439,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> close
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method Close(Substrate.Collectives.NET.NetApiExt.Generated.Model.primitive_types.H256 proposal_hash, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32> index, Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight proposal_weight_bound, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32> length_bound)
         {
@@ -444,7 +453,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> abdicate_fellow_status
-        /// Contains one variant per dispatchable that can be called by an extrinsic.
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
         public static Method AbdicateFellowStatus()
         {
@@ -453,6 +462,9 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> AllianceConstants
+    /// </summary>
     public sealed class AllianceConstants
     {
         
@@ -512,6 +524,9 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
         }
     }
     
+    /// <summary>
+    /// >> AllianceErrors
+    /// </summary>
     public enum AllianceErrors
     {
         
@@ -595,10 +610,10 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
         InsufficientFunds,
         
         /// <summary>
-        /// >> WithoutIdentityDisplayAndWebsite
+        /// >> WithoutRequiredIdentityFields
         /// The account's identity does not have display field and website field.
         /// </summary>
-        WithoutIdentityDisplayAndWebsite,
+        WithoutRequiredIdentityFields,
         
         /// <summary>
         /// >> WithoutGoodIdentityJudgement
