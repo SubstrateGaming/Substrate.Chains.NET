@@ -48,7 +48,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_timestamp.pallet
     }
     
     /// <summary>
-    /// >> 213 - Variant[pallet_timestamp.pallet.Call]
+    /// >> 221 - Variant[pallet_timestamp.pallet.Call]
     /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
     public sealed class EnumCall : BaseEnumRust<Call>

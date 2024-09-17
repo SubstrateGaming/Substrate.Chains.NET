@@ -18,7 +18,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_trie.storage_proof
     
     
     /// <summary>
-    /// >> 187 - Composite[sp_trie.storage_proof.StorageProof]
+    /// >> 195 - Composite[sp_trie.storage_proof.StorageProof]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class StorageProof : BaseType

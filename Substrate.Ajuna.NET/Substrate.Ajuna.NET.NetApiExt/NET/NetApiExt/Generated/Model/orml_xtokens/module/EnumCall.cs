@@ -150,7 +150,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.orml_xtokens.module
     }
     
     /// <summary>
-    /// >> 329 - Variant[orml_xtokens.module.Call]
+    /// >> 337 - Variant[orml_xtokens.module.Call]
     /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
     public sealed class EnumCall : BaseEnumRust<Call>

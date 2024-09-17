@@ -62,7 +62,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Client
         /// <param name="maxConcurrentCalls"></param>
         public BaseClient(string url, int maxConcurrentCalls = 10)
         {
-            _chargeTypeDefault = ChargeTransactionPayment.Default();
+            _chargeTypeDefault = ChargeAssetTxPayment.Default();
 
             _maxConcurrentCalls = maxConcurrentCalls;
 

@@ -18,7 +18,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.v3
     
     
     /// <summary>
-    /// >> 306 - Composite[xcm.v3.PalletInfo]
+    /// >> 314 - Composite[xcm.v3.PalletInfo]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class PalletInfo : BaseType

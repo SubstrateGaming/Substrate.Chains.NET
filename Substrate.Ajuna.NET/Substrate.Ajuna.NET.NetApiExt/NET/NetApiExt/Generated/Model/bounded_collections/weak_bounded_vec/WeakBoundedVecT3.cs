@@ -18,7 +18,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.weak
     
     
     /// <summary>
-    /// >> 434 - Composite[bounded_collections.weak_bounded_vec.WeakBoundedVecT3]
+    /// >> 445 - Composite[bounded_collections.weak_bounded_vec.WeakBoundedVecT3]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class WeakBoundedVecT3 : BaseType

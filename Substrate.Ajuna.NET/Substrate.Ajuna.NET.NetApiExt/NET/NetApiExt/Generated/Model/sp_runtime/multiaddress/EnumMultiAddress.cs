@@ -48,7 +48,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress
     }
     
     /// <summary>
-    /// >> 230 - Variant[sp_runtime.multiaddress.MultiAddress]
+    /// >> 238 - Variant[sp_runtime.multiaddress.MultiAddress]
     /// </summary>
     public sealed class EnumMultiAddress : BaseEnumRust<MultiAddress>
     {

@@ -18,7 +18,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v7
     
     
     /// <summary>
-    /// >> 194 - Composite[polkadot_primitives.v7.AbridgedHostConfiguration]
+    /// >> 202 - Composite[polkadot_primitives.v7.AbridgedHostConfiguration]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class AbridgedHostConfiguration : BaseType

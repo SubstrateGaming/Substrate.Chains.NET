@@ -19,6 +19,7 @@ namespace Substrate.Ajuna.NET.RestClient
    {
       private HttpClient _httpClient;
       private BaseSubscriptionClient _subscriptionClient;
+      public IAssetConversionControllerClient AssetConversionControllerClient;
       public IAssetRegistryControllerClient AssetRegistryControllerClient;
       public IAssetsControllerClient AssetsControllerClient;
       public IAuraControllerClient AuraControllerClient;
@@ -35,6 +36,7 @@ namespace Substrate.Ajuna.NET.RestClient
       public IParachainInfoControllerClient ParachainInfoControllerClient;
       public IParachainSystemControllerClient ParachainSystemControllerClient;
       public IPolkadotXcmControllerClient PolkadotXcmControllerClient;
+      public IPoolAssetsControllerClient PoolAssetsControllerClient;
       public IPreimageControllerClient PreimageControllerClient;
       public IProxyControllerClient ProxyControllerClient;
       public ISchedulerControllerClient SchedulerControllerClient;
@@ -51,6 +53,7 @@ namespace Substrate.Ajuna.NET.RestClient
       {
          _httpClient = httpClient;
          _subscriptionClient = subscriptionClient;
+         AssetConversionControllerClient = new AssetConversionControllerClient(_httpClient, _subscriptionClient);
          AssetRegistryControllerClient = new AssetRegistryControllerClient(_httpClient, _subscriptionClient);
          AssetsControllerClient = new AssetsControllerClient(_httpClient, _subscriptionClient);
          AuraControllerClient = new AuraControllerClient(_httpClient, _subscriptionClient);
@@ -67,6 +70,7 @@ namespace Substrate.Ajuna.NET.RestClient
          ParachainInfoControllerClient = new ParachainInfoControllerClient(_httpClient, _subscriptionClient);
          ParachainSystemControllerClient = new ParachainSystemControllerClient(_httpClient, _subscriptionClient);
          PolkadotXcmControllerClient = new PolkadotXcmControllerClient(_httpClient, _subscriptionClient);
+         PoolAssetsControllerClient = new PoolAssetsControllerClient(_httpClient, _subscriptionClient);
          PreimageControllerClient = new PreimageControllerClient(_httpClient, _subscriptionClient);
          ProxyControllerClient = new ProxyControllerClient(_httpClient, _subscriptionClient);
          SchedulerControllerClient = new SchedulerControllerClient(_httpClient, _subscriptionClient);

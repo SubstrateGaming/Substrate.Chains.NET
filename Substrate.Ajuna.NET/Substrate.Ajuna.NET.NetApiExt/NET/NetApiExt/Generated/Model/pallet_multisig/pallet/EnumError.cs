@@ -108,7 +108,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_multisig.pallet
     }
     
     /// <summary>
-    /// >> 349 - Variant[pallet_multisig.pallet.Error]
+    /// >> 360 - Variant[pallet_multisig.pallet.Error]
     /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>

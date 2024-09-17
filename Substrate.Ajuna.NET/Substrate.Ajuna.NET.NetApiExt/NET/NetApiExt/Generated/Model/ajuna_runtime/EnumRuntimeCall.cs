@@ -160,10 +160,20 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.ajuna_runtime
         /// >> AssetRegistry
         /// </summary>
         AssetRegistry = 91,
+        
+        /// <summary>
+        /// >> PoolAssets
+        /// </summary>
+        PoolAssets = 92,
+        
+        /// <summary>
+        /// >> AssetConversion
+        /// </summary>
+        AssetConversion = 93,
     }
     
     /// <summary>
-    /// >> 219 - Variant[ajuna_runtime.RuntimeCall]
+    /// >> 227 - Variant[ajuna_runtime.RuntimeCall]
     /// </summary>
     public sealed class EnumRuntimeCall : BaseEnumRust<RuntimeCall>
     {
@@ -201,6 +211,8 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.ajuna_runtime
 				AddTypeDecoder<Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_democracy.pallet.EnumCall>(RuntimeCall.Democracy);
 				AddTypeDecoder<Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_assets.pallet.EnumCall>(RuntimeCall.Assets);
 				AddTypeDecoder<Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_asset_registry.pallet.EnumCall>(RuntimeCall.AssetRegistry);
+				AddTypeDecoder<Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_assets.pallet.EnumCall>(RuntimeCall.PoolAssets);
+				AddTypeDecoder<Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_asset_conversion.pallet.EnumCall>(RuntimeCall.AssetConversion);
         }
     }
 }

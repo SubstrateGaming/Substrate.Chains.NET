@@ -43,7 +43,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.v2
     }
     
     /// <summary>
-    /// >> 292 - Variant[xcm.v2.Response]
+    /// >> 300 - Variant[xcm.v2.Response]
     /// </summary>
     public sealed class EnumResponse : BaseEnumRust<Response>
     {

@@ -155,6 +155,21 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.ajuna_runtime
         /// >> AssetRegistry
         /// </summary>
         AssetRegistry = 91,
+        
+        /// <summary>
+        /// >> PoolAssets
+        /// </summary>
+        PoolAssets = 92,
+        
+        /// <summary>
+        /// >> AssetConversion
+        /// </summary>
+        AssetConversion = 93,
+        
+        /// <summary>
+        /// >> AssetConversionTxPayment
+        /// </summary>
+        AssetConversionTxPayment = 94,
     }
     
     /// <summary>
@@ -195,6 +210,9 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.ajuna_runtime
 				AddTypeDecoder<Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_democracy.pallet.EnumEvent>(RuntimeEvent.Democracy);
 				AddTypeDecoder<Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_assets.pallet.EnumEvent>(RuntimeEvent.Assets);
 				AddTypeDecoder<Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_asset_registry.pallet.EnumEvent>(RuntimeEvent.AssetRegistry);
+				AddTypeDecoder<Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_assets.pallet.EnumEvent>(RuntimeEvent.PoolAssets);
+				AddTypeDecoder<Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_asset_conversion.pallet.EnumEvent>(RuntimeEvent.AssetConversion);
+				AddTypeDecoder<Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_asset_conversion_tx_payment.pallet.EnumEvent>(RuntimeEvent.AssetConversionTxPayment);
         }
     }
 }
