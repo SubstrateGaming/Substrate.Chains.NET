@@ -18,7 +18,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.boun
     
     
     /// <summary>
-    /// >> 426 - Composite[bounded_collections.bounded_btree_set.BoundedBTreeSet]
+    /// >> 437 - Composite[bounded_collections.bounded_btree_set.BoundedBTreeSet]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class BoundedBTreeSet : BaseType

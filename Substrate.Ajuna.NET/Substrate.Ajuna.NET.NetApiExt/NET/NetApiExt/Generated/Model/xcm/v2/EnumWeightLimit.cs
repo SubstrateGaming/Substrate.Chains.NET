@@ -33,7 +33,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.v2
     }
     
     /// <summary>
-    /// >> 300 - Variant[xcm.v2.WeightLimit]
+    /// >> 308 - Variant[xcm.v2.WeightLimit]
     /// </summary>
     public sealed class EnumWeightLimit : BaseEnumRust<WeightLimit>
     {

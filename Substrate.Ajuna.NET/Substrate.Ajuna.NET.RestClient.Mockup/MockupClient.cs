@@ -18,6 +18,7 @@ namespace Substrate.Ajuna.NET.RestClient.Mockup
    public sealed class MockupClient
    {
       private HttpClient _httpClient;
+      public IAssetConversionControllerMockupClient AssetConversionControllerClient;
       public IAssetRegistryControllerMockupClient AssetRegistryControllerClient;
       public IAssetsControllerMockupClient AssetsControllerClient;
       public IAuraControllerMockupClient AuraControllerClient;
@@ -34,6 +35,7 @@ namespace Substrate.Ajuna.NET.RestClient.Mockup
       public IParachainInfoControllerMockupClient ParachainInfoControllerClient;
       public IParachainSystemControllerMockupClient ParachainSystemControllerClient;
       public IPolkadotXcmControllerMockupClient PolkadotXcmControllerClient;
+      public IPoolAssetsControllerMockupClient PoolAssetsControllerClient;
       public IPreimageControllerMockupClient PreimageControllerClient;
       public IProxyControllerMockupClient ProxyControllerClient;
       public ISchedulerControllerMockupClient SchedulerControllerClient;
@@ -49,6 +51,7 @@ namespace Substrate.Ajuna.NET.RestClient.Mockup
       public MockupClient(HttpClient httpClient)
       {
          _httpClient = httpClient;
+         AssetConversionControllerClient = new AssetConversionControllerMockupClient(_httpClient);
          AssetRegistryControllerClient = new AssetRegistryControllerMockupClient(_httpClient);
          AssetsControllerClient = new AssetsControllerMockupClient(_httpClient);
          AuraControllerClient = new AuraControllerMockupClient(_httpClient);
@@ -65,6 +68,7 @@ namespace Substrate.Ajuna.NET.RestClient.Mockup
          ParachainInfoControllerClient = new ParachainInfoControllerMockupClient(_httpClient);
          ParachainSystemControllerClient = new ParachainSystemControllerMockupClient(_httpClient);
          PolkadotXcmControllerClient = new PolkadotXcmControllerMockupClient(_httpClient);
+         PoolAssetsControllerClient = new PoolAssetsControllerMockupClient(_httpClient);
          PreimageControllerClient = new PreimageControllerMockupClient(_httpClient);
          ProxyControllerClient = new ProxyControllerMockupClient(_httpClient);
          SchedulerControllerClient = new SchedulerControllerMockupClient(_httpClient);

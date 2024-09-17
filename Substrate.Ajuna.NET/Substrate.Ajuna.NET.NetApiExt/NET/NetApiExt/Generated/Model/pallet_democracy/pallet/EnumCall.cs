@@ -332,7 +332,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_democracy.pallet
     }
     
     /// <summary>
-    /// >> 341 - Variant[pallet_democracy.pallet.Call]
+    /// >> 349 - Variant[pallet_democracy.pallet.Call]
     /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
     public sealed class EnumCall : BaseEnumRust<Call>

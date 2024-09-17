@@ -33,7 +33,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_pallet_xcm.palle
     }
     
     /// <summary>
-    /// >> 225 - Variant[cumulus_pallet_xcm.pallet.Origin]
+    /// >> 233 - Variant[cumulus_pallet_xcm.pallet.Origin]
     /// </summary>
     public sealed class EnumOrigin : BaseEnumRust<Origin>
     {

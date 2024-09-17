@@ -13,33 +13,38 @@ using Substrate.NetApi.Model.Types.Metadata.Base;
 using System.Collections.Generic;
 
 
-namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_transaction_payment
+namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_asset_conversion_tx_payment
 {
     
     
     /// <summary>
-    /// >> 522 - Composite[pallet_transaction_payment.ChargeTransactionPayment]
+    /// >> 535 - Composite[pallet_asset_conversion_tx_payment.ChargeAssetTxPayment]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
-    public sealed class ChargeTransactionPayment : BaseType
+    public sealed class ChargeAssetTxPayment : BaseType
     {
         
         /// <summary>
-        /// >> value
+        /// >> tip
         /// </summary>
-        public Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128> Value { get; set; }
+        public Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128> Tip { get; set; }
+        /// <summary>
+        /// >> asset_id
+        /// </summary>
+        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.traits.tokens.fungible.union_of.EnumNativeOrWithId> AssetId { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
         {
-            return "ChargeTransactionPayment";
+            return "ChargeAssetTxPayment";
         }
         
         /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
-            result.AddRange(Value.Encode());
+            result.AddRange(Tip.Encode());
+            result.AddRange(AssetId.Encode());
             return result.ToArray();
         }
         
@@ -47,8 +52,10 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_transaction_payme
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Value = new Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128>();
-            Value.Decode(byteArray, ref p);
+            Tip = new Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128>();
+            Tip.Decode(byteArray, ref p);
+            AssetId = new Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.traits.tokens.fungible.union_of.EnumNativeOrWithId>();
+            AssetId.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];

@@ -189,6 +189,21 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated
         /// </summary>
         public AssetRegistryStorage AssetRegistryStorage;
         
+        /// <summary>
+        /// PoolAssetsStorage storage calls.
+        /// </summary>
+        public PoolAssetsStorage PoolAssetsStorage;
+        
+        /// <summary>
+        /// AssetConversionStorage storage calls.
+        /// </summary>
+        public AssetConversionStorage AssetConversionStorage;
+        
+        /// <summary>
+        /// AssetConversionTxPaymentStorage storage calls.
+        /// </summary>
+        public AssetConversionTxPaymentStorage AssetConversionTxPaymentStorage;
+        
         public SubstrateClientExt(System.Uri uri, Substrate.NetApi.Model.Extrinsics.ChargeType chargeType) : 
                 base(uri, chargeType)
         {
@@ -225,6 +240,9 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated
             this.DemocracyStorage = new DemocracyStorage(this);
             this.AssetsStorage = new AssetsStorage(this);
             this.AssetRegistryStorage = new AssetRegistryStorage(this);
+            this.PoolAssetsStorage = new PoolAssetsStorage(this);
+            this.AssetConversionStorage = new AssetConversionStorage(this);
+            this.AssetConversionTxPaymentStorage = new AssetConversionTxPaymentStorage(this);
         }
     }
 }

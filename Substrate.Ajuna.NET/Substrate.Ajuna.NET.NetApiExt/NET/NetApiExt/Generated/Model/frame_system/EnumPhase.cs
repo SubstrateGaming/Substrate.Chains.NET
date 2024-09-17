@@ -38,7 +38,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_system
     }
     
     /// <summary>
-    /// >> 149 - Variant[frame_system.Phase]
+    /// >> 157 - Variant[frame_system.Phase]
     /// </summary>
     public sealed class EnumPhase : BaseEnumRust<Phase>
     {

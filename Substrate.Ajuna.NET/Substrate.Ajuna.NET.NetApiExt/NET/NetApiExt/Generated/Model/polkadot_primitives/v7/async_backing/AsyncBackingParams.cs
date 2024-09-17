@@ -18,7 +18,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.a
     
     
     /// <summary>
-    /// >> 195 - Composite[polkadot_primitives.v7.async_backing.AsyncBackingParams]
+    /// >> 203 - Composite[polkadot_primitives.v7.async_backing.AsyncBackingParams]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class AsyncBackingParams : BaseType

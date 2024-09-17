@@ -33,7 +33,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_preimage
     }
     
     /// <summary>
-    /// >> 382 - Variant[pallet_preimage.OldRequestStatus]
+    /// >> 393 - Variant[pallet_preimage.OldRequestStatus]
     /// </summary>
     public sealed class EnumOldRequestStatus : BaseEnumRust<OldRequestStatus>
     {

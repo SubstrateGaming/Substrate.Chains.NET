@@ -18,7 +18,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_message_queue
     
     
     /// <summary>
-    /// >> 460 - Composite[pallet_message_queue.Neighbours]
+    /// >> 471 - Composite[pallet_message_queue.Neighbours]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Neighbours : BaseType

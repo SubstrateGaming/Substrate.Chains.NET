@@ -18,7 +18,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_identity.types
     
     
     /// <summary>
-    /// >> 363 - Composite[pallet_identity.types.AuthorityProperties]
+    /// >> 374 - Composite[pallet_identity.types.AuthorityProperties]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class AuthorityProperties : BaseType

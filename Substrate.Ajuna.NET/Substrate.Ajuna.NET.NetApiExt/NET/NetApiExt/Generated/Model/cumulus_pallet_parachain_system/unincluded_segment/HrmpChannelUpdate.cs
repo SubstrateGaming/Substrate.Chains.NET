@@ -18,7 +18,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain
     
     
     /// <summary>
-    /// >> 175 - Composite[cumulus_pallet_parachain_system.unincluded_segment.HrmpChannelUpdate]
+    /// >> 183 - Composite[cumulus_pallet_parachain_system.unincluded_segment.HrmpChannelUpdate]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class HrmpChannelUpdate : BaseType

@@ -33,7 +33,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_metadata_hash_exte
     }
     
     /// <summary>
-    /// >> 524 - Variant[frame_metadata_hash_extension.Mode]
+    /// >> 538 - Variant[frame_metadata_hash_extension.Mode]
     /// </summary>
     public sealed class EnumMode : BaseEnum<Mode>
     {

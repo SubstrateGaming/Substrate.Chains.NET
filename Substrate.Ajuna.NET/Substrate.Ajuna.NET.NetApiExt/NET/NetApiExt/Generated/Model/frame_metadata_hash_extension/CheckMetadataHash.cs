@@ -18,7 +18,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_metadata_hash_exte
     
     
     /// <summary>
-    /// >> 523 - Composite[frame_metadata_hash_extension.CheckMetadataHash]
+    /// >> 537 - Composite[frame_metadata_hash_extension.CheckMetadataHash]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class CheckMetadataHash : BaseType
