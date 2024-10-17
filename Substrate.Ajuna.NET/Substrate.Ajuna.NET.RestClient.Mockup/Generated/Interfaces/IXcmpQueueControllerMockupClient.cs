@@ -20,8 +20,8 @@ namespace Substrate.Ajuna.NET.RestClient.Mockup.Generated.Interfaces
    
    public interface IXcmpQueueControllerMockupClient
    {
-      Task<bool> SetInboundXcmpSuspended(BoundedBTreeSet value);
-      Task<bool> SetOutboundXcmpStatus(BoundedVecT25 value);
+      Task<bool> SetInboundXcmpSuspended(BoundedBTreeSetT1 value);
+      Task<bool> SetOutboundXcmpStatus(BoundedVecT37 value);
       Task<bool> SetOutboundXcmpMessages(WeakBoundedVecT3 value, Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, U16> key);
       Task<bool> SetSignalMessages(WeakBoundedVecT3 value, Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key);
       Task<bool> SetQueueConfig(QueueConfigData value);

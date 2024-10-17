@@ -23,7 +23,7 @@ namespace Substrate.Ajuna.NET.RestClient.Mockup.Generated.Clients
       {
          _httpClient = httpClient;
       }
-      public async Task<bool> SetAuthorities(BoundedVecT24 value)
+      public async Task<bool> SetAuthorities(BoundedVecT36 value)
       {
          return await SendMockupRequestAsync(_httpClient, "Aura/Authorities", value.Encode(), Substrate.Ajuna.NET.NetApiExt.Generated.Storage.AuraStorage.AuthoritiesParams());
       }

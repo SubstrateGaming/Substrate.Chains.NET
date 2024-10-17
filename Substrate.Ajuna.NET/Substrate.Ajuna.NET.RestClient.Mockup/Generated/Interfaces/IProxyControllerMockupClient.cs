@@ -17,7 +17,7 @@ namespace Substrate.Ajuna.NET.RestClient.Mockup.Generated.Interfaces
    
    public interface IProxyControllerMockupClient
    {
-      Task<bool> SetProxies(BaseTuple<BoundedVecT14, U128> value, Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
-      Task<bool> SetAnnouncements(BaseTuple<BoundedVecT15, U128> value, Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
+      Task<bool> SetProxies(BaseTuple<BoundedVecT26, U128> value, Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
+      Task<bool> SetAnnouncements(BaseTuple<BoundedVecT27, U128> value, Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
    }
 }

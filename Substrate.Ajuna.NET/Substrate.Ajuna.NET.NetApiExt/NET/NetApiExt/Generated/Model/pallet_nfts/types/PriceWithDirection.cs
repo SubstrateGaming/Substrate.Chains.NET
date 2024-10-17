@@ -13,33 +13,38 @@ using Substrate.NetApi.Model.Types.Metadata.Base;
 using System.Collections.Generic;
 
 
-namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set
+namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_nfts.types
 {
     
     
     /// <summary>
-    /// >> 437 - Composite[bounded_collections.bounded_btree_set.BoundedBTreeSet]
+    /// >> 192 - Composite[pallet_nfts.types.PriceWithDirection]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
-    public sealed class BoundedBTreeSet : BaseType
+    public sealed class PriceWithDirection : BaseType
     {
         
         /// <summary>
-        /// >> value
+        /// >> amount
         /// </summary>
-        public Substrate.Ajuna.NET.NetApiExt.Generated.Types.Base.BTreeSetT2 Value { get; set; }
+        public Substrate.NetApi.Model.Types.Primitive.U128 Amount { get; set; }
+        /// <summary>
+        /// >> direction
+        /// </summary>
+        public Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_nfts.types.EnumPriceDirection Direction { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
         {
-            return "BoundedBTreeSet";
+            return "PriceWithDirection";
         }
         
         /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
-            result.AddRange(Value.Encode());
+            result.AddRange(Amount.Encode());
+            result.AddRange(Direction.Encode());
             return result.ToArray();
         }
         
@@ -47,8 +52,10 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.boun
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Value = new Substrate.Ajuna.NET.NetApiExt.Generated.Types.Base.BTreeSetT2();
-            Value.Decode(byteArray, ref p);
+            Amount = new Substrate.NetApi.Model.Types.Primitive.U128();
+            Amount.Decode(byteArray, ref p);
+            Direction = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_nfts.types.EnumPriceDirection();
+            Direction.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];

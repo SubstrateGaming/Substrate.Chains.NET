@@ -18,7 +18,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_asset_conversion_
     
     
     /// <summary>
-    /// >> 535 - Composite[pallet_asset_conversion_tx_payment.ChargeAssetTxPayment]
+    /// >> 675 - Composite[pallet_asset_conversion_tx_payment.ChargeAssetTxPayment]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class ChargeAssetTxPayment : BaseType

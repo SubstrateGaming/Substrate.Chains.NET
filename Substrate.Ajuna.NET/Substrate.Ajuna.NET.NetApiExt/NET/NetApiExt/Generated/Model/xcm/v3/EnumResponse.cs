@@ -53,7 +53,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.v3
     }
     
     /// <summary>
-    /// >> 312 - Variant[xcm.v3.Response]
+    /// >> 361 - Variant[xcm.v3.Response]
     /// </summary>
     public sealed class EnumResponse : BaseEnumRust<Response>
     {
@@ -67,7 +67,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.v3
 				AddTypeDecoder<Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.v3.multiasset.MultiAssets>(Response.Assets);
 				AddTypeDecoder<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.v3.traits.EnumError>>>(Response.ExecutionResult);
 				AddTypeDecoder<Substrate.NetApi.Model.Types.Primitive.U32>(Response.Version);
-				AddTypeDecoder<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT7>(Response.PalletsInfo);
+				AddTypeDecoder<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT16>(Response.PalletsInfo);
 				AddTypeDecoder<Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.v3.EnumMaybeErrorCode>(Response.DispatchResult);
         }
     }

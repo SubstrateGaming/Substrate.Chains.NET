@@ -54,7 +54,7 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Controller
         ///  The public proposals. Unsorted. The second item is the proposal.
         /// </summary>
         [HttpGet("PublicProps")]
-        [ProducesResponseType(typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT34), 200)]
+        [ProducesResponseType(typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT45), 200)]
         [StorageKeyBuilder(typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Storage.DemocracyStorage), "PublicPropsParams")]
         public IActionResult GetPublicProps()
         {
@@ -68,7 +68,7 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Controller
         ///  TWOX-NOTE: Safe, as increasing integer keys are safe.
         /// </summary>
         [HttpGet("DepositOf")]
-        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT35, Substrate.NetApi.Model.Types.Primitive.U128>), 200)]
+        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT46, Substrate.NetApi.Model.Types.Primitive.U128>), 200)]
         [StorageKeyBuilder(typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Storage.DemocracyStorage), "DepositOfParams", typeof(Substrate.NetApi.Model.Types.Primitive.U32))]
         public IActionResult GetDepositOf(string key)
         {
@@ -163,7 +163,7 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Controller
         ///  (until when it may not be resubmitted) and who vetoed it.
         /// </summary>
         [HttpGet("Blacklist")]
-        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT35>), 200)]
+        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT46>), 200)]
         [StorageKeyBuilder(typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Storage.DemocracyStorage), "BlacklistParams", typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256))]
         public IActionResult GetBlacklist(string key)
         {

@@ -18,7 +18,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_asset_conversion.
     
     
     /// <summary>
-    /// >> 523 - Composite[pallet_asset_conversion.types.PoolInfo]
+    /// >> 663 - Composite[pallet_asset_conversion.types.PoolInfo]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class PoolInfo : BaseType

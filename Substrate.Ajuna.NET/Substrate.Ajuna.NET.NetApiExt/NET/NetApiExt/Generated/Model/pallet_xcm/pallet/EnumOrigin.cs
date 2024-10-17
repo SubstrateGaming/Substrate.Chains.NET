@@ -33,7 +33,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_xcm.pallet
     }
     
     /// <summary>
-    /// >> 232 - Variant[pallet_xcm.pallet.Origin]
+    /// >> 281 - Variant[pallet_xcm.pallet.Origin]
     /// </summary>
     public sealed class EnumOrigin : BaseEnumRust<Origin>
     {

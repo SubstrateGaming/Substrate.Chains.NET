@@ -28,7 +28,7 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Storage
         /// >> Members
         ///  The current membership, stored as an ordered Vec.
         /// </summary>
-        Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT33 GetMembers();
+        Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT44 GetMembers();
         
         /// <summary>
         /// >> Prime
@@ -46,7 +46,7 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Storage
         /// <summary>
         /// _membersTypedStorage typed storage field
         /// </summary>
-        private TypedStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT33> _membersTypedStorage;
+        private TypedStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT44> _membersTypedStorage;
         
         /// <summary>
         /// _primeTypedStorage typed storage field
@@ -58,14 +58,14 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Storage
         /// </summary>
         public TechnicalCommitteeMembershipStorage(IStorageDataProvider storageDataProvider, List<IStorageChangeDelegate> storageChangeDelegates)
         {
-            this.MembersTypedStorage = new TypedStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT33>("TechnicalCommitteeMembership.Members", storageDataProvider, storageChangeDelegates);
+            this.MembersTypedStorage = new TypedStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT44>("TechnicalCommitteeMembership.Members", storageDataProvider, storageChangeDelegates);
             this.PrimeTypedStorage = new TypedStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>("TechnicalCommitteeMembership.Prime", storageDataProvider, storageChangeDelegates);
         }
         
         /// <summary>
         /// _membersTypedStorage property
         /// </summary>
-        public TypedStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT33> MembersTypedStorage
+        public TypedStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT44> MembersTypedStorage
         {
             get
             {
@@ -114,7 +114,7 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Storage
         /// >> Members
         ///  The current membership, stored as an ordered Vec.
         /// </summary>
-        public Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT33 GetMembers()
+        public Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT44 GetMembers()
         {
             return MembersTypedStorage.Get();
         }

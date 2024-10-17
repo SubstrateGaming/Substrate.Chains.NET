@@ -18,7 +18,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_message_queue
     
     
     /// <summary>
-    /// >> 469 - Composite[pallet_message_queue.BookState]
+    /// >> 553 - Composite[pallet_message_queue.BookState]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class BookState : BaseType

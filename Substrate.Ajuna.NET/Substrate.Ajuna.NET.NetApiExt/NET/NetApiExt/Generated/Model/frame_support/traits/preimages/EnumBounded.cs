@@ -38,7 +38,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.traits.pre
     }
     
     /// <summary>
-    /// >> 350 - Variant[frame_support.traits.preimages.Bounded]
+    /// >> 398 - Variant[frame_support.traits.preimages.Bounded]
     /// </summary>
     public sealed class EnumBounded : BaseEnumRust<Bounded>
     {
@@ -49,7 +49,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.traits.pre
         public EnumBounded()
         {
 				AddTypeDecoder<Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256>(Bounded.Legacy);
-				AddTypeDecoder<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9>(Bounded.Inline);
+				AddTypeDecoder<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18>(Bounded.Inline);
 				AddTypeDecoder<BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Primitive.U32>>(Bounded.Lookup);
         }
     }

@@ -41,9 +41,9 @@ namespace Substrate.Ajuna.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("Preimage.RequestStatusFor", Substrate.Ajuna.NET.NetApiExt.Generated.Storage.PreimageStorage.RequestStatusForParams(key));
       }
-      public async Task<BoundedVecT17> GetPreimageFor(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Primitive.U32> key)
+      public async Task<BoundedVecT29> GetPreimageFor(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Primitive.U32> key)
       {
-         return await SendRequestAsync<BoundedVecT17>(_httpClient, "preimage/preimagefor", Substrate.Ajuna.NET.NetApiExt.Generated.Storage.PreimageStorage.PreimageForParams(key));
+         return await SendRequestAsync<BoundedVecT29>(_httpClient, "preimage/preimagefor", Substrate.Ajuna.NET.NetApiExt.Generated.Storage.PreimageStorage.PreimageForParams(key));
       }
       public async Task<bool> SubscribePreimageFor(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Primitive.U32> key)
       {

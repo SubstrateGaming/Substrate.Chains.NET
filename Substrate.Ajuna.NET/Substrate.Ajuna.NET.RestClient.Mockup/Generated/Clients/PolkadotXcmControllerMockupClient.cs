@@ -55,7 +55,7 @@ namespace Substrate.Ajuna.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "PolkadotXcm/VersionNotifyTargets", value.Encode(), Substrate.Ajuna.NET.NetApiExt.Generated.Storage.PolkadotXcmStorage.VersionNotifyTargetsParams(key));
       }
-      public async Task<bool> SetVersionDiscoveryQueue(BoundedVecT26 value)
+      public async Task<bool> SetVersionDiscoveryQueue(BoundedVecT38 value)
       {
          return await SendMockupRequestAsync(_httpClient, "PolkadotXcm/VersionDiscoveryQueue", value.Encode(), Substrate.Ajuna.NET.NetApiExt.Generated.Storage.PolkadotXcmStorage.VersionDiscoveryQueueParams());
       }
@@ -67,7 +67,7 @@ namespace Substrate.Ajuna.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "PolkadotXcm/RemoteLockedFungibles", value.Encode(), Substrate.Ajuna.NET.NetApiExt.Generated.Storage.PolkadotXcmStorage.RemoteLockedFungiblesParams(key));
       }
-      public async Task<bool> SetLockedFungibles(BoundedVecT28 value, Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+      public async Task<bool> SetLockedFungibles(BoundedVecT40 value, Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {
          return await SendMockupRequestAsync(_httpClient, "PolkadotXcm/LockedFungibles", value.Encode(), Substrate.Ajuna.NET.NetApiExt.Generated.Storage.PolkadotXcmStorage.LockedFungiblesParams(key));
       }

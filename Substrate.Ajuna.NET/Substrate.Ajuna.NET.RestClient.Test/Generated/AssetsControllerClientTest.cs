@@ -461,27 +461,27 @@ namespace Substrate.Ajuna.NET.RestClient.Test.Generated
          Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_assets.types.AssetMetadata result;
          result = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_assets.types.AssetMetadata();
          result.Deposit = this.GetTestValueU128();
-         result.Name = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT37();
+         result.Name = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT53();
          result.Name = this.GetTestValue19();
-         result.Symbol = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT37();
+         result.Symbol = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT53();
          result.Symbol = this.GetTestValue20();
          result.Decimals = this.GetTestValueU8();
          result.IsFrozen = this.GetTestValueBool();
          return result;
       }
-      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT37 GetTestValue19()
+      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT53 GetTestValue19()
       {
-         Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT37 result;
-         result = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT37();
+         Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT53 result;
+         result = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT53();
          result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>();
          result.Value.Create(new Substrate.NetApi.Model.Types.Primitive.U8[] {
                   this.GetTestValueU8()});
          return result;
       }
-      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT37 GetTestValue20()
+      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT53 GetTestValue20()
       {
-         Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT37 result;
-         result = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT37();
+         Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT53 result;
+         result = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT53();
          result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>();
          result.Value.Create(new Substrate.NetApi.Model.Types.Primitive.U8[] {
                   this.GetTestValueU8()});

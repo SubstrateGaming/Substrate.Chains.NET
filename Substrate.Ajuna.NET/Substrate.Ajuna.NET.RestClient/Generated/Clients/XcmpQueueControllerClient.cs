@@ -29,17 +29,17 @@ namespace Substrate.Ajuna.NET.RestClient.Generated.Clients
          _httpClient = httpClient;
          _subscriptionClient = subscriptionClient;
       }
-      public async Task<BoundedBTreeSet> GetInboundXcmpSuspended()
+      public async Task<BoundedBTreeSetT1> GetInboundXcmpSuspended()
       {
-         return await SendRequestAsync<BoundedBTreeSet>(_httpClient, "xcmpqueue/inboundxcmpsuspended");
+         return await SendRequestAsync<BoundedBTreeSetT1>(_httpClient, "xcmpqueue/inboundxcmpsuspended");
       }
       public async Task<bool> SubscribeInboundXcmpSuspended()
       {
          return await _subscriptionClient.SubscribeAsync("XcmpQueue.InboundXcmpSuspended");
       }
-      public async Task<BoundedVecT25> GetOutboundXcmpStatus()
+      public async Task<BoundedVecT37> GetOutboundXcmpStatus()
       {
-         return await SendRequestAsync<BoundedVecT25>(_httpClient, "xcmpqueue/outboundxcmpstatus");
+         return await SendRequestAsync<BoundedVecT37>(_httpClient, "xcmpqueue/outboundxcmpstatus");
       }
       public async Task<bool> SubscribeOutboundXcmpStatus()
       {

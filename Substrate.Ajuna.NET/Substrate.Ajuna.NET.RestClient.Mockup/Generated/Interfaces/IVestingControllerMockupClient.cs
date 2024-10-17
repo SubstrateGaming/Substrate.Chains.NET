@@ -15,6 +15,6 @@ namespace Substrate.Ajuna.NET.RestClient.Mockup.Generated.Interfaces
    
    public interface IVestingControllerMockupClient
    {
-      Task<bool> SetVestingSchedules(BoundedVecT21 value, Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
+      Task<bool> SetVestingSchedules(BoundedVecT33 value, Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
    }
 }

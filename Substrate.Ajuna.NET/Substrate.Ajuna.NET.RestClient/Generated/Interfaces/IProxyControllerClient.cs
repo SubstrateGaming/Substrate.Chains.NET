@@ -17,9 +17,9 @@ namespace Substrate.Ajuna.NET.RestClient.Generated.Interfaces
    
    public interface IProxyControllerClient
    {
-      Task<BaseTuple<BoundedVecT14, U128>> GetProxies(Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
+      Task<BaseTuple<BoundedVecT26, U128>> GetProxies(Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
       Task<bool> SubscribeProxies(Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
-      Task<BaseTuple<BoundedVecT15, U128>> GetAnnouncements(Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
+      Task<BaseTuple<BoundedVecT27, U128>> GetAnnouncements(Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
       Task<bool> SubscribeAnnouncements(Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
    }
 }

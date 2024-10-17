@@ -147,6 +147,31 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.ajuna_runtime
         Democracy = 46,
         
         /// <summary>
+        /// >> AwesomeAvatars
+        /// </summary>
+        AwesomeAvatars = 51,
+        
+        /// <summary>
+        /// >> Nft
+        /// </summary>
+        Nft = 60,
+        
+        /// <summary>
+        /// >> NftTransfer
+        /// </summary>
+        NftTransfer = 61,
+        
+        /// <summary>
+        /// >> AffiliatesAAA
+        /// </summary>
+        AffiliatesAAA = 70,
+        
+        /// <summary>
+        /// >> TournamentAAA
+        /// </summary>
+        TournamentAAA = 80,
+        
+        /// <summary>
         /// >> Assets
         /// </summary>
         Assets = 90,
@@ -208,6 +233,11 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.ajuna_runtime
 				AddTypeDecoder<Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_collective.pallet.EnumEvent>(RuntimeEvent.TechnicalCommittee);
 				AddTypeDecoder<Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_membership.pallet.EnumEvent>(RuntimeEvent.TechnicalCommitteeMembership);
 				AddTypeDecoder<Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_democracy.pallet.EnumEvent>(RuntimeEvent.Democracy);
+				AddTypeDecoder<Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.pallet.EnumEvent>(RuntimeEvent.AwesomeAvatars);
+				AddTypeDecoder<Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_nfts.pallet.EnumEvent>(RuntimeEvent.Nft);
+				AddTypeDecoder<Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_ajuna_nft_transfer.pallet.EnumEvent>(RuntimeEvent.NftTransfer);
+				AddTypeDecoder<Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_ajuna_affiliates.pallet.EnumEvent>(RuntimeEvent.AffiliatesAAA);
+				AddTypeDecoder<Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_ajuna_tournament.pallet.EnumEvent>(RuntimeEvent.TournamentAAA);
 				AddTypeDecoder<Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_assets.pallet.EnumEvent>(RuntimeEvent.Assets);
 				AddTypeDecoder<Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_asset_registry.pallet.EnumEvent>(RuntimeEvent.AssetRegistry);
 				AddTypeDecoder<Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_assets.pallet.EnumEvent>(RuntimeEvent.PoolAssets);

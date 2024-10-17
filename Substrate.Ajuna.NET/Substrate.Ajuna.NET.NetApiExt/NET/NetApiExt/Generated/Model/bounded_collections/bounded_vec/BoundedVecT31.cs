@@ -18,7 +18,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.boun
     
     
     /// <summary>
-    /// >> 485 - Composite[bounded_collections.bounded_vec.BoundedVecT31]
+    /// >> 495 - Composite[bounded_collections.bounded_vec.BoundedVecT31]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class BoundedVecT31 : BaseType
@@ -27,7 +27,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.boun
         /// <summary>
         /// >> value
         /// </summary>
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256> Value { get; set; }
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_balances.types.IdAmountT1> Value { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
@@ -47,7 +47,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.boun
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256>();
+            Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_balances.types.IdAmountT1>();
             Value.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

@@ -49,7 +49,7 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Controller
         ///  will be smaller.
         /// </summary>
         [HttpGet("InboundXcmpSuspended")]
-        [ProducesResponseType(typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSet), 200)]
+        [ProducesResponseType(typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSetT1), 200)]
         [StorageKeyBuilder(typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Storage.XcmpQueueStorage), "InboundXcmpSuspendedParams")]
         public IActionResult GetInboundXcmpSuspended()
         {
@@ -66,7 +66,7 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Controller
         ///  The bool is true if there is a signal message waiting to be sent.
         /// </summary>
         [HttpGet("OutboundXcmpStatus")]
-        [ProducesResponseType(typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT25), 200)]
+        [ProducesResponseType(typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT37), 200)]
         [StorageKeyBuilder(typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Storage.XcmpQueueStorage), "OutboundXcmpStatusParams")]
         public IActionResult GetOutboundXcmpStatus()
         {

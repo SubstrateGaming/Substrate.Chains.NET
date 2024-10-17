@@ -30,10 +30,10 @@ namespace Substrate.Ajuna.NET.RestClient.Test.Generated
       {
          _httpClient = CreateHttpClient();
       }
-      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSet GetTestValue2()
+      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSetT1 GetTestValue2()
       {
-         Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSet result;
-         result = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSet();
+         Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSetT1 result;
+         result = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSetT1();
          result.Value = new Substrate.Ajuna.NET.NetApiExt.Generated.Types.Base.BTreeSetT2();
          result.Value = this.GetTestValue3();
          return result;
@@ -65,7 +65,7 @@ namespace Substrate.Ajuna.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          XcmpQueueControllerClient rpcClient = new XcmpQueueControllerClient(_httpClient, subscriptionClient);
-         Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSet mockupValue = this.GetTestValue2();
+         Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSetT1 mockupValue = this.GetTestValue2();
 
 
          Assert.IsTrue(await rpcClient.SubscribeInboundXcmpSuspended());
@@ -78,15 +78,15 @@ namespace Substrate.Ajuna.NET.RestClient.Test.Generated
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSet rpcResult = await rpcClient.GetInboundXcmpSuspended();
+         Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSetT1 rpcResult = await rpcClient.GetInboundXcmpSuspended();
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT25 GetTestValue6()
+      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT37 GetTestValue6()
       {
-         Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT25 result;
-         result = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT25();
+         Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT37 result;
+         result = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT37();
          result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue.OutboundChannelDetails>();
          result.Value.Create(new Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue.OutboundChannelDetails[] {
                   this.GetTestValue7()});
@@ -123,7 +123,7 @@ namespace Substrate.Ajuna.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          XcmpQueueControllerClient rpcClient = new XcmpQueueControllerClient(_httpClient, subscriptionClient);
-         Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT25 mockupValue = this.GetTestValue6();
+         Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT37 mockupValue = this.GetTestValue6();
 
 
          Assert.IsTrue(await rpcClient.SubscribeOutboundXcmpStatus());
@@ -136,7 +136,7 @@ namespace Substrate.Ajuna.NET.RestClient.Test.Generated
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT25 rpcResult = await rpcClient.GetOutboundXcmpStatus();
+         Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT37 rpcResult = await rpcClient.GetOutboundXcmpStatus();
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());

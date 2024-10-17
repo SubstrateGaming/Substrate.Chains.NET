@@ -235,7 +235,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_treasury.pallet
     }
     
     /// <summary>
-    /// >> 343 - Variant[pallet_treasury.pallet.Call]
+    /// >> 392 - Variant[pallet_treasury.pallet.Call]
     /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
     public sealed class EnumCall : BaseEnumRust<Call>

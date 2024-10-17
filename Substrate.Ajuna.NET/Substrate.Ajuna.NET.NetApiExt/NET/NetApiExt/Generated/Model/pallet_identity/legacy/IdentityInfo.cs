@@ -18,7 +18,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_identity.legacy
     
     
     /// <summary>
-    /// >> 240 - Composite[pallet_identity.legacy.IdentityInfo]
+    /// >> 289 - Composite[pallet_identity.legacy.IdentityInfo]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class IdentityInfo : BaseType
@@ -27,7 +27,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_identity.legacy
         /// <summary>
         /// >> additional
         /// </summary>
-        public Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT6 Additional { get; set; }
+        public Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT15 Additional { get; set; }
         /// <summary>
         /// >> display
         /// </summary>
@@ -87,7 +87,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_identity.legacy
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Additional = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT6();
+            Additional = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT15();
             Additional.Decode(byteArray, ref p);
             Display = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumData();
             Display.Decode(byteArray, ref p);

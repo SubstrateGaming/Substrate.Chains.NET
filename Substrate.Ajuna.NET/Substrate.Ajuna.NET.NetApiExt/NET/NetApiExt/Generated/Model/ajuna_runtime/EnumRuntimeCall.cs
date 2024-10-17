@@ -152,6 +152,16 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.ajuna_runtime
         Democracy = 46,
         
         /// <summary>
+        /// >> AwesomeAvatars
+        /// </summary>
+        AwesomeAvatars = 51,
+        
+        /// <summary>
+        /// >> Nft
+        /// </summary>
+        Nft = 60,
+        
+        /// <summary>
         /// >> Assets
         /// </summary>
         Assets = 90,
@@ -173,7 +183,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.ajuna_runtime
     }
     
     /// <summary>
-    /// >> 227 - Variant[ajuna_runtime.RuntimeCall]
+    /// >> 276 - Variant[ajuna_runtime.RuntimeCall]
     /// </summary>
     public sealed class EnumRuntimeCall : BaseEnumRust<RuntimeCall>
     {
@@ -209,6 +219,8 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.ajuna_runtime
 				AddTypeDecoder<Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_collective.pallet.EnumCall>(RuntimeCall.TechnicalCommittee);
 				AddTypeDecoder<Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_membership.pallet.EnumCall>(RuntimeCall.TechnicalCommitteeMembership);
 				AddTypeDecoder<Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_democracy.pallet.EnumCall>(RuntimeCall.Democracy);
+				AddTypeDecoder<Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_avatars.pallet.EnumCall>(RuntimeCall.AwesomeAvatars);
+				AddTypeDecoder<Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_nfts.pallet.EnumCall>(RuntimeCall.Nft);
 				AddTypeDecoder<Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_assets.pallet.EnumCall>(RuntimeCall.Assets);
 				AddTypeDecoder<Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_asset_registry.pallet.EnumCall>(RuntimeCall.AssetRegistry);
 				AddTypeDecoder<Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_assets.pallet.EnumCall>(RuntimeCall.PoolAssets);

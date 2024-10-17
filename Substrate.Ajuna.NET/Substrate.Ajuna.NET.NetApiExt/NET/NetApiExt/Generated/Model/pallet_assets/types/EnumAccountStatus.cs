@@ -38,7 +38,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_assets.types
     }
     
     /// <summary>
-    /// >> 514 - Variant[pallet_assets.types.AccountStatus]
+    /// >> 654 - Variant[pallet_assets.types.AccountStatus]
     /// </summary>
     public sealed class EnumAccountStatus : BaseEnum<AccountStatus>
     {

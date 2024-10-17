@@ -18,7 +18,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_system
     
     
     /// <summary>
-    /// >> 162 - Composite[frame_system.CodeUpgradeAuthorization]
+    /// >> 213 - Composite[frame_system.CodeUpgradeAuthorization]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class CodeUpgradeAuthorization : BaseType

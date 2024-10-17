@@ -33,7 +33,7 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Storage
         /// >> Agenda
         ///  Items to be executed, indexed by the block number that they should be executed on.
         /// </summary>
-        Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT16 GetAgenda(string key);
+        Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT28 GetAgenda(string key);
         
         /// <summary>
         /// >> Retries
@@ -65,7 +65,7 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Storage
         /// <summary>
         /// _agendaTypedStorage typed storage field
         /// </summary>
-        private TypedMapStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT16> _agendaTypedStorage;
+        private TypedMapStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT28> _agendaTypedStorage;
         
         /// <summary>
         /// _retriesTypedStorage typed storage field
@@ -83,7 +83,7 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Storage
         public SchedulerStorage(IStorageDataProvider storageDataProvider, List<IStorageChangeDelegate> storageChangeDelegates)
         {
             this.IncompleteSinceTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32>("Scheduler.IncompleteSince", storageDataProvider, storageChangeDelegates);
-            this.AgendaTypedStorage = new TypedMapStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT16>("Scheduler.Agenda", storageDataProvider, storageChangeDelegates);
+            this.AgendaTypedStorage = new TypedMapStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT28>("Scheduler.Agenda", storageDataProvider, storageChangeDelegates);
             this.RetriesTypedStorage = new TypedMapStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_scheduler.RetryConfig>("Scheduler.Retries", storageDataProvider, storageChangeDelegates);
             this.LookupTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>>("Scheduler.Lookup", storageDataProvider, storageChangeDelegates);
         }
@@ -106,7 +106,7 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Storage
         /// <summary>
         /// _agendaTypedStorage property
         /// </summary>
-        public TypedMapStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT16> AgendaTypedStorage
+        public TypedMapStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT28> AgendaTypedStorage
         {
             get
             {
@@ -189,13 +189,13 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Storage
         /// >> Agenda
         ///  Items to be executed, indexed by the block number that they should be executed on.
         /// </summary>
-        public Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT16 GetAgenda(string key)
+        public Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT28 GetAgenda(string key)
         {
             if ((key == null))
             {
                 return null;
             }
-            if (AgendaTypedStorage.Dictionary.TryGetValue(key, out Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT16 result))
+            if (AgendaTypedStorage.Dictionary.TryGetValue(key, out Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT28 result))
             {
                 return result;
             }

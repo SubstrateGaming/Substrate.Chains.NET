@@ -18,6 +18,6 @@ namespace Substrate.Ajuna.NET.RestClient.Mockup.Generated.Interfaces
    {
       Task<bool> SetStatusFor(EnumOldRequestStatus value, Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256 key);
       Task<bool> SetRequestStatusFor(EnumRequestStatus value, Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256 key);
-      Task<bool> SetPreimageFor(BoundedVecT17 value, Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Primitive.U32> key);
+      Task<bool> SetPreimageFor(BoundedVecT29 value, Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Primitive.U32> key);
    }
 }

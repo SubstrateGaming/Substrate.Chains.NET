@@ -37,7 +37,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_asset_conversion_
     }
     
     /// <summary>
-    /// >> 156 - Variant[pallet_asset_conversion_tx_payment.pallet.Event]
+    /// >> 208 - Variant[pallet_asset_conversion_tx_payment.pallet.Event]
     /// The `Event` enum of this pallet
     /// </summary>
     public sealed class EnumEvent : BaseEnumRust<Event>

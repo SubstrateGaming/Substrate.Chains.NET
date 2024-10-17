@@ -18,7 +18,7 @@ namespace Substrate.Ajuna.NET.RestClient.Generated.Interfaces
    
    public interface IAuraExtControllerClient
    {
-      Task<BoundedVecT24> GetAuthorities();
+      Task<BoundedVecT36> GetAuthorities();
       Task<bool> SubscribeAuthorities();
       Task<BaseTuple<Slot, U32>> GetSlotInfo();
       Task<bool> SubscribeSlotInfo();

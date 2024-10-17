@@ -18,7 +18,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_runtime.traits
     
     
     /// <summary>
-    /// >> 351 - Composite[sp_runtime.traits.BlakeTwo256]
+    /// >> 399 - Composite[sp_runtime.traits.BlakeTwo256]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class BlakeTwo256 : BaseType

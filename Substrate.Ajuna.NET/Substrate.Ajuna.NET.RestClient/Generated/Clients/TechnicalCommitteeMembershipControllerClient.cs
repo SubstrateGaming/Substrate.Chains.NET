@@ -25,9 +25,9 @@ namespace Substrate.Ajuna.NET.RestClient.Generated.Clients
          _httpClient = httpClient;
          _subscriptionClient = subscriptionClient;
       }
-      public async Task<BoundedVecT33> GetMembers()
+      public async Task<BoundedVecT44> GetMembers()
       {
-         return await SendRequestAsync<BoundedVecT33>(_httpClient, "technicalcommitteemembership/members");
+         return await SendRequestAsync<BoundedVecT44>(_httpClient, "technicalcommitteemembership/members");
       }
       public async Task<bool> SubscribeMembers()
       {
