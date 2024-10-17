@@ -16,9 +16,9 @@ namespace Substrate.Ajuna.NET.RestClient.Generated.Interfaces
    
    public interface ICollatorSelectionControllerClient
    {
-      Task<BoundedVecT22> GetInvulnerables();
+      Task<BoundedVecT34> GetInvulnerables();
       Task<bool> SubscribeInvulnerables();
-      Task<BoundedVecT23> GetCandidateList();
+      Task<BoundedVecT35> GetCandidateList();
       Task<bool> SubscribeCandidateList();
       Task<U32> GetLastAuthoredBlock(Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
       Task<bool> SubscribeLastAuthoredBlock(Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);

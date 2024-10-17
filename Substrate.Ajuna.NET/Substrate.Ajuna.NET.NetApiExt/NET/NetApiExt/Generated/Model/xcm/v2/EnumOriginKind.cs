@@ -43,7 +43,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.xcm.v2
     }
     
     /// <summary>
-    /// >> 304 - Variant[xcm.v2.OriginKind]
+    /// >> 353 - Variant[xcm.v2.OriginKind]
     /// </summary>
     public sealed class EnumOriginKind : BaseEnum<OriginKind>
     {

@@ -18,7 +18,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.staging_xcm.v4
     
     
     /// <summary>
-    /// >> 330 - Composite[staging_xcm.v4.XcmT2]
+    /// >> 379 - Composite[staging_xcm.v4.XcmT2]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class XcmT2 : BaseType

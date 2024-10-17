@@ -54,7 +54,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queu
     }
     
     /// <summary>
-    /// >> 447 - Variant[cumulus_pallet_xcmp_queue.pallet.Error]
+    /// >> 531 - Variant[cumulus_pallet_xcmp_queue.pallet.Error]
     /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>

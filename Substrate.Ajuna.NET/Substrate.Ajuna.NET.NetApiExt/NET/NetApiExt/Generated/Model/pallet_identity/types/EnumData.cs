@@ -213,7 +213,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_identity.types
     }
     
     /// <summary>
-    /// >> 243 - Variant[pallet_identity.types.Data]
+    /// >> 292 - Variant[pallet_identity.types.Data]
     /// </summary>
     public sealed class EnumData : BaseEnumRust<Data>
     {

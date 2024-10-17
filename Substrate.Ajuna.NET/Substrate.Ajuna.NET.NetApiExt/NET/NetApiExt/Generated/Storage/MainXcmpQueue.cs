@@ -36,8 +36,8 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         public XcmpQueueStorage(SubstrateClientExt client)
         {
             this._client = client;
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("XcmpQueue", "InboundXcmpSuspended"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSet)));
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("XcmpQueue", "OutboundXcmpStatus"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT25)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("XcmpQueue", "InboundXcmpSuspended"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSetT1)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("XcmpQueue", "OutboundXcmpStatus"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT37)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("XcmpQueue", "OutboundXcmpMessages"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat,
                             Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U16>), typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT3)));
@@ -85,10 +85,10 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         ///  NOTE: The PoV benchmarking cannot know this and will over-estimate, but the actual proof
         ///  will be smaller.
         /// </summary>
-        public async Task<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSet> InboundXcmpSuspended(string blockhash, CancellationToken token)
+        public async Task<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSetT1> InboundXcmpSuspended(string blockhash, CancellationToken token)
         {
             string parameters = XcmpQueueStorage.InboundXcmpSuspendedParams();
-            var result = await _client.GetStorageAsync<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSet>(parameters, blockhash, token);
+            var result = await _client.GetStorageAsync<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSetT1>(parameters, blockhash, token);
             return result;
         }
         
@@ -124,10 +124,10 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         ///  case of the need to send a high-priority signal message this block.
         ///  The bool is true if there is a signal message waiting to be sent.
         /// </summary>
-        public async Task<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT25> OutboundXcmpStatus(string blockhash, CancellationToken token)
+        public async Task<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT37> OutboundXcmpStatus(string blockhash, CancellationToken token)
         {
             string parameters = XcmpQueueStorage.OutboundXcmpStatusParams();
-            var result = await _client.GetStorageAsync<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT25>(parameters, blockhash, token);
+            var result = await _client.GetStorageAsync<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT37>(parameters, blockhash, token);
             return result;
         }
         

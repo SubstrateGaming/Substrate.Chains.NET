@@ -27,11 +27,11 @@ namespace Substrate.Ajuna.NET.RestClient.Mockup.Generated.Clients
       {
          _httpClient = httpClient;
       }
-      public async Task<bool> SetInboundXcmpSuspended(BoundedBTreeSet value)
+      public async Task<bool> SetInboundXcmpSuspended(BoundedBTreeSetT1 value)
       {
          return await SendMockupRequestAsync(_httpClient, "XcmpQueue/InboundXcmpSuspended", value.Encode(), Substrate.Ajuna.NET.NetApiExt.Generated.Storage.XcmpQueueStorage.InboundXcmpSuspendedParams());
       }
-      public async Task<bool> SetOutboundXcmpStatus(BoundedVecT25 value)
+      public async Task<bool> SetOutboundXcmpStatus(BoundedVecT37 value)
       {
          return await SendMockupRequestAsync(_httpClient, "XcmpQueue/OutboundXcmpStatus", value.Encode(), Substrate.Ajuna.NET.NetApiExt.Generated.Storage.XcmpQueueStorage.OutboundXcmpStatusParams());
       }

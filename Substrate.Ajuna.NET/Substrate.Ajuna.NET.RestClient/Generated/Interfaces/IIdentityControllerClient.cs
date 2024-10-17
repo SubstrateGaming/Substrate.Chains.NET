@@ -23,9 +23,9 @@ namespace Substrate.Ajuna.NET.RestClient.Generated.Interfaces
       Task<bool> SubscribeIdentityOf(AccountId32 key);
       Task<BaseTuple<AccountId32, EnumData>> GetSuperOf(AccountId32 key);
       Task<bool> SubscribeSuperOf(AccountId32 key);
-      Task<BaseTuple<U128, BoundedVecT11>> GetSubsOf(AccountId32 key);
+      Task<BaseTuple<U128, BoundedVecT23>> GetSubsOf(AccountId32 key);
       Task<bool> SubscribeSubsOf(AccountId32 key);
-      Task<BoundedVecT12> GetRegistrars();
+      Task<BoundedVecT24> GetRegistrars();
       Task<bool> SubscribeRegistrars();
       Task<AuthorityProperties> GetUsernameAuthorities(AccountId32 key);
       Task<bool> SubscribeUsernameAuthorities(AccountId32 key);

@@ -98,7 +98,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_asset_conversion.
     }
     
     /// <summary>
-    /// >> 357 - Variant[pallet_asset_conversion.pallet.Call]
+    /// >> 442 - Variant[pallet_asset_conversion.pallet.Call]
     /// Pallet's callable functions.
     /// </summary>
     public sealed class EnumCall : BaseEnumRust<Call>

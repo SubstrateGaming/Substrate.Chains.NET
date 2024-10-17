@@ -18,7 +18,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_assets.types
     
     
     /// <summary>
-    /// >> 518 - Composite[pallet_assets.types.AssetMetadata]
+    /// >> 658 - Composite[pallet_assets.types.AssetMetadata]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class AssetMetadata : BaseType
@@ -31,11 +31,11 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_assets.types
         /// <summary>
         /// >> name
         /// </summary>
-        public Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT37 Name { get; set; }
+        public Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT53 Name { get; set; }
         /// <summary>
         /// >> symbol
         /// </summary>
-        public Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT37 Symbol { get; set; }
+        public Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT53 Symbol { get; set; }
         /// <summary>
         /// >> decimals
         /// </summary>
@@ -69,9 +69,9 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_assets.types
             var start = p;
             Deposit = new Substrate.NetApi.Model.Types.Primitive.U128();
             Deposit.Decode(byteArray, ref p);
-            Name = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT37();
+            Name = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT53();
             Name.Decode(byteArray, ref p);
-            Symbol = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT37();
+            Symbol = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT53();
             Symbol.Decode(byteArray, ref p);
             Decimals = new Substrate.NetApi.Model.Types.Primitive.U8();
             Decimals.Decode(byteArray, ref p);

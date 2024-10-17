@@ -23,15 +23,15 @@ namespace Substrate.Ajuna.NET.RestClient.Mockup.Generated.Interfaces
    public interface IDemocracyControllerMockupClient
    {
       Task<bool> SetPublicPropCount(U32 value);
-      Task<bool> SetPublicProps(BoundedVecT34 value);
-      Task<bool> SetDepositOf(BaseTuple<BoundedVecT35, U128> value, U32 key);
+      Task<bool> SetPublicProps(BoundedVecT45 value);
+      Task<bool> SetDepositOf(BaseTuple<BoundedVecT46, U128> value, U32 key);
       Task<bool> SetReferendumCount(U32 value);
       Task<bool> SetLowestUnbaked(U32 value);
       Task<bool> SetReferendumInfoOf(EnumReferendumInfo value, U32 key);
       Task<bool> SetVotingOf(EnumVoting value, Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
       Task<bool> SetLastTabledWasExternal(Bool value);
       Task<bool> SetNextExternal(BaseTuple<EnumBounded, EnumVoteThreshold> value);
-      Task<bool> SetBlacklist(BaseTuple<U32, BoundedVecT35> value, H256 key);
+      Task<bool> SetBlacklist(BaseTuple<U32, BoundedVecT46> value, H256 key);
       Task<bool> SetCancellations(Bool value, H256 key);
       Task<bool> SetMetadataOf(H256 value, EnumMetadataOwner key);
    }

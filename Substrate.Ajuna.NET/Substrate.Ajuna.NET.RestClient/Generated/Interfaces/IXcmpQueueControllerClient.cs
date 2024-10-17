@@ -20,9 +20,9 @@ namespace Substrate.Ajuna.NET.RestClient.Generated.Interfaces
    
    public interface IXcmpQueueControllerClient
    {
-      Task<BoundedBTreeSet> GetInboundXcmpSuspended();
+      Task<BoundedBTreeSetT1> GetInboundXcmpSuspended();
       Task<bool> SubscribeInboundXcmpSuspended();
-      Task<BoundedVecT25> GetOutboundXcmpStatus();
+      Task<BoundedVecT37> GetOutboundXcmpStatus();
       Task<bool> SubscribeOutboundXcmpStatus();
       Task<WeakBoundedVecT3> GetOutboundXcmpMessages(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, U16> key);
       Task<bool> SubscribeOutboundXcmpMessages(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Ajuna.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, U16> key);

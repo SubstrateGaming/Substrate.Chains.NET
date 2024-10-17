@@ -78,7 +78,7 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Controller
         ///  Proposal indices that have been approved but not yet awarded.
         /// </summary>
         [HttpGet("Approvals")]
-        [ProducesResponseType(typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT30), 200)]
+        [ProducesResponseType(typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9), 200)]
         [StorageKeyBuilder(typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Storage.TreasuryStorage), "ApprovalsParams")]
         public IActionResult GetApprovals()
         {

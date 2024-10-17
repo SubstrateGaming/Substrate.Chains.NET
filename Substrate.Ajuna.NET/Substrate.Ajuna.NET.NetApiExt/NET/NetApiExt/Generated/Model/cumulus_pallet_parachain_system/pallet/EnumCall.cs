@@ -70,7 +70,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain
     }
     
     /// <summary>
-    /// >> 211 - Variant[cumulus_pallet_parachain_system.pallet.Call]
+    /// >> 260 - Variant[cumulus_pallet_parachain_system.pallet.Call]
     /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
     public sealed class EnumCall : BaseEnumRust<Call>

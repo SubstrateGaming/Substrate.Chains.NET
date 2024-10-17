@@ -38,7 +38,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_treasury
     }
     
     /// <summary>
-    /// >> 481 - Variant[pallet_treasury.PaymentState]
+    /// >> 564 - Variant[pallet_treasury.PaymentState]
     /// </summary>
     public sealed class EnumPaymentState : BaseEnumRust<PaymentState>
     {

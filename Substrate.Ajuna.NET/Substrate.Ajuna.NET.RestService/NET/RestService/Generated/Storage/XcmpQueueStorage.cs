@@ -35,7 +35,7 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Storage
         ///  NOTE: The PoV benchmarking cannot know this and will over-estimate, but the actual proof
         ///  will be smaller.
         /// </summary>
-        Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSet GetInboundXcmpSuspended();
+        Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSetT1 GetInboundXcmpSuspended();
         
         /// <summary>
         /// >> OutboundXcmpStatus
@@ -46,7 +46,7 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Storage
         ///  case of the need to send a high-priority signal message this block.
         ///  The bool is true if there is a signal message waiting to be sent.
         /// </summary>
-        Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT25 GetOutboundXcmpStatus();
+        Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT37 GetOutboundXcmpStatus();
         
         /// <summary>
         /// >> OutboundXcmpMessages
@@ -88,12 +88,12 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Storage
         /// <summary>
         /// _inboundXcmpSuspendedTypedStorage typed storage field
         /// </summary>
-        private TypedStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSet> _inboundXcmpSuspendedTypedStorage;
+        private TypedStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSetT1> _inboundXcmpSuspendedTypedStorage;
         
         /// <summary>
         /// _outboundXcmpStatusTypedStorage typed storage field
         /// </summary>
-        private TypedStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT25> _outboundXcmpStatusTypedStorage;
+        private TypedStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT37> _outboundXcmpStatusTypedStorage;
         
         /// <summary>
         /// _outboundXcmpMessagesTypedStorage typed storage field
@@ -125,8 +125,8 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Storage
         /// </summary>
         public XcmpQueueStorage(IStorageDataProvider storageDataProvider, List<IStorageChangeDelegate> storageChangeDelegates)
         {
-            this.InboundXcmpSuspendedTypedStorage = new TypedStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSet>("XcmpQueue.InboundXcmpSuspended", storageDataProvider, storageChangeDelegates);
-            this.OutboundXcmpStatusTypedStorage = new TypedStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT25>("XcmpQueue.OutboundXcmpStatus", storageDataProvider, storageChangeDelegates);
+            this.InboundXcmpSuspendedTypedStorage = new TypedStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSetT1>("XcmpQueue.InboundXcmpSuspended", storageDataProvider, storageChangeDelegates);
+            this.OutboundXcmpStatusTypedStorage = new TypedStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT37>("XcmpQueue.OutboundXcmpStatus", storageDataProvider, storageChangeDelegates);
             this.OutboundXcmpMessagesTypedStorage = new TypedMapStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT3>("XcmpQueue.OutboundXcmpMessages", storageDataProvider, storageChangeDelegates);
             this.SignalMessagesTypedStorage = new TypedMapStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT3>("XcmpQueue.SignalMessages", storageDataProvider, storageChangeDelegates);
             this.QueueConfigTypedStorage = new TypedStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue.QueueConfigData>("XcmpQueue.QueueConfig", storageDataProvider, storageChangeDelegates);
@@ -137,7 +137,7 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Storage
         /// <summary>
         /// _inboundXcmpSuspendedTypedStorage property
         /// </summary>
-        public TypedStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSet> InboundXcmpSuspendedTypedStorage
+        public TypedStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSetT1> InboundXcmpSuspendedTypedStorage
         {
             get
             {
@@ -152,7 +152,7 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Storage
         /// <summary>
         /// _outboundXcmpStatusTypedStorage property
         /// </summary>
-        public TypedStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT25> OutboundXcmpStatusTypedStorage
+        public TypedStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT37> OutboundXcmpStatusTypedStorage
         {
             get
             {
@@ -273,7 +273,7 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Storage
         ///  NOTE: The PoV benchmarking cannot know this and will over-estimate, but the actual proof
         ///  will be smaller.
         /// </summary>
-        public Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSet GetInboundXcmpSuspended()
+        public Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set.BoundedBTreeSetT1 GetInboundXcmpSuspended()
         {
             return InboundXcmpSuspendedTypedStorage.Get();
         }
@@ -296,7 +296,7 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Storage
         ///  case of the need to send a high-priority signal message this block.
         ///  The bool is true if there is a signal message waiting to be sent.
         /// </summary>
-        public Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT25 GetOutboundXcmpStatus()
+        public Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT37 GetOutboundXcmpStatus()
         {
             return OutboundXcmpStatusTypedStorage.Get();
         }

@@ -180,6 +180,36 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated
         public DemocracyStorage DemocracyStorage;
         
         /// <summary>
+        /// RandomnessStorage storage calls.
+        /// </summary>
+        public RandomnessStorage RandomnessStorage;
+        
+        /// <summary>
+        /// AwesomeAvatarsStorage storage calls.
+        /// </summary>
+        public AwesomeAvatarsStorage AwesomeAvatarsStorage;
+        
+        /// <summary>
+        /// NftStorage storage calls.
+        /// </summary>
+        public NftStorage NftStorage;
+        
+        /// <summary>
+        /// NftTransferStorage storage calls.
+        /// </summary>
+        public NftTransferStorage NftTransferStorage;
+        
+        /// <summary>
+        /// AffiliatesAAAStorage storage calls.
+        /// </summary>
+        public AffiliatesAAAStorage AffiliatesAAAStorage;
+        
+        /// <summary>
+        /// TournamentAAAStorage storage calls.
+        /// </summary>
+        public TournamentAAAStorage TournamentAAAStorage;
+        
+        /// <summary>
         /// AssetsStorage storage calls.
         /// </summary>
         public AssetsStorage AssetsStorage;
@@ -238,6 +268,12 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated
             this.TechnicalCommitteeStorage = new TechnicalCommitteeStorage(this);
             this.TechnicalCommitteeMembershipStorage = new TechnicalCommitteeMembershipStorage(this);
             this.DemocracyStorage = new DemocracyStorage(this);
+            this.RandomnessStorage = new RandomnessStorage(this);
+            this.AwesomeAvatarsStorage = new AwesomeAvatarsStorage(this);
+            this.NftStorage = new NftStorage(this);
+            this.NftTransferStorage = new NftTransferStorage(this);
+            this.AffiliatesAAAStorage = new AffiliatesAAAStorage(this);
+            this.TournamentAAAStorage = new TournamentAAAStorage(this);
             this.AssetsStorage = new AssetsStorage(this);
             this.AssetRegistryStorage = new AssetRegistryStorage(this);
             this.PoolAssetsStorage = new PoolAssetsStorage(this);

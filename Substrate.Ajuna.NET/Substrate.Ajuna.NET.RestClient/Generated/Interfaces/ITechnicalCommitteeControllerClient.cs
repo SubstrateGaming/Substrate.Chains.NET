@@ -20,7 +20,7 @@ namespace Substrate.Ajuna.NET.RestClient.Generated.Interfaces
    
    public interface ITechnicalCommitteeControllerClient
    {
-      Task<BoundedVecT31> GetProposals();
+      Task<BoundedVecT42> GetProposals();
       Task<bool> SubscribeProposals();
       Task<EnumRuntimeCall> GetProposalOf(Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256 key);
       Task<bool> SubscribeProposalOf(Substrate.Ajuna.NET.NetApiExt.Generated.Model.primitive_types.H256 key);

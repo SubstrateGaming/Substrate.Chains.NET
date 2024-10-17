@@ -263,7 +263,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.staging_xcm.v4
     }
     
     /// <summary>
-    /// >> 332 - Variant[staging_xcm.v4.Instruction]
+    /// >> 381 - Variant[staging_xcm.v4.Instruction]
     /// </summary>
     public sealed class EnumInstruction : BaseEnumRust<Instruction>
     {

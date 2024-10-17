@@ -42,7 +42,7 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Controller
         ///  The current membership, stored as an ordered Vec.
         /// </summary>
         [HttpGet("Members")]
-        [ProducesResponseType(typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT32), 200)]
+        [ProducesResponseType(typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT43), 200)]
         [StorageKeyBuilder(typeof(Substrate.Ajuna.NET.NetApiExt.Generated.Storage.CouncilMembershipStorage), "MembersParams")]
         public IActionResult GetMembers()
         {

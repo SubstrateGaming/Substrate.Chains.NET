@@ -20,7 +20,7 @@ namespace Substrate.Ajuna.NET.RestClient.Mockup.Generated.Interfaces
       Task<bool> SetProposalCount(U32 value);
       Task<bool> SetProposals(Proposal value, U32 key);
       Task<bool> SetDeactivated(U128 value);
-      Task<bool> SetApprovals(BoundedVecT30 value);
+      Task<bool> SetApprovals(BoundedVecT9 value);
       Task<bool> SetSpendCount(U32 value);
       Task<bool> SetSpends(SpendStatus value, U32 key);
    }

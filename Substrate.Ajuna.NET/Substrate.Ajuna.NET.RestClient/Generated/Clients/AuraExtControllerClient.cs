@@ -27,9 +27,9 @@ namespace Substrate.Ajuna.NET.RestClient.Generated.Clients
          _httpClient = httpClient;
          _subscriptionClient = subscriptionClient;
       }
-      public async Task<BoundedVecT24> GetAuthorities()
+      public async Task<BoundedVecT36> GetAuthorities()
       {
-         return await SendRequestAsync<BoundedVecT24>(_httpClient, "auraext/authorities");
+         return await SendRequestAsync<BoundedVecT36>(_httpClient, "auraext/authorities");
       }
       public async Task<bool> SubscribeAuthorities()
       {
