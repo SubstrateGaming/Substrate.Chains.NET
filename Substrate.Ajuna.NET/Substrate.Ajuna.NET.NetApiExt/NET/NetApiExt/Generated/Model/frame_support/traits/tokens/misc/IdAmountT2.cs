@@ -13,12 +13,12 @@ using Substrate.NetApi.Model.Types.Metadata.Base;
 using System.Collections.Generic;
 
 
-namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_balances.types
+namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.traits.tokens.misc
 {
     
     
     /// <summary>
-    /// >> 501 - Composite[pallet_balances.types.IdAmountT2]
+    /// >> 501 - Composite[frame_support.traits.tokens.misc.IdAmountT2]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class IdAmountT2 : BaseType

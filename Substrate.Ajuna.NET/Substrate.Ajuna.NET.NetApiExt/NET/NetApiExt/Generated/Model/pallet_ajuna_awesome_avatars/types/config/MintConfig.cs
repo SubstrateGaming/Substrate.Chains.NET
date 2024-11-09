@@ -18,7 +18,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
     
     
     /// <summary>
-    /// >> 168 - Composite[pallet_ajuna_awesome_avatars.types.config.MintConfig]
+    /// >> 169 - Composite[pallet_ajuna_awesome_avatars.types.config.MintConfig]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class MintConfig : BaseType

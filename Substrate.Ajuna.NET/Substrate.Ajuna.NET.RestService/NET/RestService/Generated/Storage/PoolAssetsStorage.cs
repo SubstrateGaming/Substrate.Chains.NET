@@ -49,6 +49,20 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Storage
         ///  Metadata of an asset.
         /// </summary>
         Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_assets.types.AssetMetadata GetMetadata(string key);
+        
+        /// <summary>
+        /// >> NextAssetId
+        ///  The asset ID enforced for the next asset creation, if any present. Otherwise, this storage
+        ///  item has no effect.
+        /// 
+        ///  This can be useful for setting up constraints for IDs of the new assets. For example, by
+        ///  providing an initial [`NextAssetId`] and using the [`crate::AutoIncAssetId`] callback, an
+        ///  auto-increment model can be applied to all new asset IDs.
+        /// 
+        ///  The initial next asset ID can be set using the [`GenesisConfig`] or the
+        ///  [SetNextAssetId](`migration::next_asset_id::SetNextAssetId`) migration.
+        /// </summary>
+        Substrate.NetApi.Model.Types.Primitive.U32 GetNextAssetId();
     }
     
     /// <summary>
@@ -78,6 +92,11 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Storage
         private TypedMapStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_assets.types.AssetMetadata> _metadataTypedStorage;
         
         /// <summary>
+        /// _nextAssetIdTypedStorage typed storage field
+        /// </summary>
+        private TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32> _nextAssetIdTypedStorage;
+        
+        /// <summary>
         /// PoolAssetsStorage constructor.
         /// </summary>
         public PoolAssetsStorage(IStorageDataProvider storageDataProvider, List<IStorageChangeDelegate> storageChangeDelegates)
@@ -86,6 +105,7 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Storage
             this.AccountTypedStorage = new TypedMapStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_assets.types.AssetAccount>("PoolAssets.Account", storageDataProvider, storageChangeDelegates);
             this.ApprovalsTypedStorage = new TypedMapStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_assets.types.Approval>("PoolAssets.Approvals", storageDataProvider, storageChangeDelegates);
             this.MetadataTypedStorage = new TypedMapStorage<Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_assets.types.AssetMetadata>("PoolAssets.Metadata", storageDataProvider, storageChangeDelegates);
+            this.NextAssetIdTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32>("PoolAssets.NextAssetId", storageDataProvider, storageChangeDelegates);
         }
         
         /// <summary>
@@ -149,6 +169,21 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Storage
         }
         
         /// <summary>
+        /// _nextAssetIdTypedStorage property
+        /// </summary>
+        public TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32> NextAssetIdTypedStorage
+        {
+            get
+            {
+                return _nextAssetIdTypedStorage;
+            }
+            set
+            {
+                _nextAssetIdTypedStorage = value;
+            }
+        }
+        
+        /// <summary>
         /// Connects to all storages and initializes the change subscription handling.
         /// </summary>
         public async Task InitializeAsync(Substrate.ServiceLayer.Storage.IStorageDataProvider dataProvider)
@@ -157,6 +192,7 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Storage
             await AccountTypedStorage.InitializeAsync("PoolAssets", "Account");
             await ApprovalsTypedStorage.InitializeAsync("PoolAssets", "Approvals");
             await MetadataTypedStorage.InitializeAsync("PoolAssets", "Metadata");
+            await NextAssetIdTypedStorage.InitializeAsync("PoolAssets", "NextAssetId");
         }
         
         /// <summary>
@@ -275,6 +311,32 @@ namespace Substrate.Ajuna.NET.RestService.Generated.Storage
             {
                 return null;
             }
+        }
+        
+        /// <summary>
+        /// Implements any storage change for PoolAssets.NextAssetId
+        /// </summary>
+        [StorageChange("PoolAssets", "NextAssetId")]
+        public void OnUpdateNextAssetId(string data)
+        {
+            NextAssetIdTypedStorage.Update(data);
+        }
+        
+        /// <summary>
+        /// >> NextAssetId
+        ///  The asset ID enforced for the next asset creation, if any present. Otherwise, this storage
+        ///  item has no effect.
+        /// 
+        ///  This can be useful for setting up constraints for IDs of the new assets. For example, by
+        ///  providing an initial [`NextAssetId`] and using the [`crate::AutoIncAssetId`] callback, an
+        ///  auto-increment model can be applied to all new asset IDs.
+        /// 
+        ///  The initial next asset ID can be set using the [`GenesisConfig`] or the
+        ///  [SetNextAssetId](`migration::next_asset_id::SetNextAssetId`) migration.
+        /// </summary>
+        public Substrate.NetApi.Model.Types.Primitive.U32 GetNextAssetId()
+        {
+            return NextAssetIdTypedStorage.Get();
         }
     }
 }

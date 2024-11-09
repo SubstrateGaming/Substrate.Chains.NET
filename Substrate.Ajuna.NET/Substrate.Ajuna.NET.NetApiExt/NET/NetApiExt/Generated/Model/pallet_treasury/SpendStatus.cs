@@ -27,7 +27,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_treasury
         /// <summary>
         /// >> asset_kind
         /// </summary>
-        public Substrate.NetApi.Model.Types.Base.BaseTuple AssetKind { get; set; }
+        public Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.traits.tokens.fungible.union_of.EnumNativeOrWithId AssetKind { get; set; }
         /// <summary>
         /// >> amount
         /// </summary>
@@ -72,7 +72,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_treasury
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            AssetKind = new Substrate.NetApi.Model.Types.Base.BaseTuple();
+            AssetKind = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.traits.tokens.fungible.union_of.EnumNativeOrWithId();
             AssetKind.Decode(byteArray, ref p);
             Amount = new Substrate.NetApi.Model.Types.Primitive.U128();
             Amount.Decode(byteArray, ref p);

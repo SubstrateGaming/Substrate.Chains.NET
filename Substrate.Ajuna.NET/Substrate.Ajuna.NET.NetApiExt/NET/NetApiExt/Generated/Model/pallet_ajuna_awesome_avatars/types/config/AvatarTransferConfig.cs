@@ -18,7 +18,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
     
     
     /// <summary>
-    /// >> 170 - Composite[pallet_ajuna_awesome_avatars.types.config.AvatarTransferConfig]
+    /// >> 171 - Composite[pallet_ajuna_awesome_avatars.types.config.AvatarTransferConfig]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class AvatarTransferConfig : BaseType

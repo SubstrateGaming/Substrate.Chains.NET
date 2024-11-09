@@ -277,17 +277,25 @@ namespace Substrate.Ajuna.NET.RestClient.Test.Generated
       {
          Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_treasury.SpendStatus result;
          result = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_treasury.SpendStatus();
-         result.AssetKind = new Substrate.NetApi.Model.Types.Base.BaseTuple();
+         result.AssetKind = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.traits.tokens.fungible.union_of.EnumNativeOrWithId();
+         result.AssetKind = this.GetTestValue12();
          result.Amount = this.GetTestValueU128();
          result.Beneficiary = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32();
-         result.Beneficiary = this.GetTestValue12();
+         result.Beneficiary = this.GetTestValue13();
          result.ValidFrom = this.GetTestValueU32();
          result.ExpireAt = this.GetTestValueU32();
          result.Status = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_treasury.EnumPaymentState();
-         result.Status = this.GetTestValue13();
+         result.Status = this.GetTestValue14();
          return result;
       }
-      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue12()
+      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.traits.tokens.fungible.union_of.EnumNativeOrWithId GetTestValue12()
+      {
+         Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.traits.tokens.fungible.union_of.EnumNativeOrWithId result;
+         result = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.traits.tokens.fungible.union_of.EnumNativeOrWithId();
+         // NOT IMPLEMENTED >> Initialize Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.traits.tokens.fungible.union_of.EnumNativeOrWithId
+         return result;
+      }
+      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue13()
       {
          Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 result;
          result = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32();
@@ -327,7 +335,7 @@ namespace Substrate.Ajuna.NET.RestClient.Test.Generated
                   this.GetTestValueU8()});
          return result;
       }
-      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_treasury.EnumPaymentState GetTestValue13()
+      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_treasury.EnumPaymentState GetTestValue14()
       {
          Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_treasury.EnumPaymentState result;
          result = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_treasury.EnumPaymentState();

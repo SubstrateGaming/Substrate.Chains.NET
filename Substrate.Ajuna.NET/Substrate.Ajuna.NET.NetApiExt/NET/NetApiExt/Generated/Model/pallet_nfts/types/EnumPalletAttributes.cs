@@ -33,7 +33,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_nfts.types
     }
     
     /// <summary>
-    /// >> 194 - Variant[pallet_nfts.types.PalletAttributes]
+    /// >> 195 - Variant[pallet_nfts.types.PalletAttributes]
     /// </summary>
     public sealed class EnumPalletAttributes : BaseEnumRust<PalletAttributes>
     {

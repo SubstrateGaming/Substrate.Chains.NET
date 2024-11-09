@@ -126,7 +126,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_democracy.pallet
     }
     
     /// <summary>
-    /// >> 142 - Variant[pallet_democracy.pallet.Event]
+    /// >> 143 - Variant[pallet_democracy.pallet.Event]
     /// The `Event` enum of this pallet
     /// </summary>
     public sealed class EnumEvent : BaseEnumRust<Event>

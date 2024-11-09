@@ -144,6 +144,12 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_assets.pallet
         /// Callback action resulted in error
         /// </summary>
         CallbackFailed = 19,
+        
+        /// <summary>
+        /// >> BadAssetId
+        /// The asset ID must be equal to the [`NextAssetId`].
+        /// </summary>
+        BadAssetId = 20,
     }
     
     /// <summary>

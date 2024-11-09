@@ -43,7 +43,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
     }
     
     /// <summary>
-    /// >> 156 - Variant[pallet_ajuna_awesome_avatars.types.avatar.LogicGeneration]
+    /// >> 157 - Variant[pallet_ajuna_awesome_avatars.types.avatar.LogicGeneration]
     /// </summary>
     public sealed class EnumLogicGeneration : BaseEnum<LogicGeneration>
     {

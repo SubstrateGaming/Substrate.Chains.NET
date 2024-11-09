@@ -18,7 +18,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
     
     
     /// <summary>
-    /// >> 174 - Composite[pallet_ajuna_awesome_avatars.types.config.NftTransferConfig]
+    /// >> 175 - Composite[pallet_ajuna_awesome_avatars.types.config.NftTransferConfig]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class NftTransferConfig : BaseType

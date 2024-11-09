@@ -369,15 +369,15 @@ namespace Substrate.Ajuna.NET.RestClient.Test.Generated
       {
          Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT31 result;
          result = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT31();
-         result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_balances.types.IdAmountT1>();
-         result.Value.Create(new Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_balances.types.IdAmountT1[] {
+         result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.traits.tokens.misc.IdAmountT1>();
+         result.Value.Create(new Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.traits.tokens.misc.IdAmountT1[] {
                   this.GetTestValue17()});
          return result;
       }
-      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_balances.types.IdAmountT1 GetTestValue17()
+      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.traits.tokens.misc.IdAmountT1 GetTestValue17()
       {
-         Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_balances.types.IdAmountT1 result;
-         result = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_balances.types.IdAmountT1();
+         Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.traits.tokens.misc.IdAmountT1 result;
+         result = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.traits.tokens.misc.IdAmountT1();
          result.Id = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.ajuna_runtime.EnumRuntimeHoldReason();
          result.Id = this.GetTestValue18();
          result.Amount = this.GetTestValueU128();
@@ -463,15 +463,15 @@ namespace Substrate.Ajuna.NET.RestClient.Test.Generated
       {
          Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT32 result;
          result = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT32();
-         result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_balances.types.IdAmountT2>();
-         result.Value.Create(new Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_balances.types.IdAmountT2[] {
+         result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.traits.tokens.misc.IdAmountT2>();
+         result.Value.Create(new Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.traits.tokens.misc.IdAmountT2[] {
                   this.GetTestValue22()});
          return result;
       }
-      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_balances.types.IdAmountT2 GetTestValue22()
+      public Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.traits.tokens.misc.IdAmountT2 GetTestValue22()
       {
-         Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_balances.types.IdAmountT2 result;
-         result = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_balances.types.IdAmountT2();
+         Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.traits.tokens.misc.IdAmountT2 result;
+         result = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.traits.tokens.misc.IdAmountT2();
          result.Id = new Substrate.NetApi.Model.Types.Base.BaseTuple();
          result.Amount = this.GetTestValueU128();
          return result;
