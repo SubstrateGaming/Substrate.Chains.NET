@@ -36,7 +36,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_ajuna_nft_transfe
     }
     
     /// <summary>
-    /// >> 195 - Variant[pallet_ajuna_nft_transfer.pallet.Event]
+    /// >> 196 - Variant[pallet_ajuna_nft_transfer.pallet.Event]
     /// The `Event` enum of this pallet
     /// </summary>
     public sealed class EnumEvent : BaseEnumRust<Event>

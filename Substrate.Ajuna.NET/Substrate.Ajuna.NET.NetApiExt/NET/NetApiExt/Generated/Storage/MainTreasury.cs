@@ -232,40 +232,6 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
     {
         
         /// <summary>
-        /// >> propose_spend
-        /// Contains a variant per dispatchable extrinsic that this pallet has.
-        /// </summary>
-        public static Method ProposeSpend(Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128> value, Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress beneficiary)
-        {
-            System.Collections.Generic.List<byte> byteArray = new List<byte>();
-            byteArray.AddRange(value.Encode());
-            byteArray.AddRange(beneficiary.Encode());
-            return new Method(41, "Treasury", 0, "propose_spend", byteArray.ToArray());
-        }
-        
-        /// <summary>
-        /// >> reject_proposal
-        /// Contains a variant per dispatchable extrinsic that this pallet has.
-        /// </summary>
-        public static Method RejectProposal(Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32> proposal_id)
-        {
-            System.Collections.Generic.List<byte> byteArray = new List<byte>();
-            byteArray.AddRange(proposal_id.Encode());
-            return new Method(41, "Treasury", 1, "reject_proposal", byteArray.ToArray());
-        }
-        
-        /// <summary>
-        /// >> approve_proposal
-        /// Contains a variant per dispatchable extrinsic that this pallet has.
-        /// </summary>
-        public static Method ApproveProposal(Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32> proposal_id)
-        {
-            System.Collections.Generic.List<byte> byteArray = new List<byte>();
-            byteArray.AddRange(proposal_id.Encode());
-            return new Method(41, "Treasury", 2, "approve_proposal", byteArray.ToArray());
-        }
-        
-        /// <summary>
         /// >> spend_local
         /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
@@ -292,7 +258,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
         /// >> spend
         /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method Spend(Substrate.NetApi.Model.Types.Base.BaseTuple asset_kind, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128> amount, Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 beneficiary, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32> valid_from)
+        public static Method Spend(Substrate.Ajuna.NET.NetApiExt.Generated.Model.frame_support.traits.tokens.fungible.union_of.EnumNativeOrWithId asset_kind, Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128> amount, Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 beneficiary, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32> valid_from)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(asset_kind.Encode());
@@ -341,40 +307,6 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
     /// </summary>
     public sealed class TreasuryConstants
     {
-        
-        /// <summary>
-        /// >> ProposalBond
-        ///  Fraction of a proposal's value that should be bonded in order to place the proposal.
-        ///  An accepted proposal gets these back. A rejected proposal does not.
-        /// </summary>
-        public Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Permill ProposalBond()
-        {
-            var result = new Substrate.Ajuna.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Permill();
-            result.Create("0x50C30000");
-            return result;
-        }
-        
-        /// <summary>
-        /// >> ProposalBondMinimum
-        ///  Minimum amount of funds that should be placed in a deposit for making a proposal.
-        /// </summary>
-        public Substrate.NetApi.Model.Types.Primitive.U128 ProposalBondMinimum()
-        {
-            var result = new Substrate.NetApi.Model.Types.Primitive.U128();
-            result.Create("0x0010A5D4E80000000000000000000000");
-            return result;
-        }
-        
-        /// <summary>
-        /// >> ProposalBondMaximum
-        ///  Maximum amount of funds that should be placed in a deposit for making a proposal.
-        /// </summary>
-        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U128> ProposalBondMaximum()
-        {
-            var result = new Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U128>();
-            result.Create("0x0100406352BFC601000000000000000000");
-            return result;
-        }
         
         /// <summary>
         /// >> SpendPeriod
@@ -439,12 +371,6 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Storage
     /// </summary>
     public enum TreasuryErrors
     {
-        
-        /// <summary>
-        /// >> InsufficientProposersBalance
-        /// Proposer's balance is too low.
-        /// </summary>
-        InsufficientProposersBalance,
         
         /// <summary>
         /// >> InvalidIndex

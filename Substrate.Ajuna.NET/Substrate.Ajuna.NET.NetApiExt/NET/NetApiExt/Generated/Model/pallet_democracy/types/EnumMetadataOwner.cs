@@ -38,7 +38,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_democracy.types
     }
     
     /// <summary>
-    /// >> 146 - Variant[pallet_democracy.types.MetadataOwner]
+    /// >> 147 - Variant[pallet_democracy.types.MetadataOwner]
     /// </summary>
     public sealed class EnumMetadataOwner : BaseEnumRust<MetadataOwner>
     {

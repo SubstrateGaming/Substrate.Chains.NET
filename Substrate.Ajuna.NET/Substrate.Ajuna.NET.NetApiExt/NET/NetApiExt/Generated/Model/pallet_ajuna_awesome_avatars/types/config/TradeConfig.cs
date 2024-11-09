@@ -18,7 +18,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
     
     
     /// <summary>
-    /// >> 173 - Composite[pallet_ajuna_awesome_avatars.types.config.TradeConfig]
+    /// >> 174 - Composite[pallet_ajuna_awesome_avatars.types.config.TradeConfig]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class TradeConfig : BaseType

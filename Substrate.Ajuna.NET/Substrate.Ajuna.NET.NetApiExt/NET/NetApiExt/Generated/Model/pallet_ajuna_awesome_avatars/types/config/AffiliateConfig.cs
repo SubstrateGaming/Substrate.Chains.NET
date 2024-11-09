@@ -18,7 +18,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
     
     
     /// <summary>
-    /// >> 175 - Composite[pallet_ajuna_awesome_avatars.types.config.AffiliateConfig]
+    /// >> 176 - Composite[pallet_ajuna_awesome_avatars.types.config.AffiliateConfig]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class AffiliateConfig : BaseType

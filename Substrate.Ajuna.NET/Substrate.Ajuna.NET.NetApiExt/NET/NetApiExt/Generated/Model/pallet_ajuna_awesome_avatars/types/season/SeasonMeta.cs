@@ -18,7 +18,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
     
     
     /// <summary>
-    /// >> 158 - Composite[pallet_ajuna_awesome_avatars.types.season.SeasonMeta]
+    /// >> 159 - Composite[pallet_ajuna_awesome_avatars.types.season.SeasonMeta]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class SeasonMeta : BaseType

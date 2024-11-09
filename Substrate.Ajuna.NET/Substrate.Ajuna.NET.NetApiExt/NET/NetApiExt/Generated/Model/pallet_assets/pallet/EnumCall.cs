@@ -34,7 +34,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_assets.pallet
         /// 
         /// Parameters:
         /// - `id`: The identifier of the new asset. This must not be currently in use to identify
-        /// an existing asset.
+        /// an existing asset. If [`NextAssetId`] is set, then this must be equal to it.
         /// - `admin`: The admin of this class of assets. The admin is the initial address of each
         /// member of the asset class's admin team.
         /// - `min_balance`: The minimum balance of this new asset that any single account must
@@ -57,7 +57,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_assets.pallet
         /// Unlike `create`, no funds are reserved.
         /// 
         /// - `id`: The identifier of the new asset. This must not be currently in use to identify
-        /// an existing asset.
+        /// an existing asset. If [`NextAssetId`] is set, then this must be equal to it.
         /// - `owner`: The owner of this class of assets. The owner has full superuser permissions
         /// over this asset, but may later change and configure the permissions using
         /// `transfer_ownership` and `set_team`.

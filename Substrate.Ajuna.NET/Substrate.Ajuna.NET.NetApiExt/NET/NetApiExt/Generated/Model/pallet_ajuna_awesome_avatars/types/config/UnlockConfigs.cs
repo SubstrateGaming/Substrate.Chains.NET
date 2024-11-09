@@ -18,7 +18,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
     
     
     /// <summary>
-    /// >> 181 - Composite[pallet_ajuna_awesome_avatars.types.config.UnlockConfigs]
+    /// >> 182 - Composite[pallet_ajuna_awesome_avatars.types.config.UnlockConfigs]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class UnlockConfigs : BaseType

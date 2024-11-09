@@ -18,7 +18,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
     
     
     /// <summary>
-    /// >> 155 - Composite[pallet_ajuna_awesome_avatars.types.fee.MintFees]
+    /// >> 156 - Composite[pallet_ajuna_awesome_avatars.types.fee.MintFees]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class MintFees : BaseType

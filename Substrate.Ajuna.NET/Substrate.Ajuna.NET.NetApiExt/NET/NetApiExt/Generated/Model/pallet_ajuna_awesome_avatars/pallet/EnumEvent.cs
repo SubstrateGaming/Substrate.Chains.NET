@@ -168,7 +168,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_ajuna_awesome_ava
     }
     
     /// <summary>
-    /// >> 147 - Variant[pallet_ajuna_awesome_avatars.pallet.Event]
+    /// >> 148 - Variant[pallet_ajuna_awesome_avatars.pallet.Event]
     /// The `Event` enum of this pallet
     /// </summary>
     public sealed class EnumEvent : BaseEnumRust<Event>

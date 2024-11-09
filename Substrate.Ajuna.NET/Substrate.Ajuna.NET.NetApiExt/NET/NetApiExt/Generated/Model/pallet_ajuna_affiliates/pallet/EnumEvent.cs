@@ -44,7 +44,7 @@ namespace Substrate.Ajuna.NET.NetApiExt.Generated.Model.pallet_ajuna_affiliates.
     }
     
     /// <summary>
-    /// >> 196 - Variant[pallet_ajuna_affiliates.pallet.Event]
+    /// >> 197 - Variant[pallet_ajuna_affiliates.pallet.Event]
     /// The `Event` enum of this pallet
     /// </summary>
     public sealed class EnumEvent : BaseEnumRust<Event>
