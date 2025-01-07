@@ -1,14 +1,14 @@
 {
   "projects": {
-    "net_api": "Substrate.Polkadot.NetApiExt",
-    "net_integration": "Substrate.Polkadot.Integration",
-    "rest_service": "Substrate.Polkadot.RestService",
-    "rest_client": "Substrate.Polkadot.RestClient"
+    "net_api": "Substrate.Polkadot.NET.NetApiExt",
+    "net_integration": "Substrate.Polkadot.NET.Integration",
+    "rest_service": "Substrate.Polkadot.NET.RestService",
+    "rest_client": "Substrate.Polkadot.NET.RestClient"
   },
    "metadata": {
       "websocket": "wss://rpc.ibp.network/polkadot"
    },
   "rest_client_settings": {
-    "service_assembly": "Substrate.Polkadot.RestService.dll"
+    "service_assembly": "Substrate.Polkadot.NET.RestService.dll"
   }
 }
