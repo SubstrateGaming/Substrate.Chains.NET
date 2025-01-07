@@ -13,12 +13,12 @@ using Substrate.NetApi.Model.Types.Metadata.Base;
 using System.Collections.Generic;
 
 
-namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v6
+namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v7
 {
     
     
     /// <summary>
-    /// >> 208 - Composite[polkadot_primitives.v6.PersistedValidationData]
+    /// >> 206 - Composite[polkadot_primitives.v7.PersistedValidationData]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class PersistedValidationData : BaseType

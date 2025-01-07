@@ -48,7 +48,7 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.pallet_messa
     }
     
     /// <summary>
-    /// >> 169 - Variant[pallet_message_queue.pallet.Event]
+    /// >> 167 - Variant[pallet_message_queue.pallet.Event]
     /// The `Event` enum of this pallet
     /// </summary>
     public sealed class EnumEvent : BaseEnumRust<Event>

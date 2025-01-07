@@ -38,7 +38,7 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.frame_suppor
     }
     
     /// <summary>
-    /// >> 23 - Variant[frame_support.dispatch.DispatchClass]
+    /// >> 24 - Variant[frame_support.dispatch.DispatchClass]
     /// </summary>
     public sealed class EnumDispatchClass : BaseEnum<DispatchClass>
     {

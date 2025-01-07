@@ -13,27 +13,38 @@ using Substrate.NetApi.Model.Types.Metadata.Base;
 using System.Collections.Generic;
 
 
-namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bridge_runtime_common.refund_relayer_extension
+namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.frame_support.traits.tokens.misc
 {
     
     
     /// <summary>
-    /// >> 481 - Composite[bridge_runtime_common.refund_relayer_extension.RefundBridgedParachainMessages]
+    /// >> 249 - Composite[frame_support.traits.tokens.misc.IdAmountT2]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
-    public sealed class RefundBridgedParachainMessages : BaseType
+    public sealed class IdAmountT2 : BaseType
     {
+        
+        /// <summary>
+        /// >> id
+        /// </summary>
+        public Substrate.NetApi.Model.Types.Base.BaseTuple Id { get; set; }
+        /// <summary>
+        /// >> amount
+        /// </summary>
+        public Substrate.NetApi.Model.Types.Primitive.U128 Amount { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
         {
-            return "RefundBridgedParachainMessages";
+            return "IdAmountT2";
         }
         
         /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
+            result.AddRange(Id.Encode());
+            result.AddRange(Amount.Encode());
             return result.ToArray();
         }
         
@@ -41,6 +52,10 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bridge_runti
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
+            Id = new Substrate.NetApi.Model.Types.Base.BaseTuple();
+            Id.Decode(byteArray, ref p);
+            Amount = new Substrate.NetApi.Model.Types.Primitive.U128();
+            Amount.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];

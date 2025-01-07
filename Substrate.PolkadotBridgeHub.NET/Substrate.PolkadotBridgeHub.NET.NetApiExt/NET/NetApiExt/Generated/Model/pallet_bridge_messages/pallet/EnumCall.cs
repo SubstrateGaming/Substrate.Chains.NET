@@ -24,25 +24,49 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.pallet_bridg
         
         /// <summary>
         /// >> set_owner
-        /// See [`Pallet::set_owner`].
+        /// Change `PalletOwner`.
+        /// 
+        /// May only be called either by root, or by `PalletOwner`.
         /// </summary>
         set_owner = 0,
         
         /// <summary>
         /// >> set_operating_mode
-        /// See [`Pallet::set_operating_mode`].
+        /// Halt or resume all/some pallet operations.
+        /// 
+        /// May only be called either by root, or by `PalletOwner`.
         /// </summary>
         set_operating_mode = 1,
         
         /// <summary>
         /// >> receive_messages_proof
-        /// See [`Pallet::receive_messages_proof`].
+        /// Receive messages proof from bridged chain.
+        /// 
+        /// The weight of the call assumes that the transaction always brings outbound lane
+        /// state update. Because of that, the submitter (relayer) has no benefit of not including
+        /// this data in the transaction, so reward confirmations lags should be minimal.
+        /// 
+        /// The call fails if:
+        /// 
+        /// - the pallet is halted;
+        /// 
+        /// - the call origin is not `Signed(_)`;
+        /// 
+        /// - there are too many messages in the proof;
+        /// 
+        /// - the proof verification procedure returns an error - e.g. because header used to craft
+        ///   proof is not imported by the associated finality pallet;
+        /// 
+        /// - the `dispatch_weight` argument is not sufficient to dispatch all bundled messages.
+        /// 
+        /// The call may succeed, but some messages may not be delivered e.g. if they are not fit
+        /// into the unrewarded relayers vector.
         /// </summary>
         receive_messages_proof = 2,
         
         /// <summary>
         /// >> receive_messages_delivery_proof
-        /// See [`Pallet::receive_messages_delivery_proof`].
+        /// Receive messages delivery proof from bridged chain.
         /// </summary>
         receive_messages_delivery_proof = 3,
     }

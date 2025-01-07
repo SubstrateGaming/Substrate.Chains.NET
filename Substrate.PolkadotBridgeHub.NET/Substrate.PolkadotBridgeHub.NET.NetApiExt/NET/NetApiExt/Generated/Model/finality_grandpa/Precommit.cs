@@ -18,7 +18,7 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.finality_gra
     
     
     /// <summary>
-    /// >> 138 - Composite[finality_grandpa.Precommit]
+    /// >> 136 - Composite[finality_grandpa.Precommit]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Precommit : BaseType

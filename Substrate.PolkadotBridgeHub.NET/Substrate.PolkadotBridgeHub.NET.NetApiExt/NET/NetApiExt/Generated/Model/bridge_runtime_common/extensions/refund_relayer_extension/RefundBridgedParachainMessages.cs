@@ -13,33 +13,27 @@ using Substrate.NetApi.Model.Types.Metadata.Base;
 using System.Collections.Generic;
 
 
-namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_core.ed25519
+namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bridge_runtime_common.extensions.refund_relayer_extension
 {
     
     
     /// <summary>
-    /// >> 135 - Composite[sp_core.ed25519.Public]
+    /// >> 479 - Composite[bridge_runtime_common.extensions.refund_relayer_extension.RefundBridgedParachainMessages]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
-    public sealed class Public : BaseType
+    public sealed class RefundBridgedParachainMessages : BaseType
     {
-        
-        /// <summary>
-        /// >> value
-        /// </summary>
-        public Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Types.Base.Arr32U8 Value { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
         {
-            return "Public";
+            return "RefundBridgedParachainMessages";
         }
         
         /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
-            result.AddRange(Value.Encode());
             return result.ToArray();
         }
         
@@ -47,8 +41,6 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_core.ed25
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Value = new Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Types.Base.Arr32U8();
-            Value.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];

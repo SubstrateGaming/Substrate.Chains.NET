@@ -18,7 +18,7 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bridge_hub_p
     
     
     /// <summary>
-    /// >> 484 - Composite[bridge_hub_polkadot_runtime.Runtime]
+    /// >> 482 - Composite[bridge_hub_polkadot_runtime.Runtime]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Runtime : BaseType

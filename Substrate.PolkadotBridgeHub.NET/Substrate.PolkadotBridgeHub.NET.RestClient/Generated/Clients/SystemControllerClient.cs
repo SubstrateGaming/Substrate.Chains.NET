@@ -45,6 +45,14 @@ namespace Substrate.PolkadotBridgeHub.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("System.ExtrinsicCount");
       }
+      public async Task<Bool> GetInherentsApplied()
+      {
+         return await SendRequestAsync<Bool>(_httpClient, "system/inherentsapplied");
+      }
+      public async Task<bool> SubscribeInherentsApplied()
+      {
+         return await _subscriptionClient.SubscribeAsync("System.InherentsApplied");
+      }
       public async Task<PerDispatchClassT1> GetBlockWeight()
       {
          return await SendRequestAsync<PerDispatchClassT1>(_httpClient, "system/blockweight");

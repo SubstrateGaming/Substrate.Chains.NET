@@ -36,7 +36,7 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Storage
         public BridgeKusamaGrandpaStorage(SubstrateClientExt client)
         {
             this._client = client;
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("BridgeKusamaGrandpa", "FreeMandatoryHeadersRemaining"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Primitive.U32)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("BridgeKusamaGrandpa", "FreeHeadersRemaining"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Primitive.U32)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("BridgeKusamaGrandpa", "InitialHash"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.primitive_types.H256)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("BridgeKusamaGrandpa", "BestFinalized"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bp_runtime.HeaderId)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("BridgeKusamaGrandpa", "ImportedHashes"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
@@ -50,46 +50,44 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Storage
         }
         
         /// <summary>
-        /// >> FreeMandatoryHeadersRemainingParams
-        ///  Number mandatory headers that we may accept in the current block for free (returning
-        ///  `Pays::No`).
+        /// >> FreeHeadersRemainingParams
+        ///  Number of free header submissions that we may yet accept in the current block.
         /// 
-        ///  If the `FreeMandatoryHeadersRemaining` hits zero, all following mandatory headers in the
+        ///  If the `FreeHeadersRemaining` hits zero, all following mandatory headers in the
         ///  current block are accepted with fee (`Pays::Yes` is returned).
         /// 
-        ///  The `FreeMandatoryHeadersRemaining` is an ephemeral value that is set to
-        ///  `MaxFreeMandatoryHeadersPerBlock` at each block initialization and is killed on block
+        ///  The `FreeHeadersRemaining` is an ephemeral value that is set to
+        ///  `MaxFreeHeadersPerBlock` at each block initialization and is killed on block
         ///  finalization. So it never ends up in the storage trie.
         /// </summary>
-        public static string FreeMandatoryHeadersRemainingParams()
+        public static string FreeHeadersRemainingParams()
         {
-            return RequestGenerator.GetStorage("BridgeKusamaGrandpa", "FreeMandatoryHeadersRemaining", Substrate.NetApi.Model.Meta.Storage.Type.Plain);
+            return RequestGenerator.GetStorage("BridgeKusamaGrandpa", "FreeHeadersRemaining", Substrate.NetApi.Model.Meta.Storage.Type.Plain);
         }
         
         /// <summary>
-        /// >> FreeMandatoryHeadersRemainingDefault
+        /// >> FreeHeadersRemainingDefault
         /// Default value as hex string
         /// </summary>
-        public static string FreeMandatoryHeadersRemainingDefault()
+        public static string FreeHeadersRemainingDefault()
         {
-            return "0x00000000";
+            return "0x00";
         }
         
         /// <summary>
-        /// >> FreeMandatoryHeadersRemaining
-        ///  Number mandatory headers that we may accept in the current block for free (returning
-        ///  `Pays::No`).
+        /// >> FreeHeadersRemaining
+        ///  Number of free header submissions that we may yet accept in the current block.
         /// 
-        ///  If the `FreeMandatoryHeadersRemaining` hits zero, all following mandatory headers in the
+        ///  If the `FreeHeadersRemaining` hits zero, all following mandatory headers in the
         ///  current block are accepted with fee (`Pays::Yes` is returned).
         /// 
-        ///  The `FreeMandatoryHeadersRemaining` is an ephemeral value that is set to
-        ///  `MaxFreeMandatoryHeadersPerBlock` at each block initialization and is killed on block
+        ///  The `FreeHeadersRemaining` is an ephemeral value that is set to
+        ///  `MaxFreeHeadersPerBlock` at each block initialization and is killed on block
         ///  finalization. So it never ends up in the storage trie.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> FreeMandatoryHeadersRemaining(string blockhash, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Primitive.U32> FreeHeadersRemaining(string blockhash, CancellationToken token)
         {
-            string parameters = BridgeKusamaGrandpaStorage.FreeMandatoryHeadersRemainingParams();
+            string parameters = BridgeKusamaGrandpaStorage.FreeHeadersRemainingParams();
             var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Primitive.U32>(parameters, blockhash, token);
             return result;
         }
@@ -279,7 +277,7 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Storage
         ///  Pallet owner has a right to halt all pallet operations and then resume it. If it is
         ///  `None`, then there are no direct ways to halt/resume pallet operations, but other
         ///  runtime methods may still be used to do that (i.e. democracy::referendum to update halt
-        ///  flag directly or call the `halt_operations`).
+        ///  flag directly or call the `set_operating_mode`).
         /// </summary>
         public static string PalletOwnerParams()
         {
@@ -302,7 +300,7 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Storage
         ///  Pallet owner has a right to halt all pallet operations and then resume it. If it is
         ///  `None`, then there are no direct ways to halt/resume pallet operations, but other
         ///  runtime methods may still be used to do that (i.e. democracy::referendum to update halt
-        ///  flag directly or call the `halt_operations`).
+        ///  flag directly or call the `set_operating_mode`).
         /// </summary>
         public async Task<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> PalletOwner(string blockhash, CancellationToken token)
         {
@@ -395,6 +393,33 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Storage
             byteArray.AddRange(operating_mode.Encode());
             return new Method(51, "BridgeKusamaGrandpa", 3, "set_operating_mode", byteArray.ToArray());
         }
+        
+        /// <summary>
+        /// >> submit_finality_proof_ex
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
+        /// </summary>
+        public static Method SubmitFinalityProofEx(Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_runtime.generic.header.Header finality_target, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bp_header_chain.justification.GrandpaJustification justification, Substrate.NetApi.Model.Types.Primitive.U64 current_set_id, Substrate.NetApi.Model.Types.Primitive.Bool is_free_execution_expected)
+        {
+            System.Collections.Generic.List<byte> byteArray = new List<byte>();
+            byteArray.AddRange(finality_target.Encode());
+            byteArray.AddRange(justification.Encode());
+            byteArray.AddRange(current_set_id.Encode());
+            byteArray.AddRange(is_free_execution_expected.Encode());
+            return new Method(51, "BridgeKusamaGrandpa", 4, "submit_finality_proof_ex", byteArray.ToArray());
+        }
+        
+        /// <summary>
+        /// >> force_set_pallet_state
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
+        /// </summary>
+        public static Method ForceSetPalletState(Substrate.NetApi.Model.Types.Primitive.U64 new_current_set_id, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_consensus_grandpa.app.Public, Substrate.NetApi.Model.Types.Primitive.U64>> new_authorities, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_runtime.generic.header.Header new_best_header)
+        {
+            System.Collections.Generic.List<byte> byteArray = new List<byte>();
+            byteArray.AddRange(new_current_set_id.Encode());
+            byteArray.AddRange(new_authorities.Encode());
+            byteArray.AddRange(new_best_header.Encode());
+            return new Method(51, "BridgeKusamaGrandpa", 5, "force_set_pallet_state", byteArray.ToArray());
+        }
     }
     
     /// <summary>
@@ -404,21 +429,42 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Storage
     {
         
         /// <summary>
-        /// >> MaxFreeMandatoryHeadersPerBlock
-        ///  Maximal number of "free" mandatory header transactions per block.
+        /// >> MaxFreeHeadersPerBlock
+        ///  Maximal number of "free" header transactions per block.
         /// 
         ///  To be able to track the bridged chain, the pallet requires all headers that are
         ///  changing GRANDPA authorities set at the bridged chain (we call them mandatory).
-        ///  So it is a common good deed to submit mandatory headers to the pallet. However, if the
-        ///  bridged chain gets compromised, its validators may generate as many mandatory headers
-        ///  as they want. And they may fill the whole block (at this chain) for free. This constants
-        ///  limits number of calls that we may refund in a single block. All calls above this
-        ///  limit are accepted, but are not refunded.
+        ///  So it is a common good deed to submit mandatory headers to the pallet.
+        /// 
+        ///  The pallet may be configured (see `[Self::FreeHeadersInterval]`) to import some
+        ///  non-mandatory headers for free as well. It also may be treated as a common good
+        ///  deed, because it may help to reduce bridge fees - this cost may be deducted from
+        ///  bridge fees, paid by message senders.
+        /// 
+        ///  However, if the bridged chain gets compromised, its validators may generate as many
+        ///  "free" headers as they want. And they may fill the whole block (at this chain) for
+        ///  free. This constants limits number of calls that we may refund in a single block.
+        ///  All calls above this limit are accepted, but are not refunded.
         /// </summary>
-        public Substrate.NetApi.Model.Types.Primitive.U32 MaxFreeMandatoryHeadersPerBlock()
+        public Substrate.NetApi.Model.Types.Primitive.U32 MaxFreeHeadersPerBlock()
         {
             var result = new Substrate.NetApi.Model.Types.Primitive.U32();
             result.Create("0x04000000");
+            return result;
+        }
+        
+        /// <summary>
+        /// >> FreeHeadersInterval
+        ///  The distance between bridged chain headers, that may be submitted for free. The
+        ///  first free header is header number zero, the next one is header number
+        ///  `FreeHeadersInterval::get()` or any of its descendant if that header has not
+        ///  been submitted. In other words, interval between free headers should be at least
+        ///  `FreeHeadersInterval`.
+        /// </summary>
+        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32> FreeHeadersInterval()
+        {
+            var result = new Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32>();
+            result.Create("0x0105000000");
             return result;
         }
         
@@ -495,5 +541,33 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Storage
         /// Error generated by the `OwnedBridgeModule` trait.
         /// </summary>
         BridgeModule,
+        
+        /// <summary>
+        /// >> InvalidAuthoritySetId
+        /// The `current_set_id` argument of the `submit_finality_proof_ex` doesn't match
+        /// the id of the current set, known to the pallet.
+        /// </summary>
+        InvalidAuthoritySetId,
+        
+        /// <summary>
+        /// >> FreeHeadersLimitExceded
+        /// The submitter wanted free execution, but we can't fit more free transactions
+        /// to the block.
+        /// </summary>
+        FreeHeadersLimitExceded,
+        
+        /// <summary>
+        /// >> BelowFreeHeaderInterval
+        /// The submitter wanted free execution, but the difference between best known and
+        /// bundled header numbers is below the `FreeHeadersInterval`.
+        /// </summary>
+        BelowFreeHeaderInterval,
+        
+        /// <summary>
+        /// >> HeaderOverflowLimits
+        /// The header (and its finality) submission overflows hardcoded chain limits: size
+        /// and/or weight are larger than expected.
+        /// </summary>
+        HeaderOverflowLimits,
     }
 }

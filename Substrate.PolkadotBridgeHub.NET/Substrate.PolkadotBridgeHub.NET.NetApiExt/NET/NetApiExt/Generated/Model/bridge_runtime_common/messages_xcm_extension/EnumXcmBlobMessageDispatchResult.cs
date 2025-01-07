@@ -38,7 +38,7 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bridge_runti
     }
     
     /// <summary>
-    /// >> 149 - Variant[bridge_runtime_common.messages_xcm_extension.XcmBlobMessageDispatchResult]
+    /// >> 147 - Variant[bridge_runtime_common.messages_xcm_extension.XcmBlobMessageDispatchResult]
     /// </summary>
     public sealed class EnumXcmBlobMessageDispatchResult : BaseEnum<XcmBlobMessageDispatchResult>
     {

@@ -24,13 +24,13 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.snowbridge_p
         
         /// <summary>
         /// >> submit
-        /// See [`Pallet::submit`].
+        /// Submit an inbound message originating from the Gateway contract on Ethereum
         /// </summary>
         submit = 0,
         
         /// <summary>
         /// >> set_operating_mode
-        /// See [`Pallet::set_operating_mode`].
+        /// Halt or resume all pallet operations. May only be called by root.
         /// </summary>
         set_operating_mode = 1,
     }

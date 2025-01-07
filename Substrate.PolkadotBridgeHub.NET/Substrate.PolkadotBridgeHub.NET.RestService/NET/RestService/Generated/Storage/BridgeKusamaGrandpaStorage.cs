@@ -25,18 +25,17 @@ namespace Substrate.PolkadotBridgeHub.NET.RestService.Generated.Storage
     {
         
         /// <summary>
-        /// >> FreeMandatoryHeadersRemaining
-        ///  Number mandatory headers that we may accept in the current block for free (returning
-        ///  `Pays::No`).
+        /// >> FreeHeadersRemaining
+        ///  Number of free header submissions that we may yet accept in the current block.
         /// 
-        ///  If the `FreeMandatoryHeadersRemaining` hits zero, all following mandatory headers in the
+        ///  If the `FreeHeadersRemaining` hits zero, all following mandatory headers in the
         ///  current block are accepted with fee (`Pays::Yes` is returned).
         /// 
-        ///  The `FreeMandatoryHeadersRemaining` is an ephemeral value that is set to
-        ///  `MaxFreeMandatoryHeadersPerBlock` at each block initialization and is killed on block
+        ///  The `FreeHeadersRemaining` is an ephemeral value that is set to
+        ///  `MaxFreeHeadersPerBlock` at each block initialization and is killed on block
         ///  finalization. So it never ends up in the storage trie.
         /// </summary>
-        Substrate.NetApi.Model.Types.Primitive.U32 GetFreeMandatoryHeadersRemaining();
+        Substrate.NetApi.Model.Types.Primitive.U32 GetFreeHeadersRemaining();
         
         /// <summary>
         /// >> InitialHash
@@ -81,7 +80,7 @@ namespace Substrate.PolkadotBridgeHub.NET.RestService.Generated.Storage
         ///  Pallet owner has a right to halt all pallet operations and then resume it. If it is
         ///  `None`, then there are no direct ways to halt/resume pallet operations, but other
         ///  runtime methods may still be used to do that (i.e. democracy::referendum to update halt
-        ///  flag directly or call the `halt_operations`).
+        ///  flag directly or call the `set_operating_mode`).
         /// </summary>
         Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetPalletOwner();
         
@@ -101,9 +100,9 @@ namespace Substrate.PolkadotBridgeHub.NET.RestService.Generated.Storage
     {
         
         /// <summary>
-        /// _freeMandatoryHeadersRemainingTypedStorage typed storage field
+        /// _freeHeadersRemainingTypedStorage typed storage field
         /// </summary>
-        private TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32> _freeMandatoryHeadersRemainingTypedStorage;
+        private TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32> _freeHeadersRemainingTypedStorage;
         
         /// <summary>
         /// _initialHashTypedStorage typed storage field
@@ -150,7 +149,7 @@ namespace Substrate.PolkadotBridgeHub.NET.RestService.Generated.Storage
         /// </summary>
         public BridgeKusamaGrandpaStorage(IStorageDataProvider storageDataProvider, List<IStorageChangeDelegate> storageChangeDelegates)
         {
-            this.FreeMandatoryHeadersRemainingTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32>("BridgeKusamaGrandpa.FreeMandatoryHeadersRemaining", storageDataProvider, storageChangeDelegates);
+            this.FreeHeadersRemainingTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32>("BridgeKusamaGrandpa.FreeHeadersRemaining", storageDataProvider, storageChangeDelegates);
             this.InitialHashTypedStorage = new TypedStorage<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.primitive_types.H256>("BridgeKusamaGrandpa.InitialHash", storageDataProvider, storageChangeDelegates);
             this.BestFinalizedTypedStorage = new TypedStorage<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bp_runtime.HeaderId>("BridgeKusamaGrandpa.BestFinalized", storageDataProvider, storageChangeDelegates);
             this.ImportedHashesTypedStorage = new TypedMapStorage<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.primitive_types.H256>("BridgeKusamaGrandpa.ImportedHashes", storageDataProvider, storageChangeDelegates);
@@ -162,17 +161,17 @@ namespace Substrate.PolkadotBridgeHub.NET.RestService.Generated.Storage
         }
         
         /// <summary>
-        /// _freeMandatoryHeadersRemainingTypedStorage property
+        /// _freeHeadersRemainingTypedStorage property
         /// </summary>
-        public TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32> FreeMandatoryHeadersRemainingTypedStorage
+        public TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32> FreeHeadersRemainingTypedStorage
         {
             get
             {
-                return _freeMandatoryHeadersRemainingTypedStorage;
+                return _freeHeadersRemainingTypedStorage;
             }
             set
             {
-                _freeMandatoryHeadersRemainingTypedStorage = value;
+                _freeHeadersRemainingTypedStorage = value;
             }
         }
         
@@ -301,7 +300,7 @@ namespace Substrate.PolkadotBridgeHub.NET.RestService.Generated.Storage
         /// </summary>
         public async Task InitializeAsync(Substrate.ServiceLayer.Storage.IStorageDataProvider dataProvider)
         {
-            await FreeMandatoryHeadersRemainingTypedStorage.InitializeAsync("BridgeKusamaGrandpa", "FreeMandatoryHeadersRemaining");
+            await FreeHeadersRemainingTypedStorage.InitializeAsync("BridgeKusamaGrandpa", "FreeHeadersRemaining");
             await InitialHashTypedStorage.InitializeAsync("BridgeKusamaGrandpa", "InitialHash");
             await BestFinalizedTypedStorage.InitializeAsync("BridgeKusamaGrandpa", "BestFinalized");
             await ImportedHashesTypedStorage.InitializeAsync("BridgeKusamaGrandpa", "ImportedHashes");
@@ -313,29 +312,28 @@ namespace Substrate.PolkadotBridgeHub.NET.RestService.Generated.Storage
         }
         
         /// <summary>
-        /// Implements any storage change for BridgeKusamaGrandpa.FreeMandatoryHeadersRemaining
+        /// Implements any storage change for BridgeKusamaGrandpa.FreeHeadersRemaining
         /// </summary>
-        [StorageChange("BridgeKusamaGrandpa", "FreeMandatoryHeadersRemaining")]
-        public void OnUpdateFreeMandatoryHeadersRemaining(string data)
+        [StorageChange("BridgeKusamaGrandpa", "FreeHeadersRemaining")]
+        public void OnUpdateFreeHeadersRemaining(string data)
         {
-            FreeMandatoryHeadersRemainingTypedStorage.Update(data);
+            FreeHeadersRemainingTypedStorage.Update(data);
         }
         
         /// <summary>
-        /// >> FreeMandatoryHeadersRemaining
-        ///  Number mandatory headers that we may accept in the current block for free (returning
-        ///  `Pays::No`).
+        /// >> FreeHeadersRemaining
+        ///  Number of free header submissions that we may yet accept in the current block.
         /// 
-        ///  If the `FreeMandatoryHeadersRemaining` hits zero, all following mandatory headers in the
+        ///  If the `FreeHeadersRemaining` hits zero, all following mandatory headers in the
         ///  current block are accepted with fee (`Pays::Yes` is returned).
         /// 
-        ///  The `FreeMandatoryHeadersRemaining` is an ephemeral value that is set to
-        ///  `MaxFreeMandatoryHeadersPerBlock` at each block initialization and is killed on block
+        ///  The `FreeHeadersRemaining` is an ephemeral value that is set to
+        ///  `MaxFreeHeadersPerBlock` at each block initialization and is killed on block
         ///  finalization. So it never ends up in the storage trie.
         /// </summary>
-        public Substrate.NetApi.Model.Types.Primitive.U32 GetFreeMandatoryHeadersRemaining()
+        public Substrate.NetApi.Model.Types.Primitive.U32 GetFreeHeadersRemaining()
         {
-            return FreeMandatoryHeadersRemainingTypedStorage.Get();
+            return FreeHeadersRemainingTypedStorage.Get();
         }
         
         /// <summary>
@@ -484,7 +482,7 @@ namespace Substrate.PolkadotBridgeHub.NET.RestService.Generated.Storage
         ///  Pallet owner has a right to halt all pallet operations and then resume it. If it is
         ///  `None`, then there are no direct ways to halt/resume pallet operations, but other
         ///  runtime methods may still be used to do that (i.e. democracy::referendum to update halt
-        ///  flag directly or call the `halt_operations`).
+        ///  flag directly or call the `set_operating_mode`).
         /// </summary>
         public Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetPalletOwner()
         {

@@ -24,21 +24,67 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.pallet_bridg
         
         /// <summary>
         /// >> submit_parachain_heads
-        /// See [`Pallet::submit_parachain_heads`].
+        /// Submit proof of one or several parachain heads.
+        /// 
+        /// The proof is supposed to be proof of some `Heads` entries from the
+        /// `polkadot-runtime-parachains::paras` pallet instance, deployed at the bridged chain.
+        /// The proof is supposed to be crafted at the `relay_header_hash` that must already be
+        /// imported by corresponding GRANDPA pallet at this chain.
+        /// 
+        /// The call fails if:
+        /// 
+        /// - the pallet is halted;
+        /// 
+        /// - the relay chain block `at_relay_block` is not imported by the associated bridge
+        ///   GRANDPA pallet.
+        /// 
+        /// The call may succeed, but some heads may not be updated e.g. because pallet knows
+        /// better head or it isn't tracked by the pallet.
         /// </summary>
         submit_parachain_heads = 0,
         
         /// <summary>
         /// >> set_owner
-        /// See [`Pallet::set_owner`].
+        /// Change `PalletOwner`.
+        /// 
+        /// May only be called either by root, or by `PalletOwner`.
         /// </summary>
         set_owner = 1,
         
         /// <summary>
         /// >> set_operating_mode
-        /// See [`Pallet::set_operating_mode`].
+        /// Halt or resume all pallet operations.
+        /// 
+        /// May only be called either by root, or by `PalletOwner`.
         /// </summary>
         set_operating_mode = 2,
+        
+        /// <summary>
+        /// >> submit_parachain_heads_ex
+        /// Submit proof of one or several parachain heads.
+        /// 
+        /// The proof is supposed to be proof of some `Heads` entries from the
+        /// `polkadot-runtime-parachains::paras` pallet instance, deployed at the bridged chain.
+        /// The proof is supposed to be crafted at the `relay_header_hash` that must already be
+        /// imported by corresponding GRANDPA pallet at this chain.
+        /// 
+        /// The call fails if:
+        /// 
+        /// - the pallet is halted;
+        /// 
+        /// - the relay chain block `at_relay_block` is not imported by the associated bridge
+        ///   GRANDPA pallet.
+        /// 
+        /// The call may succeed, but some heads may not be updated e.g. because pallet knows
+        /// better head or it isn't tracked by the pallet.
+        /// 
+        /// The `is_free_execution_expected` parameter is not really used inside the call. It is
+        /// used by the transaction extension, which should be registered at the runtime level. If
+        /// this parameter is `true`, the transaction will be treated as invalid, if the call won't
+        /// be executed for free. If transaction extension is not used by the runtime, this
+        /// parameter is not used at all.
+        /// </summary>
+        submit_parachain_heads_ex = 3,
     }
     
     /// <summary>
@@ -56,6 +102,7 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.pallet_bridg
 				AddTypeDecoder<BaseTuple<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.primitive_types.H256>, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bp_polkadot_core.parachains.ParaId, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.primitive_types.H256>>, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bp_polkadot_core.parachains.ParaHeadsProof>>(Call.submit_parachain_heads);
 				AddTypeDecoder<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>>(Call.set_owner);
 				AddTypeDecoder<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bp_runtime.EnumBasicOperatingMode>(Call.set_operating_mode);
+				AddTypeDecoder<BaseTuple<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.primitive_types.H256>, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bp_polkadot_core.parachains.ParaId, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.primitive_types.H256>>, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bp_polkadot_core.parachains.ParaHeadsProof, Substrate.NetApi.Model.Types.Primitive.Bool>>(Call.submit_parachain_heads_ex);
         }
     }
 }

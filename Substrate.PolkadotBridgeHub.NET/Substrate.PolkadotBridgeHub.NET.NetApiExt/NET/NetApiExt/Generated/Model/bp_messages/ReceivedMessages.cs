@@ -18,7 +18,7 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bp_messages
     
     
     /// <summary>
-    /// >> 148 - Composite[bp_messages.ReceivedMessages]
+    /// >> 146 - Composite[bp_messages.ReceivedMessages]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class ReceivedMessages : BaseType
@@ -31,7 +31,7 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bp_messages
         /// <summary>
         /// >> receive_results
         /// </summary>
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U64, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bp_messages.EnumReceivalResult>> ReceiveResults { get; set; }
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U64, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bp_messages.EnumReceptionResult>> ReceiveResults { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
@@ -54,7 +54,7 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bp_messages
             var start = p;
             Lane = new Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bp_messages.LaneId();
             Lane.Decode(byteArray, ref p);
-            ReceiveResults = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U64, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bp_messages.EnumReceivalResult>>();
+            ReceiveResults = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U64, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bp_messages.EnumReceptionResult>>();
             ReceiveResults.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

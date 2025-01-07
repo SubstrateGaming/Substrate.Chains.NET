@@ -29,13 +29,13 @@ namespace Substrate.PolkadotBridgeHub.NET.RestClient.Generated.Clients
          _httpClient = httpClient;
          _subscriptionClient = subscriptionClient;
       }
-      public async Task<U32> GetFreeMandatoryHeadersRemaining()
+      public async Task<U32> GetFreeHeadersRemaining()
       {
-         return await SendRequestAsync<U32>(_httpClient, "bridgekusamagrandpa/freemandatoryheadersremaining");
+         return await SendRequestAsync<U32>(_httpClient, "bridgekusamagrandpa/freeheadersremaining");
       }
-      public async Task<bool> SubscribeFreeMandatoryHeadersRemaining()
+      public async Task<bool> SubscribeFreeHeadersRemaining()
       {
-         return await _subscriptionClient.SubscribeAsync("BridgeKusamaGrandpa.FreeMandatoryHeadersRemaining");
+         return await _subscriptionClient.SubscribeAsync("BridgeKusamaGrandpa.FreeHeadersRemaining");
       }
       public async Task<H256> GetInitialHash()
       {

@@ -45,10 +45,15 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.frame_suppor
         /// >> Yield
         /// </summary>
         Yield = 4,
+        
+        /// <summary>
+        /// >> StackLimitReached
+        /// </summary>
+        StackLimitReached = 5,
     }
     
     /// <summary>
-    /// >> 172 - Variant[frame_support.traits.messages.ProcessMessageError]
+    /// >> 170 - Variant[frame_support.traits.messages.ProcessMessageError]
     /// </summary>
     public sealed class EnumProcessMessageError : BaseEnumRust<ProcessMessageError>
     {
@@ -63,6 +68,7 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.frame_suppor
 				AddTypeDecoder<BaseVoid>(ProcessMessageError.Unsupported);
 				AddTypeDecoder<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>(ProcessMessageError.Overweight);
 				AddTypeDecoder<BaseVoid>(ProcessMessageError.Yield);
+				AddTypeDecoder<BaseVoid>(ProcessMessageError.StackLimitReached);
         }
     }
 }

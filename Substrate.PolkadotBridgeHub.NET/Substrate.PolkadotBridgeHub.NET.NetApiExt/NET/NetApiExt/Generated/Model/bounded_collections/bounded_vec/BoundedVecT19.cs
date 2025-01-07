@@ -13,38 +13,33 @@ using Substrate.NetApi.Model.Types.Metadata.Base;
 using System.Collections.Generic;
 
 
-namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.pallet_balances.types
+namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec
 {
     
     
     /// <summary>
-    /// >> 251 - Composite[pallet_balances.types.IdAmountT2]
+    /// >> 462 - Composite[bounded_collections.bounded_vec.BoundedVecT19]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
-    public sealed class IdAmountT2 : BaseType
+    public sealed class BoundedVecT19 : BaseType
     {
         
         /// <summary>
-        /// >> id
+        /// >> value
         /// </summary>
-        public Substrate.NetApi.Model.Types.Base.BaseTuple Id { get; set; }
-        /// <summary>
-        /// >> amount
-        /// </summary>
-        public Substrate.NetApi.Model.Types.Primitive.U128 Amount { get; set; }
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> Value { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
         {
-            return "IdAmountT2";
+            return "BoundedVecT19";
         }
         
         /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
-            result.AddRange(Id.Encode());
-            result.AddRange(Amount.Encode());
+            result.AddRange(Value.Encode());
             return result.ToArray();
         }
         
@@ -52,10 +47,8 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.pallet_balan
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Id = new Substrate.NetApi.Model.Types.Base.BaseTuple();
-            Id.Decode(byteArray, ref p);
-            Amount = new Substrate.NetApi.Model.Types.Primitive.U128();
-            Amount.Decode(byteArray, ref p);
+            Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>();
+            Value.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];

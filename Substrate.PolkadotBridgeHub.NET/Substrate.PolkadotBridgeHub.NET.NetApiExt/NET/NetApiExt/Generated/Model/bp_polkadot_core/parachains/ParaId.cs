@@ -18,7 +18,7 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bp_polkadot_
     
     
     /// <summary>
-    /// >> 145 - Composite[bp_polkadot_core.parachains.ParaId]
+    /// >> 143 - Composite[bp_polkadot_core.parachains.ParaId]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class ParaId : BaseType

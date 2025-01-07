@@ -38,23 +38,22 @@ namespace Substrate.PolkadotBridgeHub.NET.RestService.Generated.Controller
         }
         
         /// <summary>
-        /// >> FreeMandatoryHeadersRemaining
-        ///  Number mandatory headers that we may accept in the current block for free (returning
-        ///  `Pays::No`).
+        /// >> FreeHeadersRemaining
+        ///  Number of free header submissions that we may yet accept in the current block.
         /// 
-        ///  If the `FreeMandatoryHeadersRemaining` hits zero, all following mandatory headers in the
+        ///  If the `FreeHeadersRemaining` hits zero, all following mandatory headers in the
         ///  current block are accepted with fee (`Pays::Yes` is returned).
         /// 
-        ///  The `FreeMandatoryHeadersRemaining` is an ephemeral value that is set to
-        ///  `MaxFreeMandatoryHeadersPerBlock` at each block initialization and is killed on block
+        ///  The `FreeHeadersRemaining` is an ephemeral value that is set to
+        ///  `MaxFreeHeadersPerBlock` at each block initialization and is killed on block
         ///  finalization. So it never ends up in the storage trie.
         /// </summary>
-        [HttpGet("FreeMandatoryHeadersRemaining")]
+        [HttpGet("FreeHeadersRemaining")]
         [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Primitive.U32), 200)]
-        [StorageKeyBuilder(typeof(Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Storage.BridgeKusamaGrandpaStorage), "FreeMandatoryHeadersRemainingParams")]
-        public IActionResult GetFreeMandatoryHeadersRemaining()
+        [StorageKeyBuilder(typeof(Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Storage.BridgeKusamaGrandpaStorage), "FreeHeadersRemainingParams")]
+        public IActionResult GetFreeHeadersRemaining()
         {
-            return this.Ok(_bridgeKusamaGrandpaStorage.GetFreeMandatoryHeadersRemaining());
+            return this.Ok(_bridgeKusamaGrandpaStorage.GetFreeHeadersRemaining());
         }
         
         /// <summary>
@@ -136,7 +135,7 @@ namespace Substrate.PolkadotBridgeHub.NET.RestService.Generated.Controller
         ///  Pallet owner has a right to halt all pallet operations and then resume it. If it is
         ///  `None`, then there are no direct ways to halt/resume pallet operations, but other
         ///  runtime methods may still be used to do that (i.e. democracy::referendum to update halt
-        ///  flag directly or call the `halt_operations`).
+        ///  flag directly or call the `set_operating_mode`).
         /// </summary>
         [HttpGet("PalletOwner")]
         [ProducesResponseType(typeof(Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32), 200)]

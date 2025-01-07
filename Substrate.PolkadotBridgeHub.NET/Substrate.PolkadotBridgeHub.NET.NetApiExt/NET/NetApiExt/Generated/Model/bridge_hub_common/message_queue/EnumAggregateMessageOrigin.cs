@@ -43,7 +43,7 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bridge_hub_c
     }
     
     /// <summary>
-    /// >> 170 - Variant[bridge_hub_common.message_queue.AggregateMessageOrigin]
+    /// >> 168 - Variant[bridge_hub_common.message_queue.AggregateMessageOrigin]
     /// </summary>
     public sealed class EnumAggregateMessageOrigin : BaseEnumRust<AggregateMessageOrigin>
     {

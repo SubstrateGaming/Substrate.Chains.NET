@@ -43,7 +43,7 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.pallet_xcm.p
     }
     
     /// <summary>
-    /// >> 308 - Variant[pallet_xcm.pallet.VersionMigrationStage]
+    /// >> 307 - Variant[pallet_xcm.pallet.VersionMigrationStage]
     /// </summary>
     public sealed class EnumVersionMigrationStage : BaseEnumRust<VersionMigrationStage>
     {

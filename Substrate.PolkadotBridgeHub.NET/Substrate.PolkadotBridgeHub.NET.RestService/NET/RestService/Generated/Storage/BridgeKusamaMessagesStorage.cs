@@ -31,7 +31,7 @@ namespace Substrate.PolkadotBridgeHub.NET.RestService.Generated.Storage
         ///  Pallet owner has a right to halt all pallet operations and then resume it. If it is
         ///  `None`, then there are no direct ways to halt/resume pallet operations, but other
         ///  runtime methods may still be used to do that (i.e. democracy::referendum to update halt
-        ///  flag directly or call the `halt_operations`).
+        ///  flag directly or call the `set_operating_mode`).
         /// </summary>
         Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetPalletOwner();
         
@@ -73,7 +73,7 @@ namespace Substrate.PolkadotBridgeHub.NET.RestService.Generated.Storage
         /// >> OutboundMessages
         ///  All queued outbound messages.
         /// </summary>
-        Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17 GetOutboundMessages(string key);
+        Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18 GetOutboundMessages(string key);
     }
     
     /// <summary>
@@ -110,7 +110,7 @@ namespace Substrate.PolkadotBridgeHub.NET.RestService.Generated.Storage
         /// <summary>
         /// _outboundMessagesTypedStorage typed storage field
         /// </summary>
-        private TypedMapStorage<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17> _outboundMessagesTypedStorage;
+        private TypedMapStorage<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18> _outboundMessagesTypedStorage;
         
         /// <summary>
         /// BridgeKusamaMessagesStorage constructor.
@@ -122,7 +122,7 @@ namespace Substrate.PolkadotBridgeHub.NET.RestService.Generated.Storage
             this.InboundLanesTypedStorage = new TypedMapStorage<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bp_messages.InboundLaneData>("BridgeKusamaMessages.InboundLanes", storageDataProvider, storageChangeDelegates);
             this.OutboundLanesTypedStorage = new TypedMapStorage<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bp_messages.OutboundLaneData>("BridgeKusamaMessages.OutboundLanes", storageDataProvider, storageChangeDelegates);
             this.OutboundLanesCongestedSignalsTypedStorage = new TypedMapStorage<Substrate.NetApi.Model.Types.Primitive.Bool>("BridgeKusamaMessages.OutboundLanesCongestedSignals", storageDataProvider, storageChangeDelegates);
-            this.OutboundMessagesTypedStorage = new TypedMapStorage<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17>("BridgeKusamaMessages.OutboundMessages", storageDataProvider, storageChangeDelegates);
+            this.OutboundMessagesTypedStorage = new TypedMapStorage<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18>("BridgeKusamaMessages.OutboundMessages", storageDataProvider, storageChangeDelegates);
         }
         
         /// <summary>
@@ -203,7 +203,7 @@ namespace Substrate.PolkadotBridgeHub.NET.RestService.Generated.Storage
         /// <summary>
         /// _outboundMessagesTypedStorage property
         /// </summary>
-        public TypedMapStorage<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17> OutboundMessagesTypedStorage
+        public TypedMapStorage<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18> OutboundMessagesTypedStorage
         {
             get
             {
@@ -244,7 +244,7 @@ namespace Substrate.PolkadotBridgeHub.NET.RestService.Generated.Storage
         ///  Pallet owner has a right to halt all pallet operations and then resume it. If it is
         ///  `None`, then there are no direct ways to halt/resume pallet operations, but other
         ///  runtime methods may still be used to do that (i.e. democracy::referendum to update halt
-        ///  flag directly or call the `halt_operations`).
+        ///  flag directly or call the `set_operating_mode`).
         /// </summary>
         public Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetPalletOwner()
         {
@@ -379,13 +379,13 @@ namespace Substrate.PolkadotBridgeHub.NET.RestService.Generated.Storage
         /// >> OutboundMessages
         ///  All queued outbound messages.
         /// </summary>
-        public Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17 GetOutboundMessages(string key)
+        public Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18 GetOutboundMessages(string key)
         {
             if ((key == null))
             {
                 return null;
             }
-            if (OutboundMessagesTypedStorage.Dictionary.TryGetValue(key, out Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17 result))
+            if (OutboundMessagesTypedStorage.Dictionary.TryGetValue(key, out Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18 result))
             {
                 return result;
             }

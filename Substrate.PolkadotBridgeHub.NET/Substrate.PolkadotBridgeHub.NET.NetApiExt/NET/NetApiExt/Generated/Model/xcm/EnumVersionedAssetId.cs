@@ -33,7 +33,7 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.xcm
     }
     
     /// <summary>
-    /// >> 311 - Variant[xcm.VersionedAssetId]
+    /// >> 310 - Variant[xcm.VersionedAssetId]
     /// </summary>
     public sealed class EnumVersionedAssetId : BaseEnumRust<VersionedAssetId>
     {

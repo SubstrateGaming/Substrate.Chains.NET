@@ -33,7 +33,7 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.snowbridge_c
     }
     
     /// <summary>
-    /// >> 163 - Variant[snowbridge_core.outbound.v1.OperatingMode]
+    /// >> 161 - Variant[snowbridge_core.outbound.v1.OperatingMode]
     /// </summary>
     public sealed class EnumOperatingMode : BaseEnum<OperatingMode>
     {

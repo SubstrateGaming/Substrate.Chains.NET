@@ -13,33 +13,38 @@ using Substrate.NetApi.Model.Types.Metadata.Base;
 using System.Collections.Generic;
 
 
-namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bridge_runtime_common.refund_relayer_extension
+namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.async_backing
 {
     
     
     /// <summary>
-    /// >> 480 - Composite[bridge_runtime_common.refund_relayer_extension.RefundSignedExtensionAdapter]
+    /// >> 218 - Composite[polkadot_primitives.v7.async_backing.AsyncBackingParams]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
-    public sealed class RefundSignedExtensionAdapter : BaseType
+    public sealed class AsyncBackingParams : BaseType
     {
         
         /// <summary>
-        /// >> value
+        /// >> max_candidate_depth
         /// </summary>
-        public Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bridge_runtime_common.refund_relayer_extension.RefundBridgedParachainMessages Value { get; set; }
+        public Substrate.NetApi.Model.Types.Primitive.U32 MaxCandidateDepth { get; set; }
+        /// <summary>
+        /// >> allowed_ancestry_len
+        /// </summary>
+        public Substrate.NetApi.Model.Types.Primitive.U32 AllowedAncestryLen { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
         {
-            return "RefundSignedExtensionAdapter";
+            return "AsyncBackingParams";
         }
         
         /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
-            result.AddRange(Value.Encode());
+            result.AddRange(MaxCandidateDepth.Encode());
+            result.AddRange(AllowedAncestryLen.Encode());
             return result.ToArray();
         }
         
@@ -47,8 +52,10 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bridge_runti
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Value = new Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bridge_runtime_common.refund_relayer_extension.RefundBridgedParachainMessages();
-            Value.Decode(byteArray, ref p);
+            MaxCandidateDepth = new Substrate.NetApi.Model.Types.Primitive.U32();
+            MaxCandidateDepth.Decode(byteArray, ref p);
+            AllowedAncestryLen = new Substrate.NetApi.Model.Types.Primitive.U32();
+            AllowedAncestryLen.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];

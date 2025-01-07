@@ -45,7 +45,7 @@ namespace Substrate.PolkadotBridgeHub.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "BridgeKusamaMessages/OutboundLanesCongestedSignals", value.Encode(), Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Storage.BridgeKusamaMessagesStorage.OutboundLanesCongestedSignalsParams(key));
       }
-      public async Task<bool> SetOutboundMessages(BoundedVecT17 value, MessageKey key)
+      public async Task<bool> SetOutboundMessages(BoundedVecT18 value, MessageKey key)
       {
          return await SendMockupRequestAsync(_httpClient, "BridgeKusamaMessages/OutboundMessages", value.Encode(), Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Storage.BridgeKusamaMessagesStorage.OutboundMessagesParams(key));
       }

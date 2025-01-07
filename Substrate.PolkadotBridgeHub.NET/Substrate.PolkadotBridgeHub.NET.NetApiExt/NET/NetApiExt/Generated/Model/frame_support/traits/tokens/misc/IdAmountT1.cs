@@ -13,38 +13,38 @@ using Substrate.NetApi.Model.Types.Metadata.Base;
 using System.Collections.Generic;
 
 
-namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.async_backing
+namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.frame_support.traits.tokens.misc
 {
     
     
     /// <summary>
-    /// >> 220 - Composite[polkadot_primitives.v6.async_backing.AsyncBackingParams]
+    /// >> 245 - Composite[frame_support.traits.tokens.misc.IdAmountT1]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
-    public sealed class AsyncBackingParams : BaseType
+    public sealed class IdAmountT1 : BaseType
     {
         
         /// <summary>
-        /// >> max_candidate_depth
+        /// >> id
         /// </summary>
-        public Substrate.NetApi.Model.Types.Primitive.U32 MaxCandidateDepth { get; set; }
+        public Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bridge_hub_polkadot_runtime.EnumRuntimeHoldReason Id { get; set; }
         /// <summary>
-        /// >> allowed_ancestry_len
+        /// >> amount
         /// </summary>
-        public Substrate.NetApi.Model.Types.Primitive.U32 AllowedAncestryLen { get; set; }
+        public Substrate.NetApi.Model.Types.Primitive.U128 Amount { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
         {
-            return "AsyncBackingParams";
+            return "IdAmountT1";
         }
         
         /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
-            result.AddRange(MaxCandidateDepth.Encode());
-            result.AddRange(AllowedAncestryLen.Encode());
+            result.AddRange(Id.Encode());
+            result.AddRange(Amount.Encode());
             return result.ToArray();
         }
         
@@ -52,10 +52,10 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.polkadot_pri
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            MaxCandidateDepth = new Substrate.NetApi.Model.Types.Primitive.U32();
-            MaxCandidateDepth.Decode(byteArray, ref p);
-            AllowedAncestryLen = new Substrate.NetApi.Model.Types.Primitive.U32();
-            AllowedAncestryLen.Decode(byteArray, ref p);
+            Id = new Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bridge_hub_polkadot_runtime.EnumRuntimeHoldReason();
+            Id.Decode(byteArray, ref p);
+            Amount = new Substrate.NetApi.Model.Types.Primitive.U128();
+            Amount.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];

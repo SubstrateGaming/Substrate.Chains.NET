@@ -13,38 +13,33 @@ using Substrate.NetApi.Model.Types.Metadata.Base;
 using System.Collections.Generic;
 
 
-namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.pallet_balances.types
+namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bridge_runtime_common.extensions.refund_relayer_extension
 {
     
     
     /// <summary>
-    /// >> 247 - Composite[pallet_balances.types.IdAmountT1]
+    /// >> 478 - Composite[bridge_runtime_common.extensions.refund_relayer_extension.RefundSignedExtensionAdapter]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
-    public sealed class IdAmountT1 : BaseType
+    public sealed class RefundSignedExtensionAdapter : BaseType
     {
         
         /// <summary>
-        /// >> id
+        /// >> value
         /// </summary>
-        public Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bridge_hub_polkadot_runtime.EnumRuntimeHoldReason Id { get; set; }
-        /// <summary>
-        /// >> amount
-        /// </summary>
-        public Substrate.NetApi.Model.Types.Primitive.U128 Amount { get; set; }
+        public Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bridge_runtime_common.extensions.refund_relayer_extension.RefundBridgedParachainMessages Value { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
         {
-            return "IdAmountT1";
+            return "RefundSignedExtensionAdapter";
         }
         
         /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
-            result.AddRange(Id.Encode());
-            result.AddRange(Amount.Encode());
+            result.AddRange(Value.Encode());
             return result.ToArray();
         }
         
@@ -52,10 +47,8 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.pallet_balan
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Id = new Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bridge_hub_polkadot_runtime.EnumRuntimeHoldReason();
-            Id.Decode(byteArray, ref p);
-            Amount = new Substrate.NetApi.Model.Types.Primitive.U128();
-            Amount.Decode(byteArray, ref p);
+            Value = new Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bridge_runtime_common.extensions.refund_relayer_extension.RefundBridgedParachainMessages();
+            Value.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];

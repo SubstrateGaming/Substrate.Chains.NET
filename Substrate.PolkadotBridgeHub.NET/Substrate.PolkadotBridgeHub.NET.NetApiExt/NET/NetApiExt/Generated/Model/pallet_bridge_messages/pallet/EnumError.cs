@@ -97,10 +97,10 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.pallet_bridg
         MessageIsNotYetSent = 11,
         
         /// <summary>
-        /// >> ReceivalConfirmation
+        /// >> ReceptionConfirmation
         /// Error confirming messages receival.
         /// </summary>
-        ReceivalConfirmation = 12,
+        ReceptionConfirmation = 12,
         
         /// <summary>
         /// >> BridgeModule
@@ -133,7 +133,7 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.pallet_bridg
 				AddTypeDecoder<BaseVoid>(Error.InvalidUnrewardedRelayersState);
 				AddTypeDecoder<BaseVoid>(Error.InsufficientDispatchWeight);
 				AddTypeDecoder<BaseVoid>(Error.MessageIsNotYetSent);
-				AddTypeDecoder<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.pallet_bridge_messages.outbound_lane.EnumReceivalConfirmationError>(Error.ReceivalConfirmation);
+				AddTypeDecoder<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.pallet_bridge_messages.outbound_lane.EnumReceptionConfirmationError>(Error.ReceptionConfirmation);
 				AddTypeDecoder<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bp_runtime.EnumOwnedBridgeModuleError>(Error.BridgeModule);
         }
     }

@@ -24,7 +24,7 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.staging_para
     }
     
     /// <summary>
-    /// >> 238 - Variant[staging_parachain_info.pallet.Call]
+    /// >> 236 - Variant[staging_parachain_info.pallet.Call]
     /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
     public sealed class EnumCall : BaseEnum<Call>

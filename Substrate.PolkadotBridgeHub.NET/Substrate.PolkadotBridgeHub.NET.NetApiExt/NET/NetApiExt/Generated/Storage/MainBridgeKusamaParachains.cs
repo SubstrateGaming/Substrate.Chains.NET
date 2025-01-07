@@ -55,7 +55,7 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Storage
         ///  Pallet owner has a right to halt all pallet operations and then resume them. If it is
         ///  `None`, then there are no direct ways to halt/resume pallet operations, but other
         ///  runtime methods may still be used to do that (i.e. democracy::referendum to update halt
-        ///  flag directly or call the `halt_operations`).
+        ///  flag directly or call the `set_operating_mode`).
         /// </summary>
         public static string PalletOwnerParams()
         {
@@ -78,7 +78,7 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Storage
         ///  Pallet owner has a right to halt all pallet operations and then resume them. If it is
         ///  `None`, then there are no direct ways to halt/resume pallet operations, but other
         ///  runtime methods may still be used to do that (i.e. democracy::referendum to update halt
-        ///  flag directly or call the `halt_operations`).
+        ///  flag directly or call the `set_operating_mode`).
         /// </summary>
         public async Task<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> PalletOwner(string blockhash, CancellationToken token)
         {
@@ -261,6 +261,20 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Storage
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(operating_mode.Encode());
             return new Method(52, "BridgeKusamaParachains", 2, "set_operating_mode", byteArray.ToArray());
+        }
+        
+        /// <summary>
+        /// >> submit_parachain_heads_ex
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
+        /// </summary>
+        public static Method SubmitParachainHeadsEx(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.primitive_types.H256> at_relay_block, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bp_polkadot_core.parachains.ParaId, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.primitive_types.H256>> parachains, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bp_polkadot_core.parachains.ParaHeadsProof parachain_heads_proof, Substrate.NetApi.Model.Types.Primitive.Bool is_free_execution_expected)
+        {
+            System.Collections.Generic.List<byte> byteArray = new List<byte>();
+            byteArray.AddRange(at_relay_block.Encode());
+            byteArray.AddRange(parachains.Encode());
+            byteArray.AddRange(parachain_heads_proof.Encode());
+            byteArray.AddRange(is_free_execution_expected.Encode());
+            return new Method(52, "BridgeKusamaParachains", 3, "submit_parachain_heads_ex", byteArray.ToArray());
         }
     }
     

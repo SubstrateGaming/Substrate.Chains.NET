@@ -16,9 +16,9 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bp_messages
     
     
     /// <summary>
-    /// >> ReceivalResult
+    /// >> ReceptionResult
     /// </summary>
-    public enum ReceivalResult
+    public enum ReceptionResult
     {
         
         /// <summary>
@@ -43,20 +43,20 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bp_messages
     }
     
     /// <summary>
-    /// >> 152 - Variant[bp_messages.ReceivalResult]
+    /// >> 150 - Variant[bp_messages.ReceptionResult]
     /// </summary>
-    public sealed class EnumReceivalResult : BaseEnumRust<ReceivalResult>
+    public sealed class EnumReceptionResult : BaseEnumRust<ReceptionResult>
     {
         
         /// <summary>
         /// Initializes a new instance of the class.
         /// </summary>
-        public EnumReceivalResult()
+        public EnumReceptionResult()
         {
-				AddTypeDecoder<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bp_runtime.messages.MessageDispatchResult>(ReceivalResult.Dispatched);
-				AddTypeDecoder<BaseVoid>(ReceivalResult.InvalidNonce);
-				AddTypeDecoder<BaseVoid>(ReceivalResult.TooManyUnrewardedRelayers);
-				AddTypeDecoder<BaseVoid>(ReceivalResult.TooManyUnconfirmedMessages);
+				AddTypeDecoder<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bp_runtime.messages.MessageDispatchResult>(ReceptionResult.Dispatched);
+				AddTypeDecoder<BaseVoid>(ReceptionResult.InvalidNonce);
+				AddTypeDecoder<BaseVoid>(ReceptionResult.TooManyUnrewardedRelayers);
+				AddTypeDecoder<BaseVoid>(ReceptionResult.TooManyUnconfirmedMessages);
         }
     }
 }

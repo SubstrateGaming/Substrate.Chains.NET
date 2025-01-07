@@ -146,12 +146,6 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.pallet_xcm.p
         InUse = 19,
         
         /// <summary>
-        /// >> InvalidAssetNotConcrete
-        /// Invalid non-concrete asset.
-        /// </summary>
-        InvalidAssetNotConcrete = 20,
-        
-        /// <summary>
         /// >> InvalidAssetUnknownReserve
         /// Invalid asset, reserve chain could not be determined for it.
         /// </summary>

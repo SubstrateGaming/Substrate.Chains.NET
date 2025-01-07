@@ -36,7 +36,7 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.snowbridge_p
     }
     
     /// <summary>
-    /// >> 155 - Variant[snowbridge_pallet_inbound_queue.pallet.Event]
+    /// >> 153 - Variant[snowbridge_pallet_inbound_queue.pallet.Event]
     /// The `Event` enum of this pallet
     /// </summary>
     public sealed class EnumEvent : BaseEnumRust<Event>

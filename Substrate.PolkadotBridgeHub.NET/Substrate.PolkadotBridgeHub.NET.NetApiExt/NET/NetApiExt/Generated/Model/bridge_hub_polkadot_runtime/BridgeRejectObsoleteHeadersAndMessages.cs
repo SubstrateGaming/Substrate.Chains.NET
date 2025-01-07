@@ -18,7 +18,7 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bridge_hub_p
     
     
     /// <summary>
-    /// >> 479 - Composite[bridge_hub_polkadot_runtime.BridgeRejectObsoleteHeadersAndMessages]
+    /// >> 477 - Composite[bridge_hub_polkadot_runtime.BridgeRejectObsoleteHeadersAndMessages]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class BridgeRejectObsoleteHeadersAndMessages : BaseType

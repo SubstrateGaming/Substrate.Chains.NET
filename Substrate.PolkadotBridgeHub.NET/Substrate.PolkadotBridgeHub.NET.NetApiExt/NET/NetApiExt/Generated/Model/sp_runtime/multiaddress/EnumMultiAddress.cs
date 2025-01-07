@@ -48,7 +48,7 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_runtime.m
     }
     
     /// <summary>
-    /// >> 254 - Variant[sp_runtime.multiaddress.MultiAddress]
+    /// >> 252 - Variant[sp_runtime.multiaddress.MultiAddress]
     /// </summary>
     public sealed class EnumMultiAddress : BaseEnumRust<MultiAddress>
     {

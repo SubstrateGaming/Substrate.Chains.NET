@@ -45,7 +45,7 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Storage
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("BridgeKusamaMessages", "OutboundLanesCongestedSignals"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bp_messages.LaneId), typeof(Substrate.NetApi.Model.Types.Primitive.Bool)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("BridgeKusamaMessages", "OutboundMessages"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bp_messages.MessageKey), typeof(Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bp_messages.MessageKey), typeof(Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18)));
         }
         
         /// <summary>
@@ -55,7 +55,7 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Storage
         ///  Pallet owner has a right to halt all pallet operations and then resume it. If it is
         ///  `None`, then there are no direct ways to halt/resume pallet operations, but other
         ///  runtime methods may still be used to do that (i.e. democracy::referendum to update halt
-        ///  flag directly or call the `halt_operations`).
+        ///  flag directly or call the `set_operating_mode`).
         /// </summary>
         public static string PalletOwnerParams()
         {
@@ -78,7 +78,7 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Storage
         ///  Pallet owner has a right to halt all pallet operations and then resume it. If it is
         ///  `None`, then there are no direct ways to halt/resume pallet operations, but other
         ///  runtime methods may still be used to do that (i.e. democracy::referendum to update halt
-        ///  flag directly or call the `halt_operations`).
+        ///  flag directly or call the `set_operating_mode`).
         /// </summary>
         public async Task<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> PalletOwner(string blockhash, CancellationToken token)
         {
@@ -253,10 +253,10 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Storage
         /// >> OutboundMessages
         ///  All queued outbound messages.
         /// </summary>
-        public async Task<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17> OutboundMessages(Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bp_messages.MessageKey key, string blockhash, CancellationToken token)
+        public async Task<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18> OutboundMessages(Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bp_messages.MessageKey key, string blockhash, CancellationToken token)
         {
             string parameters = BridgeKusamaMessagesStorage.OutboundMessagesParams(key);
-            var result = await _client.GetStorageAsync<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17>(parameters, blockhash, token);
+            var result = await _client.GetStorageAsync<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18>(parameters, blockhash, token);
             return result;
         }
     }
@@ -426,10 +426,10 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Storage
         MessageIsNotYetSent,
         
         /// <summary>
-        /// >> ReceivalConfirmation
+        /// >> ReceptionConfirmation
         /// Error confirming messages receival.
         /// </summary>
-        ReceivalConfirmation,
+        ReceptionConfirmation,
         
         /// <summary>
         /// >> BridgeModule

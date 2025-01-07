@@ -16,9 +16,9 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.pallet_bridg
     
     
     /// <summary>
-    /// >> ReceivalConfirmationError
+    /// >> ReceptionConfirmationError
     /// </summary>
-    public enum ReceivalConfirmationError
+    public enum ReceptionConfirmationError
     {
         
         /// <summary>
@@ -43,9 +43,9 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.pallet_bridg
     }
     
     /// <summary>
-    /// >> 433 - Variant[pallet_bridge_messages.outbound_lane.ReceivalConfirmationError]
+    /// >> 433 - Variant[pallet_bridge_messages.outbound_lane.ReceptionConfirmationError]
     /// </summary>
-    public sealed class EnumReceivalConfirmationError : BaseEnum<ReceivalConfirmationError>
+    public sealed class EnumReceptionConfirmationError : BaseEnum<ReceptionConfirmationError>
     {
     }
 }

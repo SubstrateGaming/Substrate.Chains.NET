@@ -31,7 +31,7 @@ namespace Substrate.PolkadotBridgeHub.NET.RestClient.Test.Generated
          _httpClient = CreateHttpClient();
       }
       [Test()]
-      public async System.Threading.Tasks.Task TestFreeMandatoryHeadersRemaining()
+      public async System.Threading.Tasks.Task TestFreeHeadersRemaining()
       {
          // Construct new Mockup client to test with.
          BridgeKusamaGrandpaControllerMockupClient mockupClient = new BridgeKusamaGrandpaControllerMockupClient(_httpClient);
@@ -44,17 +44,17 @@ namespace Substrate.PolkadotBridgeHub.NET.RestClient.Test.Generated
          Substrate.NetApi.Model.Types.Primitive.U32 mockupValue = this.GetTestValueU32();
 
 
-         Assert.IsTrue(await rpcClient.SubscribeFreeMandatoryHeadersRemaining());
+         Assert.IsTrue(await rpcClient.SubscribeFreeHeadersRemaining());
 
          // Save the previously generated mockup value in RPC service storage.
-         bool mockupSetResult = await mockupClient.SetFreeMandatoryHeadersRemaining(mockupValue);
+         bool mockupSetResult = await mockupClient.SetFreeHeadersRemaining(mockupValue);
 
          // Test that the expected mockup value was handled successfully from RPC service.
          Assert.IsTrue(mockupSetResult);
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Substrate.NetApi.Model.Types.Primitive.U32 rpcResult = await rpcClient.GetFreeMandatoryHeadersRemaining();
+         Substrate.NetApi.Model.Types.Primitive.U32 rpcResult = await rpcClient.GetFreeHeadersRemaining();
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
@@ -426,15 +426,15 @@ namespace Substrate.PolkadotBridgeHub.NET.RestClient.Test.Generated
       {
          Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.pallet_bridge_grandpa.storage_types.StoredAuthoritySet result;
          result = new Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.pallet_bridge_grandpa.storage_types.StoredAuthoritySet();
-         result.Authorities = new Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT16();
+         result.Authorities = new Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17();
          result.Authorities = this.GetTestValue16();
          result.SetId = this.GetTestValueU64();
          return result;
       }
-      public Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT16 GetTestValue16()
+      public Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17 GetTestValue16()
       {
-         Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT16 result;
-         result = new Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT16();
+         Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17 result;
+         result = new Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17();
          result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_consensus_grandpa.app.Public, Substrate.NetApi.Model.Types.Primitive.U64>>();
          result.Value.Create(new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_consensus_grandpa.app.Public, Substrate.NetApi.Model.Types.Primitive.U64>[] {
                   this.GetTestValue17()});
@@ -451,14 +451,6 @@ namespace Substrate.PolkadotBridgeHub.NET.RestClient.Test.Generated
       {
          Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_consensus_grandpa.app.Public result;
          result = new Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_consensus_grandpa.app.Public();
-         result.Value = new Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_core.ed25519.Public();
-         result.Value = this.GetTestValue19();
-         return result;
-      }
-      public Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_core.ed25519.Public GetTestValue19()
-      {
-         Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_core.ed25519.Public result;
-         result = new Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_core.ed25519.Public();
          result.Value = new Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Types.Base.Arr32U8();
          result.Value.Create(new Substrate.NetApi.Model.Types.Primitive.U8[] {
                   this.GetTestValueU8(),
@@ -524,7 +516,7 @@ namespace Substrate.PolkadotBridgeHub.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue21()
+      public Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue20()
       {
          Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 result;
          result = new Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32();
@@ -575,7 +567,7 @@ namespace Substrate.PolkadotBridgeHub.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          BridgeKusamaGrandpaControllerClient rpcClient = new BridgeKusamaGrandpaControllerClient(_httpClient, subscriptionClient);
-         Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 mockupValue = this.GetTestValue21();
+         Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 mockupValue = this.GetTestValue20();
 
 
          Assert.IsTrue(await rpcClient.SubscribePalletOwner());
@@ -593,7 +585,7 @@ namespace Substrate.PolkadotBridgeHub.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bp_runtime.EnumBasicOperatingMode GetTestValue23()
+      public Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bp_runtime.EnumBasicOperatingMode GetTestValue22()
       {
          Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bp_runtime.EnumBasicOperatingMode result;
          result = new Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bp_runtime.EnumBasicOperatingMode();
@@ -611,7 +603,7 @@ namespace Substrate.PolkadotBridgeHub.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          BridgeKusamaGrandpaControllerClient rpcClient = new BridgeKusamaGrandpaControllerClient(_httpClient, subscriptionClient);
-         Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bp_runtime.EnumBasicOperatingMode mockupValue = this.GetTestValue23();
+         Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bp_runtime.EnumBasicOperatingMode mockupValue = this.GetTestValue22();
 
 
          Assert.IsTrue(await rpcClient.SubscribePalletOperatingMode());

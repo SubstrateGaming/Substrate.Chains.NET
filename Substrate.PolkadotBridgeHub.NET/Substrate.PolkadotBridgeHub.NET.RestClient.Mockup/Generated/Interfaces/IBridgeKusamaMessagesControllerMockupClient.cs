@@ -23,6 +23,6 @@ namespace Substrate.PolkadotBridgeHub.NET.RestClient.Mockup.Generated.Interfaces
       Task<bool> SetInboundLanes(InboundLaneData value, LaneId key);
       Task<bool> SetOutboundLanes(OutboundLaneData value, LaneId key);
       Task<bool> SetOutboundLanesCongestedSignals(Bool value, LaneId key);
-      Task<bool> SetOutboundMessages(BoundedVecT17 value, MessageKey key);
+      Task<bool> SetOutboundMessages(BoundedVecT18 value, MessageKey key);
    }
 }
