@@ -13,6 +13,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Generated.Clients
    using System.Threading.Tasks;
    using System.Net.Http;
    using Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_assets.types;
+   using Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v4.location;
    using Substrate.PolkadotAssetHub.NET.RestClient.Generated.Interfaces;
    
    public sealed class ForeignAssetsControllerClient : BaseClient, IForeignAssetsControllerClient
@@ -24,37 +25,45 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Generated.Clients
          _httpClient = httpClient;
          _subscriptionClient = subscriptionClient;
       }
-      public async Task<AssetDetails> GetAsset(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation key)
+      public async Task<AssetDetails> GetAsset(Location key)
       {
          return await SendRequestAsync<AssetDetails>(_httpClient, "foreignassets/asset", Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage.ForeignAssetsStorage.AssetParams(key));
       }
-      public async Task<bool> SubscribeAsset(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation key)
+      public async Task<bool> SubscribeAsset(Location key)
       {
          return await _subscriptionClient.SubscribeAsync("ForeignAssets.Asset", Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage.ForeignAssetsStorage.AssetParams(key));
       }
-      public async Task<AssetAccount> GetAccount(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> key)
+      public async Task<AssetAccount> GetAccount(Substrate.NetApi.Model.Types.Base.BaseTuple<Location, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> key)
       {
          return await SendRequestAsync<AssetAccount>(_httpClient, "foreignassets/account", Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage.ForeignAssetsStorage.AccountParams(key));
       }
-      public async Task<bool> SubscribeAccount(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> key)
+      public async Task<bool> SubscribeAccount(Substrate.NetApi.Model.Types.Base.BaseTuple<Location, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> key)
       {
          return await _subscriptionClient.SubscribeAsync("ForeignAssets.Account", Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage.ForeignAssetsStorage.AccountParams(key));
       }
-      public async Task<Approval> GetApprovals(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> key)
+      public async Task<Approval> GetApprovals(Substrate.NetApi.Model.Types.Base.BaseTuple<Location, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> key)
       {
          return await SendRequestAsync<Approval>(_httpClient, "foreignassets/approvals", Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage.ForeignAssetsStorage.ApprovalsParams(key));
       }
-      public async Task<bool> SubscribeApprovals(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> key)
+      public async Task<bool> SubscribeApprovals(Substrate.NetApi.Model.Types.Base.BaseTuple<Location, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> key)
       {
          return await _subscriptionClient.SubscribeAsync("ForeignAssets.Approvals", Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage.ForeignAssetsStorage.ApprovalsParams(key));
       }
-      public async Task<AssetMetadataT2> GetMetadata(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation key)
+      public async Task<AssetMetadataT2> GetMetadata(Location key)
       {
          return await SendRequestAsync<AssetMetadataT2>(_httpClient, "foreignassets/metadata", Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage.ForeignAssetsStorage.MetadataParams(key));
       }
-      public async Task<bool> SubscribeMetadata(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation key)
+      public async Task<bool> SubscribeMetadata(Location key)
       {
          return await _subscriptionClient.SubscribeAsync("ForeignAssets.Metadata", Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage.ForeignAssetsStorage.MetadataParams(key));
+      }
+      public async Task<Location> GetNextAssetId()
+      {
+         return await SendRequestAsync<Location>(_httpClient, "foreignassets/nextassetid");
+      }
+      public async Task<bool> SubscribeNextAssetId()
+      {
+         return await _subscriptionClient.SubscribeAsync("ForeignAssets.NextAssetId");
       }
    }
 }

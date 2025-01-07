@@ -13,33 +13,38 @@ using Substrate.NetApi.Model.Types.Metadata.Base;
 using System.Collections.Generic;
 
 
-namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.ed25519
+namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.frame_support.traits.tokens.misc
 {
     
     
     /// <summary>
-    /// >> 254 - Composite[sp_core.ed25519.Public]
+    /// >> 226 - Composite[frame_support.traits.tokens.misc.IdAmountT1]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
-    public sealed class Public : BaseType
+    public sealed class IdAmountT1 : BaseType
     {
         
         /// <summary>
-        /// >> value
+        /// >> id
         /// </summary>
-        public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.Arr32U8 Value { get; set; }
+        public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.asset_hub_polkadot_runtime.EnumRuntimeHoldReason Id { get; set; }
+        /// <summary>
+        /// >> amount
+        /// </summary>
+        public Substrate.NetApi.Model.Types.Primitive.U128 Amount { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
         {
-            return "Public";
+            return "IdAmountT1";
         }
         
         /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
-            result.AddRange(Value.Encode());
+            result.AddRange(Id.Encode());
+            result.AddRange(Amount.Encode());
             return result.ToArray();
         }
         
@@ -47,8 +52,10 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.ed255
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Value = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.Arr32U8();
-            Value.Decode(byteArray, ref p);
+            Id = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.asset_hub_polkadot_runtime.EnumRuntimeHoldReason();
+            Id.Decode(byteArray, ref p);
+            Amount = new Substrate.NetApi.Model.Types.Primitive.U128();
+            Amount.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];

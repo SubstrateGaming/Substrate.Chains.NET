@@ -6,7 +6,7 @@
     "rest_client": "Substrate.PolkadotAssetHub.NET.RestClient"
   },
    "metadata": {
-      "websocket": "wss://asset-hub-polkadot-rpc.dwellir.com"
+      "websocket": "wss://sys.ibp.network/asset-hub-polkadot"
    },
   "rest_client_settings": {
     "service_assembly": "Substrate.PolkadotAssetHub.NET.RestService.dll"

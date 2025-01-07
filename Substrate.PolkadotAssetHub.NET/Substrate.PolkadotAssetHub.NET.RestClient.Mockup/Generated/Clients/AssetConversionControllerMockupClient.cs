@@ -23,7 +23,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Mockup.Generated.Clients
       {
          _httpClient = httpClient;
       }
-      public async Task<bool> SetPools(PoolInfo value, Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation> key)
+      public async Task<bool> SetPools(PoolInfo value, Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v4.location.Location, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v4.location.Location> key)
       {
          return await SendMockupRequestAsync(_httpClient, "AssetConversion/Pools", value.Encode(), Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage.AssetConversionStorage.PoolsParams(key));
       }

@@ -49,6 +49,20 @@ namespace Substrate.PolkadotAssetHub.NET.RestService.Generated.Storage
         ///  Metadata of an asset.
         /// </summary>
         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_assets.types.AssetMetadataT2 GetMetadata(string key);
+        
+        /// <summary>
+        /// >> NextAssetId
+        ///  The asset ID enforced for the next asset creation, if any present. Otherwise, this storage
+        ///  item has no effect.
+        /// 
+        ///  This can be useful for setting up constraints for IDs of the new assets. For example, by
+        ///  providing an initial [`NextAssetId`] and using the [`crate::AutoIncAssetId`] callback, an
+        ///  auto-increment model can be applied to all new asset IDs.
+        /// 
+        ///  The initial next asset ID can be set using the [`GenesisConfig`] or the
+        ///  [SetNextAssetId](`migration::next_asset_id::SetNextAssetId`) migration.
+        /// </summary>
+        Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v4.location.Location GetNextAssetId();
     }
     
     /// <summary>
@@ -78,6 +92,11 @@ namespace Substrate.PolkadotAssetHub.NET.RestService.Generated.Storage
         private TypedMapStorage<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_assets.types.AssetMetadataT2> _metadataTypedStorage;
         
         /// <summary>
+        /// _nextAssetIdTypedStorage typed storage field
+        /// </summary>
+        private TypedStorage<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v4.location.Location> _nextAssetIdTypedStorage;
+        
+        /// <summary>
         /// ForeignAssetsStorage constructor.
         /// </summary>
         public ForeignAssetsStorage(IStorageDataProvider storageDataProvider, List<IStorageChangeDelegate> storageChangeDelegates)
@@ -86,6 +105,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestService.Generated.Storage
             this.AccountTypedStorage = new TypedMapStorage<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_assets.types.AssetAccount>("ForeignAssets.Account", storageDataProvider, storageChangeDelegates);
             this.ApprovalsTypedStorage = new TypedMapStorage<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_assets.types.Approval>("ForeignAssets.Approvals", storageDataProvider, storageChangeDelegates);
             this.MetadataTypedStorage = new TypedMapStorage<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_assets.types.AssetMetadataT2>("ForeignAssets.Metadata", storageDataProvider, storageChangeDelegates);
+            this.NextAssetIdTypedStorage = new TypedStorage<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v4.location.Location>("ForeignAssets.NextAssetId", storageDataProvider, storageChangeDelegates);
         }
         
         /// <summary>
@@ -149,6 +169,21 @@ namespace Substrate.PolkadotAssetHub.NET.RestService.Generated.Storage
         }
         
         /// <summary>
+        /// _nextAssetIdTypedStorage property
+        /// </summary>
+        public TypedStorage<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v4.location.Location> NextAssetIdTypedStorage
+        {
+            get
+            {
+                return _nextAssetIdTypedStorage;
+            }
+            set
+            {
+                _nextAssetIdTypedStorage = value;
+            }
+        }
+        
+        /// <summary>
         /// Connects to all storages and initializes the change subscription handling.
         /// </summary>
         public async Task InitializeAsync(Substrate.ServiceLayer.Storage.IStorageDataProvider dataProvider)
@@ -157,6 +192,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestService.Generated.Storage
             await AccountTypedStorage.InitializeAsync("ForeignAssets", "Account");
             await ApprovalsTypedStorage.InitializeAsync("ForeignAssets", "Approvals");
             await MetadataTypedStorage.InitializeAsync("ForeignAssets", "Metadata");
+            await NextAssetIdTypedStorage.InitializeAsync("ForeignAssets", "NextAssetId");
         }
         
         /// <summary>
@@ -275,6 +311,32 @@ namespace Substrate.PolkadotAssetHub.NET.RestService.Generated.Storage
             {
                 return null;
             }
+        }
+        
+        /// <summary>
+        /// Implements any storage change for ForeignAssets.NextAssetId
+        /// </summary>
+        [StorageChange("ForeignAssets", "NextAssetId")]
+        public void OnUpdateNextAssetId(string data)
+        {
+            NextAssetIdTypedStorage.Update(data);
+        }
+        
+        /// <summary>
+        /// >> NextAssetId
+        ///  The asset ID enforced for the next asset creation, if any present. Otherwise, this storage
+        ///  item has no effect.
+        /// 
+        ///  This can be useful for setting up constraints for IDs of the new assets. For example, by
+        ///  providing an initial [`NextAssetId`] and using the [`crate::AutoIncAssetId`] callback, an
+        ///  auto-increment model can be applied to all new asset IDs.
+        /// 
+        ///  The initial next asset ID can be set using the [`GenesisConfig`] or the
+        ///  [SetNextAssetId](`migration::next_asset_id::SetNextAssetId`) migration.
+        /// </summary>
+        public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v4.location.Location GetNextAssetId()
+        {
+            return NextAssetIdTypedStorage.Get();
         }
     }
 }

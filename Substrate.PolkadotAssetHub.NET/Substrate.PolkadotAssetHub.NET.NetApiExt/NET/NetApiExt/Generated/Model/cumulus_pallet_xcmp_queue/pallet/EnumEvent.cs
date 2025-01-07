@@ -30,7 +30,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_palle
     }
     
     /// <summary>
-    /// >> 51 - Variant[cumulus_pallet_xcmp_queue.pallet.Event]
+    /// >> 59 - Variant[cumulus_pallet_xcmp_queue.pallet.Event]
     /// The `Event` enum of this pallet
     /// </summary>
     public sealed class EnumEvent : BaseEnumRust<Event>

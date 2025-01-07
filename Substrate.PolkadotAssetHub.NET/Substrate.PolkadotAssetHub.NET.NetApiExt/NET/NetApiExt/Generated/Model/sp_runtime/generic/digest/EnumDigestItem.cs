@@ -48,7 +48,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_runtime.ge
     }
     
     /// <summary>
-    /// >> 16 - Variant[sp_runtime.generic.digest.DigestItem]
+    /// >> 17 - Variant[sp_runtime.generic.digest.DigestItem]
     /// </summary>
     public sealed class EnumDigestItem : BaseEnumRust<DigestItem>
     {

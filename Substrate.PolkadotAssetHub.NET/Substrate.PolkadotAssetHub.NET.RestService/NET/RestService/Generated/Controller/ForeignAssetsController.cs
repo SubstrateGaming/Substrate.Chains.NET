@@ -43,7 +43,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestService.Generated.Controller
         /// </summary>
         [HttpGet("Asset")]
         [ProducesResponseType(typeof(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_assets.types.AssetDetails), 200)]
-        [StorageKeyBuilder(typeof(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage.ForeignAssetsStorage), "AssetParams", typeof(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation))]
+        [StorageKeyBuilder(typeof(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage.ForeignAssetsStorage), "AssetParams", typeof(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v4.location.Location))]
         public IActionResult GetAsset(string key)
         {
             return this.Ok(_foreignAssetsStorage.GetAsset(key));
@@ -55,7 +55,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestService.Generated.Controller
         /// </summary>
         [HttpGet("Account")]
         [ProducesResponseType(typeof(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_assets.types.AssetAccount), 200)]
-        [StorageKeyBuilder(typeof(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage.ForeignAssetsStorage), "AccountParams", typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>))]
+        [StorageKeyBuilder(typeof(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage.ForeignAssetsStorage), "AccountParams", typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v4.location.Location, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>))]
         public IActionResult GetAccount(string key)
         {
             return this.Ok(_foreignAssetsStorage.GetAccount(key));
@@ -69,7 +69,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestService.Generated.Controller
         /// </summary>
         [HttpGet("Approvals")]
         [ProducesResponseType(typeof(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_assets.types.Approval), 200)]
-        [StorageKeyBuilder(typeof(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage.ForeignAssetsStorage), "ApprovalsParams", typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>))]
+        [StorageKeyBuilder(typeof(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage.ForeignAssetsStorage), "ApprovalsParams", typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v4.location.Location, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>))]
         public IActionResult GetApprovals(string key)
         {
             return this.Ok(_foreignAssetsStorage.GetApprovals(key));
@@ -81,10 +81,30 @@ namespace Substrate.PolkadotAssetHub.NET.RestService.Generated.Controller
         /// </summary>
         [HttpGet("Metadata")]
         [ProducesResponseType(typeof(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_assets.types.AssetMetadataT2), 200)]
-        [StorageKeyBuilder(typeof(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage.ForeignAssetsStorage), "MetadataParams", typeof(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation))]
+        [StorageKeyBuilder(typeof(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage.ForeignAssetsStorage), "MetadataParams", typeof(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v4.location.Location))]
         public IActionResult GetMetadata(string key)
         {
             return this.Ok(_foreignAssetsStorage.GetMetadata(key));
+        }
+        
+        /// <summary>
+        /// >> NextAssetId
+        ///  The asset ID enforced for the next asset creation, if any present. Otherwise, this storage
+        ///  item has no effect.
+        /// 
+        ///  This can be useful for setting up constraints for IDs of the new assets. For example, by
+        ///  providing an initial [`NextAssetId`] and using the [`crate::AutoIncAssetId`] callback, an
+        ///  auto-increment model can be applied to all new asset IDs.
+        /// 
+        ///  The initial next asset ID can be set using the [`GenesisConfig`] or the
+        ///  [SetNextAssetId](`migration::next_asset_id::SetNextAssetId`) migration.
+        /// </summary>
+        [HttpGet("NextAssetId")]
+        [ProducesResponseType(typeof(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v4.location.Location), 200)]
+        [StorageKeyBuilder(typeof(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage.ForeignAssetsStorage), "NextAssetIdParams")]
+        public IActionResult GetNextAssetId()
+        {
+            return this.Ok(_foreignAssetsStorage.GetNextAssetId());
         }
     }
 }

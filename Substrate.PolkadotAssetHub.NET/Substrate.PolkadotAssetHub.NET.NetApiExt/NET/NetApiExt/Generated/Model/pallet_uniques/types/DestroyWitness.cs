@@ -18,7 +18,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_unique
     
     
     /// <summary>
-    /// >> 353 - Composite[pallet_uniques.types.DestroyWitness]
+    /// >> 355 - Composite[pallet_uniques.types.DestroyWitness]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class DestroyWitness : BaseType

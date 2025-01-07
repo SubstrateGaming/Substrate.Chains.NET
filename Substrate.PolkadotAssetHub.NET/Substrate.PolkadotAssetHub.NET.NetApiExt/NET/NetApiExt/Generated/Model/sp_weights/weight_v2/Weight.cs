@@ -18,7 +18,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_weights.we
     
     
     /// <summary>
-    /// >> 9 - Composite[sp_weights.weight_v2.Weight]
+    /// >> 10 - Composite[sp_weights.weight_v2.Weight]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Weight : BaseType

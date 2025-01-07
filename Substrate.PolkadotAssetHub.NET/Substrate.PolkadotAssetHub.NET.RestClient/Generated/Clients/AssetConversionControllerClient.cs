@@ -25,11 +25,11 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Generated.Clients
          _httpClient = httpClient;
          _subscriptionClient = subscriptionClient;
       }
-      public async Task<PoolInfo> GetPools(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation> key)
+      public async Task<PoolInfo> GetPools(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v4.location.Location, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v4.location.Location> key)
       {
          return await SendRequestAsync<PoolInfo>(_httpClient, "assetconversion/pools", Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage.AssetConversionStorage.PoolsParams(key));
       }
-      public async Task<bool> SubscribePools(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation> key)
+      public async Task<bool> SubscribePools(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v4.location.Location, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v4.location.Location> key)
       {
          return await _subscriptionClient.SubscribeAsync("AssetConversion.Pools", Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage.AssetConversionStorage.PoolsParams(key));
       }

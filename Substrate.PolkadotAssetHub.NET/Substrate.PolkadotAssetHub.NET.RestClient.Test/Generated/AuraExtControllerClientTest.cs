@@ -41,14 +41,6 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Test.Generated
       {
          Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_consensus_aura.ed25519.app_ed25519.Public result;
          result = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_consensus_aura.ed25519.app_ed25519.Public();
-         result.Value = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.ed25519.Public();
-         result.Value = this.GetTestValue4();
-         return result;
-      }
-      public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.ed25519.Public GetTestValue4()
-      {
-         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.ed25519.Public result;
-         result = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.ed25519.Public();
          result.Value = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.Arr32U8();
          result.Value.Create(new Substrate.NetApi.Model.Types.Primitive.U8[] {
                   this.GetTestValueU8(),
@@ -114,14 +106,14 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_consensus_slots.Slot, Substrate.NetApi.Model.Types.Primitive.U32> GetTestValue6()
+      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_consensus_slots.Slot, Substrate.NetApi.Model.Types.Primitive.U32> GetTestValue5()
       {
          Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_consensus_slots.Slot, Substrate.NetApi.Model.Types.Primitive.U32> result;
          result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_consensus_slots.Slot, Substrate.NetApi.Model.Types.Primitive.U32>();
-         result.Create(this.GetTestValue7(), this.GetTestValueU32());
+         result.Create(this.GetTestValue6(), this.GetTestValueU32());
          return result;
       }
-      public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_consensus_slots.Slot GetTestValue7()
+      public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_consensus_slots.Slot GetTestValue6()
       {
          Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_consensus_slots.Slot result;
          result = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_consensus_slots.Slot();
@@ -139,7 +131,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          AuraExtControllerClient rpcClient = new AuraExtControllerClient(_httpClient, subscriptionClient);
-         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_consensus_slots.Slot, Substrate.NetApi.Model.Types.Primitive.U32> mockupValue = this.GetTestValue6();
+         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_consensus_slots.Slot, Substrate.NetApi.Model.Types.Primitive.U32> mockupValue = this.GetTestValue5();
 
 
          Assert.IsTrue(await rpcClient.SubscribeSlotInfo());

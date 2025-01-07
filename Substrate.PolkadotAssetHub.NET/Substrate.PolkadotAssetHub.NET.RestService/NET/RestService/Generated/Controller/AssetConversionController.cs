@@ -44,7 +44,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestService.Generated.Controller
         /// </summary>
         [HttpGet("Pools")]
         [ProducesResponseType(typeof(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_asset_conversion.types.PoolInfo), 200)]
-        [StorageKeyBuilder(typeof(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage.AssetConversionStorage), "PoolsParams", typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation>))]
+        [StorageKeyBuilder(typeof(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage.AssetConversionStorage), "PoolsParams", typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v4.location.Location, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v4.location.Location>))]
         public IActionResult GetPools(string key)
         {
             return this.Ok(_assetConversionStorage.GetPools(key));

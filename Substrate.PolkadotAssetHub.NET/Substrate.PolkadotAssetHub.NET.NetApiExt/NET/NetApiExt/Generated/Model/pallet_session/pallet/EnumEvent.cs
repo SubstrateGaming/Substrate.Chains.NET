@@ -31,7 +31,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_sessio
     }
     
     /// <summary>
-    /// >> 50 - Variant[pallet_session.pallet.Event]
+    /// >> 58 - Variant[pallet_session.pallet.Event]
     /// The `Event` enum of this pallet
     /// </summary>
     public sealed class EnumEvent : BaseEnumRust<Event>

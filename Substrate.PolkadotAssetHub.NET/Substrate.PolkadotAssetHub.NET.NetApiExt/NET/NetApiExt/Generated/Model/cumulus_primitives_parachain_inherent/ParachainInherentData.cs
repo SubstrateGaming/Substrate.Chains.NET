@@ -27,7 +27,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_primi
         /// <summary>
         /// >> validation_data
         /// </summary>
-        public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.PersistedValidationData ValidationData { get; set; }
+        public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.PersistedValidationData ValidationData { get; set; }
         /// <summary>
         /// >> relay_chain_state
         /// </summary>
@@ -62,7 +62,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_primi
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            ValidationData = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.PersistedValidationData();
+            ValidationData = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.PersistedValidationData();
             ValidationData.Decode(byteArray, ref p);
             RelayChainState = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_trie.storage_proof.StorageProof();
             RelayChainState.Decode(byteArray, ref p);

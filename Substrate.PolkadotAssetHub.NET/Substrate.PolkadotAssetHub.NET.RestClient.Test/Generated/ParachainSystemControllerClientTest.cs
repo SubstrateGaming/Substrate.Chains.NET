@@ -18,7 +18,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Test.Generated
    using Substrate.NetApi.Model.Types.Base;
    using Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.unincluded_segment;
    using Substrate.NetApi.Model.Types.Primitive;
-   using Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v6;
+   using Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v7;
    using Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_trie.storage_proof;
    using Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.relay_state_snapshot;
    using Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_primitives_parachain_inherent;
@@ -51,7 +51,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Test.Generated
          result.UsedBandwidth = this.GetTestValue4();
          result.ParaHeadHash = new Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.primitive_types.H256>();
          result.ParaHeadHash.Create(this.GetTestValue9());
-         result.ConsumedGoAheadSignal = new Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumUpgradeGoAhead>();
+         result.ConsumedGoAheadSignal = new Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.EnumUpgradeGoAhead>();
          result.ConsumedGoAheadSignal.Create(this.GetTestValue10());
          return result;
       }
@@ -136,11 +136,11 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Test.Generated
                   this.GetTestValueU8()});
          return result;
       }
-      public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumUpgradeGoAhead GetTestValue10()
+      public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.EnumUpgradeGoAhead GetTestValue10()
       {
-         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumUpgradeGoAhead result;
-         result = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumUpgradeGoAhead();
-         result.Create(this.GetTestValueEnum<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.UpgradeGoAhead>());
+         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.EnumUpgradeGoAhead result;
+         result = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.EnumUpgradeGoAhead();
+         result.Create(this.GetTestValueEnum<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.UpgradeGoAhead>());
          return result;
       }
       [Test()]
@@ -180,7 +180,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Test.Generated
          result.UsedBandwidth = this.GetTestValue13();
          result.HrmpWatermark = new Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32>();
          result.HrmpWatermark.Create(this.GetTestValueU32());
-         result.ConsumedGoAheadSignal = new Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumUpgradeGoAhead>();
+         result.ConsumedGoAheadSignal = new Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.EnumUpgradeGoAhead>();
          result.ConsumedGoAheadSignal.Create(this.GetTestValue18());
          return result;
       }
@@ -225,11 +225,11 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Test.Generated
          result.TotalBytes = this.GetTestValueU32();
          return result;
       }
-      public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumUpgradeGoAhead GetTestValue18()
+      public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.EnumUpgradeGoAhead GetTestValue18()
       {
-         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumUpgradeGoAhead result;
-         result = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumUpgradeGoAhead();
-         result.Create(this.GetTestValueEnum<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.UpgradeGoAhead>());
+         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.EnumUpgradeGoAhead result;
+         result = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.EnumUpgradeGoAhead();
+         result.Create(this.GetTestValueEnum<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.UpgradeGoAhead>());
          return result;
       }
       [Test()]
@@ -335,10 +335,10 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.PersistedValidationData GetTestValue24()
+      public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.PersistedValidationData GetTestValue24()
       {
-         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.PersistedValidationData result;
-         result = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.PersistedValidationData();
+         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.PersistedValidationData result;
+         result = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.PersistedValidationData();
          result.ParentHead = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.HeadData();
          result.ParentHead = this.GetTestValue25();
          result.RelayParentNumber = this.GetTestValueU32();
@@ -407,7 +407,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          ParachainSystemControllerClient rpcClient = new ParachainSystemControllerClient(_httpClient, subscriptionClient);
-         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.PersistedValidationData mockupValue = this.GetTestValue24();
+         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.PersistedValidationData mockupValue = this.GetTestValue24();
 
 
          Assert.IsTrue(await rpcClient.SubscribeValidationData());
@@ -420,7 +420,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Test.Generated
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.PersistedValidationData rpcResult = await rpcClient.GetValidationData();
+         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.PersistedValidationData rpcResult = await rpcClient.GetValidationData();
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
@@ -483,18 +483,18 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumUpgradeRestriction> GetTestValue30()
+      public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.EnumUpgradeRestriction> GetTestValue30()
       {
-         Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumUpgradeRestriction> result;
-         result = new Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumUpgradeRestriction>();
+         Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.EnumUpgradeRestriction> result;
+         result = new Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.EnumUpgradeRestriction>();
          result.Create(this.GetTestValue31());
          return result;
       }
-      public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumUpgradeRestriction GetTestValue31()
+      public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.EnumUpgradeRestriction GetTestValue31()
       {
-         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumUpgradeRestriction result;
-         result = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumUpgradeRestriction();
-         result.Create(this.GetTestValueEnum<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.UpgradeRestriction>());
+         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.EnumUpgradeRestriction result;
+         result = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.EnumUpgradeRestriction();
+         result.Create(this.GetTestValueEnum<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.UpgradeRestriction>());
          return result;
       }
       [Test()]
@@ -508,7 +508,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          ParachainSystemControllerClient rpcClient = new ParachainSystemControllerClient(_httpClient, subscriptionClient);
-         Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumUpgradeRestriction> mockupValue = this.GetTestValue30();
+         Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.EnumUpgradeRestriction> mockupValue = this.GetTestValue30();
 
 
          Assert.IsTrue(await rpcClient.SubscribeUpgradeRestrictionSignal());
@@ -521,23 +521,23 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Test.Generated
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumUpgradeRestriction> rpcResult = await rpcClient.GetUpgradeRestrictionSignal();
+         Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.EnumUpgradeRestriction> rpcResult = await rpcClient.GetUpgradeRestrictionSignal();
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumUpgradeGoAhead> GetTestValue33()
+      public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.EnumUpgradeGoAhead> GetTestValue33()
       {
-         Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumUpgradeGoAhead> result;
-         result = new Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumUpgradeGoAhead>();
+         Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.EnumUpgradeGoAhead> result;
+         result = new Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.EnumUpgradeGoAhead>();
          result.Create(this.GetTestValue34());
          return result;
       }
-      public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumUpgradeGoAhead GetTestValue34()
+      public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.EnumUpgradeGoAhead GetTestValue34()
       {
-         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumUpgradeGoAhead result;
-         result = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumUpgradeGoAhead();
-         result.Create(this.GetTestValueEnum<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.UpgradeGoAhead>());
+         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.EnumUpgradeGoAhead result;
+         result = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.EnumUpgradeGoAhead();
+         result.Create(this.GetTestValueEnum<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.UpgradeGoAhead>());
          return result;
       }
       [Test()]
@@ -551,7 +551,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          ParachainSystemControllerClient rpcClient = new ParachainSystemControllerClient(_httpClient, subscriptionClient);
-         Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumUpgradeGoAhead> mockupValue = this.GetTestValue33();
+         Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.EnumUpgradeGoAhead> mockupValue = this.GetTestValue33();
 
 
          Assert.IsTrue(await rpcClient.SubscribeUpgradeGoAhead());
@@ -564,7 +564,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Test.Generated
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumUpgradeGoAhead> rpcResult = await rpcClient.GetUpgradeGoAhead();
+         Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.EnumUpgradeGoAhead> rpcResult = await rpcClient.GetUpgradeGoAhead();
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
@@ -631,11 +631,11 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Test.Generated
          result.DmqMqcHead = this.GetTestValue41();
          result.RelayDispatchQueueRemainingCapacity = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.relay_state_snapshot.RelayDispatchQueueRemainingCapacity();
          result.RelayDispatchQueueRemainingCapacity = this.GetTestValue42();
-         result.IngressChannels = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.AbridgedHrmpChannel>>();
-         result.IngressChannels.Create(new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.AbridgedHrmpChannel>[] {
+         result.IngressChannels = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.AbridgedHrmpChannel>>();
+         result.IngressChannels.Create(new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.AbridgedHrmpChannel>[] {
                   this.GetTestValue43()});
-         result.EgressChannels = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.AbridgedHrmpChannel>>();
-         result.EgressChannels.Create(new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.AbridgedHrmpChannel>[] {
+         result.EgressChannels = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.AbridgedHrmpChannel>>();
+         result.EgressChannels.Create(new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.AbridgedHrmpChannel>[] {
                   this.GetTestValue47()});
          return result;
       }
@@ -687,10 +687,10 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Test.Generated
          result.RemainingSize = this.GetTestValueU32();
          return result;
       }
-      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.AbridgedHrmpChannel> GetTestValue43()
+      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.AbridgedHrmpChannel> GetTestValue43()
       {
-         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.AbridgedHrmpChannel> result;
-         result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.AbridgedHrmpChannel>();
+         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.AbridgedHrmpChannel> result;
+         result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.AbridgedHrmpChannel>();
          result.Create(this.GetTestValue44(), this.GetTestValue45());
          return result;
       }
@@ -701,10 +701,10 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Test.Generated
          result.Value = this.GetTestValueU32();
          return result;
       }
-      public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.AbridgedHrmpChannel GetTestValue45()
+      public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.AbridgedHrmpChannel GetTestValue45()
       {
-         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.AbridgedHrmpChannel result;
-         result = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.AbridgedHrmpChannel();
+         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.AbridgedHrmpChannel result;
+         result = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.AbridgedHrmpChannel();
          result.MaxCapacity = this.GetTestValueU32();
          result.MaxTotalSize = this.GetTestValueU32();
          result.MaxMessageSize = this.GetTestValueU32();
@@ -754,10 +754,10 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Test.Generated
                   this.GetTestValueU8()});
          return result;
       }
-      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.AbridgedHrmpChannel> GetTestValue47()
+      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.AbridgedHrmpChannel> GetTestValue47()
       {
-         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.AbridgedHrmpChannel> result;
-         result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.AbridgedHrmpChannel>();
+         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.AbridgedHrmpChannel> result;
+         result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.AbridgedHrmpChannel>();
          result.Create(this.GetTestValue48(), this.GetTestValue49());
          return result;
       }
@@ -768,10 +768,10 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Test.Generated
          result.Value = this.GetTestValueU32();
          return result;
       }
-      public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.AbridgedHrmpChannel GetTestValue49()
+      public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.AbridgedHrmpChannel GetTestValue49()
       {
-         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.AbridgedHrmpChannel result;
-         result = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.AbridgedHrmpChannel();
+         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.AbridgedHrmpChannel result;
+         result = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.AbridgedHrmpChannel();
          result.MaxCapacity = this.GetTestValueU32();
          result.MaxTotalSize = this.GetTestValueU32();
          result.MaxMessageSize = this.GetTestValueU32();
@@ -850,10 +850,10 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.AbridgedHostConfiguration GetTestValue52()
+      public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.AbridgedHostConfiguration GetTestValue52()
       {
-         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.AbridgedHostConfiguration result;
-         result = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.AbridgedHostConfiguration();
+         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.AbridgedHostConfiguration result;
+         result = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.AbridgedHostConfiguration();
          result.MaxCodeSize = this.GetTestValueU32();
          result.MaxHeadDataSize = this.GetTestValueU32();
          result.MaxUpwardQueueCount = this.GetTestValueU32();
@@ -863,14 +863,14 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Test.Generated
          result.HrmpMaxMessageNumPerCandidate = this.GetTestValueU32();
          result.ValidationUpgradeCooldown = this.GetTestValueU32();
          result.ValidationUpgradeDelay = this.GetTestValueU32();
-         result.AsyncBackingParams = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.async_backing.AsyncBackingParams();
+         result.AsyncBackingParams = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.async_backing.AsyncBackingParams();
          result.AsyncBackingParams = this.GetTestValue53();
          return result;
       }
-      public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.async_backing.AsyncBackingParams GetTestValue53()
+      public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.async_backing.AsyncBackingParams GetTestValue53()
       {
-         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.async_backing.AsyncBackingParams result;
-         result = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.async_backing.AsyncBackingParams();
+         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.async_backing.AsyncBackingParams result;
+         result = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.async_backing.AsyncBackingParams();
          result.MaxCandidateDepth = this.GetTestValueU32();
          result.AllowedAncestryLen = this.GetTestValueU32();
          return result;
@@ -886,7 +886,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          ParachainSystemControllerClient rpcClient = new ParachainSystemControllerClient(_httpClient, subscriptionClient);
-         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.AbridgedHostConfiguration mockupValue = this.GetTestValue52();
+         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.AbridgedHostConfiguration mockupValue = this.GetTestValue52();
 
 
          Assert.IsTrue(await rpcClient.SubscribeHostConfiguration());
@@ -899,7 +899,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Test.Generated
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.AbridgedHostConfiguration rpcResult = await rpcClient.GetHostConfiguration();
+         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.AbridgedHostConfiguration rpcResult = await rpcClient.GetHostConfiguration();
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());

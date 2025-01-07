@@ -33,7 +33,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.frame_support
     }
     
     /// <summary>
-    /// >> 24 - Variant[frame_support.dispatch.Pays]
+    /// >> 25 - Variant[frame_support.dispatch.Pays]
     /// </summary>
     public sealed class EnumPays : BaseEnum<Pays>
     {

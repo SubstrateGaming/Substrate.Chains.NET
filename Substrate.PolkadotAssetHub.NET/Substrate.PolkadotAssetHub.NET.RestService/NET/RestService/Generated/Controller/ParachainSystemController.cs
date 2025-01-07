@@ -108,7 +108,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestService.Generated.Controller
         ///  in the trie.
         /// </summary>
         [HttpGet("ValidationData")]
-        [ProducesResponseType(typeof(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.PersistedValidationData), 200)]
+        [ProducesResponseType(typeof(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.PersistedValidationData), 200)]
         [StorageKeyBuilder(typeof(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage.ParachainSystemStorage), "ValidationDataParams")]
         public IActionResult GetValidationData()
         {
@@ -152,7 +152,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestService.Generated.Controller
         ///  set after the inherent.
         /// </summary>
         [HttpGet("UpgradeRestrictionSignal")]
-        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumUpgradeRestriction>), 200)]
+        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.EnumUpgradeRestriction>), 200)]
         [StorageKeyBuilder(typeof(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage.ParachainSystemStorage), "UpgradeRestrictionSignalParams")]
         public IActionResult GetUpgradeRestrictionSignal()
         {
@@ -168,7 +168,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestService.Generated.Controller
         ///  set after the inherent.
         /// </summary>
         [HttpGet("UpgradeGoAhead")]
-        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumUpgradeGoAhead>), 200)]
+        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.EnumUpgradeGoAhead>), 200)]
         [StorageKeyBuilder(typeof(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage.ParachainSystemStorage), "UpgradeGoAheadParams")]
         public IActionResult GetUpgradeGoAhead()
         {
@@ -220,7 +220,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestService.Generated.Controller
         ///  This data is also absent from the genesis.
         /// </summary>
         [HttpGet("HostConfiguration")]
-        [ProducesResponseType(typeof(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.AbridgedHostConfiguration), 200)]
+        [ProducesResponseType(typeof(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.AbridgedHostConfiguration), 200)]
         [StorageKeyBuilder(typeof(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage.ParachainSystemStorage), "HostConfigurationParams")]
         public IActionResult GetHostConfiguration()
         {

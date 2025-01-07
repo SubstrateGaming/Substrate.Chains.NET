@@ -18,7 +18,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_colle
     
     
     /// <summary>
-    /// >> 263 - Composite[bounded_collections.bounded_btree_set.BoundedBTreeSetT1]
+    /// >> 262 - Composite[bounded_collections.bounded_btree_set.BoundedBTreeSetT1]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class BoundedBTreeSetT1 : BaseType

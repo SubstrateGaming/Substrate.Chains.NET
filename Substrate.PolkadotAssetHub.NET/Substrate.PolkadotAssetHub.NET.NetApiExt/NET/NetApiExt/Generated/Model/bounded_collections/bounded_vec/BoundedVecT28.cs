@@ -13,26 +13,26 @@ using Substrate.NetApi.Model.Types.Metadata.Base;
 using System.Collections.Generic;
 
 
-namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.ed25519
+namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec
 {
     
     
     /// <summary>
-    /// >> 374 - Composite[sp_core.ed25519.Signature]
+    /// >> 450 - Composite[bounded_collections.bounded_vec.BoundedVecT28]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
-    public sealed class Signature : BaseType
+    public sealed class BoundedVecT28 : BaseType
     {
         
         /// <summary>
         /// >> value
         /// </summary>
-        public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.Arr64U8 Value { get; set; }
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> Value { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
         {
-            return "Signature";
+            return "BoundedVecT28";
         }
         
         /// <inheritdoc/>
@@ -47,7 +47,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.ed255
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Value = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.Arr64U8();
+            Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>();
             Value.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

@@ -13,38 +13,38 @@ using Substrate.NetApi.Model.Types.Metadata.Base;
 using System.Collections.Generic;
 
 
-namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_balances.types
+namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.async_backing
 {
     
     
     /// <summary>
-    /// >> 230 - Composite[pallet_balances.types.IdAmountT2]
+    /// >> 198 - Composite[polkadot_primitives.v7.async_backing.AsyncBackingParams]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
-    public sealed class IdAmountT2 : BaseType
+    public sealed class AsyncBackingParams : BaseType
     {
         
         /// <summary>
-        /// >> id
+        /// >> max_candidate_depth
         /// </summary>
-        public Substrate.NetApi.Model.Types.Base.BaseTuple Id { get; set; }
+        public Substrate.NetApi.Model.Types.Primitive.U32 MaxCandidateDepth { get; set; }
         /// <summary>
-        /// >> amount
+        /// >> allowed_ancestry_len
         /// </summary>
-        public Substrate.NetApi.Model.Types.Primitive.U128 Amount { get; set; }
+        public Substrate.NetApi.Model.Types.Primitive.U32 AllowedAncestryLen { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
         {
-            return "IdAmountT2";
+            return "AsyncBackingParams";
         }
         
         /// <inheritdoc/>
         public override byte[] Encode()
         {
             var result = new List<byte>();
-            result.AddRange(Id.Encode());
-            result.AddRange(Amount.Encode());
+            result.AddRange(MaxCandidateDepth.Encode());
+            result.AddRange(AllowedAncestryLen.Encode());
             return result.ToArray();
         }
         
@@ -52,10 +52,10 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_balanc
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Id = new Substrate.NetApi.Model.Types.Base.BaseTuple();
-            Id.Decode(byteArray, ref p);
-            Amount = new Substrate.NetApi.Model.Types.Primitive.U128();
-            Amount.Decode(byteArray, ref p);
+            MaxCandidateDepth = new Substrate.NetApi.Model.Types.Primitive.U32();
+            MaxCandidateDepth.Decode(byteArray, ref p);
+            AllowedAncestryLen = new Substrate.NetApi.Model.Types.Primitive.U32();
+            AllowedAncestryLen.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;
             Bytes = new byte[bytesLength];

@@ -11,26 +11,31 @@ using Substrate.NetApi.Model.Types.Base;
 using System.Collections.Generic;
 
 
-namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v6
+namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v7
 {
     
     
     /// <summary>
-    /// >> UpgradeRestriction
+    /// >> UpgradeGoAhead
     /// </summary>
-    public enum UpgradeRestriction
+    public enum UpgradeGoAhead
     {
         
         /// <summary>
-        /// >> Present
+        /// >> Abort
         /// </summary>
-        Present = 0,
+        Abort = 0,
+        
+        /// <summary>
+        /// >> GoAhead
+        /// </summary>
+        GoAhead = 1,
     }
     
     /// <summary>
-    /// >> 189 - Variant[polkadot_primitives.v6.UpgradeRestriction]
+    /// >> 184 - Variant[polkadot_primitives.v7.UpgradeGoAhead]
     /// </summary>
-    public sealed class EnumUpgradeRestriction : BaseEnum<UpgradeRestriction>
+    public sealed class EnumUpgradeGoAhead : BaseEnum<UpgradeGoAhead>
     {
     }
 }

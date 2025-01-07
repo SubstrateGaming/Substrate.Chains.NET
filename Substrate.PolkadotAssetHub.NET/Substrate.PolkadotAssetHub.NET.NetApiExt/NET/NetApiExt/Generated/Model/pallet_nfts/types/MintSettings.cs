@@ -18,7 +18,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_nfts.t
     
     
     /// <summary>
-    /// >> 360 - Composite[pallet_nfts.types.MintSettings]
+    /// >> 362 - Composite[pallet_nfts.types.MintSettings]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class MintSettings : BaseType

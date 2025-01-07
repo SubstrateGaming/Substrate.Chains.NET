@@ -987,7 +987,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage
         /// >> pay_tips
         /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method PayTips(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT21 tips)
+        public static Method PayTips(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT22 tips)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(tips.Encode());

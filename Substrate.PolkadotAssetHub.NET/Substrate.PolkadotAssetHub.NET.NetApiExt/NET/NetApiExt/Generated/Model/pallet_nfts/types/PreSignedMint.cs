@@ -18,7 +18,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_nfts.t
     
     
     /// <summary>
-    /// >> 372 - Composite[pallet_nfts.types.PreSignedMint]
+    /// >> 374 - Composite[pallet_nfts.types.PreSignedMint]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class PreSignedMint : BaseType

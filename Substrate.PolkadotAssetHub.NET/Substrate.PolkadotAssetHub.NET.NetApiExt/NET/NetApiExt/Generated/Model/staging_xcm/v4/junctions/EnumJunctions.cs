@@ -68,7 +68,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v
     }
     
     /// <summary>
-    /// >> 56 - Variant[staging_xcm.v4.junctions.Junctions]
+    /// >> 38 - Variant[staging_xcm.v4.junctions.Junctions]
     /// </summary>
     public sealed class EnumJunctions : BaseEnumRust<Junctions>
     {

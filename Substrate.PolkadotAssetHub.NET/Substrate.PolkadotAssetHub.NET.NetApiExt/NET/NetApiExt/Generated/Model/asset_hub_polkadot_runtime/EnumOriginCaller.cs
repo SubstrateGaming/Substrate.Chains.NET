@@ -43,7 +43,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.asset_hub_pol
     }
     
     /// <summary>
-    /// >> 384 - Variant[asset_hub_polkadot_runtime.OriginCaller]
+    /// >> 383 - Variant[asset_hub_polkadot_runtime.OriginCaller]
     /// </summary>
     public sealed class EnumOriginCaller : BaseEnumRust<OriginCaller>
     {

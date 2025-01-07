@@ -38,7 +38,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm
     }
     
     /// <summary>
-    /// >> 277 - Variant[xcm.VersionedResponse]
+    /// >> 278 - Variant[xcm.VersionedResponse]
     /// </summary>
     public sealed class EnumVersionedResponse : BaseEnumRust<VersionedResponse>
     {

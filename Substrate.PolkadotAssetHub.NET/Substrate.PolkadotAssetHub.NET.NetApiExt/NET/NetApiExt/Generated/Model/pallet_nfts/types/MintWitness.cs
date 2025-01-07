@@ -18,7 +18,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_nfts.t
     
     
     /// <summary>
-    /// >> 366 - Composite[pallet_nfts.types.MintWitness]
+    /// >> 368 - Composite[pallet_nfts.types.MintWitness]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class MintWitness : BaseType
