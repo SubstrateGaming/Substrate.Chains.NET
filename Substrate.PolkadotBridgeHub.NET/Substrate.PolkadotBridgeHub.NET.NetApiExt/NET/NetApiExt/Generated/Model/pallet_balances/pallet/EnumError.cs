@@ -96,7 +96,7 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.pallet_balan
     }
     
     /// <summary>
-    /// >> 257 - Variant[pallet_balances.pallet.Error]
+    /// >> 255 - Variant[pallet_balances.pallet.Error]
     /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>

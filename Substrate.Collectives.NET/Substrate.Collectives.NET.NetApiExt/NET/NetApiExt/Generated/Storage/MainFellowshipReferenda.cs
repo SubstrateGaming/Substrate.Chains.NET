@@ -40,7 +40,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("FellowshipReferenda", "ReferendumInfoFor"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Substrate.NetApi.Model.Types.Primitive.U32), typeof(Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_referenda.types.EnumReferendumInfo)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("FellowshipReferenda", "TrackQueue"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.NetApi.Model.Types.Primitive.U16), typeof(Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT29)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.NetApi.Model.Types.Primitive.U16), typeof(Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT34)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("FellowshipReferenda", "DecidingCount"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.NetApi.Model.Types.Primitive.U16), typeof(Substrate.NetApi.Model.Types.Primitive.U32)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("FellowshipReferenda", "MetadataOf"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
@@ -137,10 +137,10 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
         /// 
         ///  This should be empty if `DecidingCount` is less than `TrackInfo::max_deciding`.
         /// </summary>
-        public async Task<Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT29> TrackQueue(Substrate.NetApi.Model.Types.Primitive.U16 key, string blockhash, CancellationToken token)
+        public async Task<Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT34> TrackQueue(Substrate.NetApi.Model.Types.Primitive.U16 key, string blockhash, CancellationToken token)
         {
             string parameters = FellowshipReferendaStorage.TrackQueueParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT29>(parameters, blockhash, token);
+            var result = await _client.GetStorageAsync<Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT34>(parameters, blockhash, token);
             return result;
         }
         
@@ -386,7 +386,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
         public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U16, Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_referenda.types.TrackInfo>> Tracks()
         {
             var result = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U16, Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_referenda.types.TrackInfo>>();
-            result.Create("0x5401001C6D656D626572730A00000000743BA40B000000000000000000000096000000E0C400009" +
+            result.Create("0x6001001C6D656D626572730A00000000743BA40B000000000000000000000096000000E0C400009" +
                     "6000000190000000000CA9A3B0065CD1D00CA9A3B0000CA9A3B0000000000CA9A3B02004870726F6" +
                     "6696369656E74206D656D626572730A00000000743BA40B000000000000000000000096000000E0C" +
                     "4000096000000190000000000CA9A3B0065CD1D00CA9A3B0000CA9A3B0000000000CA9A3B03001C6" +
@@ -427,7 +427,14 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
                     "0746F20562044616E0A00000000743BA40B000000000000000000000000000000C04B03002C01000" +
                     "0000000000000CA9A3B0046C32300CA9A3B0000CA9A3B00E1F50500CA9A3B1A004470726F6D6F746" +
                     "520746F2056492044616E0A00000000743BA40B000000000000000000000000000000C04B03002C0" +
-                    "10000000000000000CA9A3B0046C32300CA9A3B0000CA9A3B00E1F50500CA9A3B");
+                    "10000000000000000CA9A3B0046C32300CA9A3B0000CA9A3B00E1F50500CA9A3B1F0054666173742" +
+                    "070726F6D6F746520746F20492044616E0A00000000743BA40B00000000000000000000000000000" +
+                    "0C04B03002C010000000000000000CA9A3B00CD562700CA9A3B0000CA9A3B0065CD1D00CA9A3B200" +
+                    "058666173742070726F6D6F746520746F2049492044616E0A00000000743BA40B000000000000000" +
+                    "000000000000000C04B03002C010000000000000000CA9A3B00CD562700CA9A3B0000CA9A3B0065C" +
+                    "D1D00CA9A3B21005C666173742070726F6D6F746520746F204949492044616E0A00000000743BA40" +
+                    "B000000000000000000000000000000C04B03002C010000000000000000CA9A3B00CD562700CA9A3" +
+                    "B0000CA9A3B0065CD1D00CA9A3B");
             return result;
         }
     }
@@ -515,5 +522,11 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
         /// The preimage does not exist.
         /// </summary>
         PreimageNotExist,
+        
+        /// <summary>
+        /// >> PreimageStoredWithDifferentLength
+        /// The preimage is stored with a different length than the one provided.
+        /// </summary>
+        PreimageStoredWithDifferentLength,
     }
 }

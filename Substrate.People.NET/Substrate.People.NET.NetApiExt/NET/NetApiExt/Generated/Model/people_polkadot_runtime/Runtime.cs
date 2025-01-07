@@ -18,7 +18,7 @@ namespace Substrate.People.NET.NetApiExt.Generated.Model.people_polkadot_runtime
     
     
     /// <summary>
-    /// >> 414 - Composite[people_polkadot_runtime.Runtime]
+    /// >> 411 - Composite[people_polkadot_runtime.Runtime]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Runtime : BaseType

@@ -54,7 +54,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_scheduler.p
     }
     
     /// <summary>
-    /// >> 413 - Variant[pallet_scheduler.pallet.Error]
+    /// >> 422 - Variant[pallet_scheduler.pallet.Error]
     /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>

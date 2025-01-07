@@ -108,7 +108,7 @@ namespace Substrate.People.NET.NetApiExt.Generated.Model.pallet_multisig.pallet
     }
     
     /// <summary>
-    /// >> 376 - Variant[pallet_multisig.pallet.Error]
+    /// >> 373 - Variant[pallet_multisig.pallet.Error]
     /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>

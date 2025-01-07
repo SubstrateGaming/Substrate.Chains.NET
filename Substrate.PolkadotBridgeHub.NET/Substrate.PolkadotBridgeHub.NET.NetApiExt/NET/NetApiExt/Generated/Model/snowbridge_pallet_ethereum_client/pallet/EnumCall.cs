@@ -24,19 +24,21 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.snowbridge_p
         
         /// <summary>
         /// >> force_checkpoint
-        /// See [`Pallet::force_checkpoint`].
+        /// Used for pallet initialization and light client resetting. Needs to be called by
+        /// the root origin.
         /// </summary>
         force_checkpoint = 0,
         
         /// <summary>
         /// >> submit
-        /// See [`Pallet::submit`].
+        /// Submits a new finalized beacon header update. The update may contain the next
+        /// sync committee.
         /// </summary>
         submit = 1,
         
         /// <summary>
         /// >> set_operating_mode
-        /// See [`Pallet::set_operating_mode`].
+        /// Halt or resume all pallet operations. May only be called by root.
         /// </summary>
         set_operating_mode = 3,
     }

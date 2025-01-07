@@ -85,7 +85,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_collat
     }
     
     /// <summary>
-    /// >> 48 - Variant[pallet_collator_selection.pallet.Event]
+    /// >> 56 - Variant[pallet_collator_selection.pallet.Event]
     /// The `Event` enum of this pallet
     /// </summary>
     public sealed class EnumEvent : BaseEnumRust<Event>

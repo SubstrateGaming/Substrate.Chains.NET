@@ -18,7 +18,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.collectives_polkad
     
     
     /// <summary>
-    /// >> 488 - Composite[collectives_polkadot_runtime.Runtime]
+    /// >> 495 - Composite[collectives_polkadot_runtime.Runtime]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Runtime : BaseType

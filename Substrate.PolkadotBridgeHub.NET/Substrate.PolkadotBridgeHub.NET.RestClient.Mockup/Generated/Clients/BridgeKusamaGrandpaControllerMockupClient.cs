@@ -27,9 +27,9 @@ namespace Substrate.PolkadotBridgeHub.NET.RestClient.Mockup.Generated.Clients
       {
          _httpClient = httpClient;
       }
-      public async Task<bool> SetFreeMandatoryHeadersRemaining(U32 value)
+      public async Task<bool> SetFreeHeadersRemaining(U32 value)
       {
-         return await SendMockupRequestAsync(_httpClient, "BridgeKusamaGrandpa/FreeMandatoryHeadersRemaining", value.Encode(), Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Storage.BridgeKusamaGrandpaStorage.FreeMandatoryHeadersRemainingParams());
+         return await SendMockupRequestAsync(_httpClient, "BridgeKusamaGrandpa/FreeHeadersRemaining", value.Encode(), Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Storage.BridgeKusamaGrandpaStorage.FreeHeadersRemainingParams());
       }
       public async Task<bool> SetInitialHash(H256 value)
       {

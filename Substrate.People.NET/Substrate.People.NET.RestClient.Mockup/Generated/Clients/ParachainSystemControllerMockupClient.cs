@@ -15,7 +15,7 @@ namespace Substrate.People.NET.RestClient.Mockup.Generated.Clients
    using Substrate.NetApi.Model.Types.Base;
    using Substrate.People.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.unincluded_segment;
    using Substrate.NetApi.Model.Types.Primitive;
-   using Substrate.People.NET.NetApiExt.Generated.Model.polkadot_primitives.v6;
+   using Substrate.People.NET.NetApiExt.Generated.Model.polkadot_primitives.v7;
    using Substrate.People.NET.NetApiExt.Generated.Model.sp_trie.storage_proof;
    using Substrate.People.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.relay_state_snapshot;
    using Substrate.People.NET.NetApiExt.Generated.Model.cumulus_primitives_parachain_inherent;

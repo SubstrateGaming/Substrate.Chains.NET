@@ -48,9 +48,9 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_runtime
         /// </summary>
         public EnumMultiSignature()
         {
-				AddTypeDecoder<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_core.ed25519.Signature>(MultiSignature.Ed25519);
-				AddTypeDecoder<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_core.sr25519.Signature>(MultiSignature.Sr25519);
-				AddTypeDecoder<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_core.ecdsa.Signature>(MultiSignature.Ecdsa);
+				AddTypeDecoder<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Types.Base.Arr64U8>(MultiSignature.Ed25519);
+				AddTypeDecoder<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Types.Base.Arr64U8>(MultiSignature.Sr25519);
+				AddTypeDecoder<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Types.Base.Arr65U8>(MultiSignature.Ecdsa);
         }
     }
 }

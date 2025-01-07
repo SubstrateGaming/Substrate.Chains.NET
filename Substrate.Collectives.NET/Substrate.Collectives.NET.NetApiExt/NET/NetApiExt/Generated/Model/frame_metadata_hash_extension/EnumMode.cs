@@ -33,7 +33,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.frame_metadata_has
     }
     
     /// <summary>
-    /// >> 487 - Variant[frame_metadata_hash_extension.Mode]
+    /// >> 494 - Variant[frame_metadata_hash_extension.Mode]
     /// </summary>
     public sealed class EnumMode : BaseEnum<Mode>
     {

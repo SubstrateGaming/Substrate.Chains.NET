@@ -369,15 +369,15 @@ namespace Substrate.People.NET.RestClient.Test.Generated
       {
          Substrate.People.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT6 result;
          result = new Substrate.People.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT6();
-         result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.People.NET.NetApiExt.Generated.Model.pallet_balances.types.IdAmountT1>();
-         result.Value.Create(new Substrate.People.NET.NetApiExt.Generated.Model.pallet_balances.types.IdAmountT1[] {
+         result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.People.NET.NetApiExt.Generated.Model.frame_support.traits.tokens.misc.IdAmountT1>();
+         result.Value.Create(new Substrate.People.NET.NetApiExt.Generated.Model.frame_support.traits.tokens.misc.IdAmountT1[] {
                   this.GetTestValue17()});
          return result;
       }
-      public Substrate.People.NET.NetApiExt.Generated.Model.pallet_balances.types.IdAmountT1 GetTestValue17()
+      public Substrate.People.NET.NetApiExt.Generated.Model.frame_support.traits.tokens.misc.IdAmountT1 GetTestValue17()
       {
-         Substrate.People.NET.NetApiExt.Generated.Model.pallet_balances.types.IdAmountT1 result;
-         result = new Substrate.People.NET.NetApiExt.Generated.Model.pallet_balances.types.IdAmountT1();
+         Substrate.People.NET.NetApiExt.Generated.Model.frame_support.traits.tokens.misc.IdAmountT1 result;
+         result = new Substrate.People.NET.NetApiExt.Generated.Model.frame_support.traits.tokens.misc.IdAmountT1();
          result.Id = new Substrate.People.NET.NetApiExt.Generated.Model.people_polkadot_runtime.EnumRuntimeHoldReason();
          result.Id.Create(this.GetTestValueEnum<Substrate.People.NET.NetApiExt.Generated.Model.people_polkadot_runtime.RuntimeHoldReason>());
          result.Amount = this.GetTestValueU128();
@@ -456,15 +456,15 @@ namespace Substrate.People.NET.RestClient.Test.Generated
       {
          Substrate.People.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT7 result;
          result = new Substrate.People.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT7();
-         result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.People.NET.NetApiExt.Generated.Model.pallet_balances.types.IdAmountT2>();
-         result.Value.Create(new Substrate.People.NET.NetApiExt.Generated.Model.pallet_balances.types.IdAmountT2[] {
+         result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.People.NET.NetApiExt.Generated.Model.frame_support.traits.tokens.misc.IdAmountT2>();
+         result.Value.Create(new Substrate.People.NET.NetApiExt.Generated.Model.frame_support.traits.tokens.misc.IdAmountT2[] {
                   this.GetTestValue21()});
          return result;
       }
-      public Substrate.People.NET.NetApiExt.Generated.Model.pallet_balances.types.IdAmountT2 GetTestValue21()
+      public Substrate.People.NET.NetApiExt.Generated.Model.frame_support.traits.tokens.misc.IdAmountT2 GetTestValue21()
       {
-         Substrate.People.NET.NetApiExt.Generated.Model.pallet_balances.types.IdAmountT2 result;
-         result = new Substrate.People.NET.NetApiExt.Generated.Model.pallet_balances.types.IdAmountT2();
+         Substrate.People.NET.NetApiExt.Generated.Model.frame_support.traits.tokens.misc.IdAmountT2 result;
+         result = new Substrate.People.NET.NetApiExt.Generated.Model.frame_support.traits.tokens.misc.IdAmountT2();
          result.Id = new Substrate.NetApi.Model.Types.Base.BaseTuple();
          result.Amount = this.GetTestValueU128();
          return result;

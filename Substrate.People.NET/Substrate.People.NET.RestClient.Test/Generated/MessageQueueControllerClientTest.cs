@@ -144,14 +144,14 @@ namespace Substrate.People.NET.RestClient.Test.Generated
          result.FirstIndex = this.GetTestValueU32();
          result.First = this.GetTestValueU32();
          result.Last = this.GetTestValueU32();
-         result.Heap = new Substrate.People.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT16();
+         result.Heap = new Substrate.People.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17();
          result.Heap = this.GetTestValue11();
          return result;
       }
-      public Substrate.People.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT16 GetTestValue11()
+      public Substrate.People.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17 GetTestValue11()
       {
-         Substrate.People.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT16 result;
-         result = new Substrate.People.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT16();
+         Substrate.People.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17 result;
+         result = new Substrate.People.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17();
          result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>();
          result.Value.Create(new Substrate.NetApi.Model.Types.Primitive.U8[] {
                   this.GetTestValueU8()});

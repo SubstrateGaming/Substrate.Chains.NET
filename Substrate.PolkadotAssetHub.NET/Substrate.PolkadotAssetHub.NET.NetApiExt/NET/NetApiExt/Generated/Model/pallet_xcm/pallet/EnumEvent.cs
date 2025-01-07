@@ -200,7 +200,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_xcm.pa
     }
     
     /// <summary>
-    /// >> 52 - Variant[pallet_xcm.pallet.Event]
+    /// >> 60 - Variant[pallet_xcm.pallet.Event]
     /// The `Event` enum of this pallet
     /// </summary>
     public sealed class EnumEvent : BaseEnumRust<Event>

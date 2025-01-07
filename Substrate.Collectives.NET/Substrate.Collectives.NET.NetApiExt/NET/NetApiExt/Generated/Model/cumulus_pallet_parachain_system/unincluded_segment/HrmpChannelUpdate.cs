@@ -18,7 +18,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.cumulus_pallet_par
     
     
     /// <summary>
-    /// >> 294 - Composite[cumulus_pallet_parachain_system.unincluded_segment.HrmpChannelUpdate]
+    /// >> 301 - Composite[cumulus_pallet_parachain_system.unincluded_segment.HrmpChannelUpdate]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class HrmpChannelUpdate : BaseType

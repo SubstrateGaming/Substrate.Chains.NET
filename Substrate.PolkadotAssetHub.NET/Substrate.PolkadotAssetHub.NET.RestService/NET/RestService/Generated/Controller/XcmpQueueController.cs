@@ -66,7 +66,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestService.Generated.Controller
         ///  The bool is true if there is a signal message waiting to be sent.
         /// </summary>
         [HttpGet("OutboundXcmpStatus")]
-        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue.OutboundChannelDetails>), 200)]
+        [ProducesResponseType(typeof(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT15), 200)]
         [StorageKeyBuilder(typeof(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage.XcmpQueueStorage), "OutboundXcmpStatusParams")]
         public IActionResult GetOutboundXcmpStatus()
         {
@@ -78,7 +78,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestService.Generated.Controller
         ///  The messages outbound in a given XCMP channel.
         /// </summary>
         [HttpGet("OutboundXcmpMessages")]
-        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>), 200)]
+        [ProducesResponseType(typeof(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT3), 200)]
         [StorageKeyBuilder(typeof(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage.XcmpQueueStorage), "OutboundXcmpMessagesParams", typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U16>))]
         public IActionResult GetOutboundXcmpMessages(string key)
         {
@@ -90,7 +90,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestService.Generated.Controller
         ///  Any signal messages waiting to be sent.
         /// </summary>
         [HttpGet("SignalMessages")]
-        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>), 200)]
+        [ProducesResponseType(typeof(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT3), 200)]
         [StorageKeyBuilder(typeof(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage.XcmpQueueStorage), "SignalMessagesParams", typeof(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id))]
         public IActionResult GetSignalMessages(string key)
         {

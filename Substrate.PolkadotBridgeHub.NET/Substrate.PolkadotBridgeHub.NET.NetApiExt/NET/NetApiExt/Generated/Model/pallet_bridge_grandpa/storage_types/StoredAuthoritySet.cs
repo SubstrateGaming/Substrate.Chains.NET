@@ -27,7 +27,7 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.pallet_bridg
         /// <summary>
         /// >> authorities
         /// </summary>
-        public Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT16 Authorities { get; set; }
+        public Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17 Authorities { get; set; }
         /// <summary>
         /// >> set_id
         /// </summary>
@@ -52,7 +52,7 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.pallet_bridg
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Authorities = new Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT16();
+            Authorities = new Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17();
             Authorities.Decode(byteArray, ref p);
             SetId = new Substrate.NetApi.Model.Types.Primitive.U64();
             SetId.Decode(byteArray, ref p);

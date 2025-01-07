@@ -38,7 +38,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_runtime
     }
     
     /// <summary>
-    /// >> 373 - Variant[sp_runtime.MultiSignature]
+    /// >> 375 - Variant[sp_runtime.MultiSignature]
     /// </summary>
     public sealed class EnumMultiSignature : BaseEnumRust<MultiSignature>
     {
@@ -48,9 +48,9 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_runtime
         /// </summary>
         public EnumMultiSignature()
         {
-				AddTypeDecoder<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.ed25519.Signature>(MultiSignature.Ed25519);
-				AddTypeDecoder<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.sr25519.Signature>(MultiSignature.Sr25519);
-				AddTypeDecoder<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.ecdsa.Signature>(MultiSignature.Ecdsa);
+				AddTypeDecoder<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.Arr64U8>(MultiSignature.Ed25519);
+				AddTypeDecoder<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.Arr64U8>(MultiSignature.Sr25519);
+				AddTypeDecoder<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Types.Base.Arr65U8>(MultiSignature.Ecdsa);
         }
     }
 }

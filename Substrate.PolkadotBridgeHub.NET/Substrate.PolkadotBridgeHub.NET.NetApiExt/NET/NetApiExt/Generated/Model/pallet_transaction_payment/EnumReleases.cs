@@ -33,7 +33,7 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.pallet_trans
     }
     
     /// <summary>
-    /// >> 258 - Variant[pallet_transaction_payment.Releases]
+    /// >> 256 - Variant[pallet_transaction_payment.Releases]
     /// </summary>
     public sealed class EnumReleases : BaseEnum<Releases>
     {

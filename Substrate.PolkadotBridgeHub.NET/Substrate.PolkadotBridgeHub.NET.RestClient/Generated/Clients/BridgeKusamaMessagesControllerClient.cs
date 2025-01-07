@@ -67,9 +67,9 @@ namespace Substrate.PolkadotBridgeHub.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("BridgeKusamaMessages.OutboundLanesCongestedSignals", Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Storage.BridgeKusamaMessagesStorage.OutboundLanesCongestedSignalsParams(key));
       }
-      public async Task<BoundedVecT17> GetOutboundMessages(MessageKey key)
+      public async Task<BoundedVecT18> GetOutboundMessages(MessageKey key)
       {
-         return await SendRequestAsync<BoundedVecT17>(_httpClient, "bridgekusamamessages/outboundmessages", Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Storage.BridgeKusamaMessagesStorage.OutboundMessagesParams(key));
+         return await SendRequestAsync<BoundedVecT18>(_httpClient, "bridgekusamamessages/outboundmessages", Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Storage.BridgeKusamaMessagesStorage.OutboundMessagesParams(key));
       }
       public async Task<bool> SubscribeOutboundMessages(MessageKey key)
       {

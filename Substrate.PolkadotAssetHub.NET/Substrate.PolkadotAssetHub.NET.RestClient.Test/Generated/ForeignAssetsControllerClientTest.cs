@@ -16,6 +16,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Test.Generated
    using Substrate.PolkadotAssetHub.NET.RestClient.Mockup.Generated.Clients;
    using Substrate.PolkadotAssetHub.NET.RestClient.Generated.Clients;
    using Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_assets.types;
+   using Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v4.location;
    
    public class ForeignAssetsControllerClientTest : ClientTestBase
    {
@@ -208,20 +209,20 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Test.Generated
                   this.GetTestValueU8()});
          return result;
       }
-      public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation GetTestValue7()
+      public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v4.location.Location GetTestValue7()
       {
-         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation result;
-         result = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation();
+         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v4.location.Location result;
+         result = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v4.location.Location();
          result.Parents = this.GetTestValueU8();
-         result.Interior = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v3.junctions.EnumJunctions();
+         result.Interior = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v4.junctions.EnumJunctions();
          result.Interior = this.GetTestValue8();
          return result;
       }
-      public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v3.junctions.EnumJunctions GetTestValue8()
+      public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v4.junctions.EnumJunctions GetTestValue8()
       {
-         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v3.junctions.EnumJunctions result;
-         result = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v3.junctions.EnumJunctions();
-         // NOT IMPLEMENTED >> Initialize Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v3.junctions.EnumJunctions
+         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v4.junctions.EnumJunctions result;
+         result = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v4.junctions.EnumJunctions();
+         // NOT IMPLEMENTED >> Initialize Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v4.junctions.EnumJunctions
          return result;
       }
       [Test()]
@@ -236,7 +237,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Test.Generated
          // Construct new RPC client to test with.
          ForeignAssetsControllerClient rpcClient = new ForeignAssetsControllerClient(_httpClient, subscriptionClient);
          Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_assets.types.AssetDetails mockupValue = this.GetTestValue2();
-         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation mockupKey = this.GetTestValue7();
+         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v4.location.Location mockupKey = this.GetTestValue7();
 
          Assert.IsTrue(await rpcClient.SubscribeAsset(mockupKey));
 
@@ -272,27 +273,27 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Test.Generated
          // NOT IMPLEMENTED >> Initialize Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_assets.types.EnumExistenceReason
          return result;
       }
-      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> GetTestValue12()
+      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v4.location.Location, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> GetTestValue12()
       {
-         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> result;
-         result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>();
+         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v4.location.Location, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> result;
+         result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v4.location.Location, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>();
          result.Create(this.GetTestValue13(), this.GetTestValue15());
          return result;
       }
-      public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation GetTestValue13()
+      public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v4.location.Location GetTestValue13()
       {
-         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation result;
-         result = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation();
+         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v4.location.Location result;
+         result = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v4.location.Location();
          result.Parents = this.GetTestValueU8();
-         result.Interior = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v3.junctions.EnumJunctions();
+         result.Interior = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v4.junctions.EnumJunctions();
          result.Interior = this.GetTestValue14();
          return result;
       }
-      public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v3.junctions.EnumJunctions GetTestValue14()
+      public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v4.junctions.EnumJunctions GetTestValue14()
       {
-         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v3.junctions.EnumJunctions result;
-         result = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v3.junctions.EnumJunctions();
-         // NOT IMPLEMENTED >> Initialize Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v3.junctions.EnumJunctions
+         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v4.junctions.EnumJunctions result;
+         result = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v4.junctions.EnumJunctions();
+         // NOT IMPLEMENTED >> Initialize Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v4.junctions.EnumJunctions
          return result;
       }
       public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue15()
@@ -347,7 +348,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Test.Generated
          // Construct new RPC client to test with.
          ForeignAssetsControllerClient rpcClient = new ForeignAssetsControllerClient(_httpClient, subscriptionClient);
          Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_assets.types.AssetAccount mockupValue = this.GetTestValue10();
-         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> mockupKey = this.GetTestValue12();
+         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v4.location.Location, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> mockupKey = this.GetTestValue12();
 
          Assert.IsTrue(await rpcClient.SubscribeAccount(mockupKey));
 
@@ -372,27 +373,27 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Test.Generated
          result.Deposit = this.GetTestValueU128();
          return result;
       }
-      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> GetTestValue18()
+      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v4.location.Location, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> GetTestValue18()
       {
-         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> result;
-         result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>();
+         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v4.location.Location, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> result;
+         result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v4.location.Location, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>();
          result.Create(this.GetTestValue19(), this.GetTestValue21(), this.GetTestValue22());
          return result;
       }
-      public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation GetTestValue19()
+      public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v4.location.Location GetTestValue19()
       {
-         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation result;
-         result = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation();
+         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v4.location.Location result;
+         result = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v4.location.Location();
          result.Parents = this.GetTestValueU8();
-         result.Interior = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v3.junctions.EnumJunctions();
+         result.Interior = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v4.junctions.EnumJunctions();
          result.Interior = this.GetTestValue20();
          return result;
       }
-      public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v3.junctions.EnumJunctions GetTestValue20()
+      public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v4.junctions.EnumJunctions GetTestValue20()
       {
-         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v3.junctions.EnumJunctions result;
-         result = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v3.junctions.EnumJunctions();
-         // NOT IMPLEMENTED >> Initialize Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v3.junctions.EnumJunctions
+         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v4.junctions.EnumJunctions result;
+         result = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v4.junctions.EnumJunctions();
+         // NOT IMPLEMENTED >> Initialize Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v4.junctions.EnumJunctions
          return result;
       }
       public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 GetTestValue21()
@@ -487,7 +488,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Test.Generated
          // Construct new RPC client to test with.
          ForeignAssetsControllerClient rpcClient = new ForeignAssetsControllerClient(_httpClient, subscriptionClient);
          Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_assets.types.Approval mockupValue = this.GetTestValue17();
-         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> mockupKey = this.GetTestValue18();
+         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v4.location.Location, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> mockupKey = this.GetTestValue18();
 
          Assert.IsTrue(await rpcClient.SubscribeApprovals(mockupKey));
 
@@ -509,46 +510,46 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Test.Generated
          Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_assets.types.AssetMetadataT2 result;
          result = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_assets.types.AssetMetadataT2();
          result.Deposit = this.GetTestValueU128();
-         result.Name = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT26();
+         result.Name = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT27();
          result.Name = this.GetTestValue25();
-         result.Symbol = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT26();
+         result.Symbol = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT27();
          result.Symbol = this.GetTestValue26();
          result.Decimals = this.GetTestValueU8();
          result.IsFrozen = this.GetTestValueBool();
          return result;
       }
-      public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT26 GetTestValue25()
+      public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT27 GetTestValue25()
       {
-         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT26 result;
-         result = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT26();
+         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT27 result;
+         result = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT27();
          result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>();
          result.Value.Create(new Substrate.NetApi.Model.Types.Primitive.U8[] {
                   this.GetTestValueU8()});
          return result;
       }
-      public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT26 GetTestValue26()
+      public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT27 GetTestValue26()
       {
-         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT26 result;
-         result = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT26();
+         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT27 result;
+         result = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT27();
          result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>();
          result.Value.Create(new Substrate.NetApi.Model.Types.Primitive.U8[] {
                   this.GetTestValueU8()});
          return result;
       }
-      public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation GetTestValue27()
+      public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v4.location.Location GetTestValue27()
       {
-         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation result;
-         result = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation();
+         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v4.location.Location result;
+         result = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v4.location.Location();
          result.Parents = this.GetTestValueU8();
-         result.Interior = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v3.junctions.EnumJunctions();
+         result.Interior = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v4.junctions.EnumJunctions();
          result.Interior = this.GetTestValue28();
          return result;
       }
-      public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v3.junctions.EnumJunctions GetTestValue28()
+      public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v4.junctions.EnumJunctions GetTestValue28()
       {
-         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v3.junctions.EnumJunctions result;
-         result = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v3.junctions.EnumJunctions();
-         // NOT IMPLEMENTED >> Initialize Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v3.junctions.EnumJunctions
+         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v4.junctions.EnumJunctions result;
+         result = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v4.junctions.EnumJunctions();
+         // NOT IMPLEMENTED >> Initialize Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v4.junctions.EnumJunctions
          return result;
       }
       [Test()]
@@ -563,7 +564,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Test.Generated
          // Construct new RPC client to test with.
          ForeignAssetsControllerClient rpcClient = new ForeignAssetsControllerClient(_httpClient, subscriptionClient);
          Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_assets.types.AssetMetadataT2 mockupValue = this.GetTestValue24();
-         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation mockupKey = this.GetTestValue27();
+         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v4.location.Location mockupKey = this.GetTestValue27();
 
          Assert.IsTrue(await rpcClient.SubscribeMetadata(mockupKey));
 
@@ -576,6 +577,51 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Test.Generated
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
          Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_assets.types.AssetMetadataT2 rpcResult = await rpcClient.GetMetadata(mockupKey);
+
+         // Test that the expected mockup value matches the actual result from RPC service.
+         Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
+      }
+      public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v4.location.Location GetTestValue30()
+      {
+         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v4.location.Location result;
+         result = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v4.location.Location();
+         result.Parents = this.GetTestValueU8();
+         result.Interior = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v4.junctions.EnumJunctions();
+         result.Interior = this.GetTestValue31();
+         return result;
+      }
+      public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v4.junctions.EnumJunctions GetTestValue31()
+      {
+         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v4.junctions.EnumJunctions result;
+         result = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v4.junctions.EnumJunctions();
+         // NOT IMPLEMENTED >> Initialize Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v4.junctions.EnumJunctions
+         return result;
+      }
+      [Test()]
+      public async System.Threading.Tasks.Task TestNextAssetId()
+      {
+         // Construct new Mockup client to test with.
+         ForeignAssetsControllerMockupClient mockupClient = new ForeignAssetsControllerMockupClient(_httpClient);
+
+         // Construct new subscription client to test with.
+         var subscriptionClient = CreateSubscriptionClient();
+
+         // Construct new RPC client to test with.
+         ForeignAssetsControllerClient rpcClient = new ForeignAssetsControllerClient(_httpClient, subscriptionClient);
+         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v4.location.Location mockupValue = this.GetTestValue30();
+
+
+         Assert.IsTrue(await rpcClient.SubscribeNextAssetId());
+
+         // Save the previously generated mockup value in RPC service storage.
+         bool mockupSetResult = await mockupClient.SetNextAssetId(mockupValue);
+
+         // Test that the expected mockup value was handled successfully from RPC service.
+         Assert.IsTrue(mockupSetResult);
+         var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
+         Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
+
+         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v4.location.Location rpcResult = await rpcClient.GetNextAssetId();
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());

@@ -18,7 +18,7 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bp_runtime.m
     
     
     /// <summary>
-    /// >> 153 - Composite[bp_runtime.messages.MessageDispatchResult]
+    /// >> 151 - Composite[bp_runtime.messages.MessageDispatchResult]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class MessageDispatchResult : BaseType

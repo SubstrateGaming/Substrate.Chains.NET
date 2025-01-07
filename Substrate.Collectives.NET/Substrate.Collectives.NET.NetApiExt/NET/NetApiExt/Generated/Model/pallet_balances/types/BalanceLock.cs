@@ -18,7 +18,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_balances.ty
     
     
     /// <summary>
-    /// >> 317 - Composite[pallet_balances.types.BalanceLock]
+    /// >> 324 - Composite[pallet_balances.types.BalanceLock]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class BalanceLock : BaseType

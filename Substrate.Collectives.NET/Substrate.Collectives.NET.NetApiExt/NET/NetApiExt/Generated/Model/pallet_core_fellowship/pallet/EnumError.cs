@@ -80,7 +80,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_core_fellow
     }
     
     /// <summary>
-    /// >> 467 - Variant[pallet_core_fellowship.pallet.Error]
+    /// >> 476 - Variant[pallet_core_fellowship.pallet.Error]
     /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>

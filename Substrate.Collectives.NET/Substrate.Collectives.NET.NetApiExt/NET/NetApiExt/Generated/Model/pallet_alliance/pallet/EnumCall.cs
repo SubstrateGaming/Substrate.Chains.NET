@@ -24,103 +24,122 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_alliance.pa
         
         /// <summary>
         /// >> propose
-        /// See [`Pallet::propose`].
+        /// Add a new proposal to be voted on.
+        /// 
+        /// Must be called by a Fellow.
         /// </summary>
         propose = 0,
         
         /// <summary>
         /// >> vote
-        /// See [`Pallet::vote`].
+        /// Add an aye or nay vote for the sender to the given proposal.
+        /// 
+        /// Must be called by a Fellow.
         /// </summary>
         vote = 1,
         
         /// <summary>
         /// >> init_members
-        /// See [`Pallet::init_members`].
+        /// Initialize the Alliance, onboard fellows and allies.
+        /// 
+        /// The Alliance must be empty, and the call must provide some founding members.
+        /// 
+        /// Must be called by the Root origin.
         /// </summary>
         init_members = 3,
         
         /// <summary>
         /// >> disband
-        /// See [`Pallet::disband`].
+        /// Disband the Alliance, remove all active members and unreserve deposits.
+        /// 
+        /// Witness data must be set.
         /// </summary>
         disband = 4,
         
         /// <summary>
         /// >> set_rule
-        /// See [`Pallet::set_rule`].
+        /// Set a new IPFS CID to the alliance rule.
         /// </summary>
         set_rule = 5,
         
         /// <summary>
         /// >> announce
-        /// See [`Pallet::announce`].
+        /// Make an announcement of a new IPFS CID about alliance issues.
         /// </summary>
         announce = 6,
         
         /// <summary>
         /// >> remove_announcement
-        /// See [`Pallet::remove_announcement`].
+        /// Remove an announcement.
         /// </summary>
         remove_announcement = 7,
         
         /// <summary>
         /// >> join_alliance
-        /// See [`Pallet::join_alliance`].
+        /// Submit oneself for candidacy. A fixed deposit is reserved.
         /// </summary>
         join_alliance = 8,
         
         /// <summary>
         /// >> nominate_ally
-        /// See [`Pallet::nominate_ally`].
+        /// A Fellow can nominate someone to join the alliance as an Ally. There is no deposit
+        /// required from the nominator or nominee.
         /// </summary>
         nominate_ally = 9,
         
         /// <summary>
         /// >> elevate_ally
-        /// See [`Pallet::elevate_ally`].
+        /// Elevate an Ally to Fellow.
         /// </summary>
         elevate_ally = 10,
         
         /// <summary>
         /// >> give_retirement_notice
-        /// See [`Pallet::give_retirement_notice`].
+        /// As a member, give a retirement notice and start a retirement period required to pass in
+        /// order to retire.
         /// </summary>
         give_retirement_notice = 11,
         
         /// <summary>
         /// >> retire
-        /// See [`Pallet::retire`].
+        /// As a member, retire from the Alliance and unreserve the deposit.
+        /// 
+        /// This can only be done once you have called `give_retirement_notice` and the
+        /// `RetirementPeriod` has passed.
         /// </summary>
         retire = 12,
         
         /// <summary>
         /// >> kick_member
-        /// See [`Pallet::kick_member`].
+        /// Kick a member from the Alliance and slash its deposit.
         /// </summary>
         kick_member = 13,
         
         /// <summary>
         /// >> add_unscrupulous_items
-        /// See [`Pallet::add_unscrupulous_items`].
+        /// Add accounts or websites to the list of unscrupulous items.
         /// </summary>
         add_unscrupulous_items = 14,
         
         /// <summary>
         /// >> remove_unscrupulous_items
-        /// See [`Pallet::remove_unscrupulous_items`].
+        /// Deem some items no longer unscrupulous.
         /// </summary>
         remove_unscrupulous_items = 15,
         
         /// <summary>
         /// >> close
-        /// See [`Pallet::close`].
+        /// Close a vote that is either approved, disapproved, or whose voting period has ended.
+        /// 
+        /// Must be called by a Fellow.
         /// </summary>
         close = 16,
         
         /// <summary>
         /// >> abdicate_fellow_status
-        /// See [`Pallet::abdicate_fellow_status`].
+        /// Abdicate one's position as a voting member and just be an Ally. May be used by Fellows
+        /// who do not want to leave the Alliance but do not have the capacity to participate
+        /// operationally for some time.
         /// </summary>
         abdicate_fellow_status = 17,
     }

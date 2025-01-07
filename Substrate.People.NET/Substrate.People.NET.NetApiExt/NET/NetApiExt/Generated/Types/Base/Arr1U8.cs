@@ -18,7 +18,7 @@ namespace Substrate.People.NET.NetApiExt.Generated.Types.Base
     
     
     /// <summary>
-    /// >> 328 - Array
+    /// >> 329 - Array
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Array)]
     public sealed class Arr1U8 : BaseType

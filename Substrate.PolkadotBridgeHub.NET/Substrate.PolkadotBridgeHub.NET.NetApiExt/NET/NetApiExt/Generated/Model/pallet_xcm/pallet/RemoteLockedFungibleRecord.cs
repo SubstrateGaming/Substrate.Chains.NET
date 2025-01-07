@@ -18,7 +18,7 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.pallet_xcm.p
     
     
     /// <summary>
-    /// >> 312 - Composite[pallet_xcm.pallet.RemoteLockedFungibleRecord]
+    /// >> 311 - Composite[pallet_xcm.pallet.RemoteLockedFungibleRecord]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class RemoteLockedFungibleRecord : BaseType
@@ -39,7 +39,7 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.pallet_xcm.p
         /// <summary>
         /// >> consumers
         /// </summary>
-        public Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT13 Consumers { get; set; }
+        public Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT14 Consumers { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
@@ -68,7 +68,7 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.pallet_xcm.p
             Owner.Decode(byteArray, ref p);
             Locker = new Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.xcm.EnumVersionedLocation();
             Locker.Decode(byteArray, ref p);
-            Consumers = new Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT13();
+            Consumers = new Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT14();
             Consumers.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

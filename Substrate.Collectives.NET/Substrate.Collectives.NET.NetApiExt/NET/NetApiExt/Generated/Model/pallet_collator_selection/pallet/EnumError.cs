@@ -126,7 +126,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_collator_se
     }
     
     /// <summary>
-    /// >> 337 - Variant[pallet_collator_selection.pallet.Error]
+    /// >> 344 - Variant[pallet_collator_selection.pallet.Error]
     /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>

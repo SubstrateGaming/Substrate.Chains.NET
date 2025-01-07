@@ -38,7 +38,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_referenda.t
     }
     
     /// <summary>
-    /// >> 442 - Variant[pallet_referenda.types.Curve]
+    /// >> 451 - Variant[pallet_referenda.types.Curve]
     /// </summary>
     public sealed class EnumCurve : BaseEnumRust<Curve>
     {

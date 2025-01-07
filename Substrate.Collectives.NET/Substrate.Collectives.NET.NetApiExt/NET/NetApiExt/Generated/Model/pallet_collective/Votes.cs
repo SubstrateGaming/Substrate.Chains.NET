@@ -18,7 +18,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_collective
     
     
     /// <summary>
-    /// >> 422 - Composite[pallet_collective.Votes]
+    /// >> 431 - Composite[pallet_collective.Votes]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Votes : BaseType

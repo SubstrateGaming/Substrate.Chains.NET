@@ -18,7 +18,7 @@ namespace Substrate.People.NET.NetApiExt.Generated.Model.frame_system.extensions
     
     
     /// <summary>
-    /// >> 405 - Composite[frame_system.extensions.check_tx_version.CheckTxVersion]
+    /// >> 402 - Composite[frame_system.extensions.check_tx_version.CheckTxVersion]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class CheckTxVersion : BaseType

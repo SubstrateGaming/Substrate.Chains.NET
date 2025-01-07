@@ -18,7 +18,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.cumulus_pallet_par
     
     
     /// <summary>
-    /// >> 299 - Composite[cumulus_pallet_parachain_system.unincluded_segment.SegmentTracker]
+    /// >> 306 - Composite[cumulus_pallet_parachain_system.unincluded_segment.SegmentTracker]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class SegmentTracker : BaseType
@@ -35,7 +35,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.cumulus_pallet_par
         /// <summary>
         /// >> consumed_go_ahead_signal
         /// </summary>
-        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Collectives.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumUpgradeGoAhead> ConsumedGoAheadSignal { get; set; }
+        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Collectives.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.EnumUpgradeGoAhead> ConsumedGoAheadSignal { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
@@ -61,7 +61,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.cumulus_pallet_par
             UsedBandwidth.Decode(byteArray, ref p);
             HrmpWatermark = new Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U32>();
             HrmpWatermark.Decode(byteArray, ref p);
-            ConsumedGoAheadSignal = new Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Collectives.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumUpgradeGoAhead>();
+            ConsumedGoAheadSignal = new Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Collectives.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.EnumUpgradeGoAhead>();
             ConsumedGoAheadSignal.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

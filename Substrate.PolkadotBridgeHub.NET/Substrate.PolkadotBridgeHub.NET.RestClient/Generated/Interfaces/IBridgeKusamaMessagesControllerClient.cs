@@ -28,7 +28,7 @@ namespace Substrate.PolkadotBridgeHub.NET.RestClient.Generated.Interfaces
       Task<bool> SubscribeOutboundLanes(LaneId key);
       Task<Bool> GetOutboundLanesCongestedSignals(LaneId key);
       Task<bool> SubscribeOutboundLanesCongestedSignals(LaneId key);
-      Task<BoundedVecT17> GetOutboundMessages(MessageKey key);
+      Task<BoundedVecT18> GetOutboundMessages(MessageKey key);
       Task<bool> SubscribeOutboundMessages(MessageKey key);
    }
 }

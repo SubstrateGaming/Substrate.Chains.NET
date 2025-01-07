@@ -18,7 +18,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v
     
     
     /// <summary>
-    /// >> 71 - Composite[staging_xcm.v4.asset.Assets]
+    /// >> 66 - Composite[staging_xcm.v4.asset.Assets]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Assets : BaseType

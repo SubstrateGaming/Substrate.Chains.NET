@@ -18,7 +18,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_message_que
     
     
     /// <summary>
-    /// >> 380 - Composite[pallet_message_queue.Neighbours]
+    /// >> 388 - Composite[pallet_message_queue.Neighbours]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Neighbours : BaseType

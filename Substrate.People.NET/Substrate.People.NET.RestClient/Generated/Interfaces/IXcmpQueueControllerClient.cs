@@ -12,7 +12,8 @@ namespace Substrate.People.NET.RestClient.Generated.Interfaces
    using System;
    using System.Threading.Tasks;
    using Substrate.People.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set;
-   using Substrate.NetApi.Model.Types.Base;
+   using Substrate.People.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
+   using Substrate.People.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec;
    using Substrate.People.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue;
    using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.People.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point;
@@ -21,11 +22,11 @@ namespace Substrate.People.NET.RestClient.Generated.Interfaces
    {
       Task<BoundedBTreeSet> GetInboundXcmpSuspended();
       Task<bool> SubscribeInboundXcmpSuspended();
-      Task<BaseVec<OutboundChannelDetails>> GetOutboundXcmpStatus();
+      Task<BoundedVecT11> GetOutboundXcmpStatus();
       Task<bool> SubscribeOutboundXcmpStatus();
-      Task<BaseVec<U8>> GetOutboundXcmpMessages(BaseTuple<Substrate.People.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, U16> key);
-      Task<bool> SubscribeOutboundXcmpMessages(BaseTuple<Substrate.People.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, U16> key);
-      Task<BaseVec<U8>> GetSignalMessages(Substrate.People.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key);
+      Task<WeakBoundedVecT3> GetOutboundXcmpMessages(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.People.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, U16> key);
+      Task<bool> SubscribeOutboundXcmpMessages(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.People.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, U16> key);
+      Task<WeakBoundedVecT3> GetSignalMessages(Substrate.People.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key);
       Task<bool> SubscribeSignalMessages(Substrate.People.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key);
       Task<QueueConfigData> GetQueueConfig();
       Task<bool> SubscribeQueueConfig();

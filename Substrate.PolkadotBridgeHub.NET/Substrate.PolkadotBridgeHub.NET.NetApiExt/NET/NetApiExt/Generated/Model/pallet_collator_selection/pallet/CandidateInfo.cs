@@ -18,7 +18,7 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.pallet_colla
     
     
     /// <summary>
-    /// >> 261 - Composite[pallet_collator_selection.pallet.CandidateInfo]
+    /// >> 259 - Composite[pallet_collator_selection.pallet.CandidateInfo]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class CandidateInfo : BaseType

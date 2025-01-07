@@ -20,8 +20,8 @@ namespace Substrate.PolkadotBridgeHub.NET.RestClient.Generated.Interfaces
    
    public interface IBridgeKusamaGrandpaControllerClient
    {
-      Task<U32> GetFreeMandatoryHeadersRemaining();
-      Task<bool> SubscribeFreeMandatoryHeadersRemaining();
+      Task<U32> GetFreeHeadersRemaining();
+      Task<bool> SubscribeFreeHeadersRemaining();
       Task<H256> GetInitialHash();
       Task<bool> SubscribeInitialHash();
       Task<HeaderId> GetBestFinalized();

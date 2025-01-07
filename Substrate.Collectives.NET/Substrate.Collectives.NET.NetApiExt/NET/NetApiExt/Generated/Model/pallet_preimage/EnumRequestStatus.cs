@@ -33,7 +33,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_preimage
     }
     
     /// <summary>
-    /// >> 402 - Variant[pallet_preimage.RequestStatus]
+    /// >> 410 - Variant[pallet_preimage.RequestStatus]
     /// </summary>
     public sealed class EnumRequestStatus : BaseEnumRust<RequestStatus>
     {

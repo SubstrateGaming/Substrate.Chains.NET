@@ -12,16 +12,19 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Generated.Interfaces
    using System;
    using System.Threading.Tasks;
    using Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_assets.types;
+   using Substrate.NetApi.Model.Types.Primitive;
    
    public interface IAssetsControllerClient
    {
-      Task<AssetDetails> GetAsset(Substrate.NetApi.Model.Types.Primitive.U32 key);
-      Task<bool> SubscribeAsset(Substrate.NetApi.Model.Types.Primitive.U32 key);
-      Task<AssetAccount> GetAccount(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> key);
-      Task<bool> SubscribeAccount(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> key);
-      Task<Approval> GetApprovals(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> key);
-      Task<bool> SubscribeApprovals(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> key);
-      Task<AssetMetadataT1> GetMetadata(Substrate.NetApi.Model.Types.Primitive.U32 key);
-      Task<bool> SubscribeMetadata(Substrate.NetApi.Model.Types.Primitive.U32 key);
+      Task<AssetDetails> GetAsset(U32 key);
+      Task<bool> SubscribeAsset(U32 key);
+      Task<AssetAccount> GetAccount(Substrate.NetApi.Model.Types.Base.BaseTuple<U32, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> key);
+      Task<bool> SubscribeAccount(Substrate.NetApi.Model.Types.Base.BaseTuple<U32, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> key);
+      Task<Approval> GetApprovals(Substrate.NetApi.Model.Types.Base.BaseTuple<U32, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> key);
+      Task<bool> SubscribeApprovals(Substrate.NetApi.Model.Types.Base.BaseTuple<U32, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> key);
+      Task<AssetMetadataT1> GetMetadata(U32 key);
+      Task<bool> SubscribeMetadata(U32 key);
+      Task<U32> GetNextAssetId();
+      Task<bool> SubscribeNextAssetId();
    }
 }

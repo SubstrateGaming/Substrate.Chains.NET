@@ -18,7 +18,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_nfts.t
     
     
     /// <summary>
-    /// >> 441 - Composite[pallet_nfts.types.PendingSwap]
+    /// >> 440 - Composite[pallet_nfts.types.PendingSwap]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class PendingSwap : BaseType

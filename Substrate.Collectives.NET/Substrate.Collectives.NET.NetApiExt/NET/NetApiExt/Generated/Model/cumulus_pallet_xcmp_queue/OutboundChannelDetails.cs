@@ -18,7 +18,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.cumulus_pallet_xcm
     
     
     /// <summary>
-    /// >> 352 - Composite[cumulus_pallet_xcmp_queue.OutboundChannelDetails]
+    /// >> 358 - Composite[cumulus_pallet_xcmp_queue.OutboundChannelDetails]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class OutboundChannelDetails : BaseType

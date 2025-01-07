@@ -24,19 +24,28 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_asset_rate.
         
         /// <summary>
         /// >> create
-        /// See [`Pallet::create`].
+        /// Initialize a conversion rate to native balance for the given asset.
+        /// 
+        /// ## Complexity
+        /// - O(1)
         /// </summary>
         create = 0,
         
         /// <summary>
         /// >> update
-        /// See [`Pallet::update`].
+        /// Update the conversion rate to native balance for the given asset.
+        /// 
+        /// ## Complexity
+        /// - O(1)
         /// </summary>
         update = 1,
         
         /// <summary>
         /// >> remove
-        /// See [`Pallet::remove`].
+        /// Remove an existing conversion rate to native balance for the given asset.
+        /// 
+        /// ## Complexity
+        /// - O(1)
         /// </summary>
         remove = 2,
     }

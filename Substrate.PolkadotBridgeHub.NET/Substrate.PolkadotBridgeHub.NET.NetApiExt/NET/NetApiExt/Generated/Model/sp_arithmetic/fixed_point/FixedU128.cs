@@ -18,7 +18,7 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_arithmeti
     
     
     /// <summary>
-    /// >> 167 - Composite[sp_arithmetic.fixed_point.FixedU128]
+    /// >> 165 - Composite[sp_arithmetic.fixed_point.FixedU128]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class FixedU128 : BaseType

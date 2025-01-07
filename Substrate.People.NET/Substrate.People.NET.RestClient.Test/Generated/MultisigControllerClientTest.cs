@@ -34,7 +34,7 @@ namespace Substrate.People.NET.RestClient.Test.Generated
          result.Deposit = this.GetTestValueU128();
          result.Depositor = new Substrate.People.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32();
          result.Depositor = this.GetTestValue4();
-         result.Approvals = new Substrate.People.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17();
+         result.Approvals = new Substrate.People.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18();
          result.Approvals = this.GetTestValue5();
          return result;
       }
@@ -86,10 +86,10 @@ namespace Substrate.People.NET.RestClient.Test.Generated
                   this.GetTestValueU8()});
          return result;
       }
-      public Substrate.People.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17 GetTestValue5()
+      public Substrate.People.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18 GetTestValue5()
       {
-         Substrate.People.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17 result;
-         result = new Substrate.People.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17();
+         Substrate.People.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18 result;
+         result = new Substrate.People.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18();
          result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.People.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>();
          result.Value.Create(new Substrate.People.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32[] {
                   this.GetTestValue6()});

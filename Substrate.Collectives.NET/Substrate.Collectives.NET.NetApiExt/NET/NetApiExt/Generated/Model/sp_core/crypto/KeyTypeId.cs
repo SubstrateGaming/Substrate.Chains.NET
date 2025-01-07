@@ -18,7 +18,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto
     
     
     /// <summary>
-    /// >> 342 - Composite[sp_core.crypto.KeyTypeId]
+    /// >> 348 - Composite[sp_core.crypto.KeyTypeId]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class KeyTypeId : BaseType

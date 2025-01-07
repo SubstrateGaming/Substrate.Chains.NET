@@ -18,7 +18,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_nfts.t
     
     
     /// <summary>
-    /// >> 362 - Composite[pallet_nfts.types.BitFlagsT2]
+    /// >> 364 - Composite[pallet_nfts.types.BitFlagsT2]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class BitFlagsT2 : BaseType

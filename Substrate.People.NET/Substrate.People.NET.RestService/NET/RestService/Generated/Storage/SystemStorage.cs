@@ -37,6 +37,12 @@ namespace Substrate.People.NET.RestService.Generated.Storage
         Substrate.NetApi.Model.Types.Primitive.U32 GetExtrinsicCount();
         
         /// <summary>
+        /// >> InherentsApplied
+        ///  Whether all inherents have been applied.
+        /// </summary>
+        Substrate.NetApi.Model.Types.Primitive.Bool GetInherentsApplied();
+        
+        /// <summary>
         /// >> BlockWeight
         ///  The current weight for the block.
         /// </summary>
@@ -160,6 +166,11 @@ namespace Substrate.People.NET.RestService.Generated.Storage
         private TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32> _extrinsicCountTypedStorage;
         
         /// <summary>
+        /// _inherentsAppliedTypedStorage typed storage field
+        /// </summary>
+        private TypedStorage<Substrate.NetApi.Model.Types.Primitive.Bool> _inherentsAppliedTypedStorage;
+        
+        /// <summary>
         /// _blockWeightTypedStorage typed storage field
         /// </summary>
         private TypedStorage<Substrate.People.NET.NetApiExt.Generated.Model.frame_support.dispatch.PerDispatchClassT1> _blockWeightTypedStorage;
@@ -241,6 +252,7 @@ namespace Substrate.People.NET.RestService.Generated.Storage
         {
             this.AccountTypedStorage = new TypedMapStorage<Substrate.People.NET.NetApiExt.Generated.Model.frame_system.AccountInfo>("System.Account", storageDataProvider, storageChangeDelegates);
             this.ExtrinsicCountTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32>("System.ExtrinsicCount", storageDataProvider, storageChangeDelegates);
+            this.InherentsAppliedTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.Bool>("System.InherentsApplied", storageDataProvider, storageChangeDelegates);
             this.BlockWeightTypedStorage = new TypedStorage<Substrate.People.NET.NetApiExt.Generated.Model.frame_support.dispatch.PerDispatchClassT1>("System.BlockWeight", storageDataProvider, storageChangeDelegates);
             this.AllExtrinsicsLenTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32>("System.AllExtrinsicsLen", storageDataProvider, storageChangeDelegates);
             this.BlockHashTypedStorage = new TypedMapStorage<Substrate.People.NET.NetApiExt.Generated.Model.primitive_types.H256>("System.BlockHash", storageDataProvider, storageChangeDelegates);
@@ -285,6 +297,21 @@ namespace Substrate.People.NET.RestService.Generated.Storage
             set
             {
                 _extrinsicCountTypedStorage = value;
+            }
+        }
+        
+        /// <summary>
+        /// _inherentsAppliedTypedStorage property
+        /// </summary>
+        public TypedStorage<Substrate.NetApi.Model.Types.Primitive.Bool> InherentsAppliedTypedStorage
+        {
+            get
+            {
+                return _inherentsAppliedTypedStorage;
+            }
+            set
+            {
+                _inherentsAppliedTypedStorage = value;
             }
         }
         
@@ -520,6 +547,7 @@ namespace Substrate.People.NET.RestService.Generated.Storage
         {
             await AccountTypedStorage.InitializeAsync("System", "Account");
             await ExtrinsicCountTypedStorage.InitializeAsync("System", "ExtrinsicCount");
+            await InherentsAppliedTypedStorage.InitializeAsync("System", "InherentsApplied");
             await BlockWeightTypedStorage.InitializeAsync("System", "BlockWeight");
             await AllExtrinsicsLenTypedStorage.InitializeAsync("System", "AllExtrinsicsLen");
             await BlockHashTypedStorage.InitializeAsync("System", "BlockHash");
@@ -582,6 +610,24 @@ namespace Substrate.People.NET.RestService.Generated.Storage
         public Substrate.NetApi.Model.Types.Primitive.U32 GetExtrinsicCount()
         {
             return ExtrinsicCountTypedStorage.Get();
+        }
+        
+        /// <summary>
+        /// Implements any storage change for System.InherentsApplied
+        /// </summary>
+        [StorageChange("System", "InherentsApplied")]
+        public void OnUpdateInherentsApplied(string data)
+        {
+            InherentsAppliedTypedStorage.Update(data);
+        }
+        
+        /// <summary>
+        /// >> InherentsApplied
+        ///  Whether all inherents have been applied.
+        /// </summary>
+        public Substrate.NetApi.Model.Types.Primitive.Bool GetInherentsApplied()
+        {
+            return InherentsAppliedTypedStorage.Get();
         }
         
         /// <summary>

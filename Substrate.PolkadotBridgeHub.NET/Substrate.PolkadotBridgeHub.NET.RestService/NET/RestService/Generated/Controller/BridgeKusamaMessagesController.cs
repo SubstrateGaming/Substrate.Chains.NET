@@ -44,7 +44,7 @@ namespace Substrate.PolkadotBridgeHub.NET.RestService.Generated.Controller
         ///  Pallet owner has a right to halt all pallet operations and then resume it. If it is
         ///  `None`, then there are no direct ways to halt/resume pallet operations, but other
         ///  runtime methods may still be used to do that (i.e. democracy::referendum to update halt
-        ///  flag directly or call the `halt_operations`).
+        ///  flag directly or call the `set_operating_mode`).
         /// </summary>
         [HttpGet("PalletOwner")]
         [ProducesResponseType(typeof(Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32), 200)]
@@ -117,7 +117,7 @@ namespace Substrate.PolkadotBridgeHub.NET.RestService.Generated.Controller
         ///  All queued outbound messages.
         /// </summary>
         [HttpGet("OutboundMessages")]
-        [ProducesResponseType(typeof(Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17), 200)]
+        [ProducesResponseType(typeof(Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18), 200)]
         [StorageKeyBuilder(typeof(Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Storage.BridgeKusamaMessagesStorage), "OutboundMessagesParams", typeof(Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bp_messages.MessageKey))]
         public IActionResult GetOutboundMessages(string key)
         {

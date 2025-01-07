@@ -24,61 +24,130 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_core_fellow
         
         /// <summary>
         /// >> bump
-        /// See [`Pallet::bump`].
+        /// Bump the state of a member.
+        /// 
+        /// This will demote a member whose `last_proof` is now beyond their rank's
+        /// `demotion_period`.
+        /// 
+        /// - `origin`: A `Signed` origin of an account.
+        /// - `who`: A member account whose state is to be updated.
         /// </summary>
         bump = 0,
         
         /// <summary>
         /// >> set_params
-        /// See [`Pallet::set_params`].
+        /// Set the parameters.
+        /// 
+        /// - `origin`: An origin complying with `ParamsOrigin` or root.
+        /// - `params`: The new parameters for the pallet.
         /// </summary>
         set_params = 1,
         
         /// <summary>
         /// >> set_active
-        /// See [`Pallet::set_active`].
+        /// Set whether a member is active or not.
+        /// 
+        /// - `origin`: A `Signed` origin of a member's account.
+        /// - `is_active`: `true` iff the member is active.
         /// </summary>
         set_active = 2,
         
         /// <summary>
         /// >> approve
-        /// See [`Pallet::approve`].
+        /// Approve a member to continue at their rank.
+        /// 
+        /// This resets `last_proof` to the current block, thereby delaying any automatic demotion.
+        /// 
+        /// `who` must already be tracked by this pallet for this to have an effect.
+        /// 
+        /// - `origin`: An origin which satisfies `ApproveOrigin` or root.
+        /// - `who`: A member (i.e. of non-zero rank).
+        /// - `at_rank`: The rank of member.
         /// </summary>
         approve = 3,
         
         /// <summary>
         /// >> induct
-        /// See [`Pallet::induct`].
+        /// Introduce a new and unranked candidate (rank zero).
+        /// 
+        /// - `origin`: An origin which satisfies `InductOrigin` or root.
+        /// - `who`: The account ID of the candidate to be inducted and become a member.
         /// </summary>
         induct = 4,
         
         /// <summary>
         /// >> promote
-        /// See [`Pallet::promote`].
+        /// Increment the rank of a ranked and tracked account.
+        /// 
+        /// - `origin`: An origin which satisfies `PromoteOrigin` with a `Success` result of
+        ///   `to_rank` or more or root.
+        /// - `who`: The account ID of the member to be promoted to `to_rank`.
+        /// - `to_rank`: One more than the current rank of `who`.
         /// </summary>
         promote = 5,
         
         /// <summary>
+        /// >> promote_fast
+        /// Fast promotions can skip ranks and ignore the `min_promotion_period`.
+        /// 
+        /// This is useful for out-of-band promotions, hence it has its own `FastPromoteOrigin` to
+        /// be (possibly) more restrictive than `PromoteOrigin`. Note that the member must already
+        /// be inducted.
+        /// </summary>
+        promote_fast = 10,
+        
+        /// <summary>
         /// >> offboard
-        /// See [`Pallet::offboard`].
+        /// Stop tracking a prior member who is now not a ranked member of the collective.
+        /// 
+        /// - `origin`: A `Signed` origin of an account.
+        /// - `who`: The ID of an account which was tracked in this pallet but which is now not a
+        ///   ranked member of the collective.
         /// </summary>
         offboard = 6,
         
         /// <summary>
         /// >> submit_evidence
-        /// See [`Pallet::submit_evidence`].
+        /// Provide evidence that a rank is deserved.
+        /// 
+        /// This is free as long as no evidence for the forthcoming judgement is already submitted.
+        /// Evidence is cleared after an outcome (either demotion, promotion of approval).
+        /// 
+        /// - `origin`: A `Signed` origin of an inducted and ranked account.
+        /// - `wish`: The stated desire of the member.
+        /// - `evidence`: A dump of evidence to be considered. This should generally be either a
+        ///   Markdown-encoded document or a series of 32-byte hashes which can be found on a
+        ///   decentralised content-based-indexing system such as IPFS.
         /// </summary>
         submit_evidence = 7,
         
         /// <summary>
         /// >> import
-        /// See [`Pallet::import`].
+        /// Introduce an already-ranked individual of the collective into this pallet. The rank may
+        /// still be zero.
+        /// 
+        /// This resets `last_proof` to the current block and `last_promotion` will be set to zero,
+        /// thereby delaying any automatic demotion but allowing immediate promotion.
+        /// 
+        /// - `origin`: A signed origin of a ranked, but not tracked, account.
         /// </summary>
         import = 8,
+        
+        /// <summary>
+        /// >> set_partial_params
+        /// Set the parameters partially.
+        /// 
+        /// - `origin`: An origin complying with `ParamsOrigin` or root.
+        /// - `partial_params`: The new parameters for the pallet.
+        /// 
+        /// This update config with multiple arguments without duplicating
+        /// the fields that does not need to update (set to None).
+        /// </summary>
+        set_partial_params = 9,
     }
     
     /// <summary>
-    /// >> 258 - Variant[pallet_core_fellowship.pallet.Call]
+    /// >> 265 - Variant[pallet_core_fellowship.pallet.Call]
     /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
     public sealed class EnumCall : BaseEnumRust<Call>
@@ -90,14 +159,16 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_core_fellow
         public EnumCall()
         {
 				AddTypeDecoder<Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>(Call.bump);
-				AddTypeDecoder<Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_core_fellowship.ParamsType>(Call.set_params);
+				AddTypeDecoder<Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_core_fellowship.ParamsTypeT1>(Call.set_params);
 				AddTypeDecoder<Substrate.NetApi.Model.Types.Primitive.Bool>(Call.set_active);
 				AddTypeDecoder<BaseTuple<Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U16>>(Call.approve);
 				AddTypeDecoder<Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>(Call.induct);
 				AddTypeDecoder<BaseTuple<Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U16>>(Call.promote);
+				AddTypeDecoder<BaseTuple<Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U16>>(Call.promote_fast);
 				AddTypeDecoder<Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>(Call.offboard);
-				AddTypeDecoder<BaseTuple<Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_core_fellowship.EnumWish, Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT8>>(Call.submit_evidence);
+				AddTypeDecoder<BaseTuple<Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_core_fellowship.EnumWish, Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10>>(Call.submit_evidence);
 				AddTypeDecoder<BaseVoid>(Call.import);
+				AddTypeDecoder<Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_core_fellowship.ParamsTypeT2>(Call.set_partial_params);
         }
     }
 }

@@ -18,7 +18,7 @@ namespace Substrate.People.NET.NetApiExt.Generated.Model.frame_system.extensions
     
     
     /// <summary>
-    /// >> 406 - Composite[frame_system.extensions.check_genesis.CheckGenesis]
+    /// >> 403 - Composite[frame_system.extensions.check_genesis.CheckGenesis]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class CheckGenesis : BaseType

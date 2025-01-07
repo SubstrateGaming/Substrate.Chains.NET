@@ -33,7 +33,7 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.cumulus_pall
     }
     
     /// <summary>
-    /// >> 284 - Variant[cumulus_pallet_xcmp_queue.OutboundState]
+    /// >> 281 - Variant[cumulus_pallet_xcmp_queue.OutboundState]
     /// </summary>
     public sealed class EnumOutboundState : BaseEnum<OutboundState>
     {

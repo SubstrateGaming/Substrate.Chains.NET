@@ -24,13 +24,13 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_xcm_br
         
         /// <summary>
         /// >> report_bridge_status
-        /// See [`Pallet::report_bridge_status`].
+        /// Notification about congested bridge queue.
         /// </summary>
         report_bridge_status = 0,
     }
     
     /// <summary>
-    /// >> 335 - Variant[pallet_xcm_bridge_hub_router.pallet.Call]
+    /// >> 337 - Variant[pallet_xcm_bridge_hub_router.pallet.Call]
     /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
     public sealed class EnumCall : BaseEnumRust<Call>

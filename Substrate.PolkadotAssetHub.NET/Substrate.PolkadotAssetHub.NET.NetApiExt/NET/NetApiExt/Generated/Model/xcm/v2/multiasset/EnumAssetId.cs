@@ -33,7 +33,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v2.multia
     }
     
     /// <summary>
-    /// >> 100 - Variant[xcm.v2.multiasset.AssetId]
+    /// >> 95 - Variant[xcm.v2.multiasset.AssetId]
     /// </summary>
     public sealed class EnumAssetId : BaseEnumRust<AssetId>
     {

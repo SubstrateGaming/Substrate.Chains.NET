@@ -18,7 +18,7 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.snowbridge_c
     
     
     /// <summary>
-    /// >> 156 - Composite[snowbridge_core.ChannelId]
+    /// >> 154 - Composite[snowbridge_core.ChannelId]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class ChannelId : BaseType

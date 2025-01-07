@@ -33,7 +33,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.cumulus_pallet_xcm
     }
     
     /// <summary>
-    /// >> 353 - Variant[cumulus_pallet_xcmp_queue.OutboundState]
+    /// >> 359 - Variant[cumulus_pallet_xcmp_queue.OutboundState]
     /// </summary>
     public sealed class EnumOutboundState : BaseEnum<OutboundState>
     {

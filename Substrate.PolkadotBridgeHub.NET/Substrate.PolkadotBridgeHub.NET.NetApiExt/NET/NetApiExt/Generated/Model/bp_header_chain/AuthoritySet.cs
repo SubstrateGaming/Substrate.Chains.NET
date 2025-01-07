@@ -18,7 +18,7 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bp_header_ch
     
     
     /// <summary>
-    /// >> 140 - Composite[bp_header_chain.AuthoritySet]
+    /// >> 138 - Composite[bp_header_chain.AuthoritySet]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class AuthoritySet : BaseType

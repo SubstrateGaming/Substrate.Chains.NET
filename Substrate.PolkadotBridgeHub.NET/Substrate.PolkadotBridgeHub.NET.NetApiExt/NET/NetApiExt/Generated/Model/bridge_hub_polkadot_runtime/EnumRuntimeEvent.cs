@@ -123,7 +123,7 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bridge_hub_p
     }
     
     /// <summary>
-    /// >> 20 - Variant[bridge_hub_polkadot_runtime.RuntimeEvent]
+    /// >> 21 - Variant[bridge_hub_polkadot_runtime.RuntimeEvent]
     /// </summary>
     public sealed class EnumRuntimeEvent : BaseEnumRust<RuntimeEvent>
     {

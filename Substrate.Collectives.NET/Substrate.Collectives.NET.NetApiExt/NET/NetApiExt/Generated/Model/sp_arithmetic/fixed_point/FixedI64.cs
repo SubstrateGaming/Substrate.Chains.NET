@@ -18,7 +18,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_arithmetic.fixe
     
     
     /// <summary>
-    /// >> 444 - Composite[sp_arithmetic.fixed_point.FixedI64]
+    /// >> 453 - Composite[sp_arithmetic.fixed_point.FixedI64]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class FixedI64 : BaseType

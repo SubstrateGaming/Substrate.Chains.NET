@@ -17,9 +17,9 @@ namespace Substrate.People.NET.RestClient.Generated.Interfaces
    
    public interface IProxyControllerClient
    {
-      Task<BaseTuple<BoundedVecT18, U128>> GetProxies(Substrate.People.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
+      Task<BaseTuple<BoundedVecT19, U128>> GetProxies(Substrate.People.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
       Task<bool> SubscribeProxies(Substrate.People.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
-      Task<BaseTuple<BoundedVecT19, U128>> GetAnnouncements(Substrate.People.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
+      Task<BaseTuple<BoundedVecT20, U128>> GetAnnouncements(Substrate.People.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
       Task<bool> SubscribeAnnouncements(Substrate.People.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
    }
 }

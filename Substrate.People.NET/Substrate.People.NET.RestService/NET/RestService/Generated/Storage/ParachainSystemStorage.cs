@@ -70,7 +70,7 @@ namespace Substrate.People.NET.RestService.Generated.Storage
         ///  This value is expected to be set only once per block and it's never stored
         ///  in the trie.
         /// </summary>
-        Substrate.People.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.PersistedValidationData GetValidationData();
+        Substrate.People.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.PersistedValidationData GetValidationData();
         
         /// <summary>
         /// >> DidSetValidationCode
@@ -96,7 +96,7 @@ namespace Substrate.People.NET.RestService.Generated.Storage
         ///  relay-chain. This value is ephemeral which means it doesn't hit the storage. This value is
         ///  set after the inherent.
         /// </summary>
-        Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.People.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumUpgradeRestriction> GetUpgradeRestrictionSignal();
+        Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.People.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.EnumUpgradeRestriction> GetUpgradeRestrictionSignal();
         
         /// <summary>
         /// >> UpgradeGoAhead
@@ -106,7 +106,7 @@ namespace Substrate.People.NET.RestService.Generated.Storage
         ///  relay-chain. This value is ephemeral which means it doesn't hit the storage. This value is
         ///  set after the inherent.
         /// </summary>
-        Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.People.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumUpgradeGoAhead> GetUpgradeGoAhead();
+        Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.People.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.EnumUpgradeGoAhead> GetUpgradeGoAhead();
         
         /// <summary>
         /// >> RelayStateProof
@@ -140,7 +140,7 @@ namespace Substrate.People.NET.RestService.Generated.Storage
         /// 
         ///  This data is also absent from the genesis.
         /// </summary>
-        Substrate.People.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.AbridgedHostConfiguration GetHostConfiguration();
+        Substrate.People.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.AbridgedHostConfiguration GetHostConfiguration();
         
         /// <summary>
         /// >> LastDmqMqcHead
@@ -263,7 +263,7 @@ namespace Substrate.People.NET.RestService.Generated.Storage
         /// <summary>
         /// _validationDataTypedStorage typed storage field
         /// </summary>
-        private TypedStorage<Substrate.People.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.PersistedValidationData> _validationDataTypedStorage;
+        private TypedStorage<Substrate.People.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.PersistedValidationData> _validationDataTypedStorage;
         
         /// <summary>
         /// _didSetValidationCodeTypedStorage typed storage field
@@ -278,12 +278,12 @@ namespace Substrate.People.NET.RestService.Generated.Storage
         /// <summary>
         /// _upgradeRestrictionSignalTypedStorage typed storage field
         /// </summary>
-        private TypedStorage<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.People.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumUpgradeRestriction>> _upgradeRestrictionSignalTypedStorage;
+        private TypedStorage<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.People.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.EnumUpgradeRestriction>> _upgradeRestrictionSignalTypedStorage;
         
         /// <summary>
         /// _upgradeGoAheadTypedStorage typed storage field
         /// </summary>
-        private TypedStorage<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.People.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumUpgradeGoAhead>> _upgradeGoAheadTypedStorage;
+        private TypedStorage<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.People.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.EnumUpgradeGoAhead>> _upgradeGoAheadTypedStorage;
         
         /// <summary>
         /// _relayStateProofTypedStorage typed storage field
@@ -298,7 +298,7 @@ namespace Substrate.People.NET.RestService.Generated.Storage
         /// <summary>
         /// _hostConfigurationTypedStorage typed storage field
         /// </summary>
-        private TypedStorage<Substrate.People.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.AbridgedHostConfiguration> _hostConfigurationTypedStorage;
+        private TypedStorage<Substrate.People.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.AbridgedHostConfiguration> _hostConfigurationTypedStorage;
         
         /// <summary>
         /// _lastDmqMqcHeadTypedStorage typed storage field
@@ -369,14 +369,14 @@ namespace Substrate.People.NET.RestService.Generated.Storage
             this.AggregatedUnincludedSegmentTypedStorage = new TypedStorage<Substrate.People.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.unincluded_segment.SegmentTracker>("ParachainSystem.AggregatedUnincludedSegment", storageDataProvider, storageChangeDelegates);
             this.PendingValidationCodeTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>("ParachainSystem.PendingValidationCode", storageDataProvider, storageChangeDelegates);
             this.NewValidationCodeTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>>("ParachainSystem.NewValidationCode", storageDataProvider, storageChangeDelegates);
-            this.ValidationDataTypedStorage = new TypedStorage<Substrate.People.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.PersistedValidationData>("ParachainSystem.ValidationData", storageDataProvider, storageChangeDelegates);
+            this.ValidationDataTypedStorage = new TypedStorage<Substrate.People.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.PersistedValidationData>("ParachainSystem.ValidationData", storageDataProvider, storageChangeDelegates);
             this.DidSetValidationCodeTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.Bool>("ParachainSystem.DidSetValidationCode", storageDataProvider, storageChangeDelegates);
             this.LastRelayChainBlockNumberTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32>("ParachainSystem.LastRelayChainBlockNumber", storageDataProvider, storageChangeDelegates);
-            this.UpgradeRestrictionSignalTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.People.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumUpgradeRestriction>>("ParachainSystem.UpgradeRestrictionSignal", storageDataProvider, storageChangeDelegates);
-            this.UpgradeGoAheadTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.People.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumUpgradeGoAhead>>("ParachainSystem.UpgradeGoAhead", storageDataProvider, storageChangeDelegates);
+            this.UpgradeRestrictionSignalTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.People.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.EnumUpgradeRestriction>>("ParachainSystem.UpgradeRestrictionSignal", storageDataProvider, storageChangeDelegates);
+            this.UpgradeGoAheadTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.People.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.EnumUpgradeGoAhead>>("ParachainSystem.UpgradeGoAhead", storageDataProvider, storageChangeDelegates);
             this.RelayStateProofTypedStorage = new TypedStorage<Substrate.People.NET.NetApiExt.Generated.Model.sp_trie.storage_proof.StorageProof>("ParachainSystem.RelayStateProof", storageDataProvider, storageChangeDelegates);
             this.RelevantMessagingStateTypedStorage = new TypedStorage<Substrate.People.NET.NetApiExt.Generated.Model.cumulus_pallet_parachain_system.relay_state_snapshot.MessagingStateSnapshot>("ParachainSystem.RelevantMessagingState", storageDataProvider, storageChangeDelegates);
-            this.HostConfigurationTypedStorage = new TypedStorage<Substrate.People.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.AbridgedHostConfiguration>("ParachainSystem.HostConfiguration", storageDataProvider, storageChangeDelegates);
+            this.HostConfigurationTypedStorage = new TypedStorage<Substrate.People.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.AbridgedHostConfiguration>("ParachainSystem.HostConfiguration", storageDataProvider, storageChangeDelegates);
             this.LastDmqMqcHeadTypedStorage = new TypedStorage<Substrate.People.NET.NetApiExt.Generated.Model.cumulus_primitives_parachain_inherent.MessageQueueChain>("ParachainSystem.LastDmqMqcHead", storageDataProvider, storageChangeDelegates);
             this.LastHrmpMqcHeadsTypedStorage = new TypedStorage<Substrate.People.NET.NetApiExt.Generated.Types.Base.BTreeMapT2>("ParachainSystem.LastHrmpMqcHeads", storageDataProvider, storageChangeDelegates);
             this.ProcessedDownwardMessagesTypedStorage = new TypedStorage<Substrate.NetApi.Model.Types.Primitive.U32>("ParachainSystem.ProcessedDownwardMessages", storageDataProvider, storageChangeDelegates);
@@ -454,7 +454,7 @@ namespace Substrate.People.NET.RestService.Generated.Storage
         /// <summary>
         /// _validationDataTypedStorage property
         /// </summary>
-        public TypedStorage<Substrate.People.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.PersistedValidationData> ValidationDataTypedStorage
+        public TypedStorage<Substrate.People.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.PersistedValidationData> ValidationDataTypedStorage
         {
             get
             {
@@ -499,7 +499,7 @@ namespace Substrate.People.NET.RestService.Generated.Storage
         /// <summary>
         /// _upgradeRestrictionSignalTypedStorage property
         /// </summary>
-        public TypedStorage<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.People.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumUpgradeRestriction>> UpgradeRestrictionSignalTypedStorage
+        public TypedStorage<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.People.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.EnumUpgradeRestriction>> UpgradeRestrictionSignalTypedStorage
         {
             get
             {
@@ -514,7 +514,7 @@ namespace Substrate.People.NET.RestService.Generated.Storage
         /// <summary>
         /// _upgradeGoAheadTypedStorage property
         /// </summary>
-        public TypedStorage<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.People.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumUpgradeGoAhead>> UpgradeGoAheadTypedStorage
+        public TypedStorage<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.People.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.EnumUpgradeGoAhead>> UpgradeGoAheadTypedStorage
         {
             get
             {
@@ -559,7 +559,7 @@ namespace Substrate.People.NET.RestService.Generated.Storage
         /// <summary>
         /// _hostConfigurationTypedStorage property
         /// </summary>
-        public TypedStorage<Substrate.People.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.AbridgedHostConfiguration> HostConfigurationTypedStorage
+        public TypedStorage<Substrate.People.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.AbridgedHostConfiguration> HostConfigurationTypedStorage
         {
             get
             {
@@ -885,7 +885,7 @@ namespace Substrate.People.NET.RestService.Generated.Storage
         ///  This value is expected to be set only once per block and it's never stored
         ///  in the trie.
         /// </summary>
-        public Substrate.People.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.PersistedValidationData GetValidationData()
+        public Substrate.People.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.PersistedValidationData GetValidationData()
         {
             return ValidationDataTypedStorage.Get();
         }
@@ -947,7 +947,7 @@ namespace Substrate.People.NET.RestService.Generated.Storage
         ///  relay-chain. This value is ephemeral which means it doesn't hit the storage. This value is
         ///  set after the inherent.
         /// </summary>
-        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.People.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumUpgradeRestriction> GetUpgradeRestrictionSignal()
+        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.People.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.EnumUpgradeRestriction> GetUpgradeRestrictionSignal()
         {
             return UpgradeRestrictionSignalTypedStorage.Get();
         }
@@ -969,7 +969,7 @@ namespace Substrate.People.NET.RestService.Generated.Storage
         ///  relay-chain. This value is ephemeral which means it doesn't hit the storage. This value is
         ///  set after the inherent.
         /// </summary>
-        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.People.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.EnumUpgradeGoAhead> GetUpgradeGoAhead()
+        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.People.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.EnumUpgradeGoAhead> GetUpgradeGoAhead()
         {
             return UpgradeGoAheadTypedStorage.Get();
         }
@@ -1039,7 +1039,7 @@ namespace Substrate.People.NET.RestService.Generated.Storage
         /// 
         ///  This data is also absent from the genesis.
         /// </summary>
-        public Substrate.People.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.AbridgedHostConfiguration GetHostConfiguration()
+        public Substrate.People.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.AbridgedHostConfiguration GetHostConfiguration()
         {
             return HostConfigurationTypedStorage.Get();
         }

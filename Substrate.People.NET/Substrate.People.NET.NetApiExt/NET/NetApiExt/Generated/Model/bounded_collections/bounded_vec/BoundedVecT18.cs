@@ -18,7 +18,7 @@ namespace Substrate.People.NET.NetApiExt.Generated.Model.bounded_collections.bou
     
     
     /// <summary>
-    /// >> 378 - Composite[bounded_collections.bounded_vec.BoundedVecT18]
+    /// >> 372 - Composite[bounded_collections.bounded_vec.BoundedVecT18]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class BoundedVecT18 : BaseType
@@ -27,7 +27,7 @@ namespace Substrate.People.NET.NetApiExt.Generated.Model.bounded_collections.bou
         /// <summary>
         /// >> value
         /// </summary>
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.People.NET.NetApiExt.Generated.Model.pallet_proxy.ProxyDefinition> Value { get; set; }
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.People.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> Value { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
@@ -47,7 +47,7 @@ namespace Substrate.People.NET.NetApiExt.Generated.Model.bounded_collections.bou
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.People.NET.NetApiExt.Generated.Model.pallet_proxy.ProxyDefinition>();
+            Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.People.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>();
             Value.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

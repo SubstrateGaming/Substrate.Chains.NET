@@ -16,7 +16,8 @@ namespace Substrate.PolkadotBridgeHub.NET.RestClient.Test.Generated
    using Substrate.PolkadotBridgeHub.NET.RestClient.Mockup.Generated.Clients;
    using Substrate.PolkadotBridgeHub.NET.RestClient.Generated.Clients;
    using Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set;
-   using Substrate.NetApi.Model.Types.Base;
+   using Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
+   using Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec;
    using Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue;
    using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point;
@@ -82,11 +83,12 @@ namespace Substrate.PolkadotBridgeHub.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue.OutboundChannelDetails> GetTestValue6()
+      public Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10 GetTestValue6()
       {
-         Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue.OutboundChannelDetails> result;
-         result = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue.OutboundChannelDetails>();
-         result.Create(new Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue.OutboundChannelDetails[] {
+         Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10 result;
+         result = new Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10();
+         result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue.OutboundChannelDetails>();
+         result.Value.Create(new Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue.OutboundChannelDetails[] {
                   this.GetTestValue7()});
          return result;
       }
@@ -121,7 +123,7 @@ namespace Substrate.PolkadotBridgeHub.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          XcmpQueueControllerClient rpcClient = new XcmpQueueControllerClient(_httpClient, subscriptionClient);
-         Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue.OutboundChannelDetails> mockupValue = this.GetTestValue6();
+         Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10 mockupValue = this.GetTestValue6();
 
 
          Assert.IsTrue(await rpcClient.SubscribeOutboundXcmpStatus());
@@ -134,16 +136,17 @@ namespace Substrate.PolkadotBridgeHub.NET.RestClient.Test.Generated
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue.OutboundChannelDetails> rpcResult = await rpcClient.GetOutboundXcmpStatus();
+         Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10 rpcResult = await rpcClient.GetOutboundXcmpStatus();
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> GetTestValue10()
+      public Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT3 GetTestValue10()
       {
-         Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> result;
-         result = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>();
-         result.Create(new Substrate.NetApi.Model.Types.Primitive.U8[] {
+         Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT3 result;
+         result = new Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT3();
+         result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>();
+         result.Value.Create(new Substrate.NetApi.Model.Types.Primitive.U8[] {
                   this.GetTestValueU8()});
          return result;
       }
@@ -172,7 +175,7 @@ namespace Substrate.PolkadotBridgeHub.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          XcmpQueueControllerClient rpcClient = new XcmpQueueControllerClient(_httpClient, subscriptionClient);
-         Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> mockupValue = this.GetTestValue10();
+         Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT3 mockupValue = this.GetTestValue10();
          Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, Substrate.NetApi.Model.Types.Primitive.U16> mockupKey = this.GetTestValue11();
 
          Assert.IsTrue(await rpcClient.SubscribeOutboundXcmpMessages(mockupKey));
@@ -185,16 +188,17 @@ namespace Substrate.PolkadotBridgeHub.NET.RestClient.Test.Generated
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> rpcResult = await rpcClient.GetOutboundXcmpMessages(mockupKey);
+         Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT3 rpcResult = await rpcClient.GetOutboundXcmpMessages(mockupKey);
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> GetTestValue14()
+      public Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT3 GetTestValue14()
       {
-         Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> result;
-         result = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>();
-         result.Create(new Substrate.NetApi.Model.Types.Primitive.U8[] {
+         Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT3 result;
+         result = new Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT3();
+         result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>();
+         result.Value.Create(new Substrate.NetApi.Model.Types.Primitive.U8[] {
                   this.GetTestValueU8()});
          return result;
       }
@@ -216,7 +220,7 @@ namespace Substrate.PolkadotBridgeHub.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          XcmpQueueControllerClient rpcClient = new XcmpQueueControllerClient(_httpClient, subscriptionClient);
-         Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> mockupValue = this.GetTestValue14();
+         Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT3 mockupValue = this.GetTestValue14();
          Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id mockupKey = this.GetTestValue15();
 
          Assert.IsTrue(await rpcClient.SubscribeSignalMessages(mockupKey));
@@ -229,7 +233,7 @@ namespace Substrate.PolkadotBridgeHub.NET.RestClient.Test.Generated
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> rpcResult = await rpcClient.GetSignalMessages(mockupKey);
+         Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec.WeakBoundedVecT3 rpcResult = await rpcClient.GetSignalMessages(mockupKey);
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());

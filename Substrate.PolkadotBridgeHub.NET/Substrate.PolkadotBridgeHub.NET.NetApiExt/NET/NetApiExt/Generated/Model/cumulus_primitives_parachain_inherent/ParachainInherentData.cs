@@ -18,7 +18,7 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.cumulus_prim
     
     
     /// <summary>
-    /// >> 228 - Composite[cumulus_primitives_parachain_inherent.ParachainInherentData]
+    /// >> 226 - Composite[cumulus_primitives_parachain_inherent.ParachainInherentData]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class ParachainInherentData : BaseType
@@ -27,7 +27,7 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.cumulus_prim
         /// <summary>
         /// >> validation_data
         /// </summary>
-        public Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.PersistedValidationData ValidationData { get; set; }
+        public Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.PersistedValidationData ValidationData { get; set; }
         /// <summary>
         /// >> relay_chain_state
         /// </summary>
@@ -62,7 +62,7 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.cumulus_prim
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            ValidationData = new Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.PersistedValidationData();
+            ValidationData = new Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.PersistedValidationData();
             ValidationData.Decode(byteArray, ref p);
             RelayChainState = new Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_trie.storage_proof.StorageProof();
             RelayChainState.Decode(byteArray, ref p);

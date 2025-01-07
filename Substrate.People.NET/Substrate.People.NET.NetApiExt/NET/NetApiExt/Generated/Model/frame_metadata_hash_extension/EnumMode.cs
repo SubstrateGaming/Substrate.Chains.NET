@@ -33,7 +33,7 @@ namespace Substrate.People.NET.NetApiExt.Generated.Model.frame_metadata_hash_ext
     }
     
     /// <summary>
-    /// >> 413 - Variant[frame_metadata_hash_extension.Mode]
+    /// >> 410 - Variant[frame_metadata_hash_extension.Mode]
     /// </summary>
     public sealed class EnumMode : BaseEnum<Mode>
     {

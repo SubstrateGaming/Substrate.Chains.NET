@@ -27,7 +27,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_consensus_aura.
         /// <summary>
         /// >> value
         /// </summary>
-        public Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.sr25519.Public Value { get; set; }
+        public Substrate.Collectives.NET.NetApiExt.Generated.Types.Base.Arr32U8 Value { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
@@ -47,7 +47,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_consensus_aura.
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Value = new Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.sr25519.Public();
+            Value = new Substrate.Collectives.NET.NetApiExt.Generated.Types.Base.Arr32U8();
             Value.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

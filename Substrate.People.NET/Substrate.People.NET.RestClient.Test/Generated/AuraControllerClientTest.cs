@@ -39,14 +39,6 @@ namespace Substrate.People.NET.RestClient.Test.Generated
       {
          Substrate.People.NET.NetApiExt.Generated.Model.sp_consensus_aura.sr25519.app_sr25519.Public result;
          result = new Substrate.People.NET.NetApiExt.Generated.Model.sp_consensus_aura.sr25519.app_sr25519.Public();
-         result.Value = new Substrate.People.NET.NetApiExt.Generated.Model.sp_core.sr25519.Public();
-         result.Value = this.GetTestValue4();
-         return result;
-      }
-      public Substrate.People.NET.NetApiExt.Generated.Model.sp_core.sr25519.Public GetTestValue4()
-      {
-         Substrate.People.NET.NetApiExt.Generated.Model.sp_core.sr25519.Public result;
-         result = new Substrate.People.NET.NetApiExt.Generated.Model.sp_core.sr25519.Public();
          result.Value = new Substrate.People.NET.NetApiExt.Generated.Types.Base.Arr32U8();
          result.Value.Create(new Substrate.NetApi.Model.Types.Primitive.U8[] {
                   this.GetTestValueU8(),
@@ -112,7 +104,7 @@ namespace Substrate.People.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.People.NET.NetApiExt.Generated.Model.sp_consensus_slots.Slot GetTestValue6()
+      public Substrate.People.NET.NetApiExt.Generated.Model.sp_consensus_slots.Slot GetTestValue5()
       {
          Substrate.People.NET.NetApiExt.Generated.Model.sp_consensus_slots.Slot result;
          result = new Substrate.People.NET.NetApiExt.Generated.Model.sp_consensus_slots.Slot();
@@ -130,7 +122,7 @@ namespace Substrate.People.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          AuraControllerClient rpcClient = new AuraControllerClient(_httpClient, subscriptionClient);
-         Substrate.People.NET.NetApiExt.Generated.Model.sp_consensus_slots.Slot mockupValue = this.GetTestValue6();
+         Substrate.People.NET.NetApiExt.Generated.Model.sp_consensus_slots.Slot mockupValue = this.GetTestValue5();
 
 
          Assert.IsTrue(await rpcClient.SubscribeCurrentSlot());

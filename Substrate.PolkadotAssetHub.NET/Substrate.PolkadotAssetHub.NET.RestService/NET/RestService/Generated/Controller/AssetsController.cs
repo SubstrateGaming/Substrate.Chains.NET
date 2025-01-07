@@ -86,5 +86,25 @@ namespace Substrate.PolkadotAssetHub.NET.RestService.Generated.Controller
         {
             return this.Ok(_assetsStorage.GetMetadata(key));
         }
+        
+        /// <summary>
+        /// >> NextAssetId
+        ///  The asset ID enforced for the next asset creation, if any present. Otherwise, this storage
+        ///  item has no effect.
+        /// 
+        ///  This can be useful for setting up constraints for IDs of the new assets. For example, by
+        ///  providing an initial [`NextAssetId`] and using the [`crate::AutoIncAssetId`] callback, an
+        ///  auto-increment model can be applied to all new asset IDs.
+        /// 
+        ///  The initial next asset ID can be set using the [`GenesisConfig`] or the
+        ///  [SetNextAssetId](`migration::next_asset_id::SetNextAssetId`) migration.
+        /// </summary>
+        [HttpGet("NextAssetId")]
+        [ProducesResponseType(typeof(Substrate.NetApi.Model.Types.Primitive.U32), 200)]
+        [StorageKeyBuilder(typeof(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage.AssetsStorage), "NextAssetIdParams")]
+        public IActionResult GetNextAssetId()
+        {
+            return this.Ok(_assetsStorage.GetNextAssetId());
+        }
     }
 }

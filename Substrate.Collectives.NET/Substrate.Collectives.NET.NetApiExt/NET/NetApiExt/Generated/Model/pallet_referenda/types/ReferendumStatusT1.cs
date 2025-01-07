@@ -18,7 +18,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_referenda.t
     
     
     /// <summary>
-    /// >> 431 - Composite[pallet_referenda.types.ReferendumStatusT1]
+    /// >> 440 - Composite[pallet_referenda.types.ReferendumStatusT1]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class ReferendumStatusT1 : BaseType

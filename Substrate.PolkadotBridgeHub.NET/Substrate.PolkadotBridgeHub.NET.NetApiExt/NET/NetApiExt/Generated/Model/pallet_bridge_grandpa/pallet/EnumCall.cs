@@ -24,27 +24,87 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.pallet_bridg
         
         /// <summary>
         /// >> submit_finality_proof
-        /// See [`Pallet::submit_finality_proof`].
+        /// This call is deprecated and will be removed around May 2024. Use the
+        /// `submit_finality_proof_ex` instead. Semantically, this call is an equivalent of the
+        /// `submit_finality_proof_ex` call without current authority set id check.
         /// </summary>
         submit_finality_proof = 0,
         
         /// <summary>
         /// >> initialize
-        /// See [`Pallet::initialize`].
+        /// Bootstrap the bridge pallet with an initial header and authority set from which to sync.
+        /// 
+        /// The initial configuration provided does not need to be the genesis header of the bridged
+        /// chain, it can be any arbitrary header. You can also provide the next scheduled set
+        /// change if it is already know.
+        /// 
+        /// This function is only allowed to be called from a trusted origin and writes to storage
+        /// with practically no checks in terms of the validity of the data. It is important that
+        /// you ensure that valid data is being passed in.
         /// </summary>
         initialize = 1,
         
         /// <summary>
         /// >> set_owner
-        /// See [`Pallet::set_owner`].
+        /// Change `PalletOwner`.
+        /// 
+        /// May only be called either by root, or by `PalletOwner`.
         /// </summary>
         set_owner = 2,
         
         /// <summary>
         /// >> set_operating_mode
-        /// See [`Pallet::set_operating_mode`].
+        /// Halt or resume all pallet operations.
+        /// 
+        /// May only be called either by root, or by `PalletOwner`.
         /// </summary>
         set_operating_mode = 3,
+        
+        /// <summary>
+        /// >> submit_finality_proof_ex
+        /// Verify a target header is finalized according to the given finality proof. The proof
+        /// is assumed to be signed by GRANDPA authorities set with `current_set_id` id.
+        /// 
+        /// It will use the underlying storage pallet to fetch information about the current
+        /// authorities and best finalized header in order to verify that the header is finalized.
+        /// 
+        /// If successful in verification, it will write the target header to the underlying storage
+        /// pallet.
+        /// 
+        /// The call fails if:
+        /// 
+        /// - the pallet is halted;
+        /// 
+        /// - the pallet knows better header than the `finality_target`;
+        /// 
+        /// - the id of best GRANDPA authority set, known to the pallet is not equal to the
+        ///   `current_set_id`;
+        /// 
+        /// - verification is not optimized or invalid;
+        /// 
+        /// - header contains forced authorities set change or change with non-zero delay.
+        /// 
+        /// The `is_free_execution_expected` parameter is not really used inside the call. It is
+        /// used by the transaction extension, which should be registered at the runtime level. If
+        /// this parameter is `true`, the transaction will be treated as invalid, if the call won't
+        /// be executed for free. If transaction extension is not used by the runtime, this
+        /// parameter is not used at all.
+        /// </summary>
+        submit_finality_proof_ex = 4,
+        
+        /// <summary>
+        /// >> force_set_pallet_state
+        /// Set current authorities set and best finalized bridged header to given values
+        /// (almost) without any checks. This call can fail only if:
+        /// 
+        /// - the call origin is not a root or a pallet owner;
+        /// 
+        /// - there are too many authorities in the new set.
+        /// 
+        /// No other checks are made. Previously imported headers stay in the storage and
+        /// are still accessible after the call.
+        /// </summary>
+        force_set_pallet_state = 5,
     }
     
     /// <summary>
@@ -63,6 +123,8 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.pallet_bridg
 				AddTypeDecoder<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bp_header_chain.InitializationData>(Call.initialize);
 				AddTypeDecoder<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>>(Call.set_owner);
 				AddTypeDecoder<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bp_runtime.EnumBasicOperatingMode>(Call.set_operating_mode);
+				AddTypeDecoder<BaseTuple<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_runtime.generic.header.Header, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bp_header_chain.justification.GrandpaJustification, Substrate.NetApi.Model.Types.Primitive.U64, Substrate.NetApi.Model.Types.Primitive.Bool>>(Call.submit_finality_proof_ex);
+				AddTypeDecoder<BaseTuple<Substrate.NetApi.Model.Types.Primitive.U64, Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_consensus_grandpa.app.Public, Substrate.NetApi.Model.Types.Primitive.U64>>, Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_runtime.generic.header.Header>>(Call.force_set_pallet_state);
         }
     }
 }

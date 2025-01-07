@@ -33,7 +33,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v2.multia
     }
     
     /// <summary>
-    /// >> 108 - Variant[xcm.v2.multiasset.Fungibility]
+    /// >> 103 - Variant[xcm.v2.multiasset.Fungibility]
     /// </summary>
     public sealed class EnumFungibility : BaseEnumRust<Fungibility>
     {

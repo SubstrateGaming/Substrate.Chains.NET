@@ -18,7 +18,7 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.cumulus_prim
     
     
     /// <summary>
-    /// >> 221 - Composite[cumulus_primitives_parachain_inherent.MessageQueueChain]
+    /// >> 219 - Composite[cumulus_primitives_parachain_inherent.MessageQueueChain]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class MessageQueueChain : BaseType

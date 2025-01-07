@@ -24,7 +24,7 @@ namespace Substrate.People.NET.NetApiExt.Generated.Model.cumulus_pallet_xcm.pall
     }
     
     /// <summary>
-    /// >> 308 - Variant[cumulus_pallet_xcm.pallet.Call]
+    /// >> 309 - Variant[cumulus_pallet_xcm.pallet.Call]
     /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
     public sealed class EnumCall : BaseEnum<Call>

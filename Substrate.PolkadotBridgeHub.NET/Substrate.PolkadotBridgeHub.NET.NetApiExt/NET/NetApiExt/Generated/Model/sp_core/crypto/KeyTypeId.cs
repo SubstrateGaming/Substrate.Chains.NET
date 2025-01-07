@@ -18,7 +18,7 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.sp_core.cryp
     
     
     /// <summary>
-    /// >> 272 - Composite[sp_core.crypto.KeyTypeId]
+    /// >> 269 - Composite[sp_core.crypto.KeyTypeId]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class KeyTypeId : BaseType

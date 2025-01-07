@@ -18,7 +18,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.frame_system.exten
     
     
     /// <summary>
-    /// >> 482 - Composite[frame_system.extensions.check_mortality.CheckMortality]
+    /// >> 488 - Composite[frame_system.extensions.check_mortality.CheckMortality]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class CheckMortality : BaseType

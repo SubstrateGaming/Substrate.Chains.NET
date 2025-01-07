@@ -23,7 +23,7 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bridge_hub_p
     }
     
     /// <summary>
-    /// >> 248 - Variant[bridge_hub_polkadot_runtime.RuntimeHoldReason]
+    /// >> 246 - Variant[bridge_hub_polkadot_runtime.RuntimeHoldReason]
     /// </summary>
     public sealed class EnumRuntimeHoldReason : BaseEnum<RuntimeHoldReason>
     {

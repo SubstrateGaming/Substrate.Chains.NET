@@ -18,7 +18,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.frame_system.
     
     
     /// <summary>
-    /// >> 461 - Composite[frame_system.extensions.check_genesis.CheckGenesis]
+    /// >> 460 - Composite[frame_system.extensions.check_genesis.CheckGenesis]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class CheckGenesis : BaseType

@@ -18,7 +18,7 @@ namespace Substrate.People.NET.NetApiExt.Generated.Model.bounded_collections.bou
     
     
     /// <summary>
-    /// >> 234 - Composite[bounded_collections.bounded_vec.BoundedVecT10]
+    /// >> 232 - Composite[bounded_collections.bounded_vec.BoundedVecT10]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class BoundedVecT10 : BaseType

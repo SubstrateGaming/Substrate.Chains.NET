@@ -36,7 +36,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
         public AllianceMotionStorage(SubstrateClientExt client)
         {
             this._client = client;
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("AllianceMotion", "Proposals"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT27)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("AllianceMotion", "Proposals"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT32)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("AllianceMotion", "ProposalOf"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.Identity}, typeof(Substrate.Collectives.NET.NetApiExt.Generated.Model.primitive_types.H256), typeof(Substrate.Collectives.NET.NetApiExt.Generated.Model.collectives_polkadot_runtime.EnumRuntimeCall)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("AllianceMotion", "Voting"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
@@ -68,10 +68,10 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
         /// >> Proposals
         ///  The hashes of the active proposals.
         /// </summary>
-        public async Task<Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT27> Proposals(string blockhash, CancellationToken token)
+        public async Task<Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT32> Proposals(string blockhash, CancellationToken token)
         {
             string parameters = AllianceMotionStorage.ProposalsParams();
-            var result = await _client.GetStorageAsync<Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT27>(parameters, blockhash, token);
+            var result = await _client.GetStorageAsync<Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT32>(parameters, blockhash, token);
             return result;
         }
         
@@ -197,7 +197,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> PrimeParams
-        ///  The prime member that helps determine the default vote behavior in case of absentations.
+        ///  The prime member that helps determine the default vote behavior in case of abstentions.
         /// </summary>
         public static string PrimeParams()
         {
@@ -215,7 +215,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
         
         /// <summary>
         /// >> Prime
-        ///  The prime member that helps determine the default vote behavior in case of absentations.
+        ///  The prime member that helps determine the default vote behavior in case of abstentions.
         /// </summary>
         public async Task<Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> Prime(string blockhash, CancellationToken token)
         {

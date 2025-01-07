@@ -54,7 +54,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_salary.pall
     }
     
     /// <summary>
-    /// >> 271 - Variant[pallet_salary.pallet.Event]
+    /// >> 278 - Variant[pallet_salary.pallet.Event]
     /// The `Event` enum of this pallet
     /// </summary>
     public sealed class EnumEvent : BaseEnumRust<Event>

@@ -18,7 +18,7 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bridge_hub_p
     
     
     /// <summary>
-    /// >> 267 - Composite[bridge_hub_polkadot_runtime.SessionKeys]
+    /// >> 265 - Composite[bridge_hub_polkadot_runtime.SessionKeys]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class SessionKeys : BaseType

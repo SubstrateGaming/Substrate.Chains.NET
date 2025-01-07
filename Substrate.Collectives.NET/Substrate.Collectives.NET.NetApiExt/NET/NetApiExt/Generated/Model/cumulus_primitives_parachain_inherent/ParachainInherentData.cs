@@ -27,7 +27,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.cumulus_primitives
         /// <summary>
         /// >> validation_data
         /// </summary>
-        public Substrate.Collectives.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.PersistedValidationData ValidationData { get; set; }
+        public Substrate.Collectives.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.PersistedValidationData ValidationData { get; set; }
         /// <summary>
         /// >> relay_chain_state
         /// </summary>
@@ -62,7 +62,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.cumulus_primitives
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            ValidationData = new Substrate.Collectives.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.PersistedValidationData();
+            ValidationData = new Substrate.Collectives.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.PersistedValidationData();
             ValidationData.Decode(byteArray, ref p);
             RelayChainState = new Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_trie.storage_proof.StorageProof();
             RelayChainState.Decode(byteArray, ref p);

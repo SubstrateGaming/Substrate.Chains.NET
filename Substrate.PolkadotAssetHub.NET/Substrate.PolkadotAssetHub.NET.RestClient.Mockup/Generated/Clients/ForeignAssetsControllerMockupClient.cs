@@ -13,6 +13,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Mockup.Generated.Clients
    using System.Threading.Tasks;
    using System.Net.Http;
    using Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_assets.types;
+   using Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v4.location;
    using Substrate.PolkadotAssetHub.NET.RestClient.Mockup.Generated.Interfaces;
    
    public sealed class ForeignAssetsControllerMockupClient : MockupBaseClient, IForeignAssetsControllerMockupClient
@@ -22,21 +23,25 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Mockup.Generated.Clients
       {
          _httpClient = httpClient;
       }
-      public async Task<bool> SetAsset(AssetDetails value, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation key)
+      public async Task<bool> SetAsset(AssetDetails value, Location key)
       {
          return await SendMockupRequestAsync(_httpClient, "ForeignAssets/Asset", value.Encode(), Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage.ForeignAssetsStorage.AssetParams(key));
       }
-      public async Task<bool> SetAccount(AssetAccount value, Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> key)
+      public async Task<bool> SetAccount(AssetAccount value, Substrate.NetApi.Model.Types.Base.BaseTuple<Location, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> key)
       {
          return await SendMockupRequestAsync(_httpClient, "ForeignAssets/Account", value.Encode(), Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage.ForeignAssetsStorage.AccountParams(key));
       }
-      public async Task<bool> SetApprovals(Approval value, Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> key)
+      public async Task<bool> SetApprovals(Approval value, Substrate.NetApi.Model.Types.Base.BaseTuple<Location, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32> key)
       {
          return await SendMockupRequestAsync(_httpClient, "ForeignAssets/Approvals", value.Encode(), Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage.ForeignAssetsStorage.ApprovalsParams(key));
       }
-      public async Task<bool> SetMetadata(AssetMetadataT2 value, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation key)
+      public async Task<bool> SetMetadata(AssetMetadataT2 value, Location key)
       {
          return await SendMockupRequestAsync(_httpClient, "ForeignAssets/Metadata", value.Encode(), Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage.ForeignAssetsStorage.MetadataParams(key));
+      }
+      public async Task<bool> SetNextAssetId(Location value)
+      {
+         return await SendMockupRequestAsync(_httpClient, "ForeignAssets/NextAssetId", value.Encode(), Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage.ForeignAssetsStorage.NextAssetIdParams());
       }
    }
 }

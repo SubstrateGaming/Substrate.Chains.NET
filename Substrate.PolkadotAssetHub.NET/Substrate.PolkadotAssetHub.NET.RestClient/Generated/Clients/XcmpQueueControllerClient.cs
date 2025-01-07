@@ -13,7 +13,8 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Generated.Clients
    using System.Threading.Tasks;
    using System.Net.Http;
    using Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_btree_set;
-   using Substrate.NetApi.Model.Types.Base;
+   using Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
+   using Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.weak_bounded_vec;
    using Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.cumulus_pallet_xcmp_queue;
    using Substrate.NetApi.Model.Types.Primitive;
    using Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_arithmetic.fixed_point;
@@ -36,25 +37,25 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Generated.Clients
       {
          return await _subscriptionClient.SubscribeAsync("XcmpQueue.InboundXcmpSuspended");
       }
-      public async Task<BaseVec<OutboundChannelDetails>> GetOutboundXcmpStatus()
+      public async Task<BoundedVecT15> GetOutboundXcmpStatus()
       {
-         return await SendRequestAsync<BaseVec<OutboundChannelDetails>>(_httpClient, "xcmpqueue/outboundxcmpstatus");
+         return await SendRequestAsync<BoundedVecT15>(_httpClient, "xcmpqueue/outboundxcmpstatus");
       }
       public async Task<bool> SubscribeOutboundXcmpStatus()
       {
          return await _subscriptionClient.SubscribeAsync("XcmpQueue.OutboundXcmpStatus");
       }
-      public async Task<BaseVec<U8>> GetOutboundXcmpMessages(BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, U16> key)
+      public async Task<WeakBoundedVecT3> GetOutboundXcmpMessages(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, U16> key)
       {
-         return await SendRequestAsync<BaseVec<U8>>(_httpClient, "xcmpqueue/outboundxcmpmessages", Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage.XcmpQueueStorage.OutboundXcmpMessagesParams(key));
+         return await SendRequestAsync<WeakBoundedVecT3>(_httpClient, "xcmpqueue/outboundxcmpmessages", Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage.XcmpQueueStorage.OutboundXcmpMessagesParams(key));
       }
-      public async Task<bool> SubscribeOutboundXcmpMessages(BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, U16> key)
+      public async Task<bool> SubscribeOutboundXcmpMessages(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id, U16> key)
       {
          return await _subscriptionClient.SubscribeAsync("XcmpQueue.OutboundXcmpMessages", Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage.XcmpQueueStorage.OutboundXcmpMessagesParams(key));
       }
-      public async Task<BaseVec<U8>> GetSignalMessages(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key)
+      public async Task<WeakBoundedVecT3> GetSignalMessages(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key)
       {
-         return await SendRequestAsync<BaseVec<U8>>(_httpClient, "xcmpqueue/signalmessages", Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage.XcmpQueueStorage.SignalMessagesParams(key));
+         return await SendRequestAsync<WeakBoundedVecT3>(_httpClient, "xcmpqueue/signalmessages", Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Storage.XcmpQueueStorage.SignalMessagesParams(key));
       }
       public async Task<bool> SubscribeSignalMessages(Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.polkadot_parachain_primitives.primitives.Id key)
       {

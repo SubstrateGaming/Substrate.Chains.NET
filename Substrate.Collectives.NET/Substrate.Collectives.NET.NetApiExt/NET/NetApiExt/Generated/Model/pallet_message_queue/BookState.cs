@@ -18,7 +18,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_message_que
     
     
     /// <summary>
-    /// >> 378 - Composite[pallet_message_queue.BookState]
+    /// >> 386 - Composite[pallet_message_queue.BookState]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class BookState : BaseType

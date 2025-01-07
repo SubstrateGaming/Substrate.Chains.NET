@@ -43,7 +43,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.xcm.v2
     }
     
     /// <summary>
-    /// >> 82 - Variant[xcm.v2.OriginKind]
+    /// >> 188 - Variant[xcm.v2.OriginKind]
     /// </summary>
     public sealed class EnumOriginKind : BaseEnum<OriginKind>
     {

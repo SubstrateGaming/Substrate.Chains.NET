@@ -180,7 +180,7 @@ namespace Substrate.People.NET.NetApiExt.Generated.Model.pallet_identity.pallet
     }
     
     /// <summary>
-    /// >> 400 - Variant[pallet_identity.pallet.Error]
+    /// >> 397 - Variant[pallet_identity.pallet.Error]
     /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>

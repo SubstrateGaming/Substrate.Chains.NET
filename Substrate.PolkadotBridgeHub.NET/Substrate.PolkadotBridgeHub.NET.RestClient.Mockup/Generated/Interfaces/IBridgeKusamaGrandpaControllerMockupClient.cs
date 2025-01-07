@@ -20,7 +20,7 @@ namespace Substrate.PolkadotBridgeHub.NET.RestClient.Mockup.Generated.Interfaces
    
    public interface IBridgeKusamaGrandpaControllerMockupClient
    {
-      Task<bool> SetFreeMandatoryHeadersRemaining(U32 value);
+      Task<bool> SetFreeHeadersRemaining(U32 value);
       Task<bool> SetInitialHash(H256 value);
       Task<bool> SetBestFinalized(HeaderId value);
       Task<bool> SetImportedHashes(H256 value, U32 key);

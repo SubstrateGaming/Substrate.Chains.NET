@@ -108,7 +108,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_multisig.pa
     }
     
     /// <summary>
-    /// >> 389 - Variant[pallet_multisig.pallet.Error]
+    /// >> 397 - Variant[pallet_multisig.pallet.Error]
     /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>

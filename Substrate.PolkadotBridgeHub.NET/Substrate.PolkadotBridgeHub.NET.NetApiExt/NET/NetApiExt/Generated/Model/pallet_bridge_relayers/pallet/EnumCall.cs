@@ -24,19 +24,24 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.pallet_bridg
         
         /// <summary>
         /// >> claim_rewards
-        /// See [`Pallet::claim_rewards`].
+        /// Claim accumulated rewards.
         /// </summary>
         claim_rewards = 0,
         
         /// <summary>
         /// >> register
-        /// See [`Pallet::register`].
+        /// Register relayer or update its registration.
+        /// 
+        /// Registration allows relayer to get priority boost for its message delivery transactions.
         /// </summary>
         register = 1,
         
         /// <summary>
         /// >> deregister
-        /// See [`Pallet::deregister`].
+        /// `Deregister` relayer.
+        /// 
+        /// After this call, message delivery transactions of the relayer won't get any priority
+        /// boost.
         /// </summary>
         deregister = 2,
     }

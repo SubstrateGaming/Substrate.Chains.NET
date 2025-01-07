@@ -18,7 +18,7 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.primitive_ty
     
     
     /// <summary>
-    /// >> 12 - Composite[primitive_types.H256]
+    /// >> 13 - Composite[primitive_types.H256]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class H256 : BaseType

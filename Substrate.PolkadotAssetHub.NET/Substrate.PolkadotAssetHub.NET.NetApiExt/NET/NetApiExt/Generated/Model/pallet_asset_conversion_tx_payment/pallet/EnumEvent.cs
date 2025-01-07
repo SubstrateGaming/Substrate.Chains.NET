@@ -48,7 +48,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_asset_
         /// </summary>
         public EnumEvent()
         {
-				AddTypeDecoder<BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U128, Substrate.NetApi.Model.Types.Primitive.U128, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation>>(Event.AssetTxFeePaid);
+				AddTypeDecoder<BaseTuple<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U128, Substrate.NetApi.Model.Types.Primitive.U128, Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v4.location.Location>>(Event.AssetTxFeePaid);
 				AddTypeDecoder<Substrate.NetApi.Model.Types.Primitive.U128>(Event.AssetRefundFailed);
         }
     }

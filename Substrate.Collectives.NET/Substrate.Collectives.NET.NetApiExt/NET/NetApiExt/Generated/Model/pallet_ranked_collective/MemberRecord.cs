@@ -18,7 +18,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_ranked_coll
     
     
     /// <summary>
-    /// >> 424 - Composite[pallet_ranked_collective.MemberRecord]
+    /// >> 433 - Composite[pallet_ranked_collective.MemberRecord]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class MemberRecord : BaseType

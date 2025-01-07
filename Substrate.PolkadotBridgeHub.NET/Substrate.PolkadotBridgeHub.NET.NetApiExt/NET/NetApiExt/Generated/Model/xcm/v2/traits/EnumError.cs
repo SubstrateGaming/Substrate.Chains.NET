@@ -153,7 +153,7 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.xcm.v2.trait
     }
     
     /// <summary>
-    /// >> 297 - Variant[xcm.v2.traits.Error]
+    /// >> 296 - Variant[xcm.v2.traits.Error]
     /// </summary>
     public sealed class EnumError : BaseEnumRust<Error>
     {

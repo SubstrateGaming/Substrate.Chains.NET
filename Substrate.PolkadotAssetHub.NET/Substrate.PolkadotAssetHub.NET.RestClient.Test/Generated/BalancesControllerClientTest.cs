@@ -369,15 +369,15 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Test.Generated
       {
          Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9 result;
          result = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9();
-         result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_balances.types.IdAmountT1>();
-         result.Value.Create(new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_balances.types.IdAmountT1[] {
+         result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.frame_support.traits.tokens.misc.IdAmountT1>();
+         result.Value.Create(new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.frame_support.traits.tokens.misc.IdAmountT1[] {
                   this.GetTestValue17()});
          return result;
       }
-      public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_balances.types.IdAmountT1 GetTestValue17()
+      public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.frame_support.traits.tokens.misc.IdAmountT1 GetTestValue17()
       {
-         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_balances.types.IdAmountT1 result;
-         result = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_balances.types.IdAmountT1();
+         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.frame_support.traits.tokens.misc.IdAmountT1 result;
+         result = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.frame_support.traits.tokens.misc.IdAmountT1();
          result.Id = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.asset_hub_polkadot_runtime.EnumRuntimeHoldReason();
          result.Id.Create(this.GetTestValueEnum<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.asset_hub_polkadot_runtime.RuntimeHoldReason>());
          result.Amount = this.GetTestValueU128();
@@ -456,15 +456,15 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Test.Generated
       {
          Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10 result;
          result = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10();
-         result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_balances.types.IdAmountT2>();
-         result.Value.Create(new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_balances.types.IdAmountT2[] {
+         result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.frame_support.traits.tokens.misc.IdAmountT2>();
+         result.Value.Create(new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.frame_support.traits.tokens.misc.IdAmountT2[] {
                   this.GetTestValue21()});
          return result;
       }
-      public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_balances.types.IdAmountT2 GetTestValue21()
+      public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.frame_support.traits.tokens.misc.IdAmountT2 GetTestValue21()
       {
-         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_balances.types.IdAmountT2 result;
-         result = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_balances.types.IdAmountT2();
+         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.frame_support.traits.tokens.misc.IdAmountT2 result;
+         result = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.frame_support.traits.tokens.misc.IdAmountT2();
          result.Id = new Substrate.NetApi.Model.Types.Base.BaseTuple();
          result.Amount = this.GetTestValueU128();
          return result;

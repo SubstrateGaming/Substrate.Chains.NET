@@ -18,7 +18,7 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.frame_metada
     
     
     /// <summary>
-    /// >> 482 - Composite[frame_metadata_hash_extension.CheckMetadataHash]
+    /// >> 480 - Composite[frame_metadata_hash_extension.CheckMetadataHash]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class CheckMetadataHash : BaseType

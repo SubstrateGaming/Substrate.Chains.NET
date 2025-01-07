@@ -78,7 +78,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.xcm.v3.juncti
     }
     
     /// <summary>
-    /// >> 42 - Variant[xcm.v3.junction.NetworkId]
+    /// >> 113 - Variant[xcm.v3.junction.NetworkId]
     /// </summary>
     public sealed class EnumNetworkId : BaseEnumRust<NetworkId>
     {

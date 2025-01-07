@@ -18,7 +18,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_asset_
     
     
     /// <summary>
-    /// >> 466 - Composite[pallet_asset_conversion_tx_payment.ChargeAssetTxPayment]
+    /// >> 465 - Composite[pallet_asset_conversion_tx_payment.ChargeAssetTxPayment]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class ChargeAssetTxPayment : BaseType
@@ -31,7 +31,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_asset_
         /// <summary>
         /// >> asset_id
         /// </summary>
-        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation> AssetId { get; set; }
+        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v4.location.Location> AssetId { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
@@ -54,7 +54,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_asset_
             var start = p;
             Tip = new Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128>();
             Tip.Decode(byteArray, ref p);
-            AssetId = new Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v3.multilocation.MultiLocation>();
+            AssetId = new Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.staging_xcm.v4.location.Location>();
             AssetId.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

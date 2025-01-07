@@ -283,7 +283,7 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Storage
         public Substrate.NetApi.Model.Types.Primitive.U128 InboundDeliveryCost()
         {
             var result = new Substrate.NetApi.Model.Types.Primitive.U128();
-            result.Create("0x90C8B014000000000000000000000000");
+            result.Create("0xC854530D000000000000000000000000");
             return result;
         }
     }

@@ -18,7 +18,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_referenda.t
     
     
     /// <summary>
-    /// >> 435 - Composite[pallet_referenda.types.DecidingStatus]
+    /// >> 444 - Composite[pallet_referenda.types.DecidingStatus]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class DecidingStatus : BaseType

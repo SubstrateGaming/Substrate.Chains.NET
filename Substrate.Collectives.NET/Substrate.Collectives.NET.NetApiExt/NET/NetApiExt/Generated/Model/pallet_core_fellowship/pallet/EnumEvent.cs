@@ -92,7 +92,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_core_fellow
     }
     
     /// <summary>
-    /// >> 270 - Variant[pallet_core_fellowship.pallet.Event]
+    /// >> 277 - Variant[pallet_core_fellowship.pallet.Event]
     /// The `Event` enum of this pallet
     /// </summary>
     public sealed class EnumEvent : BaseEnumRust<Event>
@@ -103,7 +103,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_core_fellow
         /// </summary>
         public EnumEvent()
         {
-				AddTypeDecoder<Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_core_fellowship.ParamsType>(Event.ParamsChanged);
+				AddTypeDecoder<Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_core_fellowship.ParamsTypeT1>(Event.ParamsChanged);
 				AddTypeDecoder<BaseTuple<Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.Bool>>(Event.ActiveChanged);
 				AddTypeDecoder<Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>(Event.Inducted);
 				AddTypeDecoder<Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>(Event.Offboarded);
@@ -111,7 +111,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_core_fellow
 				AddTypeDecoder<BaseTuple<Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U16>>(Event.Demoted);
 				AddTypeDecoder<BaseTuple<Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U16>>(Event.Proven);
 				AddTypeDecoder<BaseTuple<Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_core_fellowship.EnumWish>>(Event.Requested);
-				AddTypeDecoder<BaseTuple<Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_core_fellowship.EnumWish, Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT8, Substrate.NetApi.Model.Types.Primitive.U16, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U16>>>(Event.EvidenceJudged);
+				AddTypeDecoder<BaseTuple<Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_core_fellowship.EnumWish, Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10, Substrate.NetApi.Model.Types.Primitive.U16, Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U16>>>(Event.EvidenceJudged);
 				AddTypeDecoder<BaseTuple<Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.NetApi.Model.Types.Primitive.U16>>(Event.Imported);
 				AddTypeDecoder<BaseTuple<Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32, Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>>(Event.Swapped);
         }

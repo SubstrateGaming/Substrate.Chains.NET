@@ -54,7 +54,7 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.pallet_sessi
     }
     
     /// <summary>
-    /// >> 274 - Variant[pallet_session.pallet.Error]
+    /// >> 271 - Variant[pallet_session.pallet.Error]
     /// Error for the session pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>

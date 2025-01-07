@@ -18,7 +18,7 @@ namespace Substrate.People.NET.NetApiExt.Generated.Types.Base
     
     
     /// <summary>
-    /// >> 239 - Composite[BTreeSetT2]
+    /// >> 237 - Composite[BTreeSetT2]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class BTreeSetT2 : BaseType

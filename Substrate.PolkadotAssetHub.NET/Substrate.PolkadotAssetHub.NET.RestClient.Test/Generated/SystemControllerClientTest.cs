@@ -158,26 +158,45 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.frame_support.dispatch.PerDispatchClassT1 GetTestValue8()
+      [Test()]
+      public async System.Threading.Tasks.Task TestInherentsApplied()
+      {
+         // Construct new Mockup client to test with.
+         SystemControllerMockupClient mockupClient = new SystemControllerMockupClient(_httpClient);
+
+         // Construct new subscription client to test with.
+         var subscriptionClient = CreateSubscriptionClient();
+
+         // Construct new RPC client to test with.
+         SystemControllerClient rpcClient = new SystemControllerClient(_httpClient, subscriptionClient);
+         Substrate.NetApi.Model.Types.Primitive.Bool mockupValue = this.GetTestValueBool();
+
+
+         Assert.IsTrue(await rpcClient.SubscribeInherentsApplied());
+
+         // Save the previously generated mockup value in RPC service storage.
+         bool mockupSetResult = await mockupClient.SetInherentsApplied(mockupValue);
+
+         // Test that the expected mockup value was handled successfully from RPC service.
+         Assert.IsTrue(mockupSetResult);
+         var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
+         Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
+
+         Substrate.NetApi.Model.Types.Primitive.Bool rpcResult = await rpcClient.GetInherentsApplied();
+
+         // Test that the expected mockup value matches the actual result from RPC service.
+         Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
+      }
+      public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.frame_support.dispatch.PerDispatchClassT1 GetTestValue9()
       {
          Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.frame_support.dispatch.PerDispatchClassT1 result;
          result = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.frame_support.dispatch.PerDispatchClassT1();
          result.Normal = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight();
-         result.Normal = this.GetTestValue9();
+         result.Normal = this.GetTestValue10();
          result.Operational = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight();
-         result.Operational = this.GetTestValue10();
+         result.Operational = this.GetTestValue11();
          result.Mandatory = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight();
-         result.Mandatory = this.GetTestValue11();
-         return result;
-      }
-      public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight GetTestValue9()
-      {
-         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight result;
-         result = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight();
-         result.RefTime = new Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U64>();
-         result.RefTime.Create(new Substrate.NetApi.CompactInteger(this.GetTestValueU64().Value));
-         result.ProofSize = new Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U64>();
-         result.ProofSize.Create(new Substrate.NetApi.CompactInteger(this.GetTestValueU64().Value));
+         result.Mandatory = this.GetTestValue12();
          return result;
       }
       public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight GetTestValue10()
@@ -200,6 +219,16 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Test.Generated
          result.ProofSize.Create(new Substrate.NetApi.CompactInteger(this.GetTestValueU64().Value));
          return result;
       }
+      public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight GetTestValue12()
+      {
+         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight result;
+         result = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight();
+         result.RefTime = new Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U64>();
+         result.RefTime.Create(new Substrate.NetApi.CompactInteger(this.GetTestValueU64().Value));
+         result.ProofSize = new Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U64>();
+         result.ProofSize.Create(new Substrate.NetApi.CompactInteger(this.GetTestValueU64().Value));
+         return result;
+      }
       [Test()]
       public async System.Threading.Tasks.Task TestBlockWeight()
       {
@@ -211,7 +240,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          SystemControllerClient rpcClient = new SystemControllerClient(_httpClient, subscriptionClient);
-         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.frame_support.dispatch.PerDispatchClassT1 mockupValue = this.GetTestValue8();
+         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.frame_support.dispatch.PerDispatchClassT1 mockupValue = this.GetTestValue9();
 
 
          Assert.IsTrue(await rpcClient.SubscribeBlockWeight());
@@ -258,7 +287,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.primitive_types.H256 GetTestValue14()
+      public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.primitive_types.H256 GetTestValue15()
       {
          Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.primitive_types.H256 result;
          result = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.primitive_types.H256();
@@ -309,7 +338,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          SystemControllerClient rpcClient = new SystemControllerClient(_httpClient, subscriptionClient);
-         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.primitive_types.H256 mockupValue = this.GetTestValue14();
+         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.primitive_types.H256 mockupValue = this.GetTestValue15();
          Substrate.NetApi.Model.Types.Primitive.U32 mockupKey = this.GetTestValueU32();
 
          Assert.IsTrue(await rpcClient.SubscribeBlockHash(mockupKey));
@@ -327,7 +356,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> GetTestValue16()
+      public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> GetTestValue17()
       {
          Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> result;
          result = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>();
@@ -346,7 +375,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          SystemControllerClient rpcClient = new SystemControllerClient(_httpClient, subscriptionClient);
-         Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> mockupValue = this.GetTestValue16();
+         Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> mockupValue = this.GetTestValue17();
          Substrate.NetApi.Model.Types.Primitive.U32 mockupKey = this.GetTestValueU32();
 
          Assert.IsTrue(await rpcClient.SubscribeExtrinsicData(mockupKey));
@@ -393,7 +422,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.primitive_types.H256 GetTestValue19()
+      public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.primitive_types.H256 GetTestValue20()
       {
          Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.primitive_types.H256 result;
          result = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.primitive_types.H256();
@@ -444,7 +473,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          SystemControllerClient rpcClient = new SystemControllerClient(_httpClient, subscriptionClient);
-         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.primitive_types.H256 mockupValue = this.GetTestValue19();
+         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.primitive_types.H256 mockupValue = this.GetTestValue20();
 
 
          Assert.IsTrue(await rpcClient.SubscribeParentHash());
@@ -462,16 +491,16 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_runtime.generic.digest.Digest GetTestValue21()
+      public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_runtime.generic.digest.Digest GetTestValue22()
       {
          Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_runtime.generic.digest.Digest result;
          result = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_runtime.generic.digest.Digest();
          result.Logs = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_runtime.generic.digest.EnumDigestItem>();
          result.Logs.Create(new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_runtime.generic.digest.EnumDigestItem[] {
-                  this.GetTestValue22()});
+                  this.GetTestValue23()});
          return result;
       }
-      public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_runtime.generic.digest.EnumDigestItem GetTestValue22()
+      public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_runtime.generic.digest.EnumDigestItem GetTestValue23()
       {
          Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_runtime.generic.digest.EnumDigestItem result;
          result = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_runtime.generic.digest.EnumDigestItem();
@@ -489,7 +518,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          SystemControllerClient rpcClient = new SystemControllerClient(_httpClient, subscriptionClient);
-         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_runtime.generic.digest.Digest mockupValue = this.GetTestValue21();
+         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.sp_runtime.generic.digest.Digest mockupValue = this.GetTestValue22();
 
 
          Assert.IsTrue(await rpcClient.SubscribeDigest());
@@ -507,42 +536,42 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.frame_system.EventRecord> GetTestValue24()
+      public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.frame_system.EventRecord> GetTestValue25()
       {
          Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.frame_system.EventRecord> result;
          result = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.frame_system.EventRecord>();
          result.Create(new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.frame_system.EventRecord[] {
-                  this.GetTestValue25()});
+                  this.GetTestValue26()});
          return result;
       }
-      public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.frame_system.EventRecord GetTestValue25()
+      public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.frame_system.EventRecord GetTestValue26()
       {
          Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.frame_system.EventRecord result;
          result = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.frame_system.EventRecord();
          result.Phase = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.frame_system.EnumPhase();
-         result.Phase = this.GetTestValue26();
+         result.Phase = this.GetTestValue27();
          result.Event = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.asset_hub_polkadot_runtime.EnumRuntimeEvent();
-         result.Event = this.GetTestValue27();
+         result.Event = this.GetTestValue28();
          result.Topics = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.primitive_types.H256>();
          result.Topics.Create(new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.primitive_types.H256[] {
-                  this.GetTestValue28()});
+                  this.GetTestValue29()});
          return result;
       }
-      public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.frame_system.EnumPhase GetTestValue26()
+      public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.frame_system.EnumPhase GetTestValue27()
       {
          Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.frame_system.EnumPhase result;
          result = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.frame_system.EnumPhase();
          // NOT IMPLEMENTED >> Initialize Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.frame_system.EnumPhase
          return result;
       }
-      public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.asset_hub_polkadot_runtime.EnumRuntimeEvent GetTestValue27()
+      public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.asset_hub_polkadot_runtime.EnumRuntimeEvent GetTestValue28()
       {
          Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.asset_hub_polkadot_runtime.EnumRuntimeEvent result;
          result = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.asset_hub_polkadot_runtime.EnumRuntimeEvent();
          // NOT IMPLEMENTED >> Initialize Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.asset_hub_polkadot_runtime.EnumRuntimeEvent
          return result;
       }
-      public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.primitive_types.H256 GetTestValue28()
+      public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.primitive_types.H256 GetTestValue29()
       {
          Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.primitive_types.H256 result;
          result = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.primitive_types.H256();
@@ -593,7 +622,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          SystemControllerClient rpcClient = new SystemControllerClient(_httpClient, subscriptionClient);
-         Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.frame_system.EventRecord> mockupValue = this.GetTestValue24();
+         Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.frame_system.EventRecord> mockupValue = this.GetTestValue25();
 
 
          Assert.IsTrue(await rpcClient.SubscribeEvents());
@@ -640,22 +669,22 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>> GetTestValue31()
+      public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>> GetTestValue32()
       {
          Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>> result;
          result = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>>();
          result.Create(new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>[] {
-                  this.GetTestValue32()});
+                  this.GetTestValue33()});
          return result;
       }
-      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32> GetTestValue32()
+      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32> GetTestValue33()
       {
          Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32> result;
          result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>();
          result.Create(this.GetTestValueU32(), this.GetTestValueU32());
          return result;
       }
-      public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.primitive_types.H256 GetTestValue33()
+      public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.primitive_types.H256 GetTestValue34()
       {
          Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.primitive_types.H256 result;
          result = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.primitive_types.H256();
@@ -706,8 +735,8 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          SystemControllerClient rpcClient = new SystemControllerClient(_httpClient, subscriptionClient);
-         Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>> mockupValue = this.GetTestValue31();
-         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.primitive_types.H256 mockupKey = this.GetTestValue33();
+         Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.NetApi.Model.Types.Primitive.U32>> mockupValue = this.GetTestValue32();
+         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.primitive_types.H256 mockupKey = this.GetTestValue34();
 
          Assert.IsTrue(await rpcClient.SubscribeEventTopics(mockupKey));
 
@@ -724,7 +753,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.frame_system.LastRuntimeUpgradeInfo GetTestValue35()
+      public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.frame_system.LastRuntimeUpgradeInfo GetTestValue36()
       {
          Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.frame_system.LastRuntimeUpgradeInfo result;
          result = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.frame_system.LastRuntimeUpgradeInfo();
@@ -744,7 +773,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          SystemControllerClient rpcClient = new SystemControllerClient(_httpClient, subscriptionClient);
-         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.frame_system.LastRuntimeUpgradeInfo mockupValue = this.GetTestValue35();
+         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.frame_system.LastRuntimeUpgradeInfo mockupValue = this.GetTestValue36();
 
 
          Assert.IsTrue(await rpcClient.SubscribeLastRuntimeUpgrade());
@@ -820,7 +849,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.frame_system.EnumPhase GetTestValue39()
+      public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.frame_system.EnumPhase GetTestValue40()
       {
          Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.frame_system.EnumPhase result;
          result = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.frame_system.EnumPhase();
@@ -838,7 +867,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          SystemControllerClient rpcClient = new SystemControllerClient(_httpClient, subscriptionClient);
-         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.frame_system.EnumPhase mockupValue = this.GetTestValue39();
+         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.frame_system.EnumPhase mockupValue = this.GetTestValue40();
 
 
          Assert.IsTrue(await rpcClient.SubscribeExecutionPhase());
@@ -856,16 +885,16 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.frame_system.CodeUpgradeAuthorization GetTestValue41()
+      public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.frame_system.CodeUpgradeAuthorization GetTestValue42()
       {
          Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.frame_system.CodeUpgradeAuthorization result;
          result = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.frame_system.CodeUpgradeAuthorization();
          result.CodeHash = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.primitive_types.H256();
-         result.CodeHash = this.GetTestValue42();
+         result.CodeHash = this.GetTestValue43();
          result.CheckVersion = this.GetTestValueBool();
          return result;
       }
-      public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.primitive_types.H256 GetTestValue42()
+      public Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.primitive_types.H256 GetTestValue43()
       {
          Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.primitive_types.H256 result;
          result = new Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.primitive_types.H256();
@@ -916,7 +945,7 @@ namespace Substrate.PolkadotAssetHub.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          SystemControllerClient rpcClient = new SystemControllerClient(_httpClient, subscriptionClient);
-         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.frame_system.CodeUpgradeAuthorization mockupValue = this.GetTestValue41();
+         Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.frame_system.CodeUpgradeAuthorization mockupValue = this.GetTestValue42();
 
 
          Assert.IsTrue(await rpcClient.SubscribeAuthorizedUpgrade());

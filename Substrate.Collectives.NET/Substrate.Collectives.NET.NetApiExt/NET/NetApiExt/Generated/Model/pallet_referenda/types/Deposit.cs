@@ -18,7 +18,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_referenda.t
     
     
     /// <summary>
-    /// >> 432 - Composite[pallet_referenda.types.Deposit]
+    /// >> 441 - Composite[pallet_referenda.types.Deposit]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Deposit : BaseType

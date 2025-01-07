@@ -24,61 +24,131 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.snowbridge_p
         
         /// <summary>
         /// >> upgrade
-        /// See [`Pallet::upgrade`].
+        /// Sends command to the Gateway contract to upgrade itself with a new implementation
+        /// contract
+        /// 
+        /// Fee required: No
+        /// 
+        /// - `origin`: Must be `Root`.
+        /// - `impl_address`: The address of the implementation contract.
+        /// - `impl_code_hash`: The codehash of the implementation contract.
+        /// - `initializer`: Optionally call an initializer on the implementation contract.
         /// </summary>
         upgrade = 0,
         
         /// <summary>
         /// >> set_operating_mode
-        /// See [`Pallet::set_operating_mode`].
+        /// Sends a message to the Gateway contract to change its operating mode
+        /// 
+        /// Fee required: No
+        /// 
+        /// - `origin`: Must be `Location`
         /// </summary>
         set_operating_mode = 1,
         
         /// <summary>
         /// >> set_pricing_parameters
-        /// See [`Pallet::set_pricing_parameters`].
+        /// Set pricing parameters on both sides of the bridge
+        /// 
+        /// Fee required: No
+        /// 
+        /// - `origin`: Must be root
         /// </summary>
         set_pricing_parameters = 2,
         
         /// <summary>
         /// >> create_agent
-        /// See [`Pallet::create_agent`].
+        /// Sends a command to the Gateway contract to instantiate a new agent contract representing
+        /// `origin`.
+        /// 
+        /// Fee required: Yes
+        /// 
+        /// - `origin`: Must be `Location` of a sibling parachain
         /// </summary>
         create_agent = 3,
         
         /// <summary>
         /// >> create_channel
-        /// See [`Pallet::create_channel`].
+        /// Sends a message to the Gateway contract to create a new channel representing `origin`
+        /// 
+        /// Fee required: Yes
+        /// 
+        /// This extrinsic is permissionless, so a fee is charged to prevent spamming and pay
+        /// for execution costs on the remote side.
+        /// 
+        /// The message is sent over the bridge on BridgeHub's own channel to the Gateway.
+        /// 
+        /// - `origin`: Must be `Location`
+        /// - `mode`: Initial operating mode of the channel
         /// </summary>
         create_channel = 4,
         
         /// <summary>
         /// >> update_channel
-        /// See [`Pallet::update_channel`].
+        /// Sends a message to the Gateway contract to update a channel configuration
+        /// 
+        /// The origin must already have a channel initialized, as this message is sent over it.
+        /// 
+        /// A partial fee will be charged for local processing only.
+        /// 
+        /// - `origin`: Must be `Location`
+        /// - `mode`: Initial operating mode of the channel
         /// </summary>
         update_channel = 5,
         
         /// <summary>
         /// >> force_update_channel
-        /// See [`Pallet::force_update_channel`].
+        /// Sends a message to the Gateway contract to update an arbitrary channel
+        /// 
+        /// Fee required: No
+        /// 
+        /// - `origin`: Must be root
+        /// - `channel_id`: ID of channel
+        /// - `mode`: Initial operating mode of the channel
+        /// - `outbound_fee`: Fee charged to users for sending outbound messages to Polkadot
         /// </summary>
         force_update_channel = 6,
         
         /// <summary>
         /// >> transfer_native_from_agent
-        /// See [`Pallet::transfer_native_from_agent`].
+        /// Sends a message to the Gateway contract to transfer ether from an agent to `recipient`.
+        /// 
+        /// A partial fee will be charged for local processing only.
+        /// 
+        /// - `origin`: Must be `Location`
         /// </summary>
         transfer_native_from_agent = 7,
         
         /// <summary>
         /// >> force_transfer_native_from_agent
-        /// See [`Pallet::force_transfer_native_from_agent`].
+        /// Sends a message to the Gateway contract to transfer ether from an agent to `recipient`.
+        /// 
+        /// Privileged. Can only be called by root.
+        /// 
+        /// Fee required: No
+        /// 
+        /// - `origin`: Must be root
+        /// - `location`: Location used to resolve the agent
+        /// - `recipient`: Recipient of funds
+        /// - `amount`: Amount to transfer
         /// </summary>
         force_transfer_native_from_agent = 8,
         
         /// <summary>
         /// >> set_token_transfer_fees
-        /// See [`Pallet::set_token_transfer_fees`].
+        /// Sends a message to the Gateway contract to update fee related parameters for
+        /// token transfers.
+        /// 
+        /// Privileged. Can only be called by root.
+        /// 
+        /// Fee required: No
+        /// 
+        /// - `origin`: Must be root
+        /// - `create_asset_xcm`: The XCM execution cost for creating a new asset class on AssetHub,
+        ///   in DOT
+        /// - `transfer_asset_xcm`: The XCM execution cost for performing a reserve transfer on
+        ///   AssetHub, in DOT
+        /// - `register_token`: The Ether fee for registering a new token, to discourage spamming
         /// </summary>
         set_token_transfer_fees = 9,
     }

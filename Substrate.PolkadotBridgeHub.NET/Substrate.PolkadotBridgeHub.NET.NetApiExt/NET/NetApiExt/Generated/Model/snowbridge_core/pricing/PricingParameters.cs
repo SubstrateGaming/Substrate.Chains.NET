@@ -18,7 +18,7 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.snowbridge_c
     
     
     /// <summary>
-    /// >> 166 - Composite[snowbridge_core.pricing.PricingParameters]
+    /// >> 164 - Composite[snowbridge_core.pricing.PricingParameters]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class PricingParameters : BaseType

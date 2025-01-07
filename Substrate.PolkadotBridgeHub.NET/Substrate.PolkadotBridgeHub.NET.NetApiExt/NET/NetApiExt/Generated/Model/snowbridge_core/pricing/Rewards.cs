@@ -18,7 +18,7 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.snowbridge_c
     
     
     /// <summary>
-    /// >> 168 - Composite[snowbridge_core.pricing.Rewards]
+    /// >> 166 - Composite[snowbridge_core.pricing.Rewards]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Rewards : BaseType

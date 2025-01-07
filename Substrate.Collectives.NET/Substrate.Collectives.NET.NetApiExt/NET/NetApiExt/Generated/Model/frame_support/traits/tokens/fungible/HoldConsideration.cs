@@ -18,7 +18,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.frame_support.trai
     
     
     /// <summary>
-    /// >> 403 - Composite[frame_support.traits.tokens.fungible.HoldConsideration]
+    /// >> 411 - Composite[frame_support.traits.tokens.fungible.HoldConsideration]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class HoldConsideration : BaseType

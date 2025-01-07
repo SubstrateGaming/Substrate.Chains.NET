@@ -24,7 +24,7 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.snowbridge_p
         
         /// <summary>
         /// >> set_operating_mode
-        /// See [`Pallet::set_operating_mode`].
+        /// Halt or resume all pallet operations. May only be called by root.
         /// </summary>
         set_operating_mode = 0,
     }

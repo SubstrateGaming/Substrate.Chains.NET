@@ -35,6 +35,10 @@ namespace Substrate.People.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "System/ExtrinsicCount", value.Encode(), Substrate.People.NET.NetApiExt.Generated.Storage.SystemStorage.ExtrinsicCountParams());
       }
+      public async Task<bool> SetInherentsApplied(Bool value)
+      {
+         return await SendMockupRequestAsync(_httpClient, "System/InherentsApplied", value.Encode(), Substrate.People.NET.NetApiExt.Generated.Storage.SystemStorage.InherentsAppliedParams());
+      }
       public async Task<bool> SetBlockWeight(PerDispatchClassT1 value)
       {
          return await SendMockupRequestAsync(_httpClient, "System/BlockWeight", value.Encode(), Substrate.People.NET.NetApiExt.Generated.Storage.SystemStorage.BlockWeightParams());

@@ -38,7 +38,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.xcm
     }
     
     /// <summary>
-    /// >> 361 - Variant[xcm.VersionedResponse]
+    /// >> 369 - Variant[xcm.VersionedResponse]
     /// </summary>
     public sealed class EnumVersionedResponse : BaseEnumRust<VersionedResponse>
     {

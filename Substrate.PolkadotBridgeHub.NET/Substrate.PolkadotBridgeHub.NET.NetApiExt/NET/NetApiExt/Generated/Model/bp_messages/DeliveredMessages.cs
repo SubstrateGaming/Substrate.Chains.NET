@@ -18,7 +18,7 @@ namespace Substrate.PolkadotBridgeHub.NET.NetApiExt.Generated.Model.bp_messages
     
     
     /// <summary>
-    /// >> 154 - Composite[bp_messages.DeliveredMessages]
+    /// >> 152 - Composite[bp_messages.DeliveredMessages]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class DeliveredMessages : BaseType

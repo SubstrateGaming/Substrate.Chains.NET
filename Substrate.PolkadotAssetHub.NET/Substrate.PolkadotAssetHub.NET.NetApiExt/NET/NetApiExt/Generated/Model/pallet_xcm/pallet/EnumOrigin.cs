@@ -33,7 +33,7 @@ namespace Substrate.PolkadotAssetHub.NET.NetApiExt.Generated.Model.pallet_xcm.pa
     }
     
     /// <summary>
-    /// >> 386 - Variant[pallet_xcm.pallet.Origin]
+    /// >> 385 - Variant[pallet_xcm.pallet.Origin]
     /// </summary>
     public sealed class EnumOrigin : BaseEnumRust<Origin>
     {
