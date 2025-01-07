@@ -40,17 +40,17 @@ namespace Substrate.People.NET.RestClient.Test.Generated
       {
          Substrate.People.NET.NetApiExt.Generated.Model.pallet_identity.types.Registration result;
          result = new Substrate.People.NET.NetApiExt.Generated.Model.pallet_identity.types.Registration();
-         result.Judgements = new Substrate.People.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT20();
+         result.Judgements = new Substrate.People.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT21();
          result.Judgements = this.GetTestValue4();
          result.Deposit = this.GetTestValueU128();
          result.Info = new Substrate.People.NET.NetApiExt.Generated.Model.people_polkadot_runtime.people.IdentityInfo();
          result.Info = this.GetTestValue7();
          return result;
       }
-      public Substrate.People.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT20 GetTestValue4()
+      public Substrate.People.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT21 GetTestValue4()
       {
-         Substrate.People.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT20 result;
-         result = new Substrate.People.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT20();
+         Substrate.People.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT21 result;
+         result = new Substrate.People.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT21();
          result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.People.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumJudgement>>();
          result.Value.Create(new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.People.NET.NetApiExt.Generated.Model.pallet_identity.types.EnumJudgement>[] {
                   this.GetTestValue5()});
@@ -394,17 +394,17 @@ namespace Substrate.People.NET.RestClient.Test.Generated
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.People.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17> GetTestValue27()
+      public Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.People.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18> GetTestValue27()
       {
-         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.People.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17> result;
-         result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.People.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17>();
+         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.People.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18> result;
+         result = new Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.People.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18>();
          result.Create(this.GetTestValueU128(), this.GetTestValue28());
          return result;
       }
-      public Substrate.People.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17 GetTestValue28()
+      public Substrate.People.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18 GetTestValue28()
       {
-         Substrate.People.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17 result;
-         result = new Substrate.People.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17();
+         Substrate.People.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18 result;
+         result = new Substrate.People.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18();
          result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.People.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32>();
          result.Value.Create(new Substrate.People.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32[] {
                   this.GetTestValue29()});
@@ -501,7 +501,7 @@ namespace Substrate.People.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          IdentityControllerClient rpcClient = new IdentityControllerClient(_httpClient, subscriptionClient);
-         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.People.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17> mockupValue = this.GetTestValue27();
+         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.People.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18> mockupValue = this.GetTestValue27();
          Substrate.People.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 mockupKey = this.GetTestValue30();
 
          Assert.IsTrue(await rpcClient.SubscribeSubsOf(mockupKey));
@@ -514,15 +514,15 @@ namespace Substrate.People.NET.RestClient.Test.Generated
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.People.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT17> rpcResult = await rpcClient.GetSubsOf(mockupKey);
+         Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U128, Substrate.People.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT18> rpcResult = await rpcClient.GetSubsOf(mockupKey);
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
       }
-      public Substrate.People.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT21 GetTestValue32()
+      public Substrate.People.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT22 GetTestValue32()
       {
-         Substrate.People.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT21 result;
-         result = new Substrate.People.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT21();
+         Substrate.People.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT22 result;
+         result = new Substrate.People.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT22();
          result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.People.NET.NetApiExt.Generated.Model.pallet_identity.types.RegistrarInfo>>();
          result.Value.Create(new Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.People.NET.NetApiExt.Generated.Model.pallet_identity.types.RegistrarInfo>[] {
                   this.GetTestValue33()});
@@ -596,7 +596,7 @@ namespace Substrate.People.NET.RestClient.Test.Generated
 
          // Construct new RPC client to test with.
          IdentityControllerClient rpcClient = new IdentityControllerClient(_httpClient, subscriptionClient);
-         Substrate.People.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT21 mockupValue = this.GetTestValue32();
+         Substrate.People.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT22 mockupValue = this.GetTestValue32();
 
 
          Assert.IsTrue(await rpcClient.SubscribeRegistrars());
@@ -609,7 +609,7 @@ namespace Substrate.People.NET.RestClient.Test.Generated
          var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromSeconds(1));
          Assert.IsTrue(await subscriptionClient.ReceiveNextAsync(cts.Token));
 
-         Substrate.People.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT21 rpcResult = await rpcClient.GetRegistrars();
+         Substrate.People.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT22 rpcResult = await rpcClient.GetRegistrars();
 
          // Test that the expected mockup value matches the actual result from RPC service.
          Assert.AreEqual(mockupValue.Encode(), rpcResult.Encode());
@@ -618,15 +618,15 @@ namespace Substrate.People.NET.RestClient.Test.Generated
       {
          Substrate.People.NET.NetApiExt.Generated.Model.pallet_identity.types.AuthorityProperties result;
          result = new Substrate.People.NET.NetApiExt.Generated.Model.pallet_identity.types.AuthorityProperties();
-         result.Suffix = new Substrate.People.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT22();
+         result.Suffix = new Substrate.People.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT23();
          result.Suffix = this.GetTestValue38();
          result.Allocation = this.GetTestValueU32();
          return result;
       }
-      public Substrate.People.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT22 GetTestValue38()
+      public Substrate.People.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT23 GetTestValue38()
       {
-         Substrate.People.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT22 result;
-         result = new Substrate.People.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT22();
+         Substrate.People.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT23 result;
+         result = new Substrate.People.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT23();
          result.Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>();
          result.Value.Create(new Substrate.NetApi.Model.Types.Primitive.U8[] {
                   this.GetTestValueU8()});

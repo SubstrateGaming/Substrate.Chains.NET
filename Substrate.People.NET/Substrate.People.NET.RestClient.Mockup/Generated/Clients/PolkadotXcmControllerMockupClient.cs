@@ -17,6 +17,7 @@ namespace Substrate.People.NET.RestClient.Mockup.Generated.Clients
    using Substrate.NetApi.Model.Types.Base;
    using Substrate.People.NET.NetApiExt.Generated.Model.sp_weights.weight_v2;
    using Substrate.People.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec;
+   using Substrate.People.NET.NetApiExt.Generated.Model.staging_xcm.v4;
    using Substrate.People.NET.RestClient.Mockup.Generated.Interfaces;
    
    public sealed class PolkadotXcmControllerMockupClient : MockupBaseClient, IPolkadotXcmControllerMockupClient
@@ -54,7 +55,7 @@ namespace Substrate.People.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "PolkadotXcm/VersionNotifyTargets", value.Encode(), Substrate.People.NET.NetApiExt.Generated.Storage.PolkadotXcmStorage.VersionNotifyTargetsParams(key));
       }
-      public async Task<bool> SetVersionDiscoveryQueue(BoundedVecT13 value)
+      public async Task<bool> SetVersionDiscoveryQueue(BoundedVecT14 value)
       {
          return await SendMockupRequestAsync(_httpClient, "PolkadotXcm/VersionDiscoveryQueue", value.Encode(), Substrate.People.NET.NetApiExt.Generated.Storage.PolkadotXcmStorage.VersionDiscoveryQueueParams());
       }
@@ -66,13 +67,21 @@ namespace Substrate.People.NET.RestClient.Mockup.Generated.Clients
       {
          return await SendMockupRequestAsync(_httpClient, "PolkadotXcm/RemoteLockedFungibles", value.Encode(), Substrate.People.NET.NetApiExt.Generated.Storage.PolkadotXcmStorage.RemoteLockedFungiblesParams(key));
       }
-      public async Task<bool> SetLockedFungibles(BoundedVecT15 value, Substrate.People.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+      public async Task<bool> SetLockedFungibles(BoundedVecT16 value, Substrate.People.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {
          return await SendMockupRequestAsync(_httpClient, "PolkadotXcm/LockedFungibles", value.Encode(), Substrate.People.NET.NetApiExt.Generated.Storage.PolkadotXcmStorage.LockedFungiblesParams(key));
       }
       public async Task<bool> SetXcmExecutionSuspended(Bool value)
       {
          return await SendMockupRequestAsync(_httpClient, "PolkadotXcm/XcmExecutionSuspended", value.Encode(), Substrate.People.NET.NetApiExt.Generated.Storage.PolkadotXcmStorage.XcmExecutionSuspendedParams());
+      }
+      public async Task<bool> SetShouldRecordXcm(Bool value)
+      {
+         return await SendMockupRequestAsync(_httpClient, "PolkadotXcm/ShouldRecordXcm", value.Encode(), Substrate.People.NET.NetApiExt.Generated.Storage.PolkadotXcmStorage.ShouldRecordXcmParams());
+      }
+      public async Task<bool> SetRecordedXcm(XcmT1 value)
+      {
+         return await SendMockupRequestAsync(_httpClient, "PolkadotXcm/RecordedXcm", value.Encode(), Substrate.People.NET.NetApiExt.Generated.Storage.PolkadotXcmStorage.RecordedXcmParams());
       }
    }
 }

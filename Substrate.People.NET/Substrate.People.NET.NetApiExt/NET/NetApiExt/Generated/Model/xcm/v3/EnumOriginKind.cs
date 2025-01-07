@@ -11,26 +11,41 @@ using Substrate.NetApi.Model.Types.Base;
 using System.Collections.Generic;
 
 
-namespace Substrate.People.NET.NetApiExt.Generated.Model.polkadot_primitives.v6
+namespace Substrate.People.NET.NetApiExt.Generated.Model.xcm.v3
 {
     
     
     /// <summary>
-    /// >> UpgradeRestriction
+    /// >> OriginKind
     /// </summary>
-    public enum UpgradeRestriction
+    public enum OriginKind
     {
         
         /// <summary>
-        /// >> Present
+        /// >> Native
         /// </summary>
-        Present = 0,
+        Native = 0,
+        
+        /// <summary>
+        /// >> SovereignAccount
+        /// </summary>
+        SovereignAccount = 1,
+        
+        /// <summary>
+        /// >> Superuser
+        /// </summary>
+        Superuser = 2,
+        
+        /// <summary>
+        /// >> Xcm
+        /// </summary>
+        Xcm = 3,
     }
     
     /// <summary>
-    /// >> 169 - Variant[polkadot_primitives.v6.UpgradeRestriction]
+    /// >> 82 - Variant[xcm.v3.OriginKind]
     /// </summary>
-    public sealed class EnumUpgradeRestriction : BaseEnum<UpgradeRestriction>
+    public sealed class EnumOriginKind : BaseEnum<OriginKind>
     {
     }
 }

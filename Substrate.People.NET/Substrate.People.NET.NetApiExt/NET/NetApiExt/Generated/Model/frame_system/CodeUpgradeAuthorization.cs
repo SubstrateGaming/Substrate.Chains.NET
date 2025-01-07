@@ -18,7 +18,7 @@ namespace Substrate.People.NET.NetApiExt.Generated.Model.frame_system
     
     
     /// <summary>
-    /// >> 137 - Composite[frame_system.CodeUpgradeAuthorization]
+    /// >> 136 - Composite[frame_system.CodeUpgradeAuthorization]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class CodeUpgradeAuthorization : BaseType

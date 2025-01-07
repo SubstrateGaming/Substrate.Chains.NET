@@ -23,9 +23,9 @@ namespace Substrate.People.NET.RestClient.Generated.Interfaces
       Task<bool> SubscribeIdentityOf(AccountId32 key);
       Task<BaseTuple<AccountId32, EnumData>> GetSuperOf(AccountId32 key);
       Task<bool> SubscribeSuperOf(AccountId32 key);
-      Task<BaseTuple<U128, BoundedVecT17>> GetSubsOf(AccountId32 key);
+      Task<BaseTuple<U128, BoundedVecT18>> GetSubsOf(AccountId32 key);
       Task<bool> SubscribeSubsOf(AccountId32 key);
-      Task<BoundedVecT21> GetRegistrars();
+      Task<BoundedVecT22> GetRegistrars();
       Task<bool> SubscribeRegistrars();
       Task<AuthorityProperties> GetUsernameAuthorities(AccountId32 key);
       Task<bool> SubscribeUsernameAuthorities(AccountId32 key);

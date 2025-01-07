@@ -24,6 +24,8 @@ namespace Substrate.People.NET.RestClient.Generated.Interfaces
       Task<bool> SubscribeAccount(Substrate.People.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key);
       Task<U32> GetExtrinsicCount();
       Task<bool> SubscribeExtrinsicCount();
+      Task<Bool> GetInherentsApplied();
+      Task<bool> SubscribeInherentsApplied();
       Task<PerDispatchClassT1> GetBlockWeight();
       Task<bool> SubscribeBlockWeight();
       Task<U32> GetAllExtrinsicsLen();

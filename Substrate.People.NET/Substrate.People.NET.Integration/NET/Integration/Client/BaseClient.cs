@@ -84,15 +84,7 @@ namespace Substrate.People.NET.Integration.Client
         {
             if (!IsConnected)
             {
-                try
-                {
-                    await SubstrateClient.ConnectAsync(useMetadata, standardSubstrate, token);
-                }
-                catch (Exception e)
-                {
-                    Log.Error("BaseClient.ConnectAsync: {0}",
-                        e.ToString());
-                }
+                await SubstrateClient.ConnectAsync(useMetadata, standardSubstrate, token);
             }
 
             return IsConnected;

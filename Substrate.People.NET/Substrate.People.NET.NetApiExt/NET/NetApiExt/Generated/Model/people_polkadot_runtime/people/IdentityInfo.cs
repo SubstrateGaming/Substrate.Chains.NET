@@ -18,7 +18,7 @@ namespace Substrate.People.NET.NetApiExt.Generated.Model.people_polkadot_runtime
     
     
     /// <summary>
-    /// >> 325 - Composite[people_polkadot_runtime.people.IdentityInfo]
+    /// >> 326 - Composite[people_polkadot_runtime.people.IdentityInfo]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class IdentityInfo : BaseType

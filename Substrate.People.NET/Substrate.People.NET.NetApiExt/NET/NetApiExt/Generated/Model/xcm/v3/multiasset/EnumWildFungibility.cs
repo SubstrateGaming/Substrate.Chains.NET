@@ -33,7 +33,7 @@ namespace Substrate.People.NET.NetApiExt.Generated.Model.xcm.v3.multiasset
     }
     
     /// <summary>
-    /// >> 294 - Variant[xcm.v3.multiasset.WildFungibility]
+    /// >> 295 - Variant[xcm.v3.multiasset.WildFungibility]
     /// </summary>
     public sealed class EnumWildFungibility : BaseEnum<WildFungibility>
     {

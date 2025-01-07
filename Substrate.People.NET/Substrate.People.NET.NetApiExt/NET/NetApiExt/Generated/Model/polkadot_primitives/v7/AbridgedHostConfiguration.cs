@@ -13,12 +13,12 @@ using Substrate.NetApi.Model.Types.Metadata.Base;
 using System.Collections.Generic;
 
 
-namespace Substrate.People.NET.NetApiExt.Generated.Model.polkadot_primitives.v6
+namespace Substrate.People.NET.NetApiExt.Generated.Model.polkadot_primitives.v7
 {
     
     
     /// <summary>
-    /// >> 177 - Composite[polkadot_primitives.v6.AbridgedHostConfiguration]
+    /// >> 176 - Composite[polkadot_primitives.v7.AbridgedHostConfiguration]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class AbridgedHostConfiguration : BaseType
@@ -63,7 +63,7 @@ namespace Substrate.People.NET.NetApiExt.Generated.Model.polkadot_primitives.v6
         /// <summary>
         /// >> async_backing_params
         /// </summary>
-        public Substrate.People.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.async_backing.AsyncBackingParams AsyncBackingParams { get; set; }
+        public Substrate.People.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.async_backing.AsyncBackingParams AsyncBackingParams { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
@@ -110,7 +110,7 @@ namespace Substrate.People.NET.NetApiExt.Generated.Model.polkadot_primitives.v6
             ValidationUpgradeCooldown.Decode(byteArray, ref p);
             ValidationUpgradeDelay = new Substrate.NetApi.Model.Types.Primitive.U32();
             ValidationUpgradeDelay.Decode(byteArray, ref p);
-            AsyncBackingParams = new Substrate.People.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.async_backing.AsyncBackingParams();
+            AsyncBackingParams = new Substrate.People.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.async_backing.AsyncBackingParams();
             AsyncBackingParams.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

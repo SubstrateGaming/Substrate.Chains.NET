@@ -13,12 +13,12 @@ using Substrate.NetApi.Model.Types.Metadata.Base;
 using System.Collections.Generic;
 
 
-namespace Substrate.People.NET.NetApiExt.Generated.Model.polkadot_primitives.v6.async_backing
+namespace Substrate.People.NET.NetApiExt.Generated.Model.polkadot_primitives.v7.async_backing
 {
     
     
     /// <summary>
-    /// >> 178 - Composite[polkadot_primitives.v6.async_backing.AsyncBackingParams]
+    /// >> 177 - Composite[polkadot_primitives.v7.async_backing.AsyncBackingParams]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class AsyncBackingParams : BaseType

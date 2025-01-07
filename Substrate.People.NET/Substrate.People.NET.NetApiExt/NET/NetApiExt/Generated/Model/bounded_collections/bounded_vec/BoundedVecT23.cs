@@ -13,26 +13,26 @@ using Substrate.NetApi.Model.Types.Metadata.Base;
 using System.Collections.Generic;
 
 
-namespace Substrate.People.NET.NetApiExt.Generated.Model.sp_core.ed25519
+namespace Substrate.People.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec
 {
     
     
     /// <summary>
-    /// >> 361 - Composite[sp_core.ed25519.Signature]
+    /// >> 395 - Composite[bounded_collections.bounded_vec.BoundedVecT23]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
-    public sealed class Signature : BaseType
+    public sealed class BoundedVecT23 : BaseType
     {
         
         /// <summary>
         /// >> value
         /// </summary>
-        public Substrate.People.NET.NetApiExt.Generated.Types.Base.Arr64U8 Value { get; set; }
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> Value { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
         {
-            return "Signature";
+            return "BoundedVecT23";
         }
         
         /// <inheritdoc/>
@@ -47,7 +47,7 @@ namespace Substrate.People.NET.NetApiExt.Generated.Model.sp_core.ed25519
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Value = new Substrate.People.NET.NetApiExt.Generated.Types.Base.Arr64U8();
+            Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>();
             Value.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

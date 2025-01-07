@@ -67,7 +67,7 @@ namespace Substrate.People.NET.NetApiExt.Generated.Model.xcm.v3
 				AddTypeDecoder<Substrate.People.NET.NetApiExt.Generated.Model.xcm.v3.multiasset.MultiAssets>(Response.Assets);
 				AddTypeDecoder<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.NetApi.Model.Types.Primitive.U32, Substrate.People.NET.NetApiExt.Generated.Model.xcm.v3.traits.EnumError>>>(Response.ExecutionResult);
 				AddTypeDecoder<Substrate.NetApi.Model.Types.Primitive.U32>(Response.Version);
-				AddTypeDecoder<Substrate.People.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT11>(Response.PalletsInfo);
+				AddTypeDecoder<Substrate.People.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT12>(Response.PalletsInfo);
 				AddTypeDecoder<Substrate.People.NET.NetApiExt.Generated.Model.xcm.v3.EnumMaybeErrorCode>(Response.DispatchResult);
         }
     }

@@ -33,7 +33,7 @@ namespace Substrate.People.NET.NetApiExt.Generated.Model.xcm.v2
     }
     
     /// <summary>
-    /// >> 286 - Variant[xcm.v2.WeightLimit]
+    /// >> 287 - Variant[xcm.v2.WeightLimit]
     /// </summary>
     public sealed class EnumWeightLimit : BaseEnumRust<WeightLimit>
     {

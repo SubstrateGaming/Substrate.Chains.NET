@@ -18,7 +18,7 @@ namespace Substrate.People.NET.NetApiExt.Generated.Model.frame_metadata_hash_ext
     
     
     /// <summary>
-    /// >> 412 - Composite[frame_metadata_hash_extension.CheckMetadataHash]
+    /// >> 409 - Composite[frame_metadata_hash_extension.CheckMetadataHash]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class CheckMetadataHash : BaseType

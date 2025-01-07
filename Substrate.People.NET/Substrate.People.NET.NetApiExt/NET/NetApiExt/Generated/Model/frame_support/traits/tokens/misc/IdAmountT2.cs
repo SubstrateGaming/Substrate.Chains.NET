@@ -13,21 +13,21 @@ using Substrate.NetApi.Model.Types.Metadata.Base;
 using System.Collections.Generic;
 
 
-namespace Substrate.People.NET.NetApiExt.Generated.Model.pallet_balances.types
+namespace Substrate.People.NET.NetApiExt.Generated.Model.frame_support.traits.tokens.misc
 {
     
     
     /// <summary>
-    /// >> 206 - Composite[pallet_balances.types.IdAmountT1]
+    /// >> 209 - Composite[frame_support.traits.tokens.misc.IdAmountT2]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
-    public sealed class IdAmountT1 : BaseType
+    public sealed class IdAmountT2 : BaseType
     {
         
         /// <summary>
         /// >> id
         /// </summary>
-        public Substrate.People.NET.NetApiExt.Generated.Model.people_polkadot_runtime.EnumRuntimeHoldReason Id { get; set; }
+        public Substrate.NetApi.Model.Types.Base.BaseTuple Id { get; set; }
         /// <summary>
         /// >> amount
         /// </summary>
@@ -36,7 +36,7 @@ namespace Substrate.People.NET.NetApiExt.Generated.Model.pallet_balances.types
         /// <inheritdoc/>
         public override string TypeName()
         {
-            return "IdAmountT1";
+            return "IdAmountT2";
         }
         
         /// <inheritdoc/>
@@ -52,7 +52,7 @@ namespace Substrate.People.NET.NetApiExt.Generated.Model.pallet_balances.types
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Id = new Substrate.People.NET.NetApiExt.Generated.Model.people_polkadot_runtime.EnumRuntimeHoldReason();
+            Id = new Substrate.NetApi.Model.Types.Base.BaseTuple();
             Id.Decode(byteArray, ref p);
             Amount = new Substrate.NetApi.Model.Types.Primitive.U128();
             Amount.Decode(byteArray, ref p);

@@ -11,31 +11,31 @@ using Substrate.NetApi.Model.Types.Base;
 using System.Collections.Generic;
 
 
-namespace Substrate.People.NET.NetApiExt.Generated.Model.frame_metadata_hash_extension
+namespace Substrate.People.NET.NetApiExt.Generated.Model.polkadot_primitives.v7
 {
     
     
     /// <summary>
-    /// >> Mode
+    /// >> UpgradeGoAhead
     /// </summary>
-    public enum Mode
+    public enum UpgradeGoAhead
     {
         
         /// <summary>
-        /// >> Disabled
+        /// >> Abort
         /// </summary>
-        Disabled = 0,
+        Abort = 0,
         
         /// <summary>
-        /// >> Enabled
+        /// >> GoAhead
         /// </summary>
-        Enabled = 1,
+        GoAhead = 1,
     }
     
     /// <summary>
-    /// >> 410 - Variant[frame_metadata_hash_extension.Mode]
+    /// >> 162 - Variant[polkadot_primitives.v7.UpgradeGoAhead]
     /// </summary>
-    public sealed class EnumMode : BaseEnum<Mode>
+    public sealed class EnumUpgradeGoAhead : BaseEnum<UpgradeGoAhead>
     {
     }
 }

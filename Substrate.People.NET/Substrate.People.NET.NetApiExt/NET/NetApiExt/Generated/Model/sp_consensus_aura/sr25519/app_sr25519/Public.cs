@@ -18,7 +18,7 @@ namespace Substrate.People.NET.NetApiExt.Generated.Model.sp_consensus_aura.sr255
     
     
     /// <summary>
-    /// >> 227 - Composite[sp_consensus_aura.sr25519.app_sr25519.Public]
+    /// >> 226 - Composite[sp_consensus_aura.sr25519.app_sr25519.Public]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class Public : BaseType
@@ -27,7 +27,7 @@ namespace Substrate.People.NET.NetApiExt.Generated.Model.sp_consensus_aura.sr255
         /// <summary>
         /// >> value
         /// </summary>
-        public Substrate.People.NET.NetApiExt.Generated.Model.sp_core.sr25519.Public Value { get; set; }
+        public Substrate.People.NET.NetApiExt.Generated.Types.Base.Arr32U8 Value { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
@@ -47,7 +47,7 @@ namespace Substrate.People.NET.NetApiExt.Generated.Model.sp_consensus_aura.sr255
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Value = new Substrate.People.NET.NetApiExt.Generated.Model.sp_core.sr25519.Public();
+            Value = new Substrate.People.NET.NetApiExt.Generated.Types.Base.Arr32U8();
             Value.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

@@ -1303,7 +1303,7 @@ namespace Substrate.People.NET.NetApiExt.Generated.Model.sp_runtime.generic.era
     }
     
     /// <summary>
-    /// >> 408 - Variant[sp_runtime.generic.era.Era]
+    /// >> 405 - Variant[sp_runtime.generic.era.Era]
     /// </summary>
     public sealed class EnumEra : BaseEnumRust<Era>
     {

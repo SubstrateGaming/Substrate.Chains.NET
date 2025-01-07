@@ -89,7 +89,7 @@ namespace Substrate.People.NET.RestService
          else
          {
             // Configure regular data provider
-            _storageDataProvider = new SubstrateDataProvider(Environment.GetEnvironmentVariable("SUBSTRATE_WEBSOCKET_ENDPOINT") ?? "wss://polkadot-people-rpc.polkadot.io");
+            _storageDataProvider = new SubstrateDataProvider(Environment.GetEnvironmentVariable("SUBSTRATE_WEBSOCKET_ENDPOINT") ?? "wss://sys.ibp.network/people-polkadot");
          }
 
          // Configure web sockets to allow clients to subscribe to storage changes.

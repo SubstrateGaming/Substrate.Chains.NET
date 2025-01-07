@@ -26,17 +26,17 @@ namespace Substrate.People.NET.RestClient.Generated.Clients
          _httpClient = httpClient;
          _subscriptionClient = subscriptionClient;
       }
-      public async Task<BaseTuple<BoundedVecT18, U128>> GetProxies(Substrate.People.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+      public async Task<BaseTuple<BoundedVecT19, U128>> GetProxies(Substrate.People.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {
-         return await SendRequestAsync<BaseTuple<BoundedVecT18, U128>>(_httpClient, "proxy/proxies", Substrate.People.NET.NetApiExt.Generated.Storage.ProxyStorage.ProxiesParams(key));
+         return await SendRequestAsync<BaseTuple<BoundedVecT19, U128>>(_httpClient, "proxy/proxies", Substrate.People.NET.NetApiExt.Generated.Storage.ProxyStorage.ProxiesParams(key));
       }
       public async Task<bool> SubscribeProxies(Substrate.People.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {
          return await _subscriptionClient.SubscribeAsync("Proxy.Proxies", Substrate.People.NET.NetApiExt.Generated.Storage.ProxyStorage.ProxiesParams(key));
       }
-      public async Task<BaseTuple<BoundedVecT19, U128>> GetAnnouncements(Substrate.People.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
+      public async Task<BaseTuple<BoundedVecT20, U128>> GetAnnouncements(Substrate.People.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {
-         return await SendRequestAsync<BaseTuple<BoundedVecT19, U128>>(_httpClient, "proxy/announcements", Substrate.People.NET.NetApiExt.Generated.Storage.ProxyStorage.AnnouncementsParams(key));
+         return await SendRequestAsync<BaseTuple<BoundedVecT20, U128>>(_httpClient, "proxy/announcements", Substrate.People.NET.NetApiExt.Generated.Storage.ProxyStorage.AnnouncementsParams(key));
       }
       public async Task<bool> SubscribeAnnouncements(Substrate.People.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key)
       {

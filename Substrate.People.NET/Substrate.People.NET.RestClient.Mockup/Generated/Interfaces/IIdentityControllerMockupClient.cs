@@ -21,8 +21,8 @@ namespace Substrate.People.NET.RestClient.Mockup.Generated.Interfaces
    {
       Task<bool> SetIdentityOf(BaseTuple<Registration, BaseOpt<BoundedVecT4>> value, AccountId32 key);
       Task<bool> SetSuperOf(BaseTuple<AccountId32, EnumData> value, AccountId32 key);
-      Task<bool> SetSubsOf(BaseTuple<U128, BoundedVecT17> value, AccountId32 key);
-      Task<bool> SetRegistrars(BoundedVecT21 value);
+      Task<bool> SetSubsOf(BaseTuple<U128, BoundedVecT18> value, AccountId32 key);
+      Task<bool> SetRegistrars(BoundedVecT22 value);
       Task<bool> SetUsernameAuthorities(AuthorityProperties value, AccountId32 key);
       Task<bool> SetAccountOfUsername(AccountId32 value, BoundedVecT4 key);
       Task<bool> SetPendingUsernames(BaseTuple<AccountId32, U32> value, BoundedVecT4 key);
