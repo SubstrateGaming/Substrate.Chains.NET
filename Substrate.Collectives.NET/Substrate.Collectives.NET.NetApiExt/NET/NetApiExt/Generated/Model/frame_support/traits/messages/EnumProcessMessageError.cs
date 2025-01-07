@@ -45,6 +45,11 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.frame_support.trai
         /// >> Yield
         /// </summary>
         Yield = 4,
+        
+        /// <summary>
+        /// >> StackLimitReached
+        /// </summary>
+        StackLimitReached = 5,
     }
     
     /// <summary>
@@ -63,6 +68,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.frame_support.trai
 				AddTypeDecoder<BaseVoid>(ProcessMessageError.Unsupported);
 				AddTypeDecoder<Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_weights.weight_v2.Weight>(ProcessMessageError.Overweight);
 				AddTypeDecoder<BaseVoid>(ProcessMessageError.Yield);
+				AddTypeDecoder<BaseVoid>(ProcessMessageError.StackLimitReached);
         }
     }
 }

@@ -125,6 +125,21 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.collectives_polkad
         /// >> PromoteTo6Dan
         /// </summary>
         PromoteTo6Dan = 20,
+        
+        /// <summary>
+        /// >> FastPromoteTo1Dan
+        /// </summary>
+        FastPromoteTo1Dan = 21,
+        
+        /// <summary>
+        /// >> FastPromoteTo2Dan
+        /// </summary>
+        FastPromoteTo2Dan = 22,
+        
+        /// <summary>
+        /// >> FastPromoteTo3Dan
+        /// </summary>
+        FastPromoteTo3Dan = 23,
     }
     
     /// <summary>

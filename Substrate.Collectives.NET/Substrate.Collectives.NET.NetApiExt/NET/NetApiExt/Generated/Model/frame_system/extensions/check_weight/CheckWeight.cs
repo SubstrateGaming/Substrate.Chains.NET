@@ -18,7 +18,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.frame_system.exten
     
     
     /// <summary>
-    /// >> 485 - Composite[frame_system.extensions.check_weight.CheckWeight]
+    /// >> 491 - Composite[frame_system.extensions.check_weight.CheckWeight]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class CheckWeight : BaseType

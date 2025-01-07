@@ -28,7 +28,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.collectives_polkad
     }
     
     /// <summary>
-    /// >> 325 - Variant[collectives_polkadot_runtime.RuntimeHoldReason]
+    /// >> 332 - Variant[collectives_polkadot_runtime.RuntimeHoldReason]
     /// </summary>
     public sealed class EnumRuntimeHoldReason : BaseEnumRust<RuntimeHoldReason>
     {

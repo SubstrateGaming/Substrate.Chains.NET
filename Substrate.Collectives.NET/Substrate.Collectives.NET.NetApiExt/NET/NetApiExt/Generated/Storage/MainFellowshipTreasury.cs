@@ -40,7 +40,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("FellowshipTreasury", "Proposals"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.NetApi.Model.Types.Primitive.U32), typeof(Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_treasury.Proposal)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("FellowshipTreasury", "Deactivated"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Primitive.U128)));
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("FellowshipTreasury", "Approvals"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT30)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("FellowshipTreasury", "Approvals"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT35)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("FellowshipTreasury", "SpendCount"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.NetApi.Model.Types.Primitive.U32)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("FellowshipTreasury", "Spends"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.NetApi.Model.Types.Primitive.U32), typeof(Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_treasury.SpendStatus)));
@@ -157,10 +157,10 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
         /// >> Approvals
         ///  Proposal indices that have been approved but not yet awarded.
         /// </summary>
-        public async Task<Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT30> Approvals(string blockhash, CancellationToken token)
+        public async Task<Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT35> Approvals(string blockhash, CancellationToken token)
         {
             string parameters = FellowshipTreasuryStorage.ApprovalsParams();
-            var result = await _client.GetStorageAsync<Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT30>(parameters, blockhash, token);
+            var result = await _client.GetStorageAsync<Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT35>(parameters, blockhash, token);
             return result;
         }
         
@@ -230,40 +230,6 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
     /// </summary>
     public sealed class FellowshipTreasuryCalls
     {
-        
-        /// <summary>
-        /// >> propose_spend
-        /// Contains a variant per dispatchable extrinsic that this pallet has.
-        /// </summary>
-        public static Method ProposeSpend(Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U128> value, Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_runtime.multiaddress.EnumMultiAddress beneficiary)
-        {
-            System.Collections.Generic.List<byte> byteArray = new List<byte>();
-            byteArray.AddRange(value.Encode());
-            byteArray.AddRange(beneficiary.Encode());
-            return new Method(65, "FellowshipTreasury", 0, "propose_spend", byteArray.ToArray());
-        }
-        
-        /// <summary>
-        /// >> reject_proposal
-        /// Contains a variant per dispatchable extrinsic that this pallet has.
-        /// </summary>
-        public static Method RejectProposal(Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32> proposal_id)
-        {
-            System.Collections.Generic.List<byte> byteArray = new List<byte>();
-            byteArray.AddRange(proposal_id.Encode());
-            return new Method(65, "FellowshipTreasury", 1, "reject_proposal", byteArray.ToArray());
-        }
-        
-        /// <summary>
-        /// >> approve_proposal
-        /// Contains a variant per dispatchable extrinsic that this pallet has.
-        /// </summary>
-        public static Method ApproveProposal(Substrate.NetApi.Model.Types.Base.BaseCom<Substrate.NetApi.Model.Types.Primitive.U32> proposal_id)
-        {
-            System.Collections.Generic.List<byte> byteArray = new List<byte>();
-            byteArray.AddRange(proposal_id.Encode());
-            return new Method(65, "FellowshipTreasury", 2, "approve_proposal", byteArray.ToArray());
-        }
         
         /// <summary>
         /// >> spend_local
@@ -343,40 +309,6 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
     {
         
         /// <summary>
-        /// >> ProposalBond
-        ///  Fraction of a proposal's value that should be bonded in order to place the proposal.
-        ///  An accepted proposal gets these back. A rejected proposal does not.
-        /// </summary>
-        public Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Permill ProposalBond()
-        {
-            var result = new Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_arithmetic.per_things.Permill();
-            result.Create("0x40420F00");
-            return result;
-        }
-        
-        /// <summary>
-        /// >> ProposalBondMinimum
-        ///  Minimum amount of funds that should be placed in a deposit for making a proposal.
-        /// </summary>
-        public Substrate.NetApi.Model.Types.Primitive.U128 ProposalBondMinimum()
-        {
-            var result = new Substrate.NetApi.Model.Types.Primitive.U128();
-            result.Create("0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF");
-            return result;
-        }
-        
-        /// <summary>
-        /// >> ProposalBondMaximum
-        ///  Maximum amount of funds that should be placed in a deposit for making a proposal.
-        /// </summary>
-        public Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U128> ProposalBondMaximum()
-        {
-            var result = new Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.NetApi.Model.Types.Primitive.U128>();
-            result.Create("0x01FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF");
-            return result;
-        }
-        
-        /// <summary>
         /// >> SpendPeriod
         ///  Period between successive spends.
         /// </summary>
@@ -439,12 +371,6 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
     /// </summary>
     public enum FellowshipTreasuryErrors
     {
-        
-        /// <summary>
-        /// >> InsufficientProposersBalance
-        /// Proposer's balance is too low.
-        /// </summary>
-        InsufficientProposersBalance,
         
         /// <summary>
         /// >> InvalidIndex

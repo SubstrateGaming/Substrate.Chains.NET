@@ -43,7 +43,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_xcm.pallet
     }
     
     /// <summary>
-    /// >> 367 - Variant[pallet_xcm.pallet.VersionMigrationStage]
+    /// >> 375 - Variant[pallet_xcm.pallet.VersionMigrationStage]
     /// </summary>
     public sealed class EnumVersionMigrationStage : BaseEnumRust<VersionMigrationStage>
     {

@@ -18,7 +18,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.frame_support
     
     
     /// <summary>
-    /// >> 459 - Composite[frame_support.PalletId]
+    /// >> 468 - Composite[frame_support.PalletId]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class PalletId : BaseType

@@ -63,20 +63,26 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.frame_system.palle
         CallFiltered = 5,
         
         /// <summary>
+        /// >> MultiBlockMigrationsOngoing
+        /// A multi-block migration is ongoing and prevents the current code from being replaced.
+        /// </summary>
+        MultiBlockMigrationsOngoing = 6,
+        
+        /// <summary>
         /// >> NothingAuthorized
         /// No upgrade authorized.
         /// </summary>
-        NothingAuthorized = 6,
+        NothingAuthorized = 7,
         
         /// <summary>
         /// >> Unauthorized
         /// The submitted code is not authorized.
         /// </summary>
-        Unauthorized = 7,
+        Unauthorized = 8,
     }
     
     /// <summary>
-    /// >> 289 - Variant[frame_system.pallet.Error]
+    /// >> 296 - Variant[frame_system.pallet.Error]
     /// Error for the System pallet
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>

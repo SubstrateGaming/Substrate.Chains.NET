@@ -18,7 +18,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.frame_system.limit
     
     
     /// <summary>
-    /// >> 282 - Composite[frame_system.limits.BlockLength]
+    /// >> 289 - Composite[frame_system.limits.BlockLength]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class BlockLength : BaseType

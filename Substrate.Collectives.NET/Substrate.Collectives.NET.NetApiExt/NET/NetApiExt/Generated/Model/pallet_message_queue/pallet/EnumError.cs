@@ -84,7 +84,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_message_que
     }
     
     /// <summary>
-    /// >> 384 - Variant[pallet_message_queue.pallet.Error]
+    /// >> 392 - Variant[pallet_message_queue.pallet.Error]
     /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>

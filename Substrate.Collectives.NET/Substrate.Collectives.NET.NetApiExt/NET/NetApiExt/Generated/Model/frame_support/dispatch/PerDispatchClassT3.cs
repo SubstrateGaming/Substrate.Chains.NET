@@ -18,7 +18,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.frame_support.disp
     
     
     /// <summary>
-    /// >> 283 - Composite[frame_support.dispatch.PerDispatchClassT3]
+    /// >> 290 - Composite[frame_support.dispatch.PerDispatchClassT3]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class PerDispatchClassT3 : BaseType

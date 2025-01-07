@@ -33,7 +33,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.frame_support.disp
     }
     
     /// <summary>
-    /// >> 24 - Variant[frame_support.dispatch.Pays]
+    /// >> 25 - Variant[frame_support.dispatch.Pays]
     /// </summary>
     public sealed class EnumPays : BaseEnum<Pays>
     {

@@ -18,7 +18,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Types.Base
     
     
     /// <summary>
-    /// >> 473 - Array
+    /// >> 481 - Array
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Array)]
     public sealed class Arr64U8 : BaseType

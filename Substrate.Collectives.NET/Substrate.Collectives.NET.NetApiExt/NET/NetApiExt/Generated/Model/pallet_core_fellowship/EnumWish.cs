@@ -33,7 +33,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_core_fellow
     }
     
     /// <summary>
-    /// >> 252 - Variant[pallet_core_fellowship.Wish]
+    /// >> 254 - Variant[pallet_core_fellowship.Wish]
     /// </summary>
     public sealed class EnumWish : BaseEnum<Wish>
     {

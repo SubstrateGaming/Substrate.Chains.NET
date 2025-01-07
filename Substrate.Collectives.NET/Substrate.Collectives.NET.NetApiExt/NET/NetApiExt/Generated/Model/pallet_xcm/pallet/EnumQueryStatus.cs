@@ -38,7 +38,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_xcm.pallet
     }
     
     /// <summary>
-    /// >> 357 - Variant[pallet_xcm.pallet.QueryStatus]
+    /// >> 365 - Variant[pallet_xcm.pallet.QueryStatus]
     /// </summary>
     public sealed class EnumQueryStatus : BaseEnumRust<QueryStatus>
     {

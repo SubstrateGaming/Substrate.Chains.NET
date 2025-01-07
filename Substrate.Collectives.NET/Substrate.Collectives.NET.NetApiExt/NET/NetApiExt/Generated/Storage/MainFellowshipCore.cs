@@ -36,11 +36,11 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
         public FellowshipCoreStorage(SubstrateClientExt client)
         {
             this._client = client;
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("FellowshipCore", "Params"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_core_fellowship.ParamsType)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("FellowshipCore", "Params"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_core_fellowship.ParamsTypeT1)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("FellowshipCore", "Member"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32), typeof(Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_core_fellowship.MemberStatus)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("FellowshipCore", "MemberEvidence"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32), typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_core_fellowship.EnumWish, Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT8>)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32), typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_core_fellowship.EnumWish, Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10>)));
         }
         
         /// <summary>
@@ -58,17 +58,17 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
         /// </summary>
         public static string ParamsDefault()
         {
-            return @"0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000";
+            return "0x0000000000000000";
         }
         
         /// <summary>
         /// >> Params
         ///  The overall status of the system.
         /// </summary>
-        public async Task<Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_core_fellowship.ParamsType> Params(string blockhash, CancellationToken token)
+        public async Task<Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_core_fellowship.ParamsTypeT1> Params(string blockhash, CancellationToken token)
         {
             string parameters = FellowshipCoreStorage.ParamsParams();
-            var result = await _client.GetStorageAsync<Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_core_fellowship.ParamsType>(parameters, blockhash, token);
+            var result = await _client.GetStorageAsync<Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_core_fellowship.ParamsTypeT1>(parameters, blockhash, token);
             return result;
         }
         
@@ -127,10 +127,10 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
         /// >> MemberEvidence
         ///  Some evidence together with the desired outcome for which it was presented.
         /// </summary>
-        public async Task<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_core_fellowship.EnumWish, Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT8>> MemberEvidence(Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, string blockhash, CancellationToken token)
+        public async Task<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_core_fellowship.EnumWish, Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10>> MemberEvidence(Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 key, string blockhash, CancellationToken token)
         {
             string parameters = FellowshipCoreStorage.MemberEvidenceParams(key);
-            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_core_fellowship.EnumWish, Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT8>>(parameters, blockhash, token);
+            var result = await _client.GetStorageAsync<Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_core_fellowship.EnumWish, Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10>>(parameters, blockhash, token);
             return result;
         }
     }
@@ -156,7 +156,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
         /// >> set_params
         /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method SetParams(Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_core_fellowship.ParamsType @params)
+        public static Method SetParams(Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_core_fellowship.ParamsTypeT1 @params)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(@params.Encode());
@@ -210,6 +210,18 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
         }
         
         /// <summary>
+        /// >> promote_fast
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
+        /// </summary>
+        public static Method PromoteFast(Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_core.crypto.AccountId32 who, Substrate.NetApi.Model.Types.Primitive.U16 to_rank)
+        {
+            System.Collections.Generic.List<byte> byteArray = new List<byte>();
+            byteArray.AddRange(who.Encode());
+            byteArray.AddRange(to_rank.Encode());
+            return new Method(63, "FellowshipCore", 10, "promote_fast", byteArray.ToArray());
+        }
+        
+        /// <summary>
         /// >> offboard
         /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
@@ -224,7 +236,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
         /// >> submit_evidence
         /// Contains a variant per dispatchable extrinsic that this pallet has.
         /// </summary>
-        public static Method SubmitEvidence(Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_core_fellowship.EnumWish wish, Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT8 evidence)
+        public static Method SubmitEvidence(Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_core_fellowship.EnumWish wish, Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT10 evidence)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(wish.Encode());
@@ -240,6 +252,17 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             return new Method(63, "FellowshipCore", 8, "import", byteArray.ToArray());
+        }
+        
+        /// <summary>
+        /// >> set_partial_params
+        /// Contains a variant per dispatchable extrinsic that this pallet has.
+        /// </summary>
+        public static Method SetPartialParams(Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_core_fellowship.ParamsTypeT2 partial_params)
+        {
+            System.Collections.Generic.List<byte> byteArray = new List<byte>();
+            byteArray.AddRange(partial_params.Encode());
+            return new Method(63, "FellowshipCore", 9, "set_partial_params", byteArray.ToArray());
         }
     }
     
@@ -257,6 +280,19 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
         {
             var result = new Substrate.NetApi.Model.Types.Primitive.U32();
             result.Create("0x00000100");
+            return result;
+        }
+        
+        /// <summary>
+        /// >> MaxRank
+        ///  Represents the highest possible rank in this pallet.
+        /// 
+        ///  Increasing this value is supported, but decreasing it may lead to a broken state.
+        /// </summary>
+        public Substrate.NetApi.Model.Types.Primitive.U32 MaxRank()
+        {
+            var result = new Substrate.NetApi.Model.Types.Primitive.U32();
+            result.Create("0x09000000");
             return result;
         }
     }

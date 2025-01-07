@@ -38,7 +38,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_alliance
     }
     
     /// <summary>
-    /// >> 417 - Variant[pallet_alliance.MemberRole]
+    /// >> 426 - Variant[pallet_alliance.MemberRole]
     /// </summary>
     public sealed class EnumMemberRole : BaseEnum<MemberRole>
     {

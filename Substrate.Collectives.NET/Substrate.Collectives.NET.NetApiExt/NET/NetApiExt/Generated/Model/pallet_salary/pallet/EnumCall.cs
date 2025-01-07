@@ -24,49 +24,75 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_salary.pall
         
         /// <summary>
         /// >> init
-        /// See [`Pallet::init`].
+        /// Start the first payout cycle.
+        /// 
+        /// - `origin`: A `Signed` origin of an account.
         /// </summary>
         init = 0,
         
         /// <summary>
         /// >> bump
-        /// See [`Pallet::bump`].
+        /// Move to next payout cycle, assuming that the present block is now within that cycle.
+        /// 
+        /// - `origin`: A `Signed` origin of an account.
         /// </summary>
         bump = 1,
         
         /// <summary>
         /// >> induct
-        /// See [`Pallet::induct`].
+        /// Induct oneself into the payout system.
         /// </summary>
         induct = 2,
         
         /// <summary>
         /// >> register
-        /// See [`Pallet::register`].
+        /// Register for a payout.
+        /// 
+        /// Will only work if we are in the first `RegistrationPeriod` blocks since the cycle
+        /// started.
+        /// 
+        /// - `origin`: A `Signed` origin of an account which is a member of `Members`.
         /// </summary>
         register = 3,
         
         /// <summary>
         /// >> payout
-        /// See [`Pallet::payout`].
+        /// Request a payout.
+        /// 
+        /// Will only work if we are after the first `RegistrationPeriod` blocks since the cycle
+        /// started but by no more than `PayoutPeriod` blocks.
+        /// 
+        /// - `origin`: A `Signed` origin of an account which is a member of `Members`.
         /// </summary>
         payout = 4,
         
         /// <summary>
         /// >> payout_other
-        /// See [`Pallet::payout_other`].
+        /// Request a payout to a secondary account.
+        /// 
+        /// Will only work if we are after the first `RegistrationPeriod` blocks since the cycle
+        /// started but by no more than `PayoutPeriod` blocks.
+        /// 
+        /// - `origin`: A `Signed` origin of an account which is a member of `Members`.
+        /// - `beneficiary`: The account to receive payment.
         /// </summary>
         payout_other = 5,
         
         /// <summary>
         /// >> check_payment
-        /// See [`Pallet::check_payment`].
+        /// Update a payment's status; if it failed, alter the state so the payment can be retried.
+        /// 
+        /// This must be called within the same cycle as the failed payment. It will fail with
+        /// `Event::NotCurrent` otherwise.
+        /// 
+        /// - `origin`: A `Signed` origin of an account which is a member of `Members` who has
+        ///   received a payment this cycle.
         /// </summary>
         check_payment = 6,
     }
     
     /// <summary>
-    /// >> 259 - Variant[pallet_salary.pallet.Call]
+    /// >> 266 - Variant[pallet_salary.pallet.Call]
     /// Contains a variant per dispatchable extrinsic that this pallet has.
     /// </summary>
     public sealed class EnumCall : BaseEnumRust<Call>

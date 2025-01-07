@@ -18,7 +18,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.frame_system.limit
     
     
     /// <summary>
-    /// >> 278 - Composite[frame_system.limits.BlockWeights]
+    /// >> 285 - Composite[frame_system.limits.BlockWeights]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class BlockWeights : BaseType

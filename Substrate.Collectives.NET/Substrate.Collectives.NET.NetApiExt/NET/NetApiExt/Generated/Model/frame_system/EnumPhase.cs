@@ -38,7 +38,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.frame_system
     }
     
     /// <summary>
-    /// >> 273 - Variant[frame_system.Phase]
+    /// >> 280 - Variant[frame_system.Phase]
     /// </summary>
     public sealed class EnumPhase : BaseEnumRust<Phase>
     {

@@ -163,7 +163,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.collectives_polkad
     }
     
     /// <summary>
-    /// >> 20 - Variant[collectives_polkadot_runtime.RuntimeEvent]
+    /// >> 21 - Variant[collectives_polkadot_runtime.RuntimeEvent]
     /// </summary>
     public sealed class EnumRuntimeEvent : BaseEnumRust<RuntimeEvent>
     {

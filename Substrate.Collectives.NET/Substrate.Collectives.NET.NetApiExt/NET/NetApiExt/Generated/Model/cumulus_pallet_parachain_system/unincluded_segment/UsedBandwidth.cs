@@ -18,7 +18,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.cumulus_pallet_par
     
     
     /// <summary>
-    /// >> 292 - Composite[cumulus_pallet_parachain_system.unincluded_segment.UsedBandwidth]
+    /// >> 299 - Composite[cumulus_pallet_parachain_system.unincluded_segment.UsedBandwidth]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class UsedBandwidth : BaseType

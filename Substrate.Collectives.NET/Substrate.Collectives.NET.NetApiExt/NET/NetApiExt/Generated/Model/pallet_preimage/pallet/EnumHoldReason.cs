@@ -28,7 +28,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_preimage.pa
     }
     
     /// <summary>
-    /// >> 326 - Variant[pallet_preimage.pallet.HoldReason]
+    /// >> 333 - Variant[pallet_preimage.pallet.HoldReason]
     /// </summary>
     public sealed class EnumHoldReason : BaseEnum<HoldReason>
     {

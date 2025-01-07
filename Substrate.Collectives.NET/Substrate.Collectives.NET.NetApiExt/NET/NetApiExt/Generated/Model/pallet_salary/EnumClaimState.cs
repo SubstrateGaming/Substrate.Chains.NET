@@ -38,7 +38,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_salary
     }
     
     /// <summary>
-    /// >> 452 - Variant[pallet_salary.ClaimState]
+    /// >> 461 - Variant[pallet_salary.ClaimState]
     /// </summary>
     public sealed class EnumClaimState : BaseEnumRust<ClaimState>
     {

@@ -18,7 +18,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_core_fellow
     
     
     /// <summary>
-    /// >> 447 - Composite[pallet_core_fellowship.MemberStatus]
+    /// >> 456 - Composite[pallet_core_fellowship.MemberStatus]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class MemberStatus : BaseType

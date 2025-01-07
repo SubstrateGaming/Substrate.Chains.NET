@@ -18,7 +18,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.frame_system.exten
     
     
     /// <summary>
-    /// >> 478 - Composite[frame_system.extensions.check_non_zero_sender.CheckNonZeroSender]
+    /// >> 484 - Composite[frame_system.extensions.check_non_zero_sender.CheckNonZeroSender]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class CheckNonZeroSender : BaseType

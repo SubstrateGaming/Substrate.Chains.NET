@@ -18,7 +18,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collection
     
     
     /// <summary>
-    /// >> 348 - Composite[bounded_collections.bounded_btree_set.BoundedBTreeSet]
+    /// >> 354 - Composite[bounded_collections.bounded_btree_set.BoundedBTreeSet]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class BoundedBTreeSet : BaseType

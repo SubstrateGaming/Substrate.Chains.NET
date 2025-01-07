@@ -55,7 +55,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_ranked_coll
     }
     
     /// <summary>
-    /// >> 267 - Variant[pallet_ranked_collective.pallet.Event]
+    /// >> 274 - Variant[pallet_ranked_collective.pallet.Event]
     /// The `Event` enum of this pallet
     /// </summary>
     public sealed class EnumEvent : BaseEnumRust<Event>

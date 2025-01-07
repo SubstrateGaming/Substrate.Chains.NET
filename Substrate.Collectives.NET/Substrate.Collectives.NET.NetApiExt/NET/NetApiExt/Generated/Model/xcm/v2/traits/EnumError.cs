@@ -153,7 +153,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.xcm.v2.traits
     }
     
     /// <summary>
-    /// >> 188 - Variant[xcm.v2.traits.Error]
+    /// >> 187 - Variant[xcm.v2.traits.Error]
     /// </summary>
     public sealed class EnumError : BaseEnumRust<Error>
     {

@@ -18,7 +18,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_ranked_coll
     
     
     /// <summary>
-    /// >> 268 - Composite[pallet_ranked_collective.TallyT2]
+    /// >> 275 - Composite[pallet_ranked_collective.TallyT2]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class TallyT2 : BaseType

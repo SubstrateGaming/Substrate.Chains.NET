@@ -18,7 +18,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collection
     
     
     /// <summary>
-    /// >> 409 - Composite[bounded_collections.bounded_vec.BoundedVecT24]
+    /// >> 391 - Composite[bounded_collections.bounded_vec.BoundedVecT24]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class BoundedVecT24 : BaseType
@@ -27,7 +27,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collection
         /// <summary>
         /// >> value
         /// </summary>
-        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_scheduler.Scheduled>> Value { get; set; }
+        public Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8> Value { get; set; }
         
         /// <inheritdoc/>
         public override string TypeName()
@@ -47,7 +47,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collection
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Base.BaseOpt<Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_scheduler.Scheduled>>();
+            Value = new Substrate.NetApi.Model.Types.Base.BaseVec<Substrate.NetApi.Model.Types.Primitive.U8>();
             Value.Decode(byteArray, ref p);
             var bytesLength = p - start;
             TypeSize = bytesLength;

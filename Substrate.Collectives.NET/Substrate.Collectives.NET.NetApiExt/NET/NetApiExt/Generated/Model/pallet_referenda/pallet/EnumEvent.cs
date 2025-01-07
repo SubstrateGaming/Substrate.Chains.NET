@@ -118,7 +118,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_referenda.p
     }
     
     /// <summary>
-    /// >> 269 - Variant[pallet_referenda.pallet.Event]
+    /// >> 276 - Variant[pallet_referenda.pallet.Event]
     /// The `Event` enum of this pallet
     /// </summary>
     public sealed class EnumEvent : BaseEnumRust<Event>

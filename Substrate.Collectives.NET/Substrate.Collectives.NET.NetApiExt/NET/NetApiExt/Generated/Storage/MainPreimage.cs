@@ -41,7 +41,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Preimage", "RequestStatusFor"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
                             Substrate.NetApi.Model.Meta.Storage.Hasher.Identity}, typeof(Substrate.Collectives.NET.NetApiExt.Generated.Model.primitive_types.H256), typeof(Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_preimage.EnumRequestStatus)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Preimage", "PreimageFor"), new System.Tuple<Substrate.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Substrate.NetApi.Model.Meta.Storage.Hasher[] {
-                            Substrate.NetApi.Model.Meta.Storage.Hasher.Identity}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Collectives.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Primitive.U32>), typeof(Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT23)));
+                            Substrate.NetApi.Model.Meta.Storage.Hasher.Identity}, typeof(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Collectives.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Primitive.U32>), typeof(Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT28)));
         }
         
         /// <summary>
@@ -128,10 +128,10 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
         /// <summary>
         /// >> PreimageFor
         /// </summary>
-        public async Task<Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT23> PreimageFor(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Collectives.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Primitive.U32> key, string blockhash, CancellationToken token)
+        public async Task<Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT28> PreimageFor(Substrate.NetApi.Model.Types.Base.BaseTuple<Substrate.Collectives.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Primitive.U32> key, string blockhash, CancellationToken token)
         {
             string parameters = PreimageStorage.PreimageForParams(key);
-            var result = await _client.GetStorageAsync<Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT23>(parameters, blockhash, token);
+            var result = await _client.GetStorageAsync<Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT28>(parameters, blockhash, token);
             return result;
         }
     }
@@ -258,5 +258,11 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Storage
         /// Too few hashes were requested to be upgraded (i.e. zero).
         /// </summary>
         TooFew,
+        
+        /// <summary>
+        /// >> NoCost
+        /// No ticket with a cost was returned by [`Config::Consideration`] to store the preimage.
+        /// </summary>
+        NoCost,
     }
 }

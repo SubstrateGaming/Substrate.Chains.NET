@@ -18,7 +18,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_salary
     
     
     /// <summary>
-    /// >> 450 - Composite[pallet_salary.StatusType]
+    /// >> 459 - Composite[pallet_salary.StatusType]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class StatusType : BaseType

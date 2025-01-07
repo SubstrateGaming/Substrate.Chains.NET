@@ -18,7 +18,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.sp_runtime.generic
     
     
     /// <summary>
-    /// >> 470 - Composite[sp_runtime.generic.unchecked_extrinsic.UncheckedExtrinsic]
+    /// >> 479 - Composite[sp_runtime.generic.unchecked_extrinsic.UncheckedExtrinsic]
     /// </summary>
     [SubstrateNodeType(TypeDefEnum.Composite)]
     public sealed class UncheckedExtrinsic : BaseType

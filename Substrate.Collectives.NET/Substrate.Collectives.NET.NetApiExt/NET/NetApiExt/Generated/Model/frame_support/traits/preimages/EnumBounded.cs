@@ -49,7 +49,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.frame_support.trai
         public EnumBounded()
         {
 				AddTypeDecoder<Substrate.Collectives.NET.NetApiExt.Generated.Model.primitive_types.H256>(Bounded.Legacy);
-				AddTypeDecoder<Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT9>(Bounded.Inline);
+				AddTypeDecoder<Substrate.Collectives.NET.NetApiExt.Generated.Model.bounded_collections.bounded_vec.BoundedVecT13>(Bounded.Inline);
 				AddTypeDecoder<BaseTuple<Substrate.Collectives.NET.NetApiExt.Generated.Model.primitive_types.H256, Substrate.NetApi.Model.Types.Primitive.U32>>(Bounded.Lookup);
         }
     }

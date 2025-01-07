@@ -53,7 +53,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_referenda.t
     }
     
     /// <summary>
-    /// >> 463 - Variant[pallet_referenda.types.ReferendumInfo]
+    /// >> 472 - Variant[pallet_referenda.types.ReferendumInfo]
     /// </summary>
     public sealed class EnumReferendumInfo : BaseEnumRust<ReferendumInfo>
     {

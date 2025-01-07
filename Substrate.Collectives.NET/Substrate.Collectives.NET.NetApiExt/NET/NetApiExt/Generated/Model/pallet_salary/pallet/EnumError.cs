@@ -107,7 +107,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_salary.pall
     }
     
     /// <summary>
-    /// >> 468 - Variant[pallet_salary.pallet.Error]
+    /// >> 477 - Variant[pallet_salary.pallet.Error]
     /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>

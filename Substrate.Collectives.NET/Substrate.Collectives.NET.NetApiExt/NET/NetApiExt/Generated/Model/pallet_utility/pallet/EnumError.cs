@@ -30,7 +30,7 @@ namespace Substrate.Collectives.NET.NetApiExt.Generated.Model.pallet_utility.pal
     }
     
     /// <summary>
-    /// >> 385 - Variant[pallet_utility.pallet.Error]
+    /// >> 393 - Variant[pallet_utility.pallet.Error]
     /// The `Error` enum of this pallet.
     /// </summary>
     public sealed class EnumError : BaseEnum<Error>
