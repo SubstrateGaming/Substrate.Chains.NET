@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "net_api": "Substrate.Mythos.NET.NetApiExt",
+    "net_integration": "Substrate.Mythos.NET.Integration",
+    "rest_service": "Substrate.Mythos.NET.RestService",
+    "rest_client": "Substrate.Mythos.NET.RestClient"
+  },
+   "metadata": {
+      "websocket": "wss://polkadot-mythos-rpc.polkadot.io"
+   },
+  "rest_client_settings": {
+    "service_assembly": "Substrate.Mythos.NET.RestService.dll"
+  }
+}
