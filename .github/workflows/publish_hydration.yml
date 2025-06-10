@@ -1,4 +1,4 @@
-name: publish HydraDX.NET
+name: publish Hydration.NET
 
 on:
   push:
@@ -28,27 +28,27 @@ jobs:
       # Restore the project and its dependencies.
       ##
       - name: Install dependencies
-        run: dotnet restore Substrate.HydraDX.NET
+        run: dotnet restore Substrate.Hydration.NET
 
       ##
       # Dependencies
       # Restore the project and its dependencies.
       ##
-      - name: Build HydraDX .NET
+      - name: Build Hydration .NET
         run: |
-            dotnet build Substrate.HydraDX.NET --configuration Release
+            dotnet build Substrate.Hydration.NET --configuration Release
 
       ##
       # Publishing
       # Publish all NuGet packages from Substrate Chains .NET
       ##
-      - name: Publish Substrate HydraDX .NET API Extension
+      - name: Publish Substrate Hydration .NET API Extension
         id: publish_nuget
         uses: alirezanet/publish-nuget@v3.0.4
         with:
           # Filepath of the project to be packaged, relative to root of repository
-          PROJECT_FILE_PATH: Substrate.HydraDX.NET/Substrate.HydraDX.NET.NetApiExt/Substrate.HydraDX.NET.NetApiExt.csproj
+          PROJECT_FILE_PATH: Substrate.Hydration.NET/Substrate.Hydration.NET.NetApiExt/Substrate.Hydration.NET.NetApiExt.csproj
           # NuGet package id, used for version detection & defaults to project name
-          PACKAGE_NAME: Substrate.HydraDX.NET.Extension
+          PACKAGE_NAME: Substrate.Hydration.NET.Extension
           # API key to authenticate with NuGet server
           NUGET_KEY: ${{secrets.NUGET_API_KEY}}
