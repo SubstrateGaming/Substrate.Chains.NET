@@ -56,11 +56,11 @@
 [![Nuget](https://img.shields.io/nuget/v/Substrate.Aventus.NET.Extension)](https://www.nuget.org/packages/Substrate.Aventus.NET.Extension/)
 ![Nuget](https://img.shields.io/nuget/dt/Substrate.Aventus.NET.Extension)  
 ![Build](https://github.com/SubstrateGaming/Substrate.Chains.NET/actions/workflows/publish_aventus.yml/badge.svg)  
-- HydraDX .NET SDK ([Link](https://github.com/SubstrateGaming/Substrate.Chains.NET/tree/main/Substrate.HydraDX.NET))  
-  - Substrate HydraDX .NET API Extension  
-[![Nuget](https://img.shields.io/nuget/v/Substrate.HydraDX.NET.Extension)](https://www.nuget.org/packages/Substrate.HydraDX.NET.Extension/)
-![Nuget](https://img.shields.io/nuget/dt/Substrate.HydraDX.NET.Extension)  
-![Build](https://github.com/SubstrateGaming/Substrate.Chains.NET/actions/workflows/publish_hydradx.yml/badge.svg)  
+- Hydration .NET SDK ([Link](https://github.com/SubstrateGaming/Substrate.Chains.NET/tree/main/Substrate.Hydration.NET))  
+  - Substrate Hydration .NET API Extension  
+[![Nuget](https://img.shields.io/nuget/v/Substrate.Hydration.NET.Extension)](https://www.nuget.org/packages/Substrate.Hydration.NET.Extension/)
+![Nuget](https://img.shields.io/nuget/dt/Substrate.Hydration.NET.Extension)  
+![Build](https://github.com/SubstrateGaming/Substrate.Chains.NET/actions/workflows/publish_hydration.yml/badge.svg)  
 - KILT Network .NET SDK ([Link](https://github.com/SubstrateGaming/Substrate.Chains.NET/tree/main/Substrate.KILT.NET))  
   - Substrate KILT .NET API Extension  
 [![Nuget](https://img.shields.io/nuget/v/Substrate.KILT.NET.Extension)](https://www.nuget.org/packages/Substrate.KILT.NET.Extension/)
